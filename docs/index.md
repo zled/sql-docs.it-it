@@ -7,11 +7,11 @@ author: barbkess
 ms.author: barbkess
 ms.topic: article
 ms.technology: database-engine
-ms.openlocfilehash: 99100b0d7451ba9829fed689e3b2c36b2e3a4727
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f9a888d52c31ca2c5133b70a00e8d25f6e04c29e
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/29/2017
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -71,12 +71,12 @@ ms.lasthandoff: 11/09/2017
                                                 <h3 class="bgdAccent1" style="padding:20px;">Sviluppo</h3>
                                                 <h4>Progettazione</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/connect/sql-connection-libraries">Connettersi con applicazioni client</a></li>
+                                                    <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming">Connettersi con applicazioni client</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/database-features">Concetti di database relazionali</a></li>
                                                 </ul>
                                                 <h4>Strumenti</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
+                                                    <li><a class="barLink" href="/sql/sql-operations-studio/download">SQL Operations Studio <sup>ANTEPRIMA</sup></a></li>   <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
                                                     <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
                                                     <li><a class="barLink" href="/sql/tools/overview-sql-tools">Vedere tutti gli strumenti SQL</a></li>
                                                 </ul>

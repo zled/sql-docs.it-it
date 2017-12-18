@@ -2,9 +2,12 @@
 title: Classe di evento OLEDB DataRead | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 475009bfb14dfdca4cd7ab9eed1decfa8b747e3c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cf914267c6cd1e859d7f2ab5fed7c02895f879e4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead - classe di evento
-  La classe di evento OLEDB DataRead viene generata quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiama un provider OLE DB per query distribuite e stored procedure remote. Includere questa classe di evento nelle tracce che eseguono il monitoraggio quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una chiamata per una richiesta di dati al provider OLE DB.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento OLEDB DataRead viene generata quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiama un provider OLE DB per query distribuite e stored procedure remote. Includere questa classe di evento nelle tracce che eseguono il monitoraggio quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una chiamata per una richiesta di dati al provider OLE DB.  
   
  Quando la classe OLEDB DataRead viene inclusa in una traccia, l'overhead generato sarà elevato. È consigliabile limitare l'utilizzo di questa classe di evento alle tracce che eseguono il monitoraggio di problemi specifici per brevi periodi di tempo.  
   

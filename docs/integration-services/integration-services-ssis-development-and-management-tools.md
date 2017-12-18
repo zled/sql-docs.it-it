@@ -1,12 +1,14 @@
 ---
-title: Integration Services (SSIS) strumenti di sviluppo e gestione | Documenti Microsoft
+title: Strumenti di gestione e sviluppo di Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: b0b765912f6cd4e6128453918d2a30b3ef1e1a63
-ms.contentlocale: it-it
-ms.lasthandoff: 10/04/2017
-
+ms.openlocfilehash: 07f4bba6b5a5312d62898f26b1ed6965f72cbec2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Strumenti di gestione e sviluppo di Integration Services (SSIS)
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]include due strumenti per l'utilizzo dei pacchetti:  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include due strumenti per l'uso di pacchetti:  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per lo sviluppo di pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] richiesti da una soluzione aziendale. In[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è disponibile il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in cui è possibile creare pacchetti.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/04/2017
   
 -   Creare un'utilità di distribuzione tramite cui installare i pacchetti e le relative dipendenze in altri computer.  
   
--   Salvare copie dei pacchetti per il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database msdb, il [!INCLUDE[ssIS](../includes/ssis-md.md)] archivio pacchetti e il file system.  
+-   Salvare copie dei pacchetti nel database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'archivio pacchetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] e nel file system.  
   
  Per altre informazioni su [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vedere [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686.aspx).  
   
@@ -66,4 +67,3 @@ ms.lasthandoff: 10/04/2017
 -   Eseguire l'Utilità di esecuzione pacchetti per generare una riga di comando da usare per l'esecuzione dell'utilità del prompt dei comandi **dtexec** (dtexec.exe).  
   
 -   Importare ed esportare pacchetti da e verso il database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] e il file system.  
-

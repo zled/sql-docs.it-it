@@ -1,16 +1,17 @@
 ---
-title: Sviluppo di un componente di origine personalizzata | Documenti Microsoft
+title: Sviluppo di un componente di origine personalizzato | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,30 +24,29 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 30e5320679193120148f714324da10d4d0c65506
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7ff2fd453c04886594f4d70e1115f00acac72edb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-source-component"></a>Sviluppo di un componente di origine personalizzato
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre agli sviluppatori la possibilità di scrivere componenti di origine che possono connettersi alle origini dati personalizzate e fornire i dati da tali origini ad altri componenti di un'attività flusso di dati. La possibilità per creare origini personalizzate si rivela utile quando è necessario connettersi a origini dati non accessibili tramite una delle origini di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esistenti.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre agli sviluppatori la possibilità di scrivere componenti di origine in grado di connettersi a origini dati personalizzate e di fornire dati da tali origini ad altri componenti in un'attività Flusso di dati. La possibilità per creare origini personalizzate si rivela utile quando è necessario connettersi a origini dati non accessibili tramite una delle origini di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esistenti.  
   
  I componenti di origine includono uno o più output e nessun input. In fase di progettazione tali componenti vengono utilizzati per creare e configurare connessioni, leggere metadati di colonne dall'origine dati esterna e configurare le colonne di output dell'origine in base all'origine dati esterna. Durante l'esecuzione, si connettono all'origine dati esterna e aggiungono righe a un buffer di output. L'attività Flusso di dati fornisce quindi questo buffer di righe di dati ai componenti a valle.  
   
- Per una panoramica generale dello sviluppo di componenti flusso di dati, vedere [lo sviluppo di un componente flusso di dati personalizzato](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
+ Per una panoramica generale sullo sviluppo di componenti flusso dati, vedere [Sviluppo di un componente flusso di dati personalizzato](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="design-time"></a>Fase di progettazione  
  L'implementazione della funzionalità in fase di progettazione di un componente di origine implica la specifica di una connessione a un'origine dati esterna, l'aggiunta e la configurazione delle colonne di output che riflettono l'origine dati e la verifica che il componente sia pronto per l'esecuzione. Per definizione, un componente di origine include uno o più output asincroni e nessun input.  
   
 ### <a name="creating-the-component"></a>Creazione del componente  
- I componenti di origine si connettono a origini dati esterne tramite gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> definiti in un pacchetto. Indicano il requisito di una gestione connessione con l'aggiunta di un elemento alla raccolta <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> della proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Questa raccolta svolge due funzioni: mantiene i riferimenti alle gestioni connessioni nel pacchetto utilizzato dal componente e indica alla finestra di progettazione la necessità di una gestione connessione. Quando un <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> è stato aggiunto alla raccolta, il **Editor avanzato** consente di visualizzare il **le proprietà di connessione** scheda, che consente agli utenti di selezionare o creare una connessione nel pacchetto.  
+ I componenti di origine si connettono a origini dati esterne tramite gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> definiti in un pacchetto. Indicano il requisito di una gestione connessione con l'aggiunta di un elemento alla raccolta <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> della proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Questa raccolta svolge due funzioni: mantiene i riferimenti alle gestioni connessioni nel pacchetto utilizzato dal componente e indica alla finestra di progettazione la necessità di una gestione connessione. Dopo che un oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> è stato aggiunto alla raccolta, in **Editor avanzato** viene visualizzata la scheda **Proprietà connessione**, che consente agli utenti di selezionare o creare una connessione nel pacchetto.  
   
  Nell'esempio di codice seguente è illustrata un'implementazione di <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> che aggiunge un output, quindi aggiunge un oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>.  
   
@@ -176,7 +176,7 @@ End Sub
   
  L'oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> della colonna determina i valori impostati per le altre proprietà. Nella tabella seguente sono illustrati i requisiti delle proprietà dipendenti per ogni oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>. Le proprietà dipendenti dei tipi di dati non elencati sono impostate su zero.  
   
-|DataType|Lunghezza|Scala|Precisione|CodePage|  
+|DataType|Length|Scala|Precisione|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|Maggiore di 0 e minore o uguale a 28.|0|0|  
 |DT_CY|0|0|0|0|  
@@ -185,7 +185,7 @@ End Sub
 |DT_STR|Maggiore di 0 e minore di 8000.|0|0|Diverso da 0 e tabella codici valida.|  
 |DT_WSTR|Maggiore di 0 e minore di 4000.|0|0|0|  
   
- Poiché le restrizioni sulle proprietà del tipo di dati sono basate sul tipo di dati della colonna di output, è necessario scegliere il tipo di dati di [!INCLUDE[ssIS](../../includes/ssis-md.md)] corretto quando si utilizzano tipi gestiti. La classe base fornisce tre metodi di supporto, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>, e <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, per assistere gli sviluppatori di componenti gestiti nella selezione un [!INCLUDE[ssIS](../../includes/ssis-md.md)] dato un tipo gestito di tipo di dati. Questi metodi convertono i tipi di dati gestiti nei tipi di dati di [!INCLUDE[ssIS](../../includes/ssis-md.md)] e viceversa.  
+ Poiché le restrizioni sulle proprietà del tipo di dati sono basate sul tipo di dati della colonna di output, è necessario scegliere il tipo di dati di [!INCLUDE[ssIS](../../includes/ssis-md.md)] corretto quando si utilizzano tipi gestiti. La classe di base fornisce tre metodi di supporto, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, per assistere gli sviluppatori di componenti gestiti nella selezione di un tipo di dati di [!INCLUDE[ssIS](../../includes/ssis-md.md)] dato un tipo gestito. Questi metodi convertono i tipi di dati gestiti nei tipi di dati di [!INCLUDE[ssIS](../../includes/ssis-md.md)] e viceversa.  
   
  Nell'esempio di codice seguente viene illustrato il popolamento della raccolta di colonne di output di un componente in base allo schema di una tabella. I metodi di supporto della classe di base vengono utilizzati per impostare il tipo di dati della colonna, mentre le proprietà dipendenti vengono impostate in base al tipo di dati.  
   
@@ -366,9 +366,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>Convalida del componente  
- È necessario convalidare un componente di origine e verificare che le colonne definite nelle relative raccolte di colonne di output corrispondano alle colonne nell'origine dati esterna. Talvolta, può essere impossibile verificare le colonne di output rispetto all'origine dati esterna, ad esempio in uno stato disconnesso oppure quando è preferibile evitare lunghi round trip al server. In queste situazioni, le colonne nell'output possono comunque essere convalidate tramite <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> dell'oggetto di output. Per ulteriori informazioni, vedere [la convalida di un componente del flusso di dati](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md).  
+ È necessario convalidare un componente di origine e verificare che le colonne definite nelle relative raccolte di colonne di output corrispondano alle colonne nell'origine dati esterna. Talvolta, può essere impossibile verificare le colonne di output rispetto all'origine dati esterna, ad esempio in uno stato disconnesso oppure quando è preferibile evitare lunghi round trip al server. In queste situazioni, le colonne nell'output possono comunque essere convalidate tramite <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> dell'oggetto di output. Per altre informazioni, vedere [Convalida di un componente del flusso di dati](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md).  
   
- Questa raccolta esiste sia negli oggetti di input che di output ed è possibile popolarla con le colonne dell'origine dati esterna. È possibile utilizzare questa raccolta per convalidare le colonne di output quando [!INCLUDE[ssIS](../../includes/ssis-md.md)] finestra di progettazione è offline, quando il componente è disconnesso o quando il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> proprietà **false**. La raccolta deve essere popolata per la prima volta contemporaneamente alla creazione delle colonne di output. L'aggiunta di colonne di metadati esterne alla raccolta è relativamente semplice, perché la colonna di metadati esterna deve inizialmente corrispondere alla colonna di output. Le proprietà del tipo di dati della colonna devono essere già state impostate correttamente e possono essere copiate direttamente nell'oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>.  
+ Questa raccolta esiste sia negli oggetti di input che di output ed è possibile popolarla con le colonne dell'origine dati esterna. È possibile usare questa raccolta per convalidare le colonne di output quando Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] è offline, quando il componente è disconnesso o quando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> è **false**. La raccolta deve essere popolata per la prima volta contemporaneamente alla creazione delle colonne di output. L'aggiunta di colonne di metadati esterne alla raccolta è relativamente semplice, perché la colonna di metadati esterna deve inizialmente corrispondere alla colonna di output. Le proprietà del tipo di dati della colonna devono essere già state impostate correttamente e possono essere copiate direttamente nell'oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>.  
   
  Nel codice di esempio seguente viene aggiunta una colonna di metadati esterna basata su una colonna di output appena creata. Si presuppone che la colonna di output sia già stata creata.  
   
@@ -675,7 +675,6 @@ End Namespace
   
 ## <a name="see-also"></a>Vedere anche  
  [Sviluppo di un componente di destinazione personalizzato](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
- [Creazione di un'origine con il componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
+ [Creazione di un'origine con il componente script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   
   
-

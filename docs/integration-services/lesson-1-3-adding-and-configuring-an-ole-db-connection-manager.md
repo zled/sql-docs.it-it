@@ -1,30 +1,30 @@
 ---
-title: 'Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB | Documenti Microsoft'
+title: 'Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 252ca86357f628b5b859c248bf13b1fea5bfcf75
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 42e22e1fc4d46c96160b5c507e6e51f3d6f820f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>Lezione 1-3-aggiunta e configurazione di una gestione connessione OLE DB
+# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>Lezione 1-3 - Aggiunta e configurazione di una gestione connessione OLE DB
 Dopo aver aggiunto una gestione connessione file flat per connettersi all'origine dati, l'operazione successiva consiste nell'aggiunta di una gestione connessione OLE DB per connettersi alla destinazione. Una gestione connessione OLE DB abilita un pacchetto all'estrazione di dati o al caricamento di dati in un'origine dati compatibile con OLE DB. Gestione connessione OLE DB consente di specificare il server, il metodo di autenticazione e il database predefinito per la connessione.  
   
 In questa lezione verrà creata una gestione connessione OLE DB tramite cui viene utilizzata l'autenticazione di Windows per connettersi all'istanza locale di **AdventureWorksDB2012**. Alla gestione connessione OLE DB creata faranno anche riferimento altri componenti che verranno creati più avanti in questa esercitazione, come la trasformazione Ricerca e la destinazione OLE DB.  
@@ -59,4 +59,3 @@ In questa lezione verrà creata una gestione connessione OLE DB tramite cui vien
 ## <a name="see-also"></a>Vedere anche  
 [Gestione connessione OLE DB](../integration-services/connection-manager/ole-db-connection-manager.md)  
   
-

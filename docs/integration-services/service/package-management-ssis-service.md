@@ -1,12 +1,14 @@
 ---
-title: Pacchetto di gestione (servizio SSIS) | Documenti Microsoft
+title: Gestione dei pacchetti (servizio SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: service
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,31 +29,30 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51d6e32f04d470c7f4ddfc8d3c4b6d994e0bd764
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="package-management-ssis-service"></a>Gestione dei pacchetti (servizio SSIS)
-  Gestione dei pacchetti di include il monitoraggio, gestione, l'importazione ed esportazione di pacchetti.  
+  La gestione dei pacchetti include monitoraggio, gestione, importazione ed esportazione di pacchetti.  
  
  ## <a name="package-store"></a>Archivio pacchetti  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]fornisce due cartelle di livello principale per l'accesso ai pacchetti: 
- - **Esecuzione di pacchetti** 
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include due cartelle di livello principale per l'accesso ai pacchetti: 
+ - **Pacchetti in esecuzione** 
  - **Pacchetti archiviati**
 
  La cartella **Pacchetti in esecuzione** include i pacchetti in esecuzione nel server. La cartella **Pacchetti archiviati** include i pacchetti che vengono salvati nell'archivio pacchetti. Questi sono gli unici pacchetti gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L'archivio pacchetti può includere sia il database msdb sia le cartelle del file system elencate nel file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Il file di configurazione specifica le cartelle msdb e del file system da gestire. Possono inoltre essere presenti pacchetti archiviati in un'altra posizione nel file system non gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Si salva in msdb pacchetti vengono archiviati in una tabella denominata sysssispackages. Quando si salvano i pacchetti in msdb, è possibile raggrupparli in cartelle logiche. Utilizzo di cartelle logiche consentono di organizzare i pacchetti in base allo scopo o per filtrarli nella tabella sysssispackages. Creare nuove cartelle logiche in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per impostazione predefinita, le cartelle logiche aggiunte a msdb vengono incluse automaticamente nell'archivio pacchetti.  
+ I pacchetti salvati in msdb sono archiviati in una tabella denominata sysssispackages. Quando si salvano i pacchetti in msdb, è possibile raggrupparli in cartelle logiche. L'uso di cartelle logiche può essere utile per organizzare i pacchetti in base allo scopo o per filtrarli nella tabella sysssispackages. Creare nuove cartelle logiche in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per impostazione predefinita, le cartelle logiche aggiunte a msdb vengono incluse automaticamente nell'archivio pacchetti.  
   
- Le cartelle logiche create sono rappresentate da righe nella tabella sysssispackagefolders nel database msdb. Le colonne folderid e parentfolderid di sysssispackagefolders definiscono la gerarchia delle cartelle. Le cartelle logiche radice nel database msdb sono le righe con valori null nella colonna parentfolderid sysssispackagefolders. Per ulteriori informazioni, vedere [sysssispackages &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/sysssispackages-transact-sql.md) e [sysssispackagefolders (Transact-SQL &)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md).  
+ Le cartelle logiche create sono rappresentate da righe nella tabella sysssispackagefolders di msdb. Le colonne folderid e parentfolderid di sysssispackagefolders definiscono la gerarchia delle cartelle. Le cartelle logiche radice di msdb corrispondono alle righe di sysssispackagefolders con valori Null nella colonna parentfolderid. Per altre informazioni, vedere [sysssispackages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysssispackages-transact-sql.md) e [sysssispackagefolders (Transact-SQL&)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md).  
   
  Quando si apre [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e ci si connette a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vengono visualizzate le cartelle di msdb gestite dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] elencate nella cartella Pacchetti archiviati. Se il file di configurazione specifica cartelle del file system radice, nella cartella Pacchetti archiviati sono elencati anche i pacchetti salvati nel file system in tali cartelle e in tutte le sottocartelle.  
   
@@ -63,14 +64,14 @@ ms.lasthandoff: 08/03/2017
   
  Per visualizzare un elenco dei pacchetti presenti nell'archivio pacchetti, è necessario aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e connettersi a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-## <a name="monitor-running-packages"></a>Monitoraggio di pacchetti in esecuzione  
- Il **pacchetti in esecuzione** cartella sono visualizzati i pacchetti attualmente in esecuzione. Per visualizzare informazioni sui pacchetti indicati nella pagina **Riepilogo** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], fare clic sulla cartella **Pacchetti in esecuzione** . Nella pagina **Riepilogo** verranno visualizzate informazioni come la durata di esecuzione dei pacchetti. Per visualizzare informazioni aggiornate, aggiornare la cartella.  
+## <a name="monitor-running-packages"></a>Monitorare l'esecuzione dei pacchetti  
+ La cartella **Pacchetti in esecuzione** include i pacchetti attualmente in esecuzione. Per visualizzare informazioni sui pacchetti indicati nella pagina **Riepilogo** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], fare clic sulla cartella **Pacchetti in esecuzione** . Nella pagina **Riepilogo** verranno visualizzate informazioni come la durata di esecuzione dei pacchetti. Per visualizzare informazioni aggiornate, aggiornare la cartella.  
   
  Per visualizzare informazioni su un singolo pacchetto indicato nella pagina **Riepilogo** , fare clic sul pacchetto. Nella pagina **Riepilogo** vengono visualizzate informazioni come la versione e la descrizione del pacchetto.  
   
-Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella facendo clic il pacchetto e quindi fare clic su **arrestare**.  
+Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzione**, fare clic con il pulsante destro del mouse sul pacchetto e quindi scegliere **Arresta**.  
   
-## <a name="view-packages-in-ssms"></a>Visualizzare i pacchetti in SQL Server Management Studio
+## <a name="view-packages-in-ssms"></a>Visualizzare pacchetti in SSMS
     
  In questo argomento viene descritta la procedura per la connessione a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e la visualizzazione di un elenco dei pacchetti gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -83,7 +84,7 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
     > [!IMPORTANT]  
     >  Se non è possibile stabilire la connessione con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], è probabile che il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non sia in esecuzione. Per informazioni sullo stato del servizio, fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione SQL Server**. Nel riquadro di sinistra fare clic su **Servizi di SQL Server**. Nel riquadro di destra cercare il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se non è già in esecuzione, avviare il servizio.  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verrà visualizzata. Per impostazione predefinita, la finestra Esplora oggetti viene aperta e posizionata nell'angolo inferiore sinistro del programma. Se Esplora oggetti non viene visualizzato, scegliere **Esplora oggetti** dal menu **Visualizza** .  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] si apre. Per impostazione predefinita, la finestra Esplora oggetti viene aperta e posizionata nell'angolo inferiore sinistro del programma. Se Esplora oggetti non viene visualizzato, scegliere **Esplora oggetti** dal menu **Visualizza** .  
   
 ### <a name="to-view-the-packages-that-integration-services-service-manages"></a>Per visualizzare i pacchetti gestiti da Integration Services  
   
@@ -95,7 +96,7 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
  
  I pacchetti possono essere salvati nella tabella sysssispackages del database msdb di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel file system.  
   
- L'archivio pacchetti, ovvero l'archivio logico gestito e monitorato dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], può includere sia il database msdb che le cartelle del file system specificate nel file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ L'archivio pacchetti, ovvero l'archivio logico gestito e monitorato dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , può includere sia il database msdb che le cartelle del file system specificate nel file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  È possibile importare ed esportare pacchetti tra i tipi di archivio seguenti:  
   
@@ -103,35 +104,35 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
   
 -   Cartelle dell'archivio pacchetti SSIS. Le due cartelle predefinite sono File system e MSDB.  
   
--   Il database msdb di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Il database msdb di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]offre la possibilità di importare ed esportare pacchetti e ciò per modificare il formato di archiviazione e il percorso dei pacchetti. Tramite le caratteristiche di importazione ed esportazione è possibile aggiungere pacchetti al file system, all'archivio pacchetti o al database msdb e copiarli quindi con un formato di archiviazione diverso. I pacchetti salvati in msdb, ad esempio, possono essere copiati nel file system e viceversa.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consente di importare ed esportare pacchetti. Durante queste operazioni il formato e la posizione dei pacchetti vengono modificati. Tramite le caratteristiche di importazione ed esportazione è possibile aggiungere pacchetti al file system, all'archivio pacchetti o al database msdb e copiarli quindi con un formato di archiviazione diverso. I pacchetti salvati in msdb, ad esempio, possono essere copiati nel file system e viceversa.  
   
  È inoltre possibile copiare un pacchetto in un formato diverso tramite l'utilità del prompt dei comandi **dtutil** (dtutil.exe). Per altre informazioni, vedere [dtutil Utility](../../integration-services/dtutil-utility.md).  
   
  È possibile importare o esportare un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da o nei percorsi seguenti:  
   
--   Un pacchetto archiviato può essere importato nel file system, in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Il pacchetto importato viene salvato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o in una cartella nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+-   Un pacchetto archiviato può essere importato nel file system, in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Il pacchetto importato viene salvato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o in una cartella nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
--   Un pacchetto archiviato nel file system, in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] può essere esportato in un percorso e un formato di archiviazione diverso.  
+-   Un pacchetto archiviato nel file system, in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] può essere esportato in un percorso e un formato di archiviazione diverso.  
   
- Per l'importazione e l'esportazione di un pacchetto tra versioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ci sono tuttavia alcune restrizioni:  
+ Per l'importazione e l'esportazione di un pacchetto tra versioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ci sono tuttavia alcune restrizioni:  
   
--   In un'istanza di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] è possibile importare pacchetti da un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ma non è possibile esportare pacchetti in un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+-   In un'istanza di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]è possibile importare pacchetti da un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ma non è possibile esportare pacchetti in un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
--   In un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] non è possibile importare pacchetti da o esportare pacchetti in un'istanza di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+-   In un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]non è possibile importare pacchetti da o esportare pacchetti in un'istanza di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
  Le procedure descritte di seguito descrivono come utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per importare o esportare un pacchetto.  
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>Per importare un pacchetto utilizzando SQL Server Management Studio  
   
-1.  Fare clic sul pulsante **Start**, scegliere **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quindi fare clic su **SQL Server Management Studio**.  
+1.  Fare clic sul pulsante **Start**, scegliere **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
   
 2.  Nella finestra di dialogo **Connetti al server** impostare le opzioni seguenti:  
   
     -   Nella casella **Tipo server** selezionare **Integration Services**.  
   
-    -   Nel **nome Server** casella, immettere un nome server o fare clic su  **\<Cerca... >** e individuare il server da utilizzare.  
+    -   Nella casella **Nome server** specificare il nome di un server oppure fare clic su **\<Cerca altro...>** e individuare il server da usare.  
   
 3.  Se il riquadro Esplora oggetti non è visualizzato, scegliere **Esplora oggetti** dal menu **Visualizza**.  
   
@@ -141,7 +142,7 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
   
 6.  Fare clic con il pulsante destro del mouse sulla cartella e scegliere **Importa pacchetto**, quindi effettuare una delle operazioni seguenti:  
   
-    -   Per importare il pacchetto da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare l'opzione **SQL Server**, specificare il server e selezionare la modalità di autenticazione. Se si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specificare un nome utente e una password.  
+    -   Per importare il pacchetto da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare l'opzione **SQL Server** , specificare il server e selezionare la modalità di autenticazione. Se si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente e una password.  
   
          Fare clic sul pulsante Sfoglia **(…)**, selezionare il pacchetto da importare e quindi fare clic su **OK**.  
   
@@ -149,7 +150,7 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
   
          Fare clic sul pulsante Sfoglia **(…)**, selezionare il pacchetto da importare e quindi fare clic su **Apri**.  
   
-    -   Per importare il pacchetto dall'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)], selezionare l'opzione **Archivio pacchetti SSIS** e specificare il server.  
+    -   Per importare il pacchetto dall'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] , selezionare l'opzione **Archivio pacchetti SSIS** e specificare il server.  
   
          Fare clic sul pulsante Sfoglia **(…)**, selezionare il pacchetto da importare e quindi fare clic su **OK**.  
   
@@ -161,13 +162,13 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>Per esportare un pacchetto utilizzando SQL Server Management Studio  
   
-1.  Fare clic sul pulsante **Start**, scegliere **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quindi fare clic su **SQL Server Management Studio**.  
+1.  Fare clic sul pulsante **Start**, scegliere **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
   
 2.  Nella finestra di dialogo **Connetti al server** impostare le opzioni seguenti:  
   
     -   Nella casella **Tipo server** selezionare **Integration Services**.  
   
-    -   Nel **nome Server** casella, immettere un nome server o fare clic su  **\<Cerca... >** e individuare il server da utilizzare.  
+    -   Nella casella **Nome server** specificare il nome di un server oppure fare clic su **\<Cerca altro...>** e individuare il server da usare.  
   
 3.  Se il riquadro Esplora oggetti non è visualizzato, scegliere **Esplora oggetti** dal menu **Visualizza**.  
   
@@ -177,7 +178,7 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
   
 6.  Fare clic sul pacchetto con il pulsante destro del mouse, scegliere **Esporta**e quindi eseguire una delle operazioni seguenti:  
   
-    -   Per esportare il pacchetto in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare l'opzione **SQL Server**, specificare il server e selezionare la modalità di autenticazione. Se si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specificare un nome utente e una password.  
+    -   Per esportare il pacchetto in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare l'opzione **SQL Server** , specificare il server e selezionare la modalità di autenticazione. Se si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente e una password.  
   
          Fare clic sul pulsante Sfoglia **(…)**ed espandere la cartella **Pacchetti SSIS** per individuare la cartella in cui salvare il pacchetto. Facoltativamente, aggiornare il nome predefinito del pacchetto e quindi scegliere **OK**.  
   
@@ -185,7 +186,7 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
   
          Fare clic sul pulsante Sfoglia **(…)** per individuare la cartella in cui esportare il pacchetto, digitare il nome del file del pacchetto e quindi scegliere **Salva**.  
   
-    -   Per eseguire l'esportazione nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)], selezionare l'opzione **Archivio pacchetti SSIS** e specificare il server.  
+    -   Per eseguire l'esportazione nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] , selezionare l'opzione **Archivio pacchetti SSIS** e specificare il server.  
   
          Fare clic sul pulsante Sfoglia **(…)**, espandere la cartella **Pacchetti SSIS** e selezionare la cartella in cui salvare il pacchetto. Facoltativamente, immettere un nuovo nome per il pacchetto nella casella di testo **Nome pacchetto** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -194,7 +195,7 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
 8.  Scegliere **OK** per completare l'esportazione.  
 
 ## <a name="import-package-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Importa pacchetto
-  Usare la finestra di dialogo **Importa pacchetto** disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per importare un pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e impostare o modificare il livello di protezione del pacchetto.  
+  Usare la finestra di dialogo **Importa pacchetto** disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]per importare un pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e impostare o modificare il livello di protezione del pacchetto.  
   
 ### <a name="options"></a>Opzioni  
  **Posizione pacchetto**  
@@ -219,10 +220,10 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
  Consente di selezionare un tipo di autenticazione.  
   
  **Nome utente**  
- Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente.  
+ Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente.  
   
  **Password**  
- Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
+ Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
   
  **Percorso pacchetto**  
  Digitare il percorso del pacchetto oppure fare clic sul pulsante Sfoglia **(…)** per individuare il pacchetto.  
@@ -234,7 +235,7 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
  Fare clic sul pulsante Sfoglia **(…)** e aggiornare il livello di protezione nella finestra di dialogo **Livello di protezione pacchetto** . Per altre informazioni, vedere [Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Esporta pacchetto
-  Usare la finestra di dialogo **Esporta pacchetto** disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per esportare un pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un percorso diverso ed eventualmente modificare il livello di protezione del pacchetto.  
+  Usare la finestra di dialogo **Esporta pacchetto** disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]per esportare un pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un percorso diverso ed eventualmente modificare il livello di protezione del pacchetto.  
   
 ### <a name="options"></a>Opzioni  
  **Posizione pacchetto**  
@@ -259,10 +260,10 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
  Consente di selezionare un tipo di autenticazione.  
   
  **Nome utente**  
- Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente.  
+ Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente.  
   
  **Password**  
- Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
+ Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
   
  **Percorso pacchetto**  
  Digitare il percorso del pacchetto oppure fare clic sul pulsante Sfoglia ( **…** ) e individuare la cartella in cui archiviare il pacchetto.  
@@ -270,7 +271,7 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
  **Livello di protezione**  
  Fare clic sul pulsante Sfoglia ( **…** ) e aggiornare il livello di protezione nella finestra di dialogo **Livello di protezione pacchetto** . Per altre informazioni, vedere [Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
-## <a name="back-up-and-restore-packages"></a>Eseguire il backup e ripristino dei pacchetti
+## <a name="back-up-and-restore-packages"></a>Eseguire il backup e il ripristino dei pacchetti
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] I pacchetti possono essere salvati nel file system o in msdb, un database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile eseguire il backup e il ripristino dei pacchetti salvati in msdb usando le funzionalità di backup e ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -292,4 +293,3 @@ Arrestare un pacchetto in esecuzione dal **pacchetti in esecuzione** cartella fa
  [Servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   
-

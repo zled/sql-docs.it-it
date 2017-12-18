@@ -1,30 +1,30 @@
 ---
-title: 'Passaggio 2: Esecuzione dell''installazione guidata pacchetti | Documenti Microsoft'
+title: 'Passaggio 2: Esecuzione dell''Installazione guidata pacchetti | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3007d8fa9bf7fc3c699665823b3c9c3b42d76551
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c021cf13f16aa5feaa8fc0a28f0f735478fcd42d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lezione 3-2-esecuzione dell'installazione guidata pacchetto
+# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lezione 3-2 - Esecuzione dell'Installazione guidata pacchetti
 In questa attività verrà eseguita l'Installazione guidata pacchetti per distribuire i pacchetti del progetto Deployment Tutorial in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Nella tabella sysssispackages del database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possono essere installati solo i pacchetti. I file di supporto inclusi nel pacchetto di distribuzione verranno installati nel file system.  
   
 L'Installazione guidata pacchetti consente di eseguire in modo semplificato i passaggi necessari per installare e configurare i pacchetti. I pacchetti verranno installati in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel computer di destinazione, ovvero il computer in cui si copia il pacchetto di distribuzione. Verrà inoltre creata la cartella C:\DeploymentTutorialInstall nella quale verranno installati i file non di pacchetto.  
@@ -110,4 +110,3 @@ In una lezione precedente sono stati modificati i pacchetti inclusi nell'esercit
   
 ## <a name="see-also"></a>Vedere anche  
 [Servizio Integration Services &#40;servizio SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)  
-

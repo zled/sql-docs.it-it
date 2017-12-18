@@ -1,18 +1,18 @@
 ---
-title: "Connessione a origini dati nell'attività Script | Documenti Microsoft"
+title: "Connessione a origini dati nell'attività Script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-xml
+ms.suite: sql
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - connections [Integration Services], scripts
 - Integration Services packages, connections
@@ -25,37 +25,36 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 - SSIS Script task, connections
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 825ff059476614085a338dd9c568031885bed64b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 052113c5e6f18381a26d9a3a7f1703659a40a88e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>Connessione a origini dati nell'attività Script
   Le gestioni connessioni forniscono accesso a origini dati configurate nel pacchetto. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
- L'attività Script può accedere a queste gestioni connessioni tramite il <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> proprietà del **Dts** oggetto. Ogni gestione connessione nella raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Connections> archivia informazioni su come eseguire la connessione all'origine dati sottostante.  
+ L'attività Script può accedere a queste gestioni connessioni tramite la proprietà <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> dell'oggetto **Dts**. Ogni gestione connessione nella raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Connections> archivia informazioni su come eseguire la connessione all'origine dati sottostante.  
   
  Quando si chiama il metodo <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> di una gestione connessione, la gestione connessione si connette all'origine dati, se non è già connessa, e restituisce la connessione o le informazioni di connessione appropriate da utilizzare nel codice dell'attività Script.  
   
 > [!NOTE]  
->  È necessario conoscere il tipo di connessione restituito dalla gestione connessione prima di chiamare **AcquireConnection**. Poiché l'attività Script deve **Option Strict** abilitato, è necessario eseguire il cast della connessione, che viene restituita come tipo **oggetto**, per il tipo di connessione appropriato prima che sia possibile utilizzarlo.  
+>  È necessario conoscere il tipo di connessione restituito dalla gestione connessione prima di chiamare **AcquireConnection**. Poiché l'oggetto **Option Strict** dell'attività Script è abilitato, è necessario eseguire il cast della connessione, che viene restituita come tipo **Object**, nel tipo di connessione appropriato prima dell'uso.  
   
  È possibile utilizzare il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Contains%2A> della raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Connections> restituita dalla proprietà <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> per cercare una connessione esistente prima di utilizzare la connessione nel codice.  
   
 > [!IMPORTANT]  
->  È possibile chiamare il metodo AcquireConnection delle gestioni connessioni che restituiscono oggetti non gestiti, ad esempio la gestione connessione OLE DB e la gestione connessione Excel, nel codice gestito di un'attività Script. Tuttavia, è possibile leggere la proprietà ConnectionString di queste gestioni connessioni e connettersi all'origine dati direttamente nel codice utilizzando la stringa di connessione con un **OledbConnection** dal **OleDb** dello spazio dei nomi.  
+>  Non è possibile chiamare il metodo AcquireConnection delle gestioni connessioni che restituiscono oggetti non gestiti, ad esempio la gestione connessione OLE DB e la gestione connessione Excel, nel codice gestito di un'attività Script. È tuttavia possibile leggere la proprietà ConnectionString di queste gestioni connessioni e connettersi direttamente all'origine dati nel codice usando la stringa di connessione con **OledbConnection** dallo spazio dei nomi **System.Data.OleDb**.  
 >   
->  Se è necessario chiamare il metodo AcquireConnection di una connessione di gestione che restituisce un oggetto non gestito, utilizzare un [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] gestione connessione. Quando si configura la gestione connessione [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] per l'utilizzo di un provider OLE DB, la connessione viene eseguita tramite il provider di dati [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per OLE DB. In questo caso, il metodo AcquireConnection restituisce un **OleDbConnection** anziché un oggetto non gestito. Per configurare un [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] gestione connessione per l'utilizzo con un'origine di dati di Excel, seleziona il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] il Provider OLE DB per Jet, specificare un file di Excel e immettere `Excel 8.0` (per Excel 97 e versioni successive) come valore di **proprietà estese** sul **tutti** pagina del **Connection Manager** la finestra di dialogo.  
+>  Se è necessario chiamare il metodo AcquireConnection di una gestione connessione che restituisce un oggetto non gestito, usare una gestione connessione [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Quando si configura la gestione connessione [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] per l'utilizzo di un provider OLE DB, la connessione viene eseguita tramite il provider di dati [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per OLE DB. In questo caso il metodo AcquireConnection restituisce un oggetto **System.Data.OleDb.OleDbConnection** invece di un oggetto non gestito. Per configurare una gestione connessione [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] per l'uso con un'origine dati Excel, selezionare il provider OLE DB [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Jet, specificare un file di Excel e immettere `Excel 8.0` (per Excel 97 e versioni successive) come valore di **Proprietà estese** nella pagina **Tutte** della finestra di dialogo **Gestione connessione**.  
   
 ## <a name="connections-example"></a>Esempio di connessioni  
- Nell'esempio seguente viene illustrato come accedere alle gestioni connessioni dall'attività Script. Nell'esempio si presuppone di avere creato e configurato un [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] gestione connessione denominata **Test ADO.NET Connection** e una gestione connessione File Flat denominata **Test Flat File Connection**. Si noti che il [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] gestione connessione restituisce un **SqlConnection** oggetto che è possibile utilizzare immediatamente per connettersi all'origine dati. La gestione connessione file flat, al contrario, restituisce solo una stringa che contiene il percorso e il nome di file. È necessario utilizzare i metodi di **System.IO** spazio dei nomi da aprire e utilizzare il file flat.  
+ Nell'esempio seguente viene illustrato come accedere alle gestioni connessioni dall'attività Script. Nell'esempio si presuppone che sia sta creata e configurata una gestione connessione [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] denominata **Test ADO.NET Connection** e una gestione connessione file flat denominata **Test Flat File Connection**. Si noti che la gestione connessione [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] restituisce un oggetto **SqlConnection** che è possibile usare immediatamente per connettersi all'origine dati. La gestione connessione file flat, al contrario, restituisce solo una stringa che contiene il percorso e il nome di file. È necessario usare i metodi dello spazio dei nomi **System.IO** per aprire e usare il file flat.  
   
 ```vb  
 Public Sub Main()  
@@ -106,8 +105,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40; SSIS &#41; Connessioni](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Creare gestioni connessioni](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
+ [Connessioni in Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Creazione di gestioni connessioni](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   
-

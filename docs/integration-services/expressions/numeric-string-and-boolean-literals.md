@@ -1,12 +1,14 @@
 ---
-title: Valori letterali (SSIS) | Documenti Microsoft
+title: Valori letterali (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +19,18 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 149e9cb31f5e7cecfba9d0c221c1cbddb2b76cfa
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 428bdd08e35be0ebc2a3c069396f67118144b07f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="numeric-string-and-boolean-literals"></a>Numerici, stringa e valori letterali booleani
+# <a name="numeric-string-and-boolean-literals"></a>Valori letterali numerici, stringa e booleani
  Le espressioni possono includere valori letterali numerici, stringa e booleani. L'analizzatore di espressioni supporta un'ampia gamma di valori letterali numerici, quali costanti intere, decimali e a virgola mobile. Supporta inoltre i suffissi per valori di tipo long e float, che specificano come gestire tali valori, e la notazione scientifica nei valori letterali numerici.  
   
 ## <a name="numeric-literals"></a>Valori letterali numerici  
@@ -120,4 +121,3 @@ ms.lasthandoff: 09/26/2017
 > **NOTA** : nelle espressioni i valori letterali booleani devono essere delimitati da spazi.  
   
   
-

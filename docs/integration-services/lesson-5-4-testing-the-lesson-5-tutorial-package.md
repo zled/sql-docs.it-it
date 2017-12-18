@@ -1,30 +1,30 @@
 ---
-title: 'Passaggio 4: Test del pacchetto dell''esercitazione della lezione 5 | Documenti Microsoft'
+title: 'Passaggio 4: Test del pacchetto creato nella lezione 5 dell''esercitazione | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd1b78e3c7d1e3d9324987a292220adf03f1100b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f761097d3e2b7bac98c8617a723927d132c9f30b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Lezione 5-4: test del pacchetto dell'esercitazione della lezione 5
+# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Lezione 5-4 - Test del pacchetto creato nella lezione 5 dell'esercitazione
 In fase di esecuzione, il pacchetto ottiene il valore della proprietà **Directory** da una variabile aggiornata in fase di esecuzione, anziché utilizzare il nome della directory originale specificato quando è stato creato il pacchetto. Il valore della variabile è popolato dal file SSISTutorial.dtsConfig file.  
   
 Per verificare che il pacchetto esegua l'aggiornamento della proprietà Directory con il nuovo valore in fase di esecuzione, eseguire semplicemente il pacchetto. Poiché solo tre file di dati di esempio sono stati copiati nella nuova directory, il flusso di dati verrà eseguito solo tre volte anziché essere reiterato nei 14 file della cartella originale.  
@@ -34,11 +34,11 @@ Prima di testare il pacchetto è consigliabile verificare che il flusso di contr
   
 **Flusso di controllo**  
   
-![Controllare il flusso nel pacchetto](../integration-services/media/task4lesson2control.gif "controllare il flusso nel pacchetto")  
+![Flusso di controllo nel pacchetto](../integration-services/media/task4lesson2control.gif "Flusso di controllo nel pacchetto")  
   
 **Flusso di dati**  
   
-![Flusso di dati nel pacchetto](../integration-services/media/task9lesson1data.gif "nel pacchetto del flusso di dati")  
+![Flusso di dati nel pacchetto](../integration-services/media/task9lesson1data.gif "Flusso di dati nel pacchetto")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>Per testare il pacchetto creato nella lezione 5 dell'esercitazione  
   
@@ -51,4 +51,3 @@ Prima di testare il pacchetto è consigliabile verificare che il flusso di contr
   
   
   
-

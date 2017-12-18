@@ -1,29 +1,30 @@
 ---
-title: add_data_tap | Documenti Microsoft
+title: catalog.add_data_tap | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 686b40e7e1ad7f7843bee5af3295fdf394538f63
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 20b136348f21d6b688d86039e96c5f16f1fa7d10
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Aggiunge una scelta dei dati sull'output di un componente in un flusso di dati del pacchetto, per un'istanza dell'esecuzione.  
   
@@ -39,36 +40,36 @@ catalog.add_data_tap [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @execution_id =] *valore di execution_id*  
- ID dell'esecuzione che contiene il pacchetto. Il *valore di execution_id* è un **bigint**.  
+ [ @execution_id = ] *execution_id*  
+ ID dell'esecuzione che contiene il pacchetto. *execution_id* è di tipo **bigint**.  
   
- [ @task_package_path =] *task_package_path*  
- Percorso del pacchetto per l'attività Flusso di dati. Il **PackagePath** proprietà per l'attività flusso di dati specifica il percorso. Per il percorso viene applicata la distinzione tra maiuscole e minuscole. Per individuare il percorso del pacchetto, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] destro attività flusso di dati e quindi fare clic su **proprietà**. Il **PackagePath** proprietà viene visualizzata nel **proprietà** finestra.  
+ [ @task_package_path = ] *task_package_path*  
+ Percorso del pacchetto per l'attività Flusso di dati. La proprietà **PackagePath** dell'attività Flusso di dati specifica il percorso. Per il percorso viene applicata la distinzione tra maiuscole e minuscole. Per individuare il percorso del pacchetto, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] fare clic con il pulsante destro del mouse sull'attività Flusso di dati e scegliere **Proprietà**. La proprietà **PackagePath** viene visualizzata nella finestra **Proprietà**.  
   
- Il *task_package_path* è un **nvarchar (max)**.  
+ *task_package_path* è di tipo **nvarchar(max)**.  
   
- [ @dataflow_path_id_string =] *dataflow_path_id_string*  
- Stringa di identificazione per il percorso del flusso di dati. Un percorso connette due componenti flusso di dati. Il **IdentificationString** proprietà per il percorso Specifica la stringa.  
+ [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
+ Stringa di identificazione per il percorso del flusso di dati. Un percorso connette due componenti flusso di dati. La proprietà **IdentificationString** per il percorso specifica la stringa.  
   
- Per individuare la stringa di identificazione, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] destro il percorso tra due componenti flusso dati e quindi fare clic su **proprietà**. Il **IdentificationString** proprietà viene visualizzata nel **proprietà** finestra.  
+ Per individuare la stringa di identificazione, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] fare clic con il pulsante destro del mouse sul percorso tra due componenti flusso dati e scegliere **Proprietà**. La proprietà **IdentificationString** viene visualizzata nella finestra **Proprietà**.  
   
- Il *dataflow_path_id_string* è un **nvarchar (4000)**.  
+ *dataflow_path_id_string* è di tipo **nvarchar(4000)**.  
   
- [ @data_filename =] *data_filename*  
+ [ @data_filename = ] *data_filename*  
  Nome del file in cui sono archiviati i data tap. Se l'attività Flusso di dati viene eseguita in un contenitore Ciclo Foreach o Ciclo For, i data tap per ogni iterazione del ciclo vengono archiviati in file separati. Ogni file ha un prefisso dato da un numero corrispondente a un'iterazione.  
   
- Per impostazione predefinita, il file è archiviato nel \< *unità*>: la cartella \Programmi\Microsoft SQL Server\130\DTS\DataDumps.  
+ Per impostazione predefinita, il file viene archiviato nella cartella \<*unità*>:\Programmi\Microsoft SQL Server\130\DTS\DataDumps.  
   
- Il *data_filename* è un **nvarchar (4000)**.  
+ *data_filename* è di tipo **nvarchar(4000)**.  
   
- [ @max_rows =] *max_rows*  
- Numero di righe acquisite durante la scelta dei dati. Se questo valore non è specificato, vengono acquisite tutte le righe. Il *max_rows* è un **int**.  
+ [ @max_rows = ] *max_rows*  
+ Numero di righe acquisite durante la scelta dei dati. Se questo valore non è specificato, vengono acquisite tutte le righe. *max_rows* è di tipo **int**.  
   
- [ @data_tap_id =] *data_tap_id*  
- Restituisce l'ID della scelta dei dati. Il *data_tap_id* è un **bigint**.  
+ [ @data_tap_id = ] *data_tap_id*  
+ Restituisce l'ID della scelta dei dati. *data_tap_id* è di tipo **bigint**.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene creata una scelta dei dati nel percorso del flusso di dati `'Paths[OLE DB Source.OLE DB Source Output]` nell'attività Flusso di dati `\Package\Data Flow Task`. I dati scelti vengono archiviati nel `output0.txt` file nella cartella DataDumps (\<*unità*>: \Programmi\Microsoft SQL Server\130\DTS\DataDumps).  
+ Nell'esempio seguente viene creata una scelta dei dati nel percorso del flusso di dati `'Paths[OLE DB Source.OLE DB Source Output]` nell'attività Flusso di dati `\Package\Data Flow Task`. Le scelte dei dati vengono archiviate nel file `output0.txt` nella cartella DataDumps (\<*unità*>:\Programmi\Microsoft SQL Server\130\DTS\DataDumps).  
   
 ```sql
 Declare @execution_id bigint  
@@ -82,7 +83,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Per aggiungere le scelte dei dati, l'istanza dell'esecuzione deve essere nello stato di creazione (valore 1 nella **stato** colonna del [Catalog. Operations &#40; Database SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)Vista). Il valore dello stato viene modificato in seguito all'esecuzione. È possibile creare un'esecuzione chiamando [Catalog. create_execution &#40; Database SSISDB &#41; ](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+ Per aggiungere scelte dei dati, l'istanza di esecuzione deve essere nello stato di creazione (valore 1 nella colonna **status** della vista [catalog.operations &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). Il valore dello stato viene modificato in seguito all'esecuzione. È possibile creare un'esecuzione chiamando [catalog.create_execution &#40;Database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  Di seguito sono riportate alcune considerazioni relative alla stored procedure add_data_tap.  
   
@@ -111,9 +112,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
   
 -   Autorizzazione MODIFY per l'istanza di esecuzione  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte le condizioni che causano la mancata riuscita della stored procedure.  
@@ -127,10 +128,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>Requisiti  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Post di blog, [SSIS 2012: scelte dei dati di anteprima A](http://go.microsoft.com/fwlink/?LinkId=239983), su rafael-salas.com.  
+ Intervento nel blog relativo alle [scelte dei dati in SSIS 2012](http://go.microsoft.com/fwlink/?LinkId=239983) sul sito Web rafael-salas.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   
-

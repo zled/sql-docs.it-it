@@ -1,31 +1,32 @@
 ---
-title: Catalog.set_customized_logging_level_value | Documenti Microsoft
+title: catalog.set_customized_logging_level_value | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 75ef405fe4550e81ec2d5178a1d3242d405755af
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9d29b6fbe45795f56d3f560816cd16946e477106
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogsetcustomizedlogginglevelvalue"></a>Catalog.set_customized_logging_level_value
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="catalogsetcustomizedlogginglevelvalue"></a>catalog.set_customized_logging_level_value
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Modifica le statistiche o gli eventi registrati da un livello di registrazione personalizzato esistente. Per ulteriori informazioni sui livelli di registrazione personalizzati, vedere [Integration Services &#40; SSIS &#41; Registrazione](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Cambia le statistiche o gli eventi registrati da un livello di registrazione personalizzato esistente. Per altre informazioni sui livelli di registrazione personalizzati, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,22 +37,22 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @level_name =] *level_name*  
- Il nome di un livello di registrazione personalizzato.  
+ [ @level_name = ] *level_name*  
+ Nome di un livello di registrazione personalizzato esistente.  
   
- Il *level_name* è **nvarchar (128)**.  
+ *level_name* è di tipo **nvarchar(128)**.  
   
- [ @property_name =] *property_name*  
- Il nome della proprietà da modificare. I valori validi sono **profilo** e **eventi**.  
+ [ @property_name = ] *property_name*  
+ Nome della proprietà da modificare. I valori validi sono **PROFILE** ed **EVENTS**.  
   
- Il *property_name* è **nvarchar (128)**.  
+ *property_name* è di tipo **nvarchar(128)**.  
   
- [ @property_value =] *property_value*  
- Il nuovo valore per la proprietà specificata dell'oggetto specificato livello di registrazione personalizzato.  
+ [ @property_value = ] *property_value*  
+ Nuovo valore della proprietà specificata del livello di registrazione personalizzato specificato.  
   
- Per un elenco di valori validi per i profili e gli eventi, vedere [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).  
+ Per un elenco dei valori validi per profilo ed eventi, vedere [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).  
   
- Il *property_value* è un **bigint**.  
+ *property_value* è di tipo **bigint**.  
   
 ## <a name="remarks"></a>Osservazioni  
   
@@ -73,7 +74,6 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte le condizioni che causano la mancata riuscita della stored procedure.  
   
--   L'utente non dispone delle autorizzazioni necessarie.  
+-   L'utente non ha le autorizzazioni necessarie.  
   
   
-

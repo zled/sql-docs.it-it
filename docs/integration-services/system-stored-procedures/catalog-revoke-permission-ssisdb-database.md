@@ -1,32 +1,33 @@
 ---
-title: Catalog. revoke_permission (Database SSISDB) | Documenti Microsoft
+title: catalog.revoke_permission (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f058368bdd39b31a569d8810cccfc4d03d9f875e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bc46123d3d395080f6bc5252bfccd63e597a3612
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Viene revocata un'autorizzazione su un oggetto a protezione diretta nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -40,17 +41,17 @@ catalog.revoke_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @object_type =] *object_type*  
- Tipo di oggetto a protezione diretta. Tipi di oggetti a protezione diretta sono inclusi cartelle (`1`), progetti (`2`), ambiente (`3`) e l'operazione (`4`). Il *object_type* è **smallint***.*  
+ [ @object_type = ] *object_type*  
+ Tipo di oggetto a protezione diretta. Nei tipi di oggetti a protezione diretta sono inclusi cartelle (`1`), progetti (`2`), ambienti (`3`) e operazioni (`4`). *object_type* è di tipo **smallint***.*  
   
- [ @object_id =] *object_id*  
- Identificatore (ID) univoco dell'oggetto a protezione diretta. Il *object_id* è **bigint**.  
+ [ @object_id = ] *object_id*  
+ Identificatore (ID) univoco dell'oggetto a protezione diretta. *object_id* è di tipo **bigint**.  
   
- [ @principal_id =] *principal_id*  
- ID dell'entità a cui revocare l'autorizzazione. Il *principal_id* è **int**.  
+ [ @principal_id = ] *principal_id*  
+ ID dell'entità a cui revocare l'autorizzazione. *principal_id* è di tipo **int**.  
   
- [ @permission_type =] *permission_type*  
- Tipo di autorizzazione. Il *permission_type* è **smallint**.  
+ [ @permission_type = ] *permission_type*  
+ Tipo di autorizzazione. *permission_type* è di tipo **smallint**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo)  
@@ -59,9 +60,9 @@ catalog.revoke_permission [ @object_type = ] object_type
   
  2 (object_id non esiste)  
   
- 3 (entità non esiste)  
+ 3 (principal non esiste)  
   
- 4 (autorizzazione non è valida)  
+ 4 (permission non è valido)  
   
  5 (altro errore)  
   
@@ -76,12 +77,12 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   Autorizzazioni ASSIGN_PERMISSIONS sull'oggetto  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 ## <a name="remarks"></a>Osservazioni  
- Se viene specificato permission_type, la stored procedure viene rimossa l'autorizzazione viene assegnata in modo esplicito all'entità per l'oggetto. Anche se non esiste nessuna di tali istanze, tramite la routine viene restituito un valore di codice con esito positivo (`0`). Se permission_type viene omesso, la stored procedure rimuove tutte le autorizzazioni dell'entità per l'oggetto.  
+ Se permission_type viene specificato, la stored procedure rimuove l'autorizzazione assegnata in modo esplicito all'entità per l'oggetto. Anche se non esiste nessuna di tali istanze, tramite la routine viene restituito un valore di codice con esito positivo (`0`). Se permission_type viene omesso, la stored procedure rimuove tutte le autorizzazioni dell'entità sull'oggetto.  
   
 > [!NOTE]  
 >  L'entità può disporre ancora dell'autorizzazione specificata sull'oggetto se è membro di un ruolo che dispone dell'autorizzazione specificata.  
@@ -101,4 +102,3 @@ catalog.revoke_permission [ @object_type = ] object_type
 |`104`|MANAGE_OBJECT_PERMISSIONS|Consente all'entità di gestire le autorizzazioni su tutti gli oggetti nella cartella.|Cartella|  
   
   
-

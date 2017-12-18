@@ -1,33 +1,32 @@
 ---
-title: Registrazione nel componente Script | Documenti Microsoft
+title: Registrazione nel componente script | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Script component [Integration Services], logging
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Script component [Integration Services], logging
 ms.assetid: 17c19787-379e-43fe-9107-e36e17ecda53
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 410a2472399574753d67a44b93437b1698c8b086
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c38888ad80d1674488a0335624997c0102e32d76
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-in-the-script-component"></a>Registrazione del componente script
-  La registrazione nei pacchetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] consente di salvare informazioni dettagliate su stato di esecuzione, risultati e problemi, tramite la registrazione di eventi predefiniti o di messaggi definiti dall'utente da analizzare in un secondo momento. Il componente Script può utilizzare il <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> metodo il **la classe ScriptMain** classe per registrare dati definiti dall'utente. Se la registrazione è abilitata e il **ScriptComponentLogEntry** evento è selezionato per l'accesso il **dettagli** scheda della finestra il **Configura log SSIS** la finestra di dialogo, una singola chiamata al <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> metodo archivia le informazioni sugli eventi in tutti i provider di log che sono stati configurati per l'attività flusso di dati.  
+  La registrazione nei pacchetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] consente di salvare informazioni dettagliate su stato di esecuzione, risultati e problemi, tramite la registrazione di eventi predefiniti o di messaggi definiti dall'utente da analizzare in un secondo momento. Il componente script può usare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> della classe **ScriptMain** per registrare dati definiti dall'utente. Se la registrazione è abilitata e l'evento **ScriptComponentLogEntry** è selezionato per la registrazione nella scheda **Dettagli** della finestra di dialogo **Configura log SSIS**, una singola chiamata al metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> archivia le informazioni dell'evento in tutti i provider di log configurati per l'attività Flusso di dati.  
   
  Di seguito è riportato un semplice esempio di registrazione:  
   
@@ -42,10 +41,9 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Anche se è possibile eseguire direttamente la registrazione dal componente script, è consigliabile implementare eventi anziché registrare. Quando si utilizzano gli eventi, oltre ad abilitare la registrazione dei messaggi di eventi, è anche possibile rispondere all'evento con gestori eventi predefiniti o definiti dall'utente.  
   
- Per ulteriori informazioni sulla registrazione, vedere [Integration Services &#40; SSIS &#41; Registrazione](../../../integration-services/performance/integration-services-ssis-logging.md).  
+ Per altre informazioni sulla registrazione, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40; SSIS &#41; Registrazione](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Registrazione di Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

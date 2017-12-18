@@ -1,33 +1,32 @@
 ---
-title: Generatore di espressioni | Documenti Microsoft
+title: Generatore di espressioni | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.expressionbuilder.f1
-helpviewer_keywords:
-- Expression Builder dialog box
+f1_keywords: sql13.dts.designer.expressionbuilder.f1
+helpviewer_keywords: Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 820179477a33b18a634c509d2793d8f0bac79ddd
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5d1f46b2833246dde0cd95eb8c815ae9cca69ab5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="expression-builder"></a>Generatore di espressioni
-  Usare la finestra di dialogo **Generatore di espressioni** per creare e modificare un'espressione di proprietà o scrivere l'espressione che imposta il valore di una variabile tramite un'interfaccia utente grafica in cui sono elencate variabili ed è specificato un riferimento predefinito alle funzioni, i cast di tipo e gli operatori inclusi nel linguaggio delle espressioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Usare la finestra di dialogo **Generatore di espressioni** per creare e modificare un'espressione di proprietà o scrivere l'espressione che imposta il valore di una variabile tramite un'interfaccia utente grafica in cui sono elencate variabili ed è specificato un riferimento predefinito alle funzioni, i cast di tipo e gli operatori inclusi nel linguaggio delle espressioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Un'espressione di proprietà è un'espressione assegnata a una proprietà. Quando l'espressione viene valutata, la proprietà viene aggiornata in modo dinamico per utilizzare il risultato della valutazione dell'espressione. In modo analogo, un'espressione utilizzata in una variabile consente l'aggiornamento del valore della variabile con il risultato della valutazione dell'espressione.  
   
@@ -52,10 +51,9 @@ ms.lasthandoff: 08/03/2017
 |**Valuta espressione**|Fare clic su **Valuta espressione** per visualizzare i valori restituiti dell'espressione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina espressioni](../../integration-services/expressions/expressions-page.md)   
+ [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)   
  [Editor espressioni di proprietà](../../integration-services/expressions/property-expressions-editor.md)   
- [Integration Services &#40; SSIS &#41; Variabili](../../integration-services/integration-services-ssis-variables.md)   
+ [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Variabili di sistema](../../integration-services/system-variables.md)  
   
   
-

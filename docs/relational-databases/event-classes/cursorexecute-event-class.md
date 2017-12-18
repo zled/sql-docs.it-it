@@ -2,9 +2,12 @@
 title: Classe di evento CursorExecute | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6756b69213e3c9cd9d8f27eeab02f662445751c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3c6c48706f855065e96ebcd6c254dd2856c3e15d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute - classe di evento
-  La classe di evento **CursorExecute** descrive gli eventi di esecuzione del cursore che si verificano nei cursori delle API. Tali eventi vengono generati quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea e popola un cursore a partire dal piano di esecuzione creato da un evento di preparazione del cursore.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento **CursorExecute** descrive gli eventi di esecuzione del cursore che si verificano nei cursori delle API. Tali eventi vengono generati quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea e popola un cursore a partire dal piano di esecuzione creato da un evento di preparazione del cursore.  
   
  Includere la classe di evento **CursorExecute** nelle tracce usate per registrare le prestazioni dei cursori. Quando la classe di evento **CursorExecute** viene inclusa in una traccia, l'overhead generato dipende dalla frequenza d'uso dei cursori nel database durante l'esecuzione della traccia. Se si utilizzano diffusamente i cursori, l'esecuzione della traccia potrebbe ridurre in modo significativo le prestazioni.  
   

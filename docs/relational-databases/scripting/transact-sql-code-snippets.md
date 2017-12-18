@@ -2,9 +2,12 @@
 title: Frammenti di codice Transact-SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d3c7b87cbf1ee3a61fa783a8f113b87fcb5d5cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 03d2fac305ec83d34d6f070aac71620f8b5cc055
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-code-snippets"></a>Frammenti di codice Transact-SQL
-  Un frammento di codice di [!INCLUDE[tsql](../../includes/tsql-md.md)]è un modello che contiene la struttura di base dell'istruzione o del blocco di [!INCLUDE[tsql](../../includes/tsql-md.md)] . È possibile utilizzare frammenti di codice come punto di partenza per l'aggiunta di istruzioni nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . È possibile inserire i frammenti predefiniti forniti con SQL Server oppure creare frammenti personalizzati.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un frammento di codice di [!INCLUDE[tsql](../../includes/tsql-md.md)] è un modello che contiene la struttura di base dell'istruzione o del blocco di [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile utilizzare frammenti di codice come punto di partenza per l'aggiunta di istruzioni nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . È possibile inserire i frammenti predefiniti forniti con SQL Server oppure creare frammenti personalizzati.  
   
 ## <a name="transact-sql-code-snippet-tasks"></a>Attività relative ai rammenti di codice Transact-SQL  
   

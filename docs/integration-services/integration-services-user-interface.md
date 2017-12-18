@@ -1,12 +1,14 @@
 ---
-title: Interfaccia utente di Integration Services | Documenti Microsoft
+title: Interfaccia utente di Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - SSIS, SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f6f682da8a11f99d1d58d85405dd2ff0d526a47
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 53d4cd6d44f33b05ca586077a33307616aa45986
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-user-interface"></a>Interfaccia utente di Integration Services
   Oltre alle aree di progettazione disponibili nelle schede di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , l'interfaccia utente consente l'accesso alle seguenti finestre e finestre di dialogo per l'aggiunta di funzionalità ai pacchetti e per la configurazione delle proprietà degli oggetti di pacchetto:  
@@ -52,7 +53,7 @@ ms.lasthandoff: 08/03/2017
 |**Firma digitale**|Consente di firmare o rimuovere la firma da un pacchetto.|Scegliere **Firma digitale** dal menu **SSIS**.<br /><br /> oppure<br /><br /> Fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** e quindi scegliere **Firma digitale**.|  
 |**Imposta punti di interruzione**|Consente di attivare punti di interruzione sulle attività e impostarne le proprietà.|Nell'area di progettazione della scheda **Flusso di controllo** fare clic con il pulsante destro del mouse su un'attività o contenitore e quindi scegliere **Modifica punti di interruzione**. Per impostare un punto di interruzione per il pacchetto, fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** , quindi scegliere **Modifica punti di interruzione**.|  
   
- Nella finestra **Attività iniziali** sono disponibili collegamenti a esempi, esercitazioni e video. Per aggiungere collegamenti ad altro contenuto, modificare il file SamplesSites.xml incluso nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È consigliabile non modificare il \<GettingStartedSamples > URL del valore dell'elemento che specifica il formato RSS feed. Il file si trova nel  *\<unità >*: cartella \Programmi\Microsoft SQL Server\110\DTS\Binn. In un computer a 64 bit, il file si trova nel  *\<unità >*: (x86) \Microsoft SQL Server\110\DTS\Binn nella cartella \Programmi.  
+ Nella finestra **Attività iniziali** sono disponibili collegamenti a esempi, esercitazioni e video. Per aggiungere collegamenti ad altro contenuto, modificare il file SamplesSites.xml incluso nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È consigliabile non modificare il valore dell'elemento \<GettingStartedSamples> che specifica l'URL del feed RSS. Il file si trova nella cartella *\<unità>*:\Programmi\Microsoft SQL Server\110\DTS\Binn. In un computer a 64 bit il file si trova nella cartella *\<unità>*:\Programmi (x86)\Microsoft SQL Server\110\DTS\Binn  
   
  Se il file SamplesSites.xml è danneggiato, sostituire il codice xml nel file con il codice xml predefinito seguente.  
   
@@ -125,4 +126,3 @@ ms.lasthandoff: 08/03/2017
  [Progettazione SSIS](../integration-services/ssis-designer.md)  
   
   
-

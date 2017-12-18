@@ -2,9 +2,12 @@
 title: Aggiornamento di istanze con mirroring | Microsoft Docs
 ms.custom: 
 ms.date: 02/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27c4e397e7cf5dbf6b8a930badf965b293898537
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f8b3e3b72900fe64a8925b6ebc9e8901b63e2dde
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrading-mirrored-instances"></a>Aggiornamento di istanze con mirroring
-  Quando si aggiorna un'istanza con mirroring di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nuova versione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , a un nuovo Service Pack o aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oppure a un nuovo Service Pack o aggiornamento cumulativo di Windows, è possibile ridurre i tempi di inattività per ogni database con mirroring a un singolo failover manuale eseguendo un aggiornamento in sequenza o due failover manuali in caso di failback all'istanza primaria originale. L'aggiornamento in sequenza è un processo in più fasi che, nella forma più semplice, implica l'aggiornamento dell'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che in quel momento funge da server mirror in una sessione di mirroring, seguito dal failover manuale del database con mirroring, dall'aggiornamento della prima istanza principale di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e dalla ripresa del mirroring. Nella pratica, il processo esatto dipende dalla modalità operativa, nonché dal numero e dal layout della sessione di mirroring in esecuzione nelle istanze di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da aggiornare.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si aggiorna un'istanza con mirroring di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nuova versione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a un nuovo Service Pack o aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure a un nuovo Service Pack o aggiornamento cumulativo di Windows, è possibile ridurre i tempi di inattività per ogni database con mirroring a un singolo failover manuale eseguendo un aggiornamento in sequenza o due failover manuali in caso di failback all'istanza primaria originale. L'aggiornamento in sequenza è un processo in più fasi che, nella forma più semplice, implica l'aggiornamento dell'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che in quel momento funge da server mirror in una sessione di mirroring, seguito dal failover manuale del database con mirroring, dall'aggiornamento della prima istanza principale di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e dalla ripresa del mirroring. Nella pratica, il processo esatto dipende dalla modalità operativa, nonché dal numero e dal layout della sessione di mirroring in esecuzione nelle istanze di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da aggiornare.  
   
 > [!NOTE]  
 >  Per informazioni sull'uso del mirroring del database con log shipping durante una migrazione, scaricare il [white paper Database Mirroring and Log Shipping](https://t.co/RmO6ruCT4J)(Mirroring del database e log shipping).  

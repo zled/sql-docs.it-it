@@ -1,16 +1,17 @@
 ---
-title: Sviluppo di un'interfaccia utente per un componente del flusso di dati | Documenti Microsoft
+title: Sviluppo di un'interfaccia utente per un componente flusso di dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -24,25 +25,24 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5a1e9773d91303335b616159f70de7aa0ddf966e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ce13ece34803cd0f30c0ec5633e59b6dbb1151cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Sviluppo di un'interfaccia utente per un componente del flusso di dati
   Gli sviluppatori di componenti possono fornire un'interfaccia utente personalizzata per un componente, che viene visualizzata in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] quando il componente viene modificato. L'implementazione di un'interfaccia utente personalizzata fornisce notifiche quando il componente viene aggiunto o eliminato da un'attività Flusso di dati e quando per il componente è richiesta la Guida.  
   
- Se non si fornisce un'interfaccia utente personalizzata per il componente, gli utenti possono comunque configurare il componente e le relative proprietà personalizzate utilizzando l'editor avanzato. È possibile assicurarsi che l'editor avanzato consenta agli utenti di modificare in modo appropriato i valori delle proprietà personalizzate tramite le proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> di <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100>, a seconda dei casi. Per ulteriori informazioni, vedere "Creazione di proprietà personalizzate" in [metodi della fase di progettazione di un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
+ Se non si fornisce un'interfaccia utente personalizzata per il componente, gli utenti possono comunque configurare il componente e le relative proprietà personalizzate utilizzando l'editor avanzato. È possibile assicurarsi che l'editor avanzato consenta agli utenti di modificare in modo appropriato i valori delle proprietà personalizzate tramite le proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> di <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100>, a seconda dei casi. Per altre informazioni, vedere la sezione relativa alla creazione di proprietà personalizzate in [Metodi della fase di progettazione di un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
   
 ## <a name="setting-the-uitypename-property"></a>Impostazione della proprietà UITypeName  
- Per fornire un'interfaccia utente personalizzata, lo sviluppatore deve impostare la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> di <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> sul nome di una classe che implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Quando questa proprietà è impostata dal componente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] carica e chiama l'interfaccia utente personalizzata quando il componente viene modificato in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] finestra di progettazione.  
+ Per fornire un'interfaccia utente personalizzata, lo sviluppatore deve impostare la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> di <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> sul nome di una classe che implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Quando questa proprietà viene impostata dal componente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] carica e chiama l'interfaccia utente personalizzata quando il componente viene modificato in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
  La proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> è una stringa delimitata da virgole che identifica il nome completo del tipo. Nell'elenco seguente sono illustrati, nell'ordine, gli elementi che identificano il tipo:  
   
@@ -91,10 +91,10 @@ End Class
   
  Anche se è possibile modificare direttamente il componente tramite l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>, è preferibile creare un'istanza di <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> tramite il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A>. Quando si modifica direttamente il componente tramite l'interfaccia, le misure di sicurezza di convalida del componente vengono ignorate. Il vantaggio dell'utilizzo dell'istanza della fase di progettazione del componente tramite <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> è che ci si assicura che il componente controlli le modifiche apportate.  
   
- Il valore restituito del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> determina se le modifiche apportate a un componente vengono rese persistenti o annullate. Quando questo metodo restituisce **false**, tutte le modifiche vengono annullate; **true** rende persistenti le modifiche al componente e contrassegna il pacchetto come da richiederne il salvataggio.  
+ Il valore restituito del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> determina se le modifiche apportate a un componente vengono rese persistenti o annullate. Quando questo metodo restituisce **false**, tutte le modifiche vengono annullate; se restituisce **true**, le modifiche al componente vengono rese persistenti e il pacchetto viene contrassegnato in modo da richiederne il salvataggio.  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>Utilizzo dei servizi di Progettazione SSIS  
- Il **IServiceProvider** parametro il <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> metodo fornisce l'accesso ai seguenti servizi di [!INCLUDE[ssIS](../../../includes/ssis-md.md)] progettazione:  
+ Il parametro **IServiceProvider** del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> fornisce l'accesso ai servizi seguenti di Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)]:  
   
 |Servizio|Description|  
 |-------------|-----------------|  
@@ -289,7 +289,6 @@ End Namespace
 ```
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di un componente del flusso di dati personalizzati](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
+ [Creazione di un componente flusso di dati personalizzato](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
   
   
-

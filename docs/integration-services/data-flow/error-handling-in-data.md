@@ -1,17 +1,17 @@
 ---
-title: Gestione degli errori nei dati | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Gestione degli errori nei dati | Microsoft Docs
+ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.configureerroroutput.f1
+f1_keywords: sql13.dts.designer.configureerroroutput.f1
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cb565db8a68cb12e8c8a0ab5976c37ea76e183ea
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d71c06122f09a20e384fc491f2568136e8f29ce8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling-in-data"></a>Gestione degli errori nei dati
   Quando tramite un componente flusso di dati viene applicata una trasformazione ai dati delle colonne, vengono estratti dati dalle origini o vengono caricati dati nelle destinazioni, possono verificarsi errori. Gli errori sono spesso dovuti alla presenza di valori non previsti. Una conversione di dati può ad esempio avere esito negativo perché una colonna contiene una stringa anziché un numero, un inserimento in una colonna di database può avere esito negativo perché i dati rappresentano una data mentre la colonna ha un tipo di dati numeric oppure la valutazione di un'espressione può avere esito negativo perché il valore di una colonna è zero e dà luogo a un'operazione matematica non valida.  
@@ -55,11 +54,11 @@ ms.lasthandoff: 09/26/2017
   
  Nella figura seguente viene illustrato un semplice flusso di dati che include un output degli errori.  
   
- ![Flusso di dati con output degli errori](../../integration-services/data-flow/media/mw-dts-11.gif "del flusso di dati con output degli errori")  
+ ![Flusso di dati con output degli errori](../../integration-services/data-flow/media/mw-dts-11.gif "Flusso di dati con output degli errori")  
   
  Per altre informazioni, vedere [Flusso di dati](../../integration-services/data-flow/data-flow.md) e [Percorsi in Integration Services](../../integration-services/data-flow/integration-services-paths.md).  
 
-## <a name="configure-error-output-dialog-box"></a>Configurare la finestra di dialogo di Output degli errori
+## <a name="configure-error-output-dialog-box"></a>Finestra di dialogo Configura output errori
 Usare la finestra di dialogo **Configura output errori** per configurare le opzioni di gestione degli errori per le trasformazioni del flusso di dati che supportano l'output degli errori.  
   
  Per altre informazioni sull'utilizzo degli output errori, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).  
@@ -152,10 +151,9 @@ Usare la finestra di dialogo **Configura output errori** per configurare le opzi
 
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)   
- [La trasformazione dei dati con le trasformazioni](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
+ [Trasformazione di dati con le trasformazioni](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [Connessione di componenti con i percorsi](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
- [Attività flusso di dati](../../integration-services/control-flow/data-flow-task.md)   
+ [Attività Flusso di dati](../../integration-services/control-flow/data-flow-task.md)   
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)  
   
   
-

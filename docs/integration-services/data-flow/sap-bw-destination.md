@@ -1,26 +1,27 @@
 ---
-title: Destinazione SAP BW | Documenti Microsoft
+title: Destinazione SAP BW | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28d86db3fac9d5230fa554369bccd7a23304d63c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e61105936766817678d3806f603c506bad94bd5e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-destination"></a>Destinazione SAP BW
   La destinazione SAP BW è il componente di destinazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Pertanto, la destinazione SAP BW carica i dati dal flusso di dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un sistema SAP Netweaver BW versione 7.  
@@ -93,17 +94,17 @@ ms.lasthandoff: 08/03/2017
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>Utilizzo di Progettazione SSIS per configurare la destinazione  
  Per ulteriori informazioni sulle proprietà della destinazione SAP BW che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor destinazione SAP BW &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [Editor destinazione SAP BW &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione SAP BW &#40; Pagina mapping &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [Editor destinazione SAP BW &#40;pagina Mapping&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [Editor destinazione SAP BW &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [Editor destinazione SAP BW &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [Editor destinazione SAP BW &#40; Pagina avanzate &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [Editor destinazione SAP BW &#40;pagina Avanzate&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
  Quando si configura la destinazione SAP BW, è inoltre possibile utilizzare varie finestre di dialogo per cercare o creare gli oggetti SAP Netweaver BW. Per ulteriori informazioni su queste finestre di dialogo, fare clic su uno degli argomenti seguenti:  
   
--   [Cerca Infopackage](../../integration-services/data-flow/look-up-infopackage.md)  
+-   [Cerca InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)  
   
 -   [Crea nuovo InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Crea InfoSource per dati transazione](../../integration-services/data-flow/create-infosource-for-transaction-data.md)  
   
--   [Crea InfoSource per dati Master](../../integration-services/data-flow/create-infosource-for-master-data.md)  
+-   [Crea InfoSource per dati master](../../integration-services/data-flow/create-infosource-for-master-data.md)  
   
 -   [Crea InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
@@ -123,4 +124,3 @@ ms.lasthandoff: 08/03/2017
  [Componenti di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

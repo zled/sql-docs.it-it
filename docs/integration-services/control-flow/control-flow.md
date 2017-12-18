@@ -1,12 +1,14 @@
 ---
-title: Flusso di controllo | Documenti Microsoft
+title: Flusso di controllo | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,26 +16,25 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de01c45d538cd7117b81ea55613aa66be643a2c2
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 22d33e386fb522b7b01c65d4ed87b1dac7d47e14
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="control-flow"></a>Flusso di controllo
-  Un pacchetto è costituito da un flusso di controllo e, facoltativamente, da uno o più flussi di dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornisce gli elementi del flusso di tre diversi tipi di controllo: contenitori che definiscono le strutture nei pacchetti, attività che forniscono funzionalità e i vincoli di precedenza che connettono eseguibili, contenitori e attività in un flusso di controllo ordinato.  
+  Un pacchetto è costituito da un flusso di controllo e, facoltativamente, da uno o più flussi di dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre tre diversi tipi di elementi del flusso di controllo: contenitori, che definiscono le strutture nei pacchetti, attività, che forniscono le funzionalità, e vincoli di precedenza, che connettono eseguibili, contenitori e attività in un flusso di controllo ordinato.  
   
  Per altre informazioni, vedere [Vincoli di precedenza](../../integration-services/control-flow/precedence-constraints.md), [Contenitori in Integration Services](../../integration-services/control-flow/integration-services-containers.md)e [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  
   
  Nella figura seguente viene illustrato un flusso di controllo con un contenitore e sei attività, di cui cinque definite a livello di pacchetto e una a livello di contenitore. Tale attività è all'interno di un contenitore.  
   
- ![Controllare il flusso con sei attività e un contenitore](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "flusso con un contenitore e sei le attività di controllo")  
+ ![Flusso di controllo con sei attività e un contenitore](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "Flusso di controllo con sei attività e un contenitore")  
   
  L'architettura di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta la nidificazione dei contenitori e un flusso di controllo può includere più livelli di contenitori nidificati. Un pacchetto può ad esempio includere un contenitore quale Ciclo Foreach, che a sua volta può includere un altro contenitore Ciclo Foreach e così via.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
  Nella figura seguente viene illustrato il flusso di controllo di un semplice pacchetto nella finestra di progettazione del flusso di controllo. Il flusso di controllo illustrato nella figura è composto da tre attività a livello di pacchetto e da un contenitore a livello di pacchetto contenente tre attività. Le attività e il contenitore sono connessi tramite vincoli di precedenza.  
   
- ![Schermata di progettazione del flusso di controllo con pacchetto](../../integration-services/connection-manager/media/samplecontrolflow.gif "schermata di progettazione del flusso di controllo con pacchetto")  
+ ![Schermata della finestra di progettazione del flusso di controllo con pacchetto](../../integration-services/connection-manager/media/samplecontrolflow.gif "Schermata della finestra di progettazione del flusso di controllo con pacchetto")  
   
  Per creare un flusso di controllo è necessario eseguire i passaggi seguenti:  
   
@@ -64,15 +65,14 @@ ms.lasthandoff: 08/03/2017
   
      Molte attività richiedono una connessione a un'origine dei dati ed è pertanto necessario aggiungere al pacchetto le gestioni connessioni richieste dalle attività. A seconda del tipo di enumeratore utilizzato, anche il contenitore Ciclo Foreach può richiedere una gestione connessione. È possibile aggiungere le gestioni connessioni durante la costruzione del flusso di controllo elemento per elemento oppure prima di iniziare la costruzione del flusso di controllo. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) e [Creazione di gestioni connessioni](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]Finestra di progettazione include inoltre molte funzionalità di progettazione che è possibile utilizzare per gestire l'area di progettazione e creare il controllo del flusso autodocumentato.  
+ La finestra di progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] include inoltre molte funzionalità della modalità progettazione che è possibile usare per gestire l'area di progettazione e creare un flusso di controllo autodocumentato.  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
 -   [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [Impostare le proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 -   [Raggruppare o separare componenti](../../integration-services/group-or-ungroup-components.md)  
   
   
-

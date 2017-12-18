@@ -1,26 +1,27 @@
 ---
-title: Definire una variabile di stato | Documenti Microsoft
+title: Definire una variabile di stato | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ebec44b7492ead6e3417758ac653360f44d4df9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5266703e8a7644a36ebf7eeeaccde1456ce735e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="define-a-state-variable"></a>Definire una variabile di stato
   In questa procedura viene descritto come definire una variabile del pacchetto in cui è archiviato lo stato CDC.  
@@ -31,20 +32,20 @@ ms.lasthandoff: 08/03/2017
   
  Nella tabella seguente viene fornita una descrizione di alto livello dei componenti del valore della variabile di stato CDC.  
   
-|Componente|Description|  
+|Componente|Descrizione|  
 |---------------|-----------------|  
-|**\<nome dello stato >**|Si tratta del nome dello stato CDC corrente.|  
+|**\<state-name>**|Si tratta del nome dello stato CDC corrente.|  
 |**CS**|Viene contrassegnato il punto di inizio dell'intervallo di elaborazione corrente (inizio corrente).|  
-|**\<cs-lsn >**|Si tratta dell'ultimo numero di sequenza del file di log (LSN) elaborato nell'esecuzione CDC precedente.|  
+|**\<cs-lsn>**|Si tratta dell'ultimo numero di sequenza del file di log (LSN) elaborato nell'esecuzione CDC precedente.|  
 |**CE**|Viene contrassegnato il punto di fine dell'intervallo di elaborazione corrente (fine corrente). La presenza del componente CE nello stato CDC indica che un pacchetto CDC è attualmente in fase di elaborazione o che si è verificato un errore di esecuzione di un pacchetto CDC prima del completamento dell'elaborazione dell'intervallo di elaborazione CDC.|  
-|**\<CE lsn >**|Si tratta dell'ultimo LSN da elaborare nell'esecuzione CDC corrente. Viene sempre presupposto che l'ultimo numero di sequenza da elaborare sia il valore massimo (0xFFF…).|  
+|**\<ce-lsn>**|Si tratta dell'ultimo LSN da elaborare nell'esecuzione CDC corrente. Viene sempre presupposto che l'ultimo numero di sequenza da elaborare sia il valore massimo (0xFFF…).|  
 |**IR**|Viene contrassegnato l'intervallo di elaborazione iniziale.|  
-|**\<IR start >**|Si tratta di un numero LSN di una modifica appena prima dell'avvio del caricamento iniziale.|  
-|**\<IR-end >**|Si tratta di un numero LSN di una modifica appena dopo il completamento del caricamento iniziale.|  
+|**\<ir-start>**|Si tratta di un numero LSN di una modifica appena prima dell'avvio del caricamento iniziale.|  
+|**\<ir-end>**|Si tratta di un numero LSN di una modifica appena dopo il completamento del caricamento iniziale.|  
 |**TS**|Viene contrassegnato il timestamp per l'ultimo aggiornamento dello stato CDC.|  
-|**\<timestamp >**|Si tratta di una rappresentazione decimale della proprietà System.DateTime.UtcNow a 64 bit.|  
+|**\<timestamp>**|Si tratta di una rappresentazione decimale della proprietà System.DateTime.UtcNow a 64 bit.|  
 |**ER**|Viene visualizzato quando si verifica un errore durante l'esecuzione dell'ultima operazione ed è inclusa una breve descrizione della causa dell'errore. Se il componente è presente, viene sempre visualizzato per ultimo.|  
-|**\<testo di errore breve >**|Si tratta della breve descrizione dell'errore.|  
+|**\<short-error-text>**|Si tratta della breve descrizione dell'errore.|  
   
  I numeri LSN e di sequenza sono tutti codificati come stringa esadecimale fino a un massimo di 20 cifre che rappresentano il valore LSN di Binary(10).  
   
@@ -91,7 +92,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md)   
- [Editor attività controllo CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [Editor dell'attività di controllo CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
-

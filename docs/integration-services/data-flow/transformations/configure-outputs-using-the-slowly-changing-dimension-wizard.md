@@ -1,12 +1,14 @@
 ---
-title: Configurazione degli output tramite configurazione guidata dimensioni a modifica lenta | Documenti Microsoft
+title: Configurare gli output tramite Configurazione guidata dimensioni a modifica lenta | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 478b3340eda942efc1cbef8a19a2cb811daf0685
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurazione degli output tramite Configurazione guidata dimensioni a modifica lenta
   Configurazione guidata dimensioni a modifica lenta è l'editor per la trasformazione Dimensione a modifica lenta. La compilazione e la configurazione del flusso di dati di una dimensione a modifica lenta può risultare particolarmente complessa. Configurazione guidata dimensioni a modifica lenta rappresenta il modo più semplice per compilare il flusso di dati per gli output della trasformazione Dimensione a modifica lenta assistendo l'utente nel mapping delle colonne, nella selezione delle colonne chiave business, nell'impostazione degli attributi relativi alla modifica delle colonne e nella configurazione del supporto per i membri derivati della dimensione.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 08/03/2017
   
      Nella figura seguente viene illustrato un esempio di flusso di dati che supporta i tipi di modifica Attributo fisso, Attributo modificabile e Attributo cronologico, membri derivati e modifiche ai record corrispondenti.  
   
-     ![Flusso di dati da lenta guidata dimensioni a modifica](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "del flusso di dati da una dimensione guidata a modifica lenta")  
+     ![Flusso di dati della Configurazione guidata dimensioni a modifica lenta](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Flusso di dati della Configurazione guidata dimensioni a modifica lenta")  
   
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Aggiornamento degli output della trasformazione Dimensione a modifica lenta  
  Il modo più semplice per aggiornare la configurazione degli output della trasformazione Dimensione a modifica lenta consiste nell'eseguire nuovamente Configurazione guidata dimensioni a modifica lenta e modificare le proprietà nelle pagine della procedura guidata. È possibile aggiornare la trasformazione Dimensione a modifica lenta anche usando la finestra di dialogo **Editor avanzato** oppure a livello di codice.  
@@ -88,4 +89,3 @@ ms.lasthandoff: 08/03/2017
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   
-

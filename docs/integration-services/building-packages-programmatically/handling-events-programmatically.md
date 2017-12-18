@@ -1,16 +1,17 @@
 ---
-title: Gestione degli eventi a livello di codice | Documenti Microsoft
+title: Gestione degli eventi a livello di programmazione | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,27 +27,26 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 7235703f494bd1fb50e696aef537391ba23d1749
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dadff8ac9d513c998dbe8f019e00e4fd84983344
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="handling-events-programmatically"></a>Gestione degli eventi a livello di programmazione
-  Il runtime di [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornisce una raccolta di eventi che si verificano prima, durante e dopo la convalida e l'esecuzione di un pacchetto. Tali eventi possono essere acquisiti in due modi. Il primo metodo è implementando il <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> di interfaccia in una classe e fornisce la classe come parametro per il **Execute** e **convalida** metodi del pacchetto. Il secondo metodo consiste nella creazione di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> che possono contenere altri oggetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)], ad esempio attività e cicli, eseguiti quando si verifica un evento in <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. In questa sezione vengono descritti questi due metodi e vengono forniti esempi di codice per dimostrarne l'utilizzo.  
+  Il runtime di [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornisce una raccolta di eventi che si verificano prima, durante e dopo la convalida e l'esecuzione di un pacchetto. Tali eventi possono essere acquisiti in due modi. Il primo metodo prevede di implementare l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> in una classe e specificare la classe come parametro per i metodi **Execute** e **Validate** del pacchetto. Il secondo metodo consiste nella creazione di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> che possono contenere altri oggetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)], ad esempio attività e cicli, eseguiti quando si verifica un evento in <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. In questa sezione vengono descritti questi due metodi e vengono forniti esempi di codice per dimostrarne l'utilizzo.  
   
 ## <a name="receiving-idtsevents-callbacks"></a>Ricezione di callback IDTSEvents  
- Gli sviluppatori che compilano ed eseguono pacchetti a livello di programmazione possono ricevere notifiche di eventi durante il processo di convalida ed esecuzione tramite l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Questa operazione viene eseguita tramite la creazione di una classe che implementa il <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> interfaccia e specificare tale classe come parametro per il **convalida** e **Execute** metodi di un pacchetto. I metodi della classe vengono quindi chiamati dal motore di run-time quando si verificano gli eventi.  
+ Gli sviluppatori che compilano ed eseguono pacchetti a livello di programmazione possono ricevere notifiche di eventi durante il processo di convalida ed esecuzione tramite l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. A tale scopo è possibile creare una classe che implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> e specificare tale classe come parametro per i metodi **Execute** e **Validate** di un pacchetto. I metodi della classe vengono quindi chiamati dal motore di run-time quando si verificano gli eventi.  
   
- La classe <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> è una classe che implementa già l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>; pertanto, un'alternativa all'implementazione diretta di <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> consiste nel derivare da <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> ed eseguire l'override degli eventi specifici ai quali si desidera rispondere. Specificare quindi la classe come parametro per il **convalida** e **Execute** metodi del <xref:Microsoft.SqlServer.Dts.Runtime.Package> per ricevere i callback di evento.  
+ La classe <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> è una classe che implementa già l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>; pertanto, un'alternativa all'implementazione diretta di <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> consiste nel derivare da <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> ed eseguire l'override degli eventi specifici ai quali si desidera rispondere. Specificare quindi la classe come parametro per i metodi **Validate** ed **Execute** di <xref:Microsoft.SqlServer.Dts.Runtime.Package> per ricevere i callback degli eventi.  
   
- Nell'esempio di codice seguente viene illustrata una classe che deriva da <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> ed esegue l'override del metodo <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. La classe viene quindi fornita come aparameter per il **convalida** e **Execute** metodi del pacchetto.  
+ Nell'esempio di codice seguente viene illustrata una classe che deriva da <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> ed esegue l'override del metodo <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. La classe viene quindi specificata come parametro per i metodi **Validate** ed **Execute** del pacchetto.  
   
 ```csharp  
 using System;  
@@ -115,7 +115,7 @@ End Class
 ## <a name="creating-dtseventhandler-objects"></a>Creazione di oggetti DtsEventHandler  
  Il motore di run-time fornisce un sistema di gestione e notifica degli eventi stabile e ampiamente flessibile tramite l'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. Questi oggetti consentono di progettare interi flussi di lavoro dall'interno del gestore eventi, che vengono eseguiti solo quando si verifica l'evento cui appartiene il gestore. L'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> è un contenitore eseguito quando viene generato l'evento corrispondente nel relativo oggetto padre. Questa architettura consente di creare flussi di lavoro isolati eseguiti in risposta a eventi che si verificano in un contenitore. Poiché gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> sono sincroni, l'esecuzione riprende solo dopo che sono stati restituiti i gestori eventi collegati all'evento.  
   
- Nell'esempio di codice seguente viene illustrato come creare un oggetto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. Nel codice viene aggiunto <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> alla raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A> del pacchetto, quindi viene creato un oggetto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> per l'evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> dell'attività. Un oggetto <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> viene aggiunto al gestore eventi, che viene eseguito quando si verifica l'evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> per il primo oggetto <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>. In questo esempio si presuppone che si disponga di un file denominato C:\Windows\Temp\DemoFile.txt per il test. La prima volta che si esegue l'esempio, il file viene copiato correttamente e il gestore eventi non viene chiamato. La seconda volta che si esegue l'esempio, il primo <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> non riesce a copiare il file (perché il valore di <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> è **false**), viene chiamato il gestore dell'evento, il secondo <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> Elimina il file di origine e il pacchetto segnala un problema a causa dell'errore che si sono verificati.  
+ Nell'esempio di codice seguente viene illustrato come creare un oggetto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. Nel codice viene aggiunto <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> alla raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A> del pacchetto, quindi viene creato un oggetto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> per l'evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> dell'attività. Un oggetto <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> viene aggiunto al gestore eventi, che viene eseguito quando si verifica l'evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> per il primo oggetto <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>. In questo esempio si presuppone che si disponga di un file denominato C:\Windows\Temp\DemoFile.txt per il test. La prima volta che si esegue l'esempio, il file viene copiato correttamente e il gestore eventi non viene chiamato. La seconda volta che si esegue l'esempio, il primo oggetto <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> non riesce a copiare il file (perché il valore di <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> è **false**), viene chiamato il gestore eventi, il secondo oggetto <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> elimina il file di origine, quindi il pacchetto segnala un problema a causa dell'errore che si è verificato.  
   
 ## <a name="example"></a>Esempio  
   
@@ -255,8 +255,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40; SSIS &#41; Gestori eventi](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Aggiungere un gestore eventi a un pacchetto](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Gestori eventi di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Aggiunta di un gestore eventi a un pacchetto](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

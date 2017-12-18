@@ -1,25 +1,26 @@
 ---
-title: Gestione degli errori | Documenti Microsoft
+title: Gestione degli errori | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9243f40c5088c8ed2abcb92c435d662b408b45d5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling"></a>Gestione degli errori
   Un'istanza di Oracle CDC estrae le modifiche da un singolo database di origine Oracle (un cluster Oracle RAC è considerato un singolo database) e scrive le modifiche di cui è stato eseguito il commit per modificare le tabelle in un database CDC nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Tabella MSXDBCDC.dbo.xdbcdc_trace, utilizzata per le operazioni di registrazione generale e di traccia effettuate dal processo principale del servizio Oracle CDC.  
   
--   Il \<database cdc >. la tabella xdbcdc_trace, utilizzata per la registrazione generale e l'analisi da istanze di Oracle CDC. Ciò significa che gli errori correlati a un'istanza specifica di Oracle CDC vengono registrati nella tabella di traccia dell'istanza.  
+-   Tabella \<cdc-database>.cdc.xdbcdc_trace, usata per le operazioni di registrazione generale e di traccia effettuate dalle istanze di Oracle CDC. Ciò significa che gli errori correlati a un'istanza specifica di Oracle CDC vengono registrati nella tabella di traccia dell'istanza.  
   
  Le informazioni vengono registrate dal servizio Oracle CDC quando il servizio:  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 08/03/2017
  Il servizio Oracle CDC monitora i sottoprocessi dell'istanza di CDC. Quando un sottoprocesso dell'istanza di CDC viene interrotto, il servizio CDC lo disabilita nella tabella MSXDBCDC.dbo.xdbcdc_databases e ne aggiorna lo stato cdc.xdbcdc_state su ABORTED. In questo caso, viene utilizzata la finestra di dialogo Segnalazione errori Windows standard per segnalare questo errore a scopo di ulteriore analisi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Change Data Capture Designer per Oracle di Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [L'istanza di Oracle CDC](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
+ [Progettazione Change Data Capture per Oracle di Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Istanza di Oracle CDC](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   

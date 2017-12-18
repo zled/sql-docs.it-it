@@ -1,16 +1,17 @@
 ---
-title: Salvataggio dei pacchetti | Documenti Microsoft
+title: Salvare pacchetti | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.savecopyas.f1
+f1_keywords: sql13.dts.designer.savecopyas.f1
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 997f393918f0800cad1858df142e909d3a59348d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b29636580a8e8e87229ce591863547a91cd05a8f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="save-packages"></a>Salvataggio di pacchetti
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è possibile usare Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per compilare i pacchetti e quindi salvarli nel file system come file XML, con estensione dtsx. È inoltre possibile salvare copie del file XML di un pacchetto nel database msdb in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti. L'archivio pacchetti è costituito dalle cartelle del percorso del file system gestito dal servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/26/2017
     >  È possibile verificare il percorso e il nome del file in cui è stato salvato il pacchetto nella finestra Proprietà.  
 
 ## <a name="save-a-copy-of-a-package"></a>Salvataggio di una copia di un pacchetto
-  In questa sezione viene descritto come salvare una copia di un pacchetto nel file System, nell'archivio pacchetti o per il **msdb** database [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando si specifica il percorso di salvataggio della copia del pacchetto, è inoltre possibile modificarne il nome.  
+  Questa sezione descrive come salvare una copia di un pacchetto nel file system, nell'archivio pacchetti o nel database **msdb** in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando si specifica il percorso di salvataggio della copia del pacchetto, è inoltre possibile modificarne il nome.  
   
  L'archivio pacchetti può includere sia il database **msdb** che le cartelle del file system, solo **msdb**, oppure solo le cartelle del file system. In **msdb**i pacchetti vengono salvati nella tabella **sysssispackages** . Tale tabella include una colonna **folderid** che identifica la cartella logica alla quale il pacchetto appartiene. Le cartelle logiche consentono di raggruppare i pacchetti salvati in **msdb** , nello stesso modo in cui le cartelle del file system consentono di raggruppare i pacchetti salvati nel file system. Le righe della tabella **sysssispackagefolders** di **msdb** definiscono le cartelle.  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  In Esplora soluzioni fare doppio clic sul pacchetto di cui si desidera salvare una copia.  
   
-2.  Nel **File** menu, fare clic su **Salva copia di \<file del pacchetto > come**.  
+2.  Dal menu **File** scegliere **Salva copia di \<file di pacchetto> con nome**.  
   
 3.  Nella finestra di dialogo **Salva copia del pacchetto** selezionare la posizione di un pacchetto dall'elenco **Posizione pacchetto**. Sono disponibili le opzioni seguenti:  
     -   SQL Server
@@ -91,7 +91,7 @@ ms.lasthandoff: 09/26/2017
 9. Scegliere **OK**.  
 
 ## <a name="save-a-package-as-a-package-template"></a>Salvare un pacchetto come modello di pacchetto
- In questa sezione viene descritto come definire e utilizzare pacchetti personalizzati come modelli per la creazione di nuovi pacchetti di Integration Services in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per impostazione predefinita in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene utilizzato un modello di pacchetto che crea un pacchetto vuoto quando si aggiunge un nuovo pacchetto a un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Non è possibile sostituire tale modello predefinito, ma è possibile aggiungere nuovi modelli.  
+ Questa sezione descrive come designare e usare pacchetti personalizzati come modelli per la creazione di nuovi pacchetti di Integration Services in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per impostazione predefinita in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene utilizzato un modello di pacchetto che crea un pacchetto vuoto quando si aggiunge un nuovo pacchetto a un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Non è possibile sostituire tale modello predefinito, ma è possibile aggiungere nuovi modelli.  
   
  È possibile designare più pacchetti da utilizzare come modelli. Prima di implementare pacchetti personalizzati come modelli è necessario creare i pacchetti.  
   
@@ -111,9 +111,8 @@ ms.lasthandoff: 09/26/2017
   
 2.  In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto, scegliere **Aggiungi** e quindi **Nuovo elemento**.  
   
-3.  Nel **Aggiungi nuovo elemento -\<nome progetto >** finestra di dialogo fare clic sul pacchetto che si desidera utilizzare come modello.  
+3.  Nella finestra di dialogo **Aggiungi nuovo elemento -\<nome progetto>** fare clic sul pacchetto che si vuole usare come modello.  
   
      Nell'elenco dei modelli è incluso il modello di pacchetto predefinito Nuovo pacchetto SSIS. I modelli che è possibile utilizzare come modelli di pacchetto sono identificati dall'icona di pacchetto.  
   
 4.  Scegliere **Aggiungi**.  
-

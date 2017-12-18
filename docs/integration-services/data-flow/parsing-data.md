@@ -1,29 +1,30 @@
 ---
-title: L'analisi dei dati | Documenti Microsoft
+title: Analisi dei dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e7d198fce5bdc57a21083ea063522f73cc9dde22
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parsing-data"></a>Analisi dei dati
   I flussi di dati nei pacchetti consentono di estrarre e caricare dati da archivi dati eterogenei, in cui possono venire utilizzati numerosi diversi tipi di dati standard e personalizzati. In un flusso di dati le origini di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono responsabili dell'estrazione dei dati, dell'analisi dei dati stringa e della conversione dei dati in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le trasformazioni successive possono analizzare dati per convertirli in un tipo di dati diverso oppure creare copie delle colonne con tipi di dati diversi. Anche le espressioni utilizzate nei componenti possono eseguire il cast di argomenti e operandi a tipi di dati diversi. Quando infine i dati vengono caricati in un archivio dati, la destinazione può analizzare i dati per convertirli in un tipo di dati utilizzato dalla destinazione. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -52,7 +53,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
 ## <a name="numeric-data-formats-fast-parse"></a>Formati di dati numerici (analisi veloce)
 L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dati, indipendenti dalle impostazioni locali. Supporta solo un limitato set di formati per i tipi di dati integer.  
   
-### <a name="integer-data-type"></a>Tipo di dati integer
+### <a name="integer-data-type"></a>Tipo di dati Integer
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili i tipi di dati integer DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 e DT_UI8. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  L'analisi veloce supporta i formati seguenti per i tipi di dati integer:  
@@ -113,7 +114,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
  Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-### <a name="time-data-type"></a>Tipo di dati temporali
+### <a name="time-data-type"></a>Tipi di dati per i valori di ora
  L'analisi veloce supporta i formati stringa seguenti per i dati di ora:  
   
 -   Formati di ora che includono spazi vuoti iniziali. Ad esempio, il valore " 10.24" è valido.  
@@ -168,7 +169,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
  Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-### <a name="datetime-data-type"></a>Tipo di dati Data/ora  
+### <a name="datetime-data-type"></a>Tipi di dati per i valori di data e ora  
  L'analisi veloce supporta i formati stringa seguenti per i dati di data e ora:  
   
 -   Formati che includono spazi vuoti iniziali. Il valore "  2003-01-10T203910", ad esempio, è valido.  
@@ -207,4 +208,3 @@ L'analisi standard è un set di routine di analisi, dipendenti dalle impostazion
   
  L'analisi standard consente di eseguire conversioni tra tipi di dati utilizzati per dati internazionali e deve essere utilizzata quando il formato dei dati non è supportato dall'analisi veloce. Per ulteriori informazioni sull'API di conversione del tipo di dati di automazione, vedere la sezione relativa alle API di conversione dei tipi di dati nel sito Web [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427). 
  
-

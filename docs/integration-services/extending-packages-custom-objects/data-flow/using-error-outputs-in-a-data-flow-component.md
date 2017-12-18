@@ -1,16 +1,17 @@
 ---
-title: Utilizzo di output degli errori in un componente del flusso di dati | Documenti Microsoft
+title: Uso degli output degli errori in un componente flusso di dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,25 +26,24 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0253d7a43724b0b852b96bb84618480df6c8f9a4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6dae159609b8bdd57375c9a9e2abd0fbd8ee0ca1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Utilizzo degli output degli errori in un componente del flusso di dati
   Ai componenti è possibile aggiungere oggetti <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> speciali, denominati output degli errori, in modo che il componente possa reindirizzare le righe che non è in grado di elaborare durante l'esecuzione. I problemi che si possono verificare con un componente sono in genere classificati come errori o troncamenti e sono specifici per ogni componente. I componenti che forniscono output degli errori offrono agli utenti la flessibilità di gestire le condizioni di errore filtrando le righe di errore dal set di risultati, interrompendo il componente quando si verifica un problema oppure ignorando gli errori e continuando.  
   
- Per implementare e supportare gli output degli errori in un componente, è innanzitutto necessario impostare il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> proprietà del componente da **true**. Quindi è necessario aggiungere un output al componente che ha il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> proprietà impostata su **true**. Infine, il componente deve contenere codice che reindirizza le righe all'output degli errori quando si verificano errori o troncamenti. In questo argomento vengono descritti questi tre passaggi e vengono illustrate le differenze tra output degli errori sincroni e asincroni.  
+ Prima di implementare e supportare gli output degli errori in un componente, è necessario impostare la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> del componente su **true**. Quindi, è necessario aggiungere al componente un output la cui proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> è impostata su **true**. Infine, il componente deve contenere codice che reindirizza le righe all'output degli errori quando si verificano errori o troncamenti. In questo argomento vengono descritti questi tre passaggi e vengono illustrate le differenze tra output degli errori sincroni e asincroni.  
   
 ## <a name="creating-an-error-output"></a>Creazione di un output degli errori  
- Per creare un output degli errori, chiamare il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> metodo il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A>e quindi l'impostazione di <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> proprietà del nuovo output di **true**. Se l'output è asincrono, non è necessario eseguire altre operazioni. Se l'output è sincrono ed è disponibile un altro output che è sincrono con lo stesso input, è anche necessario impostare le proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A>. Entrambe le proprietà devono avere gli stessi valori dell'altro output sincrono con lo stesso input. Se queste proprietà non sono impostate su un valore diverso da zero, le righe fornite dall'input vengono inviate a entrambi gli output sincroni con l'input.  
+ Per creare un output degli errori, chiamare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> di <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A>, quindi impostare la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> del nuovo output su **true**. Se l'output è asincrono, non è necessario eseguire altre operazioni. Se l'output è sincrono ed è disponibile un altro output che è sincrono con lo stesso input, è anche necessario impostare le proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A>. Entrambe le proprietà devono avere gli stessi valori dell'altro output sincrono con lo stesso input. Se queste proprietà non sono impostate su un valore diverso da zero, le righe fornite dall'input vengono inviate a entrambi gli output sincroni con l'input.  
   
  Quando si verifica un errore o un troncamento durante l'esecuzione di un componente, l'operazione prosegue in base alle impostazioni delle proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ErrorRowDisposition%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.TruncationRowDisposition%2A> dell'input o dell'output oppure della colonna di input o di output in cui è stato riscontrato l'errore. Il valore di queste proprietà dovrebbe essere impostato per impostazione predefinita su <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition.RD_NotUsed>. Quando l'output degli errori del componente è connesso a un componente a valle, questa proprietà viene impostata dall'utente del componente e gli consente di controllare la modalità con cui il componente stesso gestisce l'errore o il troncamento.  
   
@@ -280,7 +280,7 @@ End Sub
 ```  
   
 ### <a name="redirecting-a-row-with-asynchronous-outputs"></a>Reindirizzamento di una riga con output asincroni  
- Anziché indirizzare le righe a un output, come per gli output degli errori sincroni, i componenti con output asincroni inviano una riga a un output degli errori aggiungendo in modo esplicito una riga all'oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> dell'output. L'implementazione di un componente che utilizza output degli errori asincroni richiede l'aggiunta di colonne all'output degli errori che vengono forniti ai componenti a valle e la memorizzazione nella cache del buffer di output per l'output degli errori fornito al componente durante l'esecuzione del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>. I dettagli di implementazione di un componente con output asincroni vengono descritti in dettaglio nell'argomento [lo sviluppo di un componente di trasformazione personalizzato con output asincroni](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md). Se non vengono aggiunte colonne in modo esplicito all'output degli errori, la riga del buffer aggiunta al buffer di output contiene solo le due colonne di errore.  
+ Anziché indirizzare le righe a un output, come per gli output degli errori sincroni, i componenti con output asincroni inviano una riga a un output degli errori aggiungendo in modo esplicito una riga all'oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> dell'output. L'implementazione di un componente che utilizza output degli errori asincroni richiede l'aggiunta di colonne all'output degli errori che vengono forniti ai componenti a valle e la memorizzazione nella cache del buffer di output per l'output degli errori fornito al componente durante l'esecuzione del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>. Informazioni dettagliate sull'implementazione di un componente con output asincroni sono disponibili nell'argomento [Sviluppo di un componente di trasformazione personalizzato con output asincroni](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md). Se non vengono aggiunte colonne in modo esplicito all'output degli errori, la riga del buffer aggiunta al buffer di output contiene solo le due colonne di errore.  
   
  Per inviare una riga a un output degli errori asincrono, è necessario aggiungere una riga al buffer dell'output degli errori. Poiché è possibile che sia già stata aggiunta una riga al buffer dell'output non degli errori, è necessario rimuovere tale riga tramite il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.RemoveRow%2A>. Successivamente, impostare i valori delle colonne del buffer di output e infine chiamare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetErrorInfo%2A> per fornire il codice di errore specifico del componente e il valore della colonna di errore.  
   
@@ -439,7 +439,6 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione degli errori nei dati](../../../integration-services/data-flow/error-handling-in-data.md)   
- [Utilizzo di output degli errori](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
+ [Using Error Outputs](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md) (Uso degli output degli errori)  
   
   
-

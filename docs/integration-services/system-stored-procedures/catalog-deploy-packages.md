@@ -1,31 +1,32 @@
 ---
-title: Catalog.deploy_packages | Documenti Microsoft
+title: catalog.deploy_packages | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1839430dd7fb83ab16c4de46011819e3ce28e835
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a19a301fab52b0373eadb673d17e7436d0ffc1e2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogdeploypackages"></a>Catalog.deploy_packages
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="catalogdeploypackages"></a>catalog.deploy_packages
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Consente di distribuire uno o più pacchetti in una cartella di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del catalogo o aggiorna un pacchetto esistente che è stato distribuito in precedenza.  
+  Distribuisce uno o più pacchetti in una cartella del catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o aggiorna un pacchetto esistente distribuito precedentemente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,17 +35,17 @@ ms.lasthandoff: 09/26/2017
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @folder_name =] *nome_cartella*  
- Nome della cartella. Il *nome_cartella* è **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ Nome della cartella. *folder_name* è di tipo **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- Il nome del progetto nella cartella. Il *project_name* è **nvarchar (128)**.  
+ [ @project_name = ] *project_name*  
+ Nome del progetto nella cartella. *project_name* è di tipo **nvarchar(128)**.  
   
- [ @packages_table =] *packages_table*  
- Il contenuto binario di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] file (con estensione dtsx) del pacchetto. Il *packages_table* è **[catalog]. [ Package_Table_Type]**  
+ [ @packages_table = ] *packages_table*  
+ Contenuto binario dei file del pacchetto (con estensione dtsx) di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. *packages_table* è di tipo **[catalog].[Package_Table_Type]**  
   
- [ @operation_id =] *operation_id*  
- Viene restituito l'identificatore univoco dell'operazione di distribuzione. Il *operation_id* è **bigint**.  
+ [ @operation_id = ] *operation_id*  
+ Viene restituito l'identificatore univoco dell'operazione di distribuzione. *operation_id* è di tipo **bigint**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -55,18 +56,17 @@ ms.lasthandoff: 09/26/2017
 ## <a name="permissions"></a>Permissions  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
--   Autorizzazioni CREATE_OBJECTS il progetto o le autorizzazioni di modifica del pacchetto per aggiornare un pacchetto.  
+-   Autorizzazioni CREATE_OBJECTS sul progetto o autorizzazioni MODIFY sul pacchetto per aggiornare un pacchetto.  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte alcune condizioni che possono determinare la generazione di un errore da parte della stored procedure:  
   
--   Un parametro fa riferimento a un oggetto che non esiste, un parametro che tenta di creare un oggetto già esistente o un parametro non è valido in un altro modo.  
+-   Parametro che fa riferimento a un oggetto inesistente, parametro che tenta di creare un oggetto già esistente o parametro in altro modo non valido.  
   
 -   Utente senza autorizzazioni sufficienti.  
   
   
-

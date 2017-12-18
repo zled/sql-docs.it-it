@@ -1,11 +1,14 @@
 ---
-title: Origine OData | Documenti Microsoft
+title: Origine OData | Microsoft Docs
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,17 +17,16 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 1e0ef2b7cca9509a58aeadca3903e8aec3b7b9b9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/23/2017
-
+ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odata-source"></a>Origine OData
 Usare il componente di origine OData in un pacchetto SSIS per utilizzare i dati da un servizio Protocollo OData (Open Data). Il componente supporta i protocolli OData v3 e v4.  
@@ -35,10 +37,10 @@ Usare il componente di origine OData in un pacchetto SSIS per utilizzare i dati 
 
 L'origine OData include il supporto per le origini dati seguenti:
 -   Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online
--   Elenchi di SharePoint. Per visualizzare tutti gli elenchi in un server SharePoint, utilizzare il seguente URL: http://\<server > / _vti_bin/ListData.svc. Per ulteriori informazioni sulle convenzioni per l'URL di SharePoint, vedere la pagina relativa all' [interfaccia REST di SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
+-   Elenchi SharePoint Per visualizzare tutti gli elenchi in un server SharePoint, usare l'URL seguente: http://\<server>/_vti_bin/ListData.svc. Per ulteriori informazioni sulle convenzioni per l'URL di SharePoint, vedere la pagina relativa all' [interfaccia REST di SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
   
-## <a name="odata-format-and-performance"></a>Formato OData e prestazioni
- La maggior parte dei servizi OData possono restituire risultati in più formati. È possibile specificare il formato del set di risultati tramite l'utilizzo di `$format` opzione di query. I formati quali JSON e JSON Light sono più efficienti di ATOM o XML e possono garantire prestazioni migliori quando si trasferiscono grandi quantità di dati. Nella tabella seguente vengono forniti i risultati dei test di esempio. Come si può notare, si verifica un miglioramento delle prestazioni del 30-53% quando si passa dal formato ATOM a JSON e un miglioramento del 67% quando si passa da ATOM al nuovo formato JSON Light, disponibile in WCF Data Services 5.1.  
+## <a name="odata-format-and-performance"></a>Formato e prestazioni di OData
+ I risultati restituiti dalla maggior parte dei servizi OData sono in più formati. È possibile specificare il formato del set di risultati usando l'opzione query `$format`. I formati quali JSON e JSON Light sono più efficienti di ATOM o XML e possono garantire prestazioni migliori quando si trasferiscono grandi quantità di dati. Nella tabella seguente vengono forniti i risultati dei test di esempio. Come si può notare, si verifica un miglioramento delle prestazioni del 30-53% quando si passa dal formato ATOM a JSON e un miglioramento del 67% quando si passa da ATOM al nuovo formato JSON Light, disponibile in WCF Data Services 5.1.  
   
 |Righe|ATOM|JSON|JSON (Light)|  
 |-|-|-|-|  
@@ -74,10 +76,10 @@ L'origine OData include il supporto per le origini dati seguenti:
 |Percorso risorsa|Recuperare i dati dall'origine OData utilizzando un percorso della risorsa.|  
   
  **Opzioni query**  
- Specificare le opzioni per la query. Esempio: `$top=5` 
+ Specificare le opzioni per la query. Ad esempio: `$top=5` 
   
  **URL feed**  
- Consente di visualizzare le proprietà di sola lettura in base alle opzioni selezionate nella finestra di dialogo URL del feed.  
+ Viene visualizzato l'URL del feed di dati di sola lettura in base alle opzioni selezionate nella finestra di dialogo.  
   
  **Anteprima**  
  Vengono visualizzati in anteprima i risultati tramite la finestra di dialogo **Anteprima** . L'**anteprima** supporta la visualizzazione di un massimo di 20 righe.  
@@ -136,4 +138,3 @@ L'origine OData include il supporto per le origini dati seguenti:
  [Gestione connessione OData](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   
-

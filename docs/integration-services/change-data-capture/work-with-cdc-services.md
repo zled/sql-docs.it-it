@@ -1,28 +1,28 @@
 ---
-title: Utilizzare i servizi CDC | Documenti Microsoft
+title: Usare i servizi CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- cdcServ
+f1_keywords: cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 496eead0f37abd155b789d4ae4c40a40a64ac9f1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: eda4caf15a2c86f541978b49ee7e55c0d89e053c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="work-with-cdc-services"></a>Utilizzare i servizi CDC
   È possibile utilizzare CDC Service Configuration Console per creare un nuovo servizio CDC e preparare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per CDC.  
@@ -45,8 +45,7 @@ ms.lasthandoff: 08/03/2017
  Verrà aperta la finestra di dialogo New Oracle CDC Service.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come utilizzare i servizi CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
+ [Procedura di utilizzo dei servizi CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Creare e modificare un servizio Oracle CDC](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   
-

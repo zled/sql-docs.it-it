@@ -1,29 +1,30 @@
 ---
-title: Catalog. clear_object_parameter_value (Database SSISDB) | Documenti Microsoft
+title: catalog.clear_object_parameter_value (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d0d89081a31341a8d813d9985940c0e3ce0160a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9c079f4c5ce9809d1624992601213f6d5fafc8e3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Viene cancellato il valore di un parametro per un progetto o pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esistente archiviato nel server.  
   
@@ -38,20 +39,20 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @folder_name =] *nome_cartella*  
- Nome della cartella in cui è contenuto il progetto. Il *nome_cartella* è **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ Nome della cartella in cui è contenuto il progetto. *folder_name* è di tipo **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- Nome del progetto. Il *project_name* è **nvarchar (128)**.  
+ [ @project_name = ] *project_name*  
+ Nome del progetto. *project_name* è di tipo **nvarchar(128)**.  
   
- [ @object_type =] *object_type*  
- Tipo di oggetto. Nei valori validi sono inclusi `20` per un progetto e `30` per un pacchetto. Il *object_type* è **smallInt**.  
+ [ @object_type = ] *object_type*  
+ Tipo di oggetto. Nei valori validi sono inclusi `20` per un progetto e `30` per un pacchetto. *object_type* è di tipo **smallInt**.  
   
- [@ name oggetto =] *Name dell'oggetto*  
- Nome del pacchetto. Il *Name dell'oggetto* è **nvarchar (260)**.  
+ [ @ object_name = ] *object_name*  
+ Nome del pacchetto. *object_name* è di tipo **nvarchar(260)**.  
   
- [ @parameter_ nome =] *parameter_name*  
- Nome del parametro. Il *parameter_ nome* è **nvarchar (128)**.  
+ [ @parameter_ name = ] *parameter_name*  
+ Nome del parametro. *parameter_ name* è di tipo **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -64,12 +65,12 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 -   Autorizzazioni READ e MODIFY sul progetto  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
- Nell'elenco seguente vengono descritte alcune condizioni che potrebbero causare la procedura clear_object_parameter archiviati generare un errore:  
+ Nell'elenco seguente sono descritte alcune condizioni che possono determinare la generazione di un errore da parte della stored procedure clear_object_parameter:  
   
 -   Specificato tipo di oggetto non valido o impossibile trovare il nome dell'oggetto nel progetto  
   
@@ -80,4 +81,3 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 -   Utente senza autorizzazioni appropriate.  
   
   
-

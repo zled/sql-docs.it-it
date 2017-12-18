@@ -1,29 +1,32 @@
 ---
-title: Distribuire un progetto SSIS con PowerShell | Documenti Microsoft
+title: Distribuire un progetto SSIS con PowerShell | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
-ms.technology:
-- integration-services
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: 37fe358eb7e11cb878ebd9b0c8356ac2295ca7e9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: aa8e562bc16cdb6430ad0c8eff8b48b0d0b861b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Distribuire un progetto SSIS con PowerShell
-In questa esercitazione introduttiva viene illustrato come utilizzare uno script di PowerShell per connettersi a un server di database e distribuire un progetto SSIS nel catalogo SSIS.
+Questa esercitazione introduttiva illustra come usare uno script di PowerShell per connettersi a un server di database e distribuire un progetto SSIS nel catalogo SSIS.
 
 ## <a name="powershell-script"></a>Script di PowerShell
 Specificare i valori appropriati per le variabili nella parte superiore dello script seguente e quindi eseguire lo script per distribuire il progetto SSIS.
 
 > [!NOTE]
-> L'esempio seguente usa l'autenticazione di Windows. Per utilizzare l'autenticazione di SQL Server, sostituire il `Integrated Security=SSPI;` argomento con `User ID=<user name>;Password=<password>;`.
+> L'esempio seguente usa l'autenticazione di Windows. Per usare l'autenticazione di SQL Server, sostituire l'argomento `Integrated Security=SSPI;` con `User ID=<user name>;Password=<password>;`.
 
 ```powershell
 # Variables
@@ -64,16 +67,15 @@ Write-Host "Done."
 
 ## <a name="next-steps"></a>Passaggi successivi
 - Prendere in considerazione altri modi per distribuire un pacchetto.
-    - [Distribuire un pacchetto SSIS con SQL Server Management Studio](./ssis-quickstart-deploy-ssms.md)
+    - [Distribuire un pacchetto SSIS con SSMS](./ssis-quickstart-deploy-ssms.md)
     - [Distribuire un pacchetto SSIS con Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Distribuire un pacchetto SSIS con Transact-SQL (codice di Visual Studio)](ssis-quickstart-deploy-tsql-vscode.md)
+    - [Distribuire un pacchetto SSIS con Transact-SQL (Visual Studio Code)](ssis-quickstart-deploy-tsql-vscode.md)
     - [Distribuire un pacchetto SSIS dal prompt dei comandi](./ssis-quickstart-deploy-cmdline.md)
-    - [Distribuire un pacchetto SSIS con c#](./ssis-quickstart-deploy-dotnet.md) 
-- Eseguire un pacchetto distribuito. Per eseguire un pacchetto, è possibile scegliere da numerosi strumenti e linguaggi. Per altre informazioni, vedere gli articoli seguenti:
-    - [Eseguire un pacchetto SSIS con SQL Server Management Studio](./ssis-quickstart-run-ssms.md)
+    - [Distribuire un pacchetto SSIS con C#](./ssis-quickstart-deploy-dotnet.md) 
+- Eseguire un pacchetto distribuito. Per eseguire un pacchetto, è possibile scegliere tra diversi strumenti e linguaggi. Per altre informazioni, vedere gli articoli seguenti:
+    - [Eseguire un pacchetto SSIS con SSMS](./ssis-quickstart-run-ssms.md)
     - [Eseguire un pacchetto SSIS con Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Eseguire un pacchetto SSIS con Transact-SQL (codice di Visual Studio)](ssis-quickstart-run-tsql-vscode.md)
+    - [Eseguire un pacchetto SSIS con Transact-SQL (Visual Studio Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Eseguire un pacchetto SSIS dal prompt dei comandi](./ssis-quickstart-run-cmdline.md)
     - [Eseguire un pacchetto SSIS con PowerShell](ssis-quickstart-run-powershell.md)
-    - [Eseguire un pacchetto SSIS con c#](./ssis-quickstart-run-dotnet.md) 
-
+    - [Eseguire un pacchetto SSIS con C#](./ssis-quickstart-run-dotnet.md) 

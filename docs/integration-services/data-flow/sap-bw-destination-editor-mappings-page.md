@@ -1,28 +1,28 @@
 ---
-title: Editor destinazione SAP BW (pagina Mapping) | Documenti Microsoft
+title: Editor destinazione SAP BW (pagina Mapping) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwdestination.columns.f1
+f1_keywords: sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 245ff83f84ff1a60a08f4a73d24ee76179b31e2b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 285474f7ac773bef181487099409bc4c2e93dfc8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Editor destinazione SAP BW (pagina Mapping)
   Usare la pagina **Mapping** dell' **Editor destinazione SAP BW** per eseguire il mapping delle colonne di input alle colonne di destinazione.  
@@ -78,16 +78,15 @@ ms.lasthandoff: 08/03/2017
  **Colonna di input**  
  Visualizzare le colonne di input selezionate.  
   
- Per eseguire il mapping di un'altra colonna di input alla stessa colonna di destinazione, selezionare un'altra colonna di input nell'elenco. Per rimuovere un mapping, selezionare  **\<ignorare >** per escludere la colonna di input dall'output.  
+ Per eseguire il mapping di un'altra colonna di input alla stessa colonna di destinazione, selezionare un'altra colonna di input nell'elenco. Per rimuovere un mapping, selezionare **\<ignora>** per escludere la colonna di input dall'output.  
   
  **Colonna di destinazione**  
  Visualizzare ogni colonna di destinazione disponibile, indipendentemente dal fatto che ne venga eseguito il mapping.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor destinazione SAP BW &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Editor destinazione SAP BW &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [Editor destinazione SAP BW &#40; Pagina avanzate &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
- [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Editor destinazione SAP BW &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [Editor destinazione SAP BW &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [Editor destinazione SAP BW &#40;pagina Avanzate&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+ [Guida sensibile al contesto di Microsoft Connector per SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

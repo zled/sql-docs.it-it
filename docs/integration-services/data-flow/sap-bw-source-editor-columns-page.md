@@ -1,28 +1,28 @@
 ---
-title: Editor origine SAP BW (pagina colonne) | Documenti Microsoft
+title: Editor origine SAP BW (pagina Colonne) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwsource.columns.f1
+f1_keywords: sql13.dts.designer.sapbwsource.columns.f1
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2047fddb6986bd3014015d742053bfb0dda42019
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c6bb6d1d1061314752207fce3cdb5123daa57104
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>Editor origine SAP BW (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine SAP BW** per eseguire il mapping di una colonna di output a ogni colonna esterna (di origine).  
@@ -59,13 +59,12 @@ ms.lasthandoff: 08/03/2017
  Per modificare l'ordine delle colonne, nell'elenco **Colonne esterne disponibili** deselezionare le caselle di controllo per tutte le colonne. Selezionare quindi le colonne nell'ordine in cui si desidera visualizzarle.  
   
  **Colonna di output**  
- Consente di specificare un nome univoco per ogni colonna di output. L'impostazione predefinita è il nome della colonna (di origine) esterna selezionata. Tuttavia, è possibile immettere qualsiasi nome descrittivo univoco. [!INCLUDE[ssIS](../../includes/ssis-md.md)]Finestra di progettazione verrà visualizzato il **colonna di Output** nomi per le colonne quando si configurano i componenti a valle che utilizzano i dati dall'origine.  
+ Consente di specificare un nome univoco per ogni colonna di output. L'impostazione predefinita è il nome della colonna (di origine) esterna selezionata. Tuttavia, è possibile immettere qualsiasi nome descrittivo univoco. [!INCLUDE[ssIS](../../includes/ssis-md.md)] verranno visualizzati i nomi di **Colonna di output** per le colonne quando si configurano i componenti a valle che utilizzano i dati di questa origine.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor origine SAP BW &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [Editor origine SAP BW &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [Editor origine SAP BW &#40; Pagina avanzate &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
- [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Editor origine SAP BW &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [Editor origine SAP BW &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [Editor origine SAP BW &#40;pagina Avanzate&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+ [Guida sensibile al contesto di Microsoft Connector per SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

@@ -1,12 +1,14 @@
 ---
-title: Estrarre dati utilizzando l'origine OLE DB | Documenti Microsoft
+title: Estrarre i dati tramite l'origine OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c80e5fef4855cf5066dfa00bf527e452aa616d33
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 67082fa6742c230b5a60e98a553c975b9fab228d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Estrazione dei dati tramite l'origine OLE DB
   È possibile aggiungere e configurare un'origine OLE DB solo se il pacchetto include già almeno un'attività Flusso di dati.  
@@ -73,7 +74,6 @@ ms.lasthandoff: 08/03/2017
  [Origine OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Trasformazioni di Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Percorsi in Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [Attività flusso di dati](../../integration-services/control-flow/data-flow-task.md)  
+ [Attività Flusso di dati](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

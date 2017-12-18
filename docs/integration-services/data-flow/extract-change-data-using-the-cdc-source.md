@@ -1,26 +1,27 @@
 ---
-title: Estrarre i dati delle modifiche tramite l'origine CDC | Documenti Microsoft
+title: Estrarre dati delle modifiche tramite l'origine CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 343efa882f37276c6921edc72d2bf1e615ff1a18
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 52bc98b92c34f03f91ebc917ec30c4e4e7360157
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Estrarre dati delle modifiche tramite l'origine CDC
   Per aggiungere e configurare un'origine CDC, è necessario che il pacchetto includa già almeno un'attività Flusso di dati e un'attività di controllo CDC.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  Selezionare o digitare il nome dell' **istanza di acquisizione CDC** con la tabella CDC da leggere.  
   
-     Una tabella di origine acquisita può contenere una o due istanze acquisite per gestire la transizione senza problemi della definizione di tabella mediante modifiche dello schema. Se per la tabella di origine in corso di acquisizione sono definite più istanze di acquisizione, selezionare l'istanza di acquisizione che si desidera utilizzare a questo punto. Il nome di istanza di acquisizione predefinito per una tabella [schema]. [tabella] è \<schema > _\<tabella >, ma che i nomi delle istanze di acquisizione effettivi in uso potrebbero essere diversi. La tabella effettiva che viene letto dal è la tabella CDC **cdc.\< istanza di acquisizione > CT**.  
+     Una tabella di origine acquisita può contenere una o due istanze acquisite per gestire la transizione senza problemi della definizione di tabella mediante modifiche dello schema. Se per la tabella di origine in corso di acquisizione sono definite più istanze di acquisizione, selezionare l'istanza di acquisizione che si desidera utilizzare a questo punto. Il nome dell'istanza di acquisizione predefinito per una tabella [schema].[tabella] è \<schema_\<tabella, ma i nomi delle istanze di acquisizione effettivi in uso possono essere diversi. La tabella effettiva da cui viene eseguita la lettura è la tabella CDC **cdc .\<istanza-acquisizione>_CT**.  
   
 8.  Selezionare la modalità di elaborazione più adatta per le esigenze di elaborazione correnti. Di seguito sono elencate le opzioni possibili:  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/03/2017
   
     -   **Net**: restituisce una sola riga delle modifiche per ogni riga di origine modificata nell'intervallo di elaborazione CDC corrente. Se una riga di origine è stata aggiornata più volte, viene restituita la modifica combinata (ad esempio, inserimento+aggiornamento viene prodotto come un singolo aggiornamento e aggiornamento+eliminazione viene prodotto come una singola eliminazione). Quando si utilizza la modalità di elaborazione delle modifiche Net, è possibile suddividere le modifiche negli output Delete, Insert e Update e gestirli in parallelo, perché la singola riga di origine viene visualizzata in più output.  
   
-    -   **NET con maschera di aggiornamento**: questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **_ $\<nome colonna >\__Changed** che indicano le colonne modificate nella finestra corrente riga modificata.  
+    -   **Net with update mask**: questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<<nome-colonna>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
   
     -   **Net with merge**: questa modalità è simile alla modalità Net standard, ma con le operazioni Insert e Update unite in una singola operazione Merge (UPSERT).  
   
@@ -76,9 +77,8 @@ ms.lasthandoff: 08/03/2017
 15. Scegliere **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor origine CDC &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [Editor origine CDC &#40; Pagina colonne &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [Editor origine CDC &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [Editor origine CDC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
+ [Editor origine CDC &#40;pagina Colonne&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
+ [Editor origine CDC &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
   
-

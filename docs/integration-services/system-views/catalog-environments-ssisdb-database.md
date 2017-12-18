@@ -1,29 +1,30 @@
 ---
-title: Catalog. Environments (Database SSISDB) | Documenti Microsoft
+title: catalog.environments (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6e7ba1ba0bd8a444e4609a2f3d011da9cd233b73
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: edb3360d05e44131d6f30b510ed5dd120e2aeae7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments (database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Vengono visualizzati i dettagli relativi all'ambiente di tutti gli ambienti nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Negli ambienti sono contenute variabili che possono fare riferimento ai progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -32,9 +33,9 @@ ms.lasthandoff: 09/26/2017
 |environment_id|**bigint**|Identificatore (ID) univoco dell'ambiente.|  
 |name|**sysname**|Nome dell'ambiente.|  
 |folder_id|**bigint**|ID univoco della cartella in cui si trova l'ambiente.|  
-|description|**nvarchar (1024)**|Descrizione dell'ambiente. Questo valore è facoltativo.|  
-|created_by_sid|**varbinary (85)**|ID di sicurezza (SID) dell'utente che ha creato l'ambiente.|  
-|created_by_name|**nvarchar (128)**|Nome dell'utente che ha creato l'ambiente.|  
+|description|**nvarchar(1024)**|Descrizione dell'ambiente. Questo valore è facoltativo.|  
+|created_by_sid|**varbinary(85)**|ID di sicurezza (SID) dell'utente che ha creato l'ambiente.|  
+|created_by_name|**nvarchar(128)**|Nome dell'utente che ha creato l'ambiente.|  
 |created_time|**datetimeoffset**|Data e ora di creazione dell'ambiente.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -45,12 +46,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Autorizzazione READ sull'ambiente  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 > [!NOTE]  
 >  È applicata la sicurezza a livello di riga, pertanto vengono visualizzate solo le righe per le quali si dispone delle autorizzazioni per la visualizzazione.  
   
   
-

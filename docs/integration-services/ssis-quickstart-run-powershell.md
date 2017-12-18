@@ -1,29 +1,32 @@
 ---
-title: Eseguire un pacchetto SSIS con PowerShell | Documenti Microsoft
+title: Eseguire un pacchetto SSIS con PowerShell | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
-ms.technology:
-- integration-services
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: d392ac49442ef0f04961908fff7acf553fa1aa57
-ms.contentlocale: it-it
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 16137e7b3fe1880592afa025f324e614332d87d3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Eseguire un pacchetto SSIS con PowerShell
-In questa esercitazione introduttiva viene illustrato come utilizzare uno script di PowerShell per connettersi a un server di database ed eseguire un pacchetto SSIS.
+Questa esercitazione introduttiva illustra come usare uno script di PowerShell per connettersi a un server di database ed eseguire un pacchetto SSIS.
 
 ## <a name="powershell-script"></a>Script di PowerShell
 Specificare i valori appropriati per le variabili nella parte superiore dello script seguente e quindi eseguire lo script per eseguire il pacchetto SSIS.
 
 > [!NOTE]
-> L'esempio seguente usa l'autenticazione di Windows. Per utilizzare l'autenticazione di SQL Server, sostituire il `Integrated Security=SSPI;` argomento con `User ID=<user name>;Password=<password>;`.
+> L'esempio seguente usa l'autenticazione di Windows. Per usare l'autenticazione di SQL Server, sostituire l'argomento `Integrated Security=SSPI;` con `User ID=<user name>;Password=<password>;`.
 
 ```powershell
 # Variables
@@ -66,9 +69,8 @@ Write-Host "Done."
 
 ## <a name="next-steps"></a>Passaggi successivi
 - Prendere in considerazione altri modi per eseguire un pacchetto.
-    - [Eseguire un pacchetto SSIS con SQL Server Management Studio](./ssis-quickstart-run-ssms.md)
+    - [Eseguire un pacchetto SSIS con SSMS](./ssis-quickstart-run-ssms.md)
     - [Eseguire un pacchetto SSIS con Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Eseguire un pacchetto SSIS con Transact-SQL (codice di Visual Studio)](ssis-quickstart-run-tsql-vscode.md)
+    - [Eseguire un pacchetto SSIS con Transact-SQL (Visual Studio Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Eseguire un pacchetto SSIS dal prompt dei comandi](./ssis-quickstart-run-cmdline.md)
-    - [Eseguire un pacchetto SSIS con c#](./ssis-quickstart-run-dotnet.md) 
-
+    - [Eseguire un pacchetto SSIS con C#](./ssis-quickstart-run-dotnet.md) 

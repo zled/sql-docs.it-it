@@ -1,10 +1,13 @@
 ---
 title: Risoluzione dei problemi di PolyBase | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 8/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,14 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ee142066a441189c02488e3e0c9d3b58a4d02a5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ea89e4192c833ce569c336f5f2eb5f7382c136ab
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="polybase-troubleshooting"></a>Risoluzione dei problemi di PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
-  Per risolvere i problemi relativi a PolyBase, usare le tecniche illustrate in questo argomento.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per risolvere i problemi relativi a PolyBase, usare le tecniche illustrate in questo argomento.  
   
 ## <a name="catalog-views"></a>Viste del catalogo  
  Usare le viste del catalogo elencate di seguito per gestire le operazioni di PolyBase.  

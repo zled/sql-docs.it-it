@@ -1,12 +1,14 @@
 ---
-title: Integration Services (SSIS) espressioni | Documenti Microsoft
+title: Espressioni di Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988f9993207daeebe6c5aaea0f60d887fe74024c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 14b6c80d59f3f302e2beef26a03d95b2bf6f8294
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-expressions"></a>Espressioni di Integration Services (SSIS)
   Un'espressione è una combinazione di simboli, ovvero identificatori, valori letterali, funzioni e operatori, che restituiscono un singolo valore di dati. È possibile creare espressioni semplici, costituite da un'unica costante, variabile o funzione, In genere le espressioni sono complesse in quanto includono più operatori e funzioni e fanno riferimento a più colonne e variabili. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile usare le espressioni per definire condizioni per istruzioni CASE, creare e aggiornare valori in colonne di dati, assegnare valori a variabili, aggiornare o popolare proprietà in fase di esecuzione, definire vincoli in vincoli di precedenza e definire espressioni usate dal contenitore Ciclo For.  
@@ -48,9 +49,9 @@ ms.lasthandoff: 08/03/2017
   
 -   Il valore delle variabili viene impostato tramite un'espressione. Ad esempio, GETDATE() imposta il valore della variabile sulla data corrente.  
   
--   Nei vincoli di precedenza le espressioni consentono di impostare le condizioni che determinano se l'attività o il contenitore vincolato di un pacchetto viene eseguito. Le espressioni usate in un vincolo di precedenza devono restituire **true** o **false**. Ad esempio, l'espressione @A > @B Confronta due variabili definite dall'utente per determinare se viene eseguita l'attività vincolata.  
+-   Nei vincoli di precedenza le espressioni consentono di impostare le condizioni che determinano se l'attività o il contenitore vincolato di un pacchetto viene eseguito. Le espressioni usate in un vincolo di precedenza devono restituire **true** o **false**. Ad esempio, l'espressione @A > @B esegue un confronto tra due variabili definite dall'utente per determinare se l'attività vincolata viene eseguita.  
   
--   In un contenitore Ciclo For le espressioni consentono di compilare le istruzioni di inizializzazione, valutazione e incremento utilizzate dalla struttura del ciclo. Ad esempio, l'espressione @Counter = 1 Inizializza il contatore del ciclo.  
+-   In un contenitore Ciclo For le espressioni consentono di compilare le istruzioni di inizializzazione, valutazione e incremento utilizzate dalla struttura del ciclo. Ad esempio, l'espressione @Counter = 1 inizializza il contatore del ciclo.  
   
  Con le espressioni è inoltre possibile aggiornare i valori delle proprietà di pacchetti, contenitori quali ciclo For e ciclo Foreach, attività, gestioni connessioni a livello di pacchetto e progetto, provider di log ed enumeratori Foreach. Ad esempio, tramite un'espressione di proprietà, è possibile assegnare la stringa "Localhost.AdventureWorks" alla proprietà ConnectionName dell'attività Esegui SQL. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -77,4 +78,3 @@ ms.lasthandoff: 08/03/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

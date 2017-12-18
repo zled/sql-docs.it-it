@@ -1,16 +1,17 @@
 ---
-title: Convalida di un componente del flusso di dati | Documenti Microsoft
+title: Convalida di un componente flusso di dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,17 +24,16 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 937d904f7139e03655177b4544d573da7cc35e14
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c3953a6c1fbf676d82b3057df2eb9a61f9cc6e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="validating-a-data-flow-component"></a>Convalida di un componente del flusso di dati
   Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> della classe di base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> viene fornito per impedire l'esecuzione di un componente che non è configurato correttamente. Utilizzare questo metodo per verificare che un componente includa il numero previsto di oggetti di input e output, che i valori delle proprietà personalizzate del componente siano accettabili e che siano state specificate le eventuali connessioni richieste. Utilizzare questo metodo anche per verificare che le colonne nelle raccolte di input e output includano i tipi di dati corretti e che l'oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> di ogni colonna sia impostato correttamente per il componente. L'implementazione della classe di base assiste nel processo di convalida controllando la raccolta di colonne di input del componente e verificando che ogni colonna della raccolta faccia riferimento a una colonna presente in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> del componente a monte.  
@@ -45,9 +45,9 @@ ms.lasthandoff: 08/03/2017
   
  Il valore <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN> indica che il componente contiene un errore che può essere corretto modificando il componente nella finestra di progettazione. L'errore è in genere causato da una proprietà personalizzata o una connessione richiesta che non è specificata o non è impostata correttamente.  
   
- Il valore finale dell'errore è <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>, che indica che il componente ha individuato errori che dovrebbero verificarsi solo se la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> è stata modificata direttamente, modificando il codice XML del pacchetto o utilizzando il modello a oggetti. Ad esempio, questo tipo di errore si verifica quando un componente ha aggiunto solo un input ma durante la convalida vengono individuati più input in <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Gli errori che generano questo restituiscono valore può essere corretti solo reimpostando il componente utilizzando il **reimpostare** pulsante il **Editor avanzato** la finestra di dialogo.  
+ Il valore finale dell'errore è <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>, che indica che il componente ha individuato errori che dovrebbero verificarsi solo se la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> è stata modificata direttamente, modificando il codice XML del pacchetto o utilizzando il modello a oggetti. Ad esempio, questo tipo di errore si verifica quando un componente ha aggiunto solo un input ma durante la convalida vengono individuati più input in <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Gli errori che generano questo valore restituito possono essere corretti solo reimpostando il componente tramite il pulsante **Reimposta** della finestra di dialogo **Editor avanzato**.  
   
- Oltre a restituire valori di errori, i componenti forniscono feedback inviando avvisi o errori durante la convalida. I metodi <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> forniscono questo meccanismo. Quando questi metodi vengono chiamati, questi eventi vengono registrati nel **elenco errori** finestra [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Gli sviluppatori di componenti possono quindi fornire feedback diretto agli utenti sugli errori che si sono verificati e, se necessario, su come correggerli.  
+ Oltre a restituire valori di errori, i componenti forniscono feedback inviando avvisi o errori durante la convalida. I metodi <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> forniscono questo meccanismo. Quando questi metodi vengono chiamati, tali eventi vengono inviati nella finestra **Elenco errori** di [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Gli sviluppatori di componenti possono quindi fornire feedback diretto agli utenti sugli errori che si sono verificati e, se necessario, su come correggerli.  
   
  Nell'esempio di codice seguente viene illustrata un'implementazione sottoposta a override di <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>.  
   
@@ -196,4 +196,3 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-

@@ -2,9 +2,12 @@
 title: Eseguire query con ricerca full-text | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bfded7d067ded1dacaffede2f36f261451cd59c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-with-full-text-search"></a>Esecuzione della query con ricerca Full-Text
-
-Per scrivere query full-text, usare i predicati full-text **CONTAINS** e **FREETEXT** e le funzioni valutate a livello dei set di righe **CONTAINSTABLE** e **FREETEXTTABLE** con l'istruzione **SELECT**. In questo argomento vengono presentati alcuni esempi di predicati e funzioni per consente di scegliere quelli più adatti.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Per scrivere query full-text, usare i predicati full-text **CONTAINS** e **FREETEXT** e le funzioni valutate a livello dei set di righe **CONTAINSTABLE** e **FREETEXTTABLE** con l'istruzione **SELECT**. In questo argomento vengono presentati alcuni esempi di predicati e funzioni per consente di scegliere quelli più adatti.
 
 -   Usare **CONTAINS** e **CONTAINSTABLE** per trovare i valori corrispondenti a parole e frasi.
 -   Usare **FREETEXT** e **FREETEXTTABLE** per trovare i valori corrispondenti al significato, ma non all'esatta formulazione delle parole.

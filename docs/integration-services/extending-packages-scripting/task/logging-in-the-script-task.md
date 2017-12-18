@@ -1,18 +1,18 @@
 ---
-title: "La registrazione nell'attività Script | Documenti Microsoft"
+title: "Registrazione nell'attività Script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-xml
+ms.suite: sql
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - SQL Server Integration Services packages, logs
 - SSIS packages, logs
@@ -23,25 +23,24 @@ helpviewer_keywords:
 - Script task [Integration Services], logs
 - packages [Integration Services], logs
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 98859dafe0b023954f10239fe11e8b76f36ab28b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3f656f97ab20e1692fdfa3fe6996bfa1d36d5256
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-in-the-script-task"></a>Registrazione nell'attività Script
-  L'utilizzo della registrazione nei pacchetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] consente di registrare informazioni dettagliate su stato di esecuzione, risultati e problemi, tramite la registrazione di eventi predefiniti o di messaggi definiti dall'utente da analizzare in un secondo momento. L'attività Script può utilizzare il <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> metodo il **Dts** oggetto da registrare dati definiti dall'utente. Se la registrazione è abilitata e il **ScriptTaskLogEntry** evento è selezionato per l'accesso il **dettagli** scheda della finestra il **Configura log SSIS** la finestra di dialogo, una singola chiamata al <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> metodo archivia le informazioni sugli eventi in tutti i provider di log configurati per l'attività.  
+  L'utilizzo della registrazione nei pacchetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] consente di registrare informazioni dettagliate su stato di esecuzione, risultati e problemi, tramite la registrazione di eventi predefiniti o di messaggi definiti dall'utente da analizzare in un secondo momento. L'attività Script può usare il metodo <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> dell'oggetto **Dts** per registrare dati definiti dall'utente. Se la registrazione è abilitata e l'evento **ScriptTaskLogEntry** è selezionato per la registrazione nella scheda **Dettagli** della finestra di dialogo **Configura log SSIS**, una singola chiamata al metodo <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> archivia le informazioni dell'evento in tutti i provider di log configurati per l'attività.  
   
 > [!NOTE]  
 >  Anche se è possibile eseguire direttamente la registrazione dall'attività Script, è consigliabile implementare eventi anziché registrare. Quando si utilizzano gli eventi, oltre ad abilitare la registrazione dei messaggi di eventi, è anche possibile rispondere all'evento con gestori eventi predefiniti o definiti dall'utente.  
   
- Per ulteriori informazioni sulla registrazione, vedere [Integration Services &#40; SSIS &#41; Registrazione](../../../integration-services/performance/integration-services-ssis-logging.md).  
+ Per altre informazioni sulla registrazione, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="logging-example"></a>Esempio di registrazione  
  Nell'esempio seguente è illustrata la registrazione dall'attività Script registrando un valore che rappresenta il numero di righe elaborate.  
@@ -101,10 +100,9 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Post di blog, [registrazione di eventi personalizzati per le attività di Integration Services](http://go.microsoft.com/fwlink/?LinkId=165644), su dougbert.com  
+-   Post di blog [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=165644)(Registrazione di eventi personalizzati per le attività di Integration Services) nel sito Web dougbert.com  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40; SSIS &#41; Registrazione](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Registrazione di Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

@@ -1,43 +1,44 @@
 ---
-title: "Convalida XML con l'attività XML | Documenti Microsoft"
+title: "Eseguire la convalida XML con Attività XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML validation
 - XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15e3873505601704c4a14d4e5701875b7dc104f5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 71429997374af75e681da85b0f54588448e8937a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Eseguire la convalida XML con Attività XML
   È possibile convalidare documenti XML e ottenere output avanzato degli errori abilitando la proprietà **ValidationDetails** dell'Attività XML.  
   
  L'immagine seguente mostra l' **Editor attività XML** con le impostazioni necessarie per la convalida di XML con l'output di errore completo.  
   
- ![Proprietà dell'attività XML nell'Editor attività XML](../../integration-services/control-flow/media/xmltaskproperties.jpg "proprietà dell'attività XML nell'Editor attività XML")  
+ ![Proprietà attività XML nell'Editor attività XML](../../integration-services/control-flow/media/xmltaskproperties.jpg "Proprietà attività XML nell'Editor attività XML")  
   
  Prima che fosse disponibile la proprietà **ValidationDetails** , la convalida XML da parte dell'Attività XML restituiva solo un risultato di tipo True o False, senza informazioni sugli errori o sulle rispettive posizioni. Attualmente, quando si imposta **ValidationDetails** su True, il file di output contiene informazioni dettagliate su ogni errore, inclusi il numero di riga e la posizione. È possibile usare questa informazione per comprendere, individuare e risolvere gli errori nei documenti XML.  
   
  La funzionalità di convalida XML è facilmente scalabile per documenti XML di grandi dimensioni e un numero elevato di errori. Dato che il file di output è in formato XML, è possibile eseguire una query e analizzare l'output. Ad esempio, se l'output contiene un numero elevato di errori, è possibile raggrupparli usando un [!INCLUDE[tsql](../../includes/tsql-md.md)] , come descritto in questo argomento.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introdotto il **ValidationDetails** proprietà [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. La proprietà è disponibile anche in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) ha introdotto la proprietà **ValidationDetails** in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. La proprietà è disponibile anche in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Esempio di output per un file XML valido  
  Ecco un file di output di esempio con i risultati della convalida per un file XML valido.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 08/03/2017
 ```  
   
 ## <a name="sample-output-for-xml-thats-not-valid"></a>Esempio di output per un file XML non valido  
- Ecco un file di output di esempio con i risultati della convalida per un file XML che contiene un numero ridotto di errori. Il testo del \<errore > è stato eseguito il wrapping di elementi per migliorare la leggibilità.  
+ Ecco un file di output di esempio con i risultati della convalida per un file XML che contiene un numero ridotto di errori. Il testo degli elementi \<errore> è stato mandato a capo per migliorare la leggibilità.  
   
 ```xml  
   
@@ -125,7 +126,6 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività XML](../../integration-services/control-flow/xml-task.md)   
- [Editor attività XML &#40; Pagina generale &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
+ [Editor attività XML &#40;pagina Generale&#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
   
-

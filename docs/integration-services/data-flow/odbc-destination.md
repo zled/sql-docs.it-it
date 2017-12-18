@@ -1,12 +1,14 @@
 ---
-title: Destinazione ODBC | Documenti Microsoft
+title: Destinazione ODBC | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 0c3df5b8f8ef946021fcc72bb12cb164e99fdb5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-destination"></a>Destinazione ODBC
   Tramite la destinazione ODBC viene eseguito il caricamento bulk di dati in tabelle di database supportate da ODBC. La destinazione ODBC utilizza una gestione connessione ODBC per la connessione all'origine dati.  
@@ -67,11 +68,11 @@ ms.lasthandoff: 08/17/2017
   
  Per ulteriori informazioni, vedere uno degli argomenti seguenti:  
   
--   [Editor destinazione ODBC &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione ODBC &#40; Pagina mapping &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC Destination Editor &#40;pagina Mapping&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [Editor destinazione ODBC &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Editor destinazione ODBC &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  La finestra di dialogo **Editor avanzato** contiene le proprietà che è possibile impostare a livello di codice.  
   
@@ -133,7 +134,7 @@ ms.lasthandoff: 08/17/2017
  Elenco delle colonne di destinazione disponibili. Trascinare un colonna di destinazione in una colonna di input disponibile per eseguire il mapping tra le colonne.  
   
 #### <a name="input-column"></a>Colonna di input  
- Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando  **\<ignorare >** per escludere colonne dall'output.  
+ Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando **\<ignora>** per escludere colonne dall'output.  
   
 #### <a name="destination-column"></a>Colonna di destinazione  
  Consente di visualizzare tutte le colonne di destinazione disponibili, con o senza mapping eseguito.  
@@ -186,4 +187,3 @@ ms.lasthandoff: 08/17/2017
 #### <a name="redirect-flow"></a>Reindirizza flusso  
  La riga che determina l'errore o il troncamento viene inviata all'output degli errori della destinazione ODBC. Per ulteriori informazioni, vedere Destinazione ODBC.  
   
-

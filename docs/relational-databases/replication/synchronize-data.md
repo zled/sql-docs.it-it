@@ -2,9 +2,12 @@
 title: Sincronizzare i dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77cda8dd4c3de7ca4af940cb23fefcc09d51c80b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0f308b21bc5d24a7e07944f474f33a85da7e02c0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="synchronize-data"></a>Sincronizzare i dati
-  La sincronizzazione dei dati è il processo di propagazione dei dati e delle modifiche di schema tra il server di pubblicazione e i Sottoscrittori dopo l'applicazione dello snapshot iniziale al Sottoscrittore. La sincronizzazione può verificarsi:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La sincronizzazione dei dati è il processo di propagazione dei dati e delle modifiche di schema tra il server di pubblicazione e i Sottoscrittori dopo l'applicazione dello snapshot iniziale al Sottoscrittore. La sincronizzazione può verificarsi:  
   
 -   Continuamente, come avviene in genere per la replica transazionale.  
   

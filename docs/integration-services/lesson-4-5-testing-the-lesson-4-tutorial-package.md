@@ -1,30 +1,30 @@
 ---
-title: 'Passaggio 5: Test del pacchetto dell''esercitazione della lezione 4 | Documenti Microsoft'
+title: 'Passaggio 5: Test del pacchetto creato nella lezione 4 dell''esercitazione | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 68e4545ee2eae96664007a8dc69c9953c0351107
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e4eb7a17b6a4c71cae84ada9b6cf9a88b326c093
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>Lezione 4-5-test del pacchetto dell'esercitazione della lezione 4
+# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>Lezione 4-5 - Test del pacchetto creato nella lezione 4 dell'esercitazione
 In fase di esecuzione, il file danneggiato Currency_BAD.txt non sarà in grado di generare una corrispondenza all'interno della trasformazione Lookup Currency Key. Dato che l'output degli errori di Lookup Currency Key è stato configurato per il reindirizzamento delle righe con esito negativo alla nuova destinazione Failed Rows, il componente non presenta errori e il pacchetto viene eseguito correttamente. Tutte le righe di errore sono riportate nel file ErrorOutput.txt.  
   
 In questa attività verrà eseguito il test della configurazione dell'output degli errori modificata tramite l'esecuzione del pacchetto. Al termine dell'esecuzione corretta del pacchetto sarà possibile visualizzare il contenuto del file ErrorOutput.txt.  
@@ -37,11 +37,11 @@ Prima di testare il pacchetto è consigliabile verificare che il flusso di contr
   
 **Flusso di controllo**  
   
-![Controllare il flusso nel pacchetto](../integration-services/media/task4lesson2control.gif "controllare il flusso nel pacchetto")  
+![Flusso di controllo nel pacchetto](../integration-services/media/task4lesson2control.gif "Flusso di controllo nel pacchetto")  
   
 **Flusso di dati**  
   
-![Flusso di dati nel pacchetto](../integration-services/media/task5lesson5data.gif "nel pacchetto del flusso di dati")  
+![Flusso di dati nel pacchetto](../integration-services/media/task5lesson5data.gif "Flusso di dati nel pacchetto")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>Per eseguire il pacchetto creato nella lezione 4 dell'esercitazione  
   
@@ -57,4 +57,3 @@ Prima di testare il pacchetto è consigliabile verificare che il flusso di contr
   
   
   
-

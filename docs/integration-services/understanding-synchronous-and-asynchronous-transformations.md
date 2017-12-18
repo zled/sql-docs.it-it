@@ -1,33 +1,33 @@
 ---
-title: Informazioni sulle trasformazioni sincrone e asincrone | Documenti Microsoft
+title: Informazioni sulle trasformazioni sincrone e asincrone | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - transformations [Integration Services], synchronous and asynchronous
 - asynchronous transformations [Integration Services]
 - data flow components [Integration Services], synchronous and asynchronous
 - synchronous transformations [Integration Services]
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9cc38505042dadb1b057a737279be82bb7923432
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c258cd2c85a26c20fc50c1a5e860096f7e69f26f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Informazioni sulle trasformazioni sincrone e asincrone
   La differenza tra una trasformazione sincrona e una asincrona in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] può essere definita più facilmente iniziando con una descrizione della trasformazione sincrona. Se la trasformazione sincrona non soddisfa le esigenze specifiche, è possibile che la progettazione richieda una trasformazione asincrona.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 09/26/2017
   
  Un esempio di una trasformazione sincrona è la trasformazione Conversione dati. Per ogni riga in ingresso, il valore nella colonna specificata viene convertito e la riga viene inviata. Ogni operazione di conversione discreta è indipendente da tutte le altre righe del set di dati.  
   
- In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] script e programmazione, per specificare una trasformazione sincrona, cercare l'ID di input di un componente e assegnarlo al **SynchronousInputID** proprietà di output del componente. In questo modo al motore flusso di dati viene indicato di elaborare ogni riga dall'input e di inviarla automaticamente agli output specificati. Se si desidera che ogni riga venga inviata a ogni output, non è necessario scrivere codice aggiuntivo per l'output dei dati. Se si utilizza il **ExclusionGroup** proprietà per specificare che le righe devono essere inviate solo a uno o a un altro di un gruppo di output, come nella trasformazione Suddivisione condizionale, è necessario chiamare il **DirectRow** per selezionare (metodo) la destinazione appropriata per ogni riga. Quando si dispone di un output degli errori, è necessario chiamare **DirectErrorRow** per inviare le righe con problemi all'output degli errori anziché all'output predefinito.  
+ Per specificare una trasformazione sincrona durante la creazione di script e la programmazione in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], cercare l'ID dell'input di un componente e assegnarlo alla proprietà **SynchronousInputID** degli output del componente. In questo modo al motore flusso di dati viene indicato di elaborare ogni riga dall'input e di inviarla automaticamente agli output specificati. Se si desidera che ogni riga venga inviata a ogni output, non è necessario scrivere codice aggiuntivo per l'output dei dati. Se si usa la proprietà **ExclusionGroup** per specificare che le righe devono essere inviate solo a un gruppo di output, così come nella trasformazione Suddivisione condizionale, è necessario chiamare il metodo **DirectRow** per selezionare la destinazione appropriata per ogni riga. Se si ha un output degli errori, è necessario chiamare **DirectErrorRow** per inviare le righe con problemi all'output degli errori anziché all'output predefinito.  
   
 ## <a name="asynchronous-transformations"></a>Trasformazioni asincrone  
  La progettazione potrebbe richiedere una trasformazione asincrona quando non è possibile elaborare ogni riga in modo indipendente da tutte le altre. In altri termini, non è possibile passare ogni riga nel flusso di dati quando viene elaborata, ma è invece necessario eseguire l'output dei dati in modo asincrono, ovvero in un momento diverso, rispetto all'input. Negli scenari seguenti è ad esempio necessaria una trasformazione asincrona:  
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Non esiste una corrispondenza uno-a-uno tra righe di input e righe di output. Un esempio è la trasformazione Aggregazione, in cui il componente deve aggiungere una riga all'output per mantenere i valori di aggregazione calcolati.  
   
- In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] script e programmazione, si specifica una trasformazione asincrona assegnando un valore compreso tra 0 e il **SynchronousInputID** proprietà di output del componente. . In questo modo si indica al motore flusso di dati di non inviare automaticamente ogni riga agli output. È quindi necessario scrivere codice per inviare ogni riga in modo esplicito all'output appropriato aggiungendola al nuovo buffer di output creato per l'output di una trasformazione asincrona.  
+ Per specificare una trasformazione asincrona durante la creazione di script e la programmazione in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], assegnare il valore 0 alla proprietà **SynchronousInputID** degli output del componente. . In questo modo si indica al motore flusso di dati di non inviare automaticamente ogni riga agli output. È quindi necessario scrivere codice per inviare ogni riga in modo esplicito all'output appropriato aggiungendola al nuovo buffer di output creato per l'output di una trasformazione asincrona.  
   
 > [!NOTE]  
 >  Poiché un componente di origine deve anche aggiungere in modo esplicito ogni riga che legge dall'origine dati ai propri buffer di output, un'origine è simile a una trasformazione con output asincroni.  
@@ -56,10 +56,9 @@ ms.lasthandoff: 09/26/2017
  È anche possibile creare una trasformazione asincrona che emula una trasformazione sincrona copiando in modo esplicito ogni riga di input nell'output. Tramite questo approccio, è possibile rinominare le colonne o convertire tipi o formati di dati. Con questo approccio si verifica tuttavia una riduzione delle prestazioni. È possibile ottenere gli stessi risultati con prestazioni più elevate utilizzando i componenti integrati di Integration Services, ad esempio Copia colonna o Conversione dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di una trasformazione sincrona con il componente Script](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
- [Creazione di una trasformazione asincrona con il componente Script](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)   
+ [Creazione di una trasformazione sincrona con il componente script](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
+ [Creazione di una trasformazione asincrona con il componente script](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)   
  [Sviluppo di un componente di trasformazione personalizzato con output sincroni](../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
  [Sviluppo di un componente di trasformazione personalizzato con output asincroni](../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
   
   
-

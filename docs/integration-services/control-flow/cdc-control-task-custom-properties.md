@@ -1,26 +1,27 @@
 ---
-title: "Proprietà personalizzate dell'attività controllo CDC | Documenti Microsoft"
+title: "Proprietà personalizzate dell'attività di controllo CDC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ed58b63b6bbeff9ffea04325c94d85fe06de1ab
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2d48d78bd1e2e6d86a8416564d5ef7ee22a785d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cdc-control-task-custom-properties"></a>Proprietà personalizzate dell'attività di controllo CDC
   Nella tabella seguente vengono descritte le proprietà personalizzate dell'attività di controllo CDC. Tutte le proprietà sono di lettura/scrittura.  
@@ -39,7 +40,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md)   
- [Editor attività controllo CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [Editor dell'attività di controllo CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
-

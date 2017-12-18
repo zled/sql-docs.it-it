@@ -1,28 +1,28 @@
 ---
-title: Compilazione di pacchetti a livello di codice | Documenti Microsoft
+title: Compilazione di pacchetti a livello di programmazione | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b80495b726ac6fdac713ba028629633bf84cc004
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 88e58bc5a10c7b42f33fe1dae255114a919af556
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="building-packages-programmatically"></a>Compilazione di pacchetti a livello di programmazione
   Se è necessario creare pacchetti in modo dinamico oppure gestire ed eseguire pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] all'esterno dell'ambiente di sviluppo, è possibile modificare i pacchetti a livello di programmazione. Questo approccio rende disponibili diverse opzioni:  
@@ -35,75 +35,74 @@ ms.lasthandoff: 08/03/2017
   
  È possibile utilizzare il modello a oggetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per scrivere codice che consenta di creare, configurare ed eseguire pacchetti in qualsiasi linguaggio di programmazione gestito. Ad esempio, è possibile creare pacchetti guidati dai metadati che configurano le relative connessioni oppure origini dati, trasformazioni e destinazioni in base all'origine dati selezionata e alle relative tabelle e colonne.  
   
- In questa sezione viene descritto e illustrato come creare e configurare un pacchetto a livello di programmazione riga per riga. Alla fine dell'intervallo di opzioni di programmazione di pacchetti meno complessa, è possibile semplicemente caricare ed eseguire un pacchetto esistente senza modifiche come descritto in [in esecuzione e la gestione di pacchetti a livello di codice](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md).  
+ In questa sezione viene descritto e illustrato come creare e configurare un pacchetto a livello di programmazione riga per riga. Per scegliere l'opzione di programmazione di pacchetti meno complessa disponibile, è possibile semplicemente caricare ed eseguire un pacchetto esistente senza modifiche, come descritto in [Esecuzione e gestione dei pacchetti a livello di programmazione](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md).  
   
  Un'opzione intermedia, non descritta in questo documento, consiste nel caricare un pacchetto esistente come modello, riconfigurarlo (ad esempio per un'origine dati diversa) ed eseguirlo. È anche possibile utilizzare le informazioni di questa sezione per modificare gli oggetti esistenti in un pacchetto.  
   
 > [!NOTE]  
 >  Quando si utilizza un pacchetto esistente come modello e si modificano le colonne esistenti nel flusso di dati, può essere necessario rimuovere le colonne esistenti e chiamare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> dei componenti interessati.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Creazione di un pacchetto a livello di codice](../../integration-services/building-packages-programmatically/creating-a-package-programmatically.md)  
+## <a name="in-this-section"></a>Argomenti della sezione  
+ [Creazione di un pacchetto a livello di programmazione](../../integration-services/building-packages-programmatically/creating-a-package-programmatically.md)  
  Viene descritto come creare un pacchetto a livello di programmazione.  
   
- [Aggiunta di attività a livello di codice](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
+ [Aggiunta di attività a livello di programmazione](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
  Viene descritto come aggiungere attività al pacchetto.  
   
- [Connessione a livello di programmazione di attività](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
+ [Connessione di attività a livello di programmazione](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
  Viene descritto come controllare l'esecuzione dei contenitori e delle attività in un pacchetto in base ai risultati dell'esecuzione di un'attività o contenitore precedente.  
   
- [Aggiunta di connessioni a livello di codice](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)  
+ [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)  
  Viene descritto come aggiungere gestioni connessioni a un pacchetto  
   
- [Utilizzo delle variabili a livello di codice](../../integration-services/building-packages-programmatically/working-with-variables-programmatically.md)  
+ [Utilizzo delle variabili a livello di programmazione](../../integration-services/building-packages-programmatically/working-with-variables-programmatically.md)  
  Viene descritto come aggiungere e utilizzare variabili durante l'esecuzione di un pacchetto.  
   
- [Gestione degli eventi a livello di codice](../../integration-services/building-packages-programmatically/handling-events-programmatically.md)  
+ [Gestione degli eventi a livello di programmazione](../../integration-services/building-packages-programmatically/handling-events-programmatically.md)  
  Viene descritto come gestire gli eventi di pacchetti e attività.  
   
- [Abilitazione della registrazione a livello di codice](../../integration-services/building-packages-programmatically/enabling-logging-programmatically.md)  
+ [Abilitazione della registrazione a livello di programmazione](../../integration-services/building-packages-programmatically/enabling-logging-programmatically.md)  
  Viene descritto come abilitare la registrazione per un pacchetto o attività e come applicare filtri personalizzati ai log eventi.  
   
- [Aggiunta di attività flusso di dati a livello di codice](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+ [Aggiunta dell'attività Flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
  Viene descritto come aggiungere e configurare l'attività Flusso di dati e i relativi componenti.  
   
- [Individuazione dei componenti del flusso di dati a livello di codice](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
+ [Individuazione dei componenti del flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
  Viene descritto come individuare i componenti installati nel computer locale.  
   
- [Aggiunta di componenti flusso di dati a livello di codice](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
+ [Aggiunta dei componenti del flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
  Viene descritto come aggiungere un componente a un'attività Flusso di dati.  
   
- [La connessione a livello di programmazione di componenti flusso di dati](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
+ [Connessione dei componenti del flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
  Viene descritto come connettere due componenti di un flusso di dati.  
   
- [Selezionare le colonne di Input a livello di codice](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
+ [Selezione delle colonne di input a livello di programmazione](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
  Viene descritto come selezionare colonne di input tra quelle fornite a un componente dai componenti a monte nel flusso di dati.  
   
- [Salvataggio di un pacchetto a livello di codice](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
+ [Salvataggio di un pacchetto a livello di programmazione](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
  Viene descritto come salvare un pacchetto a livello di programmazione.  
   
 ## <a name="reference"></a>Riferimento  
- [Errori di Integration Services e riferimento ai messaggi](../../integration-services/integration-services-error-and-message-reference.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
  Vengono elencati i codici di errore predefiniti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con i relativi nomi simbolici e le descrizioni.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Estensione di pacchetti tramite Scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [Estensione di pacchetti tramite scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Viene descritto come estendere il flusso di controllo utilizzando l'attività Script e come estendere il flusso di dati utilizzando il componente script.  
   
  [Estensione di pacchetti tramite oggetti personalizzati](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Viene descritto come creare e programmare attività personalizzate, componenti del flusso di dati e altri oggetti di pacchetto da utilizzare in più pacchetti.  
   
- [In esecuzione e la gestione dei pacchetti a livello di codice](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
+ [Esecuzione e gestione dei pacchetti a livello di programmazione](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Viene descritto come enumerare, eseguire e gestire pacchetti nelle cartelle in cui sono archiviati.  
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Esempi CodePlex [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=131204), su www.codeplex.com/MSFTISProdSamples  
+-   Esempi CodePlex relativi ai [prodotti di Integration Services](http://go.microsoft.com/fwlink/?LinkID=131204) sul sito Web www.codeplex.com/MSFTISProdSamples  
   
--   Post di blog, [estensioni personalizzate di analisi delle prestazioni](http://go.microsoft.com/fwlink/?LinkId=238831), su blogs.msdn.com.  
+-   Intervento nel blog relativo all'esecuzione del [profiling delle prestazioni delle estensioni personalizzate](http://go.microsoft.com/fwlink/?LinkId=238831) sul sito Web blogs.msdn.com.  
 
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

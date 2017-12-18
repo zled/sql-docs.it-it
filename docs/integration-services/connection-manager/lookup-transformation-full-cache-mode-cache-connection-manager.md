@@ -1,30 +1,30 @@
 ---
-title: "Modalità di Full Cache trasformazione Ricerca - gestione connessione Cache | Documenti Microsoft"
+title: "Trasformazione Ricerca in modalità Full Cache - Gestione connessione della cache | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Lookup transformation [Integration Services]
+helpviewer_keywords: Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 01d518ca176ab3de156ba303221777e9cbc65207
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 804b0ab72a0e52c9ddcd10f8261998e0e8847d9f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Modalità di Full Cache trasformazione Ricerca - gestione connessione della Cache
+# <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Trasformazione Ricerca in modalità Full Cache - Gestione connessione della cache
   È possibile configurare la trasformazione Ricerca per utilizzare la modalità Full Cache e una gestione connessione della cache. Nella modalità Full Cache, il set di dati di riferimento viene caricato nella cache prima dell'esecuzione della trasformazione Ricerca.  
   
 > [!NOTE]  
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/03/2017
   
  Per altre informazioni, vedere gli argomenti seguenti:  
   
--   [Trasformazione cache](../../integration-services/data-flow/transformations/cache-transform.md)  
+-   [Trasformazione Cache](../../integration-services/data-flow/transformations/cache-transform.md)  
   
 -   [Gestione connessione della cache](../../integration-services/connection-manager/cache-connection-manager.md)  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task.md)  
   
--   [Contenitore di sequenza](../../integration-services/control-flow/sequence-container.md)  
+-   [Contenitore Sequenza](../../integration-services/control-flow/sequence-container.md)  
   
  Per visualizzare un video che illustra come implementare una trasformazione Ricerca in modalità Full Cache usando la gestione connessione della cache, vedere [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=131031)(Procedura: Implementare una trasformazione Ricerca nella modalità Full Cache).  
   
@@ -285,9 +285,8 @@ ms.lasthandoff: 08/03/2017
 9. Eseguire il pacchetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implementare una trasformazione ricerca in modalità Full Cache utilizzando la gestione connessione OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [Implementazione di una ricerca in modalità No Cache o Partial Cache](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implementare una ricerca in modalità No Cache o Partial Cache](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Trasformazioni di Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

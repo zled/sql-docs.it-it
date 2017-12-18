@@ -1,12 +1,14 @@
 ---
-title: Creare e distribuire una Cache per la trasformazione ricerca | Documenti Microsoft
+title: Creare e distribuire una cache per la trasformazione Ricerca | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b859cc7f282c2e1ef5ed095ee8c7326cb7dcf382
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Creazione e distribuzione di una cache per la trasformazione Ricerca
   È possibile creare e distribuire un file di cache (.caw) per la trasformazione Ricerca. Il set di dati di riferimento è archiviato nel file di cache.  
@@ -91,12 +92,11 @@ ms.lasthandoff: 08/03/2017
   
 4.  Configurare il progetto per creare un'utilità di distribuzione e quindi compilare il progetto. Per altre informazioni, vedere [Creazione di un'utilità di distribuzione](../../../integration-services/packages/create-a-deployment-utility.md).  
   
-     Un file manifesto, \< *nome progetto*>. Viene >.ssisdeploymentmanifest.XML che elenca i vari file nel progetto, i pacchetti e le configurazioni del pacchetto.  
+     Viene creato un file manifesto, \<*nome progetto*>.SSISDeploymentManifest.xml, che elenca i vari file nel progetto, i pacchetti e le configurazioni del pacchetto.  
   
 5.  Distribuire il pacchetto nel file system. Per altre informazioni, vedere [Distribuzione di pacchetti con l'utilità di distribuzione](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un'utilità di distribuzione](../../../integration-services/packages/create-a-deployment-utility.md)  
+ [Creazione di un'utilità di distribuzione](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   
-

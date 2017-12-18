@@ -1,29 +1,30 @@
 ---
-title: "Attività di controllo CDC | Documenti Microsoft"
+title: "Attività di controllo CDC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 99a864cf9f2e8708fa4e605dacaa7ecaf170ef79
-ms.contentlocale: it-it
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: d098ce43f58a5a65424b536742da199bb162957f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cdc-control-task"></a>Attività di controllo CDC
   L'attività di controllo CDC viene utilizzata per controllare il ciclo di vita di pacchetti Change Data Capture (CDC). Questa attività consente di gestire la sincronizzazione del pacchetto CDC con il pacchetto di caricamento iniziale e la gestione di intervalli di numeri di sequenza del file di log (LSN) elaborati in un'esecuzione di un pacchetto CDC. L'attività di controllo CDC, inoltre, consente di gestire gli scenari di errore e il recupero da errori.  
@@ -73,9 +74,9 @@ ms.lasthandoff: 08/11/2017
 ## <a name="configuring-the-cdc-control-task"></a>Configurazione dell'attività di controllo CDC  
  È possibile impostare le proprietà tramite Progettazione SSIS o a livello di codice.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
--   [Proprietà personalizzate dell'attività controllo CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
+-   [Proprietà personalizzate dell'attività di controllo CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Definire una variabile di stato](../../integration-services/data-flow/define-a-state-variable.md)  
@@ -158,4 +159,3 @@ ms.lasthandoff: 08/11/2017
  **Nome dello stato**  
  Digitare un nome da associare allo stato CDC persistente. Un nome dello stato comune verrà specificato dal caricamento completo e dai pacchetti CDC che utilizzano lo stesso contesto. Questo nome viene utilizzato per cercare la riga di stato nella tabella di stato  
   
-

@@ -2,9 +2,12 @@
 title: Classe di evento Sort Warnings | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b0f67e978040b0efbb440b1d31055ff4058c53e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d24e294e048d5673e9ed4e51cfb20fce153e9e67
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings - classe di evento
-  La classe di evento Sort Warnings indica che per le operazioni di ordinamento non è disponibile memoria sufficiente. Ciò vale soltanto per le operazioni di ordinamento eseguite in una query, ad esempio una clausola ORDER BY in un'istruzione SELECT, e non per le operazioni di ordinamento che implicano la creazione di indici.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento Sort Warnings indica che per le operazioni di ordinamento non è disponibile memoria sufficiente. Ciò vale soltanto per le operazioni di ordinamento eseguite in una query, ad esempio una clausola ORDER BY in un'istruzione SELECT, e non per le operazioni di ordinamento che implicano la creazione di indici.  
   
  Se una query che implica un'operazione di ordinamento genera una classe di evento Sort Warnings e il valore della colonna di dati EventSubClass è uguale a 2, è possibile che l'esecuzione della query risulti rallentata perché l'ordinamento richiede l'esecuzione di più passaggi sui dati. Per determinare se l'operazione di ordinamento può essere eliminata, analizzare ulteriormente la query.  
   

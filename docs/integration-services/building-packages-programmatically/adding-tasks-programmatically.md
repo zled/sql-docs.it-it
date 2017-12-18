@@ -1,16 +1,17 @@
 ---
-title: "Aggiunta di attività a livello di codice | Documenti Microsoft"
+title: "Aggiunta di attività a livello di programmazione | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 35fbfd1c17d88d684671050c297a19822b098479
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cbd8f1d0ac4a942fae2305f7841fe25dc185e463
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-tasks-programmatically"></a>Aggiunta di attività a livello di programmazione
   È possibile aggiungere attività ai tipi di oggetti seguenti nel motore di runtime:  
@@ -47,10 +47,10 @@ ms.lasthandoff: 08/03/2017
   
  Ogni contenitore include una raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Executables> che contiene i singoli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.Executable>. Ogni attività eseguibile eredita e implementa il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> e il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A>. Questi due metodi vengono chiamati dal motore di runtime per elaborare ogni oggetto <xref:Microsoft.SqlServer.Dts.Runtime.Executable>.  
   
- Per aggiungere un'attività a un pacchetto, è necessario un contenitore con una raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Executables> esistente. Nella maggior parte dei casi, l'attività che verrà aggiunta alla raccolta è un pacchetto. Per aggiungere la nuova attività eseguibile nella raccolta per tale contenitore, chiamare il <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> metodo. Il metodo include un solo parametro, ovvero una stringa che contiene il CLSID, il PROGID, il moniker STOCK o l'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> dell'attività da aggiungere.  
+ Per aggiungere un'attività a un pacchetto, è necessario un contenitore con una raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Executables> esistente. Nella maggior parte dei casi, l'attività che verrà aggiunta alla raccolta è un pacchetto. Per aggiungere l'eseguibile della nuova attività nella raccolta per tale contenitore, chiamare il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>. Il metodo include un solo parametro, ovvero una stringa che contiene il CLSID, il PROGID, il moniker STOCK o l'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> dell'attività da aggiungere.  
   
 ## <a name="task-names"></a>Nomi delle attività  
- Sebbene sia possibile specificare un'attività in base al nome o all'ID, il **STOCK** del moniker non è il parametro utilizzato più frequentemente nel <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> metodo. Per aggiungere un'attività a un eseguibile identificato dal **STOCK** moniker, utilizzare la sintassi seguente:  
+ Anche se è possibile specificare un'attività in base al nome o all'ID, il moniker **STOCK** è il parametro usato più di frequente nel metodo <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>. Per aggiungere un'attività a un eseguibile identificato dal moniker **STOCK**, usare la sintassi seguente:  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -62,7 +62,7 @@ Dim exec As Executable = package.Executables.Add("STOCK:BulkInsertTask")
   
 ```  
   
- Nell'elenco seguente mostra i nomi per ogni attività utilizzati dopo il **STOCK** moniker.  
+ L'elenco seguente illustra i nomi di ogni attività usati dopo il moniker **STOCK**.  
   
 -   ActiveXScriptTask  
   
@@ -124,7 +124,7 @@ Dim exec As Executable = package.Executables.Add( _
   "Culture=neutral, PublicKeyToken=89845dcd8080cc91")  
 ```  
   
- È possibile ottenere il nome lungo per l'attività a livello di codice, senza la necessità di specificare la versione dell'attività, tramite il **AssemblyQualifiedName** proprietà della classe, come illustrato nell'esempio seguente. Per questo esempio è richiesto un riferimento all'assembly Microsoft.SqlServer.SQLTask.  
+ È possibile ottenere il nome lungo dell'attività a livello di programmazione, senza la necessità di specificare la versione dell'attività, usando la proprietà **AssemblyQualifiedName** della classe, come illustrato nell'esempio seguente. Per questo esempio è richiesto un riferimento all'assembly Microsoft.SqlServer.SQLTask.  
   
 ```csharp  
 using Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask;  
@@ -140,7 +140,7 @@ Imports Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask
       GetType(Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask).AssemblyQualifiedName)  
 ```  
   
- Esempio di codice seguente viene illustrato come creare un <xref:Microsoft.SqlServer.Dts.Runtime.Executables> raccolta da un nuovo pacchetto, quindi aggiungere un'attività File System e un'attività Inserimento Bulk alla raccolta, usando i relativi **STOCK** moniker. Per questo esempio è richiesto un riferimento agli assembly Microsoft.SqlServer.FileSystemTask e Microsoft.SqlServer.BulkInsertTask.  
+ L'esempio di codice seguente illustra come creare una raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Executables> da un nuovo pacchetto, quindi aggiungere un'attività File system e un'attività Inserimento bulk alla raccolta tramite i relativi moniker **STOCK**. Per questo esempio è richiesto un riferimento agli assembly Microsoft.SqlServer.FileSystemTask e Microsoft.SqlServer.BulkInsertTask.  
   
 ```csharp  
 using System;  
@@ -206,7 +206,7 @@ Module Module1
 End Module  
 ```  
   
- **Esempio di Output:**  
+ **Esempio di output:**  
   
  `Type Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask`  
   
@@ -308,7 +308,7 @@ Module Module1
 End Module  
 ```  
   
- **Esempio di Output:**  
+ **Esempio di output:**  
   
  `Found task of type Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask`  
   
@@ -328,7 +328,7 @@ End Module
   
 -   È possibile progettare routine generiche che funzionano per qualsiasi attività, perché non è necessario conoscere il nome dell'attività in fase di compilazione. Tali routine generiche includono i metodi in cui si passa il nome dell'attività al metodo e il codice del metodo funziona per tutte le attività. Si tratta di un metodo efficace per la scrittura di codice di test.  
   
- Esegue il cast dal <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> nella classe specifica dell'attività presenta i vantaggi seguenti:  
+ L'esecuzione del cast da <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> nella classe specifica dell'attività presenta i vantaggi seguenti:  
   
 -   Il progetto di Visual Studio rende disponibile il completamento delle istruzioni (IntelliSense).  
   
@@ -417,10 +417,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Post di blog, [Ezapi per SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), su blogs.msdn.com.  
+ Intervento nel blog sull'[aggiornamento di EzAPI per SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) sul sito Web blogs.msdn.com.  
 
 ## <a name="see-also"></a>Vedere anche  
- [Connessione a livello di programmazione di attività](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
+ [Connessione di attività a livello di programmazione](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   
-

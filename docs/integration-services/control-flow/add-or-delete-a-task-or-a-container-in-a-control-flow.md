@@ -1,12 +1,14 @@
 ---
-title: "Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo | Documenti Microsoft"
+title: "Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9c5a240223fb25e36a9ccd4591656fffbc8875a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f7502275ff31671bd8726dec5ecb42a299d3f17c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo
   Quando si usa la progettazione dei flussi di controllo, nella casella degli strumenti di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] sono elencate le attività disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per la compilazione del flusso di controllo in un pacchetto. Per altre informazioni sulla casella degli strumenti, vedere [Casella degli strumenti SSIS](../../integration-services/ssis-toolbox.md).  
@@ -66,12 +67,12 @@ ms.lasthandoff: 09/26/2017
   
 3.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
 
-## <a name="set-the-properties-of-a-task-or-container"></a>Impostare le proprietà di un'attività o contenitore
-È possibile impostare la maggior parte delle proprietà delle attività e dei contenitori usando la finestra **Proprietà**. Le eccezioni sono le proprietà delle raccolte di attività e le proprietà che sono troppo complesse per impostare tramite il **proprietà** finestra. L'enumeratore usato dal contenitore Ciclo Foreach, ad esempio, non può essere configurato nella finestra **Proprietà**. Per impostare tali proprietà complesse, è necessario utilizzare un editor attività o contenitori. La maggior parte degli editor attività e contenitori include più nodi, ognuno dei quali contiene proprietà correlate. Il nome del nodo indica l'oggetto delle proprietà contenute.  
+## <a name="set-the-properties-of-a-task-or-container"></a>Impostare le proprietà di un'attività o di un contenitore
+È possibile impostare la maggior parte delle proprietà delle attività e dei contenitori usando la finestra **Proprietà**. Fanno eccezione le proprietà delle raccolte di attività e quelle troppo complesse per essere impostate nella finestra **Proprietà**. L'enumeratore usato dal contenitore Ciclo Foreach, ad esempio, non può essere configurato nella finestra **Proprietà**. Per impostare tali proprietà complesse, è necessario utilizzare un editor attività o contenitori. La maggior parte degli editor attività e contenitori include più nodi, ognuno dei quali contiene proprietà correlate. Il nome del nodo indica l'oggetto delle proprietà contenute.  
   
  Le procedure seguenti descrivono come impostare le proprietà di un'attività o di un contenitore usando la finestra **Proprietà** o l'editor attività o contenitori corrispondente.  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>Impostare le proprietà di un'attività o un contenitore con la finestra proprietà  
+### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>Impostare le proprietà di un'attività o di un contenitore con la finestra Proprietà  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>Impostare le proprietà di un'attività o un contenitore con l'editor attività o contenitore  
+### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>Impostare le proprietà di un'attività o di un contenitore con l'editor attività o contenitori  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -121,4 +122,3 @@ ms.lasthandoff: 09/26/2017
  [Flusso di controllo](../../integration-services/control-flow/control-flow.md)  
   
   
-

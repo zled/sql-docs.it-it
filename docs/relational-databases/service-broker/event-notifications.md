@@ -2,9 +2,12 @@
 title: Notifiche degli eventi | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: service-broker
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6a1470d8bb606a29df7c7393fbd0c74772ba5d06
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 963b05a3b4f233f5252ef97465cd8a251de1a9ae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="event-notifications"></a>Notifiche degli eventi
-  Le notifiche degli eventi consentono l'invio di informazioni sugli eventi a un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Le notifiche degli eventi vengono eseguite in risposta a una serie di istruzioni DDL (Data Definition Language) [!INCLUDE[tsql](../../includes/tsql-md.md)] ed eventi di Traccia SQL mediante l'invio di informazioni sugli eventi a un servizio [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le notifiche degli eventi inviano informazioni sugli eventi a un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Le notifiche degli eventi vengono eseguite in risposta a una serie di istruzioni DDL (Data Definition Language) [!INCLUDE[tsql](../../includes/tsql-md.md)] ed eventi di Traccia SQL mediante l'invio di informazioni sugli eventi a un servizio [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
  È possibile utilizzare le notifiche degli eventi per eseguire le attività seguenti:  
   

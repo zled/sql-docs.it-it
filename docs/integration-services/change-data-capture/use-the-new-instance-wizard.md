@@ -1,33 +1,34 @@
 ---
-title: Utilizzare la New Instance Wizard | Documenti Microsoft
+title: Usare la Procedura guidata nuova istanza | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b85f434ad5130b984e318337bcc493945a06eb93
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5805f3fa68e7b37b48edc294bf487a61aeb19ac4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-new-instance-wizard"></a>Utilizzare la New Instance Wizard
   Tramite la New Instance Wizard è possibile creare una nuova istanza per un servizio CDC. Viene visualizzata la procedura guidata Create an Oracle CDC Instance da CDC Designer Console. Nella New Instance Wizard è possibile eseguire le operazioni seguenti.  
   
--   [Creare il Database SQL Server Change](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
+-   [Creare il database delle modifiche di SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
   
--   [Connettersi a un Database di origine Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
+-   [Connettersi a un database di origine Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
   
 -   [Connettersi a Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
@@ -35,16 +36,15 @@ ms.lasthandoff: 08/03/2017
   
 -   [Selezionare le tabelle Oracle per l'acquisizione delle modifiche](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
--   [Apportare modifiche alle tabelle selezionate per l'acquisizione delle modifiche](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+-   [Apportare modifiche alle tabelle selezionate per l'acquisizione di modifiche](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
--   [Generare ed eseguire lo Script di registrazione supplementare](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
+-   [Generare ed eseguire lo script di registrazione supplementare](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   
--   [Generare tabelle Mirror e istanze di acquisizione di CDC](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
+-   [Generare tabelle mirror e istanze di acquisizione di CDC](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
   
 -   [Fine](../../integration-services/change-data-capture/finish.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come creare l'istanza SQL Server Change Database](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
+ [Procedura di creazione dell'istanza del database delle modifiche di SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
   
-

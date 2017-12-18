@@ -2,9 +2,12 @@
 title: Cmdlet Invoke-Sqlcmd | Microsoft Docs
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3a80c470217ede2ea1eae6ffad6d09cd4bccec8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7afb1a8a23055df89c0a446e2d4be3255311b5b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Cmdlet Invoke-Sqlcmd
   **Invoke-Sqlcmd** è un cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che esegue script contenenti istruzioni CONTAIN provenienti dai linguaggi ([!INCLUDE[tsql](../includes/tsql-md.md)] e XQuery) e dai comandi supportati dall'utilità **sqlcmd** .  
@@ -114,14 +117,14 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-P|-Password|  
 |Definizione della variabile.|-v|-Variable|  
-|Intervallo di timeout della query.|-t|-QueryTimeout|  
+|Intervallo di timeout della query (secondi).|-t|-QueryTimeout|  
 |Arresta l'esecuzione in caso di errore|-b|-AbortOnError|  
 |Connessione amministrativa dedicata.|-A|-DedicatedAdministratorConnection|  
 |Disabilita i comandi interattivi, gli script di avvio e le variabili di ambiente.|-X|-DisableCommands|  
 |Disabilita la sostituzione delle variabili.|-X|-DisableVariables|  
 |Livello minimo di gravità da segnalare.|-v|-SeverityLevel|  
 |Livello minimo di errore da segnalare.|-m|-ErrorLevel|  
-|Intervallo di timeout di accesso.|-l|-ConnectionTimeout|  
+|Intervallo di timeout di accesso (secondi).|-l|-ConnectionTimeout|  
 |Nome host.|-H|-HostName|  
 |Consente di modificare la password e di uscire.|-Z|-NewPassword|  
 |File di input che contiene una query.|-i|-InputFile|  

@@ -2,9 +2,12 @@
 title: Editor di query del motore di database (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81d67f47cddfe48575758ec7ff3b5949a4c6f1f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 554065f8cd2eee3667eaf93ced5e6fe1c99f9517
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor di query del Motore di database (SQL Server Management Studio)
-  Utilizzare l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per creare ed eseguire script contenenti istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'editor supporta anche l'esecuzione di script contenenti comandi **sqlcmd** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usare l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per creare ed eseguire script contenenti istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'editor supporta anche l'esecuzione di script contenenti comandi **sqlcmd** .  
   
 ## <a name="transact-sql-f1-help"></a>Guida di Transact-SQL  
  L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta il collegamento all'argomento di riferimento per un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specifica quando si seleziona F1. A tale scopo, evidenziare il nome di un'istruzione Transact-SQL, quindi selezionare F1. Verrà cercato quindi un argomento che disponga di un attributo della Guida corrispondente alla stringa evidenziata.  

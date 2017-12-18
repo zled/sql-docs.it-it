@@ -1,32 +1,32 @@
 ---
-title: 'Lezione 1: Creare un progetto e un pacchetto di base con SSIS | Documenti Microsoft'
+title: 'Lezione 1: Creare un progetto e un pacchetto di base con SSIS | Microsoft Docs'
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 0839d5dfbcb033a9a0d466ce9b87ecc738b15250
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 58a71c4ef573925218061d5796a56028d82d042b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lezione 1: Creare un progetto e un pacchetto di base
 
- > Per contenuti relativi a versioni precedenti di SQL Server, vedere [lezione 1: creazione del progetto e un pacchetto di base](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx).
+ > Per contenuti relativi a versioni precedenti di SQL Server, vedere [Lezione 1: Creazione del progetto e del pacchetto di base](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx).
 
 In questa lezione verrà creato un pacchetto ETL semplice tramite cui vengono estratti i dati da un'unica origine file flat, trasformati i dati usando due componenti di trasformazione Ricerca e scritti i dati in questione nella tabella dei fatti **FactCurrency** di **AdventureWorksDW2012**. In questa lezione si imparerà a creare nuovi pacchetti, aggiungere e configurare connessioni origine e destinazione dati e usare nuovi componenti flusso di controllo e flusso di dati.  
   
@@ -83,23 +83,22 @@ In questa lezione sono incluse le attività seguenti:
   
 -   [Passaggio 1: Creazione di un nuovo progetto di Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Passaggio 2: Aggiunta e configurazione di una gestione connessione File Flat](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Passaggio 4: Aggiunta di un'attività flusso di dati al pacchetto](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Passaggio 4: Aggiunta di un'attività Flusso di dati al pacchetto](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [Passaggio 5: Aggiunta e configurazione dell'origine File Flat](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [Passaggio 5: Aggiunta e configurazione dell'origine file flat](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Passaggio 6: Aggiunta e configurazione delle trasformazioni ricerca](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 -   [Passaggio 7: Aggiunta e configurazione della destinazione OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Passaggio 8: Semplificazione del pacchetto della lezione 1 comprensione](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Passaggio 9: Test del pacchetto dell'esercitazione della lezione 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Passaggio 9: Test del pacchetto creato nella lezione 1 dell'esercitazione](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Inizio della lezione  
 [Passaggio 1: Creazione di un nuovo progetto di Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
-

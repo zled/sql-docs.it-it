@@ -1,29 +1,30 @@
 ---
-title: Catalog.set_execution_property_override_value | Documenti Microsoft
+title: catalog.set_execution_property_override_value | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 20f2c882a78f5e60931b0152d5877898e1972d0a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d8e561e94e3dee033941c5defade34d28b1ac89c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Imposta il valore di una proprietà per un'istanza di esecuzione nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -37,20 +38,20 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @execution_id =] *valore di execution_id*  
- Identificatore univoco per l'istanza di esecuzione. Il *valore di execution_id* è **bigint**.  
+ [ @execution_id = ] *execution_id*  
+ Identificatore univoco per l'istanza di esecuzione. *execution_id* è di tipo **bigint**.  
   
- [ @property_path =] *percorso_proprietà*  
- Percorso alla proprietà nel pacchetto. Il *percorso_proprietà* è **nvarchar (4000)**.  
+ [ @property_path = ] *property_path*  
+ Percorso alla proprietà nel pacchetto. *property_path* è di tipo **nvarchar(4000)**.  
   
- [ @property_value =] *property_value*  
- Valore di override da assegnare alla proprietà. Il *property_value* è **nvarchar (max)**.  
+ [ @property_value = ] *property_value*  
+ Valore di override da assegnare alla proprietà. *property_value* è di tipo **nvarchar(max)**.  
   
- [ @sensitive =] *sensibili*  
- Quando il valore è 1, la proprietà è importante e viene crittografata quando viene archiviata. Quando il valore è 0, la proprietà non è importante e il valore viene archiviato non crittografato. Il *sensibili* argomento **bit**.  
+ [ @sensitive = ] *sensitive*  
+ Quando il valore è 1, la proprietà è importante e viene crittografata quando viene archiviata. Quando il valore è 0, la proprietà non è importante e il valore viene archiviato non crittografato. L'argomento *sensitive* è di tipo **bit**.  
   
 ## <a name="remarks"></a>Osservazioni  
- Questa routine esegue la stessa funzione di **esegue l'override di proprietà** sezione il **avanzate** scheda del **Esegui pacchetto** finestra di dialogo. Il percorso della proprietà è derivato dal **percorso pacchetto** proprietà dell'attività del pacchetto.  
+ Questa routine esegue la stessa funzione della sezione **Override di proprietà** nella scheda **Avanzate** della finestra di dialogo **Esegui pacchetto**. Il percorso della proprietà deriva dalla proprietà **Percorso del pacchetto** dell'attività del pacchetto.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -70,7 +71,6 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
 -   Il tipo di dati del valore della proprietà non corrisponde al tipo di dati della proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
- [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
+ [catalog.set_execution_parameter_value &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
   
-

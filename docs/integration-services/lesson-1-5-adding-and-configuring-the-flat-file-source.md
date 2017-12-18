@@ -1,30 +1,30 @@
 ---
-title: 'Passaggio 5: Aggiunta e configurazione di Flat File origine | Documenti Microsoft'
+title: 'Passaggio 5: Aggiunta e configurazione dell''origine file flat | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c56b634f36e69e06e03e0206cd70d841f4682ea
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0afc0fff3b28eea9d510b81f2ec3a6224d493db5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>Lezione 1-5-aggiunta e configurazione dell'origine File Flat
+# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>Lezione 1-5 - Aggiunta e configurazione dell'origine file flat
 In questa attività verrà aggiunta e configurata l'origine file flat al pacchetto. Un'origine file flat è un componente del flusso di dati che utilizza i metadati definiti dalla gestione connessione file flat per specificare il formato e la struttura dei dati da estrarre dal file flat tramite un processo di trasformazione. È possibile configurare l'origine file flat per estrarre dati da un singolo file flat utilizzando la definizione del formato del file specificata dalla gestione connessione file flat.  
   
 In questa esercitazione verrà configurata l'origine file flat in modo da utilizzare la gestione connessione **Sample Flat File Source Data** creata in precedenza.  
@@ -58,4 +58,3 @@ In questa esercitazione verrà configurata l'origine file flat in modo da utiliz
   
   
   
-

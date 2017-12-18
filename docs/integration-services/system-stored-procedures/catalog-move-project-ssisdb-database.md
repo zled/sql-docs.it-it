@@ -1,29 +1,30 @@
 ---
-title: Catalog. move_project (Database SSISDB) | Documenti Microsoft
+title: catalog.move_project (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5b091ccea1f733ebbf6e52308d17c7bdb7449cbe
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0a7cc5e2b529f503c0a4182f43e1436fc355ab4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogmoveproject---ssisdb-database"></a>Catalog. move_project - Database SSISDB
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project (database SSISDB)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Viene spostato un progetto da una cartella a un'altra all'interno del catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -36,14 +37,14 @@ catalog.move_project [ @source_folder = ] source_folder
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @source_folder =] *source_folder*  
- Nome della cartella di origine, in cui si trova il progetto prima dello spostamento. Il *source_folder* è **nvarchar (128)**.  
+ [ @source_folder = ] *source_folder*  
+ Nome della cartella di origine, in cui si trova il progetto prima dello spostamento. *source_folder* è di tipo **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- Nome del progetto che deve essere spostato. Il *project_name* è **nvarchar (128)**.  
+ [ @project_name = ] *project_name*  
+ Nome del progetto che deve essere spostato. *project_name* è di tipo **nvarchar(128)**.  
   
- [ @destination_folder =] *destination_folder*  
- Nome della cartella di destinazione, in cui si trova il progetto dopo lo spostamento. Il *destination_folder* è **nvarchar (128)**.  
+ [ @destination_folder = ] *destination_folder*  
+ Nome della cartella di destinazione, in cui si trova il progetto dopo lo spostamento. *destination_folder* è di tipo **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -56,9 +57,9 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   Autorizzazioni READ e MODIFY sul progetto che si desidera spostare e autorizzazione CREATE_OBJECTS sulla cartella di destinazione  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte alcune condizioni che possono determinare la generazione di un errore da parte della stored procedure:  
@@ -78,4 +79,3 @@ catalog.move_project [ @source_folder = ] source_folder
 >  Un progetto può disporre di riferimenti all'ambiente relativi o assoluti. I riferimenti relativi fanno riferimento all'ambiente in base al nome. Per tali riferimenti è necessario che l'ambiente si trovi nella stessa cartella del progetto. I riferimenti assoluti fanno riferimento all'ambiente in base al nome e alla cartella. Tali riferimenti fanno riferimento agli ambienti che si trovano in una cartella diversa da quella del progetto.  
   
   
-

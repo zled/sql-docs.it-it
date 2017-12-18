@@ -1,12 +1,14 @@
 ---
-title: Flussi di dati nei dati | Documenti Microsoft
+title: Dati nei flussi di dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 15689319652b1527bae7a7c27da9d89979c492d7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-in-data-flows"></a>Dati nei flussi di dati
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è disponibile un set di tipi di dati che è possibile usare nei flussi di dati.  
@@ -46,4 +47,3 @@ ms.lasthandoff: 08/03/2017
  Dopo avere distribuito un pacchetto nel catalogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile analizzare il flusso di dati nel pacchetto durante l'esecuzione per verificarne le prestazioni o per verificare la presenza di altri problemi. Sono disponibili alcuni report standard che consentono di visualizzare lo stato e la cronologia dei pacchetti ed è possibile eseguire una query sulle viste del database per ottenere informazioni dettagliate sull'esecuzione dei pacchetti. È inoltre possibile aggiungere e rimuovere dinamicamente i data tap durante l'esecuzione per individuare specifici componenti del pacchetto. Per altre informazioni, vedere [Debug di un flusso di dati](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
   
-

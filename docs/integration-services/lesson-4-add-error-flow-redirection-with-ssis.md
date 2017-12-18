@@ -1,28 +1,28 @@
 ---
-title: 'Lezione 4: Aggiungere il reindirizzamento del flusso di errore con SSIS | Documenti Microsoft'
+title: 'Lezione 4: Aggiungere il reindirizzamento del flusso errato con SSIS | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cfe3634566a7ede28e3c1f5640cfe6e4caa1c351
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 71522bf83637a5f783f14c0a13c2e129b5a0afdd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lezione 4: Aggiungere il reindirizzamento del flusso errato tramite SSIS
 Per gestire gli errori che si verificano durante il processo di trasformazione, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consente di decidere sulla base dei singoli componenti e delle singole colonne come gestire i dati che non possono essere trasformati. È possibile scegliere di ignorare un errore in alcune colonne, reindirizzare l'intera riga con esito negativo o interrompere l'esecuzione del componente. Per impostazione predefinita, tutti i componenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono configurati in modo da interrompersi quando si verificano errori. L'arresto di un componente determina l'arresto del pacchetto e di conseguenza di tutte le elaborazioni successive.  
@@ -43,17 +43,16 @@ In questa lezione sono incluse le attività seguenti:
   
 -   [Passaggio 1: Copia del pacchetto della lezione 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [Passaggio 2: Creazione di un File danneggiato](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
+-   [Passaggio 2: Creazione di un file danneggiato](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
--   [Passaggio 3: Aggiunta del reindirizzamento del flusso di errore](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+-   [Passaggio 3: Aggiunta del reindirizzamento del flusso degli errori](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
--   [Passaggio 4: Aggiunta di una destinazione File Flat](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
+-   [Passaggio 4: Aggiunta di una destinazione file flat](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [Passaggio 5: Test del pacchetto dell'esercitazione della lezione 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [Passaggio 5: Test del pacchetto creato nella lezione 4 dell'esercitazione](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Inizio della lezione  
 [Passaggio 1: Copia del pacchetto della lezione 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
   
   
-

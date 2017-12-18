@@ -1,12 +1,14 @@
 ---
-title: Transazioni di Integration Services | Documenti Microsoft
+title: Transazioni di Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7355d98c342052997441c2013e056b0453962c5a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8fa0747761ecfac4fd617096942db77a2214019d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-transactions"></a>Transazioni di Integration Services
   Nei pacchetti vengono utilizzate transazioni per l'associazione di azioni del database eseguite dalle attività in unità atomiche in modo da mantenere l'integrità dei dati. Tutti i tipi di contenitori di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ovvero pacchetti, ciclo For, ciclo Foreach, contenitori Sequenza, nonché gli host di attività in cui è incapsulata ogni attività, possono essere configurati per l'uso delle transazioni. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili tre opzioni per la configurazione delle transazioni: **NotSupported**, **Supported**e **Required**.  
@@ -50,7 +51,7 @@ Quando si configura un pacchetto per l'utilizzo di transazioni, sono disponibili
   
  Nelle procedure seguenti viene descritto come configurare entrambe le opzioni.  
   
-### <a name="configure-a-package-to-use-a-single-transaction"></a>Configurare un pacchetto per l'utilizzo di una singola transazione  
+### <a name="configure-a-package-to-use-a-single-transaction"></a>Configurare un pacchetto per l'uso di una transazione singola  
  In questo caso, il pacchetto stesso inizializza un'unica transazione. È necessario configurare il pacchetto in modo che inizializzi questa transazione impostando la proprietà TransactionOption del pacchetto su **Required**.  
   
  In questa unica transazione verranno quindi inserite le attività e i contenitori specifici. Per inserire un'attività o un contenitore in una transazione, è necessario impostare la proprietà TransactionOption dell'attività o del contenitore su **Supported**.  
@@ -74,7 +75,7 @@ Quando si configura un pacchetto per l'utilizzo di transazioni, sono disponibili
   
 8.  Ripetere i passaggi 6 e 7 per ogni attività e ogni contenitore che si desidera registrare nella transazione.  
   
-### <a name="configure-a-package-to-use-multiple-transactions"></a>Configurare un pacchetto per l'utilizzo di più transazioni  
+### <a name="configure-a-package-to-use-multiple-transactions"></a>Per configurare un pacchetto per l'uso di più transazioni  
  In questo caso, il pacchetto supporta le transazioni ma non ne avvia alcuna. È necessario configurare il pacchetto in modo che supporti le transazioni impostando la proprietà TransactionOption del pacchetto su **Supported**.  
   
  Configurare quindi le attività e i contenitori desiderati all'interno del pacchetto in modo che inizializzino la transazione o vengano eseguiti con essa. Per configurare un'attività o un contenitore in modo che inizializzi una transazione, è necessario impostare la proprietà TransactionOption dell'attività o del contenitore su **Required**.   
@@ -121,7 +122,7 @@ Un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] potre
   
  Nella figura seguente vengono illustrate le cinque transazioni non correlate del pacchetto. Una transazione viene avviata nel contenitore Sequenza e le altre quattro vengono avviate dalle attività Esegui SQL.  
   
- ![Implementazione di più transazioni](../integration-services/media/mw-dts-trans2.gif "implementazione di più transazioni")  
+ ![Implementazione di più transazioni](../integration-services/media/mw-dts-trans2.gif "Implementazione di più transazioni")  
  
 ## <a name="inherited-transactions"></a>Transazioni ereditate
  Un pacchetto può eseguire un altro pacchetto tramite l'attività Esegui pacchetto. Il pacchetto figlio, ovvero il pacchetto eseguito dall'attività Esegui pacchetto, può creare la propria transazione del pacchetto o ereditare quella del padre.  
@@ -145,7 +146,7 @@ Un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] potre
   
 -   **TransactionOption** è impostata su **NotSupported** per il pacchetto E e per le attività Esegui pacchetto C e Esegui pacchetto E.  
   
- ![Flusso di transazioni ereditate](../integration-services/media/mw-dts-executepack.gif "flusso di transazioni ereditate")  
+ ![Flusso di transazioni ereditate](../integration-services/media/mw-dts-executepack.gif "Flusso di transazioni ereditate")  
   
  Solo i pacchetti B, D e F possono ereditare transazioni dal pacchetto padre.  
   
@@ -167,4 +168,3 @@ Un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] potre
  [Più transazioni](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   
   
-

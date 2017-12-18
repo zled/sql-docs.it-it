@@ -3,8 +3,11 @@ title: "Opzione di failover di rilevamento dell'integrità del database | Docume
 ms.custom: 
 ms.date: 04/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JasonWHowell
 ms.author: jasonh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 722fec600bcb9b40564dff99c6036467c3856632
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opzione di failover di rilevamento dell'integrità a livello di database di un gruppo di disponibilità
-
-A partire da SQL Server 2016, quando si configura un gruppo di disponibilità Always On è disponibile l'opzione di rilevamento dell'integrità a livello di database (DB_FAILOVER). Il rilevamento dell'integrità a livello di database avvisa quando un database non è più nello stato online, quando si verifica un errore, e attiverà il failover automatico del gruppo di disponibilità. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A partire da SQL Server 2016, quando si configura un gruppo di disponibilità Always On è disponibile l'opzione di rilevamento dell'integrità a livello di database (DB_FAILOVER). Il rilevamento dell'integrità a livello di database avvisa quando un database non è più nello stato online, quando si verifica un errore, e attiverà il failover automatico del gruppo di disponibilità. 
 
 Il rilevamento dell'integrità a livello di database è abilitato per il gruppo di disponibilità nel suo complesso, pertanto il rilevamento dell'integrità a livello database consente di monitorare ogni database nel gruppo di disponibilità. Non può essere abilitato in modo selettivo per database specifici nel gruppo di disponibilità. 
 

@@ -1,28 +1,30 @@
 ---
-title: Tipi di dati nelle espressioni di Integration Services | Documenti Microsoft
+title: Tipi di dati nelle espressioni di Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44b5829a581f0e0a0c2ff67eabe4a2a4fae3885e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipi di dati nelle espressioni di Integration Services
   L'analizzatore di espressioni usa i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La prima volta che i dati entrano nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] il motore del flusso di dati converte i dati di tutte le colonne in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , mentre i dati delle colonne utilizzate da un'espressione hanno già un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le espressioni utilizzate nelle trasformazioni Suddivisione condizionale e Colonna derivata possono fare riferimento alle colonne perché fanno parte di un flusso di dati che include dati di colonna.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
  Osservare le espressioni nello screenshot seguente.  
   
- ![Tipi di dati nelle espressioni di SSIS String](../../integration-services/expressions/media/stringsinssisexpressions.png "stringa dei tipi di dati nelle espressioni di SSIS")  
+ ![Tipi di dati stringa nelle espressioni SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "Tipi di dati stringa nelle espressioni SSIS")  
   
 1.  La prima espressione viene eseguita senza errori perché la funzione NULL(DT_STR, ...) si trova al livello radice dell'espressione.  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
  Gli esempi seguenti illustrano gli effetti del cast.  
   
- ![Cast di stringhe nelle espressioni di SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "il cast di stringhe nelle espressioni di SSIS")  
+ ![Cast di stringhe nelle espressioni SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Cast di stringhe nelle espressioni SSIS")  
   
 1.  Nella prima espressione il cast non è al livello radice dell'espressione. L'analizzatore di espressioni gestisce questo cast in modo intelligente ed esegue il cast a DT_WSTR, non a DT_STR. L'espressione restituisce DT_WSTR.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 08/03/2017
   
  Nella figura seguente viene illustrato il tipo di risultato delle conversioni implicite delle operazioni BINARY. L'intersezione di colonna e riga in questa tabella è il tipo di risultato di un'operazione binaria con operandi di tipo sinistra (Da) e destra (A).  
   
- ![Conversione tra tipi di dati di tipi di dati implicite](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "conversione tra tipi di dati di tipi di dati")  
+ ![Conversione implicita del tipo di dati tra tipi di dati](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Conversione implicita del tipo di dati tra tipi di dati")  
   
  L'intersezione tra un valore intero con segno e un valore intero senza segno è un valore intero con segno potenzialmente maggiore di entrambi gli argomenti.  
   

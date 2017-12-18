@@ -1,32 +1,31 @@
 ---
-title: Gestione connessione cache | Documenti Microsoft
+title: Gestione connessione della cache | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.cacheconnection.f1
-helpviewer_keywords:
-- Cache connection manager
+f1_keywords: sql13.dts.designer.cacheconnection.f1
+helpviewer_keywords: Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 481075f02dff2f4900eeca549835b990b50aee37
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df50fb19024245379a92dbb5486d2c2ab035f851
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="cache-connection-manager"></a>gestione connessione della cache
+# <a name="cache-connection-manager"></a>Gestione connessione della cache
   La gestione connessione della cache consente di leggere i dati dalla trasformazione cache o da un file di cache (con estensione caw) e di salvarli in un file di cache. Se si configura la gestione connessione della cache in modo da utilizzare un file di cache, i dati sono archiviati sempre in memoria.  
   
  La trasformazione Trasformazione cache consente di scrivere i dati da un'origine dati connessa nel flusso di dati a una gestione connessione della cache. La trasformazione Ricerca in un pacchetto consente di effettuare ricerche nei dati.  
@@ -56,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o a livello di codice.  
   
- Per informazioni su come configurare una gestione connessione a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [aggiunta di connessioni a livello di codice](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Per informazioni su come configurare una gestione connessione a livello di programmazione, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="cache-connection-manager-editor"></a>Editor gestione connessione cache
   La Gestione connessione cache consente di leggere un set di dati di riferimento dalla trasformazione cache o da un file di cache (.caw) e può salvare i dati in un file di cache. I dati vengono sempre archiviati in memoria.  
@@ -132,7 +131,6 @@ ms.lasthandoff: 08/09/2017
  Specifica la tabella codici per il tipo di colonna. Se applicabile al tipo di dati, è possibile aggiornare **Code Page**.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Implementare una trasformazione ricerca in modalità Full Cache utilizzando la gestione connessione Cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione della cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   
-

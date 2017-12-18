@@ -1,18 +1,18 @@
 ---
-title: "Utilizzo di immagini con l'attività Script | Documenti Microsoft"
+title: "Uso di immagini con l'attività Script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - graphics [Integration Services]
 - Script task [Integration Services], images
@@ -25,53 +25,52 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a28fe7c6024d8cf5669199e5f33e3532013e4d3
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c86c8f11ec6351882ccb4b152b4254bad70210f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-images-with-the-script-task"></a>Utilizzo di immagini con l'attività Script
-  Un database di prodotti o utenti include di frequente immagini oltre a testo e dati numerici. Il **Drawing** dello spazio dei nomi in Microsoft .NET Framework fornisce classi per la modifica di immagini.  
+  Un database di prodotti o utenti include di frequente immagini oltre a testo e dati numerici. Lo spazio dei nomi **System.Drawing** in Microsoft .NET Framework fornisce le classi per la modifica delle immagini.  
   
- [Esempio 1: Convertire immagini in formato JPEG](#example1)  
+ [Esempio 1: convertire immagini in formato JPEG](#example1)  
   
- [Esempio 2: Creare e salvare le immagini di anteprima](#example2)  
+ [Esempio 2: creare e salvare le immagini di anteprima](#example2)  
   
 > [!NOTE]  
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a>Descrizione dell'esempio 1: Convertire immagini in formato JPEG  
+##  <a name="example1"></a> Descrizione dell'esempio 1: convertire immagini in formato JPEG  
  Nell'esempio seguente viene aperto un file di immagine specificato da una variabile e lo salva come file JPEG compresso tramite un codificatore. Il codice per recuperare le informazioni sul codificatore viene incapsulato in una funzione privata.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Per configurare questa attività Script di esempio per l'utilizzo con un solo file di immagine  
   
 1.  Creare una variabile di stringa denominata `CurrentImageFile` e impostarne il valore sul percorso e sul nome di un file di immagine esistente.  
   
-2.  Nel **Script** pagina del **Editor attività Script**, aggiungere il `CurrentImageFile` variabile il **ReadOnlyVariables** proprietà.  
+2.  Nella pagina **Script** dell'**Editor attività Script** aggiungere la variabile `CurrentImageFile` alla proprietà **ReadOnlyVariables**.  
   
-3.  Nel progetto di script, impostare un riferimento al **Drawing** dello spazio dei nomi.  
+3.  Nel progetto di script impostare un riferimento allo spazio dei nomi **System.Drawing**.  
   
-4.  Nel codice, utilizzare **importazioni** istruzioni per importare il **Drawing** e **System.IO** gli spazi dei nomi.  
+4.  Nel codice usare le istruzioni **Imports** per importare gli spazi dei nomi **System.Drawing** e **System.IO**.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>Per configurare questa attività Script di esempio per l'utilizzo con più file di immagine  
   
 1.  Inserire l'attività Script all'interno di un contenitore Ciclo Foreach.  
   
-2.  Nel **raccolta** pagina del **Editor ciclo Foreach**, selezionare il **Foreach File Enumerator** come enumeratore e specificare il percorso e il filtro dell'origine file, ad esempio come "*.bmp".  
+2.  Nella pagina **Raccolta** dell'**Editor ciclo Foreach** selezionare **Enumeratore Foreach File** come enumeratore e specificare il percorso e il filtro dei file di origine, ad esempio "*.bmp".  
   
-3.  Nel **mapping variabili** pagina, eseguire il mapping di `CurrentImageFile` variabile all'indice 0. Questa variabile passa il nome file corrente all'attività Script a ogni iterazione dell'enumeratore.  
+3.  Nella pagina **Mapping variabili** eseguire il mapping della variabile `CurrentImageFile` all'indice 0. Questa variabile passa il nome file corrente all'attività Script a ogni iterazione dell'enumeratore.  
   
     > [!NOTE]  
     >  Questi passaggi vengono aggiunti a quelli elencati nella procedura per l'utilizzo con un solo file di immagine.  
   
-### <a name="example-1-code"></a>Codice di esempio 1  
+### <a name="example-1-code"></a>Codice dell'esempio 1  
   
 ```vb  
 Public Sub Main()  
@@ -156,7 +155,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a>Descrizione dell'esempio 2: Creare e salvare le immagini di anteprima  
+##  <a name="example2"></a> Descrizione dell'esempio 2: creare e salvare le immagini di anteprima  
  Nell'esempio seguente viene aperto un file di immagine specificato da una variabile, viene creata un'anteprima dell'immagine pur mantenendo una proporzione costante e viene salvata l'anteprima con un nome file modificato. Il codice che calcola l'altezza e larghezza dell'anteprima mantenendo una proporzione costante viene incapsulato in una subroutine privata.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Per configurare questa attività Script di esempio per l'utilizzo con un solo file di immagine  
@@ -165,24 +164,24 @@ End Function
   
 2.  Creare anche la variabile di tipo integer `MaxThumbSize` e assegnare un valore in pixel, ad esempio 100.  
   
-3.  Nel **Script** pagina del **Editor attività Script**, aggiungere entrambe le variabili per il **ReadOnlyVariables** proprietà.  
+3.  Nella pagina **Script** dell'**Editor attività Script** aggiungere entrambe le variabili alla proprietà **ReadOnlyVariables**.  
   
-4.  Nel progetto di script, impostare un riferimento al **Drawing** dello spazio dei nomi.  
+4.  Nel progetto di script impostare un riferimento allo spazio dei nomi **System.Drawing**.  
   
-5.  Nel codice, utilizzare **importazioni** istruzioni per importare il **Drawing** e **System.IO** gli spazi dei nomi.  
+5.  Nel codice usare le istruzioni **Imports** per importare gli spazi dei nomi **System.Drawing** e **System.IO**.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>Per configurare questa attività Script di esempio per l'utilizzo con più file di immagine  
   
 1.  Inserire l'attività Script all'interno di un contenitore Ciclo Foreach.  
   
-2.  Nel **raccolta** pagina del **Editor ciclo Foreach**, selezionare il **Foreach File Enumerator** come il **enumeratore**e specificare il percorso e il filtro dei file di origine, ad esempio "*.jpg".  
+2.  Nella pagina **Raccolta** dell'**Editor ciclo Foreach** selezionare **Enumeratore Foreach File** come **enumeratore** e specificare il percorso e il filtro dei file di origine, ad esempio "*.jpg".  
   
-3.  Nel **mapping variabili** pagina, eseguire il mapping di `CurrentImageFile` variabile all'indice 0. Questa variabile passa il nome file corrente all'attività Script a ogni iterazione dell'enumeratore.  
+3.  Nella pagina **Mapping variabili** eseguire il mapping della variabile `CurrentImageFile` all'indice 0. Questa variabile passa il nome file corrente all'attività Script a ogni iterazione dell'enumeratore.  
   
     > [!NOTE]  
     >  Questi passaggi vengono aggiunti a quelli elencati nella procedura per l'utilizzo con un solo file di immagine.  
   
-### <a name="example-2-code"></a>Codice di esempio 2  
+### <a name="example-2-code"></a>Codice dell'esempio 2  
   
 ```vb  
 Public Sub Main()  
@@ -297,4 +296,3 @@ bool ThumbnailCallback()
 ```  
   
   
-

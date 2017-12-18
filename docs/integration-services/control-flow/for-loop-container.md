@@ -1,12 +1,14 @@
 ---
-title: Contenitore ciclo for | Documenti Microsoft
+title: Contenitore Ciclo For | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2a3671f4af356741dce481aaafa67023aabbc763
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: da7bf1509d8c49bfcd10b03e38b41f87ea80580c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="for-loop-container"></a>Contenitore Ciclo For
   Il contenitore Ciclo For definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **For** nei linguaggi di programmazione. A ogni ripetizione del ciclo il contenitore Ciclo For valuta un'espressione e ne ripete il flusso di lavoro finché tale espressione non restituisce **False**.  
@@ -42,18 +43,18 @@ ms.lasthandoff: 09/26/2017
   
  Nella figura seguente viene illustrato un contenitore Ciclo For con un'attività Invia messaggi. Se l'espressione di inizializzazione è `@Counter = 0`, l'espressione di valutazione è `@Counter < 4`e l'espressione di iterazione è `@Counter = @Counter + 1`, il ciclo si ripeterà quattro volte e verranno inviati quattro messaggi di posta elettronica.  
   
- ![Un contenitore ciclo For ripete un'attività quattro volte](../../integration-services/control-flow/media/ssis-forloop.gif "contenitore ciclo For A si ripeterà quattro volte un'attività")  
+ ![Un contenitore Ciclo For ripete un'attività quattro volte](../../integration-services/control-flow/media/ssis-forloop.gif "Un contenitore Ciclo For ripete un'attività quattro volte")  
   
  Le espressioni devono essere espressioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] valide.  
   
- Per creare le espressioni di inizializzazione e assegnazione, è possibile utilizzare l'operatore di assegnazione (=). In altre circostanze questo operatore non è supportato dalla grammatica delle espressioni di Integration Services, ma può essere utilizzato solo dai tipi di espressione di inizializzazione e assegnazione nel contenitore Ciclo For. Qualsiasi espressione che utilizza l'operatore di assegnazione deve presentare la sintassi `@Var = <expression>`, dove **Var** è una variabile in fase di esecuzione e \<espressione > è un'espressione che segue le regole del [!INCLUDE[ssIS](../../includes/ssis-md.md)] espressione sintassi. L'espressione può includere le variabili, i valori letterali e tutti gli operatori e le funzioni supportati dalla grammatica delle espressioni di SSIS. L'espressione deve restituire un tipo di dati di cui è possibile eseguire il cast al tipo di dati della variabile.  
+ Per creare le espressioni di inizializzazione e assegnazione, è possibile utilizzare l'operatore di assegnazione (=). In altre circostanze questo operatore non è supportato dalla grammatica delle espressioni di Integration Services, ma può essere utilizzato solo dai tipi di espressione di inizializzazione e assegnazione nel contenitore Ciclo For. Tutte le espressioni che usano l'operatore di assegnazione devono avere la sintassi `@Var = <expression>`, dove **Var** è una variabile di runtime ed \<expression> è un'espressione che segue le regole della sintassi delle espressioni di [!INCLUDE[ssIS](../../includes/ssis-md.md)]. L'espressione può includere le variabili, i valori letterali e tutti gli operatori e le funzioni supportati dalla grammatica delle espressioni di SSIS. L'espressione deve restituire un tipo di dati di cui è possibile eseguire il cast al tipo di dati della variabile.  
   
  Un contenitore Ciclo For può includere una sola espressione di valutazione, pertanto esegue tutti gli elementi del flusso di controllo per lo stesso numero di volte. Poiché un contenitore Ciclo For può includere altri contenitori Ciclo For, nei pacchetti è possibile compilare cicli nidificati e implementare loop complessi.  
   
  È possibile impostare una proprietà di transazione sul contenitore Ciclo For per definire una transazione per un subset del flusso di controllo del pacchetto. In questo modo è possibile gestire le transazioni con un livello di granularità superiore. Se ad esempio un contenitore Ciclo For ripete un flusso di controllo che aggiorna più volte i dati di una tabella, sarà possibile configurare il ciclo For e il relativo flusso di controllo per l'utilizzo di una transazione, in modo da assicurare che se non è possibile aggiornare correttamente tutti i dati, non ne verrà aggiornato alcuno. Per altre informazioni, vedere [Transazioni di Integration Services](../../integration-services/integration-services-transactions.md).  
   
-## <a name="add-iteration-to-a-control-flow-with-the-for-loop-container"></a>Aggiunta di un'iterazione a un flusso di controllo con il contenitore ciclo For
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]include il contenitore ciclo For, un elemento del flusso di controllo che semplifica l'integrazione di ciclo in modo condizionale che si ripete un flusso di controllo in un pacchetto. Per altre informazioni, vedere [Contenitore Ciclo For](../../integration-services/control-flow/for-loop-container.md).  
+## <a name="add-iteration-to-a-control-flow-with-the-for-loop-container"></a>Aggiungere un'iterazione a un flusso di controllo con il contenitore Ciclo For
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include il contenitore Ciclo For, un elemento del flusso di controllo che semplifica l'implementazione di un ciclo che consente la ripetizione condizionale di un flusso di controllo in un pacchetto. Per altre informazioni, vedere [Contenitore Ciclo For](../../integration-services/control-flow/for-loop-container.md).  
   
  Il contenitore Ciclo For valuta una condizione a ogni iterazione del ciclo e si arresta quando la condizione restituisce False. Il contenitore Ciclo For include espressioni per l'inizializzazione del ciclo, la definizione della condizione da valutare per determinare se arrestare o meno l'esecuzione del flusso di controllo ripetuto, nonché l'assegnazione di un valore a un'espressione che aggiorna il valore con cui confrontare la condizione da valutare. La condizione da valutare è obbligatoria, mentre le espressioni di inizializzazione e di assegnazione sono facoltative.  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 09/26/2017
   
  Il contenitore Ciclo For può includere un flusso di controllo con più attività e altri contenitori. L'aggiunta di attività e contenitori a un contenitore Ciclo For è analoga all'aggiunta di tali elementi a un pacchetto, con la differenza che è necessario trascinare attività e contenitori nel contenitore Ciclo For anziché nel pacchetto. Se il contenitore Ciclo For include più di un contenitore o attività, sarà possibile connettere tali elementi utilizzando vincoli di precedenza, come avviene nei pacchetti. Per altre informazioni, vedere [Vincoli di precedenza](../../integration-services/control-flow/precedence-constraints.md).  
   
-## <a name="add-a-for-loop-container-in-a-control-flow"></a>Aggiungere un contenitore ciclo For in un flusso di controllo  
+## <a name="add-a-for-loop-container-in-a-control-flow"></a>Aggiungere un contenitore Ciclo For in un flusso di controllo  
   
 1.  Aggiungere il contenitore Ciclo For al pacchetto. Per altre informazioni, vedere [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 09/26/2017
   
 4.  Configurare il contenitore Ciclo For. Per altre informazioni, vedere [Configurazione di un contenitore Ciclo For](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
 
-##  <a name="configure-the-for-loop-container"></a>Configurare il contenitore ciclo For
+##  <a name="configure-the-for-loop-container"></a>Configurare il contenitore Ciclo For
 Questa procedura descrive come configurare un contenitore Ciclo For tramite la finestra di dialogo **Editor ciclo For** .  
   
  Per un esempio di contenitore Ciclo For, vedere la pagina relativa all' [esecuzione corretta di cicli SSIS](http://go.microsoft.com/fwlink/?LinkId=240295) sul sito Web bimonkey.com.  
@@ -93,7 +94,7 @@ Questa procedura descrive come configurare un contenitore Ciclo For tramite la f
   
 7.  Fare clic su **OK** per chiudere la finestra **Editor ciclo For**.  
 
-## <a name="for-loop-editor-dialog-box"></a>Per la finestra di dialogo Editor ciclo
+## <a name="for-loop-editor-dialog-box"></a>Finestra di dialogo Editor ciclo For
 La pagina **Ciclo For** della finestra di dialogo **Editor ciclo For** consente di configurare un ciclo che ripeta un flusso di lavoro fino a quando una determinata condizione non restituisca il valore False.  
   
  Per ulteriori informazioni sul contenitore Ciclo Foreach e sulle modalità di utilizzo del contenitore nei pacchetti, vedere [For Loop Container](../../integration-services/control-flow/for-loop-container.md).  
@@ -117,12 +118,12 @@ La pagina **Ciclo For** della finestra di dialogo **Editor ciclo For** consente 
  **Description**  
  Consente di specificare una descrizione per il contenitore Ciclo For.  
  
-## <a name="use-expressions-with-the-for-loop-container"></a>Utilizzare le espressioni con il contenitore ciclo For  
+## <a name="use-expressions-with-the-for-loop-container"></a>Usare le espressioni con il contenitore Ciclo For  
  Quando si configura il contenitore Ciclo For specificando una condizione da valutare, un valore di inizializzazione o un valore di assegnazione, è possibile utilizzare valori letterali o espressioni.  
   
  Le espressioni possono includere variabili. Il vantaggio delle variabili è che possono essere aggiornate in fase di esecuzione, rendendo il pacchetto più flessibile e più facile da gestire. Un'espressione può avere una lunghezza massima di 4000 caratteri.  
   
- Quando si specifica una variabile in un'espressione è necessario anteporre il simbolo @ al nome della variabile. Ad esempio, per una variabile denominata **contatore**, immettere @Counter nell'espressione che utilizza il contenitore ciclo For. Se la variabile include la proprietà Namespace, sarà necessario racchiudere la variabile e lo spazio dei nomi tra parentesi quadre. Ad esempio, per un **contatore** variabile il **MyNamespace** dello spazio dei nomi, tipo [@MyNamespace::Counter].  
+ Quando si specifica una variabile in un'espressione è necessario anteporre il simbolo @ al nome della variabile. Se ad esempio il nome della variabile è **Counter**, nell'espressione usata nel contenitore Ciclo For sarà necessario immettere @Counter. Se la variabile include la proprietà Namespace, sarà necessario racchiudere la variabile e lo spazio dei nomi tra parentesi quadre. Se ad esempio si usa la variabile **Counter** nello spazio dei nomi **MyNamespace**, sarà necessario immettere [@MyNamespace::Counter].  
   
  Le variabili utilizzate dal contenitore Ciclo For devono essere definite nell'ambito del contenitore Ciclo For o di un altro contenitore di livello superiore nella gerarchia dei contenitori del pacchetto. Un contenitore Ciclo For può ad esempio utilizzare sia variabili definite nel proprio ambito, sia variabili definite nell'ambito del pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
@@ -131,7 +132,6 @@ La pagina **Ciclo For** della finestra di dialogo **Editor ciclo For** consente 
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di controllo](../../integration-services/control-flow/control-flow.md)   
- [Integration Services &#40; SSIS &#41; Espressioni](../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

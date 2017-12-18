@@ -1,37 +1,38 @@
 ---
-title: "Modificare le proprietà dell'istanza | Documenti Microsoft"
+title: "Modificare le proprietà dell'istanza | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14a55010cd2adc4ea02f0207b91a8e608ed7b176
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1ddaa0513e6b095ec5dcbb5b9b52358bbedface8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="edit-instance-properties"></a>Modificare le proprietà dell'istanza
   Utilizzare l'editor delle proprietà per apportare modifiche all'istanza di CDC dopo avere creato le configurazioni iniziali. Nell'editor delle proprietà è possibile effettuare le operazioni seguenti:  
   
--   [Modificare le proprietà del Database Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
+-   [Modificare le proprietà del database Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
   
 -   [Modificare le tabelle](../../integration-services/change-data-capture/edit-tables.md)  
   
 -   [Aggiungere tabelle a un'istanza di CDC](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
   
--   [Modificare le proprietà di tabella](../../integration-services/change-data-capture/edit-the-table-properties.md)  
+-   [Modificare le proprietà delle tabelle](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
 -   [Rivedere e generare script di registrazione supplementare](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
@@ -58,4 +59,3 @@ ms.lasthandoff: 08/03/2017
      È inoltre possibile fare clic con il pulsante destro del mouse sul servizio nell'elenco al centro di CDC Designer Console e selezionare **Proprietà**.  
   
   
-

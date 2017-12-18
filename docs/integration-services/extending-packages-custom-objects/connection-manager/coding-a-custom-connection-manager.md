@@ -1,35 +1,34 @@
 ---
-title: Codifica una gestione connessione personalizzata | Documenti Microsoft
+title: Scrittura del codice di una gestione connessione personalizzata | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom connection managers [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c8117a84ee1dcbd78de5015e5e9e21bfa0e8940
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ab9cc5d32606564b4b79ac5270217fd849e97fd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-connection-manager"></a>Scrittura del codice di una gestione connessione personalizzata
   Dopo avere creato una classe che eredita dalla classe di base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> e avere applicato l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> alla classe, è necessario eseguire l'override dell'implementazione delle proprietà e dei metodi della classe di base per fornire la funzionalità personalizzata.  
   
- Per esempi di gestioni connessioni personalizzate, vedere [lo sviluppo di un'interfaccia utente per una gestione connessione personalizzata](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Gli esempi di codice illustrati in questo argomento sono tratti dall'esempio di gestione connessione personalizzata SQL Server.  
+ Per esempi di gestioni connessione personalizzate, vedere [Sviluppo di un'interfaccia utente per una gestione connessione personalizzata](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Gli esempi di codice illustrati in questo argomento sono tratti dall'esempio di gestione connessione personalizzata SQL Server.  
   
 > [!NOTE]  
 >  La maggior parte delle attività, delle origini e delle destinazioni incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] funziona solo con tipi specifici di gestioni connessioni predefinite. Questi esempi, pertanto, non possono essere testati con le attività e i componenti predefiniti.  
@@ -193,13 +192,13 @@ public override Microsoft.SqlServer.Dts.Runtime.DTSExecResult Validate(Microsoft
 ```  
   
 ### <a name="persisting-the-connection-manager"></a>Persistenza della gestione connessione  
- In genere non è necessario implementare la persistenza personalizzata per una gestione connessione. La persistenza personalizzata è richiesta solo quando le proprietà di un oggetto utilizzano tipi di dati complessi. Per ulteriori informazioni, vedere [lo sviluppo di oggetti personalizzati per Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ In genere non è necessario implementare la persistenza personalizzata per una gestione connessione. La persistenza personalizzata è richiesta solo quando le proprietà di un oggetto utilizzano tipi di dati complessi. Per altre informazioni, vedere [Sviluppo di oggetti personalizzati per Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
   
 ## <a name="working-with-the-external-data-source"></a>Utilizzo dell'origine dati esterna  
  I metodi più importanti di una gestione connessione personalizzata sono quelli che supportano la connessione a un'origine dati esterna. I metodi <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A> vengono chiamati in vari momenti durante la fase di progettazione e la fase di esecuzione.  
   
 ### <a name="acquiring-the-connection"></a>Acquisizione della connessione  
- È necessario stabilire il tipo di oggetto appropriato che il metodo <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> deve restituire dalla gestione connessione personalizzata. Ad esempio, una gestione connessione file restituisce solo una stringa che contiene un percorso e un nome file, mentre una gestione connessione ADO.NET restituisce un oggetto connessione gestito che già è aperto. Una gestione connessione OLE DB restituisce un oggetto connessione OLE DB nativo che non può essere utilizzato da codice gestito. La gestione di connessione personalizzata SQL Server, da cui provengono i frammenti di codice in questo argomento, restituisce un oggetto aperto **SqlConnection** oggetto.  
+ È necessario stabilire il tipo di oggetto appropriato che il metodo <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> deve restituire dalla gestione connessione personalizzata. Ad esempio, una gestione connessione file restituisce solo una stringa che contiene un percorso e un nome file, mentre una gestione connessione ADO.NET restituisce un oggetto connessione gestito che già è aperto. Una gestione connessione OLE DB restituisce un oggetto connessione OLE DB nativo che non può essere utilizzato da codice gestito. La gestione connessione SQL Server personalizzata, da cui sono tratti i frammenti di codice inclusi in questo argomento, restituisce un oggetto **SqlConnection** aperto.  
   
  Gli utenti della gestione connessione devono sapere in anticipo quale tipo di oggetto aspettarsi, in modo che possano eseguire il cast dell'oggetto restituito nel tipo appropriato e accedere ai relativi metodi e proprietà.  
   
@@ -270,4 +269,3 @@ public override void ReleaseConnection(object connection)
  [Sviluppo di un'interfaccia utente per una gestione connessione personalizzata](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

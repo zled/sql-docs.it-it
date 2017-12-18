@@ -1,34 +1,33 @@
 ---
-title: "Esempi di attività di script | Documenti Microsoft"
+title: "Esempi di attività Script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], examples
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f7732abe880aa5eeaab2030da423e18d1977d64a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: cd20d44652dacf8f5d0c4e6039c477a87f8bd3f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="script-task-examples"></a>Esempi di attività Script
   L'attività Script è uno strumento multifunzione che è possibile utilizzare in un pacchetto per rispondere ai requisiti non soddisfatti dalle attività incluse in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. In questo argomento sono riportati esempi di codice dell'attività Script che dimostrano alcune delle funzionalità disponibili.  
@@ -48,16 +47,16 @@ ms.lasthandoff: 09/26/2017
  Viene raccolto un elenco di file che soddisfano criteri specificati dall'utente e viene popolata una variabile per un utilizzo successivo da parte dell'enumeratore Foreach da variabile.  
   
  [Esecuzione di query su Active Directory tramite l'attività Script](../../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md)  
- Recupera le informazioni utente da Active Directory in base al valore di un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variabile, utilizzando le classi nello spazio dei nomi System. DirectoryServices.  
+ Vengono recuperate informazioni utente da Active Directory in base al valore di una variabile [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], tramite le classi dello spazio dei nomi System.DirectoryServices.  
   
  [Monitoraggio dei contatori delle prestazioni con l'attività Script](../../integration-services/extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md)  
- Crea un contatore delle prestazioni personalizzato che può essere usato per tenere traccia dell'avanzamento dell'esecuzione di un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetto, utilizzando le classi nello spazio dei nomi System. Diagnostics.  
+ Viene creato un contatore delle prestazioni personalizzato che può essere usato per registrare lo stato dell'esecuzione di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], tramite le classi dello spazio dei nomi System.Diagnostics.  
   
  [Utilizzo di immagini con l'attività Script](../../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)  
- Comprime le immagini in formato JPEG e crea le immagini di anteprima, utilizzando le classi nello spazio dei nomi System. Drawing.  
+ Vengono compresse immagini in formato JPEG e da esse vengono create immagini anteprima, tramite le classi dello spazio dei nomi System.Drawing.  
   
  [Ricerca di stampanti installate con l'attività Script](../../integration-services/extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md)  
- Individua le stampanti installate che supportano carta specifico, utilizzando le classi nello spazio dei nomi System.Drawing.Printing.  
+ Vengono individuate le stampanti installate che supportano un formato della carta specifico, tramite le classi dello spazio dei nomi System.Drawing.Printing.  
   
  [Invio di un messaggio di posta HTML con l'attività Script](../../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md)  
  Viene inviato un messaggio di posta in formato HTML anziché di testo normale.  
@@ -84,4 +83,3 @@ ms.lasthandoff: 09/26/2017
  Viene registrato il numero di elementi elaborati dall'attività nei provider di log abilitati.  
   
   
-

@@ -1,12 +1,14 @@
 ---
-title: "Risoluzione dei problemi di strumenti per la connettività di pacchetto | Documenti Microsoft"
+title: "Strumenti per la risoluzione dei problemi relativi alla connettività dei pacchetti | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 11c80c7ecc8fc8598b1079458d83773db6e68f06
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>Risoluzione dei problemi relativi alla connettività dei pacchetti degli strumenti
 In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili gli strumenti e le caratteristiche per la risoluzione dei problemi relativi alla connettività tra pacchetti e alle origini dati da cui i pacchetti estraggono e caricano i dati.  
@@ -39,7 +40,7 @@ In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibil
   
     -   Gestione connessione OLE DB, origine OLE DB e destinazione OLE DB  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]gestione connessione e l'origine ADO NET  
+    -   Gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e origine ADO NET  
   
     -   Attività Esegui SQL  
   
@@ -74,8 +75,7 @@ In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibil
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti di risoluzione dei problemi per lo sviluppo di pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Strumenti di risoluzione dei problemi per l'esecuzione del pacchetto](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

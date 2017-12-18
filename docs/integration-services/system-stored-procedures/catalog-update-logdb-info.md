@@ -1,30 +1,28 @@
 ---
-title: Catalog.update_logdb_info (Database SSISDB) | Documenti Microsoft
+title: catalog.update_logdb_info (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a898be08859230ab873fd8e358b892789aaed043
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fad30ab7de9b608a79a8df9269dd84dabcf47418
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="catalogupdatelogdbinfo-ssisdb-database"></a>Catalog.update_logdb_info (Database SSISDB)
+# <a name="catalogupdatelogdbinfo-ssisdb-database"></a>catalog.update_logdb_info (database SSISDB)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-Aggiornamento di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] scala Out della registrazione di informazioni.
+Consente di aggiornare le informazioni di registrazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,11 +31,11 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 ```
 
 ## <a name="arguments"></a>Argomenti
-[ @server_name =] *nome_server*  
- Sql Server utilizzata per la registrazione orizzontale. Il *nome_server* è **nvarchar**.  
+[ @server_name = ] *server_name*  
+ Server SQL usato per la registrazione di Scale Out. *server_name* è di tipo **nvarchar**.  
 
- [ @connection_string =] *stringa_connessione*  
- Stringa di connessione utilizzata per la registrazione orizzontale. Il *stringa_connessione* è **nvarchar**.
+ [ @connection_string = ] *connection_string*  
+ Stringa di connessione usata per la registrazione di Scale Out. *connection_string* è di tipo **nvarchar**.
 
  ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -45,11 +43,10 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
 
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
    
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
  
-

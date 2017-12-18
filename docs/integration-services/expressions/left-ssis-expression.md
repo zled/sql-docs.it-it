@@ -1,26 +1,27 @@
 ---
-title: LEFT (espressione SSIS) | Documenti Microsoft
+title: LEFT (espressione SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aad5c2de4903b5ad79fd5087be7801a8195e943f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 88edf86e9f00e890f3e390f801ae208be3bb2799
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="left-ssis-expression"></a>LEFT (espressione SSIS)
   Viene restituito il numero specificato di caratteri della parte più a sinistra dell'espressione di caratteri indicata.  
@@ -63,8 +64,7 @@ LEFT("Mountain Bike", 8)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DESTRA &#40; Espressione SSIS &#41;](../../integration-services/expressions/right-ssis-expression.md)   
- [Funzioni &#40; Espressione SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [RIGHT &#40;espressione SSIS&#41;](../../integration-services/expressions/right-ssis-expression.md)   
+ [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

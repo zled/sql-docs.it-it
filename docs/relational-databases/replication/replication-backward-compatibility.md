@@ -2,9 +2,12 @@
 title: "Compatibilità con le versioni precedenti della replica | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 92770f531048f6697e2904f1399c74f88022be53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4031251e251a40014cdcbf41727876bf85f08efd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-backward-compatibility"></a>Compatibilità con le versioni precedenti della replica
-  Negli argomenti della sezione relativa alla compatibilità con le versioni precedenti vengono descritte le modifiche funzionali fra le versioni della replica di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È importante comprendere gli aspetti correlati alla compatibilità con le versioni precedenti se si esegue un aggiornamento o se si utilizza più di una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una topologia di replica.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Negli argomenti della sezione relativa alla compatibilità con le versioni precedenti vengono descritte le modifiche funzionali fra le versioni della replica di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È importante comprendere gli aspetti correlati alla compatibilità con le versioni precedenti se si esegue un aggiornamento o se si utilizza più di una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una topologia di replica.  
   
  [Funzionalità deprecate nella replica di SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
  Funzionalità di replica mantenute in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per la compatibilità con le versioni precedenti, ma che verranno rimosse a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

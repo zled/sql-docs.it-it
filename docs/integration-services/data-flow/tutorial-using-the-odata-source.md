@@ -1,26 +1,27 @@
 ---
-title: 'Esercitazione: Utilizzo dell''origine OData | Documenti Microsoft'
+title: 'Esercitazione: uso dell''origine OData | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: cbdc4a2e0719e65e378d232c5abcb5404e8342f1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/23/2017
-
+ms.openlocfilehash: 7f89e0403454aedd4804ae2585a82254ea092674
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="tutorial-using-the-odata-source"></a>Esercitazione: utilizzo dell'origine OData
   In questa esercitazione viene eseguito il processo per estrarre la raccolta **Dipendenti** del servizio **Northwind** OData di esempio (http://services.odata.org/V3/Northwind/Northwind.svc/) e caricarla in un file flat.  
@@ -39,27 +40,27 @@ ms.lasthandoff: 08/23/2017
   
 ## <a name="2-add-and-configure-an-odata-source"></a>2. Aggiungere e configurare un'origine OData 
   
-1.  Trascinare un'**Attività Flusso di dati** da **Casella degli strumenti SSIS** all'area di progettazione del flusso di controllo del pacchetto SSIS.  
+1.  Trascinare un' **Attività Flusso di dati** da **Casella degli strumenti SSIS** all'area di progettazione del flusso di controllo del pacchetto SSIS.  
   
-2.  Fare clic su di **del flusso di dati** scheda o fare doppio clic su di **attività flusso di dati** per aprire l'area di progettazione del flusso di dati.  
+2.  Fare clic sulla scheda **Flusso di dati** oppure fare doppio clic sull'**attività Flusso di dati** per aprire l'area di progettazione del flusso di dati.  
   
 3.  Trascinare **Origine Odata** dal gruppo **Comune** in **Casella degli strumenti SSIS**.
   
-4.  Fare doppio clic su di **origine OData** componente per avviare il **Editor origine OData** la finestra di dialogo.  
+4.  Fare doppio clic sul componente **Origine OData** per aprire la finestra di dialogo **Editor origine OData**.  
   
 5.  Fare clic su **Nuovo…** per aggiungere una nuova gestione connessione OData.  
   
-6.  Immettere l'URL del servizio OData in **percorso documento di servizio**. Questo URL può essere l'URL del documento di servizio o a un feed specifico o l'entità. Ai fini di questa esercitazione, immettere l'URL del documento di servizio: [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Immettere l'URL del servizio OData in **percorso documento di servizio**. Può essere l'URL del documento di servizio o l'URL di un'entità o di un feed specifico. Ai fini di questa esercitazione, digitare l'URL del documento di servizio: [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   
 7.  Verificare che sia selezionato **Autenticazione di Windows** come **autenticazione** da utilizzare per accedere al servizio OData. **Autenticazione di Windows** è selezionato per impostazione predefinita.  
   
-8.  Fare clic su **Test connessione** per testare la connessione, fare clic su **OK** per completare la creazione di un'istanza della gestione connessione OData.  
+8.  Fare clic su **Test connessione** per testare la connessione e fare clic su **OK** per completare la creazione di un'istanza della gestione connessione OData.  
   
 9. Nella finestra di dialogo **Editor origine OData** , verificare che **Raccolta** sia selezionato per l'opzione **Utilizza raccolta in percorso risorse** .  
   
-10. Dal **raccolta** elenco a discesa, seleziona **dipendenti**.  
+10. Selezionare **Dipendenti** nell'elenco a discesa **Raccolta**.  
   
-11. Immettere tutti i filtri o le opzioni query OData aggiuntive per **Opzioni query**. Ad esempio, `$orderby=CompanyName&$top=100`. Ai fini di questa esercitazione, immettere `$top=5`.  
+11. Immettere tutti i filtri o le opzioni query OData aggiuntive per **Opzioni query**. Ad esempio, `$orderby=CompanyName&$top=100`. Ai fini di questa esercitazione immettere `$top=5`.  
   
 12. Fare clic su **Anteprima** per visualizzare un'anteprima dei dati.  
   
@@ -69,9 +70,9 @@ ms.lasthandoff: 08/23/2017
   
 15. Fare clic su **OK** per chiudere la finestra di dialogo **Editor origine OData** .  
   
-## <a name="3-add-and-configure-a-flat-file-destination"></a>3. Aggiungere e configurare una destinazione File Flat
+## <a name="3-add-and-configure-a-flat-file-destination"></a>3. Per aggiungere e configurare una destinazione file flat
   
-1.  Trascinare una **Destinazione file flat** dalla **casella degli strumenti SSIS** all'area di progettazione del flusso di dati sotto il componente **Origine Odata**.  
+1.  Trascinare una **Destinazione file flat** dalla **casella degli strumenti SSIS** all'area di progettazione del flusso di dati sotto il componente **Origine Odata** .  
   
 2.  Connettere il componente **Origine Odata** al componente **Destinazione file flat** utilizzando la freccia blu.  
   
@@ -79,9 +80,9 @@ ms.lasthandoff: 08/23/2017
   
 4.  Nella finestra di dialogo **Editor destinazione file flat** fare clic su **Nuovo** per creare una nuova gestione connessione file flat.  
   
-5.  Nella finestra di dialogo **Formato file flat** selezionare **Delimitato**. Verranno visualizzate le **Editor gestione connessione File Flat** la finestra di dialogo.  
+5.  Nella finestra di dialogo **Formato file flat** selezionare **Delimitato**. Viene visualizzata la finestra di dialogo **Editor gestione connessione file flat**.  
   
-6.  Nel **Editor gestione connessione File Flat** nella finestra di dialogo per la **nome File**, immettere `c:\Employees.txt`.  
+6.  Nella finestra di dialogo **Editor gestione connessione file flat** immettere `c:\Employees.txt` in **Nome file**.  
   
 7.  Fare clic su **Colonne**nel pannello di navigazione sinistro. In questa pagina è possibile visualizzare l'anteprima dei dati.  
   
@@ -92,7 +93,6 @@ ms.lasthandoff: 08/23/2017
 10. Fare clic su OK per chiudere la finestra di dialogo **Editor destinazione file flat** .  
 
 ## <a name="4-run-the-package"></a>4. Eseguire il pacchetto
-Eseguire il pacchetto SSIS. Verificare che il file di output viene creato con l'ID, il nome e cognome di 5 dipendenti dal OData feed.
+Eseguire il pacchetto SSIS. Verificare che il file di output venga creato con l'ID, il nome e il cognome di cinque dipendenti dal feed OData.
   
   
-

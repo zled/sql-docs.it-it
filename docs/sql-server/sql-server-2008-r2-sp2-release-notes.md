@@ -1,11 +1,14 @@
 ---
 title: Note sulla versione di SQL Server 2008 R2 SP2 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,14 +20,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9a25b50719f315fc9b6ab4683cdb4a75f13d266
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 274eacb496ce91ca2171c467e9265acad5ce4b79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
-Nel presente documento sono descritti i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere i problemi relativi a Microsoft SQL Server 2008 R2 Service Pack 2. Il documento Note sulla versione è valido per tutte le edizioni di SQL Server 2008 R2 SP2 ed è disponibile solo online. Questo documento viene aggiornato periodicamente.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Questo documento descrive i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere i problemi relativi a Microsoft SQL Server 2008 R2 Service Pack 2. Il documento Note sulla versione è valido per tutte le edizioni di SQL Server 2008 R2 SP2 ed è disponibile solo online. Questo documento viene aggiornato periodicamente.  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 Novità del Service Pack 2  
 È stata aggiunta la vista a gestione dinamica (DMV) **sys.dm_db_stats_properties**. È possibile utilizzare questa DMV per restituire le proprietà delle statistiche di una tabella o una vista indicizzata specificata nel database corrente. Questa DMV restituisce, ad esempio, il numero di righe campionate e il numero di intervalli nell'istogramma.  

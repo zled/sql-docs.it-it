@@ -1,16 +1,17 @@
 ---
-title: Abilitazione della registrazione a livello di codice | Documenti Microsoft
+title: Abilitazione della registrazione a livello di programmazione | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,17 +26,16 @@ helpviewer_keywords:
 - LogProvider object
 - packages [Integration Services], logs
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: dd512f022832b57aa3fdcb85260926dd8354298c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e35f1d74cf6df3c3a37b8f03765f96ae2c6d7f65
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enabling-logging-programmatically"></a>Abilitazione della registrazione a livello di programmazione
   Il motore di runtime include una raccolta di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> che consentono l'acquisizione di informazioni specifiche degli eventi durante la convalida e l'esecuzione di pacchetti. Gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> sono disponibili per gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, compresi gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> e <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. La registrazione viene abilitata su singoli contenitori o sull'intero pacchetto.  
@@ -43,22 +43,22 @@ ms.lasthandoff: 08/03/2017
  Sono disponibili diversi tipi di provider di log che un contenitore può utilizzare. In questo modo è possibile creare e archiviare le informazioni del log in modo flessibile in molti formati. Per integrare un oggetto contenitore nella registrazione, sono necessari due passaggi: viene innanzitutto abilitata la registrazione, quindi viene selezionato un provider di log. Le proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingOptions%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> del contenitore vengono utilizzate per specificare gli eventi registrati e per selezionare il provider di log.  
   
 ## <a name="enabling-logging"></a>Abilitazione della registrazione  
- La proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A>, disponibile in ogni contenitore in grado di eseguire la registrazione, determina se le informazioni degli eventi del contenitore vengono o meno registrate nel log eventi. Questa proprietà, a cui viene assegnato un valore della struttura <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>, è ereditata dall'elemento padre del contenitore per impostazione predefinita. Se il contenitore è un pacchetto e pertanto non ha elementi padre, la proprietà utilizza il <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>, che per impostazione predefinita **disabilitato**.  
+ La proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A>, disponibile in ogni contenitore in grado di eseguire la registrazione, determina se le informazioni degli eventi del contenitore vengono o meno registrate nel log eventi. Questa proprietà, a cui viene assegnato un valore della struttura <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>, è ereditata dall'elemento padre del contenitore per impostazione predefinita. Se il contenitore è un pacchetto e pertanto non ha un elemento padre, la proprietà usa l'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>, che per impostazione predefinita è **Disabled**.  
   
 ### <a name="selecting-a-log-provider"></a>Selezione di un provider di log  
- Dopo il <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> è impostata su **abilitato**, viene aggiunto un provider di log per il <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> raccolta del contenitore per completare il processo. La raccolta <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> è disponibile sull'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> e contiene i provider di log selezionati per il contenitore. Il metodo <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> viene chiamato per creare un provider e per aggiungerlo alla raccolta. Il metodo restituisce quindi il provider di log aggiunto alla raccolta. Ogni provider include impostazioni di configurazione specifiche e queste proprietà vengono impostate tramite la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
+ Dopo l'impostazione della proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> su **Enabled**, viene aggiunto un provider di log alla raccolta <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> del contenitore per completare il processo. La raccolta <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> è disponibile sull'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> e contiene i provider di log selezionati per il contenitore. Il metodo <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> viene chiamato per creare un provider e per aggiungerlo alla raccolta. Il metodo restituisce quindi il provider di log aggiunto alla raccolta. Ogni provider include impostazioni di configurazione specifiche e queste proprietà vengono impostate tramite la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
   
  Nella tabella seguente sono elencati i provider di log disponibili, la relativa descrizione e le informazioni su <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
   
 |Provider|Description|Proprietà ConfigString|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|Genera tracce SQL che possono essere acquisite e visualizzate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler. L'estensione predefinita dei file per questo provider è trc.|Non è richiesta alcuna configurazione.|  
-|SQL Server|Scrive le voci di registro eventi di **sysssislog** tabella in qualsiasi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|Il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede che siano specificati la connessione al database e anche il nome del database di destinazione.|  
+|SQL Server|Scrive le voci del log eventi nella tabella **sysssislog** in qualsiasi database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede che siano specificati la connessione al database e anche il nome del database di destinazione.|  
 |File di testo|Scrive le voci del log eventi in file di testo ASCII in formato delimitato da virgole (CSV). L'estensione predefinita dei file per questo provider è log.|Nome di una gestione connessione file.|  
 |Registro eventi di Windows|Registra nel registro eventi standard di Windows nel registro applicazioni del computer locale.|Non è richiesta alcuna configurazione.|  
 |File XML|Scrive le voci del log eventi in un file in formato XML. L'estensione predefinita dei file per questo provider è xml.|Nome di una gestione connessione file.|  
   
- Gli eventi vengono inclusi o esclusi dal log eventi impostando il **EventFilterKind** e **EventFilter** proprietà del contenitore. Il **EventFilterKind** struttura contiene due valori, **ExclusionFilter** e **InclusionFilter**, che indicano se gli eventi che sono aggiunti il **EventFilter** sono inclusi nel registro eventi. Il **EventFilter** proprietà viene quindi assegnata a una matrice di stringhe contenente i nomi degli eventi che vengono eseguita l'applicazione di filtri.  
+ Gli eventi vengono inclusi o esclusi dal log eventi impostando le proprietà **EventFilterKind** e **EventFilter** del contenitore. La struttura **EventFilterKind** contiene due valori, **ExclusionFilter** e **InclusionFilter**, che indicano se gli eventi aggiunti a **EventFilter** sono inclusi nel log eventi. Alla proprietà **EventFilter** viene quindi assegnata una matrice di stringhe che contiene i nomi degli eventi soggetti all'applicazione di filtri.  
   
  Nel codice seguente viene abilitata la registrazione su un pacchetto, viene aggiunto il provider di log per i file di testo nella raccolta <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> e viene specificato un elenco di eventi da includere nell'output della registrazione.  
   
@@ -122,7 +122,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40; SSIS &#41; Registrazione](../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

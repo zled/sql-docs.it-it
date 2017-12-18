@@ -1,28 +1,28 @@
 ---
-title: Esecuzione delle operazioni (SQL Server importazione / esportazione guidata) | Documenti Microsoft
+title: Esecuzione delle operazioni (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 01/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.performingoperation.f1
+f1_keywords: sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 75dc26699071ee88bb0c05368b4bf36ba677c35b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6d31607e0a2880d0a984efe20e4b11c9195cb789
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Esecuzione delle operazioni (Importazione/Esportazione guidata SQL Server)
 Dopo avere esaminato le scelte effettuate nella procedura guidata, fare clic su **Fine** nella pagina **Completare la procedura guidata** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Importazione/Esportazione guidata visualizzerà **Esecuzione dell'operazione**. In questa pagina è possibile visualizzare lo stato di avanzamento e il risultato dell'operazione configurata nelle pagine precedenti. Non è necessario eseguire alcuna operazione in questa pagina.
@@ -30,12 +30,12 @@ Dopo avere esaminato le scelte effettuate nella procedura guidata, fare clic su 
 ## <a name="screen-shot---operation-in-progress"></a>Screenshot di operazione in corso 
  L'immagine seguente illustra la pagina **Esecuzione dell'operazione** della procedura guidata mentre l'operazione è ancora in corso.  
   
- ![Pagina di operazione di esecuzione dell'importazione / esportazione guidata](../../integration-services/import-export-data/media/performing-operation1.png "pagina operazione di esecuzione dell'importazione / esportazione guidata")  
+ ![Pagina Esecuzione dell'operazione dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/performing-operation1.png "Pagina Esecuzione dell'operazione dell'Importazione/Esportazione guidata")  
 
 ## <a name="screen-shot---operation-completed"></a>Screenshot di operazione completata 
  L'immagine seguente illustra la pagina **Esecuzione dell'operazione** della procedura guidata al termine dell'operazione. Fare clic su un elemento della colonna **Messaggio** per altre informazioni sul passaggio corrispondente.  
   
- ![Pagina di operazione di esecuzione dell'importazione / esportazione guidata](../../integration-services/import-export-data/media/performing-operation2.png "pagina operazione di esecuzione dell'importazione / esportazione guidata")  
+ ![Pagina Esecuzione dell'operazione dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/performing-operation2.png "Pagina Esecuzione dell'operazione dell'Importazione/Esportazione guidata")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>Visualizzare lo stato dell'operazione
  **Azione**  
@@ -61,6 +61,5 @@ Dopo avere esaminato le scelte effettuate nella procedura guidata, fare clic su 
 
 ## <a name="see-also"></a>Vedere anche
 [Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

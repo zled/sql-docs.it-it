@@ -1,29 +1,30 @@
 ---
-title: dm_execution_performance_counters (Database SSISDB) | Documenti Microsoft
+title: dm_execution_performance_counters (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 67d5ece89f5b964acb2bb55a8cc69ff2fb77b93b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e143b66f9a10627695387bc5215c3b92565e230f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>Funzioni - dm_execution_performance_counters
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Restituisce le statistiche sulle prestazioni per un'esecuzione in corso nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
@@ -35,10 +36,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @execution_id =] *valore di execution_id*  
+ [ @execution_id = ] *execution_id*  
  Identificatore univoco dell'esecuzione che contiene uno o più pacchetti. I pacchetti eseguiti con l'attività Esegui pacchetto vengono eseguiti nella stessa esecuzione del pacchetto padre.  
   
- Se non è specificato alcun ID esecuzione, vengono restituite le statistiche per più esecuzioni. Se si è un membro del ruolo del database **ssis_admin** , vengono restituite le statistiche sulle prestazioni per tutte le esecuzioni in corso.  Se non si è un membro del ruolo del database **ssis_admin** , vengono restituite le statistiche sulle prestazioni per le esecuzioni in corso per cui si dispone delle autorizzazioni di lettura. Il *valore di execution_id* è un **BigInt**.  
+ Se non è specificato alcun ID esecuzione, vengono restituite le statistiche per più esecuzioni. Se si è un membro del ruolo del database **ssis_admin** , vengono restituite le statistiche sulle prestazioni per tutte le esecuzioni in corso.  Se non si è un membro del ruolo del database **ssis_admin** , vengono restituite le statistiche sulle prestazioni per le esecuzioni in corso per cui si dispone delle autorizzazioni di lettura. *execution_id* è di tipo **bigint**.  
   
 ## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono elencati i valori dei nomi dei contatori restituiti dalla funzione dm_execution_performance_counter.  
@@ -64,7 +65,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |Nome colonna|Tipo di colonna|Description|Osservazioni|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** non è un valore valido.|Identificatore univoco per l'esecuzione che contiene il pacchetto.||  
-|counter_name|**nvarchar (128)**|Nome del contatore.|Vedere il **osservazioni** sezione dei valori.|  
+|counter_name|**nvarchar(128)**|Nome del contatore.|Vedere la sezione **Osservazioni** relativa ai valori.|  
 |counter_value|**BigInt**|Valore restituito dal contatore.||  
   
 ## <a name="example"></a>Esempio  
@@ -87,9 +88,9 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Autorizzazioni READ e MODIFY per l'istanza di esecuzione  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte le condizioni che causano la mancata riuscita della funzione.  
@@ -99,4 +100,3 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 -   L'ID esecuzione specificato non è valido.  
   
   
-

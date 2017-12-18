@@ -1,28 +1,31 @@
 ---
-title: Aggiornato - Integration Services per i documenti del Server SQL | Documenti Microsoft
-description: Visualizzare i frammenti di contenuto aggiornato per modificati di recente nella documentazione, Integration Services per Microsoft SQL Server.
+title: 'Aggiornato: documentazione di Integration Services per SQL Server |Microsoft Docs'
+description: Visualizza frammenti di contenuto aggiornato per modifiche recenti nella documentazione, per Integration Services per Microsoft SQL Server.
 services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.service: 
+ms.component: integration-services
+ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: 
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/27/2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
 ms.author: genemi
 ms.workload: integration-services
-ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3c5da14b7a65f8a3eb1eb253d685a146d813868a
-ms.contentlocale: it-it
-ms.lasthandoff: 10/02/2017
-
+ms.openlocfilehash: b4f4ec841a9f815ddbe0558154ec8ea692683c11
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="new-and-recently-updated-integration-services-for-sql-server"></a>Nuovi e aggiornati: Integration Services per SQL Server
+# <a name="new-and-recently-updated-integration-services-for-sql-server"></a>Articoli nuovi e aggiornati di recente: Integration Services per SQL Server
 
 
 
@@ -34,7 +37,7 @@ Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di in
 
 
 
-- *Intervallo degli aggiornamenti di date:* &nbsp; **2017-09-11** &nbsp; - a - &nbsp; **2017-09-27**
+- *Intervallo di date degli aggiornamenti:* &nbsp; **11/09/2017** &nbsp; - &nbsp; **27/09/2017**
 - *Area di interesse:* &nbsp; **Integration Services per SQL Server**.
 
 
@@ -47,23 +50,23 @@ Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di in
 I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di recente.
 
 
-1. [Connettersi al database del catalogo di SSISDB in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
-2. [Connettersi a origini dati locali con autenticazione di Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
-3. [Distribuire ed eseguire il monitoraggio di un pacchetto SSIS in Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-4. [Spostare i carichi di lavoro di SQL Server Integration Services nel cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-5. [Pianificare l'esecuzione di un pacchetto SSIS in Azure](lift-shift/ssis-azure-schedule-packages.md)
+1. [Connettersi al database del catalogo SSISDB in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+2. [Connect to on-premises data sources with Windows Authentication](lift-shift/ssis-azure-connect-with-windows-auth.md) (Connettersi a origini dati locali con l'autenticazione di Windows)
+3. [Deploy, run, and monitor an SSIS package on Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md) (Distribuire, eseguire e monitorare un pacchetto SSIS in Azure)
+4. [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) (Migrazione lift and shift di carichi di lavoro di SQL Server Integration Services nel cloud)
+5. [Schedule the execution of an SSIS package on Azure](lift-shift/ssis-azure-schedule-packages.md) (Pianificare l'esecuzione di un pacchetto SSIS in Azure)
 6. [Distribuire un progetto SSIS dal prompt dei comandi con ISDeploymentWizard.exe](ssis-quickstart-deploy-cmdline.md)
-7. [Distribuire un progetto SSIS con codice c# in un'app .NET](ssis-quickstart-deploy-dotnet.md)
+7. [Deploy an SSIS project with C# code in a .NET app](ssis-quickstart-deploy-dotnet.md) (Distribuire un progetto SSIS con codice C# in un'app .NET)
 8. [Distribuire un progetto SSIS con PowerShell](ssis-quickstart-deploy-powershell.md)
-9. [Distribuire un progetto SSIS con SQL Server Management Studio (SSMS)](ssis-quickstart-deploy-ssms.md)
-10. [Distribuire un progetto SSIS da SSMS con Transact-SQL](ssis-quickstart-deploy-tsql-ssms.md)
-11. [Distribuire un progetto SSIS dal codice di Visual Studio con Transact-SQL](ssis-quickstart-deploy-tsql-vscode.md)
-12. [Eseguire un pacchetto SSIS dal prompt dei comandi con DTExec.exe](ssis-quickstart-run-cmdline.md)
-13. [Eseguire un pacchetto SSIS con codice c# in un'app .NET](ssis-quickstart-run-dotnet.md)
+9. [Deploy an SSIS project with SQL Server Management Studio (SSMS)](ssis-quickstart-deploy-ssms.md) (Distribuire un progetto SSIS con SQL Server Management Studio (SSMS))
+10. [Deploy an SSIS project from SSMS with Transact-SQL](ssis-quickstart-deploy-tsql-ssms.md) (Distribuire un progetto SSIS da SSMS con Transact-SQL)
+11. [Deploy an SSIS project from Visual Studio Code with Transact-SQL](ssis-quickstart-deploy-tsql-vscode.md) (Distribuire un progetto SSIS da Visual Studio Code con Transact-SQL)
+12. [Run an SSIS package from the command prompt with DTExec.exe](ssis-quickstart-run-cmdline.md) (Eseguire un pacchetto SSIS dal prompt dei comandi con DTExec.exe)
+13. [Run an SSIS package with C# code in a .NET app](ssis-quickstart-run-dotnet.md) (Eseguire un pacchetto SSIS con codice C# in un'app .NET)
 14. [Eseguire un pacchetto SSIS con PowerShell](ssis-quickstart-run-powershell.md)
-15. [Eseguire un pacchetto SSIS con SQL Server Management Studio (SSMS)](ssis-quickstart-run-ssms.md)
+15. [Run an SSIS project with SQL Server Management Studio (SSMS)](ssis-quickstart-run-ssms.md) (Eseguire un progetto SSIS con SQL Server Management Studio (SSMS))
 16. [Eseguire un pacchetto SSIS da SSMS con Transact-SQL](ssis-quickstart-run-tsql-ssms.md)
-17. [Eseguire un pacchetto SSIS da codice di Visual Studio con Transact-SQL](ssis-quickstart-run-tsql-vscode.md)
+17. [Eseguire un pacchetto SSIS da Visual Studio Code con Transact-SQL](ssis-quickstart-run-tsql-vscode.md)
 
 
 
@@ -113,20 +116,20 @@ In questa sezione sono elencati articoli molto simili ad articoli aggiornati di 
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Aree di interesse con articoli nuovi o aggiornati di recente
 
-- [Nuovo + aggiornato (0 + 1): **Analitica avanzate per SQL** documenti](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuovo + aggiornato (0 + 1): **Analysis Services per SQL** documenti](../analysis-services/new-updated-analysis-services.md)
-- [Nuovo + aggiornati (4 + 1): **motore di Database per SQL** documenti](../database-engine/new-updated-database-engine.md)
-- [Nuovo + aggiornato (17 + 0): **Integration Services per SQL** documenti](../integration-services/new-updated-integration-services.md)
-- [Nuovo + aggiornato (3 + 0): **Linux per SQL** documenti](../linux/new-updated-linux.md)
-- [Nuovo + aggiornato (1 + 1): **database relazionali di SQL** documenti](../relational-databases/new-updated-relational-databases.md)
-- [Nuovo + aggiornato (2 + 0): **Reporting Services per SQL** documenti](../reporting-services/new-updated-reporting-services.md)
-- [Nuovo + aggiornato (0 + 1): **SQL Server Management Studio (SSMS)** documenti](../ssms/new-updated-ssms.md)
-- [Nuovo + aggiornato (0 + 1): **Transact-SQL** documenti](../t-sql/new-updated-t-sql.md)
+- [Nuovo + aggiornato (0+1): documentazione di **Advanced Analytics per SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuovo + aggiornato (0+1): documentazione di **Analysis Services per SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Nuovo + aggiornato (4+1): documentazione del **motore di database per SQL**](../database-engine/new-updated-database-engine.md)
+- [Nuovo + aggiornato (17+0): documentazione di **Integration Services per SQL**](../integration-services/new-updated-integration-services.md)
+- [Nuovo + aggiornato (3+0): documentazione di **Linux per SQL**](../linux/new-updated-linux.md)
+- [Nuovo + aggiornato (1+1): documentazione dei **database relazionali per SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Nuovo + aggiornato (2+0): documentazione di **Reporting Services per SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Nuovo + aggiornato (0+1): documentazione di **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Nuovo + aggiornato (0+1): documentazione di **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Aree di interesse senza articoli nuovi o aggiornati di recente
 
 - [Nuovo + aggiornato (0+0): **ActiveX Data Objects (ADO) for SQL (ActiveX Data Objects (ADO) per SQL)** Docs](../ado/new-updated-ado.md)
-- [Nuovo + aggiornato (0 + 0): **Connect to SQL** documenti](../connect/new-updated-connect.md)
+- [Nuovo + aggiornato (0+0): documentazione di **Connetti a SQL Server**](../connect/new-updated-connect.md)
 - [Nuovo + aggiornato (0+0): **Data Quality Services for SQL (Data Quality Services per SQL)** Docs](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuovo + aggiornato (0+0): **Data Mining Extensions (DMX) for SQL (Estensioni di data mining (DMX) per SQL)** Docs](../dmx/new-updated-dmx.md)
 - [Nuovo + aggiornato (0+0): documentazione di **Master Data Services (MDS) per SQL**](../master-data-services/new-updated-master-data-services.md)
@@ -134,11 +137,10 @@ In questa sezione sono elencati articoli molto simili ad articoli aggiornati di 
 - [Nuovo + aggiornato (0+0): **ODBC (Open Database Connectivity) for SQL (ODBC (Open Database Connectivity) per SQL)** Docs](../odbc/new-updated-odbc.md)
 - [Nuovo + aggiornato (0+0): **PowerShell for SQL (PowerShell per SQL)** Docs](../powershell/new-updated-powershell.md)
 - [Nuovo + aggiornato (0+0): **Samples for SQL (Esempi per SQL)** Docs](../sample/new-updated-sample.md)
-- [Nuovo + aggiornato (0 + 0): **Microsoft SQL Server** documenti](../sql-server/new-updated-sql-server.md)
+- [Nuovo + aggiornato (0+0): documentazione di **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
 - [Nuovo + aggiornato (0+0): documentazione di **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
 - [Nuovo + aggiornato (0+0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
-- [Nuovo + aggiornato (0 + 0): **Tools per SQL** documenti](../tools/new-updated-tools.md)
+- [Nuovo + aggiornato (0+0): documentazione degli **strumenti per SQL**](../tools/new-updated-tools.md)
 - [Nuovo + aggiornato (0+0): **XQuery for SQL (XQuery per SQL)** Docs](../xquery/new-updated-xquery.md)
-
 
 

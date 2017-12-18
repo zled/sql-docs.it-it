@@ -1,28 +1,28 @@
 ---
-title: Creare e modificare un servizio Oracle CDC | Documenti Microsoft
+title: Creare e modificare un servizio Oracle CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- createSrv
+f1_keywords: createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: de6ad94c01126dbdf32fefe75761f3aa2774446c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Creare e modificare un servizio Oracle CDC
   Da CDC Service Configuration Console viene creato e modificato un nuovo servizio Windows di Oracle CDC.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/26/2017
   
  Immettere le informazioni seguenti nella finestra di dialogo New Oracle CDC Windows Service CDC o la finestra di dialogo CDC Service Properties.  
   
-* * Nome servizio * *  
+**Nome servizio**  
  Digitare il nome del nuovo servizio Windows di Oracle CDC. Non utilizzare nomi lunghi, se possibile. Non è possibile utilizzare i caratteri / e \ nel nome del servizio.  
   
 > [!NOTE]  
@@ -61,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
      È possibile utilizzare un account di Windows locale o di dominio per l'account del servizio. In questo caso, è necessario immettere un valore in **Password** per l'account. Questo account può essere per l'host locale o un account di dominio. Assicurarsi di aggiornare la password quando viene modificata utilizzando Servizi locali nel Pannello di controllo di Windows.  
   
- **Nome del server**: selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza a cui connettersi (ad esempio,  **\\ \\< nome_computer >\\< instance_name >**). Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
+ **Nome server**: selezionare l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione a cui connettersi, ad esempio, **\\\\<nome_computer>\\<nome_istanza>**. Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
  **Autenticazione**  
  Selezionare una delle opzioni seguenti:  
@@ -96,4 +96,3 @@ ms.lasthandoff: 09/26/2017
  [Procedura di creazione e modifica di un servizio CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   
-

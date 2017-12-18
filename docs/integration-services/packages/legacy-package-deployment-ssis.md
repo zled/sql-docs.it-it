@@ -1,12 +1,14 @@
 ---
-title: Distribuzione del pacchetto legacy (SSIS) | Documenti Microsoft
+title: Distribuzione dei pacchetti legacy (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,17 +33,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 486fa573b955848828bff349f364543e6a1e23f7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="legacy-package-deployment-ssis"></a>distribuzione del pacchetto legacy (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include strumenti e procedure guidate per la distribuzione di pacchetti dal computer di sviluppo al server di produzione o ad altri computer.  
@@ -150,7 +151,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="registry-entry"></a>Voce del Registro di sistema  
  Se si desidera utilizzare una voce del Registro di sistema per archiviare la configurazione, è possibile utilizzare una chiave esistente oppure crearne una nuova in HKEY_CURRENT_USER. Nella chiave del Registro di sistema usata deve essere disponibile un valore denominato **Value**. Il valore può essere un DWORD o una stringa.  
   
- Se si seleziona il tipo di configurazione **Voce del Registro di sistema** , è necessario digitare il nome della chiave del Registro di sistema nella casella Voce del Registro di sistema. Il formato è \<chiave del Registro di sistema >. Se si desidera utilizzare una chiave del Registro di sistema che non si trova nella radice HKEY_CURRENT_USER, utilizzare il formato \<chiave sistema\chiave Registro di sistema\\... > per identificare la chiave. Per usare la chiave MyPackage in SSISPackages, ad esempio, digitare **SSISPackages\MyPackage**.  
+ Se si seleziona il tipo di configurazione **Voce del Registro di sistema** , è necessario digitare il nome della chiave del Registro di sistema nella casella Voce del Registro di sistema. Il formato è \<chiave del Registro di sistema>. Se si vuole usare una chiave del Registro di sistema che non si trova nella radice HKEY_CURRENT_USER, per identificare la chiave usare il formato \<chiave Registro di sistema\chiave Registro di sistema\\...>. Per usare la chiave MyPackage in SSISPackages, ad esempio, digitare **SSISPackages\MyPackage**.  
   
 #### <a name="sql-server"></a>SQL Server  
  Se si seleziona il tipo di configurazione **SQL Server** , è necessario specificare la connessione al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si desidera archiviare le configurazioni. È possibile salvare le configurazioni in una tabella esistente oppure creare una nuova tabella nel database specificato.  
@@ -361,7 +362,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**Voce del Registro di sistema**|Digitare la chiave del Registro di sistema contenente le informazioni di configurazione Il formato è \<chiave del Registro di sistema >.<br /><br /> È necessario che la chiave del Registro di sistema esista già in HKEY_CURRENT_USER e che il suo valore sia denominato Value. Il valore può essere un DWORD o una stringa.<br /><br /> Se si desidera utilizzare una chiave non si trova nella radice HKEY_CURRENT_USER del Registro di sistema, utilizzare il formato \<chiave sistema\chiave Registro di sistema\\... > per identificare la chiave.|  
+|**Voce del Registro di sistema**|Digitare la chiave del Registro di sistema contenente le informazioni di configurazione Il formato è \<chiave del Registro di sistema>.<br /><br /> È necessario che la chiave del Registro di sistema esista già in HKEY_CURRENT_USER e che il suo valore sia denominato Value. Il valore può essere un DWORD o una stringa.<br /><br /> Se si vuole usare una chiave del Registro di sistema che non si trova nella radice HKEY_CURRENT_USER, per identificare la chiave usare il formato \<chiave Registro di sistema\chiave Registro di sistema\\...>.|  
   
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui memorizzare la configurazione.  
@@ -428,7 +429,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Fine**  
  Consente di creare la configurazione e uscire dalla **Configurazione guidata pacchetto**.  
 
-## <a name="child"></a>Utilizzare i valori delle variabili e parametri in un pacchetto figlio
+## <a name="child"></a> Usare i valori di variabili e parametri in un pacchetto figlio
   In questa procedura viene descritto come creare una configurazione di pacchetto in cui viene utilizzato il tipo di configurazione variabile padre. Questo tipo di configurazione consente a un pacchetto figlio eseguito da un pacchetto padre di accedere a una variabile del pacchetto padre.  
   
 > [!NOTE]  
@@ -489,7 +490,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |CreateDeploymentUtility|Valore che specifica se in fase di compilazione del progetto viene creata un'utilità di distribuzione di pacchetti. Per creare un'utilità di distribuzione, la proprietà deve essere impostata su **True** .|  
 |DeploymentOutputPath|Posizione relativa al progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dell'utilità di distribuzione.|  
   
- Quando si compila un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un file manifesto del progetto \<nome progetto >. &Gt;.ssisdeploymentmanifest.XML, viene creato e aggiunto, insieme a copie dei pacchetti di progetto e le dipendenze dei pacchetti, nella cartella bin\Deployment nel progetto o nel percorso specificato nella proprietà DeploymentOutputPath. Nel file manifesto sono elencati i pacchetti, le configurazioni di pacchetto ed eventuali altri file del progetto.  
+ Quando si compila un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], viene creato un file manifesto, \<nome progetto>.SSISDeploymentManifest.xml, il quale viene aggiunto insieme a copie dei pacchetti di progetto e delle dipendenze di pacchetto nella cartella bin\Deployment del progetto o nel percorso specificato nella proprietà DeploymentOutputPath. Nel file manifesto sono elencati i pacchetti, le configurazioni di pacchetto ed eventuali altri file del progetto.  
   
  Il contenuto della cartella di distribuzione viene aggiornato ogni volta che si compila il progetto. Tutti i file eventualmente salvati in tale cartella e che non vengono nuovamente copiati nella cartella dal processo di compilazione verranno pertanto eliminati. Ad esempio, i file di configurazione del pacchetto salvati nelle cartelle di distribuzione verranno eliminati.  
   
@@ -499,7 +500,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  Fare clic con il pulsante destro del mouse sul progetto e quindi scegliere **Proprietà**.  
   
-3.  Nel  **\<nome progetto > pagine delle proprietà** la finestra di dialogo, fare clic su **utilità di distribuzione**.  
+3.  Nella finestra di dialogo **Pagine delle proprietà di \<nome progetto>** fare clic su **Utilità di distribuzione**.  
   
 4.  Per aggiornare le configurazioni di pacchetto in fase di distribuzione del pacchetto, impostare **AllowConfigurationChanges** su **True**.  
   
@@ -518,7 +519,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Il percorso di tale cartella è specificato nella proprietà DeploymentOutputPath del progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per il quale è stata creata l'utilità di distribuzione. Il percorso predefinito è bin\Deployment relativo al progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Creazione di un'utilità di distribuzione](../../integration-services/packages/create-a-deployment-utility.md).  
   
- Per installare i pacchetti è possibile utilizzare Installazione guidata pacchetti, che può essere avviata facendo doppio clic sul file dell'utilità di distribuzione, dopo aver copiato la cartella di distribuzione sul server. Questo file è denominato \<nome progetto >. SSISDeploymentManifest ed è disponibile nella cartella di distribuzione nel computer di destinazione.  
+ Per installare i pacchetti è possibile utilizzare Installazione guidata pacchetti, che può essere avviata facendo doppio clic sul file dell'utilità di distribuzione, dopo aver copiato la cartella di distribuzione sul server. Il file è denominato \<nome progetto>.SSISDeploymentManifest ed è disponibile nella cartella di distribuzione nel computer di destinazione.  
   
 > [!NOTE]  
 >  In base alla versione del pacchetto che si distribuisce, è possibile rilevare un errore se versioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state installate in modalità side-by-side. Questo errore può verificarsi perché l'estensione del file SSISDeploymentManifest è uguale per tutte le versioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se si fa doppio clic sul file viene chiamato il programma di installazione (dtsinstall.exe) della versione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installata più di recente, che potrebbe non corrispondere a quella del file dell'utilità di distribuzione. Per evitare tale problema, eseguire la versione corretta di dtsinstall.exe dalla riga di comando e specificare il percorso del file dell'utilità di distribuzione.  
@@ -541,7 +542,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  Aprire la cartella di distribuzione del computer di destinazione.  
   
-2.  Fare doppio clic sul file manifesto, \<nome progetto >. SSISDeploymentManifest per avviare l'installazione guidata pacchetti.  
+2.  Fare doppio clic sul file di manifesto \<nome progetto>.SSISDeploymentManifest per avviare l'Installazione guidata pacchetti.  
   
 3.  Nella pagina **Distribuzione pacchetti SSIS** selezionare l'opzione **Distribuzione di SQL Server** .  
   
@@ -702,5 +703,4 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **Fine**  
  Fare clic su **Fine**per uscire dalla procedura guidata.  
-
 

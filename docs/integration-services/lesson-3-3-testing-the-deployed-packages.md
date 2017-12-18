@@ -1,30 +1,30 @@
 ---
-title: 'Passaggio 3: Test dei pacchetti distribuiti | Documenti Microsoft'
+title: 'Passaggio 3: Test dei pacchetti distribuiti | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2b0caedd9ff32327970ea36993f5e239eafe37cc
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 59cceacbf934aea6fc3e7c0a8e2c5f089ed7f6e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-3---testing-the-deployed-packages"></a>Lezione 3-3-test dei pacchetti distribuiti
+# <a name="lesson-3-3---testing-the-deployed-packages"></a>Lezione 3-3 - Test dei pacchetti distribuiti
 In questa attività si procederà al test dei pacchetti distribuiti in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 In altre esercitazioni di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vengono eseguiti i pacchetti in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo per [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], usando l'opzione **Avvia debug** del menu **Debug** . In questa esercitazione i pacchetti verranno eseguiti in modo diverso.  
@@ -49,7 +49,7 @@ Le cartelle di livello superiore all'interno della cartella Pacchetti archiviati
     > [!IMPORTANT]  
     > Se non è possibile stabilire la connessione con [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], è probabile che il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non sia in esecuzione. Per informazioni sullo stato del servizio, fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione SQL Server**. Nel riquadro di sinistra fare clic su **Servizi di SQL Server**. Nel riquadro di destra cercare il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Se non è già in esecuzione, avviare il servizio.  
   
-    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]verrà visualizzata. Per impostazione predefinita, la finestra di Esplora oggetti viene aperta e collocata nell'angolo superiore destro dell'applicazione. Se Esplora oggetti non viene visualizzato, scegliere **Esplora oggetti** dal menu **Visualizza** .  
+    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] si apre. Per impostazione predefinita, la finestra di Esplora oggetti viene aperta e collocata nell'angolo superiore destro dell'applicazione. Se Esplora oggetti non viene visualizzato, scegliere **Esplora oggetti** dal menu **Visualizza** .  
   
 ### <a name="to-run-the-packages-using-the-execute-package-utility"></a>Per eseguire i pacchetti mediante l'Utilità di esecuzione pacchetti  
   
@@ -111,8 +111,7 @@ Le cartelle di livello superiore all'interno della cartella Pacchetti archiviati
     La query restituirà 21 righe di dati. I risultati sono costituiti dalle righe del file di dati XML, orders.xml. Ogni riga è un riepilogo per paese/area geografica, ovvero la riga elenca il nome di un paese/area geografica, il numero di ordine per ogni paese/area geografica e le date degli ordini più recenti e meno recenti.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Utilità DTExec](../integration-services/packages/dtexec-utility.md)  
+[Utilità dtexec](../integration-services/packages/dtexec-utility.md)  
   
   
   
-

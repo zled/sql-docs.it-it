@@ -2,9 +2,12 @@
 title: Classe di evento CursorOpen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef99bb8938a8a565d98fe624567a08502a2d2f0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 276c1b736886099672a38b85e48f982291e8ae1e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen - classe di evento
-  La classe di evento **CursorOpen** descrive gli eventi di apertura di cursore che si verificano nei cursori API. Gli eventi di apertura di cursore si verificano quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] definisce l'istruzione SQL da associare al cursore e le opzioni di cursore e quindi popola il cursore.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento **CursorOpen** descrive gli eventi di apertura di cursore che si verificano nei cursori API. Gli eventi di apertura di cursore si verificano quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] definisce l'istruzione SQL da associare al cursore e le opzioni di cursore e quindi popola il cursore.  
   
  Includere la classe di evento **CursorOpen** nelle tracce che registrano le prestazioni dei cursori. Quando si include in una traccia la classe di evento **CursorOpen** , l'overhead generato dipende dalla frequenza di utilizzo dei cursori nel database durante l'esecuzione della traccia. Se si utilizzano diffusamente i cursori, l'esecuzione della traccia potrebbe ridurre in modo significativo le prestazioni.  
   

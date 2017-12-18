@@ -1,26 +1,27 @@
 ---
-title: TOKEN (espressione SSIS) | Documenti Microsoft
+title: TOKEN (espressione SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff578d1f2ba584c64e471fa9514c6fa76e581d8e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 691d717b5cb5545a86fe9fbefffd0f545f77f934
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="token--ssis-expression"></a>TOKEN (espressione SSIS)
   Restituisce un token (sottostringa) da una stringa in base ai delimitatori specificati che separano i token nella stringa e al numero del token che indica quale token deve essere restituito.  
@@ -45,13 +46,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>Osservazioni  
- Questa funzione divide la stringa < character_expression > in un set di token separati dai delimitatori specificati nella < delimiter_string > e restituito il n token dove N è il numero di occorrenze del token specificato per il \<occorrenza > parametro. Per utilizzi di esempio di questa funzione, vedere la sezione Esempi.  
+ Questa funzione suddivide la stringa <character_expression> in un set di token separati dai delimitatori specificati nella <delimiter_string>, quindi restituisce l'N token dove N è il numero di occorrenze del token specificato dal parametro \<occurrence>. Per utilizzi di esempio di questa funzione, vedere la sezione Esempi.  
   
  Le osservazioni seguenti riguardano la funzione TOKEN:  
   
 -   La stringa di delimitazione può contenere uno o più caratteri delimitatori.  
   
--   Se il valore di \<occorrenza > parametro è maggiore del numero totale di token nella stringa, la funzione restituisce NULL.  
+-   Se il valore del parametro \<occurrence> è maggiore del numero totale di token nella stringa, la funzione restituisce NULL.  
   
 -   I delimitatori iniziali vengono ignorati.  
   
@@ -105,7 +106,6 @@ TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni &#40; Espressione SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

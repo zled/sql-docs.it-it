@@ -1,30 +1,29 @@
 ---
-title: Visualizzatore dati | Documenti Microsoft
+title: Visualizzatore dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataviewer.f1
-helpviewer_keywords:
-- Data Viewer dialog box
+f1_keywords: sql13.dts.designer.dataviewer.f1
+helpviewer_keywords: Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a04115502f54ce1731c0d8aa14b2f264bc66709f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8239be5300412755fa4711dea8523c4a052ab09a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-viewer"></a>Visualizzatore dati
   Se viene configurato un percorso per utilizzare un visualizzatore dati, in quest'ultimo viene visualizzato il buffer di dati in base al buffer durante lo spostamento dei dati tra due componenti di flusso di dati.  
@@ -47,7 +46,6 @@ ms.lasthandoff: 08/03/2017
  Consente di copiare i dati nel buffer corrente negli Appunti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Debug del flusso di dati](../../integration-services/troubleshooting/debugging-data-flow.md)  
+ [Debug di un flusso di dati](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   
-

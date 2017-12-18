@@ -2,9 +2,12 @@
 title: Creare un backup crittografato | Microsoft Docs
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 583c1cb2213ba744ddda0f4bc2fc76cf0c504994
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c9dc51c3288ceae6e91cd014b1220ea890d3114f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-an-encrypted-backup"></a>Creare un backup crittografato
-  In questo argomento vengono descritti i passaggi necessari per creare un backup crittografato tramite Transact-SQL.  Per un esempio dell'uso di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Creazione di un backup completo del database (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive i passaggi necessari per creare un backup crittografato tramite Transact-SQL.  Per un esempio dell'uso di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Creazione di un backup completo del database (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
   
 ## <a name="backup-to-disk-with-encryption"></a>Backup su disco con crittografia  
  **Prerequisiti:**  

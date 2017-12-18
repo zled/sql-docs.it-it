@@ -1,33 +1,33 @@
 ---
-title: Impostazione copia tabella o Query (SQL Server importazione / esportazione guidata) | Documenti Microsoft
+title: Impostazione copia tabella o query (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.specifytablecopyorquery.f1
+f1_keywords: sql13.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 59820083a0a092fc6704bebd491f1bfc0827732d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4ba4c750ecf556cdaae6fdbdfb08b6991316e544
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Impostazione copia tabella o query (Importazione/Esportazione guidata SQL Server)
   Dopo aver fornito informazioni sulla destinazione dei dati e su come connettersi a tale destinazione, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra la pagina **Impostazione copia tabella o query**. In questa pagina è possibile scegliere una delle opzioni seguenti.
--   **Copia i dati da una o più tabelle o viste**. Si desidera selezionare una o più tabelle da un elenco.
--   **Scrivi una query per specificare i dati da trasferire**. Si desidera immettere o incollare il testo di una query SQL.
+-   **Copia i dati da una o più tabelle o viste**. Per selezionare una o più tabelle da un elenco.
+-   **Scrivi una query per specificare i dati da trasferire**. Per immettere o incollare il testo di una query SQL.
     
 > [!TIP]
 > Se è necessario copiare più di un database oppure oggetti di database diversi da tabelle e viste, usare Copia guidata database anziché l'Importazione/Esportazione guidata. Per altre informazioni, vedere [Utilizzo di Copia guidata database](../../relational-databases/databases/use-the-copy-database-wizard.md).     
@@ -35,11 +35,11 @@ ms.lasthandoff: 09/26/2017
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>Screenshot della pagina Impostazione copia tabella o query    
  La schermata seguente mostra la pagina **Impostazione copia tabella o query** della procedura guidata.    
     
- ![Pagina di copia o query di tabella dell'importazione / esportazione guidata](../../integration-services/import-export-data/media/table-copy-or-query.png "pagina copia o query di tabella dell'importazione / esportazione guidata")    
+ ![Pagina Impostazione copia tabella o query dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/table-copy-or-query.png "Pagina Impostazione copia tabella o query dell'Importazione/Esportazione guidata")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>Specificare se copiare un'intera tabella o scrivere una query 
  **Copia i dati da una o più tabelle o viste**    
- Selezionare questa opzione se si desidera copiare i dati dall'origine senza filtrare o ordinare i record.   
+ Selezionare questa opzione se si vogliono copiare i dati dell'origine senza filtrare o ordinare i record.   
 
 Se si seleziona **Copia i dati da una o più tabelle o viste**, è possibile eseguire la copia da una tabella o vista nella tabella di destinazione o da più tabelle o viste in più tabelle di destinazione.
 
@@ -55,10 +55,10 @@ Dopo aver fatto clic **Avanti**, specificare un'istruzione SQL per impostare le 
 ## <a name="why-isnt-the-copy-option-available"></a>Perché l'opzione di copia non è disponibile?    
  L'opzione **Copia i dati da una o più tabelle o viste** potrebbe non essere disponibile quando la procedura guidata usa un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per la connessione all'origine dati. In questo caso, infatti, la procedura guidata non dispone di informazioni sufficienti sul provider di dati per richiedere un elenco di tabelle e viste dall'origine dati. 
  
-È comunque possibile usare il **scrivere una query** opzione, anche se è in genere non scrivere query SQL, purché si conosce il nome della tabella che si desidera esportare. Nel **query di origine** nella finestra di dialogo viene visualizzata quando si fare clic su **Avanti**, immettere la query come `SELECT * FROM <name of table>`. Se il nome della tabella contiene spazi o altri caratteri speciali, racchiudere il nome tra parentesi quadre - `SELECT * FROM [<name of table>]`.
+È possibile usare l'opzione **Scrivi una query** anche se in genere non si scrivono query SQL, purché si conosca il nome della tabella da esportare. Nella finestra di dialogo **Impostazione query di origine**, visualizzata quando si fa clic su **Avanti**, immettere la query come `SELECT * FROM <name of table>`. Se il nome della tabella contiene spazi o altri caratteri speciali, racchiudere il nome tra parentesi quadre - `SELECT * FROM [<name of table>]`.
 
 ### <a name="more-info"></a>Altre informazioni
- L'opzione **Copia i dati da una o più tabelle o viste** è disponibile solo per i provider per i quali è presente una sezione ProviderDescription nel file ProviderDescriptors.xml. (Per impostazione predefinita, questo file è \< *unità*>: \Programmi\Microsoft SQL Server\130\DTS\ProviderDescriptors.) Ogni sezione ProviderDescription del file contiene le informazioni necessarie per recuperare metadati dal provider corrispondente.    
+ L'opzione **Copia i dati da una o più tabelle o viste** è disponibile solo per i provider per i quali è presente una sezione ProviderDescription nel file ProviderDescriptors.xml. Per impostazione predefinita, questo file si trova in \<*unità*>:\Programmi\Microsoft SQL Server\130\DTS\ProviderDescriptors. Ogni sezione ProviderDescription del file contiene le informazioni necessarie per recuperare metadati dal provider corrispondente.    
     
  Per impostazione predefinita, il file ProviderDescriptors.xml contiene una sezione ProviderDescription solo per i provider seguenti:    
     
@@ -85,6 +85,5 @@ Dopo aver fatto clic **Avanti**, specificare un'istruzione SQL per impostare le 
 
 ## <a name="see-also"></a>Vedere anche
 [Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

@@ -1,33 +1,32 @@
 ---
-title: Creazione di un enumeratore Foreach personalizzato | Documenti Microsoft
+title: Creazione di un enumeratore Foreach personalizzato | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
-helpviewer_keywords:
-- custom foreach enumerators [Integration Services], creating
+helpviewer_keywords: custom foreach enumerators [Integration Services], creating
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f2f852ff319554d0b863fd06d790c2e5e9bf2d59
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e2efdf248c8db4b3e99c808a7e576ee96e83fb7f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>Creazione di un enumeratore Foreach personalizzato
   I passaggi per la creazione di un enumeratore Foreach personalizzato sono simili a quelli richiesti per la creazione di qualsiasi altro oggetto personalizzato per [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Se si desidera, sviluppare un'interfaccia utente personalizzata. Per un enumeratore Foreach, questa operazione richiede una classe che implementi l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSForEachEnumeratorUI>.  
   
- Un enumeratore personalizzato è ospitato dal contenitore <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. In fase di esecuzione il contenitore <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> chiama il metodo <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> dell'enumeratore personalizzato. L'enumeratore personalizzato restituisce un oggetto che implementa il **IEnumerable** interfaccia, ad esempio un **ArrayList**. Tramite l'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> viene quindi scorso ogni elemento della raccolta, viene fornito il valore dell'elemento corrente al flusso di controllo tramite una variabile definita dall'utente e viene eseguito il flusso di controllo nel contenitore.  
+ Un enumeratore personalizzato è ospitato dal contenitore <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. In fase di esecuzione il contenitore <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> chiama il metodo <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> dell'enumeratore personalizzato. L'enumeratore personalizzato restituisce un oggetto che implementa l'interfaccia **IEnumerable**, ad esempio **ArrayList**. Tramite l'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> viene quindi scorso ogni elemento della raccolta, viene fornito il valore dell'elemento corrente al flusso di controllo tramite una variabile definita dall'utente e viene eseguito il flusso di controllo nel contenitore.  
   
 ## <a name="getting-started-with-a-custom-foreach-enumerator"></a>Introduzione a un enumeratore Foreach personalizzato  
   
@@ -52,9 +51,9 @@ ms.lasthandoff: 08/03/2017
  Configurare entrambi i progetti per firmare gli assembly che verranno generati durante la compilazione utilizzando un file di chiave con nome sicuro.  
   
 ### <a name="applying-the-dtsforeachenumerator-attribute"></a>Applicazione dell'attributo DtsForEachEnumerator  
- Applicare l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> alla classe creata per identificarla come enumeratore Foreach. Questo attributo fornisce informazioni in fase di progettazione, ad esempio il nome e la descrizione dell'enumeratore Foreach. Il **nome** proprietà viene visualizzata nell'elenco a discesa di enumeratori disponibili nel **insieme** scheda della finestra di **Editor ciclo Foreach** la finestra di dialogo.  
+ Applicare l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> alla classe creata per identificarla come enumeratore Foreach. Questo attributo fornisce informazioni in fase di progettazione, ad esempio il nome e la descrizione dell'enumeratore Foreach. La proprietà **Name** viene visualizzata nell'elenco a discesa degli enumeratori disponibili nella scheda **Raccolta** della finestra di dialogo **Editor ciclo Foreach**.  
   
- Utilizzare la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> per collegare l'enumeratore Foreach alla relativa interfaccia utente personalizzata. Per ottenere il token di chiave pubblica che è necessario per questa proprietà, è possibile utilizzare **sn.exe -t** per visualizzare il token di chiave pubblica dal file di coppia di chiavi (con estensione snk) che si intende utilizzare per firmare l'assembly dell'interfaccia utente.  
+ Utilizzare la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> per collegare l'enumeratore Foreach alla relativa interfaccia utente personalizzata. Per ottenere il token di chiave pubblica richiesto per questa proprietà, è possibile usare **sn.exe -t** per visualizzare il token di chiave pubblica dal file della coppia di chiavi (con estensione snk) che si intende usare per firmare l'assembly dell'interfaccia utente.  
   
 ```vb  
 Imports System  
@@ -82,11 +81,10 @@ namespace Microsoft.Samples.SqlServer.Dts
 ```  
   
 ## <a name="building-deploying-and-debugging-a-custom-enumerator"></a>Compilazione, distribuzione e debug di un enumeratore personalizzato  
- I passaggi per la compilazione, la distribuzione e il debug di un enumeratore Foreach personalizzato in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono molto simili a quelli richiesti per altri tipi di oggetti personalizzati. Per ulteriori informazioni, vedere [compilazione, distribuzione e debug di oggetti personalizzati](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
+ I passaggi per la compilazione, la distribuzione e il debug di un enumeratore Foreach personalizzato in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono molto simili a quelli richiesti per altri tipi di oggetti personalizzati. Per altre informazioni, vedere [Compilazione, distribuzione e debug di oggetti personalizzati](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Codifica un enumeratore Foreach personalizzato](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)   
- [Sviluppo di un'interfaccia utente per un enumeratore ForEach personalizzato](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [Scrittura del codice di un enumeratore Foreach personalizzato](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)   
+ [Sviluppo di un'interfaccia utente per un enumeratore Foreach personalizzato](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   
-

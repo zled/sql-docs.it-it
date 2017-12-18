@@ -1,39 +1,39 @@
 ---
-title: Salvataggio di un pacchetto a livello di codice | Documenti Microsoft
+title: Salvataggio di un pacchetto a livello di programmazione | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programmatically saving a package
 - saving a package programmatically
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: f6b99377f6eaf720b9511b560e5cf563ede2b869
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6a433d64b0c2b7694dfe1fc89db6dc6df9060b54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="saving-a-package-programmatically"></a>Salvataggio di un pacchetto a livello di programmazione
   Dopo avere compilato un nuovo pacchetto a livello di programmazione, o dopo averne modificato uno esistente, si desidera in genere salvare le modifiche.  
   
- Tutti i metodi utilizzati in questo argomento per salvare i pacchetti richiedono un riferimento di **manageddts** assembly. Dopo aver aggiunto il riferimento in un nuovo progetto, importare il <xref:Microsoft.SqlServer.Dts.Runtime> spazio dei nomi con un **utilizzando** o **importazioni** istruzione.  
+ Tutti i metodi usati in questo argomento per salvare pacchetti richiedono un riferimento all'assembly **Microsoft.SqlServer.ManagedDTS**. Dopo aver aggiunto il riferimento in un nuovo progetto, importare lo spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> con un'istruzione **using** o **Imports**.  
   
 ## <a name="saving-a-package-programmatically"></a>Salvataggio di un pacchetto a livello di programmazione  
- Per salvare un pacchetto a livello di programmazione, chiamare uno dei seguenti metodi del [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application> classe:  
+ Per salvare un pacchetto a livello di programmazione, chiamare uno dei metodi seguenti della classe [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application>:  
   
 |Percorso di archiviazione|Metodo da chiamare|  
 |----------------------|--------------------|  
@@ -48,4 +48,3 @@ ms.lasthandoff: 08/03/2017
  [Salvare i pacchetti](../../integration-services/save-packages.md)  
   
   
-

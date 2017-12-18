@@ -1,28 +1,28 @@
 ---
-title: Rivedere e generare script di registrazione supplementare | Documenti Microsoft
+title: Rivedere e generare script di registrazione supplementare | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- scripts
+f1_keywords: scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3213f6e757e9fc3bcff63d0833d7f0c7fdee201
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7b5587d6def935cf31d4bf96056b21cfd2c263a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Rivedere e generare script di registrazione supplementare
   Usare la scheda **Scripts** per eseguire o rieseguire uno script nel database di origine Oracle per la configurazione della registrazione supplementare.  
@@ -59,8 +59,7 @@ ms.lasthandoff: 08/03/2017
 2.  Assegnare un nome al file e scegliere **Save** per salvarlo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come modificare le proprietà di istanza di CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Credenziali Oracle per l'esecuzione di Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [Procedura di modifica delle proprietà dell'istanza di CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+ [Credenziali Oracle per l'esecuzione di script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   
-

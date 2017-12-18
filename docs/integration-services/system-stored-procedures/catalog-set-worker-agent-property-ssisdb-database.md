@@ -1,31 +1,32 @@
 ---
-title: Catalog.set_worker_agent_property (Database SSISDB) | Documenti Microsoft
+title: catalog.set_worker_agent_property (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
-ms.contentlocale: it-it
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 1438d3a2cf200450791c085f501c49329d61154d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogsetworkeragentproperty-ssisdb-database"></a>Catalog.set_worker_agent_property (Database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property (database SSISDB)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-Imposta la proprietà di un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] scala il lavoro.
+Imposta la proprietà di un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,16 +36,16 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 
 ## <a name="arguments"></a>Argomenti
 [@WorkerAgentId =] *WorkerAgentId*  
-L'agente di lavoro, ID di scala il lavoro. Il *WorkerAgentId* è **uniqueidentifier**.
+ID agente di lavoro dello Scale Out Worker. *WorkerAgentId* è di tipo **uniqueidentifier**.
 
 [@PropertyName =] *PropertyName*  
-Nome della proprietà. Il *PropertyName* è **nvarchar (256)**.
+Nome della proprietà. *PropertyName* è di tipo **nvarchar(256)**.
 
 [@PropertyValue =] *PropertyValue*  
-Valore della proprietà. Il *PropertyValue* è **nvarchar (max)**.
+Valore della proprietà. *PropertyValue* è di tipo **nvarchar(max)**.
 
 ## <a name="remarks"></a>Osservazioni
-I nomi di proprietà validi sono **DisplayName**, **descrizione**, **tag**.
+I nomi di proprietà validi sono **DisplayName**, **Description**, **Tags**.
 
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -55,18 +56,17 @@ I nomi di proprietà validi sono **DisplayName**, **descrizione**, **tag**.
 ## <a name="permissions"></a>Permissions  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server
+-   Appartenenza al ruolo del server **sysadmin**
 
 ## <a name="errors-and-warnings"></a>Errori e avvisi
   Nell'elenco seguente vengono descritte alcune condizioni che possono generare un errore o un avviso:  
   
 -   Utente senza autorizzazioni appropriate. 
 
--   L'ID di agente di lavoro non è valido.
+-   ID agente di lavoro non valido.
 
--   Il nome della proprietà non è valido.
+-   Nome della proprietà non valido.
 
--   Il valore della proprietà non è valido.  
-
+-   Valore della proprietà non valido.  

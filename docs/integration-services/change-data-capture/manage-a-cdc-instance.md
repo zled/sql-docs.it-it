@@ -1,28 +1,28 @@
 ---
-title: Gestire un'istanza di CDC | Documenti Microsoft
+title: Gestire un'istanza di CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- manIns
+f1_keywords: manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 308d7528e516baa755a893bb42c9864c7ef7e3b7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: db85e4aee5ede4a62a660c6adc5d87fde6b89bd7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manage-a-cdc-instance"></a>Gestire un'istanza di CDC
   È possibile utilizzare CDC Designer Console per visualizzare le informazioni relative alle istanze create e per gestire l'operazione delle istanze.  
@@ -108,25 +108,24 @@ ms.lasthandoff: 08/03/2017
     -   **Written changes**: numero di modifiche scritte nelle tabelle delle modifiche di SQL Server.  
   
  **Oracle**  
- Vengono visualizzate informazioni sull'istanza di CDC e sulla relativa connessione al database Oracle. Questa scheda è di sola lettura. Per modificare queste proprietà, l'istanza nel riquadro a sinistra e scegliere **proprietà** oppure fare clic su **proprietà** nel riquadro di destra per aprire la \<istanza > la finestra di dialogo proprietà.  
+ Vengono visualizzate informazioni sull'istanza di CDC e sulla relativa connessione al database Oracle. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
   
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
  **Tabelle**  
- Vengono visualizzate informazioni sulle tabelle incluse nell'istanza di CDC. Sono anche disponibili informazioni sulle colonne. Questa scheda è di sola lettura. Per modificare queste proprietà, l'istanza nel riquadro a sinistra e scegliere **proprietà** oppure fare clic su **proprietà** nel riquadro di destra per aprire la \<istanza > la finestra di dialogo proprietà.  
+ Vengono visualizzate informazioni sulle tabelle incluse nell'istanza di CDC. Sono anche disponibili informazioni sulle colonne. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
   
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
  **Avanzate**  
- Vengono visualizzate le proprietà avanzate per l'istanza di CDC e i valori delle proprietà. Questa scheda è di sola lettura. Per modificare queste proprietà, l'istanza nel riquadro a sinistra e scegliere **proprietà** oppure fare clic su **proprietà** nel riquadro di destra per aprire la \<istanza > la finestra di dialogo proprietà.  
+ Vengono visualizzate le proprietà avanzate per l'istanza di CDC e i valori delle proprietà. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
   
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come creare l'istanza SQL Server Change Database](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Come visualizzare le proprietà di istanza di CDC](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
- [Come modificare le proprietà di istanza di CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Utilizzare la New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [Procedura di creazione dell'istanza del database delle modifiche di SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
+ [Procedura di visualizzazione delle proprietà dell'istanza di CDC](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
+ [Procedura di modifica delle proprietà dell'istanza di CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+ [Usare la Procedura guidata nuova istanza](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
-

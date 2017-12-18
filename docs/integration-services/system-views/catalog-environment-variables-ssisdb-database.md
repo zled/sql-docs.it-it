@@ -1,29 +1,30 @@
 ---
-title: Catalog. environment_variables (Database SSISDB) | Documenti Microsoft
+title: catalog.environment_variables (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40e31b9697c453f6a9d60dfcc8d9302dfefe0ac4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 936d4f9346b4f8e3e58f88bbadf60127b7dc122f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogenvironmentvariables-ssisdb-database"></a>catalog.environment_variables (database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Vengono visualizzati i dettagli delle variabili di ambiente di tutti gli ambienti nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -32,10 +33,10 @@ ms.lasthandoff: 09/26/2017
 |variable_id|**bigint**|Identificatore (ID) univoco della variabile di ambiente.|  
 |environment_id|**bigint**|ID univoco dell'ambiente a cui è associata la variabile.|  
 |name|**sysname**|Nome della variabile di ambiente.|  
-|description|**nvarchar (1024)**|Descrizione della variabile di ambiente.|  
-|tipo|**nvarchar (128)**|Tipo di dati della variabile di ambiente.|  
+|description|**nvarchar(1024)**|Descrizione della variabile di ambiente.|  
+|tipo|**nvarchar(128)**|Tipo di dati della variabile di ambiente.|  
 |sensitive|**bit**|Quando il valore è `1`, la variabile è importante e viene crittografata quando viene archiviata. Quando il valore è `0`, la variabile non è importante e il valore viene archiviato non crittografato.|  
-|Valore|**sql_variant**|Valore della variabile di ambiente. Quando sensibili è `0`, viene visualizzato il valore di testo normale. Quando sensibili è `1`, **NULL** valore viene visualizzato.|  
+|Valore|**sql_variant**|Valore della variabile di ambiente. Quando sensitive è `0`, viene visualizzato il valore non crittografato. Quando sensitive è `1`, viene visualizzato il valore **NULL**.|  
   
 ## <a name="remarks"></a>Osservazioni  
  In questa vista viene visualizzata una riga per ogni variabile di ambiente nel catalogo.  
@@ -45,12 +46,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Autorizzazione READ sull'ambiente corrispondente  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 > [!NOTE]  
 >  Quando si dispone delle autorizzazioni per eseguire un'operazione nel server, si dispone anche delle autorizzazioni per visualizzare le informazioni sull'operazione. È applicata la sicurezza a livello di riga, pertanto vengono visualizzate solo le righe per le quali si dispone delle autorizzazioni per la visualizzazione.  
   
   
-

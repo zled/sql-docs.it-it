@@ -1,12 +1,14 @@
 ---
-title: Flusso di dati | Documenti Microsoft
+title: Flusso di dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 53f945d9efbcc714bbcf3e6498a3d0a984ef95dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow"></a>Flusso di dati
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili tre diversi tipi di componenti flusso di dati: origini, trasformazioni e destinazioni. Le origini estraggono dati da archivi dati quali tabelle e viste di database relazionali, file e database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Tramite le trasformazioni è possibile modificare, riepilogare e pulire i dati. Le destinazioni consentono di caricare dati in archivi dati o di creare set di dati in memoria.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
  Nella figura seguente viene illustrato un flusso di dati che include un'origine, una trasformazione con un input e un output e una destinazione. Oltre alle colonne di input, di output ed esterne, la figura include anche gli input, gli output e gli output degli errori.  
   
- ![Componenti e i relativi input e output del flusso di dati](../../integration-services/data-flow/media/mw-dts-dataflow.gif "componenti e i relativi input e output del flusso di dati")  
+ ![Componenti del flusso di dati con relativi input e output](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Componenti del flusso di dati con relativi input e output")  
   
 ## <a name="data-flow-implementation"></a>Implementazione del flusso di dati  
  L'aggiunta di un'attività Flusso di dati al flusso di controllo di un pacchetto costituisce il primo passaggio dell'implementazione di un flusso di dati in un pacchetto. Un pacchetto può includere più attività Flusso di dati, ognuna con un proprio flusso di dati. Ad esempio, se i flussi di dati contenuti in un pacchetto devono essere eseguiti in una sequenza specifica o alternati ad altre attività, è necessario utilizzare un'attività Flusso di dati separata per ogni flusso di dati.  
@@ -221,4 +222,3 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Contenuto correlato  
  Video sulle [prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)](http://go.microsoft.com/fwlink/?LinkID=210369)sul sito Web technet.microsoft.com.  
-

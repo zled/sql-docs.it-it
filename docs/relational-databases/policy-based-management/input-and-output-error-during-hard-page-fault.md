@@ -2,9 +2,12 @@
 title: Errore di I/O durante un errore di pagina hardware | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a79f93ed8d10cb3e92ddc021982fe8f7797d75be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8730e9a29a43c53e0674e04d335c1901e56577d3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>Errore di I/O durante un errore di pagina hardware
-  Questa regola consente di controllare l'evento con ID 51 nel registro eventi di sistema. Questo problema è dovuto a un errore di pagina hardware.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa regola controlla l'evento con ID 51 nel registro eventi di sistema. Questo problema è dovuto a un errore di pagina hardware.  
   
 ## <a name="best-practices-recommendations"></a>Procedure consigliate  
  Per ulteriori informazioni sulla risoluzione di questo errore, esaminare l'articolo seguente della Microsoft Knowledge Base:  

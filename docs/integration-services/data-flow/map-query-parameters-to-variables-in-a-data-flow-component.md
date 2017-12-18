@@ -1,12 +1,14 @@
 ---
-title: Mapping di parametri di Query a variabili in un componente del flusso di dati | Documenti Microsoft
+title: Mapping dei parametri di query a variabili in un componente flusso di dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - mapping query parameters to variables [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da9367a56cefbb37244d4a47543b93586e7e8870
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 25f7da499f4ee62a6cdc8093c92d8d9002897edb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Mapping dei parametri di query a variabili in un componente del flusso di dati
   Quando viene configurata l'origine OLE DB per utilizzare query con parametri, è possibile eseguire il mapping dei parametri alle variabili.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  Fare clic su **Parametri**.  
   
-8.  Nel **imposta parametri Query** finestra di dialogo casella, eseguire il mapping di ogni parametro nel **parametri** elenco a una variabile nel **variabili** elenco o creare una nuova variabile facendo  **\<nuova variabile >**. Scegliere **OK**.  
+8.  Nella finestra di dialogo **Imposta parametri query** eseguire il mapping di ogni parametro nell'elenco **Parametri** a una variabile nell'elenco **Variabili** oppure fare clic su **\<Nuova variabile>** per creare una nuova variabile. Scegliere **OK**.  
   
     > [!NOTE]  
     >  Sono disponibili per il mapping solo le variabili di sistema e le variabili definite dall'utente nell'ambito del pacchetto, di un contenitore padre quale Ciclo Foreach o dell'attività Flusso di dati che contiene il componente del flusso di dati. La variabile deve avere un tipo di dati compatibile con la colonna nella clausola WHERE a cui è assegnato il parametro.  
@@ -59,7 +60,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Origine OLE DB](../../integration-services/data-flow/ole-db-source.md)   
- [Trasformazione ricerca](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+ [Trasformazione Ricerca](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: Informazioni del debugger Transact-SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63c4f19cea0dd6f938f2b6e2e89f66e49d4a4947
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 82eb9526073e35e05f39be67b6a3f4bcd6569612
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---information"></a>Debugger Transact-SQL - Informazioni
-  Ogni volta che l'esecuzione viene sospesa dal debugger in corrispondenza di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specifica, è possibile utilizzare le varie finestre del debugger per visualizzare lo stato corrente dell'esecuzione.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ogni volta che l'esecuzione viene sospesa dal debugger in corrispondenza di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specifica, è possibile usare le varie finestre del debugger per visualizzare lo stato corrente dell'esecuzione.  
   
 ## <a name="debugger-windows"></a>Finestre del debugger  
  In modalità di debug, il debugger apre due finestre nella parte inferiore della finestra principale di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . In queste due finestre vengono fornite tutte le informazioni del debugger. Ciascuna finestra dispone di schede che è possibile selezionare per controllare il set di informazioni che viene visualizzato nella finestra. La finestra di sinistra contiene le schede **Variabili locali**, **Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3**ed **Espressione di controllo4** . La finestra di destra contiene le schede **Stack di chiamate**, **Thread**, **Punti di interruzione**, **Finestra di comando**e **Output** .  

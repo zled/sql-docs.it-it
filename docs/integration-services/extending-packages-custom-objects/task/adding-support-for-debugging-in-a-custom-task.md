@@ -1,16 +1,17 @@
 ---
-title: "Aggiunta del supporto per il debug in un'attività personalizzata | Documenti Microsoft"
+title: "Aggiunta di supporto per il debug in un'attività personalizzata | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,33 +24,32 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f6e3d95b834bf64cb4dd4201658e0905d3e3ed46
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 90156ac284967ca1446ec7a9e34416208f612b6e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Aggiunta di supporto per il debug in un'attività personalizzata
   Il motore di runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] consente la sospensione di pacchetti, attività e altri tipi di contenitori durante l'esecuzione tramite l'utilizzo di punti di interruzione. L'utilizzo di punti di interruzione consente di rivedere e correggere gli errori che impediscono la corretta esecuzione dell'applicazione o delle attività. L'architettura dei punti di interruzione consente al client di valutare il valore di runtime degli oggetti nel pacchetto in determinati punti dell'esecuzione mentre l'elaborazione dell'attività è sospesa.  
   
  Gli sviluppatori di attività personalizzate possono utilizzare questa architettura per creare destinazioni di punti di interruzione personalizzati utilizzando l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> e la relativa interfaccia padre <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> definisce l'interazione tra il motore di runtime e l'attività per la creazione e la gestione di siti o destinazioni di punti di interruzione personalizzati. L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> fornisce metodi e proprietà che vengono chiamati dal motore di runtime per notificare all'attività di sospendere o riprendere l'esecuzione.  
   
- Un sito o una destinazione di punti di interruzione è un punto nell'esecuzione dell'attività in cui l'elaborazione può essere sospesa. Selezionano gli utenti dai siti di punti di interruzione disponibili nella **Imposta punti di interruzione** la finestra di dialogo. Ad esempio, oltre alle opzioni predefinite dei punti di interruzione, il contenitore Ciclo Foreach prevede l'opzione "Interrompi all'inizio di ogni iterazione del ciclo".  
+ Un sito o una destinazione di punti di interruzione è un punto nell'esecuzione dell'attività in cui l'elaborazione può essere sospesa. Gli utenti selezionano uno dei siti di punti di interruzione disponibili nella finestra di dialogo **Imposta punti di interruzione**. Ad esempio, oltre alle opzioni predefinite dei punti di interruzione, il contenitore Ciclo Foreach prevede l'opzione "Interrompi all'inizio di ogni iterazione del ciclo".  
   
- Quando un'attività raggiunge la destinazione di un punto di interruzione durante l'esecuzione, la valuta per determinare se il punto di interruzione è abilitato. Ciò indica che l'utente desidera arrestare l'esecuzione in corrispondenza di tale punto di interruzione. Se il punto di interruzione è abilitato, l'attività genera l'evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> per il motore di runtime. Il motore di runtime risponde all'evento chiamando il **Suspend** metodo di ogni attività che è attualmente in esecuzione nel pacchetto. L'esecuzione dell'attività riprende quando il runtime chiama il **ResumeExecution** metodo dell'attività sospesa.  
+ Quando un'attività raggiunge la destinazione di un punto di interruzione durante l'esecuzione, la valuta per determinare se il punto di interruzione è abilitato. Ciò indica che l'utente desidera arrestare l'esecuzione in corrispondenza di tale punto di interruzione. Se il punto di interruzione è abilitato, l'attività genera l'evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> per il motore di runtime. Il motore di runtime risponde all'evento chiamando il metodo **Suspend** di ogni attività attualmente in esecuzione nel pacchetto. L'esecuzione dell'attività riprende quando il runtime chiama il metodo **ResumeExecution** dell'attività sospesa.  
   
  Le attività che non utilizzano punti di interruzione devono comunque implementare le interfacce <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. Ciò assicura che l'attività venga sospesa correttamente quando altri oggetti del pacchetto generano eventi <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>.  
   
 ## <a name="idtsbreakpointsite-interface-and-breakpointmanager"></a>Interfaccia IDTSBreakpointSite e BreakpointManager  
- Le attività creano destinazioni di punti di interruzione chiamando il metodo <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> di <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, fornendo un ID integer e una stringa descrittiva come parametri. Quando l'attività raggiunge il punto del codice che contiene la destinazione del punto di interruzione, la valuta utilizzando il metodo <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> per determinare se tale punto di interruzione è abilitato. Se **true**, l'attività di notifica al motore di runtime generando il <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> evento.  
+ Le attività creano destinazioni di punti di interruzione chiamando il metodo <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> di <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, fornendo un ID integer e una stringa descrittiva come parametri. Quando l'attività raggiunge il punto del codice che contiene la destinazione del punto di interruzione, la valuta utilizzando il metodo <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> per determinare se tale punto di interruzione è abilitato. Se **true**, l'attività invia una notifica al motore di runtime generando l'evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>.  
   
- L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> definisce un singolo metodo, <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>, che viene chiamato dal motore di runtime durante la creazione di attività. Questo metodo fornisce come parametro l'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, che viene quindi utilizzato dall'attività per creare e gestire i propri punti di interruzione. Le attività devono archiviare il <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> in locale da utilizzare durante la **convalida** e **Execute** metodi.  
+ L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> definisce un singolo metodo, <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>, che viene chiamato dal motore di runtime durante la creazione di attività. Questo metodo fornisce come parametro l'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, che viene quindi utilizzato dall'attività per creare e gestire i propri punti di interruzione. Le attività devono archiviare l'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> in locale per usarlo durante l'esecuzione dei metodi **Validate** ed **Execute**.  
   
  Nell'esempio di codice seguente viene illustrato come creare una destinazione di punti di interruzione tramite <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>. Viene chiamato il metodo <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> per generare l'evento.  
   
@@ -94,11 +94,11 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>Interfaccia IDTSSuspend  
- L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> definisce i metodi che vengono chiamati dal motore di runtime quando sospende o riprende l'esecuzione di un'attività. Il <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> viene implementata mediante il <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> interfaccia e il relativo **Suspend** e **ResumeExecution** metodi vengono in genere sottoposti a override dall'attività personalizzata. Quando il motore di runtime riceve un **OnBreakpointHit** evento da un'attività, chiama il **Suspend** metodo di ogni attività in esecuzione, le attività di sospendere di notifica. Quando il client riprende l'esecuzione, il motore di runtime chiama il **ResumeExecution** metodo delle attività che vengono sospesi.  
+ L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> definisce i metodi che vengono chiamati dal motore di runtime quando sospende o riprende l'esecuzione di un'attività. L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> viene implementata dall'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> e i relativi metodi **Suspend** e **ResumeExecution** vengono in genere sottoposti a override dall'attività personalizzata. Quando il motore di runtime riceve un evento **OnBreakpointHit** da un'attività, chiama il metodo **Suspend** di ogni attività in esecuzione, notificando la pausa alle attività. Quando il client riprende l'esecuzione, il motore di runtime chiama il metodo **ResumeExecution** delle attività sospese.  
   
- La sospensione e la ripresa dell'esecuzione di un'attività implica la sospensione e la ripresa del thread di esecuzione dell'attività. Nel codice gestito, a scopo utilizzare il **ManualResetEvent** classe **System. Threading** dello spazio dei nomi di .NET Framework.  
+ La sospensione e la ripresa dell'esecuzione di un'attività implica la sospensione e la ripresa del thread di esecuzione dell'attività. Nel codice gestito questo risultato si ottiene usando la classe **ManualResetEvent** nello spazio dei nomi **System.Threading** di .NET Framework.  
   
- Nell'esempio di codice seguente vengono illustrate la sospensione e la ripresa dell'esecuzione di un'attività. Si noti che il **Execute** metodo è stato modificato dal codice di esempio precedente, e il thread di esecuzione viene sospesa quando viene attivato il punto di interruzione.  
+ Nell'esempio di codice seguente vengono illustrate la sospensione e la ripresa dell'esecuzione di un'attività. Si noti che il metodo **Execute** è diverso rispetto all'esempio di codice precedente e che il thread di esecuzione è in pausa quando viene attivato il punto di interruzione.  
   
 ```csharp  
 private ManualResetEvent m_suspended = new ManualResetEvent( true );  
@@ -351,4 +351,3 @@ End Sub
  [Debug del flusso di controllo](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   
-

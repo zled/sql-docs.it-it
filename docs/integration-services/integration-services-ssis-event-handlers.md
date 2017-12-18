@@ -1,12 +1,14 @@
 ---
-title: Integration Services (SSIS) i gestori eventi | Documenti Microsoft
+title: Gestori eventi di Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +23,16 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4fb7cc58ace602daa44d07dbaf59f76d9b7755
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d546b045520134cd3e429ec0ecf1098a1b8b462e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestori eventi di Integration Services (SSIS)
   Durante la fase di esecuzione gli eseguibili, costituiti da pacchetti e contenitori Ciclo Foreach, Ciclo For, Sequenza e Host attività, generano eventi. Quando si verifica un errore, ad esempio, viene generato l'evento OnError. È possibile creare gestori di eventi personalizzati per tali eventi, per estendere le funzionalità dei pacchetti e semplificarne la gestione in fase di esecuzione. I gestori di eventi possono eseguire varie attività, ad esempio:  
@@ -48,11 +49,11 @@ ms.lasthandoff: 09/26/2017
   
  Nella figura seguente viene illustrato un semplice pacchetto che include un contenitore Ciclo For contenente un'attività Esegui SQL.  
   
- ![Pacchetto, ciclo For, host delle attività e attività Esegui SQL](../integration-services/media/mw-dts-eventhandlerpkg.gif "pacchetto, ciclo For, host delle attività e attività Esegui SQL")  
+ ![Pacchetto, Ciclo For, host di attività e attività Esegui SQL](../integration-services/media/mw-dts-eventhandlerpkg.gif "Pacchetto, Ciclo For, host di attività e attività Esegui SQL")  
   
  Solo il pacchetto dispone di un gestore di evento per il proprio evento **OnError** . Se si verifica un errore mentre viene eseguita l'attività Esegui SQL, verrà eseguito il gestore dell'evento **OnError** del pacchetto. Nella figura seguente viene illustrata la sequenza di chiamate che provoca l'esecuzione del gestore dell'evento **OnError** per il pacchetto.  
   
- ![Flusso del gestore dell'evento](../integration-services/media/mw-dts-eventhandlers.gif "flusso del gestore dell'evento")  
+ ![Flusso del gestore dell'evento](../integration-services/media/mw-dts-eventhandlers.gif "Flusso del gestore dell'evento")  
   
  I gestori di eventi sono membri di un insieme di gestori di eventi, disponibile in tutti i contenitori. Se si crea un pacchetto utilizzando Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , sarà possibile visualizzare i membri dell'insieme dei gestori di eventi nelle cartelle **Gestori eventi** della scheda **Esplora pacchetti** di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
@@ -102,7 +103,7 @@ In fase di esecuzione contenitori e attività generano eventi. È possibile crea
   
  La scheda **Gestori eventi** include anche l'area **Gestioni connessioni** , in cui è possibile creare e modificare le gestioni connessioni usate dai gestori di eventi per connettersi a server e origini dei dati. Per altre informazioni, vedere [Creazione di gestioni connessioni](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
-### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Aggiungere un gestore eventi nella scheda gestori eventi  
+### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Aggiungere un gestore eventi nella scheda Gestori eventi  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -110,7 +111,7 @@ In fase di esecuzione contenitori e attività generano eventi. È possibile crea
   
 3.  Fare clic sulla scheda **Gestori eventi** .  
   
-     ![Schermata dell'area di progettazione con gestore dell'evento](../integration-services/media/eventhandlers.gif "schermata dell'area di progettazione con gestore di evento")  
+     ![Screenshot dell'area di progettazione con gestore eventi](../integration-services/media/eventhandlers.gif "Screenshot dell'area di progettazione con gestore eventi")  
   
      La creazione del flusso di controllo e dei flussi di dati di un gestore dell'evento è analoga alla creazione del flusso di controllo e dei flussi di dati di un pacchetto. Per altre informazioni, vedere [Flusso di controllo](../integration-services/control-flow/control-flow.md) e [Flusso di dati](../integration-services/data-flow/data-flow.md).  
   
@@ -137,4 +138,3 @@ In fase di esecuzione contenitori e attività generano eventi. È possibile crea
  Per informazioni su come aggiungere un gestore eventi a un pacchetto, vedere [Aggiunta di un gestore eventi a un pacchetto](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
   
-

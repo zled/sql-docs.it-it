@@ -1,28 +1,28 @@
 ---
-title: "Impostare le proprietà di un componente del flusso di dati | Documenti Microsoft"
+title: "Impostare le proprietà di un componente flusso di dati | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- components [Integration Services], properties
+helpviewer_keywords: components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2073bf67289ff1d54a364f6a82bff51779dc1c5
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e1e43cd578cd37385b643890a07588ff0d3fdc43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Impostazione delle proprietà di un componente del flusso di dati
   Per impostare le proprietà dei componenti flusso di dati, tra cui origini, destinazioni e trasformazioni, utilizzare una delle funzionalità seguenti:  
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/26/2017
   
 -   La finestra di dialogo **Editor avanzato** consente l'accesso alle proprietà personalizzate di ciascun componente. La finestra di dialogo **Editor avanzato** consente anche di accedere alle proprietà comuni a tutti i componenti flusso di dati, ovvero le proprietà degli input, degli output, degli output degli errori, delle colonne e delle colonne esterne.  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>Impostare le proprietà di un componente del flusso di dati con un editor di componenti  
+## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>Impostare le proprietà di un componente flusso di dati usando un editor del componente  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
   
-## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>Impostare le proprietà di un componente del flusso di dati nella finestra proprietà  
+## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>Impostare le proprietà di un componente flusso di dati nella finestra Proprietà  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>Impostare le proprietà di un componente del flusso di dati con l'Editor avanzato  
+## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>Impostare le proprietà di un componente flusso di dati usando l'Editor avanzato  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
 
-## <a name="common-properties-of-data-flow-components"></a>Proprietà comuni di componenti flusso di dati
+## <a name="common-properties-of-data-flow-components"></a>Proprietà comuni dei componenti flusso di dati
 Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] hanno proprietà comuni e proprietà personalizzate a livello di componente, input e output, colonne di input e colonne di output. Molte proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
   
  In questo argomento vengono elencate e descritte le proprietà comuni degli oggetti del flusso di dati.  
@@ -143,7 +143,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |ValidateExternalMetadata|Boolean|Indica se i metadati delle colonne esterne sono convalidati. Il valore predefinito di questa proprietà è **True**.|  
 |Version|Valore intero|Versione di un componente.|  
   
-###  <a name="inputs"></a>Proprietà di input  
+###  <a name="inputs"></a> Proprietà degli input  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , le trasformazioni e le destinazioni includono input. L'input di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  Nella tabella seguente vengono descritte le proprietà degli input dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -163,7 +163,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  Le destinazioni e alcune trasformazioni non supportano gli output degli errori e le proprietà ErrorRowDisposition e TruncationRowDisposition di questi componenti sono di sola lettura.  
   
-###  <a name="inputcolumns"></a>Proprietà delle colonne di input  
+###  <a name="inputcolumns"></a> Proprietà delle colonne di input  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un input contiene una raccolta di colonne di input. Una colonna di input di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  Nella tabella seguente vengono descritte le proprietà delle colonne di input dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -187,7 +187,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  Le colonne di input includono anche le proprietà del tipo di dati descritte in "Proprietà del tipo di dati".  
   
-###  <a name="outputs"></a>Proprietà di output  
+###  <a name="outputs"></a> Proprietà degli output  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , le origini e le trasformazioni includono output. L'output di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  Nella tabella seguente vengono descritte le proprietà degli output dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -203,12 +203,12 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |ID|Valore intero|Valore che identifica l'output in modo univoco.|  
 |IdentificationString|String|Stringa che identifica l'output.|  
 |IsErrorOut|Boolean|Indica se l'output è un output degli errori.|  
-|IsSorted|Boolean|Indica se l'output è ordinato. Il valore predefinito è **False**.<br /><br /> **\*\*Importante \* \***  impostando il valore della **IsSorted** proprietà **True** non consente di ordinare i dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati. Per altre informazioni, vedere [Ordinare i dati per le trasformazioni Unione e Merge join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Boolean|Indica se l'output è ordinato. Il valore predefinito è **False**.<br /><br /> **\*\* Importante \*\*** L'impostazione del valore della proprietà **IsSorted** su **True** non determina l'ordinamento dei dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati. Per altre informazioni, vedere [Ordinare i dati per le trasformazioni Unione e Merge join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nome|String|Nome dell'output.|  
 |SynchronousInputID|Valore intero|ID di un input sincrono all'output.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  
   
-###  <a name="outputcolumns"></a>Proprietà colonna di output  
+###  <a name="outputcolumns"></a> Proprietà delle colonne di output  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un output contiene una raccolta di colonne di output. Una colonna di output di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  Nella tabella seguente vengono descritte le proprietà delle colonne di output dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -231,7 +231,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  Le colonne di output includono anche un set di proprietà del tipo di dati.  
   
-### <a name="external-metadata-column-properties"></a>Proprietà colonne di metadati esterni  
+### <a name="external-metadata-column-properties"></a>Proprietà delle colonne di metadati esterne  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , input e output possono contenere un insieme di colonne di metadati esterne. Una colonna di metadati esterna di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>.  
   
  Nella tabella seguente vengono descritte le proprietà delle colonne di metadati esterne dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -258,7 +258,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |Precisione|Valore intero|Precisione di una colonna numerica.|  
 |Scala|Valore intero|Scala di una colonna numerica.|  
 
-## <a name="custom-properties-of-data-flow-components"></a>Proprietà personalizzate dei componenti del flusso di dati
+## <a name="custom-properties-of-data-flow-components"></a>Proprietà personalizzate dei componenti flusso di dati
 Per informazioni sulle proprietà personalizzate, vedere gli argomenti seguenti  
   
 -   [Proprietà personalizzate ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
@@ -297,7 +297,7 @@ Per informazioni sulle proprietà personalizzate, vedere gli argomenti seguenti
   
 -   [Proprietà personalizzate dell'origine XML](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
-## <a name="use-an-expression-in-a-data-flow-component"></a>Utilizzare un'espressione in un componente del flusso di dati
+## <a name="use-an-expression-in-a-data-flow-component"></a>Usare un'espressione in un componente flusso di dati
 In questo argomento viene descritta la procedura per l'aggiunta di un'espressione nella trasformazione Suddivisione condizionale o Colonna derivata. La trasformazione Suddivisione condizionale utilizza espressioni per definire le condizioni che dirigono le righe di dati all'output della trasformazione, mentre la trasformazione Colonna derivata utilizza espressioni per definire i valori assegnati alle colonne.  
   
  Per implementare un'espressione in una trasformazione, è necessario che il pacchetto includa almeno un'attività Flusso di dati e un'origine. 
@@ -345,7 +345,7 @@ I valori di determinate proprietà di oggetti del flusso di dati possono essere 
  
  È possibile specificare i valori delle proprietà del seguente elenco utilizzando le espressioni di proprietà.  
   
-### <a name="data-flow-sources"></a>Origini flusso di dati  
+### <a name="data-flow-sources"></a>Origini del flusso di dati  
   
 |Oggetto del flusso di dati|Proprietà|  
 |----------------------|--------------|  
@@ -369,13 +369,12 @@ I valori di determinate proprietà di oggetti del flusso di dati possono essere 
 |Ordinamento - trasformazione|Proprietà MaximumThreads|  
 |UnPivot - trasformazione|Proprietà PivotKeyValue|  
   
-### <a name="data-flow-destinations"></a>Destinazioni flusso di dati  
+### <a name="data-flow-destinations"></a>Destinazioni del flusso di dati  
   
 |Oggetto del flusso di dati|Proprietà|  
 |----------------------|--------------|  
 |Destinazione ADO NET|Proprietà TableOrViewName<br /><br /> Proprietà BatchSize<br /><br /> Proprietà CommandTimeout|  
 |file flat - destinazione|Proprietà dell'intestazione|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Destinazione Compact|Proprietà TableName|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]destinazione|Proprietà BulkInsertTableName<br /><br /> Proprietà BulkInsertFirstRow<br /><br /> Proprietà BulkInsertLastRow<br /><br /> Proprietà BulkInsertOrder<br /><br /> Proprietà Timeout|  
-
+|Destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact|Proprietà TableName|  
+|Destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Proprietà BulkInsertTableName<br /><br /> Proprietà BulkInsertFirstRow<br /><br /> Proprietà BulkInsertLastRow<br /><br /> Proprietà BulkInsertOrder<br /><br /> Proprietà Timeout|  
 

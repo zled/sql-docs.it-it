@@ -1,16 +1,17 @@
 ---
-title: Vincoli di precedenza | Documenti Microsoft
+title: Vincoli di precedenza | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.precedenceconstraint.f1
+f1_keywords: sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -19,30 +20,29 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 380c7e4c06b4baec2efcbad54000a009a93b93e1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="precedence-constraints"></a>Vincoli di precedenza
   I vincoli di precedenza collegano eseguibili, contenitori e attività di pacchetti in modo da formare un flusso di controllo e specificano le condizioni che determinano se tali eseguibili devono essere eseguiti. Un eseguibile può essere costituito da un gestore di evento o da un contenitore Ciclo For, Ciclo Foreach o Sequenza. Anche nei gestori di eventi vengono utilizzati vincoli di precedenza per collegare gli eseguibili in modo da formare un flusso di controllo.  
   
  Un vincolo di precedenza collega due eseguibili: l'eseguibile con precedenza e l'eseguibile soggetto al vincolo. L'eseguibile con precedenza viene eseguito prima dell'eseguibile soggetto al vincolo e il risultato della sua esecuzione può determinare se l'eseguibile soggetto al vincolo verrà eseguito o meno. Nella figura seguente vengono illustrati due eseguibili collegati da vincoli di precedenza.  
   
- ![File eseguibili collegati da un vincolo di precedenza](../../integration-services/control-flow/media/ssis-pcsimple.gif "eseguibili collegati da un vincolo di precedenza")  
+ ![Eseguibili collegati con un vincolo di precedenza](../../integration-services/control-flow/media/ssis-pcsimple.gif "Eseguibili collegati con un vincolo di precedenza")  
   
  In un flusso di controllo lineare, ovvero senza diramazioni, la sequenza di esecuzione delle attività è regolata unicamente dai vincoli di precedenza. In un flusso di controllo con diramazioni l'ordine di esecuzione delle attività e dei contenitori situati immediatamente dopo una diramazione è determinato dal motore di run-time di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Il motore di run-time determina anche l'ordine di esecuzione dei flussi di lavoro non connessi in un flusso di controllo.  
   
  L'architettura a contenitori nidificati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consente a tutti i contenitori, ad eccezione del contenitore Host attività che incapsula una sola attività, di includere altri contenitori, ognuno con un proprio flusso di controllo. I contenitori Ciclo For, Ciclo Foreach e Sequenza possono includere più attività e altri contenitori, che a loro volta possono includere più attività e contenitori. Un pacchetto con un'attività Script e un contenitore Sequenza può ad esempio includere un vincolo di precedenza che collega l'attività Script e il contenitore Sequenza. Il contenitore Sequenza include tre attività Script e i relativi vincoli di precedenza collegano le tre attività Script in modo da formare un flusso di controllo. Nella figura seguente vengono illustrati i vincoli di precedenza utilizzati in un pacchetto con due livelli di nidificazione.  
   
- ![Vincoli di precedenza in un pacchetto](../../integration-services/control-flow/media/mw-dts-12.gif "vincoli di precedenza in un pacchetto")  
+ ![Vincoli di precedenza in un pacchetto](../../integration-services/control-flow/media/mw-dts-12.gif "Vincoli di precedenza in un pacchetto")  
   
  Poiché il pacchetto è al livello principale della gerarchia dei contenitori di [!INCLUDE[ssIS](../../includes/ssis-md.md)] , non è possibile collegare più pacchetti tramite vincoli di precedenza. È tuttavia possibile aggiungere un'attività Esegui pacchetto a un pacchetto e in tal modo collegare indirettamente un altro pacchetto al flusso di controllo.  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  È possibile raggruppare in una condizione con AND logico solo **vincoli di precedenza** appartenenti alla stessa raccolta. Non è ad esempio possibile combinare i vincoli di precedenza utilizzati in due contenitori Ciclo Foreach diversi.  
   
-## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>Impostare le proprietà di un vincolo di precedenza con Editor vincoli di precedenza  
+## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>Impostare le proprietà di un vincolo di precedenza tramite Editor vincoli di precedenza  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -141,7 +141,7 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
 > [!NOTE]  
 >  Questo tipo di vincolo di precedenza viene visualizzato come riga di colore verde, evidenziata o blu tratteggiata.  
   
-## <a name="set-the-properties-of-a-precedence-constraint-in-properties-window"></a>Impostare le proprietà di un vincolo di precedenza nella finestra proprietà  
+## <a name="set-the-properties-of-a-precedence-constraint-in-properties-window"></a>Impostare le proprietà di un vincolo di precedenza nella finestra Proprietà  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto da modificare.  
   
@@ -165,7 +165,7 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
   
 6.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
 
-## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>Impostare il valore di un vincolo di precedenza con il menu di scelta rapida  
+## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>Impostare il valore di un vincolo di precedenza tramite il menu di scelta rapida  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -184,11 +184,11 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
   
  Nella figura seguente le attività A e B sono collegate da un vincolo di precedenza che utilizza il risultato di un'esecuzione e un'espressione. Il valore del vincolo è impostato su **Esito positivo** e l'espressione è  `@X >== @Z`. L'attività B, soggetta al vincolo, viene eseguita solo se l'attività A viene completata e il valore della variabile **X** è maggiore o uguale a quello della variabile **Z**.  
   
- ![Vincolo di precedenza tra due attività](../../integration-services/control-flow/media/mw-dts-03.gif "il vincolo di precedenza tra due attività")  
+ ![Vincolo di precedenza tra due attività](../../integration-services/control-flow/media/mw-dts-03.gif "Vincolo di precedenza tra due attività")  
   
  Per collegare gli eseguibili è inoltre possibile utilizzare più vincoli di precedenza contenenti espressioni diverse. Nella figura seguente, ad esempio, le attività B e C sono collegate all'attività A da vincoli di precedenza che utilizzano risultati di esecuzione ed espressioni. I valori di entrambi i vincoli sono impostati su **Esito positivo.** Uno dei vincoli di precedenza include l'espressione `@X >== @Z`, mentre l'altro include l'espressione `@X < @Z`. A seconda dei valori assunti dalle variabili **X** e **Z**, verrà eseguita l'attività C o l'attività B.  
   
- ![Le espressioni nei vincoli di precedenza](../../integration-services/control-flow/media/mw-dts-04.gif "espressioni ai vincoli di precedenza")  
+ ![Espressioni nei vincoli di precedenza](../../integration-services/control-flow/media/mw-dts-04.gif "Espressioni nei vincoli di precedenza")  
   
  Per aggiungere o modificare un'espressione, è possibile usare **Editor vincoli di precedenza** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] e la finestra Proprietà disponibile in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. La finestra Proprietà non è tuttavia in grado di verificare la sintassi delle espressioni.  
   
@@ -212,7 +212,7 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
   
 8.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
  
-### <a name="combine-execution-values-and-expressions"></a>Combinare espressioni e valori di esecuzione  
+### <a name="combine-execution-values-and-expressions"></a>Combinare valori di esecuzione ed espressioni  
  Nella tabella seguente vengono descritti gli effetti ottenuti combinando un vincolo su un valore di esecuzione e un'espressione in un vincolo precedenza.  
   
 |Operazioni di valutazione|Valore restituito dal vincolo|Valore restituito dall'espressione|Esecuzione eseguibile soggetto al vincolo|  
@@ -236,7 +236,7 @@ Un vincolo di precedenza consente di connettere due eseguibili, ad esempio due a
   
  Raggruppando più vincoli è possibile definire scenari complessi, che consentono di implementare flussi di controllo complessi nei pacchetti. Nella figura seguente, ad esempio, l'attività D è collegata all'attività A da un vincolo **positivo** , l'attività D è collegata all'attività B da un vincolo **negativo** e l'attività D è collegata all'attività C da un vincolo **positivo** . I vincoli di precedenza tra le attività D e A, tra le attività D e B e tra le attività D e C sono legati da una relazione logica *e* . L'attività D viene quindi eseguita solo se l'attività A viene completata, l'attività B non viene eseguita e l'attività C deve essere eseguita correttamente.  
   
- ![Le attività collegate tramite vincoli di precedenza](../../integration-services/control-flow/media/precedenceconstraints.gif "le attività collegate tramite vincoli di precedenza")  
+ ![Attività collegate in base ai vincoli di precedenza](../../integration-services/control-flow/media/precedenceconstraints.gif "Attività collegate in base ai vincoli di precedenza")  
   
 ### <a name="logicaland-property"></a>Proprietà LogicalAnd  
  Se a un'attività o a un contenitore sono applicati più vincoli, la proprietà **LogicalAnd** specificherà se il corrispondente vincolo di precedenza viene valutato singolarmente o insieme ad altri vincoli.  
@@ -269,4 +269,3 @@ La prima volta che si usa Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.m
 4.  Nell'area di progettazione della scheda **Flusso di controllo** fare clic sull'attività o sul contenitore e trascinarne il connettore fino all'eseguibile a cui si desidera applicare il vincolo di precedenza.  
   
 5.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
-

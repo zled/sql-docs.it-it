@@ -1,12 +1,14 @@
 ---
-title: Debug del flusso di dati | Documenti Microsoft
+title: Debug di un flusso di dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1780b770f45bd53f8f0735c092f2859593f9fa5c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debugging-data-flow"></a>Debug di un flusso di dati
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi dei flussi di dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -173,7 +174,7 @@ order by source_component_name desc
   
 4.  Fare clic con il pulsante destro del mouse sul componente di cui si desidera configurare le colonne dell'output degli errori, quindi scegliere **Visualizza editor avanzato**.  
   
-5.  Fare clic su di **proprietà Input e Output** scheda ed espandere  **\<nome componente > Output degli errori** e quindi espandere **colonne di Output**.  
+5.  Fare clic sulla scheda **Proprietà input e output**. Espandere **Output errori \<nome componente>**, quindi **Colonne di output**.  
   
 6.  Fare clic su una colonna e aggiornarne le proprietà.  
   
@@ -250,7 +251,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  Il parametro dataflow_path_id_string della stored procedure add_data_tap corrisponde alla proprietà IdentificationString del percorso del flusso di dati a cui si desidera aggiungere una scelta dei dati. Per ottenere dataflow_path_id_string, fare clic sul percorso del flusso di dati (la freccia tra le attività nel flusso di dati) e prendere nota del valore della proprietà **IdentificationString** nella finestra Proprietà.  
   
- Quando si esegue lo script, il file di output viene archiviato \<programmi > \Microsoft SQL Server\110\DTS\DataDumps. Se esiste già un file con il nome, viene creato un nuovo file con un suffisso, ad esempio output[1].txt.  
+ Quando si esegue lo script, il file di output viene archiviato in \<Programmi>\Microsoft SQL Server\110\DTS\DataDumps. Se esiste già un file con il nome, viene creato un nuovo file con un suffisso, ad esempio output[1].txt.  
   
  Come accennato in precedenza, è inoltre possibile usare la stored procedure [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)anziché la stored procedure add_data_tap. Questa stored procedure accetta l'ID dell'attività Flusso di dati come parametro anziché task_package_path. È possibile ottenere l'ID dell'attività Flusso di dati dalla finestra delle proprietà di Visual Studio.  
   
@@ -280,4 +281,3 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

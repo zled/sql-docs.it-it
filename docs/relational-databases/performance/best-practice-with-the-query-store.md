@@ -1,10 +1,13 @@
 ---
 title: Procedure consigliate per l'archivio query | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 617746f2d48662ca0eb5a26338149cf4a2e77793
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Questo argomento descrive le procedure consigliate per l'uso dell'archivio query con il carico di lavoro.  
   
-##  <a name="SSMS"></a> Usare la versione più recente di SQL Server Management Studio  
+##  <a name="SSMS"></a> Usare la versione più recente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha un set di interfacce utente progettate per la configurazione dell'archivio query nonché per l'utilizzo dei dati raccolti relativi al carico di lavoro.  
 Scaricare la versione più recente di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [qui](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
@@ -125,9 +128,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 Passare alla sottocartella dell'archivio query nel nodo database in Esplora oggetti di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per aprire le viste di risoluzione dei problemi per scenari specifici.   
 Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] possono essere usate con un set di metriche di esecuzione, espresse come una delle funzioni statistiche seguenti:  
   
-|Metrica di esecuzione|Funzione statistica|  
-|----------------------|------------------------|  
-|Tempo CPU, Durata, Conteggio esecuzioni, Letture logiche, Scritture logiche, Utilizzo memoria e Letture fisiche|Media, Massimo, Minimo, Deviazione standard, Totale|  
+|Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Metrica di esecuzione|Funzione statistica|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Tempo CPU, Durata, Conteggio esecuzioni, Letture logiche, Scritture logiche, Utilizzo memoria, Letture fisiche, Tempo CLR, Grado di parallelismo e Conteggio righe|Media, Massimo, Minimo, Deviazione standard, Totale|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|Tempo CPU, Durata, Conteggio esecuzioni, Letture logiche, Scritture logiche, Utilizzo memoria, Letture fisiche, Tempo CLR, Grado di parallelismo, Conteggio righe, Memoria log, Memoria TempDB e Tempi di attesa|Media, Massimo, Minimo, Deviazione standard, Totale|
   
  L'immagine seguente mostra come trovare le viste dell'archivio query:  
   
@@ -172,7 +176,7 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
   
 -   Riscrivere le query problematiche. Ad esempio, per sfruttare i vantaggi della parametrizzazione delle query o per implementare la logica ottimale.  
   
-##  <a name="Verify"></a> Verificare che l'archivio query raccolga i dati delle query in modo continuativo  
+##  <a name="Verify"></a> Verificare che Query Store raccolga i dati delle query in modo continuativo  
  L'archivio query può cambiare automaticamente la modalità operativa. È necessario monitorare regolarmente lo stato dell'archivio query per assicurarsi che sia in funzione e per prevenire errori dovuti a cause evitabili. Eseguire questa query per determinare la modalità operativa e visualizzare i parametri più importanti:  
   
 ```tsql
@@ -200,7 +204,7 @@ FROM sys.database_query_store_options;
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- È possibile applicare uno o entrambi questi passaggi eseguendo questa istruzione, che ripristina in modo esplicito la modalità lettura/scrittura:  
+È possibile applicare uno o entrambi questi passaggi eseguendo questa istruzione, che ripristina in modo esplicito la modalità lettura/scrittura:  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
@@ -261,7 +265,7 @@ FROM sys.database_query_store_options;
 |Auto|Concentrare l'attenzione su query rilevanti e da correggere, ovvero le query eseguite regolarmente o che hanno un consumo di risorse elevato.|  
 |None|Il set di query da monitorare è stato già acquisito in fase di esecuzione e si vuole eliminare qualsiasi distrazione introdotta da altre query.<br /><br /> È adatta ad ambienti di testing e di benchmarking.<br /><br /> È adatta ai fornitori di software che forniscono l'archivio query configurato per il monitoraggio del carico di lavoro della relativa applicazione.<br /><br /> Deve essere usata con cautela perché può precludere la possibilità di rilevare e ottimizzare nuove query importanti. Evitare di usare questa modalità a meno che non sia richiesta da uno scenario specifico.|  
   
-## <a name="keep-the-most-relevant-data-in-query-store"></a>Mantenere i dati più rilevanti nell'archivio query  
+## <a name="keep-the-most-relevant-data-in-query-store"></a>Mantenere i dati più rilevanti in Query Store  
  Configurare l'archivio query in modo che contenga solo i dati rilevanti per garantire l'esecuzione ininterrotta e la risoluzione ottimale dei problemi con un impatto minimo sul normale carico di lavoro.  
 La tabella seguente riporta le procedure consigliate:  
   

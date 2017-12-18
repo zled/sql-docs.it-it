@@ -2,9 +2,12 @@
 title: Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e968aad24d2d1ac529028eb39f64b2a842e1712b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4c2bb5ecc63c0168989e6ae23c0d85d5a22dea3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure
-  L'esercitazione seguente descrive come impostare le opzioni avanzate per [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Queste procedure sono necessarie solo se servono le funzionalità offerte. In caso contrario, è possibile abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e affidarsi al comportamento predefinito.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'esercitazione seguente descrive come impostare le opzioni avanzate per [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Queste procedure sono necessarie solo se servono le funzionalità offerte. In caso contrario, è possibile abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e affidarsi al comportamento predefinito.  
   
  In ogni scenario, il backup viene specificato con il parametro `database_name` . Quando `database_name` è NULL o *, le modifiche interessano le impostazioni predefinite a livello di istanza. Le impostazioni a livello di istanza influiscono anche sui nuovi database creati dopo la modifica.  
   

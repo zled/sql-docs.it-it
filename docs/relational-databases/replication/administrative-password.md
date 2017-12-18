@@ -2,9 +2,12 @@
 title: Password amministrativa | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 592f3db3d5340f29832c29e1fcca7a2d46a7033f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e197fb3bcaee9bba96de0dc6dd6519a01e5a13b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administrative-password"></a>Password amministrativa
-  Se per il server di pubblicazione si seleziona un server di distribuzione remoto nella pagina **Server di distribuzione** di questa procedura guidata, è necessario immettere una password per la connessione stabilita dalla replica tra il server di pubblicazione e il server di distribuzione utilizzando l'account di accesso **distributor_admin** . La password deve corrispondere a quella specificata nella pagina **Password database di distribuzione** della Configurazione guidata distribuzione o nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se per il server di pubblicazione si seleziona un server di distribuzione remoto nella pagina **Server di distribuzione** di questa procedura guidata, è necessario immettere una password per la connessione stabilita dalla replica tra il server di pubblicazione e il server di distribuzione usando l'account di accesso **distributor_admin**. La password deve corrispondere a quella specificata nella pagina **Password database di distribuzione** della Configurazione guidata distribuzione o nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione** .  
   
 ## <a name="options"></a>Opzioni  
  **Password**  

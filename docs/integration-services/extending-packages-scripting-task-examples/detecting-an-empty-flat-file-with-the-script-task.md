@@ -1,33 +1,33 @@
 ---
-title: "Rilevamento di un File Flat vuoto con l'attività Script | Documenti Microsoft"
+title: "Rilevamento di un file flat vuoto con l'attività Script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - flat files
 - Script task [Integration Services], empty flat files
 - SSIS Script task, empty flat files
 - Script task [Integration Services], examples
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40deae6a08a597114fbc721271a789895e1d8fa2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0fe2ff93bb8852a4f7237ceae25a6af423e6dfd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Rilevamento di un file flat vuoto con l'attività Script
   L'origine file flat non determina se un file flat contiene righe di dati prima di tentare di elaborarlo. È possibile migliorare l'efficienza di un pacchetto, specialmente di un pacchetto che scorre numerosi file flat, ignorando i file che non contengono alcuna riga di dati. L'attività Script consente di cercare un file flat vuoto prima che il pacchetto inizi a elaborare il flusso di dati.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/26/2017
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- L'esempio seguente usa i metodi di **System.IO** dello spazio dei nomi per verificare il file flat specificato in una gestione connessione File Flat per determinare se il file è vuoto o se contiene solo previsto di righe non di dati, ad esempio colonna intestazioni o una riga vuota. Lo script prima controlla la dimensione del file. Se la dimensione è pari a zero byte, significa che il file è vuoto. Se la dimensione del file è superiore a zero, lo script legge le righe dal file finché non sussistono più righe o finché il numero di righe supera il numero previsto di righe non di dati. Se il numero di righe nel file è minore o uguale al numero previsto di righe non di dati, il file è considerato vuoto. Il risultato viene restituito come valore booleano in una variabile dell'utente, il cui valore può essere utilizzato per la diramazione nel flusso di controllo del pacchetto. Il **FireInformation** metodo visualizza anche il risultato nel **Output** finestra il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
+ L'esempio seguente usa i metodi dello spazio dei nomi **System.IO** per testare il file flat specificato in una gestione connessione file flat per determinare se il file è vuoto o se contiene solo le righe non di dati previste, ad esempio intestazioni di colonna o una riga vuota. Lo script prima controlla la dimensione del file. Se la dimensione è pari a zero byte, significa che il file è vuoto. Se la dimensione del file è superiore a zero, lo script legge le righe dal file finché non sussistono più righe o finché il numero di righe supera il numero previsto di righe non di dati. Se il numero di righe nel file è minore o uguale al numero previsto di righe non di dati, il file è considerato vuoto. Il risultato viene restituito come valore booleano in una variabile dell'utente, il cui valore può essere utilizzato per la diramazione nel flusso di controllo del pacchetto. Anche il metodo **FireInformation** visualizza il risultato nella finestra **Output** di[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
 #### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
   
@@ -46,11 +46,11 @@ ms.lasthandoff: 09/26/2017
   
 3.  Creare una variabile booleana denominata `FFIsEmpty`.  
   
-4.  Aggiungere il `FFNonDataRows` variabile dell'attività Script **ReadOnlyVariables** proprietà.  
+4.  Aggiungere la variabile `FFNonDataRows` alla proprietà **ReadOnlyVariables** dell'attività Script.  
   
-5.  Aggiungere il `FFIsEmpty` variabile dell'attività Script **ReadWriteVariables** proprietà.  
+5.  Aggiungere la variabile `FFIsEmpty` alla proprietà **ReadWriteVariables** dell'attività Script.  
   
-6.  Nel codice, importare il **System.IO** dello spazio dei nomi.  
+6.  Nel codice importare lo spazio dei nomi **System.IO**.  
   
  Se si scorrono i file con un enumeratore Foreach File, anziché utilizzare una sola gestione connessione file flat, sarà necessario modificare il codice di esempio seguente per ottenere il nome e il percorso del file dalla variabile nella quale il valore enumerato è archiviato anziché dalla gestione connessione.  
   
@@ -150,4 +150,3 @@ public void Main()
  [Esempi di attività Script](../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
   
   
-

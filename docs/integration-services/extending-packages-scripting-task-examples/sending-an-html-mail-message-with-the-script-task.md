@@ -1,34 +1,33 @@
 ---
-title: "Invio di un messaggio di posta elettronica HTML con l'attività Script | Documenti Microsoft"
+title: "Invio di un messaggio di posta HTML con l'attività Script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Send Mail task [Integration Services]
 - Script task [Integration Services], examples
 - Script task [Integration Services], HTML mail message
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b5f50a79ca83243ea130c77a0d95ab402ba2d31a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 29b1dd04ab4be364b2569f783fe6c07f2929d925
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Invio di un messaggio di posta HTML con l'attività Script
   L'attività SendMail di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta solo messaggi di posta in formato di testo normale. Tuttavia è possibile inviare facilmente messaggi di posta HTML tramite l'attività Script e le funzionalità di posta di .NET Framework.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/03/2017
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- L'esempio seguente usa il **System.Net.Mail** dello spazio dei nomi per configurare e inviare un messaggio di posta elettronica HTML. Lo script ottiene i campi a, da, oggetto e il corpo del messaggio di posta elettronica dalle variabili del pacchetto, li utilizza per creare un nuovo **MailMessag**e ne imposta il relativo **IsBodyHtml** proprietà **True**. Quindi Ottiene il nome del server SMTP da un'altra variabile del pacchetto, Inizializza un'istanza di **SmtpClient**e chiama il relativo **inviare** metodo per inviare il messaggio HTML. Nell'esempio il messaggio viene incapsulato inviando la funzionalità in una subroutine che potrebbe essere riutilizzata in altri script.  
+ Nell'esempio seguente viene usato lo spazio dei nomi **System.Net.Mail** per configurare e inviare un messaggio di posta HTML. Lo script ottiene i campi A, Da, Oggetto e il corpo del messaggio di posta elettronica dalle variabili del pacchetto, li usa per creare un nuovo oggetto **MailMessage** e ne imposta la proprietà **IsBodyHtml** su **True**. Ottiene quindi il nome del server SMTP da un'altra variabile del pacchetto, inizializza un'istanza di **System.Net.Mail.SmtpClient** e chiama il metodo **Send** per inviare il messaggio HTML. Nell'esempio il messaggio viene incapsulato inviando la funzionalità in una subroutine che potrebbe essere riutilizzata in altri script.  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>Per configurare questa attività Script di esempio senza una gestione connessione SMTP  
   
@@ -51,19 +50,19 @@ ms.lasthandoff: 08/03/2017
   
 3.  Creare una variabile di stringa denominata `HtmlEmailServer` e assegnare il nome di un server SMTP disponibile che accetta messaggi in uscita anonimi.  
   
-4.  Tutte queste cinque variabili per assegnare il **ReadOnlyVariables** proprietà di una nuova attività Script.  
+4.  Assegnare queste cinque variabili alla proprietà **ReadOnlyVariables** di una nuova attività Script.  
   
-5.  Importazione di **System.Net** e **System.Net.Mail** gli spazi dei nomi nel codice.  
+5.  Importare gli spazi dei nomi **System.Net** e **System.Net.Mail** nel codice.  
   
  Il codice di esempio in questo argomento ottiene il nome del server SMTP da una variabile del pacchetto. Tuttavia, è possibile sfruttare anche una gestione connessione SMTP per incapsulare le informazioni di connessione ed estrarre il nome del server dalla gestione connessione nel codice. Il metodo <xref:Microsoft.SqlServer.Dts.ManagedConnections.SMTPConn.AcquireConnection%2A> della gestione connessione SMTP restituisce una stringa nel formato seguente:  
   
  `SmtpServer=smtphost;UseWindowsAuthentication=False;EnableSsl=False;`  
   
- È possibile utilizzare il **String. Split** (metodo) per separare questo elenco di argomenti in una matrice di stringhe singole in corrispondenza di ogni punto e virgola (;) o uguale (=) di accedere e quindi estrarre il secondo argomento (pedice 1) dalla matrice come nome del server.  
+ È possibile usare il metodo **String.Split** per separare questo elenco di argomenti in una matrice di stringhe singole in corrispondenza di ogni punto e virgola (;) o segno di uguale (=), quindi estrarre il secondo argomento (pedice 1) dalla matrice come nome del server.  
   
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>Per configurare questa attività Script di esempio con una gestione connessione SMTP  
   
-1.  Modificare l'attività Script configurata precedentemente rimuovendo la `HtmlEmailServer` variabile dall'elenco di **ReadOnlyVariables**.  
+1.  Modificare l'attività Script configurata precedentemente rimuovendo la variabile `HtmlEmailServer` dall'elenco di **ReadOnlyVariables**.  
   
 2.  Sostituire la riga di codice che ottiene il nome del server:  
   
@@ -161,4 +160,3 @@ public void Main()
  [Attività Invia messaggi](../../integration-services/control-flow/send-mail-task.md)  
   
   
-

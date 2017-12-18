@@ -2,9 +2,12 @@
 title: Revocare le autorizzazioni per una raccolta di XML Schema | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db10bb0d69106c3263c01a6762a0685a3cd721d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3daaadf50d221b5f5b4fc2f580990a3e849a0c60
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Revoca delle autorizzazioni per una raccolta di XML Schema
-  Per revocare l'autorizzazione per creare una raccolta XML Schema, è possibile eseguire una delle operazioni seguenti:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Per revocare l'autorizzazione per creare una raccolta XML Schema, è possibile eseguire una delle operazioni seguenti:  
   
 -   Revocare l'autorizzazione ALTER per lo schema relazionale. L'entità non sarà quindi in grado di creare una raccolta XML Schema nello schema relazionale, ma potrà comunque eseguire questa operazione negli altri schemi relazionali dello stesso database.  
   

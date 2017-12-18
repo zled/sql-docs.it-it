@@ -1,39 +1,39 @@
 ---
-title: "Proprietà dell'origine OData | Documenti Microsoft"
+title: "Proprietà dell'origine OData | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 64e297a37c3b6449551968b5788f8c2c0ddd4ab6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/23/2017
-
+ms.openlocfilehash: 0ff5a45fff7cc967f8fbec8d07926fe0c9fe3a83
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odata-source-properties"></a>Proprietà dell'origine OData
-Quando si fa clic su **origine OData** nel flusso di dati e fare clic su **proprietà**, per visualizzare le proprietà per il **origine OData** componente il **proprietà** finestra.  
+Quando si fa clic con il pulsante destro del mouse su **Origine OData** nel flusso di dati e si sceglie **Proprietà**, vengono visualizzate le proprietà del componente **Origine OData** nella finestra **Proprietà**.  
 
 ## <a name="properties"></a>Proprietà 
 |Proprietà|Description|  
 |-|-|  
-|CollectionName|Nome della raccolta da recuperare dal servizio OData. La proprietà **CollectionName** viene utilizzata quando **UseResourcePath** è False.<br /><br /> Questa proprietà è expressionable, che consente di impostare il valore in fase di esecuzione. Tuttavia, se i metadati della raccolta non corrispondono ai metadati esistenti in fase di progettazione, la convalida si verifica un errore, che causa l'errore di esecuzione del flusso di dati.|  
+|CollectionName|Nome della raccolta da recuperare dal servizio OData. La proprietà **CollectionName** viene utilizzata quando **UseResourcePath** è False.<br /><br /> Questa proprietà ammette le espressioni e consente l'impostazione del valore in fase di esecuzione. Tuttavia, se i metadati della raccolta non corrispondono a quelli esistenti in fase di progettazione, si verifica un errore di convalida e l'esecuzione del flusso di dati non viene completata.|  
 |DefaultStringLength|Con questo valore viene specificata la lunghezza predefinita per le colonne stringa che sono prive della lunghezza massima.<br /><br /> **Valore predefinito:** 4000|  
-|Query|Parametri della query OData. Questa proprietà è expressionable e può essere impostata in fase di esecuzione.|  
+|Query|Parametri della query OData. Questa proprietà ammette le espressioni e può essere impostata in fase di esecuzione.|  
 |ResourcePath|Utilizzare questa proprietà quando è necessario specificare un percorso completo della risorsa, anziché selezionare semplicemente il nome di una raccolta. Questa proprietà viene utilizzata quando **UseResourcePath** è True.|  
 |UseResourcePath|Quando impostato su True, il valore di **ResourcePath** viene aggiunto all'URL di base per determinare il percorso del feed OData. Quando impostato su False, viene utilizzato il valore di **CollectionName** .<br /><br /> **Valore predefinito:** False|  
   
 ## <a name="see-also"></a>Vedere anche
 [Origine OData](odata-source.md)
-

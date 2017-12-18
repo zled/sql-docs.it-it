@@ -1,12 +1,14 @@
 ---
-title: "Proprietà personalizzate della trasformazione | Documenti Microsoft"
+title: "Proprietà personalizzate delle trasformazioni | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -41,19 +43,19 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 964997cb8223139d44c696a80b4c659769f717a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transformation-custom-properties"></a>Proprietà personalizzate delle trasformazioni
-  Oltre alle proprietà comuni alla maggior parte degli oggetti del flusso di dati nel modello a oggetti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], molti oggetti del flusso di dati hanno proprietà personalizzate specifiche dell'oggetto. Tali proprietà personalizzate sono disponibili solo in fase di esecuzione e non sono trattate nella documentazione di riferimento relativa alla programmazione gestita in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
+  Oltre alle proprietà comuni alla maggior parte degli oggetti del flusso di dati nel modello a oggetti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , molti oggetti del flusso di dati hanno proprietà personalizzate specifiche dell'oggetto. Tali proprietà personalizzate sono disponibili solo in fase di esecuzione e non sono trattate nella documentazione di riferimento relativa alla programmazione gestita in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
  In questo argomento vengono elencate e descritte le proprietà personalizzate delle diverse trasformazioni del flusso di dati. Per informazioni sulle proprietà comuni alla maggior parte degli oggetti del flusso di dati, vedere [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
@@ -225,7 +227,7 @@ ms.lasthandoff: 08/03/2017
   
  L'input e l'output della trasformazione Colonna derivata non includono proprietà personalizzate.  
   
- Per altre informazioni, vedere [trasformazione Colonna derivata](../../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+ Per altre informazioni, vedere [Trasformazione Colonna derivata](../../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
 ##  <a name="extract"></a> Proprietà personalizzate della trasformazione Esporta colonna  
  La trasformazione Esporta colonna include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
@@ -264,7 +266,7 @@ ms.lasthandoff: 08/03/2017
   
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
-|Delimiters|String|Delimitatori di token utilizzati dalla trasformazione. I delimitatori predefiniti includono i seguenti caratteri: spazio (), virgola, punto (.), punto e virgola (;), due punti (:), trattino (-), retta di virgolette doppie ("), segno di virgolette semplici ('), contrassegnare e commerciale (&), barra (/), barra rovesciata (\\), simbolo di chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi ((), parentesi ()), minore di (\<), maggiore di (>), apertura tra parentesi quadre ([), parentesi di apertura di parentesi graffe ({), parentesi graffa (}), barra verticale (&#124;) di chiusura (]), chiudere il simbolo di cancelletto (#), asterisco (*), accento circonflesso (^) e (%).|  
+|Delimiters|String|Delimitatori di token utilizzati dalla trasformazione. I delimitatori predefiniti includono i caratteri seguenti: spazio ( ), virgola (,), punto (.), punto e virgola (;), due punti (:), trattino (-), virgolette diritte doppie ("), virgolette diritte singole ('), e commerciale (&), barra (/), barra rovesciata (\\), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), segno di minore (\<), segno di maggiore (>), parentesi quadra di apertura ([), parentesi quadra di chiusura (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), barra verticale (&#124;), cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
 |Exhaustive|Boolean|Valore che specifica se ogni record di input viene confrontato con tutti gli altri record di input. Il valore **True** è destinato per lo più al debug. Il valore predefinito di questa proprietà è **False**.<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Raggruppamento fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MaxMemoryUsage|Valore intero|Quantità di memoria massima che può essere utilizzata dalla trasformazione. Il valore predefinito di questa proprietà è **0**, che consente l'uso della memoria dinamica.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Raggruppamento fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MinSimilarity|Double|Soglia di somiglianza utilizzata dalla trasformazione per identificare duplicati, espressa come valore compreso tra 0 e 1.  Il valore predefinito di questa proprietà è 0.8.|  
@@ -298,7 +300,7 @@ ms.lasthandoff: 08/03/2017
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Specifica se è necessario creare una copia della tabella di riferimento per la creazione dell'indice di ricerca fuzzy e le ricerche successive. Il valore predefinito di questa proprietà è **True**.|  
-|Delimiters|String|Delimitatori utilizzati dalla trasformazione per suddividere in token i valori di colonna. I delimitatori predefiniti includono i seguenti caratteri: spazio (), virgola (,), semicolon(;) punto (.), trattino di due punti (:) (-), le virgolette doppie ("), segno di virgolette semplici ('), contrassegnare e commerciale (&), barra (/), barra rovesciata (\\), simbolo di chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi ()), minore di (\<), maggiore di (>), apertura di parentesi quadra ([), parentesi di apertura di parentesi graffe ({), parentesi graffa (}), barra verticale (&#124;) di chiusura (]), di chiusura. cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
+|Delimiters|String|Delimitatori utilizzati dalla trasformazione per suddividere in token i valori di colonna. I delimitatori predefiniti includono i caratteri seguenti: spazio ( ), virgola (,), punto (.), punto e virgola (;), due punti (:), trattino (-), virgolette diritte doppie ("), virgolette diritte singole ('), e commerciale (&), barra (/), barra rovesciata (\\), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), segno di minore (\<), segno di maggiore (>), parentesi quadra di apertura ([), parentesi quadra di chiusura (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), barra verticale (&#124;), cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
 |DropExistingMatchIndex|Boolean|Un valore che specifica se l'indice delle corrispondenze specificato in MatchIndexName viene eliminato quando MatchIndexOptions non è impostata su ReuseExistingIndex. Il valore predefinito di questa proprietà è **True**.|  
 |Exhaustive|Boolean|Valore che specifica se ogni record di input viene confrontato con tutti gli altri record di input. Il valore **True** è destinato per lo più al debug. Il valore predefinito di questa proprietà è **False**.<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Ricerca fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MatchIndexName|String|Nome dell'indice delle corrispondenze. L'indice delle corrispondenze è la tabella in cui la trasformazione crea e salva l'indice utilizzato. Se viene riusato l'indice delle corrispondenze, MatchIndexName specifica l'indice da riusare. MatchIndexName deve essere un nome di identificatore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valido. Se il nome contiene spazi, ad esempio, deve essere racchiuso tra parentesi.|  
@@ -558,7 +560,7 @@ ms.lasthandoff: 08/03/2017
   
  L'input e l'output della trasformazione Ordinamento non includono proprietà personalizzate.  
   
- Per altre informazioni, vedere [Trasformazione ordinamento](../../../integration-services/data-flow/transformations/sort-transformation.md).  
+ Per altre informazioni, vedere [Trasformazione Ordinamento](../../../integration-services/data-flow/transformations/sort-transformation.md).  
   
 ##  <a name="textract"></a> Proprietà personalizzate della trasformazione Estrazione termini  
  La trasformazione Estrazione termini include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  

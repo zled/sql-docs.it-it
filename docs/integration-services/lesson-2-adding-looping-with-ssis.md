@@ -1,28 +1,28 @@
 ---
-title: 'Lezione 2: Aggiunta di ciclo con SSIS | Documenti Microsoft'
+title: 'Lezione 2: Aggiungere cicli con SSIS | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8559dc3afb5f347555b9b21b61abc50765fd92c4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 96194edec70f67e9db45265de11d735e09fead30
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Lezione 2: Aggiungere cicli con SSIS
 Nella [Lezione 1: Creazione del progetto e del pacchetto di base](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)è stato creato un pacchetto che ha estratto i dati da un'unica origine file flat, ha trasformato i dati usando la trasformazione Ricerca e infine ha caricato i dati nella tabella dei fatti **FactCurrency** del database di esempio **AdventureWorksDW2012** .  
@@ -54,7 +54,7 @@ In questa lezione verranno illustrate le procedure per modificare il pacchetto E
 In questa lezione verrà modificato solo il flusso di controllo, non il flusso di dati.  
   
 > [!IMPORTANT]  
-> Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e sulla distribuzione di **AdventureWorksDW2012**, vedere [Esempi di Reporting Services su CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+> Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e sulla distribuzione di **AdventureWorksDW2012**, vedere la pagina relativa agli [esempi del prodotto Reporting Services su CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
 In questa lezione sono incluse le attività seguenti:  
@@ -75,4 +75,3 @@ In questa lezione sono incluse le attività seguenti:
   
   
   
-

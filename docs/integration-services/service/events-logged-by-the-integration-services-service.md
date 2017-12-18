@@ -1,12 +1,14 @@
 ---
-title: Gli eventi registrati dal servizio Integration Services | Documenti Microsoft
+title: Eventi registrati dal servizio Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: service
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dc85b9b432cfccacabb6cf877e7f26edd4b0b975
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Eventi registrati dal servizio Integration Services
   Quando l'esecuzione del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene avviata, arrestata o quando si verificano determinati problemi, vengono registrati vari messaggi di evento nel registro eventi applicazioni di Windows.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 08/03/2017
 |258|DTS_MSG_SERVER_STOPPING|È in corso l'arresto del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .%n%nInterrompi tutti i pacchetti in esecuzione all'uscita: %1|Il servizio sta per essere arrestato e, se la configurazione lo prevede, verranno arrestati tutti i pacchetti in esecuzione. È possibile impostare un valore True o False nel file di configurazione per specificare se arrestare i pacchetti in esecuzione quando viene arrestato il servizio. Nel messaggio relativo a questo evento è incluso il valore di questa impostazione.|  
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Servizio arrestato.%nVersione server %1|Il servizio è stato arrestato.|  
   
-## <a name="settings-file-messages"></a>Messaggi di file di impostazioni  
+## <a name="settings-file-messages"></a>Messaggi dei file di impostazioni  
  Le impostazioni per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono archiviate in un file XML che è possibile modificare. Per altre informazioni, vedere [Servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
 |ID evento|Nome simbolico|Text|Note|  
@@ -59,8 +60,8 @@ ms.lasthandoff: 08/03/2017
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Servizio Microsoft SSIS: è in corso l'interruzione del pacchetto in esecuzione.%nID istanza pacchetto: %1%nID pacchetto: %2%nNome pacchetto: %3%nDescrizione pacchetto: %4%nPacchetto|Il servizio sta tentando di arrestare l'esecuzione di un pacchetto. È possibile monitorare e arrestare i pacchetti in esecuzione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni su come gestire i pacchetti in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vedere [Gestione dei pacchetti &#40;servizio SSIS&#41;](../../integration-services/service/package-management-ssis-service.md).|  
 
-## <a name="view-events"></a>Visualizza eventi
-  Sono disponibili due strumenti nei quali è possibile visualizzare eventi per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
+## <a name="view-events"></a>Visualizzare eventi
+  Sono disponibili due strumenti nei quali è possibile visualizzare eventi per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   
 -   La finestra di dialogo **Visualizzatore file di log** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Nella finestra di dialogo **Visualizzatore file di log** sono disponibili opzioni per l'esportazione, l'applicazione di filtri e l'esecuzione di ricerche nel log. Per altre informazioni sulle opzioni della finestra di dialogo **Visualizzatore file di log**, vedere [Guida sensibile al contesto del Visualizzatore file di log](../../relational-databases/logs/log-file-viewer-f1-help.md).  
   
@@ -102,4 +103,3 @@ ms.lasthandoff: 08/03/2017
  
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come visualizzare le voci di log, vedere [Eventi registrati da un pacchetto di Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-

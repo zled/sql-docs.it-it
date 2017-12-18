@@ -1,12 +1,14 @@
 ---
-title: Origine del File flat | Documenti Microsoft
+title: Origine file flat | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +22,18 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3460c0a209af8b587617e81c28fdccc2d5ff0eed
-ms.contentlocale: it-it
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 0d9493c57bcfa4285bfadc811d6b24e1485bbb46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="flat-file-source"></a>origine file flat
+# <a name="flat-file-source"></a>Origine file flat
   L'origine file flat legge dati da un file di testo. Tale file può essere in formato delimitato, a larghezza fissa o misto.  
   
 -   Nel formato delimitato per definire le righe e le colonne vengono utilizzati delimitatori di riga e colonna.  
@@ -140,4 +141,3 @@ ms.lasthandoff: 08/17/2017
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)  
   
   
-

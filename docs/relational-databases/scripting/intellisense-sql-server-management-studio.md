@@ -2,9 +2,12 @@
 title: IntelliSense (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b749035286507e3ee2a8a05af82d9da9d1e7b4c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8c9b1806be022d0391cb19cc03a81a039927e923
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
-  Gli editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supportano le opzioni IntelliSense [!INCLUDE[msCoName](../../includes/msconame-md.md)] in grado di ridurre la digitazione, fornire l'accesso rapido alle informazioni sulla sintassi o facilitare la visualizzazione dei delimitatori di espressioni complesse.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Gli editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supportano le opzioni IntelliSense [!INCLUDE[msCoName](../../includes/msconame-md.md)] in grado di ridurre la digitazione, fornire l'accesso rapido alle informazioni sulla sintassi o facilitare la visualizzazione dei delimitatori di espressioni complesse.  
   
 ## <a name="benefits-of-intellisense"></a>Vantaggi di IntelliSense  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense offre una gamma di opzioni che rendono facilmente accessibili i riferimenti del linguaggio. Durante la scrittura di codice non è necessario uscire dall'editor per eseguire ricerche negli elementi del linguaggio. È infatti possibile rimanere nel contesto, trovare le informazioni necessarie, inserire gli elementi del linguaggio direttamente nel codice e ottenerne l'immissione automatica.  

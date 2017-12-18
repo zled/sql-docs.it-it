@@ -1,16 +1,17 @@
 ---
-title: "Sviluppo di un'interfaccia utente per un'attività personalizzata | Documenti Microsoft"
+title: "Sviluppo di un'interfaccia utente per un'attività personalizzata | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,17 +24,16 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1d13e82111d97d4d4a63615c91b3cbb48f68f708
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8707a24fda7d84ac260e33884d01279d8cbe5501
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Sviluppo di un'interfaccia utente per un'attività personalizzata
   Il modello a oggetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre agli sviluppatori di attività la possibilità di creare facilmente un'interfaccia utente personalizzata per un'attività da integrare e visualizzare in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. L'interfaccia utente può fornire informazioni utili all'utente in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] oltre a indicazioni su come configurare correttamente le proprietà e le impostazioni dell'attività personalizzata.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/03/2017
   
  In questa sezione viene descritto il ruolo dell'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> e dell'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> durante lo sviluppo di un'interfaccia utente per un'attività personalizzata e vengono fornite informazioni su come creare, integrare, distribuire e sottoporre a debug l'attività all'interno di Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
- Il [!INCLUDE[ssIS](../../../includes/ssis-md.md)] finestra di progettazione fornisce più punti di ingresso all'interfaccia utente per l'attività: l'utente può selezionare **modifica** il menu di scelta rapida, fare doppio clic su attività, oppure fare clic su di **Visualizza Editor** collegamento nella parte inferiore della finestra delle proprietà. Quando l'utente accede a uno di questi punti di ingresso, Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] trova e carica l'assembly che contiene l'interfaccia utente per l'attività. L'interfaccia utente per l'attività è responsabile della creazione della finestra di dialogo delle proprietà che l'utente visualizza in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] fornisce più punti di ingresso all'interfaccia utente dell'attività. L'utente può scegliere **Modifica** dal menu di scelta rapida, fare doppio clic sull'attività o fare clic sul collegamento **Visualizza editor** nella parte inferiore della finestra delle proprietà. Quando l'utente accede a uno di questi punti di ingresso, Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] trova e carica l'assembly che contiene l'interfaccia utente per l'attività. L'interfaccia utente per l'attività è responsabile della creazione della finestra di dialogo delle proprietà che l'utente visualizza in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
  L'attività e la relativa interfaccia utente sono entità separate che devono essere implementate in assembly distinti per ridurre gli interventi di localizzazione, distribuzione e manutenzione. La DLL dell'attività non carica, chiama né in genere contiene informazioni sulla relativa interfaccia utente, ad eccezione delle informazioni contenute nei valori dell'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> codificati nell'attività. Questo è l'unico modo in cui un'attività è associata alla propria interfaccia utente.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/03/2017
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Se utilizzata, impostarla su uno dei valori dell'enumerazione <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Ad esempio, `RequiredProductLevel = DTSProductLevel.None`.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|Contiene informazioni di contatto per i casi in cui l'attività richiede supporto tecnico.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|Assegna un tipo all'attività.|  
-|Attribute.TypeId|Se implementata in una classe derivata, ottiene un identificatore univoco per questo attributo. Per ulteriori informazioni, vedere **Attribute.TypeID** proprietà nella libreria di classi .NET Framework.|  
+|Attribute.TypeId|Se implementata in una classe derivata, ottiene un identificatore univoco per questo attributo. Per altre informazioni, vedere la proprietà **Attribute.TypeID** nella libreria di classi .NET Framework.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.UITypeName%2A>|Nome di tipo dell'assembly utilizzato da Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] per caricare l'assembly. Questa proprietà viene utilizzata per trovare l'assembly dell'interfaccia utente per l'attività.|  
   
  Nell'esempio di codice seguente è illustrato l'aspetto di <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> codificato sopra la definizione della classe.  
@@ -124,7 +124,7 @@ End Class 'MyTask
   
  La finestra di progettazione chiama il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> per richiedere la finestra visualizzata in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. L'attività crea un'istanza della finestra che contiene l'interfaccia utente per l'attività e restituisce l'interfaccia utente alla finestra di progettazione per la visualizzazione. In genere, gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> e <xref:Microsoft.SqlServer.Dts.Runtime.Connections> vengono forniti alla finestra tramite un costruttore di overload, in modo che possano essere utilizzati per configurare l'attività.  
   
- Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] chiama il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> dell'interfaccia utente dell'attività per visualizzare l'interfaccia utente per l'attività. L'interfaccia utente dell'attività restituisce il Windows Form da questo metodo e Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] visualizza questo form come finestra di dialogo modale. Quando il form viene chiuso, [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer esamina il valore della **DialogResult** proprietà del form per determinare se l'attività è stato modificato e se queste modifiche devono essere salvate. Se il valore del **DialogResult** proprietà **OK**, [!INCLUDE[ssIS](../../../includes/ssis-md.md)] finestra di progettazione chiama i metodi di persistenza dell'attività per salvare le modifiche; in caso contrario, le modifiche vengono ignorate.  
+ Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] chiama il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> dell'interfaccia utente dell'attività per visualizzare l'interfaccia utente per l'attività. L'interfaccia utente dell'attività restituisce il Windows Form da questo metodo e Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] visualizza questo form come finestra di dialogo modale. Quando il form viene chiuso, Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] esamina il valore della proprietà **DialogResult** del form per determinare se l'attività è stata modificata e se queste modifiche devono essere salvate. Se il valore della proprietà **DialogResult** è **OK**, Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] chiama i metodi di persistenza dell'attività per salvare le modifiche; in caso contrario, le modifiche vengono ignorate.  
   
  Nell'esempio di codice seguente viene implementata l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> e si presuppone l'esistenza di una classe di Windows Form denominata SampleTaskForm.  
   
@@ -206,8 +206,7 @@ End Class
  
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un'attività personalizzata](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
- [La codifica di un'attività personalizzata](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
+ [Scrittura del codice di un'attività personalizzata](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
  [Sviluppo di un'interfaccia utente per un'attività personalizzata](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
   
   
-

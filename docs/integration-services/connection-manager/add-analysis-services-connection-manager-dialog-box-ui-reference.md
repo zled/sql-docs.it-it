@@ -1,30 +1,29 @@
 ---
-title: Aggiungi riferimento all'interfaccia utente della finestra di dialogo Gestione connessione di Analysis Services | Documenti Microsoft
+title: Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.olapconnection.f1
-helpviewer_keywords:
-- Add Analysis Services Connection Manager
+f1_keywords: sql13.dts.designer.olapconnection.f1
+helpviewer_keywords: Add Analysis Services Connection Manager
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87542f1672fb53f1ea08d15c942c56a2e3bef4d5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: eab4334febdb7b834bf1974cd213116cd381ad55
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services
   Utilizzare la finestra di dialogo **Aggiungi gestione connessione Analysis Services** per creare una connessione a un server che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o per modificare le proprietà della connessione.  
@@ -48,8 +47,7 @@ ms.lasthandoff: 08/03/2017
  Consente di selezionare un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nell'elenco.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Errori di Integration Services e riferimento ai messaggi](../../integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services &#40; SSIS &#41; Connessioni](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

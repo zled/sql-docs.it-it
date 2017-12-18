@@ -1,26 +1,27 @@
 ---
-title: "Come visualizzare le proprietà di istanza di CDC | Documenti Microsoft"
+title: "Procedura di visualizzazione delle proprietà dell'istanza di CDC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 022b2b25d055e25dbfcc62ba494e5e6564dc4cd5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Procedura di visualizzazione delle proprietà dell'istanza di CDC
   In questa procedura viene descritto come utilizzare CDC Designer Console per visualizzare le informazioni relative alle istanze create per gestire l'operazione delle istanze.  
@@ -48,4 +49,3 @@ ms.lasthandoff: 08/03/2017
      In questa scheda viene visualizzato un elenco delle proprietà avanzate definite nell'editor delle proprietà. Per informazioni sul contenuto di questa scheda, vedere [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
   
-

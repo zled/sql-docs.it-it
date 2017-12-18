@@ -1,12 +1,14 @@
 ---
-title: Caratteristiche di prestazioni del flusso di dati | Documenti Microsoft
+title: "Funzionalità delle prestazioni del flusso di dati | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +25,16 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1598f40bb947a98b8fccc8ae47ba1dd7b9447b0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
   In questo argomento sono inclusi alcuni suggerimenti sulla progettazione di pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per evitare problemi di prestazioni comuni. Sono inoltre fornite informazioni sugli strumenti e sulle funzionalità che è possibile usare per risolvere i problemi relativi alle prestazioni dei pacchetti.  
@@ -103,7 +104,7 @@ ms.lasthandoff: 08/03/2017
  Indipendentemente dal componente del flusso di dati, è consigliabile seguire due linee guida generali per migliorare le prestazioni: ottimizzare le query ed evitare stringhe non necessarie.  
   
 #### <a name="optimize-queries"></a>Ottimizzazione delle query  
- Numerosi componenti del flusso di dati usano query in operazioni di estrazione dei dati dalle origini o in operazioni di ricerca per la creazione di tabelle di riferimento. La query predefinita utilizza l'istruzione SELECT * FROM \<tableName > sintassi. con cui vengono restituite tutte le colonne della tabella di origine. La disponibilità di tutte le colonne in fase di progettazione consente di scegliere qualsiasi colonna come colonna di ricerca, colonna pass-through o colonna di origine. Dopo avere selezionato le colonne da usare, è tuttavia necessario modificare la query in modo che includa solo le colonne selezionate. La rimozione delle colonne superflue garantisce una maggiore efficienza del flusso di dati in un pacchetto, in quanto un minor numero di colonne comporta la creazione di una riga con dimensioni inferiori. Una riga con dimensioni inferiori fa sì che sia possibile inserire più righe in un buffer e che l'elaborazione di tutte le righe nel set di dati risulti meno complessa.  
+ Numerosi componenti del flusso di dati usano query in operazioni di estrazione dei dati dalle origini o in operazioni di ricerca per la creazione di tabelle di riferimento. La query predefinita usa la sintassi SELECT * FROM \<nomeTabella>. con cui vengono restituite tutte le colonne della tabella di origine. La disponibilità di tutte le colonne in fase di progettazione consente di scegliere qualsiasi colonna come colonna di ricerca, colonna pass-through o colonna di origine. Dopo avere selezionato le colonne da usare, è tuttavia necessario modificare la query in modo che includa solo le colonne selezionate. La rimozione delle colonne superflue garantisce una maggiore efficienza del flusso di dati in un pacchetto, in quanto un minor numero di colonne comporta la creazione di una riga con dimensioni inferiori. Una riga con dimensioni inferiori fa sì che sia possibile inserire più righe in un buffer e che l'elaborazione di tutte le righe nel set di dati risulti meno complessa.  
   
  Per creare una query, è possibile digitarla o usare Generatore query.  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 08/03/2017
 #### <a name="slowly-changing-dimension-transformation"></a>Trasformazione Dimensione a modifica lenta  
  La Configurazione guidata dimensioni a modifica lenta e la trasformazione Dimensione a modifica lenta sono strumenti di uso generale in grado di rispondere alle esigenze della maggior parte degli utenti. Il flusso di dati generato dalla procedura guidata, tuttavia, non è ottimizzato per le prestazioni.  
   
- I componenti più lenti nella trasformazione Dimensione a modifica lenta sono in genere le trasformazioni Comando OLE DB che eseguono istruzioni UPDATE su una singola riga per volta. Il modo più efficace per migliorare le prestazioni della trasformazione Dimensione a modifica lenta consiste pertanto nel sostituire le trasformazioni Comando OLE DB. È possibile sostituire tali trasformazioni con componenti di destinazione che salvano tutte le righe da aggiornare in una tabella di gestione temporanea. È quindi possibile aggiungere un'attività Esegui SQL per l'esecuzione di un singola istruzione UPDATE di Transact-SQL basata su set su tutte le righe contemporaneamente.  
+ I componenti più lenti nella trasformazione Dimensione a modifica lenta sono in genere le trasformazioni Comando OLE DB che eseguono istruzioni UPDATE su una singola riga per volta. Il modo più efficace per migliorare le prestazioni della trasformazione Dimensione a modifica lenta consiste pertanto nel sostituire le trasformazioni Comando OLE DB. È possibile sostituire tali trasformazioni con componenti di destinazione che salvano tutte le righe da aggiornare in una tabella di staging. È quindi possibile aggiungere un'attività Esegui SQL per l'esecuzione di un singola istruzione UPDATE di Transact-SQL basata su set su tutte le righe contemporaneamente.  
   
  Gli utenti avanzati possono progettare un flusso di dati personalizzato per l'elaborazione delle dimensioni a modifica lenta ottimizzata per dimensioni estese. Per una descrizione e un esempio di questo approccio, vedere la sezione relativa allo scenario con dimensione univoca nel white paper [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602).  
   
@@ -164,13 +165,13 @@ ms.lasthandoff: 08/03/2017
  In alcuni casi il salvataggio di dati nelle destinazioni potrebbe richiedere tempi più lunghi di quelli previsti. Per stabilire se ciò è dovuto a un'elaborazione lenta dei dati nella destinazione, è possibile sostituire temporaneamente la destinazione con una trasformazione Conteggio righe. Se la velocità effettiva risulta notevolmente migliorata, è probabile che la causa delle prestazioni lente sia la destinazione in cui vengono caricati i dati.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>Analisi delle informazioni nella scheda Stato  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]Finestra di progettazione fornisce informazioni sul flusso di controllo e flusso di dati quando si esegue un pacchetto in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Nella scheda **Stato** sono elencati i contenitori e le attività in ordine di esecuzione, nonché l'ora di inizio e di fine, gli avvisi e i messaggi di errore per ogni contenitore e attività, inclusi quelli relativi al pacchetto stesso. Sono inoltre elencati i componenti del flusso di dati in ordine di esecuzione, nonché informazioni sullo stato, visualizzato in forma di percentuale di completamento, e il numero di righe elaborate.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] , in Progettazione [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Nella scheda **Stato** sono elencati i contenitori e le attività in ordine di esecuzione, nonché l'ora di inizio e di fine, gli avvisi e i messaggi di errore per ogni contenitore e attività, inclusi quelli relativi al pacchetto stesso. Sono inoltre elencati i componenti del flusso di dati in ordine di esecuzione, nonché informazioni sullo stato, visualizzato in forma di percentuale di completamento, e il numero di righe elaborate.  
   
  Per abilitare o disabilitare la visualizzazione di messaggi nella scheda **Stato** , attivare o disattivare l'opzione **Debug report di stato** del menu **SSIS** . La disabilitazione del report di stato consente di migliorare le prestazioni durante l'esecuzione di un pacchetto complesso in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Ordinamento dei dati per le trasformazioni unione e Merge Join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  **Articoli e post di Blog**  
@@ -206,8 +207,7 @@ ms.lasthandoff: 08/03/2017
 -   Video relativo al [server di distribuzione di dati bilanciati](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)sul sito technet.microsoft.com.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti di risoluzione dei problemi per lo sviluppo di pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Strumenti di risoluzione dei problemi per l'esecuzione del pacchetto](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

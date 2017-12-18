@@ -1,12 +1,14 @@
 ---
-title: Caricamento bulk dei dati tramite la destinazione di SQL Server | Documenti Microsoft
+title: Caricamento bulk dei dati tramite la destinazione SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6592de5c7bd0ca674c797d2d3e28f3adbe7dd339
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 72c335cab197a6adcb85f0b0e7c05cc9f8c3e7dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Caricamento bulk dei dati tramite la destinazione SQL Server
   È possibile aggiungere e configurare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine dati.  
@@ -71,10 +72,9 @@ ms.lasthandoff: 08/03/2017
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Destinazione SQL Server](../../integration-services/data-flow/sql-server-destination.md)   
+ [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)   
  [Trasformazioni di Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Percorsi in Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [Attività flusso di dati](../../integration-services/control-flow/data-flow-task.md)  
+ [Attività Flusso di dati](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

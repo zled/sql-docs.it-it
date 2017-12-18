@@ -1,16 +1,17 @@
 ---
-title: Documentazione per sviluppatori di Integration Services | Documenti Microsoft
+title: Documentazione per gli sviluppatori di Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -20,19 +21,18 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf7d7afba8ada3f6027db3053914b1822597792c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4f1568b369673d68051ecccf19484f80b6094087
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="integration-services-developer-documentation"></a>Documentazione per sviluppatori di Integration Services
+# <a name="integration-services-developer-documentation"></a>Documentazione per gli sviluppatori di Integration Services
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è disponibile un modello a oggetti completamente riscritto, potenziato con diverse funzionalità grazie alle quali l'estensione e la programmazione di pacchetti diventano operazioni più semplici, flessibili ed efficaci. Gli sviluppatori possono estendere e programmare quasi ogni aspetto dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  Gli sviluppatori di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] possono adottare due approcci fondamentali per la programmazione di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
@@ -65,7 +65,7 @@ ms.lasthandoff: 09/26/2017
  Vengono descritte le importanti differenze tra output sincroni e asincroni e vengono illustrati i componenti che li utilizzano nel flusso di dati.  
   
  [Utilizzo di gestioni connessioni a livello di programmazione](../integration-services/working-with-connection-managers-programmatically.md)  
- Elenca le gestioni connessioni che è possibile utilizzare dal codice gestito e i valori restituiti le gestioni connessioni quando il codice chiama il **AcquireConnection** metodo.  
+ Elenca le gestioni connessioni che è possibile usare dal codice gestito e i valori restituiti quando viene chiamato il metodo **AcquireConnection**.  
   
  [Estensione di pacchetti tramite scripting](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Viene descritto come estendere il flusso di controllo utilizzando l'attività Script o il flusso di dati utilizzando il componente script.  
@@ -89,10 +89,9 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Esempi CodePlex [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=131204), su www.codeplex.com/MSFTISProdSamples  
+-   Esempi CodePlex relativi ai [prodotti di Integration Services](http://go.microsoft.com/fwlink/?LinkID=131204) sul sito Web www.codeplex.com/MSFTISProdSamples  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   
-

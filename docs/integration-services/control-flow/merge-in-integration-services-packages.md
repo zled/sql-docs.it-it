@@ -1,42 +1,42 @@
 ---
-title: UNIRE i pacchetti di Integration Services | Documenti Microsoft
+title: MERGE nei pacchetti di Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MERGE statement [SQL Server]
+helpviewer_keywords: MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a3b26c9c918e1a3c59b0bd8cd688b3fff2d6a868
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   Nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]l'istruzione SQL in un'attività Esegui SQL può contenere un'istruzione MERGE. che consente di eseguire più operazioni INSERT, UPDATE e DELETE in una singola istruzione.  
   
  Per utilizzare l'istruzione MERGE in un pacchetto, effettuare le operazioni seguenti:  
   
--   Creare un'attività Flusso di dati per caricare, trasformare e salvare l'origine dati in una tabella temporanea o di gestione temporanea.  
+-   Creare un'attività Flusso di dati per caricare, trasformare e salvare l'origine dati in una tabella temporanea o di staging.  
   
 -   Creare un'attività Esegui SQL contenente l'istruzione MERGE.  
   
--   Connettere l'attività Flusso di dati all'attività Esegui SQL e utilizzare i dati della tabella di gestione temporanea come input per l'istruzione MERGE.  
+-   Connettere l'attività Flusso di dati all'attività Esegui SQL e utilizzare i dati della tabella di staging come input per l'istruzione MERGE.  
   
     > [!NOTE]  
-    >  Anche se un'istruzione MERGE richiede in genere una tabella di gestione temporanea in questo scenario, le prestazioni dell'istruzione MERGE sono solitamente superiori a quelle della ricerca riga per riga eseguita con la trasformazione Ricerca. MERGE risulta utile anche quando, a causa delle dimensioni elevate di una tabella di ricerca, viene verificata la memoria a disposizione della trasformazione Ricerca per la memorizzazione nella cache della relativa tabella di riferimento.  
+    >  Anche se un'istruzione MERGE richiede in genere una tabella di staging in questo scenario, le prestazioni dell'istruzione MERGE sono solitamente superiori a quelle della ricerca riga per riga eseguita con la trasformazione Ricerca. MERGE risulta utile anche quando, a causa delle dimensioni elevate di una tabella di ricerca, viene verificata la memoria a disposizione della trasformazione Ricerca per la memorizzazione nella cache della relativa tabella di riferimento.  
   
  Per un componente di destinazione di esempio che supporta l'utilizzo dell'istruzione MERGE, vedere l'esempio nella community CodePlex relativo alla [destinazione MERGE](http://go.microsoft.com/fwlink/?LinkId=141215).  
   
@@ -74,4 +74,3 @@ ms.lasthandoff: 08/03/2017
  Il database Inventory contiene una tabella ProductsInventory con le colonne ProductID e StockOnHand. In una tabella Shipments con le colonne ProductID, CustomerID e Quantity vengono rilevate le spedizioni di prodotti ai clienti. La tabella ProductInventory deve essere aggiornata ogni giorno in base alle informazioni presenti nella tabella Shipments. Con una singola istruzione MERGE è possibile ridurre l'inventario nella tabella ProductInventory in base alle spedizioni effettuate. Se l'inventario per un prodotto è stato ridotto a 0, con l'istruzione MERGE è possibile eliminare anche la riga di tale prodotto dalla tabella ProductInventory.  
   
   
-

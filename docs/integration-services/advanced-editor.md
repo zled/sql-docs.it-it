@@ -1,12 +1,14 @@
 ---
-title: Editor avanzato | Documenti Microsoft
+title: Editor avanzato | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,24 +18,23 @@ f1_keywords:
 - sql13.dts.designer.advancededitor.connections.f1
 - sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a19014f742ea4be55028bd93d07b0c388159e0a0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1b955ca40730e07da0b0532ee42b0820116ad14f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="advanced-editor"></a>Editor avanzato
   Utilizzare la finestra di dialogo **Editor avanzato** per configurare le proprietà per l'oggetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] selezionato.  
   
  L' **Editor avanzato** è disponibile per la maggior parte degli oggetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che dispongono di proprietà configurabili. Questo è l'unico editor disponibile per gli oggetti che non espongono un'interfaccia utente personalizzata.  
   
- Per gli oggetti flusso di dati di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili proprietà che è possibile impostare a livello di componente, a livello di input e output e a livello delle colonne di input e output. Nell' **Editor avanzato** vengono enumerate tutte le proprietà comuni e personalizzate dell'oggetto selezionato e tali proprietà possono essere visualizzate in massimo quattro delle cinque schede seguenti, in base al contesto appropriato:  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili proprietà che è possibile impostare a livello di componente, a livello di input e output e a livello delle colonne di input e output. Nell' **Editor avanzato** vengono enumerate tutte le proprietà comuni e personalizzate dell'oggetto selezionato e tali proprietà possono essere visualizzate in massimo quattro delle cinque schede seguenti, in base al contesto appropriato:  
   
 -   **Gestioni connessioni** : usare questa scheda per impostare le proprietà di connessione  
   
@@ -58,7 +59,6 @@ ms.lasthandoff: 08/03/2017
 -   [Trasformazioni di Integration Services](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Errori di Integration Services e riferimento ai messaggi](../integration-services/integration-services-error-and-message-reference.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

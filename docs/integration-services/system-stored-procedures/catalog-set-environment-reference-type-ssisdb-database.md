@@ -1,29 +1,30 @@
 ---
-title: Catalog.set_environment_reference_type (Database SSISDB) | Documenti Microsoft
+title: catalog.set_environment_reference_type (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 31a6d4310ad32f2517c8779172b0d539803e9f15
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (database SSISDB)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Vengono impostati il tipo di riferimento e il nome dell'ambiente associato a un riferimento all'ambiente esistente per un progetto nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -36,14 +37,14 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @reference_id =] *reference_id*  
- Identificatore univoco del riferimento all'ambiente che deve essere aggiornato. Il *reference_id* è **bigint**.  
+ [ @reference_id = ] *reference_id*  
+ Identificatore univoco del riferimento all'ambiente che deve essere aggiornato. *reference_id* è di tipo **bigint**.  
   
- [ @reference_type =] *reference_type*  
- Viene indicato se l'ambiente può essere individuato nella stessa cartella del progetto (riferimento relativo) o in una cartella diversa (riferimento assoluto). Utilizzare il valore `R` per indicare un riferimento relativo. Utilizzare il valore `A` per indicare un riferimento assoluto. Il *reference_type* è **char (1)**.  
+ [ @reference_type = ] *reference_type*  
+ Viene indicato se l'ambiente può essere individuato nella stessa cartella del progetto (riferimento relativo) o in una cartella diversa (riferimento assoluto). Utilizzare il valore `R` per indicare un riferimento relativo. Utilizzare il valore `A` per indicare un riferimento assoluto. *reference_type* è di tipo **char(1)**.  
   
- [ @environment_folder_name =] *environment_folder_name*  
- Cartella in cui viene individuato l'ambiente. Questo valore è richiesto per i riferimenti assoluti. Il *environment_folder_name* è **nvarchar (128)**.  
+ [ @environment_folder_name = ] *environment_folder_name*  
+ Cartella in cui viene individuato l'ambiente. Questo valore è richiesto per i riferimenti assoluti. *environment_folder_name* è di tipo **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -56,9 +57,9 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   Autorizzazioni READ e MODIFY sul progetto e autorizzazione READ sull'ambiente  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte alcune condizioni che possono generare un errore o un avviso:  
@@ -67,13 +68,12 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   Utente senza autorizzazioni appropriate  
   
--   Un riferimento assoluto specificato con il `A` carattere nel *reference_location* parametro, ma il nome della cartella non è stato specificato con il *environment_folder_name* parametro.  
+-   Un riferimento assoluto è specificato tramite il carattere `A` nel parametro *reference_location*, ma il nome della cartella non è stato specificato con il parametro *environment_folder_name*.  
   
 ## <a name="remarks"></a>Osservazioni  
  Un progetto può disporre di riferimenti all'ambiente relativi o assoluti. I riferimenti relativi fanno riferimento all'ambiente in base al nome. Per tali riferimenti è necessario che l'ambiente si trovi nella stessa cartella del progetto. I riferimenti assoluti fanno riferimento all'ambiente in base al nome e alla cartella e possono fare riferimento ad ambienti che si trovano in una cartella di destinazione diversa da quella del progetto. Un progetto può fare riferimento a più ambienti.  
   
 > [!IMPORTANT]  
->  Se viene specificato un riferimento relativo, il *environment_folder_name* valore del parametro non viene utilizzato, e il nome di cartella dell'ambiente viene impostato automaticamente **NULL**. Se viene specificato un riferimento assoluto, è necessario specificare il nome di cartella dell'ambiente nel *environment_folder_name* parametro.  
+>  Se viene specificato un riferimento relativo, il valore del parametro *environment_folder_name* non viene usato e il nome della cartella dell'ambiente viene impostato automaticamente su **NULL**. Se viene specificato un riferimento assoluto, il nome della cartella dell'ambiente deve essere fornito nel parametro *environment_folder_name*.  
   
   
-

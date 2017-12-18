@@ -1,29 +1,30 @@
 ---
-title: Change Data Capture (SSIS) | Documenti Microsoft
+title: Change Data Capture (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b9c01b948f5510a01c778648c23324155471b8ac
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1f2d68bc745df5c06b623a74815efa937366e8ec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
   Change Data Capture in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre una soluzione efficace alla sfida posta dall'esecuzione di caricamenti incrementali da tabelle di origine in data mart e data warehouse.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 09/26/2017
   
  Dopo che un amministratore ha abilitato Change Data Capture nel database, è possibile creare un pacchetto per l'esecuzione del caricamento incrementale di tali dati. Nel diagramma seguente vengono illustrati i passaggi per la creazione di tale pacchetto che esegue un caricamento incrementale da una singola tabella:  
   
- ![Modificare i passaggi di creazione del pacchetto di dati acquisizione](../../integration-services/change-data-capture/media/cdc-package-creation.gif "modificare passaggi di creazione del pacchetto acquisizione dei dati")  
+ ![Passaggi di creazione del pacchetto di Change Data Capture](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Passaggi di creazione del pacchetto di Change Data Capture")  
   
  Come illustrato nel diagramma precedente, la creazione di un pacchetto per l'esecuzione di un caricamento incrementale dei dati modificati comporta i passaggi seguenti:  
   
@@ -108,17 +109,17 @@ ms.lasthandoff: 09/26/2017
   
 -   [Definizione di un intervallo dei dati delle modifiche](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
--   [Come determinare se i dati delle modifiche sono pronti](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
+-   [Determinare se i dati delle modifiche sono pronti](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
--   [Preparazione dell'esecuzione di una query per i dati delle modifiche](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+-   [Preparare l'esecuzione di una query per i dati delle modifiche](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
--   [Creazione della funzione per il recupero dei dati delle modifiche](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
+-   [Creare la funzione per il recupero dei dati delle modifiche](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
--   [Recupero e comprensione dei dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+-   [Recuperare e interpretare i dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
--   [Elaborazione di inserimenti, aggiornamenti ed eliminazioni](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
+-   [Elaborare inserimenti, aggiornamenti ed eliminazioni](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
--   [Applicazione delle modifiche alla destinazione](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+-   [Applicare le modifiche alla destinazione](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 -   [Esecuzione di un caricamento incrementale di più tabelle](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
@@ -126,4 +127,3 @@ ms.lasthandoff: 09/26/2017
  Intervento nel blog sul [carico incrementale con schema progettuale di SSIS](http://go.microsoft.com/fwlink/?LinkId=217679)su sqlblog.com  
   
   
-

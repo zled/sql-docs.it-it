@@ -1,12 +1,14 @@
 ---
-title: "Attività Esegui pacchetto | Documenti Microsoft"
+title: "Attività Esegui pacchetto | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,17 +21,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
-ms.contentlocale: it-it
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-package-task"></a>Attività Esegui pacchetto
   L'attività Esegui pacchetto permette di estendere le funzionalità aziendali di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentendo ai pacchetti di eseguire altri pacchetti nell'ambito di un flusso di lavoro.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 08/11/2017
  L'attività Esegui pacchetto consente di eseguire i pacchetti figlio contenuti nello stesso progetto in cui è contenuto il pacchetto padre. Per selezionare un pacchetto figlio dal progetto, impostare la proprietà **ReferenceType** su **Riferimento al progetto**e quindi impostare la proprietà **PackageNameFromProjectReference** .  
   
 > [!NOTE]  
->  L'opzione **ReferenceType** è di sola lettura e viene impostata su **Riferimento esterno** se il progetto in cui è contenuto il pacchetto non è stato convertito nel modello di distribuzione del progetto. [Integration Services (SSIS) di distribuire progetti e pacchetti](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  L'opzione **ReferenceType** è di sola lettura e viene impostata su **Riferimento esterno** se il progetto in cui è contenuto il pacchetto non è stato convertito nel modello di distribuzione del progetto. [Distribuire progetti e pacchetti di Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  L'attività Esegui pacchetto può eseguire sia pacchetti archiviati nel database msdb di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che pacchetti archiviati nel file system. L'attività usa una gestione connessione OLE DB per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una gestione connessione file per l'accesso al file system. Per altre informazioni, vedere [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) e [File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
@@ -159,7 +160,7 @@ ms.lasthandoff: 08/11/2017
  Selezionare **Riferimento al progetto** per pacchetti figlio inclusi nel progetto. Selezionare **Riferimento esterno** per pacchetti figlio posizionati esternamente al pacchetto  
   
 > [!NOTE]  
->  L'opzione **ReferenceType** è di sola lettura e viene impostata su **Riferimento esterno** se il progetto in cui è contenuto il pacchetto non è stato convertito nel modello di distribuzione del progetto. [Integration Services (SSIS) di distribuire progetti e pacchetti](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  L'opzione **ReferenceType** è di sola lettura e viene impostata su **Riferimento esterno** se il progetto in cui è contenuto il pacchetto non è stato convertito nel modello di distribuzione del progetto. [Distribuire progetti e pacchetti di Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Password**  
  Se il pacchetto figlio è protetto con password, specificare la password per il pacchetto figlio oppure fare clic sul pulsante con i puntini di sospensione (…) per creare una nuova password per il pacchetto figlio.  
@@ -192,16 +193,16 @@ ms.lasthandoff: 08/11/2017
   
 ##### <a name="location--sql-server"></a>Percorso = SQL Server  
  **Connessione**  
- Selezionare una gestione connessione OLE DB nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione OLE DB nell'elenco o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **Argomenti correlati:** [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
  Digitare il nome del pacchetto figlio oppure fare clic sul pulsante con i puntini di sospensione (…) per individuare il pacchetto.  
   
 ##### <a name="location--file-system"></a>Percorso = File system  
  **Connessione**  
- Selezionare una gestione connessione File nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -211,7 +212,7 @@ ms.lasthandoff: 08/11/2017
 ###  <a name="parameter"></a> Impostare le opzioni nella pagina Associazioni di parametro  
  È possibile passare i valori del pacchetto padre o del progetto al pacchetto figlio. Il progetto deve utilizzare il modello di distribuzione del progetto e il pacchetto figlio deve essere contenuto nello stesso progetto in cui è contenuto il pacchetto padre.  
   
- Per informazioni sulla conversione di progetti nel modello di distribuzione del progetto, vedere [distribuire Integration Services (SSIS) progetti e pacchetti](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Per informazioni sulla conversione dei progetti nel modello di distribuzione del progetto, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Parametro del pacchetto figlio**  
  Immettere o selezionare un nome per il parametro del pacchetto figlio.  
@@ -226,4 +227,3 @@ ms.lasthandoff: 08/11/2017
  Fare clic su questa opzione per rimuovere un mapping tra un parametro o una variabile e un parametro del pacchetto figlio.  
   
   
-

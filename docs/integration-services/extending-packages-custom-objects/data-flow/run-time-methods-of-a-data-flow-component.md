@@ -1,16 +1,17 @@
 ---
-title: Componente del flusso di metodi in fase di esecuzione di un tipo di dati | Documenti Microsoft
+title: Metodi di runtime di un componente flusso di dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da14a10c936d1966e9317fe50141ecdb86c23379
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f978a101e721ee1b96caa59e7633988777d30dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Metodi di runtime di un componente del flusso di dati
   In fase di esecuzione l'attività Flusso di dati esamina la sequenza di componenti, prepara un piano di esecuzione e gestisce un pool di thread di lavoro che eseguono il piano di lavoro. L'attività carica righe di dati dalle origini, li elabora tramite trasformazioni, quindi li salva nelle destinazioni.  
@@ -164,10 +164,10 @@ public overrides sub PrimeOutput( outputs as Integer , outputIDs() as Integer ,b
 End Sub  
 ```  
   
- Per ulteriori informazioni sullo sviluppo di componenti che aggiungono righe ai buffer di output, vedere [lo sviluppo di un componente di origine personalizzata](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) e [lo sviluppo di un componente di trasformazione personalizzato con output asincroni](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
+ Per altre informazioni sullo sviluppo di componenti che aggiungono righe ai buffer di output, vedere [Sviluppo di un componente di origine personalizzato](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) e [Sviluppo di un componente di trasformazione personalizzato con output asincroni](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
   
 ### <a name="receiving-rows"></a>Ricezione di righe  
- I componenti ricevono righe dai componenti a monte in oggetti <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. L'attività Flusso di dati fornisce un oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> che contiene le righe aggiunte al flusso di dati dai componenti a monte come parametro per il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Questo buffer di input può essere utilizzato per esaminare e modificare le righe e le colonne nel buffer, ma non può essere utilizzato per aggiungere o rimuovere righe. Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> viene chiamato ripetutamente finché non sono più disponibili buffer. L'ultima volta che viene chiamato, il <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> proprietà **true**. È possibile scorrere la raccolta di righe nel buffer tramite il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>, che fa avanzare il buffer alla riga successiva. Questo metodo restituisce **false** quando il buffer è nell'ultima riga nella raccolta. Non è necessario controllare la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> a meno che non occorra eseguire un'azione aggiuntiva dopo l'elaborazione delle ultime righe di dati.  
+ I componenti ricevono righe dai componenti a monte in oggetti <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. L'attività Flusso di dati fornisce un oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> che contiene le righe aggiunte al flusso di dati dai componenti a monte come parametro per il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Questo buffer di input può essere utilizzato per esaminare e modificare le righe e le colonne nel buffer, ma non può essere utilizzato per aggiungere o rimuovere righe. Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> viene chiamato ripetutamente finché non sono più disponibili buffer. L'ultima volta che viene chiamato, la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> è **true**. È possibile scorrere la raccolta di righe nel buffer tramite il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>, che fa avanzare il buffer alla riga successiva. Questo metodo restituisce **false** quando il buffer si trova nell'ultima riga della raccolta. Non è necessario controllare la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> a meno che non occorra eseguire un'azione aggiuntiva dopo l'elaborazione delle ultime righe di dati.  
   
  Nel testo riportato di seguito viene illustrato l'utilizzo corretto del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> e della proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>:  
   
@@ -213,10 +213,9 @@ Public Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pipe
 End Sub  
 ```  
   
- Per ulteriori informazioni sullo sviluppo di componenti che ricevono righe nei buffer di input, vedere [lo sviluppo di un componente di destinazione personalizzato](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) e [lo sviluppo di un componente di trasformazione personalizzato con output sincroni](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
+ Per altre informazioni sullo sviluppo di componenti che ricevono righe nei buffer di input, vedere [Sviluppo di un componente di destinazione personalizzato](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) e [Sviluppo di un componente di trasformazione personalizzato con output sincroni](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi della fase di progettazione di un componente flusso di dati](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   
-

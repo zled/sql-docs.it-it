@@ -1,18 +1,18 @@
 ---
-title: Caricamento ed esecuzione di un pacchetto locale a livello di codice | Documenti Microsoft
+title: Caricamento ed esecuzione di un pacchetto locale a livello di programmazione | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: run-manage-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Integration Services packages, running
 - events [Integration Services], capturing
@@ -22,20 +22,19 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 07ceb460488ca1973295b6b8e991948efe8b9d2a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7a017f2d0b04df41b25e093bdeccd53036aa5710
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Caricamento ed esecuzione di un pacchetto locale a livello di codice
-  È possibile eseguire [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti alle necessità o a orari predeterminati utilizzando i metodi descritti in [pacchetti in esecuzione](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Tuttavia, con poche righe di codice, è anche possibile eseguire un pacchetto da un'applicazione personalizzata, ad esempio un'applicazione Windows Form, un'applicazione console, un Web Form o un servizio Web ASP.NET oppure un servizio Windows.  
+  È possibile eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in base alle necessità o a orari predeterminati utilizzando i metodi descritti in [Esecuzione di pacchetti](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Tuttavia, con poche righe di codice, è anche possibile eseguire un pacchetto da un'applicazione personalizzata, ad esempio un'applicazione Windows Form, un'applicazione console, un Web Form o un servizio Web ASP.NET oppure un servizio Windows.  
   
  In questo argomento viene illustrato quanto segue:  
   
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Esecuzione di un pacchetto a livello di codice  
   
- Tutti i metodi utilizzati in questo argomento per caricare ed eseguire pacchetti richiedono un riferimento di **manageddts** assembly. Dopo aver aggiunto il riferimento in un nuovo progetto, importare il <xref:Microsoft.SqlServer.Dts.Runtime> spazio dei nomi con un **utilizzando** o **importazioni** istruzione.  
+ Tutti i metodi usati in questo argomento per caricare ed eseguire pacchetti richiedono un riferimento all'assembly **Microsoft.SqlServer.ManagedDTS**. Dopo aver aggiunto il riferimento in un nuovo progetto, importare lo spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> con un'istruzione **using** o **Imports**.  
   
 ## <a name="loading-a-package-programmatically"></a>Caricamento di un pacchetto a livello di codice  
  Per caricare un pacchetto a livello di codice nel computer locale, indipendentemente dal fatto che il pacchetto sia archiviato in modalità locale o remota, chiamare uno dei metodi seguenti:  
@@ -64,9 +63,9 @@ ms.lasthandoff: 08/03/2017
   
 1.  Avviare l'ambiente di sviluppo di Visual Studio e creare una nuova applicazione nel linguaggio di sviluppo preferito. In questo esempio viene utilizzata un'applicazione console. Tuttavia, è anche possibile eseguire un pacchetto da un'applicazione Windows Form, da un Web Form o servizio Web ASP.NET oppure da un servizio Windows.  
   
-2.  Nel **progetto** menu, fare clic su **Aggiungi riferimento** e aggiungere un riferimento a **Microsoft.SqlServer.ManagedDTS.dll**. Scegliere **OK**.  
+2.  Scegliere **Aggiungi riferimento** dal menu **Progetto**, quindi aggiungere un riferimento a **Microsoft.SqlServer.ManagedDTS.dll**. Scegliere **OK**.  
   
-3.  Utilizzo di Visual Basic **importazioni** istruzione o c# **utilizzando** per importare il **Microsoft** dello spazio dei nomi.  
+3.  Usare l'istruzione **Imports** di Visual Basic o l'istruzione C# **using** per importare lo spazio dei nomi **Microsoft.SqlServer.Dts.Runtime**.  
   
 4.  Aggiungere il codice seguente nella routine principale. L'applicazione console completata dovrebbe essere simile all'esempio seguente.  
   
@@ -231,9 +230,8 @@ namespace RunFromClientAppWithEventsCS
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comprendere le differenze tra l'esecuzione locale e remoto](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [Caricamento ed esecuzione di un pacchetto remoto a livello di codice](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
- [Caricamento dell'Output di un pacchetto locale](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
+ [Differenze tra l'esecuzione locale e remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [Caricamento ed esecuzione di un pacchetto remoto a livello di programmazione](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
+ [Caricamento dell'output di un pacchetto locale](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   
-

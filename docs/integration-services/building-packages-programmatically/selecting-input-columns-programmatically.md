@@ -1,16 +1,17 @@
 ---
-title: Selezionare le colonne di Input a livello di codice | Documenti Microsoft
+title: Selezione delle colonne di input a livello di programmazione | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,17 +24,16 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2ead17945bc9a6d2d3baeb73c07c86fad0e8cf1f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: aea8e6a9c780cbb56dff74c3ee003be2d4259486
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="selecting-input-columns-programmatically"></a>Selezione delle colonne di input a livello di programmazione
   Dopo avere connesso i componenti a livello di programmazione, selezionare le colonne dei componenti upstream che verranno trasformate o passate ai componenti downstream. Se non si selezionano colonne di input per il componente, quest'ultimo non riceve righe dall'attività Flusso di dati.  
@@ -218,7 +218,6 @@ End Module
 ```
   
 ## <a name="see-also"></a>Vedere anche  
- [Salvataggio di un pacchetto a livello di codice](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
+ [Salvataggio di un pacchetto a livello di programmazione](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
   
   
-

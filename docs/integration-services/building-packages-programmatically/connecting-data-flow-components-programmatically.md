@@ -1,16 +1,17 @@
 ---
-title: La connessione a livello di programmazione di componenti flusso di dati | Documenti Microsoft
+title: Connessione dei componenti del flusso di dati a livello di programmazione | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -20,28 +21,27 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 40869328965e049b5981e94655226bc0a78dc37f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c79cd2d2b540bab98b810ae07a1c66a3cff650c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>Connessione dei componenti del flusso di dati a livello di programmazione
   Dopo avere aggiunto componenti all'attività Flusso di dati, connetterli per creare un albero di esecuzione che rappresenti il flusso di dati dalle origini attraverso le trasformazioni alle destinazioni. Utilizzare oggetti <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> per connettere i componenti nel flusso di dati.  
   
 ## <a name="creating-a-path"></a>Creazione di un percorso  
- Chiamare il metodo di nuovo il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> proprietà del <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> interfaccia per creare un nuovo percorso e aggiungerlo alla raccolta di percorsi nell'attività flusso di dati. Questo metodo restituisce un nuovo oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> disconnesso, che verrà quindi utilizzato per connettere due componenti.  
+ Chiamare il metodo New della proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> dell'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> per creare un nuovo percorso e aggiungerlo alla raccolta di percorsi nell'attività Flusso di dati. Questo metodo restituisce un nuovo oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> disconnesso, che verrà quindi utilizzato per connettere due componenti.  
   
  Chiamare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> per connettere il percorso e notificare ai componenti partecipanti nel percorso che sono stati connessi. Questo metodo accetta <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> del componente a monte e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> del componente a valle come parametri. Per impostazione predefinita, la chiamata al metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> del componente crea un singolo input per i componenti che includono input e un singolo output per i componenti che includono output. Nell'esempio seguente vengono utilizzati l'output predefinito dell'origine e l'input predefinito della destinazione.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- Dopo aver stabilito un percorso tra due componenti, il passaggio successivo consiste nel mapping delle colonne di input nel componente a valle, descritto nell'argomento successivo, [selezione Input le colonne a livello di codice](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md).  
+ Dopo aver stabilito un percorso tra due componenti, il passaggio successivo consiste nell'eseguire il mapping delle colonne di input nel componente a valle, descritto nell'argomento successivo [Selezione delle colonne di input a livello di programmazione](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md).  
   
 ## <a name="sample"></a>Esempio  
  Nell'esempio di codice seguente è illustrato come stabilire un percorso tra due componenti.  
@@ -128,7 +128,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Selezionare le colonne di Input a livello di codice](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
+ [Selezione delle colonne di input a livello di programmazione](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
   
   
-

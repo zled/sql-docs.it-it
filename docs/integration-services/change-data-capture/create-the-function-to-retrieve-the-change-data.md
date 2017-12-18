@@ -1,28 +1,28 @@
 ---
-title: Creare la funzione per recuperare i dati delle modifiche | Documenti Microsoft
+title: Creare la funzione per il recupero dei dati delle modifiche | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],creating function
+helpviewer_keywords: incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20f754d1559e170c4922969b11aa97052f576cc7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3d7a5305d9b8c5c094f27b02bdcbd9c1c7bbb4a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Creazione della funzione per il recupero dei dati delle modifiche
   Dopo avere completato il flusso di controllo per un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche, l'attività successiva consiste nella creazione di una funzione con valori di tabella per il recupero di tali dati. Questa funzione deve essere creata solo una volta, prima del primo caricamento incrementale.  
@@ -121,9 +121,9 @@ deallocate #hfunctions
   
  Per semplificare l'esecuzione di query su tutte le righe di una tabella delle modifiche, le funzioni wrapper generate supportano inoltre le convenzioni seguenti:  
   
--   Se il @start_time parametro è null, le funzioni wrapper utilizzano il valore LSN minimo nell'istanza di acquisizione come limite inferiore della query.  
+-   Se il parametro @start_time è null, le funzioni wrapper usano il valore LSN minimo nell'istanza di acquisizione come limite inferiore della query.  
   
--   Se il @end_time parametro è null, le funzioni wrapper utilizzano il valore LSN massimo nell'istanza di acquisizione come limite superiore della query.  
+-   Se il parametro @end_time è null, le funzioni wrapper usano il valore LSN massimo nell'istanza di acquisizione come limite superiore della query.  
   
  La maggior parte degli utenti dovrebbe essere in grado di usare le funzioni wrapper create dalla stored procedure di sistema **sys.sp_cdc_generate_wrapper_function** senza apportare modifiche. Tuttavia, per personalizzare le funzioni wrapper, è necessario personalizzare gli script CREATE prima di eseguire gli script.  
   
@@ -217,7 +217,7 @@ go
 |**__$seqval**|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche alle righe in una transazione.|  
 |**__$operation**|**int**|Operazione DML (Data Manipulation Language) associata alla modifica. I possibili valori sono i seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori precedenti all'operazione di aggiornamento)<br /><br /> 4 = aggiornamento (valori successivi all'operazione di aggiornamento)|  
 |**__$update_mask**|**varbinary(128)**|Maschera di bit basata su numeri ordinali di colonna della tabella delle modifiche che identifica le colonne modificate. È possibile esaminare questo valore se è necessario determinare le colonne modificate.|  
-|**\<colonne di tabella di origine acquisite >**|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se in origine non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, verranno restituite tutte le colonne della tabella di origine.|  
+|**\<colonne della tabella di origine acquisite>**|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se in origine non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, verranno restituite tutte le colonne della tabella di origine.|  
   
  Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
@@ -227,4 +227,3 @@ go
  **Argomento successivo:** [Recuperare e comprendere i dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   
-

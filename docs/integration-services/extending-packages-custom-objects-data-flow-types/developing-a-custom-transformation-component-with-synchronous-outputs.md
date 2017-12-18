@@ -1,16 +1,17 @@
 ---
-title: Sviluppo di un componente di trasformazione personalizzato con output sincroni | Documenti Microsoft
+title: Sviluppo di un componente di trasformazione personalizzato con output sincroni | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: d316a3921cd3b2d8b3e82a6ed5c5b629389614a7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5c6999fbcc1dccdf7a79802bdc9a2d49630f908e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Sviluppo di un componente di trasformazione personalizzato con output sincroni
-  I componenti di trasformazione con output sincroni ricevono righe dai componenti a monte, quindi leggono o modificano i valori nelle colonne di queste righe mentre le passano ai componenti a valle. Possono anche definire colonne di output aggiuntive derivate dalle colonne fornite dai componenti a monte, ma non aggiungono righe al flusso di dati. Per ulteriori informazioni sulla differenza tra componenti sincroni e asincroni, vedere [comprensione sincrona e asincrona trasformazioni](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
+  I componenti di trasformazione con output sincroni ricevono righe dai componenti a monte, quindi leggono o modificano i valori nelle colonne di queste righe mentre le passano ai componenti a valle. Possono anche definire colonne di output aggiuntive derivate dalle colonne fornite dai componenti a monte, ma non aggiungono righe al flusso di dati. Per altre informazioni sulla differenza tra componenti sincroni e asincroni, vedere [Informazioni sulle trasformazioni sincrone e asincrone](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Questo tipo di componente è indicato per attività in cui i dati vengono modificati in linea quando vengono forniti al componente e in cui il componente non deve necessariamente vedere tutte le righe prima di elaborarle. Si tratta del componente più facile da sviluppare, perché le trasformazioni con output sincroni solitamente non si connettono a origini dati esterne, non gestiscono colonne di metadati esterne né aggiungono righe ai buffer di output.  
   
@@ -118,7 +118,7 @@ End Class
   
  L'oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> della colonna determina i valori impostati per le altre proprietà. Nella tabella seguente sono illustrati i requisiti delle proprietà dipendenti per ogni oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>. Le proprietà dipendenti dei tipi di dati non elencati sono impostate su zero.  
   
-|DataType|Lunghezza|Scala|Precisione|CodePage|  
+|DataType|Length|Scala|Precisione|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|Maggiore di 0 e minore o uguale a 28.|0|0|  
 |DT_CY|0|0|0|0|  
@@ -191,7 +191,7 @@ End Sub
 ### <a name="processing-rows"></a>Elaborazione di righe  
  I componenti ricevono oggetti <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> che contengono righe e colonne nel metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Durante questo metodo vengono scorse le righe nel buffer e vengono lette e modificate le colonne identificate durante <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> . Il metodo viene chiamato ripetutamente dall'attività Flusso di dati finché non vengono più fornite righe dal componente a monte.  
   
- Una singola colonna nel buffer viene letta o scritta utilizzando il metodo di accesso dell'indicizzatore di matrice oppure utilizzando uno del **ottenere** o **impostare** metodi. Il **ottenere** e **impostare** metodi sono più efficienti e deve essere utilizzati quando è noto il tipo di dati della colonna nel buffer.  
+ Una singola colonna nel buffer viene letta o scritta tramite il metodo di accesso dell'indicizzatore di matrici oppure con il metodo **Get** o **Set**. I metodi **Get** e **Set** sono più efficienti e devono essere usati quando il tipo di dati della colonna nel buffer è noto.  
   
  Nell'esempio di codice seguente è illustrata un'implementazione del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> che elabora le righe in ingresso.  
   
@@ -331,7 +331,6 @@ End Namespace
 ## <a name="see-also"></a>Vedere anche  
  [Sviluppo di un componente di trasformazione personalizzato con output asincroni](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
  [Informazioni sulle trasformazioni sincrone e asincrone](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
- [Creazione di una trasformazione sincrona con il componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
+ [Creazione di una trasformazione sincrona con il componente script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

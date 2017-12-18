@@ -2,9 +2,12 @@
 title: Finestra di dialogo Visualizza criteri | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30be8d926fda1b299338ba2bb66839712c0305aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fa7dfabe97a531dc69302cc30b0c42a6d3cd09f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-policies-dialog-box"></a>Finestra di dialogo Visualizza criteri
-  Utilizzare questa finestra di dialogo per visualizzare i criteri validi per la destinazione corrente. In questa finestra di dialogo vengono visualizzati i criteri pertinenti, le relative categorie e le informazioni sui criteri.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa finestra di dialogo per visualizzare i criteri validi per la destinazione corrente. In questa finestra di dialogo vengono visualizzati i criteri pertinenti, le relative categorie e le informazioni sui criteri.  
   
 ## <a name="options"></a>Opzioni  
  **Stato di integrità criteri**  

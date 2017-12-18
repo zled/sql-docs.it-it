@@ -1,29 +1,30 @@
 ---
-title: Catalog. deploy_project (Database SSISDB) | Documenti Microsoft
+title: catalog.deploy_project (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
-ms.contentlocale: it-it
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: b056ec4e0d4f762190154988fe3fa225e447c315
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Viene distribuito un progetto in una cartella del catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o viene aggiornato un progetto esistente distribuito precedentemente.  
   
@@ -37,21 +38,21 @@ catalog.deploy_project [@folder_name =] folder_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [@folder_name =] *nome_cartella*  
- Il nome della cartella in cui viene distribuito il progetto. Il *nome_cartella* è **nvarchar (128)**.  
+ [@folder_name =] *folder_name*  
+ Nome della cartella in cui è distribuito il progetto. *folder_name* è di tipo **nvarchar(128)**.  
   
  [@project_name =] *project_name*  
- Nome del progetto nuovo o aggiornato nella cartella. Il *project_name* è **nvarchar (128)**.  
+ Nome del progetto nuovo o aggiornato nella cartella. *project_name* è di tipo **nvarchar(128)**.  
   
  [@projectstream =] *projectstream*  
  Contenuto binario di un file di distribuzione progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (estensione ispac).  
   
- È possibile utilizzare un'istruzione SELECT con la funzione OPENROWSET e il provider BULK per set di righe per recuperare il contenuto binario del file. Per un esempio, vedere [distribuire Integration Services (SSIS) progetti e pacchetti](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). Per ulteriori informazioni su OPENROWSET, vedere [OPENROWSET &#40; Transact-SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
+ È possibile utilizzare un'istruzione SELECT con la funzione OPENROWSET e il provider BULK per set di righe per recuperare il contenuto binario del file. Per un esempio, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). Per altre informazioni su OPENROWSET, vedere [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
- Il *projectstream* è **varbinary (max)**  
+ *projectstream* è di tipo **varbinary(MAX)**  
   
  [@operation_id =] *operation_id*  
- Viene restituito l'identificatore univoco dell'operazione di distribuzione. Il *operation_id* è **bigint**.  
+ Viene restituito l'identificatore univoco dell'operazione di distribuzione. *operation_id* è di tipo **bigint**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -64,16 +65,16 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   Autorizzazioni CREATE_OBJECTS sulla cartella per distribuire un nuovo progetto o autorizzazioni MODIFY sul progetto per aggiornare un progetto  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte alcune condizioni che possono determinare la generazione di un errore da parte della stored procedure:  
   
 -   Parametro che fa riferimento a un oggetto inesistente, parametro che tenta di creare un oggetto già esistente o parametro non valido in alcuni altri modi  
   
--   Il valore del parametro  *@project_name*  non corrisponde al nome del progetto nel file di distribuzione  
+-   Valore del parametro *@project_name* non corrispondente al nome del progetto nel file di distribuzione  
   
 -   Utente senza autorizzazioni sufficienti.  
   
@@ -81,4 +82,3 @@ catalog.deploy_project [@folder_name =] folder_name
  Durante la distribuzione o aggiornamento di un progetto, il livello di protezione dei singoli pacchetti non viene controllato dalla stored procedure.  
   
   
-

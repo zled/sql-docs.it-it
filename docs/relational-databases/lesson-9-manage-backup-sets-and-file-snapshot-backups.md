@@ -1,10 +1,13 @@
 ---
 title: 'Lezione 9: Gestire set di backup e backup di snapshot di file | Microsoft Docs'
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc4ce7fe2c3648da7923dbb35fbfe252c971b006
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a2e16cd4312b50b700363be0dc85a67d2740a889
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-9-manage-backup-sets-and-file-snapshot-backups"></a>Lezione 9: Gestire set di backup e backup di snapshot di file
-In questa lezione, verrà eliminato un set di backup tramite la stored procedure di sistema [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) . Questa stored procedure di sistema elimina il file di backup e lo snapshot del file in ogni file di database associato a questo set di backup.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In questa lezione, verrà eliminato un set di backup tramite la stored procedure di sistema [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md). Questa stored procedure di sistema elimina il file di backup e lo snapshot del file in ogni file di database associato a questo set di backup.  
   
 > [!NOTE]  
 > Se si tenta di eliminare un set di backup semplicemente eliminando il file di backup dal contenitore BLOB di Azure, verrà rimosso solo file di backup, mentre gli snapshot dei file rimarranno. Se ci si ritrova in questo scenario, usare la funzione di sistema [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) per identificare l'URL degli snapshot di file orfani e usare la stored procedure di sistema [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) per eliminare ogni snapshot di file orfano. Per altre informazioni, vedere  [Backup di snapshot di file per i file di database in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  

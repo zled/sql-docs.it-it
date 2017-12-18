@@ -1,29 +1,30 @@
 ---
-title: SQRT (espressione SSIS) | Documenti Microsoft
+title: SQRT (espressione SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQRT function
 - square root of given expression
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5ae5e55d52ba0e4232d8e7a83d3aab2f70a6b56
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b6176d42ed4c3537dcf49cdb6416c00cce37eed8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (espressione SSIS)
   Restituisce la radice quadrata di un'espressione numerica.  
@@ -72,7 +73,6 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 >  Nelle espressioni i nomi delle variabili includono sempre il prefisso @.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni &#40; Espressione SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

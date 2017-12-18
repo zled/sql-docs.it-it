@@ -1,26 +1,27 @@
 ---
-title: Change Data Capture Service for Oracle by Attunity F1 Help | Documenti Microsoft
+title: Guida di Change Data Capture Service per Oracle di Attunity | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d214af688c862d64e5a5d5f608c5b02f9037b55a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e97cdc3490c7a0d0c263b434a50eaa958c6ebac0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Guida del servizio Change Data Capture per Oracle di Attunity
   Utilizzare CDC Service Configuration Console per definire, aggiornare ed eliminare un servizio Oracle CDC locale.  
@@ -39,9 +40,8 @@ ms.lasthandoff: 08/03/2017
   
 -   [Preparare SQL Server per CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
--   [Preparare SQL Server per Oracle CDC-Visualizza Script](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md)  
+-   [Preparare SQL Server per lo script di visualizzazione di Oracle CDC](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md)  
   
 -   [Utilizzare i servizi CDC](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   
-

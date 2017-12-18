@@ -1,26 +1,27 @@
 ---
-title: Gestione connessione di pulizia di DQS | Documenti Microsoft
+title: Gestione connessione DQS Cleansing | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1a2e49092a7bf8e8428edad9c246ee2bda4d650f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8d6368c520e8ddf7f14a9d01605624687badbf03
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Gestione connessione DQS Cleansing
   Una gestione connessione DQS Cleansing consente a un pacchetto di connettersi a un server [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]. La trasformazione DQS Cleansing utilizza la gestione connessione DQS Cleansing.  
@@ -36,4 +37,3 @@ ms.lasthandoff: 08/03/2017
  Per informazioni sulla configurazione a livello di programmazione di una gestione connessione, vedere la documentazione relativa alla classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> nella Guida per gli sviluppatori.  
   
   
-

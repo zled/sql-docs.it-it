@@ -1,30 +1,30 @@
 ---
-title: 'Passaggio 2: Creazione del progetto di distribuzione | Documenti Microsoft'
+title: 'Passaggio 2: Creazione del progetto di distribuzione | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e92d8018d600c88e444cebd4623d290e24c0a779
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: da96393429cf37224ef609b1ed1de52f41704015
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-2---creating-the-deployment-project"></a>Lezione 1-2-Creazione del progetto di distribuzione
+# <a name="lesson-1-2---creating-the-deployment-project"></a>Lezione 1-2 - Creazione del progetto di distribuzione
 In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]l'unità distribuibile è rappresentata da un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per poter distribuire i pacchetti, è necessario creare un nuovo progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e aggiungervi tutti i pacchetti e gli eventuali file ausiliari che di desidera distribuire unitamente ai pacchetti.  
   
 ### <a name="to-create-the-integration-services-project"></a>Per creare il progetto di Integration Services  
@@ -53,5 +53,4 @@ In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]l'unità distribuib
   
   
   
-
 

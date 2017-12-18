@@ -1,35 +1,34 @@
 ---
-title: La codifica di un Provider di Log personalizzato | Documenti Microsoft
+title: Scrittura del codice di un provider di log personalizzato | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom log providers [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ae46112c19473b117a9a11eb83fc4510427365c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0fdab647193d9439ba9be97f89c503978254e0a5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-log-provider"></a>Scrittura del codice di un provider di log personalizzato
   Dopo avere creato una classe che eredita dalla classe di base <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> e avere applicato l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> alla classe, è necessario eseguire l'override dell'implementazione delle proprietà e dei metodi della classe di base per fornire la funzionalità personalizzata.  
   
- Per esempi reali di provider di log personalizzati, vedere [lo sviluppo di un'interfaccia utente per un Provider di Log personalizzato](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
+ Per esempi reali dei provider di log personalizzati, vedere [Sviluppo di un'interfaccia utente per un provider di log personalizzato](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
   
 ## <a name="configuring-the-log-provider"></a>Configurazione del provider di log  
   
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/03/2017
  Eseguire l'override del metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A> per memorizzare nella cache i riferimenti alla raccolta di connessioni e all'interfaccia degli eventi. È possibile utilizzare questi riferimenti memorizzati nella cache in seguito in altri metodi del provider di log.  
   
 ### <a name="using-the-configstring-property"></a>Utilizzo della proprietà ConfigString  
- In fase di progettazione, un provider di log riceve informazioni di configurazione di **configurazione** colonna. Tali informazioni corrispondono alla proprietà <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> del provider di log. Per impostazione predefinita, questa colonna contiene una casella di testo da cui è possibile recuperare qualsiasi informazione in formato stringa. La maggior parte dei provider di log inclusi in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilizza questa proprietà per archiviare il nome della gestione connessione utilizzata per connettersi a un'origine dati esterna. Se il provider di log utilizza la <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> proprietà, utilizzare il <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> metodo per convalidare questa proprietà e assicurarsi che la proprietà è impostata correttamente.  
+ In fase di progettazione un provider di log riceve le informazioni di configurazione dalla colonna **Configurazione**. Tali informazioni corrispondono alla proprietà <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> del provider di log. Per impostazione predefinita, questa colonna contiene una casella di testo da cui è possibile recuperare qualsiasi informazione in formato stringa. La maggior parte dei provider di log inclusi in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilizza questa proprietà per archiviare il nome della gestione connessione utilizzata per connettersi a un'origine dati esterna. Se il provider di log usa la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>, usare il metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> per convalidarla e verificare che sia impostata correttamente.  
   
 ### <a name="validating-the-log-provider"></a>Convalida del provider di log  
  Eseguire l'override del metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> per verificare che il provider sia stato configurato correttamente e sia pronto per l'esecuzione. In genere, è richiesto un livello minimo di convalida per verificare che <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> sia impostato correttamente. L'esecuzione non può continuare finché il provider di log non restituisce <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> dal metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>.  
@@ -84,7 +83,7 @@ End Function
 ```  
   
 ### <a name="persisting-the-log-provider"></a>Persistenza del provider di log  
- In genere non è necessario implementare la persistenza personalizzata per una gestione connessione. La persistenza personalizzata è richiesta solo quando le proprietà di un oggetto utilizzano tipi di dati complessi. Per ulteriori informazioni, vedere [lo sviluppo di oggetti personalizzati per Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ In genere non è necessario implementare la persistenza personalizzata per una gestione connessione. La persistenza personalizzata è richiesta solo quando le proprietà di un oggetto utilizzano tipi di dati complessi. Per altre informazioni, vedere [Sviluppo di oggetti personalizzati per Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
   
 ## <a name="logging-with-the-log-provider"></a>Registrazione con il provider di log  
  Tutti i provider di log devono eseguire l'override di tre metodi di runtime: <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>.  
@@ -139,7 +138,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Scrittura di voci di log  
- Il <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> metodo viene chiamato ogni volta che un oggetto nel pacchetto genera un evento chiamando un incendio\<evento > metodo su una delle interfacce di eventi. Ogni evento viene generato con informazioni sul relativo contesto e in genere con un messaggio descrittivo. Tuttavia, non tutte le chiamate al metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> includono informazioni per ogni parametro del metodo. Ad esempio, alcuni eventi standard i cui nomi sono autodescrittivi non forniscono MessageText, mentre DataCode e DataBytes vengono utilizzati per fornire informazioni supplementari facoltative.  
+ Il metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> viene chiamato ogni volta che un oggetto del pacchetto genera un evento chiamando un metodo Fire\<evento> in una delle interfacce degli eventi. Ogni evento viene generato con informazioni sul relativo contesto e in genere con un messaggio descrittivo. Tuttavia, non tutte le chiamate al metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> includono informazioni per ogni parametro del metodo. Ad esempio, alcuni eventi standard i cui nomi sono autodescrittivi non forniscono MessageText, mentre DataCode e DataBytes vengono utilizzati per fornire informazioni supplementari facoltative.  
   
  Nell'esempio di codice seguente viene implementato il metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> e vengono scritti gli eventi nel flusso aperto nella sezione precedente.  
   
@@ -196,8 +195,7 @@ End Sub
 ```  
  
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di un Provider di Log personalizzato](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
- [Sviluppo di un'interfaccia utente per un Provider di Log personalizzato](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
+ [Creazione di un provider di log personalizzato](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
+ [Sviluppo di un'interfaccia utente per un provider di log personalizzato](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   
   
-

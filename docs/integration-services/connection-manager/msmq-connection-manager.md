@@ -1,33 +1,33 @@
 ---
-title: Gestione connessione MSMQ | Documenti Microsoft
+title: Gestione connessione MSMQ | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.msmqconnectionmanager.f1
+f1_keywords: sql13.dts.designer.msmqconnectionmanager.f1
 helpviewer_keywords:
 - connections [Integration Services], message queues
 - connection managers [Integration Services], MSMQ
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 0e028f9f648acc18d56dc05262adccbbc52f8f7e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ae3af4dcc8937acc481e773d3af3a9ead0cf775
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="msmq-connection-manager"></a>gestione connessione MSMQ
   Una gestione connessione MSMQ consente la connessione di un pacchetto a una coda di messaggi che utilizza MSMQ (Message Queuing, Accodamento messaggi). Questa gestione connessione è usata dall'attività Message Queue inclusa in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -44,8 +44,8 @@ ms.lasthandoff: 08/09/2017
   
 |Tipo di coda|Percorso di esempio|  
 |----------------|-----------------|  
-|Pubblico|\<nome computer >\\< nome della coda\>|  
-|Privato|\<nome computer > \Private$\\< nome della coda\>|  
+|Pubblico|\<nome computer>\\<nome della coda\>|  
+|Privato|\<nome computer>\Private$\\\<nome della coda\>|  
   
  Per rappresentare il computer locale è possibile utilizzare un punto (.).  
   
@@ -76,8 +76,8 @@ ms.lasthandoff: 08/09/2017
   
 |Tipo di coda|Percorso di esempio|  
 |----------------|-----------------|  
-|Pubblico|\<nome computer >\\< nome della coda\>|  
-|Privato|\<nome computer > \Private$\\< nome della coda\>|  
+|Pubblico|\<nome computer>\\<nome della coda\>|  
+|Privato|\<nome computer>\Private$\\\<nome della coda\>|  
   
  Per rappresentare il computer locale è possibile utilizzare ".".  
   
@@ -86,7 +86,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Message Queue](../../integration-services/control-flow/message-queue-task.md)   
- [Integration Services &#40; SSIS &#41; Connessioni](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

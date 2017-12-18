@@ -2,9 +2,12 @@
 title: Stampare codice e risultati | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 493a87b6a78fbc1918c86852999afbb9bc557be3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e90994acf92b6c2a3ba44d04ec62266f364a2dcc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="print-code-and-results"></a>Stampa di codice e risultati
-  Nella stampa di query o file gli elementi colorati vengono stampati a colori se la stampante supporta questa funzionalità e se quest'ultima è abilitata nell'impostazione della stampante.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Nella stampa di query o file gli elementi colorati vengono stampati a colori se la stampante supporta questa funzionalità e se quest'ultima è abilitata nell'impostazione della stampante.  
   
  Il tipo di carattere e il colore del testo nell'editor e la modalità di stampa del testo nella stampante possono tuttavia essere diversi. Scegliere **Opzioni** dal menu **Strumenti**. In **Ambiente**selezionare **Tipi di carattere e colori**, quindi selezionare i tipi di caratteri e i colori per gli elementi da visualizzare nell'editor e quelli da applicare per la stampa. Poiché queste impostazioni possono variare, l'output potrebbe essere diverso da quanto visualizzato nell'editor.  
   

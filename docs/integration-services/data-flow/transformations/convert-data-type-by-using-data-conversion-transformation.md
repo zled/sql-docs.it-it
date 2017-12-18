@@ -1,12 +1,14 @@
 ---
-title: Convertire il tipo di dati utilizzando una trasformazione conversione dati | Documenti Microsoft
+title: Convertire un tipo di dati tramite la trasformazione Conversione dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,18 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 3a6de227fc2fd0e93abfc9e8ac5300dbf0a137ac
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fcae6a724feb11400c8b6c3d4e149bc6b87504c9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="convert-data-type-by-using-data-conversion-transformation"></a>Convertire il tipo di dati utilizzando una trasformazione conversione dati
+# <a name="convert-data-type-by-using-data-conversion-transformation"></a>Convertire un tipo di dati tramite la trasformazione Conversione dati
   È possibile aggiungere e configurare una trasformazione Conversione dati solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  
   
 ### <a name="to-convert-data-to-a-different-data-type"></a>Per convertire i dati in un tipo di dati diverso  
@@ -59,11 +60,10 @@ ms.lasthandoff: 08/03/2017
 12. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trasformazione conversione dati](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
+ [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Percorsi in Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
- [Attività flusso di dati](../../../integration-services/control-flow/data-flow-task.md)  
+ [Attività Flusso di dati](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

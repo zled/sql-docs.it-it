@@ -1,31 +1,31 @@
 ---
-title: Visualizzatore profilo dati | Documenti Microsoft
+title: Visualizzatore profilo dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.dataprofileviewer.f1
+f1_keywords: sql13.dts.dataprofileviewer.f1
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 78476021d8f54edb0f26748e6d610f9590bee037
-ms.contentlocale: it-it
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: f364b536b40a68565eb1dac1c8709dc28931043e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profile-viewer"></a>Visualizzatore profilo dati
   La visualizzazione e l'analisi dei profili dati costituiscono il passaggio successivo del processo di profiling dei dati. È possibile visualizzare tali profili dopo avere eseguito l'attività Profiling dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e avere calcolato i profili dati. Per altre informazioni su come configurare ed eseguire le attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/11/2017
   
 -   Fare clic con il pulsante destro del mouse sull'attività **Profiling dati** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , quindi scegliere **Modifica**. Fare clic su **Apri Visualizzatore profilo** nella pagina **Generale** dell' **Editor attività Profiling dati**.  
   
--   Nella cartella  *\<unità >*: il file \Programmi (x86) | Programma Programmi\Microsoft SQL Server\110\DTS\Binn, eseguire DataProfileViewer.exe.  
+-   Nella cartella *\<unità>*:\Programmi (x86) | Programmi\Microsoft SQL Server\110\DTS\Binn eseguire DataProfileViewer.exe.  
   
  Il visualizzatore contiene più riquadri per visualizzare i profili richiesti e i risultati calcolati, con funzionalità di drill-down e dettagli facoltativi:  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-length-distribution-profile"></a>Tipo di profilo: profilo Distribuzione lunghezze di colonna  
   
-##### <a name="column-length-distribution-profile---column-pane"></a>Profilo distribuzione lunghezze di colonna - \<colonna > riquadro  
+##### <a name="column-length-distribution-profile---column-pane"></a>Profilo Distribuzione lunghezze di colonna - riquadro \<colonna>  
  **Lunghezza minima**  
  Visualizza la lunghezza minima dei valori nella colonna.  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-null-ratio-profile"></a>Tipo di profilo: profilo Rapporto di valori Null nella colonna  
   
-##### <a name="column-null-ratio-profile---column-pane"></a>Profilo rapporto di valori di colonna Null - \<colonna > riquadro  
+##### <a name="column-null-ratio-profile---column-pane"></a>Profilo Rapporto di valori Null - riquadro \<colonna>  
  **Conteggio valori Null**  
  Visualizza il numero di righe in cui il valore della colonna analizzata è un valore Null.  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-pattern-profile"></a>Tipo di profilo: profilo Criteri di ricerca colonna  
   
-##### <a name="column-pattern-profile---column-pane"></a>Profilo criteri di ricerca colonna - \<colonna > riquadro  
+##### <a name="column-pattern-profile---column-pane"></a>Profilo Criteri di ricerca colonna - riquadro \<colonna>  
  **Conteggio righe**  
  Visualizza il numero di righe della tabella o della vista.  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-statistics-profile"></a>Tipo di profilo: profilo Statistiche di colonna  
   
-##### <a name="column-statistics-profile---column-pane"></a>Profilo statistiche di colonna - \<colonna > riquadro  
+##### <a name="column-statistics-profile---column-pane"></a>Profilo Statistiche di colonna - riquadro \<colonna>  
  **Minimo**  
  Visualizza il valore minimo rilevato nella colonna analizzata.  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-value-distribution-profile"></a>Tipo di profilo: profilo Distribuzione valori di colonna  
   
-##### <a name="column-value-distribution-profile---column-pane"></a>Profilo distribuzione valori di colonna - \<colonna > riquadro  
+##### <a name="column-value-distribution-profile---column-pane"></a>Profilo Distribuzione valori di colonna - riquadro \<colonna>  
  **Numero di valori distinct**  
  Visualizza il conteggio dei valori distinct rilevati nella colonna analizzata.  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--candidate-key-profile"></a>Tipo di profilo: profilo Chiave candidata  
   
-##### <a name="candidate-key-profile---table-pane"></a>Profilo chiave candidata - \<tabella > riquadro  
+##### <a name="candidate-key-profile---table-pane"></a>Profilo Chiave candidata - riquadro \<tabella>  
  **Colonne chiave**  
  Visualizza le colonne selezionate per l'analisi come chiave candidata.  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 08/11/2017
  Visualizza il livello di attendibilità (come percentuale) della colonna o combinazione di colonne chiave candidata. Un livello di attendibilità inferiore al 100% indica la presenza di valori duplicati.  
   
 ##### <a name="key-violations-pane"></a>Riquadro Violazioni chiave  
- **\<Column1 >, \<column2 > e così via.**  
+ **\<colonna1>, \<colonna2>, ecc.**  
  Visualizza i valori duplicati rilevati nella colonna analizzata.  
   
  **Count**  
@@ -213,17 +213,17 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Una percentuale elevata di valori non corretti nei dati può provocare risultati imprevisti da un profilo Dipendenza funzionale. Ad esempio, il 90% delle righe contiene il valore di stato "WI" per il valore di codice postale ZIP "98052". Il profilo segnala le righe che contengono il valore di stato "WA" corretto come violazioni.  
   
- **\<Nome colonna determinante >**  
+ **\<nome colonna determinante>**  
  Visualizza il valore della colonna determinante o della combinazione di colonne determinanti in questa istanza di una violazione della dipendenza funzionale.  
   
- **\<Nome colonna dipendente >**  
+ **\<nome colonna dipendente>**  
  Visualizza il valore della colonna dipendente in questa istanza di una violazione della dipendenza funzionale.  
   
  **Conteggio del supporto**  
  Visualizza il numero di righe in cui il valore della colonna determinante determina la colonna dipendente.  
   
  **Conteggio violazioni**  
- Visualizza il numero di righe in cui il valore della colonna determinante non determina la colonna dipendente. (Queste sono le righe in cui i valori dipendenti corrispondono ai valori indicati nella  **\<nome colonna dipendente >** colonna.)  
+ Visualizza il numero di righe in cui il valore della colonna determinante non determina la colonna dipendente. Si tratta delle righe in cui i valori dipendenti corrispondono ai valori indicati nella colonna **\<dependent column name>**.  
   
  **Percentuale del supporto**  
  Visualizza la percentuale di righe in cui la colonna determinante determina la colonna dipendente.  
@@ -241,10 +241,9 @@ ms.lasthandoff: 08/11/2017
  Visualizza il livello di attendibilità (come percentuale) della sovrapposizione tra colonne. Un livello di attendibilità inferiore al 100% indica che vi sono casi in cui il valore del subset non viene rilevato tra i valori del superset.  
   
 ##### <a name="inclusion-violations-pane"></a>Riquadro Violazioni inclusione  
- **\<Column1 >, \<column2 > e così via.**  
+ **\<colonna1>, \<colonna2>, ecc.**  
  Visualizza i valori nella colonna o colonne del subset che non sono disponibili nella colonna o colonne del superset.  
   
  **Count**  
  Visualizza il numero di righe in cui la colonna specificata ha il valore indicato nella prima colonna.  
   
-

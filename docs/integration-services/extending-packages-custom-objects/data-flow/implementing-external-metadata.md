@@ -1,16 +1,17 @@
 ---
-title: Implementazione di metadati esterni | Documenti Microsoft
+title: Implementazione di metadati esterni | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,17 +26,16 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], external metadata
 - external metadata [Integration Services]
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 96d413bca20ec171d515ac6d0ad81b5b994bd854
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a87f4a2f1119b1fc9d6b104264636c930352a713
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="implementing-external-metadata"></a>Implementazione di metadati esterni
   Quando un componente è disconnesso dalla relativa origine dati, è possibile convalidare le colonne nelle raccolte di colonne di input e output in base alle colonne presenti nell'origine dati esterna utilizzando l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Questa interfaccia consente di mantenere uno snapshot delle colonne presenti nell'origine dati esterna e di eseguire il mapping di queste colonne alle raccolte di colonne di input e output del componente.  
@@ -82,12 +82,12 @@ End Sub
  La convalida richiede passaggi aggiuntivi per i componenti che mantengono una raccolta di colonne di metadati esterni, perché è necessario eseguirla in base a una raccolta aggiuntiva di colonne. La convalida può essere eseguita in modalità connessa o disconnessa.  
   
 ### <a name="connected-validation"></a>Convalida in modalità connessa  
- Quando un componente è connesso a un'origine dati esterna, le colonne delle raccolte di input o output vengono verificate direttamente in base all'origine dati esterna. È inoltre necessario convalidare le colonne della raccolta di metadati esterni. Questa operazione è necessaria perché la raccolta dei metadati esterni può essere modificata utilizzando il **Editor avanzato** in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], e le modifiche apportate alla raccolta non sono rilevabili. Pertanto, se connessi, i componenti devono assicurarsi che le colonne della raccolta di colonne di metadati esterni continuino a riflettere le colonne presenti nell'origine dati esterna.  
+ Quando un componente è connesso a un'origine dati esterna, le colonne delle raccolte di input o output vengono verificate direttamente in base all'origine dati esterna. È inoltre necessario convalidare le colonne della raccolta di metadati esterni. Questa operazione è necessaria perché la raccolta di metadati esterni può essere modificata tramite l'**Editor avanzato** in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e le modifiche non sono individuabili. Pertanto, se connessi, i componenti devono assicurarsi che le colonne della raccolta di colonne di metadati esterni continuino a riflettere le colonne presenti nell'origine dati esterna.  
   
- È possibile scegliere di nascondere la raccolta di metadati esterni nel **Editor avanzato** impostando il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> proprietà della raccolta in **false**. Tuttavia in questo modo si nasconde anche la **Mapping colonne** scheda dell'editor, che consente agli utenti di eseguire il mapping di colonne da una raccolta di input o output e le colonne nella raccolta delle colonne di metadati esterna. Impostando questa proprietà su **false** non impedisce agli sviluppatori di modifica a livello di codice della raccolta, ma fornisce un livello di protezione per la raccolta di colonne di metadati esterna di un componente utilizzato esclusivamente in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ È possibile scegliere di nascondere la raccolta di metadati esterni nell'**Editor avanzato** impostando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> della raccolta su **false**. Tuttavia, in questo modo si nasconde anche la scheda **Mapping colonne** dell'editor, che consente agli utenti di eseguire il mapping delle colonne della raccolta di input o output alle colonne della raccolta di colonne di metadati esterni. L'impostazione di questa proprietà su **false** non impedisce agli sviluppatori di modificare la raccolta a livello di programmazione, ma fornisce un livello di protezione per la raccolta di colonne di metadati esterni di un componente usato esclusivamente in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="disconnected-validation"></a>Convalida in modalità disconnessa  
- Quando un componente è disconnesso da un'origine dati esterna, la convalida risulta semplificata, perché le colonne della raccolta di input o output vengono verificate direttamente in base alle colonne della raccolta di metadati esterni e non rispetto all'origine esterna. Un componente deve eseguire la convalida in modalità disconnessa quando non è stata stabilita la connessione all'origine dati esterna o quando il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> proprietà **false**.  
+ Quando un componente è disconnesso da un'origine dati esterna, la convalida risulta semplificata, perché le colonne della raccolta di input o output vengono verificate direttamente in base alle colonne della raccolta di metadati esterni e non rispetto all'origine esterna. Un componente deve eseguire la convalida in modalità disconnessa quando la connessione all'origine dati esterna non è stata stabilita o quando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> è **false**.  
   
  Nell'esempio di codice seguente è illustrata un'implementazione di un componente che esegue la convalida in base alla raccolta di colonne di metadati esterni.  
   
@@ -119,4 +119,3 @@ End Function
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)  
   
   
-

@@ -1,28 +1,28 @@
 ---
-title: "Incorporare un'attività Profiling dati nel pacchetto del flusso di lavoro | Documenti Microsoft"
+title: "Incorporare un'attività Profiling dati nel flusso di lavoro del pacchetto | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling task [Integration Services], using output in workflow
+helpviewer_keywords: Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3712f432207551dac0d14666b01ad8d8e2f8fc0e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto
   Il profiling dati e la pulizia non sono attività potenziali per un processo automatizzato nelle fasi iniziali. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]l'output dell'attività Profiling dati richiede di solito un'analisi visiva e una valutazione umana per determinare se le violazioni segnalate sono significative o eccessive. Anche dopo il riconoscimento di problemi di qualità dei dati, è comunque necessario definire con attenzione un piano ben studiato per tentare di individuare l'approccio migliore per la pulizia.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/03/2017
     > [!NOTE]  
     >  Alcuni risultati del profilo visualizzati nel Visualizzatore profilo dati sono valori calcolati che non si trovano direttamente nell'output. Ad esempio, l'output del profilo Rapporto di valori Null nella colonna contiene il numero complessivo di righe e il numero di righe che contengono valori Null. È necessario eseguire una query su questi due valori, quindi calcolare la percentuale di righe che contengono valori Null per ottenere il rapporto di valori Null nella colonna.  
   
--   **Input dell'attività**. L'input dell'attività Profiling dati viene letto da tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pertanto, è necessario salvare i dati presenti in memoria in tabelle di gestione temporanea se si desidera eseguire il profiling di dati già caricati e trasformati nel flusso di dati.  
+-   **Input dell'attività**. L'input dell'attività Profiling dati viene letto da tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pertanto, è necessario salvare i dati presenti in memoria in tabelle di staging se si desidera eseguire il profiling di dati già caricati e trasformati nel flusso di dati.  
   
  Nelle sezioni seguenti questo flusso di lavoro generale viene applicato al profiling di dati provenienti direttamente da un'origine dati esterna o trasformati dall'attività Flusso di dati. Viene inoltre illustrato come gestire i requisiti di input e di output dell'attività Flusso di dati.  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  Aggiungere una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] al pacchetto. Configurare questa gestione connessione per l'uso del provider di dati .NET per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) e per la connessione a un'istanza disponibile del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     Per impostazione predefinita, la gestione connessione è il seguente nome: \<nome server >. AdventureWorks1.  
+     Per impostazione predefinita, il nome della gestione connessione è \<nome server>.AdventureWorks1.  
   
 3.  Aggiungere una gestione connessione file al pacchetto. Configurare questa gestione connessione per la creazione del file di output per l'attività Profiling dati.  
   
@@ -301,12 +301,12 @@ ms.lasthandoff: 08/03/2017
      Ad esempio, è possibile impostare **Operazione valutazione** del vincolo di precedenza su **Espressione e vincolo**. È quindi possibile utilizzare `@AddressLine2NullRatio < .90` come valore dell'espressione. In questo modo il flusso di lavoro segue il percorso selezionato quando le attività precedenti vengono completate e quando la percentuale di valori Null nella colonna selezionata è minore del 90%.  
   
 ## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>Connessione dell'attività Profiling dati ai dati trasformati dal flusso di dati  
- Anziché direttamente da un'origine dati, è possibile eseguire il profiling dei dati che sono già stati caricati e trasformanti nel flusso di lavoro. L'attività Profiling dati funziona, tuttavia, solo per dati persistenti, non per dati in memoria. Pertanto, è necessario utilizzare dapprima un componente di destinazione per salvare i dati trasformati in una tabella di gestione temporanea.  
+ Anziché direttamente da un'origine dati, è possibile eseguire il profiling dei dati che sono già stati caricati e trasformanti nel flusso di lavoro. L'attività Profiling dati funziona, tuttavia, solo per dati persistenti, non per dati in memoria. Pertanto, è necessario utilizzare dapprima un componente di destinazione per salvare i dati trasformati in una tabella di staging.  
   
 > [!NOTE]  
->  Quando si configura l'attività Profiling dati, è necessario selezionare tabelle e colonne esistenti. Pertanto, è necessario creare la tabella di gestione temporanea in fase di progettazione prima di poter configurare l'attività. In altri termini, questo scenario non consente l'utilizzo di una tabella temporanea creata in fase di esecuzione.  
+>  Quando si configura l'attività Profiling dati, è necessario selezionare tabelle e colonne esistenti. Pertanto, è necessario creare la tabella di staging in fase di progettazione prima di poter configurare l'attività. In altri termini, questo scenario non consente l'utilizzo di una tabella temporanea creata in fase di esecuzione.  
   
- Dopo aver salvato i dati in una tabella di gestione temporanea, è possibile effettuare le azioni seguenti:  
+ Dopo aver salvato i dati in una tabella di staging, è possibile effettuare le azioni seguenti:  
   
 -   Utilizzare l'attività Profiling dati per eseguire il profiling dei dati.  
   
@@ -322,9 +322,9 @@ ms.lasthandoff: 08/03/2017
   
 2.  Nel flusso di dati aggiungere, configurare e connettere le origini e le trasformazioni appropriate.  
   
-3.  Nel flusso di dati aggiungere, configurare e connettere un componente di destinazione che salva i dati trasformati in una tabella di gestione temporanea.  
+3.  Nel flusso di dati aggiungere, configurare e connettere un componente di destinazione che salva i dati trasformati in una tabella di staging.  
   
-4.  Nel flusso di controllo aggiungere e configurare un'attività Profiling dati che calcola i profili desiderati rispetto ai dati trasformati nella tabella di gestione temporanea. Connettere l'attività Profiling dati all'attività Flusso di dati.  
+4.  Nel flusso di controllo aggiungere e configurare un'attività Profiling dati che calcola i profili desiderati rispetto ai dati trasformati nella tabella di staging. Connettere l'attività Profiling dati all'attività Flusso di dati.  
   
 5.  Configurare le variabili del pacchetto che conterranno i valori che si desidera recuperare dai risultati del profilo.  
   
@@ -337,4 +337,3 @@ ms.lasthandoff: 08/03/2017
  [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md)  
   
   
-

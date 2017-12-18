@@ -2,9 +2,12 @@
 title: Proteggere una topologia di replica | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c7637dd9fb2e9f827c1d0d0f5d222ce8b7bbf5c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a7e832901034529888457e021d753e0c3fb2e11a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="secure-a-replication-topology"></a>Protezione di una topologia di replica
-  Gli account di sicurezza, i nomi di accesso e le password richiesti dalla replica vengono specificati durante la configurazione della replica e durante la creazione di pubblicazioni e sottoscrizioni. Queste impostazioni di sicurezza possono essere modificate in un secondo momento utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], stored procedure di replica e oggetti RMO (Replication Management Objects). Negli argomenti seguenti viene descritto come modificare le impostazioni di sicurezza della replica.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gli account di sicurezza, i nomi di accesso e le password richiesti dalla replica vengono specificati durante la configurazione della replica e durante la creazione di pubblicazioni e sottoscrizioni. Queste impostazioni di sicurezza possono essere modificate in un secondo momento utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], stored procedure di replica e oggetti RMO (Replication Management Objects). Negli argomenti seguenti viene descritto come modificare le impostazioni di sicurezza della replica.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

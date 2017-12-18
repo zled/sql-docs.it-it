@@ -2,9 +2,12 @@
 title: LineString | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 35c9755a290383ed925ea67c18e7b863623b6797
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a06c7cffcf4fbfc98323cdbb3e69f78b2d87c4bc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="linestring"></a>LineString
-  **LineString** indica un oggetto unidimensionale che rappresenta una sequenza di punti e i segmenti lineari che li connettono.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **LineString** è un oggetto unidimensionale che rappresenta una sequenza di punti e i segmenti lineari che li connettono.  
   
 ## <a name="linestring-instances"></a>Istanze LineString  
  Nella figura seguente vengono illustrati esempi di istanze **LineString** .  

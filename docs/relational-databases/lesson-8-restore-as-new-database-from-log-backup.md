@@ -1,10 +1,13 @@
 ---
 title: Lezione 8. Ripristinare come nuovo database dal backup del log | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd973fc07c6849a1e211f77be4a995bdada4b271
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 65e5464a1a3ee36420d92b23268ab9aa7cb88c02
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>Lezione 8. Ripristinare come nuovo database dal backup del log
-In questa lezione il database AdventureWorks2014 verrà ripristinato come nuovo database dal backup del log delle transazioni dello snapshot di file.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In questa lezione il database AdventureWorks2014 verrà ripristinato come nuovo database dal backup del log delle transazioni dello snapshot di file.  
   
 In questo scenario viene eseguito un ripristino in un'istanza di SQL Server in una macchina virtuale diversa per l'analisi business e la creazione di report. Il ripristino in un'altra istanza in una macchina virtuale diversa ripartisce il carico di lavoro su una macchina virtuale dedicata con dimensioni adatte allo scopo eliminando le richieste di risorse dal sistema transazionale.  
   

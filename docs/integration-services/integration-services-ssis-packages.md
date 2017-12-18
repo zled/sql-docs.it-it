@@ -1,12 +1,14 @@
 ---
-title: Integration Services (SSIS) pacchetti | Documenti Microsoft
+title: Pacchetti di Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2a80b0c5d00cac3ca874bb61d1acf55311892dec
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-packages"></a>Pacchetti di Integration Services (SSIS)
   Un pacchetto è una raccolta organizzata di connessioni, elementi di flusso di controllo, elementi di flusso di dati, gestori eventi, variabili, parametri e configurazioni che possono essere assemblati usando gli strumenti di progettazione grafica disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], oppure compilati a livello di codice.  Salvare il pacchetto completo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'archivio pacchetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] o nel file system oppure distribuire il progetto ssISnoversion nel server [!INCLUDE[ssIS](../includes/ssis-md.md)] . Il pacchetto è l'unità di lavoro che viene recuperata, eseguita e salvata.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 08/03/2017
   
  Nella figura seguente viene illustrato un semplice pacchetto che contiene un flusso di controllo con un'attività Flusso di dati, che a sua volta contiene un flusso di dati.  
   
- ![Un pacchetto con un flusso di controllo e flusso di dati](../integration-services/media/ssis-package.gif "un pacchetto con un flusso di controllo e flusso di dati")  
+ ![Pacchetto con flusso di controllo e flusso di dati](../integration-services/media/ssis-package.gif "Pacchetto con flusso di controllo e flusso di dati")  
   
  Dopo aver creato il pacchetto base è possibile estenderne le funzionalità aggiungendovi ad esempio variabili e funzionalità di registrazione. Per ulteriori informazioni, vedere la sezione dedicata agli oggetti che estendono le funzionalità dei pacchetti.  
   
@@ -112,11 +113,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>Attività correlate  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili due strumenti grafici per la creazione di pacchetti, Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , oltre al modello a oggetti [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per informazioni dettagliate, vedere gli argomenti seguenti.  
   
--   [Importazione ed esportazione di dati con SQL Server importazione / esportazione guidata](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+-   [Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
--   [Creazione di pacchetti in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
+-   [Creare pacchetti in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
--   Vedere [compilazione di pacchetti a livello di programmazione](../integration-services/building-packages-programmatically/building-packages-programmatically.md) nella Guida per gli sviluppatori. 
+-   Vedere [Compilazione di pacchetti a livello di programmazione](../integration-services/building-packages-programmatically/building-packages-programmatically.md) nella Guida per gli sviluppatori. 
   
   
-

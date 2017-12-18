@@ -1,12 +1,14 @@
 ---
-title: Integration Services (SSIS) registrazione | Documenti Microsoft
+title: Registrazione di Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -29,17 +31,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 22c1126b8d5555dc743f7c8906230cf5dbcb08a8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 772217a434d69d8849fdaefd66108365c25e46e7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili provider di log che è possibile utilizzare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
@@ -138,7 +139,7 @@ ms.lasthandoff: 08/03/2017
 |**OnVariableValueChanged**|Viene registrata una voce di log quando il valore di una variabile viene modificato.|  
 |**OnWarning**|Viene registrata una voce di log in corrispondenza di un avviso.|  
 |**PipelineComponentTime**|Per ogni componente del flusso di dati, viene registrata una voce di log per ogni fase di convalida ed esecuzione. La voce di log specifica il tempo di elaborazione per ogni fase.|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|Viene registrata una voce di log che fornisce informazioni diagnostiche.<br /><br /> È ad esempio possibile registrare un messaggio prima e dopo ogni chiamata a un provider di dati esterno. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Registrare l'evento **DiagnosticEx** quando si vuole trovare i nomi delle colonne per le colonne nel flusso di dati che contengono errori. Questo evento scrive una mappa di derivazione del flusso di dati nel log. È quindi possibile cercare il nome della colonna in questa mappa di derivazione usando l'identificatore della colonna acquisito da un output degli errori. Per ulteriori informazioni, vedere [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Notare che l'evento **DiagnosticEx** non mantiene gli spazi vuoti nel relativo output XML per ridurre le dimensioni del log. Per migliorare la leggibilità, copiare il log in un editor XML come Visual Studio, che supporta la formattazione XML e l'evidenziazione della sintassi.<br /><br /> Nota: se si registra l'evento **DiagnosticEx** con il provider di log di SQL Server, l'output potrebbe essere troncato. Il campo **message** del provider di log di SQL Server è di tipo nvarchar(2048). Per evitare il troncamento, usare un provider di log diverso quando si registra l'evento **DiagnosticEx** .|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|Viene registrata una voce di log che fornisce informazioni diagnostiche.<br /><br /> È ad esempio possibile registrare un messaggio prima e dopo ogni chiamata a un provider di dati esterno. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Registrare l'evento **DiagnosticEx** quando si vuole trovare i nomi delle colonne per le colonne nel flusso di dati che contengono errori. Questo evento scrive una mappa di derivazione del flusso di dati nel log. È quindi possibile cercare il nome della colonna in questa mappa di derivazione usando l'identificatore della colonna acquisito da un output degli errori. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Notare che l'evento **DiagnosticEx** non mantiene gli spazi vuoti nel relativo output XML per ridurre le dimensioni del log. Per migliorare la leggibilità, copiare il log in un editor XML come Visual Studio, che supporta la formattazione XML e l'evidenziazione della sintassi.<br /><br /> Nota: se si registra l'evento **DiagnosticEx** con il provider di log di SQL Server, l'output potrebbe essere troncato. Il campo **message** del provider di log di SQL Server è di tipo nvarchar(2048). Per evitare il troncamento, usare un provider di log diverso quando si registra l'evento **DiagnosticEx** .|  
   
  Per il pacchetto e per molte attività sono disponibili voci di log personalizzate che è possibile abilitare per la registrazione. Per l'attività Invia messaggi è ad esempio disponibile la voce di log personalizzata **SendMailTaskBegin** , che registra informazioni quando l'attività viene avviata, ma prima che invii un messaggio di posta elettronica. Per altre informazioni, vedere [Custom Messages for Logging](#custom_messages).  
   
@@ -174,7 +175,7 @@ ms.lasthandoff: 08/03/2017
  L'attività Flusso di dati offre molte voci di log personalizzate che è possibile utilizzare per monitorare e regolare le prestazioni. È ad esempio possibile monitorare i componenti che potrebbero causare perdite di memoria o tenere traccia del tempo necessario per eseguire un componente specifico. Per un elenco di queste voci di log personalizzate e un output di registrazione di esempio, vedere [Data Flow Task](../../integration-services/control-flow/data-flow-task.md).  
   
 #### <a name="capture-the-names-of-columns-in-which-errors-occur"></a>Acquisire i nomi delle colonne cui si verificano errori  
- Quando si configura un output di errore errori nel flusso di dati, per impostazione predefinita l'output di errore fornisce solo l'identificatore numerico della colonna in cui si è verificato l'errore. Per ulteriori informazioni, vedere [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).  
+ Quando si configura un output di errore errori nel flusso di dati, per impostazione predefinita l'output di errore fornisce solo l'identificatore numerico della colonna in cui si è verificato l'errore. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).  
   
  È possibile trovare i nomi di colonna abilitando la registrazione e selezionando l'evento **DiagnosticEx** . Questo evento scrive una mappa di derivazione del flusso di dati nel log. È quindi possibile cercare il nome della colonna dal relativo identificatore in questa mappa di derivazione. Notare che l'evento **DiagnosticEx** non mantiene gli spazi vuoti nel relativo output XML per ridurre le dimensioni del log. Per migliorare la leggibilità, copiare il log in un editor XML come Visual Studio, che supporta la formattazione XML e l'evidenziazione della sintassi.  
   
@@ -231,7 +232,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  Selezionare un provider di log nell'elenco **Tipo provider** e quindi fare clic su **Aggiungi**.  
   
-4.  Nel **configurazione** colonna, selezionare una gestione connessione oppure fare clic su  **\<nuova connessione >** per creare una nuova gestione connessione del tipo appropriato per il provider di log. A seconda del provider selezionato, utilizzare una delle gestioni connessioni seguenti:  
+4.  Nella colonna **Configurazione** selezionare una gestione connessione oppure fare clic su **\<Nuova connessione>** per creare una nuova gestione connessione del tipo appropriato per il provider di log. A seconda del provider selezionato, utilizzare una delle gestioni connessioni seguenti:  
   
     -   Per file di testo utilizzare una gestione connessione file. Per altre informazioni, vedere [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -239,7 +240,7 @@ ms.lasthandoff: 08/03/2017
   
     -   Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]utilizzare una gestione connessione OLE DB. Per altre informazioni, vedere [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-    -   Per il Registro eventi di Windows, non eseguire alcuna operazione. [!INCLUDE[ssIS](../../includes/ssis-md.md)]Crea automaticamente il log.  
+    -   Per il Registro eventi di Windows, non eseguire alcuna operazione. [!INCLUDE[ssIS](../../includes/ssis-md.md)] crea automaticamente il registro.  
   
     -   Per file XML utilizzare una gestione connessione file.  
   
@@ -313,7 +314,7 @@ ms.lasthandoff: 08/03/2017
  Il campo della descrizione è modificabile. Fare clic nel campo e quindi modificare la descrizione predefinita del log.  
   
  **Configurazione**  
- Selezionare una gestione connessione esistente nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione. A seconda del tipo di logger, è possibile configurare una gestione connessione OLE DB o una gestione connessione file. Il logger per il registro eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] non necessita di connessioni.  
+ Selezionare una gestione connessione esistente nell'elenco oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione. A seconda del tipo di logger, è possibile configurare una gestione connessione OLE DB o una gestione connessione file. Il logger per il registro eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] non necessita di connessioni.  
   
  Argomenti correlati: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) e [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -417,7 +418,7 @@ ms.lasthandoff: 08/03/2017
 |Basic|Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. Si tratta del valore predefinito.|  
 |RuntimeLineage|Raccoglie i dati necessari a tenere traccia delle informazioni di derivazione nel flusso di dati. È possibile analizzare queste informazioni di derivazione per mappare la relazione di derivazione tra attività. Gli ISV e sviluppatori possono creare strumenti personalizzati di mapping della derivazione con queste informazioni.|  
 |Prestazioni|Vengono registrati solo le statistiche sulle prestazioni e gli eventi OnError e OnWarning.<br /><br /> Nel report **Prestazioni di esecuzione** vengono visualizzati il tempo di attività e il tempo totale per i componenti flusso di dati del pacchetto. Queste informazioni sono disponibili se il livello di registrazione dell'ultima esecuzione del pacchetto è stato impostato su **Prestazioni** o **Dettagliato**. Per altre informazioni, vedere [Report per il server Integration Services](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> La vista [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) visualizza le ore di inizio e di fine per i componenti flusso di dati, per ogni fase di esecuzione. In questa vista vengono visualizzate le informazioni per i componenti solo quando il livello di registrazione dell'esecuzione del pacchetto è impostato su **Prestazioni** o **Dettagliato**.|  
-|Dettagliato|Tutti gli eventi vengono registrati, inclusi gli eventi personalizzati e di diagnostica.<br /><br /> Gli eventi personalizzati includono quelli registrati dalle attività di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sugli eventi personalizzati, vedere [Messaggi personalizzati per la registrazione](#custom_messages).<br /><br /> L'evento **DiagnosticEx** rappresenta un esempio di un evento di diagnostica. Ogni volta che un'attività Esegui pacchetto esegue un pacchetto figlio, l'evento acquisisce i valori dei parametri passati ai pacchetti figlio.<br /><br /> L'evento **DiagnosticEx** consente inoltre di ottenere i nomi delle colonne in cui si verificano errori a livello di riga. Questo evento scrive una mappa di derivazione del flusso di dati nel log. È quindi possibile cercare il nome della colonna in questa mappa di derivazione usando l'identificatore della colonna acquisito da un output degli errori.  Per ulteriori informazioni, vedere [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Il valore della colonna di messaggio per **DiagnosticEx** è testo XML. Per visualizzare il testo del messaggio per l'esecuzione del pacchetto, eseguire una query nella vista [catalog.operation_messages &#40;database SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Notare che l'evento **DiagnosticEx** non mantiene gli spazi vuoti nel relativo output XML per ridurre le dimensioni del log. Per migliorare la leggibilità, copiare il log in un editor XML come Visual Studio, che supporta la formattazione XML e l'evidenziazione della sintassi.<br /><br /> Nella vista [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) viene visualizzata una riga ogni volta che un componente flusso di dati invia dati a un componente downstream, per l'esecuzione di un pacchetto. Il livello di registrazione deve essere impostato su **Dettagliato** per acquisire queste informazioni nella vista.|  
+|Dettagliato|Tutti gli eventi vengono registrati, inclusi gli eventi personalizzati e di diagnostica.<br /><br /> Gli eventi personalizzati includono quelli registrati dalle attività di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sugli eventi personalizzati, vedere [Messaggi personalizzati per la registrazione](#custom_messages).<br /><br /> L'evento **DiagnosticEx** rappresenta un esempio di un evento di diagnostica. Ogni volta che un'attività Esegui pacchetto esegue un pacchetto figlio, l'evento acquisisce i valori dei parametri passati ai pacchetti figlio.<br /><br /> L'evento **DiagnosticEx** consente inoltre di ottenere i nomi delle colonne in cui si verificano errori a livello di riga. Questo evento scrive una mappa di derivazione del flusso di dati nel log. È quindi possibile cercare il nome della colonna in questa mappa di derivazione usando l'identificatore della colonna acquisito da un output degli errori.  Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Il valore della colonna di messaggio per **DiagnosticEx** è testo XML. Per visualizzare il testo del messaggio per l'esecuzione del pacchetto, eseguire una query nella vista [catalog.operation_messages &#40;database SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Notare che l'evento **DiagnosticEx** non mantiene gli spazi vuoti nel relativo output XML per ridurre le dimensioni del log. Per migliorare la leggibilità, copiare il log in un editor XML come Visual Studio, che supporta la formattazione XML e l'evidenziazione della sintassi.<br /><br /> Nella vista [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) viene visualizzata una riga ogni volta che un componente flusso di dati invia dati a un componente downstream, per l'esecuzione di un pacchetto. Il livello di registrazione deve essere impostato su **Dettagliato** per acquisire queste informazioni nella vista.|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>Creare e gestire i livelli di registrazione personalizzati con la finestra di dialogo Gestione del livello di registrazione personalizzato  
  È possibile creare livelli di registrazione personalizzati che raccolgono solo le statistiche e gli eventi desiderati. Facoltativamente, è anche possibile acquisire il contesto degli eventi, che include i valori delle variabili, le stringhe di connessione e le proprietà del componente. Quando si esegue un pacchetto, è possibile selezionare un livello di registrazione personalizzato in tutti i casi in cui è possibile selezionare un livello di registrazione predefinito.  
@@ -684,4 +685,3 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
   
 ## <a name="related-content"></a>Contenuto correlato  
  [Strumento DTLoggedExec per la registrazione completa e dettagliata (progetto CodePlex)](http://go.microsoft.com/fwlink/?LinkId=150579)  
-

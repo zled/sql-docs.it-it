@@ -1,12 +1,14 @@
 ---
-title: Integration Services (SSIS) variabili | Documenti Microsoft
+title: Variabili di Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eb632c5fa2242b5b607d62488b65682a0cc4b07f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
   Nelle variabili vengono archiviati valori che possono essere usati in fase di esecuzione da un pacchetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e dai relativi contenitori, attività e gestori di eventi. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 08/03/2017
   
  Per altre informazioni su scenari reali relativi all'uso delle variabili, vedere [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
-## <a name="properties-of-variables"></a>Proprietà di variabili  
+## <a name="properties-of-variables"></a>Proprietà delle variabili  
  È possibile configurare le variabili definite dall'utente impostando le proprietà seguenti nella finestra **Variabili** o nella finestra **Proprietà** . Alcune proprietà sono disponibili solo nella finestra Proprietà.  
   
 > [!NOTE]  
@@ -100,7 +101,7 @@ ms.lasthandoff: 08/03/2017
  Specifica il nome della variabile.  
   
  **Spazio dei nomi**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]fornisce due spazi dei nomi **utente** e **sistema**. Per impostazione predefinita, le variabili personalizzate appartengono allo spazio dei nomi **User** , mentre le variabili di sistema appartengono allo spazio dei nomi **System** . È possibile creare altri spazi dei nomi per le variabili definite dall'utente e modificare il nome dello spazio dei nomi **User** , ma non è possibile modificare il nome dello spazio dei nomi **System** , né aggiungere variabili allo spazio dei nomi **System** o assegnare variabili di sistema a uno spazio dei nomi diverso.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre due spazi dei nomi: **User** e **System**. Per impostazione predefinita, le variabili personalizzate appartengono allo spazio dei nomi **User** , mentre le variabili di sistema appartengono allo spazio dei nomi **System** . È possibile creare altri spazi dei nomi per le variabili definite dall'utente e modificare il nome dello spazio dei nomi **User** , ma non è possibile modificare il nome dello spazio dei nomi **System** , né aggiungere variabili allo spazio dei nomi **System** o assegnare variabili di sistema a uno spazio dei nomi diverso.  
   
 **RaiseChangedEvent**  
  Se la proprietà è impostata su **True**, quando viene modificato il valore della variabile viene generato l'evento **OnVariableValueChanged** .  
@@ -142,7 +143,7 @@ ms.lasthandoff: 08/03/2017
   
  Specificare il tipo di dati del valore della variabile.  
 
-## <a name="scenarios-for-using-variables"></a>Scenari per l'utilizzo di variabili  
+## <a name="scenarios-for-using-variables"></a>Scenari di utilizzo delle variabili  
  Nei pacchetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] le variabili vengono utilizzate in diversi modi. Durante lo sviluppo di un pacchetto vengono in genere aggiunte variabili definite dall'utente allo scopo di implementare la flessibilità e la gestibilità richieste dalla soluzione. A seconda dello scenario, vengono comunemente utilizzate anche variabili di sistema.  
   
  **Espressioni di proprietà** Usano le variabili per specificare i valori nelle espressioni di proprietà che impostano gli oggetti e le proprietà dei pacchetti. L'espressione `SELECT * FROM @varTableName` , ad esempio, include la variabile `varTableName` che aggiorna l'istruzione SQL eseguita da un'attività Esegui SQL. L'espressione `DATEPART("d", GETDATE()) == 1? @[User::varPackageFirst]:@[User::varPackageOther]`" aggiorna il pacchetto eseguito dall'attività Esegui pacchetto, eseguendo il pacchetto specificato nella variabile `varPackageFirst` il primo giorno del mese e il pacchetto specificato nella variabile `varPackageOther` in altri giorni. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../integration-services/expressions/use-property-expressions-in-packages.md).  
@@ -196,7 +197,7 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
  **Spazio dei nomi**  
  Consente di specificare lo spazio dei nomi della variabile. Per impostazione predefinita, le variabili definite dall'utente si trovano nello spazio dei nomi **Utente** .  
   
- **Tipo di valore**  
+ **Tipo valore**  
  Consente di selezionare un tipo di dati.  
   
  **Valore**  
@@ -245,9 +246,9 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
 -   Finestra Proprietà. La finestra **Proprietà** elenca le proprietà per la configurazione delle variabili non disponibili nella finestra **Variabili** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType e IncludeInDebugDump.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]fornisce inoltre un set di variabili di sistema le cui proprietà non viene aggiornate, fatta eccezione per la proprietà RaiseChangedEvent.  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include anche un set di variabili di sistema le cui proprietà non possono essere aggiornate, ad eccezione della proprietà RaiseChangedEvent.  
   
-### <a name="set-expressions-on-variables"></a>Impostare le espressioni nelle variabili  
+### <a name="set-expressions-on-variables"></a>Impostare espressioni nelle variabili  
   
  Quando si usa la finestra **Proprietà** per impostare le espressioni in una variabile definita dall'utente:  
   
@@ -267,11 +268,11 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
   
  In entrambe le finestre **Variabili** e **Proprietà**, se si assegna un'espressione a una variabile ed **EvaluateAsExpression** è impostato su **True**, non sarà possibile modificare il tipo di dati della variabile.  
   
-### <a name="set-the-namespace-and-name-properties"></a>Impostare la proprietà Namespace e Name
+### <a name="set-the-namespace-and-name-properties"></a>Impostare le proprietà Namespace e Name
   
  I valori delle proprietà **Name** e **Namespace** devono iniziare con una delle lettere dell'alfabeto definite dallo standard Unicode 2.0 oppure con un carattere di sottolineatura (_). I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, o il carattere di sottolineatura (\_).  
   
-### <a name="set-variable-properties-in-the-variables-window"></a>Impostare le proprietà delle variabili nella finestra variabili   
+### <a name="set-variable-properties-in-the-variables-window"></a>Impostare le proprietà delle variabili nella finestra Variabili   
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -289,7 +290,7 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
   
 7.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
   
-### <a name="set-variable-properties-in-the-properties-window"></a>Impostare le proprietà delle variabili nella finestra proprietà  
+### <a name="set-variable-properties-in-the-properties-window"></a>Impostare le proprietà delle variabili nella finestra Proprietà  
 
 1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -305,7 +306,7 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
   
 7.  Nella finestra **Proprietà** aggiornare le proprietà delle variabili in lettura/scrittura. Alcune proprietà sono di sola lettura per le variabili definite dall'utente.  
   
-     Per ulteriori informazioni sulle proprietà, vedere [Integration Services &#40; SSIS &#41; Le variabili](../integration-services/integration-services-ssis-variables.md).  
+     Per altre informazioni sulle proprietà, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md).  
   
 8.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
 
@@ -316,4 +317,3 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
  [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Mapping dei parametri di query a variabili in un componente del flusso di dati](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
-

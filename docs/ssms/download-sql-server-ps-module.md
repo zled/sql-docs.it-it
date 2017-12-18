@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 16ca0d08413ba75b7603596e8e4c5340715cb1a3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7f6ab758ecd32d4d9bdb39d9157cbba9b38e73ba
+ms.sourcegitcommit: b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>Scaricare il modulo PowerShell di SQL Server
 Come parte della versione 17.0 di SQL Server Management Studio, il modulo PowerShell di SQL Server ora è disponibile in PowerShell Gallery.  Il modulo non è più incluso nel pacchetto di installazione di SQL Server Management Studio. Per usare PowerShell con SSMS 17.0 e versioni successive, il modulo di SQL Server deve essere installato nel computer come passaggio aggiuntivo.
@@ -42,7 +42,7 @@ Se in esecuzione come amministratore e per installare il modulo per tutti gli ut
 
 > Install-Module -Name SqlServer -AllowClobber
 
-Se non è possibile l'esecuzione come amministratore o per installare solo per l'utente corrente
+Se non è possibile l'esecuzione come amministratore o per eseguire l'installazione solo per l'utente corrente
 
 > Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
 

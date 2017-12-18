@@ -1,40 +1,40 @@
 ---
-title: Completare la procedura guidata (SQL Server importazione / esportazione guidata) | Documenti Microsoft
+title: Completamento procedura guidata (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.completewizard.f1
+f1_keywords: sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c2592ac0539b2cd693e4aef48d7652c7970ec71c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b06adc095408d010acc2008352447a2ee48d8f67
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Completamento procedura guidata (Importazione/Esportazione guidata SQL Server)
-Dopo aver specificato se si desidera eseguire immediatamente l'operazione di copia e dopo il salvataggio, facoltativamente, il pacchetto che ha creata la procedura guidata, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata mostra **completare la procedura guidata**. In questa pagina è possibile rivedere le scelte effettuate nella procedura guidata e quindi scegliere **Fine** per avviare l'operazione di copia.
+Dopo aver specificato se si vuole eseguire immediatamente l'operazione di copia e, facoltativamente, dopo aver salvato il pacchetto creato dalla procedura guidata, Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Completamento procedura guidata**. In questa pagina è possibile rivedere le scelte effettuate nella procedura guidata e quindi scegliere **Fine** per avviare l'operazione di copia.
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>Screenshot della pagina Completamento procedura guidata 
- La schermata seguente illustra un semplice esempio del **completare la procedura guidata** pagina della procedura guidata.  
+ La schermata seguente mostra un semplice esempio della pagina **Completamento procedura guidata** della procedura guidata.  
   
- ![Completare la pagina della procedura guidata di importazione / esportazione guidata](../../integration-services/import-export-data/media/complete.png "completare pagina della procedura guidata di importazione / esportazione guidata")  
+ ![Pagina Completamento procedura guidata dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/complete.png "Pagina Completamento procedura guidata dell'Importazione/Esportazione guidata")  
   
 ## <a name="review-the-options-you-selected"></a>Rivedere le opzioni selezionate  
  
-Esaminare il riepilogo e verificare le informazioni seguenti:  
+Rivedere il riepilogo e verificare le informazioni seguenti:  
 -   L'origine e la destinazione dei dati da copiare.
 -   I dati da copiare.
 -   Se il pacchetto verrà salvato o meno.
@@ -45,5 +45,4 @@ Esaminare il riepilogo e verificare le informazioni seguenti:
  
 ## <a name="see-also"></a>Vedere anche
 [Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 

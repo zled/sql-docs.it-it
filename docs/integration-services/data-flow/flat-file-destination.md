@@ -1,12 +1,14 @@
 ---
-title: Destinazione File flat | Documenti Microsoft
+title: Destinazione file flat | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,19 +21,18 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c7112381911e783e86db2504e3ec12b321be4905
-ms.contentlocale: it-it
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 14de99532df85ad2d65d28bdeeccfcbd8fa3d039
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="flat-file-destination"></a>file flat - destinazione
+# <a name="flat-file-destination"></a>Destinazione file flat
   La destinazione file flat scrive dati in un file di testo che può essere in formato delimitato, a larghezza fissa, a larghezza fissa con delimitatore di riga o non allineato a destra.  
   
  Per configurare la destinazione file flat, procedere nel modo seguente:  
@@ -92,7 +93,7 @@ ms.lasthandoff: 08/17/2017
  Consente di visualizzare l'elenco delle colonne di destinazione disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di destinazione disponibili e le colonne di input.  
   
  **Colonna di input**  
- Consente di visualizzare le colonne di input selezionate più indietro in questo argomento. È possibile modificare i mapping utilizzando l'elenco **Colonne di input disponibili**. Selezionare  **\<ignorare >** per escludere la colonna dall'output.  
+ Consente di visualizzare le colonne di input selezionate più indietro in questo argomento. È possibile modificare i mapping utilizzando l'elenco **Colonne di input disponibili**. Selezionare **\<ignora>** per escludere la colonna dall'output.  
   
  **Colonna di destinazione**  
  Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che siano mappate o meno.  
@@ -102,4 +103,3 @@ ms.lasthandoff: 08/17/2017
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)  
   
   
-

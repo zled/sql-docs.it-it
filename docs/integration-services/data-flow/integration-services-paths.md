@@ -1,12 +1,14 @@
 ---
-title: Percorsi in Integration Services | Documenti Microsoft
+title: Percorsi in Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 541c8faa4c878922411680646f3fa7a557eefe0f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 388a88d1f9a7ad6b18b2f04a702d2198c644e4fe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-paths"></a>Percorsi in Integration Services
   Un percorso collega due componenti in un flusso di dati connettendo l'output di un componente all'input dell'altro. Un percorso ha un'origine e una destinazione. Se un percorso connette, ad esempio, un'origine OLE DB e una trasformazione Ordinamento, l'origine OLE DB costituirà l'origine del percorso e la trasformazione Ordinamento ne costituirà la destinazione. L'origine è il componente da cui inizia il percorso, mentre la destinazione è il componente in cui termina.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 09/26/2017
   
  I metadati indicano il nome, il tipo di dati, la precisione, la scala, la lunghezza, la tabella codici e il componente di origine di ogni colonna nell'output del componente precedente. Il componente di origine è il componente del flusso di dati che ha creato la colonna e può anche non essere il primo componente nel flusso di dati. Le trasformazioni Unione input multipli e Ordinamento, ad esempio, creano proprie colonne e costituiscono pertanto l'origine delle relative colonne di output. La trasformazione Copia colonna, invece, può passare colonne senza modificarle oppure creare nuove colonne copiando le colonne di input. La trasformazione Copia colonna costituisce il componente di origine solo per le nuove colonne.  
 
-## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>Impostare le proprietà di un percorso con i dati Editor percorso flusso di
+## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>Impostare le proprietà di un percorso tramite l'Editor percorso flusso di dati
 I percorsi connettono due componenti flusso di dati. Affinché sia possibile impostare le proprietà di un percorso, il flusso di dati deve contenere almeno due componenti connessi.
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
@@ -61,7 +62,7 @@ I percorsi connettono due componenti flusso di dati. Affinché sia possibile imp
   
 6.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
 
-## <a name="general-page---data-flow-path-editor"></a>Pagina generale - Editor percorso flusso di dati
+## <a name="general-page---data-flow-path-editor"></a>Pagina Generale - Editor percorso flusso di dati
 Utilizzare la finestra di dialogo **Editor percorso flusso di dati** per impostare le proprietà del percorso, visualizzare i metadati delle colonne e gestire i visualizzatori di dati collegati al percorso.  
   
  Utilizzare il nodo **Generale** della finestra di dialogo **Editor percorso flusso di dati** per assegnare un nome e una descrizione al percorso e per specificare le opzioni relative all'annotazione del percorso.  
@@ -88,7 +89,7 @@ Utilizzare la finestra di dialogo **Editor percorso flusso di dati** per imposta
  **SourceName**  
  Indica l'output che corrisponde all'inizio del percorso.  
  
-## <a name="metadata-page---data-flow-path-editor"></a>Pagina metadati - Editor percorso flusso di dati
+## <a name="metadata-page---data-flow-path-editor"></a>Pagina Metadati - Editor percorso flusso di dati
 Utilizzare la pagina **Metadati** della finestra di dialogo **Editor percorso flusso di dati** per visualizzare i metadati delle colonne percorso.  
   
 ### <a name="options"></a>Opzioni  
@@ -128,7 +129,7 @@ Utilizzare la pagina **Metadati** della finestra di dialogo **Editor percorso fl
  **Copia negli Appunti**  
  Consente di copiare i metadati della colonna negli Appunti. Per impostazione predefinita, tutte le righe di metadati vengono copiate nell'ordine in cui sono attualmente visualizzate.  
  
-## <a name="data-viewers-page---data-flow-path-editor"></a>Pagina visualizzatori dati - Editor percorso flusso di dati
+## <a name="data-viewers-page---data-flow-path-editor"></a>Pagina Visualizzatori dati - Editor percorso flusso di dati
 Utilizzare la pagina **Visualizzatori dati** della finestra di dialogo **Editor percorso flusso di dati** per gestire i visualizzatori di dati associati al percorso.  
   
 ### <a name="options"></a>Opzioni  
@@ -152,7 +153,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  In questo argomento vengono elencate e descritte le proprietà personalizzate dei percorsi che connettono gli oggetti del flusso di dati.  
   
-### <a name="custom-properties-of-a-path"></a>Proprietà personalizzate di un tracciato  
+### <a name="custom-properties-of-a-path"></a>Proprietà personalizzate di un percorso  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] un percorso che connette componenti nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100>.  
   
  Nella tabella seguente vengono descritte le proprietà configurabili dei percorsi in un flusso di dati. Inoltre, il motore del flusso di dati assegna valori a proprietà di sola lettura aggiuntive che non sono elencate qui.  
@@ -162,4 +163,3 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |PathAnnotation|Integer (enumerazione)|Un valore che indica se un'annotazione deve essere visualizzata con il percorso sulla superficie dell'area di progettazione. I valori possibili sono **AsNeeded**, **SourceName**, **PathName**e **Never**. Il valore predefinito è **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|L'input associato al percorso.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|L'output associato al percorso.|  
-

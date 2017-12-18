@@ -1,31 +1,31 @@
 ---
-title: Sviluppo di un'interfaccia utente per una gestione connessione personalizzata | Documenti Microsoft
+title: Sviluppo di un'interfaccia utente per una gestione connessione personalizzata | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c66c5410f38532c80a631cb190f248f7c5377bd5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 267313c3cc0c6d12f290088832ad908bf53dd980
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Sviluppo di un'interfaccia utente per una gestione connessione personalizzata
   Dopo aver eseguito l'override dell'implementazione delle proprietà e dei metodi della classe di base per fornire la funzionalità personalizzata, è possibile creare un'interfaccia utente personalizzata per la gestione connessione. Se non si crea un'interfaccia utente personalizzata, gli utenti possono configurare la gestione connessione solo utilizzando la finestra delle proprietà.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/03/2017
  In un progetto o assembly di interfaccia utente personalizzata sono in genere incluse due classi: una classe che implementa l'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> e il Windows Form che quest'ultimo visualizza per raccogliere informazioni dall'utente.  
   
 > [!IMPORTANT]  
->  Dopo la firma e la creazione di un'interfaccia utente personalizzata e installarlo nella global assembly cache, come descritto in [codifica di una gestione connessione personalizzata](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md), ricordarsi di specificare il nome completo di questa classe nella <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> proprietà del <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  
+>  Dopo aver firmato, compilato e installato l'interfaccia utente nella Global Assembly Cache, come descritto in [Scrittura del codice di una gestione connessione personalizzata](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md), specificare il nome completo di questa classe nella proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> dell'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  
   
 > [!NOTE]  
 >  La maggior parte delle attività, delle origini e delle destinazioni incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] funziona solo con tipi specifici di gestioni connessioni predefinite. Questi esempi, pertanto, non possono essere testati con le attività e i componenti predefiniti.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/03/2017
 >  Può non essere necessario scrivere codice per il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A> se non è richiesta alcuna pulizia quando l'utente elimina un'istanza della gestione connessione.  
   
 ### <a name="initializing-the-user-interface"></a>Inizializzazione dell'interfaccia utente  
- Nel metodo <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A> la finestra di progettazione fornisce un riferimento alla gestione connessione configurata, in modo che la classe dell'interfaccia utente possa modificarne le proprietà. Come illustrato nel codice seguente, il codice deve memorizzare nella cache il riferimento per la connessione di managerfor utilizzare in un secondo momento.  
+ Nel metodo <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A> la finestra di progettazione fornisce un riferimento alla gestione connessione configurata, in modo che la classe dell'interfaccia utente possa modificarne le proprietà. Come illustrato nel codice seguente, il codice deve memorizzare nella cache il riferimento alla gestione connessione per un uso successivo.  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As Microsoft.SqlServer.Dts.Runtime.ConnectionManager, ByVal serviceProvider As System.IServiceProvider) Implements Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize  
@@ -167,7 +167,7 @@ public bool Edit(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSe
  Dopo aver creato la classe dell'interfaccia utente che implementa i metodi dell'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>, è necessario creare un Windows Form in cui l'utente possa configurare le proprietà della gestione connessione.  
   
 ### <a name="initializing-the-user-interface-form"></a>Inizializzazione del form dell'interfaccia utente  
- Quando si visualizza il form personalizzato per la modifica, è possibile passare un riferimento alla gestione connessione da modificare. È possibile passare questo riferimento tramite un costruttore personalizzato per la classe del form oppure creando un proprio **inizializzare** metodo come illustrato di seguito.  
+ Quando si visualizza il form personalizzato per la modifica, è possibile passare un riferimento alla gestione connessione da modificare. È possibile passare questo riferimento tramite un costruttore personalizzato per la classe del form oppure creando un metodo **Initialize** personalizzato come illustrato di seguito.  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As ConnectionManager, ByVal serviceProvider As IServiceProvider)  
@@ -293,7 +293,6 @@ private void ConfigureControlsFromConnectionManager()
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di una gestione connessione personalizzata](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
- [Codifica una gestione connessione personalizzata](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
+ [Scrittura del codice di una gestione connessione personalizzata](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
   
   
-

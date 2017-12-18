@@ -1,41 +1,40 @@
 ---
-title: Codifica un enumeratore Foreach personalizzato | Documenti Microsoft
+title: Scrittura del codice di un enumeratore Foreach personalizzato | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom foreach enumerators [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom foreach enumerators [Integration Services], coding
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 74e6e838c3dcfb18e52a8fbf460a5b71ee25399a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a7b4e876198c38de3b6ead93e3b4c78a08615f6c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>Scrittura del codice di un enumeratore Foreach personalizzato
   Dopo avere creato una classe che eredita dalla classe di base <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator> e avere applicato l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> alla classe, è necessario eseguire l'override dell'implementazione delle proprietà e dei metodi della classe di base per fornire la funzionalità personalizzata.  
   
- Per un esempio reale di enumeratore personalizzato, vedere [lo sviluppo di un'interfaccia utente per un enumeratore ForEach personalizzato](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md).  
+ Per un esempio reale di enumeratore personalizzato, vedere [Sviluppo di un'interfaccia utente per un enumeratore Foreach personalizzato](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md).  
   
 ## <a name="initializing-the-enumerator"></a>Inizializzazione dell'enumeratore  
  È possibile eseguire l'override del metodo <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.InitializeForEachEnumerator%2A> per memorizzare nella cache i riferimenti alle gestioni connessioni definite nel pacchetto e i riferimenti all'interfaccia degli eventi che è possibile utilizzare per generare errori, avvisi e messaggi informativi.  
   
 ## <a name="validating-the-enumerator"></a>Convalida dell'enumeratore  
- Eseguire l'override del metodo <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> per verificare che l'enumeratore sia configurato correttamente. Se il metodo restituisce **errore**, l'enumeratore e il pacchetto che contiene l'enumeratore non verranno eseguiti. L'implementazione di questo metodo è specifica di ogni enumeratore, ma se l'enumeratore si basa su oggetti <xref:Microsoft.SqlServer.Dts.Runtime.Variable> o <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, è necessario aggiungere codice per verificare che questi oggetti esistano nelle raccolte fornite al metodo.  
+ Eseguire l'override del metodo <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> per verificare che l'enumeratore sia configurato correttamente. Se il metodo restituisce **Failure**, l'enumeratore e il pacchetto che lo contiene non verranno eseguiti. L'implementazione di questo metodo è specifica di ogni enumeratore, ma se l'enumeratore si basa su oggetti <xref:Microsoft.SqlServer.Dts.Runtime.Variable> o <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, è necessario aggiungere codice per verificare che questi oggetti esistano nelle raccolte fornite al metodo.  
   
  Nell'esempio di codice seguente è illustrata un'implementazione di <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> che verifica una variabile specificata in una proprietà dell'enumeratore.  
   
@@ -116,7 +115,6 @@ End Function
  
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un enumeratore Foreach personalizzato](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)   
- [Sviluppo di un'interfaccia utente per un enumeratore ForEach personalizzato](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [Sviluppo di un'interfaccia utente per un enumeratore Foreach personalizzato](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   
-

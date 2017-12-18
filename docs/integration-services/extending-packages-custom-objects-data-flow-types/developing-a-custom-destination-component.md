@@ -1,16 +1,17 @@
 ---
-title: Sviluppo di un componente di destinazione personalizzato | Documenti Microsoft
+title: Sviluppo di un componente di destinazione personalizzato | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,30 +23,29 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], destination components
 - data flow components [Integration Services], destination components
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b579a17ba5095e3864148abaff75880da9fed108
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a95f24318503d8f76604bbcf683bc9ed79bd1ce0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-destination-component"></a>Sviluppo di un componente di destinazione personalizzato
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre agli sviluppatori la possibilità di scrivere componenti di destinazione personalizzati che possono connettersi e archiviare i dati in qualsiasi origine dati personalizzata. I componenti di destinazione personalizzati risultano utili quando è necessario connettersi a origini dati che non sono accessibili tramite uno dei componenti di destinazione disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre agli sviluppatori la possibilità di scrivere componenti di destinazione personalizzati in grado di connettersi a un'origine dati personalizzata e archiviarvi i dati. I componenti di destinazione personalizzati risultano utili quando è necessario connettersi a origini dati che non sono accessibili tramite uno dei componenti di destinazione disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  I componenti di destinazione includono uno o più input e nessun output. In fase di progettazione creano e configurano connessioni e leggono metadati di colonne dall'origine dati esterna. Durante l'esecuzione si connettono all'origine dati esterna e vi aggiungono le righe ricevute dai componenti a monte nel flusso di dati. Se l'origine dati esterna esiste prima dell'esecuzione del componente, il componente di destinazione deve anche assicurarsi che i tipi di dati delle colonne ricevute corrispondano ai tipi di dati delle colonne presenti nell'origine dati esterna.  
   
- In questa sezione viene descritto come sviluppare componenti di destinazione e vengono forniti esempi di codice per chiarire i concetti importanti. Per una panoramica generale dello sviluppo di componenti flusso di dati, vedere [lo sviluppo di un componente flusso di dati personalizzato](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
+ In questa sezione viene descritto come sviluppare componenti di destinazione e vengono forniti esempi di codice per chiarire i concetti importanti. Per una panoramica generale sullo sviluppo di componenti flusso dati, vedere [Sviluppo di un componente flusso di dati personalizzato](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="design-time"></a>Fase di progettazione  
  L'implementazione della funzionalità in fase di progettazione di un componente di destinazione implica la specifica di una connessione a un'origine dati esterna e la verifica che il componente sia correttamente configurato. Per definizione, un componente di destinazione include un input e possibilmente un output degli errori.  
   
 ### <a name="creating-the-component"></a>Creazione del componente  
- I componenti di destinazione si connettono a origini dati esterne tramite gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> definiti in un pacchetto. Il componente di destinazione indica il requisito per una gestione connessione per il [!INCLUDE[ssIS](../../includes/ssis-md.md)] progettazione e agli utenti del componente, aggiungendo un elemento per il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> insieme del <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Questa raccolta svolge due funzioni: indica innanzitutto a Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] la necessità di una gestione connessione, quindi, dopo che l'utente ha selezionato o creato una gestione connessione, mantiene un riferimento alla gestione connessione nel pacchetto utilizzato dal componente. Quando un <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> viene aggiunto alla raccolta, il **Editor avanzato** consente di visualizzare il **le proprietà di connessione** scheda, per richiedere all'utente di selezionare o creare una connessione nel pacchetto per l'utilizzo dal componente.  
+ I componenti di destinazione si connettono a origini dati esterne tramite gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> definiti in un pacchetto. Il componente di destinazione indica il proprio requisito di una gestione connessione a Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] e agli utenti del componente aggiungendo un elemento alla raccolta <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> di <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Questa raccolta svolge due funzioni: indica innanzitutto a Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] la necessità di una gestione connessione, quindi, dopo che l'utente ha selezionato o creato una gestione connessione, mantiene un riferimento alla gestione connessione nel pacchetto utilizzato dal componente. Quando un oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> viene aggiunto alla raccolta, in **Editor avanzato** viene visualizzata la scheda **Proprietà connessione**, in cui si richiede di selezionare o creare nel pacchetto una connessione che verrà usata dal componente.  
   
  Nell'esempio di codice seguente è illustrata un'implementazione di <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> che aggiunge un input, quindi aggiunge un oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>.  
   
@@ -171,9 +171,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>Convalida del componente  
- Gli sviluppatori di componenti di destinazione devono eseguire la convalida, come descritto in [componente convalida](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md). Devono inoltre verificare che le proprietà del tipo di dati delle colonne definite nella raccolta di colonne di input del componente corrispondano alle colonne nell'origine dati esterna. A volte, la verifica delle colonne di input rispetto all'origine dati esterna può essere impossibile o indesiderata, ad esempio quando il componente o Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] è in uno stato disconnesso o quando i round trip al server non sono accettabili. In queste situazioni, le colonne nella raccolta di colonne di input possono comunque essere convalidate tramite <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> dell'oggetto di output.  
+ Gli sviluppatori di componenti di destinazione devono eseguire la convalida come descritto in [Convalida del componente](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md). Devono inoltre verificare che le proprietà del tipo di dati delle colonne definite nella raccolta di colonne di input del componente corrispondano alle colonne nell'origine dati esterna. A volte, la verifica delle colonne di input rispetto all'origine dati esterna può essere impossibile o indesiderata, ad esempio quando il componente o Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] è in uno stato disconnesso o quando i round trip al server non sono accettabili. In queste situazioni, le colonne nella raccolta di colonne di input possono comunque essere convalidate tramite <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> dell'oggetto di output.  
   
- Questa raccolta esiste sia negli oggetti di input che di output e deve essere popolata dallo sviluppatore di componenti dalle colonne dell'origine dati esterna. Questa raccolta può essere utilizzata per convalidare le colonne di input quando il [!INCLUDE[ssIS](../../includes/ssis-md.md)] finestra di progettazione è offline, quando il componente è disconnesso o quando il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> proprietà **false**.  
+ Questa raccolta esiste sia negli oggetti di input che di output e deve essere popolata dallo sviluppatore di componenti dalle colonne dell'origine dati esterna. È possibile usare questa raccolta per convalidare le colonne di input quando Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] è offline, quando il componente è disconnesso o quando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> è **false**.  
   
  Nel codice di esempio seguente viene aggiunta una colonna di metadati esterna basata su una colonna di input esistente.  
   
@@ -211,7 +211,7 @@ End Sub
 ```  
   
 ## <a name="run-time"></a>Fase di esecuzione  
- Durante l'esecuzione il componente di destinazione riceve una chiamata al metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> ogni volta che il componente a monte rende disponibile un oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> pieno. Questo metodo viene chiamato ripetutamente finché non sono non disponibili più alcun buffer e <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> proprietà **true**. Durante questo metodo, i componenti di destinazione leggono le colonne e le righe nel buffer e le aggiungono all'origine dati esterna.  
+ Durante l'esecuzione il componente di destinazione riceve una chiamata al metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> ogni volta che il componente a monte rende disponibile un oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> pieno. Questo metodo viene chiamato più volte finché non sono più disponibili buffer e la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> è **true**. Durante questo metodo, i componenti di destinazione leggono le colonne e le righe nel buffer e le aggiungono all'origine dati esterna.  
   
 ### <a name="locating-columns-in-the-buffer"></a>Individuazione di colonne nel buffer  
  Il buffer di input per un componente contiene tutte le colonne definite nelle raccolte di colonne di output dei componenti a monte del componente nel flusso di dati. Se ad esempio un componente di origine prevede tre colonne nel relativo output e il componente successivo aggiunge un'altra colonna di output, il buffer fornito al componente di destinazione contiene quattro colonne, anche se quest'ultimo ne scriverà solo due.  
@@ -490,7 +490,6 @@ End Namespace
   
 ## <a name="see-also"></a>Vedere anche  
  [Sviluppo di un componente di origine personalizzato](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   
- [Creazione di una destinazione con il componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [Creazione di una destinazione con il componente script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   
-

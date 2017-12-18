@@ -1,12 +1,14 @@
 ---
-title: Identificatori (SSIS) | Documenti Microsoft
+title: Identificatori (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc690b6318c3e9fea27fbbba74b1f1b7289a3d32
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 819dc582a8c30c4758399c3d7d07184a65b72b44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifiers-ssis"></a>Identificatori (SSIS)
   Nelle espressioni gli identificatori sono colonne e variabili disponibili per l'operazione. Le espressioni possono utilizzare identificatori regolari e qualificati.  
@@ -90,7 +91,7 @@ ms.lasthandoff: 08/03/2017
 >  Se nella notazione con punto entrambi gli elementi sono racchiusi da una coppia di parentesi quadre, l'analizzatore di espressioni interpreta la coppia come un identificatore unico, non come combinazione origine-colonna.  
   
 ## <a name="variables-in-expressions"></a>Variabili nelle espressioni  
- Quando in un'espressione viene fatto riferimento a una variabile, è necessario anteporre il prefisso @ al nome della variabile. Ad esempio, il **contatore** variabile fa riferimento tramite @Counter. Il carattere @ non fa parte del nome della variabile, ma consente all'analizzatore di espressioni di identificarla come tale. Se per compilare le espressioni si utilizzano le finestre di dialogo disponibili in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , il carattere @ verrà aggiunto automaticamente al nome della variabile. Non è consentito includere spazi tra il carattere @ e il nome della variabile.  
+ Quando in un'espressione viene fatto riferimento a una variabile, è necessario anteporre il prefisso @ al nome della variabile. Per fare riferimento alla variabile **Counter**, ad esempio, è necessario specificare @Counter. Il carattere @ non fa parte del nome della variabile, ma consente all'analizzatore di espressioni di identificarla come tale. Se per compilare le espressioni si utilizzano le finestre di dialogo disponibili in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , il carattere @ verrà aggiunto automaticamente al nome della variabile. Non è consentito includere spazi tra il carattere @ e il nome della variabile.  
   
  Per i nomi delle variabili valgono le stesse regole applicate agli altri identificatori regolari:  
   
@@ -129,4 +130,3 @@ ms.lasthandoff: 08/03/2017
  Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=746575)sul sito Web pragmaticworks.com  
   
   
-

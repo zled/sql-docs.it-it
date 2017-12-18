@@ -1,29 +1,30 @@
 ---
-title: Catalog. rename_folder (Database SSISDB) | Documenti Microsoft
+title: catalog.rename_folder (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8320f1a4d4fb08e206e2dcde2e5158b5dd0729aa
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8cc91bd37682f929d69f12185fa3646d972c31e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrenamefolder-ssisdb-database"></a>catalog.rename_folder (database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Rinomina una cartella nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -34,11 +35,11 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @old_name =] *vecchio_nome*  
- Nome originale della cartella. Il *vecchio_nome* è **nvarchar (128)**.  
+ [ @old_name = ] *old_name*  
+ Nome originale della cartella. *old_name* è di tipo **nvarchar(128)**.  
   
- [ @new_name =] *nuovo_nome*  
- Nuovo nome della cartella. Il *nuovo_nome* è **nvarchar (128)**.  
+ [ @new_name = ] *new_name*  
+ Nuovo nome della cartella. *new_name* è di tipo **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  Nessuno  
@@ -49,9 +50,9 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 ## <a name="permissions"></a>Permissions  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte alcune condizioni che possono generare un errore o un avviso:  
@@ -61,4 +62,3 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 -   Nome nuovo già utilizzato in una cartella esistente.  
   
   
-

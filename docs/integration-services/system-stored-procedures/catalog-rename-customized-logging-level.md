@@ -1,31 +1,32 @@
 ---
-title: Catalog.rename_customized_logging_level | Documenti Microsoft
+title: catalog.rename_customized_logging_level | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00c2cd8fa5f8423a7791d663d02aecbf27b8ab41
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 345b424bd4404af4cc2f52aee4fc9ce174aee983
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogrenamecustomizedlogginglevel"></a>Catalog.rename_customized_logging_level
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Rinomina un livello di registrazione personalizzato esistente. Per ulteriori informazioni sui livelli di registrazione personalizzati, vedere [Integration Services &#40; SSIS &#41; Registrazione](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Consente di rinominare un livello di registrazione personalizzato esistente. Per altre informazioni sui livelli di registrazione personalizzati, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,15 +36,15 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @old_name =] *vecchio_nome*  
- Il nome dell'oggetto esistente personalizzate a livello di registrazione da rinominare.  
+ [ @old_name = ] *old_name*  
+ Nome del livello di registrazione personalizzato esistente da rinominare.  
   
- Il *vecchio_nome* è **nvarchar (128)**.  
+ *old_name* è di tipo **nvarchar(128)**.  
   
- [ @new_name =] *nuovo_nome*  
- Il nuovo nome per il livello di registrazione personalizzato.  
+ [ @new_name = ] *new_name*  
+ Nuovo nome del livello di registrazione personalizzato specificato.  
   
- Il *nuovo_nome* è **nvarchar (128)**.  
+ *new_name* è di tipo **nvarchar(128)**.  
   
 ## <a name="remarks"></a>Osservazioni  
   
@@ -65,7 +66,6 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte le condizioni che causano la mancata riuscita della stored procedure.  
   
--   L'utente non dispone delle autorizzazioni necessarie.  
+-   L'utente non ha le autorizzazioni necessarie.  
   
   
-

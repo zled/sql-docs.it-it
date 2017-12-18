@@ -1,29 +1,30 @@
 ---
-title: Catalog. deny_permission (Database SSISDB) | Documenti Microsoft
+title: catalog.deny_permission (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 689a59e92286881fa3be7ee3754a786ccb54ae6c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5ba6cb8b0d185ce5c669fd33f563a9bb5754baa2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Viene negata un'autorizzazione su un oggetto a protezione diretta nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -37,17 +38,17 @@ catalog.deny_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @object_type =] *object_type*  
- Tipo di oggetto a protezione diretta. Tipi di oggetti a protezione diretta sono inclusi cartelle (`1`), progetti (`2`), ambiente (`3`) e l'operazione (`4`). Il *object_type* è **smallint***.*  
+ [ @object_type = ] *object_type*  
+ Tipo di oggetto a protezione diretta. Nei tipi di oggetti a protezione diretta sono inclusi cartelle (`1`), progetti (`2`), ambienti (`3`) e operazioni (`4`). *object_type* è di tipo **smallint***.*  
   
- [ @object_id =] *object_id*  
- Identificatore (ID) univoco o chiave primaria dell'oggetto a protezione diretta. Il *object_id* è **bigint**.  
+ [ @object_id = ] *object_id*  
+ Identificatore (ID) univoco o chiave primaria dell'oggetto a protezione diretta. *object_id* è di tipo **bigint**.  
   
- [ @principal_id =] *principal_id*  
- ID dell'entità a cui deve essere negata l'autorizzazione. Il *principal_id* è **int**.  
+ [ @principal_id = ] *principal_id*  
+ ID dell'entità a cui deve essere negata l'autorizzazione. *principal_id* è di tipo **int**.  
   
- [ @permission_type =] *permission_type*  
- Tipo di autorizzazione che deve essere negata. Il *permission_type* è **smallint**.  
+ [ @permission_type = ] *permission_type*  
+ Tipo di autorizzazione che deve essere negata. *permission_type* è di tipo **smallint**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo)  
@@ -56,9 +57,9 @@ catalog.deny_permission [ @object_type = ] object_type
   
  2 (object_id non esiste)  
   
- 3 (entità non esiste)  
+ 3 (principal non esiste)  
   
- 4 (autorizzazione non è valida)  
+ 4 (permission non è valido)  
   
  5 (altro errore)  
   
@@ -70,9 +71,9 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   Autorizzazione MANAGE_PERMISSIONS sull'oggetto  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 ## <a name="remarks"></a>Osservazioni  
  Questa stored procedure consente all'utente di negare i tipi di autorizzazione descritti nella tabella seguente:  
@@ -92,9 +93,8 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte alcune condizioni che possono generare un errore o un avviso:  
   
--   Se permission_type viene specificato, la routine viene negata l'autorizzazione specificata assegnata in modo esplicito all'entità specificata per l'oggetto specificato. Anche se non esiste nessuna di tali istanze, tramite la routine viene restituito ancora un valore di codice con esito positivo (`0`).  
+-   Se viene specificato permission_type, la routine nega l'autorizzazione specificata assegnata in modo esplicito all'entità indicata per l'oggetto specificato. Anche se non esiste nessuna di tali istanze, tramite la routine viene restituito ancora un valore di codice con esito positivo (`0`).  
   
--   Se permission_type viene omesso, la routine vengono negate tutte le autorizzazioni per l'entità specificata all'oggetto specificato.  
+-   Se permission_type viene omesso, la routine nega tutte le autorizzazioni per l'entità indicata sull'oggetto specificato.  
   
   
-

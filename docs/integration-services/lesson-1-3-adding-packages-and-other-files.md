@@ -1,30 +1,30 @@
 ---
-title: 'Passaggio 3: Aggiunta di pacchetti e altri file | Documenti Microsoft'
+title: 'Passaggio 3: Aggiunta di pacchetti e altri file | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f8cf4eedc8930492e28f41cee67f0c25a382bacd
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 43f5f8e693aac51bee20a4ca7b29a5cb0676cf92
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-3---adding-packages-and-other-files"></a>Lezione 1-3 - aggiunta di pacchetti e altri file
+# <a name="lesson-1-3---adding-packages-and-other-files"></a>Lezione 1-3 - Aggiunta di pacchetti e altri file
 In questa attività verranno aggiunti i pacchetti esistenti, i file ausiliari di supporto a singoli pacchetti e un file Leggimi relativo al progetto Deployment Tutorial creato nell'attività precedente. Verrò aggiunto ad esempio un file di dati XML contenente i dati relativi a un pacchetto e un file di testo che include informazioni su tutti i pacchetti del progetto.  
   
 Quando si distribuiscono i pacchetti in un ambiente di test o produzione, non si includono in genere i file di dati, ma si utilizzano invece le configurazioni per l'aggiornamento dei percorsi delle origini dei dati in modo da poter accedere a versioni di test o produzione dei database o dei file di dati. Questa esercitazione include file di dati nella distribuzione dei pacchetti allo scopo di fornire istruzioni.  
@@ -79,4 +79,3 @@ Nell'attività successiva si procederà all'aggiunta delle configurazioni per i 
   
   
   
-

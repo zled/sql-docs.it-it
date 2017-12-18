@@ -1,10 +1,12 @@
 ---
 title: Scenari d'uso dell'archivio query | Microsoft Docs
-ms.custom: SQL2016_New_Updated
-ms.date: 04/12/2016
-ms.prod: sql-server-2016
+ms.custom: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b348f8b2eb093607753446095b804b71085ba4f9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0c996f85f6c487874f1d5bc5e4839b1ea2a9c618
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-store-usage-scenarios"></a>Scenari di utilizzo dell'Archivio query
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Archivio query può essere usato in diversi scenari in cui è fondamentale rilevare e garantire prestazioni prevedibili del carico di lavoro. Di seguito sono riportati alcuni esempi:  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Passare al livello di compatibilità più recente: esporre il carico di lavoro alle modifiche più recenti di Query Optimizer e consentire la possibilità di creare nuovi piani.  
   
-5.  Usare Query Store per le correzioni di analisi e regressioni: nella maggior parte dei casi, le nuove modifiche di Query Optimizer genereranno piani migliori. Query Store offre comunque un modo semplice per identificare le regressioni di scelta del piano e risolverle usando un meccanismo che forza il piano.  
+5.  Usare Query Store per le correzioni di analisi e regressioni: nella maggior parte dei casi, le nuove modifiche di Query Optimizer genereranno piani migliori. Query Store offre comunque un modo semplice per identificare le regressioni di scelta del piano e risolverle usando un meccanismo che forza il piano. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)],quando si usa la funzionalità di [correzione automatica del piano](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) questo passaggio è automatico.  
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Identificare e migliorare i carichi di lavoro ad hoc  
  Alcuni carichi di lavoro non includono query dominanti che è possibile ottimizzare per migliorare le prestazioni complessive dell'applicazione. In genere, questi carichi di lavoro sono caratterizzati da un numero relativamente elevato di query diverse, ognuna delle quali utilizza una parte delle risorse di sistema. Essendo univoche, queste query vengono eseguite raramente, (di solito una sola volta, quindi si consiglia di assegnare un nome ad hoc), di conseguenza il consumo di runtime non è critico. D'altra parte, dato che l'applicazione genera continuamente nuove query, una parte significativa delle risorse di sistema viene impiegata per la compilazione di query, il che non rappresenta uno scenario ottimale. Questa situazione non è ideale per Archivio query perché un numero elevato di query e piani ne occupa lo spazio riservato e causa probabilmente il passaggio in tempi molto rapidi alla modalità di sola lettura di Archivio query. Se è attivato **Modalità di pulizia basata sulle dimensioni** , un'opzione[fortemente consigliata](best-practice-with-the-query-store.md) per mantenere Archivio query sempre attivo e in esecuzione, il processo in background esegue costantemente la pulizia delle strutture di Archivio query assorbendo molto spesso notevoli risorse di sistema.  

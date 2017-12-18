@@ -1,24 +1,26 @@
 ---
-title: "SQL Server Integration Services (SSIS) scalabilità Master | Documenti Microsoft"
+title: "Master di scalabilità orizzontale di SQL Server Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1672c015186998065b5d6dc95897147aa11d14ec
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 07cd19a5e7a53e824d2bed3a2e2943efd7ef867b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Master di scalabilità orizzontale di Integration Services (SSIS)
 Il master di scalabilità orizzontale gestisce il sistema di scalabilità orizzontale tramite il catalogo SSISDB e il servizio Master di scalabilità orizzontale. 
@@ -27,7 +29,7 @@ Il catalogo SSISDB archivia tutte le informazioni relative ai ruoli di lavoro di
 
 Master di scalabilità orizzontale è un servizio Windows responsabile della comunicazione con ruoli di lavoro di scalabilità orizzontale. Scambia lo stato delle esecuzioni del pacchetto con i ruoli di lavoro di scalabilità orizzontale tramite HTTPS e agisce sui dati in SSISDB. 
 
-## <a name="scale-out-related-sql-views-and-stored-procedures-in-ssisdb"></a>Orizzontale relative viste SQL e stored procedure nel database SSISDB
+## <a name="scale-out-related-sql-views-and-stored-procedures-in-ssisdb"></a>Viste di SQL relative al servizio di scalabilità orizzontale e stored procedure in SSISDB
 
 #### <a name="views"></a>Viste:
 [[catalog].[master_properties]](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md), [[catalog].[worker_agents]](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md).
@@ -47,14 +49,13 @@ Configurazione  |Descrizione  |Valore predefinito
 ---------|---------|---------
 PortNumber|Numero di porta di rete usato per comunicare con un ruolo di lavoro di scalabilità orizzontale.|8391         
 SSLCertThumbprint|Identificazione personale del certificato SSL usato per proteggere la comunicazione con un ruolo di lavoro di scalabilità orizzontale.|Identificazione personale del certificato SSL specificato durante l'installazione del master di scalabilità orizzontale.         
-SqlServerName|Il nome del [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] che contiene il catalogo SSISDB. Ad esempio, ServerName\\\\NomeIstanza.|Il nome del Server SQL che viene installato con la scala Out Master.         
+SqlServerName|Nome dell'istanza di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] contenente il catalogo SSISDB. Ad esempio, NomeServer\\\\NomeIstanza.|Nome dell'istanza di SQL Server installata con il master di scalabilità orizzontale.         
 CleanupCompletedJobsIntervalInMs|Intervallo per l'eliminazione dei processi di esecuzione completati, espresso in millisecondi.|43200000         
 DealWithExpiredTasksIntervalInMs|Intervallo per la gestione dei processi di esecuzione scaduti, espresso in millisecondi.|300000
 MasterHeartbeatIntervalInMs|Intervallo per l'heartbeat del master di scalabilità orizzontale, espresso in millisecondi. Specifica l'intervallo necessario al master di scalabilità orizzontale per l'aggiornamento del proprio stato in linea nel catalogo SSISDB.|30000
-SqlConnectionTimeoutInSecs|Il timeout di connessione SQL in secondi per la connessione al database SSISDB.|15        
+SqlConnectionTimeoutInSecs|Timeout della connessione SQL in secondi per la connessione a SSISDB.|15        
 
 ## <a name="view-scale-out-master-service-log"></a>Visualizzare il log del servizio Master di scalabilità orizzontale
-Il file di log di servizio scala Out Master si trova nel \<driver\>: \Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Master percorso della cartella. 
+Il file di log del servizio Master di scalabilità orizzontale è nel percorso della cartella \<unità\>: \Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Master. 
 
-Il *[account]* fa riferimento all'account del servizio scala Out Master. Per impostazione predefinita, l'account è SSISScaleOutMaster140.
-
+*[account]* è l'account che esegue il servizio Master di scalabilità orizzontale. Per impostazione predefinita, l'account è SSISScaleOutMaster140.

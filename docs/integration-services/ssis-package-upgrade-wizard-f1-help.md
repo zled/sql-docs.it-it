@@ -1,12 +1,14 @@
 ---
-title: Aggiornamento guidato F1 Guida del pacchetto SSIS | Documenti Microsoft
+title: Guida sensibile al contesto dell'Aggiornamento guidato pacchetti SSIS | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,20 +20,19 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0e9c1eccc9a14c580ba733fc3c4f63e88db92d60
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 01c6f66c5b72a320284034cf5e789d37cc265551
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Guida sensibile al contesto dell'Aggiornamento guidato pacchetti SSIS
-  Utilizzare l'aggiornamento guidato pacchetti SSIS per aggiornare i pacchetti creati nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] al formato dei pacchetti per la versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  Usare l'Aggiornamento guidato pacchetti SSIS per aggiornare i pacchetti creati in versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel formato della versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Per eseguire l'Aggiornamento guidato pacchetti SSIS**  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 09/26/2017
  **Non visualizzare più questa pagina**  
  Consente di evitare la visualizzazione della pagina introduttiva alla successiva apertura della procedura guidata.  
  
-## <a name="select-source-location-page"></a>Pagina di selezione della posizione di origine
+## <a name="select-source-location-page"></a>Pagina Seleziona posizione di origine
  Usare la pagina **Seleziona posizione di origine** per specificare l'origine da cui eseguire l'aggiornamento dei pacchetti.  
   
 > [!NOTE]  
@@ -87,19 +88,19 @@ ms.lasthandoff: 09/26/2017
  **Password**  
  Digitare la password usata dall'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la connessione al server.  
  
-## <a name="select-destination-location-page"></a>Pagina di selezione della posizione di destinazione
+## <a name="select-destination-location-page"></a>Pagina Seleziona posizione di destinazione
  Usare la pagina **Seleziona posizione di destinazione** per specificare la destinazione in cui salvare i pacchetti aggiornati.  
   
 > [!NOTE]  
 >  Tale pagina è disponibile solo quando si esegue l'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o dal prompt dei comandi.  
  
 ### <a name="static-options"></a>Opzioni statiche  
- **Salva nel percorso di origine**  
+ **Salva in posizione di origine**  
  Consente di salvare i pacchetti aggiornati nella stessa posizione specificata nella pagina **Seleziona posizione di origine** della procedura guidata.  
   
  Se i pacchetti originali sono archiviati nel file system e si desidera eseguire il backup dei pacchetti, selezionare l'opzione **Salva in posizione di origine** . Per altre informazioni, vedere [Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
- **Selezionare il nuovo percorso di destinazione**  
+ **Seleziona nuova posizione di destinazione**  
  Consente di salvare i pacchetti aggiornati nella posizione di destinazione specificata nella pagina.  
   
  **Origine pacchetto**  
@@ -139,7 +140,7 @@ ms.lasthandoff: 09/26/2017
  **Password**  
  Digitare la password da usare quando si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la connessione al server.  
  
-## <a name="select-package-management-options-page"></a>Selezionare la pagina di opzioni di gestione pacchetti
+## <a name="select-package-management-options-page"></a>Pagina Seleziona opzioni di gestione pacchetti
   Usare la pagina **Seleziona opzioni di gestione pacchetti** per specificare le opzioni per l'aggiornamento dei pacchetti.  
   
  **Per eseguire l'Aggiornamento guidato pacchetti SSIS**  
@@ -150,32 +151,32 @@ ms.lasthandoff: 09/26/2017
  **Aggiorna stringhe di connessione per l'uso di nuovi nomi di provider**  
  Consente di aggiornare le stringhe di connessione per utilizzare i nomi dei provider seguenti per la versione corrente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
   
--   Provider OLE DB per[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   Provider OLE DB per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
   
  L'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] consente di aggiornare solo le stringhe di connessione archiviate nelle gestioni connessione. Non vengono aggiornate le stringhe di connessione costruite dinamicamente utilizzando il linguaggio delle espressioni di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o il codice in un'attività Script.  
   
- **Convalidare i pacchetti di aggiornamento**  
+ **Convalida pacchetti di aggiornamento**  
  Consente di convalidare i pacchetti di aggiornamento e di salvare solo i pacchetti che superano la convalida.  
   
  Se non si seleziona questa opzione, i pacchetti di aggiornamento non verranno convalidati. Pertanto, verranno salvati tutti i pacchetti di aggiornamento, indipendentemente dalla loro validità. I pacchetti di aggiornamento vengono salvati nella destinazione specificata alla pagina **Seleziona posizione di destinazione** della procedura guidata.  
   
  La convalida influisce sulla durata del processo di aggiornamento. Si consiglia di non selezionare questa opzione per pacchetti grandi che probabilmente verranno aggiornati in modo corretto.  
   
- **Creare nuovi ID pacchetti**  
+ **Crea nuovi ID pacchetti**  
  Consente di creare nuovi ID per i pacchetti di aggiornamento.  
   
- **Continuare il processo di aggiornamento quando un aggiornamento del pacchetto ha esito negativo**  
+ **Continua aggiornamento in caso di mancato aggiornamento dei pacchetti**  
  Consente di specificare che quando un pacchetto non può essere aggiornato, l'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] continua ad aggiornare i pacchetti rimanenti.  
   
  **Conflitti di nome pacchetti**  
  Consente di specificare come vengono gestiti i pacchetti che hanno lo stesso nome. Per questa opzione sono disponibili i valori elencati nella tabella seguente.  
   
- **Sovrascrivere i file di pacchetto esistenti**  
+ **Sovrascrivi file di pacchetto esistenti**  
  Consente di sostituire il pacchetto esistente con il pacchetto di aggiornamento con lo stesso nome.  
   
- **Aggiungi suffissi numerici a nomi di pacchetto di aggiornamento**  
+ **Aggiungi suffissi numerici a nomi di pacchetti di aggiornamento**  
  Consente di aggiungere un suffisso numerico al nome del pacchetto di aggiornamento.  
   
  **Non aggiornare pacchetti**  
@@ -192,7 +193,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  Questa opzione è disponibile solo se si specifica che i pacchetti originali e i pacchetti aggiornati sono archiviati nel file system e nella stessa cartella.  
 
-## <a name="select-packages-page"></a>Selezionare la pagina di pacchetti
+## <a name="select-packages-page"></a>Pagina Seleziona pacchetti
   Utilizzare la pagina **Seleziona pacchetti** per selezionare i pacchetti da aggiornare. In questa pagina vengono elencati i pacchetti archiviati nel percorso specificato nella pagina **Seleziona posizione di origine** della procedura guidata.  
   
 ### <a name="options"></a>Opzioni  
@@ -211,18 +212,18 @@ ms.lasthandoff: 09/26/2017
  **Applica a selezione**  
  Consente di applicare la password specificata per decrittografare i pacchetti di aggiornamento selezionati.  
  
-## <a name="complete-the-wizard-page"></a>Completare la pagina della procedura guidata
+## <a name="complete-the-wizard-page"></a>Pagina Completamento procedura guidata
   Utilizzare la pagina **Completamento procedura guidata** per verificare e confermare le opzioni di aggiornamento del pacchetto selezionate. Si tratta dell'ultima pagina della procedura guidata. È possibile tornare alle pagine precedenti per modificare le opzioni per questa sessione della procedura guidata.  
   
 ### <a name="options"></a>Opzioni  
  **Riepilogo delle opzioni**  
  Rivedere le opzioni di aggiornamento selezionate nella procedura guidata. Per modificare un'opzione, fare clic su **Indietro** per tornare alle pagine precedenti della procedura guidata.
  
-## <a name="upgrading-the-packages-page"></a>L'aggiornamento della pagina di pacchetti
+## <a name="upgrading-the-packages-page"></a>Pagina Aggiornamento pacchetti
   Utilizzare la pagina **Aggiornamento pacchetti** per visualizzare lo stato dell'aggiornamento dei pacchetti e per interrompere l'aggiornamento. L'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] consente di aggiornare uno per uno i pacchetti selezionati.  
   
 ### <a name="options"></a>Opzioni  
- **Riquadro messaggio**  
+ **Riquadro Messaggio**  
  Consente di visualizzare messaggi di stato e informazioni di riepilogo durante il processo di aggiornamento.  
   
  **Azione**  
@@ -253,7 +254,7 @@ ms.lasthandoff: 09/26/2017
   
 In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], in Esplora oggetti connettersi a un'istanza locale di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], quindi espandere il nodo **Pacchetti archiviati** per visualizzare i pacchetti aggiornati.  
   
-### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>Visualizzare i pacchetti aggiornati che sono stati aggiornati da SQL Server Data Tools  
+### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>Visualizzare i pacchetti aggiornati da SQL Server Data Tools  
   
 In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Esplora soluzioni aprire il progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , quindi espandere il nodo **Pacchetti SSIS** per visualizzare i pacchetti aggiornati.  
   
@@ -261,4 +262,3 @@ In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Esplor
  [Aggiornare pacchetti di Integration Services](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   
-

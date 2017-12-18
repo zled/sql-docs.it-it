@@ -1,30 +1,30 @@
 ---
-title: 'Passaggio 2: Abilitare e configurare le configurazioni di pacchetto | Documenti Microsoft'
+title: 'Passaggio 2: Abilitazione e impostazione delle configurazioni dei pacchetti | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5cf47715b998a7f09b6d90772a2b456872eebed
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 333379e7f96322ae8212625a0f42a1018a189dd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lezione 5-2-Abilitazione e configurazione delle configurazioni dei pacchetti
+# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lezione 5-2 - Abilitazione e impostazione delle configurazioni dei pacchetti
 In questa attività si convertirà il progetto nel modello di distribuzione del pacchetto e si abiliteranno le configurazioni di pacchetto utilizzando la Configurazione guidata pacchetto. Questa procedura guidata consente di generare un file di configurazione XML contenente le impostazioni di configurazione per la proprietà **Directory** del contenitore Ciclo Foreach. Il valore della proprietà Directory è specificato da una variabile a livello di pacchetto che è possibile aggiornare in fase di esecuzione. Verrà inoltre popolata una cartella di dati di esempio da utilizzare durante il test.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Per creare una nuova variabile a livello di pacchetto associata alla proprietà Directory  
@@ -114,4 +114,3 @@ In questa attività si convertirà il progetto nel modello di distribuzione del 
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
 [Passaggio 3: Modifica del valore di configurazione della proprietà Directory](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
-

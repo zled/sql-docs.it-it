@@ -1,31 +1,32 @@
 ---
-title: create_execution_dump | Documenti Microsoft
+title: catalog.create_execution_dump | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b05e1b46845c0a2b5ee47b94dc239d79d4a12a17
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e8fc97f65fb17605393505c428b645994d3fd1da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Comporta la sospensione di un pacchetto in esecuzione e la creazione di un file di dump. Il file viene archiviato nel  *\<unità >*: cartella \Programmi\Microsoft SQL Server\130\Shared\ErrorDumps.  
+  Comporta la sospensione di un pacchetto in esecuzione e la creazione di un file di dump. Il file viene archiviato nella cartella *\<unità>*:\Programmi\Microsoft SQL Server\130\Shared\ErrorDumps.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,8 +36,8 @@ catalog.create_execution_dump [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @execution_id =] *valore di execution_id*  
- ID di esecuzione del pacchetto in esecuzione. Il *valore di execution_id* è **bigint**.  
+ [ @execution_id = ] *execution_id*  
+ ID di esecuzione del pacchetto in esecuzione. *execution_id* è di tipo **bigint**.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene richiesta la creazione di un file di dump per il pacchetto in esecuzione con ID esecuzione 88.  
@@ -54,7 +55,7 @@ EXEC create_execution_dump @execution_id = 88
  Nessuno  
   
 ## <a name="permissions"></a>Permissions  
- Questa stored procedure richiede agli utenti di essere membri del **ssis_admin** ruolo del database.  
+ Per questa stored procedure è necessario che gli utenti siano membri del ruolo del database **ssis_admin**.  
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte le condizioni che causano la mancata riuscita della stored procedure.  
@@ -69,4 +70,3 @@ EXEC create_execution_dump @execution_id = 88
  [Generazione di file di dump per l'esecuzione dei pacchetti](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

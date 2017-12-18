@@ -1,12 +1,14 @@
 ---
-title: Bilanciamento del carico dei pacchetti su server remoti tramite SQL Server Agent | Documenti Microsoft
+title: Bilanciamento del carico dei pacchetti su server remoti tramite SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c6226a4f0e91ac69b8355892d67c721325a1439b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e94e2a9341651198f556022e4cd20cb257b2c6ce
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Bilanciamento del carico dei pacchetti su server remoti tramite SQL Server Agent
   Quando è necessario eseguire numerosi pacchetti, è preferibile utilizzare altri server eventualmente disponibili. L'utilizzo di altri server per l'esecuzione di più pacchetti controllati da un unico pacchetto padre è detto bilanciamento del carico. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]il bilanciamento del carico è una procedura manuale che deve essere definita dai proprietari dei pacchetti. Il bilanciamento del carico non viene infatti eseguito automaticamente dai server. Inoltre, sui server remoti è possibile eseguire esclusivamente pacchetti interi, non singole attività in altri pacchetti.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="illustration-of-load-balancing"></a>Illustrazione del bilanciamento del carico  
  Nella figura seguente viene illustrato un pacchetto padre in un server. Il pacchetto padre contiene più attività Esegui processo di SQL Server Agent e ogni attività nel pacchetto padre chiama un processo di SQL Server Agent su un server remoto. Ogni server remoto contiene un processo di SQL Server Agent che include un passaggio in cui viene chiamato un pacchetto su tale server.  
   
- ![Panoramica dell'architettura di bilanciamento del carico SSIS](../../integration-services/packages/media/loadbalancingoverview.gif "architettura di bilanciamento del carico di panoramica di SSIS")  
+ ![Panoramica dell'architettura di bilanciamento del carico di SSIS](../../integration-services/packages/media/loadbalancingoverview.gif "Panoramica dell'architettura di bilanciamento del carico di SSIS")  
   
  I passaggi necessari per il bilanciamento del carico in questa architettura non sono concetti nuovi. Il bilanciamento del carico viene infatti ottenuto utilizzando in modo nuovo concetti esistenti e oggetti SSIS comuni.  
   
@@ -129,10 +130,9 @@ ms.lasthandoff: 08/03/2017
   
  Per visualizzare tutti i file di log, l'amministratore deve semplicemente accedere a un server e visualizzare il file di log per tutti i pacchetti figlio.  
   
- Per informazioni su come abilitare la registrazione in un pacchetto, vedere [la registrazione di Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Per informazioni su come abilitare la registrazione in un pacchetto, vedere [Registrazione di Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
 
 ## <a name="related-tasks"></a>Attività correlate  
  [Processi di SQL Server Agent per i pacchetti](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   
-

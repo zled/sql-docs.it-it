@@ -1,28 +1,28 @@
 ---
-title: "Opzioni di richiesta profilo criterio colonna (attività Profiling dati) | Documenti Microsoft"
+title: "Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
-ms.contentlocale: it-it
-ms.lasthandoff: 10/05/2017
-
+ms.openlocfilehash: f51bdacbe57674f10f2dc7ea1c20d1ab64b0c229
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni per la **Richiesta profilo Criteri di ricerca colonna** selezionata nel riquadro delle richieste. Un profilo Criteri di ricerca colonna segnala un set di espressioni regolari che analizzano la percentuale specificata di valori in una colonna stringa. Questo profilo consente di identificare eventuali problemi nei dati, ad esempio le stringhe non valide, e può indicare le possibili espressioni regolari da utilizzare in futuro per convalidare nuovi valori. Un profilo di criteri di ricerca di una colonna contenente i codici postali degli Stati Uniti, ad esempio, può generare le espressioni regolari \d{5}-\d{4}, \d{5} e \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 10/05/2017
   
 -   **Delimiters** Per impostazione predefinita, l'elenco dei delimitatori contiene i caratteri seguenti: spazio, tabulazione orizzontale (\t), nuova riga (\n) e ritorno a capo (\r). È possibile specificare delimitatori aggiuntivi, ma non è possibile rimuovere i delimitatori predefiniti.  
   
--   **Simboli** per impostazione predefinita, l'elenco di **simboli** contiene i seguenti caratteri: `,.;:-"'~=&/@!?()<>[]{}|#*^%` nonché il segno di graduazione. Se, ad esempio, i simboli sono "`()-`", il valore "(425) 123-4567" viene suddiviso in token come ["(", "425", ")", "123", "-", "4567", ")"].  
+-   **Symbols** Per impostazione predefinita, l'elenco **Symbols** contiene i caratteri seguenti: `,.;:-"'~=&/@!?()<>[]{}|#*^%`, oltre al segno di graduazione. Se, ad esempio, i simboli sono "`()-`", il valore "(425) 123-4567" viene suddiviso in token come ["(", "425", ")", "123", "-", "4567", ")"].  
   
  Un carattere non può essere simultaneamente un delimitatore e un simbolo.  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 10/05/2017
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   
  **Symbols**  
- Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e " @ " per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco di **simboli** contiene i seguenti caratteri: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
+ Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e "@" per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco **Symbols** contiene i caratteri seguenti: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   
@@ -149,7 +149,6 @@ ms.lasthandoff: 10/05/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor attività Profiling dati &#40;pagina Generale&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Form profilo rapido singola tabella &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Form profilo rapido singola tabella &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

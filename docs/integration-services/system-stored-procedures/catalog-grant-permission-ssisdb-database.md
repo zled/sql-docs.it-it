@@ -1,32 +1,33 @@
 ---
-title: Catalog. grant_permission (Database SSISDB) | Documenti Microsoft
+title: catalog.grant_permission (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 5f9bb38521631bcc60d39fba747f17b86183545d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: 6d9115186c35eaae94e36cc079753bbdbe798638
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Viene concessa un'autorizzazione su un oggetto a protezione diretta nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -40,17 +41,17 @@ catalog.grant_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @object_type =] *object_type*  
- Tipo di oggetto a protezione diretta. Tipi di oggetti a protezione diretta sono inclusi cartelle (`1`), progetti (`2`), ambiente (`3`) e l'operazione (`4`). Il *object_type* è **smallint***.*  
+ [ @object_type = ] *object_type*  
+ Tipo di oggetto a protezione diretta. Nei tipi di oggetti a protezione diretta sono inclusi cartelle (`1`), progetti (`2`), ambienti (`3`) e operazioni (`4`). *object_type* è di tipo **smallint***.*  
   
- [ @object_id =] *object_id*  
- Identificatore (ID) univoco dell'oggetto a protezione diretta. Il *object_id* è **bigint**.  
+ [ @object_id = ] *object_id*  
+ Identificatore (ID) univoco dell'oggetto a protezione diretta. *object_id* è di tipo **bigint**.  
   
- [ @principal_id =] *principal_id*  
- ID dell'entità a cui concedere l'autorizzazione. Il *principal_id* è **int**.  
+ [ @principal_id = ] *principal_id*  
+ ID dell'entità a cui concedere l'autorizzazione. *principal_id* è di tipo **int**.  
   
- [ @permission_type =] *permission_type*  
- Tipo di autorizzazione da concedere. Il *permission_type* è **smallint**.  
+ [ @permission_type = ] *permission_type*  
+ Tipo di autorizzazione da concedere. *permission_type* è di tipo **smallint**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo)  
@@ -59,9 +60,9 @@ catalog.grant_permission [ @object_type = ] object_type
   
  2 (object_id non esiste)  
   
- 3 (entità non esiste)  
+ 3 (principal non esiste)  
   
- 4 (autorizzazione non è valida)  
+ 4 (l'autorizzazione non è valida)  
   
  5 (altro errore)  
   
@@ -73,11 +74,11 @@ catalog.grant_permission [ @object_type = ] object_type
   
 -   Autorizzazioni ASSIGN_PERMISSIONS sull'oggetto  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
 
-Questa procedura può essere chiamata da account di accesso che sono state autenticate da SQL Server. Non può essere chiamato dall'account di accesso sa.
+Questa procedura non può essere chiamata tramite account di accesso autenticati con SQL Server. Non può essere chiamato tramite l'account di accesso sa.
   
 ## <a name="remarks"></a>Osservazioni  
  Questa stored procedure consente all'utente di concedere i tipi di autorizzazione descritti nella tabella seguente:  
@@ -98,4 +99,3 @@ Questa procedura può essere chiamata da account di accesso che sono state auten
  Per errori e avvisi relativi, vedere la sezione Valori di codice restituiti.  
   
   
-

@@ -1,30 +1,29 @@
 ---
-title: Aggiungi copia del pacchetto esistente | Documenti Microsoft
+title: Aggiungi copia del pacchetto esistente | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.addcopyexistingpackage.f1
-helpviewer_keywords:
-- Add Copy of Existing Package dialog box
+f1_keywords: sql13.dts.designer.addcopyexistingpackage.f1
+helpviewer_keywords: Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 95cf1faebe886981c272a71d54d84bc42b2a66f9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b2b0255236aee66b63318dca9a18cfbae54d7ed6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-copy-of-existing-package"></a>Aggiungi copia del pacchetto esistente
   Utilizzare la finestra di dialogo **Aggiungi copia del pacchetto esistente** per aggiungere una copia di un pacchetto archiviato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nel file system o nell'archivio pacchetti SSIS a un progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -50,8 +49,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Salva copia del pacchetto](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
- [Salvataggio di pacchetti](../integration-services/save-packages.md)   
+ [Salvare i pacchetti](../integration-services/save-packages.md)   
  [Servizio Integration Services &#40;servizio SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)
   
   
-

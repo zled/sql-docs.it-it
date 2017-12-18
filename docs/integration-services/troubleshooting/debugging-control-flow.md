@@ -1,16 +1,17 @@
 ---
-title: Debug del flusso di controllo | Documenti Microsoft
+title: Debug del flusso di controllo | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.setbreakpoints.f1
+f1_keywords: sql13.dts.designer.setbreakpoints.f1
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: dbf3a57ca87678aed1eac296b24e230d68db93b7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 3fbeb43740b012eb4af3b9bb38252a4e18006ba2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debugging-control-flow"></a>Debug del flusso di controllo
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi del flusso di controllo in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -103,7 +104,7 @@ ms.lasthandoff: 08/03/2017
   
  Il diagramma illustra la scheda **Stato** .  
   
- ![Scheda stato di progettazione SSIS](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "scheda stato di progettazione SSIS")  
+ ![Scheda Stato di Progettazione SSIS](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "Scheda Stato di Progettazione SSIS")  
   
 ## <a name="debug-windows"></a>Finestre di debug  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] include numerose finestre che è possibile usare per la gestione dei punti di interruzione e per il debug dei pacchetti contenenti punti di interruzione. Per ulteriori informazioni su una finestra specifica, aprirla e premere F1 per visualizzare l'argomento della Guida corrispondente.  
@@ -135,7 +136,7 @@ ms.lasthandoff: 08/03/2017
   
     -   Per impostare punti di interruzione in un gestore evento, nella scheda **Gestore evento** fare clic con il pulsante destro del mouse su un'attività o su un contenitore Ciclo For, Ciclo Foreach o Sequenza e quindi scegliere **Modifica punti di interruzione**.  
   
-4.  Nel **Imposta punti di interruzione \<nome contenitore >** finestra di dialogo, selezionare i punti di interruzione da abilitare.  
+4.  Nella finestra di dialogo **Imposta punti di interruzione \<nome contenitore>** selezionare i punti di interruzione da attivare.  
   
 5.  Facoltativamente, modificare il tipo di passaggi e il numero di passaggi per ogni punto di interruzione.  
   
@@ -165,6 +166,5 @@ ms.lasthandoff: 08/03/2017
  Consente di specificare il numero di passaggi al raggiungimento del quale attivare un'interruzione. Questa opzione non è disponibile se il punto di interruzione è sempre attivo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
+ [Strumenti per la risoluzione dei problemi relativi allo sviluppo dei pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [Eseguire il debug di uno script impostando punti di interruzione in un'attività e in un componente Script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   
-

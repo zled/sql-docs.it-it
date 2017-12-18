@@ -2,9 +2,12 @@
 title: 'Classe di evento TM: Rollback Tran Starting | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1dbcebdc0320932306f3b79d129df9180e69dd15
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 038491088438b768c0667fbde0416c151a3ca5a9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting - classe di evento
-  La classe di evento TM: Rollback Tran Starting indica l'avvio di una richiesta ROLLBACK TRANSACTION. La richiesta viene inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se una nuova transazione verrà avviata dopo il rollback della transazione corrente.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento TM: Rollback Tran Starting indica l'avvio di una richiesta ROLLBACK TRANSACTION. La richiesta viene inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se una nuova transazione verrà avviata dopo il rollback della transazione corrente.  
   
 ## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>Colonne di dati della classe di evento TM: Rollback Tran Starting  
   

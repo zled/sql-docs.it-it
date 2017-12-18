@@ -1,29 +1,30 @@
 ---
-title: Catalog. start_execution (Database SSISDB) | Documenti Microsoft
+title: catalog.start_execution (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
-ms.contentlocale: it-it
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: a09c765e61b71586802d31b31917644a0f336f0c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Viene avviata un'istanza di esecuzione nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -34,17 +35,17 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [@execution_id =] *valore di execution_id*  
- Identificatore univoco per l'istanza di esecuzione. Il *valore di execution_id* è **bigint**.
+ [@execution_id =] *execution_id*  
+ Identificatore univoco per l'istanza di esecuzione. *execution_id* è di tipo **bigint**.
  
- [@retry_count =] *conteggio_tentativi*  
- Il numero di tentativi se l'esecuzione ha esito negativo. Ha effetto solo se l'esecuzione è in orizzontale. Questo parametro è facoltativo. Se non specificato, il valore è impostato su 0. Il *conteggio_tentativi* è **int**.
+ [@retry_count =] *retry_count*  
+ Numero di tentativi in caso di esecuzione non riuscita. Ha effetto solo se l'esecuzione è in Scale Out. Questo parametro è facoltativo. Se non specificato, il valore viene impostato su 0. *retry_count* è di tipo **int**.
   
 ## <a name="remarks"></a>Osservazioni  
- Un'esecuzione viene utilizzata per specificare i valori di parametro che viene utilizzato da un pacchetto durante una singola istanza di esecuzione del pacchetto. Dopo che è stata creata un'istanza di esecuzione, prima che venga avviata, il progetto corrispondente potrebbe essere ridistribuito. In questo caso, l'istanza di esecuzione fa riferimento a un progetto che non è aggiornato. Questo riferimento non valido fa sì che la stored procedure per l'esito negativo.  
+ Un'esecuzione viene usata per specificare i valori del parametro usati da un pacchetto durante una singola istanza di esecuzione del pacchetto. Dopo che è stata creata un'istanza di esecuzione, prima che venga avviata, il progetto corrispondente potrebbe essere ridistribuito. In questo caso, l'istanza di esecuzione fa riferimento a un progetto obsoleto. Questo riferimento non valido impedisce il completamento della stored procedure.  
   
 > [!NOTE]  
->  Le esecuzioni possono essere avviate solo una volta. Per avviare un'istanza di esecuzione, deve essere nello stato di creazione (valore `1` nel **stato** colonna del [Catalog. Operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) Vista).  
+>  Le esecuzioni possono essere avviate solo una volta. Per avviare un'istanza di esecuzione, questa deve essere nello stato di creazione (valore `1` nella colonna **status** della vista [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene chiamato catalog.create_execution per creare un'istanza di esecuzione del pacchetto Child1.dtsx. Il pacchetto è incluso in Project1 di Integration Services. Nell'esempio viene chiamato catalog.set_execution_parameter_value per impostare i valori per i parametri Parameter1, Parameter2 e LOGGING_LEVEL. Inoltre viene chiamato catalog.start_execution per avviare un'istanza di esecuzione.  
@@ -74,9 +75,9 @@ GO
   
 -   Autorizzazioni READ e MODIFY sull'istanza di esecuzione, autorizzazioni READ e EXECUTE sul progetto e, se applicabile, autorizzazioni per la lettura sull'ambiente a cui si fa riferimento  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte alcune condizioni che possono generare un errore o un avviso:  
@@ -94,4 +95,3 @@ GO
 -   Versione del progetto associata all'istanza di esecuzione obsoleta. Può essere eseguita solo la versione più corrente di un progetto.  
   
   
-

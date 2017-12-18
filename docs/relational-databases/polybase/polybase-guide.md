@@ -1,9 +1,13 @@
 ---
 title: Guida a PolyBase | Microsoft Docs
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -22,16 +26,14 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f3413635f51d180135d94e9240769e7fc075f682
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f7ce518d2588e07ae90842f92a7e9ee47cfc5543
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="polybase-guide"></a>Guida a PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
-
-  PolyBase è una tecnologia che accede ai dati all'esterno del database tramite il linguaggio T-SQL.  In SQL Server 2016 questa tecnologia consente di eseguire query sui dati esterni in Hadoop o di importare/esportare dati da Archiviazione BLOB di Azure. Le query vengono ottimizzate per eseguire il push del calcolo in Hadoop. In Azure SQL Data Warehouse è possibile importare/esportare dati da Archiviazione BLOB di Azure e Azure Data Lake Store.
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase è una tecnologia che accede ai dati all'esterno del database tramite il linguaggio T-SQL.  In SQL Server 2016 questa tecnologia consente di eseguire query sui dati esterni in Hadoop o di importare/esportare dati da Archiviazione BLOB di Azure. Le query vengono ottimizzate per eseguire il push del calcolo in Hadoop. In Azure SQL Data Warehouse è possibile importare/esportare dati da Archiviazione BLOB di Azure e Azure Data Lake Store.
   
   
  Per usare PolyBase, vedere [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)(Introduzione a PolyBase).  

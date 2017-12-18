@@ -1,48 +1,48 @@
 ---
-title: Sviluppo di oggetti personalizzati per Integration Services | Documenti Microsoft
+title: Sviluppo di oggetti personalizzati per Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - custom user interface [Integration Services]
 - custom objects [Integration Services]
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6bbb7ccd5d65caa4b5c8cc8f28383b8100e09cd6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c44e3342fa9c15ecb9924c9fa64a4bc5163a484b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Sviluppo di oggetti personalizzati per Integration Services
-  Quando il flusso di controllo e flusso di dati gli oggetti inclusi con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non soddisfano completamente specifici requisiti, è possibile sviluppare molti tipi di oggetti personalizzati, tra:  
+  Quando gli oggetti del flusso di controllo e del flusso di dati inclusi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non soddisfano completamente specifici requisiti, è possibile sviluppare molti tipi di oggetti personalizzati, tra cui:  
   
 -   **Attività personalizzate**.  
   
--   **Gestioni connessioni personalizzate.** Consentono la connessione a origini dati esterne attualmente non supportate.  
+-   **Gestioni connessioni personalizzate**. Consentono la connessione a origini dati esterne attualmente non supportate.  
   
--   **Provider di log personalizzati.** Consentono di registrare eventi dei pacchetti in formati attualmente non supportati.  
+-   **Provider di log personalizzati**. Consentono di registrare eventi dei pacchetti in formati attualmente non supportati.  
   
--   **Enumeratori personalizzati.** Supportano l'iterazione in un set di oggetti o valori in formati attualmente non supportati.  
+-   **Enumeratori personalizzati**. Supportano l'iterazione in un set di oggetti o valori in formati attualmente non supportati.  
   
--   **Componenti del flusso di dati personalizzati.** Possono essere configurati come origini, trasformazioni o destinazioni.  
+-   **Componenti flusso di dati personalizzati**. Possono essere configurati come origini, trasformazioni o destinazioni.  
   
  Il modello a oggetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] facilita questo sviluppo personalizzato con classi di base che forniscono un framework coerente e affidabile per l'implementazione personalizzata.  
   
- Se non è necessario riutilizzare la funzionalità personalizzata in più pacchetti, l'attività Script e il componente script offrono tutte le funzionalità di un linguaggio di programmazione gestito con una quantità decisamente minore di codice dell'infrastruttura da scrivere Per ulteriori informazioni, vedere [confronto tra soluzioni di Scripting e oggetti personalizzati](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md).  
+ Se non è necessario riutilizzare la funzionalità personalizzata in più pacchetti, l'attività Script e il componente script offrono tutte le funzionalità di un linguaggio di programmazione gestito con una quantità decisamente minore di codice dell'infrastruttura da scrivere Per altre informazioni, vedere [Confronto tra soluzioni di scripting e oggetti personalizzati](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md).  
   
 ## <a name="steps-in-developing-a-custom-object-for-integration-services"></a>Passaggi per lo sviluppo di un oggetto personalizzato Integration Services  
  Quando si sviluppa un oggetto personalizzato per l'utilizzo in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], è necessario sviluppare una libreria di classi (DLL) che verrà caricata in fase di progettazione e di esecuzione da Progettazione SSIS e dal runtime di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. I metodi più importanti che è necessario implementare non sono quelli che lo sviluppatore chiama dal codice personalizzato, ma quelli chiamati dal runtime nei momenti appropriati per inizializzare e convalidare i componenti e richiamarne le funzionalità.  
@@ -59,9 +59,9 @@ ms.lasthandoff: 08/03/2017
   
 5.  Facoltativamente, compilare un'interfaccia utente personalizzata per il componente. Per agevolare la distribuzione, è possibile sviluppare l'interfaccia utente come progetto distinto nella stessa soluzione e compilarla come assembly distinto.  
   
-6.  Facoltativamente, visualizzare un collegamento a esempi e contenuto della Guida per l'oggetto personalizzato nel **casella degli strumenti SSIS**.  
+6.  Facoltativamente, visualizzare un collegamento a esempi e contenuto della Guida per l'oggetto personalizzato nella **Casella degli strumenti SSIS**.  
   
-7.  Compilare, distribuire ed eseguire il debug del nuovo oggetto personalizzato come descritto in [compilazione, distribuzione e debug di oggetti personalizzati](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
+7.  Compilare, distribuire ed eseguire il debug del nuovo oggetto personalizzato come descritto in [Compilazione, distribuzione e debug di oggetti personalizzati](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
   
 ## <a name="base-classes-attributes-and-important-methods"></a>Classi di base, attributi e metodi importanti  
  In questa tabella viene fornito un riferimento rapido agli elementi più importanti del modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per ogni tipo di oggetto personalizzato che è possibile sviluppare.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/03/2017
 |Componente del flusso di dati|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>|<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>|  
   
 ## <a name="providing-links-to-samples-and-help-content"></a>Collegamenti a esempi e contenuto della Guida  
- Per visualizzare un collegamento nel **casella degli strumenti SSIS** a esempi e contenuto della Guida per un oggetto personalizzato scritto in codice gestito, utilizzare le seguenti proprietà.  
+ Per visualizzare un collegamento nella **Casella degli strumenti SSIS** a esempi e contenuto della Guida per un oggetto personalizzato scritto in codice gestito, usare le proprietà seguenti.  
   
 -   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.SamplesTag%2A>  
   
@@ -101,25 +101,24 @@ ms.lasthandoff: 08/03/2017
  In un progetto o assembly di interfaccia utente personalizzata sono in genere incluse due classi: una classe che implementa un'interfaccia [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per le interfacce utente per il tipo specifico di oggetto personalizzato e il Windows Form che l'interfaccia visualizza per raccogliere informazioni dall'utente. Le interfacce che si implementano includono solo alcuni metodi e un'interfaccia utente personalizzata non è difficile da sviluppare.  
   
 > [!NOTE]  
->  Molti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] i provider di log hanno un'interfaccia utente personalizzata che implementa <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> e sostituisce il **configurazione** casella di testo con un elenco a discesa filtrato di gestioni connessioni disponibili. Tuttavia, le interfacce utente personalizzate per i provider di log personalizzati non sono implementate in questa versione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L'impostazione di un valore per la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> di <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> non ha alcun effetto.  
+>  Molti provider di log di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] hanno un'interfaccia utente personalizzata che implementa <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> e sostituisce la casella di testo **Configurazione** con un elenco a discesa filtrato di gestioni connessioni disponibili. Tuttavia, le interfacce utente personalizzate per i provider di log personalizzati non sono implementate in questa versione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L'impostazione di un valore per la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> di <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> non ha alcun effetto.  
   
- Nella tabella seguente viene fornito un riferimento rapido alle interfacce che è necessario implementare quando si sviluppa un'interfaccia utente personalizzata per ogni tipo di oggetto personalizzato. Viene inoltre spiegato quanto l'utente viene visualizzato se si sceglie di non sviluppare un'interfaccia utente personalizzata per l'oggetto, o se non è possibile collegare l'oggetto alla relativa interfaccia utente utilizzando il **UITypeName** proprietà nell'attributo dell'oggetto. Anche se il potente editor avanzato può essere soddisfacente per un componente del flusso di dati personalizzato, la finestra delle proprietà è una soluzione meno semplice da utilizzare per attività e gestioni connessioni e un enumeratore Foreach personalizzato non può essere configurato senza un form personalizzato.  
+ Nella tabella seguente viene fornito un riferimento rapido alle interfacce che è necessario implementare quando si sviluppa un'interfaccia utente personalizzata per ogni tipo di oggetto personalizzato. Viene inoltre illustrato ciò che l'utente visualizza se si sceglie di non sviluppare un'interfaccia utente personalizzata per l'oggetto oppure se l'oggetto non viene collegato alla relativa interfaccia utente tramite la proprietà **UITypeName** nell'attributo dell'oggetto. Anche se il potente editor avanzato può essere soddisfacente per un componente del flusso di dati personalizzato, la finestra delle proprietà è una soluzione meno semplice da utilizzare per attività e gestioni connessioni e un enumeratore Foreach personalizzato non può essere configurato senza un form personalizzato.  
   
 |Oggetto personalizzato|Classe di base per l'interfaccia utente|Comportamento di modifica predefinito senza un'interfaccia utente personalizzata|  
 |-------------------|-----------------------------------|----------------------------------------------------------------------|  
 |Attività|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Solo finestra delle proprietà|  
 |Gestione connessione|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>|Solo finestra delle proprietà|  
-|Provider di log|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> (non implementato in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)])|Casella di testo in **configurazione** colonna|  
+|Provider di log|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> (non implementato in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)])|Casella di testo nella colonna **Configurazione**|  
 |Enumeratore|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>|Solo finestra delle proprietà. L'area Configurazione enumeratore dell'editor è vuota.|  
 |Componente del flusso di dati|<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>|Editor avanzato|  
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Post di blog, [processo di compilazione di soluzioni di Visual Studio offrono un avviso sulla dipendenza indiretta dall'assembly di .NET Framework a causa di riferimenti SSIS](http://go.microsoft.com/fwlink/?LinkId=215662), su blogs.msdn.com.  
+-   Intervento nel blog, [Il processo di compilazione della soluzione per Visual Studio restituisce un avviso sulla dipendenza indiretta dall'assembly .NET Framework a causa dei riferimenti SSIS](http://go.microsoft.com/fwlink/?LinkId=215662), su blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Persistenza degli oggetti personalizzati](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
  [Compilazione, distribuzione e debug di oggetti personalizzati](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   
   
-

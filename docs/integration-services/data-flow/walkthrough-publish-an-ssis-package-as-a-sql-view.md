@@ -1,29 +1,28 @@
 ---
-title: 'Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL | Documenti Microsoft'
-ms.custom:
-- SQL2016_New_Updated
+title: 'Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL | Microsoft Docs'
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.packagepublishwizard.f1
+f1_keywords: sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: f0e5fa598ce47a95aafe11fd3f05c82eca79c064
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL
   Questa procedura dettagliata fornisce le informazioni necessarie per pubblicare un pacchetto SSIS come vista SQL in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -75,7 +74,7 @@ ms.lasthandoff: 09/27/2017
   
     5.  Configurare il componente per estrarre i dati dalla tabella **Dipendente** nel database **TestDB** . Selezionare **(locale).TestDB** per **Gestione connessione OLE DB**, **Tabella o vista** per **Modalità di accesso ai dati**e **[dbo].[Dipendente]** per **Nome tabella o vista**.  
   
-         ![Destinazione - connessione OLE DB flusso di dati](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "destinazione - connessione OLE DB flusso di dati")  
+         ![Destinazione flusso di dati - Connessione OLE DB](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Destinazione flusso di dati - Connessione OLE DB")  
   
 6.  Trascinare il componente **Destinazione flusso di dati** dalla casella degli strumenti nel flusso di dati. Questo componente si trova nella sezione Comune della casella degli strumenti.  
   
@@ -98,17 +97,17 @@ ms.lasthandoff: 09/27/2017
   
 2.  Fare clic su **Avanti** nella pagina **Introduzione** .  
   
-     ![Pubblicazione guidata - pagina Introduzione Feed di dati](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Feed di dati di pubblicazione guidata - pagina Introduzione")  
+     ![Pubblicazione guidata feed di dati - Pagina Introduzione](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Pubblicazione guidata feed di dati - Pagina Introduzione")  
   
 3.  Nella pagina **Impostazioni del pacchetto** effettuare le seguenti operazioni:  
   
     1.  Digitare il **nome** dell'istanza di SQL Server che contiene il catalogo SSIS o fare clic su **Sfoglia** per selezionare il server.  
   
-         ![Pubblicazione guidata - pagina Impostazioni pacchetto Feed di dati](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "pubblicazione guidata - pagina Impostazioni pacchetto Feed di dati")  
+         ![Pubblicazione guidata feed di dati - Pagina Impostazioni pacchetto](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Pubblicazione guidata feed di dati - Pagina Impostazioni pacchetto")  
   
     2.  Fare clic su **Sfoglia** accanto al campo Percorso, selezionare il catalogo SSIS, selezionare il pacchetto SSIS da pubblicare (ad esempio: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**) e quindi fare clic su **OK**.  
   
-         ![Data pubblicazione guidata Feed - Cerca pacchetto](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "dati pubblicazione guidata Feed - Cerca pacchetto")  
+         ![Pubblicazione guidata feed di dati - Cerca pacchetto](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Pubblicazione guidata feed di dati - Cerca pacchetto")  
   
     3.  Usando le schede Parametri del pacchetto, Parametri del progetto e Gestioni connessioni nella parte inferiore della pagina, immettere i valori per i parametri di pacchetto, i parametri del progetto o le impostazioni di gestione connessione per il pacchetto. È anche possibile indicare un riferimento all'ambiente da usare per l'esecuzione del pacchetto e associare i parametri di progetto o del pacchetto alle variabili di ambiente.  
   
@@ -120,7 +119,7 @@ ms.lasthandoff: 09/27/2017
   
     1.  Selezionare il **database** per la vista da creare.  
   
-         ![Data pubblicazione guidata di Feed - pagina Impostazioni di pubblicazione](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Feed di dati pubblicazione guidata - pagina Impostazioni di pubblicazione")  
+         ![Pubblicazione guidata feed di dati - Pagina Impostazioni di pubblicazione](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Pubblicazione guidata feed di dati - Pagina Impostazioni di pubblicazione")  
   
     2.  Digitare un **nome** per la **vista**. È anche possibile selezionare una vista esistente dall'elenco a discesa.  
   
@@ -142,7 +141,7 @@ ms.lasthandoff: 09/27/2017
   
 5.  Nella pagina **Convalida** esaminare i risultati della convalida dei valori per tutte le impostazioni. Nell'esempio seguente è visualizzato un **avviso** relativo all'esistenza del server collegato perché il server collegato non esiste nell'istanza di SQL Server selezionata. Se viene visualizzato **Errore** come **Risultato**, posizionare il mouse su **Errore** per visualizzare i relativi dettagli. Ad esempio, se non è stata abilitata l'opzione Consenti in-process per il provider SSISOLEDB, verrà visualizzato un errore relativo all'azione di configurazione del server collegato.  
   
-     ![Pubblicazione guidata - pagina convalida Feed di dati](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "pubblicazione guidata - pagina convalida Feed di dati")  
+     ![Pubblicazione guidata feed di dati - Pagina Convalida](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Pubblicazione guidata feed di dati - Pagina Convalida")  
   
 6.  Per salvare questo report come file XML, fare clic su Salva report.  
   
@@ -150,7 +149,7 @@ ms.lasthandoff: 09/27/2017
   
 8.  Verificare le selezioni nella pagina **Riepilogo** e fare clic su **Pubblica** per avviare il processo di pubblicazione, che creerà il server collegato se non esiste già nel server e quindi creare la vista usando il server collegato.  
   
-     ![Pubblicazione guidata - pagina Riepilogo Feed di dati](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "pubblicazione guidata - pagina Riepilogo Feed di dati")  
+     ![Pubblicazione guidata feed di dati - Pagina Riepilogo](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Pubblicazione guidata feed di dati - Pagina Riepilogo")  
   
      Ora è possibile eseguire query sui dati di output del pacchetto usando l'istruzione SQL seguente sul database TestDB: SELECT * FROM [SSISPackageView].  
   
@@ -166,9 +165,9 @@ ms.lasthandoff: 09/27/2017
   
 1.  Avviare SQL Server Management Studio.  
   
-2.  Espandere \< **nome macchina**>, **database**, \< **database selezionato nella procedura guidata**>, e **viste**.  
+2.  Espandere \<**nome macchina**>, **Database**, \<**database selezionato nella procedura guidata**> e **Viste**.  
   
-3.  Fare doppio clic su di \< **vista creata dalla procedura guidata**> creato dalla procedura guidata e fare clic su **selezionare le prime 1000 righe**.  
+3.  Fare clic con il pulsante destro del mouse sulla \<**vista creata dalla procedura guidata**> e scegliere **Seleziona le prime 1000 righe**.  
   
 4.  Confermare la visualizzazione dei risultati del pacchetto SSIS.  
   
@@ -276,4 +275,3 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
  [Configurare la destinazione flusso di dati](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   
-

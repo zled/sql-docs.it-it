@@ -1,38 +1,37 @@
 ---
-title: "Query su Active Directory con l'attività Script | Documenti Microsoft"
+title: "Esecuzione di query su Active Directory tramite l'attività Script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], Active Directory access
 - SSIS Script task, Active Directory access
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ee5a82829785e78554b105e1f3bf3bd24f05b778
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0328b2eeaa94e279a53b45e8e205c1356768e53d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Esecuzione di query su Active Directory tramite l'attività Script
-  Le applicazioni di elaborazione di dati aziendali, ad esempio i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], devono in genere elaborare i dati in modo diverso a seconda del grado, della posizione o di altre caratteristiche dei dipendenti archiviati in Active Directory. Active Directory è un [!INCLUDE[msCoName](../../includes/msconame-md.md)] servizio directory di Windows che fornisce un archivio centralizzato di metadati, non solo sugli utenti, ma anche su altre risorse organizzative, ad esempio computer e stampanti. Il **System. DirectoryServices** dello spazio dei nomi in Microsoft .NET Framework fornisce classi per l'utilizzo di Active Directory, che consentono di diretto l'elaborazione dei dati del flusso di lavoro in base alle informazioni in essa contenuti.  
+  Le applicazioni di elaborazione di dati aziendali, ad esempio i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], devono in genere elaborare i dati in modo diverso a seconda del grado, della posizione o di altre caratteristiche dei dipendenti archiviati in Active Directory. Active Directory è un servizio directory di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows che rende disponibile un archivio centralizzato di metadati sugli utenti e su altre risorse dell'organizzazione, come computer e stampanti. Lo spazio dei nomi **System.DirectoryServices** in Microsoft .NET Framework fornisce le classi da usare con Active Directory per indirizzare il flusso di lavoro dell'elaborazione dei dati in base alle informazioni archiviate.  
   
 > [!NOTE]  
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
@@ -44,13 +43,13 @@ ms.lasthandoff: 09/26/2017
   
 1.  Creare le tre variabili stringa `email`, `name` e `title`. Immettere un indirizzo di posta elettronica aziendale valido come valore della variabile `email`.  
   
-2.  Nel **Script** pagina del **Editor attività Script**, aggiungere il `email` variabile il **ReadOnlyVariables** proprietà.  
+2.  Nella pagina **Script** dell'**Editor attività Script** aggiungere la variabile `email` alla proprietà **ReadOnlyVariables**.  
   
-3.  Aggiungere il `name` e `title` variabili per il **ReadWriteVariables** proprietà.  
+3.  Aggiungere le variabili `name` e `title` alla proprietà **ReadWriteVariables**.  
   
-4.  Nel progetto di script, aggiungere un riferimento di **System. DirectoryServices** dello spazio dei nomi.  
+4.  Nel progetto di script aggiungere un riferimento allo spazio dei nomi **System.DirectoryServices**.  
   
-5.  . Nel codice, utilizzare un **importazioni** per importare il **DirectoryServices** dello spazio dei nomi.  
+5.  . Nel codice usare un'istruzione **Imports** per importare lo spazio dei nomi **DirectoryServices**.  
   
 > [!NOTE]  
 >  Per eseguire correttamente lo script, è necessario che l'azienda utilizzi Active Directory nella propria rete e archivi le informazioni sui dipendenti utilizzati nell'esempio.  
@@ -115,7 +114,6 @@ public void Main()
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Articolo tecnico relativo [l'elaborazione di informazioni di Active Directory in SSIS](http://go.microsoft.com/fwlink/?LinkId=199588), sul sito Web social.technet.microsoft.com  
+-   Articolo tecnico [Processing Active Directory Information in SSIS](http://go.microsoft.com/fwlink/?LinkId=199588) (Elaborazione di informazioni di Active Directory in SSIS) nel sito Web social.technet.microsoft.com  
   
   
-

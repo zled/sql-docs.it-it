@@ -1,32 +1,33 @@
 ---
-title: Ordinamento dei dati per le trasformazioni unione e Merge Join | Documenti Microsoft
+title: Ordinare i dati per le trasformazioni Unione e Merge Join | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a99a414a74e873e5c09d22c6469a13ac04a32d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 75bcc0fbc667921debf0fa27d7cc95103fa4860c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordinamento dei dati per le trasformazioni Unione e Merge Join
-  In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] le trasformazioni Unione e Merge Join richiedono dati di input ordinati. I dati di input devono essere ordinati fisicamente ed è necessario impostare le opzioni di ordinamento sugli output e sulle colonne di output nell'origine o nella trasformazione a monte. Se le opzioni di ordinamento indicano che i dati sono ordinati, mentre in realtà non lo sono, l'operazione di Unione o Merge join restituisce risultati imprevisti.  
+  In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]le trasformazioni Unione e Merge Join richiedono dati di input ordinati. I dati di input devono essere ordinati fisicamente ed è necessario impostare le opzioni di ordinamento sugli output e sulle colonne di output nell'origine o nella trasformazione a monte. Se le opzioni di ordinamento indicano che i dati sono ordinati, mentre in realtà non lo sono, l'operazione di Unione o Merge join restituisce risultati imprevisti.  
   
 ## <a name="sorting-the-data"></a>Ordinamento dei dati  
  È possibile ordinare i dati mediante uno dei seguenti metodi:  
@@ -76,7 +77,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  Fare clic sulla scheda **Proprietà input e output** .  
   
-6.  Fare clic su  **\<nome componente > Output**e impostare il **IsSorted** proprietà **True**.  
+6.  Fare clic su **Output \<nome componente>** e impostare la proprietà **IsSorted** su **True**.  
   
     > [!NOTE]  
     >  Se si imposta manualmente la proprietà **IsSorted** dell'output su **True** e se i dati non sono ordinati, quando si esegue il pacchetto alcuni dati potrebbero risultare mancanti o danneggiati nella trasformazione Unione o Merge Join.  
@@ -112,11 +113,10 @@ ms.lasthandoff: 08/03/2017
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trasformazione unione](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Trasformazione Merge Join](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+ [Trasformazione Unione](../../../integration-services/data-flow/transformations/merge-transformation.md)   
+ [Trasformazione Merge join](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Percorsi in Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Attività flusso di dati](../../../integration-services/control-flow/data-flow-task.md)  
+ [Attività Flusso di dati](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

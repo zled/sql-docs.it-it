@@ -2,9 +2,12 @@
 title: Classe di evento CursorPrepare | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978867c63089538ad4d02c92058fa147560e7ee3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6fcbca475c65b6fb1b3aed42f49bfa7dace3cea8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare - classe di evento
-  La classe di evento **CursorPrepare** descrive gli eventi di preparazione del cursore che si verificano per i cursori delle API. Gli eventi di preparazione del cursore vengono generati quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] compila in un piano di esecuzione l'istruzione SELECT associata a un cursore, senza tuttavia creare il cursore.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento **CursorPrepare** descrive gli eventi di preparazione del cursore che si verificano per i cursori delle API. Gli eventi di preparazione del cursore vengono generati quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] compila in un piano di esecuzione l'istruzione SELECT associata a un cursore, senza tuttavia creare il cursore.  
   
  Includere la classe di evento **CursorPrepare** nelle tracce che registrano le prestazioni dei cursori. Quando si include la classe di evento **CursorPrepare** in una traccia, la quantità di overhead generato dipenderà da quanto frequentemente vengono usati i cursori nel database durante la traccia. Se si utilizzano diffusamente i cursori, l'esecuzione della traccia potrebbe ridurre in modo significativo le prestazioni.  
   

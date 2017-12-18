@@ -1,31 +1,32 @@
 ---
-title: Catalog. set_object_parameter_value (Database SSISDB) | Documenti Microsoft
+title: catalog.set_object_parameter_value (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
-ms.contentlocale: it-it
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 8fe142dd0fdf6e896c6930528b563514c3aa2fb8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Viene impostato il valore di un parametro nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Associa il valore di una variabile di ambiente o assegna un valore letterale che viene utilizzato per impostazione predefinita, quando nessun altro valore assegnato.  
+  Viene impostato il valore di un parametro nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Viene associato il valore a una variabile di ambiente o viene assegnato un valore letterale che viene usato per impostazione predefinita nel caso non siano assegnati altri valori.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,25 +42,25 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 ## <a name="arguments"></a>Argomenti  
  [@object_type =] *object_type*  
- Tipo di parametro. Utilizzare il valore `20` per indicare un parametro del progetto o il valore `30` per indicare un parametro del pacchetto. Il *object_type* è **smallInt**.  
+ Tipo di parametro. Utilizzare il valore `20` per indicare un parametro del progetto o il valore `30` per indicare un parametro del pacchetto. *object_type* è di tipo **smallInt**.  
   
- [@folder_name =] *nome_cartella*  
- Nome della cartella in cui è contenuto il parametro. Il *nome_cartella* è **nvarchar (128)**.  
+ [@folder_name =] *folder_name*  
+ Nome della cartella in cui è contenuto il parametro. *folder_name* è di tipo **nvarchar(128)**.  
   
  [@project_name =] *project_name*  
- Nome del progetto in cui è contenuto il parametro. Il *project_name* è **nvarchar (128)**.  
+ Nome del progetto in cui è contenuto il parametro. *project_name* è di tipo **nvarchar(128)**.  
   
  [@parameter_name =] *parameter_name*  
- Nome del parametro. Il *parameter_name* è **nvarchar (128)**.  
+ Nome del parametro. *parameter_name* è di tipo **nvarchar(128)**.  
   
  [@parameter_value =] *parameter_value*  
- Valore del parametro. Il *parameter_value* è **sql_variant**.  
+ Valore del parametro. *parameter_value* è di tipo **sql_variant**.  
   
  [@object_name =] *object_name*  
- Nome del pacchetto. Questo argomento è necessario quando il parametro è un parametro del pacchetto. Il *object_name* è **nvarchar (260)**.  
+ Nome del pacchetto. Questo argomento è necessario quando il parametro è un parametro del pacchetto. *object_name* è di tipo **nvarchar(260)**.  
   
  [@value_type =] *value_type*  
- Tipo di valore del parametro. Utilizzare il carattere `V` per indicare che *parameter_value* è un valore letterale che viene utilizzato per impostazione predefinita, quando nessun altro valore assegnato prima dell'esecuzione. Utilizzare il carattere `R` per indicare che *parameter_value* è un valore di riferimento ed è stata impostata sul nome di una variabile di ambiente. Questo argomento è facoltativo. Per impostazione predefinita, viene utilizzato il carattere `V`. Il *value_type* è **char (1)**.  
+ Tipo di valore del parametro. Usare il carattere `V` per indicare che *parameter_value* è un valore letterale che viene usato per impostazione predefinita quando non viene assegnato nessun altro valore prima dell'esecuzione. Usare il carattere `R` per indicare che *parameter_value* è un valore di riferimento ed è stato impostato sul nome di una variabile di ambiente. Questo argomento è facoltativo. Per impostazione predefinita, viene utilizzato il carattere `V`. *value_type* è di tipo **char(1)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -72,9 +73,9 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   Autorizzazioni READ e MODIFY sul progetto  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte alcune condizioni che possono determinare la generazione di un errore da parte della stored procedure:  
@@ -91,13 +92,12 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 ## <a name="remarks"></a>Osservazioni  
   
--   Se non *value_type* viene specificato un valore letterale per *parameter_value* viene utilizzato per impostazione predefinita. Quando viene utilizzato un valore letterale, la *value_set* nel [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) visualizzazione è impostata su `1`. Un valore di parametro NULL non è consentito.  
+-   Se *value_type* non viene specificato, per impostazione predefinita viene usato un valore letterale per *parameter_value*. Quando viene usato un valore letterale, il parametro *value_set* nella vista [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) viene impostato su `1`. Un valore di parametro NULL non è consentito.  
   
--   Se *value_type* contiene il carattere `R`, che indica un valore di riferimento, *parameter_value* fa riferimento al nome di una variabile di ambiente.  
+-   Se *value_type* contiene il carattere `R`, che indica un valore a cui si fa riferimento, *parameter_value* fa riferimento al nome di una variabile di ambiente.  
   
--   Il valore `20` possono essere utilizzati per *object_type* per indicare un parametro del progetto. In questo caso, un valore per *object_name* non è necessario e qualsiasi valore specificato per *object_name* viene ignorato. Questo valore viene utilizzato quando l'utente desidera impostare un parametro del progetto.  
+-   Il valore `20` può essere usato per il parametro *object_type* per indicare un parametro del progetto. In questo caso, un valore per *object_name* non è necessario e qualsiasi valore specificato per *object_name* verrà ignorato. Questo valore viene utilizzato quando l'utente desidera impostare un parametro del progetto.  
   
--   Il valore `30` possono essere utilizzati per *object_type* per indicare un parametro del pacchetto. In questo caso, un valore per *object_name* viene utilizzato per indicare il pacchetto corrispondente. Se *object_name* viene omesso, la stored procedure restituisce un errore e termina.  
+-   Il valore `30` può essere usato per il parametro *object_type* per indicare un parametro del pacchetto. In questo caso, un valore di *object_name* viene usato per indicare il pacchetto corrispondente. Se *object_name* non è specificato, la stored procedure restituisce un errore e viene terminata.  
   
   
-

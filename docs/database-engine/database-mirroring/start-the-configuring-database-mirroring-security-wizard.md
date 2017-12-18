@@ -2,9 +2,12 @@
 title: Avviare la Configurazione guidata sicurezza mirroring del database | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5d5f46e2ea6356616864c5f60b858caa5ee0c1b3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 452b2bc9e11d0f2d1dd06767efe68d48bfdcef8d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>Avviare la Configurazione guidata sicurezza mirroring del database
-  È possibile utilizzare la Configurazione guidata sicurezza mirroring del database per eseguire la configurazione iniziale delle impostazioni di sicurezza in tutte o alcune istanze del server coinvolte nel mirroring. Questa procedura guidata viene eseguita insieme alla pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile usare la Configurazione guidata sicurezza mirroring del database per eseguire la configurazione iniziale delle impostazioni di sicurezza in tutte o alcune istanze del server coinvolte nel mirroring. Questa procedura guidata viene eseguita insieme alla pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
   
 ### <a name="to-launch-the-configure-database-mirroring-security-wizard"></a>Per avviare Configurazione guidata sicurezza mirroring del database  
   

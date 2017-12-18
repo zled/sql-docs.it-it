@@ -2,9 +2,12 @@
 title: Completa parola (IntelliSense) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1fbc08fbc46e0518c32ef048db34237016e0417
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3a453cb71890b50d770f13dd56f6fcab97fbddaf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="complete-word-intellisense"></a>Completa parola (IntelliSense)
-  L'opzione Completa parola di [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense immette la parte rimanente di un nome di variabile, di comando o di funzione dopo che è stato digitato un numero di caratteri sufficiente per identificare il termine in modo univoco.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L'opzione Completa parola di [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense immette la parte rimanente di un nome di variabile, di comando o di funzione dopo che è stato digitato un numero di caratteri sufficiente per identificare il termine in modo univoco.  
   
  La caratteristica Completa parola può essere richiamata nei quattro modi seguenti:  
   

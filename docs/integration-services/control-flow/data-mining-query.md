@@ -1,28 +1,28 @@
 ---
-title: Query di Data Mining | Documenti Microsoft
+title: Query di data mining | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataminingquery.f1
+f1_keywords: sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8809f1e5f91ad5746b66d4640747b1ec0a923f0f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4509a3b7838e112bbd002c7efe4b6782a772f7d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query"></a>Query di data mining
   Il riquadro di progettazione contiene il generatore delle query di stima di data mining che consente di compilare le query delle stime di data mining. È possibile progettare query di stima in base a tabelle di input o query di stima singleton. Passare alla visualizzazione dei risultati per eseguire la query e visualizzare i risultati. Nella visualizzazione Query viene visualizzata la query DMX (Data Mining Extensions) creata dal generatore delle query di stima.  
@@ -31,9 +31,9 @@ ms.lasthandoff: 08/03/2017
  Pulsante Cambia visualizzazione  
  Fare clic su un'icona per alternare il riquadro di progettazione al riquadro Query. Per impostazione predefinita è aperto il riquadro di progettazione.  
   
- Per passare al riquadro di progettazione, scegliere il ![icona progettazione](../../integration-services/control-flow/media/ssis-designicon.gif "icona progettazione") icona.  
+ Per passare al riquadro di progettazione, fare clic sull'icona ![Icona Progettazione](../../integration-services/control-flow/media/ssis-designicon.gif "Icona Progettazione").  
   
- Per passare al riquadro query, scegliere il ![icona SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "icona SQL") icona.  
+ Per passare al riquadro Query, fare clic sull'icona ![Icona SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "Icona SQL").  
   
  **Modello di data mining**  
  Consente di visualizzare il modello di data mining selezionato sul quale si desidera basare le stime.  
@@ -69,7 +69,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti query di data mining](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

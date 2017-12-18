@@ -2,9 +2,12 @@
 title: Protocolli e librerie di rete | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,23 +28,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 657134dd5c6c7fe7c4ee81050c570dc14e9d23d1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cbd032edc776aa19873a4615ba6a16c7ff8ce9aa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
-# Protocolli e librerie di rete
-  Un server può consentire di restare in attesa su più protocolli di rete contemporaneamente o di monitorarli. È tuttavia necessario configurare ogni protocollo. Se un particolare protocollo non è configurato, il server non può restare in attesa su tale protocollo. Le configurazioni dei protocolli possono essere modificate dopo l'installazione utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="network-protocols-and-network-libraries"></a>Protocolli e librerie di rete
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un server può restare in attesa o monitorare più protocolli di rete contemporaneamente. È tuttavia necessario configurare ogni protocollo. Se un particolare protocollo non è configurato, il server non può restare in attesa su tale protocollo. Le configurazioni dei protocolli possono essere modificate dopo l'installazione utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Configurazione di rete predefinita di SQL Server  
+## <a name="default-sql-server-network-configuration"></a>Configurazione di rete predefinita di SQL Server  
  Un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene configurata per la porta TCP/IP 1433 e la named pipe \\\\\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurate per le porte dinamiche TCP, con un numero di porta assegnato dal sistema operativo.  
   
  Se non è possibile utilizzare indirizzi di porta dinamici (ad esempio, quando le connessioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono passare tramite un server firewall configurato per l'utilizzo di indirizzi di porte specifici). Selezionare un numero di porta non assegnato. Le assegnazioni dei numeri di porta vengono gestite dall'ente Internet Assigned Numbers Authority e sono elencate in [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844).  
   
  Per migliorare la sicurezza, la connettività di rete non viene abilitata completamente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per abilitare, disabilitare e configurare i protocolli di rete al termine dell'installazione, utilizzare l'area Configurazione di rete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Protocollo Server Message Block  
+## <a name="server-message-block-protocol"></a>Protocollo Server Message Block  
  È necessario disabilitare tutti i protocolli non richiesti, incluso il protocollo SMB (Server Message Block), dei server della rete perimetrale. Per i server Web e i server DNS (Domain Name System) non è necessario SMB. È necessario disabilitare questo protocollo per proteggersi dal rischio di enumerazione degli utenti.  
   
 > [!WARNING]  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/09/2017
 > -   Specificare una condivisione file SMB come directory dei dati durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 > -   Creare un file di database in una condivisione file SMB  
   
-#### Per disabilitare SMB  
+#### <a name="to-disable-smb"></a>Per disabilitare SMB  
   
 1.  Scegliere **Impostazioni** dal menu **Start**e quindi fare clic su **Rete e connessioni remote**.  
   
@@ -65,11 +68,11 @@ ms.lasthandoff: 11/09/2017
   
 5.  Eseguire la procedura di disinstallazione.  
   
-#### Per disabilitare SMB nei server accessibili da Internet  
+#### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>Per disabilitare SMB nei server accessibili da Internet  
   
 -   In Connessione alla rete locale (LAN) usare la finestra di dialogo **Proprietà TCP/IP** per rimuovere **Condivisione file e stampanti per reti Microsoft** e **Client per reti Microsoft**.  
   
-## Endpoint  
+## <a name="endpoints"></a>Endpoint  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduce un nuovo concetto in base al quale le connessioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono rappresentate sul lato server da un [!INCLUDE[tsql](../../includes/tsql-md.md)]*endpoint*. È possibile concedere, revocare o negare le autorizzazioni per gli endpoint [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per impostazione predefinita, tutti gli utenti dispongono delle autorizzazioni di accesso a un endpoint a meno che tali autorizzazioni non vengano negate o revocate da un membro del gruppo sysadmin o dal proprietario dell'endpoint. La sintassi GRANT, REVOKE e DENY ENDPOINT utilizza un ID di endpoint che l'amministratore deve ottenere dalla vista del catalogo dell'endpoint.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea endpoint [!INCLUDE[tsql](../../includes/tsql-md.md)] per tutti i protocolli di rete supportati, nonché per la connessione amministrativa dedicata.  
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Configurazione di rete del server](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione superficie di attacco](../../relational-databases/security/surface-area-configuration.md)   
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  

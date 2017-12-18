@@ -2,9 +2,12 @@
 title: Classe di evento Execution Warnings | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e8a8f643884c4d2c817a6a899690f980dc41502
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a0f3903f3bcf19915b962f95e413ccee492ae34c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings - classe di evento
-  La classe di evento Execution Warnings indica avvisi di concessione di memoria che sono stati generati durante l'esecuzione di un'istruzione o di una stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile monitorare questa classe di evento per determinare se per l'elaborazione delle query è stata necessaria un'attesa di un secondo o maggiore oppure se il tentativo iniziale di utilizzo della memoria non è riuscito. Le informazioni sui tempi di attesa delle query sono utili per rilevare problemi di contesa presenti nel sistema e che possono influire sulle prestazioni.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento Execution Warnings indica avvisi di concessione di memoria che sono stati generati durante l'esecuzione di un'istruzione o di una stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile monitorare questa classe di evento per determinare se per l'elaborazione delle query è stata necessaria un'attesa di un secondo o maggiore oppure se il tentativo iniziale di utilizzo della memoria non è riuscito. Le informazioni sui tempi di attesa delle query sono utili per rilevare problemi di contesa presenti nel sistema e che possono influire sulle prestazioni.  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Colonne di dati della classe di evento Execution Warnings  
   

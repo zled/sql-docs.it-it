@@ -1,37 +1,37 @@
 ---
-title: Enumerazione dei pacchetti disponibili a livello di codice | Documenti Microsoft
+title: Enumerazione dei pacchetti disponibili a livello di programmazione | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: run-manage-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programmatically enumerate packages [SSIS]
 - existence testing [Integration Services]
 - enumerating packages [Integration Services]
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ebdf52b9ec71be3845d0fcdf3053b2168467389
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 84ab5ed55cd87c1dce61455a80b75990c423e792
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="enumerating-available-packages-programmatically"></a>Enumerazione dei pacchetti disponibili a livello di codice
-  <a name="top"></a>Mentre si lavora a livello di codice con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti, è consigliabile per determinare la presenza di una cartella o un singolo pacchetto o per enumerare i pacchetti salvati disponibili caricare ed eseguire. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> dello spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> fornisce un'ampia varietà di metodi e classi per soddisfare questi requisiti.    
+# <a name="enumerating-available-packages-programmatically"></a>Enumerazione dei pacchetti disponibili a livello di programmazione
+  <a name="top"></a> Quando si usano i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a livello di programmazione, può essere necessario determinare se esiste un singolo pacchetto o cartella o enumerare i pacchetti salvati disponibili per il caricamento e l'esecuzione. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> dello spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> fornisce un'ampia varietà di metodi e classi per soddisfare questi requisiti.    
     
-##  <a name="exists"></a>Determinazione della presenza di un pacchetto o cartella    
+##  <a name="exists"></a> Verifica dell'esistenza di un pacchetto o di una cartella    
  Per determinare a livello di codice se un pacchetto salvato esiste, chiamare uno dei metodi seguenti prima di tentare di caricarlo ed eseguirlo:    
     
 |Percorso di archiviazione|Metodo da chiamare|    
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/26/2017
     
  [Torna all'inizio](#top)    
     
-##  <a name="listing"></a>Enumerazione dei pacchetti disponibili    
+##  <a name="listing"></a> Enumerazione dei pacchetti disponibili    
  Per ottenere a livello di codice un elenco dei pacchetti salvati, chiamare uno dei metodi seguenti:    
     
 |Percorso di archiviazione|Metodo da chiamare|    
@@ -58,7 +58,7 @@ ms.lasthandoff: 09/26/2017
     
  Gli esempi seguenti sono applicazioni console che dimostrano l'utilizzo di questi metodi.    
     
-###  <a name="listing_store"></a>Esempio (archivio pacchetti SSIS)    
+###  <a name="listing_store"></a> Esempio (archivio pacchetti SSIS)    
  Utilizzare il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> per elencare i pacchetti archiviati nell'archivio pacchetti SSIS. I percorsi di archiviazione predefiniti gestiti dall'archivio pacchetti SSIS sono File system e MSDB. In questi percorsi è possibile creare altre cartelle logiche.    
     
 ```vb    
@@ -164,7 +164,7 @@ namespace EnumeratePackagesSSIS_CS
     
  [Torna all'inizio](#top)    
     
-###  <a name="listing_sql"></a>Esempio (SQL Server)    
+###  <a name="listing_sql"></a> Esempio (SQL Server)    
  Utilizzare il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> per elencare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archiviati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 ```vb    
@@ -249,4 +249,3 @@ namespace EnumeratePackagesSql_CS
  [Gestione dei pacchetti &#40;servizio SSIS&#41;](../../integration-services/service/package-management-ssis-service.md)    
     
   
-

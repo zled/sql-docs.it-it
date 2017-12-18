@@ -3,7 +3,7 @@
 # Panoramica
 ## [Che cos'è Microsoft Machine Learning Services](r/r-services.md)
 ## [Novità nell'apprendimento automatico](what-s-new-in-sql-server-machine-learning-services.md)
-## [Articoli nuovi e aggiornati di recente](new-updated-advanced-analytics.md)
+## [Articoli nuovi e aggiornati](new-updated-advanced-analytics.md)
 ## [Architettura e panoramica](architecture-overview-machine-learning.md)
 ## [Differenze nelle funzionalità di apprendimento automatico tra le edizioni di SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
 
@@ -122,6 +122,7 @@
 
 ### [Evitare errori con le librerie di pacchetti dell'utente per R](r/packages-installed-in-user-libraries.md)
 
+### [Aggiungere SQLRUserGroup come utente del database](r/add-sqlrusergroup-to-database.md)
 
 ## Esplorazione e modellazione dei dati
 

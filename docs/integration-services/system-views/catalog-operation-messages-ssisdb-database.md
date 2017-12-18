@@ -1,32 +1,33 @@
 ---
-title: Catalog. operation_messages (Database SSISDB) | Documenti Microsoft
+title: catalog.operation_messages (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 235e9896cbf075bdc26e3df120b23091b8e82d6d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 666d7014adb8feaa77e72f5856838051d992c8df
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Vengono visualizzati i messaggi registrati durante le operazioni nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -34,18 +35,18 @@ ms.lasthandoff: 09/26/2017
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|Identificatore (ID) univoco del messaggio.|  
 |operation_id|**bigint**|ID univoco dell'operazione.|  
-|message_time|**DateTimeOffset(7)**|Ora di creazione del messaggio.|  
+|message_time|**datetimeoffset(7)**|Ora di creazione del messaggio.|  
 |message_type|**smallint**|Tipo di messaggio visualizzato.|  
 |message_source_type|**smallint**|L'ID del tipo di origine del messaggio.|  
 |message|**nvarchar(max)**|Testo del messaggio.|  
-|extended_info_id|**bigint**|L'ID di informazioni aggiuntive correlate al messaggio dell'operazione, vedere il [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) visualizzazione.|  
+|extended_info_id|**bigint**|ID di informazioni aggiuntive correlate al messaggio dell'operazione, individuato nella vista [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
   
 ## <a name="remarks"></a>Osservazioni  
  In questa vista viene visualizzata una riga per ogni messaggio registrato durante un'operazione nel catalogo. Il messaggio può essere generato dal server, dal processo di esecuzione del pacchetto o dal motore di esecuzione.  
   
  In questa vista vengono visualizzati i tipi di messaggio seguenti:  
   
-|**message_type** valore|Description|  
+|Valore di **message_type**|Description|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|Errore|  
@@ -81,12 +82,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Autorizzazione READ per l'operazione  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
   
 > [!NOTE]  
 >  Quando si dispone delle autorizzazioni per eseguire un'operazione nel server, si dispone anche delle autorizzazioni per visualizzare le informazioni sull'operazione. È applicata la sicurezza a livello di riga, pertanto vengono visualizzate solo le righe per le quali si dispone delle autorizzazioni per la visualizzazione.  
   
   
-

@@ -1,12 +1,14 @@
 ---
-title: "Utilità DTUtil | Documenti Microsoft"
+title: "Utilità dtutil | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,17 +27,16 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 114
+caps.latest.revision: "114"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 15315ffd796662bb814060c62bc0fb3872c9190a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7a5cf2737ac465c5d216a0d9a27a3c3e6e5836e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dtutil-utility"></a>utilità dtutil
   L'utilità del prompt dei comandi **dtutil** viene usata per gestire i pacchetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Utilizzare questa utility per copiare, spostare, eliminare un pacchetto oppure per verificarne l'esistenza. È possibile eseguire queste azioni in qualsiasi pacchetto di [!INCLUDE[ssIS](../includes/ssis-md.md)] archiviato in un database [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] e nel file system. Se l'utilità accede a un pacchetto archiviato in **msdb**, al prompt dei comandi può essere necessario specificare nome utente e password. Se l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], al prompt dei comandi sarà necessario specificare nome utente e password. Se non viene specificato il nome utente, **dtutil[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tenta di accedere a**  usando l'autenticazione di Windows. Il tipo di archiviazione del pacchetto è definito dalle opzioni **/SQL**, **/FILE** e **/DTS**.  
@@ -67,18 +68,18 @@ ms.lasthandoff: 08/03/2017
   
  In un computer a 64 bit con [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene installata una versione a 64 bit dell'utilità **dtexec** (dtexec.exe) e dell'utilità **dtutil** (dtutil.exe). Per installare le versioni a 32 bit di questi strumenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è necessario selezionare gli strumenti client o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] durante l'installazione.  
   
- Per impostazione predefinita, un computer a 64 bit contenente le versioni a 64 bit e a 32 bit di un'utilità del prompt dei comandi di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] installata eseguirà la versione a 32 bit al prompt dei comandi. Viene eseguita la versione a 32 bit perché il percorso della directory della versione a 32 bit compare nella variabile di ambiente PATH prima del percorso della directory della versione a 64 bit. (In genere, il percorso della directory a 32 bit è  *\<unità >*: \Programmi file (x86) \Microsoft SQL Server\130\DTS\Binn, mentre il percorso di directory a 64 bit è  *\<unità >*: \Programmi\Microsoft SQL Server\130\DTS\Binn.)  
+ Per impostazione predefinita, un computer a 64 bit contenente le versioni a 64 bit e a 32 bit di un'utilità del prompt dei comandi di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] installata eseguirà la versione a 32 bit al prompt dei comandi. Viene eseguita la versione a 32 bit perché il percorso della directory della versione a 32 bit compare nella variabile di ambiente PATH prima del percorso della directory della versione a 64 bit. In genere, il percorso della directory a 32 bit è *\<unità>*:\Programmi (x86) \Microsoft SQL Server\130\DTS\Binn, mentre il percorso della directory a 64 bit è *\<unità>*:\Programmi\Microsoft SQL Server\130\DTS\Binn.  
   
 > [!NOTE]  
 >  Se si utilizza SQL Server Agent per eseguire l'utilità, verrà automaticamente utilizzata la versione a 64 bit dell'utilità. Per trovare l'eseguibile corretto per l'utilità, SQL Server Agent utilizza il Registro di sistema, non la variabile di ambiente PATH.  
   
  Per assicurarsi di eseguire la versione a 64 bit dell'utilità al prompt dei comandi, è possibile eseguire una delle azioni seguenti:  
   
--   Aprire una finestra del prompt dei comandi, passare alla directory che contiene la versione a 64 bit dell'utilità *(\<unità >*: \Programmi\Microsoft SQL Server\130\DTS\Binn), quindi eseguire l'utilità da quel percorso.  
+-   Aprire una finestra del prompt dei comandi, passare alla directory che contiene la versione a 64 bit dell'utilità, *\<unità>*:\Programmi\Microsoft SQL Server\130\DTS\Binn, quindi eseguire l'utilità da quel percorso.  
   
--   Al prompt dei comandi, eseguire l'utilità immettendo il percorso completo (*\<unità >*: \Programmi\Microsoft SQL Server\130\DTS\Binn) alla versione a 64 bit dell'utilità.  
+-   Al prompt dei comandi eseguire l'utilità immettendo il percorso completo (*\<unità>*:\Programmi\Microsoft SQL Server\130\DTS\Binn) della versione a 64 bit dell'utilità.  
   
--   Modificare in modo definitivo l'ordine dei percorsi nella variabile di ambiente PATH spostando il percorso a 64 bit (*\<unità >*: \Programmi\Microsoft SQL Server\130\DTS\Binn) prima del percorso a 32 bit (*\<unità >*: \ Programma \Microsoft SQL Server\130\DTS\Binn file (x86)) nella variabile.  
+-   Modificare in modo definitivo l'ordine dei percorsi nella variabile di ambiente PATH spostando il percorso della versione a 64 bit (*\<unità>*:\Programmi\Microsoft SQL Server\130\DTS\Binn) prima del percorso della versione a 32 bit (*\<unità>*:\Programmi(x86)\Microsoft SQL Server\130\DTS\Binn).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -97,7 +98,7 @@ dtutil /option [value] [/option [value]]...
 |/DestP[assword] *password*|Specifica la password utilizzata dall'opzione SQL per connettersi a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di destinazione tramite l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Viene generato un errore se si specifica *DESTPASSWORD* in una riga di comando che non include l'opzione *DTSUSER* .<br /><br /> Nota: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].|  
 |/DestS[erver] *server_instance*|Specifica il nome del server usato con qualsiasi azione che determina il salvataggio di una destinazione in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Questa opzione viene usata per identificare un server non locale o non predefinito durante il salvataggio di un pacchetto [!INCLUDE[ssIS](../includes/ssis-md.md)] . Non è corretto specificare *DESTSERVER* in una riga di comando che non include un'azione associata a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Azioni come ad esempio le azioni *SIGN SQL*, *COPY SQL*o *MOVE SQL* sono comandi appropriati che è possibile combinare con questa opzione.<br /><br /> Per specificare il nome di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , è sufficiente aggiungere una barra rovesciata e il nome dell'istanza al nome del server.|  
 |/DestU[ser] *username*|Specifica il nome utente usato con le opzioni *SIGN SQL*, *COPY SQL*e *MOVE SQL* per connettersi a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che usa l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Non è corretto specificare *DESTUSER* in una riga di comando che non include l'opzione *SIGN SQL*, *COPY SQL*o *MOVE SQL* .|  
-|/Dump *process ID*|(Facoltativo) Causa la sospensione del processo specificato, ovvero l'utilità **dtexec** o il processo **dtsDebugHost.exe** e la creazione dei file dump di debug, con estensione mdmp e tmp.<br /><br /> Nota: per usare l'opzione **/Dump**, è necessario disporre dei diritti dell'utente Debug di programmi (SeDebugPrivilege).<br /><br /> Per trovare l' *ID processo* per il processo da sospendere, usare Gestione attività Windows.<br /><br /> Per impostazione predefinita, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella  *\<unità >*: \Programmi\Microsoft SQL Server\130\Shared\ErrorDumps.<br /><br /> Per altre informazioni sull'utilità **dtexec** e il processo **dtsDebugHost.exe** , vedere [Utilità dtexec](../integration-services/packages/dtexec-utility.md) e [Compilazione, distribuzione e debug di oggetti personalizzati](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).<br /><br /> Per ulteriori informazioni sui file di dump del debug, vedere [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).<br /><br /> Nota: i file di dump del debug possono contenere informazioni sensibili. Utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso ai file oppure copiare i file in una cartella con accesso limitato.|  
+|/Dump *process ID*|(Facoltativo) Causa la sospensione del processo specificato, ovvero l'utilità **dtexec** o il processo **dtsDebugHost.exe** e la creazione dei file dump di debug, con estensione mdmp e tmp.<br /><br /> Nota: per usare l'opzione **/Dump**, è necessario disporre dei diritti dell'utente Debug di programmi (SeDebugPrivilege).<br /><br /> Per trovare l' *ID processo* per il processo da sospendere, usare Gestione attività Windows.<br /><br /> Per impostazione predefinita, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] archivia i file dump di debug nella cartella *\<unità>*:\Programmi\Microsoft SQL Server\130\Shared\ErrorDumps.<br /><br /> Per altre informazioni sull'utilità **dtexec** e il processo **dtsDebugHost.exe** , vedere [Utilità dtexec](../integration-services/packages/dtexec-utility.md) e [Compilazione, distribuzione e debug di oggetti personalizzati](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).<br /><br /> Per ulteriori informazioni sui file di dump del debug, vedere [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).<br /><br /> Nota: i file di dump del debug possono contenere informazioni sensibili. Utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso ai file oppure copiare i file in una cartella con accesso limitato.|  
 |/DT[S] *filespec*|Specifica che il pacchetto [!INCLUDE[ssIS](../includes/ssis-md.md)] da utilizzare si trova nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] . L'argomento *filespec* deve includere il percorso della cartella, a partire dalla radice dell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per impostazione predefinita, i nomi delle cartelle radice nel file di configurazione sono "MSDB" e "File System". I percorsi che contengono uno spazio devono essere delimitati da virgolette doppie.<br /><br /> Se si specifica l'opzione DT[S] nella stessa riga di comando di una delle opzioni seguenti, viene restituito un errore DTEXEC_DTEXECERROR:<br /><br /> **FILE**<br /><br /> **SQL**<br /><br /> **SOURCEUSER**<br /><br /> **SOURCEPASSWORD**<br /><br /> **SOURCESERVER**|  
 |/En[crypt] *{SQL &#124; FILE}; Path;ProtectionLevel[;password]*|(Facoltativo) Crittografa il pacchetto caricato in base alla password e al livello di protezione specificati, quindi lo salva nel percorso specificato in *Path*. L'argomento *ProtectionLevel* determina se è necessaria una password.<br /><br /> *SQL* : il percorso è rappresentato dal nome del pacchetto di destinazione.<br /><br /> *FILE* : il percorso è rappresentato dal percorso e dal nome file completi del pacchetto.<br /><br /> *DTS* : questa opzione non è attualmente supportata.<br /><br /> Opzioni di*ProtectionLevel* :<br /><br /> Livello 0: le informazioni riservate vengono eliminate.<br /><br /> Livello 1: le informazioni riservate vengono crittografate utilizzando le credenziali utente locali.<br /><br /> Livello 2: le informazioni riservate vengono crittografate utilizzando la password richiesta.<br /><br /> Livello 3: il pacchetto viene crittografato utilizzando la password richiesta.<br /><br /> Livello 4: il pacchetto viene crittografato utilizzando le credenziali utente locali.<br /><br /> Livello 5: il pacchetto usa la crittografia per l'archiviazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |/Ex[ists]|(Facoltativo) Utilizzata per determinare l'eventuale esistenza di un pacchetto. **dtutil** tenta di individuare il pacchetto specificato dalle opzioni *SQL*, *DTS* o *FILE* . Se risulta impossibile individuare il pacchetto specificato, l'utilità **dtutil** restituisce un errore DTEXEC_DTEXECERROR.|  
@@ -281,4 +282,3 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 [Eseguire pacchetti di Integration Services (SSIS)](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   
-

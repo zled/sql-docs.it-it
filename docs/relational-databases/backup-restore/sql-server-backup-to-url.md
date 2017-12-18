@@ -1,10 +1,13 @@
 ---
 title: Backup di SQL Server nell'URL | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/17/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b043c44f4ed08ae8add252abd0f2a46db968d65c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3358baeca572cb8894eb31798932221d1809a77a
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -111,12 +114,12 @@ ms.lasthandoff: 11/09/2017
   
 |Istruzione di backup/ripristino|Supportato|Eccezioni|Commenti|
 |-|-|-|-|
-|BACKUP|√|BLOCKSIZE e MAXTRANSFERSIZE sono supportati per i BLOB in blocchi. Non sono supportati per i BLOB di pagine. | Per usare BACKUP per un BLOB in blocchi è necessaria una firma di accesso condiviso salvata in una credenziale di SQL Server. Per usare BACKUP per un BLOB di pagine è necessaria la chiave dell'account di archiviazione salvata in una credenziale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e occorre che sia specificato l'argomento WITH CREDENTIAL.|  
-|RESTORE|√||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
-|RESTORE FILELISTONLY|√||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
-|RESTORE HEADERONLY|√||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
-|RESTORE LABELONLY|√||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
-|RESTORE VERIFYONLY|√||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
+|BACKUP|S|BLOCKSIZE e MAXTRANSFERSIZE sono supportati per i BLOB in blocchi. Non sono supportati per i BLOB di pagine. | Per usare BACKUP per un BLOB in blocchi è necessaria una firma di accesso condiviso salvata in una credenziale di SQL Server. Per usare BACKUP per un BLOB di pagine è necessaria la chiave dell'account di archiviazione salvata in una credenziale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e occorre che sia specificato l'argomento WITH CREDENTIAL.|  
+|RESTORE|S||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
+|RESTORE FILELISTONLY|S||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
+|RESTORE HEADERONLY|S||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
+|RESTORE LABELONLY|S||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
+|RESTORE VERIFYONLY|S||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
 |RESTORE REWINDONLY|−|||  
   
  Per la sintassi e informazioni generali sulle istruzioni di backup, vedere [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
@@ -127,36 +130,36 @@ ms.lasthandoff: 11/09/2017
 
 |Argomento|Supportato|Eccezione|Commenti|  
 |-|-|-|-|  
-|DATABASE|√|||  
-|LOG|√|||  
+|DATABASE|S|||  
+|LOG|S|||  
 ||  
-|TO (URL)|√|Diversamente da DISK e TAPE, l'URL non supporta la specifica o la creazione di un nome logico.|Questo argomento viene utilizzato per specificare il percorso URL del file di backup.|  
-|MIRROR TO|√|||  
+|TO (URL)|S|Diversamente da DISK e TAPE, l'URL non supporta la specifica o la creazione di un nome logico.|Questo argomento viene utilizzato per specificare il percorso URL del file di backup.|  
+|MIRROR TO|S|||  
 |**OPZIONI WITH:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL è supportato solo quando si usa l'opzione BACKUP TO URL per il backup nel servizio di archiviazione BLOB di Microsoft Azure e solo se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
-|FILE_SNAPSHOT|√|||  
-|ENCRYPTION|√||Quando è specificato l'argomento **WITH ENCRYPTION** , il backup con snapshot di file di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica che l'intero database sia stato crittografato con TDE prima dell'esecuzione del backup e, in caso affermativo, crittografa il file di backup con snapshot di file stesso usando l'algoritmo specificato per TDE sul database. Se tutti i dati del database, in tutto il database, non sono stati crittografati, il backup non verrà completato (ad esempio, se il processo di crittografia non è ancora stato completato).|  
-|DIFFERENTIAL|√|||  
-|COPY_ONLY|√|||  
-|COMPRESSION&#124;NO_COMPRESSION|√|Non supportato per il backup con snapshot di file||  
-|DESCRIPTION|√|||  
-|NAME|√|||  
+|CREDENTIAL|S||WITH CREDENTIAL è supportato solo quando si usa l'opzione BACKUP TO URL per il backup nel servizio di archiviazione BLOB di Microsoft Azure e solo se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
+|FILE_SNAPSHOT|S|||  
+|ENCRYPTION|S||Quando è specificato l'argomento **WITH ENCRYPTION** , il backup con snapshot di file di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica che l'intero database sia stato crittografato con TDE prima dell'esecuzione del backup e, in caso affermativo, crittografa il file di backup con snapshot di file stesso usando l'algoritmo specificato per TDE sul database. Se tutti i dati del database, in tutto il database, non sono stati crittografati, il backup non verrà completato (ad esempio, se il processo di crittografia non è ancora stato completato).|  
+|DIFFERENTIAL|S|||  
+|COPY_ONLY|S|||  
+|COMPRESSION&#124;NO_COMPRESSION|S|Non supportato per il backup con snapshot di file||  
+|DESCRIPTION|S|||  
+|NAME|S|||  
 |EXPIREDATE &#124; RETAINDAYS|−|||  
 |NOINIT &#124; INIT|−||L'accodamento ai BLOB non è consentito. Per sovrascrivere un backup, usare l'argomento **WITH FORMAT** . Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento **WITH FORMAT** non è consentito per evitare di lasciare snapshot di file orfani creati con il backup originale.|  
 |NOSKIP &#124; SKIP|−|||  
-|NOFORMAT &#124; FORMAT|√||Un backup eseguito in un BLOB esistente non viene completato a meno che non venga specificato **WITH FORMAT** . Il BLOB esistente viene sovrascritto quando viene specificato **WITH FORMAT** . Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento FORMAT non è consentito per evitare di lasciare snapshot di file orfani creati con il backup con snapshot di file originale. Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento **WITH FORMAT** non è consentito per evitare di lasciare snapshot di file orfani creati con il backup originale.|  
-|MEDIADESCRIPTION|√|||  
-|MEDIANAME|√|||  
-|BLOCKSIZE|√|Non supportati per i BLOB di pagine. Supportati per i BLOB in blocchi.| Si consiglia BLOCKSIZE=65536 per ottimizzare l'uso dei 50.000 blocchi consentiti in un BLOB in blocchi. |  
-|BUFFERCOUNT|√|||  
-|MAXTRANSFERSIZE|√|Non supportati per i BLOB di pagine. Supportati per i BLOB in blocchi.| Il valore predefinito è 1048576. Il valore può arrivare fino a 4 MB con incrementi di 65536 byte.</br> Si consiglia MAXTRANSFERSIZE=4194304 per ottimizzare l'uso dei 50.000 blocchi consentiti in un BLOB in blocchi. |  
-|NO_CHECKSUM &#124; CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|STATS|√|||  
+|NOFORMAT &#124; FORMAT|S||Un backup eseguito in un BLOB esistente non viene completato a meno che non venga specificato **WITH FORMAT** . Il BLOB esistente viene sovrascritto quando viene specificato **WITH FORMAT** . Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento FORMAT non è consentito per evitare di lasciare snapshot di file orfani creati con il backup con snapshot di file originale. Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento **WITH FORMAT** non è consentito per evitare di lasciare snapshot di file orfani creati con il backup originale.|  
+|MEDIADESCRIPTION|S|||  
+|MEDIANAME|S|||  
+|BLOCKSIZE|S|Non supportati per i BLOB di pagine. Supportati per i BLOB in blocchi.| Si consiglia BLOCKSIZE=65536 per ottimizzare l'uso dei 50.000 blocchi consentiti in un BLOB in blocchi. |  
+|BUFFERCOUNT|S|||  
+|MAXTRANSFERSIZE|S|Non supportati per i BLOB di pagine. Supportati per i BLOB in blocchi.| Il valore predefinito è 1048576. Il valore può arrivare fino a 4 MB con incrementi di 65536 byte.</br> Si consiglia MAXTRANSFERSIZE=4194304 per ottimizzare l'uso dei 50.000 blocchi consentiti in un BLOB in blocchi. |  
+|NO_CHECKSUM &#124; CHECKSUM|S|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
+|STATS|S|||  
 |REWIND &#124; NOREWIND|−|||  
 |UNLOAD &#124; NOUNLOAD|−|||  
-|NORECOVERY &#124; STANDBY|√|||  
-|NO_TRUNCATE|√|||  
+|NORECOVERY &#124; STANDBY|S|||  
+|NO_TRUNCATE|S|||  
   
  Per altre informazioni sugli argomenti di backup, vedere [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -164,35 +167,35 @@ ms.lasthandoff: 11/09/2017
   
 |Argomento|Supportato|Eccezioni|Commenti|  
 |-|-|-|-|  
-|DATABASE|√|||  
-|LOG|√|||  
-|FROM (URL)|√||L'argomento FROM URL viene utilizzato per specificare il percorso URL del file di backup.|  
+|DATABASE|S|||  
+|LOG|S|||  
+|FROM (URL)|S||L'argomento FROM URL viene utilizzato per specificare il percorso URL del file di backup.|  
 |**WITH Options:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL è supportato solo quando si usa l'opzione RESTORE FROM URL per eseguire il ripristino dal servizio di archiviazione BLOB di Microsoft Azure.|  
-|PARTIAL|√|||  
-|RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
-|LOADHISTORY|√|||  
-|MOVE|√|||  
-|REPLACE|√|||  
-|RESTART|√|||  
-|RESTRICTED_USER|√|||  
+|CREDENTIAL|S||WITH CREDENTIAL è supportato solo quando si usa l'opzione RESTORE FROM URL per eseguire il ripristino dal servizio di archiviazione BLOB di Microsoft Azure.|  
+|PARTIAL|S|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|S|||  
+|LOADHISTORY|S|||  
+|MOVE|S|||  
+|REPLACE|S|||  
+|RESTART|S|||  
+|RESTRICTED_USER|S|||  
 |FILE|−|||  
-|PASSWORD|√|||  
-|MEDIANAME|√|||  
-|MEDIAPASSWORD|√|||  
-|BLOCKSIZE|√|||  
+|PASSWORD|S|||  
+|MEDIANAME|S|||  
+|MEDIAPASSWORD|S|||  
+|BLOCKSIZE|S|||  
 |BUFFERCOUNT|−|||  
 |MAXTRANSFERSIZE|−|||  
-|CHECKSUM &#124; NO_CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|FILESTREAM|√|Non supportato per il backup con snapshot di file||  
-|STATS|√|||  
+|CHECKSUM &#124; NO_CHECKSUM|S|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
+|FILESTREAM|S|Non supportato per il backup con snapshot di file||  
+|STATS|S|||  
 |REWIND &#124; NOREWIND|−|||  
 |UNLOAD &#124; NOUNLOAD|−|||  
-|KEEP_REPLICATION|√|||  
-|KEEP_CDC|√|||  
-|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
-|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
+|KEEP_REPLICATION|S|||  
+|KEEP_CDC|S|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|S|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|S|||  
   
  Per altre informazioni sugli argomenti di ripristino, vedere [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
@@ -275,10 +278,12 @@ L'attività Ripristina database include **URL** come dispositivo da cui eseguire
 >  Per un'esercitazione sull'uso di SQL Server 2016 con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Esercitazione: Uso del servizio di archiviazione BLOB di Windows Azure con i database di SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="SAS"></a> Creare una firma di accesso condiviso  
- Nell'esempio seguente vengono create firme di accesso condiviso che possono essere usate per creare credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un nuovo contenitore. Questo script crea una firma di accesso condiviso associata ai criteri di accesso archiviati. Per altre informazioni, vedere [Firme di accesso condiviso, parte 1: conoscere il modello di firma di accesso condiviso](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Questo esempio richiede Microsoft Azure PowerShell. Per altre informazioni sull'installazione e l'uso di PowerShell, vedere [Come installare e configurare Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ Nell'esempio seguente vengono create firme di accesso condiviso che possono essere usate per creare credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un nuovo contenitore. Questo script crea una firma di accesso condiviso associata ai criteri di accesso archiviati. Per altre informazioni, vedere [Firme di accesso condiviso, parte 1: conoscere il modello di firma di accesso condiviso](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Lo script scrive inoltre il comando T-SQL necessario per creare le credenziali in SQL Server. 
 
 > [!NOTE] 
->  Questi script sono stati scritti con Azure PowerShell 5.0.10586.
+> Questo esempio richiede Microsoft Azure PowerShell. Per altre informazioni sull'installazione e l'uso di PowerShell, vedere [Come installare e configurare Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+> Questi script sono stati verificati con Azure PowerShell 5.1.15063. 
+
 
 **Firma di accesso condiviso associata a un criterio di accesso archiviato**  
   
@@ -311,21 +316,16 @@ New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resource
 $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
 
 # Create a new storage account context using an ARM storage account  
-$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Key1 
+$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
 
 # Creates a new container in blob storage  
 $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
 $cbc = $container.CloudBlobContainer  
 
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-$permissions = $cbc.GetPermissions();  
-$policyName = $policyName  
-$policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-$policy.SharedAccessStartTime = $(Get-Date).ToUniversalTime().AddMinutes(-5)  
-$policy.SharedAccessExpiryTime = $(Get-Date).ToUniversalTime().AddYears(10)  
-$policy.Permissions = "Read,Write,List,Delete"  
-$permissions.SharedAccessPolicies.Add($policyName, $policy)  
-$cbc.SetPermissions($permissions);  
+$policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
+$sas = New-AzureStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
+
 
 # Gets the Shared Access Signature for the policy  
 $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
@@ -338,51 +338,59 @@ $tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET
 $tSql | clip  
 Write-Host $tSql  
 ```  
-  
+
+Dopo aver completato l'esecuzione dello script, copiare il comando `CREATE CREDENTIAL` in uno strumento di query, connettersi a un'istanza di SQL Server ed eseguire il comando per creare le credenziali con la firma di accesso condiviso. 
+
 ###  <a name="credential"></a> Creare credenziali  
- Nei seguenti esempi vengono create le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'autenticazione al servizio di archiviazione BLOB di Microsoft Azure.  
+ Nei seguenti esempi vengono create le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'autenticazione al servizio di archiviazione BLOB di Microsoft Azure. riportate di seguito. 
   
-1.  **Uso della chiave di identità e di accesso dell'account di archiviazione**  
+1.  **Uso della firma di accesso condiviso**  
+
+   Se si è eseguito lo script per creare la firma di accesso condiviso precedente, copiare il comando `CREATE CREDENTIAL` in un editor di query connesso all'istanza di SQL Server ed eseguire il comando. 
+
+   Il codice T-SQL seguente è un esempio che crea le credenziali per l'uso di una firma di accesso condiviso. 
+
+   ```sql  
+   IF NOT EXISTS  
+   (SELECT * FROM sys.credentials   
+   WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
+   CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
+      WITH IDENTITY = 'SHARED ACCESS IGNATURE',  
+      SECRET = '<SAS_TOKEN>';  
+   ```  
   
-    ```Transact-sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE name = '<mycredentialname>')  
-    CREATE CREDENTIAL [<mycredentialname>] WITH IDENTITY = '<mystorageaccountname>'  
-    ,SECRET = '<mystorageaccountaccesskey>';  
-    ```  
+2.  **Uso della chiave di identità e di accesso dell'account di archiviazione**  
   
-2.  **Uso della firma di accesso condiviso**  
-  
-    ```Transact-sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
-    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] WITH IDENTITY = 'SHARED ACCESS SIGNATURE'  
-    ,SECRET = '<SAS_TOKEN>';  
-    ```  
+   ```sql 
+   IF NOT EXISTS  
+   (SELECT * FROM sys.credentials   
+   WHERE name = '<mycredentialname>')  
+   CREATE CREDENTIAL [<mycredentialname>] WITH IDENTITY = '<mystorageaccountname>'  
+   ,SECRET = '<mystorageaccountaccesskey>';  
+   ```  
   
 ###  <a name="complete"></a> Eseguire un backup completo del database  
- Negli esempi seguenti viene eseguito un backup completo del database AdventureWorks2016 nel servizio di archiviazione BLOB di Microsoft Azure.  
+ Negli esempi seguenti viene eseguito un backup completo del database AdventureWorks2016 nel servizio di archiviazione BLOB di Microsoft Azure. Eseguire una delle operazioni seguenti:   
   
-1.  **Nell'URL tramite la chiave di identità e di accesso dell'account di archiviazione**  
-  
-    ```Transact-SQL
-    BACKUP DATABASE AdventureWorks2016  
-    TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
-          WITH CREDENTIAL = '<mycredentialname>'   
-         ,COMPRESSION  
-         ,STATS = 5;  
-    GO   
-    ```  
   
 2.  **Nell'URL tramite una firma di accesso condiviso**  
   
-    ```Transact-SQL  
-    BACKUP DATABASE AdventureWorks2016   
-    TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
-    GO   
-    ```  
+   ```sql  
+   BACKUP DATABASE AdventureWorks2016   
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
+   GO   
+   ```  
+
+1.  **Nell'URL tramite la chiave di identità e di accesso dell'account di archiviazione**  
+  
+   ```sql
+   BACKUP DATABASE AdventureWorks2016  
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
+         WITH CREDENTIAL = '<mycredentialname>'   
+        ,COMPRESSION  
+        ,STATS = 5;  
+   GO   
+   ```  
   
 
   
@@ -392,21 +400,21 @@ Write-Host $tSql
   
 1.  **Dall'URL tramite una firma di accesso condiviso**  
   
-    ```Transact-SQL
-    RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
-    WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
-    ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
-    ,NORECOVERY  
-    ,REPLACE  
-    ,STATS = 5;  
-    GO   
+   ```sql
+   RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
+   WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
+   ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
+   ,NORECOVERY  
+   ,REPLACE  
+   ,STATS = 5;  
+   GO   
   
-    RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
-    WITH   
-    RECOVERY   
-    ,STOPAT = 'May 18, 2015 5:35 PM'   
-    GO  
-    ```  
+   RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
+   WITH   
+   RECOVERY   
+   ,STOPAT = 'May 18, 2015 5:35 PM'   
+   GO  
+   ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   

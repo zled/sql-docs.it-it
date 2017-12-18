@@ -1,12 +1,14 @@
 ---
-title: Controllo di accesso per i dati sensibili nei pacchetti | Documenti Microsoft
+title: Controllo dell'accesso per dati sensibili nei pacchetti | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +25,16 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51150293cd37e0d9f641bd7ee2ee30f8cce8ed95
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: bd057df624f83e6a43bd7ed13d8f7c98e462c698
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controllo dell'accesso per dati sensibili nei pacchetti
   Per proteggere i dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile impostare un livello di protezione in modo da proteggere i dati sensibili o tutti i dati all'interno del pacchetto. Inoltre, è possibile crittografare questi dati con una password o una chiave utente o utilizzare il sistema di crittografia del database. Inoltre, il livello di protezione che si utilizza per un pacchetto non è necessariamente statico, ma cambia durante tutto il ciclo di vita del pacchetto. Spesso si imposta un livello di protezione durante lo sviluppo e un altro appena si distribuisce il pacchetto.  
@@ -115,7 +116,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>Per impostare o modificare il livello di protezione dei pacchetti dal prompt dei comandi  
   
-1.  Esaminare i valori disponibili per il **ProtectionLevel** proprietà nella sezione [impostando il livello di protezione dei pacchetti](#set_protection)e determinare il valore appropriato per il pacchetto.  
+1.  Controllare i valori disponibili per la proprietà **ProtectionLevel** nella sezione [Impostazione del livello di protezione dei pacchetti](#set_protection) e determinare il valore appropriato per il pacchetto.  
   
 2.  Controllare i mapping per l'opzione **Encrypt** nell'argomento [Utilità dtutil](../../integration-services/dtutil-utility.md)e determinare il valore intero appropriato da usare come valore della proprietà **ProtectionLevel** selezionata.  
   
@@ -137,10 +138,10 @@ ms.lasthandoff: 08/03/2017
   
          Se si utilizza un comando simile in un file batch, immettere il segnaposto del file "% f" come "%% f" nel file batch.  
 
-## <a name="protection_dialog"></a>Progetto protezione livello dialogo pacchetto
+## <a name="protection_dialog"></a> Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto
   Utilizzare la finestra di dialogo **Livello di protezione pacchetto** per aggiornare il livello di protezione di un pacchetto. Il livello di protezione determina il metodo di protezione, la password o chiave utente e l'ambito di protezione del pacchetto. La protezione può includere tutti i dati o solo i dati sensibili.  
   
- Per comprendere i requisiti e le opzioni per la protezione del pacchetto, può risultare utile visualizzare [Cenni preliminari sulla sicurezza &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md).  
+ Per comprendere i requisiti e le opzioni relative alla sicurezza dei pacchetti, vedere [Panoramica della sicurezza &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
 ### <a name="options"></a>Opzioni  
  **Package protection level**  
@@ -152,7 +153,7 @@ ms.lasthandoff: 08/03/2017
  **Conferma password**  
  Digitare di nuovo la password.  
 
-## <a name="password_dialog"></a>Finestra di dialogo Password pacchetto
+## <a name="password_dialog"></a> Finestra di dialogo Password pacchetto
   Utilizzare la finestra di dialogo **Password pacchetto** per specificare la password del pacchetto per un pacchetto crittografato con una password. È necessario specificare una password se il pacchetto utilizza il livello di protezione **Crittografa tutti i dati riservati con una password**oppure **Crittografa tutti i dati con una password** .  
   
 ### <a name="options"></a>Opzioni  
@@ -161,7 +162,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Pacchetti di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [Cenni preliminari sulla sicurezza &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
- [Utilità DTUtil](../../integration-services/dtutil-utility.md)  
+ [Panoramica sulla sicurezza &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [Utilità dtutil](../../integration-services/dtutil-utility.md)  
   
-

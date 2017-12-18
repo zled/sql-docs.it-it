@@ -1,30 +1,30 @@
 ---
-title: 'Passaggio 1: Copia del pacchetto di distribuzione | Documenti Microsoft'
+title: 'Passaggio 1: Copia del pacchetto di distribuzione| Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af7cbc058ac548c4fb86d70518ca2366f6fffd57
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fd36b536be89f5a808aba7fdb6f6f423f0322599
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-1---copying-the-deployment-bundle"></a>Lezione 3-1-copia del pacchetto di distribuzione
+# <a name="lesson-3-1---copying-the-deployment-bundle"></a>Lezione 3-1 - Copia del pacchetto di distribuzione
 In questa attività si procederà alla copia del pacchetto di distribuzione nel computer di destinazione.  
   
 Il modo più semplice per copiare il pacchetto di distribuzione nel computer di destinazione consiste innanzitutto nella creazione di una condivisione pubblica in tale computer, l'esecuzione del mapping di un'unità alla condivisione pubblica e quindi la copia in quest'ultima del pacchetto di distribuzione. Se sono necessarie informazioni su come creare e configurare le cartelle pubbliche oppure il mapping delle unità, vedere la documentazione di Windows.  
@@ -44,4 +44,3 @@ Il modo più semplice per copiare il pacchetto di distribuzione nel computer di 
   
   
   
-

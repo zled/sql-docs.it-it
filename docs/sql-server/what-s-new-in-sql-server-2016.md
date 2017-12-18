@@ -1,10 +1,13 @@
 ---
 title: "Novità di SQL Server 2016"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8cbdc851a7b050f359bd473e8ea971587ff850b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7f4f6bc0101c4cd05a9ec301b3e46b083250d08f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novità di SQL Server 2016
- Con SQL Server 2016 è possibile creare applicazioni intelligenti di importanza critica con una piattaforma di database ibrida e scalabile che dispone di tutti gli strumenti necessari, da prestazioni in memoria e sicurezza avanzata a funzionalità di analisi nel database. SQL Server 2016 aggiunge nuove funzionalità di sicurezza e di query, l'integrazione di Hadoop e cloud, analisi R e altro ancora, oltre a numerosi miglioramenti e ottimizzazioni. 
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Con SQL Server 2016 è possibile creare applicazioni intelligenti di importanza critica con una piattaforma di database ibrida e scalabile che dispone di tutti gli strumenti necessari, da prestazioni in memoria e sicurezza avanzata a funzionalità di analisi nel database. SQL Server 2016 aggiunge nuove funzionalità di sicurezza e di query, l'integrazione di Hadoop e cloud, analisi R e altro ancora, oltre a numerosi miglioramenti e ottimizzazioni. 
 
 Questa pagina include informazioni di riepilogo e collegamenti a informazioni più dettagliate sulle novità dei singoli componenti di SQL Server 2016. 
 

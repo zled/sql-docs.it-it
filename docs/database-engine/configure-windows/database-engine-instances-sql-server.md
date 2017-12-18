@@ -2,9 +2,12 @@
 title: Istanza del motore di database (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 418e09ffb86563d22b145c2fba9f7ce61ad0c746
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 906150705dabca37cfee4eae1d0e19cecc641e4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-engine-instances-sql-server"></a>Istanza del motore di database (SQL Server)
-  Un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è una copia del file eseguibile **sqlservr.exe** che viene eseguita come un servizio del sistema operativo. Ogni istanza gestisce diversi database di sistema e uno o più database utente. Ciascun computer può eseguire più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le applicazioni si connettono all'istanza per eseguire attività in un database gestito dall'istanza.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è una copia del file eseguibile **sqlservr.exe** che viene eseguita come servizio del sistema operativo. Ogni istanza gestisce diversi database di sistema e uno o più database utente. Ciascun computer può eseguire più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le applicazioni si connettono all'istanza per eseguire attività in un database gestito dall'istanza.  
   
 ## <a name="instances"></a>Istanze  
  Un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] funziona come un servizio che gestisce ogni richiesta dell'applicazione per utilizzare i dati in qualsiasi database gestito da quell'istanza. È la destinazione delle richieste di connessione (accessi) da parte delle applicazioni. La connessione attraversa una connessione di rete se l'applicazione e l'istanza si trovano in computer separati. Se l'applicazione e l'istanza sono nello stesso computer, la connessione di SQL Server può essere eseguita come una connessione di rete o una connessione in memoria. Una volta completata una connessione, un'applicazione invia le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] attraverso la connessione all'istanza. L'istanza risolve le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in operazioni rispetto ai dati e agli oggetti nei database e, se le autorizzazioni necessarie sono state concesse alle credenziali di accesso, esegue l'attività. Qualsiasi dato recuperato viene restituito all'applicazione, insieme a qualsiasi messaggio, come ad esempio errori.  

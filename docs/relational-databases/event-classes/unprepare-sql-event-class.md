@@ -2,9 +2,12 @@
 title: Classe di evento Unprepare SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 714bf39c07d862b51f0d0fa0ff2ebb63b23101c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 22da6cb0ea25b23b581ee8048a03ca6af855bda2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="unprepare-sql-event-class"></a>Unprepare SQL - classe di evento
-  La classe di evento Unprepare SQL indica che una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] preparate sono state convertite in istruzioni non preparate (eliminate) da SqlClient, ODBC, OLE DB o DB-Library.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento Unprepare SQL indica che una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] preparate sono state convertite in istruzioni non preparate (eliminate) da SqlClient, ODBC, OLE DB o DB-Library.  
   
 ## <a name="unprepare-sql-event-class-data-columns"></a>Colonne di dati della classe di evento Unprepare SQL  
   
