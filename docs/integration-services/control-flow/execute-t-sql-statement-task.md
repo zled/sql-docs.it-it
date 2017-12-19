@@ -1,32 +1,32 @@
 ---
-title: "Attività Esegui istruzione T-SQL | Documenti Microsoft"
+title: "Attività Esegui istruzione T-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.executetsqlstatementtask.f1
+f1_keywords: sql13.dts.designer.executetsqlstatementtask.f1
 helpviewer_keywords:
 - Transact-SQL statements, SSIS
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 94fd411504f1781041e8d36f3f1cf41f6082aa09
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5e156f49956a9eb4497a7860ba54f037f7a8ffc1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-t-sql-statement-task"></a>Attività Esegui istruzione T-SQL
   L'attività Esegui istruzione T-SQL consente di eseguire istruzioni Transact-SQL. Per altre informazioni, vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md) e [Query di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-queries.md).  
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/03/2017
  Questa attività è simile all'attività Esegui SQL, ma supporta solo la versione Transact-SQL del linguaggio SQL e non può essere utilizzata per eseguire istruzioni su server che utilizzano altri sottolinguaggi del linguaggio SQL. Se è necessario eseguire query con parametri, salvare i risultati delle query nelle variabili oppure utilizzare espressioni di proprietà, è necessario utilizzare l'attività Esegui SQL anziché l'attività Esegui istruzione T-SQL. Per altre informazioni, vedere [Attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md).  
   
 ## <a name="configuration-of-the-execute-t-sql-task"></a>Configurazione dell'attività Esegui istruzione T-SQL  
- È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Questa attività è disponibile nella sezione **Attività di manutenzione** della casella degli strumenti **** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Questa attività è disponibile nella sezione **Attività di manutenzione** della **casella degli strumenti** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
@@ -47,7 +47,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flusso di controllo](../../integration-services/control-flow/control-flow.md)   
- [UNIRE i pacchetti di Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
+ [MERGE nei pacchetti di Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
   
   
-

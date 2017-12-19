@@ -1,33 +1,33 @@
 ---
-title: Integration Services (SSIS) query | Documenti Microsoft
+title: Query di Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.querybuilder.f1
+f1_keywords: sql13.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder [Integration Services]
 - queries [Integration Services]
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 81dd719383f3a05356d15677ce61bad5e8962807
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-queries"></a>Query di Integration Services (SSIS)
   L'attività Esegui SQL, l'origine OLE DB, la destinazione OLE DB e la trasformazione Ricerca possono utilizzare query SQL. Nell'attività Esegui SQL, tramite le istruzioni SQL vengono creati, aggiornati ed eliminati dati e oggetti di database e vengono eseguite stored procedure e istruzioni SELECT. Nell'origine OLE DB e nella trasformazione Ricerca, le istruzioni SQL sono solitamente istruzioni SELECT o EXEC. Queste ultime eseguono in genere stored procedure che restituiscono set di risultati.  
@@ -35,9 +35,9 @@ ms.lasthandoff: 09/26/2017
  Le query possono essere analizzate per stabilire se sono valide. Quando si analizza una query che utilizza una connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la query viene analizzata ed eseguita e il risultato dell'esecuzione, ovvero esito positivo o negativo, viene assegnato al risultato dell'analisi. Se la query utilizza una connessione a dati diversi da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'istruzione viene semplicemente analizzata.  
   
 È possibile specificare l'istruzione SQL nei modi seguenti:
-1.   Immetterlo direttamente nella finestra di progettazione.
-2.   Specificare che una connessione a un file contenente l'istruzione.
-3.   Specificare una variabile che contiene l'istruzione.  
+1.   Immettendola direttamente nella finestra di progettazione.
+2.   Specificando una connessione a un file che contiene l'istruzione.
+3.   Specificando una variabile che contiene l'istruzione.  
   
 ## <a name="direct-input-sql"></a>SQL a input diretto  
  Generatore query è disponibile nell'interfaccia utente per l'attività Esegui SQL, l'origine OLE DB, la destinazione OLE DB e la trasformazione Ricerca. Tramite Generatore query è possibile:  
@@ -97,19 +97,19 @@ Utilizzare la finestra di dialogo **Generatore query** per creare una query da u
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**Mostra/Nascondi riquadro Diagramma**|Consente di visualizzare o nascondere il riquadro **diagramma**.|  
+|**Mostra/Nascondi riquadro diagramma**|Consente di visualizzare o nascondere il riquadro **diagramma**.|  
 |**Mostra/Nascondi riquadro griglia**|Consente di visualizzare o nascondere il riquadro **griglia**.|  
 |**Mostra/Nascondi riquadro SQL**|Consente di visualizzare o nascondere il riquadro **SQL**.|  
-|**Mostra/Nascondi riquadro risultati**|Consente di visualizzare o nascondere il riquadro dei **risultati**.|  
-|**Correre**|Consente di eseguire la query. I risultati verranno visualizzati nel riquadro dei risultati.|  
+|**Mostra/Nascondi riquadro Risultati**|Consente di visualizzare o nascondere il riquadro dei **risultati**.|  
+|**Esegui**|Consente di eseguire la query. I risultati verranno visualizzati nel riquadro dei risultati.|  
 |**Verifica istruzione SQL**|Consente di verificare che l'istruzione sia valida.|  
 |**Ordinamento crescente**|Consente di disporre in ordine crescente le righe di output della colonna selezionata nel riquadro griglia.|  
 |**Ordinamento decrescente**|Consente di disporre in ordine decrescente le righe di output della colonna selezionata nel riquadro griglia.|  
 |**Rimuovi filtro**|Selezionare un nome di colonna nel riquadro griglia e quindi fare clic su **Rimuovi filtro** per rimuovere i criteri di ordinamento per la colonna.|  
 |**Usa Group By**|Consente di aggiungere funzionalità di raggruppamento GROUP BY alla query.|  
-|**Aggiungere una tabella**|Consente di aggiungere una nuova tabella alla query.|  
+|**Aggiungi tabella**|Consente di aggiungere una nuova tabella alla query.|  
   
- **Definizione della query**  
+ **Definizione query**  
  Questa opzione mette a disposizione una barra degli strumenti e riquadri in cui è possibile definire e testare la query.  
   
 |Riquadro|Description|  
@@ -120,4 +120,3 @@ Utilizzare la finestra di dialogo **Generatore query** per creare una query da u
 |Riquadro**Risultati** |Visualizza i risultati della query quando si fa clic su **Esegui** sulla barra degli strumenti.| 
 
   
-

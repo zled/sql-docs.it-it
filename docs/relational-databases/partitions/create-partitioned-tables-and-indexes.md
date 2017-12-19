@@ -2,9 +2,12 @@
 title: Creare tabelle e indici partizionati | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -32,14 +35,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f674dc211dd8c4611234cca4cdb6755a577f0a5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6f3f7e6d9f23ccebb49ac1f2c4bbc70acdff12d2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Creare tabelle e indici partizionati
-  Utilizzando [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile creare una tabella o un indice partizionato in [!INCLUDE[tsql](../../includes/tsql-md.md)]. I dati delle tabelle e degli indici partizionati vengono suddivisi orizzontalmente in unità che possono essere distribuite in più filegroup di un database. Il partizionamento semplifica la gestione delle tabelle e degli indici di grandi dimensioni e li rende più scalabili.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile creare una tabella o un indice partizionato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. I dati delle tabelle e degli indici partizionati vengono suddivisi orizzontalmente in unità che possono essere distribuite in più filegroup di un database. Il partizionamento semplifica la gestione delle tabelle e degli indici di grandi dimensioni e li rende più scalabili.  
   
  La creazione di una tabella o di un indice partizionato richiede generalmente quattro operazioni:  
   
