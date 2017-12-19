@@ -103,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  Nella scheda **Flusso di controllo** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] aggiungere un'attività Flusso di dati nell'area di progettazione.  
   
-2.  Nella scheda **Flusso di dati** tab, add an OLE DB source to the Flusso di dati task, and then open the **Editor origine OLE DB**.  
+2.  Nella scheda **Flusso di dati** aggiungere un'origine OLE DB all'attività Flusso di dati e quindi aprire **Editor origine OLE DB.**  
   
 3.  Nella pagina **Gestione connessione** dell'editor configurare l'origine con le impostazioni seguenti:  
   

@@ -26,11 +26,9 @@
 ## [Configurare operazioni parallele sugli indici](configure-parallel-index-operations.md)  
 ## [Guida sensibile al contesto di Proprietà indice](index-properties-f1-help.md)  
 
-
-
 # Indici columnstore
 ## [Panoramica](columnstore-indexes-overview.md)  
-## [Architettura](columnstore-indexes-architecture.md)  
+## [Architettura](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)  
 ## [Linee guida per la progettazione](columnstore-indexes-design-guidance.md)  
 ## [Linee guida per il caricamento di dati](columnstore-indexes-data-loading-guidance.md)  
 ## [Novità](columnstore-indexes-what-s-new.md)  
