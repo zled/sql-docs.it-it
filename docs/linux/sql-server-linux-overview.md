@@ -23,7 +23,7 @@ ms.lasthandoff: 12/01/2017
 ---
 # <a name="sql-server-on-linux"></a>SQL Server in Linux
 
-SQL Server 2017 viene ora eseguito in Linux. È lo stesso motore di database di SQL Server, molte funzionalità e i servizi indipendentemente dal sistema operativo simili.
+SQL Server 2017 viene ora eseguito in Linux. È lo stesso motore di database di SQL Server, con molte funzionalità e i servizi indipendentemente dal sistema operativo utilizzato.
 
 ## <a name="install"></a>Install
 
