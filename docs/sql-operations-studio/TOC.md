@@ -1,5 +1,6 @@
 # [SQL Operations Studio (anteprima)](what-is.md)
 # [Installare](download.md)
+# [Note sulla versione](release-notes.md)
 # Guide introduttive
 ## [Connettersi ed eseguire query in SQL Server](quickstart-sql-server.md)
 ## [Connettersi ed eseguire query in un database SQL di Azure](quickstart-sql-database.md)
