@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3278e9eaf53426fef36b42c47e63cdf049de4266
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b5758fcbb5e73e40a3022d5a97fb744b6735c7d2
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Abilitazione dell'opzione Blocco di pagine in memoria (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questi criteri di Windows determinano gli account autorizzati a usare un processo per mantenere i dati nella memoria fisica, impedendo al sistema di eseguire il paging dei dati nella memoria virtuale su disco.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  Nella finestra di dialogo **Selezione utenti, computer, account del servizio o gruppi** aggiungere un account con privilegi per l'esecuzione di sqlservr.exe.  
   
-8.  Effettuare la disconnessione e nuovamente l'accesso per rendere operativa questa modifica.  
+8.  Riavviare il servizio di motore dati di SQL Server per rendere effettiva questa impostazione.
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni di configurazione del server Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  

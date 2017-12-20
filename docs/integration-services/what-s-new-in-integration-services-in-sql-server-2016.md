@@ -23,7 +23,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/04/2017
 ---
-# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
+# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità di Integration Services in SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 Questo argomento descrive le funzionalità che sono state aggiunte o aggiornate in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Contiene anche le funzionalità aggiunte o aggiornate nel [Feature Pack di Azure per Integration Services &#40; SSIS &#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) durante l'intervallo di tempo di SQL Server 2016.  
@@ -224,7 +224,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
   
  Il metodo GetIdentificationStringByLineageID è stato rinominato in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Per ulteriori informazioni, vedere [Nomi di colonna per gli errori nel flusso di dati](#ErrorColumn).  
   
- Per altre informazioni su questa modifica e sui miglioramenti apportati alla colonna errore, vedere il seguente post di blog aggiornato. [Miglioramenti della colonna errore per il flusso di dati SSIS (aggiornato per la versione CTP&3;.3)](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ Per altre informazioni su questa modifica e sui miglioramenti apportati alla colonna errore, vedere il seguente post di blog aggiornato. [Miglioramenti della colonna errore per il flusso di dati SSIS (aggiornato per la versione CTP3.3)](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
   
 > [!NOTE]  
 >  (in RC0, questo metodo è stato spostato nella nuova interfaccia di <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Per altre informazioni, vedere [Nuova interfaccia IDTSComponentMetaData130 nell'API](#CMD130)).  

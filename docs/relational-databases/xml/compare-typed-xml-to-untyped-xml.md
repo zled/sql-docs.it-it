@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1335222c16e955affee5237c0160afb058ebeea2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cf2185ff9c0aa70c97b4d067f4d58d5360b70948
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Confronto dati XML tipizzati con dati XML non tipizzati
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] È possibile creare variabili, parametri e colonne di tipo **xml**. È inoltre possibile associare una raccolta XML Schema a una variabile, un parametro o una colonna di tipo **xml** . In questo caso, l'istanza del tipo di dati **xml** viene definita *tipizzata*. In caso contrario, l'istanza XML è definita *non tipizzata*.  

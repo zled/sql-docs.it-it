@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Questo argomento descrive alcune delle cause comuni della riduzione delle prestazioni per gli indici e le query full-text. Vengono inoltre forniti alcuni suggerimenti per limitare i problemi e migliorare le prestazioni.
@@ -151,7 +151,7 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
   
  `F = 8*10*8=640`  
   
- Il calcolo successivo ottiene il valore ottimale per **max server memory**—*M*. *L*a memoria fisica totale disponibile su questo sistema in MB—*T*—è `8192`.  
+ Il calcolo successivo ottiene il valore ottimale per **max server memory**—*M*. La memoria fisica totale disponibile in questo sistema in MB—*T*—è `8192`.  
   
  `M = 8192-640-500=7052`  
   

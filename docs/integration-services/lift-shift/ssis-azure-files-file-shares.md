@@ -1,19 +1,19 @@
 ---
 title: Archiviare e recuperare file nelle condivisioni file in locale e in Azure | Microsoft Docs
 description: In questo articolo viene descritto come usare il file system e le condivisioni file, sia a livello locale che in Azure, con SSIS
-ms.date: 11/10/2017
+ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4980f39deea4d70817da3650dccbff7997ba83d
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>Archiviare e recuperare file nelle condivisioni file in locale e in Azure con SSIS
 In questo articolo viene descritto come aggiornare i pacchetti di SQL Server Integration Services (SSIS) quando si esegue la migrazione lift-and-shift dei pacchetti che usano i file system locali in SSIS in Azure.
@@ -22,7 +22,7 @@ In questo articolo viene descritto come aggiornare i pacchetti di SQL Server Int
 > Attualmente il database del catalogo SSIS (SSISDB) supporta solo un singolo set di credenziali di accesso. Di conseguenza, il runtime di integrazione SSIS di Azure non è in grado di usare credenziali diverse per connettersi a più condivisioni file locali e alle condivisioni di File di Azure.
 
 ## <a name="store-temporary-files"></a>Archiviare i file temporanei
-Se è necessario archiviare ed elaborare i file temporanei durante l'esecuzione di un singolo pacchetto, i pacchetti possono usare la cartella temporanea `(.)/temp` o `%TEMP%` dei nodi del runtime di integrazione SSIS di Azure.
+Se è necessario archiviare ed elaborare i file temporanei durante l'esecuzione di un singolo pacchetto, i pacchetti possono usare la directory di lavoro corrente (`.`) o la cartella temporanea (`%TEMP%`) dei nodi del runtime di integrazione SSIS di Azure.
 
 ## <a name="store-files-across-multiple-package-executions"></a>Archiviare i file in più esecuzioni del pacchetto
 Se è necessario archiviare ed elaborare i file permanenti e renderli persistenti in più esecuzioni dei pacchetti, è possibile usare condivisioni di file in locale o File di Azure

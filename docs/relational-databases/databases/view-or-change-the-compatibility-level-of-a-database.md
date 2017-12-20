@@ -1,7 +1,7 @@
 ---
 title: "Visualizzare o modificare il livello di compatibilità di un database | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 40c4657342ee642cf7d9f9535d4bcfc5b5169618
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 83be5f7ff574c28cf5182053e47edbacd6cc7ecf
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Visualizzare o modificare il livello di compatibilità di un database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Questo argomento illustra come visualizzare o modificare il livello di compatibilità di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Prima di modificare il livello di compatibilità di un database, è importante comprendere quale impatto avrà la modifica sulle applicazioni. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
      Il livello di compatibilità corrente viene visualizzato nella casella di riepilogo **Livello di compatibilità** .  
   
-5.  Per modificare il livello di compatibilità, selezionare un'opzione diversa dall'elenco. Scegliere tra **SQL Server 2008 (100)**, **SQL Server 2012 (110)**o **SQL Server 2014 (120)**.  
+5.  Per modificare il livello di compatibilità, selezionare un'opzione diversa dall'elenco. Le scelte comprendono **SQL Server 2008 (100)**, **SQL Server 2012 (110)**, **SQL Server 2014 (120)**, **SQL Server 2016 (130)** e **SQL Server 2017 (140)**.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
@@ -83,7 +83,6 @@ GO
 SELECT compatibility_level  
 FROM sys.databases WHERE name = 'AdventureWorks2012';  
 GO  
-  
 ```  
   
 #### <a name="to-change-the-compatibility-level-of-a-database"></a>Per modificare il livello di compatibilità di un database  
@@ -100,4 +99,5 @@ SET COMPATIBILITY_LEVEL = 120;
 GO  
 ```  
   
-  
+## <a name="see-also"></a>Vedere anche
+ [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
