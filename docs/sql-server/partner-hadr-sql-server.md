@@ -7,8 +7,8 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: 
 ms.assetid: 
-ms.service: database-engine
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -16,28 +16,27 @@ ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: 
 ms.date: 09/17/2017
-ms.prod: sql-server
-ms.prod_service: sql-non-specified
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 0234e7966cc326edf2ce5a85ce03f8e38143f5b5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a37ba047d17dda983d3fbed247df38ebb3a1aaf8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Partner di disponibilità elevata e ripristino di emergenza per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per garantire la disponibilità elevata e il ripristino di emergenza per i servizi di SQL Server, è disponibile un'ampia gamma di strumenti leader nel settore.  In questo articolo vengono evidenziate le aziende partner Microsoft con soluzioni per la disponibilità elevata e il ripristino di emergenza che supportano Microsoft SQL Server.
 
 ## <a name="our-high-availability-and-disaster-recovery-partners"></a>Partner Microsoft per la disponibilità elevata e il ripristino di emergenza
-<!--
-|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
 | Partner | Description | Collegamenti | 
 | --- | --- | --- |
 |![azure][5] |**Azure Site Recovery**<br>Azure Site Recovery replica i carichi di lavoro in esecuzione in macchine virtuali o server fisici in modo che rimangano disponibili in una posizione secondaria se il sito primario non è disponibile. È possibile eseguire la replica e il failover delle macchine virtuali di SQL Server dal data center locale ad Azure o a un altro data center locale oppure da un data center di Azure a un altro data center di Azure.<br><br> Edizioni Enterprise e Standard di SQL Server 2008 R2 - SQL Server 2016|[Sito Web][azure_website]<br>[Marketplace][azure_marketplace]<br>[Foglio dati][azure_datasheet]<br>[Twitter][azure_twitter]<br>[Video][azure_youtube]|
 |![dh2i][2] |**DH2i**<br>DxEnterprise è il software di disponibilità intelligente per Windows, Linux e Docker che consente di ottenere il tempo di inattività pianificato e non pianificato più vicino a zero, sblocca enormi risparmi sui costi, semplifica drasticamente la gestione e ottiene il consolidamento sia fisico che logico.<br><br>SQL Server 2005+, Windows Server 2008R2+, Ubuntu 16+, RHEL 7+, CentOS 7+|[Sito Web][dh2i_website]<br>[Foglio dati][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[Video][dh2i_youtube]|
-|![hpe][4] |**HPE Serviceguard**<br>HPE Serviceguard per Linux (SGLX) consente di proteggere i carichi di lavoro critici di SQL Server 2017 in Linux® da tempi di inattività pianificati e non pianificati con i relativi errori dell'infrastruttura e delle applicazioni negli ambienti fisici e virtuali su qualsiasi distanza. Come parte del programma Beta, HPE SGL X offre opzioni di monitoraggio e recupero sensibili al contesto per i carichi di lavoro di SQL Server delle istanze del cluster di failover e dei gruppi di disponibilità Always On. Ottimizzare i tempi di attività con HPE SGLX senza compromettere l'integrità e le prestazioni dei dati.<br><br>SQL Server 2017 in Linux - RedHat 7.3, 7.4, SuSE 12 SP2, SP3|[Sito Web][hpe_website]<br>[Foglio dati][hpe]<br>[Download][hpe_download]<br>[Twitter][hpe_twitter]
+|![hpe][4] |**HPE Serviceguard**<br>HPE Serviceguard per Linux (SGLX) consente di proteggere i carichi di lavoro critici di SQL Server 2017 in Linux® da tempi di inattività pianificati e non pianificati con i relativi errori dell'infrastruttura e delle applicazioni negli ambienti fisici e virtuali su qualsiasi distanza. Come parte del programma Beta, HPE SGLX offre opzioni di monitoraggio e recupero sensibili al contesto per i carichi di lavoro di SQL Server delle istanze del cluster di failover e dei gruppi di disponibilità Always On. Ottimizzare i tempi di attività con HPE SGLX senza compromettere l'integrità e le prestazioni dei dati.<br><br>SQL Server 2017 in Linux - RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[Sito Web][hpe_website]<br>[Foglio dati][hpe]<br>[Download della versione beta][hpe_download]<br>[Blog][hpe_download]<br>[Twitter][hpe_twitter]
 |![idera][3]|**IDERA**<br>SQL Safe Backup è una soluzione di backup e recupero ad alte prestazioni per SQL Server che consente di risparmiare denaro riducendo i tempi di backup e le dimensioni dei file di backup dei database e offre l'accesso immediato in lettura e scrittura ai database all'interno dei file di backup.<br><br>Microsoft SQL Server: 2005 SP1 o versioni successive, 2008, 2008 R2, 2012, 2014, 2016; tutte le versioni |[Sito Web][idera_website]|
 |![portworx][6] |**Portworx**<br>Portworx è la soluzione per i contenitori con stato in esecuzione nell'ambiente di produzione. Con Portworx gli utenti possono gestire qualsiasi database o servizio con stato in qualsiasi infrastruttura usando un'utilità di pianificazione del contenitore, ad esempio Kubernetes, Mesosphere DC/OS e Docker Swarm. Portworx risolve i cinque problemi più comuni affrontati dai team DevOps durante l'esecuzione dei database nei contenitori e altri servizi con stato nell'ambiente di produzione: persistenza, disponibilità elevata, automazione dei dati, supporto per più archivi dati e infrastruttura, sicurezza.<br><br>SQL Server 2017 in Docker |[Sito Web][portworx_website]<br>[Documentazione][portworx_docs]<br>[Video][portworx_youtube]|
 |![veeam][1] |**Veeam**<br>Veeam Backup & Replication è una soluzione di backup e disponibilità potente, economica e facile da usare. Offre un recupero rapido, affidabile e flessibile delle applicazioni virtualizzate e dei dati, combinando il backup e la replica delle macchine virtuali in un'unica soluzione software. Veeam Backup & Replication offre un eccellente supporto per gli ambienti virtuali VMware vSphere e Microsoft Hyper-V.<br><br>SQL Server 2005 SP4 – SQL Server 2016 in Windows |[Sito Web][veeam_website]<br>[Foglio dati][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[Video][veeam_youtube]|
@@ -99,3 +98,6 @@ Per altre informazioni su alcuni altri partner, vedere [monitoraggio][mon_partne
 
 <!--Download links-->
 [hpe_download]: http://downloads.linux.hpe.com/SDR/project/sglx/sglx-beta/
+
+<!--Blog links-->
+[hpe_blog]: https://community.hpe.com/t5/Servers-The-Right-Compute/SQL-Server-for-Linux-Is-Here-and-A-New-Chapter-for-Mission/ba-p/6977571#.WiHWW0xFwUE

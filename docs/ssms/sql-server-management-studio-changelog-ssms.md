@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Log delle modifiche (SSMS) | Microsoft Docs
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -17,17 +17,113 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dde2d7831a7bc75f9873efedcddb0bf6134669d9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6046e57ec48ace2795c65879d00ad563d81fd0d6
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questo articolo fornisce informazioni dettagliate sugli aggiornamenti, i miglioramenti e le correzioni di bug per le versioni correnti e precedenti di SSMS. Scaricare le [versioni precedenti di SSMS indicate di seguito](#previous-ssms-releases).
 
 
-## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
+Disponibile a livello generale | Numero di build: 14.0.17213.0
+
+### <a name="whats-new"></a>Novità
+
+**SQL Server Management Studio (SSMS) - Generale**
+
+Valutazione della vulnerabilità:
+- Aggiunta di un nuovo servizio di valutazione della vulnerabilità SQL per l'analisi dei database per rilevare eventuali vulnerabilità e deviazioni dalle procedure consigliate, ad esempio configurazioni errate, autorizzazioni eccessive ed esposizione di dati sensibili. 
+- I risultati della valutazione includono le azioni applicabili per risolvere ogni problema, oltre a script di correzione personalizzati, ove applicabile. I report di valutazione possono essere personalizzati per ogni ambiente e adattati a specifici requisiti. Per altre informazioni, vedere [Valutazione della vulnerabilità SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment).
+
+SMO:
+- Risoluzione del problema per cui *HasMemoryOptimizedObjects* genera un'eccezione in Azure.
+- Aggiunta del supporto per la funzionalità CATALOG_COLLATION.
+
+Dashboard Always On:
+- Miglioramenti dell'analisi della latenza nei gruppi di disponibilità.
+- Aggiunta di due nuovi report: *AlwaysOn\_Latency\_Primary* e *AlwaysOn\_Latency\_Secondary*.
+
+Showplan:
+- Aggiornamento dei collegamenti che ora puntano alla documentazione corretta.
+- Possibilità di eseguire l'analisi di un singolo piano direttamente dal piano effettivo generato.
+- Nuovo set di icone.
+- Aggiunta del supporto per riconoscere l'applicazione di operatori logici, ad esempio GbApply e InnerApply.
+        
+Profiler XE:
+- Rinominato in Profiler XEvent.
+- I comandi di menu Arresta/Avvia ora arrestano/avviano la sessione per impostazione predefinita.
+- Abilitazione dei tasti di scelta rapida (ad esempio, CTRL+F per la ricerca).
+- Aggiunta delle azioni database\_name e client\_hostname agli eventi appropriati nelle sessioni di Profiler XEvent. Per applicare la modifica, potrebbe essere necessario eliminare le istanze della sessione QuickSessionStandard o QuickSessionTSQL sui server - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
+
+Riga di comando:
+- Aggiunta di una nuova opzione della riga di comando ("-G") che può essere usata per la connessione automatica di SSMS a un server/database usando l'autenticazione di Active Directory (integrata o della password). Per altre informazioni, vedere [Utilità Ssms](ssms-utility.md).
+
+Procedura guidata Importa file flat:
+- Possibilità di selezionare un nome di schema diverso da quello predefinito ("dbo") quando si crea la tabella.
+
+Query Store:
+- Ripristino del report "Query regredite" quando si espande l'elenco di report disponibili di Query Store.
+
+**Integration Services (IS)**
+- Aggiunta della funzione di convalida dei pacchetti in Distribuzione guidata, che consente all'utente di determinare i componenti nei pacchetti SSIS non supportati nel runtime di integrazione SSIS di Azure.
+
+### <a name="bug-fixes"></a>Correzioni di bug
+
+**SQL Server Management Studio (SSMS) - Generale**
+
+- Esplora oggetti:
+    - Risoluzione di un problema per cui il nodo Funzione con valori di tabella non viene visualizzato per gli snapshot del database - [Connect 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161).
+    - Miglioramento delle prestazioni quando si espande il nodo *Database* quando il server ha database a chiusura automatica.
+- Editor query:
+    - Risoluzione di un problema per cui IntelliSense ha esito negativo per gli utenti che non hanno accesso al database master.
+    - Risoluzione di un problema che in alcuni casi causa l'arresto anomalo di SSMS quando la connessione a un computer remoto viene chiusa - [Connect 3142557](https://connect.microsoft.com/SQLServer/feedback/details/3142557).
+- Visualizzatore XEvent:
+    - Riabilitazione della funzionalità di esportazione in XEL.
+    - Risoluzione dei problemi per cui in alcuni casi l'utente non riesce a caricare un intero file XEL.
+- Profiler XEvent:
+    - Risoluzione di un problema che causa l'arresto anomalo di SSMS quando l'utente non ha autorizzazioni *VISUALIZZAZIONE STATO DEL SERVER*.
+    - Risoluzione di un problema per cui la chiusura della finestra dei dati dinamici di Profiler XE non arresta la sessione sottostante.
+- Server registrati:
+    - Risoluzione di un problema per cui il comando "Sposta in" smette di funzionare - [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) e [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/).
+- SMO:
+    - Risoluzione di un problema per cui il metodo TransferData sull'oggetto Transfer non funziona.
+    - Risoluzione di un problema per cui i database del server generano un'eccezione per i database di SQL DW in pausa.
+    - Risoluzione di un problema per cui lo script del database SQL in SQL DW genera valori di parametri T-SQL non corretti.
+    - Risoluzione di un problema per cui lo script di un database con estensione crea erroneamente l'opzione *DATA\_COMPRESSION*.
+- Monitoraggio attività processi:
+    - Risoluzione di un problema per cui l'utente visualizza l'errore "Index non compreso nell'intervallo. Richiesto valore non negativo e minore della dimensione della raccolta. 
+        Nome parametro: index (System.Windows.Forms)" quando prova ad applicare il filtro per categoria - [Connect 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691).
+- Finestra di dialogo della connessione:
+    - Risoluzione di un problema per cui gli utenti di un dominio senza accesso a un controller di dominio in lettura/scrittura non possono accedere a un'istanza di SQL Server usando l'autenticazione SQL - [Connect 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381).
+- Replica:
+    - Risoluzione di un problema per cui viene visualizzato un errore simile a "Non è possibile applicare il valore 'null' alla proprietà ServerInstance" quando si esaminano le proprietà di una sottoscrizione pull in SQL Server.
+- Installazione di SSMS:
+    - Risoluzione di un problema per cui l'installazione di SSMS causa erroneamente la riconfigurazione di tutti i prodotti installati nel computer.
+- Impostazioni utente:
+   - Con questa correzione, gli utenti del cloud sovrano US Government avranno accesso senza interruzione alle risorse del database SQL di Azure e di Azure Resource Manager con SSMS tramite l'autenticazione universale e l'accesso ad Azure Active Directory.  Gli utenti delle versioni precedenti di SSMS dovranno aprire Strumenti|Opzioni|Servizi di Azure e in Gestione risorse impostare la configurazione della proprietà "Autorità di Active Directory" su https://login.microsoftonline.us.
+
+**Analysis Services (AS)**
+
+- Profiler: risoluzione di un problema quando si prova a connettersi usando l'autenticazione di Windows in Azure AS.
+- Risoluzione di un problema che può causare un arresto anomalo del sistema quando si annullano i dettagli della connessione in un modello 1400.
+- Quando si imposta una chiave BLOB di Azure nella finestra di dialogo Proprietà connessione quando si aggiornano le credenziali, ora risulta mascherata.
+- Risoluzione di un problema per cui nella finestra di dialogo Selezione utenti di Azure Analysis Services viene visualizzato il GUID ID applicazione invece dell'ID oggetto durante una ricerca.
+- Risoluzione di un problema della barra degli strumenti Progettazione query MDX/Browse Database (Esplora database) che causa il mapping non corretto delle icone per alcuni pulsanti.
+- Risoluzione di un problema che impedisce la connessione a SSAS tramite indirizzi http/https di IIS di tipo msmdpump.
+- Diverse stringhe nella finestra di dialogo Selezione utenti di Azure Analysis Services sono state convertite per altri linguaggi.
+- La proprietà MaxConnections è ora visibile per le origini dati nei modelli tabulari.
+- La Distribuzione guidata genera ora le definizioni JSON corrette per i membri del ruolo di Azure AS.
+- Risoluzione di un problema in SQL Profiler per cui, selezionando l'autenticazione di Windows in Azure AS, viene ancora richiesto l'accesso.
+
+
+## <a name="previous-ssms-releases"></a>Versioni precedenti di SSMS
+
+Scaricare le versioni precedenti di SSMS facendo clic sui collegamenti ai titoli nelle sezioni seguenti.
+
+## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![download](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 Disponibile a livello generale | Numero di build: 14.0.17199.0
 
 ### <a name="enhancements"></a>Miglioramenti
@@ -117,10 +213,6 @@ Disponibile a livello generale | Numero di build: 14.0.17199.0
 
 - [execution_path] in [catalog].[event_messagea] non è corretto per le esecuzioni dei pacchetti in Scale Out. [execution_path] inizia con "\Package" anziché con il nome oggetto dell'eseguibile del pacchetto. Quando si visualizza il report panoramica delle esecuzioni dei pacchetti in SSMS, il collegamento "Percorso di esecuzione" in Panoramica sulle esecuzioni non funziona. La soluzione alternativa consiste nel fare clic su "Visualizzazione messaggi" nel report panoramica per controllare tutti i messaggi di evento.
 
-
-## <a name="previous-ssms-releases"></a>Versioni precedenti di SSMS
-
-Scaricare le versioni precedenti di SSMS facendo clic sui collegamenti ai titoli nelle sezioni seguenti.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![download](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 Disponibile a livello generale | Numero di build: 14.0.17177.0

@@ -1,7 +1,7 @@
 ---
 title: "Utilità Ssms | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e308a64f82ddb822bc5535c6cae7dc076265d212
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 867317119ffb1b58aeac049f4a1e64162368ff08
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="ssms-utility"></a>Utilità Ssms
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L'utilità **Ssms** apre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Se specificato, **Ssms** anche una connessione a un server e apre query, script, file, progetti e soluzioni.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 Ssms  
     [scriptfile] [projectfile] [solutionfile]  
-    [-S servername] [-d databasename] [-U username] [-P password]   
+    [-S servername] [-d databasename] [-G] [-U username] [-P password]   
     [-E] [-nosplash] [-log [filename]?] [-?]  
 ```  
   
@@ -58,27 +58,34 @@ Ssms
  Specifica una soluzione da aprire. Il parametro deve includere il percorso completo del file di soluzione.  
   
  [**-S** *nomeserver*]  
- Nome server  
+  Nome server  
   
  [**-d** *databasename*]  
- Nome database  
+  Nome database  
+
+ [**-G**] Connessione con l'autenticazione di Azure Active Directory. Il tipo di connessione dipende dal fatto che sia incluso **-P** e/o **-U**.
+ - Se **-U** e **-P** *non* sono inclusi, viene usato **Active Directory - Integrata** e non verranno visualizzate finestre di dialogo.
+ - Se sia **-U** che **-P** sono inclusi, viene usato **Active Directory - Password**. **Non è consigliabile** usare questa opzione perché è necessario specificare una password non crittografata nella riga di comando, ma è meglio evitarlo.
+ - Se **-U** è incluso, ma **-P** è mancante, verrà visualizzata la finestra di dialogo dell'autorizzazione, ma tutti i tentativi di accesso avranno esito negativo. 
+
+  Si noti che **Active Directory - Universale con supporto MFA** non è attualmente supportato. 
   
- [**-U** *username*]  
- Nome utente utilizzato per la connessione tramite l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+[**-U** *username*]  
+ Nome utente quando ci si connette con "Autenticazione SQL" o "Active Directory - Password"  
   
- [**-P** *password*]  
- Password utilizzata per la connessione tramite l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+[**-P** *password*]  
+ Password quando ci si connette con "Autenticazione SQL" o "Active Directory - Password"
   
- [**-E**]  
+[**-E**]  
  Stabilisce la connessione utilizzando l'autenticazione di Windows  
   
- [**-nosplash**]  
+[**-nosplash**]  
  Se si specifica questa opzione, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] non viene visualizzata la grafica della schermata iniziale all'apertura. Utilizzare questa opzione in caso di connessione al computer che esegue [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per mezzo di Servizi terminal tramite una connessione a larghezza di banda limitata. Questo argomento non supporta la distinzione tra maiuscole e minuscole e può trovarsi prima o dopo altri argomenti.  
   
- [**-log***[filename]?*]  
+[**-log***[filename]?*]  
  L'attività [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] viene registrata nel file specificato per la risoluzione dei problemi  
   
- [**-?**]  
+[**-?**]  
  Visualizza informazioni della Guida relative alla riga di comando.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -103,13 +110,21 @@ Ssms
   
 ```  
   
+ Il codice seguente apre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] da un prompt dei comandi usando *Active Directory - Integrata*:  
+  
+```  
+Ssms.exe -S servername.database.windows.net -G
+  
+``` 
+
+
  Lo script seguente apre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] da un prompt dei comandi utilizzando l'autenticazione di Windows, con l'editor del codice impostato sul server `ACCTG and the database AdventureWorks2012,` senza visualizzare la schermata iniziale.  
   
 ```  
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash  
   
 ```  
-  
+
  Lo script seguente apre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] da un prompt dei comandi e quindi apre lo script MonthEndQuery.  
   
 ```  
@@ -130,7 +145,10 @@ Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"  
   
 ```  
-  
+ 
+
+
+
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   

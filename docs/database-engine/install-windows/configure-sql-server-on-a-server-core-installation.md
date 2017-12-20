@@ -19,11 +19,11 @@ caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: f55439476e962ab97c2e29a37524854fa52d819b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 571f4f13be8ddcfaf2bd1b4d649df0ef09ba6bfc
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurare SQL Server in un'installazione Server Core
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive i dettagli sulla configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'installazione Server Core.  
@@ -115,7 +115,7 @@ Questi passaggi devono essere effettuati in un PC in cui viene eseguita l'edizio
   
 7. Selezionare la scheda **Disponibilità elevata AlwaysOn** .  
   
-8. Verificare che nel campo Nome cluster di failover Windows sia incluso il nome del nodo del cluster di failover locale. Se il campo è vuoto, questa istanza del server non supporta attualmente Gruppi di disponibilità AlwaysOn. Il computer locale non è un nodo del cluster, il cluster WSFC è stato chiuso, oppure si tratta di un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] che non supporta Gruppi di disponibilità AlwaysOn.  
+8. Verificare che nel campo Nome cluster di failover Windows sia incluso il nome del nodo del cluster di failover locale. Se il campo è vuoto, questa istanza del server non supporta attualmente Gruppi di disponibilità AlwaysOn. Il computer locale non è un nodo del cluster, il cluster WSFC è stato chiuso oppure questa edizione di [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] non supporta Gruppi di disponibilità AlwaysOn.  
   
 9. Selezionare la casella di controllo Abilita gruppi di disponibilità AlwaysOn e scegliere OK.  
   
