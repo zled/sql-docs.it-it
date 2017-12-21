@@ -1,7 +1,7 @@
-# [Installare Reporting Services](install-reporting-services.md)
+# [Installare Reporting Services 2017](install-reporting-services.md)
+## [Trovare il codice Product Key per Reporting Services 2017](find-reporting-services-product-key-ssrs.md)
 
-
-# [Installare Reporting Services in modalità nativa](install-reporting-services-native-mode-report-server.md)  
+# [Installare Reporting Services 2016 in modalità nativa](install-reporting-services-native-mode-report-server.md)  
 ## [Eseguire un'installazione di tipo "solo file" di Reporting Services](files-only-installation-reporting-services.md)  
 ## [Installare side-by-side Reporting Services e Internet Information Services (modalità nativa SSRS)](install-reporting-and-internet-information-services-side-by-side.md)  
 ## [Ospitare un database del server di report in un cluster di failover di SQL Server](host-a-report-server-database-in-a-sql-server-failover-cluster.md)  
@@ -29,7 +29,7 @@
 ### [Integrazione di Power BI](power-bi-report-server-integration-configuration-manager.md)  
 
 
-# [Installare la modalità SharePoint di Reporting Services](install-reporting-services-sharepoint-mode.md)  
+# [Installare la modalità SharePoint di Reporting Services 2016](install-reporting-services-sharepoint-mode.md)  
 ## [Combinazioni supportate di SharePoint, server Reporting Services e componente aggiuntivo (SQL Server 2016)](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 ## [Posizione in cui trovare il componente aggiuntivo SSRS per SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
 ## [Installare il primo server di report in modalità SharePoint](install-the-first-report-server-in-sharepoint-mode.md)  
