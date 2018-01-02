@@ -184,7 +184,7 @@ Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe
   
 ##  <a name="KnownIssues"></a> Risoluzione dei problemi relativi alla procedura guidata  
  **La procedura guidata Abilitare il database per l'estensione non ha esito positivo.**  
- Se Estensione database non è ancora abilitata a livello di server e se si esegue la procedura guidata senza le autorizzazioni di amministratore di sistema per abilitarlo, la procedura guidata avrà esito negativo. Chiedere all'amministratore di sistema di abilitare Estensione database nell'istanza del server locale e quindi eseguire nuovamente la procedura guidata. Per ulteriori informazioni, vedere [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
+ Se Estensione database non è ancora abilitata a livello di server e se si esegue la procedura guidata senza le autorizzazioni di amministratore di sistema per abilitarlo, la procedura guidata avrà esito negativo. Chiedere all'amministratore di sistema di abilitare Estensione database nell'istanza del server locale e quindi eseguire nuovamente la procedura guidata. Per ulteriori informazioni, vedere [Prerequisito: autorizzazioni per abilitare Stretch Database nel server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Abilitare tabelle aggiuntive per Estensione database. Monitorare la migrazione dei dati e gestire tabelle e database abilitati per l'estensione.  
