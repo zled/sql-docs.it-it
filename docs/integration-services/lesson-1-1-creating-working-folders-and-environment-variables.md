@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8ee63b1546b182cad4e0bb2b137c1bad51f15032
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 56776e68d9e9ed897bb948ad53e4736c7d1485dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Passaggio 1-1: Creazione di cartelle di lavoro e variabili di ambiente
 In questa attività si procederà alla creazione della cartella di lavoro C:\DeploymentTutorial e delle nuove variabili di ambiente`DataTransfer` e `LoadXMLData`che verranno utilizzate nelle attività successive dell'esercitazione.  
@@ -57,7 +57,7 @@ Se si prevede di distribuire i pacchetti in un altro computer, è necessario cre
   
 5.  Nella finestra di dialogo **Nuova variabile di sistema** digitare **DataTransfer** nella casella **Nome variabile** e **C:\DeploymentTutorial\datatransferconfig.dtsconfig** nella casella **Valore variabile** .  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 7.  Fare nuovamente clic su **Nuova** e digitare **LoadXMLData** nella casella **Nome variabile** e **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig** nella casella **Valore variabile** .  
   
@@ -79,7 +79,7 @@ Se si prevede di distribuire i pacchetti in un altro computer, è necessario cre
   
 5.  Nella finestra di dialogo **Nuova variabile di sistema** digitare **DataTransfer** nella casella **Nome variabile** e **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig** nella casella **Valore variabile** .  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 7.  Fare nuovamente clic su **Nuova** e digitare **LoadXMLData** nella casella **Nome variabile** e **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig** nella casella **Valore variabile** .  
   

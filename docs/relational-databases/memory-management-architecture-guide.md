@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 503814b6f9ade3623a4586b97ae09434f78c0db4
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 1e764d14059dbb4015c213fc9f35e75f529d4b10
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,10 +93,10 @@ La tabella seguente indica se un tipo specifico di allocazione di memoria è con
 |Tipo di allocazione di memoria| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Allocazioni di singole pagine|Sì|Sì, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
-|Allocazioni di più pagine|No|Sì, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
-|Allocazioni CLR|No|Sì|
-|Memoria stack di thread|No|No|
-|Allocazioni dirette da Windows|No|No|
+|Allocazioni di più pagine|no|Sì, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
+|Allocazioni CLR|no|Sì|
+|Memoria stack di thread|no|no|
+|Allocazioni dirette da Windows|no|no|
 
 A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe allocare altra memoria rispetto al valore specificato nell'impostazione max server memory. Questo comportamento può verificarsi quando il valore ***Memoria totale server (KB)*** ha già raggiunto il valore dell'impostazione ***Memoria prevista server (KB)*** (come specificato da max server memory). Se la memoria contigua disponibile è insufficiente per soddisfare le richieste di più pagine di memoria (più di 8 KB) a causa della frammentazione della memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può eseguire l'overcommit anziché rifiutare la richiesta di memoria. 
 
@@ -120,7 +120,7 @@ La tabella seguente indica se un tipo specifico di allocazione di memoria rientr
 
 |Tipo di allocazione di memoria| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Allocazioni di singole pagine|No|No, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
+|Allocazioni di singole pagine|no|No, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
 |Allocazioni di più pagine|Sì|No, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
 |Allocazioni CLR|Sì|Sì|
 |Memoria stack di thread|Sì|Sì|
@@ -138,7 +138,7 @@ Quando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza la memori
 
 La query seguente restituisce le informazioni sulla memoria attualmente allocata:  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
     large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 

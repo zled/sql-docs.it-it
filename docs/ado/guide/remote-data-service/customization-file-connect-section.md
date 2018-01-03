@@ -3,7 +3,7 @@ title: File di personalizzazione connettersi sezione | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe0012f287536d015e1086d02833a0f6651194f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b18fd84d31e95aa2973dd0d5377fbc8f51fafe4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customization-file-connect-section"></a>Collegare il File di personalizzazione
 Il comportamento predefinito del gestore consiste nel negare tutte le connessioni. Il **connettersi** sezione specifica le eccezioni a questo comportamento. Ad esempio, se tutti i **connettersi** sezioni sono assenti o vuota, quindi per impostazione predefinita può essere eseguita alcuna connessione.  
@@ -61,7 +61,7 @@ connectionString
   
 |Parte|Description|  
 |----------|-----------------|  
-|**Connetti**|Una stringa letterale che indica che si è una stringa di connessione.|  
+|**Connect**|Una stringa letterale che indica che si è una stringa di connessione.|  
 |***connectionString***|Stringa che sostituisce la stringa di connessione client intero.|  
 |**Accesso**|Una stringa letterale che indica che si è una voce di accesso.|  
 |***accessRight***|Uno dei diritti di accesso seguenti:<br /><br /> -   **NoAccess** : utente non è possibile accedere all'origine dati.<br />-   **ReadOnly** : l'utente può leggere l'origine dati.<br />-   **ReadWrite** , in grado di leggere o scrivere nell'origine dati utente.|  

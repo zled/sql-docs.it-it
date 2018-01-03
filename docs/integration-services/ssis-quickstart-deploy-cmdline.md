@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c3e7f7e3fa870c7aa5b30a5a4a324f0cef7f6ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a753aa1418e935604148d0d42afa22716dec1b17
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Distribuire un progetto SSIS dal prompt dei comandi con ISDeploymentWizard.exe
 Questa esercitazione introduttiva illustra come distribuire un progetto SSIS dal prompt dei comandi eseguendo la Distribuzione guidata Integration Services, `ISDeploymentWizard.exe`.
@@ -40,7 +40,7 @@ Per altre informazioni sulla procedura, vedere [Distribuzione guidata Integratio
     Fare clic su **Avanti** per visualizzare la pagina **Seleziona destinazione** .
   
 3.  Nella pagina **Seleziona destinazione** selezionare la destinazione per il progetto.
-    -   Immettere il nome completo del server. Se il server di destinazione è un server del database SQL di Azure, il nome è nel formato: `<server_name>.database.windows.net`.
+    -   Immettere il nome completo del server. Se il server di destinazione è un server del database SQL di Azure, il nome è nel formato `<server_name>.database.windows.net`.
     -   Fare clic su **Sfoglia** per selezionare la cartella di destinazione in SSISDB.
     Fare clic su **Avanti** per aprire la pagina **Verifica**.  
   
@@ -48,8 +48,8 @@ Per altre informazioni sulla procedura, vedere [Distribuzione guidata Integratio
     -   È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro.
     -   Fare clic su **Distribuisci** per avviare il processo di distribuzione.
   
-5.  Al termine del processo di distribuzione, si apre la pagina **Risultati**. Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
-    -   Se l'azione non è stata completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore.
+5.  Al termine del processo di distribuzione viene visualizzata la pagina **Risultati**. Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
+    -   Se l'azione ha avuto esito negativo, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore.
     -   In alternativa, fare clic su **Salva report...** per salvare i risultati in un file XML.
     -   Per uscire dalla procedura guidata, fare clic su **Chiudi**.
 

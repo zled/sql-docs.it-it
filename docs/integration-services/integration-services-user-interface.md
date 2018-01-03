@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53d4cd6d44f33b05ca586077a33307616aa45986
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e491a90b39421fb04501498b205b5e8355eec063
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-user-interface"></a>Interfaccia utente di Integration Services
   Oltre alle aree di progettazione disponibili nelle schede di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , l'interfaccia utente consente l'accesso alle seguenti finestre e finestre di dialogo per l'aggiunta di funzionalità ai pacchetti e per la configurazione delle proprietà degli oggetti di pacchetto:  
@@ -119,7 +119,7 @@ ms.lasthandoff: 11/20/2017
   
  Per ulteriori informazioni su altri menu e finestre, vedere la documentazione di Visual Studio.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  Per informazioni su come creare pacchetti in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vedere [Creare pacchetti in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 ## <a name="see-also"></a>Vedere anche  

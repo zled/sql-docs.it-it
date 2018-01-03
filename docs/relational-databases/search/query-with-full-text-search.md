@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c4d90a0e4498ecdb28727eeca14c2f6bbe147e6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-with-full-text-search"></a>Esecuzione della query con ricerca Full-Text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Per scrivere query full-text, usare i predicati full-text **CONTAINS** e **FREETEXT** e le funzioni valutate a livello dei set di righe **CONTAINSTABLE** e **FREETEXTTABLE** con l'istruzione **SELECT**. In questo argomento vengono presentati alcuni esempi di predicati e funzioni per consente di scegliere quelli più adatti.
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example---contains"></a>Esempio - CONTAINS  
  Nell'esempio seguente vengono trovati tutti i prodotti il cui prezzo è `$80.99` e contenenti la parola `"Mountain"`.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -55,7 +55,7 @@ GO
 ### <a name="example---freetext"></a>Esempio - FREETEXT 
  Nell'esempio seguente viene eseguita la ricerca di tutti i documenti contenenti le parole associate a "vital", "safety" e "components".  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -68,7 +68,7 @@ GO
 ### <a name="example---containstable"></a>Esempio - CONTAINSTABLE  
  Nell'esempio seguente vengono restituiti l'ID della descrizione e la descrizione di tutti i prodotti per cui la colonna **Description** contiene la parola "aluminum" accanto alla parola "light" o "lightweight". Vengono restituite solo le righe con un valore di pertinenza maggiore o uguale a 2.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -90,7 +90,7 @@ GO
 ### <a name="example--freetexttable"></a>Esempio - FREETEXTTABLE  
  Nell'esempio seguente viene estesa una query FREETEXTTABLE in modo che vengano restituite per prime le righe con valore di pertinenza maggiore e che la classificazione di ogni riga venga aggiunta all'elenco di selezione. Per specificare la query, è necessario sapere che **ProductDescriptionID** è la colonna chiave univoca per la tabella **ProductDescription** .  
   
-```tsql 
+```sql 
 USE AdventureWorks2012  
 GO  
   
@@ -106,7 +106,7 @@ GO
   
 Di seguito viene riportata un'estensione della stessa query che restituisce solo le righe con valore di pertinenza maggiore o uguale a 10:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -164,7 +164,7 @@ Nella tabella seguente vengono descritti i tipi di parole o frasi che è possibi
 ###  <a name="Simple_Term"></a> Ricerca di parole o frasi specifiche (termine semplice)  
  È possibile usare [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)o [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) per cercare una frase specifica in una tabella. Per eseguire una ricerca nella tabella **ProductReview** del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] per trovare tutti i commenti su un prodotto con la frase "learning curve", ad esempio, è possibile usare il predicato CONTAINS nel modo seguente:  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -179,7 +179,7 @@ GO
 ###  <a name="Prefix_Term"></a> Ricerca di una parola con un prefisso (termine di prefisso)  
  È possibile usare [CONTAINS](../../t-sql/queries/contains-transact-sql.md) o [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) per cercare parole o frasi con un prefisso specificato. Vengono restituite tutte le voci nella colonna che contengono testo che inizia con il prefisso specificato. È possibile cercare, ad esempio, tutte le righe che contengono il prefisso `top`-, come in `top``ple`, `top``ping`e `top`. La query è la seguente:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -198,7 +198,7 @@ GO
   
 Nell'esempio seguente vengono cercate tutte le forme del termine "piede" ("piede", "piedi" e così via) presenti nella colonna `Comments` della tabella `ProductReview` nel database `AdventureWorks` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -215,7 +215,7 @@ Nella ricerca full-text vengono usati gli *stemmer*, che consentono di cercare i
   
 Nell'esempio seguente viene illustrata una query per la ricerca di tutti gli indirizzi dei clienti, tramite valori di ponderazione, in cui il testo che inizia con la stringa "Bay" contiene anche la parola "Street" o "View". I risultati assegnano un livello di importanza superiore alle righe che contengono il numero maggiore di parole specificate.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -243,7 +243,7 @@ Al contrario, FREETEXT e FREETEXTTABLE considerano i termini booleani come parol
 ### <a name="example"></a>Esempio  
  L'esempio seguente usa il predicato CONTAINS per cercare le descrizioni il cui ID sia diverso da 5 e contenenti le parole "Aluminum" e "spindle". Nella condizione di ricerca viene utilizzato l'operatore booleano AND. In questo esempio viene usata la tabella ProductDescription del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -258,7 +258,7 @@ GO
 
  Quando si scrivono query full-text, è anche possibile specificare le opzioni seguenti.
   
--   **Lingua** con l'opzione **LANGUAGE**. Molti termini di query dipendono in larga misura dal comportamento del word breaker. Per assicurarsi di utilizzare il word breaker (e lo stemmer) e il thesaurus corretti, è consigliabile specificare l'opzione LANGUAGE. Per altre informazioni, vedere [Scegliere una lingua durante la creazione di un indice full-text](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
+-   **Lingua** con l'opzione **LANGUAGE**. Molti termini di query dipendono in larga misura dal comportamento del word breaker. Per assicurarsi di utilizzare il word breaker (e lo stemmer) e il thesaurus corretti, è consigliabile specificare l'opzione LANGUAGE. Per altre informazioni, vedere [Scelta di una lingua durante la creazione di un indice full-text](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
 
 -   **Distinzione maiuscole/minuscole**. Per le query di ricerca full-text non viene fatta distinzione tra maiuscole e minuscole. La lingua giapponese, tuttavia, prevede più forme fonetiche basate sul concetto di normalizzazione ortografica simile alla mancanza di distinzione tra maiuscole e minuscole, ad esempio kana = senza distinzione. Questo tipo di normalizzazione ortografica non è supportato.  
 

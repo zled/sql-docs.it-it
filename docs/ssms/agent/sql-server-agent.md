@@ -3,7 +3,7 @@ title: SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1e818b754e994c3b6b585712092e5a473ed6e11b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f475fcb1a86f61f684edb65adf637e9234d0a494
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ Un sottosistema è un oggetto predefinito che rappresenta funzionalità disponib
   
 Ogni proxy corrisponde a una credenziale di sicurezza e può essere associato a un set di sottosistemi e a un set di account di accesso. È possibile utilizzare il proxy solo per i passaggi di processo che utilizzano un sottosistema associato al proxy stesso. Per creare un passaggio di processo che utilizza un proxy specifico, il proprietario del processo deve utilizzare un account di accesso associato a tale proxy oppure essere un membro di un ruolo con accesso senza limitazioni ai proxy. I membri del ruolo predefinito del server **sysadmin** hanno privilegi di accesso senza limitazioni ai proxy. I membri del ruolo **SQLAgentUserRole**, **SQLAgentReaderRole**o **SQLAgentOperatorRole** possono utilizzare solo i proxy ai quali sono specificamente autorizzati ad accedere. È necessario concedere l'accesso a proxy specifici a ogni utente membro di uno di questi ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, in modo che possa creare passaggi di processo che utilizzano tali proxy.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
 Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent per automatizzare l'amministrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] procedere come descritto di seguito:  
   
 1.  Individuare le attività amministrative o gli eventi server che si verificano regolarmente e che possono essere gestiti a livello di programmazione. È possibile automatizzare un'attività se implica una sequenza prevedibile di passaggi e si verifica a un'ora specifica o in risposta a un evento specifico.  

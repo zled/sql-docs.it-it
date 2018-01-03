@@ -3,7 +3,7 @@ title: Soluzioni (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 506e7aec9c3c6c89d057d75f4b8b92947cc0cd50
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 54000cd193dc9634f9dcfae9bd702fadcd77b7e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluzioni (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Una soluzione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] è una raccolta di uno o più progetti correlati. I progetti sono contenitori che gli sviluppatori utilizzano per organizzare file correlati, ad esempio set di script di amministrazione di uso comune.  
@@ -53,8 +53,8 @@ Le soluzioni e i progetti possono integrati in un database di [!INCLUDE[msCoName
 |Viene descritto come aprire una soluzione esistente in Esplora soluzioni.|[Apertura di una soluzione esistente](../../ssms/solution/open-an-existing-solution.md)|  
 |Viene illustrato come chiudere una soluzione.|[Chiusura di una soluzione](../../ssms/solution/close-a-solution.md)|  
 |Viene descritto come eliminare una soluzione.|[Eliminazione di una soluzione](../../ssms/solution/delete-a-solution.md)|  
-|Viene descritto come copiare elementi tra progetti.|[Copia di elementi in una soluzione](../../ssms/solution/copy-items-in-a-solution.md)|  
-|Viene descritto come eliminare elementi in un progetto o un intero progetto.|[Rimozione o eliminazione di un elemento o di un progetto](../../ssms/solution/remove-or-delete-an-item-or-project.md)|  
+|Viene descritto come copiare elementi tra progetti.|[Copiare elementi in una soluzione](../../ssms/solution/copy-items-in-a-solution.md)|  
+|Viene descritto come eliminare elementi in un progetto o un intero progetto.|[Rimuovere o eliminare un elemento o un progetto](../../ssms/solution/remove-or-delete-an-item-or-project.md)|  
 |Viene descritto come spostare elementi tra i progetti di una soluzione.|[Spostare elementi in una soluzione](../../ssms/solution/move-items-in-a-solution.md)|  
 |Viene descritto come rinominare una soluzione o gli elementi nella soluzione.|[Ridenominazione di soluzioni ed elementi del progetto](../../ssms/solution/rename-solutions-and-project-items.md)|  
   

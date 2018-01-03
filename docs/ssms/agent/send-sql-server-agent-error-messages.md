@@ -3,7 +3,7 @@ title: Inviare messaggi di errore di SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01d2e06d19ac7ae8f922705de6bbcaf57d4edeae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a3bb10970309cd6c1e14fa55b8a28e09707a95d7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come configurare [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent per l'invio di messaggi di errore tramite Net Send in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
@@ -74,5 +74,5 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
   
 3.  Nella finestra di dialogo **Proprietà SQL Server Agent -***nome_server* sotto **Log degli errori** , nella pagina **Generale** , digitare il nome utente o il nome computer a cui inviare messaggi di errore nella casella **Destinatario Net Send** .  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   

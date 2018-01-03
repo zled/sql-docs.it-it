@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -22,11 +22,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1dad77d3c02be12e437bd016a256bb31cad830f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0056a26ead4148ad0c163000611791e799d91df5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="notifications-master-data-services"></a>Notifiche (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] può essere configurato in modo da inviare una notifica tramite posta elettronica quando la convalida delle regole di business non riesce oppure quando lo stato di una versione di modello o di un insieme di modifiche cambia.  
@@ -39,14 +39,14 @@ ms.lasthandoff: 11/20/2017
   
 |Istanza|Description|  
 |--------------|-----------------|  
-|La convalida dei dati tramite regole business ha esito negativo|È necessario configurare singole regole business per l'invio di posta elettronica quando la convalida tramite regole business di un valore di attributo ha esito negativo. La notifica contiene le informazioni seguenti.<br /><br /> Modello<br /><br /> Version<br /><br /> Entità<br /><br /> Codice membro<br /><br /> Regola di business non riuscita<br /><br /> Collegamento al membro per il quale il valore dell'attributo causa l'errore della regola business<br /><br /> Ora di invio della notifica<br /><br /> Per altre informazioni, vedere [Configurare le regole di business per l'invio di notifiche &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
-|Lo stato della versione di un modello viene modificato|Ogni volta che lo stato della versione di un modello viene modificato, vengono inviate automaticamente notifiche agli utenti configurati come amministratori del modello. La notifica contiene le informazioni seguenti.<br /><br /> Modello<br /><br /> Version<br /><br /> Stato precedente e nuovo della versione<br /><br /> Ora di invio della notifica<br /><br /> Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
-|Modifiche dello stato dell'insieme di modifiche|Ogni volta che viene modificato lo stato di un insieme di modifiche per un'entità che richiede l'approvazione, gli amministratori dell'entità e/o i proprietari dell'insieme di modifiche ricevono automaticamente una notifica. La notifica contiene le informazioni seguenti.<br /><br /> Modello<br /><br /> Version<br /><br /> Nome dell'insieme di modifiche<br /><br /> Stato precedente<br /><br /> Nuovo stato<br /><br /> Collegamento per applicare l'insieme di modifiche per visualizzare e modificare le modifiche in sospeso.<br /><br /> Per altre informazioni, vedere [Insiemi di modifiche &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)|  
+|La convalida dei dati tramite regole business ha esito negativo|È necessario configurare singole regole business per l'invio di posta elettronica quando la convalida tramite regole business di un valore di attributo ha esito negativo. La notifica contiene le informazioni seguenti.<br /><br /> Modello<br /><br /> Versione<br /><br /> Entità<br /><br /> Codice membro<br /><br /> Regola di business non riuscita<br /><br /> Collegamento al membro per il quale il valore dell'attributo causa l'errore della regola business<br /><br /> Ora di invio della notifica<br /><br /> Per altre informazioni, vedere [Configurare le regole di business per l'invio di notifiche &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
+|Lo stato della versione di un modello viene modificato|Ogni volta che lo stato della versione di un modello viene modificato, vengono inviate automaticamente notifiche agli utenti configurati come amministratori del modello. La notifica contiene le informazioni seguenti.<br /><br /> Modello<br /><br /> Versione<br /><br /> Stato precedente e nuovo della versione<br /><br /> Ora di invio della notifica<br /><br /> Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
+|Modifiche dello stato dell'insieme di modifiche|Ogni volta che viene modificato lo stato di un insieme di modifiche per un'entità che richiede l'approvazione, gli amministratori dell'entità e/o i proprietari dell'insieme di modifiche ricevono automaticamente una notifica. La notifica contiene le informazioni seguenti.<br /><br /> Modello<br /><br /> Versione<br /><br /> Nome dell'insieme di modifiche<br /><br /> Stato precedente<br /><br /> Nuovo stato<br /><br /> Collegamento per applicare l'insieme di modifiche per visualizzare e modificare le modifiche in sospeso.<br /><br /> Per altre informazioni, vedere [Insiemi di modifiche &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)|  
   
 ## <a name="system-settings"></a>Impostazioni sistema  
  Alcune impostazioni di [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] hanno effetto sulle notifiche. È possibile regolare tali impostazioni in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o direttamente nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
 -   [Versioni &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   

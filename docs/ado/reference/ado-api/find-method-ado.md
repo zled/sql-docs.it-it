@@ -3,7 +3,7 @@ title: Find (metodo) (ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f2a2af33a7355084f85e80fda3ff92e5415adcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-method-ado"></a>Find (metodo) (ADO)
 Cerca un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per la riga che soddisfa i criteri specificati. Facoltativamente, la direzione della ricerca, la riga iniziale e offset dalla riga iniziale può essere specificata. Se vengono soddisfatti i criteri, la posizione della riga corrente è impostata su record trovato. in caso contrario, la posizione viene impostata per la fine o inizio del **Recordset**.  
@@ -49,7 +49,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Parametro facoltativo*.* Oggetto [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valore che specifica se la ricerca deve iniziare sulla riga corrente o la successiva riga disponibile nella direzione della ricerca. Arresta una ricerca alla fine del **Recordset** se il valore è **adSearchForward**. Arresta una ricerca all'inizio del **Recordset** se il valore è **adSearchBackward**.  
   
  *Inizio*  
- Facoltativa. Oggetto **Variant** segnalibro che funziona come la posizione iniziale per la ricerca.  
+ Facoltativo. Oggetto **Variant** segnalibro che funziona come la posizione iniziale per la ricerca.  
   
 ## <a name="remarks"></a>Osservazioni  
  Può essere specificato solo un nome di colonna singola *criteri*. Questo metodo non supporta le ricerche a più colonne.  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a4eea06466e59b0ddb8344dbba5b7d81bf1e97b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5052c8c5d53cccdbabc91b135d1452f89f573f16
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="business-rules-extension-master-data-services"></a>Estensione delle regole business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile applicare gli script SQL definiti dall'utente come estensione di condizioni e azioni predefinite.  
@@ -73,7 +73,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema.  
@@ -98,7 +98,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 7.  Eseguire le operazioni seguenti per creare uno script definito dall'utente come condizione.  
   
-    1.  Nel blocco **If** fare clic sul pulsante **Aggiungi** . Verrà visualizzato un pannello.  
+    1.  Nel blocco **If** fare clic sul pulsante **Aggiungi** . Viene visualizzato un pannello.  
   
     2.  Nell'elenco a discesa **Operatore** selezionare la funzione definita dall'utente in **Script definito dall'utente** .  
   

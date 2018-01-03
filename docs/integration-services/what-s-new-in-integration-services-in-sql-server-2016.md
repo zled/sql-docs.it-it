@@ -3,8 +3,11 @@ title: "Novità&#39 di Integration Services in SQL Server 2016 | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,13 +20,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 36f418950cfa6d475c911c05fd9737fcecf62aa6
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 6e459849dbbc844039ba3ae7a766794f1283e8a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità di Integration Services in SQL Server 2016
+# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 Questo argomento descrive le funzionalità che sono state aggiunte o aggiornate in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Contiene anche le funzionalità aggiunte o aggiornate nel [Feature Pack di Azure per Integration Services &#40; SSIS &#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) durante l'intervallo di tempo di SQL Server 2016.  
@@ -153,20 +156,20 @@ Per queste nuove funzionalità è necessario SQL Server Data Tools (SSDT) versio
 ### <a name="better-deployment"></a>Migliore distribuzione
 
 ####  <a name="ssisdbupgrwiz"></a> Aggiornamento guidato del database SSISDB  
- Eseguire l'aggiornamento guidato SSISDB per aggiornare il database di catalogo SSIS, SSISDB, quando il database è antecedente alla versione corrente dell'istanza di SQL Server. Ciò si verifica quando viene soddisfatta una delle condizioni seguenti.  
+ Eseguire Aggiornamento guidato del database SSISDB per aggiornare il database di catalogo SSIS, SSISDB, quando il database è antecedente alla versione corrente dell'istanza di SQL Server. Ciò si verifica quando viene soddisfatta una delle condizioni seguenti.  
   
 -   Il database è stato ripristinato da una versione precedente di SQL Server.  
   
--   Il database non è stato rimosso da un gruppo di disponibilità AlwaysOn prima di aggiornare l'istanza di SQL Server. In questo modo si impedisce l'aggiornamento automatico del database. Per ulteriori informazioni, vedere [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+-   Il database non è stato rimosso da un gruppo di disponibilità AlwaysOn prima di aggiornare l'istanza di SQL Server. In questo modo si impedisce l'aggiornamento automatico del database. Per ulteriori informazioni, vedere [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
   
- Per altre informazioni, vedere [SSIS Catalog &#40;SSISDB&#41;](../integration-services/service/ssis-catalog.md) (Catalogo SSIS &#40;SSISDB&#41;). 
+ Per altre informazioni, vedere [SSIS Catalog &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md) (Catalogo SSIS &#40;SSISDB&#41;). 
 
 ####  <a name="AlwaysOn"></a> Supporto per Always On nel catalogo SSIS  
  I gruppi di disponibilità Always On sono una soluzione di disponibilità elevata e recupero di emergenza che offre un'alternativa di livello enterprise al mirroring del database. Un gruppo di disponibilità supporta un ambiente di failover per un set discreto di database utente, noti come database di disponibilità, su cui si verifica il failover. Per altre informazioni, vedere [Gruppi di disponibilità Always On](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  In SQL Server 2016 SSIS introduce nuove funzionalità che consentono di distribuire facilmente a un catalogo SSIS centralizzato (ad esempio, il database utente SSISDB). Per garantire una disponibilità elevata per il database SSISDB e il relativo contenuto (progetti, pacchetti, log di esecuzione e così via) è possibile aggiungere il database SSISDB a un gruppo di disponibilità AlwaysOn, esattamente come qualsiasi altro database utente. Quando si verifica un failover, uno dei nodi secondari diventa automaticamente il nuovo nodo primario.  
   
- Per una panoramica e istruzioni dettagliate sull'abilitazione di Always On per SSISDB, vedere [SSIS Catalog](../integration-services/service/ssis-catalog.md) (Catalogo SSIS).  
+ Per una panoramica e istruzioni dettagliate sull'abilitazione di Always On per SSISDB, vedere [SSIS Catalog](../integration-services/catalog/ssis-catalog.md) (Catalogo SSIS).  
 
 ####  <a name="IncrementalDeployment"></a> Distribuzione di pacchetti incrementale  
 La funzionalità di distribuzione dei pacchetti incrementale consente di distribuire uno o più pacchetti in un progetto nuovo o esistente senza distribuire l'intero progetto. È possibile distribuire i pacchetti in modo incrementale usando gli strumenti seguenti.  
@@ -224,7 +227,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
   
  Il metodo GetIdentificationStringByLineageID è stato rinominato in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Per ulteriori informazioni, vedere [Nomi di colonna per gli errori nel flusso di dati](#ErrorColumn).  
   
- Per altre informazioni su questa modifica e sui miglioramenti apportati alla colonna errore, vedere il seguente post di blog aggiornato. [Miglioramenti della colonna errore per il flusso di dati SSIS (aggiornato per la versione CTP3.3)](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ Per altre informazioni su questa modifica e sui miglioramenti apportati alla colonna errore, vedere il seguente post di blog aggiornato. [Miglioramenti della colonna errore per il flusso di dati SSIS (aggiornato per la versione CTP&3;.3)](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
   
 > [!NOTE]  
 >  (in RC0, questo metodo è stato spostato nella nuova interfaccia di <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Per altre informazioni, vedere [Nuova interfaccia IDTSComponentMetaData130 nell'API](#CMD130)).  
@@ -316,7 +319,7 @@ La versione più recente del Feature Pack di Azure include l'attività di carica
 ### <a name="better-install-experience"></a>Migliore esperienza di installazione
 
 ####  <a name="Upgrade"></a> Aggiornamento bloccato quando SSISDB appartiene a un gruppo di disponibilità  
- Se il database del catalogo SSIS (SSISDB) appartiene a un gruppo di disponibilità Always On, è necessario rimuovere il database SSISDB dal gruppo di disponibilità, eseguire l'aggiornamento di SQL Server e quindi aggiungere nuovamente SSISDB al gruppo di disponibilità. Per ulteriori informazioni, vedere [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+ Se il database del catalogo SSIS (SSISDB) appartiene a un gruppo di disponibilità Always On, è necessario rimuovere il database SSISDB dal gruppo di disponibilità, eseguire l'aggiornamento di SQL Server e quindi aggiungere nuovamente SSISDB al gruppo di disponibilità. Per ulteriori informazioni, vedere [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
 
 ### <a name="better-design-experience"></a>Migliore esperienza di progettazione
 

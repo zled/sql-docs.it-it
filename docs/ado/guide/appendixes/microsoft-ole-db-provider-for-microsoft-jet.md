@@ -3,7 +3,7 @@ title: Provider Microsoft OLE DB per Microsoft Jet | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8a09ad6fb1af544e98f1b7875d1e04c396e46e60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b6afa16b339241460c33beb459fed74946a1238
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Provider Microsoft OLE DB per Microsoft Jet Panoramica
 Il Provider OLE DB per Microsoft Jet consente ADO per accedere ai database Microsoft Jet.
@@ -137,7 +137,7 @@ Microsoft.Jet.OLEDB.4.0
 |Termine catalogo|DBPROP_CATALOGTERM|
 |Definizione di colonna|DBPROP_COLUMNDEFINITION|
 |Catalogo corrente|DBPROP_CURRENTCATALOG|
-|Data Source|DBPROP_INIT_DATASOURCE|
+|origine dati|DBPROP_INIT_DATASOURCE|
 |Nome origine dati|VALORE DBPROP_DATASOURCENAME|
 |Modello di Threading oggetto origine dei dati|DBPROP_DSOTHREADMODEL|
 |Nome DBMS|DBPROP_DBMSNAME|

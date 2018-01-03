@@ -3,7 +3,7 @@ title: Finestra di dialogo Commento SQL (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 039f84ddff175ae8e2830b7e38ee4fc28b54a307
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 395fb96d7c98556d62c17858c549287aa7af3d66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>Finestra di dialogo Commento SQL (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In questa finestra di dialogo è disponibile un'area modificabile in cui è possibile scrivere una descrizione dettagliata della query. Per accedere a tale finestra di dialogo, aprire la query o la vista in Progettazione query e Progettazione viste e quindi nella finestra **Proprietà** selezionare **Commento SQL**e fare clic sui puntini di sospensione (**…**) a destra del campo della proprietà.  

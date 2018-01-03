@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 38a85c28afb7a93c15b031799b47b07f592350c2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9060efc7289f0bf8fd17ad52cd97f45abefc4bfc
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -209,9 +209,9 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="bkmk_AccessInMemTables">
             </a> Accesso alle tabelle ottimizzate per la memoria in una replica secondaria  
- Con le tabelle con ottimizzazione per la memoria in una replica secondaria possono essere usati gli stessi livelli di isolamento delle transazioni usati nella replica primaria. È consigliabile impostare il livello di isolamento a livello di sessione su READ COMMITTED e l'opzione a livello di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT su ON. Esempio:  
+ Con le tabelle con ottimizzazione per la memoria in una replica secondaria possono essere usati gli stessi livelli di isolamento delle transazioni usati nella replica primaria. È consigliabile impostare il livello di isolamento a livello di sessione su READ COMMITTED e l'opzione a livello di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT su ON. Ad esempio  
   
-```tsql  
+```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
 GO  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
@@ -238,9 +238,9 @@ GO
   
     |Replica secondaria leggibile?|L'isolamento dello snapshot o l'isolamento dello snapshot Read Committed è abilitato?|Database primario|Database secondario|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |No|No|Nessuna versione di riga né overhead di 14 byte|Nessuna versione di riga né overhead di 14 byte|  
-    |No|Sì|Versioni di riga e overhead di 14 byte|Nessuna versione di riga, ma overhead di 14 byte|  
-    |Sì|No|Nessuna versione di riga, ma overhead di 14 byte|Versioni di riga e overhead di 14 byte|  
+    |no|no|Nessuna versione di riga né overhead di 14 byte|Nessuna versione di riga né overhead di 14 byte|  
+    |no|Sì|Versioni di riga e overhead di 14 byte|Nessuna versione di riga, ma overhead di 14 byte|  
+    |Sì|no|Nessuna versione di riga, ma overhead di 14 byte|Versioni di riga e overhead di 14 byte|  
     |Sì|Sì|Versioni di riga e overhead di 14 byte|Versioni di riga e overhead di 14 byte|  
   
 ##  <a name="bkmk_RelatedTasks"></a> Attività correlate  
@@ -262,7 +262,7 @@ GO
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Statistiche](../../../relational-databases/statistics/statistics.md)  

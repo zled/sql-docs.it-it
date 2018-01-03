@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba616e93dac142ea283a15640afec5f0acf6228c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 10fcf58743fc17f120bfba6844ca3188fc6f3a66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="entity-permissions-master-data-services"></a>Autorizzazioni per le entità (Master Data Services)
   Le autorizzazioni per le entità si applicano a:  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 |Autorizzazione|Description|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
-|**Create**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
+|**Creare**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
 |**Update**|L'utente può aggiornare i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
 |**Elimina**|L'utente può eliminare i membri.|  
 |**Nega**|Nega ogni accesso all'entità.|  

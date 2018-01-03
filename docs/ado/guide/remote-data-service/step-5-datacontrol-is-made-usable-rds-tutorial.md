@@ -3,7 +3,7 @@ title: "Passaggio 5: DataControl è rendere utilizzabile (esercitazione su RDS) 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 93ac89a0007223681f4844c0ecd36e4581414a6c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45e7605b16c224e4b299c0f1454dec9372ccd929
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Passaggio 5: DataControl è rendere utilizzabile (esercitazione di servizi desktop remoto)
 L'oggetto restituito **Recordset** l'oggetto è disponibile per l'utilizzo. È possibile esaminare, esplorare o modificarlo come qualsiasi altra **Recordset**. Cosa si può fare con il **Recordset** dipende dall'ambiente. Visual Basic e Visual C++ sono controlli visivi che è possono utilizzare un **Recordset** direttamente o indirettamente con l'aiuto di un controllo di dati di attivazione.  

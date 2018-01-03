@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e9f7359e19df03dc544211ba3a39041efa0637
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta due modelli di distribuzione, ovvero il modello di distribuzione del progetto e il modello di distribuzione del pacchetto legacy. Tramite il modello di distribuzione del progetto è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -100,7 +100,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
  Per distribuire un progetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , completare le attività seguenti:  
   
-1.  Se necessario, creare un catalogo SSISDB. Per altre informazioni, vedere [Catalogo SSIS](../../integration-services/service/ssis-catalog.md).  
+1.  Se necessario, creare un catalogo SSISDB. Per altre informazioni, vedere [Catalogo SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Convertire il progetto nel modello di distribuzione del progetto eseguendo la **Conversione guidata progetto di Integration Services** . Per ulteriori informazioni, vedere le istruzioni riportate di seguito: [Per convertire un progetto nel modello di distribuzione del progetto](#convert)  
   
@@ -291,7 +291,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
 
  - Digitare **"Distribuzione guidata di SQL Server"** in Windows Search 
 
-**OPPURE**
+**OR**
 
  - Cercare il file eseguibile **ISDeploymentWizard.exe** nella cartella di installazione di SQL Server; ad esempio: "C:\Programmi (x86) \Microsoft SQL Server\130\DTS\Binn". 
  
@@ -341,7 +341,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
 > [!IMPORTANT]  
 >  Per un'esecuzione specifica, un pacchetto può essere eseguito solo con i valori contenuti in un ambiente server singolo.  
   
- È possibile eseguire query sulle viste per un elenco di ambienti server, riferimenti all'ambiente e variabili di ambiente. È inoltre possibile chiamare stored procedure per aggiungere, eliminare e modificare gli ambienti, i riferimenti all'ambiente e le variabili di ambiente. Per ulteriori informazioni, vedere la sezione **Ambienti server, variabili del server e riferimenti all'ambiente del server** in [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+ È possibile eseguire query sulle viste per un elenco di ambienti server, riferimenti all'ambiente e variabili di ambiente. È inoltre possibile chiamare stored procedure per aggiungere, eliminare e modificare gli ambienti, i riferimenti all'ambiente e le variabili di ambiente. Per ulteriori informazioni, vedere la sezione **Ambienti server, variabili del server e riferimenti all'ambiente del server** in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Per creare e utilizzare un ambiente server  
   
@@ -361,13 +361,13 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
     3.  Immettere il **Valore** per la variabile di ambiente.  
   
-         Per informazioni sulle regole per i nomi delle variabili di ambiente, vedere la sezione **Variabile di ambiente** in [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Per informazioni sulle regole per i nomi delle variabili di ambiente, vedere la sezione **Variabile di ambiente** in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
     4.  Indicare se nella variabile è contenuto il valore sensibile, selezionando o deselezionando la casella di controllo **Sensibile** .  
   
          Se si seleziona **Sensibile**, il valore della variabile non viene visualizzato nel campo **Valore** .  
   
-         I valori sensibili vengono crittografati nel catalogo SSISDB. Per ulteriori informazioni sulla crittografia, vedere [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         I valori sensibili vengono crittografati nel catalogo SSISDB. Per ulteriori informazioni sulla crittografia, vedere [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 6.  Nella pagina **Autorizzazioni** concedere o negare le autorizzazioni per gli utenti e i ruoli selezionati effettuando le operazioni riportate di seguito.  
   
@@ -577,7 +577,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Usa autenticazione di SQL Server**  
  Quando un utente si connette da una connessione non trusted con un nome di account di accesso e una password specificati, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autentica la connessione controllando se è stato impostato un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se la password specificata corrisponde a quella registrata in precedenza. Se non è stato impostato alcun account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'autenticazione non viene completata e viene segnalato un errore all'utente.  
   
- **Nome utente**  
+ **User name**  
  Specificare un nome utente quando si utilizza l'autenticazione di SQL Server.  
   
  **Password**  
@@ -697,7 +697,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Ambito**  
  Viene elencato l'ambito del parametro.  
   
- **Valore**  
+ **Value**  
  Viene elencato il valore del parametro.  
   
  Fare clic sul pulsante con i puntini di sospensione accanto al campo del valore per configurare le proprietà del parametro.  

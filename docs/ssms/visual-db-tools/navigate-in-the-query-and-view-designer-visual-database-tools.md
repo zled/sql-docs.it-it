@@ -3,7 +3,7 @@ title: Navigare all'interno di Progettazione query e Progettazione viste (Visual
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 134e017c94bbf364d74c3914149a09be3deaa9a3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9cbebb7269afbf1ae1caa16032c7d4c4406ba148
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigazione all'interno di Progettazione viste e Progettazione query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile usare Progettazione query e Progettazione viste con la tastiera o con il mouse. Fare riferimento alle seguenti tabelle per gli specifici metodi.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 |Spostarsi fra colonne di una tabella o di un oggetto strutturato a tabella|Tasti di direzione|Sulla colonna in cui spostarsi|  
 |Scegliere la colonna dati selezionata per l'output|BARRA SPAZIATRICE o tasto PIÙ|Sulla casella di controllo accanto al nome della colonna|  
 |Rimuovere la colonna dati selezionata dall'output della query|BARRA SPAZIATRICE o tasto MENO|Sulla casella di controllo accanto al nome della colonna|  
-|Rimuovere dalla query la tabella, l'oggetto strutturato a tabella o la linea join selezionata|DELETE|Fare clic con il pulsante destro del mouse e scegliere **Rimuovi**|  
+|Rimuovere dalla query la tabella, l'oggetto strutturato a tabella o la linea join selezionata|Elimina|Fare clic con il pulsante destro del mouse e scegliere **Rimuovi**|  
   
 > [!NOTE]  
 > Se sono selezionati più elementi, l'utilizzo di questo tasto avrà effetto su tutti gli elementi selezionati. È possibile selezionare più elementi tenendo premuto CTRL mentre si fa clic su di essi.  
@@ -72,8 +72,8 @@ Per altre informazioni, vedere [Riquadro Diagramma &#40;Visual Database Tools&#4
 |Incollare il testo dagli Appunti (in modalità di modifica)|CTRL+V||  
 |Passare dalla modalità di inserimento alla modalità di sovrascrittura durante la modifica di una cella|INS||  
 |Attivare o disattivare la casella di controllo nella colonna Output|BARRA SPAZIATRICE|Sulla casella di controllo|  
-|Cancellare il contenuto selezionato di una cella|DELETE||  
-|Cancellare tutti i valori di una colonna selezionata nella griglia|DELETE||  
+|Cancellare il contenuto selezionato di una cella|Elimina||  
+|Cancellare tutti i valori di una colonna selezionata nella griglia|Elimina||  
 |Inserire una riga fra due righe esistenti|INS dopo avere selezionato una riga della griglia||  
 |Aggiungere una colonna Oppure ...|INS dopo aver selezionato una colonna Oppure ...||  
   
@@ -82,7 +82,7 @@ Per altre informazioni, vedere [Riquadro Diagramma &#40;Visual Database Tools&#4
   
 Per altre informazioni, vedere [Riquadro Criteri &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md).  
   
-## <a name="sql-pane"></a>Riquadro SQL  
+## <a name="sql-pane"></a>riquadro SQL  
 Nel riquadro SQL è possibile usare i normali tasti di modifica di Windows, ad esempio CTRL+tasti di direzione per spostarsi da una parola a un'altra, e i comandi **Taglia**, **Copia**e **Incolla** del menu **Modifica** .  
   
 > [!NOTE]  
@@ -103,7 +103,7 @@ Per altre informazioni, vedere [Riquadro SQL &#40;Visual Database Tools&#41;](..
 |Selezionare l'ultimo carattere di una cella|MAIUSC+FINE||  
 |Passare dalla modalità di modifica alla modalità di selezione delle celle|F2||  
 |Passare dalla modalità di inserimento alla modalità di sovrascrittura durante la modifica di una cella|INS||  
-|Eliminare una riga dalla tabella|DELETE||  
+|Eliminare una riga dalla tabella|Elimina||  
 |Annullare le modifiche apportate alla cella corrente|ESC nella cella che è stata modificata||  
 |Annullare le modifiche apportate alla riga corrente|ESC in una cella qualsiasi che non è stata modificata||  
 |Immettere un carattere Null in una cella|CTRL+0||  

@@ -3,7 +3,7 @@ title: Gestione degli errori in JScript | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d8e0111cc2102135190579e4aa9a158dc7d8078
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e2293d7541dfaebd660ddeed8acf0c7259850c4b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-errors-in-jscript"></a>Gestione degli errori di JScript
 Il codice di Microsoft® JScript® deve verificare il **conteggio** proprietà del **connessione** dell'oggetto **errori** insieme. Se il valore è maggiore di 0, scorrere la raccolta e visualizzare i valori come si farebbe in qualsiasi altro linguaggio.  

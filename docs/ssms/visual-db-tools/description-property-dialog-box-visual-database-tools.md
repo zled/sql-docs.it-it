@@ -3,7 +3,7 @@ title: "Finestra di dialogo Proprietà Descrizione (Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e5bbb82ada8e0169f6f1629b38038cab2dc3042
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ebf89f25956ed529ffb75c6f9d92f15c9e95a5c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>Finestra di dialogo Proprietà Descrizione (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Nella finestra di dialogo **Proprietà descrizione** è presente un'area modificabile in cui è possibile scrivere una descrizione dettagliata di oggetti di database quali tabelle, colonne e vincoli di chiave esterna. L'accesso a questa finestra di dialogo è possibile dalla finestra Proprietà per oggetti quali tabelle e viste selezionate in una finestra di progettazione, dalle finestre di dialogo relative a oggetti quali indici e vincoli CHECK e dalla scheda **Proprietà colonne** di Progettazione tabelle per le colonne delle tabelle. La descrizione viene archiviata come proprietà estesa dell'oggetto.  

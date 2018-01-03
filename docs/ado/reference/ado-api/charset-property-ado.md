@@ -3,7 +3,7 @@ title: "Proprietà set di caratteri (ADO) | Documenti Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ded981a9ed4905aa607d8b19fe010682b61b5780
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: efa963c26617a382270ccf2ed25f1aeb5c9785d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="charset-property-ado"></a>Proprietà set di caratteri (ADO)
 Indica il set di caratteri in cui il contenuto di un testo [flusso](../../../ado/reference/ado-api/stream-object-ado.md) devono essere convertite per la memorizzazione nel buffer interno del **flusso** oggetto.  

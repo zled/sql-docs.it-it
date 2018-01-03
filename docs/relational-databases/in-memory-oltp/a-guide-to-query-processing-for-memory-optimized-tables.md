@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebca47eee84b4e48edc5164fa6a66670a84e3fee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9f4dcd81deb9f16e21cd1b63df80cebb25a53ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Vengono considerate due tabelle, Customer e Order. Il seguente script di [!INCLUDE[tsql](../../includes/tsql-md.md)] contiene le definizioni di queste due tabelle e gli indici associati, nel formato basato su disco (tradizionale):  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -72,7 +72,7 @@ GO
   
  Si consideri la query seguente, che crea un join tra le tabelle Customer e Order e restituisce l'ID dell'ordine e le informazioni sul cliente associato:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -91,7 +91,7 @@ Piano di query per il join di tabelle basate su disco.
   
  Si consideri una leggera variazione in questa query, con la restituzione di tutte le righe della tabella Order e non solo di OrderID, come illustrato di seguito:  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -144,7 +144,7 @@ Pipeline di elaborazione delle query per l'accesso del codice Transact-SQL inter
   
  Lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] riportato di seguito contiene versioni ottimizzate per la memoria delle tabelle Order e Customer, con indici hash:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -161,7 +161,7 @@ GO
   
  Si consideri la stessa query eseguita su tabelle ottimizzate per la memoria:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -180,10 +180,10 @@ Piano di query per il join di tabelle ottimizzate per la memoria.
   
 -   Questo piano contiene un **Hash Match** anziché un **Merge Join**. Sia gli indici della tabella Order che quelli della tabella Customer sono indici hash, quindi non ordinati. Un **Merge Join** richiederebbe un operatore di ordinamento, che ridurrebbe le prestazioni.  
   
-## <a name="natively-compiled-stored-procedures"></a>Stored procedure compilate in modo nativo  
+## <a name="natively-compiled-stored-procedures"></a>stored procedure compilate in modo nativo  
  Le stored procedure compilate in modo nativo sono stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] compilate nel codice macchina, piuttosto che interpretate dal motore di esecuzione delle query. Lo script seguente crea una stored procedure compilata in modo nativo che esegue la query di esempio (della sezione Query di esempio).  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -247,9 +247,9 @@ Esecuzione di stored procedure compilate in modo nativo.
  Lo sniffing dei parametri non viene utilizzato per la compilazione delle stored procedure compilate in modo nativo. Tutti i parametri della stored procedure vengono considerati con valore UNKNOWN. Analogamente alle stored procedure interpretate, anche le stored procedure compilate in modo nativo supportano l'hint **OPTIMIZE FOR**. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Recupero di un piano di esecuzione di query per le stored procedure compilate in modo nativo  
- Il piano di esecuzione di query per una stored procedure compilata in modo nativo può essere recuperato usando **Piano di esecuzione stimato** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o tramite l'opzione SHOWPLAN_XML in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esempio:  
+ Il piano di esecuzione di query per una stored procedure compilata in modo nativo può essere recuperato usando **Piano di esecuzione stimato** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o tramite l'opzione SHOWPLAN_XML in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ad esempio  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -268,11 +268,11 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|Elimina|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|Questo operatore viene utilizzato sia per le funzioni intrinseche che per le conversioni dei tipi. Non tutte le funzioni e conversioni dei tipi sono supportate nelle stored procedure compilate in modo nativo.|  
 |Join a cicli annidati|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|Nested Loops è l'unico operatore di join supportato nelle stored procedure compilate in modo nativo. In tutti i piani che contengono join viene utilizzato l'operatore Nested Loops, anche se il piano per la stessa query eseguita come codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato contiene un hash join o un merge join.|  
 |Ordina|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
-|Torna all'inizio|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
+|TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
 |Top-sort|`SELECT TOP 10 ContactName FROM dbo.Customer  ORDER BY ContactName`|L'espressione **TOP** (il numero di righe da restituire) non può superare le 8.000 righe. Meno se nella query sono presenti anche operatori di aggregazione e di join. I join e le aggregazioni in genere riducono il numero di righe da ordinare, rispetto al numero di righe delle tabelle di base.|  
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Si noti che l'operatore Hash Match non è supportato per l'aggregazione. Pertanto, in tutte le aggregazioni nelle stored procedure compilate in modo nativo viene utilizzato l'operatore Stream Aggregate, anche se il piano per la stessa query nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato utilizza l'operatore Hash Match.|  
   

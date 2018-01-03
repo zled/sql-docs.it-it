@@ -3,7 +3,7 @@ title: Metodo CancelBatch (ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b5dc5cc6d3047c7dc0804c42c7e8efcc80b64054
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49394c50c0b1265b0948e8d053a201342e44dd2c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancelbatch-method-ado"></a>Metodo CancelBatch (ADO)
 Annulla un aggiornamento batch in sospeso.  
@@ -40,7 +40,7 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Parametri  
  *AffectRecords*  
- Facoltativa. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che indica il numero di record di **CancelBatch** saranno influenzati dal metodo.  
+ Facoltativo. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che indica il numero di record di **CancelBatch** saranno influenzati dal metodo.  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare il **CancelBatch** metodo annullare eventuali aggiornamenti in sospeso in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in modalità di aggiornamento batch. Se il **Recordset** è in modalità di aggiornamento immediato, la chiamata **CancelBatch** senza **adAffectCurrent** genera un errore.  

@@ -3,7 +3,7 @@ title: Visualizzare i riquadri di Progettazione query e Progettazione viste (Vis
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14268591a142263a159d879ea821a8a395d33c1f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7e7ab7fc0efacbcd2f777c7c64154d98661d8318
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Visualizzazione dei riquadri di Progettazione query e Progettazione viste (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La finestra Progettazione query e Progettazione viste è costituita da quattro riquadri separati: Diagramma, Criteri, SQL e Risultati. Quando si apre una vista o si crea una nuova query, in genere vengono aperti tutti e quattro questi riquadri. Qualora però uno qualsiasi di tali riquadri non fosse aperto e si desiderasse aprirlo, è necessario che la finestra Progettazione query e Progettazione viste sia già visualizzata.  

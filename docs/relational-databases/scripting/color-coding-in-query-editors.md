@@ -3,9 +3,9 @@ title: Codifica con colori negli editor di query | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 536b71b546530f152da3b8c02fd60629d6aaa398
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fd16ce685a01fe72df65c75971fb9cec0b10562a
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="color-coding-in-query-editors"></a>Codifica con colori negli editor di query
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al testo immesso negli editor del codice viene assegnata una categoria. Ogni categoria viene identificata con un colore. I colore consentono di individuare rapidamente il testo nel codice. I commenti ad esempio vengono evidenziati con il colore verde scuro. Nella tabella seguente sono riportati i colori più comuni. È possibile visualizzare l'intero elenco dei colori e le relative categorie e configurare uno schema di colori personalizzato dal menu **Strumenti**, **Opzioni** . Per altre informazioni su come modificare i colori predefiniti, vedere [Modificare lo stile, le dimensioni e il colore del carattere](../../relational-databases/scripting/change-font-color-size-and-style.md).  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |Nero su sfondo argento|Comando SQLCMD|  
 |Fucsia|Funzioni di sistema|  
 |Green|Tabella di sistema o funzione con valori di tabella, nonché gli schemi di sistema sys e INFORMATION_SCHEMA.|  
-|Blue|Parola chiave|  
+|Blu|Parola chiave|  
 |Verde acqua|Numeri di riga o parametro modello|  
 |Bordeaux|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure|  
 |Grigio scuro|Operatori|  

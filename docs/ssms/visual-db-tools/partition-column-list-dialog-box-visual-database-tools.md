@@ -3,7 +3,7 @@ title: Finestra di dialogo Elenco colonne partizione (Visual Database Tools) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bf4032ba86ee8cdb2b2ee32d787f8aa505f34a60
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 79eb525e471b463368cb928cae0dfcf3cf1bc797
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Finestra di dialogo Elenco colonne partizione (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se una tabella è associata a uno schema di partizione, è possibile usare questa finestra di dialogo per scegliere una o più colonne a cui applicare la funzione di partizione. Perché la funzione sia valida, è necessario che il tipo di dati della colonna su cui ci si posiziona sia lo stesso della colonna definita nella funzione Partition.  
@@ -33,7 +33,7 @@ Per ulteriori informazioni sulle funzioni e sugli schemi di partizione, vedere l
 Tipo di dati  
 Visualizza i tipi di dati delle colonne definite nello schema di partizione.  
   
-Colonna  
+colonna  
 Consente di selezionare nell'elenco a discesa la colonna a cui applicare la funzione Partition.  
   
 ## <a name="see-also"></a>Vedere anche  

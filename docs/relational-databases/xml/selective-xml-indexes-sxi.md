@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 15fe0cb4d21bc72fa8eb351829914bdd6958a89c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8270991f406e6845cdbe4d19fd8bc58e57eb4b35
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="selective-xml-indexes-sxi"></a>Indici XML selettivi
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Gli indici XML selettivi rappresentano un altro tipo di indice XML disponibile oltre agli indici XML comuni. Di seguito sono indicati gli obiettivi della funzionalità degli indici XML selettivi.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
  Se è necessario esclusivamente eseguire una query su questi dati per il percorso `/book/title` e il percorso `/book/subjects` , è possibile creare l'indice XML selettivo seguente:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   

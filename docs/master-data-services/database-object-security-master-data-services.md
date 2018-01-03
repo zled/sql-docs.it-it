@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 365b24e35f44154c644afbf2646f8c52738bd90c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7058099b0da0b991327f6ab408e55fc7143f8d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
   Nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] i dati vengono archiviati in più tabelle di database e sono visibili tramite viste. Le informazioni eventualmente protette nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sono visibili agli utenti che dispongono dell'accesso al database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="Staging"></a> Dati di gestione temporanea  
  Nella tabella seguente, in ogni entità a protezione diretta la parola 'name' fa parte del nome. Viene indicato il nome della tabella di staging specificato quando viene creata un'entità. Per altre informazioni, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-|Azione|Entità a protezione diretta|Permissions|  
+|Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  
 |Creare, aggiornare ed eliminare i membri foglia e i relativi attributi.|stg.name_Leaf|Obbligatoria: INSERT<br /><br /> Facoltative: SELECT e UPDATE|  
 |Caricare i dati dalla tabella di staging Foglia nelle tabelle di database MDS appropriate.|stg.udp_name_Leaf|EXECUTE|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="rules"></a> Convalida dei dati rispetto a regole business  
   
-|Azione|Entità a protezione diretta|Permissions|  
+|Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|---------------|-----------------|  
 |Convalidare una versione di dati rispetto a regole business|mdm.udpValidateModel|EXECUTE|  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="Versions"></a> Eliminazione di versioni  
   
-|Azione|Entità a protezione diretta|Permissions|  
+|Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  
 |Determinare l'ID della versione che si desidera eliminare|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |Eliminare una versione di un modello|mdm.udpVersionDelete|EXECUTE|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="Hierarchy"></a> Applicazione immediata di autorizzazioni per membri della gerarchia  
   
-|Azione|Entità a protezione diretta|Permissions|  
+|Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  
 |Applicare immediatamente autorizzazioni per membri|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
   

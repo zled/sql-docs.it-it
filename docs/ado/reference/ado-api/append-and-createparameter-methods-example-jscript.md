@@ -3,7 +3,7 @@ title: Aggiungere e un esempio di metodi CreateParameter (JScript) | Documenti M
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f7048719f14ed0841fba3b221f1bbb7314d16ad2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1cf2d2bebf9f08e5646cdee17be0ba89f5528612
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Aggiungere e un esempio di metodi CreateParameter (JScript)
 Questo esempio viene utilizzato il [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodi per eseguire una stored procedure con un parametro di input. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **AppendJS**.  

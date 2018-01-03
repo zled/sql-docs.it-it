@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f597ea6c3b7f99a3dcff8ead62377acbafd2f34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c3bd76705ebf1f118fc1398e9fb13e083053de03
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="specify-if-backup-or-restore-continues-or-stops-after-error"></a>Specificare se il backup o il ripristino prosegue o si arresta dopo un errore
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per specificare se un'operazione di backup o ripristino viene arrestata o prosegue in seguito a un errore utilizzando:**  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  BACKUP  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Nella sezione **Affidabilità** della pagina **Opzioni** fare clic su **Esegui checksum prima della scrittura nei supporti** e **Continua in caso di errori**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-specify-whether-a-backup-operation-continues-or-stops-after-encountering-an-error"></a>Per specificare se un'operazione di backup viene arrestata o prosegue in seguito a un errore  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Nell'istruzione [BACKUP](../../t-sql/statements/backup-transact-sql.md) specificare l'opzione CONTINUE_AFTER ERROR per continuare o l'opzione STOP_ON_ERROR per interrompere. Il comportamento predefinito è l'arresto nel caso venga rilevato un errore. In questo esempio si indica all'operazione di backup di continuare nonostante sia stato rilevato un errore.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
@@ -93,7 +93,7 @@ GO
   
 3.  Nell'istruzione [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) specificare l'opzione CONTINUE_AFTER ERROR per continuare o l'opzione STOP_ON_ERROR per interrompere. Il comportamento predefinito è l'arresto nel caso venga rilevato un errore. In questo esempio si indica all'operazione di ripristino di continuare nonostante sia stato rilevato un errore.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  

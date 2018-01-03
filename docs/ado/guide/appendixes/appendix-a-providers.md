@@ -3,7 +3,7 @@ title: 'Appendice a: provider | Documenti Microsoft'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cc5846114e328cb717b8b9c6d86891e97b41ddf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fc27499ecc4b67a95067002be0d8d3a5c86c76da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Appendice a: dati e provider di servizi
 In questa sezione vengono tre tipi di provider: provider di dati, i provider di servizi e componenti del servizio. Provider rientrano in due categorie: quelli che forniscono dati e quelli che forniscono servizi. Oggetto *provider di dati* possiede i propri dati e lo espone in formato tabulare all'applicazione. Oggetto *provider di servizi* incapsula un servizio di creazione e utilizzo di dati, in modo da integrare le funzionalità delle applicazioni ADO. Un provider di servizi può inoltre essere definito un *componente del servizio*, che è necessario collaborare con altri provider di servizi o componenti.

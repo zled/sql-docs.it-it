@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba873b9ae0f29caa7acc85e5d5daed8dcbfd22a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2df4759c6f2715706be48799e4190e309ffe3904
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurazione e gestione di word breaker e stemmer per la ricerca
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Word breaker e stemmer eseguono l'analisi linguistica su tutti i dati con indicizzazione full-text. L'analisi linguistica esegue le due operazioni seguenti:
@@ -53,7 +53,7 @@ Per usare word breaker e stemmer forniti per tutte le lingue supportate da SQL S
 
 Per visualizzare l'elenco delle lingue supportate dalla ricerca full-text di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente. La presenza di una lingua nell'elenco indica che per tale lingua sono registrati word breaker. 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -63,7 +63,7 @@ Per potere usare i word breaker di una determinata lingua per la ricerca full-te
 
 Per visualizzare l'elenco dei componenti word breaker registrati, usare l'istruzione seguente.
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -88,7 +88,7 @@ Se si aggiunge, rimuove o modifica un word breaker, è necessario aggiornare l'e
   
 Per visualizzare la lingua del word breaker di colonne specifiche, eseguire l'istruzione seguente.
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 
@@ -99,7 +99,7 @@ Per altre opzioni e ulteriori informazioni, vedere [sys.fulltext_index_columns &
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>Informazioni sull'errore MSSQLSERVER_30053
   
-|Proprietà|Valore|
+|Proprietà|valore|
 |-|-|
 |Nome prodotto|SQL Server|  
 |ID evento|30053|  

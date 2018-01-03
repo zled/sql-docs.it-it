@@ -3,7 +3,7 @@ title: Metodo UpdateBatch | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1522f6165e08a2a45cbd35e0b66d996ad93c1c4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a1b1e31de97eb701fed5db18acf45b7551f5984
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updatebatch-method"></a>Metodo UpdateBatch
 Scrive tutti gli aggiornamenti di batch in sospeso sul disco.  
@@ -40,10 +40,10 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>Parametri  
  *AffectRecords*  
- Facoltativa. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che indica il numero di record di **UpdateBatch** saranno influenzati dal metodo.  
+ Facoltativo. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che indica il numero di record di **UpdateBatch** saranno influenzati dal metodo.  
   
  *PreserveStatus*  
- Facoltativa. Oggetto **booleano** valore che specifica se le modifiche locali, come indicato dal [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà, deve essere eseguito il commit. Se questo valore è impostato su **True**, **stato** proprietà di ogni record rimane invariata dopo il completamento dell'aggiornamento.  
+ Facoltativo. Oggetto **booleano** valore che specifica se le modifiche locali, come indicato dal [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà, deve essere eseguito il commit. Se questo valore è impostato su **True**, **stato** proprietà di ogni record rimane invariata dopo il completamento dell'aggiornamento.  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare il **UpdateBatch** metodo quando si modifica un **Recordset** oggetto in modalità di aggiornamento batch per trasmettere tutte le modifiche apportate un **Recordset** oggetto al database sottostante.  

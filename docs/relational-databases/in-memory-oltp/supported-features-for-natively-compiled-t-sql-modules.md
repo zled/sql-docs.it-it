@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ed811d1184287c1e45f93d3ddd4253400dc5a237
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fee5822e0833afec741b00d2e18b2c1a0db28ec5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Funzionalità supportate per i moduli T-SQL compilati in modo nativo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,19 +62,19 @@ Clausola SELECT:
 -   Alias di nomi e colonne (usando la sintassi AS o =).  
 
 -   Sottoquery scalari
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le istruzioni scalari sono supportate per i moduli compilati in modo nativo.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], l'operatore DISTINCT è supportato in moduli compilati in modo nativo.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION e UNION ALL
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori UNION e UNION ALL sono supportati in moduli compilati in modo nativo.
 
 -   Assegnazioni di variabili  
@@ -86,11 +86,11 @@ Clausola FROM:
 -   FROM \<funzione con valori di tabella inline compilata in modo nativo>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN e INNER JOIN.
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori JOINS sono supportati in moduli compilati in modo nativo.
 
 -   Sottoquery `[AS] table_alias`. Per altre informazioni, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le sottoquery sono supportate in moduli compilati in modo nativo.
 
 Clausola WHERE:  
@@ -99,7 +99,7 @@ Clausola WHERE:
 
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori OR/NOT/IN/EXISTS sono supportati in moduli compilati in modo nativo.
 
 
@@ -137,7 +137,7 @@ Clausola HAVING:
   - Questo limite può risultare più basso nel caso in cui la query contenga funzioni di aggregazione o dei join. Ad esempio, con un join (due tabelle) il limite scende a 4.096 righe. Con due join (tre tabelle) il limite è 2.730 righe.  
   - È possibile che si ottengano risultati maggiori di 8.192 archiviando il numero di righe in una variabile:  
 
-```tsql
+```sql
 DECLARE @v INT = 9000;
 SELECT TOP (@v) … FROM … ORDER BY …
 ```
@@ -155,7 +155,7 @@ Sono supportate le istruzioni DML seguenti.
 
 -   UPDATE  
 
--   DELETE  
+-   Elimina  
 
 -   La clausola WHERE è supportata con le istruzioni UPDATE e DELETE.  
 
@@ -257,7 +257,7 @@ Sono supportate le istruzioni DML seguenti.
 
  Esempio con TOP N = 8192: compila  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -270,7 +270,7 @@ GO
 
  Esempio con TOP N > 8192: non riesce a compilare.  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -285,7 +285,7 @@ GO
 
  Esempio di utilizzo di una variabile: compila  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  

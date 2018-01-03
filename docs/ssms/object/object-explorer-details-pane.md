@@ -3,7 +3,7 @@ title: Riquadro Dettagli di Esplora oggetti | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 523ea1b976fc5769cd400e9bbe32f380956421df
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6bf7fdbd0c791ae6302774116769b91fcd4a6ee3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-explorer-details-pane"></a>Riquadro Dettagli di Esplora oggetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dettagli Esplora oggetti è un componente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] che fornisce una vista tabulare di tutti gli oggetti nel server e offre un'interfaccia utente che consente di gestire tali oggetti. Le funzionalità di Esplora oggetti variano leggermente in base al tipo di server, ma in genere comprendono le funzionalità di sviluppo per i database e di gestione per tutti i tipi di server.  
@@ -50,7 +50,7 @@ In Dettagli Esplora oggetti è inclusa una barra degli strumenti che contiene le
 |**Avanti**|Sposta lo stato attivo alla schermata successiva dopo la selezione di un'operazione **Indietro** .|  
 |**Su**|Sposta lo stato attivo sulla cartella o l'oggetto padre.|  
 |**Sincronizza**|Imposta lo stato attivo di Esplora oggetti sull'oggetto selezionato in Dettagli Esplora oggetti.|  
-|**Filtra**|Quando disponibile, visualizza un subset di oggetti configurabili.|  
+|**Filter**|Quando disponibile, visualizza un subset di oggetti configurabili.|  
 |**Aggiorna**|Aggiorna la visualizzazione del contenuto di Dettagli Esplora oggetti.|  
 |**Cerca**|Fornisce un'area nella quale immettere un termine di ricerca per determinati oggetti di database.|  
   
@@ -104,5 +104,5 @@ Set di grandi dimensioni
 -   La ricerche eseguite su set di grandi dimensioni possono richiedere tempi particolarmente lunghi e ridurre le prestazioni del server.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esplora oggetti](../../ssms/object/object-explorer.md)  
+[Visualizza](../../ssms/object/object-explorer.md)  
   

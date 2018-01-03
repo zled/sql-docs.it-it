@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,18 +17,18 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91f9472c80cc592181618bd218ee03199334e9d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7a29f3f006af3376c430b99de312474283905ed9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formati di vista sottoscrizioni [Master Data Services]
   In base all'entità o alla gerarchia derivata selezionata, i formati seguenti sono disponibili per la vista delle sottoscrizioni.  
   
 ## <a name="subscription-view-formats"></a>Formati di vista sottoscrizioni  
   
-|Nome|Description|  
+|nome|Description|  
 |----------|-----------------|  
 |**Membri foglia**|Contiene i membri foglia e i relativi valori di attributo associati.|  
 |**Cronologia dei membri foglia**|Contiene i dati cronologici dei membri foglia e i valori di attributo associati. Il formato di visualizzazione è lo stile 4 di tipo Dimensione a modifica lenta.|  

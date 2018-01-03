@@ -3,7 +3,7 @@ title: Forma clausola COMPUTE | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-compute-clause"></a>Clausola COMPUTE forma
 Una clausola COMPUTE forma genera un elemento padre **Recordset**, le cui colonne sono costituiti da un riferimento al figlio **Recordset**; facoltativo colonne il cui contenuto è capitolo, nuovo, o le colonne calcolate, o risultato dell'esecuzione di funzioni di aggregazione sull'elemento figlio **Recordset** o una forma precedentemente **Recordset**; e tutte le colonne dal figlio **Recordset** elencate parametro facoltativo nella clausola.  
@@ -67,7 +67,7 @@ SHAPE child-command [AS] child-alias
   
  Se la clausola BY viene omessa, l'intero figlio **Recordset** viene considerato come un singolo gruppo e l'elemento padre **Recordset** conterrà esattamente una riga. Tale riga farà riferimento intero figlio **Recordset**. Omettere la clausola BY consente di calcolare le aggregazioni di "totale complessivo" sull'intero figlio **Recordset**.  
   
- Esempio:  
+ Ad esempio  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
@@ -82,7 +82,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
   
  Si supponga, ad esempio, che si dispone di una tabella, denominata dati demografici, che include i campi di stato, città e popolamento. (Le cifre di popolamento della tabella vengono fornite esclusivamente come esempio).  
   
-|State|City|Popolazione|  
+|State|Città|Popolazione|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |o|Medford|200,000|  
@@ -118,21 +118,21 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ## <a name="child1"></a>Child1  
   
-|State|City|Popolazione|  
+|State|Città|Popolazione|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|City|Popolazione|  
+|State|Città|Popolazione|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|City|Popolazione|  
+|State|Città|Popolazione|  
 |-----------|----------|----------------|  
 |o|Medford|200,000|  
 |o|Portland|400,000|  

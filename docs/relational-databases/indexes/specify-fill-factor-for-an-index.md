@@ -3,8 +3,11 @@ title: Specificare un fattore di riempimento per un indice | Microsoft Docs
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3145ece1536701b112f5ffddc55c12a6f0d5369c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a5d92a3e54da02194fa104d38a7440c9f191462b
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Specificare un fattore di riempimento per un indice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ ms.lasthandoff: 12/01/2017
   
      [Considerazioni sulle prestazioni](#Performance)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per specificare un fattore di riempimento in un indice tramite:**  
   
@@ -63,7 +66,7 @@ ms.lasthandoff: 12/01/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -76,7 +79,7 @@ ms.lasthandoff: 12/01/2017
   
 3.  Fare clic con il pulsante destro del mouse sulla tabella in cui si vuole specificare il fattore di riempimento di un indice e selezionare **Progettazione**.  
   
-4.  Scegliere **Indici/chiavi** dal menu **Progettazione tabelle**.  
+4.  Scegliere **Indici/chiavi** nel menu **Progettazione tabelle**.  
   
 5.  Selezionare l'indice con il fattore di riempimento che si desidera specificare.  
   
@@ -102,9 +105,9 @@ ms.lasthandoff: 12/01/2017
   
 7.  Nella riga **Fattore di riempimento** immettere il fattore di riempimento desiderato.  
   
-8.  Scegliere **OK**.  
+8.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Per specificare un fattore di riempimento in un indice esistente  
   
@@ -112,7 +115,7 @@ ms.lasthandoff: 12/01/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene ricompilato un indice esistente e viene applicato il fattore di riempimento specificato durante l'operazione di ricompilazione.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene ricompilato un indice esistente e viene applicato il fattore di riempimento specificato durante l'operazione di ricompilazione.  
   
     ```  
     USE AdventureWorks2012;  
@@ -131,7 +134,7 @@ ms.lasthandoff: 12/01/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

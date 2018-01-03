@@ -3,7 +3,7 @@ title: Sostituire i parametri del modello | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-templates
 ms.reviewer: 
@@ -23,13 +23,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17d36529a476493920ceb74d64069d5e77e7d10e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cae991dbfcdfb2b00a3229746455c58b59f39bd5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="replace-template-parameters"></a>Sostituire i parametri modello
+# <a name="replace-template-parameters"></a>Sostituisci parametri modello
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] I modelli contengono parametri che possono essere sostituiti da valori specifici dell'implementazione ogni volta che il modello viene usato. Dopo avere aperto un modello in un editor di codice, è possibile sostituire i parametri con i valori attinenti all'implementazione.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
@@ -37,7 +37,7 @@ La finestra di dialogo **Imposta valori per parametri modello** è una griglia c
   
 Per usare questa finestra di dialogo, è necessario che i parametri nello script siano racchiusi tra parentesi angolari (`< >`) nel formato `<`*parameter_name*`,` *data_type*`,` *default_value*`>`.  
   
-## <a name="replace-template-parameters"></a>Sostituire i parametri modello  
+## <a name="replace-template-parameters"></a>Sostituisci parametri modello  
 Dopo avere aperto il modello in una finestra dell'editor di codice:  
   
 1.  Scegliere **Imposta valori per parametri modello** dal menu **Query**.  

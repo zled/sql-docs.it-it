@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 362ce1e89941b1abb4578f1931d91d424ec68ae8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c3e51c4507973ef0e4394aef1049fe0edadf94f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Ricerca di parole vicine a un'altra parola con NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Per cercare parole o frasi vicine, è possibile usare un *termine di prossimità* **NEAR** in un predicato [CONTAINS](../../t-sql/queries/contains-transact-sql.md) o in una funzione [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md). 
@@ -79,7 +79,7 @@ Per altre informazioni sulla sintassi, vedere [CONTAINS &#40;Transact-SQL&#41;](
 ### <a name="example-1"></a>Esempio 1
  È possibile, ad esempio, cercare 'John' entro due termini 'Smith', come segue:  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -92,7 +92,7 @@ Per altre informazioni sulla sintassi, vedere [CONTAINS &#40;Transact-SQL&#41;](
 ### <a name="example-2"></a>Esempio 2
  Nell'esempio seguente viene effettuata la ricerca nella tabella `Production.Document` del database di esempio `AdventureWorks` di tutti i riepiloghi di documenti che contengono sia la parola "riflettore" che la parola "supporto".  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -113,7 +113,7 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>Combinare NEAR con altri termini  
- È possibile combinare NEAR con altri termini. È possibile usare AND (&), OR (|) oppure AND NOT (&!) per combinare un termine di prossimità personalizzato con un altro termine di prossimità personalizzato, un termine semplice o un termine prefisso. Esempio:  
+ È possibile combinare NEAR con altri termini. È possibile usare AND (&), OR (|) oppure AND NOT (&!) per combinare un termine di prossimità personalizzato con un altro termine di prossimità personalizzato, un termine semplice o un termine prefisso. Ad esempio  
   
 -   CONTAINS('NEAR((*term1*,*term2*),5) AND *term3*')  
   
@@ -161,4 +161,4 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
 ## <a name="see-also"></a>Vedere anche  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [Esecuzione della query con ricerca Full-Text](../../relational-databases/search/query-with-full-text-search.md)   
+ [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md)   

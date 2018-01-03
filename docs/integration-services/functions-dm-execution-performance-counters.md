@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e143b66f9a10627695387bc5215c3b92565e230f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ece7ad69dc6ed7421b3e2793330e9ecb995575fd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>Funzioni - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  Se non è specificato alcun ID esecuzione, vengono restituite le statistiche per più esecuzioni. Se si è un membro del ruolo del database **ssis_admin** , vengono restituite le statistiche sulle prestazioni per tutte le esecuzioni in corso.  Se non si è un membro del ruolo del database **ssis_admin** , vengono restituite le statistiche sulle prestazioni per le esecuzioni in corso per cui si dispone delle autorizzazioni di lettura. *execution_id* è di tipo **bigint**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Nella tabella seguente sono elencati i valori dei nomi dei contatori restituiti dalla funzione dm_execution_performance_counter.  
   
 |Nome contatore|Description|  
@@ -62,7 +62,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>Return  
  La funzione dm_execution_performance_counters restituisce una tabella con le colonne seguenti per un'esecuzione in corso. Le informazioni restituite riguardano tutti i pacchetti contenuti nell'esecuzione. In assenza di esecuzioni in corso, viene restituita una tabella vuota.  
   
-|Nome colonna|Tipo di colonna|Description|Osservazioni|  
+|Nome colonna|Tipo di colonna|Description|Remarks|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** non è un valore valido.|Identificatore univoco per l'esecuzione che contiene il pacchetto.||  
 |counter_name|**nvarchar(128)**|Nome del contatore.|Vedere la sezione **Osservazioni** relativa ai valori.|  
@@ -83,7 +83,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa funzione richiede una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni READ e MODIFY per l'istanza di esecuzione  

@@ -17,13 +17,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0673cda38da74437a8a5370ae664da91afef1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2d704561458719b9d1d73467370d2e5e1d8bd13
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Associazione di un database con tabelle con ottimizzazione per la memoria a un pool di risorse
+# <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Associare un database con tabelle con ottimizzazione per la memoria a un pool di risorse
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Un pool di risorse rappresenta un subset di risorse fisiche che è possibile governare. Per impostazione predefinita, i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono associati alle risorse del pool di risorse predefinito e usano queste ultime. Per evitare che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tutte le risorse vengano usate da una o più tabelle ottimizzate per la memoria e che altri utenti utilizzino la memoria necessaria per le tabelle ottimizzate per la memoria, è consigliabile creare un pool di risorse distinto per gestire l'utilizzo di memoria per il database con tabelle ottimizzate per la memoria.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_CreateDatabase"></a> Creare il database  
  Con l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene creato un database denominato IMOLTP_DB in cui saranno incluse una o più tabelle ottimizzate per la memoria. Il percorso \<UnitàPercorso> deve esistere prima dell'esecuzione del comando.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP_DB  
 GO  
 ALTER DATABASE IMOLTP_DB ADD FILEGROUP IMOLTP_DB_fg CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -96,7 +96,7 @@ In questo esempio si suppone che sia stato calcolato che gli indici e le tabelle
   
  Con il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene creato un pool di risorse denominato Pool_IMOLTP con metà della memoria disponibile per l'utilizzo.  Dopo la creazione del pool, Resource Governor viene riconfigurato in modo da includere Pool_IMOLTP.  
   
-```tsql  
+```sql  
 -- set MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value  
 CREATE RESOURCE POOL Pool_IMOLTP   
   WITH   
@@ -113,7 +113,7 @@ GO
   
  Con l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene definita un'associazione del database IMOLTP_DB al pool di risorse Pool_IMOLTP. L'associazione non diventa effettiva finché il database non viene portato online.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -123,7 +123,7 @@ GO
 ##  <a name="bkmk_ConfirmBinding"></a> Verificare l'associazione  
  Verificare l'associazione, annotando l'ID del pool di risorse per IMOLTP_DB. Non deve essere NULL.  
   
-```tsql  
+```sql  
 SELECT d.database_id, d.name, d.resource_pool_id  
 FROM sys.databases d  
 GO  
@@ -132,7 +132,7 @@ GO
 ##  <a name="bkmk_MakeBindingEffective"></a> Rendere effettiva l'associazione  
  Dopo aver associato il database al pool di risorse, è necessario portare il database offline, quindi di nuovo online per rendere effettiva l'associazione. Se in precedenza il database era stato associato a un pool diverso, tramite questa operazione la memoria allocata verrà rimossa dal pool di risorse precedente e verranno usate le allocazioni di memoria per gli indici e la tabella ottimizzata per la memoria provenienti dal pool di risorse appena associato al database.  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -156,7 +156,7 @@ GO
   
  **Codice di esempio**  
   
-```tsql  
+```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
 WITH  
      ( MIN_MEMORY_PERCENT = 70,  
@@ -186,7 +186,7 @@ GO
   
  Dopo l'associazione di un database a un pool di risorse denominato, usare la query seguente per visualizzare le allocazioni di memoria tra pool di risorse diversi.  
   
-```tsql  
+```sql  
 SELECT pool_id  
      , Name  
      , min_memory_percent  

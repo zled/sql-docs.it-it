@@ -3,7 +3,7 @@ title: "Esempio OriginalValue e UnderlyingValue proprietà (VB) | Documenti Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95087b445fa316ebe31055a0e53584334e24b693
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6f80342894b931caac28a3474f5a6502e4b2919
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>Esempio OriginalValue e UnderlyingValue proprietà (Visual Basic)
 Questo esempio viene illustrato il [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) proprietà visualizzando un messaggio se i dati sottostanti di un record è stata modificata durante un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aggiornamento batch.  

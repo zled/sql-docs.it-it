@@ -3,7 +3,7 @@ title: URL assoluto e relativo | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ae21e6abedfda13da5a02130110cac0034ef8f34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f0bbd79ff71ffe17c9fb33903501ab7302766fbf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absolute-and-relative-urls"></a>URL assoluto e relativo
 Un URL specifica il percorso di una destinazione memorizzata in un computer locale o in rete. La destinazione può essere un file, directory, una pagina HTML, immagine, programma e così via*.*  
@@ -41,7 +41,7 @@ Un URL specifica il percorso di una destinazione memorizzata in un computer loca
  *schema*  
  Specifica il modo in *risorse* viene eseguito.  
   
- *Server*  
+ *server*  
  Specifica il nome del computer in cui il *risorse* si trova.  
   
  *percorso*  

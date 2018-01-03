@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 dev_langs: VB
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f7369fe9b75148c7b0d448ff4fd2b9457dc77212
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eee5dea5945d48b4fd9a2d40380c61c632d02410
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Riferimento alle librerie ADO In un'applicazione Visual Basic 6
 Per importare le librerie di ADO in un'applicazione di Microsoft Visual Basic 6, è necessario impostare un riferimento nel progetto di Visual Basic.  
@@ -45,7 +45,7 @@ Per importare le librerie di ADO in un'applicazione di Microsoft Visual Basic 6,
   
 6.  Fare clic su **OK** per completare l'impostazione dei riferimenti.  
   
-## <a name="backward-compatibility"></a>Compatibilità con le versioni precedenti  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  Installazione di ADO copia anche le librerie dei tipi seguenti di versioni precedenti:  
   
 -   *msado27.tlb*, libreria dei tipi 2.7 ADO  

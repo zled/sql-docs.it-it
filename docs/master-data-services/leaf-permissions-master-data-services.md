@@ -5,7 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -23,11 +23,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18a5a0b1d3309d58cda54387fe228010ca11d831
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 630e5a4d312855581c6a2d8b29028d415068a396
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorizzazioni per elementi foglia (Master Data Services)
   Le autorizzazioni foglia si applicano ai valori di attributo per tutti i membri foglia di un'entità.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 |Autorizzazione|Description|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri foglia e i relativi attributi.|  
-|**Create**|L'utente può creare i membri foglia e assegnare i valori di attributo durante la creazione.|  
+|**Creare**|L'utente può creare i membri foglia e assegnare i valori di attributo durante la creazione.|  
 |**Update**|L'utente può aggiornare i membri foglia e gli attributi.|  
 |**Elimina**|L'utente può eliminare i membri foglia.|  
 |**Nega**|Negare l'accesso ai membri foglia.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 |Autorizzazione|Description|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere gli attributi.|  
-|**Create**|L'utente può assegnare valori durante la creazione di membri.|  
+|**Creare**|L'utente può assegnare valori durante la creazione di membri.|  
 |**Update**|L'utente può aggiornare gli attributi.|  
 |**Elimina**|Nessun effetto.|  
 |**Nega**|L'attributo non viene visualizzato.<br /><br /> Nota: non è possibile negare in modo esplicito l'accesso agli attributi Name e Code.|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="example"></a>Esempio  
  Per l'entità Product, assegnare l'autorizzazione **Update** all'attributo Subcategory. Negare l'autorizzazione per tutti gli altri attributi.  
   
-|Name|Code|Subcategory (Aggiornamento)|  
+|nome|codice|Subcategory (Aggiornamento)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} Mountain Bikes|  
 |Mountain-100|BK-M201|{5} Mountain Bikes|  

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4026737ea567bb6e4d9300f3fa5d0b9456b1d2b2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8aa9bab370e4d2a44ac7a39030444a59d132ccd6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Componenti di Microsoft Connector for SAP BW
   Questa sezione contiene gli argomenti che descrivono i tre componenti di [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW:  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT]  
 >  La documentazione per Microsoft Connector 1.1 for SAP BW presuppone la conoscenza dell'ambiente SAP Netweaver BW. Per ulteriori informazioni su SAP Netweaver BW o per informazioni su come configurare oggetti e processi di SAP Netweaver BW, vedere la documentazione SAP.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [SAP BW Connection Manager](../integration-services/connection-manager/sap-bw-connection-manager.md)  
  Descrive la gestione connessione SAP BW. Tramite la gestione connessione l'origine o la destinazione SAP BW viene connessa a sistema SAP Netweaver BW versione 7.  
   

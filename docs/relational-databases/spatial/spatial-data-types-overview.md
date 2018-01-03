@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c434a1c9c514018176b1afcc0a7a57c63fc896e3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0cc470ce80e24520283f3a34c9e1f560ab096288
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ I metodi che operano sui tipi di segmento di arco circolare utilizzano segmenti 
 Nel diagramma seguente vengono illustrati triangoli isosceli identici. Nel triangolo A vengono utilizzati segmenti di linea per definire il triangolo, mentre nel triangolo B vengono utilizzati segmenti di arco circolare.  
 
 ![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) In questo esempio viene illustrato come archiviare i triangoli isosceli precedenti usando un'istanza **LineString** e un'istanza **CircularString**:  
-```tsql
+```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
 SET @g1 = geometry::STGeomFromText('LINESTRING(1 1, 5 1, 3 5, 1 1)', 0);
@@ -125,7 +125,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 Si noti che un'istanza **CircularString** richiede sette punti per definire il triangolo, mentre un'istanza **LineString** richiede solo quattro punti. Il motivo è che un'istanza **CircularString** archivia segmenti di arco circolare e non segmenti di linea. Di conseguenza, i lati del triangolo archiviati nell'istanza **CircularString** sono ABC, CDE ed EFA, mentre i lati del triangolo archiviati nell'istanza **LineString** sono AC, CE ed EA.  
 
 Si consideri il frammento di codice seguente:  
-```tsql
+```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
@@ -145,16 +145,16 @@ Come illustrato nella figura precedente, le istanze **CircularString** utilizzan
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>Confronto tra LineString e CompoundCurve  
 Negli esempi di codice seguenti viene illustrato come archiviare la stessa figura utilizzando istanze **LineString** e **CompoundCurve** :
-```tsql
+```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 ```
 
-o  
+o Gestione configurazione  
 
 Negli esempi precedenti un'istanza **LineString** o un'istanza **CompoundCurve** potrebbe archiviare la figura.  Nell'esempio seguente viene utilizzata un'istanza **CompoundCurve** per archiviare una sezione di un grafico a torta:  
-```tsql
+```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
 
@@ -162,7 +162,7 @@ Un'istanza **CompoundCurve** consente di archiviare direttamente il segmento di 
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>Confronto tra CircularString e CompoundCurve  
 Nell'esempio di codice seguente viene illustrata l'archiviazione di una sezione di un grafico a torta in un'istanza **CircularString** :  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
 SELECT @g.ToString(), @g.STLength();
@@ -170,12 +170,12 @@ SELECT @g.ToString(), @g.STLength();
 
 Per archiviare la sezione del grafico a torta utilizzando un'istanza **CircularString** , è necessario utilizzare tre punti per ogni segmento di linea.  Se un punto intermedio non è noto, deve essere calcolato oppure è necessario raddoppiare l'endpoint del segmento di linea, come illustrato nel frammento di codice seguente:  
 
-```tsql
+```sql
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
 Le istanze**CompoundCurve** consentono componenti sia **LineString** sia **CircularString** , in modo che solo due punti nei segmenti di linea della sezione del grafico a torta debbano essere noti.  In questo esempio di codice viene illustrato come utilizzare un'istanza **CompoundCurve** per archiviare la stessa figura:  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246), (-3 6.3246, 0 0, 3 6.3246))');
 SELECT @g.ToString(), @g.STLength();

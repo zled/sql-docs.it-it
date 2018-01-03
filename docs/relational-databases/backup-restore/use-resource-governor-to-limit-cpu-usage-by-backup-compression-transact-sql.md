@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36fd0cd2cc5f7168e4daf7948ab9a9223b21e394
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
      **Per creare un account di accesso**  
   
-    -   [Creazione di un account di accesso](../../relational-databases/security/authentication-access/create-a-login.md)  
+    -   [Creare un account di accesso](../../relational-databases/security/authentication-access/create-a-login.md)  
   
     -   [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
  Questo esempio crea un accesso per l'account di Windows *domain_name*`\MAX_CPU` e concede l'autorizzazione VIEW SERVER STATE all'accesso. che consente di verificare la classificazione di Resource Governor delle sessioni dell'account di accesso. L'esempio crea quindi un utente per *domain_name*`\MAX_CPU` e lo aggiunge al ruolo predefinito del database db_backupoperator per il database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Tale nome utente verrà utilizzato dalla funzione di classificazione di Resource Governor.  
   
-```tsql  
+```sql  
 -- Create a SQL Server login for low-priority operations  
 USE master;  
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
@@ -207,7 +207,7 @@ GO
 > [!IMPORTANT]  
 >  L'esempio seguente usa il nome dell'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di esempio creato in "Esempio A. Impostazione di un accesso e di un utente (Transact-SQL)", ossia *domain_name*`\MAX_CPU`. Sostituire questo nome con quello dell'utente relativo all'account di accesso che si intende utilizzare per la creazione di backup compressi con priorità bassa.  
   
-```tsql  
+```sql  
 -- Configure Resource Governor.  
 BEGIN TRAN  
 USE master;  
@@ -249,7 +249,7 @@ GO
 ##  <a name="verifying"></a> Verifica della classificazione della sessione corrente (Transact-SQL)  
  Facoltativamente, accedere come l'utente specificato nella funzione di classificazione e verificare la classificazione della sessione eseguendo l'istruzione [SELECT](../../t-sql/queries/select-transact-sql.md) seguente in Esplora oggetti:  
   
-```tsql  
+```sql  
 USE master;  
 SELECT sess.session_id, sess.login_name, sess.group_id, grps.name   
 FROM sys.dm_exec_sessions AS sess   
@@ -272,7 +272,7 @@ GO
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Esempio C. Creazione di un backup compresso (Transact-SQL)  
  Nell'esempio seguente [BACKUP](../../t-sql/statements/backup-transact-sql.md) viene creato un backup compresso completo del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] nel nuovo file di backup formattato `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
-```tsql  
+```sql  
 --Run backup statement in the gBackup session.  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   

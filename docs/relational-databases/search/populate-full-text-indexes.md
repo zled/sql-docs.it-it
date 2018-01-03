@@ -31,11 +31,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aa5d1392d5dd90cd5b783ae8e96a47b0fdf4d5be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 463494b3e3810a31d487b44c58aac58eccbf3674
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La creazione e la gestione di un indice full-text comporta il popolamento dell'indice con un processo denominato *popolamento*, noto anche con il termine *ricerca per indicizzazione*.  
@@ -58,7 +58,7 @@ Per creare un indice full-text senza popolarlo immediatamente, specificare la cl
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Esempio: creare un indice full-text senza eseguire un popolamento completo  
  Nell'esempio seguente viene creato un indice full-text nella tabella `Production.Document` del database di esempio `AdventureWorks` . Questo esempio usa `WITH CHANGE_TRACKING OFF, NO POPULATION` per ritardare il popolamento completo iniziale.  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -77,7 +77,7 @@ GO
 ### <a name="example---run-a-full-population-on-a-table"></a>Esempio: eseguire un popolamento completo in una tabella  
  Nell'esempio seguente viene eseguito un popolamento completo nella tabella `Production.Document` del database di esempio `AdventureWorks` .  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -110,7 +110,7 @@ Esistono due tipi di rilevamento delle modifiche:
     **Esempio: modificare un indice full-text per l'uso del rilevamento delle modifiche automatico**  
     Nell'esempio seguente viene creato un indice full-text della tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks` per l'utilizzo del rilevamento delle modifiche con il popolamento automatico.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -130,7 +130,7 @@ Esistono due tipi di rilevamento delle modifiche:
     **Esempio: creare un indice full-text con il rilevamento delle modifiche manuale**  
     Nell'esempio seguente viene creato un indice full-text che utilizzerà il rilevamento delle modifiche con popolamento manuale nella tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks` .  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -144,7 +144,7 @@ Esistono due tipi di rilevamento delle modifiche:
     **Esempio: eseguire un popolamento manuale**  
     Nell'esempio seguente viene eseguito un popolamento manuale nell'indice full-text con rilevamento delle modifiche della tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks` .  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  

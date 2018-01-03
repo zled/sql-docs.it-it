@@ -3,7 +3,7 @@ title: Esplora soluzioni | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: db694cf9183a4fd80aeb0f46c21be7abce1147de
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3652c94ce57fa5200e846c922f4d6a245478965c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="solution-explorer"></a>Esplora soluzioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Nel riquadro Esplora soluzioni in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] sono presenti contenitori chiamati progetti per la gestione di elementi quali script di database, query, connessioni dati e file. Uno o più i progetti correlati l'uno all'altro possono essere combinati in un contenitore chiamato soluzione.  
@@ -53,12 +53,12 @@ Questi contenitori possono essere utilizzati per:
   
 Gli elementi contenuti nei progetti dipendono dal tipo di progetto e dall'eventuale utilizzo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
 Utilizzare gli argomenti seguenti per iniziare a utilizzare le soluzioni di SQL Server:  
   
 |||  
 |-|-|  
-|**Description**|**Argomento**|  
+|**Descrizione**|**Argomento**|  
 |Viene illustrato come raccogliere uno o più progetti in una soluzione.|[Soluzioni &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Viene illustrato come creare un progetto e aggiungere elementi quali script e connessioni.|[Progetti &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Vengono fornite informazioni sui file utilizzati da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] per la gestione di soluzioni e file.|[File per la gestione di soluzioni e progetti](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  

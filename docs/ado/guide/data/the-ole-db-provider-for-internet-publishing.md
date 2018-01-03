@@ -3,7 +3,7 @@ title: Il Provider OLE DB per la pubblicazione su Internet | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29dc06f21ef0a20271184ae71ecb9d203897f2aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5731b15274e4d2c1acafec09bd6478fc244a1f59
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Il Provider OLE DB per la pubblicazione su Internet
 ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) e [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetti sono utilizzabile con il Provider Microsoft OLE DB per Internet Publishing (Internet Publishing Provider) per accedere e modificare le risorse, ad esempio file o cartelle Web servite da Microsoft FrontPage. Con ADO, è possibile specificare l'origine di un **Record**, **flusso**, o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) da un URL. È possibile caricare, scaricare, spostare, copiare ed eliminare le risorse o modificare direttamente le proprietà delle risorse.  
@@ -38,19 +38,19 @@ ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) e [flusso](../
   
  Esistono tre modi per la connessione di ADO per Internet Publishing Provider:  
   
--   Specificare "URL =" nella stringa di connessione. Esempio:  
+-   Specificare "URL =" nella stringa di connessione. Ad esempio  
   
     ```  
     objConn.Open "URL=http://servername"  
     ```  
   
--   Specificare Msdaipp. DSO per il *Provider* parola chiave della stringa di connessione. Esempio:  
+-   Specificare Msdaipp. DSO per il *Provider* parola chiave della stringa di connessione. Ad esempio  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
     ```  
   
--   Specificare Msdaipp. DSO per il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà del [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Esempio:  
+-   Specificare Msdaipp. DSO per il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà del [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Ad esempio  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
