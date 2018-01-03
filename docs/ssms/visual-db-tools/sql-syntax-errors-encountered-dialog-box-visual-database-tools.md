@@ -3,7 +3,7 @@ title: Finestra di dialogo Errori nella sintassi SQL (Visual Database Tools) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b59d9f9ce4768a5cabb6c763b99a029f7720e7c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd83cac5ef064cb5df226ecc94b5be954f506405
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>Finestra di dialogo Errori nella sintassi SQL (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Tramite questa finestra di dialogo l'utente viene avvisato dell'impossibilità di analizzare l'istruzione SQL nel riquadro SQL.  

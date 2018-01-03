@@ -3,7 +3,7 @@ title: "Proprietà ParentSameAsPrev (ADO MD) | Documenti Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c1c8cd042b673c256906035c3a1fcd4ee863a71
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4e33af885d000705596e6c457357b98dbc98255
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parentsameasprev-property-ado-md"></a>Proprietà ParentSameAsPrev (ADO MD)
 Indica se l'elemento padre di questa posizione [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) corrisponde a quello dell'elemento padre del membro immediatamente precedente.  

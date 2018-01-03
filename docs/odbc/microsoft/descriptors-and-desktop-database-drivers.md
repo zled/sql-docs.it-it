@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 795cc9faa07c8763398c9c31800e521055774e96
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 136c037cbf6d6d40335350e1c6cb9136d9bf8f0c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Descrittori e i driver di Database Desktop
 Un descrittore è una struttura di dati che contiene informazioni sui dati delle colonne o parametri dinamici. **SQLGetDescField** può essere utilizzato per recuperare i descrittori supportati elencati di seguito. Descrittori di parametri di implementazione (IPD) non vengono popolati automaticamente perché **SQLDescribeParam** non è supportata. I campi di descrizione che non sono disponibili tramite Jet (ad esempio SQL_DESC_BASE_TABLE_NAME) non sono inoltre supportati.  

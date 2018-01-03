@@ -3,7 +3,7 @@ title: Metodo SetPermissions (ADOX) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 068de529cd2319b846f013dab8ae399135623fd7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a3aad4675415b4366c612960d78bc003061bb10
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setpermissions-method-adox"></a>Metodo SetPermissions (ADOX)
 Specifica le autorizzazioni per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) o [utente](../../../ado/reference/adox-api/user-object-adox.md) su un oggetto.  
@@ -54,10 +54,10 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  Oggetto **lungo** valore che può essere una maschera di bit di uno o più di [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) costanti, che indica i diritti per impostare.  
   
  *Ereditare*  
- Facoltativa. Oggetto **lungo** valore che può essere uno del [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) costanti, che specifica il modo in cui gli oggetti ereditano tali autorizzazioni. Il valore predefinito è **adInheritNone**.  
+ Facoltativo. Oggetto **lungo** valore che può essere uno del [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) costanti, che specifica il modo in cui gli oggetti ereditano tali autorizzazioni. Il valore predefinito è **adInheritNone**.  
   
  *ID tipo oggetto*  
- Facoltativa. Oggetto **Variant** valore che specifica il GUID per un tipo di oggetto provider che non è definito dalla specifica OLE DB. Questo parametro è obbligatorio se *ObjectType* è impostato su **impostato su adPermObjProviderSpecific**; in caso contrario, non viene utilizzato.  
+ Facoltativo. Oggetto **Variant** valore che specifica il GUID per un tipo di oggetto provider che non è definito dalla specifica OLE DB. Questo parametro è obbligatorio se *ObjectType* è impostato su **impostato su adPermObjProviderSpecific**; in caso contrario, non viene utilizzato.  
   
 ## <a name="remarks"></a>Osservazioni  
  Se il provider non supporta impostazione dei diritti di accesso per gruppi o utenti, si verificherà un errore.  

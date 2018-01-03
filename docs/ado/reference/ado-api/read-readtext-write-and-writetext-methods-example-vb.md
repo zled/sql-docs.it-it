@@ -3,7 +3,7 @@ title: Lettura, ReadText, scrittura ed esempio di metodi WriteText (VB) | Docume
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 148d884f1effd676b4fabd80abe9f741ecc396f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4811b1ad46663baa1aadf0e4f89313520913974e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Esempio di metodi WriteText (VB), ReadText, scrittura e lettura
 In questo esempio viene illustrato come leggere il contenuto di una casella di testo in un testo di entrambi [flusso](../../../ado/reference/ado-api/stream-object-ado.md) e un file binario **flusso**. Altre proprietà e metodi illustrati includono [posizione](../../../ado/reference/ado-api/position-property-ado.md), [dimensioni](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), e [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

@@ -5,7 +5,7 @@ ms.date: 10/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05c94bd5803520aa5424cca837784f8f67382d16
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 07d72eb6c4d40c3e61f4292616f9eda99d6d4742
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novità di Data Migration Assistant
 
@@ -84,7 +84,7 @@ La versione 1.0 di DMA è la versione iniziale, e consente di:
     - Funzionalità deprecate
 
 - Individuazione di nuove funzionalità della piattaforma di SQL Server di destinazione che il database può trarre vantaggio da un aggiornamento. Le conclusioni sono descritte come indicazioni di funzionalità e la classificazione nelle aree seguenti:
-    - Prestazioni
+    - restazioni
     - Security
     - Archiviazione
 

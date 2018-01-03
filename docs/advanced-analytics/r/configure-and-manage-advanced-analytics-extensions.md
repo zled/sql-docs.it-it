@@ -2,11 +2,11 @@
 title: Configurazione opzioni avanzate per servizi di Machine Learning | Documenti Microsoft
 ms.custom: SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 369c630e249d7775e67508fc9b00e94447182012
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 24f2082572cdb314257826570471548f87b1b60e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Opzioni di configurazione avanzate per i servizi di Machine Learning
 
@@ -97,7 +97,7 @@ Per poter apportare modifiche a questo file è necessario essere amministratore 
 
 La tabella seguente elenca le impostazioni avanzate per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], con i valori consentiti. 
 
-|**Nome impostazione**|**Tipo**|**Description**|
+|**Nome impostazione**|**Tipo**|**Descrizione**|
 |----|----|----|
 |PROCESSO\_PULIZIA\_ON\_USCITA|Valore intero |Questa è un'impostazione esclusivamente interna, non modificare questo valore. </br></br>Specifica se la cartella di lavoro temporanea creata per ogni sessione di runtime esterno deve essere pulita al termine della sessione. L'impostazione è utile per il debug. </br></br>Valori supportati sono **0** (disattivato) o **1** (abilitato). </br></br>Il valore predefinito è 1, i file di log di significato sono rimossi all'uscita.|
 |TRACCIA\_LIVELLO|Valore intero |Consente di configurare il livello di dettaglio di traccia di MSSQLLAUNCHPAD a scopo di debug. Ciò influisce sui file di traccia nel percorso specificato dall'impostazione LOG_DIRECTORY. </br></br>Valori supportati sono: **1** (errore), **2** (prestazioni), **3** (avviso), **4** (informazioni). </br></br>Il valore predefinito è 1, vale a dire solo avvisi di output.|

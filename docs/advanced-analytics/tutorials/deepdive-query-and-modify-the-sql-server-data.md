@@ -1,38 +1,46 @@
 ---
-title: Eseguire una query e modificare i dati SQL Server | Documenti Microsoft
+title: Eseguire una query e modificare i dati di SQL Server (SQL e R approfondimento) | Documenti Microsoft
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 8c7007a9-9a8f-4dcd-8068-40060d4f6444
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 66543db80e1d4c6255f6ac64077bfdc10b28dc5d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 38273ac15673344ff00714d38ec87386ca5dae64
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="query-and-modify-the-sql-server-data"></a>Eseguire query e modificare i dati SQL Server
+# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>Eseguire una query e modificare i dati di SQL Server (SQL e R approfondimento)
+
+Questo articolo fa parte dell'esercitazione approfondimento di analisi scientifica dei dati, su come usare [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
 Ora che i dati sono stati caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile usare le origini dati create come argomenti per le funzioni R in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], per ottenere le informazioni di base sulle variabili e generare riepiloghi e istogrammi.
 
-In questo passaggio si userà nuovamente le origini dati per eseguire un'analisi rapida e quindi per ottimizzare i dati.
+In questo passaggio, utilizzare nuovamente le origini dati per eseguire un'analisi rapida e quindi per ottimizzare i dati.
 
-## <a name="query-the-data"></a>Esecuzione di query sui dati
+## <a name="query-the-data"></a>Eseguire query sui dati
 
 Per prima cosa ottenere un elenco delle colonne e dei relativi tipi di dati.
 
-1.  Utilizzare la funzione **rxGetVarInfo** e specificare l'origine dati che si desidera analizzare.
+1.  Utilizzare la funzione [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) e specificare l'origine dati che si desidera analizzare.
+
+    A seconda della versione di RevoScaleR, è inoltre possibile utilizzare [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -63,7 +71,9 @@ Per prima cosa ottenere un elenco delle colonne e dei relativi tipi di dati.
 
 Tutte le variabili vengono archiviate come valori interi, ma alcune variabili rappresentano dati relativi alle categorie denominati *variabili di fattore* in R. Ad esempio, la colonna *stato* contiene numeri che rappresentano gli identificatori di 50 stati più District of Columbia.  Per facilitare la comprensione dei dati, sostituire i numeri con un elenco di codici di stato.
 
-In questo passaggio verrà specificato un vettore di stringhe contenente le abbreviazioni e verrà eseguito il mapping dei valori relativi alle categorie agli identificatori interi originali. La variabile creata verrà usata nell'argomento *colInfo* per specificare che la colonna deve essere gestita come fattore. Da quel momento, ogni volta che i dati vengono analizzati o importati, verranno usate le abbreviazioni e la colonna gestita come fattore.
+In questo passaggio, creare un vettore di stringhe contenente le abbreviazioni e quindi eseguire il mapping di questi valori categorici per gli identificatori di tipo integer originale. È quindi utilizzare la nuova variabile nel *colInfo* argomento, per specificare che la colonna deve essere gestito come un fattore. Ogni volta che si analizzano i dati o spostarlo, vengono utilizzate le abbreviazioni e la colonna viene gestita come un fattore.
+
+Il mapping della colonna alle abbreviazioni prima di usarla come fattore consente di migliorare anche le prestazioni. Per ulteriori informazioni, vedere [R e i dati di ottimizzazione](..\r\r-and-data-optimization-r-services.md).
 
 1. Iniziare creando la variabile R *stateAbb*e definendo il vettore di stringhe da aggiungere alla variabile come segue:
   
@@ -100,7 +110,7 @@ In questo passaggio verrà specificato un vettore di stringhe contenente le abbr
     )
     ```
   
-3. Per creare l'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che usa i dati aggiornati, chiamare la funzione *RxSqlServerData* come in precedenza, ma aggiungere l'argomento *colInfo* .
+3. Per creare l'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che usa i dati aggiornati, chiamare la funzione **RxSqlServerData** come in precedenza, ma aggiungere l'argomento *colInfo* .
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -110,9 +120,8 @@ In questo passaggio verrà specificato un vettore di stringhe contenente le abbr
   
     - Per il parametro *table* , passare la variabile *sqlFraudTable*che contiene l'origine dati creata in precedenza.
     - Per il parametro *colInfo* , passare la variabile *ccColInfo* che contiene i tipi di dati di colonna e i livelli di fattore.
-    - Il mapping della colonna alle abbreviazioni prima di usarla come fattore consente di migliorare anche le prestazioni. Per altre informazioni, vedere [R e ottimizzazione dei dati](https://msdn.microsoft.com/library/mt723575.aspx)
-  
-4.  È ora possibile utilizzare rxGetVarInfo la funzione per visualizzare le variabili nella nuova origine dati.
+
+4.  È ora possibile usare la funzione **rxGetVarInfo** per visualizzare le variabili nella nuova origine dati.
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -142,11 +151,8 @@ A questo punto le tre variabili specificate (_gender_, _state_e _cardholder_) ve
 
 ## <a name="next-step"></a>Passaggio successivo
 
-[Definire e utilizzare i contesti di calcolo](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
+[Definire e usare i contesti di calcolo](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
 
 ## <a name="previous-step"></a>Passaggio precedente
 
 [Creare oggetti dati di SQL Server usando RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-
-

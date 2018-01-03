@@ -1,32 +1,37 @@
 ---
-title: Analizzare i dati nel contesto di calcolo locale | Documenti Microsoft
-ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: Analizzare i dati nel contesto di calcolo locale (SQL e R approfondimento) | Documenti Microsoft
+ms.date: 12/18/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 787bb526-4a13-40fa-9343-75d3bf5ba6a2
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d8e6516b7d203180d5c2a605db1099b1dcbae708
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e65a4ad3018cfec6b60dae605945a8641b568c5d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="analyze-data-in-local-compute-context-data-science-deep-dive"></a>Analizzare i dati nel contesto di calcolo locale (dati scienza approfondimento)
+# <a name="analyze-data-in-local-compute-context-sql-and-r-deep-dive"></a>Analizzare i dati nel contesto di calcolo locale (SQL e R approfondimento)
 
-Sebbene sia più veloce per eseguire codice R complesso usando il contesto server, in alcuni casi è semplicemente più conveniente ottenere i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e analizzarlo nella workstation privata.
+Questo articolo fa parte dell'esercitazione approfondimento di analisi scientifica dei dati, su come usare [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-In questa sezione verrà illustrato come passare ad un contesto di calcolo locale, e spostare dati tra contesti per ottimizzare le prestazioni.
+In questa sezione informazioni su come tornare a un contesto di calcolo locale e spostare dati tra i contesti per ottimizzare le prestazioni.
+
+Sebbene i potrebbe essere più veloce per eseguire codice R complesso usando il contesto server, a volte è più conveniente ottenere i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e analizzarli in una workstation locale.
 
 ## <a name="create-a-local-summary"></a>Creare un riepilogo locale
 
@@ -36,7 +41,7 @@ In questa sezione verrà illustrato come passare ad un contesto di calcolo local
     rxSetComputeContext ("local")
     ```
   
-2. Durante l'estrazione dei dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è spesso possibile ottenere prestazioni migliori, aumentando il numero di righe estratte per ogni lettura.  A tale scopo, aumentare il valore del parametro *rowsPerRead* nell'origine dati.
+2. Durante l'estrazione dei dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è spesso possibile ottenere prestazioni migliori, aumentando il numero di righe estratte per ogni lettura.  A tale scopo, aumentare il valore del parametro *rowsPerRead* nell'origine dati. In precedenza, il valore di *rowsPerRead* era impostato su 5000.
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
@@ -45,24 +50,19 @@ In questa sezione verrà illustrato come passare ad un contesto di calcolo local
        colInfo = ccColInfo,
        rowsPerRead = 10000)
     ```
-  
-    In precedenza, il valore di *rowsPerRead* era impostato su 5000.
-  
-3. A questo punto chiamare **rxSummary** nella nuova origine dati.
+
+3. Chiamare **rxSummary** nella nuova origine dati.
   
     ```R
     rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
     ```
   
-    I risultati effettivi devono essere lo stesso come quando si esegue rxSummary nel contesto del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer.  L'operazione potrebbe tuttavia essere più veloce o più lenta a seconda del tipo di connessione al database. Per essere analizzati, i dati vengono infatti trasferiti nel computer locale.
+    I risultati effettivi devono corrispondere a quelli ottenuti con l'esecuzione di **rxSummary** nel contesto del computer con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  L'operazione potrebbe tuttavia essere più veloce o più lenta a seconda del tipo di connessione al database. Per essere analizzati, i dati vengono infatti trasferiti nel computer locale.
 
-
-## <a name="next--step"></a>Passaggio successivo
+## <a name="next-step"></a>Passaggio successivo
 
 [Spostare dati tra SQL Server e i File con estensione XDF](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 
 ## <a name="previous-step"></a>Passaggio precedente
 
-[Eseguire l'analisi di suddivisione in blocchi utilizzando rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
-
-
+[Eseguire un'analisi in blocchi tramite rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)

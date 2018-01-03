@@ -1,40 +1,44 @@
 ---
-title: Spostare dati tra SQL Server e i File con estensione XDF | Documenti Microsoft
+title: Spostare dati tra SQL Server e il file con estensione XDF (SQL e R approfondimento) | Documenti Microsoft
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 40887cb3-ffbb-4769-9f54-c006d7f4798c
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a140cc358afab1f1ff324e0a47ed67501ee75e23
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 65fb70927d799a77c00ec1d361f66ebf23f88136
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="move-data-between-sql-server-and-xdf-file"></a>Spostare i dati tra SQL Server e file XDF
+# <a name="move-data-between-sql-server-and-xdf-file-sql-and-r-deep-dive"></a>Spostare dati tra SQL Server e il file con estensione XDF (SQL e R approfondimento)
 
-Quando si lavora in un contesto di calcolo locale, si ha accesso a entrambi i file di dati locali e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database (definito da un'origine dati RxSqlServerData).
+Questo articolo fa parte dell'esercitazione approfondimento di analisi scientifica dei dati, su come usare [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-In questa sezione verrà illustrato come ottenere i dati e archiviarli in un file nel computer locale, in modo tale che sia possibile trasformarli. Al termine, si userà i dati nel file per creare un nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella, tramite rxDataStep.
+In questo passaggio descritto come utilizzare un file con estensione XDF per trasferire dati tra i contesti di calcolo remoti e locali. L'archiviazione dei dati in un file con estensione XDF consente di eseguire trasformazioni sui dati.
+
+Al termine, utilizzare i dati nel file per creare un nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella. La funzione [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) possono applicare trasformazioni ai dati ed esegue la conversione tra i frame di dati e i file con estensione xdf.
   
-## <a name="create-a-sql-server-table-from-an-xdf-file"></a>Creare una tabella di SQL Server da un file XDF
+## <a name="create-a-sql-server-table-from-an-xdf-file"></a>Creare una tabella di SQL Server da un file con estensione XDF
 
-La funzione rxImport consente di importare dati da qualsiasi origine dati supportata in un file con estensione XDF locale. È utile usare un file locale se si vuole sottoporre ad analisi diverse i dati archiviati nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza continuare a ripetere la stessa query.
+Per questo esercizio, utilizzare nuovamente i dati di frodi carta di credito. In questo scenario è stato richiesto di eseguire alcune analisi aggiuntive sugli utenti in California, Oregon e Washington. In modo più efficiente, si è deciso di archiviare i dati per solo questi stati nel computer locale e utilizzare solo il sesso di variabili, titolare della carta, stato e saldo.
 
-Per questo esercizio saranno usati nuovamente i dati di frode di una carta di credito. In questo scenario è stato richiesto di eseguire alcune analisi aggiuntive sugli utenti in California, Oregon e Washington. Per maggiore efficienza, si è deciso di archiviare i dati di questi soli tre paesi nel computer locale e di lavorare con le variabili sesso, titolare carta e saldo.
-
-1. Usare di nuovo il vettore *stateAbb* creato in precedenza per identificare i livelli da includere e stampare la nuova variabile *statesToKeep*nella console.
+1. Riutilizzo di `stateAbb` variabile creata in precedenza per identificare i livelli da includere e scriverli in una nuova variabile, `statesToKeep`.
   
     ```R
     statesToKeep <- sapply(c("CA", "OR", "WA"), grep, stateAbb)
@@ -42,11 +46,11 @@ Per questo esercizio saranno usati nuovamente i dati di frode di una carta di cr
     ```
     **Risultati**
     
-    CA|OPPURE|WA
+    CA|o|WA
     ----|----|----
     5|38|48
     
-2. A questo punto definire i dati che si vuole rilevare da SQL Server usando una query [!INCLUDE[tsql](../../includes/tsql-md.md)] .  Questa variabile sarà poi usata come argomento *inData* per *rxImport*.
+2. Definire i dati che si desidera trasferire tramite da SQL Server, utilizzando un [!INCLUDE[tsql](../../includes/tsql-md.md)] query.  In un secondo momento si utilizza questa variabile come il *inData* argomento per **rxImport**.
   
     ```R
     importQuery <- paste("SELECT gender,cardholder,balance,state FROM",  sqlFraudTable,  "WHERE (state = 5 OR state = 38 OR state = 48)")
@@ -54,7 +58,7 @@ Per questo esercizio saranno usati nuovamente i dati di frode di una carta di cr
   
     Assicurarsi che la query non contenga caratteri nascosti, ad esempio avanzamenti riga e tabulazioni.
   
-3. Successivamente, verranno definite le colonne da utilizzare quando si lavora con i dati in R. Ad esempio, nel set di dati più piccoli, è necessario solo tre livelli di fattore, perché la query restituirà i dati relativi solo tre stati.  È possibile usare nuovamente la variabile *statesToKeep* per identificare i livelli appropriati da includere.
+3. Successivamente, definire le colonne da utilizzare quando si lavora con i dati in R. Ad esempio, nel set di dati più piccoli, è necessario solo tre livelli di fattore, poiché la query restituisce i dati per solo tre stati.  Applicare il `statesToKeep` variabile per identificare i livelli appropriati da includere.
   
     ```R
     importColInfo <- list(
@@ -69,8 +73,10 @@ Per questo esercizio saranno usati nuovamente i dati di frode di una carta di cr
     ```R
     rxSetComputeContext("local")
     ```
-  
-5. Creare l'oggetto origine dati mediante il passaggio di tutte le variabili definite come argomenti RxSqlServerData.
+    
+    Il [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) funzione possibile importare dati da qualsiasi origine dati supportata in un file con estensione XDF locale. Utilizzando una copia locale dei dati è utile quando si desidera effettuare molti analisi diverse sui dati, ma evitare di eseguire ripetutamente la stessa query.
+
+5. Creare l'oggetto origine dati, passando le variabili definite in precedenza come argomenti **RxSqlServerData**.
   
     ```R
     sqlServerImportDS <- RxSqlServerData(
@@ -79,7 +85,7 @@ Per questo esercizio saranno usati nuovamente i dati di frode di una carta di cr
         colInfo = importColInfo)
     ```
   
-6. Chiamare quindi **rxImport** per scrivere i dati in un file denominato `ccFraudSub.xdf`, nella directory di lavoro corrente.
+6. Chiamare **rxImport** per scrivere i dati in un file denominato `ccFraudSub.xdf`, nella directory di lavoro corrente.
   
     ```R
     localDS <- rxImport(inData = sqlServerImportDS,
@@ -87,9 +93,9 @@ Per questo esercizio saranno usati nuovamente i dati di frode di una carta di cr
         overwrite = TRUE)
     ```
   
-    Il *localDs* oggetto restituito dalla funzione rxImport è un oggetto di origine dati di RxXdfData leggera che rappresenta il file di dati ccFraud.xdf archiviato localmente sul disco.
+    Il `localDs` oggetto restituito dal **rxImport** funzione è un leggero **RxXdfData** oggetto origine dati che rappresenta il `ccFraud.xdf` file di dati archiviati localmente sul disco.
   
-7. Chiamare rxGetVarInfo su un file con estensione XDF per verificare che lo schema di dati è lo stesso.
+7. Chiamare [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) nel file XDF per verificare che lo schema dei dati sia lo stesso.
   
     ```R
     rxGetVarInfo(data = localDS)
@@ -107,13 +113,13 @@ Per questo esercizio saranno usati nuovamente i dati di frode di una carta di cr
 
     *Var 4: state, Type: factor, no factor levels available*
   
-8. È ora possibile chiamare varie funzioni R per analizzare l'oggetto *localDs* , come si è soliti fare con i dati di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esempio:
+8. È ora possibile chiamare varie funzioni R per analizzare l'oggetto `localDs`, come si è soliti fare con i dati di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ad esempio, è possibile creare un riepilogo per sesso:
   
     ```R
     rxSummary(~gender + cardholder + balance + state, data = localDS)
     ```
 
-Dopo aver appreso l'uso di contesti di calcolo e aver usato origini dati diverse è possibile passare alla parte più divertente. Nella lezione successiva, che è anche l'ultima, si creerà una semplice simulazione usando una funzione R personalizzata. La simulazione sarà eseguita nel server remoto.
+Dopo aver appreso l'uso di contesti di calcolo e aver usato origini dati diverse è possibile passare alla parte più divertente. Nella lezione successiva e finale creare una simulazione semplice che esegue una funzione R personalizzata nel server remoto.
 
 ## <a name="next-step"></a>Passaggio successivo
 
@@ -121,7 +127,7 @@ Dopo aver appreso l'uso di contesti di calcolo e aver usato origini dati diverse
 
 ## <a name="previous-step"></a>Passaggio precedente
 
-[Analizzare i dati nel contesto di calcolo locale](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
+[Analizzare i dati in un contesto di calcolo locale](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
 
 
 

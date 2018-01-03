@@ -1,38 +1,44 @@
 ---
-title: 'Lezione 5: Creare una simulazione semplice (procedura approfondita di data science) | Microsoft Docs'
+title: Creare una simulazione semplice (SQL e R approfondimento) | Documenti Microsoft
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
 caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e5dfca8ecef324b510b614ae93b7aefe9a4efe07
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 047ce5984129eadde9ef92505b7c5448f7c37d4f
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="create-a-simple-simulation"></a>Creare una simulazione semplice
+# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>Creare una simulazione semplice (SQL e R approfondimento)
+
+In questo articolo è il passaggio finale dell'esercitazione di approfondimento di analisi scientifica dei dati, su come usare [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
 Fino ad oggi si usano già funzioni R progettate specificamente per lo spostamento dei dati tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e contesto di calcolo locale. Si supponga tuttavia di creare una funzione R personalizzata e di volerla eseguire nel contesto dei server?
 
-È possibile chiamare una funzione arbitraria nel contesto del computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando la funzione **rxExec** . È inoltre possibile utilizzare rxExec per distribuire in modo esplicito il lavoro tra core in un singolo nodo del server.
+È possibile chiamare una funzione arbitraria nel contesto del computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando la funzione [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) . È inoltre possibile utilizzare **rxExec** per distribuire in modo esplicito il lavoro tra core in un singolo server.
 
-In questa lezione verrà usato il server remoto per creare una simulazione semplice. La simulazione non richiede alcuna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati; l'esempio illustra solo come progettare una funzione personalizzata e quindi chiamare mediante la funzione rxExec.
+In questa lezione, si utilizza il server remoto per creare una semplice simulazione. La simulazione non richiede dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'esempio si limita a illustrare come creare una funzione personalizzata ed eseguirne la chiamata usando la funzione **rxExec** .
 
-Per un esempio più complesso di rxExec di utilizzo, vedere l'articolo: [il parallelismo con granularità grossolana con foreach e rxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+Per un esempio più complesso di utilizzo **rxExec**, vedere l'articolo: [il parallelismo con granularità grossolana con foreach e rxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
 
-## <a name="create-the-function"></a>Creare la funzione
+## <a name="create-the-custom-function"></a>Creare la funzione personalizzata
 
 Un comune gioco di casinò consiste nel tirare un paio di dati con le regole seguenti:
 
@@ -70,7 +76,7 @@ Il gioco può essere facilmente simulato in R creando una funzione personalizzat
     }
     ```
   
-2.  Per simulare una singola giocata ai dadi, eseguire la funzione.
+2.  Per simulare un gioco di lancio dei dadi singolo, eseguire la funzione.
   
     ```R
     rollDice()
@@ -78,13 +84,13 @@ Il gioco può essere facilmente simulato in R creando una funzione personalizzat
   
     Si ha vinto o si ha perso?
   
-Verrà ora descritto come eseguire la funzione più volte per creare una simulazione che consente di determinare la probabilità di vincita.
+Ora di seguito viene illustrato come utilizzare **rxExec** per eseguire la funzione più volte, per creare una simulazione che consente di determinare la probabilità di un fattore positivo.
 
 ## <a name="create-the-simulation"></a>Creare la simulazione
 
-Per eseguire una funzione arbitraria nel contesto del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, si chiama la funzione rxExec. Anche se rxExec supporta inoltre distribuita esecuzione di una funzione in parallelo tra nodi o core in un contesto di server, di seguito si userà solo per eseguire la funzione personalizzata nel server.
+Per eseguire una funzione arbitraria nel contesto del computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , viene eseguita una chiamata alla funzione **rxExec** . Sebbene **rxExec** inoltre supporta distribuita l'esecuzione di una funzione in parallelo tra i nodi o core in un contesto di server, in questo caso, la funzione personalizzata in esecuzione sul computer SQL Server.
 
-1. Chiamare la funzione personalizzata come argomento di rxExec, con alcuni altri parametri che modificano la simulazione.
+1. Chiamare la funzione personalizzata come argomento di **rxExec**, insieme con altri parametri che modificano la simulazione.
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -95,7 +101,7 @@ Per eseguire una funzione arbitraria nel contesto del [!INCLUDE[ssNoVersion](../
   
     - Gli argomenti *RNGseed* e *RNGkind* possono essere usati per controllare la generazione casuale dei numeri. Quando *RNGseed* è impostato su **auto**, viene inizializzato un flusso di numeri casuali parallelo in ogni computer di lavoro.
   
-2. La funzione rxExec crea un elenco con un elemento per ogni esecuzione; Tuttavia, non verrà visualizzato quantità il problema fino a quando l'elenco è completo. Quando tutte le iterazioni vengono completate, la riga che inizia con `length` restituirà un valore.
+2. La funzione **rxExec** crea un elenco con un elemento per ogni esecuzione; tuttavia, non verranno eseguite molte operazioni fino a quando l'elenco non è completato. Quando tutte le iterazioni vengono completate, la riga che inizia con `length` restituirà un valore.
   
     È quindi possibile andare al passaggio successivo per ottenere un riepilogo del record vincita-perdita.
   
@@ -119,17 +125,20 @@ In questa esercitazione è stata acquisita familiarità con queste attività:
   
 -   Passaggio di modelli, dati e grafici tra la workstation e il server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
->  [!TIP]
-> 
-> Se si desidera sperimentare queste tecniche utilizzando un set di dati più grande di 10 milioni di osservazioni, i file di dati sono disponibili dal sito web analitica Revolution: [indice dei set di dati](http://packages.revolutionanalytics.com/datasets)
->   
-> Per utilizzare nuovamente questa procedura dettagliata con i file di dati più grandi, scaricare i dati e modificare tutte le origini di dati come segue:
->  - Impostare le variabili *ccFraudCsv* e *ccScoreCsv* in modo che puntino ai nuovi file di dati
->  - Modificare il nome della tabella cui viene fatto riferimento in *sqlFraudTable* in *ccFraud10*
->  - Modificare il nome della tabella cui viene fatto riferimento in *sqlScoreTable* in *ccFraudScore10*
 
+Se si desidera sperimentare queste tecniche utilizzando un set di dati più grande di 10 milioni di osservazioni, i file di dati sono disponibili dal sito web analitica Revolution: [indice dei set di dati](http://packages.revolutionanalytics.com/datasets)
+
+Per utilizzare nuovamente questa procedura dettagliata con i file di dati più grandi, scaricare i dati e modificare tutte le origini di dati come segue:
+
+1. Modificare le variabili `ccFraudCsv` e `ccScoreCsv` in modo che punti ai nuovi file di dati
+2. Modificare il nome della tabella a cui fa riferimento *sqlFraudTable* per`ccFraud10`
+3. Modificare il nome della tabella a cui fa riferimento *sqlScoreTable* per`ccFraudScore10`
+
+## <a name="additional-samples"></a>Esempi aggiuntivi
+
+Ora che aver acquisito l'uso di contesti di calcolo e le funzioni RevoScaler per passare e trasformare i dati, vedere queste esercitazioni:
+
+[Esercitazioni di R per servizi di Machine Learning](machine-learning-services-tutorials.md)
 ## <a name="previous-step"></a>Passaggio precedente
 
-[Spostare dati tra SQL Server e i File con estensione XDF](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
-
-
+[Spostare i dati tra SQL Server e file XDF](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

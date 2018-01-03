@@ -3,7 +3,7 @@ title: Dimensione oggetto (ADO MD) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b8b166484928abbeba70934d5b597c7e27d41f1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aeab1d9f91ac80c78bd5c3f546d26ff1c868f3cd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dimension-object-ado-md"></a>Oggetto dimensione (ADO MD)
 Rappresenta una delle dimensioni di un cubo multidimensionale, contenente uno o più gerarchie di membri.  
@@ -42,7 +42,7 @@ Rappresenta una delle dimensioni di un cubo multidimensionale, contenente uno o 
   
  Il **proprietà** insieme contiene le proprietà specifiche del provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione del provider per un elenco completo delle proprietà disponibili.  
   
-|Nome|Description|  
+|nome|Description|  
 |----------|-----------------|  
 |CatalogName|Il nome del catalogo a cui appartiene il cubo.|  
 |CubeName|Nome del cubo.|  

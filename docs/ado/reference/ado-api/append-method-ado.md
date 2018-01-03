@@ -3,7 +3,7 @@ title: Append (metodo) (ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 87c05e88325d3e00061ee57af80be65d9a7508ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0c0c887da52e8c91caeab582c2b1973b491e81d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-ado"></a>Append (metodo) (ADO)
 Aggiunge un oggetto a una raccolta. Se la raccolta è [campi](../../../ado/reference/ado-api/fields-collection-ado.md), un nuovo [campo](../../../ado/reference/ado-api/field-object.md) oggetto può essere creato prima di essere aggiunto alla raccolta.  
@@ -54,13 +54,13 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  Oggetto [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore, il cui valore predefinito è **adEmpty**, che specifica il tipo di dati del nuovo campo. I seguenti tipi di dati non supportati da ADO e dovrebbe non essere utilizzato quando aggiungendo nuovi campi a un [Recordset ADO (Object)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
   
  *DefinedSize*  
- Facoltativa. Oggetto **lungo** valore che rappresenta le dimensioni definite, in caratteri o byte, del nuovo campo. Il valore predefinito per questo parametro è derivato da *tipo*. Campi che dispongono di un *DefinedSize* maggiori di 255 byte vengono considerati come colonne di lunghezza variabile. Il valore predefinito per *DefinedSize* non è specificato.  
+ Facoltativo. Oggetto **lungo** valore che rappresenta le dimensioni definite, in caratteri o byte, del nuovo campo. Il valore predefinito per questo parametro è derivato da *tipo*. Campi che dispongono di un *DefinedSize* maggiori di 255 byte vengono considerati come colonne di lunghezza variabile. Il valore predefinito per *DefinedSize* non è specificato.  
   
  *Attrib*  
- Facoltativa. Oggetto [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) valore, il cui valore predefinito è **adFldDefault**, che specifica gli attributi per il nuovo campo. Se questo valore viene omesso, il campo conterrà gli attributi derivati da *tipo*.  
+ Facoltativo. Oggetto [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) valore, il cui valore predefinito è **adFldDefault**, che specifica gli attributi per il nuovo campo. Se questo valore viene omesso, il campo conterrà gli attributi derivati da *tipo*.  
   
  *FieldValue*  
- Facoltativa. Oggetto **Variant** che rappresenta il valore per il nuovo campo. Se non specificato, il campo viene aggiunto con un valore null.  
+ Facoltativo. Oggetto **Variant** che rappresenta il valore per il nuovo campo. Se non specificato, il campo viene aggiunto con un valore null.  
   
 ## <a name="remarks"></a>Osservazioni  
   

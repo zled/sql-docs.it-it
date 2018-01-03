@@ -3,7 +3,7 @@ title: CopyTo (metodo) (ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e9f5d99069108e452c4ba4038d166ae3a59ef20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c59a27806939557b170ae8fc7d3f842afd21f83
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyto-method-ado"></a>CopyTo (metodo) (ADO)
 Copia il numero specificato di caratteri o byte (in base alle [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md)) nei [flusso](../../../ado/reference/ado-api/stream-object-ado.md) a un altro **flusso** oggetto.  
@@ -46,7 +46,7 @@ Stream.CopyTo DestStream, NumChars
 >  Il *DestStream* parametro non può essere un proxy di **flusso** oggetto perché è necessario l'accesso a un'interfaccia privata sul **flusso** oggetto che non può essere eseguita in modalità remota per il client.  
   
  *NumChars*  
- Facoltativa. Un **intero** valore che specifica il numero di byte o caratteri da copiare dalla posizione corrente nell'origine **flusso** alla destinazione **flusso**. Il valore predefinito è -1, che specifica che tutti i caratteri o byte vengono copiati dalla posizione corrente a [fine del flusso](../../../ado/reference/ado-api/eos-property.md).  
+ Facoltativo. Un **intero** valore che specifica il numero di byte o caratteri da copiare dalla posizione corrente nell'origine **flusso** alla destinazione **flusso**. Il valore predefinito è -1, che specifica che tutti i caratteri o byte vengono copiati dalla posizione corrente a [fine del flusso](../../../ado/reference/ado-api/eos-property.md).  
   
 ## <a name="remarks"></a>Osservazioni  
  Questo metodo copia il numero specificato di caratteri o byte, a partire dalla posizione corrente specificata dal [posizione](../../../ado/reference/ado-api/position-property-ado.md) proprietà. Se il numero specificato è maggiore del numero di byte fino a quando disponibile **fine del flusso**, quindi solo caratteri o byte dalla posizione corrente per **fine del flusso** vengono copiati. Se il valore di *NumChars* è -1 o viene omesso, vengono copiati tutti i caratteri o byte a partire dalla posizione corrente.  

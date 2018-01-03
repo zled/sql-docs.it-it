@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, glossary
@@ -17,11 +17,11 @@ caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: dd35c15674cff4dc01edddd18f8416d86280d38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
 In questo argomento definisce termini rilevanti per ADO.  
@@ -68,7 +68,7 @@ In questo argomento definisce termini rilevanti per ADO.
  regola di Business  
  La combinazione di modifiche di convalida, verifiche di accesso, ricerche nel database, i criteri e trasformazioni algoritmiche che costituiscono un'azienda di attività di business. Noto anche come *logica di business*.  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
  Espressione calcolata  
  Un'espressione non costante, ma il cui valore dipende da altri valori. Per poter essere valutata un'espressione calcolata è necessario ottenere e calcolare i valori da altre origini, in genere in altri campi o righe.  
   
@@ -253,7 +253,7 @@ In questo argomento definisce termini rilevanti per ADO.
  Proxy  
  Un oggetto specifico dell'interfaccia che fornisce il marshalling dei parametri e la comunicazione richiesti da un client chiamare un oggetto di applicazione che è in esecuzione in un ambiente di esecuzione diverso, ad esempio in un thread diverso o in un altro processo. Il proxy con il client si trova e comunica con uno stub corrispondente si trova all'oggetto applicazione che viene chiamato. Vedere anche stub.  
   
-## <a name="r"></a>L  
+## <a name="r"></a>R  
  URL relativo  
  URL parziale che specifica una risorsa in Internet o intranet il cui percorso è relativo a un punto di partenza specificato da un URL assoluto o un oggetto ADO Connection equivalente. In effetti, la concatenazione assoluto e relativo URL rappresentare un URL completo. Vedere anche URL e l'URL assoluto.  
   

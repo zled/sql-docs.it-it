@@ -3,7 +3,7 @@ title: Append (metodo) (ADOX utenti) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1720503f6ff8de32b247fa4878bccb69c88d5c71
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69f839a24ee99d0db10435a3562926786f2d4620
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-users"></a>Append (metodo) (ADOX utenti)
 Aggiunge un nuovo [utente](../../../ado/reference/adox-api/user-object-adox.md) dell'oggetto per il [utenti](../../../ado/reference/adox-api/users-collection-adox.md) insieme.  
@@ -43,7 +43,7 @@ Users.Append User[,Password]
  Oggetto **Variant** valore contenente il **utente** oggetto da accodare o il nome dell'utente per creare e aggiungere.  
   
  *Password*  
- Facoltativa. Oggetto **stringa** valore contenente la password per l'utente. Il *Password* parametro corrisponde al valore specificato per il [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) metodo di un **utente** oggetto.  
+ Facoltativo. Oggetto **stringa** valore contenente la password per l'utente. Il *Password* parametro corrisponde al valore specificato per il [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) metodo di un **utente** oggetto.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il **utenti** raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta gli utenti del catalogo. Il **utenti** raccolta per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) rappresenta solo gli utenti appartenenti al gruppo specifico.  

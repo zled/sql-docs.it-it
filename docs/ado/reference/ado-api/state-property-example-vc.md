@@ -3,7 +3,7 @@ title: "Stato di esempio di proprietà (VC + +) | Documenti Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0889515a8d76399c9f85e20d1963e89eedda3478
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5430684fcf88559bca3fcf11203f1c1509416101
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="state-property-example-vc"></a>Esempio di proprietà state (VC + +)
 Questo esempio viene utilizzato il [stato](../../../ado/reference/ado-api/state-property-ado.md) proprietà per visualizzare un messaggio durante l'apertura di connessioni asincrone e l'esecuzione di comandi asincroni.  

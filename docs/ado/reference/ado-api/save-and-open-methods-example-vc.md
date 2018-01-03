@@ -3,7 +3,7 @@ title: Salvare e aprire l'esempio di metodi (VC + +) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 074e26314b178bce57a78a171cd0dffc2acb395c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91c4a609689598194ed2d597ddbfb215db2192ad
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-and-open-methods-example-vc"></a>Salvare e aprire l'esempio di metodi (VC + +)
 Questi tre esempi viene illustrato come la [salvare](../../../ado/reference/ado-api/save-method.md) e **aprire** metodi possono essere utilizzati insieme.  

@@ -1,37 +1,42 @@
 ---
-title: Creare ed eseguire gli script R | Documenti Microsoft
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: Creare ed eseguire gli script R (SQL e R approfondimento) | Documenti Microsoft
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 51e8e66f-a0a5-4e96-aa71-f5c870e6d0d4
 caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d5afb4be84373a1002d7a141fdc743a3a91d1ac8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 3f26a5850ffe3245029486a2be4406790e36b6ab
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="create-and-run-r-scripts"></a>Creare ed eseguire gli script R
+# <a name="create-and-run-r-scripts-sql-and-r-deep-dive"></a>Creare ed eseguire gli script R (SQL e R approfondimento)
 
-Dopo aver impostato le origini dati e stabilito uno o più contesti di calcolo, è possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per eseguire alcuni script R avanzati.  In questa lezione si userà il contesto di calcolo server per eseguire alcune attività comuni di apprendimento automatico:
+Questo articolo fa parte dell'esercitazione approfondimento di analisi scientifica dei dati, su come usare [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+
+Dopo aver impostato le origini dati e stabilito uno o più contesti di calcolo, è possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per eseguire alcuni script R avanzati.  In questa lezione, si utilizza il contesto di calcolo di server per eseguire alcune attività comuni di apprendimento:
 
 - Visualizzare dati e generare alcune statistiche di riepilogo
 - Creare un modello di regressione lineare
 - Creare un modello di regressione logistica
 - Assegnare punteggi ai nuovi dati e creare un istogramma dei punteggi
 
-## <a name="change-compute-context-to-the-server"></a>Impostare il contesto di calcolo server
+## <a name="change-compute-context-to-the-server"></a>Modifica contesto per il server di calcolo
 
 Prima di eseguire qualsiasi codice R è necessario specificare il contesto di calcolo *current* o *active* .
 
@@ -41,7 +46,7 @@ Prima di eseguire qualsiasi codice R è necessario specificare il contesto di ca
     rxSetComputeContext(sqlCompute)
     ```
   
-    Dopo l'esecuzione di questa istruzione, tutti i calcoli successivi si svolgeranno nel computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indicato nel parametro *sqlCompute* .
+    Non appena si esegue questa istruzione, tutti i calcoli successivi intervenire il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificato nel computer il *sqlCompute* parametro.
   
 2. Se si decide di eseguire il codice R sulla propria workstation, reimpostare il contesto di calcolo sul computer locale mediante la parola chiave  **local** .
   
@@ -53,22 +58,22 @@ Prima di eseguire qualsiasi codice R è necessario specificare il contesto di ca
   
 3. Dopo che è stato specificato, il contesto di calcolo resta attivo fino a quando non lo si modifica. Tuttavia, qualsiasi script R *non* eseguibile in un contesto server remoto verrà eseguito localmente.
 
-## <a name="compute-summary-statistics"></a>Calcolare statistiche di riepilogo
+## <a name="compute-some-summary-statistics"></a>Calcolare alcune statistiche di riepilogo
 
-Per capire come funziona il contesto di calcolo, usare la sorgente dati *sqlFraudDS* per generare statistiche di riepilogo.  Tenere presente che l'oggetto origine dati definisce solo i dati che saranno usati. Non modifica il contesto di calcolo.
+Per verificare il funzionamento del contesto di calcolo, provare la generazione di statistiche di riepilogo mediante il `sqlFraudDS` origine dati.  Tenere presente che l'oggetto origine dati definisce solo i dati usati; non modifica il contesto di calcolo.
 
-+ Per eseguire il riepilogo localmente, usare **rxSetComputeContext** e specificare la parola chiave "local".
++ Per eseguire il riepilogo localmente, utilizzare **rxSetComputeContext** e specificare il _locale_ (parola chiave).
 + Per creare gli stessi calcoli nel computer con SQL Server, passare al contesto di calcolo SQL definito in precedenza.
 
-1. Chiamare la funzione **rxSummary** e passare gli argomenti obbligatori, ad esempio la formula e l'origine dati, e assegnare i risultati alla variabile *sumOut*.
+1. Chiamare il [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) funzione e passare gli argomenti obbligatori, ad esempio la formula e l'origine dati e assegnare i risultati alla variabile `sumOut`.
   
     ```R
-    sumOut \<- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
+    sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    Il linguaggio R sono disponibili molte funzioni di riepilogo, ma supporta l'esecuzione in diversi contesti di calcolo remoto, tra cui rxSummary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Per altre informazioni su funzioni simili, vedere [Data Summaries](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-summaries) (Riepiloghi di dati) e le informazioni di [riferimento a ScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
+    Il linguaggio R offre molte funzioni di riepilogo, ma **rxSummary** supporta l'esecuzione in diversi contesti di calcolo remoto, tra cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sulle funzioni simili, vedere [i riepiloghi dei dati con RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
   
-2. Al termine dell'elaborazione, è possibile stampare il contenuto della variabile *sumOut* nella console.
+2. Quando viene eseguita l'elaborazione, è possibile stampare il contenuto del `sumOut` variabile nella console.
   
     ```R
     sumOut
@@ -76,7 +81,6 @@ Per capire come funziona il contesto di calcolo, usare la sorgente dati *sqlFrau
   
     > [!NOTE]
     > Non stampare i risultati prima che siano stati restituiti dal computer con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Potrebbe verificarsi un errore.
-
 
 **Risultati**
 
@@ -112,11 +116,11 @@ Per capire come funziona il contesto di calcolo, usare la sorgente dati *sqlFrau
 
   *Female 3846*
 
-## <a name="add-maximum-and-minimum-values"></a>Aggiungere valori di colonna minimo e massimo
+## <a name="add-maximum-and-minimum-values"></a>Aggiungere i valori minimi e massimo
 
-Le statistiche di riepilogo calcolate hanno restituito informazioni utili sui dati da inserire nell'origine dati per l'uso in ulteriori calcoli. Ad esempio, è possono utilizzare i valori minimo e massimi per calcolare gli istogrammi, si decide pertanto di aggiungere i valori minimo e massimo per l'origine dati RxSqlServerData.
+Le statistiche di riepilogo calcolate hanno restituito informazioni utili sui dati da inserire nell'origine dati per l'uso in ulteriori calcoli. Ad esempio, è possono utilizzare i valori minimo e massimi per calcolare gli istogrammi. Per questo motivo, aggiungere i valori minimo e massimo per il **RxSqlServerData** origine dati.
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] include funzioni ottimizzate che convertono in modo molto efficiente dati integer in dati fattore di categoria.
+Fortunatamente [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] include le funzioni ottimizzate in grado di convertire in modo efficiente dati integer per i dati categorici fattore.
 
 1. Per iniziare si configurano alcune variabili temporanee.
   
@@ -125,9 +129,9 @@ Le statistiche di riepilogo calcolate hanno restituito informazioni utili sui da
     var <- sumDF$Name
     ```
   
-2. Usare la variabile *ccColInfo* creata in precedenza per definire le colonne nell'origine dati.
+2. Usare la variabile `ccColInfo` creata in precedenza per definire le colonne nell'origine dati.
   
-    Saranno aggiunte anche nuove colonne calcolate (*numTrans*, *numIntlTrans*e *creditLine*) alla raccolta di colonne.
+    Inoltre, aggiungere alcune colonne calcolate di nuovo (`numTrans`, `numIntlTrans`, e `creditLine`) per la raccolta delle colonne.
   
     ```R 
     ccColInfo <- list(
@@ -149,28 +153,28 @@ Le statistiche di riepilogo calcolate hanno restituito informazioni utili sui da
             )
     ```
   
-3. Dopo aver aggiornato la raccolta di colonne è possibile applicare l'istruzione seguente per creare una versione aggiornata dell'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definita in precedenza.
+3. Dover aggiornare la raccolta di colonne, applicare l'istruzione seguente per creare una versione aggiornata del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati definita in precedenza.
   
     ```R
-    sqlFraudDS \<- RxSqlServerData(
+    sqlFraudDS <- RxSqlServerData(
         connectionString = sqlConnString,
         table = sqlFraudTable,
         colInfo = ccColInfo,
         rowsPerRead = sqlRowsPerRead)
     ```
   
-    L'origine dati *sqlFraudDS* include ora le nuove colonne aggiunte in *ccColInfo*.
+    Il `sqlFraudDS` origine dati include ora le nuove colonne aggiunte utilizzando `ccColInfo`.
   
-  Queste modifiche interessano solo l'oggetto origine dati in R, mentre nella tabella di database non sono stati ancora scritti nuovi dati. È tuttavia possibile usare i dati acquisiti nella variabile *sumOut* per creare visualizzazioni e riepiloghi. Il passaggio successivo illustrerà come eseguire questa operazione usando i contesti di calcolo.
+
+A questo punto, le modifiche interessano solo l'oggetto di origine dati in R; Nessun nuovo dato è stato ancora scritto alla tabella di database. Tuttavia, è possibile utilizzare i dati acquisiti nel `sumOut` variabile da creare visualizzazioni e riepiloghi. Nel passaggio successivo si informazioni su come eseguire questa operazione durante il cambio di contesti di calcolo.
 
 > [!TIP]
-> Se si dimentica di cui si sta utilizzando il contesto di calcolo, eseguire `rxGetComputeContext()`.  Valore restituito di `RxLocalSeq Compute Context` indica che sono in esecuzione nel contesto di calcolo locale.
+> Se si dimentica di cui si sta utilizzando il contesto di calcolo, eseguire `rxGetComputeContext()`.  Valore restituito di "Contesto di calcolo RxLocalSeq" indica che siano in esecuzione nel contesto di calcolo locale.
 
 ## <a name="next-step"></a>Passaggio successivo
 
-[Visualizzare i dati di SQL Server con R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+[Visualizzare i dati di SQL Server tramite R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
 
 ## <a name="previous-step"></a>Passaggio precedente
 
-[Definire e utilizzare i contesti di calcolo](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-
+[Definire e usare i contesti di calcolo](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

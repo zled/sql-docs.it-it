@@ -2,10 +2,10 @@
 title: Problemi comuni con l'esecuzione dello script esterno in SQL Server | Documenti Microsoft
 ms.custom: SQL2016_New_Updated
 ms.date: 10/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e1dfc244fbe77d7938853cf6c1109e190c464436
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4f515ba26c4eeae70eaf9244c0eaedaa954954b4
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problemi comuni con l'esecuzione dello script esterno in SQL Server
 
@@ -191,9 +191,9 @@ Se è stato installato e attivato quindi l'apprendimento, ma questo errore si ve
 
 4. Il riavvio del servizio in genere consente di correggere il problema, in modo che sia possibile eseguire gli script di machine learning. Se il riavvio non risolve il problema, si noti il percorso e gli argomenti di **percorso binario** , proprietà ed eseguire le operazioni seguenti:
 
-    a. Esaminare i file con estensione config dell'utilità di avvio e verificare che la directory di lavoro sia valida.
+    A. Esaminare i file con estensione config dell'utilità di avvio e verificare che la directory di lavoro sia valida.
 
-    b. Verificare che il gruppo di Windows che viene utilizzato dalla finestra di avvio è possibile connettersi all'istanza di SQL Server, come descritto nel [precedente sezione](#bkmk_LaunchpadTS).
+    B. Verificare che il gruppo di Windows che viene utilizzato dalla finestra di avvio è possibile connettersi all'istanza di SQL Server, come descritto nel [precedente sezione](#bkmk_LaunchpadTS).
 
     c. Se si modifica una qualsiasi delle proprietà del servizio, riavviare il servizio Launchpad.
 

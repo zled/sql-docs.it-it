@@ -3,7 +3,7 @@ title: Riordinare le colonne di output (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 770e918f8f61679a69dd474975672652124fd2d3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f81fae76f155da544467c39fea1a85419f6ba89a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>Riordinamento delle colonne di output (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La sequenza di immissione delle colonne di dati in una query di selezione determina l'ordine in cui saranno visualizzate nei risultati. La prima colonna aggiunta alla query verrà visualizzata a sinistra nei risultati, seguita dalla seconda colonna e così via.  

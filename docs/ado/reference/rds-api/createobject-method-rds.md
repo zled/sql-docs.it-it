@@ -3,7 +3,7 @@ title: CreateObject (metodo) (RDS) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 587ea0590dbf2a6bed3f8733c2a1c1f4a90adb58
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba9c2d9ee2c2cf0a646155e5d184640d1aa0283b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createobject-method-rds"></a>CreateObject (metodo) (RDS)
 Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore a esso. I pacchetti ed esegue il marshalling dei dati proxy allo stub sul lato server per le comunicazioni con l'oggetto business per l'invio di richieste e dei dati tramite Internet. Per gli oggetti di componente in-process, non vengono utilizzati proxy, viene fornito solo un puntatore all'oggetto.  

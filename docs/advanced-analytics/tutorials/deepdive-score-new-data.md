@@ -1,39 +1,43 @@
 ---
-title: Assegnare un punteggio nuovi dati | Documenti Microsoft
+title: Assegnare un punteggio nuovi dati (SQL e R approfondimento) | Documenti Microsoft
 ms.custom: 
-ms.date: 05/18/2016
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 87056467-f67f-4d72-a83c-ac052736d85d
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 83beab637e3740dc41706c34ccfacffe985f2957
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 54cc4dd297357407592c953b54e04d0ae024f7aa
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="score-new-data"></a>Valutazione dei nuovi dati
+# <a name="score-new-data-sql-and-r-deep-dive"></a>Assegnare un punteggio nuovi dati (SQL e R approfondimento)
 
-Ora che è disponibile un modello da usare per le stime, è possibile inserirvi i dati estratti dal database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per generare alcune stime.
+Questo articolo fa parte dell'esercitazione approfondimento di analisi scientifica dei dati, su come usare [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-Per creare i punteggi per un altro set di dati che usa le stesse variabili indipendenti come input, si userà il modello di regressione logistica *logitObj*.
+In questo passaggio, utilizzare il modello di regressione logistica creato in precedenza, per creare punteggi per un altro set di dati che utilizza le stesse variabili indipendenti come input.
 
 > [!NOTE]
-> Per alcuni di questi passaggi saranno necessari privilegi di amministratore DDL.
+> Sono necessari privilegi di amministratore DDL per alcuni di questi passaggi.
 
 ## <a name="generate-and-save-scores"></a>Generare e salvare i punteggi
   
-1. Aggiornare l'origine dati *sqlScoreDS*impostata in precedenza per aggiungere le informazioni necessarie sulla colonna.
+1. Aggiornare l'origine dati che è impostato in precedenza, `sqlScoreDS`, per aggiungere le informazioni di colonna richiesta.
   
     ```R
     sqlScoreDS <- RxSqlServerData(
@@ -43,14 +47,14 @@ Per creare i punteggi per un altro set di dati che usa le stesse variabili indip
         rowsPerRead = sqlRowsPerRead)
     ```
   
-2. Per non perdere i risultati, è necessario creare un nuovo oggetto origine dati da usare per popolare una nuova tabella nel database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+2. Per assicurarsi di non perdere i risultati, creare un nuovo oggetto origine dati. Quindi, usare il nuovo oggetto origine dati per popolare una nuova tabella nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.
   
     ```R
     sqlServerOutDS <- RxSqlServerData(table = "ccScoreOutput",
         connectionString = sqlConnString,
         rowsPerRead = sqlRowsPerRead )
     ```
-     A questo punto la tabella non è stata creata. Questa istruzione definisce solo un contenitore per i dati.
+    A questo punto la tabella non è stata creata. Questa istruzione definisce solo un contenitore per i dati.
      
 3. Controllare il contesto di calcolo corrente e impostare il contesto di calcolo per il server, se necessario.
   
@@ -66,10 +70,11 @@ Per creare i punteggi per un altro set di dati che usa le stesse variabili indip
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
     ```
   
-    -  La funzione rxSqlServerTableExists query al driver ODBC e restituisce TRUE se la tabella esiste, FALSE in caso contrario.
-    -  La funzione rxSqlServerDropTable funzione esegue l'istruzione DDL e restituisce TRUE se la tabella è stata rimossa, FALSE in caso contrario.
+    -  La funzione **rxSqlServerTableExists** esegue una query del driver ODBC e restituisce TRUE se la tabella esiste, FALSE in caso contrario.
+    -  La funzione **rxSqlServerDropTable** esegue l'istruzione DDL e restituisce TRUE se la tabella è stata eliminata, FALSE in caso contrario.
+    - Riferimento per entrambe le funzioni sono disponibili qui: [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)
   
-5. È ora possibile usare la funzione **rxPredict** funzione per creare i punteggi e salvarli nella nuova tabella definita nell'origine dati *sqlScoreDS*.
+5. È ora possibile utilizzare il [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) funzione per creare i punteggi e salvarle nella nuova tabella definita nell'origine dati `sqlScoreDS`.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -81,17 +86,17 @@ Per creare i punteggi per un altro set di dati che usa le stesse variabili indip
         overwrite = TRUE)
     ```
   
-    La funzione rxPredict è un'altra funzione che supporta l'esecuzione in contesti di calcolo remoto. È possibile utilizzare la funzione rxPredict alla creazione di punteggi da modelli creati utilizzando rxLinMod, rxLogit o rxGlm.
+    La funzione **rxPredict** è un'altra funzione che supporta l'esecuzione in contesti di calcolo remoti. È possibile usare la funzione **rxPredict** per creare punteggi da modelli creati tramite [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)o [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
   
     - Il parametro *writeModelVars* è impostato su **TRUE** qui. Ciò significa che le variabili usate per la stima verranno incluse nella nuova tabella.
   
-    - Il parametro *predVarNames* specifica la variabile in cui verranno archiviati i risultati. A questo punto viene passata una nuova variabile denominata *ccFraudLogitScore*.
+    - Il parametro *predVarNames* specifica la variabile in cui verranno archiviati i risultati. In questo caso si passa una nuova variabile, `ccFraudLogitScore`.
   
-    - Il *tipo* parametro per rxPredict definisce la modalità di calcolo stime. Specificare la parola chiave **response** per generare i punteggi in base alla scala della variabile di risposta oppure usare la parola chiave **link** per generare punteggi basati sulla funzione di collegamento sottostante e in questo caso le stime saranno su una scala logistica.
+    - Il parametro *type* per **rxPredict** definisce la modalità di calcolo delle stime. Specificare la parola chiave **risposta** per generare punteggi in base alla scala della variabile di risposta. In alternativa, usare la parola chiave **collegamento** per generare punteggi basati sulla funzione collegamento sottostante, nel qual caso le stime vengono create utilizzando una scala logistica.
 
 6. Attendere un attimo prima di aggiornare l'elenco delle tabelle in Management Studio e visualizzare la nuova tabella con i dati.
 
-7. Per aggiungere altre variabili alle stime di output, usare l'argomento *extraVarsToWrite* .  In questo codice, ad esempio, la variabile *custID* della tabella dei dati dei punteggi viene aggiunta alla tabella di output delle stime.
+7. Per aggiungere variabili aggiuntive alle stime di output, usare l'argomento *extraVarsToWrite*.  Ad esempio, nel codice seguente, la variabile `custID` aggiunti dalla tabella di dati di punteggio nella tabella di output di stime.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -104,11 +109,11 @@ Per creare i punteggi per un altro set di dati che usa le stesse variabili indip
             overwrite = TRUE)
     ```
 
-## <a name="display-scores-in-a-histogram"></a>Visualizzare i punteggi in un istogramma
+## <a name="display-scores-in-a-histogram"></a>Punteggi di visualizzazione in un istogramma
 
-Dopo aver creato la nuova tabella, si potrà calcolare e visualizzare un istogramma dei 10.000 punteggi stimati. Il calcolo sarà più veloce se si specificano i valori minimo e massimo. Estrarli quindi dal database e aggiungerli ai dati in uso.
+Dopo aver creata la nuova tabella, è possibile calcolare e visualizzare un istogramma che mostra i punteggi stimati 10.000. Calcolo è più veloce se si specificano i valori minimo e massimo, quindi accedere a queste dal database e aggiungerli ai dati di utilizzo.
 
-1. Creare una nuova origine dati *sqlMinMax*per eseguire una query del database e ottenere i valori minimo e massimo.
+1. Creare una nuova origine dati, `sqlMinMax`, che esegue una query del database per ottenere i valori minimo e massimo.
   
     ```R
     sqlMinMax <- RxSqlServerData(
@@ -117,9 +122,9 @@ Dopo aver creato la nuova tabella, si potrà calcolare e visualizzare un istogra
         connectionString = sqlConnString)
     ```
 
-     Questo esempio, è possibile vedere come è facile da usare RxSqlServerData oggetti origine dei dati per definire i set di dati arbitrari basati su query SQL, funzioni o stored procedure e quindi utilizzare tali nel codice R. La variabile non archivia i valori effettivi, solo la definizione dell'origine dati; per generare i valori solo quando si usa una funzione come rxImport viene eseguita la query.
+     Questo esempio spiega come è facile usare gli oggetti origine dati **RxSqlServerData** per definire set di dati arbitrari basati su query SQL, funzioni o stored procedure e usarli nel codice R. La variabile non archivia i valori effettivi, ma solo la definizione dell'origine dati. La query viene eseguita per generare i valori solo se usata in una funzione come **rxImport**.
       
-2. Chiamare la funzione rxImport per inserire i valori in un frame di dati che può essere condivise tra i vari contesti di calcolo.
+2. Chiamare il [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) funzione per inserire i valori in un frame di dati che può essere condivise tra i vari contesti di calcolo.
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)
@@ -132,7 +137,7 @@ Dopo aver creato la nuova tabella, si potrà calcolare e visualizzare un istogra
      
      *[1] -23.970256   9.786345*
   
-3. Ora che sono disponibili i valori minimi e massimo, utilizzare i valori per creare l'origine dati di punteggio.
+3. Ora che sono disponibili i valori minimi e massimo, utilizzare i valori per creare un'altra origine dati per i punteggi generati.
   
     ```R
     sqlOutScoreDS <- RxSqlServerData(sqlQuery = "SELECT ccFraudLogitScore FROM ccScoreOutput",
@@ -143,7 +148,7 @@ Dopo aver creato la nuova tabella, si potrà calcolare e visualizzare un istogra
                         high = ceiling(minMaxVals[2]) ) ) )
     ```
 
-4. Usare infine l'oggetto origine dati di punteggio per ottenere i dati relativi al punteggio, calcolare e visualizzare un istogramma. Aggiungere il codice per impostare il contesto di calcolo, se necessario.
+4. Utilizzare l'oggetto origine dati `sqlOutScoreDS` per ottenere i punteggi e di calcolo e di visualizzare un istogramma. Aggiungere il codice per impostare il contesto di calcolo, se necessario.
   
     ```R
     # rxSetComputeContext(sqlCompute)
@@ -156,10 +161,10 @@ Dopo aver creato la nuova tabella, si potrà calcolare e visualizzare un istogra
   
 ## <a name="next-step"></a>Passaggio successivo
 
-[Trasformare i dati usando R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
+[Trasformare i dati con R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
 
 ## <a name="previous-step"></a>Passaggio precedente
 
-[Creazione di modelli](../../advanced-analytics/tutorials/deepdive-create-models.md)
+[Creare modelli](../../advanced-analytics/tutorials/deepdive-create-models.md)
 
 

@@ -3,7 +3,7 @@ title: Metodi ADO | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b93fe94c608cce5ca4338e1d0a7ccfbcc834a322
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f3e79fcbef3c9a07ac43de13865632fef2ca6ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-methods"></a>Metodi ADO
 |||  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |[Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md)|Aggiorna gli oggetti in una raccolta in modo da riflettere gli oggetti disponibili e specifiche del provider.|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Aggiorna i dati in un **Recordset** oggetto rieseguendo la query in cui si basa l'oggetto.|  
 |[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|Aggiorna i dati nell'oggetto **Recordset** oggetto, o **campi** raccolta di un **Record** oggetto dal database sottostante.|  
-|[Salva](../../../ado/reference/ado-api/save-method.md)|Salva il **Recordset** in un file o **flusso** oggetto.|  
+|[Salvare](../../../ado/reference/ado-api/save-method.md)|Salva il **Recordset** in un file o **flusso** oggetto.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Salva il contenuto binario di un **flusso** in un file.|  
 |[Ricerca](../../../ado/reference/ado-api/seek-method.md)|Cerca l'indice di un **Recordset** per individuare rapidamente la riga che corrisponde ai valori specificati e modifica la posizione della riga corrente di tale riga.|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Imposta la posizione che rappresenta la fine del flusso.|  

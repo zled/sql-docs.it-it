@@ -3,10 +3,10 @@ title: Configurazione di inizializzazione File immediata (Analitica piattaforma 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
 caps.latest.revision: "20"
-ms.openlocfilehash: af18d7da04c84f9cbc74b9b2974ef568098963ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b7dda4bb925e08f49409ea1950cfe3649b4db3e0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="instant-file-initialization-configuration"></a>Configurazione di inizializzazione immediata dei File
 Inizializzazione immediata dei file è una funzionalità di SQL Server che consente operazioni di file di dati eseguire più rapidamente. Selezionando la casella per attivare l'inizializzazione immediata dei File migliorerà le prestazioni di SQL Server PDW. Tuttavia, se ciò comporta un rischio per la sicurezza per l'utente business, quindi lasciare deselezionata la casella.  

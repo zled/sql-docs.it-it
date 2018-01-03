@@ -3,7 +3,7 @@ title: Finestra di dialogo Percorso (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e909d68acae61d209d8d5c9be569b6d76c88b892
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c355410d0536b4f461973ac55ba382183aa3694
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Finestra di dialogo Percorso (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usare questa finestra di dialogo per individuare e selezionare la cartella contenente i file desiderati. Questa finestra di dialogo restituisce alla finestra di dialogo chiamante il percorso della cartella selezionata. È possibile accedere alla finestra di dialogo nel modo seguente:  
@@ -46,7 +46,7 @@ Consente di visualizzare il contenuto del disco floppy, del disco rigido e dell'
 **Nome cartella**  
 Consente di visualizzare il percorso della cartella selezionata.  
   
-**Apertura**  
+**Aprire**  
 Restituisce alla finestra di dialogo chiamante il percorso della cartella selezionata nel campo **Nome cartella** .  
   
 ## <a name="toolbar"></a>Barra degli strumenti  

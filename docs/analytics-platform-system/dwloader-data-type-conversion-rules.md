@@ -3,10 +3,10 @@ title: Regole di conversione per dwloader del tipo di dati
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
 caps.latest.revision: "30"
-ms.openlocfilehash: 2ac1325b3765bafbe34dc61f65f7641431afdfa0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29cf43b7bb5ea38d821e62b03cc125fe5e0fc30c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-conversion-rules-for-dwloader"></a>Regole di conversione per dwloader del tipo di dati
 Questo argomento descrive i formati di dati di input e le conversioni implicite dei dati che [dwloader caricatore della riga di comando](dwloader.md) supporta al momento del caricamento dei dati in PDW. Le conversioni implicite dei dati si verificano quando i dati di input non corrisponde al tipo di dati nella tabella di destinazione di SQL Server PDW. Utilizzare queste informazioni quando il processo di caricamento per garantire che i dati di progettazione verrà caricato correttamente in SQL Server PDW.  
@@ -91,7 +91,7 @@ Nella tabella seguente definisce il formato predefinito e le regole per il caric
 ### <a name="DateFormats"></a>Formati di data/ora  
 Dwloader supporta i seguenti formati di dati per i dati di input che sta caricando in SQL Server PDW. Ulteriori dettagli sono elencati sotto la tabella.  
   
-|datetime|smalldatetime|data|datetime2|datetimeoffset|  
+|DATETIME|smalldatetime|Data|datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
 |[M [M]] M-[d] d-[Aa] aa hh.mm.ss [. fff]|[M [M]] M-[d] d-[Aa] aa hh: mm [: 00]|[M [M]] M-[d] d-[Aa] AA|[M [M]] M-[d] d-[Aa] aa hh.mm.ss [. fffffff]|[M [M]] M-[d] d-[Aa] aa hh.mm.ss [. fffffff] zzz|  
 |[M [M]] M-[d] d-[Aa] aa hh.mm.ss [. fff] [Aa]|[M [M]] M-[d] d-[Aa] aa hh: mm [: 00] [Aa]||[M [M]] M-[d] d-[Aa] aa hh.mm.ss [. fffffff] [Aa]|[M [M]] M-[d] d-[Aa] aa hh.mm.ss [. fffffff] [Aa] zzz|  

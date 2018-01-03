@@ -2,10 +2,10 @@
 title: Panoramica dell'architettura di servizi di SQL Server Machine Learning | Documenti Microsoft
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6904c963c6178db530248f6189906e71df25308a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 62bcc1ce7b8dbdbee96b50631644a00afbfd4e78
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Panoramica dell'architettura di servizi di SQL Server Machine Learning 
 
@@ -33,7 +33,7 @@ In generale, il framework di estendibilità è quasi identico per R e Python, co
 - [Panoramica dell'architettura per Python in SQL Server](python/architecture-overview-sql-server-python.md)
 
 
-## <a name="background"></a>Background
+## <a name="background"></a>Informazioni preliminari
 
 In SQL Server 2016, sono state introdotte numerose modifiche al motore di database per supportare l'esecuzione di script R con SQL Server. In SQL Server 2017, questa infrastruttura sottostante è stata migliorata per aggiungere il supporto per la lingua di Python.
 
@@ -60,7 +60,7 @@ Per soddisfare questi obiettivi, l'architettura di SQL Server 2016 R Services e 
 
    Inoltre, Microsoft fornisce un set di librerie proprietarie che consentono l'integrazione con SQL Server, incluse la conversione dei dati, la compressione e dell'ottimizzazione destinata a ogni lingua supportata.
 
-+ **Sicurezza**
++ **Security**
 
    Migliora la sicurezza significa supporto per autenticazione integrata di Windows sia basata su password account di accesso SQL, come la gestione e la protezione delle credenziali, per la protezione dei dati e l'uso di SQL Server Trusted Launchpad per la gestione di script esterni vengono usati in SQL Server l'esecuzione e la protezione dei dati utilizzati negli script.
 

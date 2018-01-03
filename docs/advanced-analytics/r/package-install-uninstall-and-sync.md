@@ -2,9 +2,11 @@
 title: Sincronizzazione del pacchetto R per SQL Server | Documenti Microsoft
 ms.custom: 
 ms.date: 10/02/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fb56ffa08160934e1a3eac340a81ba7d6427ad49
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a7530d67c2c74b4918228ea91597f1667c0abbd6
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>Sincronizzazione del pacchetto R per SQL Server
 
@@ -60,7 +62,7 @@ Ogni volta che si aggiunge un nuovo pacchetto utilizzando le funzioni di gestion
 
 > [!NOTE]
 > Se si hanno stato installando i pacchetti R modo tradizionale, con strumenti R per installare i pacchetti direttamente nel file system, è possibile utilizzare la sincronizzazione di pacchetto.
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 
 + La persona che esegue la funzione di sincronizzazione del pacchetto deve essere un'entità in cui l'istanza di SQL Server e database che contiene i pacchetti di sicurezza.
 

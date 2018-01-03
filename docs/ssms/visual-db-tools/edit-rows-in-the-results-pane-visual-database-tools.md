@@ -3,7 +3,7 @@ title: Modificare righe nel riquadro Risultati (Visual Database Tools) | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c6a8804827768aa0398d611636f69758099f3e6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4f7051a7f0d4610a2ddd6a612db9525380d40d5a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Modifica di righe nel riquadro Risultati (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In molti casi è possibile modificare i dati nel [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Per altre informazioni sulla modifica dei dati, vedere [Regole per l'aggiornamento dei risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) e [Usare i dati nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  

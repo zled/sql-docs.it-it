@@ -3,7 +3,7 @@ title: Save (metodo) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6bd594fb077c3a8b6eca9e3496c857dbbc0249c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb9651c4bf6de24fd3cdf7c7d42e6c0c24365fda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-method"></a>Save (metodo)
 Salva il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in un file o [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
@@ -40,10 +40,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parametri  
  *Destinazione*  
- Facoltativa. Oggetto **Variant** che rappresenta il nome di percorso completo del file in cui il **Recordset** deve essere salvato, o un riferimento a un **flusso** oggetto.  
+ Facoltativo. Oggetto **Variant** che rappresenta il nome di percorso completo del file in cui il **Recordset** deve essere salvato, o un riferimento a un **flusso** oggetto.  
   
  *PersistFormat*  
- Facoltativa. Oggetto [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valore che specifica il formato in cui il **Recordset** deve essere salvato (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
+ Facoltativo. Oggetto [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valore che specifica il formato in cui il **Recordset** deve essere salvato (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il [metodo Save](../../../ado/reference/ado-api/save-method.md) metodo può essere richiamato solo su un oggetto aperto **Recordset**. Utilizzare il [Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo di ripristino successive il **Recordset** da *destinazione*.  

@@ -3,7 +3,7 @@ title: Firme (ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 524957fe66debad97fc9c1512cc9e3c70153d216
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 569303b6598f0d6b580f20049a02f7e9a5e90621
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nextrecordset-method-ado"></a>Firme (ADO)
 Cancella il contenuto del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto e restituisce il successivo **Recordset** anticipando attraverso una serie di comandi.  
@@ -44,7 +44,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>Parametri  
  *RecordsAffected*  
- Facoltativa. Oggetto **lungo** variabile in cui il provider restituisce il numero di record interessati dall'operazione corrente.  
+ Facoltativo. Oggetto **lungo** variabile in cui il provider restituisce il numero di record interessati dall'operazione corrente.  
   
 > [!NOTE]
 >  Questo parametro restituisce solo il numero di record interessati da un'operazione. non viene restituito un conteggio di record da un'istruzione select utilizzata per generare il **Recordset**.  

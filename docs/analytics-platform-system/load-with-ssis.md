@@ -3,10 +3,10 @@ title: Caricare i dati con Integration Services
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
 caps.latest.revision: "69"
-ms.openlocfilehash: 631f93d14670e3d9c6f03517504e059087243ca1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-data-with-integration-services"></a>Caricare i dati con Integration Services
 Fornisce informazioni di riferimento e di distribuzione per il caricamento dei dati in SQL Server Parallel Data Warehouse utilizzando i pacchetti di SQL Server Integration Services (SSIS).  
@@ -89,7 +89,7 @@ Quindi i mapping dei dati da servizi di integrazione di tipi di dati di SQL Serv
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -120,7 +120,7 @@ SQL Server PDW non supporta i seguenti tipi di dati di Integration Services:
   
 Per caricare le colonne contenenti questi tipi di dati in SQL Server PDW, è necessario aggiungere una trasformazione conversione dati a monte nel flusso di dati per convertire i dati in un tipo di dati compatibile.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Per eseguire un pacchetto di caricamento di Integration Services, è necessario:  
   
 -   CARICARE l'autorizzazione per il database.  

@@ -3,7 +3,7 @@ title: Eseguire query con join (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4d46c668c5654155783c3cc70a1ad23b33c5c82
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fb22fb2b6def35ee971edf962adf176aaa78edd3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Esecuzione di query con join (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Il risultato di una query può includere dati da più tabelle o oggetti con valori di tabella. Per combinare i dati di più oggetti con valori di tabella, è possibile utilizzare l'operazione JOIN di SQL.  
@@ -71,9 +71,9 @@ Viene descritta la procedura per visualizzare le proprietà di un join.
 [Tipi di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 Vengono forniti collegamenti ad argomenti in cui vengono descritti i tipi di query supportati.  
   
-[Esecuzione di operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 Vengono forniti collegamenti ad argomenti relativi alle operazioni che è possibile eseguire più comunemente con le query.  
   
-[Specifica di criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Specifica dei criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 Vengono forniti collegamenti ad argomenti relativi ai vari tipi di criteri di ricerca e alle modalità di utilizzo.  
   

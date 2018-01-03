@@ -3,7 +3,7 @@ title: Metodo GetString (ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 38cfe142f2c8cfc38acd72334ee279d28d83081e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f92e1be67ce0eb26f300cde4b1ef53bfc5dc49c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getstring-method-ado"></a>Metodo GetString (ADO)
 Restituisce il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sotto forma di stringa.  
@@ -46,16 +46,16 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  Oggetto [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) valore che specifica il modo in **Recordset** devono essere convertite in una stringa. Il *RowDelimiter*, *ColumnDelimiter*, e *NullExpr* parametri vengono utilizzati solo con un *StringFormat* di  **adClipString**.  
   
  *NumRows*  
- Facoltativa. Il numero di righe da convertire nel **Recordset**. Se *NumRows* non viene specificato, o se è maggiore del numero totale di righe nel **Recordset**, quindi tutte le righe di **Recordset** vengono convertiti.  
+ Facoltativo. Il numero di righe da convertire nel **Recordset**. Se *NumRows* non viene specificato, o se è maggiore del numero totale di righe nel **Recordset**, quindi tutte le righe di **Recordset** vengono convertiti.  
   
  *ColumnDelimiter*  
- Facoltativa. Delimitatore utilizzato tra le colonne, se specificato, in caso contrario il carattere di tabulazione.  
+ Facoltativo. Delimitatore utilizzato tra le colonne, se specificato, in caso contrario il carattere di tabulazione.  
   
  *RowDelimiter*  
- Facoltativa. Un delimitatore utilizzato tra righe, se specificato, in caso contrario il carattere di ritorno a capo.  
+ Facoltativo. Un delimitatore utilizzato tra righe, se specificato, in caso contrario il carattere di ritorno a capo.  
   
  *NullExpr*  
- Facoltativa. Un'espressione utilizzata al posto di un valore null, se specificato, in caso contrario la stringa vuota.  
+ Facoltativo. Un'espressione utilizzata al posto di un valore null, se specificato, in caso contrario la stringa vuota.  
   
 ## <a name="remarks"></a>Osservazioni  
  Dati di riga, ma non i dati dello schema, viene salvato nella stringa. Pertanto, un **Recordset** non può essere riaperto utilizzando questa stringa.  

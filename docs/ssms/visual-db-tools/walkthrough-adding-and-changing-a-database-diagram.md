@@ -3,7 +3,7 @@ title: 'Scenario: Aggiunta e modifica di un diagramma di database | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d202d485b27b19a0d7b3461e0f427d996567b4f4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7835747f81513f26fb7e69a357094cdc1d8dcfe0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Scenario: Aggiunta e modifica di un diagramma di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questa procedura dettagliata illustra come creare e modificare un diagramma di database e apportare modifiche al database tramite il componente per i diagrammi di database. Verrà descritto come aggiungere tabelle ai diagrammi, creare relazioni tra le tabelle, creare vincoli e indici su colonne e modificare il livello delle informazioni visualizzate per ogni tabella.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 Per completare questo scenario, saranno necessari gli elementi seguenti:  
   
 -   Accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] con il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] .  
@@ -82,7 +82,7 @@ Per completare questo scenario, saranno necessari gli elementi seguenti:
   
 3.  Aggiungere le informazioni seguenti a **Table1**:  
   
-    |**Nome colonna**|**Tipo di dati**|**Consenti valori Null**|  
+    |**Nome colonna**|**Tipo di dati**|**Consenti valori NULL**|  
     |-------------------|-----------------|-------------------|  
     |**T1col1**|**int**|selezionata|  
     |**T1col2**|**varchar(50)**|selezionata|  
@@ -125,7 +125,7 @@ Per completare questo scenario, saranno necessari gli elementi seguenti:
   
 1.  Creare una nuova tabella in Progettazione diagrammi denominata `Table2` con le colonne seguenti:  
   
-    |**Nome colonna**|**Tipo di dati**|**Consenti valori Null**|  
+    |**Nome colonna**|**Tipo di dati**|**Consenti valori NULL**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|non selezionata|  
     |**T2col2**|**varchar(50)**|selezionata|  
@@ -197,11 +197,11 @@ Tutte le modifiche apportate a un diagramma non vengono inviate al database fino
   
     Verrà visualizzata la finestra di dialogo **Salva** . Se l'opzione **Avvisa in caso le tabelle siano modificate** è selezionata, vengono indicate informazioni sulle tabelle nuove o modificate.  
   
-2.  Scegliere **OK**.  
+2.  Fare clic su **OK**.  
   
 3.  Se si sono verificati errori, verrà visualizzata la finestra di dialogo **Notifiche postsalvataggio** con gli errori e le relative cause. Correggere gli errori e salvare nuovamente il diagramma.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Si tratta di un diagramma di base con due tabelle esistenti e due tabelle nuove, che illustra comunque le potenzialità della creazione di diagrammi per un database esistente o di creazione di un nuovo schema in modo visivo. Alcuni suggerimenti per un'analisi più ampia dell'argomento includono:  
   
 -   Creazione di nuovi diagrammi che contengono gruppi di tabelle correlate  

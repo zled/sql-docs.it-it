@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cfdd5c33557087a49535d32e8de36460b9adc3c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6e53544ca828709027393f246ea0f39e7f31a55
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-arithmetic"></a>Operazione aritmetica di data
 Il driver supporta l'aggiunta e sottrazione di un numero intero compreso tra una colonna di data, ora o TIMESTAMP. Per una colonna di data, l'integer che specifica il numero di giorni da aggiungere o sottrarre. Per una colonna TIMESTAMP o di ora, il numero intero specifica il numero di secondi per aggiungere o sottrarre.

@@ -3,7 +3,7 @@ title: Procedure per la progettazione di query e viste (Visual Database Tools) |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 208b7c4819344b1a54dfbff8b5299cb122f01727
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1aa5d3107577a7d838d6ba813934b42f497db8a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Procedure per la progettazione di query e viste (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Progettazione query e Progettazione viste può essere utile per la creazione e la manutenzione dei componenti per il recupero e la manipolazione dei dati di un'applicazione.  
@@ -53,13 +53,13 @@ Vengono elencati gli argomenti relativi alle procedure per la creazione di vari 
 [Utilizzo dei dati nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
 Viene descritto come utilizzare i risultati restituiti da una query o da una vista e vengono forniti collegamenti ad argomenti relativi alle procedure.  
   
-[Esecuzione di operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 Vengono elencati gli argomenti relativi alla creazione, modifica, esecuzione e copia di query, nonché gli argomenti di base relativi all'ordinamento e alla stampa dei risultati delle query.  
   
 [Specifica di criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 Vengono elencate le regole e le convenzioni per la creazione di query, nonché le procedure per l'utilizzo di criteri per ottenere risultati specifici.  
   
-[Esecuzione di query con join &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Eseguire query con join &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 Vengono elencati gli argomenti in cui viene descritto come utilizzare join per eseguire query su più tabelle, ad esempio come creare outer join e come eseguire il join automatico delle tabelle.  
   
 [Esecuzione di query mediante parametri &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

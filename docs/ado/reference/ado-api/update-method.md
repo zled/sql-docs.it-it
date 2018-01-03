@@ -3,7 +3,7 @@ title: Metodo di aggiornamento | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b8d9acf6072961b1d63a691033d4c2ecd578cb4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7d416b0d132af4d2f1d2145de577ca930eaeef9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="update-method"></a>Update (metodo)
 Salva le modifiche apportate alla riga corrente di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto.  
@@ -38,11 +38,11 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Campi*  
- Facoltativa. Oggetto **Variant** che rappresenta un singolo nome o un **Variant** matrice che rappresenta i nomi o posizione ordinale del campo o campi che si desidera modificare.  
+ *Fields*  
+ Facoltativo. Oggetto **Variant** che rappresenta un singolo nome o un **Variant** matrice che rappresenta i nomi o posizione ordinale del campo o campi che si desidera modificare.  
   
  *Valori*  
- Facoltativa. Oggetto **Variant** che rappresenta un singolo valore o un **Variant** matrice che rappresenta i valori per i campi nel nuovo record.  
+ Facoltativo. Oggetto **Variant** che rappresenta un singolo valore o un **Variant** matrice che rappresenta i valori per i campi nel nuovo record.  
   
 ## <a name="remarks"></a>Osservazioni  
   

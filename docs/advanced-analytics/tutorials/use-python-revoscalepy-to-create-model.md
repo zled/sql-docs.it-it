@@ -2,21 +2,23 @@
 title: Usare Python con revoscalepy per creare un modello | Documenti Microsoft
 ms.custom: SQL2016_New_Updated
 ms.date: 09/19/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.suite: 
+mms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: bb5d4aac51728ac090fb4cbeae8da6c87db22aea
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b5d6daa6c1e4db5f3f78b325f8821402a6b65b14
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Usare Python con revoscalepy per creare un modello
 
@@ -26,7 +28,7 @@ Il **revoscalepy** dal pacchetto per Python contiene oggetti, le trasformazioni,
 
 Per ulteriori informazioni, vedere [novità revoscalepy?](../python/what-is-revoscalepy.md) e [riferimento alla funzione di Python](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 > [!IMPORTANT]
 > Per eseguire codice Python in SQL Server, è necessario avere installato SQL Server 2017 CTP 2.0 o versione successiva e, è necessario installare e abilitare la funzionalità, **Machine Learning Services** con Python. Altre versioni di SQL Server non supportano l'integrazione di Python.

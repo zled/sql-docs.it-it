@@ -3,7 +3,7 @@ title: Esempio del metodo Cancel (VC + +) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a990c9fadbab695968dee2ac08c175a0b6598772
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d7a21c3369f4546407161e247b935a97c0066bba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancel-method-example-vc"></a>Esempio del metodo Cancel (VC + +)
 Questo esempio viene utilizzato il [Annulla](../../../ado/reference/ado-api/cancel-method-ado.md) metodo per annullare un comando in esecuzione su un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto se la connessione è occupata.  

@@ -3,7 +3,7 @@ title: Impostazione DCOM flusso marshalling formato | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5addd2044189538b95e4023230653e6011e087b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 370958ce7f66aa7a87296f47884b62a08935fae0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>Impostazione DCOM flusso formato di marshalling
 Un computer client mediante i componenti di RDS 1.5 o versioni precedenti non è compatibile con un server mediante i componenti da RDS 2.0 o versione successiva. Quando si utilizza DCOM come protocollo sottostante, il supporto per RDS 2.0 o versione successiva è più efficiente nel trasporto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti. Se il client è in esecuzione i componenti di servizi desktop remoto 1.5 o versioni precedenti, è possibile impostare il server da utilizzare con il supporto di servizi desktop remoto precedente (denominata RDS 1.0) o il supporto di servizi desktop remoto più recente (denominata RDS 2.0 o versione successiva). Impostare una delle voci del Registro di sistema seguenti:  

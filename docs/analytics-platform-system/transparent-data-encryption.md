@@ -3,10 +3,10 @@ title: Transparent Data Encryption per Parallel Data Warehouse
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
 caps.latest.revision: "22"
-ms.openlocfilehash: b0544f5dee735b8444ce68d25e3be288be214202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c96bd67d9a935756b8353999f6c778134d2ed57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
 Per proteggere il database è possibile adottare alcune accortezze, tra cui la progettazione di un sistema sicuro, la crittografia dei dati riservati e la compilazione di un firewall attorno ai server di database. Tuttavia, nel caso in cui i supporti fisici (ad esempio unità o nastri di backup) venissero rubati, un malintenzionato potrebbe ripristinare o collegare il database e accedere ai dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
@@ -139,7 +139,7 @@ Nella tabella seguente vengono illustrate le viste del catalogo e le viste a ges
 |[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Vista del catalogo che consente di visualizzare i certificati di un database.|  
 |[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Vista a gestione dinamica che fornisce informazioni per ogni nodo, le chiavi di crittografia utilizzato in un database e lo stato di crittografia di un database.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Ogni funzionalità e comando di TDE ha requisiti specifici relativi alle autorizzazioni, descritti nelle tabelle precedenti.  
   
 La visualizzazione dei metadati interessati da TDE richiede il `CONTROL SERVER` autorizzazione.  
@@ -149,7 +149,7 @@ Durante un'analisi di una nuova crittografia di un database, le operazioni di ma
   
 È possibile trovare lo stato di crittografia del database utilizzando il **sys.dm_pdw_nodes_database_encryption_keys** vista a gestione dinamica. Per ulteriori informazioni, vedere il *viste del catalogo e viste a gestione dinamica* in precedenza in questo argomento).  
   
-### <a name="restrictions"></a>Restrizioni  
+### <a name="restrictions"></a>Restrictions  
 Le operazioni seguenti non sono consentite durante il `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, o `ALTER DATABASE...SET ENCRYPTION` istruzioni.  
   
 -   Eliminazione del database.  

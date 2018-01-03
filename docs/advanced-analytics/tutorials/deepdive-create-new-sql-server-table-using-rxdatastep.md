@@ -1,58 +1,66 @@
 ---
-title: Creare una nuova tabella di SQL Server utilizzando rxDataStep | Documenti Microsoft
+title: Creare una nuova tabella di SQL Server utilizzando rxDataStep (SQL e R approfondimento) | Documenti Microsoft
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 98cead96-6de7-4edf-98b9-a1efb09297b9
 caps.latest.revision: "19"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8f276a09ea785da6b31a54693a6f5d758bb77b43
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5a414c590f72a1b1cfef9a3dbd8082a500592140
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="create-new-sql-server-table-using-rxdatastep"></a>Creare una nuova tabella di SQL Server mediante rxDataStep
+# <a name="create-new-sql-server-table-using-rxdatastep-sql-and-r-deep-dive"></a>Creare una nuova tabella di SQL Server utilizzando rxDataStep (SQL e R approfondimento)
 
-In questa lezione verrà illustrato come spostare i dati tra i frame di dati in memoria, il contesto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i file locali.
+Questo articolo fa parte dell'esercitazione approfondimento di analisi scientifica dei dati, su come usare [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+
+In questa lezione, è illustrato come spostare i dati tra i frame di dati in memoria, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contesto e i file locali.
 
 > [!NOTE]
-> Per questa lezione, verrà usato un set di dati diverso. Il set di dati di ritardi Airline è un set di dati pubblico che è ampiamente utilizzata per esperimenti di apprendimento. Se R viene usato per la prima volta, questo set di dati risulta particolarmente adatto ai test poiché è usato in diversi esempi di prodotti di [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] pubblicati con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. I file di dati necessari per questo esempio sono disponibili nella stessa directory degli altri esempi del prodotto.
+> In questa lezione viene utilizzato un set di dati diverso. Il set di dati di ritardi Airline è un set di dati pubblico che è ampiamente utilizzata per esperimenti di apprendimento. I file di dati utilizzati in questo esempio sono disponibili nella stessa directory degli altri esempi di prodotto.
 
 ## <a name="create-sql-server-table-from-local-data"></a>Creare una tabella di SQL Server dai dati locali
 
-Nella prima parte di questa esercitazione, è utilizzato il **RxTextData** funzione per importare dati in R da un file di testo e quindi usata la **RxDataStep** funzione per spostare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Nella prima metà di questa esercitazione, è utilizzato il **RxTextData** funzione per importare dati in R da un file di testo e quindi usata la **RxDataStep** funzione per spostare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-In questa lezione si userà un approccio diverso e i dati verranno ottenuti da un file salvato nel [formato XDF](https://en.wikipedia.org/wiki/Extensible_Data_Format). Il formato XDF è uno standard XML sviluppato per i dati di dimensioni elevate. Si tratta di un formato di file binario con un'interfaccia R che ottimizza l'elaborazione e l'analisi di righe e colonne.  È possibile usarlo per spostare i dati e archiviare subset di dati utili per l'analisi.
+In questa lezione adotta un approccio diverso, e vengono utilizzati i dati da un file salvato nel [formato con estensione XDF](https://en.wikipedia.org/wiki/Extensible_Data_Format). Dopo aver eseguito alcune trasformazioni ai dati utilizzando il file con estensione XDF leggeri, salvare i dati trasformati in un nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella.
 
-Dopo avere eseguito alcune piccole trasformazioni sui dati usando il file XDF, i dati trasformati verranno salvati in una nuova tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+**Che cos'è con estensione XDF?**
 
-> [!NOTE]
-> Per questa operazione sono necessarie autorizzazioni DDL.
+Il formato con estensione XDF è uno standard XML sviluppato per i dati di dimensioni elevate e viene utilizzato il formato di file nativi da [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Si tratta di un formato di file binario con un'interfaccia R che ottimizza l'elaborazione e l'analisi di righe e colonne.  È possibile usarlo per spostare i dati e archiviare subset di dati utili per l'analisi.
 
-1. Impostare il contesto di calcolo sulla workstation locale.
+1. Impostare il contesto di calcolo sulla workstation locale. **Per questo passaggio, sono necessarie le autorizzazioni di DDL.**
+
   
     ```R
     rxSetComputeContext("local")
     ```
   
-2. Definire un nuovo oggetto origine dati usando la funzione **RxXdfData** . Per un'origine dati XDF, è sufficiente specificare il percorso del file di dati.  È possibile specificare il percorso del file di utilizzo di una variabile di testo, ma in questo caso, è presente un collegamento utile, perché il file di dati di esempio (AirlineDemoSmall.xdf) nella directory restituita dalla funzione rxGetOption.
+2. Definire un nuovo oggetto origine dati usando la funzione **RxXdfData** . Per definire un'origine dati con estensione XDF, specificare il percorso al file di dati.  
+
+    È possibile specificare il percorso del file di utilizzo di una variabile di testo. Tuttavia, in questo caso, è un collegamento utile, in cui è possibile utilizzare il **rxGetOption** funzione e ottenere il file (AirlineDemoSmall.xdf) dalla directory di dati di esempio.
   
     ```R
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
     ```
 
-3. Chiamare rxGetVarInfo sui dati in memoria per visualizzare un riepilogo del set di dati.
+3. Chiamare [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) nei dati in memoria per visualizzare un riepilogo del set di dati.
   
     ```R
     rxGetVarInfo(xdfAirDemo)
@@ -68,9 +76,9 @@ Dopo avere eseguito alcune piccole trasformazioni sui dati usando il file XDF, i
 
 > [!NOTE]
 > 
-> Si noti che non sono necessarie chiamare qualsiasi altra funzione per caricare i dati nel file con estensione XDF e potrebbe chiamare rxGetVarInfo sui dati immediatamente? Ciò avviene perché XDF è il metodo di archiviazione provvisorio predefinito per RevoScaleR. Per ulteriori informazioni sui file con estensione XDF, vedere [creare un con estensione XDF](https://msdn.microsoft.com/microsoft-r/scaler-data-xdf).
+> Si noti che non è stato necessario chiamare altre funzioni per caricare i dati nel file XDF e che è stato possibile chiamare immediatamente **rxGetVarInfo** nei dati. Ciò avviene perché XDF è il metodo di archiviazione provvisorio predefinito per RevoScaleR. Oltre ai file con estensione XDF, il **rxGetVarInfo** funzione ora supporta più tipi di origine.
   
-4. A questo punto, si posizioneranno questi dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archiviando _DayOfWeek_ come integer con valori compresi tra 1 e 7.
+4. Inserire dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella, l'archiviazione _DayOfWeek_ come integer con valori compresi tra 1 e 7.
   
     A tale scopo, per prima cosa definire un'origine dati SQL Server.
   
@@ -84,7 +92,7 @@ Dopo avere eseguito alcune piccole trasformazioni sui dati usando il file XDF, i
     if (rxSqlServerTableExists("AirDemoSmallTest",  connectionString = sqlConnString))  rxSqlServerDropTable("AirDemoSmallTest",  connectionString = sqlConnString)
     ```
   
-6. Creare la tabella e caricare i dati usando **rxDataStep**. Questa funzione consente di spostare dati tra due già definito le origini dati e di trasformare i dati sulla route.
+6. Creare la tabella e caricare i dati usando **rxDataStep**. Questa funzione consente di spostare dati tra due già definito origini dati e facoltativamente possono trasformare i dati sulla route.
   
     ```R
     rxDataStep(inData = xdfAirDemo, outFile = sqlServerAirDemo,
@@ -93,7 +101,7 @@ Dopo avere eseguito alcune piccole trasformazioni sui dati usando il file XDF, i
             overwrite = TRUE )
     ```
   
-    Si tratta di una tabella piuttosto grande, quindi attendere che venga visualizzato il messaggio di stato finale: *Righe lette: 200000, Totale righe elaborate: 600000*.
+    Si tratta di una tabella di dimensioni piuttosto grande, quindi attendere fino a quando non viene visualizzato un messaggio di stato finale simile alla seguente: *righe lette: 200000, totale righe elaborate: 600000*.
      
 7. Impostare nuovamente il contesto di calcolo sul computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
@@ -101,7 +109,7 @@ Dopo avere eseguito alcune piccole trasformazioni sui dati usando il file XDF, i
     rxSetComputeContext(sqlCompute)
     ```
   
-8. Creare una nuova origine dati SQL Server, usando una semplice query SQL sulla nuova tabella. Questa definizione aggiunge livelli di fattore per la colonna *DayOfWeek*, usando l'argomento *colInfo* di RxSqlServerData.
+8. Creare una nuova origine dati SQL Server, usando una semplice query SQL sulla nuova tabella. Questa definizione aggiunge livelli fattore per il *DayOfWeek* colonna, utilizzando il *colInfo* argomento **RxSqlServerData**.
   
     ```R
     SqlServerAirDemo <- RxSqlServerData(
@@ -111,7 +119,7 @@ Dopo avere eseguito alcune piccole trasformazioni sui dati usando il file XDF, i
         colInfo = list(DayOfWeek = list(type = "factor",  levels = as.character(1:7))))
     ```
   
-9. Chiamare rxSummary ancora una volta per visualizzare un riepilogo dei dati nella query.
+9. Chiamare **rxSummary** ancora una volta per visualizzare un riepilogo dei dati nella query.
   
     ```R
     rxSummary(~., data = sqlServerAirDemo)
@@ -119,10 +127,8 @@ Dopo avere eseguito alcune piccole trasformazioni sui dati usando il file XDF, i
 
 ## <a name="next-step"></a>Passaggio successivo
 
-[Eseguire l'analisi di suddivisione in blocchi utilizzando rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
+[Eseguire un'analisi in blocchi tramite rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
 
 ## <a name="previous-step"></a>Passaggio precedente
 
-[Caricare i dati in memoria usando rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
-
-
+[Caricare i dati in memoria mediante rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)

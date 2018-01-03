@@ -3,7 +3,7 @@ title: SchemaEnum | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 78baaa8f9665bc54efdc0b93464013f3fea71a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75e8380ba12f6390f8db4661fc570b40f18e7c49
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Specifica il tipo di schema **Recordset** che il [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) recupera metodo.  
@@ -38,7 +38,7 @@ Specifica il tipo di schema **Recordset** che il [OpenSchema](../../../ado/refer
   
  ADO genera risultati dello schema per le costanti, **adSchemaDBInfoKeywords** e **adSchemaDBInfoLiterals**. ADO crea un **Recordset**e ogni riga viene riempita con i valori restituiti rispettivamente dal **IDBInfo:: GetKeywords** e **IDBInfo::** metodi. Ulteriori informazioni su questi metodi, vedere il [IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) sezione di riferimento di OLE DB Programmer.  
   
-|Costante|Valore|Description|Colonne del vincolo|  
+|Costante|valore|Description|Colonne del vincolo|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Restituisce le asserzioni definite nel catalogo che appartengono a un determinato utente.<br /><br /> ASSERZIONI (set di righe)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Restituisce gli attributi fisici associati a cataloghi accessibili dal DBMS.<br /><br /> I cataloghi (set di righe)|CATALOG_NAME|  

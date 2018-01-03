@@ -3,7 +3,7 @@ title: Viste e i campi di esempio di raccolte (VB) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a031d9502ab0158f175b4f329f3e631a3bfe04b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f770f0cc1801fb7181d515fff70c301865b3e394
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Esempio di raccolte di campi (VB) e viste
 Il codice seguente viene illustrato come utilizzare il [comando](../../../ado/reference/adox-api/command-property-adox.md) proprietà e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto per recuperare informazioni sui campi per la visualizzazione.  

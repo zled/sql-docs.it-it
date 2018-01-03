@@ -3,10 +3,10 @@ title: Scaricare e applicare gli aggiornamenti di Microsoft (Analitica piattafor
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
 caps.latest.revision: "51"
-ms.openlocfilehash: 806b7fd790244963d878038a3c3c291c387ebb1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-and-apply-microsoft-updates"></a>Scaricare e applicare gli aggiornamenti Microsoft
 In questo argomento viene illustrato come scaricare gli aggiornamenti dal catalogo di Microsoft Update per Windows Server Update Services (WSUS) e applicare gli aggiornamenti ai server accessorio Analitica Platform System. Microsoft Update installerà tutti gli aggiornamenti per Windows e SQL Server. Windows Server Update Services è installato nella macchina virtuale VMM del dispositivo.  
@@ -32,7 +32,7 @@ In questo argomento viene illustrato come scaricare gli aggiornamenti dal catalo
 >   
 > Non si applicano Microsoft Updates mentre il dispositivo è in uso. L'applicazione degli aggiornamenti potrebbe nodi dello strumento riavviare il computer. Gli aggiornamenti da applicare durante una finestra di manutenzione quando il dispositivo non è in uso.  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
 Prima di eseguire questi passaggi, è necessario:  
   
 -   Configurare WSUS del dispositivo seguendo le istruzioni in [configurare Windows Server Update Services &#40; Windows Server Update Services &#41; &#40; Sistema della piattaforma Analitica &#41; ](configure-windows-server-update-services-wsus.md).  

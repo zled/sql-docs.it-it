@@ -3,7 +3,7 @@ title: Metodo ReadText | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d3628847bc62ad45781442f227e709e87f52c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9915f0bfe1b70cef5cab39a058f7131ceaa44f98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="readtext-method"></a>Metodo ReadText
 Legge un numero di caratteri da un testo specificato [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
@@ -40,7 +40,7 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>Parametri  
  *NumChars*  
- Facoltativa. Oggetto **lungo** valore che specifica il numero di caratteri da leggere dal file o un [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valore. Il valore predefinito è **adReadAll**.  
+ Facoltativo. Oggetto **lungo** valore che specifica il numero di caratteri da leggere dal file o un [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valore. Il valore predefinito è **adReadAll**.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il **ReadText** metodo legge un numero specificato di caratteri, un'intera riga o dell'intero flusso da un **flusso** dell'oggetto e restituisce la stringa risulta.  

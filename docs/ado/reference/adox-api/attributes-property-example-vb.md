@@ -3,7 +3,7 @@ title: "Gli attributi di esempio di proprietà (VB) | Documenti Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 04b6964031e8fcc16d4278f4623732ae43cd2d6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a97cb58f1030960cef68c8220d8edbf7a60b79e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-property-example-vb"></a>Esempio di proprietà Attributes (VB)
 Questo esempio viene illustrato il [attributi](../../../ado/reference/adox-api/attributes-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md). Se è impostato su **adColNullable** consente all'utente di impostare il valore di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [campo](../../../ado/reference/ado-api/field-object.md) su una stringa vuota. In questo caso, sarà possibile distinguere tra un record in cui i dati non sono noto e un record in cui i dati non validi.  

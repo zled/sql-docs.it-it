@@ -3,7 +3,7 @@ title: "Proprietà delle tabelle (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7dc7692744a8f1b194e10591106d43d0f8aa938d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe0a195866ec219190d9c2c2ae5a21c8ebc7b194
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="table-properties-visual-database-tools"></a>Proprietà delle tabelle (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Queste proprietà vengono visualizzate nella finestra Proprietà quando si fa clic con il pulsante destro del mouse in Progettazione tabelle e si sceglie Proprietà. Se non specificato diversamente, è possibile modificare tali proprietà nella finestra Proprietà, quando la tabella desiderata è selezionata.  
@@ -89,5 +89,5 @@ Visualizza la colonna utilizzata da Microsoft SQL Server come colonna ROWGUID de
 Consente di selezionare nell'elenco a discesa il filegroup per le colonne con tipi di dati text o image. Se la tabella viene archiviata utilizzando uno schema di partizione, lasciare vuoto il campo.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Progettazione di tabelle (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Progettare tabelle (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

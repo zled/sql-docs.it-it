@@ -3,7 +3,7 @@ title: Eseguire il metodo (comando ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d8a16c395a01e20765dd1aaa569889b4b041cb9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa39093a0efe75959bfa0e6805ea90b65c6d39a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute-method-ado-command"></a>Eseguire il metodo (comando ADO)
 Esegue la query, l'istruzione SQL o stored procedure specificata nel [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) proprietà del [oggetto comando](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -43,13 +43,13 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
 #### <a name="parameters"></a>Parametri  
  *RecordsAffected*  
- Facoltativa. Oggetto **lungo** variabile in cui il provider restituisce il numero di record interessati dall'operazione. Il *RecordsAffected* parametro si applica solo a query o stored procedure. *RecordsAffected* non restituisce il numero di record restituito da una stored procedure o la restituzione di risultati di query. Per ottenere queste informazioni, utilizzare il [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) proprietà. Il **Execute** metodo non restituirà le informazioni corrette quando si utilizza **adAsyncExecute**, semplicemente perché quando viene eseguito un comando in modo asincrono, il numero di record interessati non può ancora essere noto al momento il metodo restituisce.  
+ Facoltativo. Oggetto **lungo** variabile in cui il provider restituisce il numero di record interessati dall'operazione. Il *RecordsAffected* parametro si applica solo a query o stored procedure. *RecordsAffected* non restituisce il numero di record restituito da una stored procedure o la restituzione di risultati di query. Per ottenere queste informazioni, utilizzare il [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) proprietà. Il **Execute** metodo non restituirà le informazioni corrette quando si utilizza **adAsyncExecute**, semplicemente perché quando viene eseguito un comando in modo asincrono, il numero di record interessati non può ancora essere noto al momento il metodo restituisce.  
   
  *Parametri*  
- Facoltativa. Oggetto **Variant** matrice di valori dei parametri utilizzati in combinazione con la stringa di input o di un flusso specificato in **CommandText** o **CommandStream**. (I parametri di output non restituisce valori corretti quando passati in questo argomento).  
+ Facoltativo. Oggetto **Variant** matrice di valori dei parametri utilizzati in combinazione con la stringa di input o di un flusso specificato in **CommandText** o **CommandStream**. (I parametri di output non restituisce valori corretti quando passati in questo argomento).  
   
  *Opzioni*  
- Facoltativa. A **lungo** valore che indica la modalità con cui il provider deve valutare il [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) proprietà del [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto. Può essere eseguito utilizzando un valore di maschera di bit [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) e/o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valori. Ad esempio, è possibile utilizzare **adCmdText** e **adExecuteStream** in combinazione, se si desidera utilizzare ADO di valutare il valore della **CommandText** proprietà come testo, e indica che il comando deve annullare e viene restituito alcun record che potrebbe essere generato quando viene eseguito il testo del comando.  
+ Facoltativo. A **lungo** valore che indica la modalità con cui il provider deve valutare il [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) proprietà del [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto. Può essere eseguito utilizzando un valore di maschera di bit [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) e/o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valori. Ad esempio, è possibile utilizzare **adCmdText** e **adExecuteStream** in combinazione, se si desidera utilizzare ADO di valutare il valore della **CommandText** proprietà come testo, e indica che il comando deve annullare e viene restituito alcun record che potrebbe essere generato quando viene eseguito il testo del comando.  
   
 > [!NOTE]
 >  Utilizzare il **ExecuteOptionEnum** valore **adExecuteStream** per migliorare le prestazioni riducendo al minimo l'elaborazione interna. Se **adExecuteStream** è stato specificato, le opzioni **adAsyncFetch** e **adAsynchFetchNonBlocking** vengono ignorati. Non utilizzare il **CommandTypeEnum** valori di **adCmdFile** o **adCmdTableDirect** con **Execute**. Questi valori possono essere utilizzati solo come opzioni con il [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md) e [Requery](../../../ado/reference/ado-api/requery-method.md) metodi di un **Recordset**.  

@@ -3,21 +3,21 @@ title: "Novità di sistema della piattaforma Analitica: scalabilità orizzontale
 author: happynicolle
 ms.author: nicw;barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
 description: "Novità di Microsoft® Analitica piattaforma del sistema, uno strumento di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse, vedere."
 ms.date: 11/28/2016
 ms.topic: article
-ms.openlocfilehash: 3dc1a338ced5aa90ada112b97c4a6f13777da409
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eeeb41045527e72856edfb8bdb40becc462bde07
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>Novità di Analitica piattaforma System 2016, un data warehouse di scalabilità orizzontale MPP
 Vedere quali sono le novità in Microsoft® Analitica piattaforma di strumenti analitici 2016, l'ultimo aggiornamento del dispositivo per un dispositivo di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse. 
