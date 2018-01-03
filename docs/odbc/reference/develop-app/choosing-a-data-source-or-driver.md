@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 449aeb2cf24cc03df6b76c84079c88badc7b1ff9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 496b9a40dfa1beb27144eead8d8ab9b03056b000
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Scelta dei dati di un Driver o origine
 L'origine dati o il driver utilizzato da un'applicazione è a volte hardcoded nell'applicazione. Ad esempio, un'applicazione personalizzata programmata dal dipartimento MIS per trasferire dati da un'origine dati a un'altra contiene i nomi di tali origini dati, ovvero semplicemente l'applicazione non funziona con tutte le altre origini dati. Un altro esempio è un'applicazione verticale, ad esempio un oggetto utilizzato per l'inserimento dell'ordine. Tale applicazione sempre utilizza la stessa origine dati, che ha uno schema predefinito noto dall'applicazione.  

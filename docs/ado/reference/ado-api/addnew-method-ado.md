@@ -3,7 +3,7 @@ title: AddNew (metodo) (ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b1db70bfb438d7954a5874c80631c9a72c83e7b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 51978e39a34b02238d4c0b1658620c9ba8d538a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addnew-method-ado"></a>AddNew (metodo) (ADO)
 Crea un nuovo record per un aggiornabile [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -43,10 +43,10 @@ recordset.AddNew FieldList, Values
  Oggetto **Recordset** oggetto.  
   
  *FieldList*  
- Facoltativa. Un singolo nome o una matrice di nomi o posizioni ordinali dei campi nel nuovo record.  
+ Facoltativo. Un singolo nome o una matrice di nomi o posizioni ordinali dei campi nel nuovo record.  
   
  *Valori*  
- Facoltativa. Un singolo valore o una matrice di valori per i campi nel nuovo record. Se *elenco campi* è una matrice, *valori* deve essere una matrice con lo stesso numero di membri in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice.  
+ Facoltativo. Un singolo valore o una matrice di valori per i campi nel nuovo record. Se *elenco campi* è una matrice, *valori* deve essere una matrice con lo stesso numero di membri in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice.  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare il **AddNew** per creare e inizializzare un nuovo record. Utilizzare il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo con **adAddNew** (un [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valore) per verificare se è possibile aggiungere record corrente **Recordset**oggetto.  

@@ -3,7 +3,7 @@ title: Usare colonne in query di aggregazione (Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2aca7a040d2eba0fec2870ee95a89d1ad47ae1b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ea4c188fc5075cb0c563e360df5fe2fe83022cb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Utilizzo di colonne in query di aggregazione (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quando si creano query di aggregazione con [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md), le operazioni vengono eseguite sulla base di alcuni presupposti che garantiscono la generazione di una query valida. Se, ad esempio, si crea una query di aggregazione e si contrassegna una colonna di dati per l'output, in Progettazione query e Progettazione viste la colonna viene automaticamente inserita nella clausola GROUP BY, in modo che non sia possibile visualizzare inavvertitamente il contenuto di una singola riga in un riepilogo.  

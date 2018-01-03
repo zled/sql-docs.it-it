@@ -3,7 +3,7 @@ title: "Proprietà colonna (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 647187fc56293cf1d30b2daa4150f1ad05503338
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8ef372c7a1716fe9e928b3567c52c654268f7a3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-properties-visual-database-tools"></a>Proprietà colonne (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Per le colonne sono disponibili due set di proprietà: il set completo, visualizzabile nella scheda **Proprietà colonna** in Progettazione tabelle (disponibile solo per i database di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]) e un subset, visualizzabile nella finestra Proprietà in Esplora server.  
@@ -68,7 +68,7 @@ Consente di visualizzare il valore di inizializzazione assegnato alla prima riga
 **Identità**  
 Indica se la colonna selezionata è la colonna di identità per la tabella. (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]).  
   
-**Lunghezza**  
+**Length**  
 Indica il numero di caratteri consentiti per i tipi di dati basati su caratteri.  
   
 **Ammette valori Null**  
@@ -95,7 +95,7 @@ Consente di visualizzare il nome della colonna. Per modificare il nome, digitarl
 > [!CAUTION]  
 > Se query, viste, funzioni definite dall'utente, stored procedure o programmi esistenti fanno riferimento alla tabella, la modifica del nome renderà non validi tali oggetti.  
   
-**Consenti valori Null**  
+**Consenti valori NULL**  
 Indica se il tipo di dati della colonna accetta valori Null.  
   
 **Tipo di dati**  
@@ -107,7 +107,7 @@ Mostra il valore predefinito utilizzato per la colonna quando non ne viene speci
 **Lunghezza**  
 Indica il numero di caratteri consentiti per i tipi di dati basati su caratteri. Questa proprietà è disponibile solo per tipi di dati basati su caratteri.  
   
-**Precisione**  
+**Precisionee**  
 Indica il numero massimo di cifre ammesse per i tipi di dati numerici. Questa proprietà corrisponde a **0** per i tipi di dati non numerici. Questa proprietà è disponibile solo per tipi di dati numerici.  
   
 **Scala**  
@@ -116,7 +116,7 @@ Indica il numero massimo di cifre ammesse dopo la virgola decimale nei tipi di d
 **Categoria Progettazione tabelle**  
 Viene espansa per visualizzare le proprietà rimanenti.  
   
-**Confronto**  
+**Regole di confronto**  
 Indica l'impostazione delle regole di confronto per la colonna selezionata. Per modificare questa impostazione, scegliere **Regole di confronto** e fare clic sui puntini di sospensione **(…)** a destra del valore.  
   
 **Categoria Specifica colonna calcolata**  
@@ -131,7 +131,7 @@ Consente di salvare la colonna calcolata con l'origine dei dati. Una colonna cal
 **Tipo di dati abbreviato**  
 Consente di visualizzare informazioni sul tipo di dati del campo, nello stesso formato dell'istruzione SQL CREATE TABLE. Un campo contenente ad esempio una stringa di lunghezza variabile con un massimo di 20 caratteri viene rappresentato come "varchar(20)". Per modificare questa proprietà, digitare direttamente il valore desiderato.  
   
-**Description**  
+**Descrizione**  
 Consente di visualizzare la descrizione della colonna. Per visualizzare la descrizione completa o modificarla, fare clic su Descrizione e sui puntini di sospensione **(…)** a destra della proprietà.  
   
 **Categoria Specifica full-text**  

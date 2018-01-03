@@ -3,7 +3,7 @@ title: Database di sviluppo, verifica e produzione | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a5742f5c71b5e68a87a7394e157ba9ecb7c07e09
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bb5f4a786ad7103deba42e58aafcb49fb61a254d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Database di sviluppo, verifica e produzione (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se si dispone di due database con la stessa struttura, è possibile apportare alcune modifiche in uno di essi e propagarle nell'altro. Se, ad esempio, si utilizzano un database di sviluppo personale e un database di verifica condiviso dall'intero gruppo di lavoro, è possibile modificare il database di sviluppo e propagare le modifiche al database di verifica.  

@@ -3,7 +3,7 @@ title: Open (metodo) (Recordset ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3f223702a882910354d69fbcbfe5920e444000f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81a22742808fe2663f5601af91cb554764a8e46c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-recordset"></a>Open (metodo) (Recordset ADO)
 Apre un cursore su un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -40,19 +40,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativa. Oggetto **Variant** che restituisce un valore valido [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto, un'istruzione SQL, un nome di tabella, una chiamata alla stored procedure, un URL o il nome di un file o [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto che contiene un memorizzarlo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Facoltativo. Oggetto **Variant** che restituisce un valore valido [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto, un'istruzione SQL, un nome di tabella, una chiamata alla stored procedure, un URL o il nome di un file o [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto che contiene un memorizzarlo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  *ActiveConnection*  
- Facoltativa. Entrambi un **Variant** che restituisce un valore valido [connessione](../../../ado/reference/ado-api/connection-object-ado.md) nome di variabile oggetto o un **stringa** contenente [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) parametri.  
+ Facoltativo. Entrambi un **Variant** che restituisce un valore valido [connessione](../../../ado/reference/ado-api/connection-object-ado.md) nome di variabile oggetto o un **stringa** contenente [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) parametri.  
   
  *CursorType*  
- Facoltativa. Oggetto [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) valore che determina il tipo di cursore che il provider deve utilizzare quando si apre il **Recordset**. Il valore predefinito è **adOpenForwardOnly**.  
+ Facoltativo. Oggetto [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) valore che determina il tipo di cursore che il provider deve utilizzare quando si apre il **Recordset**. Il valore predefinito è **adOpenForwardOnly**.  
   
  *Tipo di blocco*  
- Facoltativa. Oggetto [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valore che determina il tipo di blocco (concorrenza) il provider deve utilizzare quando si apre il **Recordset**. Il valore predefinito è **adLockReadOnly**.  
+ Facoltativo. Oggetto [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valore che determina il tipo di blocco (concorrenza) il provider deve utilizzare quando si apre il **Recordset**. Il valore predefinito è **adLockReadOnly**.  
   
  *Opzioni*  
- Facoltativa. A **lungo** valore che indica la modalità con cui il provider deve valutare il *origine* argomento se rappresenta un elemento diverso da un **comando** oggetto o che il **Recordset** deve essere ripristinato da un file in cui è stato salvato in precedenza. Può essere uno o più [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valori, che possono essere combinati con un operatore OR bit per bit.  
+ Facoltativo. A **lungo** valore che indica la modalità con cui il provider deve valutare il *origine* argomento se rappresenta un elemento diverso da un **comando** oggetto o che il **Recordset** deve essere ripristinato da un file in cui è stato salvato in precedenza. Può essere uno o più [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valori, che possono essere combinati con un operatore OR bit per bit.  
   
 > [!NOTE]
 >  Se si apre un **Recordset** da un **flusso** contenente un persistente **Recordset**, usando un [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valore **adAsyncFetchNonBlocking** non avrà effetto; l'operazione di recupero sarà sincrono e di blocco.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27a6df2276d2d474137038fdbe0b42fdf2b05e5b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4ec1cbc18c952c4394f16123c76a32330116d5af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Messaggi di errore (Driver ODBC di Visual FoxPro)
 Quando si verifica un errore, il driver di Visual FoxPro restituisce le informazioni seguenti:  
@@ -52,7 +52,7 @@ Quando si verifica un errore, il driver di Visual FoxPro restituisce le informaz
   
  I prefissi tra parentesi quadre ([]) identificano l'origine dell'errore, come definito nella tabella seguente.  
   
-|Origine dati|Prefisso|Valore|  
+|Origine dati|Prefisso|valore|  
 |-----------------|------------|-----------|  
 |Gestione driver|[fornitore]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Gestione Driver ODBC]<br />N/D|  
 |Driver Visual FoxPro|fornitore]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Driver ODBC Visual FoxPro]<br />N/D|  

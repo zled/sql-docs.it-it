@@ -3,7 +3,7 @@ title: Metodo CreateParameter (ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 929d7e91566aa18938a64f1085b1d77153205898
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 070b1fed1f5d38da0a3f8275abf9933339a8f5dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createparameter-method-ado"></a>Metodo CreateParameter (ADO)
 Crea un nuovo [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetto con le proprietà specificate.  
@@ -43,19 +43,19 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Parametri  
  *Nome*  
- Facoltativa. Oggetto **stringa** valore contenente il nome del **parametro** oggetto.  
+ Facoltativo. Oggetto **stringa** valore contenente il nome del **parametro** oggetto.  
   
  *Tipo*  
- Facoltativa. Oggetto [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore che specifica il tipo di dati di **parametro** oggetto.  
+ Facoltativo. Oggetto [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore che specifica il tipo di dati di **parametro** oggetto.  
   
  *Direzione*  
- Facoltativa. Oggetto [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) valore che specifica il tipo di **parametro** oggetto.  
+ Facoltativo. Oggetto [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) valore che specifica il tipo di **parametro** oggetto.  
   
  *Dimensione*  
- Facoltativa. Oggetto **lungo** valore che specifica la lunghezza massima per il valore del parametro in caratteri o byte.  
+ Facoltativo. Oggetto **lungo** valore che specifica la lunghezza massima per il valore del parametro in caratteri o byte.  
   
  *Valore*  
- Facoltativa. Oggetto **Variant** che specifica il valore per il **parametro** oggetto.  
+ Facoltativo. Oggetto **Variant** che specifica il valore per il **parametro** oggetto.  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare il **CreateParameter** metodo per creare un nuovo **parametro** oggetto con un nome, tipo, direzione, dimensioni e valore specificati. Vengono scritti i valori passati negli argomenti corrispondenti **parametro** proprietà.  

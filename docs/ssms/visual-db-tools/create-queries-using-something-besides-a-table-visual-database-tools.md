@@ -3,7 +3,7 @@ title: Creare query mediante l'uso di altre origini oltre a una tabella | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10e634170ad1d21ec5094032dbe0b63395b40eb8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc1923dcca1052c3c0bcdc2d1ba9abfb7935803a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Creazione di query mediante l'utilizzo di altre origini oltre a una tabella (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quando si crea una query di recupero dati, si definiscono le colonne e le righe da estrarre e la posizione dei dati originali. I dati originali in genere sono costituiti da una tabella o da più tabelle unite in join, ma possono anche provenire da origini diverse dalle tabelle, quali viste, query, sinonimi o funzioni definite dall'utente che restituiscono una tabella.  

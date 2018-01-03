@@ -3,10 +3,10 @@ title: Caricare i dati con l'istruzione INSERT
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6e951b0e-e95b-4fd1-b5f3-c65607aee0d8
 caps.latest.revision: "21"
-ms.openlocfilehash: 059dc1e8601fb02aac9a91631a161bae1e995389
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 625b6938ebbb2d0b753cb1a35f5c1df7372c6cca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-data-with-insert"></a>Caricare i dati con l'istruzione INSERT
 
@@ -129,8 +129,8 @@ Nella tabella seguente definisce i formati accettati e regole per l'inserimento 
   
 |Tipo di valore letterale|Formato|Regole di conversione|  
 |------------|------|----------------|
-|Valore letterale stringa nel **intero** formato|'nnnnnnnnnnnnnn'<br /><br />Esempio: '321312313123'| Nessuno |  
-|Valore letterale integer|nnnnnnnnnnnnnn<br /><br />Esempio: 321312313123| Nessuno|  
+|Valore letterale stringa nel **intero** formato|'nnnnnnnnnnnnnn'<br /><br />Esempio: '321312313123'| None |  
+|Valore letterale integer|nnnnnnnnnnnnnn<br /><br />Esempio: 321312313123| None|  
 |Valore letterale decimale|nnnnnn.nnnnn<br /><br />Esempio: 123344.34455|I valori a destra del separatore decimale vengono troncati.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>tipi di dati Money e smallmoney  
@@ -153,10 +153,10 @@ Nella tabella seguente definisce i formati accettati e regole per l'inserimento 
   
 |Tipo di valore letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
-|Valore letterale stringa|Formato: "stringa di caratteri'<br /><br />Esempio: 'abc'| Nessuno|  
-|Valore letterale stringa Unicode|Formato: Stringa N'character'<br /><br />Esempio: N'abc '|  Nessuno |  
-|Valore letterale integer|Formato: nnnnnnnnnnn<br /><br />Esempio: 321312313123| Nessuno |  
-|Valore letterale decimale|Formato: nnnnnn.nnnnnnn<br /><br />Esempio: 12344.34455| Nessuno |  
+|Valore letterale stringa|Formato: "stringa di caratteri'<br /><br />Esempio: 'abc'| None|  
+|Valore letterale stringa Unicode|Formato: Stringa N'character'<br /><br />Esempio: N'abc '|  None |  
+|Valore letterale integer|Formato: nnnnnnnnnnn<br /><br />Esempio: 321312313123| None |  
+|Valore letterale decimale|Formato: nnnnnn.nnnnnnn<br /><br />Esempio: 12344.34455| None |  
 |Valore letterale Money|Formato: $nnnnnn.nnnnn<br /><br />Esempio: $123456.99|Il simbolo di valuta non viene inserito con il valore. Per inserire il simbolo di valuta, inserire il valore come valore letterale stringa. Questo verrà corrisponde al formato di **dwloader** uno strumento che considera ogni valore letterale come un valore letterale stringa.<br /><br />Virgola non è consentita.<br /><br />Se il numero di cifre dopo il separatore decimale sono superiori a 2, il valore viene arrotondato per eccesso al valore più vicino. Ad esempio, il valore 123.946789 viene inserito come 123.95.<br /><br />Quando si utilizza la funzione CONVERT per inserire valori letterali money, è consentito solo lo stile predefinito 0 (Nessun separatore delle migliaia e 2 cifre dopo il separatore decimale).|  
 
   

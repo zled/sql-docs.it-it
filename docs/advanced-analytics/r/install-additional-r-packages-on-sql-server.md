@@ -1,11 +1,11 @@
 ---
 title: Installare pacchetti R aggiuntivi su SQL Server | Documenti Microsoft
 ms.date: 11/15/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f8d20c5b5b687a6d9d94cd97605f294cead27215
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 996b69b08973805648da329a328e712d5de45660
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Installare pacchetti R aggiuntivi su SQL Server
 
@@ -297,7 +297,7 @@ Pacchetti R spesso dipendono da altri più pacchetti, alcuni dei quali potrebber
 
 Se è necessario installare più pacchetti o per assicurarsi che tutti gli utenti dell'organizzazione Ottiene il tipo di pacchetto corretto e la versione, è consigliabile utilizzare il pacchetto miniCRAN per creare un repository locale che può essere condivisa tra più utenti o computer. Per ulteriori informazioni, vedere [creare un repository di pacchetti locali tramite miniCRAN](create-a-local-package-repository-using-minicran.md).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 
 Nel caso di un utente esperto di R, potrebbe essere abituati a pacchetti di installazione dalla riga di comando senza autorizzazioni speciali o senza scaricarli in anticipo. Tuttavia, la maggior parte dei server non dispone di una connessione internet. Inoltre, l'accesso a condivisioni file o archiviazione potrebbe essere limitata.
 

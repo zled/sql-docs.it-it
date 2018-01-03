@@ -3,7 +3,7 @@ title: AffectEnum | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 060740333ab0190d1a691f040b045f63a76b2e0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f3378f54473498b1b1988f11868f5f21497a5309
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="affectenum"></a>AffectEnum
 Specifica i record interessati da un'operazione.  
   
-|Costante|Valore|Description|  
+|Costante|valore|Description|  
 |--------------|-----------|-----------------|  
 |**adAffectAll**|3|Se non è presente un [filtro](../../../ado/reference/ado-api/filter-property.md) applicato per la **Recordset**, influisce su tutti i record.<br /><br /> Se il **filtro** è impostata su un criterio di tipo stringa (ad esempio "autore = 'Smith'"), l'operazione interesserà i record visibili nel capitolo corrente.<br /><br /> Se il **filtro** è impostata su un membro del [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) o una matrice di segnalibri, quindi l'operazione verrà applicate a tutte le righe del **Recordset**. **Nota:****adAffectAll** è nascosto nel Visualizzatore oggetti Visual Basic.|  
 |**adAffectAllChapters**|4|Interessa tutti i record in tutti i capitoli di pari livello di **Recordset**, inclusi quelli non visibili tramite qualsiasi **filtro** attualmente applicato.|  

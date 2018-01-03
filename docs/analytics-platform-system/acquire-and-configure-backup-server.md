@@ -3,10 +3,10 @@ title: Acquisire e configurare un Server di Backup per PDW APS
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 caps.latest.revision: "20"
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 3540c2e43082dbdad4f267745683f33ae9b0b036
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acquire-and-configure-a-backup-server"></a>Acquisire e configurare un server di backup
 In questo argomento viene descritto come configurare un sistema di Windows non strumento come un server di backup per l'utilizzo con le funzionalità di backup e ripristino in Analitica piattaforma di strumenti analitici e di SQL Server Parallel Data Warehouse (PDW).  
@@ -94,7 +94,7 @@ PDW potranno accedere il server di backup tramite una condivisione file UNC. Per
   
 5.  Aggiungere le credenziali dell'account di dominio di backup a PDW.  
   
-    Esempio:  
+    Ad esempio  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -114,7 +114,7 @@ Per il backup dei dati, utilizzare un client di query per connettersi a SQL Serv
 > [!IMPORTANT]  
 > Ricordarsi di utilizzare l'indirizzo IP InfiniBand del server di backup. In caso contrario, verranno copiati i dati su Ethernet anziché InfiniBand.  
   
-Esempio:  
+Ad esempio  
   
 ```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  

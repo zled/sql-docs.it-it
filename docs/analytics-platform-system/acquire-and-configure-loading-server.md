@@ -3,10 +3,10 @@ title: Acquisire e configurare un Server di caricamento (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: a434b174-a818-4f73-b218-264619bab664
 caps.latest.revision: "19"
-ms.openlocfilehash: 05747889f905e1f827a87cc0ad53ace62a911922
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4a91dc3216945b3f473e1b5b131333ad8d210d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acquire-and-configure-a-loading-server"></a>Acquisire e configurare un server di caricamento
 In questo argomento viene descritto come acquisire e configurare un server durante il caricamento di un sistema di Windows non strumento per l'invio di caricamenti di dati di SQL Server Parallel Data Warehouse (PDW).  
@@ -97,7 +97,7 @@ A questo punto si è pronti avviare il caricamento dei dati. Per altre informazi
   
 2.  [Panoramica di carico](load-overview.md)  
   
-## <a name="performance"></a>Prestazioni  
+## <a name="performance"></a>restazioni  
 Per ottenere migliori prestazioni in Windows Server 2012 e versioni successive di caricamento, attivare l'inizializzazione immediata dei File in modo che quando i dati vengono sovrascritti, il sistema operativo non sovrascrive i dati esistenti con zeri. Se si tratta di un rischio per la sicurezza perché sono ancora presenti dati precedenti sui dischi, quindi assicurarsi di disattivare l'inizializzazione immediata dei File.  
   
 ## <a name="Security"></a>Avvisi di sicurezza  

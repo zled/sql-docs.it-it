@@ -3,7 +3,7 @@ title: Informazioni sui File di personalizzazione | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52cd707a4c9c82cb3740f79f36a5b0578d2379f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f630817b87a464d3f02e5fdad6c88c161a081b23
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-customization-file"></a>Informazioni sui File di personalizzazione
 Ogni intestazione di sezione nel file di personalizzazione è costituita da parentesi quadre (**[]**) contenente un parametro e tipo. I quattro tipi di sezioni sono indicati da stringhe letterali **connettersi**, **sql**, **userlist**, o **log**. Il parametro è il valore letterale stringa, il valore predefinito, un identificatore specificato dall'utente o nulla.  

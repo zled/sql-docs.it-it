@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8cba3b5cb3f9da5963045d7fd8b015be4ed9f4cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db56df9bfd37b4395268250e6b921a3f98a2f6ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ordinary-arguments"></a>Argomenti normali
 Quando l'argomento di stringa di una funzione di catalogo è un argomento normale, viene considerato come una stringa letterale. Un argomento normale accetta un criterio di ricerca stringa né un elenco di valori. Nel caso di un argomento normale è significativo e considerati virgolette nella stringa. Questi argomenti vengono trattati come argomenti normali, se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_FALSE; vengono considerate come argomenti identificatore invece se questo attributo è impostato su SQL_TRUE.  

@@ -3,7 +3,7 @@ title: Usare i dati nel riquadro Risultati (Visual Database Tools) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7493784bc506c454ab0c230d549d0accae58c7c4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7ac0861f7c9d1a5f30efbfeb7466ed320f346191
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utilizzo dei dati nel riquadro Risultati (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dopo l'esecuzione di una query o di una vista, i risultati ottenuti vengono visualizzati nel riquadro Risultati e su di essi è possibile eseguire numerose operazioni, ad esempio aggiungere ed eliminare righe, immettere o modificare dati e navigare con facilità nell'ambito di set di risultati estesi.  
@@ -126,6 +126,6 @@ Gli elementi restituiti dal database e visualizzati nel riquadro Risultati sono 
 -   Non è sempre possibile mantenere il livello di precisione e il fattore di scala. Il riquadro Risultati supporta ad esempio un livello di precisione pari a 27. Se i dati sono di un tipo caratterizzato da un livello di precisione maggiore, può accadere che vengano troncati o rappresentati con *<Unable to read data>*.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione di operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[Specifica di criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Specifica dei criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

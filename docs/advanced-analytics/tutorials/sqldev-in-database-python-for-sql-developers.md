@@ -2,12 +2,14 @@
 title: Analitica Python nel database per gli sviluppatori SQL | Documenti Microsoft
 ms.custom: 
 ms.date: 10/13/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2017
 dev_langs:
 - Python
@@ -17,11 +19,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 1f6a1279268668062c83a151b6e7235b5c873325
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c6e59f8e3e1b59b9225a95dbe787698dd5bf4f9e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Analitica Python nel Database per gli sviluppatori SQL
 
@@ -74,7 +76,7 @@ Tutte le attività eseguibili tramite [!INCLUDE[tsql](../../includes/tsql-md.md)
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>Prerequisites
 
 + Installare un'istanza di SQL Server 2017 con servizi di Machine Learning e Python abilitato. Per ulteriori informazioni, vedere [configurare servizi di SQL Server Machine Learning con Python](../python/setup-python-machine-learning-services.md).
 + L'account di accesso usato per questa procedura deve avere le autorizzazioni necessarie per creare database e altri oggetti, per caricare i dati, selezionare i dati ed eseguire le stored procedure.

@@ -3,10 +3,10 @@ title: Applicare aggiornamenti rapidi del sistema di Analitica piattaforma (sist
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fca5eec9-86b8-4d20-b498-1678c367b5c8
 caps.latest.revision: "25"
-ms.openlocfilehash: af879486885f2c27ad4c3d80ef9a3d41279ff0ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 562d0ce41f5a1b12930fdedabd73214ddebd4e4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Applicare aggiornamenti rapidi del sistema di piattaforma Analitica
 In questo argomento viene descritto come applicare gli aggiornamenti rapidi per il software del sistema di piattaforma Analitica.  
@@ -33,7 +33,7 @@ In questo argomento viene descritto come applicare gli aggiornamenti rapidi per 
 > [!WARNING]  
 > Non applicare un hotfix Analitica piattaforma sistema mentre il dispositivo è in uso. L'applicazione di un hotfix potrebbe nodi dello strumento riavviare il computer. L'hotfix deve essere applicato in una finestra di manutenzione quando il dispositivo non è in uso.  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
 Per eseguire queste operazioni, è necessario:  
   
 -   Un accesso di sistema della piattaforma Analitica con le autorizzazioni per accedere alla Console di amministrazione per monitorare lo stato del dispositivo. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  

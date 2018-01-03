@@ -3,10 +3,10 @@ title: Comportamento di blocco (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c55c636e-b767-4a0c-8184-be991a10801f
 caps.latest.revision: "27"
-ms.openlocfilehash: 6f4b213942db85b9e7171d11d6b88512d3ad7779
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1cb1b0ec346ff18d40a3ac03e7ba45b37666c98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locking-behavior"></a>Comportamento di blocco
 SQL Server PDW vengono utilizzati i blocchi per garantire l'integrità delle transazioni e mantenere la coerenza dei database quando più utenti accedono ai dati nello stesso momento.  
@@ -33,7 +33,7 @@ SQL Server PDW supporta quattro modalità di blocco:
 Exclusive  
 Il blocco esclusivo impedisce di scrittura o lettura dall'oggetto bloccato fino a quando la transazione che contiene che il blocco esclusivo viene completata. Nessun altri blocchi di qualsiasi modalità sono consentite mentre è in corso di un blocco esclusivo. Ad esempio, DROP TABLE e CREATE DATABASE utilizzare un blocco esclusivo.  
   
-Origine dati  
+Condivisa  
 Il blocco condiviso impedisce l'avvio di un blocco esclusivo sull'oggetto interessato, ma consente tutte le altre modalità di blocco. Ad esempio, l'istruzione SELECT inizia un blocco condiviso e pertanto consente di accedere ai dati selezionati contemporaneamente più query, ma impedisce gli aggiornamenti per i record da leggere, fino al completamento dell'istruzione SELECT.  
   
 ExclusiveUpdate  

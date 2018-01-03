@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7b9056b21f5f2b74956c4a94878a0b326bbd1335
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d3ad9ed32342dbd2dc7faf955eba3e9141b4fab1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-data-source-administrator"></a>Amministratore origine dati ODBC
 Amministrazione origine dati di Microsoft® ODBC gestisce le origini dati e i driver di database. Questa applicazione si trova nel Pannello di controllo di Windows in **strumenti di amministrazione**. A partire da Windows 8, l'icona è denominata **origini dati ODBC**, e nei sistemi operativi a 64 bit è disponibile una versione a 32 e 64 bit.  

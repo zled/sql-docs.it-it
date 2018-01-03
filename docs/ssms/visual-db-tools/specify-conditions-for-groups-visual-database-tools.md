@@ -3,7 +3,7 @@ title: Specificare le condizioni per i gruppi (Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 83c0a7bd21d7af608a3d8f31a2eeb9e08554d20b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b6168fec36beba851fea3850b688dedc3958ebf0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>Definizione di condizioni per i gruppi (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Per limitare i gruppi presenti in una query, è possibile specificare una condizione applicabile ai gruppi come insieme, ossia una clausola HAVING. Dopo il raggruppamento e l'aggregazione dei dati, vengono applicate le condizioni nella clausola HAVING. Nella query verranno inseriti solo i gruppi che soddisfano le condizioni.  

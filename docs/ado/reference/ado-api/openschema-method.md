@@ -3,7 +3,7 @@ title: Metodo OpenSchema | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da75cff99c5a3fbe85c18a8b47f3025f748872bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b79dcd972c3b14a27cae47cc08893f2266dfd6b2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openschema-method"></a>Metodo OpenSchema
 Ottiene informazioni sullo schema di database dal provider.  
@@ -46,7 +46,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Qualsiasi [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) valore che rappresenta il tipo di query di schema per l'esecuzione.  
   
  *Criteri*  
- Facoltativa. Una matrice dei vincoli di query per ogni *QueryType* opzione, come indicato nella [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Facoltativo. Una matrice dei vincoli di query per ogni *QueryType* opzione, come indicato nella [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *SchemaID*  
  GUID per una query di schema provider non è definito dalla specifica OLE DB. Questo parametro è obbligatorio se *QueryType* è impostato su **adSchemaProviderSpecific**; in caso contrario, non viene utilizzato.  

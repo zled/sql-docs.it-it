@@ -3,7 +3,7 @@ title: "Provider e l'esempio di proprietà DefaultDatabase (VB) | Documenti Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ac4121e3679489e3f0886520212b1541c463bfc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7824f3e69e76d3350bbc3ee55287c8b166c5c56e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Esempio di proprietà DefaultDatabase (VB) e di provider
 Questo esempio viene illustrato il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà aprendo tre [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetti con provider diversi. Utilizza inoltre il [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) proprietà per impostare il database predefinito per il Provider ODBC di Microsoft.  

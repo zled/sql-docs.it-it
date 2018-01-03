@@ -2,10 +2,10 @@
 title: Assegnazione dei punteggi in tempo reale | Documenti Microsoft
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 214fd0c3fad495db4642650de867c8d3a9c3b741
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9136aee11d5104fd0723521a3466361f06ce26d6
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="realtime-scoring"></a>Assegnazione dei punteggi in tempo reale
 
@@ -62,7 +62,7 @@ In SQL Server, è necessario abilitare funzionalità di punteggio in anticipo in
 
 Per informazioni in tempo reale di punteggio in un ambiente distribuito in base a Microsoft R Server, consultare il [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) disponibile in funzione la [mrsDeploy pacchetto](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package), che supporta pubblicazione di modelli per in tempo reale di punteggio come nuovo un servizio web in esecuzione nel Server di R.
 
-### <a name="restrictions"></a>Restrizioni
+### <a name="restrictions"></a>Restrictions
 
 + Training del modello deve essere eseguito in precedenza tramite uno dei supportati **rx** algoritmi. Per informazioni dettagliate, vedere [supportati gli algoritmi](#bkmk_rt_supported_algos). In tempo reale di punteggio con `sp_rxPredict` supporta gli algoritmi RevoScaleR sia MicrosoftML.
 

@@ -3,7 +3,7 @@ title: "Eseguire il join di tabelle su più colonne (Visual Database Tools) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 926380140dc136647cdf4bfba95f825af5966415
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bfe676ff39f2ce59cd9c9b39915ff6393d5f9b6a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>Join di tabelle su più colonne (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile creare un join tra tabelle con più colonne, ossia creare una query che crei una corrispondenza tra le righe di due tabelle solo se soddisfano più condizioni. Se il database contiene una relazione di corrispondenza tra una tabella con una chiave esterna formata da più colonne e una tabella con una chiave primaria di più colonne, sarà possibile utilizzare questa relazione per creare un join a più colonne. Per informazioni dettagliate, vedere [Unione di tabelle in modo automatico &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md).  

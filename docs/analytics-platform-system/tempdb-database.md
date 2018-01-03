@@ -3,10 +3,10 @@ title: Database (SQL Server PDW) tempdb
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -17,11 +17,11 @@ ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
 caps.latest.revision: "22"
 ms.workload: not set
-ms.openlocfilehash: 94cd8614f5098a1f065dbfe19f0ec024c42f9179
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tempdb-database"></a>Database tempdb
 **tempdb** è un database di sistema di SQL Server PDW che archivia le tabelle temporanee locali per i database utente. Tabelle temporanee vengono spesso utilizzate per migliorare le prestazioni delle query. Ad esempio, utilizzare una tabella temporanea per modularizzare uno script e il riutilizzo dei dati calcolati.  
@@ -86,7 +86,7 @@ Limitazioni e restrizioni per le tabelle temporanee locali. Si *non è possibile
 > [!NOTE]  
 > Si *possibile* creare e aggiornare le statistiche in una tabella temporanea. **ALTER INDEX** può essere utilizzato per ricompilare un indice cluster.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Qualsiasi utente può creare oggetti temporanei in tempdb. Gli utenti possono accedere solo ai propri oggetti, a meno che non ottengano ulteriori autorizzazioni. È possibile revocare l'autorizzazione per la connessione a tempdb per impedire a un utente di utilizzarlo, tuttavia questa operazione non è consigliabile poiché in alcune operazioni di routine è richiesto l'utilizzo di tempdb.  
   
 ## <a name="RelatedTasks"></a>Attività correlate  

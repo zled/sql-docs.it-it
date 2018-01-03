@@ -3,10 +3,10 @@ title: Avviare Gestione configurazione (Analitica piattaforma sistema)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
 caps.latest.revision: "22"
-ms.openlocfilehash: 98ae90d198b4a1b68e1b72305721611a8efa30ff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ead82cd226a585d261eac2779cacb72cd5edbb6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="launch-the-configuration-manager"></a>Avviare Gestione configurazione
 In questo argomento vengono fornite istruzioni per l'avvio di **Configuration Manager** per l'applicazione di sistema della piattaforma Analitica.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
 Il sistema di piattaforma Analitica**Configuration Manager** può essere eseguito solo dall'amministratore del dominio applicazione. Per eseguire questo strumento, è necessario specificare la password per l'amministratore del dominio applicazione. Per creare altri amministratori di punti di accesso, vedere [creare un amministratore di dominio APS &#40; APS &#41; ](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Avviare lo strumento di Configuration Manager  

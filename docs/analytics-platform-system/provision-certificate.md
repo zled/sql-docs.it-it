@@ -3,10 +3,10 @@ title: Certificato PDW Provisioning (Analitica piattaforma sistema)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,18 +15,18 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
 caps.latest.revision: "22"
-ms.openlocfilehash: dd8daf48fc67d4325f5a76631ef2808f42a0dee3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6cbaf559e51103648a4238245d44425c4d5af77
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-certificate-provisioning"></a>Provisioning di certificati PDW
 Il **Provisioning certificato PDW** pagina del sistema di piattaforma Analitica**Configuration Manager** Importa o rimuove il certificato utilizzato da PDW. 
 
 Utilizzando, un certificato per crittografare le connessioni consentono comunicazioni protette al nodo di controllo tramite client di SQL Server, gli strumenti che utilizzano il driver SQL Server PDW, il [Console di amministrazione](monitor-the-appliance-by-using-the-admin-console.md), e il caricamento di Integration Services. 
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 Prima di installare il certificato, eseguire le operazioni seguenti:  
   
 1.  Ottenere un certificato di protezione. Se è necessario ulteriori informazioni su come ottenere un certificato protetto, contattare il supporto Microsoft.  

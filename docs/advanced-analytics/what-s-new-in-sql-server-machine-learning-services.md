@@ -1,10 +1,10 @@
 ---
 title: "Novità &#39; s novità di servizi di Machine Learning | Documenti Microsoft"
 ms.date: 11/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41ff01d46e2ca0aa996d8f582733b24b7560e29b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Novità di servizi di Machine Learning in SQL Server
 
@@ -84,7 +84,7 @@ Questa versione contiene più opzioni e funzionalità che consentono di implemen
 
     Il **mrsdeploy** pacchetto per [!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)] e [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] supporta la distribuzione di modelli di Python e gli script come servizi web. Per un esempio di come funziona, vedere [pubblica e utilizzare il codice Python](python/publish-consume-python-code.md).
 
-+ Prestazioni
++ restazioni
 
     Microsoft ha inserito i limiti delle prestazioni per il punteggio. Con l'assegnazione dei punteggi nel database, elaborazione un milione di righe al secondo tramite modelli R. In questa versione, le nuove funzionalità per **assegnazione dei punteggi in tempo reale** e **punteggio native** supportare prestazioni migliori in una singola riga e dell'assegnazione punteggio batch.
 

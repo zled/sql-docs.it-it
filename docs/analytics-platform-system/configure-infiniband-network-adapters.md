@@ -3,10 +3,10 @@ title: Configurare le schede di rete InfiniBand per Analitica piattaforma di str
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
 caps.latest.revision: "15"
-ms.openlocfilehash: 007e595f52ab891438c862afa6d94d68644b091f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurare le schede di rete InfiniBand per Analitica Platform System
 Viene descritto come configurare le schede di rete InfiniBand in un server non strumento client per connettersi al nodo di controllo in SQL Server Parallel Data Warehouse (PDW). Utilizzare queste istruzioni per la connettività di base e per la disponibilità elevata, in modo che il caricamento, i processi di backup e di altri verranno automaticamente connesso alla rete InfiniBand attiva.  
@@ -54,11 +54,11 @@ Ad esempio, se il nome dell'area PDW è MyPDW e il nome del dispositivo è MyAPS
 ## <a name="BeforeBegin"></a>Prima di iniziare  
   
 ### <a name="requirements"></a>Requisiti  
-È necessario un account di dominio accessorio punti di accesso all'account di accesso al nodo AD01. Ad esempio, F12345 * \administrator..  
+È necessario un account di dominio accessorio punti di accesso all'account di accesso al nodo AD01. Ad esempio, F12345 * \administrator.  
   
 È necessario un account di Windows nel server che dispone dell'autorizzazione per configurare le schede di rete client.  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
 Queste istruzioni presuppongono il server di client è già stato centralizzato in remoto e connesso alla rete InfiniBand accessorio. Per su rack e i cavi di istruzioni, vedere [acquisire e configurare un Server durante il caricamento](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Osservazioni generali  

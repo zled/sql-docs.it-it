@@ -3,23 +3,23 @@ title: dwloader caricatore della riga di comando per Parallel Data Warehouse
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
-description: "* * dwloader * * è uno strumento da riga di comando di Parallel Data Warehouse (PDW) che esegue il caricamento bulk di righe di tabella in una tabella esistente."
+description: "**dwloader** è uno strumento da riga di comando Parallel Data Warehouse (PDW) che esegue il caricamento bulk di righe di tabella in una tabella esistente."
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: "90"
-ms.openlocfilehash: 0335005e2e0590efe28a0cbf7dff6aaacfea331f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader caricatore della riga di comando
 **dwloader** è uno strumento da riga di comando Parallel Data Warehouse (PDW) che esegue il caricamento bulk di righe di tabella in una tabella esistente. Durante il caricamento di righe, è possibile aggiungere tutte le righe alla fine della tabella (*modalità append* o *modalità fastappend*), aggiungere nuove righe e aggiornare le righe esistenti (*modalità upsert*), o eliminarli tutti righe prima del caricamento esistente e quindi inserire tutte le righe in una tabella vuota (*ricaricare modalità*).  
@@ -226,7 +226,7 @@ Specifica un tipo di codifica dei caratteri per i dati da caricare dal file di d
 **-t** *field_delimiter*  
 Il delimitatore per ogni campo (colonna) della riga. Il delimitatore di campo è di uno o più di questi caratteri di escape ASCII o valori esadecimali ASCII...  
   
-|Nome|Carattere escape|Caratteri esadecimali|  
+|nome|Carattere escape|Caratteri esadecimali|  
 |--------|--------------------|-----------------|  
 |Scheda|\t|0x09|  
 |Ritorno a capo (CR)|\r|0x0D|  
@@ -402,7 +402,7 @@ Il caricatore inserisce righe alla fine delle righe esistenti nella tabella di d
 fastappend  
 Il caricatore inserisce righe direttamente, senza utilizzare una tabella temporanea, alla fine delle righe esistenti nella tabella di destinazione. fastappend richiede la multi-transazione (-m) opzione. Quando si utilizza fastappend, non è possibile specificare un database di gestione temporanea. Viene eseguito alcun rollback con fastappend, il che significa che il ripristino da un carico interrotto o non deve essere gestito dal proprio processo di caricamento.  
   
-Upsert **-K***merge_column* [,... *n* ]    
+Upsert **-K***merge_column* [,... *n* ]  
 Il caricatore Usa l'istruzione Merge SQL Server per aggiornare le righe esistenti e inserire nuove righe.  
   
 L'opzione -K specifica le colonne su cui basare il merge. Queste colonne formano una chiave di tipo merge, che deve rappresentare una riga univoca. Se la chiave di tipo merge esiste nella tabella di destinazione, la riga viene aggiornata. Se la chiave di tipo merge non esiste nella tabella di destinazione, la riga viene aggiunto.  
@@ -491,7 +491,7 @@ Ignora il caricamento di file vuoti. Anche questo ignora la decompressione di fi
 ## <a name="return-code-values"></a>Valori restituiti  
 0 (esito positivo) o un altro valore intero (errore)  
   
-In un file di comando finestra o un batch, utilizzare `errorlevel` per visualizzare il codice restituito. Esempio:  
+In un file di comando finestra o un batch, utilizzare `errorlevel` per visualizzare il codice restituito. Ad esempio  
   
 ```  
 dwloader  
@@ -502,7 +502,7 @@ if %errorlevel%==0 echo Success
   
 Quando si usa PowerShell, usare `$LastExitCode`.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Richiede l'autorizzazione di carico e le autorizzazioni applicabili (INSERT, UPDATE, DELETE) nella tabella di destinazione. Richiede l'autorizzazione di creazione (per la creazione di una tabella temporanea) nel database di gestione temporanea. Se non viene utilizzato un database di gestione temporanea, l'autorizzazione CREATE è necessario nel database di destinazione. 
 
 <!-- MISSING LINK
@@ -556,13 +556,13 @@ La modalità append carica i dati in due fasi. La fase uno carica i dati dal fil
 |Tipo di tabella|Più transazioni<br />Modalità (-m)|La tabella è vuota|Concorrenza supportata|Registrazione|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Heap|Sì|Sì|Sì|minimo|  
-|Heap|Sì|No|Sì|minimo|  
-|Heap|No|Sì|No|minimo|  
-|Heap|No|No|No|minimo|  
-|CL|Sì|Sì|No|minimo|  
-|CL|Sì|No|Sì|Completo|  
-|CL|No|Sì|No|minimo|  
-|CL|No|No|Sì|Completo|  
+|Heap|Sì|no|Sì|minimo|  
+|Heap|no|Sì|no|minimo|  
+|Heap|no|no|no|minimo|  
+|CL|Sì|Sì|no|minimo|  
+|CL|Sì|no|Sì|Full|  
+|CL|no|Sì|no|minimo|  
+|CL|no|no|Sì|Full|  
   
 Illustrato nella tabella precedente **dwloader** usando la modalità append, il caricamento in un heap o di una tabella di un indice cluster (CI), con o senza il flag di multi-transazionale e il caricamento in una tabella vuota o una tabella non vuota. Il blocco e la registrazione di comportamento di ogni tale combinazione di carico viene visualizzato nella tabella. Ad esempio, il caricamento di fase (2) con la modalità append in un indice cluster senza la modalità multi-transazionale e in un oggetto vuoto tabella sarà PDW creare un blocco esclusivo sulla tabella e la registrazione è minima. Ciò significa che un cliente non sarà in grado di caricare simultaneamente (2) fase e query in una tabella vuota. Tuttavia, quando si caricano con la stessa configurazione in una tabella non vuota, PDW non emetterà un blocco esclusivo sulla tabella e la concorrenza è possibile. Sfortunatamente, si verifica la registrazione completa, rallentare il processo.  
   

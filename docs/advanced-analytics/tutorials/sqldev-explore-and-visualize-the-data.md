@@ -2,12 +2,14 @@
 title: 'Lezione 3: Esplorare e visualizzare i dati | Documenti Microsoft'
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs:
 - R
@@ -18,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e385cdc2624b7d3fc5e1d13644475ab5d9c7a0d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9a47e9d2b2bec007af27b8e8ce26d6a6c6f67c3f
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lezione 3: Esplorare e visualizzare i dati
 
@@ -54,7 +56,7 @@ Nel set di dati originale gli identificatori di taxi e i record delle corse si t
   
 -   I valori utilizzati per le colonne di etichetta sono tutti basati sul _suggerimento\_quantità_ colonna utilizzando le regole business:
   
-    |Nome colonna derivata|Rule|
+    |Nome colonna derivata|Regola|
     |-|-|
      |tipped|Se tip_amount > 0, tipped = 1, altrimenti tipped = 0|
     |tip_class|Classe 0: tip_amount = $0<br /><br />Classe 1: tip_amount > $0 e tip_amount <= $5<br /><br />Classe 2: tip_amount > $5 e tip_amount <= $10<br /><br />Classe 3: tip_amount > $10 e tip_amount <= $20<br /><br />Classe 4: tip_amount > $20|

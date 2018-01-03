@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.workload: Inactive
-ms.openlocfilehash: 1c7348433aa9162f64e1ecccb9301276c46ce383
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 989c34ff57fcc6ef0aa561c58043d1073772b63c
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Limitazioni di sicurezza per SQL Server in Linux
 
@@ -30,7 +30,7 @@ SQL Server in Linux attualmente presenta le limitazioni seguenti:
 * Viene fornito un criterio password standard. MUST_CHANGE è l'unica opzione che è possibile configurare.  
 * Extensible Key Management non è supportata. 
 * Utilizzo di chiavi archiviate nell'insieme di credenziali chiave di Azure non è supportato.
-* SQL Server genera il proprio certificato autofirmato per crittografia delle connessioni. Attualmente, SQL Server non può essere configurato per l'utilizzo di un utente fornito un certificato per SSL o TLS. 
+* SQL Server genera il proprio certificato autofirmato per crittografia delle connessioni. SQL Server può essere configurato per l'utilizzo di un utente fornito un certificato per TLS. 
 
 Per ulteriori informazioni sulle funzionalità di sicurezza disponibili in SQL Server, vedere il [centro di sicurezza per il motore di Database di SQL Server e Database SQL di Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 

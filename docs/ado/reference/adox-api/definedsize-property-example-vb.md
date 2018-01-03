@@ -3,7 +3,7 @@ title: "Esempio di proprietà DefinedSize (VB) | Documenti Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 05838262ef249e38ba5fc33c06854b685be318a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f2908e130d96384e177ad4f6a3f01806ccdab1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="definedsize-property-example-vb"></a>Esempio di proprietà DefinedSize (VB)
 Questo esempio viene illustrato il [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md). Il codice verrà ridefinire le dimensioni della colonna FirstName del **dipendenti** sommario il *Northwind* database. Quindi, la modifica i valori di nome [campo](../../../ado/reference/ado-api/field-object.md) di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in base il **dipendenti** tabella viene visualizzata. Si noti che per impostazione predefinita, il campo FirstName verranno aggiunti spazi dopo si ridefinisce il **DefinedSize** proprietà.  

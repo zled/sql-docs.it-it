@@ -3,7 +3,7 @@ title: "Metodo Seek e esempio di proprietà indice (VC + +) | Documenti Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 821fea690e32fc489e9d1de4c56a032240bf4689
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 42bb3db1e79106f1a3a287f39a4d0297737fa953
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Metodo Seek e esempio di proprietà indice (VC + +)
 Questo esempio viene utilizzato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [Seek](../../../ado/reference/ado-api/seek-method.md) (metodo) e [indice](../../../ado/reference/ado-api/index-property.md) proprietà in combinazione con un determinato ***ID dipendente***per individuare il nome del dipendente nel ***dipendenti*** tabella del database Nwind.  

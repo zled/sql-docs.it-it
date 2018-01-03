@@ -3,10 +3,10 @@ title: "Foglio di pianificazione della capacità di Server di backup (SQL Server
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 36294bf6-6dde-481f-a190-d4382b04c030
 caps.latest.revision: "6"
-ms.openlocfilehash: f707715e19a3c647048f3156878bbd479ebb4b59
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e025410f3be18b5f8276984219dd1cb6a40c2a87
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backup-server-capacity-planning-worksheet"></a>Foglio di lavoro di pianificazione della capacità server backup
 Questo foglio di lavoro Pianificazione della capacità consente di determinare i requisiti per un server di backup per l'esecuzione di backup del database di SQL Server PDW e operazioni di ripristino. Consente di creare il piano per i server di backup di acquisto nuovo o provisioning esistente.  

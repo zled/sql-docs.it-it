@@ -3,7 +3,7 @@ title: Move (metodo) (ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d1db74ef70a98467e320dc09ff4e19c5935ac04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47239335259fc7bee4d01ef01741e4148f1a3ea0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-method-ado"></a>Metodo Move (ADO)
 Sposta la posizione del record corrente in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -43,7 +43,7 @@ recordset.Move NumRecords, Start
  Con un segno **lungo** espressione che specifica il numero di record che si sposta la posizione del record corrente.  
   
  *Inizio*  
- Facoltativa. Oggetto **stringa** valore o **Variant** che restituisca un segnalibro. È inoltre possibile utilizzare un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valore.  
+ Facoltativo. Oggetto **stringa** valore o **Variant** che restituisca un segnalibro. È inoltre possibile utilizzare un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valore.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il **spostare** metodo è supportato in tutti **Recordset** oggetti.  

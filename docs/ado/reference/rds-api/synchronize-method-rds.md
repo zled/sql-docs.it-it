@@ -1,11 +1,13 @@
 ---
 title: Synchronize (metodo) (RDS) | Documenti Microsoft
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c69217abc435fb4b3438975db560b9ce5836ee8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c933cbb0a39486ea1ed04b645057bdc31011b05b
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="synchronize-method-rds"></a>Synchronize (metodo) (RDS)
 Sincronizzare il Recordset specificato con il database specificato dalla stringa di connessione per l'utilizzo in ADO 2.5 e versioni successiva.  

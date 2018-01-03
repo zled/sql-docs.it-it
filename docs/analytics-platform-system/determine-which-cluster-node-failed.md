@@ -3,10 +3,10 @@ title: "Determinare quale nodo del Cluster non è riuscita (Analitica piattaform
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
 caps.latest.revision: "21"
-ms.openlocfilehash: 59f188526cff2d605c5bffcf2187b3c765276c81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 14b68f56a89d5fec57ede1a49be4dedc435353b5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determine-which-cluster-node-failed"></a>Determinare il nodo del Cluster non riuscita
 In questo argomento viene descritto come determinare il nome del nodo che non è riuscita dopo un failover del cluster si è verificato e generato un avviso di failover del cluster SQL Server PDW. Come parte della risoluzione dei problemi relativi a un cluster di failover, è necessario determinare il nome del nodo che non è riuscito prima di contattare Microsoft per risolvere il problema.  

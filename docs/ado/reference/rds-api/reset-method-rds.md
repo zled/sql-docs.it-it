@@ -1,11 +1,13 @@
 ---
 title: Reset (metodo) (RDS) | Documenti Microsoft
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4762d331c76b1e97d13ffd1dbf926a35468bcaa9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef5dfc619f39547150d096721da70c0ac715d04d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="reset-method-rds"></a>Reset (metodo) (RDS)
 Esegue l'ordinamento o filtro sul lato client **Recordset** basato sulle proprietà di ordinamento e filtro specificata.  
@@ -40,7 +42,7 @@ DataControl.Reset(value)
  Una variabile oggetto che rappresenta un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
   
  *Valore*  
- Facoltativa. Oggetto **booleano** valore **True** (impostazione predefinita), se si desidera filtrare il set di righe "filtrato" corrente. **False** indica che viene filtrato il set di righe originale, rimuovendo eventuali opzioni di filtro precedente.  
+ Facoltativo. Oggetto **booleano** valore **True** (impostazione predefinita), se si desidera filtrare il set di righe "filtrato" corrente. **False** indica che viene filtrato il set di righe originale, rimuovendo eventuali opzioni di filtro precedente.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)proprietà forniscono l'ordinamento e filtrare le funzionalità della cache sul lato client. La funzionalità di ordinamento Ordina i record per i valori da una colonna. La funzionalità di filtro consente di visualizzare un subset di record in base a criteri di ricerca, la versione completa [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene mantenuto nella cache. Il **reimpostare** metodo i criteri e sostituire corrente **Recordset** con un aggiornabile **Recordset**.  

@@ -3,7 +3,7 @@ title: Esempio di firme (VB) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4ad28e324126f0dc7374b6882e727f1052e41d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e601411ddcc4cec836b8211f0c168ff68efc43f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nextrecordset-method-example-vb"></a>Esempio di firme (VB)
 Questo esempio viene utilizzato il [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) metodo per visualizzare i dati in un recordset che utilizza un'istruzione di comando composta costituita da tre separato **selezionare** istruzioni.  
