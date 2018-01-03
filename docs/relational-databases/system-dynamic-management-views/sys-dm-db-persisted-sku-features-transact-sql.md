@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6108de273aedd3808a1941da5c152c6c774e5804
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8dc796f006abde19b0441cb9dba27d29f27c1b7e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ ms.lasthandoff: 11/17/2017
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |feature_name|**sysname**|Nome esterno della funzionalità abilitata nel database ma non supportata in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa funzionalità deve essere rimossa prima di poter eseguire la migrazione del database in tutte le edizioni disponibili di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|feature_id|**int**|ID funzionalità associato alla funzionalità. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
+|feature_id|**int**|ID funzionalità associato alla funzionalità. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)](Indici per tabelle con ottimizzazione per la memoria).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il database.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 
  Per determinare se in un database sono in uso funzionalità disponibili solo in edizioni specifiche, eseguire l'istruzione seguente nel database:  
   
-```t-sql  
+```sql  
 SELECT feature_name FROM sys.dm_db_persisted_sku_features;  
 GO  
 ```  

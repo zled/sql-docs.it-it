@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61fe4d56d73a3d2d7822308af2fb0eb377647ced
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c56a813ec873293fec2dc846da851fc9d36f2dae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>I valori restituito per l'accesso SQLGetInfo
 La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento e i corrispondenti valori restituiti da **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines a **SQLGetInfo** nel *fInfoType* argomento. Per ulteriori informazioni sui valori restituiti da **SQLGetInfo**, vedere il *riferimento per programmatori ODBC*.  

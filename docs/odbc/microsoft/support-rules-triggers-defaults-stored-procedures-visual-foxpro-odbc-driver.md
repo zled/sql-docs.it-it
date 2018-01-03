@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -35,11 +35,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1592db374d02534121ed75cfe8e07429f1aacac
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Supporto per le regole, valori predefiniti, trigger e Stored procedure, Driver ODBC di Visual FoxPro,
 È possibile creare regole di Visual FoxPro, trigger, i valori predefiniti o stored procedure utilizzando il Driver ODBC di Visual FoxPro. Tuttavia, l'applicazione potrebbe interagire con le regole esistenti, trigger, i valori predefiniti o stored procedure come inserisce, aggiorna o Elimina Visual FoxPro i dati archiviati in un database.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
 |Funzione BITTEST)|Funzione BITXOR)||  
 |Funzione BOF)|BITAND () (funzione)||  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
   
 ||||  
 |-|-|-|  
@@ -209,7 +209,7 @@ ms.lasthandoff: 11/20/2017
 |PROCEDURE (comando)|Funzione di PV)||  
 |Comando pubblico|() PADL &#124; () PADR &#124; Funzioni PADC)||  
   
-## <a name="r"></a>L  
+## <a name="r"></a>R  
   
 ||||  
 |-|-|-|  

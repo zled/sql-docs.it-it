@@ -1,7 +1,7 @@
 ---
 title: Utilizzo della crittografia senza convalida | Documenti Microsoft
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -23,21 +23,23 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d29061f3c43735b9a3855cee0dd635face3db00
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9ed3d0fd12d4a563e525ea4ff5498ba0ad1c5d91
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-encryption-without-validation"></a>Utilizzo della crittografia senza convalida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa sempre pacchetti di rete associati all'accesso. Se non è stato eseguito il provisioning di nessun certificato nel server quando viene avviato, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera un certificato autofirmato utilizzato per crittografare pacchetti di accesso.  
-  
- Le applicazioni possono inoltre richiedere l'attivazione della crittografia per tutto il traffico di rete mediante le parole chiave della stringa di connessione o le proprietà di connessione. Le parole chiave sono "Encrypt" per ODBC e OLE DB quando si utilizza una stringa del provider con **IDBInitialize:: Initialize**, o "Use Encryption for Data" per ADO e OLE DB quando si utilizza una stringa di inizializzazione con **IDataInitialize** . Può anche essere configurato da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager utilizzando il **Forza crittografia protocollo** opzione. Per impostazione predefinita, la crittografia di tutto il traffico di rete per una connessione richiede che nel server sia stato eseguito il provisioning di un certificato.  
-  
- Per informazioni sulle parole chiave di stringa di connessione, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa sempre pacchetti di rete associati all'accesso. Se non è stato eseguito il provisioning di nessun certificato nel server quando viene avviato, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera un certificato autofirmato utilizzato per crittografare pacchetti di accesso.  
+
+I certificati autofirmati non garantiscono protezione. L'handshake crittografato è basato su NT LAN Manager (NTLM). È consigliabile che si esegua il provisioning di un certificato verificabile in SQL Server per la connettività protetta. Sicurezza TLS (Transport Layer) è possibile proteggere solo con la convalida dei certificati.
+
+Le applicazioni possono inoltre richiedere l'attivazione della crittografia per tutto il traffico di rete mediante le parole chiave della stringa di connessione o le proprietà di connessione. Le parole chiave sono "Encrypt" per ODBC e OLE DB quando si utilizza una stringa del provider con **IDBInitialize:: Initialize**, o "Use Encryption for Data" per ADO e OLE DB quando si utilizza una stringa di inizializzazione con **IDataInitialize** . Può anche essere configurato da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager utilizzando il **Forza crittografia protocollo** opzione e la configurazione per il client di richiedere connessioni crittografate. Per impostazione predefinita, la crittografia di tutto il traffico di rete per una connessione richiede che nel server sia stato eseguito il provisioning di un certificato. Impostando il client per considerare attendibile il certificato nel server, potrebbe diventare vulnerabile ad attacchi man-in-the-middle. Se si distribuisce un certificato verificabile sul server, assicurarsi di modificare le impostazioni del client relative al trust del certificato su FALSE.
+
+Per informazioni sulle parole chiave di stringa di connessione, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  Per abilitare la crittografia da utilizzare quando non è stato fornito un certificato sul server, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager può essere utilizzato per impostare entrambi i **Forza crittografia protocollo** e **considera attendibile certificato Server**  opzioni. In questo caso, la crittografia utilizzerà un certificato server autofirmato senza convalida se nel server non è stato eseguito il provisioning di alcun certificato verificabile.  
   
@@ -45,14 +47,18 @@ ms.lasthandoff: 11/17/2017
   
 |Impostazione client Forza crittografia protocollo|Impostazione client Considera attendibile certificato server|Attributo/stringa di connessione Encrypt/Use Encryption for Data|Attributo/stringa di connessione Trust Server Certificate|Risultato|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|No|N/D|No (impostazione predefinita)|Ignorato|Nessuna crittografia.|  
-|No|N/D|Sì|No (impostazione predefinita)|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
-|No|N/D|Sì|Sì|La crittografia viene sempre applicata, ma può essere utilizzato un certificato server auto-firmato.|  
-|Sì|No|Ignorato|Ignorato|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
+|no|N/D|No (impostazione predefinita)|Ignorato|Nessuna crittografia.|  
+|no|N/D|Sì|No (impostazione predefinita)|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
+|no|N/D|Sì|Sì|La crittografia viene sempre applicata, ma può essere utilizzato un certificato server auto-firmato.|  
+|Sì|no|Ignorato|Ignorato|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
 |Sì|Sì|No (impostazione predefinita)|Ignorato|La crittografia viene sempre applicata, ma può essere utilizzato un certificato server auto-firmato.|  
 |Sì|Sì|Sì|No (impostazione predefinita)|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
 |Sì|Sì|Sì|Sì|La crittografia viene sempre applicata, ma può essere utilizzato un certificato server auto-firmato.|  
-  
+||||||
+
+> [!CAUTION]
+> Nella tabella precedente solo fornisce una Guida al comportamento di sistema in diverse configurazioni. Per una connettività sicura, verificare che il client e server di richiedere la crittografia. Verificare inoltre che il server disponga di un certificato verificabile e che il **TrustServerCertificate** impostazione sul client è impostata su FALSE.
+
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provider OLE DB di SQL Server Native Client  
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta la crittografia senza convalida tramite l'aggiunta di SSPROP_INIT_TRUST_SERVER_CERTIFICATE proprietà dell'origine dati l'inizializzazione, che viene implementata nel set di proprietà DBPROPSET_SQLSERVERDBINIT set. È stata inoltre aggiunta una nuova parola chiave, "TrustServerCertificate", per la stringa di connessione. Accetta i valori yes o no. Il valore predefinito è no. Quando si utilizzano i componenti del servizio, accetta i valori true o false; false è l'impostazione predefinita.  
   

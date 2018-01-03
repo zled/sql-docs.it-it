@@ -1,7 +1,7 @@
 ---
 title: Mapping di origine e i tipi di dati di destinazione (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -26,11 +26,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58d908af3ce4c8ee9e04d9499367949e27d9ca3e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4de8ef23dae7d51e63742caf30ccc2a79361ae0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Mapping di origine e i tipi di dati di destinazione (AccessToSQL)
 Diversi tipi di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di database. Quando si esegue la conversione di oggetti di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti, è necessario specificare come eseguire il mapping dei tipi di dati dall'accesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. È possibile accettare i mapping dei tipi di dati predefinito oppure è possibile personalizzare i mapping, come illustrato nelle procedure seguenti.  
@@ -97,7 +97,7 @@ La procedura seguente viene illustrato come eseguire il mapping di tipi di dati 
   
     2.  Scegliere **Rimuovi**.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Il passaggio successivo del processo di migrazione è [convertire gli oggetti di database di accesso agli oggetti di SQL Server](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>Vedere anche  

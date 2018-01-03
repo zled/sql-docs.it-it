@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26e758e6f4884309a17d5abfaa82b64d767d4df5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||Nome della tabella o vista utilizzata per generare un file di output di sincronizzazione. Il valore predefinito è NULL. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 |**spazio di tabella**||Identifica lo spazio tabella utilizzato dalla tabella di registrazione per un articolo pubblicato da un database Oracle. Per altre informazioni, vedere [Gestire spazi di tabella Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
 |**soglia**||Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Non supportato per la replica peer-to-peer.|  
-|**tipo**||Questa proprietà non è supportata per server di pubblicazione Oracle.|  
+|**type**||Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 ||**logbased**|Articolo basato su un log.|  
 ||**logbased manualboth**|Articolo basato su log con filtro manuale e vista manuale. Questa opzione richiede che il *sync_object* e *filtro* anche essere impostate. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 ||**logbased manualfilter**|Articolo basato su log con filtro manuale. Questa opzione richiede che il *sync_object* e *filtro* anche essere impostate. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
@@ -218,7 +218,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  All'interno di una pubblicazione esistente, è possibile utilizzare **sp_changearticle** per modificare un articolo senza dover eliminare e ricreare l'intera pubblicazione.  
   
 > [!NOTE]  
->  Quando si modifica il valore di *schema_option*, il sistema non esegue un aggiornamento bit per bit. Ciò significa che quando si imposta *schema_option* utilizzando **sp_changearticle**esistente, le impostazioni di bit possono essere disattivate. Per mantenere le impostazioni esistenti, è necessario eseguire [& (AND bit per bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) tra il valore da impostare e il valore corrente di *schema_option*, che è possibile determinare eseguendo [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
+>  Quando si modifica il valore di *schema_option*, il sistema non esegue un aggiornamento bit per bit. Ciò significa che quando si imposta *schema_option* utilizzando **sp_changearticle**esistente, le impostazioni di bit possono essere disattivate. Per mantenere le impostazioni esistenti, è necessario eseguire [| (OR bit per bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) tra il valore da impostare e il valore corrente di *schema_option*, che è possibile determinare eseguendo [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
   
 ## <a name="valid-schema-options"></a>Opzioni di schema valide  
  Nella tabella seguente vengono descritti i valori consentiti di *schema_option* in base al tipo di replica (indicato nella parte superiore) e il tipo di articolo (indicato nella prima colonna).  
@@ -246,7 +246,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_changearticle**.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,6 +1,6 @@
 ---
 title: Introduzione a SQL Server 2017 su Red Hat Enterprise Linux | Documenti Microsoft
-description: In questa esercitazione introduttiva viene illustrato come installare SQL Server 2017 in Red Hat Enterprise Linux e quindi creare query in un database con sqlcmd.
+description: Questa Guida introduttiva viene illustrato come installare SQL Server 2017 in Red Hat Enterprise Linux e quindi creare query in un database con sqlcmd.
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 42bcabc32c3a47c09bc8c3dd116403163faa2071
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 1826b003083d374aa052943016296079491ae158
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Installazione di SQL Server e creare un database in Red Hat
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In questa esercitazione introduttiva, installare innanzitutto 2017 di SQL Server su Red Hat Enterprise Linux (RHEL) 7.3 +. Connettiti con **sqlcmd** per creare il primo database ed eseguire query.
+In questa Guida rapida, installare innanzitutto 2017 di SQL Server su Red Hat Enterprise Linux (RHEL) 7.3 +. Connettiti con **sqlcmd** per creare il primo database ed eseguire query.
 
 > [!TIP]
 > Questa esercitazione richiede input dell'utente e una connessione internet. Se si è interessati di [automatica](sql-server-linux-setup.md#unattended) o [offline](sql-server-linux-setup.md#offline) procedure di installazione, vedere [Guida all'installazione per SQL Server in Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 È necessario avere un 7.3 RHEL o 7.4 macchina con **almeno 2 GB** di memoria.
 
@@ -117,6 +117,11 @@ Per creare un database, è necessario connettersi con uno strumento che è possi
    ```
 
 > [!TIP]
-> **SQLCMD** è solo uno strumento per la connessione a SQL Server per eseguire query ed eseguire attività di gestione e sviluppo. Altri strumenti includono [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) e [codice di Visual Studio](sql-server-linux-develop-use-vscode.md).
+> **SQLCMD** è solo uno strumento per la connessione a SQL Server per eseguire query ed eseguire attività di gestione e sviluppo. Altri strumenti includono:
+>
+> * [SQL Server operazioni Studio (anteprima)](../sql-operations-studio/what-is.md)
+> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Codice di Visual Studio](sql-server-linux-develop-use-vscode.md).
+> * [MSSQL-cli (anteprima)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

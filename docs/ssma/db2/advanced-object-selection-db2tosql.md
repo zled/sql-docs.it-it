@@ -1,7 +1,7 @@
 ---
 title: Advanced Selezione oggetto (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0aeaf76a6d697b4348f0ae53d844a83eb00863f6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b246973c44b1d781ec191c8473b000fd4d54a1de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-object-selection-db2tosql"></a>Selezione avanzata di oggetti (DB2ToSQL)
 Il **avanzate sezione oggetto** la finestra di dialogo consente di filtrare gli oggetti di database utilizzando le stringhe e sottostringhe nel nome dell'oggetto, quindi selezionare o deselezionare gli oggetti. SSMA consente di eseguire operazioni di conversione e migrazione oggetti selezionati.  

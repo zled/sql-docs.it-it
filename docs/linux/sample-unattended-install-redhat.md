@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 93e6520d3d2c15559ee001742bf58fa897814e3d
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: a66c65ea0eae4d3f1704f5bbeafb78ff657ab9ed
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Esempio: Script di installazione automatica di SQL Server per Red Hat Enterprise Linux
 
@@ -27,9 +27,9 @@ ms.lasthandoff: 12/09/2017
 Questo script di esempio Bash installa 2017 di SQL Server su Red Hat Enterprise Linux (RHEL) senza input interattivo. Fornisce esempi di installazione del motore di database, gli strumenti da riga di comando di SQL Server, SQL Server Agent e vengono eseguiti i passaggi di post-installazione. Facoltativamente, è possibile installare la ricerca full-text e creare un utente amministratore.
 
 > [!TIP]
-> Se non è necessario uno script di installazione automatica, il modo più rapido per installare SQL Server consiste nel seguire il [esercitazione introduttiva di Red Hat](quickstart-install-connect-red-hat.md). Per altre informazioni sull'installazione, vedere [Guida all'installazione per SQL Server in Linux](sql-server-linux-setup.md).
+> Se non è necessario uno script di installazione automatica, il modo più rapido per installare SQL Server consiste nel seguire il [avvio rapido per Red Hat](quickstart-install-connect-red-hat.md). Per altre informazioni sull'installazione, vedere [Guida all'installazione per SQL Server in Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - È necessario almeno 2 GB di memoria per l'esecuzione di SQL Server in Linux.
 - Il file system deve essere **XFS** o **EXT4**. Altri file System, ad esempio **BTRFS**, non sono supportati.
@@ -39,7 +39,7 @@ Questo script di esempio Bash installa 2017 di SQL Server su Red Hat Enterprise 
 Salvare lo script di esempio in un file e quindi per personalizzarlo, sostituire i valori di variabile nello script. È possibile anche impostare le variabili di scripting come variabili di ambiente, come rimuoverli dal file di script.
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

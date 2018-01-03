@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a2bbfe9608fabef11b4208597f550e32e2a816d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 078afea5ea6dfa6e0c3312d8e61cabb37369a2f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-specification-subkeys"></a>Sottochiavi di specifica di driver
 Ogni driver elencate nella sottochiave del driver ODBC ha una sottochiave propri. Questa sottochiave ha lo stesso nome come valore corrispondente nella sottochiave del driver ODBC. I valori in questa sottochiave elencare i percorsi completi dei driver e di installazione del driver DLL, i valori delle parole chiave driver restituite da **SQLDrivers**e il conteggio di utilizzo. I formati dei valori vengono visualizzati nella tabella seguente.  
   
-|Nome|Tipo di dati|data|  
+|nome|Tipo di dati|data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ.|**0** &#124; **1** &#124; **2**|  
 |ConnectFunctions|REG_SZ.|{**Y**&#124; **N**} {**Y**&#124; **N**} {**Y**&#124; **N**}|  

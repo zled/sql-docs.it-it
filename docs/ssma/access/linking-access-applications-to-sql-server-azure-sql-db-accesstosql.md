@@ -1,7 +1,7 @@
 ---
 title: 'Collegamento alle applicazioni di accesso di SQL Server: database SQL di Azure | Documenti Microsoft'
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -33,11 +33,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: b4ac30b2c0275de85f7ebab7cb8c7d0876f3142f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa06650106584d975c6bf45855473dc1d80a100d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Il collegamento alle applicazioni di accesso di SQL Server: database SQL di Azure (AccessToSQL)
 Se si desidera utilizzare le applicazioni Access esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile collegare le tabelle di Access originale dopo la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tabelle di SQL Azure. Collegamento di modifica nel database di Access in modo che i dati di utilizzare pagine di accesso ai dati, moduli, report e query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database di SQL Azure anziché i dati nel database di Access.  

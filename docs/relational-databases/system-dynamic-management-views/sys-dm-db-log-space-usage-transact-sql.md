@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4dfc548cdc7c2ece756e86f753a8bc21513f158
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7e0e14e96c3581b7a66fad23e21ac7a15808a1f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdblogspaceusage-transact-sql"></a>Sys.dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |log_space_in_bytes_since_last_backup |**bigint** |La quantità di spazio utilizzato dall'ultimo backup del log <br />**Si applica a:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] tramite [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
     
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede `VIEW SERVER STATE` autorizzazione nel server.  
   
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede livelli Premium di `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Standard e Basic richiede il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] account amministratore.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. Determinare la quantità di Log spazio disponibile in tempdb   
 La query seguente restituisce lo spazio di log libero totale in megabyte (MB) disponibile in tempdb.
 
-```tsql
+```sql
 USE tempdb;  
 GO  
 

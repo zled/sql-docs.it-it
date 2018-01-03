@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fead7415e3cb4a951a5ab2ba90b4969682905a0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolattribute-function"></a>Funzione SQLColAttribute
 **Conformità**  
@@ -131,7 +131,7 @@ SQLRETURN SQLColAttribute (
   
  Un database ODBC 3. *x* driver deve restituire un valore per ognuno dei campi di descrizione. Se un campo di descrizione non viene applicata a un'origine dati o i driver e se non diversamente specificato, il driver restituisce 0 in \* *StringLengthPtr* o una stringa vuota in **CharacterAttributePtr*.  
   
-## <a name="backward-compatibility"></a>Compatibilità con le versioni precedenti  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  ODBC 3. *x* funzione **SQLColAttribute** sostituisce deprecate ODBC 2. *x* funzione **SQLColAttributes**. Quando il mapping di **SQLColAttributes** a **SQLColAttribute** (quando un ODBC 2. *x* applicazione funziona con un'applicazione ODBC 3. *x* driver), o mapping **SQLColAttribute** a **SQLColAttributes** (quando un'applicazione ODBC 3. *x* applicazione sta utilizzando un'API ODBC 2. *x* driver), gestione Driver sia passa il valore di *FieldIdentifier* tramite, ne esegue il mapping a un nuovo valore, o restituisce un errore, come indicato di seguito:  
   
 > [!NOTE]  

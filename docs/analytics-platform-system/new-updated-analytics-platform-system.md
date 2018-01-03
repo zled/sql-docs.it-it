@@ -6,8 +6,12 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
-ms.topic: updart-autogen
+ms.suite: sql
+ms.prod: analytics-platform-system
+ms.prod_service: mpp-data-warehouse
+ms.service: 
+ms.component: 
+ms.topic: article
 ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
@@ -15,11 +19,11 @@ ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
 ms.workload: sql-analytics-platform-system
-ms.openlocfilehash: e70b3a0e5793a2cae46b7bd873a4ca5896d07d07
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 2d7342f4b533a4cc42e00dd04520bc4a28654410
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-and-recently-updated-analytics-platform-system-for-sql-server"></a>Nuovi e aggiornati: Analitica piattaforma sistema per SQL Server
 
@@ -33,7 +37,7 @@ Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di in
 
 
 
-- *Intervallo degli aggiornamenti di date:* &nbsp; **2017-09-28** &nbsp; - a - &nbsp; **2017-02-12**
+- *Intervallo di date degli aggiornamenti:* &nbsp; **28/09/2017** &nbsp; - &nbsp; **02/12/2017**
 - *Area di interesse:* &nbsp; **Analitica Platform System per SQL Server**.
 
 
@@ -183,26 +187,26 @@ In questa sezione sono elencati articoli molto simili ad articoli aggiornati di 
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Aree di interesse con articoli nuovi o aggiornati di recente
 
-- [Nuovo + aggiornato (3 + 14): **Analitica avanzate per SQL** documenti](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuovo + aggiornato (3+14): documentazione di **Advanced Analytics per SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
 - [Nuovo + aggiornato (1+0): **Analysis Services for SQL (Analysis Services per SQL)** Docs](../analysis-services/new-updated-analysis-services.md)
-- [Nuovo + aggiornato (87 + 0): **Analitica Platform System per SQL** documenti](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nuovo + aggiornato (5 + 4): **Connect to SQL** documenti](../connect/new-updated-connect.md)
-- [Nuovo + aggiornato (0 + 1): **motore di Database per SQL** documenti](../database-engine/new-updated-database-engine.md)
-- [Nuovo + aggiornato (2 + 2): **Integration Services per SQL** documenti](../integration-services/new-updated-integration-services.md)
-- [Nuovo + aggiornato (10 + 9): **Linux per SQL** documenti](../linux/new-updated-linux.md)
-- [Nuovo + aggiornato (2 + 4): **database relazionali di SQL** documenti](../relational-databases/new-updated-relational-databases.md)
-- [Nuovo + aggiornati (4 + 2): **Reporting Services per SQL** documenti](../reporting-services/new-updated-reporting-services.md)
-- [Nuovo + aggiornato (0 + 1): **esempi per SQL** documenti](../sample/new-updated-sample.md)
-- [Nuovo + aggiornato (21 + 0): **operazioni SQL Studio** documenti](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nuovo + aggiornato (5 + 1): **Microsoft SQL Server** documenti](../sql-server/new-updated-sql-server.md)
+- [Nuovo + aggiornato (87+0): documentazione della **piattaforma di strumenti analitici per SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Nuovo + aggiornato (5+4): documentazione della **connessione a SQL Server**](../connect/new-updated-connect.md)
+- [Nuovo + aggiornato (0+1): documentazione del **motore di database di SQL Server**](../database-engine/new-updated-database-engine.md)
+- [Nuovo + aggiornato (2+2): documentazione di **SQL Server Integration Services**](../integration-services/new-updated-integration-services.md)
+- [Nuovo + aggiornato (10+9): documentazione di **Linux per SQL Server**](../linux/new-updated-linux.md)
+- [Nuovo + aggiornato (2+4): documentazione dei **database relazionali per SQL Server**](../relational-databases/new-updated-relational-databases.md)
+- [Nuovo + aggiornato (4+2): documentazione di **SQL Server Reporting Services**](../reporting-services/new-updated-reporting-services.md)
+- [Nuovo + aggiornato (0+1): documentazione degli **esempi per SQL Server**](../sample/new-updated-sample.md)
+- [Nuovo + aggiornato (21+0): documentazione di **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nuovo + aggiornato (5+1): documentazione di **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
 - [Nuovo + aggiornato (0+1): **SQL Server Data Tools (SSDT)** Docs](../ssdt/new-updated-ssdt.md)
-- [Nuovo + aggiornato (1 + 0): **SQL Server Migration Assistant (SSMA)** documenti](../ssma/new-updated-ssma.md)
+- [Nuovo + aggiornato (1+0): documentazione di **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
 - [Nuovo + aggiornato (0+1): **SQL Server Management Studio (SSMS)** Docs](../ssms/new-updated-ssms.md)
-- [Nuovo + aggiornato (0 + 2): **Transact-SQL** documenti](../t-sql/new-updated-t-sql.md)
+- [Nuovo + aggiornato (0+2): documentazione di **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Aree di interesse senza articoli nuovi o aggiornati di recente
 
-- [Nuovo + aggiornato (0 + 0): **dati Migration Assistant (DMA) per SQL** documenti](../dma/new-updated-dma.md)
+- [Nuovo + aggiornato (0 + 0): documentazione di **Data Migration Assistant (DMA) per SQL Server**](../dma/new-updated-dma.md)
 - [Nuovo + aggiornato (0+0): **ActiveX Data Objects (ADO) for SQL (ActiveX Data Objects (ADO) per SQL)** Docs](../ado/new-updated-ado.md)
 - [Nuovo + aggiornato (0+0): **Data Quality Services for SQL (Data Quality Services per SQL)** Docs](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuovo + aggiornato (0+0): **Data Mining Extensions (DMX) for SQL (Estensioni di data mining (DMX) per SQL)** Docs](../dmx/new-updated-dmx.md)

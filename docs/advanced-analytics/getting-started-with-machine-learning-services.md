@@ -1,11 +1,11 @@
 ---
 title: Guida introduttiva con machine learning in SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 11/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.date: 12/20/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 98f6498eb042cc79728f8c1fb55e142655842481
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 600f105a3e3fb5fb590ce081633258db3d3d35d5
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>Guida introduttiva con machine learning in SQL Server
 
@@ -83,7 +83,7 @@ In SQL Server 2016, utilizzare l'opzione per installare [!INCLUDE[rsql-platform-
 
 + [Esercitazioni di Machine learning](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  Per trovare un elenco di tutte le risorse informative su soluzioni di machine learning tramite iniziare da qui [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] o [!INCLUDE[sssql15-md](../includes/sssql15-md.md)].
+  Iniziare da qui trovare un elenco di tutte le risorse per apprendere i concetti relativi a soluzioni di machine learning utilizzando SQL Server 2016 e SQL Server 2017.
 
 ### <a name="r-tutorials"></a>Esercitazioni di R
 
@@ -95,7 +95,7 @@ In SQL Server 2016, utilizzare l'opzione per installare [!INCLUDE[rsql-platform-
 
 + [Esplorare R e ridimensionamento in 25 funzioni brevi](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   Non si ha familiarità con R? Sapere come Microsoft R (o RevoScaleR) Confronta a R standard? Per R Server, vedere questi rapida-avvio.
+   Non si ha familiarità con R? Sapere come Microsoft R (o RevoScaleR) Confronta a R standard? Per Server R e Machine Learning, vedere questi rapida-avvio.
 
 ### <a name="python-tutorials"></a>Esercitazioni di Python
 

@@ -25,11 +25,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0399e0ef7587a7a7cb8a7ef32419518f1b95d53e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>Sys.dm_geo_replication_link_status (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ ms.lasthandoff: 11/17/2017
 |ruolo|**tinyint**|Ruolo di replica geografica, uno di:<br /><br /> 0 = database primario. Il database_id fa riferimento al database primario della relazione di replica geografica.<br /><br /> 1 = secondario.  Il database_id fa riferimento al database primario della relazione di replica geografica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Il tipo secondario, uno di:<br /><br /> 0 non = Nessun direct sono consentite connessioni al database secondario e il database non è disponibile per l'accesso in lettura.<br /><br /> 2 = tutte le connessioni sono consentite al database nella replica secondaria; ication per l'accesso in sola lettura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Tutto|  
-|last_commit|**datetimeoffset**|Ora dell'ultima transazione di commit nel database. Se quando il database primario del collegamento di replica è attivo, recuperare nel database secondario, indica fino a quando il punto il database secondario viene aggiornato rispetto.|
+|secondary_allow_connections_desc|**nvarchar(256)**|no<br /><br /> All|  
+|last_commit|**datetimeoffset**|Ora dell'ultima transazione di commit nel database. Se recuperata nel database primario, indica l'ultima ora di commit nel database primario. Se recuperata nel database secondario, indica l'ultima ora di commit nel database secondario. Se quando il database primario del collegamento di replica è attivo, recuperare nel database secondario, indica fino a quando il punto il database secondario viene aggiornato rispetto.|
   
 > [!NOTE]  
 >  Se la relazione di replica viene terminata rimuovendo il database secondario (sezione 4.2), la riga per il database nel **sys.dm_geo_replication_link_status** visualizzazione scomparirà.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Eseguire una query qualsiasi account con autorizzazione view_database_state **sys.dm_geo_replication_link_status**.  
   
 ## <a name="example"></a>Esempio  

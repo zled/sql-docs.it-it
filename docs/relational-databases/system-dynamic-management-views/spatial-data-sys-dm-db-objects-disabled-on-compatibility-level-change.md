@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bafca706c9fa8aa1f90bfb38b16df067c317a475
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d0f725b1725442ec7853bc4ac130b3d3e1d10fe2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>I dati spaziali - Sys.dm db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```sql  
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
@@ -51,7 +51,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**classe**|**int**|1 = vincoli<br /><br /> 7 = indici e heap|  
+|**class**|**int**|1 = vincoli<br /><br /> 7 = indici e heap|  
 |**class_desc**|**nvarchar(60)**|OBJECT o COLUMN per i vincoli<br /><br /> INDEX per indici e heap|  
 |**major_id**|**int**|OBJECT ID dei vincoli<br /><br /> OBJECT ID della tabella che contiene indici e heap|  
 |**minor_id**|**int**|NULL per i vincoli<br /><br /> Index_id per indici e heap|  
@@ -145,13 +145,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrata una query su **Sys.dm db_objects_disabled_on_compatibility_level_change** per trovare gli oggetti interessati dall'impostazione del livello di compatibilità su 120.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  
 GO  
   

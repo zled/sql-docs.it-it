@@ -1,7 +1,7 @@
 ---
 title: Impostazione delle opzioni progetto (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 33144db25f6e444759cd8dc615106b062d9bc5f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2ffdaea48e85e53a6ba170ab34251a1d26e193f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-db2tosql"></a>Impostazione delle opzioni progetto (DB2ToSQL)
 Per ogni progetto SSMA è possibile impostare opzioni del livello di progetto. Queste opzioni specificano la conversione degli oggetti, il caricamento di oggetti, impostazioni di migrazione di dati e di interfaccia utente. Prima di convertire oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o la migrazione dei dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], verificare che le opzioni di configurazione siano appropriate per il progetto.  
@@ -46,13 +46,13 @@ SSMA con cinque set di impostazioni di progetto:
   
 Include inoltre quattro modalità per la configurazione di queste impostazioni:  
   
--   Valore predefinito  
+-   Default  
   
 -   Optimistic  
   
--   Completo  
+-   Full  
   
--   Custom  
+-   Personalizzato  
   
 La modalità predefinita è consigliata per la maggior parte degli utenti. La modalità ottimistica mantiene più la sintassi di DB2 corrente e più facile la lettura. Tuttavia, mantenendo la sintassi corrente potrebbe non essere accurata. Se è necessario convertire la sintassi di DB2 equivalente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintassi, la modalità completa esegue la conversione più completa, ma il codice risulta potrebbe essere più difficile da leggere. In modalità personalizzata, impostare le opzioni.  
   
@@ -99,7 +99,7 @@ In SSMA, è possibile configurare le impostazioni predefinite per tutti i proget
   
 3.  Fare clic su **OK** per salvare le impostazioni.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Il passaggio successivo della migrazione dipende dalle esigenze del progetto:  
   
 -   Per personalizzare il mapping dei tipi di dati di origine e di destinazione, vedere [DB2ToSQL Mapping DB2 e tipi di dati di SQL Server &#40; &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  

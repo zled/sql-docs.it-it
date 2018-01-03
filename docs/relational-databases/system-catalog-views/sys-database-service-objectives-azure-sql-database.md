@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4d1ccfea9f9c24312d29be192e5b6497c89e7972
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72cc970e8e6b37988399707b5cef77cbda3afd36
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -41,18 +41,18 @@ Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (livello d
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|int|L'ID del database, univoco all'interno di un'istanza del server di Database SQL di Azure. Attive con [Sys. Databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|INT|L'ID del database, univoco all'interno di un'istanza del server di Database SQL di Azure. Attive con [Sys. Databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|Il livello di servizio per il database o data warehouse: **base**, **Standard**, **Premium** o **Data Warehouse**.|  
 |service_objective|sysname|Il piano tariffario del database. Se il database è in un pool elastico, restituisce **ElasticPool**.<br /><br /> Nel **base** livello, restituisce **base**.<br /><br /> **Solo i database in un livello di servizio standard** restituisce uno dei seguenti: S0, S1, S2 o S3.<br /><br /> **Solo i database in un livello premium** restituisce delle operazioni seguenti: P1, P2, P4, P6/P3 o P11.<br /><br /> **SQL Data Warehouse** restituisce DW100 tramite DW2000.|  
 |elastic_pool_name|sysname|Il nome del [pool elastico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) al quale appartiene il database. Restituisce **NULL** se il database è un singolo database o un warehoue di dati.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede **dbManager** autorizzazione per il database master.  A livello di database, l'utente deve essere l'autore o il proprietario.  
   
 ## <a name="examples"></a>Esempi  
  Questo esempio può essere eseguito nel database master o nei database utente. La query restituisce il nome del servizio e informazioni di livello delle prestazioni dei database.  
   
-```tsql  
+```sql  
 SELECT  d.name,   
      slo.*    
 FROM sys.databases d   

@@ -1,13 +1,12 @@
 ---
 title: dbo.slo_service_objectives (Database SQL di Azure) | Documenti Microsoft
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 03/04/2017
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -27,15 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5330bc8977c0e043f27cb5f035510c5da007e0c4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0f91dccf478821047e4c3a25ea19d35d1a2774fd
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbosloserviceobjectives-azure-sql-database"></a>dbo.slo_service_objectives (Database SQL di Azure)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
-
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  Questa funzionalità è in uno stato di anteprima ed è stata deprecata in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (V12). Non specificare una dipendenza dall'implementazione specifica di questa funzionalità perché potrebbe essere modificata o rimossa in una versione successiva.  
@@ -49,16 +47,16 @@ ms.lasthandoff: 11/09/2017
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |objective_id|**uniqueidentifier**|ID dell'obiettivo del livello di servizio.|  
-|name|**sysname**|Nome dell'obiettivo del livello di servizio.|  
+|NAME|**sysname**|Nome dell'obiettivo del livello di servizio.|  
 |description|**nvarchar**|Descrizione dell'obiettivo del livello di servizio.|  
-|create_date|**DateTimeOffset(7)**|Data di creazione dell'obiettivo del livello di servizio nel server.|  
+|create_date|**datetimeoffset(7)**|Data di creazione dell'obiettivo del livello di servizio nel server.|  
 |is_system|**bit**|1 = obiettivo del livello di servizio di sistema|  
 |is_default|**bit**|1 = viene utilizzato l'obiettivo del livello di servizio predefinito.|  
 |state|**tinyint**|1 = l'obiettivo del livello di servizio è abilitato.<br /><br /> 2 = l'obiettivo del livello di servizio è disabilitato.|  
 |state_desc|**nvarchar**|Descrizione dell'obiettivo del livello di servizio.|  
 |metadata_version|**decimal**|Versione dell'obiettivo del livello di servizio.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa vista è disponibile per tutti i ruoli utente con autorizzazioni per connettersi al virtuale **master** database.  
   
 ## <a name="see-also"></a>Vedere anche  

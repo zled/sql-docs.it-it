@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73acfc1747cdda9d3082eaed420e56943f698fea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6b37e2294a22eadffad1302452d74b72a94891f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-buffer-type"></a>Tipo di Buffer di dati
 Il tipo di dati C di un buffer specificato dall'applicazione. Con una singola variabile, questo errore si verifica quando l'applicazione alloca la variabile. Con generici per la memoria, vale a dire memoria a cui fa riferimento un puntatore di tipo void, questo errore si verifica quando l'applicazione esegue il cast della memoria per un particolare tipo. Il driver individua questo tipo in due modi:  

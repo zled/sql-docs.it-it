@@ -1,7 +1,7 @@
 ---
 title: Impostazione delle opzioni progetto (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16d9b108e62772093379c46bcbf2bd171d069618
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3aaec0d6811369af2ab4b5c52591af95fd944b57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-mysqltosql"></a>Impostazione delle opzioni progetto (MySQLToSQL)
 Per ogni progetto SSMA, è possibile impostare le opzioni a livello di progetto. Queste opzioni specificano la modalità di conversione, migrazione dei dati e modalità di mapping dei tipi di dati di origine ai tipi di dati di destinazione.  Prima di convertire gli oggetti in SQL Server o SQL Azure o la migrazione dei dati in SQL Server o SQL Azure, verificare che le opzioni di configurazione siano appropriate per il progetto.  
@@ -47,13 +47,13 @@ SSMA con cinque set di impostazioni di progetto:
   
 Le impostazioni di progetto possono essere configurate in quattro modi:  
   
--   Valore predefinito  
+-   Default  
   
 -   Optimistic  
   
--   Completo  
+-   Full  
   
--   Custom  
+-   Personalizzato  
   
 La modalità predefinita è consigliata per la maggior parte degli utenti. La modalità ottimistica mantiene più la sintassi corrente di MySQL e più facile la lettura. Tuttavia, mantenendo la sintassi corrente potrebbe non essere accurata. Se la sintassi di MySQL deve essere convertita in sintassi equivalente di SQL Server o SQL Azure, la modalità completa esegue la conversione più completa. Il codice risultante, tuttavia, potrebbe essere più difficile da leggere. Nella modalità personalizzata, è possibile impostare le opzioni.  
   

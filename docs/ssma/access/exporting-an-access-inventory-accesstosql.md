@@ -1,7 +1,7 @@
 ---
 title: Esportazione di un inventario di accesso (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ec72d4137f8fcee6b600783988981f24b108f1d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7f1ca36e752e0df28ca4b1fb3dcc7dff6f8895cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Esportazione di un inventario di accesso (AccessToSQL)
 Se si dispone di più database di Access e non si è certi di quelle per eseguire la migrazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile esportare un inventario di tutti i database di Access in un progetto. È possibile quindi esaminare e query sui metadati per determinare i database e gli oggetti all'interno di tali database per eseguire la migrazione di inventario. L'inventario consente rapidamente trovare risposte alle domande, ad esempio le operazioni seguenti:  

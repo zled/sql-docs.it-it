@@ -3,7 +3,7 @@ title: Sybase ASE schemi di mapping per gli schemi di SQL Server (SybaseToSQL) |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2afb2479c801fbc2484b387dfc2a81ea3fc0d782
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e0b8dad8d5742782ed3b3828806c5122092b37b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Sybase ASE schemi di mapping per gli schemi di SQL Server (SybaseToSQL)
 In Sybase Adaptive Server Enterprise (ASE), ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti all'interno di un database e lo schema nello stesso database e schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Tuttavia, è possibile personalizzare il mapping tra ASE e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database di SQL Azure e schemi.  
@@ -69,7 +69,7 @@ Se si personalizza il mapping tra uno schema di base e un [!INCLUDE[ssNoVersion]
   
 1.  Nella scheda mapping dello schema, selezionare una riga e fare clic su **Ripristina predefiniti** per ripristinare il database predefinito e lo schema.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Se si desidera analizzare la conversione di oggetti di Sybase ASE in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o oggetti di SQL Azure, è possibile [creare un report di conversione](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c). In caso contrario, è possibile [convertire le definizioni degli oggetti di database ASE](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o le definizioni degli oggetti di SQL Azure.  
   
 ## <a name="see-also"></a>Vedere anche  

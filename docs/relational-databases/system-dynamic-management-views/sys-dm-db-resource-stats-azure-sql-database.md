@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41ae9665de08068d1bfa3ed919bbf43f55151a7c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b1fa8f540e8f16d901eb41138bc7ee153339cb5a
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |avg_cpu_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  
 |avg_data_io_percent|**Decimal (5,2)**|Media di dati utilizzo i/o in percentuale del limite del livello del servizio.|  
 |avg_log_write_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio delle risorse di scrittura del limite del livello del servizio.|  
-|avg_memory_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio della memoria del limite del livello del servizio.<br /><br /> Ciò include la memoria utilizzata per l'archiviazione di oggetti di OLTP In memoria.|  
+|avg_memory_usage_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio della memoria del limite del livello del servizio.<br /><br /> Ciò include la memoria utilizzata per l'archiviazione di oggetti di OLTP In memoria.|  
 |xtp_storage_percent|**Decimal (5,2)**|Utilizzo di archiviazione per OLTP In memoria in percentuale del limite del livello del servizio (alla fine dell'intervallo di reporting). Ciò include la memoria utilizzata per l'archiviazione degli oggetti OLTP In memoria: le tabelle con ottimizzazione per la memoria, indici e le variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione di operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP In memoria non viene utilizzato nel database.|  
 |max_worker_percent|**Decimal (5,2)**|Massimi simultanee processi di lavoro (richieste) in percentuale del limite del livello di servizio del database.|  
 |max_session_percent|**Decimal (5,2)**|Numero massimo di sessioni simultaneo espresso come percentuale del limite del livello di servizio del database.|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 > [!TIP]  
 >  Per ulteriori informazioni di contesto su questi limiti e i livelli di servizio, vedere gli argomenti [livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) e [funzionalità di livello e i limiti del servizio](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa vista richiede l'autorizzazione VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Osservazioni  

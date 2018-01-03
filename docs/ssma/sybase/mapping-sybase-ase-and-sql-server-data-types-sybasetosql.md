@@ -3,7 +3,7 @@ title: Mapping di Sybase ASE e tipi di dati SQL Server (SybaseToSQL) | Documenti
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1e23b31985fac096a05b2735c19abae8e4002a8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 11a73d901763591930c485020f52d525a6163a41
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mapping di Sybase ASE e tipi di dati SQL Server (SybaseToSQL)
 Tipi di database di Sybase Adaptive Server Enterprise (ASE) diversi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tipi di database di SQL Azure. Quando si esegue la conversione di oggetti di database ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o oggetti di SQL Azure, è necessario specificare come eseguire il mapping di tipi di dati di base per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefinito oppure è possibile personalizzare i mapping, come illustrato nelle sezioni seguenti.  
@@ -73,7 +73,7 @@ La procedura seguente viene illustrato come eseguire il mapping di tipi di dati 
   
         Alcuni tipi richiedono una lunghezza di tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire** casella.  
   
-    5.  Scegliere **OK**.  
+    5.  Fare clic su **OK**.  
   
 3.  Per modificare un mapping dei tipi di dati, eseguire le operazioni seguenti:  
   
@@ -97,7 +97,7 @@ La procedura seguente viene illustrato come eseguire il mapping di tipi di dati 
   
         È possibile rimuovere i mapping ereditati. Tuttavia, i mapping ereditati vengono sovrascritte dai mapping personalizzati in un oggetto specifico o una categoria dell'oggetto.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Il passaggio successivo del processo di migrazione è su [creare una relazione di valutazione](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) o [oggetti di database Sybase ASE convertire la sintassi di SQL Server o SQL Azure](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3). Se si crea una relazione di valutazione, gli oggetti di Sybase ASE vengono convertiti automaticamente durante la valutazione.  
   
 ## <a name="see-also"></a>Vedere anche  

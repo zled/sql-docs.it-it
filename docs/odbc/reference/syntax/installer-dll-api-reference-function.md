@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 846cd1f07c5bd940e35711ee79dc1c6c5e63e736
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 614548110102e21cdd9f4bd5ba01f85aff6a6c55
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installer-dll-api-reference-function"></a>Programma di installazione nella DLL la funzione API Reference
 In questa sezione viene descritta la sintassi delle funzioni DLL API del programma di installazione. Il programma di installazione costituito da 20 funzioni API DLL. Tre di queste funzioni, **SQLGetTranslator**, **SQLRemoveDSNFromIni**, e **SQLWriteDSNToIni**, vengono chiamati solo da file DLL di installazione. Le altre funzioni vengono chiamate dai programmi di installazione e amministrazione.  

@@ -1,7 +1,7 @@
 ---
 title: Mapping di DB2 e tipi di dati SQL Server (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce0e2311d040705713b51bf007b9334bccaa69ff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 88d98ac264e853a2bc94be002c2c2e4eeadee9ff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mapping di DB2 e tipi di dati SQL Server (DB2ToSQL)
 Tipi di database DB2 sono diversi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di database. Quando si esegue la conversione di oggetti di database DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti, è necessario specificare come eseguire il mapping dei tipi di dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. È possibile accettare i mapping dei tipi di dati predefinito oppure è possibile personalizzare i mapping, come illustrato nelle sezioni seguenti.  
@@ -94,7 +94,7 @@ La procedura seguente viene illustrato come eseguire il mapping di tipi di dati 
   
         È possibile rimuovere i mapping ereditati. Tuttavia, i mapping ereditati vengono sovrascritte dai mapping personalizzati in un oggetto specifico o una categoria dell'oggetto.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Il passaggio successivo del processo di migrazione è su [DB2ToSQL valutazione Report &#40; &#41;](../../ssma/db2/assessment-report-db2tosql.md) o [DB2ToSQL la conversione di schemi di DB2 &#40; &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Se si crea una relazione di valutazione, gli oggetti DB2 vengono convertiti automaticamente durante la valutazione.  
   
 ## <a name="see-also"></a>Vedere anche  

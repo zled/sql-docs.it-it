@@ -7,18 +7,18 @@ manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 32ecce66caea01798b3c189108a5e196b04999d0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4ab25f440db693c0fd81093f6191fc0c3390ebb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Eseguire la migrazione di uno schema Oracle a SQL Server 2017 in Linux con SQL Server Migration Assistant
 
@@ -32,7 +32,7 @@ Questa esercitazione viene utilizzato SQL Server Migration Assistant (SSMA) per 
 > * Convertire lo schema di esempio delle risorse Umane
 > * la migrazione dei dati
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Un'istanza di Oracle 12C (12.2.0.1.0) con il **HR** installato lo schema
 - Un'istanza di lavoro di SQL Server in Linux

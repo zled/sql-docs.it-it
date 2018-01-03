@@ -1,7 +1,7 @@
 ---
 title: Monitoraggio di Analysis Services con eventi estesi di SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 12/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0fc2147822a5377f3ff3a3d60475225cf0e80c03
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 58e23a9d4732274b84c325f6ac8424b0330d8dc4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Monitorare Analysis Services con eventi estesi di SQL Server
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eventi estesi (*XEvent*) è una traccia leggero e delle prestazioni di sistema che vengono utilizzate poche risorse di sistema di monitoraggio rende uno strumento ideale per la diagnosi dei problemi sui server di produzione e di test. È anche un sistema altamente scalabile e che offre ampie possibilità di configurazione, oltre a essere più facile da usare in SQL Server 2016 grazie al nuovo supporto predefinito dello strumento. In SQL Server Management Studio, per le connessioni a istanze di Analysis Services, è possibile configurare, eseguire e monitorare una traccia in tempo reale, in modo simile all'uso di SQL Server Profiler. L'aggiunta di strumenti migliori dovrebbe rendere XEvents una sostituzione più ragionevole per SQL Server Profiler e creare maggiore simmetria per le modalità di diagnosi dei problemi nel motore di database e nei carichi di lavoro di Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]Eventi estesi (*XEvent*) è una traccia leggero e delle prestazioni di sistema che vengono utilizzate poche risorse di sistema di monitoraggio rende uno strumento ideale per la diagnosi dei problemi sui server di produzione e di test. È anche un sistema altamente scalabile e che offre ampie possibilità di configurazione, oltre a essere più facile da usare in SQL Server 2016 grazie al nuovo supporto predefinito dello strumento. In SQL Server Management Studio, per le connessioni a istanze di Analysis Services, è possibile configurare, eseguire e monitorare una traccia in tempo reale, in modo simile all'uso di SQL Server Profiler. L'aggiunta di strumenti migliori dovrebbe rendere XEvents una sostituzione più ragionevole per SQL Server Profiler e creare maggiore simmetria per le modalità di diagnosi dei problemi nel motore di database e nei carichi di lavoro di Analysis Services.  
   
  Oltre a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], per la configurazione delle sessioni di eventi estesi di  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è anche possibile usare la modalità precedente, tramite script XMLA, supportata nelle versioni precedenti.  
   

@@ -1,7 +1,7 @@
 ---
 title: Impostazioni (Mapping dei tipi) del progetto (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -27,11 +27,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d82b431499de3986f0358074ad96e4acc69fb41
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 81c2512eacc634de526ecffb0d56d86dbcecca87
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Impostazioni (Mapping dei tipi) del progetto (AccessToSQL)
 Le impostazioni di Mapping dei tipi del progetto consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA. È inoltre possibile specificare i mapping dei tipi per singoli oggetti di database. Per ulteriori informazioni, vedere [Mapping tipi di origine e destinazione dati](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
@@ -65,7 +65,7 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |**Long**|**int**|  
 |**LongBinary**|**varbinary(max)**|  
 |**Memo**|**nvarchar(max)**|  
-|**Memo** : per Access 97|**varchar(max)**|  
+|**Memo** : per Access 97|**ntext**|  
 |**singolo**|**real**|  
 |**text[\*.. \*]**|**nvarchar [\*]**|  
 |**text[\*.. \*]** : per Access 97|**varchar [\*]**|  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5a33c92d5762702f7e309d70ef48f076ecc0b2b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6394b29ff1f76fd0f7edd24a3c239de367c3d58b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-specification-subkeys"></a>Sottochiavi di specifica origine dati
 Ogni origine dati elencate nella sottochiave origini dati ODBC dispone di una sottochiave propri. Questa sottochiave ha lo stesso nome come valore corrispondente nella sottochiave origini dati ODBC. I valori in questa sottochiave è necessario elencare la DLL del driver e possono elencare una descrizione dell'origine dati. Se il driver supporta funzioni di conversione, i valori possono elencare il nome di una funzione di conversione predefinita, la DLL di conversione predefinita e l'opzione di conversione predefinita. I valori possono inoltre essere elencate altre informazioni richieste dal driver per la connessione all'origine dati. Ad esempio, il driver potrebbe richiedere un nome del server, nome del database o nome dello schema.  
   
  I formati dei valori vengono visualizzati nella tabella seguente. È necessario solo il valore di Driver.  
   
-|Nome|Tipo di dati|data|  
+|nome|Tipo di dati|data|  
 |----------|---------------|----------|  
 |Description|REG_SZ.|*Descrizione*|  
 |Driver|REG_SZ.|*percorso DLL di driver*|  

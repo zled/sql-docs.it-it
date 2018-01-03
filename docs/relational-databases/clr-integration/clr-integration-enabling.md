@@ -20,16 +20,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 86547cd78253d17ccacebe1d9b0db9e3cdda0c8a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d66238df770dfd647c3013441024409f15fdef9b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="clr-integration---enabling"></a>Integrazione con CLR - abilitazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]La funzionalità di integrazione di common language runtime (CLR) è disattivata per impostazione predefinita e deve essere abilitata per utilizzare gli oggetti implementati mediante l'integrazione CLR. Per abilitare l'integrazione con CLR, utilizzare il **clr abilitato** opzione del **sp_configure** stored procedure [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
-```tsql  
+```sql  
   
 sp_configure 'show advanced options', 1;  
 GO  

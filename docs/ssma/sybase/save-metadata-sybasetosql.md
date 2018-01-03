@@ -3,7 +3,7 @@ title: Salvare i metadati (SybaseToSQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c94871e7799882f7df9d5017d84fa4ec0e68f14
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 982a481a1476dab39ce91c500d7c60b256bea1ed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-metadata--sybasetosql"></a>Salvare i metadati (SybaseToSQL)
 Il **salvare metadati** la finestra di dialogo viene richiesto di caricare i metadati al progetto SSMA prima del salvataggio. Questo consente di avere un file di progetto completo che è possibile utilizzare non in linea e inviare ad altri utenti, come il personale di supporto tecnico.  
@@ -46,7 +46,7 @@ Seleziona database tutti elencati.
 **Clear**  
 Cancella la casella di controllo per tutti i database con metadati mancanti. È possibile deselezionare la casella di controllo se i metadati sono stato caricato.  
   
-**Salva**  
+**Salvare**  
 Salva il progetto, il caricamento dei metadati per i database selezionati con metadati mancanti.  
   
 **Annulla**  

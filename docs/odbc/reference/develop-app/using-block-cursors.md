@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d38aa5b7d3aeedd09b18941c69b82b2a835b8f6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fb2662ac4dcfc6a1f0fa2362bfc71f7a173bcd9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-block-cursors"></a>Utilizzo di cursori a blocchi
 Supporto per cursori a blocchi viene compilato in ODBC 3. *x*. **SQLFetch** può essere utilizzata solo per operazioni di recupero su più righe quando viene chiamato in ODBC 3. *x*; se un database ODBC 2. *x* applicazione chiama **SQLFetch**, verrà aperto solo un cursore a riga singola e forward-only. Quando un'applicazione ODBC 3. *x* applicazione chiama **SQLFetch** in un'API ODBC 2. *x* driver, restituisce una singola riga, a meno che il driver supporta **SQLExtendedFetch**. Per ulteriori informazioni, vedere [cursori a blocchi, i cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  

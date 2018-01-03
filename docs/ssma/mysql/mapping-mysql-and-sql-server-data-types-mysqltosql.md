@@ -1,7 +1,7 @@
 ---
 title: Mapping di MySQL e SQL Server Data Types (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2757f2f5a3abe743eae1ef6f72b8ca00e4c14bf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 265030255071cb9292cf5604320d98c447173928
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Mapping di tipi di dati (MySQLToSQL) di SQL Server e MySQL
 Diversi tipi di database MySQL da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tipi di database di SQL Azure. Quando si esegue la conversione di oggetti di database MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o oggetti di SQL Azure, è necessario specificare come eseguire il mapping dei tipi di dati da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefinito oppure è possibile personalizzare i mapping, come illustrato nelle procedure seguenti.  

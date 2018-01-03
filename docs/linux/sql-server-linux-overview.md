@@ -4,7 +4,7 @@ description: In questo argomento viene descritto come SQL Server viene eseguita 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: b598357bb8ebe17ad15fb10e1d74c21c169c1da8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a17c62aeddd0ed898d2a43931965bb7052a58412
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sql-server-on-linux"></a>SQL Server in Linux
 
@@ -27,7 +27,7 @@ SQL Server 2017 viene ora eseguito in Linux. È lo stesso motore di database di 
 
 ## <a name="install"></a>Install
 
-Per iniziare, installare SQL Server in Linux con una delle esercitazioni di avvio rapido seguenti:
+Per iniziare, installare SQL Server in Linux con una delle Guide rapide seguenti:
 
 - [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -40,7 +40,7 @@ Per iniziare, installare SQL Server in Linux con una delle esercitazioni di avvi
 
 ## <a name="connect"></a>Connect
 
-Dopo l'installazione, connettersi all'istanza di SQL Server nel computer Linux. È possibile connettersi in locale o in modalità remota e con un'ampia gamma di strumenti e i driver. Le esercitazioni di Guida introduttiva viene illustrato come utilizzare il [sqlcmd](sql-server-linux-setup-tools.md) strumento da riga di comando. Altri strumenti comprendono quanto segue:
+Dopo l'installazione, connettersi all'istanza di SQL Server nel computer Linux. È possibile connettersi in locale o in modalità remota e con un'ampia gamma di strumenti e i driver. La Guida introduttiva viene illustrato come utilizzare il [sqlcmd](sql-server-linux-setup-tools.md) strumento da riga di comando. Altri strumenti comprendono quanto segue:
 
 | Strumento | Esercitazione |
 |-----|-----|
@@ -52,7 +52,7 @@ Dopo l'installazione, connettersi all'istanza di SQL Server nel computer Linux. 
 
 SQL Server 2017 ha lo stesso motore di database sottostanti in tutte le piattaforme supportate, tra cui Linux. Numero così elevato e le funzionalità esistenti funzionano nello stesso modo in Linux. Questa area della documentazione espone alcune di queste funzionalità da una prospettiva di Linux. Chiama anche le aree che sono previsti requisiti specifici in Linux.
 
-Se si ha già familiarità con SQL Server, esaminare il [note sulla versione](sql-server-linux-release-notes.md) per linee guida generali e i problemi noti per questa versione. Esaminare quindi [novità di SQL Server in Linux](sql-server-linux-whats-new.md) nonché [novità di SQL Server 2017 generale](../sql-server/what-s-new-in-sql-server-2017.md).
+Se si ha già familiarità con SQL Server, esaminare il [note sulla versione](sql-server-linux-release-notes.md) per linee guida generali e i problemi noti per questa versione. Esaminare quindi [novità di SQL Server in Linux](sql-server-linux-whats-new.md) nonché [novità di SQL Server 2017 generale](../sql-server/what-s-new-in-sql-server-2017.md). Per le risposte alle domande più frequenti, vedere il [SQL Server in domande frequenti su Linux](sql-server-linux-faq.md).
 
 ##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) Coinvolgimento del team di progettazione di SQL Server
 

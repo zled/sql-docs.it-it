@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31ade565f2294d00a297671cbf745c038db6d475
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fd3644acb609a041c53232a757fa27fc5b5a4bf1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-with-sqlconnect"></a>Connessione con SQLConnect
 **SQLConnect** è la funzione di connessione più semplice. Richiede un nome origine dati e accetta un ID utente facoltativo e una password. Funziona anche per le applicazioni che codificare un'origine dati nome e non richiedono un ID utente o password. Inoltre, funziona anche per le applicazioni che si desiderano controllare i propri "aspetto" o che non dispongono di alcuna interfaccia utente. Tali applicazioni è possono creare un elenco di origini dati utilizzando **SQLDataSources**, richiedere all'utente per l'origine dati, l'ID utente e password e quindi chiamare **SQLConnect**.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cafac55eeca169ff83521e945f0f5e76b31f19c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 156d7a4fa40e28f2526b5ab3f5fd1a5bef19c003
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-result-set-columns"></a>Colonne del Set di risultati di associazione
 Le applicazioni possono associare come molti o con il minor numero di colonne del set di risultati a propria scelta, tra cui non associazione colonne affatto. Quando viene recuperata una riga di dati, il driver restituisce i dati per le colonne associate all'applicazione. Se l'applicazione associa tutte le colonne nel set di risultati dipende dall'applicazione. Ad esempio, le applicazioni che generano i rapporti in genere hanno un formato fisso; tali applicazioni creare un set di risultati contenente tutte le colonne utilizzate nel report e quindi associare e recuperano i dati per tutte queste colonne. Le applicazioni che consentono di visualizzare schermate completa dei dati talvolta consentono all'utente di decidere le colonne da visualizzare. tali applicazioni creare un set di risultati contenente tutte le colonne, l'utente potrebbe comunque ma associare e recuperare i dati solo per le colonne selezionate dall'utente.  

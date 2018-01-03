@@ -4,7 +4,7 @@ description: Installare, aggiornare e disinstallare SQL Server in Linux. Questo 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/26/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 65835ac1faf75664ecdbac8907c74906ccc4175e
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/01/2017
 In questo argomento viene illustrato come installare, aggiornare e disinstallare 2017 di SQL Server in Linux. 2017 di SQL Server è supportato in Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) e Ubuntu. È inoltre disponibile come un'immagine di Docker, che può essere eseguita nel motore Docker in Linux o Docker per Windows/Mac.
 
 > [!TIP]
-> Per iniziare rapidamente, passare a una delle esercitazioni di avvio rapido per [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), o [Docker](quickstart-install-connect-docker.md).
+> Per iniziare rapidamente, passare a una delle Guide rapide per [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), o [Docker](quickstart-install-connect-docker.md).
 
 ## <a id="supportedplatforms"></a>Piattaforme supportate
 
@@ -40,6 +40,10 @@ In questo argomento viene illustrato come installare, aggiornare e disinstallare
 | **SUSE Linux Enterprise Server** | SP2 (V12) | [Ottenere SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ottenere Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Motore docker** | 1.8+ | [Ottenere Docker](http://www.docker.com/products/overview)
+
+Microsoft supporta la distribuzione e la gestione dei contenitori di SQL Server utilizzando OpenShift e Kubernetes.
+
+Per i criteri di supporto più recenti per SQL Server 2017, vedere [criteri di supporto tecnico per Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a id="system"></a>Requisiti di sistema
 
@@ -62,7 +66,7 @@ Se si utilizza **File System NFS (Network)** condivisioni remote nell'ambiente d
 
 ## <a id="platforms"></a> Installare SQL Server
 
-È possibile installare SQL Server in Linux dalla riga di comando. Per istruzioni, vedere una delle esercitazioni di avvio rapido seguenti:
+È possibile installare SQL Server in Linux dalla riga di comando. Per istruzioni, vedere una delle Guide rapide seguenti:
 
 - [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -162,7 +166,7 @@ Fine dell'URL del repository conferma che il tipo di repository:
 Per configurare il repository CU o GDR, attenersi alla procedura seguente:
 
 > [!NOTE]
-> Il [avvio rapido di esercitazioni](#platforms) configurare l'aggiornamento Cumulativo del repository. Se si seguono queste esercitazioni, non è necessario utilizzare la procedura seguente per continuare a usare il repository CU. Questi passaggi sono necessari solo per la modifica del repository configurato.
+> Il [Guide rapide](#platforms) configurare l'aggiornamento Cumulativo del repository. Se si seguono queste esercitazioni, non è necessario utilizzare la procedura seguente per continuare a usare il repository CU. Questi passaggi sono necessari solo per la modifica del repository configurato.
 
 1. Se necessario, rimuovere il repository configurato in precedenza.
 
@@ -184,7 +188,7 @@ Per configurare il repository CU o GDR, attenersi alla procedura seguente:
 
 1. Configurare il nuovo repository.
 
-   | Piattaforma | Archivio | Command |
+   | Piattaforma | Archivio | Comando |
    |-----|-----|-----|
    | RHEL | AGGIORNAMENTO CUMULATIVO | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
@@ -202,7 +206,7 @@ Per configurare il repository CU o GDR, attenersi alla procedura seguente:
 
 È possibile eseguire un'installazione automatica nel modo seguente:
 
-- Attenersi alla procedura iniziale nel [esercitazioni di avvio rapido](#platforms) per registrare il repository e installare SQL Server.
+- Attenersi alla procedura iniziale nel [Guide rapide](#platforms) per registrare il repository e installare SQL Server.
 - Quando si esegue `mssql-conf setup`, impostare [le variabili di ambiente](sql-server-linux-configure-environment-variables.md) e utilizzare il `-n` (Nessun prompt) opzione.
 
 Nell'esempio seguente consente di configurare l'edizione Developer di SQL Server con il **MSSQL_PID** variabile di ambiente. Tale metodo accetta inoltre il contratto di licenza (**ACCEPT_EULA**) e imposta la password dell'utente amministratore (**MSSQL_SA_PASSWORD**). Il `-n` parametro consente di eseguire un'installazione unprompted in cui i valori di configurazione vengono estratti dalle variabili di ambiente.
@@ -266,7 +270,7 @@ Dopo l'installazione, è inoltre possibile installare altri pacchetti di SQL Ser
 - [Ricerca Full-Text SQL Server](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-Connettersi all'istanza di SQL Server per avviare la creazione e la gestione dei database. Per iniziare, vedere le esercitazioni di avvio rapido:
+Connettersi all'istanza di SQL Server per avviare la creazione e la gestione dei database. Per iniziare, vedere la Guida introduttiva:
 
 - [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

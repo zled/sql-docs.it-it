@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978418b3341bf82e0d7560052e68fecbbeb3c59b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d175970f31ac75e3d94fe23bfc89304ac316e3ab
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Lunghezza dei dati, lunghezza del Buffer e il troncamento
 Il *lunghezza dei dati* è la lunghezza in byte dei dati potrebbe essere memorizzato nel buffer di dati dell'applicazione, non viene archiviato nell'origine dati. Questa distinzione è importante perché i dati vengono spesso archiviati in tipi diversi nel buffer di dati nell'origine dati. Pertanto, per i dati inviati all'origine dati, questa è la lunghezza in byte dei dati prima della conversione al tipo dell'origine dati. Per i dati recuperati dall'origine dati, questa è la lunghezza in byte dei dati dopo la conversione al tipo di buffer di dati e prima che venga eseguita qualsiasi troncamento.  

@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ed224c77a502f81da57b232a68fddc0d4157338
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 147ac7627ba30a8a249e00cbf03e37887368de09
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>Sys.dm exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ Il request_id da [Sys.dm exec_requests](../../relational-databases/system-dynami
 |**parametri**|**smallint**|I parametri forniti per l'istruzione.|  
 |**event_info**|**nvarchar(max)**|Il testo dell'istruzione nel buffer di input per il valore spid specificato.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente dispone dell'autorizzazione VIEW SERVER STATE, l'utente vedrà le sessioni in esecuzione tutti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; in caso contrario, l'utente vedrà solo la sessione corrente.  
   
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se l'utente è il proprietario del database, l'utente vedrà le sessioni in esecuzione tutti nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; in caso contrario, l'utente vedrà solo la sessione corrente.  
@@ -75,7 +75,7 @@ Il request_id da [Sys.dm exec_requests](../../relational-databases/system-dynami
 ### <a name="a-simple-example"></a>A. Esempio semplice  
  Nell'esempio seguente viene illustrato come passare un id di sessione (SPID) e un id di richiesta alla funzione.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
@@ -83,7 +83,7 @@ GO
 ### <a name="b-using-cross-apply-to-additional-information"></a>B. Tra si applicano alle informazioni aggiuntive  
  Nell'esempio seguente vengono elencati i buffer di input per le sessioni con id di sessione superiore a 50.  
   
-```tsql  
+```sql  
 SELECT es.session_id, ib.event_info   
 FROM sys.dm_exec_sessions AS es  
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib  

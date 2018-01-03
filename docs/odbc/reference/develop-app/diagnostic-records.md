@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13dbdcb97bb56f665d6688b981dfc472349b54bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df08adfc15a2ad80bac007a65ce4ed9304194f20
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-records"></a>Record di diagnostica
 Associato a ogni ambiente, connessione, l'istruzione e handle di descrittore sono *i record di diagnostica*. Questi record contengono informazioni di diagnostica relative l'ultima funzione chiamata che è usato un handle specifico. I record vengono sostituiti solo quando viene chiamata un'altra funzione utilizzando l'handle. Non sussiste alcun limite al numero di record di diagnostica che possono essere archiviati in qualsiasi momento.  

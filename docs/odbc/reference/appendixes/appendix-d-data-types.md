@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe3088b5a750bd47f4d9a2c8288a1cedbd87be4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 68e4d1d80dfa517db63b850d546d1fcb7e2ba60d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-d-data-types"></a>Appendice d: i tipi di dati
 ODBC definisce due set di tipi di dati: SQL tipi di dati e tipi di dati C. Tipi di dati SQL indicano il tipo di dati dei dati archiviati nell'origine dati. Tipi di dati C indicano il tipo di dati di dati memorizzati nel buffer dell'applicazione.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 93d3fa89e2e918082f327848a55c6dbd60376984
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3994ed86f488748f3edd569ad80979d9871f588f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementazione di driver di Database Desktop
 Istruzioni e note tecniche su come implementare e configurare i driver di Database di Microsoft ODBC Desktop sono disponibili nella Guida in linea Amministrazione origine dati ODBC. Questo file è possibile accedere durante la routine di installazione di driver dal [Amministrazione origine dati ODBC di Microsoft](../../odbc/admin/odbc-data-source-administrator.md).  

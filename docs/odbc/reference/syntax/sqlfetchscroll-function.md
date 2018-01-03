@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a21a5e5b390e0798ed4dd25fba164a710298af00
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetchscroll-function"></a>Funzione SQLFetchScroll
 **Conformità**  
@@ -258,7 +258,7 @@ SQLRETURN SQLFetchScroll(
   
  Se il cursore rileva le righe aggiunte al set di risultati o rimuove le righe eliminate dal set di risultati, viene visualizzato come se rileva le modifiche solo quando il recupero dei dati. Include il caso quando **SQLFetchScroll** viene chiamato con FetchOrientation impostato su SQL_FETCH_RELATIVE e FetchOffset impostato su 0 per recupera di nuovo set di righe dello stesso, ma non include il caso quando viene chiamato SQLSetPos con fOption impostato su SQL _ AGGIORNAMENTO. In quest'ultimo caso, vengono aggiornati i dati nei buffer di set di righe, ma le righe non refetched ed eliminate non vengono rimossi dal set di risultati. Pertanto, quando una riga viene eliminata da o inserita nel set di righe corrente, il cursore non modifica i buffer di set di righe. In alternativa, rileva la modifica durante il recupero qualsiasi set di righe che in precedenza, inclusa la riga eliminata o ora include la riga inserita.  
   
- Esempio:  
+ Ad esempio  
   
 ```  
 // Fetch the next rowset.  
@@ -333,7 +333,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>Driver di SQLFetchScroll e ODBC 2. x  
  Quando un'applicazione chiama **SQLFetchScroll** nel driver ODBC 2. x, gestione Driver esegue il mapping di questa chiamata a **SQLExtendedFetch**. Passa i valori seguenti per gli argomenti di **SQLExtendedFetch**.  
   
-|Argomento SQLExtendedFetch.|Valore|  
+|Argomento SQLExtendedFetch.|valore|  
 |-------------------------------|-----------|  
 |StatementHandle|StatementHandle in **SQLFetchScroll**.|  
 |FetchOrientation|FetchOrientation in **SQLFetchScroll**.|  

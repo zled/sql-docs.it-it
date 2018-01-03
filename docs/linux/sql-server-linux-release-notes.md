@@ -4,7 +4,7 @@ description: "In questo argomento contiene le note sulla versione e tutte le fun
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 12/12/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 2e43e6f3ae6761886b2279910a69a83e756dc35f
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 su Linux
 
@@ -35,7 +35,7 @@ Le note sulla versione seguenti si applicano a 2017 di SQL Server in esecuzione 
 | Motore docker 1.8 + in Windows, Mac o Linux | N/D | [Guida all'installazione](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> Esaminare il [requisiti di sistema](sql-server-linux-setup.md#system) per SQL Server in Linux.
+> Per ulteriori dettagli, esaminare il [requisiti di sistema](sql-server-linux-setup.md#system) per SQL Server in Linux. Per i criteri di supporto più recenti per SQL Server 2017, vedere il [criteri di supporto tecnico per Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a name="supported-client-tools"></a>Strumenti client supportati
 
@@ -134,7 +134,7 @@ Le funzionalità e i servizi seguenti non sono disponibili su Linux in questo mo
 | &nbsp; | Change Data Capture |
 | &nbsp; | Backup gestito |
 | **Disponibilità elevata** | Mirroring del database  |
-| **Sicurezza** | Extensible Key Management |
+| **Security** | Extensible Key Management |
 | &nbsp; | Autenticazione di Active Directory per i server collegati | 
 | &nbsp; | Autenticazione di Active Directory per i gruppi di disponibilità (estensivi) | 
 | &nbsp; | strumenti di terze parti AD 3 (Centrify, Vintela, Powerbroker) | 
@@ -289,7 +289,7 @@ Le limitazioni seguenti si applicano a SQL Server Management Studio in Windows c
 
 ### <a name="next-steps"></a>Passaggi successivi
 
-Per iniziare, vedere le esercitazioni di avvio rapido seguenti:
+Per iniziare, vedere la Guida introduttiva di seguito:
 
 - [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

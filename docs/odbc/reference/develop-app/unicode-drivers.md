@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e73a559545a870d83e3d8e2e94dd20f6731f72eb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 195dc99394d8708e4895fce746ca13bbf724782c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-drivers"></a>Driver di Unicode
 Se un driver deve essere un driver Unicode o un driver ANSI dipende interamente la natura dell'origine dati. Se l'origine dati supporta dati Unicode, il driver deve essere un driver di Unicode. Se l'origine dati supporta solo i dati ANSI, il driver deve rimanere un driver ANSI.  

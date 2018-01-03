@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc8ca40adb6a70b56d9b91842fa1fd560fc50f8a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f72a196447399b6df74de8d46fa1eee572910fac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Chiedere conferma all'utente informazioni di connessione
 Se l'applicazione utilizza **SQLConnect** e deve richiedere all'utente le informazioni di connessione, ad esempio un nome utente e una password, è necessario usare la stessa. Mentre in questo modo l'applicazione controllare il "aspetto", potrebbe forzare l'applicazione contenente il codice specifico del driver. Questo errore si verifica quando l'applicazione deve richiedere all'utente le informazioni di connessione specifici del driver. Ciò rappresenta una situazione possibile per le applicazioni generiche, vengono progettati per funzionare con alcuni o tutti i driver, inclusi i driver che non esistono quando l'applicazione viene scritta.  

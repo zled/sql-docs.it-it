@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 051a94e77b5a53d2a87b3310048da9f8d67260fd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 253a322e200f0da9046f5928385c5892265cbc19
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="call-level-interfaces"></a>Interfacce a livello di chiamata
 La tecnica finale per l'invio di istruzioni SQL per il sistema DBMS è tramite un'interfaccia a livello di chiamata (CLI). Un'interfaccia a livello di chiamata fornisce una libreria di funzioni di sistema DBMS che può essere chiamato dall'applicazione. Pertanto, anziché tentare di blend SQL con un altro linguaggio di programmazione, un'interfaccia a livello di chiamata è simile alle routine librerie che la maggior parte dei programmatori sono abituati a usare, ad esempio la stringa, i/o o librerie matematiche in C. Notare che DBMS che supportano SQL incorporato dispone già di un'interfaccia a livello di chiamata, le chiamate a cui vengono generate dallo strumento di precompilazione. Tuttavia, queste chiamate sono non documentato e soggetto a modifiche senza preavviso.  

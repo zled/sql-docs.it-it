@@ -15,11 +15,11 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 3a29c6580a4163bd69d2bb2ee1d037afc04f8108
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 416a05397580e6b9c609307f8b25c8014099f999
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Configurare le immagini contenitore di SQL Server 2017 in Docker
 
@@ -32,7 +32,7 @@ In questo argomento viene illustrato come configurare e utilizzare il [immagine 
 
 ## <a name="pull-and-run-the-container-image"></a>Effettuare il pull ed eseguire l'immagine del contenitore
 
-Per effettuare il pull ed eseguire di immagine contenitore Docker per SQL Server 2017, seguire i prerequisiti e i passaggi nell'esercitazione introduttiva seguenti:
+Per effettuare il pull ed eseguire di immagine contenitore Docker per SQL Server 2017, seguire i prerequisiti e i passaggi della Guida introduttiva di seguenti:
 
 - [Eseguire l'immagine di SQL Server 2017 contenitore con Docker](quickstart-install-connect-docker.md)
 
@@ -40,7 +40,7 @@ Questa sezione di configurazione fornisce scenari di utilizzo aggiuntive nelle s
 
 ## <a id="production"></a>Eseguire le immagini contenitore di produzione
 
-Esercitazione introduttiva nella sezione precedente, l'edizione Developer gratuita di SQL Server viene eseguito dall'Hub Docker. La maggior parte delle informazioni si applica comunque Se si desidera eseguire le immagini contenitore, ad esempio le edizioni Enterprise, Standard o Web di produzione. Tuttavia, esistono alcune differenze descritte di seguito.
+Guida introduttiva nella sezione precedente viene eseguita l'edizione Developer gratuita di SQL Server dall'Hub Docker. La maggior parte delle informazioni si applica comunque Se si desidera eseguire le immagini contenitore, ad esempio le edizioni Enterprise, Standard o Web di produzione. Tuttavia, esistono alcune differenze descritte di seguito.
 
 - È possibile utilizzare solo SQL Server in un ambiente di produzione, se si dispone di una licenza valida. È possibile ottenere una licenza di produzione SQL Server Express gratuita [qui](https://go.microsoft.com/fwlink/?linkid=857693). Licenze di SQL Server Standard ed Enterprise Edition sono disponibili tramite [Microsoft Volume Licensing](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
 
@@ -56,7 +56,7 @@ Esercitazione introduttiva nella sezione precedente, l'edizione Developer gratui
 
    1. Successivamente, è necessario ottenere lo sviluppatore gratuito immagine contenitore nell'archivio di Docker. Passare a [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), fare clic su **procedere con l'estrazione**e seguire le istruzioni.
 
-   1. Esaminare i requisiti ed eseguire le procedure nel [esercitazione introduttiva](quickstart-install-connect-docker.md). Tuttavia, vi sono due differenze. È necessario effettuare il pull dell'immagine **archivio/microsoft/mssql-server-linux:\<-nome del tag\>**  dall'archivio di Docker. Ed è necessario specificare l'edizione di produzione con la **MSSQL_PID** variabile di ambiente. Nell'esempio seguente viene illustrato come eseguire l'ultima immagine contenitore 2017 di SQL Server per l'edizione Enterprise:
+   1. Esaminare i requisiti ed eseguire le procedure nel [delle Guide rapide](quickstart-install-connect-docker.md). Tuttavia, vi sono due differenze. È necessario effettuare il pull dell'immagine **archivio/microsoft/mssql-server-linux:\<-nome del tag\>**  dall'archivio di Docker. Ed è necessario specificare l'edizione di produzione con la **MSSQL_PID** variabile di ambiente. Nell'esempio seguente viene illustrato come eseguire l'ultima immagine contenitore 2017 di SQL Server per l'edizione Enterprise:
 
       ```bash
       docker run --name sqlenterprise \
@@ -351,7 +351,7 @@ In Windows, verificare che si avvia PowerShell o prompt dei comandi come amminis
 
 Se il contenitore di SQL Server non viene eseguita, provare a eseguire i test seguenti:
 
-- Se si verifica un errore, ad esempio **' non è riuscito a creare endpoint CONTAINER_NAME nel bridge di rete. Errore durante l'avvio proxy: associazione di ascolto tcp 0.0.0.0:1433: indirizzo già in uso.'** , quindi si sta tentando di eseguire il mapping a una porta è già in uso la porta 1433 del contenitore. Questa situazione può verificarsi se si esegue SQL Server in locale nel computer host. Può inoltre verificarsi se si avvia due contenitori di SQL Server e provare a eseguire il mapping di entrambi per la stessa porta host. In questo caso, utilizzare il `-p` parametro per il contenitore porta 1433 per eseguire il mapping a una porta di host diverso. Esempio: 
+- Se si verifica un errore, ad esempio **' non è riuscito a creare endpoint CONTAINER_NAME nel bridge di rete. Errore durante l'avvio proxy: associazione di ascolto tcp 0.0.0.0:1433: indirizzo già in uso.'** , quindi si sta tentando di eseguire il mapping a una porta è già in uso la porta 1433 del contenitore. Questa situazione può verificarsi se si esegue SQL Server in locale nel computer host. Può inoltre verificarsi se si avvia due contenitori di SQL Server e provare a eseguire il mapping di entrambi per la stessa porta host. In questo caso, utilizzare il `-p` parametro per il contenitore porta 1433 per eseguire il mapping a una porta di host diverso. Ad esempio 
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.
@@ -431,6 +431,6 @@ cat errorlog
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Introduzione a SQL Server 2017 le immagini contenitore Docker attraverso il [esercitazione introduttiva](quickstart-install-connect-docker.md).
+Introduzione a SQL Server 2017 le immagini contenitore Docker attraverso il [delle Guide rapide](quickstart-install-connect-docker.md).
 
 Vedere anche il [repository GitHub mssql docker](https://github.com/Microsoft/mssql-docker) per le risorse, commenti e suggerimenti e problemi noti.
