@@ -1,7 +1,7 @@
 ---
 title: ORDINARE per clausola (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -44,11 +44,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ba5d93e724e11887397fef9a6e3a6a33426c88c6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e718c2d35b1627abee53c3214294372fb23d61a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Selezionare, ordinare per clausola (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,9 +61,12 @@ ms.lasthandoff: 11/17/2017
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  ORDER BY non è supportata nella finestra Seleziona / in o le istruzioni di creazione tabella AS selezionare (un'istruzione CTAS) in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -131,7 +134,7 @@ ORDER BY order_by_expression
  Nei piani di esecuzione di query, il valore di conteggio righe di offset viene visualizzato nel **righe** o **Top** attributo dell'operatore di query TOP.  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- Evitare di specificare numeri interi nella clausola ORDER BY come rappresentazioni posizionali delle colonne nell'elenco di selezione. Ad esempio, anche se un'istruzione quale `SELECT ProductID, Name FROM Production.Production ORDER BY 2` è valida, l'istruzione non risulta comprensibile come la specifica del nome della colonna effettivo. Inoltre, le modifiche all'elenco di selezione, ad esempio la modifica dell'ordine delle colonne o l'aggiunta di nuove colonne, richiederanno la modifica della clausola ORDER BY per evitare risultati imprevisti.  
+ Evitare di specificare numeri interi nella clausola ORDER BY come rappresentazioni posizionali delle colonne nell'elenco di selezione. Ad esempio, anche se un'istruzione quale `SELECT ProductID, Name FROM Production.Production ORDER BY 2` è valida, l'istruzione non risulta comprensibile come la specifica del nome della colonna effettivo. Inoltre, modifiche all'elenco di selezione, ad esempio per cambiare l'ordine delle colonne o aggiungendo nuove colonne, è necessario modificare la clausola ORDER BY per evitare risultati imprevisti.  
   
  Nella parte superiore selezionare (*N*) istruzione, utilizzare sempre una clausola ORDER BY. È l'unico modo per indicare prevedibilmente quali righe sono interessate dalla clausola TOP. Per ulteriori informazioni, vedere [torna all'inizio &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
   
@@ -159,9 +162,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- Inoltre, quando l'istruzione include un operatore UNION, EXCEPT o INTERSECT, i nomi o gli alias delle colonne devono essere specificati nell'elenco di selezione della prima query (lato sinistro).  
+ Inoltre, quando l'istruzione include un operatore UNION, EXCEPT o INTERSECT (operatore), i nomi delle colonne o alias di colonna devono essere specificati nell'elenco di selezione della prima query (lato sinistro).  
   
- In una query che utilizza l'operatore UNION, EXCEPT o INTERSECT, la clausola ORDER BY è consentita solo alla fine dell'istruzione. Questa restrizione si applica unicamente ai casi in cui UNION, EXCEPT e INTERSECT vengono specificati in una query di livello principale e non in una sottoquery. Vedere la sezione Esempi riportata di seguito.  
+ In una query che utilizza l'operatore UNION, EXCEPT o INTERSECT, la clausola ORDER BY è consentita solo alla fine dell'istruzione. Questa restrizione si applica solo a quando si specifica l'operatore UNION, EXCEPT e INTERSECT in una query di livello superiore e non in una sottoquery. Vedere la sezione Esempi riportata di seguito.  
   
  La clausola ORDER BY non è valida nelle viste, nelle funzioni inline, nelle tabelle derivate e nelle sottoquery, a meno che non vengano specificate anche la clausola TOP o le clausole OFFSET e FETCH. Quando si utilizza ORDER BY in questi oggetti, la clausola viene utilizzata esclusivamente per determinare le righe restituite dalla clausola TOP o dalle clausole OFFSET e FETCH. La clausola ORDER BY non garantisce risultati ordinati in caso di query su questi costrutti, a meno che tale clausola non venga specificata anche nella query.  
   
@@ -267,8 +270,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-a-ascending-order"></a>B. Specifica di un ordine crescente  
- Nell'esempio seguente il set di risultati viene ordinato in base alla colonna `Name` in ordine crescente. Si noti che i caratteri sono ordinati alfabeticamente, non numericamente. Di conseguenza, 10 precede 2.  
+#### <a name="b-specifying-an-ascending-order"></a>B. Specifica un ordine crescente  
+ Nell'esempio seguente il set di risultati viene ordinato in base alla colonna `Name` in ordine crescente. I caratteri vengono ordinati in ordine alfabetico, non numericamente. Di conseguenza, 10 precede 2.  
   
 ```  
 USE AdventureWorks2012;  
@@ -313,7 +316,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a>Specifica di un ordine condizionale  
- Negli esempi seguenti viene utilizzata l'espressione CASE in una clausola ORDER BY per determinare in modo condizionale l'ordinamento delle righe in base a un valore di colonna specificato. Nel primo esempio, viene calcolato il valore nella colonna `SalariedFlag` della tabella `HumanResources.Employee`. I dipendenti per cui `SalariedFlag` è impostato su 1 vengono restituiti in ordine decrescente in base a `BusinessEntityID`. I dipendenti per cui `SalariedFlag` è impostato su 0 vengono restituiti in ordine crescente in base a `BusinessEntityID`. Nel secondo esempio il set di risultati viene ordinato in base alla colonna `TerritoryName` quando la colonna `CountryRegionName` è uguale a 'United States' e in base a `CountryRegionName` per tutte le altre righe.  
+ Nell'esempio seguente utilizzano l'espressione CASE in una clausola ORDER BY per determinare in modo condizionale l'ordinamento delle righe in base a un valore di colonna specificato. Nel primo esempio, viene calcolato il valore nella colonna `SalariedFlag` della tabella `HumanResources.Employee`. I dipendenti per cui `SalariedFlag` è impostato su 1 vengono restituiti in ordine decrescente in base a `BusinessEntityID`. I dipendenti per cui `SalariedFlag` è impostato su 0 vengono restituiti in ordine crescente in base a `BusinessEntityID`. Nel secondo esempio il set di risultati viene ordinato in base alla colonna `TerritoryName` quando la colonna `CountryRegionName` è uguale a 'United States' e in base a `CountryRegionName` per tutte le altre righe.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  

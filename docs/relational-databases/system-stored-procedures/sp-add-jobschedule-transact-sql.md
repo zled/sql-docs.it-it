@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63ebaeb737f3e1d1b6abbf2a8b4800161a82e9ef
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b2680a591628811fb9617077700d05981ece2a2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_type=** ] *frequency_type*  
  Valore che indica la frequenza di esecuzione del processo. *frequency_type* è **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti:  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**4**|Ogni giorno|  
@@ -86,7 +86,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_interval=** ] *frequency_interval*  
  Giorno di esecuzione del processo. *frequency_interval* è **int**, con un valore predefinito è 0 e dipende dal valore di *frequency_type* come indicato nella tabella seguente:  
   
-|Valore|Effetto|  
+|valore|Effetto|  
 |-----------|------------|  
 |**1** (una volta)|*frequency_interval* è inutilizzato.|  
 |**4** (giornaliera)|Ogni *frequency_interval* giorni.|  
@@ -99,7 +99,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_subday_type=** ] *frequency_subday_type*  
  Specifica le unità per *frequency_subday_interval*. *frequency_subday_type* è **int**e non prevede alcun valore predefinito può essere uno dei valori seguenti:  
   
-|Valore|Descrizione (unità)|  
+|valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x4**|Minutes|  
@@ -113,7 +113,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* è **int**e non prevede alcun valore predefinito può essere uno dei valori seguenti:  
   
-|Valore|Descrizione (unità)|  
+|valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -150,12 +150,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
 ## <a name="remarks"></a>Osservazioni  
  È possibile gestire le pianificazioni dei processi in modo indipendente dai processi. Per aggiungere una pianificazione a un processo, utilizzare **sp_add_schedule** per creare la pianificazione e **sp_attach_schedule** per associare la pianificazione a un processo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -168,7 +168,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  
  ## <a name="example"></a>Esempio
  Nell'esempio seguente viene assegnato a una pianificazione del processo `SaturdayReports` cui verrà eseguita ogni sabato alle 2:00 AM.
-```tsql  
+```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name
         @name = N'Weekly_Sat_2AM',  -- Schedule name

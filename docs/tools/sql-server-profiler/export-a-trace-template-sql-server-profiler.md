@@ -3,7 +3,7 @@ title: Esportare un modello di traccia (SQL Server Profiler) | Documenti Microso
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7622a3328ac1ee17da9f8c9543f469ae0cf100cc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d052ac98b13277d366867d8e95e1f56a3b2cdfaa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>Esportare un modello di traccia (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questo argomento viene descritto come esportare un modello di traccia esistente per salvare come file modello (con estensione tdf) tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Un modello di traccia esportato e salvato come un file modello può essere utilizzato in un'altra istanza di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

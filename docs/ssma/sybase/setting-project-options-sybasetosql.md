@@ -3,7 +3,7 @@ title: Impostazione delle opzioni progetto (SybaseToSQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8196130a681a3d01691bae3c863f319005d6bae6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 750be041907417b0683633fbe59f88fdb5b53ead
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-sybasetosql"></a>Impostazione delle opzioni progetto (SybaseToSQL)
 Per ogni progetto SSMA, è possibile impostare opzioni del livello di progetto. Queste opzioni specificano la conversione degli oggetti, il caricamento di oggetti, SQL azure, interfaccia utente e le impostazioni di migrazione di dati. Prima di convertire oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure o la migrazione dei dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, verificare che le opzioni di configurazione siano appropriate per il progetto.  
@@ -47,13 +47,13 @@ SSMA con cinque set di impostazioni di progetto:
   
 Include inoltre quattro modalità per la configurazione di queste impostazioni:  
   
-1.  Valore predefinito  
+1.  Default  
   
 2.  Optimistic  
   
-3.  Completo  
+3.  Full  
   
-4.  Custom  
+4.  Personalizzato  
   
 La modalità predefinita è consigliata per la maggior parte degli utenti. La modalità ottimistica mantiene più la sintassi di Sybase Adaptive Server Enterprise (ASE) corrente e più facile la lettura. Tuttavia, mantenendo la sintassi corrente potrebbe non essere accurata. Se è necessario convertire la sintassi di base equivalente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o sintassi SQL Azure, la modalità completa esegue una conversione completa, ma il codice risulta potrebbe essere più difficile da leggere. In modalità personalizzata, impostare le opzioni.  
   
@@ -102,7 +102,7 @@ In SSMA, è possibile configurare le impostazioni predefinite per tutti i proget
   
 3.  Fare clic su **OK** per salvare le impostazioni.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Il passaggio successivo della migrazione dipende dalle esigenze del progetto:  
   
 -   Se si desidera personalizzato per il mapping dei tipi di dati di origine e di destinazione, vedere [Mapping Sybase ASE e tipi di dati di SQL Server &#40; SybaseToSQL &#41; ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  

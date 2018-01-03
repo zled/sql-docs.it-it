@@ -3,7 +3,7 @@ title: "Utilità SQLCMD | Documenti Microsoft"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlcmd
 ms.reviewer: 
@@ -33,13 +33,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fbf609bb0bfba5f49a38e942deb566377b066864
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 711ac727b68dbd6ee3c1697e7933ead413919a29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="sqlcmd-utility"></a>Utilità sqlcmd
+# <a name="sqlcmd-utility"></a>sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Per SQL Server 2014 e inferiore, vedere [utilità sqlcmd](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
@@ -319,7 +319,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 > [!IMPORTANT]  
 >  Non utilizzare il carattere di terminazione GO nella query.  
   
- Se insieme a questa opzione si specifica **-b** , l'utilità **sqlcmd** viene chiusa in caso di errore. L'opzione**-b** è descritta più avanti in questo argomento.  
+ Se insieme a questa opzione si specifica **-b** , l'utilità **sqlcmd** viene chiusa in caso di errore. L'opzione **-b** è descritta più avanti in questo argomento.  
   
  **-Q"** *cmdline query* **"**  
  Esegue una query all'avvio di **sqlcmd** e quindi chiude immediatamente **sqlcmd**. È possibile eseguire più query delimitandole con punti e virgola.  
@@ -372,7 +372,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  **-y** *variable_length_type_display_width*  
  Imposta la variabile di scripting **di** sqlcmd `SQLCMDMAXVARTYPEWIDTH`. L'impostazione predefinita è 256. Limita il numero di caratteri restituiti per i tipi di dati a lunghezza variabile di grandi dimensioni:  
   
--   **varchar(max)**  
+-   **ntext**  
   
 -   **nvarchar(max)**  
   
@@ -505,24 +505,24 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
 ## <a name="sqlcmd-scripting-variables"></a>Variabili di scripting di sqlcmd  
   
-|Variabile|Opzione correlata|L/S|Valore predefinito|  
+|Variabile|Opzione correlata|L/S|Default|  
 |--------------|--------------------|----------|-------------|  
-|SQLCMDUSER|-U|L|""|  
+|SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
-|SQLCMDSERVER|-S|L|"DefaultLocalInstance"|  
-|SQLCMDWORKSTATION|-H|L|"ComputerName"|  
-|SQLCMDDBNAME|-d|L|""|  
+|SQLCMDSERVER|-S|R|"DefaultLocalInstance"|  
+|SQLCMDWORKSTATION|-H|R|"ComputerName"|  
+|SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|L/S|"8" (secondi)|  
 |SQLCMDSTATTIMEOUT|-t|L/S|"0" = attesa illimitata|  
 |SQLCMDHEADERS|-H|L/S|"0"|  
 |SQLCMDCOLSEP|-S|L/S|" ".|  
 |SQLCMDCOLWIDTH|-w|L/S|"0"|  
-|SQLCMDPACKETSIZE|-A|L|"4096"|  
+|SQLCMDPACKETSIZE|-A|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|L/S|0|  
 |SQLCMDMAXVARTYPEWIDTH|-y|L/S|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|L/S|"0" = numero illimitato|  
 |SQLCMDEDITOR||L/S|"edit.com"|  
-|SQLCMDINI||L|""|
+|SQLCMDINI||R|""|
 |SQLCMDUSEAAD  | -G | L/S | "" |  
   
  Le variabili SQLCMDUSER, SQLCMDPASSWORD e SQLCMDSERVER vengono impostate quando viene usato **:Connect** .  
@@ -642,7 +642,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  `:EXIT(query)`  
   
- Esempio:  
+ Ad esempio  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -668,7 +668,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  L'utilità esegue il batch in cui è inclusa la query e quindi viene chiusa dopo aver restituito i risultati della query.  
   
- Se in uno script **sqlcmd** si usa RAISERROR e si verifica una condizione con stato 127, l'utilità **sqlcmd** viene chiusa e restituisce al client l'ID di messaggio. Esempio:  
+ Se in uno script **sqlcmd** si usa RAISERROR e si verifica una condizione con stato 127, l'utilità **sqlcmd** viene chiusa e restituisce al client l'ID di messaggio. Ad esempio  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -676,7 +676,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  I valori restituiti, -1 e -99 sono riservati da SQL Server. **sqlcmd** definisce i valori restituiti aggiuntivi seguenti:  
   
-|Valori restituiti|Descrizione|  
+|Valori restituiti|Description|  
 |-------------------|-----------------|  
 |-100|Si è verificato un errore prima di selezionare il valore restituito.|  
 |-101|Selezionando il valore restituito non si sono trovate righe.|  
@@ -729,7 +729,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  `:connect $(myservername) $(myusername)`  
   
  [**:**] **!!**< *comando*>  
- Esegue i comandi del sistema operativo. Per eseguire un comando del sistema operativo, digitare due punti esclamativi all'inizio della riga (**!!**) seguiti dal comando del sistema operativo. Esempio:  
+ Esegue i comandi del sistema operativo. Per eseguire un comando del sistema operativo, digitare due punti esclamativi all'inizio della riga (**!!**) seguiti dal comando del sistema operativo. Ad esempio  
   
  `:!! Dir`  
   

@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f4589c45311ad9c1479f97ceb82b38f3e13393e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 67c842da8894bc7fe33be69a35a88949c6e441b7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -48,10 +48,10 @@ THROW [ { error_number | @local_variable },
  *error_number*  
  Costante o variabile che rappresenta l'eccezione. *error_number* è **int** e deve essere maggiore o uguale a 50000 e minore o uguale a 2147483647.  
   
- *Messaggio*  
+ *message*  
  Stringa o variabile in cui viene descritta l'eccezione. *messaggio* è **nvarchar (2048)**.  
   
- *stato*  
+ *state*  
  Costante o variabile compresa tra 0 e 255 tramite cui viene indicato lo stato da associare al messaggio. *stato* è **tinyint**.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -77,7 +77,7 @@ THROW [ { error_number | @local_variable },
 ### <a name="a-using-throw-to-raise-an-exception"></a>A. Utilizzo di THROW per generare un'eccezione  
  Nell'esempio seguente viene illustrato come utilizzare l'istruzione `THROW` per generare un'eccezione.  
   
-```tsql  
+```sql  
 THROW 51000, 'The record does not exist.', 1;  
 ```  
   
@@ -92,7 +92,7 @@ THROW 51000, 'The record does not exist.', 1;
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>B. Utilizzo di THROW per generare nuovamente un'eccezione  
  Nell'esempio seguente viene illustrato come utilizzare l'istruzione `THROW` per generare nuovamente l'ultima eccezione generata.  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 CREATE TABLE dbo.TestRethrow  
@@ -123,7 +123,7 @@ END CATCH;
 ### <a name="c-using-formatmessage-with-throw"></a>C. Utilizzo di FORMATMESSAGE con THROW  
  Nell'esempio seguente viene illustrato come utilizzare la funzione `FORMATMESSAGE` con `THROW` per generare un messaggio di errore personalizzato. Nell'esempio viene prima creato un messaggio di errore definito dall'utente tramite `sp_addmessage`. Poiché l'istruzione THROW non consente parametri di sostituzione nel *messaggio* parametro in modo avviene con RAISERROR, la funzione FORMATMESSAGE viene utilizzata per passare i tre valori dei parametri previsti dal messaggio di errore 60000.  
   
-```tsql  
+```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
 ,@severity = 16  

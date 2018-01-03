@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbca0ca02e994a3c286cea445965edd9cd53bfcf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ddde4fe4ff510058ff1a70a329a8939de0808a3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |state|**smallint**|Numero di contesto dell'errore indicante il punto nel codice in cui si è verificato l'errore.|  
 |message|**nvarchar (2048)**|Testo del messaggio di errore.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le guide di piano definite a livello di ambito di OBJECT richiedono l'autorizzazione VIEW DEFINITION o ALTER nell'oggetto a cui si fa riferimento e autorizzazioni per compilare la query o il batch forniti nella guida di piano. Ad esempio, se un batch contiene istruzioni SELECT, sono richieste autorizzazioni SELECT per gli oggetti a cui si fa riferimento.  
   
  Le guide di piano definite a livello di ambito di SQL o TEMPLATE richiedono l'autorizzazione ALTER per il database e autorizzazioni per compilare la query o il batch forniti nella guida di piano. Ad esempio, se un batch contiene istruzioni SELECT, sono richieste autorizzazioni SELECT per gli oggetti a cui si fa riferimento.  
@@ -70,7 +70,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 ### <a name="a-validating-all-plan-guides-in-a-database"></a>A. Convalida di tutte le guide di piano in un database  
  Nell'esempio seguente viene verificata la validità di tutte le guide di piano nel database corrente. Se viene restituito un set di risultati vuoto, sono valide tutte le guide di piano.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT plan_guide_id, msgnum, severity, state, message  
@@ -82,7 +82,7 @@ GO
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. Test della convalida della guida di piano prima di implementare una modifica nel database  
  Nell'esempio seguente viene utilizzata una transazione esplicita per eliminare un indice. Il `sys.fn_validate_plan_guide` funzione viene eseguita per determinare se l'azione invaliderà tutte le guide di piano nel database. In base ai risultati della funzione, viene eseguito il commit dell'istruzione `DROP INDEX` o il rollback della transazione, l'indice non viene eliminato.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BEGIN TRANSACTION;  

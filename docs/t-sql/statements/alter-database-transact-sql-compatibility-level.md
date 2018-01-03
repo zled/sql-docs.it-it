@@ -1,7 +1,7 @@
 ---
 title: "MODIFICARE il livello di compatibilità DATABASE (Transact-SQL) | Documenti Microsoft"
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c5e55a85b2ff67327198ff3fa54654b904429ed8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Livello di compatibilità di ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 
  Eseguire la query seguente per determinare la versione di [!INCLUDE[ssDE](../../includes/ssde-md.md)] che si è connessi.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
 ```  
   
@@ -88,12 +88,13 @@ SELECT SERVERPROPERTY('ProductVersion');
 
  Per determinare il livello di compatibilità corrente, eseguire una query di **compatibility_level** colonna di [Sys. Databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level FROM sys.databases;  
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Per tutte le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il livello di compatibilità predefinito è impostato per la versione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I database sono impostati per questo livello, a meno che il **modello** database con un livello di compatibilità inferiore. Quando un database viene aggiornato da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il database mantiene il livello di compatibilità esistente se è almeno minimo consentito per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'aggiornamento di un database con un livello di compatibilità inferiore a quello consentito, imposta il database per la compatibilità più bassa livello è consentita. Questo comportamento si applica sia ai database di sistema che ai database utente. Utilizzare **ALTER DATABASE** per modificare il livello di compatibilità del database. Per visualizzare il livello di compatibilità corrente di un database, eseguire una query di **compatibility_level** colonna il **Sys. Databases** vista del catalogo.  
+
+Per tutte le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il livello di compatibilità predefinito è impostato per la versione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I database sono impostati per questo livello, a meno che il **modello** database con un livello di compatibilità inferiore. Quando un database viene aggiornato da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il database mantiene il livello di compatibilità esistente se è almeno minimo consentito per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'aggiornamento di un database con un livello di compatibilità inferiore a quello consentito, imposta il database per la compatibilità più bassa livello è consentita. Questo comportamento si applica sia ai database di sistema che ai database utente. Utilizzare **ALTER DATABASE** per modificare il livello di compatibilità del database. Per visualizzare il livello di compatibilità corrente di un database, eseguire una query di **compatibility_level** colonna il **Sys. Databases** vista del catalogo.  
 
   
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>Utilizzo del livello di compatibilità per garantire la compatibilità con le versioni precedenti  
@@ -136,7 +137,8 @@ In questa sezione vengono descritti i nuovi comportamenti introdotti con livello
 | Traccia 2371 è impostata su OFF per impostazione predefinita in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. | [Traccia 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) è impostata su ON per impostazione predefinita in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Flag di traccia 2371 indica l'aggiornamento statistiche automatico per un subset più piccolo ancora convocazione di righe, in una tabella con un elevato numero di righe di esempio. <br/> <br/> Un miglioramento consiste nell'includere nell'esempio di più righe che sono state inserite di recente. <br/> <br/> Un altro miglioramento è per consentire le query di esecuzione durante il processo di aggiornamento delle statistiche è in esecuzione, anziché bloccare la query. |  
 | Per il livello 120, le statistiche vengono campionate da un *singolo*-thread di processo. | Per il livello 130, le statistiche vengono campionate da un *più*-thread di processo. |  
 | 253 chiavi esterne in ingresso è il limite. | Una tabella può fare riferimento fino a 10.000 chiavi esterne in ingresso o riferimenti simile. Per informazioni sulle restrizioni, vedere [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md). |  
-|Gli algoritmi di hash MD2, MD4, MD5, SHA e SHA1 deprecati sono consentiti.|Sono consentiti solo gli algoritmi di hash SHA2_256 e SHA2_512.|  
+|Gli algoritmi di hash MD2, MD4, MD5, SHA e SHA1 deprecati sono consentiti.|Sono consentiti solo gli algoritmi di hash SHA2_256 e SHA2_512.|
+||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]include miglioramenti in alcune conversioni di tipi di dati e alcune operazioni (per lo più comune). Per informazioni dettagliate, vedere [SQL Server 2016 miglioramenti nella gestione di alcuni tipi di dati e operazioni meno frequenti](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon).|
   
   
 Flag di correzioni che sono stati nella finestra di traccia 4199 nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prima di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] sono ora abilitati per impostazione predefinita. Con la modalità di compatibilità 130. Flag di traccia 4199 sarà comunque applicabile per nuove correzioni di query optimizer che vengono rilasciate dopo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Per utilizzare query optimizer precedente in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è necessario selezionare il livello di compatibilità 110. Per informazioni sui Flag di traccia 4199, vedere [Flag di traccia 4199](https://support.microsoft.com/en-us/kb/974006).  
@@ -146,7 +148,7 @@ Flag di correzioni che sono stati nella finestra di traccia 4199 nelle versioni 
   
 |Livello di compatibilità 110 o inferiore|Livello di compatibilità 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|Viene utilizzata la versione precedente di Query Optimizer.|In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sono stati apportati miglioramenti sostanziali al componente per la creazione e l'ottimizzazione dei piani di query. Questa nuova funzionalità di Query Optimizer dipende dall'utilizzo del livello di compatibilità del database 120. Per sfruttare al meglio questi miglioramenti, sarebbe opportuno sviluppare le nuove applicazioni di database utilizzando il livello di compatibilità del database 120. Le applicazioni di cui si esegue la migrazione da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono essere testate con attenzione per assicurarsi che le prestazioni vengano mantenute o migliorate. Se si verifica un calo delle prestazioni, è possibile impostare il livello di compatibilità del database su 110 o su un valore inferiore per utilizzare la metodologia precedente di Query Optimizer.<br /><br /> Il livello di compatibilità 120 del database utilizza un nuovo strumento di stima della cardinalità ottimizzato per i carichi di lavoro OLTP e di data warehouse più recenti. Prima di impostare il livello di compatibilità del database su 110 a causa di problemi di prestazioni, vedere le indicazioni contenute nella sezione piani di Query del [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [novità nel motore di Database](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) argomento.|  
+|Viene utilizzata la versione precedente di Query Optimizer.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]include miglioramenti sostanziali al componente che crea e consente di ottimizzare i piani di query. Questa nuova funzionalità di Query Optimizer dipende dall'utilizzo del livello di compatibilità del database 120. Per sfruttare al meglio questi miglioramenti, sarebbe opportuno sviluppare le nuove applicazioni di database utilizzando il livello di compatibilità del database 120. Le applicazioni di cui si esegue la migrazione da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono essere testate con attenzione per assicurarsi che le prestazioni vengano mantenute o migliorate. Se si verifica un calo delle prestazioni, è possibile impostare il livello di compatibilità del database su 110 o su un valore inferiore per utilizzare la metodologia precedente di Query Optimizer.<br /><br /> Il livello di compatibilità 120 del database utilizza un nuovo strumento di stima della cardinalità ottimizzato per i carichi di lavoro OLTP e di data warehouse più recenti. Prima di impostare il livello di compatibilità del database su 110 a causa di problemi di prestazioni, vedere le indicazioni contenute nella sezione piani di Query del [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [novità nel motore di Database](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) argomento.|  
 |Livelli di compatibilità inferiori a 120, l'impostazione della lingua viene ignorata durante la conversione di un **data** valore in un valore stringa. Si noti che questo comportamento è specifico solo per il **data** tipo. Vedere l'esempio B nella sezione esempi riportata di seguito.|L'impostazione della lingua non viene ignorato durante la conversione di un **data** valore in un valore stringa.|  
 |I riferimenti ricorsivi sul lato destro di una clausola EXCEPT creano un ciclo infinito. Esempio C, nella sezione esempi riportata di seguito viene illustrato questo comportamento.|I riferimenti ricorsivi in una clausola EXCEPT generano un errore in conformità allo standard ANSI SQL.|  
 |Una CTE ricorsiva consente i nomi di colonna duplicati.|Una CTE ricorsiva non consente i nomi di colonna duplicati.|  
@@ -176,24 +178,24 @@ Flag di correzioni che sono stati nella finestra di traccia 4199 nelle versioni 
 |L'impostazione QUOTED_IDENTIFER è sempre impostata su ON per le funzioni con valori di tabella composte da più istruzioni quando tali funzioni vengono create indipendentemente dall'impostazione del livello di sessione.|L'impostazione della sessione QUOTED IDENTIFIER viene applicata quando vengono create funzioni con valori di tabella composte da più istruzioni.|Media|  
 |Quando si crea o modifica una funzione di partizione, **datetime** e **smalldatetime** valori letterali nella funzione vengono valutati presupponendo che l'impostazione della lingua US_English.|L'impostazione della lingua corrente viene utilizzata per valutare **datetime** e **smalldatetime** valori letterali nella funzione di partizione.|Media|  
 |La clausola FOR BROWSE è consentita (e ignorata) nelle istruzioni INSERT e SELECT INTO.|La clausola FOR BROWSE non è consentita nelle istruzioni INSERT e SELECT INTO.|Media|  
-|Nella clausola OUTPUT sono consentiti predicati full-text.|I predicati full-text non sono consentiti nella clausola OUTPUT.|Basso|  
-|Le funzioni CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST e DROP FULLTEXT STOPLIST non sono supportate. Per impostazione predefinita, ai nuovi indici full-text viene associato automaticamente l'elenco di parole non significative di sistema.|Le funzioni CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST e DROP FULLTEXT STOPLIST sono supportate.|Basso|  
-|MERGE non viene applicata come parola chiave riservata.|MERGE è una parola chiave completamente riservata. L'istruzione MERGE è supportata con i livelli di compatibilità 100 e 90.|Basso|  
-|Utilizzo di \<dml_table_source > dell'argomento dell'istruzione INSERT genera un errore di sintassi.|È possibile acquisire i risultati di una clausola OUTPUT in un'istruzione INSERT, UPDATE, DELETE o MERGE nidificata e inserire tali risultati in una vista o tabella di destinazione. Questa operazione viene eseguita utilizzando il \<dml_table_source > dell'argomento dell'istruzione INSERT.|Basso|
-|A meno che non sia specificato NOINDEX, DBCC CHECKDB o DBCC CHECKTABLE esegue controlli di consistenza sia fisica che logica in una singola tabella o vista indicizzata e in tutti i relativi indici non cluster e XML. Gli indici spaziali non sono supportati.|A meno che non sia specificato NOINDEX, DBCC CHECKDB o DBCC CHECKTABLE esegue controlli di consistenza sia fisica che logica in una singola tabella e in tutti i relativi indici non cluster. Per impostazione predefinita, tuttavia, negli indici XML, negli indici spaziali e nelle viste indicizzate vengono eseguiti solo controlli di consistenza fisica.<br /><br /> Se è specificato WITH EXTENDED_LOGICAL_CHECKS, vengono eseguiti controlli logici su viste indicizzate, indici XML e indici spaziali, laddove presenti. Per impostazione predefinita, i controlli di consistenza fisica vengono eseguiti prima di quelli di consistenza logica. Se viene specificato anche NOINDEX, vengono eseguiti solo i controlli logici.|Basso|  
-|Quando una clausola OUTPUT viene utilizzata con un'istruzione DML (Data Manipulation Language) e si verifica un errore di run-time durante l'esecuzione di istruzioni, l'intera transazione viene terminata e ne viene eseguito il rollback.|Quando una clausola OUTPUT viene utilizzata con un'istruzione DML (Data Manipulation Language) e si verifica un errore di run-time durante l'esecuzione di istruzioni, il comportamento dipende dall'impostazione di SET XACT_ABORT. Se SET XACT_ABORT è OFF, un errore di interruzione dell'istruzione generato dall'istruzione DML tramite la clausola OUTPUT terminerà l'istruzione, ma l'esecuzione del batch continuerà e non verrà eseguito il rollback della transazione. Se SET XACT_ABORT è ON, tutti gli errori di run-time generati dall'istruzione DML tramite la clausola OUTPUT termineranno il batch e verrà eseguito il rollback della transazione.|Basso|  
-|CUBE e ROLLUP non vengono applicate come parole chiave riservate.|CUBE e ROLLUP sono parole chiave riservate all'interno della clausola GROUP BY.|Basso|  
-|Convalida di tipo Strict viene applicata agli elementi del codice XML **anyType** tipo.|La convalida LAX viene applicata agli elementi del **anyType** tipo. Per ulteriori informazioni, vedere [componenti jolly e convalida del contenuto](../../relational-databases/xml/wildcard-components-and-content-validation.md).|Basso|  
-|Gli attributi speciali **xsi: nil** e **xsi: Type** non è possibile eseguire una query o modificati da istruzioni data manipulation language.<br /><br /> Ciò significa che `/e/@xsi:nil` ha esito negativo `/e/@*` ignora il **xsi: nil** e **xsi: Type** attributi. Tuttavia, `/e` restituisce il **xsi: nil** e **xsi: Type** attributi per la coerenza con `SELECT xmlCol`, anche se `xsi:nil = "false"`.|Gli attributi speciali **xsi: nil** e **xsi: Type** vengono archiviati come attributi regolari e può essere eseguita una query e modificato.<br /><br /> Ad esempio, l'esecuzione della query `SELECT x.query('a/b/@*')` restituisce tutti gli attributi inclusi **xsi: nil** e **xsi: Type**. Per escludere questi tipi nella query, sostituire `@*` con `@*[namespace-uri(.) != "` *inserire l'uri dello spazio dei nomi xsi* `"` e non `(local-name(.) = "type"` o`local-name(.) ="nil".`|Basso|  
-|Una funzione definita dall'utente che converte un valore stringa costante XML in un tipo datetime di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene contrassegnata come deterministica.|Una funzione definita dall'utente che converte un valore stringa costante XML in un tipo datetime di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene contrassegnata come non deterministica.|Basso|  
+|Nella clausola OUTPUT sono consentiti predicati full-text.|I predicati full-text non sono consentiti nella clausola OUTPUT.|Bassa|  
+|Le funzioni CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST e DROP FULLTEXT STOPLIST non sono supportate. Per impostazione predefinita, ai nuovi indici full-text viene associato automaticamente l'elenco di parole non significative di sistema.|Le funzioni CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST e DROP FULLTEXT STOPLIST sono supportate.|Bassa|  
+|MERGE non viene applicata come parola chiave riservata.|MERGE è una parola chiave completamente riservata. L'istruzione MERGE è supportata con i livelli di compatibilità 100 e 90.|Bassa|  
+|Utilizzo di \<dml_table_source > dell'argomento dell'istruzione INSERT genera un errore di sintassi.|È possibile acquisire i risultati di una clausola OUTPUT in un'istruzione INSERT, UPDATE, DELETE o MERGE nidificata e inserire tali risultati in una vista o tabella di destinazione. Questa operazione viene eseguita utilizzando il \<dml_table_source > dell'argomento dell'istruzione INSERT.|Bassa|
+|A meno che non sia specificato NOINDEX, DBCC CHECKDB o DBCC CHECKTABLE esegue controlli di consistenza sia fisica che logica in una singola tabella o vista indicizzata e in tutti i relativi indici non cluster e XML. Gli indici spaziali non sono supportati.|A meno che non sia specificato NOINDEX, DBCC CHECKDB o DBCC CHECKTABLE esegue controlli di consistenza sia fisica che logica in una singola tabella e in tutti i relativi indici non cluster. Per impostazione predefinita, tuttavia, negli indici XML, negli indici spaziali e nelle viste indicizzate vengono eseguiti solo controlli di consistenza fisica.<br /><br /> Se è specificato WITH EXTENDED_LOGICAL_CHECKS, vengono eseguiti controlli logici su viste indicizzate, indici XML e indici spaziali, laddove presenti. Per impostazione predefinita, i controlli di consistenza fisica vengono eseguiti prima di quelli di consistenza logica. Se viene specificato anche NOINDEX, vengono eseguiti solo i controlli logici.|Bassa|  
+|Quando una clausola OUTPUT viene utilizzata con un'istruzione DML (Data Manipulation Language) e si verifica un errore di run-time durante l'esecuzione di istruzioni, l'intera transazione viene terminata e ne viene eseguito il rollback.|Quando una clausola OUTPUT viene utilizzata con un'istruzione DML (Data Manipulation Language) e si verifica un errore di run-time durante l'esecuzione di istruzioni, il comportamento dipende dall'impostazione di SET XACT_ABORT. Se SET XACT_ABORT è OFF, un errore di interruzione dell'istruzione generato dall'istruzione DML tramite la clausola OUTPUT terminerà l'istruzione, ma l'esecuzione del batch continuerà e non verrà eseguito il rollback della transazione. Se SET XACT_ABORT è ON, tutti gli errori di run-time generati dall'istruzione DML tramite la clausola OUTPUT termineranno il batch e verrà eseguito il rollback della transazione.|Bassa|  
+|CUBE e ROLLUP non vengono applicate come parole chiave riservate.|CUBE e ROLLUP sono parole chiave riservate all'interno della clausola GROUP BY.|Bassa|  
+|Convalida di tipo Strict viene applicata agli elementi del codice XML **anyType** tipo.|La convalida LAX viene applicata agli elementi del **anyType** tipo. Per ulteriori informazioni, vedere [componenti jolly e convalida del contenuto](../../relational-databases/xml/wildcard-components-and-content-validation.md).|Bassa|  
+|Gli attributi speciali **xsi: nil** e **xsi: Type** non è possibile eseguire una query o modificati da istruzioni data manipulation language.<br /><br /> Ciò significa che `/e/@xsi:nil` ha esito negativo `/e/@*` ignora il **xsi: nil** e **xsi: Type** attributi. Tuttavia, `/e` restituisce il **xsi: nil** e **xsi: Type** attributi per la coerenza con `SELECT xmlCol`, anche se `xsi:nil = "false"`.|Gli attributi speciali **xsi: nil** e **xsi: Type** vengono archiviati come attributi regolari e può essere eseguita una query e modificato.<br /><br /> Ad esempio, l'esecuzione della query `SELECT x.query('a/b/@*')` restituisce tutti gli attributi inclusi **xsi: nil** e **xsi: Type**. Per escludere questi tipi nella query, sostituire `@*` con `@*[namespace-uri(.) != "` *inserire l'uri dello spazio dei nomi xsi* `"` e non `(local-name(.) = "type"` o`local-name(.) ="nil".`|Bassa|  
+|Una funzione definita dall'utente che converte un valore stringa costante XML in un tipo datetime di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene contrassegnata come deterministica.|Una funzione definita dall'utente che converte un valore stringa costante XML in un tipo datetime di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene contrassegnata come non deterministica.|Bassa|  
 |I tipi unione ed elenco XML non sono supportati completamente.|I tipi unione ed elenco sono supportati completamente, incluse le funzionalità seguenti.<br /><br /> Unione di elenco<br /><br /> Unione di unione<br /><br /> Elenco di tipi atomici<br /><br /> Elenco di unione|Bassa|  
-|Le opzioni SET necessarie per un metodo xQuery non vengono convalidate quando il metodo è contenuto in una vista o in una funzione inline con valori di tabella.|Le opzioni SET necessarie per un metodo xQuery vengono convalidate quando il metodo è contenuto in una vista o in una funzione inline con valori di tabella. Se le opzioni SET del metodo non sono impostate correttamente, viene generato un errore.|Basso|  
-|I valori di attributo XML contenenti caratteri di fine riga (ritorno a capo e avanzamento riga) non vengono normalizzati in base allo standard XML, ovvero vengono restituiti entrambi i caratteri anziché un singolo carattere di avanzamento riga.|I valori di attributo XML contenenti caratteri di fine riga (ritorno a capo e avanzamento riga) vengono normalizzati in base allo standard XML, ovvero tutte le interruzioni di riga in entità analizzate esterne (inclusa l'entità del documento) vengono normalizzate in fase di input traducendo sia la sequenza di due caratteri #xD #xA sia qualsiasi carattere #xD non seguito da #XA in un singolo carattere #xA.<br /><br /> Le applicazioni che utilizzano attributi per trasportare valori stringa contenenti caratteri di fine riga non riceveranno di nuovo tali caratteri quando questi vengono inviati. Per evitare il processo di normalizzazione, utilizzare entità di caratteri numerici XML per codificare tutti i caratteri di fine riga.|Basso|  
-|Le proprietà di colonna ROWGUIDCOL e IDENTITY possono essere erroneamente denominate come un vincolo. L'istruzione `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)`, ad esempio, viene eseguita correttamente, ma il nome del vincolo non viene mantenuto e non è accessibile per l'utente.|Le proprietà di colonna ROWGUIDCOL e IDENTITY non possono essere denominate come un vincolo. In caso contrario, verrà restituito l'errore 156.|Basso|  
-|L'aggiornamento di colonne tramite un'assegnazione bidirezionale, ad esempio `UPDATE T1 SET @v = column_name = <expression>`, può produrre risultati imprevisti, in quanto è possibile che durante l'esecuzione dell'istruzione in altre clausole quali WHERE e ON venga utilizzato il valore attivo della variabile anziché il valore iniziale dell'istruzione. Ciò può comportare una modifica imprevista dei significati dei predicati per ciascuna riga.<br /><br /> Questo comportamento è applicabile solo quando il livello di compatibilità è impostato su 90.|L'aggiornamento di colonne tramite un'assegnazione bidirezionale produce i risultati previsti, in quanto durante l'esecuzione dell'istruzione è possibile accedere solo al valore iniziale dell'istruzione per la colonna.|Basso|  
-|Vedere l'esempio E nella sezione esempi riportata di seguito.|Vedere l'esempio F nella sezione esempi riportata di seguito.|Basso|  
-|La funzione ODBC {fn CONVERT()} utilizza il formato di data predefinito della lingua specifica. Per alcune lingue il formato predefinito è AGM, che può comportare errori di conversione quando la funzione CONVERT() è combinata con altre funzioni, ad esempio {fn CURDATE()}, che prevedono l'utilizzo del formato AMG.|La funzione ODBC {fn CONVERT()} utilizza lo stile 121, un formato AMG indipendente dalla lingua, per la conversione nei tipi di dati ODBC SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP.|Basso|  
-|Le funzioni intrinseche datetime, ad esempio DATEPART, non richiedono che i valori di input di tipo stringa siano valori letterali datetime validi. La funzione SELECT DATEPART (year, '2007/05-30'), ad esempio, viene compilata correttamente.|Le funzioni intrinseche datetime, ad esempio DATEPART, richiedono che i valori di input di tipo stringa siano valori letterali datetime validi. Quando si utilizza un valore letterale datetime non valido, viene restituito l'errore 241.|Basso|  
+|Le opzioni SET necessarie per un metodo xQuery non vengono convalidate quando il metodo è contenuto in una vista o in una funzione inline con valori di tabella.|Le opzioni SET necessarie per un metodo xQuery vengono convalidate quando il metodo è contenuto in una vista o in una funzione inline con valori di tabella. Se le opzioni SET del metodo non sono impostate correttamente, viene generato un errore.|Bassa|  
+|I valori di attributo XML contenenti caratteri di fine riga (ritorno a capo e avanzamento riga) non vengono normalizzati in base allo standard XML, ovvero vengono restituiti entrambi i caratteri anziché un singolo carattere di avanzamento riga.|I valori di attributo XML contenenti caratteri di fine riga (ritorno a capo e avanzamento riga) vengono normalizzati in base allo standard XML, ovvero tutte le interruzioni di riga in entità analizzate esterne (inclusa l'entità del documento) vengono normalizzate in fase di input traducendo sia la sequenza di due caratteri #xD #xA sia qualsiasi carattere #xD non seguito da #XA in un singolo carattere #xA.<br /><br /> Le applicazioni che utilizzano attributi per trasportare valori stringa contenenti caratteri di fine riga non riceveranno di nuovo tali caratteri quando questi vengono inviati. Per evitare il processo di normalizzazione, utilizzare entità di caratteri numerici XML per codificare tutti i caratteri di fine riga.|Bassa|  
+|Le proprietà di colonna ROWGUIDCOL e IDENTITY possono essere erroneamente denominate come un vincolo. L'istruzione `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)`, ad esempio, viene eseguita correttamente, ma il nome del vincolo non viene mantenuto e non è accessibile per l'utente.|Le proprietà di colonna ROWGUIDCOL e IDENTITY non possono essere denominate come un vincolo. In caso contrario, verrà restituito l'errore 156.|Bassa|  
+|L'aggiornamento di colonne tramite un'assegnazione bidirezionale, ad esempio `UPDATE T1 SET @v = column_name = <expression>`, può produrre risultati imprevisti, in quanto è possibile che durante l'esecuzione dell'istruzione in altre clausole quali WHERE e ON venga utilizzato il valore attivo della variabile anziché il valore iniziale dell'istruzione. Ciò può comportare una modifica imprevista dei significati dei predicati per ciascuna riga.<br /><br /> Questo comportamento è applicabile solo quando il livello di compatibilità è impostato su 90.|L'aggiornamento di colonne tramite un'assegnazione bidirezionale produce i risultati previsti, in quanto durante l'esecuzione dell'istruzione è possibile accedere solo al valore iniziale dell'istruzione per la colonna.|Bassa|  
+|Vedere l'esempio E nella sezione esempi riportata di seguito.|Vedere l'esempio F nella sezione esempi riportata di seguito.|Bassa|  
+|La funzione ODBC {fn CONVERT()} utilizza il formato di data predefinito della lingua specifica. Per alcune lingue il formato predefinito è AGM, che può comportare errori di conversione quando la funzione CONVERT() è combinata con altre funzioni, ad esempio {fn CURDATE()}, che prevedono l'utilizzo del formato AMG.|La funzione ODBC {fn CONVERT()} utilizza lo stile 121, un formato AMG indipendente dalla lingua, per la conversione nei tipi di dati ODBC SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP.|Bassa|  
+|Le funzioni intrinseche datetime, ad esempio DATEPART, non richiedono che i valori di input di tipo stringa siano valori letterali datetime validi. La funzione SELECT DATEPART (year, '2007/05-30'), ad esempio, viene compilata correttamente.|Le funzioni intrinseche datetime, ad esempio DATEPART, richiedono che i valori di input di tipo stringa siano valori letterali datetime validi. Quando si utilizza un valore letterale datetime non valido, viene restituito l'errore 241.|Bassa|  
   
 ## <a name="reserved-keywords"></a>Parole chiave riservate  
  L'impostazione di compatibilità determina anche le parole chiave riservate dal [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Nella tabella seguente sono elencate le parole chiave riservate introdotte per ogni livello di compatibilità.  
@@ -214,7 +216,7 @@ Flag di correzioni che sono stati nella finestra di traccia 4199 nelle versioni 
   
  Per altre informazioni, vedere [Parole chiave riservate &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
 ## <a name="examples"></a>Esempi  
@@ -222,7 +224,7 @@ Flag di correzioni che sono stati nella finestra di traccia 4199 nelle versioni 
 ### <a name="a-changing-the-compatibility-level"></a>A. Modifica del livello di compatibilità  
  L'esempio seguente modifica il livello di compatibilità di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database `110,` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET COMPATIBILITY_LEVEL = 110;  
 GO  
@@ -230,7 +232,7 @@ GO
   
  L'esempio seguente restituisce il livello di compatibilità del database corrente.  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level   
 FROM sys.databases   
 WHERE name = db_name();  
@@ -239,7 +241,7 @@ WHERE name = db_name();
 ### <a name="b-ignoring--the-set-language-statement-except-under-compatibility-level-120"></a>B. Ignorando l'istruzione SET LANGUAGE tranne con il livello di compatibilità 120  
  La query seguente ignora l'istruzione SET LANGUAGE tranne con il livello di compatibilità 120.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;   
 DECLARE @t2 date = '12/5/2011' ;  
 SET LANGUAGE dutch;   
@@ -255,7 +257,7 @@ SELECT CONVERT(varchar(11), @t2, 106);
 ### <a name="c"></a>C.  
  Per impostazione a livello di compatibilità 110 o inferiore, i riferimenti ricorsivi sul lato destro di una clausola EXCEPT creano un ciclo infinito.  
   
-```tsql  
+```sql  
 WITH   
 cte AS (SELECT * FROM (VALUES (1),(2),(3)) v (a)),  
 r   
@@ -270,7 +272,7 @@ FROM r;
 ### <a name="d"></a>D.  
  In questo esempio mostra la differenza tra gli stili 0 e 121. Per ulteriori informazioni sugli stili di data e ora, vedere [CAST e CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE TABLE t1 (c1 time(7), c2 datetime2);   
   
 INSERT t1 (c1,c2) VALUES (GETDATE(), GETDATE());  
@@ -293,7 +295,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ### <a name="e"></a>E.  
  L'assegnazione di variabile è consentita in un'istruzione contenente un operatore UNION di livello principale, ma restituisce risultati imprevisti. Nelle istruzioni seguenti, ad esempio, alla variabile locale `@v` è assegnato il valore della colonna `BusinessEntityID` dall'unione di due tabelle. Per definizione, quando l'istruzione SELECT restituisce più valori, alla variabile viene assegnato l'ultimo valore restituito. In questo caso, alla variabile viene assegnato correttamente l'ultimo valore, ma viene restituito anche il set di risultati dell'istruzione SELECT UNION.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET compatibility_level = 90;  
 GO  
@@ -309,7 +311,7 @@ SELECT @v;
 ### <a name="f"></a>F.  
  L'assegnazione di variabile non è consentita in un'istruzione contenente un operatore UNION di livello principale. In caso contrario, verrà restituito l'errore 10734. Per risolvere questo errore, riscrivere la query come illustrato nell'esempio seguente.  
   
-```tsql  
+```sql  
 DECLARE @v int;  
 SELECT @v = BusinessEntityID FROM   
     (SELECT BusinessEntityID FROM HumanResources.Employee  

@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c0b06e7119f051d5854ae7f5435e8edd7fecf1a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8d32038273e727db3b47125b26ad8293ce088672
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -212,14 +212,14 @@ CHIAVE asimmetrica *asym_key_name*
   
  Per ulteriori informazioni su [!INCLUDE[ssSDS](../../includes/sssds-md.md)] gli account di accesso, vedere [gestione di database e account di accesso nel Database SQL di Azure](http://msdn.microsoft.com/library/ee336235.aspx).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], richiede **ALTER ANY LOGIN** l'autorizzazione per il server o l'appartenenza di **securityadmin** ruolo predefinito del server.  
   
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] solo l'account di accesso dell'entità di livello server (creato dal processo di provisioning) o i membri del ruolo del database `loginmanager` nel database master possono creare nuovi account di accesso.  
   
  Se il **CREDENZIALI** opzione viene utilizzata, è richiesta anche **ALTER ANY CREDENTIAL** autorizzazione nel server.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
  Dopo aver creato un account di accesso, l'account di accesso può connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)] o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ma include solo le autorizzazioni concesse al **pubblica** ruolo. Provare a effettuare alcune delle attività seguenti:  
   
 -   Per connettersi a un database, creare un utente del database per l'account di accesso. Per altre informazioni, vedere [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
@@ -314,7 +314,7 @@ GO
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. Creazione di un account di accesso di autenticazione di SQL Server con una password  
  Nell'esempio seguente viene creato l'account di accesso `Mary7` con password `A2c3456`.  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   

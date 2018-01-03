@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5cd1687ea44749eea8a777d80026d375fbd841a2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ CHANGETABLE (
   
  Il valore di SYS_CHANGE_VERSION potrebbe essere NULL se non sono state apportate modifiche per un periodo superiore a quello di memorizzazione, ad esempio se la pulizia ha eliminato le informazioni sulle modifiche, o se la riga non è mai stata modificata dal momento dell'abilitazione del rilevamento delle modifiche per la tabella.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede le autorizzazioni seguenti per la tabella specificata per il *tabella* valore per ottenere informazioni sul rilevamento delle modifiche:  
   
 -   Autorizzazione SELECT per le colonne chiave primaria  
@@ -158,7 +158,7 @@ CHANGETABLE (
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. Restituzione delle righe per una sincronizzazione iniziale dei dati  
  Nell'esempio seguente viene illustrato come ottenere i dati per una sincronizzazione iniziale dei dati della tabella. La query restituisce tutti i dati delle righe e le relative versioni associate. Sarà quindi possibile inserire o aggiungere tali dati al sistema che conterrà i dati sincronizzati.  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -170,7 +170,7 @@ CROSS APPLY CHANGETABLE
 ### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>B. Elenco di tutte le modifiche effettuate a partire da una versione specifica  
  Nell'esempio seguente viene illustrato come elencare tutte le modifiche effettuate in una tabella a partire dalla versione specificata (`@last_sync_version)`. [Emp ID] e SSN sono colonne in una chiave primaria composta.  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -182,7 +182,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>C. Acquisizione di tutti i dati modificati per una sincronizzazione  
  Nell'esempio seguente viene illustrato come ottenere tutti i dati modificati. La query unisce le informazioni sul rilevamento delle modifiche alla tabella utente, in modo da restituire le informazioni sulla tabella utente. Utilizzando un `LEFT OUTER JOIN` viene restituita una riga per le righe eliminate.  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -197,7 +197,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### <a name="d-detecting-conflicts-by-using-changetableversion"></a>D. Rilevamento di conflitti utilizzando CHANGETABLE(VERSION...)  
  Nell'esempio seguente viene illustrato come aggiornare una riga che non ha subito modifiche dall'ultima sincronizzazione. Il numero di versione della riga specifica si ottiene utilizzando `CHANGETABLE`. Se la riga è stata aggiornata, le modifiche non vengono effettuate e la query restituisce informazioni sulla sua modifica più recente.  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  

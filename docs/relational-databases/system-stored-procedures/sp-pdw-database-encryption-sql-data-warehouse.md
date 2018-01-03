@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e70d3a09e94a5e54f119934ec2c63ea90fa932f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5baf00f93d6105b4da137d4d8d6eff4035c6f2e4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;  
@@ -53,13 +53,13 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="remarks"></a>Osservazioni  
  Quando la funzionalità TDE è abilitata utilizzando **sp_pdw_database_encryption**, il database tempdb viene eliminato, ricreato e crittografato. Per questo motivo, di Transparent Data Encryption non è abilitato su un dispositivo mentre sono presenti altre sessioni attive, l'utilizzo di tempdb. Abilitazione o disabilitazione di TDE in un dispositivo è un'azione che modifica lo stato del dispositivo, nella maggior parte dei casi deve essere eseguita una volta nel corso della durata di dispositivo e deve essere eseguita quando non viene rilevato traffico nel dispositivo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza di **sysadmin** ruolo predefinito del database, o **CONTROL SERVER** autorizzazione.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente Abilita TDE nel dispositivo.  
   
-```tsql  
+```sql  
 EXEC sys.sp_pdw_database_encryption 1;  
 ```  
   

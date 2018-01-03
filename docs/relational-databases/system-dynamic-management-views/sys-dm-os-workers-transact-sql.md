@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2de361a20f4369cb79b856c265f732dc4dc8018c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4451ba929c34137f285aadb615a1b286fd38e28e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,14 +84,14 @@ ms.lasthandoff: 11/17/2017
   
  Quando viene segnalato un thread di lavoro in attesa di un evento, tale thread viene inserito all'inizio della coda eseguibile. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente l'esecuzione di questa operazione mille volte in una riga. Superato questo valore, il thread di lavoro viene inserito alla fine della coda. Lo spostamento di un thread di lavoro alla fine della coda è caratterizzato da alcune implicazioni a livello di prestazioni.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.  
   
 ## <a name="examples"></a>Esempi  
  La query seguente consente di determinare per quanto tempo un thread di lavoro è rimasto in esecuzione in stato SUSPENDED o RUNNABLE.  
   
-```tsql
+```sql
 SELECT   
     t1.session_id,  
     CONVERT(varchar(10), t1.status) AS status,  

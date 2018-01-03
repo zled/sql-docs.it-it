@@ -3,7 +3,7 @@ title: "Proprietà SQL Server (scheda Avanzate) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 570471b64b257bda598f72015e6b9a7767a4e5ba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1e84232f8ef7287e3b3c2447c364284b024d8ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Proprietà - SQL Server (scheda Avanzate)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le seguenti proprietà vengono visualizzate nel **avanzate** scheda per impostazione predefinita. Se sono state definite proprietà personalizzate, verranno visualizzate anche in questa scheda con i rispettivi valori.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/05/2017
  **SKU**  
  Visualizza il numero del codice di riferimento del prodotto (SKU).  
   
- **Version**  
+ **Versione**  
  Visualizza il numero di versione dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Nome server virtuale**  

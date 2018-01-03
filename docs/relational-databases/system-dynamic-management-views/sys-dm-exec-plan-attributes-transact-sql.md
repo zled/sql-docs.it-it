@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3346d20f183810891615615c493d1d39c3339658
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 La tabella precedente, **attributo** può avere i valori seguenti:
 
-|Attribute|Tipo di dati|Description|  
+|attribute|Tipo di dati|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Indica i valori delle opzioni con cui è stato compilato il piano.|  
 |objectid|**int**|Una delle chiavi principali utilizzate per la ricerca di un oggetto nella cache. Questo è l'ID di oggetto archiviato in [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) per gli oggetti di database (procedure, viste, trigger e così via). Per i piani di tipo ad hoc o preparati, questo attributo corrisponde a un hash interno del testo del batch.|  
@@ -83,7 +83,7 @@ La tabella precedente, **attributo** può avere i valori seguenti:
 |sql_handle|**varbinary**(64)|Handle SQL per il batch.|  
 |merge_action_type|**smallint**|Il tipo di piano di esecuzione del trigger utilizzato come risultato di un'istruzione MERGE.<br /><br /> 0 indicano un piano non-trigger, un piano del trigger che non viene eseguito come risultato di un'istruzione MERGE o un piano del trigger che viene eseguito come risultato di un'istruzione MERGE in cui viene specificata solo un'azione DELETE.<br /><br /> 1 indica un piano di trigger INSERT che è in esecuzione come risultato di un'istruzione MERGE.<br /><br /> 2 indica un piano di trigger UPDATE in esecuzione come risultato di un'istruzione MERGE.<br /><br /> 3 indica un piano di trigger DELETE che viene eseguito come risultato di un'istruzione MERGE che contiene un'azione INSERT o UPDATE corrispondente.<br /><br /> Per i trigger nidificati eseguiti da azioni a catena, questo valore è l'azione dell'istruzione MERGE che provoca la propagazione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessaria l'autorizzazione VIEW SERVER STATE nel server.  
   
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Premium richiede l'autorizzazione VIEW DATABASE STATE nel database. In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Standard e Basic richiede il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] account amministratore.  
@@ -96,7 +96,7 @@ La tabella precedente, **attributo** può avere i valori seguenti:
 ### <a name="evaluating-set-options"></a>Valutazione delle opzioni SET  
  Per convertire il valore restituito in **set_options** opzioni con cui è stato compilato il piano, sottrarre i valori di **set_options** valore, che inizia con il valore massimo possibile, finché non si raggiungere 0. Ogni valore sottratto corrisponde a un'opzione utilizzata nel piano di query. Ad esempio, se il valore in **set_options** è 251, le opzioni con cui è stato compilato il piano sono ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS(32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), Parallel Plan(2) e ANSI_PADDING (1).  
   
-|Opzione|Valore|  
+|Opzione|valore|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -124,9 +124,9 @@ La tabella precedente, **attributo** può avere i valori seguenti:
 ### <a name="evaluating-cursor-options"></a>Valutazione delle opzioni di cursore  
  Per convertire il valore restituito in **required_cursor_options** e **acceptable_cursor_options** opzioni con cui è stato compilato il piano, sottrarre i valori dal valore della colonna, a partire da il valore massimo possibile, fino a raggiungere 0. Ogni valore sottratto corrisponde a un'opzione di cursore utilizzata nel piano di query.  
   
-|Opzione|Valore|  
+|Opzione|valore|  
 |------------|-----------|  
-|Nessuno|0|  
+|None|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -148,7 +148,7 @@ La tabella precedente, **attributo** può avere i valori seguenti:
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. Restituzione degli attributi per un piano specifico  
  Nell'esempio seguente vengono restituiti tutti gli attributi per un piano specificato. Viene prima di tutto eseguita una query sulla vista a gestione dinamica `sys.dm_exec_cached_plans` per ottenere l'handle del piano specificato. Nella seconda query, sostituire `<plan_handle>` con il valore di handle di piani restituito dalla prima query.  
   
-```tsql  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -160,7 +160,7 @@ GO
 ### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>B. Restituzione delle opzioni SET per i piani compilati e dell'handle SQL per i piani memorizzati nella cache  
  Nell'esempio seguente viene restituito un valore che rappresenta le opzioni con cui è stato compilato ogni piano. Inoltre, viene restituito l'handle SQL per tutti i piani memorizzati nella cache.  
   
-```tsql  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   

@@ -41,11 +41,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 57fe9fffdb553dffc3cd019d36692a8c34681817
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 777f08cf0a05e195ca5086f7af25eb8d95ef4010
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (Transact-SQL di SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ CREATE DATABASE database_snapshot_name
   
      Specifica il livello di accesso FILESTREAM non transazionale al database.  
   
-    |Valore|Descrizione|  
+    |valore|Description|  
     |-----------|-----------------|  
     |OFF|L'accesso non transazionale è disabilitato.|  
     |READONLY|I dati FILESTREAM di questo database possono essere letti da processi non transazionali.|  
@@ -359,7 +359,7 @@ CREATE DATABASE database_snapshot_name
   
  DIMENSIONE non può essere specificato quando il *os_file_name* viene specificato come un percorso UNC. SIZE non si applica a un filegroup FILESTREAM.  
   
- *dimensioni*  
+ *size*  
  Dimensioni iniziali del file.  
   
  Quando *dimensioni* non viene fornito per il file primario, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza le dimensioni del file primario nel database modello. Le dimensioni predefinite del modello sono 8 MB (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) o 1 MB (per le versioni precedenti). Quando viene specificato un file di dati secondario o di un file di log, ma *dimensioni* non è specificato per il file, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea un file 8 MB (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) o 1 MB (per le versioni precedenti). Le dimensioni specificate per il file di dati primario devono essere uguali almeno alle dimensioni del file primario del database model.  
@@ -489,7 +489,7 @@ Alcune funzionalità di database dipendono dalle caratteristiche o funzionalità
 ## <a name="viewing-database-information"></a>Visualizzazione delle informazioni sui database  
  Per restituire informazioni su database, file e filegroup, è possibile usare viste del catalogo, funzioni di sistema e stored procedure di sistema. Per altre informazioni, vedere [Viste di sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CREATE DATABASE, CREATE ANY DATABASE o ALTER ANY DATABASE.  
   
  Per mantenere il controllo sull'utilizzo del disco per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'autorizzazione per la creazione dei database è in genere limitata a pochi account di accesso.  
@@ -541,7 +541,7 @@ GO
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. Creazione di un database che specifica i file di dati e i file di log delle transazioni  
  Nell'esempio seguente viene creato il database `Sales`. Dal momento che la parola chiave PRIMARY non è specificata, il primo file, cioè `Sales_dat`, corrisponde al file primario. Poiché nel parametro SIZE non viene specificato il suffisso MB o KB per le dimensioni del file `Sales_dat` , viene utilizzato MB e le dimensioni del file vengono allocate in megabyte. Il backup del database `Sales_log` vengono allocate in megabyte perché nel parametro `MB` è stato specificato in modo esplicito il suffisso `SIZE` .  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -563,7 +563,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. Creazione di un database specificando più file di dati e più file di log delle transazioni  
  Nell'esempio seguente viene creato il database `Archive` che include tre file di dati da `100-MB` e due file del log delle transazioni da `100-MB`. Il file primario è il primo file dell'elenco e viene specificato in modo esplicito con la parola chiave `PRIMARY`. I file di log delle transazioni vengono specificati dopo le parole chiave `LOG ON`. Si notino le estensioni utilizzate per i file nell'opzione `FILENAME`: `.mdf` per i file di dati primari, `.ndf` per i file di dati secondari e `.ldf` per i file di log delle transazioni. In questo esempio il database viene collocato nell'unità `D:` anziché con il database `master`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -609,7 +609,7 @@ GO
   
  In questo esempio i file di dati e di log vengono collocati in dischi diversi al fine di migliorare le prestazioni.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -658,7 +658,7 @@ GO
 ### <a name="e-attaching-a-database"></a>E. Collegamento di un database  
  Nell'esempio seguente viene scollegato il database `Archive` creato nell'esempio D, quindi viene collegato tramite la clausola `FOR ATTACH`. `Archive` è stato definito in modo da avere più dati e file di log. Tuttavia, poiché il percorso dei file non è stato modificato dopo la creazione, deve essere specificato solo il file primario nella clausola `FOR ATTACH`. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], tutti i file full-text inclusi nel database in fase di collegamento verranno collegati assieme al database.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -674,7 +674,7 @@ GO
   
  Il database di origine per questo esempio è il database `Sales` creato nell'esempio D.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -691,7 +691,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. Creazione di un database e specifica di un nome delle regole di confronto e delle opzioni  
  Nell'esempio seguente viene creato il database `MyOptionsTest`. Viene specificato un nome delle regole di confronto e le opzioni `TRUSTYWORTHY` e `DB_CHAINING` vengono impostate su `ON`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -712,7 +712,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. Collegamento di un catalogo full-text che è stato spostato  
  Nell'esempio seguente viene collegato il catalogo full-text `AdvWksFtCat` insieme ai file di log e di dati di `AdventureWorks2012`. In questo esempio, il catalogo full-text viene spostato dalla posizione predefinita in una nuova posizione `c:\myFTCatalogs`. I file di dati e di log rimangono nelle posizioni predefinite.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -737,7 +737,7 @@ GO
   
 -   `FileStreamResumes` contiene dati FILESTREAM. Contiene un contenitore di dati FILESTREAM, ossia `FSResumes` nel percorso `C:\MyFSfolder\Resumes`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  
@@ -789,7 +789,7 @@ GO
 ### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. Creazione di un database contenente un filegroup FILESTREAM con più file  
  Nell'esempio seguente viene creato il database `BlobStore1`. Il database viene creato con un filegroup di righe e un filegroup FILESTREAM, `FS`. Nel filegroup FILESTREAM sono contenuti due file, vale a dire `FS1` e `FS2`. Successivamente il database viene modificato con l'aggiunta di un terzo file, `FS3`, al filegroup FILESTREAM.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25675b2dc83e5251b381bf95af353deb647d563a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4314d23f344df87d270f526a64e4d6d0f033dab
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```sql  
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
@@ -59,20 +59,20 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|Numero di errori di connessione quando il programma si connette all'account di archiviazione di Windows Azure.|  
-|number_of_sql_errors|int|Numero di errori restituiti mentre il programma si connette al motore di SQL Server.|  
-|number_of_invalid_credential_errors|int|Numero di errori restituiti mentre il programma tenta di eseguire l'autenticazione utilizzando le credenziali SQL.|  
-|number_of_other_errors|int|Numero di errori di altre categorie oltre la connettività, SQL o le credenziali.|  
-|number_of_corrupted_or_deleted_backups|int|Numero di file di backup danneggiati o eliminati.|  
-|number_of_backup_loops|int|Il numero di analisi eseguite dall'agente di backup su tutti i database configurati con il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|number_of_retention_loops|int|Numero di analisi eseguite sui database per valutare il periodo di memorizzazione impostato.|  
+|number_of_storage_connectivity_errors|INT|Numero di errori di connessione quando il programma si connette all'account di archiviazione di Windows Azure.|  
+|number_of_sql_errors|INT|Numero di errori restituiti mentre il programma si connette al motore di SQL Server.|  
+|number_of_invalid_credential_errors|INT|Numero di errori restituiti mentre il programma tenta di eseguire l'autenticazione utilizzando le credenziali SQL.|  
+|number_of_other_errors|INT|Numero di errori di altre categorie oltre la connettività, SQL o le credenziali.|  
+|number_of_corrupted_or_deleted_backups|INT|Numero di file di backup danneggiati o eliminati.|  
+|number_of_backup_loops|INT|Il numero di analisi eseguite dall'agente di backup su tutti i database configurati con il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|number_of_retention_loops|INT|Numero di analisi eseguite sui database per valutare il periodo di memorizzazione impostato.|  
   
 ## <a name="best-practices"></a>Procedure consigliate  
  Questi conteggi aggregati possono essere utilizzati per monitorare l'integrità del sistema. Ad esempio, se la colonna number_ of_retention_loops è 0 in 30 minuti, è possibile che la gestione della memorizzazione richieda del tempo o che addirittura non funzioni correttamente. Le colonne di errori diverse da zero possono indicare problemi e, per individuarli, è necessario verificare i registri eventi estesi. In alternativa, utilizzare la stored procedure **managed_backup.sp_get_backup_diagnostics** per ottenere un elenco degli eventi estesi per trovare i dettagli dell'errore.  
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Richiede **selezionare** autorizzazioni nella funzione.  
   
 ## <a name="examples"></a>Esempi  

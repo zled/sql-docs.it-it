@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b420b7b73af8f32d2de9dac39cc4f57b41680c7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f5ce90660a43e5285735a74a01b560ec210ba3f0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-security-policy-transact-sql"></a>MODIFICARE il criterio di sicurezza (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```sql  
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
@@ -99,7 +99,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
   
  I predicati di blocco vengono valutati dopo l'esecuzione dell'operazione DML corrispondente. Pertanto, una query READ UNCOMMITTED possa vedere valori temporanei che sarà possibile eseguire il rollback.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione ALTER ANY SECURITY POLICY.  
   
  Inoltre, per ogni predicato che viene aggiunto sono richieste le autorizzazioni seguenti:  

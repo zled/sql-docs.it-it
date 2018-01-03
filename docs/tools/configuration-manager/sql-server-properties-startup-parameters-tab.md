@@ -3,7 +3,7 @@ title: "Proprietà SQL Server (scheda parametri di avvio) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bc88c227ddad0cabd100e78d4424375399aa5fb6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 15243df46fad807a3078c9dfcd2c9043670ab05f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Proprietà di SQL Server (scheda Parametri di avvio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilizzare questa finestra di dialogo per aggiungere o rimuovere i parametri di avvio per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I parametri di avvio possono avere un effetto significativo sulle prestazioni di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Prima di aggiungere o modificare i parametri di avvio, vedere l'argomento "Utilizzo delle opzioni di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/05/2017
   
 |Parametro|Breve descrizione|  
 |---------------|-----------------------|  
-|-m|Avvia un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo.|  
+|-M|Avvia un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo.|  
 |-T1204|Restituisce le risorse e i tipi di blocco coinvolti in un deadlock nonché il comando corrente interessato.|  
 |-T1224|Disabilita l'escalation di blocchi in base al numero di blocchi.|  
 |-T3608|Impedisce l'avvio e il recupero automatico dei database ad eccezione del database master in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

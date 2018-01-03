@@ -42,11 +42,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 54104cda5736255ae1cea4205e24f7aadcc0c124
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - tabella
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 > [!IMPORTANT]  
 >  L'omissione della parola chiave WITH è una funzionalità deprecata: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Gli hint di tabella seguenti sono supportati sia con, sia senza la parola chiave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Esempio:  
+ Gli hint di tabella seguenti sono supportati sia con, sia senza la parola chiave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Ad esempio  
   
 ```  
 FROM t (TABLOCK)  
@@ -442,7 +442,7 @@ GO
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Utilizzo di un hint di tabella come hint per la query  
  *Hint di tabella* può anche essere specificato come hint per la query utilizzando la clausola OPTION (TABLE HINT). È consigliabile utilizzare un hint di tabella come hint per la query solo nel contesto di un [Guida di piano](../../relational-databases/performance/plan-guides.md). Per le query ad hoc, specificare questi hint solo come hint di tabella. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Gli hint KEEPIDENTITY, IGNORE_CONSTRAINTS e IGNORE_TRIGGERS richiedono l'autorizzazione ALTER sulla tabella.  
   
 ## <a name="examples"></a>Esempi  
@@ -450,7 +450,7 @@ GO
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. Utilizzo dell'hint TABLOCK per specificare un metodo di blocco  
  Nell'esempio seguente viene specificata l'acquisizione di un blocco condiviso sulla tabella `Production.Product` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che viene mantenuto fino alla fine dell'istruzione UPDATE.  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -474,7 +474,7 @@ GO
   
  Nell'esempio seguente l'hint FORCESEEK viene usato con un indice affinché in Query Optimizer venga eseguita un'operazione di ricerca nell'indice e nella colonna di indice specificati.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -489,7 +489,7 @@ GO
 ### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>C. Utilizzo dell'hint FORCESCAN per specificare un'operazione di analisi dell'indice  
  Nell'esempio seguente viene utilizzato l'hint FORCESCAN per forzare l'esecuzione di un'operazione di analisi da parte di Query Optimizer nella tabella `Sales.SalesOrderDetail` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   

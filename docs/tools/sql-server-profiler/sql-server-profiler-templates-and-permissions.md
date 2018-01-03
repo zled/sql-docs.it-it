@@ -3,7 +3,7 @@ title: Modelli di SQL Server Profiler e autorizzazioni | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bca0afc8ddbf301b1ffc5760a01e232010ffaae4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8fcf7a6edeeedc09f6b83a2db354256f116633b0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>Modelli e autorizzazioni di SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] viene illustrato come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risolve internamente le query. In questo modo gli amministratori possono verificare quali istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o espressioni multidimensionali vengono inviate al server e in quale modo il server accede al database o al cubo per restituire i set di risultati.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Modelli di SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates.md)|Presenta informazioni sui modelli di traccia predefiniti disponibili in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|Presenta informazioni sulle autorizzazioni necessarie per l'esecuzione di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  

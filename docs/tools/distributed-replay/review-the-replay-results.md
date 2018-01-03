@@ -3,7 +3,7 @@ title: Esaminare i risultati di riproduzione | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c51dd81d0d3b0c97a74cbdc42cdf37a79d9dcb83
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad034ad1cd4bc4f2c2945365e186262d500a6776
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="review-the-replay-results"></a>Controllo dei risultati della riproduzione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dopo il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità riesecuzione distribuita completata una riproduzione distribuita, l'attività di riproduzione per ogni client può essere acquisito e salvato nel file di traccia dei risultati in ogni client. Per acquisire questa attività, è necessario usare il parametro **-o** quando si esegue lo strumento di amministrazione con l'opzione **replay** . Per altre informazioni sull'opzione replay, vedere [Opzione replay &#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="column-descriptions-for-result-trace"></a>Descrizioni delle colonne per la traccia dei risultati  
  Nella tabella seguente vengono descritte le colonne dei dati di traccia dei risultati.  
   
-|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|  
+|Nome colonna di dati|Tipo di dati|Description|ID colonna|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|Nome della classe di evento.|1|  
 |EventSequence|**bigint**|Per gli errori del provider e gli errori interni e gli avvisi, sequenza di eventi di acquisizione corrispondente all'errore o all'avviso.<br /><br /> Per tutte le altre classi di evento, sequenza dell'evento nei dati di traccia originali.|2|  

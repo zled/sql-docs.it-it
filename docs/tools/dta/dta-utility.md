@@ -3,7 +3,7 @@ title: "Utilità DTA | Documenti Microsoft"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dta-utility"></a>dta - utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il **dta** utilità è la versione del prompt dei comandi di ottimizzazione guidata motore di Database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
@@ -134,7 +134,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** *database_name*  
- Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Esempio:  
+ Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Ad esempio  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -158,7 +158,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*database_name* specificato con l'opzione **–D**||  
 |*owner_name*|**dbo**|*owner_name* deve essere **dbo**. Se si specifica un qualsiasi altro valore, l'esecuzione di **dta** ha esito negativo e viene restituito un errore.|  
-|*table_name*|Nessuno||  
+|*table_name*|None||  
   
  Se si utilizza un file, specificare l'estensione xml, ad esempio TuningLog.xml.  
   
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Specifica i tipi di strutture di progettazione fisica che **dta** deve includere nell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento. Se non si specifica alcun valore, **dta** usa l'argomento predefinito **-fa****IDX**.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |IDX_IV|Indici e viste indicizzate.|  
 |IDX|Solo indici.|  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Specifica le strutture di progettazione fisica esistenti che **dta** deve conservare durante la generazione dell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Nessuno|Nessuna struttura esistente.|  
 |ALL|Tutte le strutture esistenti.|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Specifica se le nuove strutture di progettazione fisica, ovvero indici e viste indicizzate, proposte da **dta** devono essere partizionate e definisce la modalità di partizionamento. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Nessuno|Nessun partizionamento.|  
 |FULL|Partizionamento completo (scegliere questo valore per ottimizzare le prestazioni).|  
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Specifica se le strutture di progettazione fisica vengono create online. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |OFF|Le strutture di progettazione fisica indicate non possono essere create online.|  
 |ON|Tutte le strutture di progettazione fisica indicate possono essere create online.|  
@@ -306,7 +306,7 @@ In questo caso, DTA verrà usare archivio Query come origine del carico di lavor
  **-rl** *analysis_report_list*  
  Specifica l'elenco dei report di analisi da generare. Nella tabella seguente sono riportati i valori che è possibile specificare per questo argomento.  
   
-|Valore|Report|  
+|valore|Report|  
 |-----------|------------|  
 |ALL|Tutti i report di analisi|  
 |STMT_COST|Report costo istruzioni|  

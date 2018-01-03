@@ -3,7 +3,7 @@ title: Elemento StorageBoundInMB (DTA) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7377acefc270c6e497a1a8890ab6bea41a92fd1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: da0825fe578e3c908fd4b0728b98fb9e6b8c1326
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storageboundinmb-element-dta"></a>Elemento StorageBoundInMB (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Specifica lo spazio massimo in megabyte che possono essere utilizzate per l'indicazione di ottimizzazione di ottimizzazione guidata motore di Database (indice e partizionamento set).  
@@ -40,18 +40,18 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**unsignedInt**, lunghezza illimitata.|  
-|**Valore predefinito**|Nessuno|  
-|**Occorrenza**|Facoltativa. Può essere utilizzato una sola volta per l'elemento **TuningOptions** .|  
+|**Valore predefinito**|nessuna.|  
+|**Occorrenza**|Facoltativo. Può essere utilizzato una sola volta per l'elemento **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementi figlio**|Nessuno|  
+|**Elementi figlio**|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  Se si ottimizzano più database, per il calcolo dello spazio vengono considerate le indicazioni per tutti i database. Per impostazione predefinita, nell'Ottimizzazione guidata motore di database vengono utilizzate le dimensioni minori tra gli spazi di archiviazione seguenti:  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="example"></a>Esempio  
   
-## <a name="description"></a>Descrizione  
+## <a name="description"></a>Description  
  Nell'esempio di codice seguente viene illustrata la procedura per impostare un limite di 1500 megabyte per lo spazio massimo su disco utilizzabile da un'indicazione di ottimizzazione:  
   
 ## <a name="code"></a>codice  

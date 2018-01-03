@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa43f93003240c41fefdc589392f936c60a2333d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -75,13 +75,13 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  La scelta della sessione che sarà vittima del deadlock dipende dalla priorità di deadlock delle sessioni:  
   
--   Se entrambe le sessioni hanno la stessa priorità di deadlock, l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglie come vittima del deadlock la sessione per cui risulta meno oneroso eseguire il rollback. Se, ad esempio, la priorità di deadlock di entrambe le sessioni è impostata su HIGH, l'istanza sceglierà come vittima la sessione per cui ritiene che sia meno oneroso eseguire il rollback.  
+-   Se entrambe le sessioni hanno la stessa priorità di deadlock, l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglie come vittima del deadlock la sessione per cui risulta meno oneroso eseguire il rollback. Se, ad esempio, la priorità di deadlock di entrambe le sessioni è impostata su HIGH, l'istanza sceglierà come vittima la sessione per cui ritiene che sia meno oneroso eseguire il rollback. Il costo viene determinato confrontando il numero di byte di log scritti in tale punto in ogni transazione. (È possibile visualizzare questo valore come "Registro utilizzato" in un grafico di deadlock).
   
 -   Se le priorità di deadlock delle sessioni sono diverse, come vittima del deadlock verrà scelta la sessione con la priorità di deadlock inferiore.  
   
  L'opzione SET DEADLOCK_PRIORITY viene impostata in fase di esecuzione, non in fase di analisi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  

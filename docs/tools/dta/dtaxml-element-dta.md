@@ -3,7 +3,7 @@ title: Elemento DTAXML (DTA) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c75accc66ce70c6d5f8c022fe87ba9aeaa11bc1a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a652a6e44909984906fcbcbe2b962cc7de374fbb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dtaxml-element-dta"></a>Elemento DTAXML (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]L'elemento radice di un XML di Database di motore di ottimizzazione guidata file di input o output, **DTAXML** contiene tutti gli elementi che descrivono l'input e l'output di ottimizzazione che Ottimizzazione guidata motore di Database viene generato l'errore.  
@@ -41,25 +41,25 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|Attribute|Descrizione|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**xmlns:xsi**|Obbligatorio. Identifica lo spazio dei nomi di istanze di XML Schema. Gli attributi da questo spazio dei nomi sono utilizzati per fare riferimento allo schema utilizzato per convalidare il file XML di Ottimizzazione guidata motore di database.<br /><br /> Valore obbligatorio: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |**xmlns**|Obbligatorio. Identifica lo spazio dei nomi di Ottimizzazione guidata motore di database.<br /><br /> Se il file XML di Ottimizzazione guidata motore di database viene modificato utilizzando l'editor XML in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], questo valore è utilizzato da F1 Guida e Guida dinamica per individuare i possibili argomenti di riferimento nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Valore obbligatorio:<br /><br /> Spazio dei nomi[XML Schema di Ottimizzazione guidata motore di database](http://go.microsoft.com/fwlink/?LinkId=43100) |  
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|Nessuno|  
-|**Valore predefinito**|Nessuno|  
+|**Tipo di dati e lunghezza**|nessuna.|  
+|**Valore predefinito**|nessuna.|  
 |**Occorrenza**|Obbligatorio una volta per ogni file DTA XML.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|Nessuno|  
-|**Elementi figlio**|[Elemento DTAInput &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> Elemento**DTAOutput** . Per informazioni, vedere [Database Engine Tuning Advisor XML schema](http://schemas.microsoft.com/sqlserver/) (Schema XML dell'Ottimizzazione guidata motore di database).|  
+|**Elemento padre**|None|  
+|**Elementi figlio**|[Elemento DTAInput &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> Elemento **DTAOutput**. Per informazioni, vedere [Database Engine Tuning Advisor XML schema](http://schemas.microsoft.com/sqlserver/) (Schema XML dell'Ottimizzazione guidata motore di database).|  
   
 ## <a name="remarks"></a>Osservazioni  
  Per ulteriori informazioni sugli spazi dei nomi XML, vedere [Spazi dei nomi in un documento XML](http://go.microsoft.com/fwlink/?LinkId=7341) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN Library.  

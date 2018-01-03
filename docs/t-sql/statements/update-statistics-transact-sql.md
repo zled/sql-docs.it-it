@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96ace864a1cff7724451b521db4b184323db6d8e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b619b3cf7ea50fb87e18fd96e8a85a2a231d21f5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -181,7 +181,7 @@ Quando **ON**, le statistiche verranno mantenute la percentuale di campionamento
 ## <a name="updating-all-statistics-with-spupdatestats"></a>Aggiornamento di tutte le statistiche con sp_updatestats  
  Per informazioni sull'aggiornamento delle statistiche per tutte le tabelle interne e definite dall'utente nel database, vedere la stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Il comando riportato di seguito chiama ad esempio sp_updatestats per aggiornare tutte le statistiche per il database.  
   
-```t-sql  
+```sql  
 EXEC sp_updatestats;  
 ```  
   
@@ -191,27 +191,27 @@ EXEC sp_updatestats;
 ## <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
  La sintassi seguente non è supportata da PDW / SQL Data Warehouse  
   
-```t-sql  
+```sql  
 update statistics t1 (a,b);   
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with sample 10 rows;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with NORECOMPUTE;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with INCREMENTAL=ON;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista.  
   
 ## <a name="examples"></a>Esempi  
@@ -219,7 +219,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ### <a name="a-update-all-statistics-on-a-table"></a>A. Aggiornamento di tutte le statistiche di una tabella  
  L'esempio seguente aggiorna le statistiche per tutti gli indici nel `SalesOrderDetail` tabella.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
@@ -229,7 +229,7 @@ GO
 ### <a name="b-update-the-statistics-for-an-index"></a>B. Aggiornamento delle statistiche per un indice  
  In questo esempio vengono aggiornate le statistiche relative all'indice `AK_SalesOrderDetail_rowguid` della tabella `SalesOrderDetail`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
@@ -239,7 +239,7 @@ GO
 ### <a name="c-update-statistics-by-using-50-percent-sampling"></a>C. Aggiornamento delle statistiche tramite un campionamento al 50 percento  
  Nell'esempio seguente vengono create e quindi aggiornate le statistiche per le colonne `Name` e `ProductNumber` della tabella `Product`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE STATISTICS Products  
@@ -253,7 +253,7 @@ UPDATE STATISTICS Production.Product(Products)
 ### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>D. Aggiornamento delle statistiche tramite le opzioni FULLSCAN e NORECOMPUTE  
  Nell'esempio seguente vengono aggiornate le statistiche `Products` della tabella `Product`, viene eseguita un'analisi completa di tutte le righe della tabella `Product`, quindi viene disattivato l'aggiornamento automatico delle statistiche di `Products`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
@@ -266,21 +266,21 @@ GO
 ### <a name="e-update-statistics-on-a-table"></a>E. Aggiornare le statistiche in una tabella  
  Nell'esempio seguente viene aggiornato il `CustomerStats1` le statistiche per il `Customer` tabella.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. Aggiornamento delle statistiche tramite un'analisi completa  
  Nell'esempio seguente viene aggiornato il `CustomerStats1` statistiche, in base a tutte le righe nell'analisi di `Customer` tabella.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  
 ```  
   
 ### <a name="g-update-all-statistics-on-a-table"></a>G. Aggiornamento di tutte le statistiche di una tabella  
  L'esempio seguente aggiorna tutte le statistiche sul `Customer` tabella.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer;  
 ```  
   
@@ -293,7 +293,7 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40; Transact-SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [Sys.dm db_stats_properties &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 
 

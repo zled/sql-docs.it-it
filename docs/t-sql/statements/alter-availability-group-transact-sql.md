@@ -1,7 +1,7 @@
 ---
 title: ALTER AVAILABILITY GROUP (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 01/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c31f7eef71570c9c25afe19e26779943678ff509
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ALTER AVAILABILITY GROUP group_name
  Specifica il nome del nuovo gruppo di disponibilità. *nome_gruppo* deve essere un valore valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificatore e deve essere univoco in tutti i gruppi di disponibilità nel cluster WSFC.  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {PRIMARIO | SECONDARY_ONLY | SECONDARIO | NONE}  
- Specifica le preferenze per la modalità di valutazione della replica primaria da parte di un processo di backup nella scelta della posizione in cui eseguire i backup. È possibile generare uno script affinché un processo di backup specifico prenda in considerazione le preferenze di backup automatico. È importante comprendere che le preferenze non vengono applicate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pertanto non incidono sui backup ad hoc.  
+ Specifica le preferenze per la modalità di valutazione della replica primaria da parte di un processo di backup nella scelta della posizione in cui eseguire i backup. È possibile generare uno script affinché un processo di backup specifico prenda in considerazione le preferenze di backup automatico. È importante comprendere che la preferenza non viene applicata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pertanto non incide sui backup ad hoc.  
   
  Supportato solo nella replica primaria.  
   
@@ -185,7 +185,7 @@ ALTER AVAILABILITY GROUP group_name
  Specifica che si preferisce che i processi di backup ignorino il ruolo delle repliche di disponibilità nella scelta della replica per l'esecuzione dei backup. Si noti che i processi di backup potrebbero valutare altri fattori, ad esempio la priorità di backup di ogni replica di disponibilità in combinazione con lo stato operativo e lo stato connesso.  
   
 > [!IMPORTANT]  
->  Non è prevista l'applicazione dell'impostazione AUTOMATED_BACKUP_PREFERENCE. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. L'impostazione relativa alle preferenze di backup automatico non incide sui backup ad hoc. Per ulteriori informazioni, vedere [configurare il Backup su repliche di disponibilità &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
+>  Non è prevista l'applicazione dell'impostazione AUTOMATED_BACKUP_PREFERENCE. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. L'impostazione delle preferenze di backup automatico non incide sui backup ad hoc. Per ulteriori informazioni, vedere [configurare il Backup su repliche di disponibilità &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 > [!NOTE]  
 >  Per visualizzare la preferenza di backup automatico di un gruppo di disponibilità esistente, selezionare il **automated_backup_preference** o **automated_backup_preference_desc** colonna il [ availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) vista del catalogo. Inoltre, [Sys. fn_hadr_backup_is_preferred_replica &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) può essere usato per determinare la replica di backup preferita.  Questa funzione restituirà sempre 1 per almeno una delle repliche, anche quando `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
@@ -302,7 +302,7 @@ ALTER AVAILABILITY GROUP group_name
 
    Per ulteriori informazioni, vedere [replica solo configurazione](../../linux/sql-server-linux-availability-group-ha.md).
     
- AVAILABILITY_MODE è obbligatorio nella clausola ADD REPLICA ON e facoltativo nella clausola MODIFY REPLICA ON. Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ AVAILABILITY_MODE è obbligatorio nella clausola ADD REPLICA ON e facoltativo nella clausola MODIFY REPLICA ON. Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  FAILOVER_MODE  **=**  {AUTOMATICO | MANUALE}  
  Specifica la modalità di failover della replica di disponibilità che si sta definendo.  
@@ -356,7 +356,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  Sono consentite tutte le connessioni ai database nella replica secondaria per l'accesso in sola lettura.  
   
- Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='**TCP**://***indirizzo-sistema***:***porta***'**  
  Specifica l'URL da usare per il routing delle richieste di connessione con finalità di lettura a questa replica di disponibilità. Si tratta dell'URL sul quale è in ascolto il motore di database di SQL Server. In genere, l'istanza predefinita del motore di database di SQL Server è in ascolto sulla porta TCP 1433.  
@@ -542,14 +542,14 @@ ALTER AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  Non è consigliabile utilizzare DHCP negli ambienti di produzione. Se si verifica un periodo di inattività e il lease IP DHCP scade, è necessario del tempo aggiuntivo per registrare il nuovo indirizzo IP della rete DHCP che è associato al nome DNS del listener e influisce sulla connettività client. DHCP può essere tranquillamente usato per la configurazione dell'ambiente di sviluppo e test per verificare le funzioni di base di gruppi di disponibilità e per l'integrazione con le applicazioni.  
   
- Esempio:  
+ Ad esempio  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
  CON IP **(** { **('***four_part_ipv4_address***','***four_part_ipv4_mask* **')** | **('***ipv6_address***')** } [ **,** ...  *n*  ] **)** [ **,** Porta  **=**  *listener_port* ]  
  Specifica che, anziché usare DHCP, nel listener del gruppo di disponibilità saranno usati uno o più indirizzi IP statici. Per creare un gruppo di disponibilità tra più subnet, viene richiesto un indirizzo IP statico nella configurazione del listener per ogni subnet. Per una determinata subnet, l'indirizzo IP statico può essere un indirizzo IPv4 o IPv6. Contattare l'amministratore di rete per ottenere un indirizzo IP statico per ogni subnet in cui verrà ospitata una replica di disponibilità per il nuovo gruppo di disponibilità.  
   
- Esempio:  
+ Ad esempio  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
@@ -602,7 +602,7 @@ ALTER AVAILABILITY GROUP group_name
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
- È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
+ È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  Richiede l'autorizzazione ALTER ANY DATABASE.   
   
 ## <a name="examples"></a>Esempi  
   
@@ -629,7 +629,7 @@ GO
  [Sys. availability_replicas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [availability_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Risolvere i problemi sempre sulla configurazione di gruppi di disponibilità &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   

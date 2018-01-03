@@ -3,7 +3,7 @@ title: Banner (ssbdiagnose) elemento | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssbdiagnose
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 57351e5fae1d9cd7a52eab4f1ad441ada4564471
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4da84a33034bc664ddefd264d9346034ac69ba49
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="banner-element-ssbdiagnose"></a>Elemento Banner (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Identifica quale utilità ha generato il **ssbdiagnose** file XML di output.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|Attribute|Descrizione|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**title**|Identifica l'utilità che ha generato il file di output XML di **ssbdiagnose** .|  
 |**product**|Identifica il prodotto che ha generato il file di output XML di **ssbdiagnose** .|  
@@ -50,10 +50,10 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|Nessuno|  
-|**Valore predefinito**|Nessuno|  
+|**Tipo di dati e lunghezza**|nessuna.|  
+|**Valore predefinito**|nessuna.|  
 |**Occorrenza**|Una volta per ogni file di output XML di **ssbdiagnose** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/05/2017
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento DiagnosticInformation &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
-|**Elementi figlio**|Nessuno|  
+|**Elementi figlio**|nessuna.|  
   
 ## <a name="example"></a>Esempio  
  Di seguito viene riportato un esempio di un elemento Banner.  

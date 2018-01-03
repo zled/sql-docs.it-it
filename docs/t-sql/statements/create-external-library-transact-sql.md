@@ -3,7 +3,7 @@ title: CREARE una libreria esterna (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
@@ -21,15 +21,15 @@ helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8d0f700ba30b77e892b37e98c43996d6e654e7ea
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bf4807943521308cb2907adab8cfc6e701325b8a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-external-library-transact-sql"></a>CREARE una libreria esterna (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 Carica i pacchetti R in un database dal percorso di file o flusso di byte specificata.
 
@@ -99,7 +99,7 @@ Librerie di caricamento per l'istanza possono essere pubblici o privati. Se la c
 
 È possibile utilizzare i BLOB come origine dati nella versione SQL Server 2017.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 Richiede il `CREATE ANY EXTERNAL LIBRARY` autorizzazione.
 

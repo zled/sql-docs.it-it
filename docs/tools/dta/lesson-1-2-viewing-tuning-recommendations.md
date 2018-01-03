@@ -3,7 +3,7 @@ title: Visualizzazione delle indicazioni di ottimizzazione | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0beed8adb028f43884306b92223a9c3f58db507b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: edd4b57780ac2df7a8eec09701819b5b44ef19bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>Lezione 1-2 - visualizzazione indicazioni di ottimizzazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Questa attività viene utilizzata la sessione di ottimizzazione che è stato creato in [ottimizzazione di un carico di lavoro](../../tools/dta/lesson-1-1-tuning-a-workload.md). Dopo aver ottimizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tramite lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] MyScript.sql, Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] visualizza i risultati nella scheda **Indicazioni** . L'attività seguente presenta la scheda **Indicazioni** dell'interfaccia utente grafica di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] e descrive come visualizzare le informazioni della scheda sui risultati della sessione di ottimizzazione.  

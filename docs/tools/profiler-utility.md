@@ -3,7 +3,7 @@ title: "Utilità profiler | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: profiler
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e01a99b3fa95074d48f2d3f7c69596cfd4c2d7e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c3bd2990df59e1ae2ccaa0a5a162b3ac42e4c938
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profiler-utility"></a>Utilità profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il **profiler** utilità consente di avviare il [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] dello strumento. Gli argomenti facoltativi elencati di seguito in questo argomento consentono di controllare la modalità di avvio dell'applicazione.  
@@ -66,7 +66,7 @@ profiler
  ID di accesso utente per l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per gli ID di accesso la distinzione tra maiuscole e minuscole è rilevante.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)](Indici per tabelle con ottimizzazione per la memoria).  
   
  **/P** *password*  
  Specifica una password definita dall'utente per l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -87,7 +87,7 @@ profiler
  Specifica una tabella di traccia da caricare all'avvio di SQL Profiler. Assieme alla tabella è necessario specificare il database, l'utente oppure lo schema.  
   
  **/T"** *template_name* **"**  
- Specifica il modello che verrà caricato per configurare la traccia. È necessario racchiudere il nome del modello tra virgolette. Il nome del modello deve trovarsi nella directory dei modelli di sistema oppure in quella dei modelli utente. Se in entrambe le directory esistono due modelli con lo stesso nome, verrà caricato il modello incluso nella directory di sistema. Se non esiste alcun modello con il nome specificato, verrà caricato il modello standard. Si noti che l'estensione di file tdf del modello non dovrà essere specificata come parte del *template_name*. Esempio:  
+ Specifica il modello che verrà caricato per configurare la traccia. È necessario racchiudere il nome del modello tra virgolette. Il nome del modello deve trovarsi nella directory dei modelli di sistema oppure in quella dei modelli utente. Se in entrambe le directory esistono due modelli con lo stesso nome, verrà caricato il modello incluso nella directory di sistema. Se non esiste alcun modello con il nome specificato, verrà caricato il modello standard. Si noti che l'estensione di file tdf del modello non dovrà essere specificata come parte del *template_name*. Ad esempio  
   
 ```  
 /T "standard"  

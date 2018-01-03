@@ -3,7 +3,7 @@ title: Elemento DatabaseToConnect (DTA) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d487b07c39a0203da364345423c03da581709074
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77eeb9f0b3077b057e060da76c2f3a83abff295a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="databasetoconnect-element-dta"></a>Elemento DatabaseToConnect (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Specifica il primo database al quale Ottimizzazione guidata motore di Database si connette durante l'ottimizzazione di un carico di lavoro.  
@@ -39,18 +39,18 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**string**, lunghezza illimitata.|  
-|**Valore predefinito**|Nessuno|  
-|**Occorrenza**|Facoltativa. È possibile utilizzarlo una volta per ogni elemento **TuningOptions** .|  
+|**Valore predefinito**|nessuna.|  
+|**Occorrenza**|Facoltativo. È possibile utilizzarlo una volta per ogni elemento **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementi figlio**|Nessuno|  
+|**Elementi figlio**|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare **DatabaseToConnect** per specificare il nome del primo database al quale si desidera che Ottimizzazione guidata motore di database si connetta quando viene avviata la sessione di ottimizzazione. È possibile specificare un solo database con questo elemento. Se vengono specificati più nomi di database, Ottimizzazione guidata motore di database restituisce un errore.  

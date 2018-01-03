@@ -3,7 +3,7 @@ title: Analizzare deadlock con SQL Server Profiler | Documenti Microsoft
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c0de1737702872b1d692a5489afbd4c64eba499
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c2940a94d2893fb58886506fa5db07402b86280d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analizzare deadlock con SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per identificare la causa di un deadlock. I deadlock si verificano in caso di dipendenza ciclica tra due o più thread o processi per alcuni set di risorse in SQL Server. Tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è possibile creare una traccia che registra, riproduce e visualizza gli eventi deadlock da analizzare.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
 |ID proprietario|ID transazione per i processi che utilizzano transazioni e che sono in attesa in un blocco.|  
 |Descrittore transazione|Puntatore al descrittore della transazione che descrive lo stato della transazione.|  
 |Buffer di input|Buffer di input del processo corrente. Consente di definire il tipo di evento e l'istruzione eseguita. I valori possibili includono:<br /><br /> **Lingua**<br /><br /> **RPC**<br /><br /> **Nessuno**|  
-|Istruzione|Tipo di istruzione. I valori possibili sono:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
+|.|Tipo di istruzione. I valori possibili sono:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>Nodo di risorsa del deadlock  
  In un deadlock, due processi sono in attesa ognuno di una risorsa mantenuta dall'altro processo. In un grafico di deadlock, le risorse sono visualizzate come nodi di risorsa.  

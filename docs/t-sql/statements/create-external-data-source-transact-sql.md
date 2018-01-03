@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ba34b4411b5c3946bf1bc5cb75bc361cd7929990
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREARE l'origine dati esterna (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -276,7 +276,7 @@ Per un elenco completo delle origini dati esterne supportate, vedere [configuraz
   
 -   Una tabella esterna che fa riferimento l'origine dati esterna e il formato di file esterno.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione CONTROL sul database nel data Warehouse di SQL, SQL Server, APS 2016 e database di SQL Server.
 
 > [!IMPORTANT]  
@@ -308,7 +308,7 @@ Per garantire l'esito positivo delle query di PolyBase nel caso di failover Hado
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Creare l'origine dati esterna da riferimento Hadoop  
 Per creare un'origine dati esterna per fare riferimento a cluster Hortonworks o Cloudera Hadoop, specificare il nome del computer o indirizzo IP della porta e Hadoop Namenode.  
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -320,7 +320,7 @@ WITH (
 ### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. Creare l'origine dati esterna da riferimento Hadoop con la distribuzione abilitata  
 Specificare l'opzione RESOURCE_MANAGER_LOCATION per abilitare push-down dei calcoli in Hadoop per le query PolyBase. Una volta abilitato, PolyBase utilizza una decisione basata sui costi per determinare se il calcolo di query che devono essere inviato in Hadoop o tutti i dati devono essere spostati per elaborare la query in SQL Server.
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -333,7 +333,7 @@ WITH (
 ###  <a name="credential"></a> C. Creare l'origine dati esterna per fare riferimento a Hadoop protetto con Kerberos  
 Per verificare se il cluster Hadoop protetto con Kerberos, controllare il valore della proprietà hadoop.security.authentication in core-Site.XML Hadoop. Per fare riferimento a un cluster Hadoop protetto con Kerberos, è necessario specificare le credenziali con ambito database che contiene il nome utente di Kerberos e la password. La chiave master del database viene utilizzata per crittografare la chiave privata credenziali con ambito database. 
   
-```tsql  
+```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
 
@@ -380,7 +380,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Creare un'origine dati esterna gestione di partizioni della mappa
 Per creare un'origine dati esterna per fare riferimento a un SHARD_MAP_MANAGER, specificare il nome logico di server che ospita il gestore mappe partizioni nel Database di SQL Azure o un database di SQL Server in una macchina virtuale di Azure.
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred  
@@ -400,7 +400,7 @@ WITH (
 ### <a name="f-create-an-rdbms-external-data-source"></a>F. Creare un'origine dati esterna RDBMS
 Per creare un'origine dati esterna per fare riferimento a un sistema RDBMS, specifica il nome del server logico del database remoto nel Database di SQL Azure.
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
@@ -421,7 +421,7 @@ WITH (
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Creare l'origine dati esterna da riferimento archivio Azure Data Lake
 Connettività archivio Azure Data lake dipende l'URI di ADLS ed entità servizio dell'applicazione Azure Active directory. Documentazione per la creazione di questa applicazione è reperibile in[autenticazione di archivio Data lake tramite Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
-```tsql
+```sql
 -- If you do not have a Master Key on your DW you will need to create one.
 CREATE MASTER KEY
 
@@ -444,7 +444,7 @@ WITH (TYPE = HADOOP,
 ### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. Creare l'origine dati esterna da riferimento Hadoop con la distribuzione abilitata
 Specificare l'opzione JOB_TRACKER_LOCATION per abilitare push-down dei calcoli in Hadoop per le query PolyBase. Una volta abilitato, PolyBase utilizza una decisione basata sui costi per determinare se il calcolo di query che devono essere inviato in Hadoop o tutti i dati devono essere spostati per elaborare la query in SQL Server. 
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -458,7 +458,7 @@ PERCORSO di origine origine dati per fare riferimento nel contenitore dell'archi
 
 In questo esempio, l'origine dati esterna viene denominato dailylogs con account di archiviazione di Azure denominato myaccount un contenitore di archiviazione blob di Azure. L'origine dati esterna di archiviazione di Azure per il trasferimento dei dati e non supporta la distribuzione del predicato.
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
         TYPE = HADOOP, 
         LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'
@@ -469,7 +469,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Creare un'origine dati esterna per le operazioni bulk, il recupero dei dati dall'archiviazione Blob di Azure.   
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
 Utilizzare l'origine dati seguente per le operazioni bulk utilizzando [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). La credenziale utilizzata, deve essere creata usando `SHARED ACCESS SIGNATURE` come identità. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,

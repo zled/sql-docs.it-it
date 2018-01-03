@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64686457f1f5f4057635eb4a4c9a0f3d4030d8fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c2a8612af978c6cd32056ff192e0eae8909b50cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -206,7 +206,7 @@ L'argomento CATALOG_COLLATION è disponibile solo durante la creazione del datab
   
  Per ulteriori informazioni, vedere [creare una copia di un database SQL di Azure mediante Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per creare un account di accesso di un database deve essere uno dei valori seguenti:  
   
 -   L'account di accesso a livello di server principale  
@@ -223,14 +223,14 @@ Per un'esercitazione introduttiva che mostra come connettersi a un database di S
 ### <a name="simple-example"></a>Esempio semplice  
  Un esempio semplice per la creazione di un database.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
 ### <a name="simple-example-with-edition"></a>Semplice esempio con l'edizione  
  Un esempio semplice per la creazione di un database standard.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB2  
 ( EDITION = 'standard' );  
 ```  
@@ -238,7 +238,7 @@ CREATE DATABASE TestDB2
 ### <a name="example-with-additional-options"></a>Esempio con opzioni aggiuntive  
  Un esempio di utilizzo più opzioni.  
   
-```tsql  
+```sql  
 CREATE DATABASE hito   
 COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS   
 ( MAXSIZE = 500 MB, EDITION = 'standard', SERVICE_OBJECTIVE = 'S1' ) ;  
@@ -247,7 +247,7 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ### <a name="creating-a-copy"></a>Creazione di una copia  
  Un esempio di creazione di una copia di un database.  
   
-```tsql  
+```sql  
 CREATE DATABASE escuela   
 AS COPY OF school;  
 ```  
@@ -255,21 +255,21 @@ AS COPY OF school;
 ### <a name="creating-a-database-in-an-elastic-pool"></a>Creazione di un Database in un Pool elastico  
  Crea nuovo database nel pool denominato S3M100:  
   
-```tsql  
+```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>Creazione di una copia di un Database in un altro Server  
  Nell'esempio seguente crea una copia del database db_original, denominato db_copy nel livello di prestazioni P2 per un singolo database.  Questo vale indipendentemente dal fatto che db_original un livello di prestazioni per un singolo database o di un pool elastico.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' )  ;  
 ```  
   
  Nell'esempio seguente crea una copia del database db_original, denominato db_copy in un pool elastico denominato uscita ep1.  Questo vale indipendentemente dal fatto che db_original un livello di prestazioni per un singolo database o di un pool elastico.  Se db_original si trova in un pool elastico con un nome diverso, db_copy viene comunque creato in uscita ep1.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original   
     (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
@@ -279,7 +279,7 @@ CREATE DATABASE db_copy
 
 Nell'esempio seguente imposta le regole di confronto del catalogo DATABASE_DEFAULT durante la creazione di database, che imposta le regole di confronto del catalogo deve corrispondere alle regole di confronto del database.
 
-```tsql
+```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```

@@ -3,7 +3,7 @@ title: Riprodurre un File di traccia (SQL Server Profiler) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7495e722c8bd620be497894ad87f527454171aa9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4a7a8c4b5165f72500f1bb38c47d2c9b50c7c840
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>Riprodurre un file di traccia (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Riproduzione è la possibilità di aprire una traccia salvata e riprodurla nuovamente. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] include un motore di riproduzione a thread multipli in grado di simulare le connessioni utente e l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La funzionalità di riproduzione risulta utile per la risoluzione dei problemi a livello di applicazione o di processo. Quando si identifica il problema e si implementano le correzioni adeguate, eseguire nell'applicazione o nel processo la traccia con cui è stato rilevato il possibile problema. Riprodurre quindi la traccia originale e confrontare i risultati.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  Selezionare **Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**oppure **Riproduci gli eventi usando più thread**. Nella tabella seguente viene spiegata la differenza tra queste impostazioni.  
   
-    |Opzione|Descrizione|  
+    |Opzione|Description|  
     |------------|-----------------|  
     |**Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**|Gli eventi vengono riprodotti nell'ordine in cui sono stati inseriti nella traccia. Questa opzione consente il debug.|  
     |**Riproduci gli eventi usando più thread**|Vengono utilizzati più thread per riprodurre i vari eventi, indipendentemente dalla sequenza. Questa opzione consente di ottimizzare le prestazioni.|  

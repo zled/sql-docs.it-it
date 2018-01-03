@@ -1,7 +1,7 @@
 ---
 title: Flag di traccia (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e0315da3d42331296f78cf977c7fd36cdff32853
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 05d205ca74a1da06e0783a69102b332603ec75a0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - flag di traccia (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,6 +82,7 @@ Nella tabella seguente vengono elencati e descritti i flag di traccia disponibil
 |**2371**|Modifica la soglia di statistiche di aggiornamento automatico predefinito per soglia statistiche di aggiornamento automatico dinamico. Per ulteriori informazioni, vedere questo [articolo di supporto Microsoft](http://support.microsoft.com/kb/2754171).<br /><br />**Nota:** a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e sotto il [il livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, questo comportamento è controllato dal motore e il flag di traccia 2371 non ha alcun effetto.<br /><br />**Ambito**: globali solo|
 |**2389**|Abilita generato automaticamente statistiche rapide per le chiavi (modifica istogramma) in ordine crescente. Se è impostato il flag di traccia 2389 e una colonna iniziale delle statistiche è contrassegnata come crescente, l'istogramma usato per la stima della cardinalità verrà modificato in fase di compilazione di query. Per ulteriori informazioni, vedere questo [articolo di supporto Microsoft](http://support.microsoft.com/kb/2801413).<br /><br />**Nota:** , assicurarsi di testare completamente questa opzione, prima di distribuirlo in un ambiente di produzione.<br /><br />**Nota:** questo flag di traccia non si applica a CE versione 120 o versioni successive. Utilizzare il flag di traccia 4139.<br /><br />**Ambito**: globale o sessione o query|
 |**2390**|Abilitare le statistiche di quick generate automaticamente per la gestione delle chiavi (modifica istogramma) crescente o sconosciuti. Se è impostato il flag di traccia 2390 e una colonna iniziale delle statistiche è contrassegnata come crescente o sconosciuto, l'istogramma usato per la stima della cardinalità verrà modificato in fase di compilazione di query. Per ulteriori informazioni, vedere questo [articolo di supporto Microsoft](http://support.microsoft.com/kb/2801413).<br /><br />**Nota:** , assicurarsi di testare completamente questa opzione, prima di distribuirlo in un ambiente di produzione.<br /><br />**Nota:** questo flag di traccia non si applica a CE versione 120 o versioni successive. Utilizzare il flag di traccia 4139.<br /><br />**Ambito**: globale o sessione o query|
+|**2430**|Consente di alternano la pulitura della classe di blocco. Per ulteriori informazioni, vedere questo [articolo di supporto Microsoft](http://support.microsoft.com/kb/2754301).<br /><br />**Ambito**: globali solo| 
 |**2453**|Consente a una variabile di tabella attivare recompile quando viene modificato di un numero sufficiente di righe. Per ulteriori informazioni, vedere questo [articolo di supporto Microsoft](http://support.microsoft.com/kb/2952444).<br /><br />**Nota:** , assicurarsi di testare completamente questa opzione, prima di distribuirlo in un ambiente di produzione.<br /><br />**Ambito**: globale o sessione o query|
 |**2528**|Disabilita il controllo parallelo di oggetti eseguito da DBCC CHECKDB, DBCC CHECKFILEGROUP e DBCC CHECKTABLE. Per impostazione predefinita, il grado di parallelismo viene determinato automaticamente da Query Processor. Il grado massimo di parallelismo viene configurato come quello delle query parallele. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).<br /><br />**Nota:** istruzioni DBCC parallele verifica in genere deve essere abilitato (impostazione predefinita). Query processor Rivaluta e regola automaticamente il parallelismo per ogni tabella o un batch di tabelle controllato da DBCC CHECKDB.<br /><br />Lo scenario di utilizzo tipico è quando un amministratore di sistema riconosce che aumenta il carico del server prima di DBCC CHECKDB viene completata e quindi sceglie diminuire o disabilitare il parallelismo, allo scopo di migliorare la concorrenza con altro carico di lavoro utente manualmente. Tuttavia, la disabilitazione delle verifiche parallele in DBCC CHECKDB può provocare per richiedere più tempo.<br /><br />**Nota:** Se DBCC CHECKDB viene eseguito utilizzando l'opzione TABLOCK e parallelismo è disabilitato, le tabelle potrebbero rimanere bloccate per periodi di tempo.<br /><br />**Nota:** a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, un'opzione MAXDOP è disponibile per l'opzione max degree of parallelism configurazione di sp_configure per l'istruzione di eseguire l'override.<br /><br />**Ambito**: globale o sessione|
 |**2549**|Esegue il comando DBCC CHECKDB, presupponendo che ogni file di database è in un'unità disco univoca. Comando DBCC CHECKDB compila un elenco interno di pagine read per ogni unità disco univoco in tutti i file di database. Questa logica determina l'unità disco univoche in base alla lettera di unità del nome del file fisico di ogni file.<br /><br />**Nota:** non utilizzare questo flag di traccia, a meno che non si è certi che ogni file è basato su un disco fisico univoco.<br /><br />**Nota:** anche se questo flag di traccia di migliorare le prestazioni di DBCC CHECKDB comandi dell'utilizzo dell'opzione PHYSICAL_ONLY destinazione, alcuni utenti potrebbero non essere visualizzate alcun miglioramento delle prestazioni. Anche se questo flag di traccia migliora l'utilizzo di risorse dei / o disco, le prestazioni delle risorse disco sottostante possono limitare le prestazioni complessive del comando DBCC CHECKDB. Per ulteriori informazioni, vedere [articolo di supporto Microsoft](http://support.microsoft.com/kb/2634571).<br /><br />**Ambito**: globali solo| 
@@ -165,13 +166,13 @@ Utilizzare il `DBCC TRACESTATUS` per determinare i flag di traccia sono attualme
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente imposta flag di traccia 3205 per tutte le sessioni a livello di server tramite DBCC TRACEON.  
   
-```t-sql  
+```sql  
 DBCC TRACEON (3205,-1);  
 ```
 
 È possibile abilitare tutti gli hotfix relative ai piani controllati dal flag di traccia 4199 e 4137 per una determinata query.
   
-```t-sql
+```sql
 SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137)
 ``` 
  
@@ -185,7 +186,7 @@ SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUER
 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
 [SET NOCOUNT &#40; Transact-SQL &#41;](../../t-sql/statements/set-nocount-transact-sql.md)  
-[Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
+[Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
 [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
 [Hint per la query (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
 

@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2fd94b7bab89220337cede905ecbaf1decef722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Funzioni di partizione  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -124,27 +124,27 @@ sys.dm_sql_referenced_entities (
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
 |Tabella|Sì*|Sì|  
-|Visualizza|Sì|Sì|  
+|Vista|Sì|Sì|  
 |Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
-|stored procedure CLR|No|Sì|  
+|stored procedure CLR|no|Sì|  
 |Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
-|Funzione CLR definita dall'utente|No|Sì|  
-|Trigger CLR (DML e DDL)|No|No|  
-|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Sì|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Sì|No|  
-|Stored procedure estese|No|Sì|  
-|Coda|No|Sì|  
-|Sinonimo|No|Sì|  
-|Tipo (alias e tipo di CLR definito dall'utente)|No|Sì|  
-|Raccolta di XML Schema|No|Sì|  
-|Funzione di partizione|No|Sì|  
+|Funzione CLR definita dall'utente|no|Sì|  
+|Trigger CLR (DML e DDL)|no|no|  
+|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|no|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Sì|no|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Sì|no|  
+|Stored procedure estese|no|Sì|  
+|Coda|no|Sì|  
+|Sinonimo|no|Sì|  
+|Tipo (alias e tipo di CLR definito dall'utente)|no|Sì|  
+|Raccolta di XML Schema|no|Sì|  
+|Funzione di partizione|no|Sì|  
   
  \*Una tabella viene registrata come un'entità di riferimento solo quando fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
   
  ** Le stored procedure numerate con un valore intero maggiore di 1 non vengono registrate come entità di riferimento o a cui viene fatto riferimento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per sys.dm_sql_referenced_entities e l'autorizzazione VIEW DEFINITION per l'entità di riferimento. Per impostazione predefinita, l'autorizzazione SELECT è concessa al ruolo public. È richiesta l'autorizzazione VIEW DEFINITION per il database o un'autorizzazione ALTER ANY DATABASE DDL TRIGGER per il database corrente quando l'entità di riferimento è un trigger DDL a livello di database. È richiesta l'autorizzazione VIEW ANY DEFINITION per il server quando l'entità di riferimento è un trigger DDL a livello di server.  
   
 ## <a name="examples"></a>Esempi  
@@ -152,7 +152,7 @@ sys.dm_sql_referenced_entities (
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. Restituzione di entità cui fa riferimento un trigger DDL a livello di database  
  Nell'esempio seguente vengono restituite le entità (tabelle e colonne) cui fa riferimento il trigger DDL `ddlDatabaseTriggerLog` a livello di database.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -164,7 +164,7 @@ GO
 ### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. Restituzione di entità cui fa riferimento un oggetto  
  Nell'esempio seguente vengono restituite le entità cui fa riferimento la funzione `dbo.ufnGetContactInformation` definita dall'utente.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -176,7 +176,7 @@ GO
 ### <a name="c-returning-column-dependencies"></a>C. Restituzione delle dipendenze della colonna  
  Nell'esempio seguente viene creata la tabella `Table1` con la colonna calcolata `c` definita come somma delle colonne `a` e `b`. Viene quindi chiamata la vista `sys.dm_sql_referenced_entities`. La vista restituisce due righe, una per ogni colonna definita nella colonna calcolata.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -205,7 +205,7 @@ GO
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. Restituzione delle dipendenze delle colonne non associate a schemi  
  Nell'esempio seguente viene eliminata `Table1` e vengono create `Table2` e la stored procedure `Proc1`. La procedura fa riferimento a `Table2` e alla tabella `Table1` inesistente. La vista `sys.dm_sql_referenced_entities` viene eseguita con la stored procedure specificata come entità di riferimento. Il set di risultati indica una riga per `Table1` e 3 righe per `Table2`. Poiché `Table1` non è presente, le dipendenze della colonna non possono essere risolte e viene restituito l'errore 2020. La colonna `is_all_columns_found` restituisce 0 per `Table1`, a indicare che sono presenti colonne che non è stato possibile individuare.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -239,7 +239,7 @@ GO
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>E. Dimostrazione della gestione delle dipendenze dinamiche  
  Nell'esempio seguente viene esteso l'esempio D per illustrare la gestione dinamica delle dipendenze. Nell'esempio viene prima ricreata `Table1`, eliminata nell'esempio D. Viene quindi rieseguita la vista `sys.dm_sql_referenced_entities` con la stored procedure specificata come entità di riferimento. Il set di risultati indica che vengono restituite entrambe le tabelle e le rispettive colonne definite nella stored procedure. Inoltre, la colonna `is_all_columns_found` restituisce 1 per tutti gli oggetti e le colonne.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -272,7 +272,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```t-sql  
+```sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   

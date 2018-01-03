@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 47d4b177e93d028ccf0afffec6a9480928e11cb0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 65a39571e4cd02b9bbb20d42463301d38d0f8836
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (OR bit per bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ expression | expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
+ *expression*  
  È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) della categoria di tipi di dati integer, o **bit**, **binario**, o **varbinary** tipi di dati. *espressione* viene considerato come un numero binario per l'operazione bit per bit.  
   
 > [!NOTE]  
@@ -65,7 +65,7 @@ expression | expression
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una tabella con **int** tipi per mostrare i valori originali di dati e lo inserisce nella tabella in un'unica riga.  
   
-```tsql  
+```sql  
 CREATE TABLE bitwise  
 (   
  a_int_value int NOT NULL,  

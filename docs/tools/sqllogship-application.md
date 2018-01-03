@@ -3,7 +3,7 @@ title: Applicazione sqllogship | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqllogship
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bbc29db3024f217fc09f283c3310ead6034e5003
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d98cbf2e1e18538fe20fd4ff76319b8b69d1e05
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqllogship-application"></a>Applicazione sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il **sqllogship** applicazione esegue un backup, copia, o l'operazione di ripristino e le attività di pulizia associate per una configurazione di log shipping. L'operazione viene eseguita su una specifica istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per un database specifico.  
@@ -58,7 +58,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  Specifica il livello di messaggi aggiunti alla cronologia di log shipping. *level* può essere uno dei valori interi seguenti:  
   
-|level|Descrizione|  
+|level|Description|  
 |-----------|-----------------|  
 |0|L'output non include messaggi di traccia e di debug.|  
 |1|L'output include messaggi di gestione degli errori.|  

@@ -27,13 +27,13 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b0165fefcc715becfb9c59644ed0ddd96cca9c07
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad2b7e5343547bb65c6d81de8c6586ef5209e52a
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="countbig-transact-sql"></a>COUNT_BIG (Transact-SQL)
+# <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Consente di restituire il numero di elementi di un gruppo. Il funzionamento di COUNT_BIG è analogo a quello della funzione COUNT. L'unica differenza è il valore restituito. COUNT_BIG infatti restituisce sempre un **bigint** valore del tipo di dati. Funzione COUNT restituisce sempre un **int** valore del tipo di dati.
@@ -66,7 +66,7 @@ Applica la funzione di aggregazione a tutti i valori. Il valore predefinito è A
 DISTINCT  
 Specifica che COUNT_BIG deve restituire il numero di valori univoci non Null.
   
-*espressione*  
+*expression*  
 È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo. Non è possibile utilizzare funzioni di aggregazione e sottoquery.
   
 *\**  
@@ -78,7 +78,7 @@ Applica la funzione di aggregazione a tutti i valori. Il valore predefinito è A
 DISTINCT  
 Indica che la funzione AVG deve essere eseguita solo in ogni istanza univoca di un valore, indipendentemente dal numero di occorrenze del valore.
   
-*espressione*  
+*expression*  
 È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di uno, categoria del tipo di dati numerici o numerici approssimativi, ad eccezione del **bit** tipo di dati. Non è possibile utilizzare funzioni di aggregazione e sottoquery.
   
 SU **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  

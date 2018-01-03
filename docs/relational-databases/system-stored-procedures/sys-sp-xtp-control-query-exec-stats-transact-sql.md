@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4bcc1bb453783a38c4b23e6526de1a804bde8f1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: aeae0a552d2df0c911b2a95a4578c3b835192612
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -63,13 +63,13 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ## <a name="return-code"></a>Codice restituito  
  0 per l'esito positivo. Diverso da zero per l'esito negativo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito sysadmin.  
   
 ## <a name="code-sample"></a>Codice di esempio  
  Il seguente esempio di codice indica come abilitare la raccolta per statistiche di tutte le stored procedure compilate in modo nativo per l'istanza e per una stored procedure specifica compilata in modo nativo.  
   
-```tsql   
+```sql   
 DECLARE @c bit  
   
 EXEC [sys].[sp_xtp_control_query_exec_stats] @new_collection_value = 1;  

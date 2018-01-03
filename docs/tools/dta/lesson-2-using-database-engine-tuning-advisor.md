@@ -3,7 +3,7 @@ title: 'Lezione 2: Utilizzo di Database di ottimizzazione guidata motore | Docum
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 707c67f64ac8e074f3f0177733c9119eb9095bc3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c7c9ec1efea6c7fa1051e3a527a46236aef21315
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lezione 2: Utilizzo dello strumento Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Ottimizzazione guidata motore di database consente di ottimizzare i database, gestire le sessioni di ottimizzazione e visualizzare le indicazioni di ottimizzazione. Gli utenti esperti di strutture di progettazione fisica possono utilizzare questo strumento per analisi esplorative di ottimizzazione dei database. Gli utenti inesperti di ottimizzazione di database possono utilizzare lo strumento per individuare la migliore configurazione delle strutture di progettazione fisica per i carichi di lavoro che desiderano ottimizzare. Questa lezione illustra le tecniche di base per gli amministratori di database che non conoscono l'interfaccia utente grafica dello strumento Ottimizzazione guidata motore di database e per gli amministratori di sistema con una conoscenza limitata delle strutture di progettazione fisica.  

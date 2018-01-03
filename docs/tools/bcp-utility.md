@@ -3,7 +3,7 @@ title: "Utilità bcp | Documenti Microsoft"
 ms.custom: 
 ms.date: 09/26/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: bcp
 ms.reviewer: 
@@ -34,11 +34,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 18d7ba613fe4b98adc94bcf099e9576fd0550e6d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1b9fd81237093da7296d85efdbe9472da711315
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bcp-utility"></a>Utilità bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 -   **queryout**<a name="qry_out"></a> esegue la copia da una query e deve essere specificata solo in caso di copia bulk di dati da una query.  
   
--   **format**<a name="format"></a> crea un file di formato basato sull'opzione specificata (**-n**, **-c**, **-w**o **-N**) e sui delimitatori della tabella o della vista. Durante la copia bulk dei dati, il comando **bcp** può fare riferimento a un file di formato e si può quindi evitare di immettere nuovamente le informazioni sul formato in modo interattivo. L'opzione **format** richiede l'opzione **-f**. Se si crea un file di formato XML, è necessaria anche l'opzione **-x**. Per altre informazioni, vedere [Creare un file di formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). È necessario specificare **nul** come valore (**format nul**).  
+-   **format**<a name="format"></a> crea un file di formato basato sull'opzione specificata (**-n**, **-c**, **-w**o **-N**) e sui delimitatori della tabella o della vista. Durante la copia bulk dei dati, il comando **bcp** può fare riferimento a un file di formato e si può quindi evitare di immettere nuovamente le informazioni sul formato in modo interattivo. L'opzione **format** richiede l'opzione **-f**. Se si crea un file di formato XML, è necessaria anche l'opzione **-x**. Per altre informazioni, vedere [Creazione di un file di formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). È necessario specificare **nul** come valore (**format nul**).  
   
  ***owner***<a name="schema"></a>  
  Nome del proprietario della tabella o della vista. *owner* è facoltativo se l'utente che esegue l'operazione è il proprietario della tabella o della vista specificata. Se *owner* non viene specificato e l'utente che esegue l'operazione non è il proprietario della tabella o della vista specificata, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] restituisce un messaggio di errore e l'operazione viene annullata.  
@@ -143,7 +143,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > È consigliabile specificare un nome regole di confronto per ogni colonna in un file di formato tranne quando si vuole assegnare all'opzione 65001 la priorità sulla specifica delle regole di confronto o della tabella codici.
   
-|Valore tabella codici|Descrizione|  
+|Valore tabella codici|Description|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Tabella codici predefinita utilizzata dal client. Si tratta della tabella codici predefinita usata se non si specifica **-C** .|  
@@ -210,7 +210,7 @@ Specifica che viene acquisito un blocco a livello di tabella per l'aggiornamento
   Una situazione in cui può essere necessario disabilitare i vincoli (comportamento predefinito) è rappresentata dal caso in cui i dati di input contengono righe che violano i vincoli. Se i vincoli CHECK sono disabilitati, è possibile importare i dati e quindi utilizzare le istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] per rimuovere i dati non validi.  
   
   > [!NOTE]
-  > L'utilità**bcp** ora esegue la convalida e i controlli dei dati che potrebbero causare la mancata esecuzione degli script quando questi vengono eseguiti su dati non validi inclusi in un file di dati.
+  > L'utilità **bcp**ora esegue la convalida e i controlli dei dati che potrebbero causare la mancata esecuzione degli script quando questi vengono eseguiti su dati non validi inclusi in un file di dati.
   
   > [!NOTE]
   > L'opzione **-m** *max_errors* non è valida per il controllo dei vincoli.
@@ -227,7 +227,7 @@ Se specificato con l'argomento **in** , determina l'esecuzione dei trigger di in
  Specifica che durante l'operazione il valore delle colonne vuote deve essere Null, ovvero che non verranno inseriti valori predefiniti in tali colonne. Per altre informazioni, vedere [Mantenere i valori Null o usare i valori predefiniti durante l'importazione in blocco &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
  **-K** ***application_intent***<a name="K"></a>   
- Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore consentito è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità bcp non supporterà la connettività a una replica secondaria in un gruppo di disponibilità Always On. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore consentito è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità bcp non supporterà la connettività a una replica secondaria in un gruppo di disponibilità Always On. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **-L** ***last_row***<a name="L"></a>  
  Specifica il numero dell'ultima riga da esportare da una tabella o da importare da un file di dati. Per questo parametro è necessario specificare un valore maggiore di (>) 0, ma minore (<) o uguale (=) al numero dell'ultima riga. Se il parametro viene omesso, l'impostazione predefinita è l'ultima riga del file.  
@@ -281,7 +281,7 @@ Esegue l'operazione di copia bulk utilizzando i tipi di dati nativi del database
  Per altre informazioni, vedere la sezione [Osservazioni](#remarks)di seguito in questo argomento.  
   
  **-r** ***row_term***<a name="r"></a>  
- Specifica il carattere di terminazione della riga. Il valore predefinito è **\n** (carattere di nuova riga). Utilizzare questo parametro per specificare un carattere di terminazione della riga diverso da quello predefinito. Per altre informazioni, vedere [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+ Specifica il carattere di terminazione della riga. Il valore predefinito è **\n** (carattere di nuova riga). Utilizzare questo parametro per specificare un carattere di terminazione della riga diverso da quello predefinito. Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Se si specifica il carattere di terminazione della riga in notazione esadecimale nel comando bcp.exe, il valore verrà troncato in corrispondenza di 0x00. Se ad esempio si specifica 0x410041, verrà utilizzato 0x41.  
   
@@ -293,7 +293,7 @@ Esegue l'operazione di copia bulk utilizzando i tipi di dati nativi del database
  **-S** ***nome_server*** [\\***instance_name***]<a name="S"> </a> specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a cui connettersi. Se non si specifica alcun server, l'utilità **bcp** si connette all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] del computer locale. È necessario specificare questa opzione se un comando **bcp** viene eseguito da un computer remoto in rete o in un'istanza denominata locale. Per connettersi all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un server, specificare solo *server_name*. Per connettersi a un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], specificare *server_name***\\***instance_name*.  
   
  **-t** ***field_term***<a name="t"></a>  
- Specifica il carattere di terminazione del campo. Il valore predefinito è **\t** (carattere di tabulazione). Utilizzare questo parametro per specificare un carattere di terminazione del campo diverso da quello predefinito. Per altre informazioni, vedere [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+ Specifica il carattere di terminazione del campo. Il valore predefinito è **\t** (carattere di tabulazione). Utilizzare questo parametro per specificare un carattere di terminazione del campo diverso da quello predefinito. Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Se si specifica il carattere di terminazione del campo in notazione esadecimale nel comando bcp.exe, il valore verrà troncato in corrispondenza di 0x00. Se ad esempio si specifica 0x410041, verrà utilizzato 0x41.  
   
@@ -400,7 +400,7 @@ L'utilità bcp può anche essere scaricata separatamente dal [Microsoft SQL Serv
 |SQLNCHAR o SQLNVARCHAR|I dati vengono inviati in formato Unicode. L'effetto equivale a quello ottenuto specificando l'opzione **-w** senza definire un file di formato.|  
 |SQLBINARY o SQLVARYBIN|I dati vengono inviati senza conversione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Un'operazione **bcp out** richiede l'autorizzazione SELECT per la tabella di origine.  
   
  Un'operazione **bcp in** richiede almeno l'autorizzazione SELECT/INSERT per la tabella di destinazione. È inoltre richiesta l'autorizzazione ALTER TABLE se si verifica uno dei casi seguenti:  

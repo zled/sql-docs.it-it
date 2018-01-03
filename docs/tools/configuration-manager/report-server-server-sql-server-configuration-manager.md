@@ -3,7 +3,7 @@ title: Server di report &lt;server&gt; (Gestione configurazione SQL Server) | Do
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59a0b919005571ad3801fb4e2f6dfef4249c0349
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f602743d8cb1073b4a124302d9f1dc450916d6b0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="report-server-ltservergt-sql-server-configuration-manager"></a>Server di report &lt;server&gt; (Gestione configurazione SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Si tratta del servizio che supporta [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per visualizzare le proprietà del servizio, fare clic con il pulsante destro del mouse sul servizio nel riquadro dei dettagli, quindi scegliere **Proprietà**.  

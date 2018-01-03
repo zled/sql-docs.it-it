@@ -1,7 +1,7 @@
 ---
 title: Impostazioni (Mapping dei tipi) del progetto (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 00caaddad937894b416e3289a7d4e96b152ac41b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7ca62e82b85d401f99a6e59f6f440d9a6519e58d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Impostazioni (Mapping dei tipi) del progetto (MySQLToSQL)
 Le impostazioni di Mapping dei tipi del progetto consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA.  
@@ -61,9 +61,9 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |||  
 |-|-|  
 |**Tipo di dati di MySQL**|**Tipo di dati SQL Server**|  
-|bigint|bigint|  
-|bigint [*... 255]|bigint|  
-|binary|binario [1]|  
+|BIGINT|BIGINT|  
+|bigint [*... 255]|BIGINT|  
+|BINARY|binario [1]|  
 |binario [0..1]|binario [1]|  
 |binario [2..255]|binario [*]|  
 |bit|binario [1]|  
@@ -89,35 +89,35 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |Char [2..255]|nchar [*]|  
 |character|nchar [1]|  
 |caratteri diversi [0..1]|nvarchar [1]|  
-|caratteri diversi [2..255]|nvarchar|  
+|caratteri diversi [2..255]|NVARCHAR|  
 |caratteri [0..1]|nchar [1]|  
 |caratteri [2..255]|nchar [*]|  
-|data|data|  
-|datetime|datetime2 [0]|  
-|dec|decimal|  
+|Data|Data|  
+|DATETIME|datetime2 [0]|  
+|dec|Decimal|  
 |DEC [*... 65]|decimale [*] [0]|  
 |DEC [*... 65][\*.. 30]|decimale [*] [\*]|  
-|decimal|decimal|  
+|Decimal|Decimal|  
 |decimale [*... 65]|decimale [*] [0]|  
 |decimale [*... 65][\*.. 30]|decimale [*] [\*]|  
 |double|float [53]|  
 |valore a precisione doppia|float [53]|  
 |valore a precisione doppia [*... 255][\*.. 30]|numerico [*] [\*]|  
 |Double [*... 255][\*.. 30]|numerico [*] [\*]|  
-|predefinito|numeric|  
+|predefinito|NUMERIC|  
 |fissa [*... 65][\*.. 30]|numerico [*] [\*]|  
-|float|float [24]|  
+|FLOAT|float [24]|  
 |float [*... 255][\*.. 30]|numerico [*] [\*]|  
 |float [*... 53]|float [53]|  
-|int|int|  
-|int [*... 255]|int|  
-|integer|int|  
-|numero intero [*... 255]|int|  
+|INT|INT|  
+|int [*... 255]|INT|  
+|integer|INT|  
+|numero intero [*... 255]|INT|  
 |longblob|varbinary(max)|  
 |LONGTEXT|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|int|  
-|mediumint [*... 255]|int|  
+|mediumint|INT|  
+|mediumint [*... 255]|INT|  
 |mediumtext|nvarchar(max)|  
 |char nazionali|nchar [1]|  
 |National char [0..1]|nchar [1]|  
@@ -133,76 +133,76 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |National varchar [0..1]|nvarchar [1]|  
 |National varchar [2..4000]|nvarchar [*]|  
 |National varchar [4001... *]|nvarchar(max)|  
-|nchar|nchar [1]|  
+|NCHAR|nchar [1]|  
 |nchar varchar|nvarchar [1]|  
 |nchar varchar [0..1]|nvarchar [1]|  
 |nchar varchar [2..4000]|nvarchar [*]|  
 |nchar varchar [4001... *]|nvarchar(max)|  
 |nchar [0..1]|nchar [1]|  
 |nchar [2..255]|nchar [*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |numerico [*... 65]|numerico [*] [0]|  
 |numerico [*... 65][\*.. 30]|numerico [*] [\*]|  
-|nvarchar|nvarchar [1]|  
+|NVARCHAR|nvarchar [1]|  
 |nvarchar [0..1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
 |nvarchar [4001... *]|nvarchar(max)|  
-|real|float [53]|  
+|REAL|float [53]|  
 |reale [*... 255][\*.. 30]|numerico [*] [\*]|  
-|Seriale|bigint|  
-|smallint|smallint|  
-|smallint [*... 255]|smallint|  
+|Seriale|BIGINT|  
+|SMALLINT|SMALLINT|  
+|smallint [*... 255]|SMALLINT|  
 |text|nvarchar(max)|  
 |testo [0..1]|nvarchar [1]|  
 |testo [2..4000]|nvarchar [*]|  
 |testo [4001... *]|nvarchar(max)|  
 |time|time|  
-|timestamp|datetime|  
+|TIMESTAMP|DATETIME|  
 |tinyblob|varbinary [255]|  
-|tinyint|smallint|  
-|tinyint [*... 255]|smallint|  
+|TINYINT|SMALLINT|  
+|tinyint [*... 255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
-|bigint senza segno|bigint|  
-|senza segno bigint [*... 255]|bigint|  
-|dec senza segno|decimal|  
+|bigint senza segno|BIGINT|  
+|senza segno bigint [*... 255]|BIGINT|  
+|dec senza segno|Decimal|  
 |senza segno dec [*... 65]|decimale [*] [0]|  
 |senza segno dec [*... 65][\*.. 30]|decimale [*] [\*]|  
-|senza segno decimale|decimal|  
+|senza segno decimale|Decimal|  
 |senza segno decimale [*... 65]|decimale [*] [0]|  
 |senza segno decimale [*... 65][\*.. 30]|decimale [*] [\*]|  
 |doppia senza segno|float [53]|  
 |senza segno a precisione doppia|float [53]|  
 |senza segno a precisione doppia [*... 255][\*.. 30]|numerico [*] [\*]|  
 |Unsigned double [*... 255][\*.. 30]|numerico [*] [\*]|  
-|Unsigned predefinito|numeric|  
+|Unsigned predefinito|NUMERIC|  
 |Unsigned fissa [*... 65][\*.. 30]|numerico [*] [\*]|  
 |float senza segno|float [24]|  
 |senza segno float [*... 255][\*.. 30]|numerico [*] [\*]|  
 |senza segno float [*... 53]|float [53]|  
-|int senza segno|bigint|  
-|int senza segno [*... 255]|bigint|  
-|intero senza segno|bigint|  
-|intero senza segno [*... 255]|bigint|  
-|mediumint senza segno|int|  
-|senza segno mediumint [*... 255]|int|  
-|numerico senza segno|numeric|  
+|int senza segno|BIGINT|  
+|int senza segno [*... 255]|BIGINT|  
+|intero senza segno|BIGINT|  
+|intero senza segno [*... 255]|BIGINT|  
+|mediumint senza segno|INT|  
+|senza segno mediumint [*... 255]|INT|  
+|numerico senza segno|NUMERIC|  
 |numerico senza segno [*... 65]|numerico [*] [0]|  
 |numerico senza segno [*... 65][\*.. 30]|numerico [*] [\*]|  
 |senza segno reale|float [53]|  
 |Unsigned reale [*... 255[[\*.. 30]|numerico [*] [\*]|  
-|smallint senza segno|int|  
-|smallint non firmati [*... 255]|int|  
-|tinyint senza segno|tinyint|  
-|senza segno tinyint [*... 255]|tinyint|  
+|smallint senza segno|INT|  
+|smallint non firmati [*... 255]|INT|  
+|tinyint senza segno|TINYINT|  
+|senza segno tinyint [*... 255]|TINYINT|  
 |varbinary [0..1]|varbinary [1]|  
 |varbinary [2..8000]|varbinary [*]|  
 |varbinary [8001... *]|varbinary(max)|  
 |varchar [0..1]|nvarchar [1]|  
 |varchar [2..4000]|nvarchar [*]|  
 |varchar [4001... *]|nvarchar(max)|  
-|year|smallint|  
-|anno [2..2]|smallint|  
-|anno [4..4]|smallint|  
+|year|SMALLINT|  
+|anno [2..2]|SMALLINT|  
+|anno [4..4]|SMALLINT|  
   
 ##### <a name="add"></a>Aggiungi  
 Fare clic per aggiungere un tipo di dati nell'elenco di mapping.  

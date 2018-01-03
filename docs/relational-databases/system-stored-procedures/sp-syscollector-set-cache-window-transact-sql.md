@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9c1678c776266b602b227182f5109581851bdd0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9f9390255229779d2584fb0176c5651fa06cfb51
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spsyscollectorsetcachewindow-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
  [ @cache_window =] *cache_window*  
  Numero di volte in cui viene eseguito un tentativo di caricamento dati nel data warehouse di gestione in caso di errore, senza perdita dei dati. *cache_window* è **int** con un valore predefinito di 1. *cache_window* può avere uno dei valori seguenti:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |-1|Vengono memorizzati nella cache tutti i dati di caricamento dei precedenti tentativi di caricamento non riusciti.|  
 |0|Non vengono memorizzati nella cache dati dei tentativi di caricamento non riusciti.|  
@@ -61,13 +61,13 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="remarks"></a>Osservazioni  
  È necessario disabilitare l'agente di raccolta dati prima di modificare la configurazione della finestra della cache. La stored procedure ha esito negativo se l'agente di raccolta dati è abilitato. Per ulteriori informazioni, vedere [abilitare o disabilitare la raccolta dei dati](../../relational-databases/data-collection/enable-or-disable-data-collection.md), e [gestire raccolta dati](../../relational-databases/data-collection/manage-data-collection.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
 ## <a name="examples"></a>Esempi  
  In questo esempio viene disabilitato l'agente di raccolta dati, viene configurata la finestra della cache per conservare i dati per un massimo di tre tentativi di caricamento non riusciti, quindi viene riabilitato l'agente di raccolta dati.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXECUTE dbo.sp_syscollector_disable_collector;  

@@ -3,7 +3,7 @@ title: Configurare Distributed Replay | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0eb4502675fb2bd9e9978b5443882a44f867e39c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dc41572e269bda127f8d725960944d40acacdfae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dettagli di configurazione di Distributed Replay sono specificati in file XML nel controller di riesecuzione distribuita, i client, e in cui è installato lo strumento di amministrazione. ovvero i file seguenti:  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
  Nel livello di registrazione specificato nel file di configurazione del controller è inclusa la seguente impostazione:  
   
-|Impostazione|Elemento XML|Descrizione|Valori consentiti|Required|  
+|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Livello di registrazione|`<LoggingLevel>`|Specifica il livello di registrazione per il servizio controller.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|No. Per impostazione predefinita, il valore è `CRITICAL`.|  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
   
  Di seguito vengono indicate le impostazioni specificate nel file di configurazione del client:  
   
-|Impostazione|Elemento XML|Descrizione|Valori consentiti|Required|  
+|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Controller|`<Controller>`|Specifica il nome computer del controller. Il client tenterà di registrarsi nell'ambiente Distributed Replay contattando il controller.|È possibile utilizzare "`localhost`" o "`.`" per fare riferimento al computer locale.|No. Per impostazione predefinita, viene effettuato un tentativo di registrazione del client nell'istanza del controller eseguita in locale ("`.`"), se presente.|  
 |Directory di lavoro client|`<WorkingDirectory>`|Percorso locale nel client in cui vengono salvati i file di recapito.<br /><br /> I file inclusi in questa directory vengono sovrascritti alla riproduzione successiva.|Nome di directory completo, che inizia con la lettera di unità.|No. Se non è specificato alcun valore, i file di recapito verranno salvati nello stesso percorso del file di configurazione del client predefinito. Se viene specificato un valore e la cartella non esiste nel client, il servizio client non verrà avviato.|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/05/2017
   
  Le impostazioni di configurazione della pre-elaborazione vengono specificate in elementi XML figli dell'elemento `<PreprocessModifiers>` nel file di configurazione della pre-elaborazione. Sono incluse le seguenti impostazioni:  
   
-|Impostazione|Elemento XML|Descrizione|Valori consentiti|Required|  
+|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Inclusione delle attività della sessione di sistema|`<IncSystemSession>`|Indica se le attività della sessione di sistema eseguite durante l'acquisizione verranno incluse durante la riproduzione.|`Yes` &#124; `No`|No. Per impostazione predefinita, il valore è `No`.|  
 |Tempo massimo di inattività|`<MaxIdleTime>`|Fissa il tempo di inattività su un numero assoluto (in secondi).|Numero intero >= -1.<br /><br /> `-1` indica nessuna modifica rispetto al valore originale nel file di traccia originale.<br /><br /> `0` indica che sono in corso una o più attività in un momento specificato.|No. Per impostazione predefinita, il valore è `-1`.|  
@@ -125,7 +125,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="replayoptions-element"></a>\<ReplayOptions > elemento  
  Di seguito vengono indicate le impostazioni specificate dal file di configurazione della riproduzione nell'elemento `<ReplayOptions>` :  
   
-|Impostazione|Elemento XML|Descrizione|Valori consentiti|Required|  
+|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (server di prova)|`<Server>`|Specifica il nome del server e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi.|*server_name*[\\*instance_name*]<br /><br /> Non è possibile utilizzare "`localhost`" o "`.`" per rappresentare l'host locale.|No, se il nome del server è già specificato con il parametro **-s***target server* con l'opzione **replay** dello strumento di amministrazione.|  
 |Modalità di sequenza|`<SequencingMode>`|Specifica la modalità utilizzata per la pianificazione degli eventi.|`synchronization` &#124; `stress`|No. Per impostazione predefinita, il valore è `stress`.|  
@@ -140,7 +140,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="outputoptions-element"></a>\<OutputOptions > elemento  
  Di seguito vengono indicate le impostazioni specificate dal file di configurazione della riproduzione nell'elemento `<OutputOptions>` :  
   
-|Impostazione|Elemento XML|Descrizione|Valori consentiti|Required|  
+|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Registrazione del conteggio delle righe|`<RecordRowCount>`|Indica se deve essere registrato il conteggio delle righe per ogni set di risultati.|`Yes` &#124; `No`|No. Per impostazione predefinita, il valore è `Yes`.|  
 |Registrazione del set di risultati|`<RecordResultSet>`|Indica se deve essere registrato il contenuto di tutti i set di risultati.|`Yes` &#124; `No`|No. Per impostazione predefinita, il valore è `No`.|  

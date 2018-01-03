@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c8099f3a7e05a2cce9acc6186c4311ab0f3fc061
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 52a896293ad991509884b45979be0129bd56f287
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -185,7 +185,7 @@ Execute a character string
   
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
@@ -356,7 +356,7 @@ Execute a character string
   
  Le modifiche al contesto del database rimangono effettive solo fino al termine dell'esecuzione di EXECUTE. Ad esempio, dopo l'esecuzione di `EXEC` nell'istruzione seguente, il contesto di database è master.  
   
-```tsql  
+```sql  
 USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
 ```  
   
@@ -375,7 +375,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>Procedure consigliate  
  Specificare un account di accesso o un utente che disponga almeno dei privilegi necessari per eseguire le operazioni definite nell'istruzione o nel modulo. Ad esempio, non specificare un nome account di accesso con autorizzazioni a livello di server se sono richieste solo autorizzazioni a livello di database oppure non specificare l'account di un proprietario di database a meno che siano richieste le autorizzazioni corrispondenti.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire l'istruzione EXECUTE, non è necessario disporre di autorizzazioni specifiche. Sono tuttavia richieste autorizzazioni per le entità a protezione diretta a cui viene fatto riferimento all'interno della stringa EXECUTE. Se, ad esempio, la stringa include un'istruzione INSERT, il chiamante dell'istruzione EXECUTE deve disporre dell'autorizzazione INSERT per la tabella di destinazione. Le autorizzazioni vengono verificate non appena viene rilevata l'istruzione EXECUTE, anche se l'istruzione è inclusa in un modulo.  
   
  Le autorizzazioni per l'istruzione EXECUTE per un modulo vengono assegnate per impostazione predefinita al proprietario del modulo, che può quindi trasferirle ad altri utenti. Quando si esegue un modulo che esegue una stringa, la verifica delle autorizzazioni viene eseguita nel contesto dell'utente che esegue il modulo e non nel contesto dell'utente che l'ha creato. Se, tuttavia, lo stesso utente è proprietario del modulo chiamante e del modulo richiamato, la verifica delle autorizzazioni per l'istruzione EXECUTE non viene eseguita per il secondo modulo.  
@@ -467,7 +467,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
 ### <a name="e-using-execute-with-a-stored-procedure-variable"></a>E. Utilizzo dell'istruzione EXECUTE con una variabile di stored procedure  
  Nell'esempio seguente viene creata una variabile che rappresenta il nome di una stored procedure.  
   
-```tsql  
+```sql  
 DECLARE @proc_name varchar(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  

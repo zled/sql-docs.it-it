@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: da5449283269e7ff018e7a4b394eb4c26b69e590
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 5900878e440a0ae821655adea764eaebad8fddf2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -334,7 +334,7 @@ Prima di [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1 CTP, valore 
   
  Per ulteriori informazioni su questa e altre considerazioni sulla sicurezza per l'utilizzo di BULK INSERT, vedere [importazione Bulk dei dati per l'utilizzo di BULK INSERT o OPENROWSET &#40; BULK... &#41; &#40; SQL Server &#41; ](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie le autorizzazioni INSERT e ADMINISTER BULK OPERATIONS. È inoltre richiesta l'autorizzazione ALTER TABLE se si verificano una o più delle condizioni seguenti:  
   
 -   Sono presenti vincoli e l'opzione CHECK_CONSTRAINTS non è specificata.  
@@ -415,7 +415,7 @@ WITH (FORMAT = 'CSV');
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importazione di dati da un file nell'archiviazione blob di Azure   
 Nell'esempio seguente viene illustrato come caricare dati da un file csv in un percorso di archiviazione blob di Azure, è stato configurato come un'origine dati esterna. Ciò richiede credenziali con ambito database tramite una firma di accesso condiviso.    
 
-```tsql
+```sql
 BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -433,7 +433,7 @@ Per completare `BULK INSERT` esempi inclusi la configurazione di credenziali e l
   
 -   [Mantenere i valori Null o usare i valori predefiniti durante l'importazione in blocco &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)  
+-   [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)  
   
 -   [Usare un file di formato per l'importazione in blocco dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)  
   
@@ -441,7 +441,7 @@ Per completare `BULK INSERT` esempi inclusi la configurazione di credenziali e l
   
 -   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
@@ -450,8 +450,8 @@ Per completare `BULK INSERT` esempi inclusi la configurazione di credenziali e l
 -   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sull'importazione ed esportazione in blocco di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Informazioni sull'importazione ed esportazione bulk di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [Utilità bcp](../../tools/bcp-utility.md)   
  [File di formato per importare o esportare dati &#40; SQL Server &#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

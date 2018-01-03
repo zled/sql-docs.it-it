@@ -3,7 +3,7 @@ title: "Utilità osql | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: osql
 ms.reviewer: 
@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f8e8f3045d6af2264007d7b0ec5fac9f4e464a5f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a41dd247105dcce2580027c014aa266df5ed9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="osql-utility"></a>Utilità osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Il **osql** utilità consente di immettere [!INCLUDE[tsql](../includes/tsql-md.md)] istruzioni, procedure di sistema e file script. Questa utilità comunica con il server tramite ODBC.  
@@ -142,7 +142,7 @@ C:\>osql
  Specifica il carattere di terminazione del comando. Per impostazione predefinita, i comandi vengono terminati e inviati a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite l'immissione di GO su una riga a sé stante. Se si reimposta il carattere di terminazione del comando, non utilizzare parole riservate di [!INCLUDE[tsql](../includes/tsql-md.md)] o caratteri con un significato speciale per il sistema operativo, indipendentemente dal fatto che siano preceduti da una barra rovesciata.  
   
  **-q "** *query* **"**  
- Esegue una query all'avvio di **osql** senza uscire da **osql** al termine della query. Si noti che l'istruzione della query non dovrebbe includere l'istruzione GO. Se si esegue una query da un file batch, è possibile utilizzare variabili in formato %variabile o variabili di ambiente in formato %variabile%. Esempio:  
+ Esegue una query all'avvio di **osql** senza uscire da **osql** al termine della query. Si noti che l'istruzione della query non dovrebbe includere l'istruzione GO. Se si esegue una query da un file batch, è possibile utilizzare variabili in formato %variabile o variabili di ambiente in formato %variabile%. Ad esempio  
   
 ```  
 SET table=sys.objects  
@@ -212,7 +212,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>Comandi OSQL  
  Oltre alle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] all'interno di **osql**, sono disponibili anche i comandi seguenti.  
   
-|Command|Descrizione|  
+|Comando|Description|  
 |-------------|-----------------|  
 |GO|Esegue tutte le istruzioni immesse dopo l'ultimo comando GO.|  
 |RESET|Cancella tutte le istruzioni immesse.|  
@@ -274,13 +274,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- Esempio:  
+ Ad esempio  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- È inoltre possibile includere il parametro EXIT in un file batch. Esempio:  
+ È inoltre possibile includere il parametro EXIT in un file batch. Ad esempio  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -308,7 +308,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   RAISERROR con stato 127.  
   
 > [!NOTE]  
->  Se in uno script **osql** si usa RAISERROR e viene generato un errore con stato 127, l'utilità **osql** viene chiusa e al client viene restituito l'ID di messaggio. Esempio:  
+>  Se in uno script **osql** si usa RAISERROR e viene generato un errore con stato 127, l'utilità **osql** viene chiusa e al client viene restituito l'ID di messaggio. Ad esempio  
   
 ```  
 RAISERROR(50001, 10, 127)  

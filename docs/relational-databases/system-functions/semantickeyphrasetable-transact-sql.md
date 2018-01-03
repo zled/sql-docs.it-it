@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 484ad4e6f82bff235fd1a9a3cad5752fb4ce08a2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d5b6f184c3ea2a455c59f221f4156e5ab7ce5210
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```sql  
 SEMANTICKEYPHRASETABLE  
     (  
     table,  
@@ -54,7 +54,7 @@ SEMANTICKEYPHRASETABLE
   
  Questo nome può essere costituito da una a quattro parti, ma non è consentito un nome di server remoto.  
   
- **colonna**  
+ **column**  
  Nome della colonna indicizzata per cui restituire risultati. Per la colonna deve essere abilitata l'indicizzazione semantica.  
   
  **column_list**  
@@ -90,7 +90,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie autorizzazioni SELECT per la tabella di base in cui sono stati creati gli indici full-text e semantico.  
   
 ## <a name="examples"></a>Esempi  
@@ -98,7 +98,7 @@ SEMANTICKEYPHRASETABLE
 ###  <a name="HowToTopPhrases"></a>Esempio 1: Trovare le principali frasi chiave in un documento specifico  
  L'esempio seguente recupera le prime 10 frasi chiave dal documento specificato tramite la variabile @DocumentId nella colonna Document della tabella Production.Document del database di esempio AdventureWorks. La variabile @DocumentId rappresenta un valore della colonna chiave dell'indice full-text. La funzione **SEMANTICKEYPHRASETABLE** recupera in modo efficiente questi risultati tramite una ricerca nell'indice anziché un'analisi della tabella. In questo esempio si presuppone che la colonna venga configurata per l'indicizzazione full-text e semantica.  
   
-```tsql  
+```sql  
 SELECT TOP(10) KEYP_TBL.keyphrase  
 FROM SEMANTICKEYPHRASETABLE  
     (  
@@ -113,7 +113,7 @@ ORDER BY KEYP_TBL.score DESC;
 ###  <a name="HowToTopDocuments"></a>Esempio 2: Trovare i documenti principali che contengono una frase chiave specifica  
  Nell'esempio seguente vengono recuperati i primi 25 documenti che contengono la frase chiave "supporto" dalla colonna Documento della tabella Production.Document del database di esempio AdventureWorks. In questo esempio si presuppone che la colonna venga configurata per l'indicizzazione full-text e semantica.  
   
-```tsql  
+```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  
 FROM Production.Document AS DOC_TBL  
     INNER JOIN SEMANTICKEYPHRASETABLE  

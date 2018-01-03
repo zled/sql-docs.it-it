@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7680fdcc7f3d59295f6dd4dd9e08501d56d54d4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 39223c0b83e3c79bede3e25ed6f5f8e70f34750b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="indexkeyproperty-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  *proprietà*  
  Nome della proprietà di cui si desidera ottenere informazioni. *proprietà* è una stringa di caratteri e può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**ColumnId**|ID della colonna nella *key_ID* posizione dell'indice.|  
 |**IsDescending**|Ordine in cui viene archiviata la colonna dell'indice.<br /><br /> 1 = decrescente 0 = crescente|  
@@ -79,7 +79,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite entrambe le proprietà per l'ID di indice `1`, la colonna chiave `1` nella tabella `Production.Location`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   

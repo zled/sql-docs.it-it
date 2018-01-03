@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d36338abefd30103b80a202ebde030d73b6b071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0a52966aaa6bd8cc58c58eeb7fbf16bc6ab31afa
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|Regole di confronto del server|Descrizione della classe a protezione diretta.|  
 |permission_name|**nvarchar(60)**|Regole di confronto del server|Nome dell'autorizzazione.|  
-|tipo|**varchar(4)**|Regole di confronto del server|Codice abbreviato del tipo di autorizzazione. Vedere la tabella seguente.|  
+|Tipo|**varchar(4)**|Regole di confronto del server|Codice abbreviato del tipo di autorizzazione. Vedere la tabella seguente.|  
 |covering_permission_name|**nvarchar(60)**|Regole di confronto del server|Se non è NULL, corrisponde al nome dell'autorizzazione per la classe specifica, che implica altre autorizzazioni per tale classe.|  
 |parent_class_desc|**nvarchar(60)**|Regole di confronto del server|Se non è NULL, corrisponde al nome della classe padre contenente la classe corrente.|  
 |parent_covering_permission_name|**nvarchar(60)**|Regole di confronto del server|Se non è NULL, corrisponde al nome dell'autorizzazione per la classe padre specifica, che implica tutte le altre autorizzazioni per tale classe.|  
@@ -91,13 +91,13 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |---------------------|---------------------|-----------------------------------|  
 |AADS|ALTER ANY DATABASE EVENT SESSION<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |AAES|ALTER ANY EVENT SESSION|SERVER|  
-|AAMK|ALTER ANY MASK<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|AAMK|ALTER ANY MASK<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |ADBO|ADMINISTER BULK OPERATIONS|SERVER|  
-|AEDS|ALTER ANY EXTERNAL DATA SOURCE<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|AEFF|ALTER ANY EXTERNAL FILE FORMAT<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|AEDS|ALTER ANY EXTERNAL DATA SOURCE<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|AEFF|ALTER ANY EXTERNAL FILE FORMAT<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |AL|ALTER|APPLICATION ROLE|  
 |AL|ALTER|ASSEMBLY|  
-|AL|ALTER<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|AL|ALTER<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
 |AL|ALTER|ASYMMETRIC KEY|  
 |AL|ALTER|CERTIFICATE|  
 |AL|ALTER|CONTRACT|  
@@ -114,24 +114,24 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER|ROUTE|  
 |AL|ALTER|SCHEMA|  
 |AL|ALTER|SEARCH PROPERTY LIST|  
-|AL|ALTER<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|AL|ALTER<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |AL|ALTER|SERVICE|  
 |AL|ALTER|SYMMETRIC KEY|  
 |AL|ALTER|Utente|  
 |AL|ALTER|XML SCHEMA COLLECTION|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|  
-|ALAG|ALTER ANY AVAILABILITY GROUP<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|ALAG|ALTER ANY AVAILABILITY GROUP<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |ALAK|ALTER ANY ASYMMETRIC KEY|DATABASE|  
 |ALAR|ALTER ANY APPLICATION ROLE|DATABASE|  
 |ALAS|ALTER ANY ASSEMBLY|DATABASE|  
 |ALCD|ALTER ANY CREDENTIAL|SERVER|  
 |ALCF|ALTER ANY CERTIFICATE|DATABASE|  
-|ALCK|ALTER ANY COLUMN ENCRYPTION KEY<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|ALCM|ALTER ANY COLUMN MASTER KEY<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ALCK|ALTER ANY COLUMN ENCRYPTION KEY<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ALCM|ALTER ANY COLUMN MASTER KEY<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |ALCO|ALTER ANY CONNECTION|SERVER|  
 |ALDA|ALTER ANY DATABASE AUDIT|DATABASE|  
 |ALDB|ALTER ANY DATABASE|SERVER|  
-|ALDC|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ALDC|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |ALDS|ALTER ANY DATASPACE|DATABASE|  
 |ALED|ALTER ANY DATABASE EVENT NOTIFICATION|DATABASE|  
 |ALES|ALTER ANY EVENT NOTIFICATION|SERVER|  
@@ -147,8 +147,8 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |ALSC|ALTER ANY CONTRACT|DATABASE|  
 |ALSK|ALTER ANY SYMMETRIC KEY|DATABASE|  
 |ALSM|ALTER ANY SCHEMA|DATABASE|  
-|ALSP|ALTER ANY SECURITY POLICY<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|ALSR|ALTER ANY SERVER ROLE<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|ALSP|ALTER ANY SECURITY POLICY<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ALSR|ALTER ANY SERVER ROLE<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |ALSS|ALTER SERVER STATE|SERVER|  
 |ALST|ALTER SETTINGS|SERVER|  
 |ALSV|ALTER ANY SERVICE|DATABASE|  
@@ -163,7 +163,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|APPLICATION ROLE|  
 |CL|CONTROL|ASSEMBLY|  
 |CL|CONTROL|ASYMMETRIC KEY|  
-|CL|CONTROL<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|CL|CONTROL<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
 |CL|CONTROL|CERTIFICATE|  
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
@@ -180,7 +180,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|SCHEMA|  
 |CL|CONTROL|SEARCH PROPERTY LIST|  
 |CL|CONTROL SERVER|SERVER|  
-|CL|CONTROL<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|CL|CONTROL<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
 |CL|CONTROL|TYPE|  
@@ -191,7 +191,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CORP|CONNECT REPLICATION|DATABASE|  
 |COSQ|CONNECT SQL|SERVER|  
 |CP|CHECKPOINT|DATABASE|  
-|CRAC|CREATE AVAILABILITY GROUP<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|CRAC|Creare un gruppo di disponibilità<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |CRAG|CREATE AGGREGATE|DATABASE|  
 |CRAK|CREATE ASYMMETRIC KEY|DATABASE|  
 |CRAS|CREATE ASSEMBLY|DATABASE|  
@@ -216,7 +216,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRSM|CREATE SCHEMA|DATABASE|  
 |CRSN|CREATE SYNONYM|DATABASE|  
 |CRSO|CREATE SEQUENCE|SCHEMA|  
-|CRSR|CREATE SERVER ROLE<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|CRSR|CREATE SERVER ROLE<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |CRSV|CREATE SERVICE|DATABASE|  
 |CRTB|CREATE TABLE|DATABASE|  
 |CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|  
@@ -224,15 +224,15 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **Si applica a**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|DELETE|DATABASE|  
-|DL|DELETE|OBJECT|  
-|DL|DELETE|SCHEMA|  
-|EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|EX|Eseguire|DATABASE|  
-|EX|Eseguire|OBJECT|  
-|EX|Eseguire|SCHEMA|  
-|EX|Eseguire|TYPE|  
-|EX|Eseguire|XML SCHEMA COLLECTION|  
+|DL|Elimina|DATABASE|  
+|DL|Elimina|OBJECT|  
+|DL|Elimina|SCHEMA|  
+|EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|EX|EXECUTE|DATABASE|  
+|EX|EXECUTE|OBJECT|  
+|EX|EXECUTE|SCHEMA|  
+|EX|EXECUTE|TYPE|  
+|EX|EXECUTE|XML SCHEMA COLLECTION|  
 |IAL|IMPERSONATE ANY LOGIN<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |IM|IMPERSONATE|Account di accesso|  
 |IM|IMPERSONATE|Utente|  
@@ -266,7 +266,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |SUS|SELECT ALL USER SECURABLES<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |TO|TAKE OWNERSHIP|ASSEMBLY|  
 |TO|TAKE OWNERSHIP|ASYMMETRIC KEY|  
-|TO|TAKE OWNERSHIP<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|TO|TAKE OWNERSHIP<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
 |TO|TAKE OWNERSHIP|CERTIFICATE|  
 |TO|TAKE OWNERSHIP|CONTRACT|  
 |TO|TAKE OWNERSHIP|DATABASE|  
@@ -281,19 +281,19 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|ROLE|  
 |TO|TAKE OWNERSHIP|ROUTE|  
 |TO|TAKE OWNERSHIP|SCHEMA|  
-|TO|TAKE OWNERSHIP<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|TO|TAKE OWNERSHIP<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |TO|TAKE OWNERSHIP|SERVICE|  
 |TO|TAKE OWNERSHIP|SYMMETRIC KEY|  
 |TO|TAKE OWNERSHIP|TYPE|  
 |TO|TAKE OWNERSHIP|XML SCHEMA COLLECTION|  
-|UMSK|UNMASK<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|UMSK|UNMASK<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |UP|UPDATE|DATABASE|  
 |UP|UPDATE|OBJECT|  
 |UP|UPDATE|SCHEMA|  
 |VW|VIEW DEFINITION|APPLICATION ROLE|  
 |VW|VIEW DEFINITION|ASSEMBLY|  
 |VW|VIEW DEFINITION|ASYMMETRIC KEY|  
-|VW|VIEW DEFINITION<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|VW|VIEW DEFINITION<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
 |VW|VIEW DEFINITION|CERTIFICATE|  
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
@@ -309,15 +309,15 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|ROUTE|  
 |VW|VIEW DEFINITION|SCHEMA|  
 |VW|VIEW DEFINITION|SEARCH PROPERTY LIST|  
-|VW|VIEW DEFINITION<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|VW|VIEW DEFINITION<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
 |VW|VIEW DEFINITION|TYPE|  
 |VW|VIEW DEFINITION|Utente|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
-|VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|VWCM|VIEW ANY COLUMN MASTER KEY DEFINITION<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|VWCM|VIEW ANY COLUMN MASTER KEY DEFINITION<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |VWCT|VIEW CHANGE TRACKING|OBJECT|  
 |VWCT|VIEW CHANGE TRACKING|SCHEMA|  
 |VWDB|VIEW ANY DATABASE|SERVER|  
@@ -341,27 +341,27 @@ La figura seguente illustra le autorizzazioni e le relative relazioni. Alcune de
 > Come parte di questo argomento il poster è molto piccolo e non può essere consultato. Scaricare il poster relativo alle autorizzazioni del motore di database da [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
    
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-listing-all-built-in-permissions"></a>A. Elenco di tutte le autorizzazioni predefinite   
 Utilizzare `DEFAULT` o una stringa vuota per restituire tutte le autorizzazioni.   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
 ### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>B. Elenco delle autorizzazioni che possono essere impostate in una chiave simmetrica   
 Specificare una classe per restituire tutte le autorizzazioni possibili per tale classe.   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
   
 ### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>C. Elenco delle classi che includono un'autorizzazione SELECT   
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT)   
     WHERE permission_name = 'SELECT';  
 ```  

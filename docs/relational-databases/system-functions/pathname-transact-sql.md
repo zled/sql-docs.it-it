@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 029ba3a0508e3198b3b81e94a508783308a4257d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f37b03f60063643472b325c4c3f61e87078794f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  Un numero intero [espressione](../../t-sql/language-elements/expressions-transact-sql.md) che definisce la modalità con cui deve essere formattato il componente server del percorso. *@option*può essere uno dei valori seguenti. Il valore predefinito è 0.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |0|Restituisce il nome del server convertito in formato BIOS, ad esempio `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Restituisce il nome del server senza conversione, ad esempio `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -64,7 +64,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Quando il database appartiene a un di disponibilità Always On di gruppo, quindi il valore di *use_replica_computer_name* produce l'effetto seguente sull'output del **PathName** funzione:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Non specificato.|La funzione restituisce il nome di rete virtuale nel percorso.|  
 |0|La funzione restituisce il nome di rete virtuale nel percorso.|  
@@ -86,7 +86,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. Lettura del percorso di un oggetto BLOB FILESTREAM  
  Nell'esempio seguente viene assegnato `PathName` a una variabile `nvarchar(max)`.  
   
-```tsql  
+```sql  
 DECLARE @PathName nvarchar(max);  
 SET @PathName = (  
     SELECT TOP 1 photo.PathName()  
@@ -98,7 +98,7 @@ SET @PathName = (
 ### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. Visualizzazione dei percorsi di oggetti BLOB FILESTREAM in una tabella  
  Nell'esempio seguente vengono creati e visualizzati i percorsi di tre oggetti BLOB FILESTREAM.  
   
-```tsql  
+```sql  
 -- Create a FILESTREAM-enabled database.  
 -- The c:\data directory must exist.  
 CREATE DATABASE PathNameDB  

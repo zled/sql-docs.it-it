@@ -3,7 +3,7 @@ title: Applicazione sqlservr | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlservr
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1736e617da17f058e27a970e73e77ada7957876e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 52fb7eaebe655c2be06b23522e434a2e08950b62
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlservr-application"></a>Applicazione sqlservr
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il **sqlservr** applicazione avvia, arresta, sospende e riprende un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da un prompt dei comandi.  
@@ -78,7 +78,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  **-n**  
  Avvia un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se non si specifica il set di parametri **-s** , viene avviata l'istanza predefinita. Al prompt dei comandi è necessario passare alla directory BINN appropriata per l'istanza prima di avviare **sqlservr.exe**. Ad esempio, se Instance1 usa \mssql$Instance1 per i relativi file binari, l'utente deve passare alla directory \mssql$Instance1\binn per avviare **sqlservr.exe -s instance1**. Se si avvia un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con l'opzione **-n** , è consigliabile usare anche l'opzione **-e** . In caso contrario, gli eventi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non vengono registrati.  
   
- **-T** *trace#*  
+ **-T** *trace #*  
  Indica l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con uno specifico flag di traccia (*trace#*) attivo. I flag di traccia vengono utilizzati per avviare il server con un funzionamento non standard. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 > [!IMPORTANT]  

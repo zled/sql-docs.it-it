@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85bb9f9c5e389c80f3316b6a62dea8e82ac25d77
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ab59a2912f51882954420a81514b0fe2089f9a8f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |**file_in_group**|**sysname**|Nome logico del file nel filegroup.|  
 |**fileid**|**smallint**|Identificatore numerico del file.|  
 |**nome file**|**nchar(260)**|Nome fisico del file che include il percorso di directory.|  
-|**dimensioni**|**nvarchar (15)**|Dimensione del file in kilobyte.|  
+|**size**|**nvarchar (15)**|Dimensione del file in kilobyte.|  
 |**MaxSize**|**nvarchar (15)**|Dimensione massima del file.<br /><br /> Valore massimo fino a cui possono aumentare le dimensioni del file. Se questo campo include il valore UNLIMITED, le dimensioni del file possono aumentare fino a riempire il disco.|  
 |**aumento delle dimensioni**|**nvarchar (15)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo.<br /><br /> 0 = la dimensione del file è fissa e non aumenterà.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -76,7 +76,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ### <a name="a-returning-all-filegroups-in-a-database"></a>A. Restituzione di tutti i filegroup in un database  
  Nell'esempio seguente vengono restituite le informazioni sui filegroup nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup;  
@@ -86,7 +86,7 @@ GO
 ### <a name="b-returning-all-files-in-a-filegroup"></a>B. Restituzione di tutti i file in un filegroup  
  Nell'esempio seguente vengono restituite le informazioni relative a tutti i file nel filegroup `PRIMARY` nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup 'PRIMARY';  

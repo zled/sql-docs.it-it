@@ -2,7 +2,7 @@
 title: MODIFICARE le opzioni SET di DATABASE (Transact-SQL) | Documenti Microsoft
 description: Informazioni su come impostare le opzioni di database, ad esempio la crittografia, ottimizzazione automatica, archivio query in un SQL Server e Database SQL di Azure
 ms.custom: 
-ms.date: 11/27/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -34,11 +34,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d73118014577a947037bd25fd2fb3959a56a4e47
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni ALTER DATABASE SET (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -248,7 +248,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -388,7 +388,7 @@ SET
 
  **\<change_tracking_option >:: =**  
   
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è disponibile in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
  Controlla le opzioni di rilevamento delle modifiche. È possibile abilitare il rilevamento delle modifiche, impostare le opzioni, modificare le opzioni e disabilitare il rilevamento delle modifiche. Per alcuni esempi, vedere la sezione Esempi più avanti in questo argomento.  
   
@@ -666,7 +666,7 @@ MULTI_USER
   
  **\<mixed_page_allocation_option >:: =**  
   
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)). Non è disponibile in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)). Non è disponibile in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  MIXED_PAGE_ALLOCATION {OFF | ON} controlli se il database può creare pagine iniziali utilizzando un extent misto per le prime otto pagine di indice o una tabella.  
   
@@ -693,7 +693,7 @@ MULTI_USER
   
  **\<query_store_options >:: =**  
   
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ON | OFF | CLEAR [ ALL ]  
  Verifica se l'archivio di query è abilitato nel database e controlla la rimozione del contenuto dell'archivio di query.  
@@ -714,7 +714,7 @@ OPERATION_MODE
  Descrive i criteri di conservazione dati dell'archivio di query. STALE_QUERY_THRESHOLD_DAYS determina il numero di giorni per cui vengono mantenute le informazioni per una query in archivio query. STALE_QUERY_THRESHOLD_DAYS è di tipo **bigint**.  
   
  DATA_FLUSH_INTERVAL_SECONDS  
- Determina la frequenza con cui i dati scritti nell'archivio query vengono mantenuti su disco. Per ottimizzare le prestazioni, i dati raccolti dall'archivio di query vengono scritti in modo asincrono sul disco. La frequenza con cui si verifica questo trasferimento asincrono viene configurata tramite l'argomento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS è di tipo **bigint**.  
+ Determina la frequenza con cui i dati scritti nell'archivio di query vengono mantenuti su disco. Per ottimizzare le prestazioni, i dati raccolti dall'archivio di query vengono scritti in modo asincrono sul disco. La frequenza con cui si verifica questo trasferimento asincrono viene configurata tramite l'argomento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS è di tipo **bigint**.  
   
  MAX_STORAGE_SIZE_MB  
  Determina lo spazio allocato per l'archivio di query. MAX_STORAGE_SIZE_MB è di tipo **bigint**.  
@@ -1018,7 +1018,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | DISATTIVATO
   
  Per determinare lo stato di questa opzione, è possibile esaminare la colonna is_arithabort_on nella vista del catalogo sys.databases oppure la proprietà IsArithmeticAbortEnabled della funzione DATABASEPROPERTYEX.  
   
- COMPATIBILITY_LEVEL { 90 | 100 | 110 | 120}  
+ COMPATIBILITY_LEVEL = {90 | 100 | 110 | 120 | 130 | 140}  
  Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -1123,21 +1123,21 @@ FEDERATED_SERVICE_ACCOUNT = ON | DISATTIVATO
 |\<db_user_access_option >|Sì|Sì|  
 |\<db_update_option >|Sì|Sì|  
 |\<delayed_durability_option >|Sì|Sì|  
-|\<external_access_option >|Sì|No|  
-|\<cursor_option >|Sì|No|  
-|\<auto_option >|Sì|No|  
-|\<sql_option si >|Sì|No|  
-|\<recovery_option >|Sì|No|  
-|\<target_recovery_time_option >|No|Sì|  
-|\<database_mirroring_option >|No|No|  
-|ALLOW_SNAPSHOT_ISOLATION|No|No|  
-|READ_COMMITTED_SNAPSHOT|No|Sì|  
+|\<external_access_option >|Sì|no|  
+|\<cursor_option >|Sì|no|  
+|\<auto_option >|Sì|no|  
+|\<sql_option si >|Sì|no|  
+|\<recovery_option >|Sì|no|  
+|\<target_recovery_time_option >|no|Sì|  
+|\<database_mirroring_option >|no|no|  
+|ALLOW_SNAPSHOT_ISOLATION|no|no|  
+|READ_COMMITTED_SNAPSHOT|no|Sì|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Sì|Sì|  
-|\<service_broker_option >|Sì|No|  
+|\<service_broker_option >|Sì|no|  
 |DATE_CORRELATION_OPTIMIZATION|Sì|Sì|  
 |\<parameterization_option >|Sì|Sì|  
 |\<change_tracking_option >|Sì|Sì|  
-|\<db_encryption >|Sì|No|  
+|\<db_encryption >|Sì|no|  
   
  La cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene cancellata quando si imposta una delle opzioni seguenti:  
   
@@ -1223,7 +1223,7 @@ GO
   
  Il set di risultati indica che il framework di isolamento dello snapshot è abilitato.  
   
- |name |snapshot_isolation_state |description|  
+ |NAME |snapshot_isolation_state |description|  
  |-------------------- |------------------------  |----------|  
  |AdventureWorks2012   |1                        | ON |  
   
@@ -1251,7 +1251,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. Abilitazione dell'archivio di query  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  L'esempio seguente abilita l'archivio di query e configura i relativi parametri.  
   

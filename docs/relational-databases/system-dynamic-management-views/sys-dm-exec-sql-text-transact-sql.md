@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91602b959da7ed3b622fcc77e59670cdfc803722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e024b0147fb716adfba320d2129a7d623bbff85d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ Identifica in modo univoco un piano di query per un batch memorizzato nella cach
 |**crittografato**|**bit**|1 = Il testo SQL è crittografato.<br /><br /> 0 = Il testo SQL non è crittografato.|  
 |**text**|**nvarchar (max** **)**|Testo della query SQL.<br /><br /> Per gli oggetti crittografati viene restituito NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -96,7 +96,7 @@ Handle del piano è un valore hash derivato dal piano compilato dell'intero batc
 Di seguito è riportato un esempio di base per illustrare il passaggio di un **sql_handle** direttamente o mediante **CROSS APPLY**.
   1.  Creare attività.  
 Eseguire T-SQL seguente in una nuova finestra query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
-      ```tsql
+      ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -108,7 +108,7 @@ Eseguire T-SQL seguente in una nuova finestra query in [!INCLUDE[ssManStudioFull
     2.  Utilizzando **CROSS APPLY**.  
     Il valore di sql_handle da **Sys.dm exec_requests** verranno passate al **Sys.dm exec_sql_text** utilizzando **CROSS APPLY**. Aprire una nuova finestra query e passare il valore di spid identificato nel passaggio 1. In questo esempio il valore di spid possono essere `59`.
 
-        ```tsql
+        ```sql
         SELECT t.*
         FROM sys.dm_exec_requests AS r
         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
@@ -118,7 +118,7 @@ Eseguire T-SQL seguente in una nuova finestra query in [!INCLUDE[ssManStudioFull
     2.  Il passaggio di **sql_handle** direttamente.  
 Acquisire il **sql_handle** da **Sys.dm exec_requests**. Quindi, passare il **sql_handle** direttamente a **Sys.dm exec_sql_text**. Aprire una nuova finestra query e passare il valore di spid identificato nel passaggio 1 per **Sys.dm exec_requests**. In questo esempio il valore di spid possono essere `59`. Quindi passare l'oggetto restituito **sql_handle** come argomento di **Sys.dm exec_sql_text**.
 
-        ```tsql
+        ```sql
         -- acquire sql_handle
         SELECT sql_handle FROM sys.dm_exec_requests WHERE session_id = 59  -- modify this value with your actual spid
         
@@ -130,7 +130,7 @@ Acquisire il **sql_handle** da **Sys.dm exec_requests**. Quindi, passare il **sq
 ### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. Ottenere informazioni sulle prime cinque query per tempo medio CPU  
  Nell'esempio seguente vengono restituiti il testo dell'istruzione SQL e il tempo medio di CPU per le prime cinque query.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -145,7 +145,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### <a name="c-provide-batch-execution-statistics"></a>C. Le statistiche di esecuzione dei batch  
  Nell'esempio seguente viene restituito il testo delle query SQL eseguite in batch e vengono visualizzate le relative informazioni statistiche.  
   
-```tsql  
+```sql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   

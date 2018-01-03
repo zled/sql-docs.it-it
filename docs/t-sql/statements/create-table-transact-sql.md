@@ -52,11 +52,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -716,7 +716,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *Logical_Expression*  
  Espressione logica che restituisce TRUE o FALSE. L'espressione non può includere tipi di dati alias.  
   
- *colonna*  
+ *column*  
  Colonna o elenco di colonne, indicate tra parentesi, utilizzate nei vincoli di tabella per indicare le colonne specificate nella definizione del vincolo.  
   
  [ **ASC** | DESC]  
@@ -763,7 +763,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  DATA_COMPRESSION  
  Specifica l'opzione di compressione dei dati per la tabella, il numero di partizione o l'intervallo di partizioni specificato. Sono disponibili le opzioni seguenti:  
   
- NONE  
+ Nessuno  
  La tabella o le partizioni specificate non vengono compresse.  
   
  ROW  
@@ -1075,15 +1075,15 @@ Le tabelle temporanee globali per il database SQL di Azure seguono la stessa sin
 
 Per la risoluzione dei problemi di tempdb, vedere [spazio di risoluzione dei problemi di disco insufficiente in tempdb](https://technet.microsoft.com/library/ms176029%28v=sql.105%29.aspx?f=255&MSPPError=-2147217396). Per accedere le DMV di risoluzione dei problemi nel Database di SQL Azure, è necessario essere un amministratore del server.
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
 
- Qualsiasi utente può creare oggetti temporanei globali. Gli utenti possono accedere solo ai propri oggetti, a meno che non ottengano ulteriori autorizzazioni. .  
+ Qualsiasi utente può creare oggetti temporanei globali. Gli utenti possono accedere solo ai propri oggetti, a meno che non ottengano ulteriori autorizzazioni. ,  
   
 ### <a name="examples"></a>Esempi 
 
 - Sessione crea una tabella temporanea globale ##test nel Database SQL di Azure testdb1 e aggiunge la 1 riga
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1101,7 +1101,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - Sessione B si connette al Database SQL di Azure testdb1 e può accedere a tabella ##test creato da una sessione
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1109,7 +1109,7 @@ SELECT * FROM ##test
 
 - Sessione C si connette a un altro database in Database SQL di Azure testdb2 e desidera accedere ##test creato in testdb1. Questa selezione non riesce a causa dell'ambito del database per le tabelle temporanee globali 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1118,7 +1118,7 @@ Invalid object name '##test'
 
 - Indirizzamento di oggetto di sistema nel Database SQL di Azure tempdb dal testdb1 di database utente corrente
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
@@ -1127,7 +1127,7 @@ SELECT * FROM tempdb.sys.database_files
 
 
 ## <a name="partitioned-tables"></a>Tabelle partizionate  
- Prima di creare una tabella partizionata con CREATE TABLE, è necessario creare una funzione di partizione per specificare la modalità di partizionamento della tabella. Viene creata una funzione di partizione utilizzando [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md). In secondo luogo, è necessario creare uno schema di partizione per specificare i filegroup di destinazione delle partizioni indicate dalla funzione di partizione. Viene creato uno schema di partizione utilizzando [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). Per le tabelle partizionate non è possibile posizionare i vincoli PRIMARY KEY o UNIQUE in filegroup diversi. Per altre informazioni, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Prima di creare una tabella partizionata con CREATE TABLE, è necessario creare una funzione di partizione per specificare la modalità di partizionamento della tabella. Viene creata una funzione di partizione utilizzando [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md). In secondo luogo, è necessario creare uno schema di partizione per specificare i filegroup di destinazione delle partizioni indicate dalla funzione di partizione. Viene creato uno schema di partizione utilizzando [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). Per le tabelle partizionate non è possibile posizionare i vincoli PRIMARY KEY o UNIQUE in filegroup diversi. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ## <a name="primary-key-constraints"></a>Vincoli PRIMARY KEY  
   
@@ -1237,7 +1237,7 @@ SELECT * FROM tempdb.sys.database_files
   
  Se non si specifica in modo esplicito il supporto di valori Null per una colonna, saranno valide le regole indicate nella tabella seguente.  
   
-|Tipo di dati colonna|Rule|  
+|Tipo di dati colonna|Regola|  
 |----------------------|----------|  
 |Tipo di dati alias|[!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza l'impostazione del supporto di valori Null specificata in fase di creazione del tipo di dati. Per determinare i valori null del tipo di dati predefiniti, utilizzare **sp_help**.|  
 |Tipo CLR definito dall'utente|Il supporto dei valori Null viene stabilito in base alla definizione della colonna.|  
@@ -1255,7 +1255,7 @@ SELECT * FROM tempdb.sys.database_files
   
  Per valutare il modo in cui la modifica dello stato di compressione influirà su una tabella, un indice o una partizione, usare la stored procedure [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono richieste l'autorizzazione CREATE TABLE per il database e l'autorizzazione ALTER per lo schema in cui viene creata la tabella.  
   
  Se una colonna nell'istruzione CREATE TABLE è definita con un tipo CLR definito dall'utente, è necessario che l'utente sia il proprietario del tipo o disponga dell'autorizzazione REFERENCES.  

@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3ef20711fc03d6dac95d62cb8b2bd4a8b0d69528
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ Specifica un carattere che verrà utilizzato come carattere di virgolette nel fi
 |SQLNCHAR o SQLNVARCHAR|I dati vengono inviati in formato Unicode.|  
 |SQLBINARY o SQLVARYBIN|I dati vengono inviati senza conversione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  `OPENROWSET`le autorizzazioni sono determinate dalle autorizzazioni del nome utente che viene passato al provider OLE DB. Utilizzare il `BULK` opzione richiede `ADMINISTER BULK OPERATIONS` autorizzazione.  
   
 ## <a name="examples"></a>Esempi  
@@ -281,7 +281,7 @@ Specifica un carattere che verrà utilizzato come carattere di virgolette nel fi
 ### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>A. Utilizzo di OPENROWSET con SELECT e il provider OLE DB di SQL Server Native Client  
  L'esempio seguente usa il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client per accedere il `HumanResources.Department` tabella il [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database nel server remoto `Seattle1`. (L'utilizzo di SQLNCLI e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reindirizza alla versione più recente del provider OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.) Viene utilizzata un'istruzione `SELECT` per definire il set di righe restituito. La stringa del provider contiene le parole chiave `Server` e `Trusted_Connection`. Queste parole chiave sono riconosciute dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client.  
   
-```tsql  
+```sql  
 SELECT a.*  
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',  
      'SELECT GroupName, Name, DepartmentID  
@@ -295,7 +295,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 > [!NOTE]  
 >  Nell'esempio si presuppone che Access sia installato. Per eseguire questo esempio, è necessario installare il database Northwind.  
   
-```tsql  
+```sql  
 SELECT CustomerID, CompanyName  
    FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',  
       'C:\Program Files\Microsoft Office\OFFICE11\SAMPLES\Northwind.mdb';  
@@ -309,7 +309,7 @@ GO
 > [!NOTE]  
 >  Nell'esempio si presuppone che Access sia installato. Per eseguire questo esempio, è necessario installare il database Northwind.  
   
-```tsql  
+```sql  
 USE Northwind  ;  
 GO  
 SELECT c.*, o.*  
@@ -324,7 +324,7 @@ GO
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. Utilizzo di OPENROWSET per eseguire un inserimento bulk dei dati del file in una colonna varbinary(max).  
  Nell'esempio seguente viene creata una tabella di piccole dimensioni a titolo dimostrativo e vengono quindi inseriti i dati di un file denominato `Text1.txt` archiviato nella directory radice `C:` in una colonna `varbinary(max)`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTable(FileName nvarchar(60),   
@@ -341,7 +341,7 @@ GO
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. Utilizzo del provider OPENROWSET BULK con un file di formato per recuperare le righe da un file di testo  
  Nell'esempio seguente viene utilizzato un file di formato per recuperare le righe da un file di testo delimitato da tabulazioni, `values.txt` contenente i dati seguenti:  
   
-```tsql  
+```sql  
 1     Data Item 1  
 2     Data Item 2  
 3     Data Item 3  
@@ -349,7 +349,7 @@ GO
   
  Il file di formato, `values.fmt`, descrive le colonne in `values.txt`:  
   
-```tsql  
+```sql  
 9.0  
 2  
 1  SQLCHAR  0  10 "\t"        1  ID                SQL_Latin1_General_Cp437_BIN  
@@ -358,7 +358,7 @@ GO
   
  Di seguito è illustrata la query che recupera tali dati:  
   
-```tsql  
+```sql  
 SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',   
    FORMATFILE = 'c:\test\values.fmt') AS a;  
 ```  
@@ -366,14 +366,14 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. Specificare una pagina di codice e file di formato  
  Nell'esempio seguente viene illustrato come utilizzare entrambi i file di codice pagina Opzioni di formato nello stesso momento.  
   
-```tsql  
+```sql  
 INSERT INTO MyTable SELECT a.* FROM  
 OPENROWSET (BULK N'D:\data.csv', FORMATFILE =   
     'D:\format_no_collation.txt', CODEPAGE = '65001') AS a;  
 ```  
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. L'accesso ai dati da un file CSV con un file di formato  
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-```tsql
+```sql
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMATFILE = N'D:\XChange\test-csv.fmt', 
@@ -383,7 +383,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. L'accesso ai dati da un file CSV senza un file di formato
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK 'C:\Program Files\Microsoft SQL Server\MSSQL14.CTP1_1\MSSQL\DATA\inv-2017-01-19.csv',
    SINGLE_CLOB) AS DATA;
@@ -393,7 +393,7 @@ SELECT * FROM OPENROWSET(
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 L'esempio seguente usa un'origine dati esterna che punta a un contenitore in un account di archiviazione di Azure e le credenziali con ambito database creato per una firma di accesso condiviso.     
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
@@ -412,18 +412,18 @@ Per completare `OPENROWSET` esempi inclusi la configurazione di credenziali e l'
   
 -   [Usare un file di formato per l'importazione in blocco dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
 -   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [Informazioni sull'importazione ed esportazione in blocco di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [Informazioni sull'importazione ed esportazione bulk di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENQUERY &#40; Transact-SQL &#41;](../../t-sql/functions/openquery-transact-sql.md)   

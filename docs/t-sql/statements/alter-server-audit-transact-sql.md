@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23952b00480291dc5e73b1e729af36ebb2912747
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 992919d80e0f82393af0a6aa4c2c5564d3ec6189
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ Forza l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'a
   
  Non è possibile modificare il GUID di un controllo dopo che il controllo è stato creato.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per creare, modificare o eliminare un'entità del controllo del server, è necessario disporre dell'autorizzazione ALTER ANY SERVER AUDIT o CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  
@@ -191,7 +191,7 @@ GO
 ### <a name="c-changing-a-server-audit-where-clause"></a>C. Modifica di una clausola WHERE del controllo di un server  
  L'esempio seguente modifica where creata nell'esempio C di clausola [CREATE SERVER AUDIT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-audit-transact-sql.md). La nuova clausola WHERE Filtra per evento definito dall'utente se pari a 27.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -204,7 +204,7 @@ GO
 ### <a name="d-removing-a-where-clause"></a>D. Rimozione di una clausola WHERE  
  Nell'esempio seguente viene rimossa un'espressione del predicato della clausola WHERE.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -217,7 +217,7 @@ GO
 ### <a name="e-renaming-a-server-audit"></a>E. Ridenominazione di un controllo del server  
  Nell'esempio seguente il nome del controllo del server viene modificato da `FilterForSensitiveData` a `AuditDataAccess`.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  

@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8ca323b2431d493edd3db513502f197580b4149d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,7 +91,7 @@ match_expression [ NOT ] LIKE pattern
   
  Un confronto tra stringhe con uno schema che contiene **char** e **varchar** dati potrebbero non superare i confronti LIKE a causa di modalità di archiviazione di dati. È importante capire la modalità di archiviazione di ogni tipo di dati e i casi in cui i confronti LIKE potrebbero avere esito negativo. Nell'esempio seguente passa una variabile locale **char** variabile a una stored procedure e viene utilizzato un modello di corrispondenza per trovare tutti i dipendenti il cui cognome inizia con un set di caratteri specificato.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -109,7 +109,7 @@ GO
   
  Tuttavia, nell'esempio seguente ha esito positivo perché gli spazi vuoti finali non vengono aggiunti a un **varchar** variabile.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -137,7 +137,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  Negli esempi seguenti vengono illustrate le differenze tra le righe restituite da ricerche LIKE per ASCII e per Unicode.  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -168,7 +168,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  Ad esempio, la query seguente visualizza tutte le viste a gestione dinamica nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] in quanto tutte iniziano con le lettere `dm`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -207,7 +207,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>A. Utilizzo dell'operatore LIKE con il carattere jolly %  
  Nell'esempio seguente viene eseguita una ricerca di tutti i numeri telefonici con prefisso `415` nella tabella `PersonPhone`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -241,7 +241,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Utilizzo dell'operatore NOT LIKE con il carattere jolly %  
  Nell'esempio seguente viene eseguita una ricerca di tutti i numeri telefonici nella tabella `PersonPhone` il cui prefisso è diverso da `415`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -272,7 +272,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>C. Utilizzo della clausola ESCAPE  
  Nell'esempio seguente vengono utilizzati la clausola `ESCAPE` e il carattere di escape per cercare la stringa di caratteri esatta `10-15%` nella colonna `c1` della tabella `mytbl2`.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -297,7 +297,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>D. Utilizzo del carattere jolly [ ]  
  Nell'esempio seguente consente di trovare i dipendenti nel `Person` tabella con il nome di `Cheryl` o `Sheryl`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -308,7 +308,7 @@ GO
   
  Nell'esempio seguente vengono restituite le righe relative ai dipendenti nella tabella `Person` con cognome `Zheng` o `Zhang`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -323,7 +323,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Utilizzo dell'operatore LIKE con il carattere jolly %  
  Nell'esempio seguente consente di individuare tutti i dipendenti di `DimEmployee` tabella con numeri di telefono che iniziano con `612`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -333,9 +333,9 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Utilizzo dell'operatore NOT LIKE con il carattere jolly %  
- Nell'esempio seguente consente di individuare tutti i numeri di telefono di `DimEmployee` tabella che non iniziano con `612`.  .  
+ Nell'esempio seguente consente di individuare tutti i numeri di telefono di `DimEmployee` tabella che non iniziano con `612`.  ,  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -347,7 +347,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. Utilizzo dell'operatore LIKE con il carattere jolly _  
  Nell'esempio seguente consente di individuare tutti i numeri di telefono che dispone di un codice di area, a partire da `6` e di fine `2` nel `DimEmployee` tabella. Si noti che il carattere jolly % è anche incluso alla fine del criterio di ricerca perché il codice di area è la prima parte del numero di telefono e caratteri aggiuntivi dopo aver sono il valore della colonna.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  

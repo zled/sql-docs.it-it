@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda4f4793f0692b77ba8a606c904612674e29721
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a498430f8af12bad1e5ec934dcb60c63aeb96e56
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="translate-transact-sql"></a>CONVERTIRE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>B. Convertire i punti GeoJSON WKT    
 GeoJSON è un formato per la codifica di un'ampia gamma di strutture di dati geografici. Con il `TRANSLATE` (funzione), gli sviluppatori è possono convertire facilmente i punti GeoJSON in formato WKT e viceversa. La query seguente sostituisce quadrate e parentesi graffe nell'input con parentesi graffe regolari:   
-```tsql
+```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```

@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e1f234dc76b6b231fc3f1d0f258937e70035a65
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b34ea1ffe5a61b8cb7a0ba8b695015a8655c8709
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ CREATE STATISTICS statistics_name
   
 **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede una delle seguenti autorizzazioni:  
   
 -   ALTER TABLE  
@@ -234,7 +234,7 @@ CREATE STATISTICS statistics_name
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. Utilizzo di CREATE STATISTICS con l'opzione SAMPLE number PERCENT  
  Nell'esempio seguente vengono create le statistiche `ContactMail1` utilizzando un campionamento casuale del 5% delle colonne `BusinessEntityID` e `EmailPromotion` della tabella `Contact` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
@@ -243,7 +243,7 @@ CREATE STATISTICS ContactMail1
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>B. Utilizzo di CREATE STATISTICS con le opzioni FULLSCAN e NORECOMPUTE  
  Nell'esempio seguente vengono create le statistiche `ContactMail2` per tutte le righe nelle colonne `BusinessEntityID` e `EmailPromotion` della tabella `Contact` e viene disabilitato il ricalcolo automatico delle statistiche.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, NORECOMPUTE;  
@@ -252,7 +252,7 @@ CREATE STATISTICS NamePurchase
 ### <a name="c-using-create-statistics-to-create-filtered-statistics"></a>C. Utilizzo di CREATE STATISTICS per creare statistiche filtrate  
  Nell'esempio seguente vengono create le statistiche filtrate `ContactPromotion1`. [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza come campione il 50% dei dati, quindi seleziona le righe in cui `EmailPromotion` è uguale a 2.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactPromotion1  
     ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
 WHERE EmailPromotion = 2  
@@ -265,7 +265,7 @@ GO
   
  Poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiederà più importazioni di dati della tabella esterna in una tabella temporanea per creare le statistiche, l'opzione di analisi completa. Per una tabella di grandi dimensioni, il metodo di campionamento predefinito è in genere sufficiente.  
   
-```t-sql  
+```sql  
 --Create statistics on an external table and use default sampling.  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
   
@@ -276,7 +276,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Utilizzo di CREATE STATISTICS con le opzioni FULLSCAN e PERSIST_SAMPLE_PERCENT  
  Nell'esempio seguente viene creata la `ContactMail2` statistiche per tutte le righe il `BusinessEntityID` e `EmailPromotion` colonne di `Contact` tabella e imposta una percentuale di campionamento pari al 100% per tutti gli aggiornamenti successivi che eseguire in modo esplicito non specificare un campionamento percentuale.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
@@ -287,14 +287,14 @@ CREATE STATISTICS NamePurchase
 ### <a name="f-create-statistics-on-two-columns"></a>F. Creazione di statistiche su due colonne  
  Nell'esempio seguente viene creata la `CustomerStats1` statistiche, in base al `CustomerKey` e `EmailAddress` colonne di `DimCustomer` tabella. Le statistiche vengono create in base a un campione statisticamente significativo delle righe di `Customer` tabella.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. Creare statistiche tramite un'analisi completa  
  Nell'esempio seguente viene creata la `CustomerStatsFullScan` statistiche, in base a tutte le righe nell'analisi di `DimCustomer` tabella.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsFullScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
@@ -302,7 +302,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. Creare statistiche specificando la percentuale di esempio  
  Nell'esempio seguente viene creata la `CustomerStatsSampleScan` statistiche, l'analisi del 50% delle righe in base il `DimCustomer` tabella.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsSampleScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  

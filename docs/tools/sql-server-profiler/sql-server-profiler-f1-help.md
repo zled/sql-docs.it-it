@@ -3,7 +3,7 @@ title: Finestre di dialogo di SQL Server Profiler | Documenti Microsoft
 ms.custom: 
 ms.date: 07/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -48,11 +48,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e27d4133d4115d3313dcb7b9f0e9e834b60645d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 927d9d4f805932f4d95e898649e2cac60547d99c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Finestre di dialogo di SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è uno strumento che consente di acquisire [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli eventi da un server. Gli eventi vengono salvati in un file di traccia che è possibile analizzare o utilizzare in un momento successivo per riprodurre una serie specifica di passaggi allo scopo di diagnosticare un problema. Di seguito sono i comandi e le impostazioni disponibili nelle finestre di dialogo di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -221,7 +221,7 @@ Per visualizzare questa finestra utilizzare [!INCLUDE[ssSqlProfiler](../../inclu
 |**Salva nella tabella**|Consente di salvare i risultati di riproduzione in una tabella. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo di selezione della tabella in cui è possibile specificare la posizione in cui salvare la tabella.  
 |**Numero di thread di riproduzione**|Consente di specificare il numero di thread di riproduzione da utilizzare simultaneamente. Un numero elevato determina un maggior consumo di risorse durante la riproduzione, ma la riproduzione viene eseguita in modo più veloce e simultaneo.  
 |**Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**|Gli eventi vengono riprodotti in modo sequenziale. Utilizzare questa opzione per riprodurre una traccia a scopi di debug.  
-|**Riproduci gli eventi utilizzando più thread** |Gli eventi vengono riprodotti simultaneamente. Questa opzione offre una riproduzione più veloce rispetto alla riproduzione degli eventi sequenziale, ma non permette l'utilizzo a scopi di debug. Gli eventi vengono ordinati in base ai relativi identificatori di processo di sistema (SPID).  
+|**Riproduci gli eventi usando più thread** |Gli eventi vengono riprodotti simultaneamente. Questa opzione offre una riproduzione più veloce rispetto alla riproduzione degli eventi sequenziale, ma non permette l'utilizzo a scopi di debug. Gli eventi vengono ordinati in base ai relativi identificatori di processo di sistema (SPID).  
 |**Visualizza risultati di riproduzione**|Consente di visualizzare i risultati di riproduzione in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. 
 ### <a name="advanced-replay-options"></a>Opzioni avanzate di riproduzione
 La scheda **Opzioni avanzate di riproduzione** della finestra di dialogo **Configurazione riproduzione** consente di specificare la modalità di riproduzione di un file di traccia.  

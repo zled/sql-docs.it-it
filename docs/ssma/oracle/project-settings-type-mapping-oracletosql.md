@@ -1,7 +1,7 @@
 ---
 title: Impostazioni (Mapping dei tipi) del progetto (OracleToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 60a996ce7e67c418e511e88306224818286541c2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4be0d12ce3067f46c934cfa7e053ddd1779ac9f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Impostazioni (Mapping dei tipi) del progetto (OracleToSQL)
 La pagina Mapping dei tipi del **impostazioni progetto** la finestra di dialogo contiene le impostazioni che consentono di personalizzare la modalità SSMA converte i tipi di dati Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di dati.  
@@ -68,22 +68,22 @@ Nella tabella seguente contiene il mapping dei tipi di dati predefinito per gli 
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|int|  
+|binary_integer|INT|  
 |blob|varbinary(max)|  
 |boolean|bit|  
-|char|varchar(max)|  
-|char varying|varchar(max)|  
-|character|varchar(max)|  
-|character varying|varchar(max)|  
-|Oggetto CLOB|varchar(max)|  
-|data|datetime2 [0]|  
+|char|ntext|  
+|char varying|ntext|  
+|character|ntext|  
+|character varying|ntext|  
+|Oggetto CLOB|ntext|  
+|Data|datetime2 [0]|  
 |dec|DEC [38] [0]|  
-|decimal|float [53]|  
+|Decimal|float [53]|  
 |valore a precisione doppia|float [53]|  
-|float|float [53]|  
-|int|int|  
-|integer|int|  
-|long|varchar(max)|  
+|FLOAT|float [53]|  
+|INT|INT|  
+|integer|INT|  
+|long|ntext|  
 |long raw|varbinary(max)|  
 |long raw [\*... 8000]<sup>*</sup>|varbinary [*]|  
 |long raw [8001...\*]<sup>*</sup>|varbinary(max)|  
@@ -92,24 +92,24 @@ Nella tabella seguente contiene il mapping dei tipi di dati predefinito per gli 
 |caratteri nazionali|nvarchar(max)|  
 |variabile di caratteri nazionali<sup>**</sup>|nvarchar(max)|  
 |variabile di caratteri nazionali<sup>*</sup>|nvarchar(max)|  
-|nchar|nvarchar(max)|  
+|NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |number|float [53]|  
-|numeric|float [53]|  
+|NUMERIC|float [53]|  
 |NVARCHAR2|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|INT|  
 |raw|varbinary(max)|  
-|real|float [53]|  
-|ROWID|uniqueidentifier|  
-|Signtype|smallint|  
-|smallint|smallint|  
-|string|varchar(max)|  
-|timestamp|datetime2|  
+|REAL|float [53]|  
+|ROWID|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
+|string|ntext|  
+|TIMESTAMP|datetime2|  
 |timestamp con fuso orario locale|datetimeoffset|  
 |timestamp con fuso orario|datetimeoffset|  
-|UROWID|uniqueidentifier|  
-|varchar|varchar(max)|  
-|VARCHAR2|varchar(max)|  
+|UROWID|UNIQUEIDENTIFIER|  
+|varchar|ntext|  
+|VARCHAR2|ntext|  
 |XmlType|xml|  
   
 <sup>*</sup>Si applica per restituire i mapping solo di valori tipo.  
@@ -131,55 +131,55 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le colonne.
 |character|char|  
 |variabile di tipo carattere [*... \*]|varchar [*]|  
 |caratteri [*... \*]|Char [*]|  
-|Oggetto CLOB|varchar(max)|  
-|data|datetime2 [0]|  
+|Oggetto CLOB|ntext|  
+|Data|datetime2 [0]|  
 |dec|DEC [38] [0]|  
 |DEC [*... \*]|DEC [*] [0]|  
 |DEC [*... \*][\*.. \*]|dec[*][\*]|  
-|decimal|decimale [38] [0]|  
+|Decimal|decimale [38] [0]|  
 |decimale [*... \*]|decimale [*] [0]|  
 |decimale [*... \*][\*.. \*]|decimale [*] [\*]|  
 |valore a precisione doppia|float [53]|  
-|float|float [53]|  
+|FLOAT|float [53]|  
 |float [*... 53]|float [*]|  
 |float [54... *]|float [53]|  
-|int|int|  
-|integer|int|  
-|long|varchar(max)|  
+|INT|INT|  
+|integer|INT|  
+|long|ntext|  
 |long raw|varbinary(max)|  
 |long raw [*... 8000]|varbinary [*]|  
 |long raw [8001... *]|varbinary(max)|  
-|Long varchar|varchar(max)|  
+|Long varchar|ntext|  
 |tempo [*... 8000]|varchar [*]|  
-|tempo [8001... *]|varchar(max)|  
-|char nazionali|nchar|  
+|tempo [8001... *]|ntext|  
+|char nazionali|NCHAR|  
 |char National varying [*... \*]|nvarchar [*]|  
 |National char [*... \*]|nchar [*]|  
-|caratteri nazionali|nchar|  
+|caratteri nazionali|NCHAR|  
 |variabile di caratteri nazionale [*... \*]|nvarchar [*]|  
 |caratteri nazionali [*... \*]|nchar [*]|  
-|nchar|nchar|  
+|NCHAR|NCHAR|  
 |nchar [*]|nchar [*]|  
 |NCLOB|nvarchar(max)|  
 |number|float [53]|  
 |numero [*... \*]|numerico [*]|  
 |numero [*... \*][\*.. \*]|numerico [*] [\*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |numerico [*... \*]|numerico [*]|  
 |numerico [*... \*][\*.. \*]|numerico [*] [\*]|  
 |NVARCHAR2 [*... \*]|nvarchar [*]|  
 |non elaborato [*... \*]|varbinary [*]|  
-|real|float [53]|  
-|ROWID|uniqueidentifier|  
-|smallint|smallint|  
-|timestamp|datetime2|  
+|REAL|float [53]|  
+|ROWID|UNIQUEIDENTIFIER|  
+|SMALLINT|SMALLINT|  
+|TIMESTAMP|datetime2|  
 |timestamp con fuso orario locale|datetimeoffset|  
 |timestamp con fuso orario locale [*... \*]|DateTimeOffset [*]|  
 |timestamp con fuso orario|datetimeoffset|  
 |timestamp con fuso orario [*... \*]|DateTimeOffset [*]|  
 |timestamp [*... \*]|datetime2 [*]|  
-|UROWID|uniqueidentifier|  
-|UROWID [*... \*]|uniqueidentifier|  
+|UROWID|UNIQUEIDENTIFIER|  
+|UROWID [*... \*]|UNIQUEIDENTIFIER|  
 |varchar [*... \*]|varchar [*]|  
 |VARCHAR2 [*... \*]|varchar [*]|  
 |XmlType|xml|  
@@ -192,49 +192,49 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|int|  
+|binary_interger|INT|  
 |BLOB|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
 |variabile Char [*... 8000]|varchar [*]|  
-|variabile Char [8001... *]|varchar(max)|  
+|variabile Char [8001... *]|ntext|  
 |Char [*... 8000]|Char [*]|  
-|Char [8001... *]|varchar(max)|  
+|Char [8001... *]|ntext|  
 |Carattere|char|  
 |variabile di tipo carattere [*... 8000]|varchar [*]|  
-|variabile di tipo carattere [8001... *]|varchar(max)|  
+|variabile di tipo carattere [8001... *]|ntext|  
 |caratteri [*... 8000]|Char [*]|  
-|caratteri [8001... *]|varchar(max)|  
-|Oggetto CLOB|varchar(max)|  
-|data|datetime2 [0]|  
+|caratteri [8001... *]|ntext|  
+|Oggetto CLOB|ntext|  
+|Data|datetime2 [0]|  
 |dec|DEC [38] [0]|  
 |DEC [*... \*]|DEC [*] [0]|  
 |DEC [*... \*][\*.. \*]|dec[*][\*]|  
-|decimal|decimale [38] [0]|  
+|Decimal|decimale [38] [0]|  
 |decimale [*... \*]|decimale [*] [0]|  
 |decimale [*... \*][\*.. \*]|decimale [*] [\*]|  
 |valore a precisione doppia|float [53]|  
-|Float|float [53]|  
+|float|float [53]|  
 |float [*... 53]|float [*]|  
 |float [54... *]|float [53]|  
-|int|int|  
-|Valore intero|int|  
+|Int|INT|  
+|Valore intero|INT|  
 |numero intero [*... \*]|numerico [*] [0]|  
-|Long|varchar(max)|  
+|Long|ntext|  
 |long raw|varbinary(max)|  
 |long raw [*... 8000]|varbinary [*]|  
 |long raw [8001... *]|varbinary(max)|  
-|char nazionali|nchar|  
+|char nazionali|NCHAR|  
 |char National varying [*... 4000]|nvarchar [*]|  
 |char National varying [4001... *]|nvarchar(max)|  
 |National char [*... 4000]|nchar [*]|  
 |National char [4001... *]|nvarchar(max)|  
-|caratteri nazionali|nchar|  
+|caratteri nazionali|NCHAR|  
 |caratteri nazionali [*... 4000]|nvarchar [*]|  
 |caratteri nazionali [4001... *]|nvarchar(max)|  
 |variabile di caratteri nazionale [*... 4000]|nvarchar [*]|  
 |variabile di caratteri nazionale [4001... *]|nvarchar(max)|  
-|Nchar|nchar|  
+|Nchar|NCHAR|  
 |nchar [*... 4000]|nchar [*]|  
 |nchar [4001... *]|nvarchar(max)|  
 |nchar varying [*... 4000]|nvarchar [*]|  
@@ -248,25 +248,25 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili
 |numerico [*... \*][\*.. \*]|numerico [*] [\*]|  
 |NVARCHAR2 [*... 4000]|nvarchar [*]|  
 |NVARCHAR2 [4001... *]|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|INT|  
 |non elaborato [*... 8000]|varbinary [*]|  
 |non elaborato [8001... *]|varbinary(max)|  
 |Real|float [53]|  
-|ROWID|uniqueidentifier|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|ROWID|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |stringa [*... 8000]|varchar [*]|  
-|stringa [8001... *]|varchar(max)|  
-|timestamp|datetime2|  
+|stringa [8001... *]|ntext|  
+|TIMESTAMP|datetime2|  
 |timestamp con fuso orario locale|datetimeoffset|  
 |timestamp con fuso orario|datetimeoffset|  
 |timestamp con fuso orario locale [*... \*]|DateTimeOffset [*]|  
 |timestamp con fuso orario [*... \*]|DateTimeOffset [*]|  
 |timestamp [*... \*]|datetime2 [*]|  
-|UROWID|uniqueidentifier|  
-|UROWID [*... \*]|uniqueidentifier|  
+|UROWID|UNIQUEIDENTIFIER|  
+|UROWID [*... \*]|UNIQUEIDENTIFIER|  
 |varchar [*... 8000]|varchar [*]|  
-|varchar [8001... *]|varchar(max)|  
+|varchar [8001... *]|ntext|  
 |VARCHAR2 [*... 8000]|varchar [*]|  
 |VARCHAR2 [8001... *]|varcha(max)|  
 |XmlType|xml|  

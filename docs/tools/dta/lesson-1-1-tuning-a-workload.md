@@ -3,7 +3,7 @@ title: Ottimizzazione di un carico di lavoro | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 56041b15a6fa78bc88d62c409f0df958d0dd862a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 534f4ab58ee49d3bfce6899bf3858404fb7b3fd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-1---tuning-a-workload"></a>Lezione 1-1: ottimizzazione di un carico di lavoro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Per trovare la migliore struttura fisica del database per le prestazioni delle query nel database e tabelle selezionate per l'ottimizzazione, è possibile utilizzare Ottimizzazione guidata motore di Database.  

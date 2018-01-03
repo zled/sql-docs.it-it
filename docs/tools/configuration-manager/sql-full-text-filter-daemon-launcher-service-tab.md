@@ -3,7 +3,7 @@ title: Avvio del Daemon filtri Full-text SQL (scheda servizio) | Documenti Micro
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58adfe0ee2c9133c357079766ad01e2a7847b83d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8ed0ccaed0106d331812d56f3aa5c29e0d70c4d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Utilità di avvio del daemon filtri full-text di SQL (scheda Servizio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], il servizio di avvio del Daemon di filtri SQL Full-text (FDHOST Launcher) viene utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text. Se si utilizza la ricerca full-text, questo servizio deve essere in esecuzione. Per informazioni sui processi host del daemon di filtri, vedere "Architettura della ricerca full-text" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

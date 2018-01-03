@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55bf1ae9625c5b27c7078bbba61704eef195b0ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tabelle di applicazione livello dati - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 |**dac_object_name_posttran**|**sysname**|Nome dell'oggetto dopo l'esecuzione del commit della transazione contenente l'azione. Utilizzato solo per database e account di accesso.|  
 |**in SqlScript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] che implementa un'azione in un database o account di accesso.|  
 |**payload**|**varbinary(max)**|Definizione del pacchetto di applicazione livello dati salvata in una stringa codificata binaria.|  
-|**Commenti**|**varchar(max)**|Consente di registrare l'accesso di un utente che ha accettato la possibile perdita dei dati in un aggiornamento dell'applicazione livello dati.|  
+|**Commenti**|**ntext**|Consente di registrare l'accesso di un utente che ha accettato la possibile perdita dei dati in un aggiornamento dell'applicazione livello dati.|  
 |**ERROR_STRING**|**nvarchar(max)**|Messaggio di errore generato se l'azione rileva un errore.|  
 |**created_by**|**sysname**|Account di accesso che ha avviato l'azione di creazione questa voce.|  
 |**Date_Created**|**datetime**|Data e ora di creazione della voce.|  
@@ -63,12 +63,12 @@ ms.lasthandoff: 11/17/2017
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|create|dacpac|  
 |12|1|create|login|  
-|12|2|create|database|  
-|12|3|ridenominazione|database|  
+|12|2|create|Database|  
+|12|3|ridenominazione|Database|  
   
  Operazioni di applicazione livello dati, ad esempio elimina, non rimuovono le righe da **sysdac_history_internal**. È possibile utilizzare la query seguente per eliminare manualmente le righe per le applicazioni livello dati non più distribuite su un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
-```tsql  
+```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
 WHERE instance_id NOT IN  
    (SELECT instance_id  
@@ -80,7 +80,7 @@ WHERE instance_id NOT IN
 > [!NOTE]  
 >  Attualmente non è disponibile alcun meccanismo per l'eliminazione di **sysdac_history_internal** le righe sul [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin. Accesso in sola lettura a questa vista è disponibile per tutti gli utenti con autorizzazioni per connettersi al database master.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -3,7 +3,7 @@ title: "Utilità sqlmaint | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlmaint
 ms.reviewer: 
@@ -25,13 +25,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ef2ee4a1e84f18cc79b337e6358155f88fde826
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5eb402990dd9859a957c64d8d6bf47f7d2b3213
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="sqlmaint-utility"></a>Utilità sqlmaint
+# <a name="sqlmaint-utility"></a>utilità sqlmaint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il**sqlmaint** utilità consente di eseguire un set specificato di operazioni di manutenzione su uno o più database. Usare l'utilità **sqlmaint** per eseguire controlli DBCC, backup di un database e del relativo log delle transazioni, aggiornare statistiche e ricompilare indici. Tutte le attività di manutenzione dei database generano un report che può essere inviato a un file di testo, un file HTML o un account di posta elettronica specificato. **sqlmaint** esegue i piani di manutenzione dei database creati con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per eseguire i piani di manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi, usare l' [utilità dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
@@ -135,7 +135,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  Quando si accede a un server remoto con *sqlmaint* , è necessario specificare il nome UNC completo del file per **html_file** .  
   
  **-DelHtmlRpt** \<*time_period*>  
- Specifica che tutti i report HTML nella directory di report deve essere eliminata se supera l'intervallo di tempo dopo la creazione del file di report \< *periodo_tempo*>. **-DelHtmlRpt** cerca i file con nome corrispondente al modello generato dal parametro *html_file* . Se *html_file* è c:\Programmi\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, quindi **- DelHtmlRpt** causa **sqlmaint** elimini i file i cui nomi corrispondono al modello C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*htm e che risalgono a più specificato \< *periodo_tempo*>.  
+ Specifica che tutti i report HTML nella directory di report deve essere eliminata se supera l'intervallo di tempo dopo la creazione del file di report \< *periodo_tempo*>. **-DelHtmlRpt** cerca i file con nome corrispondente al modello generato dal parametro *html_file*. Se *html_file* è c:\Programmi\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, quindi **- DelHtmlRpt** causa **sqlmaint** elimini i file i cui nomi corrispondono al modello C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*htm e che risalgono a più specificato \< *periodo_tempo*>.  
   
  **-RmUnusedSpace** *threshold_percent free_percent*  
  Specifica la rimozione dello spazio inutilizzato dal database indicato in **-D**. Questa opzione è utile solo nel caso di database per i quali è stato impostato l'aumento automatico delle dimensioni. *Threshold_percent* specifica le dimensioni, in megabyte, che il database deve raggiungere prima che **sqlmaint** rimuova lo spazio inutilizzato. Se le dimensioni del database sono inferiori a *threshold_percent*, non viene eseguita alcuna azione. *Free_percent* specifica la quantità di spazio inutilizzato che deve rimanere nel database, in termini di percentuale delle dimensioni finali del database. Se ad esempio un database di 200 MB contiene 100 MB di dati e si specifica 10 per *free_percent* , le dimensioni finali del database saranno di 110 MB. Le dimensioni del database non vengono aumentate se sono inferiori a *free_percent* più la quantità di dati del database. Se ad esempio un database di 108 MB contiene 100 MB di dati e si specifica 10 per *free_percent* , il database non viene esteso a 110 MB, ma resta di 108 MB.  

@@ -3,7 +3,7 @@ title: "Utilità SQLdiag | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqldiag
 ms.reviewer: 
@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2533811a2ccc47ac836079c4a4972bfc1f9e5bd7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9ffbcdc873f61ee683e182294d40bb7880047b60
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldiag-utility"></a>SQLdiag - utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il **SQLdiag** utilità è un'utilità di raccolta dati diagnostici generica che può essere eseguita come applicazione console o come un servizio. È possibile usare **SQLdiag** per raccogliere i log e i file di dati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e altri tipi di server, nonché per monitorare i server in un intervallo di tempo oppure risolvere problemi specifici dei server. L'utilità**SQLdiag** è stata creata per velocizzare e semplificare la raccolta delle informazioni diagnostiche necessarie per il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -164,11 +164,11 @@ sqldiag
   
  È possibile usare*SQLdiag_application_name* per avviare o arrestare un'istanza specifica del servizio **SQLdiag** .  
   
- Esempio:  
+ Ad esempio  
   
  **SQLDIAG START /A**  *SQLdiag_application_name*  
   
- È anche possibile usare tale parametro con l'opzione **/R** per registrare un'istanza specifica di **SQLdiag** come servizio. Esempio:  
+ È anche possibile usare tale parametro con l'opzione **/R** per registrare un'istanza specifica di **SQLdiag** come servizio. Ad esempio  
   
  **SQLDIAG /R /A** *SQLdiag_application_name*  
   
@@ -227,11 +227,11 @@ sqldiag
  **START** | **STOP** | **STOP_ABORT**  
  Avvia o arresta il servizio **SQLdiag** . **STOP_ABORT** forza il servizio di arrestarsi al più presto senza portare a termine la raccolta dei dati diagnostici in corso.  
   
- Questi argomenti di controllo del servizio devono essere i primi nella riga di comando quando vengono utilizzati. Esempio:  
+ Questi argomenti di controllo del servizio devono essere i primi nella riga di comando quando vengono utilizzati. Ad esempio  
   
  **SQLDIAG START**  
   
- L' argomento **/A** , che specifica un'istanza denominata di **SQLdiag**, è l'unico che può essere usato con **START**, **STOP**o **STOP_ABORT** per il controllo di un'istanza specifica del servizio **SQLdiag** . Esempio:  
+ L' argomento **/A** , che specifica un'istanza denominata di **SQLdiag**, è l'unico che può essere usato con **START**, **STOP**o **STOP_ABORT** per il controllo di un'istanza specifica del servizio **SQLdiag** . Ad esempio  
   
  **SQLDIAG START /A** *SQLdiag_application_name*  
   

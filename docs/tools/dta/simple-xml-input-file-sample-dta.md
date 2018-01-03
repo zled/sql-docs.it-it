@@ -3,7 +3,7 @@ title: Esempio di File (DTA) di Input XML semplice | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8ba0f572ff740549d204507e364eb8eafd82fba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2c5fcc0d00ce8883e010c5cc26c0de4918f7d47a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>Esempio di file di input XML semplice (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Copiare e incollare questo esempio di un file di input XML semplice da utilizzare per l'ottimizzazione dei carichi di lavoro nell'editor di testo o editor XML preferito. Sostituire quindi i valori specificati per gli elementi **Server**, **Database**, **Schema**, **Table**, **Workload**e **TuningOptions** con quelli per la sessione di ottimizzazione specifica. Per altre informazioni sugli attributi e sugli elementi figlio che è possibile usare con questi elementi, vedere [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md). Nell'esempio seguente viene utilizzato solo un subset delle opzioni relative agli attributi e agli elementi figlio disponibili.  

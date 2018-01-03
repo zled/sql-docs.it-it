@@ -64,11 +64,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 596e524d009f62439e5b8205603040369384fc79
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -703,7 +703,7 @@ TABLE
   
  Specifica l'opzione di compressione dei dati per la tabella, il numero di partizione o l'intervallo di partizioni specificato. Sono disponibili le opzioni seguenti:  
   
- NONE  
+ Nessuno  
  La tabella o le partizioni specificate non vengono compresse. Non si applica alle tabelle columnstore.  
   
  ROW  
@@ -777,7 +777,7 @@ TABLE
   
 -   Per disabilitare l'estensione per una tabella e copiare i dati remoti per la tabella da Azure a SQL Server, eseguire il comando seguente. Questo comando non può essere annullato.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
@@ -788,7 +788,7 @@ ALTER TABLE \<table name>
   
 -   Per disabilitare l'estensione per una tabella e abbandonare i dati remoti, eseguire il comando seguente.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
@@ -943,7 +943,7 @@ Nelle versioni precedenti l'uso del formato server.database.schema.tabella gener
   
  Per risolvere il problema, rimuovere l'uso di un prefisso in quattro parti.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
  Le autorizzazioni ALTER TABLE si applicano a entrambe le tabelle coinvolte in un'istruzione ALTER TABLE SWITCH. Tutti i dati trasferiti ereditano la sicurezza della tabella di destinazione.  
@@ -1648,7 +1648,7 @@ ORDER BY p.partition_number;
 ```  
   
 ### <a name="g-determining-the-partition-column-for-a-partitioned-table"></a>G. Determinare la colonna di partizione per una tabella partizionata  
- Tramite la query seguente viene restituito il nome della colonna di partizionamento per la tabella. `FactResellerSales`.  
+ Tramite la query seguente viene restituito il nome della colonna di partizionamento per la tabella. `FactResellerSales`(Indici per tabelle con ottimizzazione per la memoria).  
   
 ```  
 SELECT t.object_id AS Object_ID, t.name AS TableName, 

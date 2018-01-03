@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c21066f81db2e229ac66ea350a9c369174eaa4fb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4d43024a0e094e3f5f59c8929db30ed809884cb5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +56,13 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
   
  Nel momento in cui sp_syscollector_set_cache_directory viene eseguita la directory specificata non deve essere esistere. I dati tuttavia non possono essere memorizzati nella cache né caricati in modo corretto fino a quando la directory non viene creata. È consigliabile pertanto creare la directory prima di eseguire questa stored procedure.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene disabilitato l'agente di raccolta dati, imposta la directory della cache per l'agente di raccolta dati per `D:\tempdata`e quindi Abilita l'agente di raccolta dati.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXECUTE dbo.sp_syscollector_disable_collector;  

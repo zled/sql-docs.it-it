@@ -43,11 +43,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 671eb95a5c1772ec790886d923112d491bbd2a35
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a739b230d39726367d54a64e7b2327f6a80f9ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -161,7 +161,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *column_name*  
  È una colonna contenente i dati da modificare. *column_name* deve essere presente in *table_or view_name*. Non è possibile aggiornare le colonne Identity.  
   
- *espressione*  
+ *expression*  
  Variabile, valore letterale, espressione o istruzione sub-SELECT racchiusa tra parentesi che restituisce un valore singolo. Il valore restituito da *espressione* sostituisce il valore esistente in *column_name* o  *@variable* .  
   
 > [!NOTE]  
@@ -466,7 +466,7 @@ ID     Value
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni UPDATE sono necessarie nella tabella di destinazione. Le autorizzazioni SELECT sono necessari anche per la tabella da aggiornare se l'istruzione UPDATE include una clausola WHERE, oppure se *espressione* nel SET di clausola utilizza una colonna nella tabella.  
   
  AGGIORNAMENTO delle autorizzazioni per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server, il **db_owner** e **db_datawriter** fissa ruoli del database e il proprietario della tabella. I membri del **sysadmin**, **db_owner**, e **db_securityadmin** ruoli e il proprietario della tabella possono trasferire autorizzazioni ad altri utenti.  

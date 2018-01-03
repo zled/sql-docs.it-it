@@ -34,11 +34,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,8 +46,11 @@ ms.lasthandoff: 11/17/2017
 Convertire una tabella rowstore in un indice columnstore cluster o creare un indice columnstore non cluster. Utilizzare un indice columnstore per un'esecuzione efficiente analitica operativa in tempo reale in un carico di lavoro OLTP o per migliorare le prestazioni di query e la compressione dei dati per i carichi di lavoro di data warehousing.  
   
 > [!NOTE]  
->  A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile creare la tabella come indice columnstore cluster.   Non è più necessario creare prima una tabella rowstore e quindi convertirla in un indice columnstore cluster.  
-  
+> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile creare la tabella come indice columnstore cluster.   Non è più necessario creare prima una tabella rowstore e quindi convertirla in un indice columnstore cluster.  
+
+> [!TIP]
+> Per informazioni sulle linee guida di progettazione di indice, vedere il [Guida alla progettazione di SQL Server indice](../../relational-databases/sql-server-index-design-guide.md).
+
 Ignora agli esempi:  
 -   [Esempi per la conversione di una tabella rowstore a columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [Esempi per gli indici columnstore non cluster](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
@@ -257,7 +260,7 @@ Crea l'indice specificato nel filegroup predefinito.
   
 In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e deve essere delimitato, ad esempio ON **"**predefinito**"** oppure ON **[**predefinito**]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="GenRemarks"></a>Osservazioni generali  
@@ -299,20 +302,20 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 **Ogni colonna in un indice columnstore deve essere uno dei seguenti tipi di dati di business comuni:** 
 -   DateTimeOffset [(  *n*  )]  
 -   datetime2 [(  *n*  )]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   data  
+-   Data  
 -   tempo [(  *n*  )]  
 -   float [(  *n*  )]  
 -   reale [(  *n*  )]  
 -   decimale [( *precisione* [ *, scala* ] **)** ]
 -   numerico [( *precisione* [ *, scala* ] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
+-   SMALLMONEY  
+-   BIGINT  
+-   INT  
 -   smallint  
--   tinyint  
+-   TINYINT  
 -   bit  
 -   nvarchar [(  *n*  )] 
 -   nvarchar (max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e Database SQL di Azure a premium tariffario, solo gli indici columnstore cluster)   

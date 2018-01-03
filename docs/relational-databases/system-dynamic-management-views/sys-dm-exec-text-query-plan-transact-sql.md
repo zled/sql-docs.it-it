@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bb3aa76b6d09b2a1c31f30c20fb4ce4374d48d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bd975dbb78b502df209a6763c6198284f1f5dea
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ Il valore -1 indica la fine del batch. Il valore predefinito è -1.
   
 Quando una query ad hoc utilizza [semplice](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) o [parametrizzazione forzata](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), **query_plan** colonna conterrà solo il testo dell'istruzione e non il piano di query effettivo. Per restituire il piano di query, chiamare **Sys.dm exec_text_query_plan** per l'handle del piano della query con parametri preparata. È possibile determinare se la parametrizzazione della query è stata facendo riferimento al **sql** colonna del [Sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) visualizzazione o la colonna di testo del [exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)vista a gestione dinamica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire **Sys.dm exec_text_query_plan**, un utente deve essere un membro del **sysadmin** ruolo predefinito del server o disporre dell'autorizzazione VIEW SERVER STATE nel server.  
   
 ## <a name="examples"></a>Esempi  
@@ -118,7 +118,7 @@ Quando una query ad hoc utilizza [semplice](../../relational-databases/query-pro
   
  Utilizzare innanzitutto la stored procedure `sp_who` per recuperare l'ID del processo server (SPID, Server Process ID) per il processo che esegue la query o il batch:  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_who;  
@@ -127,7 +127,7 @@ GO
   
  Il set dei risultati restituito da `sp_who` indica che il valore di SPID è `54`. È possibile utilizzare questo SPID con la vista a gestione dinamica `sys.dm_exec_requests` per recuperare l'handle del piano utilizzando la query seguente:  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -137,7 +137,7 @@ GO
   
  La tabella restituita da **Sys.dm exec_requests** indica che l'handle del piano per la query con esecuzione prolungata o il batch è `0x06000100A27E7C1FA821B10600`. Nell'esempio seguente viene restituito il piano di query per l'handle del piano specificato e vengono utilizzati i valori predefiniti 0 e -1 per restituire tutte le istruzioni nella query o nel batch.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT query_plan   
@@ -148,7 +148,7 @@ GO
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. Recupero di tutti i piani di query dalla cache dei piani  
  Per recuperare uno snapshot di tutti i piani di query disponibili nella cache dei piani, è possibile recuperare gli handle per tutti i piani di query nella cache eseguendo una query sulla vista a gestione dinamica `sys.dm_exec_cached_plans`. Gli handle dei piani sono archiviati nella colonna `plan_handle` della vista `sys.dm_exec_cached_plans`. È quindi necessario utilizzare l'operatore CROSS APPLY per passare gli handle dei piani a `sys.dm_exec_text_query_plan` come illustrato di seguito. L'output per ogni piano attualmente nella cache dei piani viene indicato Showplan il `query_plan` colonna della tabella restituita.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT *   
@@ -160,7 +160,7 @@ GO
 ### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. Recupero di tutti i piani di query per cui il server ha raccolto informazioni statistiche sulle query dalla cache dei piani  
  Per recuperare uno snapshot di tutti i piani di query disponibili nella cache dei piani per i quali il server ha raccolto informazioni statistiche, è possibile recuperare gli handle dei piani per tutti i piani di query nella cache eseguendo una query sulla vista a gestione dinamica `sys.dm_exec_query_stats`. Gli handle dei piani sono archiviati nella colonna `plan_handle` della vista `sys.dm_exec_query_stats`. È quindi necessario utilizzare l'operatore CROSS APPLY per passare gli handle dei piani a `sys.dm_exec_text_query_plan` come illustrato di seguito. L'output Showplan per ogni piano viene indicato nella colonna `query_plan` della tabella restituita.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_query_stats AS qs   
@@ -171,7 +171,7 @@ GO
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Recupero di informazioni sulle prime cinque query in base al tempo medio di CPU  
  Nell'esempio seguente vengono restituiti i piani di query e il tempo medio di CPU per le prime cinque query. Il **Sys.dm exec_text_query_plan** funzione specifica i valori predefiniti 0 e -1 per restituire tutte le istruzioni nel batch nel piano di query.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
 Plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  
