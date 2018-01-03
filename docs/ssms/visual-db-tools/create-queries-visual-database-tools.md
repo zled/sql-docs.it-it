@@ -3,7 +3,7 @@ title: Creare query (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44d4501f760e397a9ce6339a9f898f30cbc181fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c000e41faca9bcc3442cd67695f13d9a33e7366f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-queries-visual-database-tools"></a>Creazione di query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le query consentono di recuperare dati dalle tabelle e dalle viste del database. Le query vengono create e usate in **Progettazione query e Progettazione viste**, uno strumento che comprende quattro riquadri: il [riquadro Diagramma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), il [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), il [riquadro Criteri Pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)e il [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
@@ -51,7 +51,7 @@ Per perfezionare la query, è possibile modificare il codice SQL nel **riquadro 
 ## <a name="see-also"></a>Vedere anche  
 [Salvataggio di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Tipi di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
-[Specificare i criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Specifica dei criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Creare un riepilogo dei risultati di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

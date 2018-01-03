@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a505859d320552f4c591e61440a5b97bf92d8e17
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21b7665fa4beaf0dc48f336c7f706f1a12ed4865
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Avvio rapido: Eventi estesi in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ I passaggi sono comprensibili anche se si decide di non eseguirli. La dimostrazi
 - Generale
 - Eventi
 - Archiviazione dei dati
-- Avanzate
+- Advanced
 
 
 Il testo e le schermate di supporto possono presentare leggere imprecisioni a causa delle modifiche apportate all'interfaccia utente nel corso di mesi o anni. Le schermate restano tuttavia valide ai fini della spiegazione se le discrepanze sono di minore entità.
@@ -97,7 +97,7 @@ Il testo e le schermate di supporto possono presentare leggere imprecisioni a ca
 
 2. In Esplora oggetti, fare clic su **Gestione** > **Eventi estesi** > **Nuova sessione**. La finestra di dialogo **Nuova sessione** è preferibile rispetto alla finestra di dialogo di **Creazione guidata nuova sessione**anche se le due finestre sono simili tra loro.
 
-3. In alto a sinistra fare clic sulla pagina **Generale** . Quindi digitare *SessioneUtente*, o qualsiasi nome desiderato, nella casella di testo **Nome sessione** . *Non* premere il pulsante **OK** ; questa operazione verrà eseguita solo alla fine della demo.
+3. In alto a sinistra fare clic sulla pagina **Generale** . Quindi digitare *SessioneUtente*, o qualsiasi nome desiderato, nella casella di testo **Nome sessione** . *Non* premere il pulsante **OK**; questa operazione verrà eseguita solo alla fine della demo.
 
     ![Nuova sessione > Generale > Nome sessione](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -111,11 +111,11 @@ Il testo e le schermate di supporto possono presentare leggere imprecisioni a ca
     - Fare clic sul pulsante freccia destra **>** per spostare l'evento nella casella **Eventi selezionati** .
 
 6. Sempre nella pagina **Eventi** fare clic sul pulsante **Configura** all'estrema destra.
-    - Nella schermata seguente, dalla quale è stato eliminato il lato sinistro per una migliore visualizzazione, è possibile vedere l'area **Opzioni di configurazione eventi** .
+    - Nella schermata seguente, dalla quale è stato eliminato il lato sinistro per una migliore visualizzazione, è possibile vedere l'area **Opzioni di configurazione eventi**.
 
     ![Nuova sessione > Eventi > Configura > Filtro (predicato) > Campo](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Fare clic sulla scheda **Filtro (predicato)** . Successivamente, fare clic su **Fare clic qui per aggiungere una clausola**se si intende acquisire tutte le istruzioni SQL SELECT che hanno una clausola HAVING.
+7. Fare clic sulla scheda **Filtro (predicato)**. Successivamente, fare clic su **Fare clic qui per aggiungere una clausola**se si intende acquisire tutte le istruzioni SQL SELECT che hanno una clausola HAVING.
 
 8. Scegliere **sqlserver.sql_text** dall'elenco a discesa **Campo**.
    - Per **Operatore** scegliere un operatore LIKE.
@@ -138,11 +138,11 @@ Il testo e le schermate di supporto possono presentare leggere imprecisioni a ca
 
     ![Nuova sessione > Avanzate > Latenza di recapito massima > OK](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. In alto a sinistra fare clic sulla pagina **Avanzate** .
+12. In alto a sinistra fare clic sulla pagina **Avanzate**.
     - Ridurre la **Latenza di recapito massima** a 3 secondi.
     - Infine, fare clic su **OK** nella parte inferiore.
 
-13. In **Esplora oggetti**espandere **Gestione** > **Sessioni**e visualizzare il nuovo nodo per **SessioneUtente**.
+13. In **Esplora oggetti** espandere **Gestione** > **Sessioni** e visualizzare il nuovo nodo per **SessioneUtente**.
 
     ![Nodo per la nuova *sessione eventi* denominata SessioneUtente, in Esplora oggetti, in Gestione> Eventi estesi > Sessioni](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
@@ -165,7 +165,7 @@ In **Esplora oggetti**di SSMS è possibile modificare la sessione eventi facendo
 Di seguito è riportata l'istruzione T-SQL CREATE EVENT SESSION per *SessioneUtente*, che è stata generata dai clic eseguiti nell'interfaccia utente:
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [YourSession]
     ON SERVER 
     ADD EVENT sqlserver.sql_statement_completed
@@ -206,7 +206,7 @@ GO
 Prima dell'istruzione CREATE EVENT SESSION, potrebbe essere necessario eseguire un'istruzione DROP EVENT SESSION nel caso in cui il nome esiste già.
 
 
-```tsql
+```sql
 IF EXISTS (SELECT *
       FROM sys.server_event_sessions    -- If Microsoft SQL Server.
     --FROM sys.database_event_sessions  -- If Azure SQL Database in the cloud.
@@ -226,7 +226,7 @@ go
 Quando si crea una sessione eventi, il valore predefinito è l'avvio non automatico. È possibile avviare o arrestare la sessione eventi in qualsiasi momento usando l'istruzione T-SQL ALTER EVENT SESSION seguente.
 
 
-```tsql
+```sql
 ALTER EVENT SESSION [YourSession]
       ON SERVER
     --ON DATABASE
@@ -252,7 +252,7 @@ Testare la sessione eventi con questi semplici passaggi:
 
 
 
-```tsql
+```sql
 SELECT
         c.name,
         Count(*)  AS [Count-Per-Column-Repeated-Name]
@@ -304,7 +304,7 @@ In SSML eseguire l'istruzione T-SQL SELECT seguente per restituire i risultati i
 > Il sistema di eventi aggiunge sempre un numero lungo al nome file event_file *xel* specificato. Prima di poter eseguire l'istruzione SELECT dal file, è necessario copiare il nome completo specificato dal sistema e incollarlo nell'istruzione SELECT.
 
 
-```tsql
+```sql
 SELECT
         object_name,
         file_name,
@@ -430,7 +430,7 @@ Alcuni scenari specifici per le sessioni eventi finalizzate alla valutazione dei
 La tabella seguente elenca i termini usati per gli eventi estesi e ne descrive i significati.
 
 
-| Nome | Descrizione |
+| Nome | Description |
 | :--- | :---------- |
 | sessione eventi | Un costrutto incentrato su uno o più eventi, oltre a elementi di supporto quali azioni e destinazioni. L'istruzione CREATE EVENT SESSION viene costruita a ogni sessione eventi. È possibile modificare una sessione eventi in modo da avviarla e arrestarla in base alle proprie esigenze. <br/> <br/> Una sessione eventi viene a volte indicata semplicemente come *sessione*, quando il dal contesto si evince che indica la *sessione eventi*. <br/> <br/> Altre informazioni sulle sessioni eventi sono descritte in: [Sessioni degli eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | evento | Un'occorrenza specifica del sistema che viene controllata da una sessione eventi attiva. <br/> <br/> Ad esempio, l'evento *sql_statement_completed* rappresenta il momento in cui viene completata un'istruzione T-SQL. L'evento può segnalare la durata e altri dati. |
@@ -446,7 +446,7 @@ La tabella seguente elenca i termini usati per gli eventi estesi e ne descrive i
 L'istruzione T-SQL SELECT seguente restituisce una riga per ogni evento disponibile il cui nome contiene la stringa di tre caratteri 'sql'. Naturalmente, è possibile modificare il valore LIKE per cercare nomi di eventi diversi. Le righe mostrano anche il nome del pacchetto che contiene l'evento.
 
 
-```tsql
+```sql
 SELECT   -- Find an event you want.
         p.name         AS [Package-Name],
         o.object_type,
@@ -578,7 +578,7 @@ Le istruzioni Transact-SQL SELECT seguenti possono segnalare l'identità del pro
 L'istruzione SELECT...UNION ALL seguente restituisce le righe che mostrano l'identità di chi ha le autorizzazioni necessarie per la creazione di sessioni eventi e l'esecuzione di query nelle viste del catalogo di sistema per gli eventi estesi.
 
 
-```tsql
+```sql
 -- Ascertain who has the permissions listed in the ON clause.
 -- 'CONTROL SERVER' permission includes the permissions
 -- 'ALTER ANY EVENT SESSION' and 'VIEW SERVER STATE'.
@@ -636,7 +636,7 @@ L'istruzione SELECT seguente segnala le autorizzazioni. Si basa sulla funzione p
 Inoltre, se si ha l'autorità di *rappresentare* temporaneamente altri account, è possibile rimuovere il commento dalle istruzioni [EXECUTE AS LOGIN](../../t-sql/statements/execute-as-transact-sql.md) e REVERT per richiedere informazioni sugli altri account.
 
 
-```tsql
+```sql
 --EXECUTE AS LOGIN = 'AccountNameHere';
 SELECT HAS_PERMS_BY_NAME(
     null, null,

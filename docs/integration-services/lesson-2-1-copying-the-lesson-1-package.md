@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cc1fd5b193fa9b9a2da8931ad290b7f2612bd76f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3656d4c9647c12e8d824b59956b114098270751e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>Lezione 2-1 - Copia del pacchetto della lezione 1
 In questa attività si procederà alla creazione di una copia del pacchetto della lezione 1, denominato Lesson 1.dtsx. Se non è stata completata la lezione 1, è possibile aggiungere al progetto il pacchetto completo della lezione 1 incluso nell'esercitazione e quindi copiarlo. Questa nuova copia verrà usata per tutto il seguito della lezione 2.  
@@ -35,7 +35,7 @@ In questa attività si procederà alla creazione di una copia del pacchetto dell
   
 3.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Lesson 1.dtsx**e quindi scegliere **Copia**.  
   
-4.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Pacchetti SSIS**e quindi scegliere **Incolla**.  
+4.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Pacchetti SSIS** e quindi scegliere **Incolla**.  
   
     Per impostazione predefinita, il pacchetto copiato verrà denominato Lesson 2.dtsx.  
   
@@ -59,7 +59,7 @@ In questa attività si procederà alla creazione di una copia del pacchetto dell
   
     Per scaricare tutti i pacchetti di lezioni di questa esercitazione, effettuare le operazioni seguenti.  
   
-    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Passare alla pagina degli [esempi del prodotto di Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Fare clic sulla scheda **DOWNLOADS** .  
   

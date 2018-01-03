@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 43f5f8e693aac51bee20a4ca7b29a5cb0676cf92
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e5c5c217d5449c0c934636b983f48235724bb027
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lezione 1-3 - Aggiunta di pacchetti e altri file
 In questa attività verranno aggiunti i pacchetti esistenti, i file ausiliari di supporto a singoli pacchetti e un file Leggimi relativo al progetto Deployment Tutorial creato nell'attività precedente. Verrò aggiunto ad esempio un file di dati XML contenente i dati relativi a un pacchetto e un file di testo che include informazioni su tutti i pacchetti del progetto.  
@@ -60,7 +60,7 @@ Nell'attività successiva si procederà all'aggiunta delle configurazioni per i 
   
 5.  Fare clic sul pulsante con i puntini di sospensione **(…)** , passare a C:\Programmi\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, selezionare **DataTransfer.dtsx**e quindi fare clic su **Apri**.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 7.  Ripetere i passaggi da 3 a 6 per aggiungere questa volta LoadXMLData.dtsx, che si trova in C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages.  
   
@@ -72,7 +72,7 @@ Nell'attività successiva si procederà all'aggiunta delle configurazioni per i 
   
 3.  Nella finestra di dialogo **Aggiungi elemento esistente - Deployment Tutorial** passare a C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\\, selezionare Readme.txt e fare clic su **Aggiungi**.  
   
-4.  Scegliere **Salva tutti**dal menu File.  
+4.  Scegliere **Salva tutto**dal menu File.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
 [Passaggio 4: Aggiunta delle configurazioni dei pacchetti](../integration-services/lesson-1-4-adding-package-configurations.md)  

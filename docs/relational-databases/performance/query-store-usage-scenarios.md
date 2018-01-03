@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c996f85f6c487874f1d5bc5e4839b1ea2a9c618
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 941481fb17d33c18e648e4afe511e868e59fc0a1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-store-usage-scenarios"></a>Scenari di utilizzo dell'Archivio query
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ ms.lasthandoff: 11/17/2017
   
  In alternativa, è possibile eseguire script [!INCLUDE[tsql](../../includes/tsql-md.md)] per ottenere il numero totale di testi della query, query e piani nel sistema e determinarne le differenze confrontando query_hash e plan_hash:  
   
-```tsql  
+```sql  
 /*Do cardinality analysis when suspect on ad-hoc workloads*/  
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
@@ -166,7 +166,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
  L'approccio che prevede l'uso di singoli modelli di query richiede la creazione di guide di piano:  
   
-```tsql  
+```sql  
 /*Apply plan guide for the selected query template*/  
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
@@ -188,7 +188,7 @@ EXEC sp_create_plan_guide
   
  Se tutte o la maggior parte delle query sono idonee alla parametrizzazione automatica, valutare la modifica di `FORCED PARAMETERIZATION` per l'intero database:  
   
-```tsql  
+```sql  
 /*Apply forced parameterization for entire database*/  
 ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;  
 ```  
@@ -204,7 +204,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;
   
  In questo caso è opportuno abilitare l'opzione server [**Ottimizza per carichi di lavoro ad hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) per evitare di usare in modo non efficiente cache per query che probabilmente non verranno più eseguite. Per impedire l'acquisizione di tali query in Archivio query, impostare `QUERY_CAPTURE_MODE` su `AUTO`.  
   
-```tsql  
+```sql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -221,7 +221,7 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitoraggio delle prestazioni con Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   

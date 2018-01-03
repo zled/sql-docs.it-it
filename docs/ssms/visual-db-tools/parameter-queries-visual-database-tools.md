@@ -3,7 +3,7 @@ title: Query con parametri (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a076e12d307e39188ca4d462fc1f65221066e8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 19089d8fa51a7285782606b8d49e3da31e07d865
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Query con parametri (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In alcuni casi potrebbe essere necessario creare una query da usare più volte, specificando però ogni volta un valore diverso. Se, ad esempio, si eseguono di frequente delle query per individuare tutti i `title_ids` di un determinato autore, è possibile utilizzare la stessa query per tutte le richieste specificando però ogni volta un ID o un nome di autore diverso.  
@@ -70,7 +70,7 @@ WHERE au_fname = %first name% AND
 Al momento dell'esecuzione della query in Progettazione query e Progettazione viste, nella [finestra di dialogo Parametri query](../../ssms/visual-db-tools/query-parameters-dialog-box-visual-database-tools.md) viene visualizzato un elenco di parametri denominati.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione di query mediante parametri &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
+[Esecuzione di query con parametri &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
 [Tipi di query supportati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c8a82c0ebb888c4ea075789c7f2149726ff7af25
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e21ab2cdfc462485bf15b741dbe6e795c0833de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Parametri del pacchetto e del progetto di Integration Services (SSIS)
   I parametri (SSIS) di[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consentono di assegnare valori alle proprietà incluse nei pacchetti durante la fase di esecuzione. È possibile creare *parametri di progetto* al livello del progetto e *parametri di pacchetto* al livello del pacchetto. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  Nella tabella riportata di seguito sono elencati i tipi di valori.  
   
-|Nome del valore|Descrizione|Tipo di valore|  
+|Nome del valore|Description|Tipo di valore|  
 |----------------|-----------------|-------------------|  
 |Valore di esecuzione|Valore assegnato a un'istanza specifica di esecuzione del pacchetto. Questa assegnazione esegue l'override di tutti gli altri valori, tuttavia è applicabile a una sola istanza di esecuzione del pacchetto.|Valore letterale|  
 |Valore del server|Valore assegnato al parametro nell'ambito del progetto, dopo la distribuzione del progetto nel server Integration Services. Questo valore esegue l'override del valore predefinito di progettazione.|Valore letterale o riferimento a una variabile di ambiente|  
@@ -124,11 +124,11 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
   
     |Proprietà|Description|  
     |--------------|-----------------|  
-    |Nome|Nome del parametro.|  
+    |nome|Nome del parametro.|  
     |Tipo di dati|Tipo di dati del parametro.|  
     |Valore predefinito|Valore predefinito del parametro assegnato in fase di progettazione. Noto anche come valore predefinito di progettazione.|  
     |Sensibile|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  
-    |Required|Richiede che un valore diverso dal valore predefinito di progettazione venga specificato prima dell'esecuzione del pacchetto.|  
+    |Obbligatorio|Richiede che un valore diverso dal valore predefinito di progettazione venga specificato prima dell'esecuzione del pacchetto.|  
     |Description|Per manutenzione, la descrizione del parametro. In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], impostare la descrizione del parametro nella finestra Proprietà di Visual Studio quando il parametro viene selezionato nella finestra dei parametri applicabile.|  
   
     > **NOTA:** quando si distribuisce un progetto nel catalogo, molte più proprietà vengono associate al progetto. Per visualizzare tutte le proprietà di tutti i parametri nel catalogo, usare la vista [catalog.object_parameters &#40;database SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
@@ -155,11 +155,11 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
   
     |Proprietà|Description|  
     |--------------|-----------------|  
-    |Nome|Nome del parametro.|  
+    |nome|Nome del parametro.|  
     |Tipo di dati|Tipo di dati del parametro.|  
     |Valore predefinito|Valore predefinito del parametro assegnato in fase di progettazione. Noto anche come valore predefinito di progettazione.|  
     |Sensibile|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  
-    |Required|Richiede che un valore diverso dal valore predefinito di progettazione venga specificato prima dell'esecuzione del pacchetto.|  
+    |Obbligatorio|Richiede che un valore diverso dal valore predefinito di progettazione venga specificato prima dell'esecuzione del pacchetto.|  
     |Description|Per manutenzione, la descrizione del parametro. In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], impostare la descrizione del parametro nella finestra Proprietà di Visual Studio quando il parametro viene selezionato nella finestra dei parametri applicabile.|  
   
 5.  Salvare il progetto per salvare le modifiche ai parametri. I valori dei parametri sono archiviati nelle configurazioni del file di progetto. Salvare il file di progetto per eseguire il commit al disco delle eventuali modifiche apportate ai valori dei parametri.  
@@ -185,10 +185,10 @@ La finestra di dialogo **Imposta parametri** consente di associare un parametro 
  **Nome**  
  Specificare il nome del parametro che si desidera creare.  
   
- **Description**  
+ **Descrizione**  
  Specificare la descrizione per il parametro.  
   
- **Valore**  
+ **Value**  
  Specificare il valore predefinito per il parametro. Definito anche valore predefinito per la progettazione, potrà essere sostituito in seguito in fase di distribuzione.  
   
  **Ambito**  

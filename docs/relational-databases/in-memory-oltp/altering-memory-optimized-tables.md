@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c51763f25d86402e2728c3639a1958cbfec13ac6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf905d416e81c6dbc30294559e83f247c9e3f197
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="altering-memory-optimized-tables"></a>Modifica di tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ In questo caso l'operazione a thread singolo registrerebbe l'intero contenuto de
 ## <a name="examples"></a>Esempi  
  L'esempio seguente modifica il numero di bucket di un indice hash esistente. L'indice hash viene ricompilato con il nuovo numero di bucket mentre le altre proprietà dell'indice hash rimangono invariate.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem   
        ALTER INDEX imPK_SalesOrderDetail_SalesOrderID_SalesOrderDetailID  
               REBUILD WITH (BUCKET_COUNT=67108864);  
@@ -117,7 +117,7 @@ GO
   
  L'esempio seguente aggiunge una colonna con un vincolo NON NULL e una definizione DEFAULT e usa WITH VALUES per fornire valori per ogni riga esistente nella tabella. Se non si utilizza WITH VALUES, a ogni riga della nuova colonna viene associato il valore NULL.  
   
-```tsql  
+```sql  
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD Comment NVARCHAR(100) NOT NULL DEFAULT N'' WITH VALUES;  
 GO
@@ -125,7 +125,7 @@ GO
   
  L'esempio seguente aggiunge un vincolo di chiave primaria a una colonna esistente.  
   
-```tsql
+```sql
 CREATE TABLE dbo.UserSession (   
    SessionId int not null,   
    UserId int not null,   
@@ -143,7 +143,7 @@ GO
   
  L'esempio seguente rimuove un indice.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        DROP INDEX ix_ModifiedDate;  
 GO
@@ -151,7 +151,7 @@ GO
   
  L'esempio seguente aggiunge un indice.  
   
-```tsql  
+```sql  
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD INDEX ix_ModifiedDate (ModifiedDate);  
 GO  
@@ -159,7 +159,7 @@ GO
   
  L'esempio seguente aggiunge più colonne, con un indice e vincoli.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD    CustomerID int NOT NULL DEFAULT -1 WITH VALUES,  
               ShipMethodID int NOT NULL DEFAULT -1 WITH VALUES,  

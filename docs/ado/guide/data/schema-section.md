@@ -3,7 +3,7 @@ title: Sezione schema | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbe340ed1778b125d6281ef62f53b721923939cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65b56003d7fd7723dce57a0c8c6fae2ecee6da06
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schema-section"></a>Sezione dello schema
 La sezione dello schema è necessaria. Come illustrato nell'esempio precedente, ADO scrive metadati dettagliati su ogni colonna per mantenere la semantica dei valori dei dati il più possibile per l'aggiornamento. Tuttavia, per caricare il file XML, ADO richiede solo i nomi delle colonne e il set di righe a cui appartengono. Di seguito è riportato un esempio di uno schema minimo:  

@@ -3,7 +3,7 @@ title: Connettersi a SQL Server o al database SQL di Azure | Microsoft Docs
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9f1f7bc813e3b22007c9a7ef58ce373e57fbe0c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 023641a1c7f298af6a946e3d9746bc8fe29145a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Connettersi a SQL Server o al database SQL di Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Per usare server e database, è prima di tutto necessario connettersi al server. È possibile connettersi a più server contemporaneamente.
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/05/2017
 
    ![Connessione completata](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Next Steps
 
 [Progettare, creare e aggiornare le tabelle](../visual-db-tools/design-tables-visual-database-tools.md)
 

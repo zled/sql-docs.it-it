@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 498e6557348e164085bae3b3ea646caa318a49c7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8e55988e5e55671b5ff97b80916e3c368d51dd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Lezione 1-2 - Aggiunta e configurazione di una gestione connessione file flat
 In questa attività si aggiungerà una gestione connessione file flat al pacchetto appena creato. Una gestione connessione file flat abilita un pacchetto all'estrazione di dati da un file flat. Utilizzando tale gestione connessione è possibile specificare il nome file e la posizione, le impostazioni locali e la tabella codici e il formato del file, inclusi i delimitatori di colonna, da applicare quando il pacchetto estrae i dati dal file flat. È anche possibile specificare manualmente il tipo di dati per le singole colonne o usare la finestra di dialogo **Suggerisci tipo di colonne** per eseguire automaticamente il mapping delle colonne di dati estratti ai tipi di dati di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -92,10 +92,10 @@ Gestione connessione file flat fornisce informazioni sulle impostazioni locali p
   
     |Colonna file flat|Tipo suggerito|Colonna di destinazione|Tipo destinazione|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|data|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Data|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
     Il tipo di dati suggerito per la colonna **CurrencyID** non è compatibile con il tipo di dati del campo della tabella di destinazione. Dal momento che il tipo di dati di `DimCurrency.CurrencyAlternateKey` è nchar (3), **CurrencyID** deve essere modificato da stringa [DT_STR] in stringa [DT_WSTR]. Il campo `DimDate.FullDateAlternateKey` viene anche definito come tipo di dati relativo alla data, quindi **CurrencyDate** deve essere modificato da date [DT_Date] in database date [DT_DBDATE].  
   
@@ -103,7 +103,7 @@ Gestione connessione file flat fornisce informazioni sulle impostazioni locali p
   
 3.  Nel riquadro delle proprietà modificare il tipo di dati della colonna **CurrencyDate** da date [DT_DATE] a database date [DT_DBDATE].  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
 [Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  

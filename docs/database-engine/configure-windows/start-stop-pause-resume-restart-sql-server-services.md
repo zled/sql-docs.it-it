@@ -47,11 +47,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2694383403923ad677ba680fcdaaa0a2e7e5138a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e9ff0f1d6fb35c9c5bc63b973e4ec269f12b3865
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
     -   [Informazioni aggiuntive](#MoreInformation)  
   
-    -   [Sicurezza](#Security)  
+    -   [Security](#Security)  
   
 -   **Istruzioni relative all'utilizzo di:**  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per impostazione predefinita, solo i membri del gruppo di amministratori locale possono avviare, arrestare, mettere in pausa, riprendere o riavviare un servizio. Per concedere a utenti non amministratori la possibilità di gestire servizi, vedere [Concedere agli utenti i privilegi per gestire i servizi in Windows Server 2003](http://support.microsoft.com/kb/325349). Il processo è analogo ad altre versioni di Windows.  
   
  L'arresto del [!INCLUDE[ssDE](../../includes/ssde-md.md)] con il comando [!INCLUDE[tsql](../../includes/tsql-md.md)]SHUTDOWN **di**  richiede l'appartenenza ai ruoli predefiniti del server **sysadmin** o **serveradmin** e non è trasferibile.  
@@ -269,20 +269,20 @@ ms.lasthandoff: 11/20/2017
   
     -   Per arrestare un servizio, sostituire **net start** con **net stop**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile arrestare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite l'istruzione **SHUTDOWN** .  
   
 #### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>Per arrestare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 -   Per attendere il completamento delle stored procedure e delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] attualmente in esecuzione e quindi arrestare [!INCLUDE[ssDE](../../includes/ssde-md.md)], eseguire l'istruzione seguente.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   Per arrestare immediatamente il [!INCLUDE[ssDE](../../includes/ssde-md.md)], eseguire l'istruzione seguente.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   

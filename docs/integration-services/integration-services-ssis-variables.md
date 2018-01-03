@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
   Nelle variabili vengono archiviati valori che possono essere usati in fase di esecuzione da un pacchetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e dai relativi contenitori, attività e gestori di eventi. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
@@ -194,13 +194,13 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
  **Nome**  
  Consente di digitare il nome della variabile.  
   
- **Spazio dei nomi**  
+ **Namespace**  
  Consente di specificare lo spazio dei nomi della variabile. Per impostazione predefinita, le variabili definite dall'utente si trovano nello spazio dei nomi **Utente** .  
   
  **Tipo valore**  
  Consente di selezionare un tipo di dati.  
   
- **Valore**  
+ **Value**  
  Consente di digitare un valore. Il valore deve essere compatibile con il tipo di dati specificato nell'opzione **Tipo valore** .  
   
  **Sola lettura**  
@@ -313,7 +313,7 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
 ## <a name="update-a-variable-dynamically-with-configurations"></a>Aggiornare una variabile in modo dinamico con configurazioni  
  Per aggiornare le variabili in modo dinamico, è possibile creare configurazioni per le variabili, distribuirle insieme al pacchetto e quindi aggiornare i valori delle variabili nel file di configurazione quando si distribuiscono i pacchetti. In fase di esecuzione il pacchetto utilizza i valori di variabile aggiornati. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../integration-services/packages/create-package-configurations.md).  
 
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Mapping dei parametri di query a variabili in un componente del flusso di dati](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

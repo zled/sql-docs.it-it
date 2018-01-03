@@ -3,9 +3,9 @@ title: Gestire i segnalibri | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4dc1a1474d70e686fb08e6c6df79c40cb9d3488
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-bookmarks"></a>Gestione di segnalibri
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quando si lavora in un editor di codice, la finestra **Segnalibri** consente di creare collegamenti a righe di codice specifiche all'interno del documento. Per visualizzare questa finestra, usare il menu **Visualizza** .  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
  **Abilita/Disabilita tutti i segnalibri**  
  Deseleziona o abilita le caselle di controllo per tutti i segnalibri nella finestra **Segnalibri** . I segnalibri non vengono rimossi e le righe di codice identificate dai segnalibri non vengono modificate.  
   
- **Delete**  
+ **Elimina**  
  Rimuove il segnalibro attualmente selezionato dalla finestra **Segnalibri** e dal documento in cui il segnalibro è stato inserito. La riga di codice corrispondente non viene rimossa.  
   
  Caselle di controllo dei segnalibri  
@@ -84,10 +84,10 @@ ms.lasthandoff: 11/17/2017
 ## <a name="bookmarks-window-shortcut-menu"></a>Menu di scelta rapida della finestra Segnalibri  
  Quando si fa clic con il pulsante destro del mouse su una voce nella finestra **Segnalibri** , vengono resi disponibili i seguenti comandi nel menu di scelta rapida.  
   
- **Delete**  
+ **Elimina**  
  Rimuove il segnalibro attualmente selezionato dalla finestra **Segnalibri** e dal documento in cui il segnalibro è stato inserito. La riga di codice corrispondente non viene rimossa.  
   
- **Rename**  
+ **Rinominare**  
  Consente di assegnare un nuovo nome visualizzato a un segnalibro o a una cartella.  
   
  **Abilita/Disabilita segnalibro**  

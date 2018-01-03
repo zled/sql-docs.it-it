@@ -3,7 +3,7 @@ title: Servizi Desktop remoto restituisce &quot;flusso non lettura&quot; errore 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd1d9232fd2fec4d3380ab037f8583b0047a5290
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 40ddc0352e3964b3a2cb654c0feb01ed3a13175a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>Servizi Desktop remoto restituisce &quot;flusso non lettura&quot; errore
 "L'oggetto di flusso di lettura perché è vuoto o la posizione corrente si trova alla fine del flusso. Per i flussi non vuoto, impostare la posizione corrente con la proprietà posizione. Per determinare se il flusso è vuoto, controllare la proprietà di dimensione."  

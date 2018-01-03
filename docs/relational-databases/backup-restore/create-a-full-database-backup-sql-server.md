@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7cf23385a5eb76d9d528213998de853856333614
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 42964f190b4eacba2e1861c7af0f86d48dcbd4b0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Creazione di un backup completo del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , le opzioni **PASSWORD** e **MEDIAPASSWORD** non sono più disponibile per la creazione di backup. È possibile ripristinare backup creati con password.  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
   
  Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario poter leggere e scrivere nel dispositivo; l'account con il quale viene eseguito il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **deve** avere autorizzazioni di scrittura. Tuttavia, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema, non controlla le autorizzazioni di accesso al file. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
@@ -148,7 +148,7 @@ ms.lasthandoff: 12/05/2017
   
          Per altre informazioni sulle date di scadenza dei backup, vedere [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
-21. Nella sezione **Compressione** usare l'elenco a discesa **Imposta compressione backup** per selezionare il livello di compressione desiderato.  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versioni successive supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Per impostazione predefinita, la compressione di un backup dipende dal valore dell'opzione di configurazione del server **Valore predefinito di compressione backup** . Tuttavia, indipendentemente dall'impostazione predefinita a livello di server corrente, è possibile comprimere un backup selezionando **Comprimi backup**ed è possibile impedire la compressione selezionando **Non comprimere il backup**.  
+21. Nella sezione **Compressione** usare l'elenco a discesa **Imposta compressione backup** per selezionare il livello di compressione desiderato.  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versioni successive supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Per impostazione predefinita, la compressione di un backup dipende dal valore dell'opzione di configurazione del server **Valore predefinito di compressione backup**. Tuttavia, indipendentemente dall'impostazione predefinita a livello di server corrente, è possibile comprimere un backup selezionando **Comprimi backup**ed è possibile impedire la compressione selezionando **Non comprimere il backup**.  
   
      Per altre informazioni sulle impostazioni della compressione dei backup, vedere [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
@@ -164,7 +164,7 @@ In questo esempio verrà eseguito il backup su disco del database `Sales` nel pe
 
 2.  Espandere i **database**, fare clic con il pulsante destro del mouse su `Sales`, scegliere **Attività**, quindi fare clic su **Backup...**.
 
-3.  Scegliere **OK**.
+3.  Fare clic su **OK**.
 
 #### <a name="b--full-back-up-to-disk-to-non-default-location"></a>**B.  Eseguire il backup completo su disco in un percorso non predefinito**
 In questo esempio verrà eseguito il backup su disco del database `Sales` nel percorso `E:\MSSQL\BAK`.  In precedenza sono stati eseguiti backup di `Sales` .
@@ -180,9 +180,9 @@ In questo esempio verrà eseguito il backup su disco del database `Sales` nel pe
 
 6.  Immettere `E:\MSSQL\BAK\Sales_20160801.bak` nella casella di testo del **nome file** .
 
-7.  Scegliere **OK**.
+7.  Fare clic su **OK**.
 
-8.  Scegliere **OK**.
+8.  Fare clic su **OK**.
 
 #### <a name="c--create-an-encrypted-backup"></a>**C.  Creare un backup crittografato**
 In questo esempio verrà eseguito il backup con crittografia del database `Sales` nel percorso di backup predefinito.  È già stata creata una  [**chiave master del database**](../../relational-databases/security/encryption/create-a-database-master-key.md) .  Inoltre, è già stato creato un  [**certificato**](../../t-sql/statements/create-certificate-transact-sql.md) denominato `MyCertificate`. Per un esempio T-SQL di creazione di una **chiave master del database** e di un **certificato** , vedere [Creare un backup crittografato](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
@@ -198,7 +198,7 @@ In questo esempio verrà eseguito il backup con crittografia del database `Sales
 
 6.  Nell'elenco a discesa **Certificato o chiave asimmetrica** selezionare `MyCertificate`.
 
-7.  Scegliere **OK**.
+7.  Fare clic su **OK**.
 
 #### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Backup nel servizio di archiviazione BLOB di Azure**
 #### <a name="common-steps"></a>**Passaggi comuni**  
@@ -218,24 +218,24 @@ Sono stati creati i criteri di accesso archiviati con diritti di lettura, scritt
 
     6.  Nella casella di testo **File di Backup:** digitare `Sales_stripe1of2_20160601.bak`.
 
-    7.  Scegliere **OK**.
+    7.  Fare clic su **OK**.
 
     8.  Ripetere i passaggi **4** e **5**.
 
     9.  Nella casella di testo **File di Backup:** digitare `Sales_stripe2of2_20160601.bak`.
 
-    10.  Scegliere **OK**.
+    10.  Fare clic su **OK**.
 
-    11.   Scegliere **OK**.
+    11.   Fare clic su **OK**.
 
     **D2.  Esiste una firma di accesso condiviso e le credenziali di SQL Server non esistono**
   5.    Digitare `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` nella casella di testo **Contenitore di Archiviazione di Azure:**
   
   6.    Digitare la firma di accesso condiviso nella casella di testo **Criteri di accesso condiviso:** .
   
-  7.    Scegliere **OK**.
+  7.    Fare clic su **OK**.
   
-  8.    Scegliere **OK**.
+  8.    Fare clic su **OK**.
 
     **D3.  Non esiste una firma di accesso condiviso**
   5.    Fare clic sul pulsante **Nuovo contenitore** e si aprirà la finestra di dialogo **Connetti a una sottoscrizione Microsoft** .  
@@ -244,10 +244,10 @@ Sono stati creati i criteri di accesso archiviati con diritti di lettura, scritt
   
   7.    Fare clic su **OK** nella finestra di dialogo **Selezionare la destinazione di backup** .
   
-  8.    Scegliere **OK**.
+  8.    Fare clic su **OK**.
 
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 ### <a name="create-a-full-database-backup"></a>Creare un backup completo del database  
   
@@ -265,7 +265,7 @@ Sono stati creati i criteri di accesso archiviati con diritti di lettura, scritt
   
      [ WITH *con_opzioni* [ **,**...*o* ] ];  
   
-    |Opzione|Descrizione|  
+    |Opzione|Description|  
     |------------|-----------------|  
     |*database*|Corrisponde al database di cui eseguire il backup.|  
     |*dispositivo_backup* [ **,**...*n* ]|Specifica un elenco di dispositivi di backup da 1 a 64 da utilizzare per l'operazione di backup. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente se è già stata definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=***nome_dispositivo_backup_fisico*<br /><br /> Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
@@ -304,7 +304,7 @@ Sono stati creati i criteri di accesso archiviati con diritti di lettura, scritt
 #### <a name="a-back-up-to-a-disk-device"></a>**A. Backup su un dispositivo disco**  
  Nell'esempio riportato di seguito viene eseguito il backup su disco del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] completo, utilizzando `FORMAT` per creare un nuovo set di supporti.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -318,7 +318,7 @@ GO
 #### <a name="b-back-up-to-a-tape-device"></a>**B. Backup su un dispositivo nastro**  
  Nell'esempio seguente viene eseguito il backup completo su nastro del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , accodandolo ai backup precedenti.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -331,7 +331,7 @@ GO
 #### <a name="c-back-up-to-a-logical-tape-device"></a>**C. Backup su un dispositivo nastro logico**  
  Nell'esempio seguente viene creato in un dispositivo di backup logico per un'unità nastro. Nell'esempio viene quindi eseguito il backup completo del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] su quel dispositivo.  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  
@@ -386,7 +386,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
   
 -   [Ripristinare un database fino al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
--   [Ripristinare un database in un percorso nuovo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
+-   [Ripristinare un database in una nuova posizione &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
 -   [Utilizzare la Creazione guidata piano di manutenzione](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   

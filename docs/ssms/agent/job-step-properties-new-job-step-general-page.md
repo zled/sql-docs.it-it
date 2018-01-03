@@ -3,7 +3,7 @@ title: "Proprietà passaggio processo - Nuovo passaggio di processo (pagina Gene
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fb87fbdb20c9872d502543f125911eb638cfc8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13f3553e80052f9264f70d0018d8d1157aaacb14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Proprietà passaggio processo - Nuovo passaggio di processo (pagina Generale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa pagina per visualizzare e modificare le proprietà di un passaggio di processo di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent o per definirne uno nuovo.  
@@ -46,7 +46,7 @@ Imposta il database in cui viene eseguito il passaggio di processo. Questa opzio
 Consente di impostare il comando eseguito dal passaggio del processo.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Opzioni per i passaggi del processo Transact-SQL  
-**Apertura**  
+**Aprire**  
 Consente di caricare il comando da un file.  
   
 **Seleziona tutto**  
@@ -75,7 +75,7 @@ Consente di specificare JScript come linguaggio per i passaggi del processo.
 **Altro**  
 Consente di digitare il nome del linguaggio per i passaggi del processo scritti in un altro linguaggio di scripting.  
   
-**Apertura**  
+**Aprire**  
 Consente di caricare il comando da un file.  
   
 **Seleziona tutto**  
@@ -91,7 +91,7 @@ Consente di incollare il contenuto degli Appunti.
 **Elabora codice di uscita di un comando eseguito correttamente**  
 Consente di digitare il codice di uscita restituito dal comando per indicare il corretto completamento.  
   
-**Apertura**  
+**Aprire**  
 Consente di caricare il comando da un file.  
   
 **Seleziona tutto**  
@@ -104,7 +104,7 @@ Consente di copiare il testo selezionato.
 Consente di incollare il contenuto degli Appunti.  
   
 ## <a name="options-for-powershell-job-steps"></a>Opzioni per i passaggi di processo di PowerShell  
-**Apertura**  
+**Aprire**  
 Consente di caricare lo script da un file.  
   
 **Seleziona tutto**  
@@ -192,7 +192,7 @@ Consente di selezionare il server in cui viene eseguito il passaggio del process
 **Database**  
 Database da utilizzare per il passaggio del processo.  
   
-**Apertura**  
+**Aprire**  
 Consente di caricare il comando da un file.  
   
 **Seleziona tutto**  
@@ -278,7 +278,7 @@ Consente di visualizzare le origini dei dati specificate nel pacchetto.
 **Gestione connessione**  
 Consente di visualizzare il nome dell'origine dei dati.  
   
-**Description**  
+**Descrizione**  
 Consente di visualizzare la descrizione dell'origine dei dati.  
   
 **Stringa di connessione**  
@@ -329,7 +329,7 @@ Consente di visualizzare o modificare i valori delle proprietà per il pacchetto
 **Percorso proprietà**  
 Consente di visualizzare o modificare il percorso per la proprietà.  
   
-**Valore**  
+**Value**  
 Consente di visualizzare o modificare il valore della proprietà.  
   
 **Rimuovi**  

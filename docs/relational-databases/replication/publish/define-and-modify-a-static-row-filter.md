@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9eea80799dd0ccc51c23685249ebccc1cf3b1338
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62c79a98fc0b23173539b9653272f85f20a534a7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definizione e modifica di un filtro di riga statico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come definire e modificare un filtro di riga statico in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
--   Poiché questi filtri sono statici, tutti i sottoscrittori riceveranno lo stesso subset di dati. Se è necessario filtrare dinamicamente le righe in un articolo di tabella appartenente a una tabella di tipo merge, in modo che ogni sottoscrittore riceva una partizione diversa dei dati, vedere [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). La replica di tipo merge consente inoltre di filtrare righe correlate in base a un filtro di riga esistente. Per altre informazioni, vedere [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+-   Poiché questi filtri sono statici, tutti i sottoscrittori riceveranno lo stesso subset di dati. Se è necessario filtrare dinamicamente le righe in un articolo di tabella appartenente a una tabella di tipo merge, in modo che ogni sottoscrittore riceva una partizione diversa dei dati, vedere [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). La replica di tipo merge consente inoltre di filtrare righe correlate in base a un filtro di riga esistente. Per altre informazioni, vedere [Definizione e modifica di un filtro di join tra articoli di merge](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Per definire, modificare ed eliminare filtri di riga statici, usare la pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o la pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
@@ -76,19 +76,19 @@ ms.lasthandoff: 11/17/2017
   
     -   L'area di testo **Istruzione per il filtro** contiene il testo predefinito, nel formato seguente:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [schema].[tablename] WHERE  
         ```  
   
     -   Il testo predefinito non può essere modificato. Digitare la clausola di filtro dopo la parola chiave WHERE usando la sintassi SQL standard. La clausola di filtro completa sarà simile alla seguente:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE [LoginID] = 'adventure-works\ranjit0'  
         ```  
   
     -   In un filtro di riga statico può essere inclusa una funzione definita dall'utente. La clausola di filtro completa per un filtro di riga statico con una funzione definita dall'utente sarà simile alla seguente:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   
@@ -108,16 +108,16 @@ ms.lasthandoff: 11/17/2017
   
 1.  Nella pagina **Filtro righe tabelle** della Creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Elimina**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  Quando si creano articoli di tabella, è possibile definire una clausola WHERE per escludere le righe di un articolo. È inoltre possibile modificare un filtro di riga dopo che è stato definito. È possibile creare e modificare a livello di programmazione i filtri di riga statici tramite le stored procedure di replica.  
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Per definire un filtro di riga statico per una pubblicazione snapshot o transazionale  
   
-1.  Definire l'articolo da filtrare. Per altre informazioni, vedere [definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Definire l'articolo da filtrare. Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Specificare il nome dell'articolo per **@article**, il nome della pubblicazione per **@publication**, il nome del filtro per **@filter_name**e la clausola di filtro per **@filter_clause** (senza includere `WHERE`).  
   
-3.  Se non è ancora stato definito un filtro di colonna, vedere [Definizione e modifica di un filtro colonne](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). In caso contrario, eseguire [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Specificare il nome della pubblicazione per **@publication**, il nome dell'articolo filtrato per **@article**e la clausola di filtro specificata nel passaggio 2 per **@filter_clause**. Verranno creati gli oggetti di sincronizzazione per l'articolo filtrato.  
+3.  Se non è ancora stato definito un filtro di colonna, vedere [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). In caso contrario, eseguire [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Specificare il nome della pubblicazione per **@publication**, il nome dell'articolo filtrato per **@article**e la clausola di filtro specificata nel passaggio 2 per **@filter_clause**. Verranno creati gli oggetti di sincronizzazione per l'articolo filtrato.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Per modificare un filtro di riga statico per una pubblicazione snapshot o transazionale  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>Per definire un filtro di riga statico per una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specificare la clausola di filtro per **@subset_filterclause** (senza includere `WHERE`). Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specificare la clausola di filtro per **@subset_filterclause** (senza includere `WHERE`). Per altre informazioni, vedere [definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Se non è ancora stato definito un filtro di colonna, vedere [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   

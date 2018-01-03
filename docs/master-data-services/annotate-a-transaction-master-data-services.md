@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec045db7e85912ac6ffd165f5a410396b8fbb36b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3b21908af85948492677134c17465a6788f3b9b5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Annotare una transazione (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]annotare una transazione quando si desidera fornire dettagli di supporto sulla transazione per scopi cronologici.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Non è possibile eliminare le annotazioni.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Per annotare le transazioni create, è necessario disporre dell'autorizzazione per accedere all'area funzionale **Visualizzatore** e almeno dell'autorizzazione **Update** per l'oggetto modello che si vuole annotare.  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 ### <a name="to-annotate-a-transaction-in-version-management-administrators-only"></a>Per annotare una transazione in Gestione versioni (solo amministratori)  
   
-1.  Scegliere [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Gestione versioni **dalla pagina iniziale di**.  
+1.  Scegliere [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Gestione versioni **dalla home page di**.  
   
 2.  Sulla barra dei menu fare clic su **Transazioni**.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  Nella casella **Annotazione** del riquadro **Annotazioni transazioni** digitare l'annotazione.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Annotazioni &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   

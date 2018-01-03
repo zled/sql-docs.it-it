@@ -3,9 +3,9 @@ title: Eseguire il debugger Transact-SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e081ce40af97789870b1ed63ff705db8113fb809
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 016079a4e88a669a8ea4be31652095cfc81b0184
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-the-transact-sql-debugger"></a>Esecuzione del debugger Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile avviare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] dopo avere aperto una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. È quindi possibile eseguire il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] in modalità di debug fino a quando non si desidera arrestare il debugger. È possibile impostare le opzioni desiderate per personalizzare la modalità di esecuzione del debugger.  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
 |**Continue**|Non disponibile|**Continue**|ALT+F5|Eseguire il codice fino al successivo punto di interruzione. **Continua** non è attivo fintanto che una finestra dell'editor di query in modalità di debug non ha lo stato attivo.|  
 |**Avvia debug**|Non disponibile|**Avvia debug**|ALT+F5|Consente di attivare la modalità di debug per una finestra dell'editor di query ed eseguire il codice fino al primo punto di interruzione. Se lo stato attivo si trova in una finestra dell'editor di query in modalità di debug, **Avvia debug** viene sostituito da **Continua**.|  
 |**Interrompi tutto**|Non disponibile|**Interrompi tutto**|CTRL+ALT+INTERR|Questa caratteristica non è utilizzata dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
-|**Debug**|Non disponibile|**Debug**|MAIUSC+F5|Consente di portare una finestra dell'editor di query dalla modalità di debug alla modalità normale.|  
+|**Arresta debug**|Non disponibile|**Debug**|MAIUSC+F5|Consente di portare una finestra dell'editor di query dalla modalità di debug alla modalità normale.|  
 |**Disconnetti tutto**|Non disponibile|Non disponibile|Non disponibile|Consente di arrestare la modalità di debug, ma di eseguire le istruzioni restanti nella finestra dell'editor di query.|  
 |**Esegui istruzione**|Non disponibile|**Esegui istruzione**|F11|Consente di eseguire l'istruzione successiva e anche di aprire una nuova finestra dell'editor di query nella modalità di debug se l'istruzione successiva esegue una stored procedure, un trigger o una funzione.|  
 |**Esegui istruzione/routine**|Non disponibile|**Esegui istruzione/routine**|F10|Stessa funzione di **Esegui istruzione**eccetto per il fatto che con questo comando non viene eseguito il debug di funzioni, stored procedure o trigger.|  

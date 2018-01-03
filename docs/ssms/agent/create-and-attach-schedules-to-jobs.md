@@ -3,7 +3,7 @@ title: Creare e collegare pianificazioni ai processi | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc61a3323ae24d1c571b743fa4d0d2bed3278585
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c1f516bb0add6bd1f415260f061b1de77bf2b22a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Creazione e collegamento di pianificazioni ai processi
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La pianificazione dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent comporta la definizione della condizione o delle condizioni che provocano l'inizio dell'esecuzione del processo senza interazione dell'utente. È possibile pianificare l'esecuzione automatica di un processo creando una nuova pianificazione per il processo o collegando una pianificazione esistente al processo.  
@@ -87,11 +87,11 @@ Prima di definire i processi da eseguire durante l'inattività della CPU, è nec
   
 Definire la condizione di inattività come valore percentuale. L'utilizzo della CPU dovrà rimanere inferiore a tale valore per un periodo di tempo specificato. Definire quindi il periodo di tempo. Quando l'utilizzo della CPU è inferiore alla percentuale specificata per il periodo di tempo specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent avvia tutti i processi pianificati per l'esecuzione con CPU inattiva. Per ulteriori informazioni sull'uso di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] o di Performance Monitor per monitorare l'utilizzo della CPU, vedere [Monitoraggio dell'utilizzo della CPU](http://msdn.microsoft.com/en-us/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Argomento**|  
+|**Descrizione**|**Argomento**|  
 |Viene descritto come creare una pianificazione per un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |Viene descritto come pianificare un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Pianificare un processo](../../ssms/agent/schedule-a-job.md)|  
 |Viene illustrato come definire la condizione di inattività della CPU per il server.|[Impostare tempo e durata di inattività della CPU &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  

@@ -3,7 +3,7 @@ title: Registrazione di server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8ec8399d12d9f9b8310cad503d87cf4aa5c1f5fe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d14a15a9be5697b8c87e9fbd6f9574428cfda507
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="register-servers"></a>Registrazione di server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La registrazione di un server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di archiviare le informazioni sulla connessione al server per uso futuro. È possibile registrare un server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in tre modi.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Visualizzare i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le istanze online o offline di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  Utilizzare gli argomenti seguenti per iniziare a utilizzare i server registrati:  
   
 |**Descrizione**|**Argomento**|  

@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 83025e81146c8d7087c100c66fb47215a0603562
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04a9fcb300f3c3f374a3ee940df34c77d2516db0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="plan-guides"></a>Guide di piano
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le guide di piano consentono di ottimizzare le prestazioni delle query quando non è possibile o non si desidera modificare direttamente il testo della query corrente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Le guide di piano influiscono sull'ottimizzazione delle query mediante l'aggiunta di hint per la query o di un piano di query fisso. Le guide di piano risultano utili quando le prestazioni di un piccolo subset di query eseguite su un database di terze parti sono inferiori a quelle previste. In una guida di piano, viene specificata l'istruzione Transact-SQL da ottimizzare e la clausola OPTION che contiene gli hint per la query da utilizzare o un piano di query specifico da utilizzare per ottimizzare la query. Quando viene eseguita la query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associa l'istruzione Transact-SQL alla guida di piano e, in fase di esecuzione, associa la clausola OPTION alla query oppure utilizza il piano di query specificato.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Si supponga che la stored procedure seguente, che accetta il parametro `@Country_region`, si trovi in un'applicazione di database distribuita sul database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
   
-```t-sql  
+```sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -66,7 +66,7 @@ END;
   
  Per risolvere il problema è possibile modificare la stored procedure aggiungendo alla query l'hint `OPTIMIZE FOR` . Poiché la stored procedure si trova in un'applicazione distribuita, non è possibile modificare direttamente il codice dell'applicazione. È invece possibile creare la guida di piano seguente nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -86,13 +86,13 @@ sp_create_plan_guide
  ### <a name="sql-plan-guide"></a>Guida di piano di tipo SQL  
  Una guida di piano di tipo SQL corrisponde alle query eseguite nel contesto di batch e istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] autonome che non fanno parte di un oggetto di database. Le guide di piano basate su SQL possono inoltre essere utilizzate per query con parametrizzazioni specifiche. Le guide di piano di tipo SQL vengono applicate a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] autonome e batch. Spesso tali istruzioni vengono inoltrate da un'applicazione mediante la stored procedure di sistema [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) . Ad esempio, si consideri il batch autonomo seguente:  
   
-```t-sql  
+```sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  Per impedire la generazione di un piano di esecuzione parallelo su questa query, creare la seguente guida di piano e impostare l'hint per la query `MAXDOP` su `1` nel parametro `@hints` .  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -119,13 +119,13 @@ sp_create_plan_guide
 ## <a name="plan-guide-matching-requirements"></a>Requisiti di corrispondenza per la guida di piano  
  Le guide di piano sono definite a livello di ambito del database in cui vengono create. Pertanto, è possibile far corrispondere alla query solo le guide di piano presenti nel database corrente al momento dell'esecuzione della query. Ad esempio, se [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] è il database corrente e viene eseguita la query seguente:  
   
- ```t-sql
+ ```sql
  SELECT FirstName, LastName FROM Person.Person;
  ```  
   
  È possibile far corrispondere alla query solo le guide di piano nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Se tuttavia il database corrente è [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e vengono eseguite le istruzioni seguenti:  
   
- ```t-sql
+ ```sql
  USE DB1; 
  SELECT FirstName, LastName FROM Person.Person;
  ```  
@@ -144,7 +144,7 @@ sp_create_plan_guide
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Effetto delle guide di piano sulla cache dei piani  
  La creazione di una guida di piano su un modulo rimuove il piano di query per il dato modulo dalla cache dei piani. La creazione di una guida di piano di tipo OBJECT o SQL su un batch rimuove il piano di query per un batch con lo stesso valore hash. La creazione di una guida di piano di tipo TEMPLATE rimuove tutti i batch a istruzione singola dalla cache dei piani all'interno del database.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Attività|Argomento|  
 |----------|-----------|  

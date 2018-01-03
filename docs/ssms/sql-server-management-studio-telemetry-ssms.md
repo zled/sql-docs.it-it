@@ -3,7 +3,7 @@ title: SQL Server Management Studio - Telemetria (SSMS) | Microsoft Docs
 ms.custom: 
 ms.date: 02/20/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db59123cfd2f78bc069bdb2b688dc2daec8e6830
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c9e2f0d6a57d890eaeb673d213c48245e84e5624
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Controllo locale per la raccolta di dati relativi all'utilizzo di SSMS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Management Studio (SSMS) include funzionalità abilitate per Internet che consentono di raccogliere e inviare a Microsoft dati anonimi relativi all'uso delle funzionalità. SSMS può raccogliere informazioni standard sul computer e informazioni relative all'uso e alle prestazioni che possono venire trasmesse a Microsoft e analizzate al fine di migliorare la qualità, la sicurezza e l'affidabilità di SSMS. Microsoft non raccoglie il nome, l’indirizzo o altre informazioni di contatto. Per informazioni dettagliate, vedere l'[informativa sulla privacy di SQL Server](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx).

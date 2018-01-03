@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cd98311fb9b047d7c518524a6f33210bf7e9ea2b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variables-window"></a>Finestra Variabili
   Usare la finestra **Variabili** per creare e modificare variabili definite dall'utente e visualizzare quelle di sistema.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Se si assegna un'espressione alla variabile, non è possibile modificare il tipo di dati.  
   
- **Valore**  
+ **Value**  
  Consente di visualizzare il valore della variabile. È possibile aggiornare il valore per le variabili definite dall'utente. Questo valore può essere letterale, un'espressione e una stringa su più righe. Per assegnare un'espressione alla variabile, fare clic sul pulsante con i puntini di sospensione accanto alla colonna **Espressione** nella finestra **Variabili** .  
   
  **Namespace**  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **Raise Change Event**  
  Consente di indicare se generare l'evento **OnVariableValueChanged** alla modifica di un valore. È possibile aggiornare il valore per le variabili definite dall'utente e le variabili di sistema. Per impostazione predefinita, questa colonna non viene visualizzata nella finestra **Variabili** . Per visualizzare questa colonna, fare clic su **Opzioni griglia**.  
   
- **Description**  
+ **Descrizione**  
  Consente di visualizzare la descrizione della variabile. È possibile modificare la descrizione per le variabili definite dall'utente. Per impostazione predefinita, questa colonna non viene visualizzata nella finestra **Variabili** . Per visualizzare questa colonna, fare clic su **Opzioni griglia**.  
   
  **Espressione**  
@@ -104,13 +104,13 @@ ms.lasthandoff: 11/20/2017
   
 -   **Data type**  
   
--   **Valore**  
+-   **Value**  
   
--   **Spazio dei nomi**  
+-   **Namespace**  
   
 -   **Genera evento alla modifica del valore della variabile**  
   
--   **Description**  
+-   **Descrizione**  
   
 -   **Espressione**  
   

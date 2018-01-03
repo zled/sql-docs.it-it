@@ -3,7 +3,7 @@ title: Modificare un processo master di SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 02/28/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 88b38032866ef191a41cbec5fe5d326280b949c0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 84291e7269c9c5f720545c7d2741a6f3b4da47f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>Modificare un processo master di SQL Server Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gli argomenti seguenti descrivono come modificare un processo master di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/05/2017
   
 [Aggiungere passaggi a un processo master di SQL Server Agent](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
   
-[Modificare i passaggi di un processo master di SQL Server Agent](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
+[Change Steps of a SQL Server Agent Master Job](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
   
 [Remove Steps from a SQL Server Agent Master Job](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
   

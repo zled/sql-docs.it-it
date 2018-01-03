@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34b63ac7f650bdc3e333bb50a19021a48c65dee1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ef0146839adf62839b6f319df6407a4afad8e1f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Creare un set di raccolta personalizzato che usa il tipo agente di raccolta Query T-SQL generico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile creare un set di raccolta personalizzato con elementi della raccolta che usano il tipo di agente di raccolta Query T-SQL generico tramite le stored procedure fornite con l'agente di raccolta dati. Il completamento di questa attività comporta l'utilizzo dell'Editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per eseguire le procedure descritte di seguito:  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Poiché il nuovo elemento della raccolta è basato su un tipo di agente di raccolta generico già installato, è possibile eseguire il codice seguente per impostare il GUID in modo che corrisponda al tipo di agente di raccolta Query T-SQL generico.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
     SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
     WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Utilizzare la stored procedure sp_syscollector_create_collection_item per creare l'elemento della raccolta. Dichiarare lo schema per l'elemento della raccolta in modo che ne venga eseguito il mapping allo schema richiesto per il tipo di agente di raccolta Query T-SQL generico.  
   
-    ```tsql  
+    ```sql  
     EXEC sp_syscollector_create_collection_item   
         @name=N'Query Stats - Test 1',   
         @parameters=N'  
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Prima di avviare il nuovo set di raccolta, eseguire la query seguente per verificare che il nuovo set di raccolta e l'elemento della raccolta siano stati creati.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="example"></a>Esempio  
  Nell'esempio di codice seguente vengono combinati gli esempi documentati nei passaggi precedenti. Si noti che la frequenza di raccolta impostata per l'elemento della raccolta (5 secondi) viene ignorata, poiché la modalità di raccolta del set di raccolta è impostata su 0 (modalità cache). Per altre informazioni, vedere [Data Collection](../../relational-databases/data-collection/data-collection.md).  
   
-```tsql  
+```sql  
 USE msdb;  
   
 DECLARE @collection_set_id int;  

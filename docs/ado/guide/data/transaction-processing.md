@@ -3,7 +3,7 @@ title: L'elaborazione delle transazioni | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a2afb43e83ebc2ed765c04fa15f070597009457
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55f563b145cf77dc64879801c4603bd51234b0f4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-processing"></a>Elaborazione delle transazioni
 Oggetto *transazione* delimita l'inizio e alla fine di una serie di operazioni di accesso ai dati eseguito attraverso una connessione. Soggetto alle funzionalità transazionali dell'origine dati, il **connessione** oggetto consente inoltre di creare e gestire le transazioni. Ad esempio, utilizza il Provider Microsoft OLE DB per SQL Server per accedere a un database in Microsoft SQL Server, è possibile creare più transazioni nidificate per i comandi da eseguire.  

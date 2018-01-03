@@ -3,7 +3,7 @@ title: Il significato della posizione del cursore | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 541b0195abbe4a37c3a2090add0b0cf5dbbeb568
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e5b39610496e4ff897365dd16d0a48e7057c18ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-significance-of-cursor-location"></a>Il significato della posizione del cursore
 Ogni cursore utilizza risorse temporanee per la memorizzazione dei dati. Queste risorse possono essere memoria, un file di paging su disco, i file su disco temporaneo o un archivio temporaneo nel database. Il cursore viene chiamato un *sul lato client* cursore quando queste risorse si trovano nel computer client. Il cursore viene chiamato un *sul lato server* cursore quando queste risorse si trovano nel server.  

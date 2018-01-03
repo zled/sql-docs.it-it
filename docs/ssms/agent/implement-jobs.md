@@ -3,7 +3,7 @@ title: Implementare processi | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2c24813e306a43cf1adce27f71afe7c209194d53
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4551b1ed606f3ddeef57c855e64ac2306e8a306e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implement-jobs"></a>Implementazione di processi
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] I processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent consentono di automatizzare le attività amministrative di routine ed eseguirle a intervalli ricorrenti, in modo da rendere più efficiente l'amministrazione.  
@@ -35,11 +35,11 @@ Un processo include una serie di operazioni specificate eseguite in sequenza da 
   
 È possibile eseguire un processo manualmente oppure configurarlo per l'esecuzione in base a una pianificazione o in risposta ad avvisi.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Argomento**|  
+|**Descrizione**|**Argomento**|  
 |Contiene informazioni sulla creazione dei processi e sull'assegnazione della proprietà.|[Crea processi](../../ssms/agent/create-jobs.md)|  
 |Contiene informazioni sull'organizzazione dei processi in categorie.|[Organizzare processi](../../ssms/agent/organize-jobs.md)|  
 |Contiene informazioni sui diversi tipi di passaggi di processo che è possibile creare e sulla rispettiva modalità di gestione.|[Gestire passaggi di processo](../../ssms/agent/manage-job-steps.md)|  

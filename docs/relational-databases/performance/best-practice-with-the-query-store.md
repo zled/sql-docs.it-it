@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c4026c4495c9c11922f8f4496b0000dfb2c9420
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ I parametri predefiniti offrono un modo rapido per iniziare, ma è opportuno mon
   
  Il valore predefinito (100 MB) potrebbe non essere sufficiente se il carico di lavoro genera un numero elevato di query e piani diversi o se si vuole conservare la cronologia delle query per un periodo di tempo più lungo. Tenere traccia dell'utilizzo dello spazio e aumentare le Dimensioni massime (MB) per impedire che l'archivio query passi alla modalità di sola lettura.  Usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o eseguire lo script seguente per ottenere informazioni aggiornate sulle dimensioni dell'archivio query:  
   
-```tsql 
+```sql 
 USE [QueryStoreDB];  
 GO  
   
@@ -68,14 +68,14 @@ FROM sys.database_query_store_options;
   
  Lo script seguente imposta un nuovo valore di Dimensioni massime (MB):  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **Intervallo di raccolta statistiche:** definisce il livello di granularità delle statistiche di runtime raccolte. Il valore predefinito è 1 ora. È possibile usare un valore inferiore se è necessaria una maggiore granularità o maggiore rapidità nel rilevare e limitare i problemi, ma questo influisce direttamente sulle dimensioni dei dati dell'archivio query. Usare SSMS o Transact-SQL per impostare un valore diverso per Intervallo di raccolta statistiche:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
@@ -84,7 +84,7 @@ Per impostazione predefinita, l'archivio query è configurato in modo da conserv
   
  Evitare di conservare i dati cronologici che non si intende usare. In questo modo è possibile ridurre il ricorso allo stato di sola lettura. Le dimensioni dei dati dell'archivio query e il tempo necessario per rilevare e limitare il problema saranno più prevedibili. Usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oppure lo script seguente per configurare i criteri di pulizia basati sul tempo:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
@@ -93,7 +93,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
   
  È consigliabile attivare la pulizia basata sulle dimensioni per assicurarsi che l'archivio query venga sempre eseguito in modalità lettura/scrittura e possa raccoglie i dati più recenti.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -108,7 +108,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  Lo script seguente imposta la modalità di acquisizione query su Auto:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -120,7 +120,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  Abilitare l'archivio query usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] come descritto nella sezione precedente o eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:  
   
-```tsql  
+```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -179,7 +179,7 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
 ##  <a name="Verify"></a> Verificare che Query Store raccolga i dati delle query in modo continuativo  
  L'archivio query può cambiare automaticamente la modalità operativa. È necessario monitorare regolarmente lo stato dell'archivio query per assicurarsi che sia in funzione e per prevenire errori dovuti a cause evitabili. Eseguire questa query per determinare la modalità operativa e visualizzare i parametri più importanti:  
   
-```tsql
+```sql
 USE [QueryStoreDB];  
 GO  
   
@@ -200,13 +200,13 @@ FROM sys.database_query_store_options;
   
 -   Eseguire la pulizia dei dati dell'archivio query usando l'istruzione seguente:  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
 È possibile applicare uno o entrambi questi passaggi eseguendo questa istruzione, che ripristina in modo esplicito la modalità lettura/scrittura:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -222,7 +222,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>Stato di errore  
  Per recuperare l'archivio query, provare a impostare in modo esplicito la modalità lettura/scrittura e ricontrollare lo stato effettivo.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -240,7 +240,7 @@ FROM sys.database_query_store_options;
  
  Se questa soluzione non funziona, si può provare a cancellare il contenuto di Query Store prima di richiedere la modalità lettura/scrittura.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -303,7 +303,7 @@ Questo influisce negativamente sulle prestazioni del carico di lavoro e l'archiv
 
  L'uso forzato del piano è un meccanismo efficace per risolvere i problemi di prestazioni delle query critiche e renderle più prevedibili. Tuttavia, come accade con gli hint di piano e le guide di piano, forzare un piano non garantisce che poi venga usato nelle esecuzioni successive. In genere, quando lo schema del database viene modificato in modo che gli oggetti a cui fa riferimento il piano di esecuzione vengono modificati o eliminati, l'uso forzato del piano ha esito negativo. In questo caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opta per la ricompilazione delle query, mentre il motivo effettivo dell'errore viene esposto in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La query seguente restituisce informazioni sui piani forzati:  
   
-```tsql  
+```sql  
 USE [QueryStoreDB];  
 GO  
   

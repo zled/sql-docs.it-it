@@ -3,9 +3,9 @@ title: Finestra Punti di interruzione | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06c8b84f4cf69b06e54e8a8d10c1121add1c6026
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1d2cbc8ca85606b85f8f4780bfda7bf25527162
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Debugger Transact-SQL - Finestra Punti di interruzione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La finestra **Punti di interruzione** contiene un elenco di tutti i punti di interruzione impostati nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] corrente. Per gestire i punti di interruzione, usare la barra degli strumenti nella finestra **Punti di interruzione** . I punti di interruzione sono posizioni nel codice in cui viene sospesa l'esecuzione in modalità di debug per consentire la visualizzazione dei dati di debug.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  È possibile aggiungere e rimuovere le colonne seguenti selezionandole nell'elenco **Colonne** .  
   
- **Filtra**  
+ **Filter**  
  Viene visualizzato **(nessuno)**. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di filtri per i punti di interruzione.  
   
  **Quando raggiunto**  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="breakpoints-window-toolbar"></a>Barra degli strumenti della finestra Punti di interruzione  
  Quando la finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] corrente include punti di interruzione attivi, nella finestra **Punti di interruzione** viene visualizzata una barra degli strumenti che può essere usata per gestire i punti di interruzione.  
   
- **Delete**  
+ **Elimina**  
  Consente di eliminare il punto di interruzione selezionato.  
   
  **Elimina tutti i punti di interruzione**  

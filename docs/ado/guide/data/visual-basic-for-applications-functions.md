@@ -3,7 +3,7 @@ title: Le funzioni di Visual Basic | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fee0368395faf95ce941dbf4e5352dbca549a64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 835dfeb15a84529baf553ce1daa171d02e8faca7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-for-applications-functions"></a>Le funzioni di Visual Basic
 Data shaping espressioni di calcolo, è possibile utilizzare Visual Basic per le funzioni seguenti:  
@@ -35,11 +35,11 @@ Data shaping espressioni di calcolo, è possibile utilizzare Visual Basic per le
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |$ ChrB|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|Data|Date$|DateAdd|  
+|Cvar|CVDate|CVErr|date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
 |Errore|Error$|Exp|Fix|Formato|Format$|  
 |FV|Hex|Hex$|Ora|IIF|InStr|  
-|int|IPmt|IRR|IsDate|IsEmpty|IsError|  
+|Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
 |LeftB|Left$|LeftB$|Len|File di log|LTrim|  
 |LTrim$|Mid|Mid$|Minuto|MIRR|Month|  

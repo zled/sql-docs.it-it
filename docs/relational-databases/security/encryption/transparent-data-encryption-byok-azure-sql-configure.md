@@ -2,32 +2,34 @@
 title: 'PowerShell: abilitare TDE usando la propria chiave di Azure Key Vault | Microsoft Docs'
 description: Informazioni sulla configurazione di un database e un data warehouse SQL di Azure per iniziare a usare Transparent Data Encryption (TDE) per crittografare i dati inattivi con PowerShell.
 keywords: 
-services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: aliceku
-ms.openlocfilehash: f8de7e653a925e04dbcab9efbd5b5c8e5354b611
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0acfd9faa668d1e86cb82496bdd97dc6a0ec2bc8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell: abilitare Transparent Data Encryption usando la propria chiave di Azure Key Vault
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Questa guida alle procedure spiega come usare una chiave di Azure Key Vault per Transparent Data Encryption (TDE) in un database o data warehouse SQL. Per altre informazioni su TDE con supporto BYOK (Bring Your Own Key), consultare l'articolo relativo all'[uso di TDE con supporto BYOK per Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - È necessario avere una sottoscrizione di Azure ed essere un amministratore per tale sottoscrizione.
 - [Scelta consigliata ma facoltativa] Usare un modulo di protezione hardware (HSM) o un archivio chiavi locale per creare una copia locale del materiale della chiave di protezione TDE.

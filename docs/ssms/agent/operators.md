@@ -3,7 +3,7 @@ title: Operatori | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0580a64735d39032c56ea052233e78049e7fabd2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 90de26a78dffb5adca8fbdbe0ab0c6a910f493f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operators"></a>Operatori
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gli operatori sono alias per persone o gruppi che possono ricevere notifiche elettroniche al completamento dei processi o quando vengono generati avvisi. Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent supporta il servizio di notifica degli amministratori tramite gli operatori. Gli operatori consentono di abilitare la notifica e le funzionalità di monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
@@ -119,7 +119,7 @@ Per inviare una notifica a un operatore, è necessario configurare una o più im
   
 -   Per usare il comando **Net Send**, l'operatore deve essere connesso al computer specificato e il computer specificato deve consentire la ricezione di messaggi da Windows Messenger.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  

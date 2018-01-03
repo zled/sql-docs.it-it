@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 864c9a05a863106f62bd0ecc4a5db09034de05c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2f48a4f1e1ecfbab11ae890a0da8f1aa85edc325
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>Creare un amministratore di entità (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un amministratore di entità quando si vuole che un gruppo o un utente abbia tutte le autorizzazioni in una o più entità oppure l'autorizzazione per approvare gli insiemi di modifiche in sospeso.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/20/2017
 > [!TIP]  
 >  Per semplificare l'amministrazione, creare un gruppo locale o di Windows e configurarlo come amministratore di entità. È quindi possibile aggiungere e rimuovere utenti nel gruppo senza accedere a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione di accesso all'area funzionale **Autorizzazioni utenti e gruppi** .  

@@ -3,7 +3,7 @@ title: Utilizzo di segnalibri | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a1cfde267a31b3e11f1c869ac96b652b9db5af16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cbabea62b99f36adb2adf9f12e52d80644f33ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-bookmarks"></a>Utilizzo di segnalibri
 È spesso utile tornare direttamente a un record specifico dopo vari spostamenti **Recordset** senza dover scorrere ogni record e confrontare i valori. Ad esempio, se si tenta di eseguire la ricerca di un record utilizzando il **trovare** metodo ma la ricerca non restituisce alcun record, si viene automaticamente posizionati in delle estremità del **Recordset**. Se il provider supporta questa funzionalità, è possono utilizzare i segnalibri per contrassegnare la posizione prima di utilizzare il **trovare** metodo in modo da poter ritornare alla posizione dell'utente. Un segnalibro è un **Variant** tipo di valore che identifica in modo univoco un record in un **Recordset** oggetto.  

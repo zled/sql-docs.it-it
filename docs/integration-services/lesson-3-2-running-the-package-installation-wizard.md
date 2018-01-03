@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c021cf13f16aa5feaa8fc0a28f0f735478fcd42d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e432e01995835f870b40ff1a0e5df07c06ef56a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lezione 3-2 - Esecuzione dell'Installazione guidata pacchetti
 In questa attività verrà eseguita l'Installazione guidata pacchetti per distribuire i pacchetti del progetto Deployment Tutorial in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Nella tabella sysssispackages del database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possono essere installati solo i pacchetti. I file di supporto inclusi nel pacchetto di distribuzione verranno installati nel file system.  
@@ -60,7 +60,7 @@ In una lezione precedente sono stati modificati i pacchetti inclusi nell'esercit
     > [!IMPORTANT]  
     > A tale nome viene fatto riferimento nel valore delle variabili di ambiente utilizzate dalle configurazioni. Il nome della cartella e il riferimento devono corrispondere. In caso contrario non sarà possibile eseguire il pacchetto.  
   
-12. Scegliere **OK**.  
+12. Fare clic su **OK**.  
   
 13. Nella pagina Selezione cartella di installazione verificare che nella casella Cartella sia indicato il percorso **C:\DeploymentTutorialInstall** e quindi fare clic su **Avanti**.  
   
@@ -72,14 +72,14 @@ In una lezione precedente sono stati modificati i pacchetti inclusi nell'esercit
   
 16. Nell'elenco **File di configurazione** fare clic su **datatransferconfig.dtsconfig**, espandere Property nella colonna **Percorso** della casella **Configurazioni** e aggiornare la colonna **Valore** con i valori seguenti:  
   
-    |Proprietà|Valore|Valore aggiornato|  
+    |Proprietà|valore|Valore aggiornato|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. Nell'elenco **File di configurazione** fare clic su loadxmldataconfig.dtsconfig, espandere Property nella colonna **Percorso** della casella **Configurazioni** e aggiornare la colonna **Valore** con i valori seguenti:  
   
-    |Proprietà|Valore|Valore aggiornato|  
+    |Proprietà|valore|Valore aggiornato|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  

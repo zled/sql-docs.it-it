@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d3588fd2410fdacb3c4e332c3485b40640b5587
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ Se un'istruzione SQL fa riferimento a una vista non indicizzata, il parser e Que
 
 Si consideri, ad esempio, la vista seguente:
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW EmployeeName AS
@@ -118,7 +118,7 @@ GO
 
 In base a questa vista le due istruzioni SQL seguenti eseguono le stesse operazioni sulle tabelle di base e producono gli stessi risultati:
 
-```tsql
+```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
@@ -142,7 +142,7 @@ La funzionalità Showplan di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 
 Gli hint inseriti nelle viste di una query possono entrare in conflitto con altri hint individuati quando la vista viene espansa in modo da accedere alle relative tabelle di base. In questo caso, la query restituisce un errore. Si consideri, ad esempio, la vista seguente nella cui definizione è contenuto un hint di tabella:
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
@@ -154,7 +154,7 @@ WHERE a.StateProvinceID = s.StateProvinceID;
 
 Si supponga a questo punto di immettere la query seguente:
 
-```tsql
+```sql
 SELECT AddressID, AddressLine1, StateProvinceCode, CountryRegionCode
 FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
@@ -168,7 +168,7 @@ Gli hint possono propagarsi in più livelli di viste nidificate. Si supponga, ad
 
 Quando si usa l'hint `FORCE ORDER` in una query che contiene una vista, l'ordine di join delle tabelle all'interno della vista dipende dalla posizione della vista nel costrutto ordinato. La query seguente, ad esempio, consente di selezionare da tre tabelle e una vista:
 
-```tsql
+```sql
 SELECT * FROM Table1, Table2, View1, Table3
 WHERE Table1.Col1 = Table2.Col1 
     AND Table2.Col1 = View1.Col1
@@ -178,7 +178,7 @@ OPTION (FORCE ORDER);
 
 La vista `View1` viene definita come illustrato di seguito:
 
-```tsql
+```sql
 CREATE VIEW View1 AS
 SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
@@ -249,7 +249,7 @@ Si consideri, ad esempio, un sistema in cui la tabella Customers è partizionata
 
 Si consideri quindi il piano di esecuzione compilato per la query eseguita in Server1:
 
-```tsql
+```sql
 SELECT *
 FROM CompanyData.dbo.Customers
 WHERE CustomerID BETWEEN 3200000 AND 3400000;
@@ -259,7 +259,7 @@ Il piano di esecuzione di questa query estrae dalla tabella membro locale le rig
 
 Query Processor di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può inoltre compilare una logica dinamica nei piani di esecuzione delle query per istruzioni SQL in cui i valori di chiave non sono noti al momento della compilazione del piano. Si consideri, ad esempio, la stored procedure seguente:
 
-```tsql
+```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
 AS
 SELECT *
@@ -269,7 +269,7 @@ WHERE CustomerID = @CustomerIDParameter;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non è in grado di determinare in anticipo quale valore della chiave verrà restituito dal parametro `@CustomerIDParameter` a ogni esecuzione della procedura. Pertanto, nemmeno Query Processor può prevedere a quale tabella membro si accederà. Per gestire questa situazione, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila un piano di esecuzione che include una logica condizionale (ovvero filtri dinamici) in grado di determinare in base al valore del parametro di input a quale tabella membro si accederà. Se la stored procedure `GetCustomer` viene eseguita in Server1, la logica del piano di esecuzione può essere rappresentata nel modo seguente:
 
-```tsql
+```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
 ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
@@ -303,7 +303,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile un algo
 
 Per gli algoritmi che consentono di trovare la corrispondenza tra le nuove istruzioni SQL e i piani di esecuzione esistenti inutilizzati nella cache è necessario che i riferimenti agli oggetti siano completi. Per la prima delle istruzioni `SELECT` seguenti, ad esempio, non viene trovata la corrispondenza con un piano esistente, come avviene invece per la seconda:
 
-```tsql
+```sql
 SELECT * FROM Person;
 
 SELECT * FROM Person.Person;
@@ -383,13 +383,13 @@ L'utilizzo dei parametri, inclusi i marcatori di parametro nelle applicazioni AD
  
 L'unica differenza tra le due istruzioni `SELECT` seguenti è rappresentata dai valori confrontati nella clausola `WHERE` :
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
@@ -401,7 +401,7 @@ La separazione delle costanti dall'istruzione SQL tramite i parametri consente a
 
 * In Transact-SQL, usare `sp_executesql`: 
 
-   ```tsql
+   ```sql
    DECLARE @MyIntParm INT
    SET @MyIntParm = 1
    EXEC sp_executesql
@@ -436,7 +436,7 @@ Se non si compilano parametri in modo esplicito nella progettazione dell'applica
 
 Quando viene attivata la parametrizzazione forzata, la parametrizzazione semplice può essere comunque eseguita. La query seguente, ad esempio, non può essere parametrizzata in base alle regole di parametrizzazione forzata:
 
-```tsql
+```sql
 SELECT * FROM Person.Address
 WHERE AddressID = 1 + 2;
 ```
@@ -454,18 +454,18 @@ Se un'istruzione SQL viene eseguita senza parametri, in [!INCLUDE[ssNoVersion](.
 
 Si consideri l'istruzione seguente:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 Il valore 1 alla fine dell'istruzione può essere specificato come parametro. Tramite il motore relazionale compilato il piano di esecuzione per questo batch come se fosse stato specificato un parametro al posto del valore 1. Grazie a questa semplice parametrizzazione, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] riconosce che le due istruzioni seguenti generano essenzialmente lo stesso piano di esecuzione e il primo piano viene riutilizzato per la seconda istruzione:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
@@ -561,7 +561,7 @@ L'utilizzo eccessivo del modello di preparazione/esecuzione può determinare un 
 
 L'applicazione può innanzitutto eseguire una query distinta per ogni prodotto richiesto:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
@@ -569,7 +569,7 @@ WHERE ProductID = 63;
 Altrimenti, l'applicazione può eseguire le operazioni seguenti: 
 
 1. Preparare un'istruzione contenente un marcatore di parametro (?):  
-   ```tsql
+   ```sql
    SELECT * FROM AdventureWorks2014.Production.Product  
    WHERE ProductID = ?;
    ```
@@ -654,7 +654,7 @@ Nella query seguente viene eseguito il conteggio del numero di ordini effettuati
 
 Nell'esempio seguente vengono utilizzati nomi di tabelle e colonne fittizi.
 
-```tsql
+```sql
 SELECT o_orderpriority, COUNT(*) AS Order_Count
 FROM orders
 WHERE o_orderdate >= '2000/04/01'
@@ -672,7 +672,7 @@ WHERE o_orderdate >= '2000/04/01'
 
 Si supponga che per le tabelle `lineitem` e `orders` vengano definiti gli indici seguenti:
 
-```tsql
+```sql
 CREATE INDEX l_order_dates_idx 
    ON lineitem
       (l_orderkey, l_receiptdate, l_commitdate, l_shipdate)
@@ -765,7 +765,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta due me
 * Nomi di server collegati  
   Per assegnare il nome di un server a un'origine dei dati OLE DB vengono usate le stored procedure di sistema `sp_addlinkedserver` e `sp_addlinkedsrvlogin` . Per fare riferimento agli oggetti di server collegati nelle istruzioni Transact-SQL, è possibile usare nomi in quattro parti. Ad esempio, se si definisce il nome del server collegato `DeptSQLSrvr` per un'altra istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'istruzione seguente fa riferimento a una tabella in tale server: 
   
-  ```tsql
+  ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
@@ -775,7 +775,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta due me
 * Nomi di connettore ad hoc  
   Nel caso di un numero limitato di riferimenti a un'origine dei dati, nella funzione `OPENROWSET` o `OPENDATASOURCE` vengono specificate le informazioni necessarie per la connessione al server collegato. In seguito, sarà possibile fare riferimento a tale set di righe nelle istruzioni Transact-SQL in base alle stesse modalità usate per i riferimenti a una tabella: 
   
-  ```tsql
+  ```sql
   SELECT *
   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
         'c:\MSOffice\Access\Samples\Northwind.mdb';'Admin';'';
@@ -811,13 +811,13 @@ L'eliminazione della partizione viene ora eseguita durante tale operazione di ri
 
 In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (come colonna iniziale logica) e su altre colonne chiave indice e quindi un'operazione di ricerca di secondo livello, con una condizione diversa, su una o più colonne aggiuntive, per ogni valore distinto che soddisfa la qualificazione per l'operazione di ricerca di primo livello. Questa operazione, denominata skip scan consente a Query Optimizer di eseguire un'operazione di ricerca o di analisi basata su un unica condizione per determinare le partizioni a cui eseguire l'accesso e un'operazione Index Scan di secondo livello all'interno di tale operatore per restituire le righe delle partizioni che soddisfano una condizione diversa. Si consideri ad esempio la query seguente.
 
-```tsql
+```sql
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
 Per questo esempio si supponga che la tabella T, definita come `T(a, b, c)`, venga partizionata in base alla colonna A e includa un indice cluster nella colonna B. I limiti delle partizione per la tabella T sono definiti dalla funzione di partizione seguente:
 
-```tsql
+```sql
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
@@ -847,7 +847,7 @@ Questi strumenti consentono di verificare le informazioni seguenti:
 
 Per illustrare la modalità di visualizzazione di queste informazioni nell'output del piano di esecuzione grafico e nell'output di Showplan XML, considerare la query seguente sulla tabella partizionata `fact_sales`. Questa query implica l'aggiornamento dei dati in due partizioni. 
 
-```tsql
+```sql
 UPDATE fact_sales
 SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
@@ -976,7 +976,7 @@ Nell'esempio seguente viene creato un database di test che contiene un'unica tab
 > [!NOTE]
 > In questo esempio nella tabella viene inserito più di un milione di righe. A seconda dell'hardware disponibile l'esecuzione di questo esempio può richiedere diversi minuti. Prima di eseguire questo esempio, verificare di disporre di almeno 1,5 GB di spazio libero su disco. 
  
-```tsql
+```sql
 USE master;
 GO
 IF DB_ID (N'db_sales_test') IS NOT NULL

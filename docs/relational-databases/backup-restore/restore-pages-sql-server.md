@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5de0a22e84a354096a5e595b39f8ba60154bdd87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc6d693e70c23fa23f6a48780df9cc98ebab14ed
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-pages-sql-server"></a>Ripristino di pagine (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
      [Indicazioni](#Recommendations)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per ripristinare le pagine usando:**  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, **Ripristina**, quindi fare clic su **Pagina**. Verrà aperta la finestra di dialogo **Ripristina pagina** .  
   
-     **Ripristina**  
+     **Restore**  
      Questa sezione ha la stessa funzione di **Ripristina fino a** in [Ripristina database (pagina Generale)](../../relational-databases/backup-restore/restore-database-general-page.md).  
   
      **Database**  
@@ -170,7 +170,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Per ripristinare le pagine elencate nella griglia, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  Per specificare una pagina in un'istruzione RESTORE DATABASE, sono necessari l'ID del file contenente la pagina e l'ID della pagina. La sintassi necessaria è la seguente:  
   
  `RESTORE DATABASE <database_name>`  
@@ -211,7 +211,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
  Nell'esempio seguente vengono ripristinate quattro pagine danneggiate del file `B` con `NORECOVERY`. Successivamente, vengono applicati due backup del log con `NORECOVERY`, seguiti dal backup della parte finale del log, ripristinato con `RECOVERY`. Nell'esempio seguente viene eseguito un ripristino in linea. Nell'esempio l'ID del file `B` è `1`e gli ID delle pagine danneggiate sono `57`, `202`, `916`e `1016`.  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  
@@ -226,7 +226,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Applicazione dei backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
+ [Applicare backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   

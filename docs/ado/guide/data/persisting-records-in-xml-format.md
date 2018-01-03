@@ -3,7 +3,7 @@ title: Salvataggio di record in formato XML | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 719d6d0575f90f3460de6e8b1285b6a59cf7f791
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f3259a78bba2451609c728372d9583eb259cbda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="persisting-records-in-xml-format"></a>Salvataggio di record in formato XML
 Ad esempio formato ADTG, **Recordset** persistenza in formato XML è implementata con Provider Microsoft OLE DB la persistenza. Questo provider genera un set di righe forward-only di sola lettura da un file XML o un flusso che contiene le informazioni sullo schema generate da ADO salvato. Analogamente, può richiedere un oggetto ADO **Recordset**, generare codice XML e salvarlo in un file o di qualsiasi oggetto che implementa il modello COM **IStream** interfaccia. (In realtà, un file è semplicemente un altro esempio di un oggetto che supporta **IStream**.) Per le versioni 2.5 e versioni successive, ADO si basa su Microsoft XML Parser (MSXML) per caricare il codice XML nel **Recordset**; pertanto MSXML è obbligatorio.  

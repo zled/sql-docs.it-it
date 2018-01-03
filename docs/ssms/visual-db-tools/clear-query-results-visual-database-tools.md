@@ -3,7 +3,7 @@ title: Cancellare i risultati di una query (Visual Database Tools) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30c1aa87c77ce0a3f60c690d24eb563c524b7739
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9150c8d8c7fd9db38827347f040bd9076b1facb6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Cancella i risultati di una query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dopo l'esecuzione di una query in **Progettazione query e Progettazione viste**, è possibile cancellare il contenuto del riquadro Risultati. Questa procedura è valida per le query create usando le opzioni **Open View** (Apri vista) o **Apri tabella** di Esplora oggetti. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]dopo l'esecuzione di una query nell'editor di query, è possibile cancellare il contenuto del riquadro Risultati solo chiudendo la finestra dell'editor di query o eseguendo un'altra query.  
@@ -44,5 +44,5 @@ ms.lasthandoff: 12/05/2017
 ## <a name="see-also"></a>Vedere anche  
 [Esecuzione di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Arrestare una query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
-[Utilizzo dei dati nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Usare i dati nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

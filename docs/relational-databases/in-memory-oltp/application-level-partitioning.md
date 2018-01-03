@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10623fc1a5c493dc0fd5f03f730bf712f6c3b893
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0f27dbf8d8a6deb04fc9f45af51d0a90f694e4ef
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="application-level-partitioning"></a>Partizionamento a livello di applicazione
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Questa applicazione elabora gli ordini. Gli ordini recenti vengono sottoposti a numerose elaborazioni. Gli ordini meno recenti non vengono sottoposti a numerose elaborazioni. Gli ordini recenti sono in una tabella ottimizzata per la memoria. Gli ordini meno recenti sono in una tabella basata su disco. Tutti gli ordini dopo *hotDate* sono nella tabella ottimizzata per la memoria. Tutti gli ordini prima di *hotDate* sono nella tabella basata su disco. Si supponga un pesante carico di lavoro OLTP con molte transazioni simultanee. Questa regola di business (ordini recenti in una tabella ottimizzata per la memoria) deve essere applicata anche se diverse transazioni simultanee stanno tentando di modificare *hotDate*.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="code-listing"></a>Listato di codice  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
 IF NOT EXISTS(SELECT name FROM sys.databases WHERE name = 'hkTest')  

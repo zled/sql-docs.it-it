@@ -3,7 +3,7 @@ title: Modello di programmazione di servizi desktop remoto con gli oggetti | Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eafec33754d2c1dd0c7a79ddfae627006e31f493
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0f2d2e5cfb50df5fa6a6b1eaace7ba285b0855e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-programming-model-with-objects"></a>Modello di programmazione di servizi desktop remoto con gli oggetti
 L'obiettivo di servizi desktop remoto è per accedere e aggiornare origini dati tramite un intermediario, ad esempio IIS. Il modello di programmazione specifica la sequenza di attività necessarie per raggiungere questo obiettivo. Il modello a oggetti specifica gli oggetti i cui metodi e proprietà influiscono sul modello di programmazione.  

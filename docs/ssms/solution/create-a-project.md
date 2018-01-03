@@ -3,7 +3,7 @@ title: Creare un progetto | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a95d8c7ecf359e6fc10939759d05d816d91efc5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13ef5a52fff423b9c4a4035b2751017a30e86da9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-project"></a>Creazione di un progetto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile creare uno o più progetti in una soluzione esistente.  
@@ -97,16 +97,16 @@ ms.lasthandoff: 12/05/2017
     **Aggiungi al controllo del codice sorgente**  
     Se questa casella di controllo è selezionata, l'applicazione del controllo del codice sorgente si apre quando si fa clic su **OK**. Per continuare, immettere tutte le informazioni richieste dall'applicazione del controllo del codice sorgente. Per utilizzare questa opzione, è necessario disporre di un'applicazione client del controllo del codice sorgente.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 È possibile stabilire un nome per il progetto script. I nomi delle cartelle vengono invece stabiliti da [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] e non possono essere modificati. È possibile configurare il percorso e l'unità per il set di cartelle comune mediante la finestra di dialogo **Aggiungi nuovo progetto** . Fare clic con il pulsante destro del mouse sull'icona della soluzione in **Esplora soluzioni**e scegliere **Aggiungi**. Il percorso predefinito per le cartelle dei progetti script è C:\Documents and Settings\\\*nomeutente*\Documenti\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esplora soluzioni](../../ssms/solution/solution-explorer.md)  
 [Aggiunta di un progetto esistente a una soluzione](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
-[Aggiunta di nuovi elementi a un progetto](../../ssms/solution/add-new-items-to-a-project.md)  
-[Aggiunta di elementi esistenti a un progetto](../../ssms/solution/add-existing-items-to-a-project.md)  
+[Aggiungere nuovi elementi a un progetto](../../ssms/solution/add-new-items-to-a-project.md)  
+[Aggiungere elementi esistenti a un progetto](../../ssms/solution/add-existing-items-to-a-project.md)  
 [Modifica del percorso predefinito per i progetti](../../ssms/solution/change-the-default-location-for-projects.md)  
-[Rimozione o eliminazione di un elemento o di un progetto](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
+[Rimuovere o eliminare un elemento o un progetto](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [Eliminazione di una soluzione](../../ssms/solution/delete-a-solution.md)  
   

@@ -3,9 +3,9 @@ title: Importare il modulo SQLPS | Microsoft Docs
 ms.custom: 
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 360350a7b8e051bcab2e24df508ea97b742c52a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae5fb5957e23a6ad4488a33587d227219855d6b8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-the-sqlps-module"></a>Importare il modulo SQLPS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Il metodo consigliato per gestire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da PowerShell consiste nell'importare il modulo **sqlps** in un ambiente Windows PowerShell. Il modulo carica e registra gli snap-in e gli assembly di gestibilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  A partire da Windows PowerShell 3.0, i moduli vengono importati automaticamente quando un cmdlet o una funzione nel modulo viene usato in un comando. Questa funzionalità può essere usata in tutti i moduli di una directory inclusi nel valore della variabile di ambiente PSModulePath.  Per altre informazioni, vedere [Importing a PowerShell Module (Importazione di un modulo di PowerShell)](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
@@ -75,7 +75,7 @@ Get-Module -ListAvailable -Name Sqlps;
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Provider PowerShell per SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
- [Utilizzo di cmdlet del motore di database](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
+ [Usare cmdlet del motore di database](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
  [Installazione di un modulo di PowerShell](https://msdn.microsoft.com/library/dd878350(v=vs.85).aspx)  
  [Import-Module](https://technet.microsoft.com/library/hh849725.aspx)
   

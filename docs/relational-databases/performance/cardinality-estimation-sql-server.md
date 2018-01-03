@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b1c53b09fe118de3a90c78bd1393da90a915385b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b009aea458e83421468e57a07455803f9df96a0b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Sono implementate tecniche per identificare una query che risulta più lenta con
   
  **Livello di compatibilità:** per assicurarsi che il database sia impostato su un determinato livello, è possibile usare il codice Transact-SQL seguente per [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
-```tsql  
+```sql  
 SELECT ServerProperty('ProductVersion');  
 go  
   
@@ -65,7 +65,7 @@ go
   
  **Stima di cardinalità legacy:** per un database di SQL Server impostato sul livello di compatibilità 120 o superiore, è possibile attivare la stima di cardinalità di livello 70 a livello di database usando [MODIFICARE LA CONFIGURAZIONE CON AMBITO DATABASE](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
-```tsql  
+```sql  
 ALTER DATABASE
     SCOPED CONFIGURATION  
         SET LEGACY_CARDINALITY_ESTIMATION = ON;  
@@ -78,7 +78,7 @@ SELECT name, value
  
  Oppure, a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```tsql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01'; 
@@ -87,7 +87,7 @@ SELECT CustomerId, OrderAddedDate
  
  **Query Store:** a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], Query Store è uno strumento utile per esaminare le prestazioni delle query. In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] in **Esplora oggetti** nel nodo del database viene visualizzato un nodo **Query Store** quando Query Store è abilitato.  
   
-```tsql  
+```sql  
 ALTER DATABASE <yourDatabase>  
     SET QUERY_STORE = ON;  
 go  
@@ -109,7 +109,7 @@ ALTER DATABASE <yourDatabase>
   
  Un'altra opzione per tenere traccia del processo relativo alle stime di cardinalità consiste nell'usare l'evento esteso denominato **query_optimizer_estimate_cardinality**. Il seguente codice T-SQL di esempio viene eseguito su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scrive un file con estensione xel in C:\Temp\ (percorso modificabile). Quando si apre il file con estensione xel in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], le informazioni dettagliate sono visualizzate in modo intuitivo.  
   
-```tsql  
+```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
 go  
   
@@ -234,7 +234,7 @@ Questa sezione descrive query di esempio che usufruiscono dai miglioramenti impl
   
 Si supponga che le statistiche per OrderTable siano state raccolte per l'ultima volta il 30-04-2016, quando il valore massimo per OrderAddedDate era 30-04-2016. La stima di cardinalità per il livello di compatibilità 120 (e livelli più elevati) comprende che le colonne in OrderTable con dati in ordine *crescente* potrebbero contenere valori maggiori rispetto al valore massimo registrato dalle statistiche. Questa consapevolezza migliora il piano di query per le istruzioni SQL SELECT come la seguente.  
   
-```tsql  
+```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01';  
@@ -246,7 +246,7 @@ Nell'istruzione SELECT seguente sono presenti predicati filtrati su Model e Mode
   
 Il livello 120 della stima di cardinalità riconosce che potrebbe esistere una correlazione tra le due colonne nella stessa tabella, ovvero Model e ModelVariant. La stima di cardinalità prevede in modo più preciso quante righe verranno restituite dalla query e Query Optimizer genera un piano più ottimale.  
   
-```tsql  
+```sql  
 SELECT Model, Purchase_Price  
     FROM dbo.Hardware  
     WHERE  
@@ -257,7 +257,7 @@ SELECT Model, Purchase_Price
 ### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tablescc"></a>Esempio C. La stima di cardinalità non presume più alcuna correlazione tra i predicati filtrati da tabelle diverse 
 Una nuova ricerca estesa su carichi di lavoro moderni e dati di business effettivi rivelano che i filtri del predicato da tabelle diverse in genere non sono correlati tra loro. Nella query seguente, la stima di cardinalità presuppone che non esista alcuna correlazione tra s.type e r.date. La stima di cardinalità riduce quindi la stima del numero di righe restituite.  
   
-```tsql  
+```sql  
 SELECT s.ticket, s.customer, r.store  
     FROM  
                    dbo.Sales    AS s  

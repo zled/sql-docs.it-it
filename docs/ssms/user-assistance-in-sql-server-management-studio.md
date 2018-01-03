@@ -3,7 +3,7 @@ title: Documentazione per gli utenti in SQL Server Management Studio | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6a3108ec508a859dd6b097425f27475a85c026f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: af99082f7ec0d39d59c7aa20fc1f6ba1d51596ed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Documentazione per gli utenti in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] la documentazione per gli utenti è disponibile tramite il menu ? e la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Il menu ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] offre diverse possibilità per ottenere informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Consente inoltre di accedere alla community di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e alle risorse di MSDN Online che in precedenza non erano disponibili dall'ambiente della Guida. Quest'ultimo può essere inoltre configurato per essere avviato all'interno dell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] o in una finestra esterna associata.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
     Offre un set gerarchico di pagine collegate che contengono argomenti utili correlati ad attività comuni in [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . Il contenuto è organizzato in base al componente e all'attività, ad esempio argomenti relativi alla replica e così via.  
   
--   **Cerca**  
+-   **Ricerca**  
   
     Consente di cercare argomenti, con o senza filtri predefiniti. Cerca in [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] è una pagina a schede separata. Gli utenti possono eseguire ricerche selettive con uno o più filtri predefiniti per tipo di argomento, lingua o tecnologia. Per impostazione predefinita non viene utilizzato nessuno dei filtri predefiniti e la ricerca viene eseguita solo tra gli argomenti presenti nelle raccolte installate.  
   
@@ -80,7 +80,7 @@ Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../inclu
   
 4.  Se **Codezone Community** è uno dei provider selezionati, selezionare e deselezionare gli elementi desiderati dall'elenco **Codezone Community** .  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>Per eseguire ricerche in MSDN Online e nelle community dedicate a SQL Server dalla pagina Cerca  
   

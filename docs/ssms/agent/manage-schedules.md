@@ -3,7 +3,7 @@ title: Gestire le pianificazioni | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3abb52a483d939ade1e2e24ddc9836fe1560548e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fed3a1f1202817d56c1e96c241d0487f5b51aaec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-schedules"></a>Gestione pianificazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Consente di visualizzare e modificare le proprietà per le pianificazioni dei processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
@@ -37,7 +37,7 @@ Consente di visualizzare il nome della pianificazione.
 **Abilitata**  
 Selezionare questa opzione per abilitare la pianificazione.  
   
-**Description**  
+**Descrizione**  
 Descrive le condizioni nelle quali la pianificazione esegue il processo.  
   
 **Processi nella pianificazione**  

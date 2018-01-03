@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ff03a1d00fc6cd1972ecb1d5915882287f372a5f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="security-principals"></a>Entità di sicurezza  
  Con entità di sicurezza si definiscono le identità che usano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e a cui è possibile assegnare delle autorizzazioni per eseguire varie azioni. Si tratta in genere di utenti o gruppi di utenti, ma possono essere altre entità che fingono di essere utenti. Le entità di sicurezza possono essere create e gestite con il linguaggio [!INCLUDE[tsql](../../../includes/tsql-md.md)] elencato o con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
- Account di accesso  
+ Logins  
  Gli account di accesso sono account utente singoli per l'accesso al [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e il [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] supportano account di accesso basati sull'autenticazione di Windows e account di accesso basati sull'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per informazioni sui due tipi di account di accesso, vedere [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
  Ruoli predefiniti del server  
@@ -193,7 +193,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
  Per restituire le autorizzazioni esplicite concesse o negate in un database ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), eseguire l'istruzione seguente nel database.  
   
-```tsql  
+```sql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
@@ -208,7 +208,7 @@ JOIN sys.objects AS obj
   
  Per restituire i membri dei ruoli del server (solo[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), eseguire l'istruzione seguente.  
   
-```tsql  
+```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -220,7 +220,7 @@ JOIN sys.server_principals AS sRole
  
  Per restituire i membri dei ruoli del database ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), eseguire l'istruzione seguente nel database.  
   
-```tsql  
+```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  
@@ -229,7 +229,7 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
  Per altri argomenti introduttivi, vedere:  
   
 -   [Esercitazione: Introduzione al motore di database](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Creazione di un database &#40;esercitazione&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  

@@ -3,7 +3,7 @@ title: Impostare le opzioni di crittografia nei server di destinazione | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5735a73ad2b428e074d06841260dc2242820be55
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3ffc48c2e8d5257eb485bbbe7c5f0fe581e3fcdc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Impostazione delle opzioni di crittografia nei server di destinazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se non è possibile usare un certificato per le comunicazioni crittografate SSL (Secure Sockets Layer) tra server master e alcuni o tutti i server di destinazione e si vuole crittografare il canale di comunicazione, configurare i server di destinazione per l'uso del livello di sicurezza necessario.  
   
-Per configurare il livello di sicurezza appropriato necessario per uno specifico canale di comunicazione tra server master e server di destinazione, impostare la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]sottochiave del Registro di sistema di Agent **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*nome_istanza*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)**nel server di destinazione su uno dei valori seguenti. Il valore di \<*nome_istanza*> è **MSSQL.***n*. Ad esempio, **MSSQL.1** o **MSSQL.3**.  
+Per configurare il livello di sicurezza appropriato necessario per uno specifico canale di comunicazione tra server master e server di destinazione, impostare la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]sottochiave del Registro di sistema di Agent **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*nome_istanza*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)**nel server di destinazione su uno dei valori seguenti. Il valore di \<*nome_istanza*&gt; è **MSSQL***n*. Ad esempio, **MSSQL.1** o **MSSQL.3**.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |---------|---------------|  
 |**0**|Disabilita la crittografia tra il server di destinazione e il server master. Selezionare questa opzione solo quando il canale tra il server di destinazione e il server master è protetto in altro modo.|  
 |**1**|Attiva solo la crittografia tra il server di destinazione e il server master senza la convalida del certificato.|  

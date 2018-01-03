@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 01b85a4c7cf91d2d6b2f2616ff6b19221a188afd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b3236a5888d906328f525333ae9e20b42e6d8de
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="use-transact-sql-statements"></a>Usare istruzioni Transact-SQL  
   
-1.  Per abilitare l'archivio query, usare l'istruzione **ALTER DATABASE** . Esempio:  
+1.  Per abilitare l'archivio query, usare l'istruzione **ALTER DATABASE** . Ad esempio  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
@@ -90,7 +90,7 @@ In Query Store sono contenuti tre archivi:
   
  La query seguente restituisce le informazioni sulle query e sui piani inclusi nell'archivio query.  
   
-```tsql  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -200,7 +200,7 @@ Le opzioni seguenti sono disponibili per la configurazione dei parametri dell'ar
   
  Eseguire una query su [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) per determinare se la funzionalità Query Store è attualmente attiva e se è in corso la raccolta delle statistiche di runtime.  
   
-```tsql  
+```sql  
 SELECT actual_state, actual_state_desc, readonly_reason,   
     current_storage_size_mb, max_storage_size_mb  
 FROM sys.database_query_store_options;  
@@ -213,7 +213,7 @@ Quando le dimensioni di Archivio query superano la quota, la funzionalità passa
   
  Per informazioni dettagliate sullo stato di Archivio query, eseguire l'istruzione seguente in un database utente.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
@@ -221,7 +221,7 @@ SELECT * FROM sys.database_query_store_options;
   
  È possibile ignorare l'intervallo per l'aggregazione delle statistiche di runtime delle query (impostazione predefinita: 60 minuti).  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
@@ -235,14 +235,14 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  Per controllare le dimensioni e i limiti correnti di Archivio query, eseguire l'istruzione seguente nel database utente.  
   
-```tsql  
+```sql  
 SELECT current_storage_size_mb, max_storage_size_mb   
 FROM sys.database_query_store_options;  
 ```  
   
  Se lo spazio di archiviazione di Archivio query è esaurito, usare l'istruzione seguente per estenderlo.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
@@ -251,7 +251,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
   
  È possibile impostare più opzioni di Archivio query contemporaneamente con un'unica istruzione ALTER DATABASE.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database name>   
 SET QUERY_STORE (  
     OPERATION_MODE = READ_WRITE,  
@@ -270,7 +270,7 @@ SET QUERY_STORE (
   
  Le tabelle interne di Archivio query vengono create nel filegroup PRIMARY durante la creazione del database e tale configurazione non è modificabile in un secondo momento. Se si esaurisce lo spazio, è possibile cancellare dati di Archivio query meno recenti usando l'istruzione seguente.  
   
-```tsql  
+```sql  
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;  
 ```  
   
@@ -278,7 +278,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  **Eliminare query ad-hoc** È possibile eliminare le query che sono state eseguite solo una volta e che risalgono a più di 24 ore prima.  
   
-```tsql  
+```sql  
 DECLARE @id int  
 DECLARE adhoc_queries_cursor CURSOR   
 FOR   
@@ -321,7 +321,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  **Ultime *n* query eseguite sul database?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
     qt.query_text_id, p.plan_id, rs.last_execution_time  
 FROM sys.query_store_query_text AS qt   
@@ -336,7 +336,7 @@ ORDER BY rs.last_execution_time DESC;
   
  **Numero di esecuzioni per ogni query.**  
   
-```tsql  
+```sql  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
     SUM(rs.count_executions) AS total_execution_count  
 FROM sys.query_store_query_text AS qt   
@@ -352,7 +352,7 @@ ORDER BY total_execution_count DESC;
   
  **Numero di query con il tempo medio di esecuzione maggiore nell'ultima ora.**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
     qt.query_text_id, p.plan_id, GETUTCDATE() AS CurrentUTCTime,   
     rs.last_execution_time   
@@ -369,7 +369,7 @@ ORDER BY rs.avg_duration DESC;
   
  **Numero di query con il maggior numero medio di letture I/O fisiche nelle ultime 24 ore, con il numero medio di righe e di esecuzioni corrispondente.**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
     q.query_id, qt.query_text_id, p.plan_id, rs.runtime_stats_id,   
     rsi.start_time, rsi.end_time, rs.avg_rowcount, rs.count_executions  
@@ -388,7 +388,7 @@ ORDER BY rs.avg_physical_io_reads DESC;
   
  **Query con più piani.** Queste query sono particolarmente interessanti perché sono candidati a regressioni in seguito alla modifica del piano selezionato. La query seguente consente di identificare queste query unitamente a tutti i piani:  
   
-```tsql  
+```sql  
 WITH Query_MultPlans  
 AS  
 (  
@@ -417,7 +417,7 @@ ORDER BY query_id, plan_id;
   
  **Query in cui si è verificata di recente una regressione delle prestazioni (confrontando momenti diversi).** L'esempio di query seguente restituisce tutte le query in cui il tempo di esecuzione è raddoppiato nelle ultime 48 ore in seguito alla modifica del piano selezionato. La query confronta tutti gli intervalli delle statistiche di runtime affiancandoli.  
   
-```tsql  
+```sql  
 SELECT   
     qt.query_sql_text,   
     q.query_id,   
@@ -457,7 +457,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  **Query che rimangono più a lungo in attesa**
 Questa query restituirà le prime 10 query che rimangono più a lungo in attesa. 
  
- ```tsql 
+ ```sql 
   SELECT TOP 10
     qt.query_text_id,
     q.query_id,
@@ -473,7 +473,7 @@ ORDER BY sum_total_wait_ms DESC
  
  **Query in cui si è verificata di recente una regressione delle prestazioni (confrontando esecuzioni recenti e della cronologia).** La query successiva confronta le esecuzioni di query in base ai periodi di esecuzione. In questo specifico esempio la query confronta le esecuzioni nel periodo recente (1 ora) con il periodo della cronologia (ultimo giorno) e identifica quelle che hanno introdotto `additional_duration_workload`. Questa metrica viene ottenuta moltiplicando la differenza tra l'esecuzione media recente e quella media della cronologia e il numero delle esecuzioni recenti. Rappresenta in effetti la quantità di esecuzioni recenti con durata aggiuntiva introdotte rispetto alla cronologia:  
   
-```tsql  
+```sql  
 --- "Recent" workload - last 1 hour  
 DECLARE @recent_start_time datetimeoffset;  
 DECLARE @recent_end_time datetimeoffset;  
@@ -562,7 +562,7 @@ OPTION (MERGE JOIN);
   
  **Forzare un piano per una query (applicando criteri di utilizzo forzato).** Quando si forza un piano per una determinata query, la query viene sempre eseguita con il piano di cui è stato forzato l'utilizzo.  
   
-```tsql  
+```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
@@ -570,7 +570,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  **Rimuovere l'utilizzo forzato del piano per una query.** Per impiegare di nuovo Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per calcolare il piano di query ottimale, usare **sp_query_store_unforce_plan** per annullare l'utilizzo forzato del piano selezionato per la query.  
   
-```tsql  
+```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   

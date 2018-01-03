@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f36523b8a9bf432cbf728ed48f11513a7b09aa9a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32583e8e6b2cf06f9437ee00821cdf1b62f3b938
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>Visualizzazione delle proprietà e del contenuto di un dispositivo di backup logico (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per visualizzare le proprietà e il contenuto di un dispositivo di backup logico utilizzando:**  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Security"></a> Sicurezza  
  Per informazioni sulla sicurezza, vedere [RESTORE LABELONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md).  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, per ottenere informazioni su un set o un dispositivo di backup è necessario disporre dell'autorizzazione CREATE DATABASE. Per altre informazioni, vedere [GRANT - autorizzazioni per database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Per altre informazioni, vedere [Pagina Contenuto supporti](../../relational-databases/backup-restore/backup-device-media-contents-page.md).  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-the-properties-and-contents-of-a-logical-backup-device"></a>Per visualizzare le proprietà e il contenuto di un dispositivo di backup logico  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Utilizzare l'istruzione [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) . In questo esempio vengono restituite informazioni sul dispositivo di backup logico `AdvWrks2008R2Backup` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 RESTORE LABELONLY  
    FROM AdvWrks2008R2Backup ;  

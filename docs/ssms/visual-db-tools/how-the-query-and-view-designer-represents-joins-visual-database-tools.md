@@ -3,7 +3,7 @@ title: Rappresentazione di join in Progettazione query e Progettazione viste | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d112b8edd88c1d5b34f63206dc3c69a1e2e89652
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 38a655b6bd55d27c49ee88affeb16db66089b87e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Rappresentazione di join in Progettazione query e Progettazione viste (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se è stato creato un join tra le tabelle, in [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) il join verrà rappresentato in forma grafica all'interno del [riquadro Diagramma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) e mediante la sintassi SQL all'interno del [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
@@ -43,7 +43,7 @@ Se le colonne di dati unite in join non vengono visualizzate, ad esempio perché
   
 La forma dell'icona al centro della linea di join indica come le tabelle o gli oggetti con struttura a tabella sono uniti in join. Se la clausola di join utilizza un operatore diverso da uguale (=), tale operatore verrà visualizzato nell'icona della linea di join. Nella seguente tabella sono elencate le icone visualizzate nella linea di join.  
   
-|**Icona della linea di join**|**Description**|  
+|**Icona della linea di join**|**Descrizione**|  
 |----------------------|-------------------|  
 |![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbih.gif "Icona di Visual Database Tools")|Inner join (creato con il segno di uguale).|  
 |![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbii.gif "Icona di Visual Database Tools")|Inner join basato sull'operatore "maggiore di".|  
@@ -87,6 +87,6 @@ Le opzioni della sintassi per il join di tabelle comprendono:
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione di query con join &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Eseguire query con join &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [Finestra di dialogo Join &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
   

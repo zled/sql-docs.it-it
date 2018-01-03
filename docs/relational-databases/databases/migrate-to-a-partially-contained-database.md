@@ -18,13 +18,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84fee80391d7ac1ce5b509ba91eaf54b385b623a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ce086529c97471ed6b2e80e5487aadab70be2c9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="migrate-to-a-partially-contained-database"></a>Migrazione in un database parzialmente indipendente
+# <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come prepararsi al passaggio al modello del database parzialmente indipendente e descrive la procedura di migrazione.  
   
  **Contenuto dell'argomento:**  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Abilitazione di database indipendenti tramite Transact-SQL  
  Nell'esempio seguente vengono abilitati database indipendenti nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE ;  
@@ -80,7 +80,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Conversione di un database in parzialmente indipendente tramite Transact-SQL  
  Nell'esempio seguente un database denominato `Accounting` viene convertito in un database parzialmente indipendente.  
   
-```tsql  
+```sql  
 USE [master]  
 GO  
 ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
@@ -99,7 +99,7 @@ GO
 ##  <a name="users"></a> Migrazione di utenti a utenti di database indipendenti  
  Nell'esempio seguente viene eseguita la migrazione di tutti gli utenti basati sugli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a utenti del database indipendente con password. Nell'esempio sono inclusi account di accesso non abilitati. L'esempio deve essere eseguito nel database indipendente.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

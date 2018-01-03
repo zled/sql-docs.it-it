@@ -3,7 +3,7 @@ title: Open (metodo) (connessione ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9133d8e959d1831fc1ff64ed1d8ecace96c3f882
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41850de804523a50dbf0d489e678b93c9f29b6ae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-connection"></a>Open (metodo) (connessione ADO)
 Apre una connessione a un'origine dati.  
@@ -41,16 +41,16 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>Parametri  
  *ConnectionString*  
- Facoltativa. Oggetto **stringa** valore che contiene informazioni di connessione. Vedere il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà per informazioni dettagliate sulle impostazioni valide.  
+ Facoltativo. Oggetto **stringa** valore che contiene informazioni di connessione. Vedere il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà per informazioni dettagliate sulle impostazioni valide.  
   
  *ID utente*  
- Facoltativa. Oggetto **stringa** valore che contiene un nome utente da utilizzare per stabilire la connessione.  
+ Facoltativo. Oggetto **stringa** valore che contiene un nome utente da utilizzare per stabilire la connessione.  
   
  *Password*  
- Facoltativa. Oggetto **stringa** valore che contiene una password da utilizzare per stabilire la connessione.  
+ Facoltativo. Oggetto **stringa** valore che contiene una password da utilizzare per stabilire la connessione.  
   
  *Opzioni*  
- Facoltativa. Oggetto [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) valore che determina se questo metodo deve essere restituito dopo (in modo sincrono) o prima (in modo asincrono) in cui viene stabilita la connessione.  
+ Facoltativo. Oggetto [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) valore che determina se questo metodo deve essere restituito dopo (in modo sincrono) o prima (in modo asincrono) in cui viene stabilita la connessione.  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzando il **aprire** metodo su un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto stabilisce la connessione fisica a un'origine dati. Dopo il metodo viene completato correttamente, viene stabilita la connessione ed è possibile eseguire comandi su di esso e a elaborare i risultati.  

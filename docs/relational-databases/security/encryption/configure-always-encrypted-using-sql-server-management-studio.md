@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d4181262d713918c834d7dc971444118f11fe623
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a6e6764d71d632cb4f232eecd34e16f38bede57
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Configurare Always Encrypted usando SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Parametrizzazione per Always Encrypted è una funzionalità di SQL Server Manage
   
 Senza parametrizzazione, il provider di dati .NET Framework passa ogni istruzione creata nell'editor di query come query senza parametri. Se la query contiene valori letterali o variabili Transact-SQL destinate a colonne crittografate, il provider di dati .NET Framework per SQL Server non riuscirà a rilevarle e crittografarle prima di inviare la query al database. Di conseguenza, la query avrà esito negativo a causa di mancata corrispondenza tra i tipi, ovvero tra la variabile Transact-SQL letterale non crittografata e la colonna crittografata. Ad esempio, la query seguente avrà esito negativo senza parametrizzazione, supponendo che la colonna `SSN` sia crittografata.   
 
-```tsql
+```sql
 DECLARE @SSN NCHAR(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN
@@ -128,14 +128,14 @@ Per abilitare o disabilitare la funzionalità Parametrizzazione per Always Encry
 2.  Selezionare **Opzioni query...**   
 3.  Passare a **Esecuzione** > **Avanzata**.   
 4.  Selezionare o deselezionare **Abilita parametrizzazione per Always Encrypted**.   
-5.  Scegliere **OK**.   
+5.  Fare clic su **OK**.   
 
 Per abilitare/disabilitare la funzionalità Parametrizzazione per Always Encrypted per future finestre dell'editor di query:   
 1.  Selezionare **Strumenti** dal menu principale.   
 2.  Selezionare **Opzioni...**   
 3.  Passare a **Esecuzione query** > **SQL Server** > **Avanzata**.   
 4.  Selezionare o deselezionare **Abilita parametrizzazione per Always Encrypted**.   
-5.  Scegliere **OK**.   
+5.  Fare clic su **OK**.   
 
 Se si esegue una query in una finestra dell'editor di query che usa una connessione di database con l'opzione Always Encrypted abilitata, ma la parametrizzazione non è abilitata per la finestra dell'editor di query, verrà richiesto di abilitarla.   
 >   [!NOTE]   
@@ -148,7 +148,7 @@ Se nella connessione di database sono abilitati sia la funzionalità Parametrizz
 - Le variabili devono essere inizializzate con un singolo valore letterale. Variabili inizializzate con espressioni compresi operatori o funzioni non verranno parametrizzate.      
 
 Di seguito sono riportati alcuni esempi di variabili che verranno parametrizzate da SQL Server Management Studio.   
-```tsql
+```sql
 DECLARE @SSN char(11) = '795-73-9838';
    
 DECLARE @BirthDate date = '19990104';
@@ -156,7 +156,7 @@ DECLARE @Salary money = $30000;
 ```
 
 Di seguito sono riportati invece alcuni esempi di variabili che non verranno parametrizzate da SQL Server Management Studio:   
-```tsql
+```sql
 DECLARE @Name nvarchar(50); --Initialization seperate from declaration
 SET @Name = 'Abel';
    
@@ -170,7 +170,7 @@ Per far sì che la parametrizzazione riesca:
 - Se il tipo dichiarato della variabile è un tipo data o ora, la variabile deve essere inizializzata usando una stringa con uno dei formati conformi a ISO 8601 seguenti.   
 
 Di seguito sono riportati alcuni esempi di dichiarazioni di variabili Transact-SQL che causano errori di parametrizzazione:   
-```tsql
+```sql
 DECLARE @BirthDate date = '01/04/1999' -- unsupported date format   
    
 DECLARE @Number int = 1.1 -- the type of the literal does not match the type of the variable   
@@ -192,7 +192,7 @@ Un altro esempio riportato di seguito mostra due variabili che soddisfano le con
 >   [!NOTE]
 >   Poiché Always Encrypted supporta un subset limitato di conversioni di tipi, in molti casi è necessario che il tipo di dati di una variabile Transact-SQL sia lo stesso tipo della colonna di database di destinazione a cui è destinato. Ad esempio, supponendo che il tipo della colonna `SSN` nella tabella `Patients` è `char(11)`, la query sottostante avrà esito negativo perché il tipo della variabile `@SSN` , ovvero `nchar(11)`, non corrisponde al tipo della colonna.   
 
-```tsql
+```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN;
@@ -209,7 +209,7 @@ WHERE [SSN] = @SSN;
 >   [!NOTE]
 >   Senza la parametrizzazione, l'intera query, incluse le conversioni dei tipi, viene elaborata all'interno di SQL Server o del database SQL di Azure. Con parametrizzazione abilitata, alcune conversioni dei tipi vengono eseguite da .NET Framework all'interno di SQL Server Management Studio. A causa delle differenze tra il sistema dei tipi .NET Framework e il sistema dei tipi SQL Server (ad esempio diversa precisione di alcuni tipi come float), una query eseguita con la parametrizzazione abilitata può produrre risultati diversi rispetto alla query eseguita senza la parametrizzazione abilitata. 
 
-#### <a name="permissions"></a>Permissions      
+#### <a name="permissions"></a>Autorizzazioni      
 
 Per eseguire le query su colonne crittografate, incluse le query che recuperano i dati in testo crittografato, sono necessarie le autorizzazioni `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` nel database.   
 Oltre a queste autorizzazioni, per decrittografare i risultati delle query o per crittografare i parametri di query (generati dalla parametrizzazione delle variabili Transact-SQL), è necessario anche accedere alla chiave master della colonna proteggendo le colonne di destinazione:   
@@ -256,12 +256,12 @@ La finestra di dialogo **Nuova chiave di crittografia della colonna** consente d
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Chiavi di crittografia della colonna** e selezionare **Nuova chiave di crittografia della colonna**. 
 3.  Nella finestra di dialogo **Nuova chiave di crittografia della colonna** immettere il nome dell'oggetto metadati della chiave di crittografia della colonna.
 4.  Selezionare un oggetto metadati che rappresenta la chiave master della colonna nel database.
-5.  Scegliere **OK**. 
+5.  Fare clic su **OK**. 
 
 
 SQL Server Management Studio genera una nuova chiave di crittografia della colonna e consente di recuperare i metadati per la chiave master della colonna selezionata dal database. SQL Server Management Studio userà quindi i metadati della chiave master della colonna per contattare l'archivio chiavi contenente la chiave master della colonna e crittografare la chiave di crittografia della colonna. Infine, vengono creati nel database i metadati per la nuova chiave di crittografia della colonna. Nella finestra di dialogo viene generata e rilasciata un'istruzione [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) .
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 
 Sono necessarie le autorizzazioni *ALTER ANY ENCRYPTION MASTER KEY* e *VIEW ANY COLUMN MASTER KEY DEFINITION* del database per creare nella finestra di dialogo i metadati della chiave di crittografia della colonna e accedere ai metadati della chiave master della colonna.
 Per accedere a un archivio chiavi e usare la chiave master della colonna, è possibile richiedere le autorizzazioni per l'archivio chiavi e/o la chiave:
@@ -290,7 +290,7 @@ In questo passaggio è necessario crittografare tutte le chiavi di crittografia 
 2.  Fare clic con il pulsante destro del mouse sulla chiave master della colonna e selezionare **Ruota**.
 3.  Nella finestra **Rotazione della chiave master della colonna** selezionare il nome della nuova chiave master della colonna creata nel passaggio 1 nel campo **Destinazione** .
 4.  Consultare l'elenco delle chiavi di crittografia della colonna protette dalle chiavi master della colonna esistenti. Queste chiavi saranno coinvolte nella rotazione.
-5.  Scegliere **OK**.
+5.  Fare clic su **OK**.
 
 SQL Server Management Studio ottiene i metadati delle chiavi di crittografia della colonna protette con la chiave master della colonna precedente e i metadati delle chiavi master della colonna vecchie e nuove. Quindi, SSMS usa i metadati della chiave master della colonna per accedere all'archivio dati contenente la chiave master della colonna precedente e decrittografare le chiavi di crittografia della colonna. Successivamente, SSMS accede all'archivio chiavi contenente la nuova chiave master della colonna per produrre un nuovo set di valori crittografati delle chiavi di crittografia della colonna e quindi aggiunge i nuovi valori ai metadati generando ed emettendo istruzioni [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) .
 
@@ -299,7 +299,7 @@ SQL Server Management Studio ottiene i metadati delle chiavi di crittografia del
 
 **Passaggio 3: Configurazione delle applicazioni con la nuova chiave master della colonna**
 
-In questo passaggio è necessario verificare che tutte le applicazioni client in uso che eseguono query nelle colonne del database protette dalla chiave master della colonna in fase di rotazione siano in grado di accedere alla nuova chiave master della colonna, ad esempio le colonne del database crittografate con una chiave di crittografia della colonna crittografata con la chiave master della colonna. Questo passaggio dipende dal tipo di archivio chiavi in cui si trova la nuova chiave master della colonna. Esempio:
+In questo passaggio è necessario verificare che tutte le applicazioni client in uso che eseguono query nelle colonne del database protette dalla chiave master della colonna in fase di rotazione siano in grado di accedere alla nuova chiave master della colonna, ad esempio le colonne del database crittografate con una chiave di crittografia della colonna crittografata con la chiave master della colonna. Questo passaggio dipende dal tipo di archivio chiavi in cui si trova la nuova chiave master della colonna. Ad esempio
 - Se la nuova chiave master della colonna è un certificato archiviato nell'archivio certificati di Windows, è necessario distribuire il certificato nella posizione dell'archivio dei certificati (*Utente corrente* o *Computer locale*) e nella posizione specificata nel percorso della chiave master della colonna nel database. L'applicazione deve poter accedere al certificato:
     - Se il certificato viene archiviato nel percorso dell'archivio certificati *Utente corrente* , deve essere importato nell'archivio Utente corrente dell'identità Windows dell'applicazione (utente).
     - Se il certificato viene archiviato nel percorso dell'archivio certificati *Computer locale* , l'identità Windows dell'applicazione deve disporre dell'autorizzazione per accedere al certificato.
@@ -322,7 +322,7 @@ Un altro motivo per cui è necessario pulire il valore precedente prima di archi
 1.  In **Esplora oggetti** passare alla cartella **Sicurezza>Chiavi con crittografia sempre attiva** e individuare la chiave master della colonna esistente da sostituire.
 2.  Fare clic con il pulsante destro del mouse sulla chiave master della colonna esistente e selezionare **Pulizia**.
 3.  Verificare l'elenco dei valori delle chiavi di crittografia della colonna da rimuovere.
-4.  Scegliere **OK**.
+4.  Fare clic su **OK**.
 
 SQL Server Management Studio rilascerà istruzioni [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) per eliminare i valori crittografati delle chiavi di crittografia della colonna crittografati con la chiave master della colonna precedente.
 
@@ -331,12 +331,12 @@ SQL Server Management Studio rilascerà istruzioni [ALTER COLUMN ENCRYPTION KEY 
 Se si sceglie di rimuovere la definizione della chiave master della colonna precedente dal database, eseguire la procedura descritta di seguito. 
 1.  In **Esplora oggetti** passare alla cartella **Sicurezza>Chiavi con crittografia sempre attiva>Chiavi master della colonna** e individuare la chiave master della colonna precedente da rimuovere dal database.
 2.  Fare clic con il pulsante destro del mouse sulla chiave master della colonna precedente e selezionare **Elimina**. In questo modo viene generata e rilasciata un'istruzione [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) per rimuovere i metadati della colonna chiave master.
-3.  Scegliere **OK**.
+3.  Fare clic su **OK**.
 
 > [!NOTE]
 > Si consiglia di non eliminare definitivamente la chiave master della colonna precedente dopo la rotazione. È opportuno invece mantenere la chiave master della colonna precedente nell'archivio chiavi in cui si trova o archiviarla in un altro posto sicuro. Se si ripristina il database da un file di backup creato prima della configurazione della nuova chiave master della colonna, sarà necessaria la chiave precedente per accedere ai dati.
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 
 La rotazione di una chiave master della colonna richiede le seguenti autorizzazioni di database:
 
@@ -371,7 +371,7 @@ Per ruotare una chiave di crittografia della colonna, usare la procedura guidata
 7.  Nella pagina **Riepilogo** esaminare le opzioni selezionate, quindi fare clic su **Fine** e chiudere la procedura guidata quando viene completata.
 8.  In **Esplora oggetti**passare alla cartella **Sicurezza/Chiavi con crittografia sempre attiva/Chiavi di crittografia della colonna** e individuare la chiave di crittografia della colonna precedente da rimuovere dal database. Fare clic sulla chiave con il pulsante destro del mouse e selezionare **Elimina**.
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 
 La rotazione di una chiave di crittografia della colonna richiede le seguenti autorizzazioni di database: **ALTER ANY COLUMN MASTER KEY** : richiesta se si usa una nuova chiave di crittografia della colonna generata automaticamente (verranno generati anche una nuova chiave master della colonna e i relativi metadati).
 **ALTER ANY COLUMN ENCRYPTION KEY** : richiesta per aggiungere metadati per la nuova chiave di crittografia della colonna.
@@ -404,7 +404,7 @@ Quando si aggiorna un database usando un file DACPAC e il file DACPAC o il datab
 > [!NOTE]
 > Se la chiave master della colonna configurata per la colonna nel database o nel file DACPAC viene archiviata nell'insieme di credenziali delle chiavi di Azure, verrà richiesto di accedere ad Azure, a meno che l'accesso non sia già stato eseguito.
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 
 Per eseguire un'operazione di aggiornamento dell'applicazione livello dati se Always Encrypted è configurato nel file DACPAC o nel database di destinazione, potrebbero essere necessarie alcune o tutte le autorizzazioni indicate di seguito, in base alle differenze tra lo schema nel file DACPAC e lo schema del database di destinazione.
 
@@ -427,7 +427,7 @@ Quando si importa il file BACPAC in un database, i dati crittografati del file B
 Se si usa un'applicazione configurata per modificare o recuperare i dati crittografati archiviati nel database di origine (quello esportato), non sono necessarie operazioni particolari per consentire all'applicazione di eseguire query sui dati crittografati nel database di destinazione, perché le chiavi presenti in entrambi i database sono le stesse.
 
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 
 Sono necessarie le autorizzazioni *ALTER ANY COLUMN MASTER KEY* e *ALTER ANY COLUMN ENCRYPTION KEY* per il database di origine. Per il database di destinazione sono necessarie le autorizzazioni *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*e *VIEW ANY COLUMN ENCRYPTION* .
 
@@ -450,7 +450,7 @@ Nella tabella seguente sono riportati gli scenari di migrazione possibili con le
 |Spostare i dati crittografati senza decrittografarli.<br><br>**Nota:** le tabelle di destinazione con colonne crittografate devono esistere prima della migrazione.| Provider di dati/driver: *qualsiasi*<br>Impostazione di crittografia di colonna = Disabilitata<br><br>(se si usano il provider di dati .net Framework per SqlServer e .NET Framework 4.6 o versione successiva)| Provider di dati/driver: *qualsiasi*<br>Impostazione di crittografia di colonna = Disabilitata<br><br>(se si usano il provider di dati .net Framework per SqlServer e .NET Framework 4.6 o versione successiva)<br><br>L'utente deve avere impostato ALLOW_ENCRYPTED_VALUE_MODIFICATIONS su ON.<br><br>Per i dettagli, vedere [Migrare dati sensibili protetti da Crittografia sempre attiva](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).
 
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 
 Per **crittografare** o **decrittografare** i dati memorizzati nell'origine dati, sono necessarie le autorizzazioni *VIEW ANY COLUMN MASTER KEY DEFINITION* e *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* nel database di origine.
 

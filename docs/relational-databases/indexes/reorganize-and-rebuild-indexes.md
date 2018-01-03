@@ -37,11 +37,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e0115a7595476adadb0fc0328a14b01b0476771a
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: c55cc253a5b82bed265b2b67ab9cd63d8c971408
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Riorganizzare e ricompilare gli indici
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/28/2017
   
  Il set di risultati restituito dalla funzione **sys.dm_db_index_physical_stats** include le colonne seguenti.  
   
-|Colonna|Descrizione|  
+|colonna|Description|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|Percentuale di frammentazione logica (pagine non ordinate nell'indice).|  
 |**fragment_count**|Numero di frammenti (pagine foglia fisicamente consecutive) nell'indice.|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/28/2017
   
 ### <a name="Security"></a> Sicurezza  
   
-#### <a name="Permissions"></a> Autorizzazioni  
+#### <a name="Permissions"></a> Permissions  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ## <a name="SSMSProcedureFrag"></a> Controllare la frammentazione dell'indice tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
@@ -162,9 +162,9 @@ ms.lasthandoff: 11/28/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Find the average fragmentation percentage of all indexes  
@@ -256,9 +256,9 @@ ms.lasthandoff: 11/28/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
@@ -276,9 +276,9 @@ ms.lasthandoff: 11/28/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize all indexes on the HumanResources.Employee table.  
@@ -293,7 +293,7 @@ ms.lasthandoff: 11/28/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene ricompilato un solo indice nella tabella `Employee` .  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene ricompilato un solo indice nella tabella `Employee` .  
   
      [!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]  
   

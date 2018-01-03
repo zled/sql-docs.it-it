@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2b0255236aee66b63318dca9a18cfbae54d7ed6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e437e550b8522d85319a5207b2a26365b4e0d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-copy-of-existing-package"></a>Aggiungi copia del pacchetto esistente
   Utilizzare la finestra di dialogo **Aggiungi copia del pacchetto esistente** per aggiungere una copia di un pacchetto archiviato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nel file system o nell'archivio pacchetti SSIS a un progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  **Tipo di autenticazione**  
  Se si esegue la copia da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selezionare un tipo di autenticazione.  
   
- **Nome utente**  
+ **User name**  
  Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , specificare un nome utente.  
   
  **Password**  

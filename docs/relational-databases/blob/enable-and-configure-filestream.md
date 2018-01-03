@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 28de8df00cc2a98756492b7ae434838d04a4e53c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55dd8e263f95d9abf13d34bc37d703b7171bea2c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-and-configure-filestream"></a>Abilitare e configurare FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Prima di iniziare a usare FILESTREAM, è necessario abilitarlo nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. In questo argomento viene descritto come abilitare FILESTREAM utilizzando Gestione configurazione SQL Server.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
 11. Nell'editor di query immettere il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  
@@ -82,9 +82,9 @@ ms.lasthandoff: 11/17/2017
   
 ||||||  
 |-|-|-|-|-|  
-|Livello RAID|Prestazioni di scrittura|Prestazioni di lettura|Tolleranza di errore|Osservazioni|  
-|RAID 5|Normal|Normal|Eccellenti|Le prestazioni sono più elevate rispetto all'utilizzo di un unico disco o di JBOD e meno elevate rispetto all'utilizzo di RAID 0 o RAID 5 con striping.|  
-|RAID 0|Eccellenti|Eccellenti|Nessuno||  
+|Livello RAID|Prestazioni di scrittura|Prestazioni di lettura|Tolleranza di errore|Remarks|  
+|RAID 5|Normale|Normale|Eccellenti|Le prestazioni sono più elevate rispetto all'utilizzo di un unico disco o di JBOD e meno elevate rispetto all'utilizzo di RAID 0 o RAID 5 con striping.|  
+|RAID 0|Eccellenti|Eccellenti|None||  
 |RAID 5 + striping|Eccellenti|Eccellenti|Eccellenti|Opzione più costosa.|  
   
   

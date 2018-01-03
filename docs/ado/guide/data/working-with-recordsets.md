@@ -3,7 +3,7 @@ title: Utilizzo di recordset | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cf54089c037d972649d3acc872a38eed21d02507
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a861030b8ec30e176d7535d6e2f7976a87c0832a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-recordsets"></a>Utilizzo di recordset
 Il **Recordset** oggetto dispone di funzionalità incorporate che consentono ridisporre l'ordine dei dati nel set di risultati, per cercare un record specifico in base a criteri specificati e anche per ottimizzare le operazioni di ricerca tramite gli indici. Se queste funzionalità sono disponibili per l'uso dipende dal provider e in alcuni casi, ad esempio quelle del [indice](../../../ado/reference/ado-api/index-property.md) proprietà, ovvero la struttura dell'origine dati stessa.  

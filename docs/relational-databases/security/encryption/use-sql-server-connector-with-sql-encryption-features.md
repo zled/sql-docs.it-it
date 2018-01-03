@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e93230571a231e1746eeff928d894c02fffd57ad
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e25ba8ad35a44088cee720ad626bb1524f3db1c0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Usare Connettore SQL Server con le funzionalità di crittografia SQL
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)] Le attività di crittografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comuni che usano una chiave asimmetrica protetta da Azure Key Vault includono le tre aree seguenti.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
     -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte I è `Replace-With-AAD-Client-Secret`. La stringa finale dell'argomento `SECRET` sarà una lunga sequenza di lettere e numeri *senza trattini*.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
      Creare un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e aggiungere le credenziali del passaggio 1. Questo esempio di [!INCLUDE[tsql](../../../includes/tsql-md.md)] usa la stessa chiave importata in precedenza.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     -- Create a SQL Server login associated with the asymmetric key   
     -- for the Database engine to use when it loads a database   
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/21/2017
   
      La chiave DEK crittografa i file di dati e di log nell'istanza del database e a sua volta viene crittografata dalla chiave asimmetrica dell'insieme di credenziali delle chiavi di Azure. La chiave DEK può essere creata usando qualsiasi lunghezza dell'algoritmo o della chiave supportata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-    ```tsql  
+    ```sql  
     USE ContosoDatabase;  
     GO  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  **Attivare TDE**  
   
-    ```tsql  
+    ```sql  
     -- Alter the database to enable transparent data encryption.  
     ALTER DATABASE ContosoDatabase   
     SET ENCRYPTION ON;  
@@ -127,7 +127,7 @@ ms.lasthandoff: 11/21/2017
   
      In alternativa, è possibile eseguire lo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente. Uno stato di crittografia 3 indica un database crittografato.  
   
-    ```tsql  
+    ```sql  
     USE MASTER  
     SELECT * FROM sys.asymmetric_keys  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 11/21/2017
   
     -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte I è `Replace-With-AAD-Client-Secret`. La stringa finale dell'argomento `SECRET` sarà una lunga sequenza di lettere e numeri *senza trattini*.   
   
-        ```tsql  
+        ```sql  
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
@@ -181,7 +181,7 @@ ms.lasthandoff: 11/21/2017
   
      Questo esempio usa la chiave asimmetrica `CONTOSO_KEY_BACKUP` archiviata nell'insieme di credenziali delle chiavi che può essere importato o creato in precedenza per il database master, come descritto nel passaggio 5 della parte 4 precedente.  
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     -- Create a SQL Server login associated with the asymmetric key   
@@ -203,7 +203,7 @@ ms.lasthandoff: 11/21/2017
      
      Nell'esempio seguente si noti che se il database è stato già crittografato con TDE e la chiave asimmetrica `CONTOSO_KEY_BACKUP` è diversa dalla chiave asimmetrica TDE, il backup verrà crittografato sia con la chiave asimmetrica TDE che con `CONTOSO_KEY_BACKUP`. L'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di destinazione dovrà disporre di entrambe le chiavi per decrittografare il backup.
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     BACKUP DATABASE [DATABASE_TO_BACKUP]  
@@ -226,7 +226,7 @@ ms.lasthandoff: 11/21/2017
     
      Esempio del codice di ripristino:  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE [DATABASE_TO_BACKUP]  
     FROM DISK = N'[PATH TO BACKUP FILE]'   
         WITH FILE = 1, NOUNLOAD, REPLACE;  
@@ -243,7 +243,7 @@ ms.lasthandoff: 11/21/2017
   
  Questo esempio usa la chiave asimmetrica `CONTOSO_KEY_COLUMNS` archiviata nell'insieme di credenziali delle chiavi che può essere importata o creata in precedenza, come descritto nel passaggio 3 della sezione 3 di [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md). Per usare questa chiave asimmetrica nel database `ContosoDatabase` , è necessario eseguire nuovamente l'istruzione `CREATE ASYMMETRIC KEY` in modo da fornire al database `ContosoDatabase` un riferimento alla chiave.  
   
-```tsql  
+```sql  
 USE [ContosoDatabase];  
 GO  
   

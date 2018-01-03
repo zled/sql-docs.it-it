@@ -3,7 +3,7 @@ title: Aggiornare diagrammi di database delle precedenti edizioni | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f225eafb6cd6b1a4518a8e98f6b657bdc385cb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e4651d6e75744ce33f7e8eb1062de0f2b8daf396
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Aggiornamento di diagrammi di database delle precedenti edizioni (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] I diagrammi di database creati nelle edizioni precedenti dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] vengono aggiornati automaticamente quando il diagramma di database viene impostato su [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]. Per altre informazioni sull'impostazione dei diagrammi, vedere [Impostazione di Progettazione diagrammi di database (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  

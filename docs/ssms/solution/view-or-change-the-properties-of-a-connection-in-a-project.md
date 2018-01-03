@@ -3,7 +3,7 @@ title: "Visualizzare o modificare le proprietà di una connessione in un progett
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 04b64f2186b1be8f1909d72c10732c8b33fa2cb5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d2fbf26947bbf50bb16fc78dbe6af61e45f4c202
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>Visualizzazione o modifica delle proprietà di una connessione in un progetto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile visualizzare le proprietà di una connessione salvata in un progetto e modificarne alcune.  
@@ -41,5 +41,5 @@ ms.lasthandoff: 12/05/2017
 ## <a name="see-also"></a>Vedere anche  
 [Esplora soluzioni](../../ssms/solution/solution-explorer.md)  
 [Associazione di una query a una connessione in un progetto](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)  
-[Modifica della connessione associata a una query](../../ssms/solution/change-the-connection-associated-with-a-query.md)  
+[Modificare la connessione associata a una query](../../ssms/solution/change-the-connection-associated-with-a-query.md)  
   

@@ -3,7 +3,7 @@ title: "Monitorare le attività del processo | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddc5235281231c8d1aa08a22e7f55fe4131480d5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b989e3a1bc7bdaa3d7e4d241eb674e4ecd58247d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-job-activity"></a>Monitoraggio delle attività del processo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per eseguire il monitoraggio dell'attività corrente di tutti i processi definiti in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile usare Monitoraggio attività processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
@@ -59,11 +59,11 @@ Per aprire Monitoraggio attività processi, espandere **SQL Server Agent** in Es
   
 Per visualizzare l'attività dei processi della sessione corrente è inoltre possibile usare la stored procedure **sp_help_jobactivity**.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Argomento**|  
+|**Descrizione**|**Argomento**|  
 |Viene illustrato come visualizzare lo stato di runtime dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Visualizza attività processi](../../ssms/agent/view-job-activity.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

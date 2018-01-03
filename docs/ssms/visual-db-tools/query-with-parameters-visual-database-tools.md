@@ -3,7 +3,7 @@ title: Eseguire query mediante parametri (Visual Database Tools) | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a74efc549ad7e04191e518ba17b1a88c230d8cf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 66b72b4a855628c20ba06afa465be5ee7997fb6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Esecuzione di query mediante parametri (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In molti casi può essere utile creare una query da riusare più volte nelle applicazioni inserendo di volta in volta dati diversi. In questa sezione vengono fornite informazioni sulla creazione di query con parametri per un uso generale.  
@@ -38,9 +38,9 @@ Vengono fornite informazioni sulle query generiche.
 Viene descritto come creare una query con parametri senza nome.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
-[Esecuzione di operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 Vengono forniti collegamenti ad argomenti relativi alle operazioni che è possibile eseguire più comunemente con le query.  
   
-[Specifica di criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Specifica dei criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 Vengono forniti collegamenti ad argomenti relativi ai diversi metodi di ricerca e all'esecuzione di ricerche specifiche.  
   

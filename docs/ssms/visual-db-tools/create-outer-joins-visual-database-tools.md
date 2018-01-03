@@ -3,7 +3,7 @@ title: Creare outer join (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ccbda35c56aaa7aeb221ff3f0c7527b0389eebe8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5847977926b80ef1cf98172b7b59c3e8a0a1c02
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Creazione di join esterni (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Per impostazione predefinita, in [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) viene creato un inner join tra le tabelle. Le righe prive di corrispondenza nell'altra tabella vengono eliminate. Gli outer join restituiscono invece tutte le righe di almeno una delle tabelle o viste specificate nella clausola FROM, a condizione che tali righe soddisfino una delle condizioni di ricerca della clausola WHERE o HAVING. Se si desidera includere nel set di risultati le righe di dati che non hanno una corrispondenza nella tabella in join, sarà possibile creare un outer join.  
@@ -64,6 +64,6 @@ WHERE (jobs.job_id IS NULL)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione di query con join &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Eseguire query con join &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [Finestra di dialogo Join &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
   

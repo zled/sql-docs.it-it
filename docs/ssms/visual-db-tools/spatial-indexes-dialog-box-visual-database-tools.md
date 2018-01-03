@@ -3,7 +3,7 @@ title: Finestra di dialogo Indici spaziali (Visual Database Tools) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: efb3e7457ce2406fa52801221b4c9a9d937fc7dd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a3a67a16ceef1e85a988b762d7f0cecb4e452d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici spaziali (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La finestra di dialogo **Indici spaziali** consente di creare indici per le colonne con tipo di dati **geometry** o **geography** (*colonne spaziali*), che non possono essere indicizzate con la finestra di dialogo **Indici/chiavi**. Ogni colonna spaziale può avere più indici spaziali, ma gli indici devono essere creati uno alla volta.  

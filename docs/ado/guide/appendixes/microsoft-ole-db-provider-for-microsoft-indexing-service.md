@@ -3,7 +3,7 @@ title: Provider Microsoft OLE DB per servizio di indicizzazione Microsoft | Docu
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0fb1ffdfdd73562aaa5b64ce997e857ae9f213
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d278b3fd6a2460471195e5744baef93292dfbc30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Provider Microsoft OLE DB per una panoramica del servizio di indicizzazione Microsoft
 Il Provider Microsoft OLE DB per servizio di indicizzazione Microsoft fornisce l'accesso di sola lettura a livello di codice per file system e i dati Web indicizzati dal servizio di indicizzazione Microsoft. Applicazioni ADO possono eseguire query SQL per recuperare informazioni sulle proprietà di contenuto e il file.
@@ -101,13 +101,13 @@ MSIDXS
 
 |Metodo|Disponibile?|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|No|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|no|
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Sì|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|no|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|no|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Sì|
 |[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Sì|
-|[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|
+|[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|no|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|
 |[Sposta](../../../ado/reference/ado-api/move-method-ado.md)|Sì|
 |[Metodo MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|
@@ -116,8 +116,8 @@ MSIDXS
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sì|
 |[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|Sì|
 |[Supporta](../../../ado/reference/ado-api/supports-method.md)|Sì|
-|[Update](../../../ado/reference/ado-api/update-method.md)|No|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|
+|[Update](../../../ado/reference/ado-api/update-method.md)|no|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|no|
 
  Per dettagli specifici sull'implementazione e funzionale informazioni su Provider Microsoft OLE DB per servizio di indicizzazione Microsoft, consultare il [Guida per programmatori OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), oppure visitare la pagina servizi Web di Windows NT Server Web sito.
 

@@ -3,7 +3,7 @@ title: Seleziona pianificazione per il processo | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba4f4845b905b4b9ccf77c4e96b985b7be3ad5d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 35274d2236cc7485c3f9a967386b3931ece03ed1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pick-schedule-for-job"></a>Seleziona pianificazione per il processo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa finestra di dialogo per selezionare una pianificazione esistente per il processo di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
@@ -38,7 +38,7 @@ Consente di visualizzare il nome della pianificazione.
 **Abilitata**  
 Questa opzione è selezionata se la pianificazione è abilitata.  
   
-**Description**  
+**Descrizione**  
 Descrive le condizioni nelle quali la pianificazione esegue il processo.  
   
 **Processi nella pianificazione**  

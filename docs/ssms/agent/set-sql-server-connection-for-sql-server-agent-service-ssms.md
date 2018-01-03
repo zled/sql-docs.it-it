@@ -3,7 +3,7 @@ title: Impostare la connessione a SQL Server per il servizio SQL Server Agent | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5caa2ebe88fd2de52a239693e5a5b517f2e8ae46
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5a70b599aa521e50959e460ef604ca754655caff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come impostare la connessione tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent e [!INCLUDE[ssDE](../../includes/ssde_md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Per la connessione a un'istanza locale di SQL Server il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent può utilizzare Autenticazione di Windows.  
@@ -70,7 +70,7 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
   
 1.  In **Esplora oggetti**fare clic sul segno più per espandere il server che si desidera impostare con una connessione al servizio SQL Server Agent.  
   
-2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent** e quindi scegliere **Proprietà**.  
+2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent** e scegliere **Proprietà**.  
   
 3.  Nella finestra di dialogo **Proprietà SQL Server Agent***nome_server* fare clic su **Connessione**in **Seleziona una pagina**.  
   

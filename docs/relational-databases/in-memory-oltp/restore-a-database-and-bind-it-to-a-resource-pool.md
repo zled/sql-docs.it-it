@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0123a452a34fc5d445499fa1ba372a458cdcff60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e959e9afd0ff9487e77fd4526a570aacf894d285
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>Ripristinare un database e associarlo a un pool di risorse
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Anche se si dispone di memoria sufficiente per ripristinare un database con tabelle ottimizzate per la memoria, è possibile seguire le procedure consigliate e associare il database a un pool di risorse denominato. Poiché il database deve essere già presente per poter essere associato al pool, il ripristino del database è un processo costituito da più passaggi. In questo argomento viene illustrato tale processo.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_NORECOVERY"></a> Ripristino con NORECOVERY  
  Il ripristino di un database con NORECOVERY comporta la creazione del database e il ripristino dell'immagine disco senza l'uso di memoria.  
   
-```tsql  
+```sql  
 RESTORE DATABASE IMOLTP_DB   
    FROM DISK = 'C:\IMOLTP_test\IMOLTP_DB.bak'  
    WITH NORECOVERY  
@@ -51,7 +51,7 @@ RESTORE DATABASE IMOLTP_DB
 ###  <a name="bkmk_createPool"></a> Creazione del pool di risorse  
  Il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente di creare un pool di risorse denominato Pool_IMOLTP con il 50% della memoria disponibile per l'uso.  Dopo la creazione del pool, Resource Governor viene riconfigurato in modo da includere Pool_IMOLTP.  
   
-```tsql  
+```sql  
 CREATE RESOURCE POOL Pool_IMOLTP WITH (MAX_MEMORY_PERCENT = 50);  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
@@ -62,7 +62,7 @@ GO
   
  Con l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene definita un'associazione del database IMOLTP_DB al pool di risorse Pool_IMOLTP. L'associazione non diventa effettiva finché non viene completato il passaggio successivo.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -70,7 +70,7 @@ GO
 ###  <a name="bkmk_RECOVERY"></a> Ripristino con RECOVERY  
  Quando si ripristina il database con recupero, il database viene portato online e vengono ripristinati tutti i dati.  
   
-```tsql  
+```sql  
 RESTORE DATABASE IMOLTP_DB   
    WITH RECOVERY  
 ```  

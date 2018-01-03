@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3834e2948ea4e43bc5e44a4aed9f1560b2864b64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e9c1bcfec7bd2d009af31b69317f9fd23b68843
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>Creare, modificare e rilasciare FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Descrive come creare una nuova tabella FileTable o come modificarne o eliminarne una esistente.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  Nell'esempio seguente viene creata una nuova tabella FileTable e vengono specificati valori definiti dall'utente sia per **FILETABLE_DIRECTORY** che per **FILETABLE_COLLATE_FILENAME**.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -84,7 +84,7 @@ GO
   
  Nell'esempio seguente viene inoltre creata una nuova tabella FileTable. Poiché non sono specificati valori definiti dall'utente, il valore di **FILETABLE_DIRECTORY** diventa il nome della tabella FileTable, il valore di **FILETABLE_COLLATE_FILENAME** diventa database_default e tramite i vincoli di chiave primaria e univoci si ricevono i nomi generati dal sistema.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -119,7 +119,7 @@ GO
   
  **Esempio**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -150,7 +150,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> Quando si crea una tabella FileTable, vengono creati altri oggetti di database  
  Quando si crea una nuova tabella FileTable, vengono creati anche alcuni indici e vincoli definiti dal sistema. Non è possibile modificare o eliminare questi oggetti, che verranno eliminato solo all'eliminazione della tabella FileTable stessa. Per visualizzare l'elenco di questi oggetti, eseguire una query sulla vista del catalogo [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  
@@ -188,6 +188,6 @@ GO
 -   *\<identificatoreunivoco* è una stringa generata dal sistema per specificare un nome univoco. È possibile che questa stringa contenga il nome della tabella FileTable e un identificatore univoco.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione di tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
+ [Gestire tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
   
   

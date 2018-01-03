@@ -3,9 +3,9 @@ title: SQL Server PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 08/04/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 20bdab1b97f3806cea8b8cb3b526a3d4a057f6fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 19eb632fc1b975671f968b9e2db806129eacae27
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta Windows PowerShell, ovvero una potente shell di scripting che consente agli amministratori e agli sviluppatori di automatizzare l'amministrazione del server e la distribuzione delle applicazioni. Il linguaggio di Windows PowerShell supporta una logica più complessa rispetto agli script [!INCLUDE[tsql](../../includes/tsql-md.md)] , consentendo agli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di compilare script di amministrazione affidabili. Gli script di Windows PowerShell possono anche essere utilizzati per amministrare altri prodotti server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] , Ciò fornisce agli amministratori un linguaggio di scripting comune in tutti i server.  

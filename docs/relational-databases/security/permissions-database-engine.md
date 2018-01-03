@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6d2d7b6f97be65f053248396528c3f4f18f7230e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e37b0da02e9608249c2283683324fee42fe9a8e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ Il numero totale di autorizzazioni per [!INCLUDE[ssSQLv14_md](../../includes/sss
 [![Autorizzazioni del motore di database](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
 Una volta comprese le autorizzazioni, applicare le autorizzazioni a livello di server agli account di accesso e le autorizzazioni a livello di database agli utenti con le istruzioni [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOCARE](../../t-sql/statements/revoke-transact-sql.md)e [DENY](../../t-sql/statements/deny-transact-sql.md) . Ad esempio:   
-```tsql
+```sql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
@@ -110,7 +110,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |----------------|----------------|  
 |ALTER|Tutte le classi di oggetti ad eccezione di TYPE|  
 |CONTROL|Tutte le classi di oggetti: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW e<br />XML SCHEMA COLLECTION|  
-|DELETE|Tutte le classi di oggetti ad eccezione di DATABASE SCOPED CONFIGURATION e SERVER|  
+|Elimina|Tutte le classi di oggetti ad eccezione di DATABASE SCOPED CONFIGURATION e SERVER|  
 |EXECUTE|Tipi CLR, script esterni, procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR), funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e sinonimi|  
 |IMPERSONATE|Account di accesso e utenti|  
 |INSERT|Sinonimi, tabelle e colonne, viste e colonne. L'autorizzazione può essere concesso a livello di database, schema oppure oggetto|  
@@ -217,7 +217,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
+|DATABASE|Elimina|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente).|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
@@ -264,7 +264,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|DELETE|  
+|OBJECT|DELETE|DL|SCHEMA|Elimina|  
 |OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -294,7 +294,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|DELETE|DL|DATABASE|DELETE|  
+|SCHEMA|Elimina|DL|DATABASE|Elimina|  
 |SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -324,7 +324,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |SERVER|CONNECT SQL|COSQ|Non applicabile|Non applicabile|  
 |SERVER|CONTROL SERVER|CL|Non applicabile|Non applicabile|  
 |SERVER|CREATE ANY DATABASE|CRDB|Non applicabile|Non applicabile|  
-|SERVER|CREATE AVAILABILITY GROUP|CRAC|Non applicabile|Non applicabile|  
+|SERVER|Creare un gruppo di disponibilità|CRAC|Non applicabile|Non applicabile|  
 |SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|Non applicabile|Non applicabile|  
 |SERVER|CREATE ENDPOINT|CRHE|Non applicabile|Non applicabile|  
 |SERVER|CREATE SERVER ROLE|CRSR|Non applicabile|Non applicabile|  
@@ -423,8 +423,8 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 
 ## <a name="secial-considerations-for-column-level-permissions"></a>Considerazioni speciali per le autorizzazioni a livello di colonna
 
-Le autorizzazioni a livello di colonna vengono concesse con la sintassi *<NomeTabella>(\<NomeColonna>)*. Esempio:
-```tsql
+Le autorizzazioni a livello di colonna vengono concesse con la sintassi *<NomeTabella>(\<NomeColonna>)*. Ad esempio
+```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Un'istruzione GRANT a livello di colonna esegue l'override di un'istruzione DENY a livello di tabella. Tuttavia, un'istruzione DENY successiva a livello di tabella rimuoverà l'istruzione GRANT a livello di colonna. 
@@ -435,7 +435,7 @@ Un'istruzione GRANT a livello di colonna esegue l'override di un'istruzione DENY
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. A. Restituzione dell'elenco completo delle autorizzazioni che è possibile concedere  
  L'istruzione seguente restituisce tutte le autorizzazioni del [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite la funzione `fn_builtin_permissions` . Per altre informazioni, vedere [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions(default);  
 GO  
 ```  
@@ -443,7 +443,7 @@ GO
 ### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>B. B. Restituzione delle autorizzazioni per una classe di oggetti specifica  
  Nell'esempio seguente viene usata la funzione `fn_builtin_permissions` per visualizzare tutte le autorizzazioni disponibili per una categoria di entità a protezione diretta. Nell'esempio vengono restituite le autorizzazioni per gli assembly.  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions('assembly');  
 GO    
 ```  
@@ -451,7 +451,7 @@ GO
 ### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>C. C. Restituzione delle autorizzazioni concesse all'entità di esecuzione per un oggetto  
  Nell'esempio seguente viene usata la funzione `fn_my_permissions` per restituire un elenco delle autorizzazioni valide assegnate all'entità chiamante per un'entità a protezione diretta specificata. Nell'esempio vengono restituite le autorizzazioni per un oggetto denominato `Orders55`. Per altre informazioni, vedere [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM fn_my_permissions('Orders55', 'object');  
 GO  
 ```  
@@ -459,7 +459,7 @@ GO
 ### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D. D. Restituzione delle autorizzazioni applicabili a un oggetto specificato  
  Nell'esempio seguente vengono restituite le autorizzazioni applicabili a un oggetto denominato `Yttrium`. Si noti che la funzione predefinita `OBJECT_ID` viene usata per recuperare l'ID dell'oggetto `Yttrium`.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_permissions   
     WHERE major_id = OBJECT_ID('Yttrium');  
 GO  

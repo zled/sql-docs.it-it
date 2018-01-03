@@ -3,7 +3,7 @@ title: Organizzare processi | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59cbeeff0868e37f4eb665090adcb507505b7204
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 72379002527a54261fab19d152b5c7db553aeec1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="organize-jobs"></a>organizzare processi
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le categorie consentono di organizzare i processi per semplificare le operazioni di raggruppamento e filtro. È ad esempio possibile organizzare tutti i processi di backup dei database raggruppandoli nella categoria Manutenzione database. È inoltre possibile creare categorie di processi personalizzate.  
@@ -32,11 +32,11 @@ ms.lasthandoff: 12/05/2017
 > [!WARNING]  
 > Le categorie multiserver sono disponibili solo in un server master. In un server master è disponibile una sola categoria di processi predefinita: [**Senza categoria (multiserver)**]. Quando viene scaricato un processo multiserver, la categoria viene modificata in **Processi dal server MSX** nel server di destinazione.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Argomento**|  
+|**Descrizione**|**Argomento**|  
 |Descrive come creare una categoria di processi.|[Creare una categoria di processi](../../ssms/agent/create-a-job-category.md)|  
 |Descrive come eliminare una categoria di processi.|[Eliminare una categoria di processi](../../ssms/agent/delete-a-job-category.md)|  
 |Descrive come assegnare un processo a una categoria di processi.|[Assegnare un processo a una categoria di processi](../../ssms/agent/assign-a-job-to-a-job-category.md)|  

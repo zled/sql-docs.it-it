@@ -3,7 +3,7 @@ title: Riferimento all'errore ADO | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 202ece8496decb7ada7300cbfca79158bd7d2338
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05191a1797a2aa09f7c7f740401655febcead998
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-errors"></a>Errori ADO
 Il **ErrorValueEnum** costante descrive i valori di errore ADO. Per un elenco completo delle costanti enumerate, inclusi i valori, vedere [appendice b: errori di ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). In questa sezione verrà esaminare alcuni degli errori più interessanti e vengono descritte alcune situazioni specifiche che possono generare o soluzioni per risolvere il problema. Entrambi i **ErrorValueEnum** costante e il numero di decimale positivo breve sono elencati.

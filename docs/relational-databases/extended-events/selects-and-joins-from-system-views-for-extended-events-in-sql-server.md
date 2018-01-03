@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 160513acf82e56718e15893de1aa70d698174c80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a81021ed7170b6bf92bfd2eebfebef9044de3bde
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Istruzioni SELECT e JOIN da viste di sistema per eventi estesi in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Per eseguire istruzioni SELECT dalle viste di sistema, è necessaria l'autorizza
 
 <a name="section_B_catalog_views"></a>
 
-## <a name="b-catalog-views"></a>B. Vista del catalogo
+## <a name="b-catalog-views"></a>B. Viste del catalogo
 
 
 In questa sezione vengono abbinati e messi in correlazione i punti di vista di tre tecnologie diverse nella stessa sessione evento. La sessione è definita e visibile in **Esplora oggetti** di SQL Server Management Studio (SSMS.exe) ma non è in esecuzione.
@@ -126,21 +126,21 @@ Nella finestra di dialogo **Nuova sessione** , nella prima sezione, **Generale**
 ![Nuova sessione > Generale, Avviare la sessione eventi all'avvio del server.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-Quindi, nella sezione **Eventi** è stato scelto l'evento **lock_deadlock** . Per questo evento sono state selezionate tre **Azioni** . Ciò significa che il pulsante **Configura** è stato selezionato. Il pulsante, infatti, ora è disabilitato.
+Quindi, nella sezione **Eventi** è stato scelto l'evento **lock_deadlock**. Per questo evento sono state selezionate tre **Azioni** . Ciò significa che il pulsante **Configura** è stato selezionato. Il pulsante, infatti, ora è disabilitato.
 
 ![Nuova sessione > Eventi, Campi globali (azioni)](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-Quindi, sempre nella sezione **Eventi** > **Configura** , è possibile vedere che [**resource_type** è stato impostato su **PAGE**](#resource_type_dmv_actual_row). Ciò significa che i dati eventi non verranno inviati dal motore degli eventi alla destinazione se il valore **resource_type** è diverso da **PAGE**.
+Quindi, sempre nella sezione **Eventi** > **Configura**, è possibile vedere che [**resource_type** è stato impostato su **PAGE**](#resource_type_dmv_actual_row). Ciò significa che i dati eventi non verranno inviati dal motore degli eventi alla destinazione se il valore **resource_type** è diverso da **PAGE**.
 
 È anche possibile vedere altri predicati di filtri per il nome del database e per un contatore.
 
 ![Nuova sessione > Eventi, campi dei predicati dei filtri (Azioni)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-Quindi, nella sezione **Archiviazione dati** è possibile vedere che **event_file** è stato scelto come destinazione. È anche possibile vedere che è stata selezionata l'opzione **Consenti rollover dei file** .
+Quindi, nella sezione **Archiviazione dati** è possibile vedere che **event_file** è stato scelto come destinazione. È anche possibile vedere che è stata selezionata l'opzione **Consenti rollover dei file**.
 
 ![Nuova sessione > Archiviazione dati, eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
@@ -165,7 +165,7 @@ Per decompilare una sessione evento, in **Esplora oggetti** è possibile fare cl
 Lo script T-SQL seguente è stato creato tramite decompilazione con SSMS. Quindi lo script è stato abbellito manualmente manipolando in modo strategico solo gli spazi.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_session_test3]
     ON SERVER  -- Or, if on Azure SQL Database, ON DATABASE.
 
@@ -219,7 +219,7 @@ E questo è tutto per quanto riguarda il punto di vista di T-SQL.
 Niente paura, l'istruzione T-SQL SELECT è lunga solo perché contiene diverse istruzioni UNION che uniscono diverse istruzioni SELECT più brevi. Ognuna delle istruzioni SELECT più brevi può essere eseguita separatamente. Le istruzioni SELECT più brevi illustrano come devono essere unite tramite JOIN le diverse viste del catalogo di sistema.
 
 
-```tsql
+```sql
 SELECT
         s.name        AS [Session-Name],
         '1_EVENT'     AS [Clause-Type],
@@ -414,7 +414,7 @@ Ecco l'elenco delle istruzioni SELECT presenti in questa sezione C, dedicata all
 Tutti gli oggetti che è possibile usare nell'area degli eventi estesi provengono da pacchetti caricati nel sistema. In questa sezione sono elencati tutti i pacchetti e le relative descrizioni.
 
 
-```tsql
+```sql
 SELECT  --C.1
         p.name         AS [Package],
         p.description  AS [Package-Description]
@@ -470,7 +470,7 @@ XtpRuntime     Extended events for the XTP Runtime
 In questa sezione è illustrato il tipo degli oggetti contenuti nei pacchetti eventi. È visualizzato l'elenco completo di tutti i tipi di oggetto presenti in *sys.dm\_xe\_objects*, nonché il numero per ciascun tipo.
 
 
-```tsql
+```sql
 SELECT  --C.2
         Count(*)  AS [Count-of-Type],
         o.object_type
@@ -514,7 +514,7 @@ L'istruzione SELECT seguente restituisce circa 1915 righe, una per ogni oggetto.
 
 
 
-```tsql
+```sql
 SELECT  --C.3
         o.object_type  AS [Type-of-Item],
         p.name         AS [Package],
@@ -583,7 +583,7 @@ L'istruzione SELECT seguente restituisce tutti i campi dati specifici di un part
 - È anche necessario modificare il valore della clausola WHERE in *o.name =*.
 
 
-```tsql
+```sql
 SELECT  -- C.4
         p.name         AS [Package],
         c.object_name  AS [Event],
@@ -661,7 +661,7 @@ Lo scopo dell'istruzione SELECT è di visualizzare i numerosi campi che è possi
 - Per filtrare le occorrenze dell'evento da inviare e quelle da non inviare alla destinazione.
 
 
-```tsql
+```sql
 SELECT  --C.5
         dp.name         AS [Package],
         do.name         AS [Object],
@@ -736,7 +736,7 @@ L'istruzione SELECT seguente restituisce ogni parametro per la destinazione. Ogn
 - È anche necessario modificare il valore della clausola WHERE in *o.name =*.
 
 
-```tsql
+```sql
 SELECT  --C.6
         p.name        AS [Package],
         o.name        AS [Target],
@@ -801,7 +801,7 @@ Questa istruzione SELECT di DMV restituisce righe di dati provenienti dalla dest
 - È necessario modificare il valore della clausola WHERE in *s.name =*.
 
 
-```tsql
+```sql
 SELECT  --C.7
         s.name,
         t.target_name,
@@ -869,7 +869,7 @@ Si supponga che la sessione evento abbia raccolto alcuni dati e in seguito sia s
     - Non è necessario prestare attenzione alle cifre aggiuntive che il sistema SQL incorpora nei nomi file con estensione XEL effettivi ogni volta che si riavvia la sessione. È sufficiente specificare il nome radice e l'estensione normali.
 
 
-```tsql
+```sql
 SELECT  --C.8
         f.module_guid,
         f.package_guid,

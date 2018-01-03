@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d5606c5733472e462b74d32a8ff4598f52ebcf90
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3158ac5784d00ce59964e3de010d68dd873c21c7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Monitorare e risolvere i problemi relativi all'utilizzo della memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[hek_1](../../includes/hek-1-md.md)] utilizza la memoria in modi diversi rispetto alle tabelle basate su disco. È possibile monitorare la quantità di memoria allocata e utilizzata dagli indici e dalle tabelle ottimizzate per la memoria nel database tramite DMV o contatori delle prestazioni forniti per il sottosistema di Garbage Collection e memoria.  Ciò offre visibilità a livello di sistema e di database e consente di evitare problemi dovuti all'esaurimento della memoria.  
@@ -156,7 +156,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>Utilizzo della memoria da parte di indici e tabelle ottimizzate per la memoria  
  Per conoscere l'utilizzo della memoria da parte di tutte le tabelle utente, gli indici e gli oggetti di sistema, eseguire una query su `sys.dm_db_xtp_table_memory_stats` come illustrato di seguito.  
   
-```tsql  
+```sql  
 SELECT object_name(object_id) AS Name  
      , *  
    FROM sys.dm_db_xtp_table_memory_stats  
@@ -182,7 +182,7 @@ NULL       -2          192                           25                      16 
 #### <a name="memory-consumption-by-internal-system-structures"></a>Utilizzo della memoria da parte delle strutture di sistema interne  
  La memoria viene utilizzata anche dagli oggetti di sistema, ad esempio le strutture transazionali, i buffer per file di dati e differenziali, le strutture di Garbage Collection e altro ancora. Per conoscere la memoria utilizzata da parte di questi oggetti di sistema, eseguire una query su `sys.dm_xtp_system_memory_consumers` come illustrato di seguito.  
   
-```tsql  
+```sql  
 SELECT memory_consumer_desc  
      , allocated_bytes/1024 AS allocated_bytes_kb  
      , used_bytes/1024 AS used_bytes_kb  
@@ -221,7 +221,7 @@ PGPOOL:  4K               0                    0                    0
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>Utilizzo della memoria in fase di esecuzione quando si accede alle tabelle ottimizzate per la memoria  
  Per determinare la memoria utilizzata dalle strutture di runtime, ad esempio la cache delle procedure, eseguire la query riportata di seguito. Tutte le strutture di runtime sono contrassegnate con XTP.  
   
-```tsql  
+```sql  
 SELECT memory_object_address  
      , pages_in_bytes  
      , bytes_used  
@@ -254,7 +254,7 @@ memory_object_address pages_ in_bytes bytes_used type
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Memoria utilizzata dal motore [!INCLUDE[hek_2](../../includes/hek-2-md.md)] nell'istanza  
  La memoria allocata al motore [!INCLUDE[hek_2](../../includes/hek-2-md.md)] e agli oggetti ottimizzati per la memoria viene gestita in modo analogo a qualsiasi altro consumer di memoria all'interno dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I clerk di tipo MEMORYCLERK_XTP tengono conto di tutta la memoria allocata al motore [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Utilizzare la query seguente per trovare tutta la memoria utilizzata dal motore [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
-```tsql  
+```sql  
 -- this DMV accounts for all memory used by the hek_2 engine  
 SELECT type  
      , name  

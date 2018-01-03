@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 483b31cf84a5933bac88744612c5c95fa7ceae56
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c0cce6f70771e67f55f987fe6c307d4713e3f928
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenzione e risoluzione dei problemi di Connettore SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
      Importare la nuova chiave asimmetrica.  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE ASYMMETRIC KEY [MASTER_KEY2]   
     FROM PROVIDER [EKM]   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
      Creare un nuovo account di accesso da associare alla nuova chiave asimmetrica (come illustrato nelle istruzioni relative a TDE).  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE LOGIN TDE_Login2   
     FROM ASYMMETRIC KEY [MASTER_KEY2]  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
      Creare nuove credenziali per il mapping all'account di accesso.  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
        SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
@@ -86,14 +86,14 @@ ms.lasthandoff: 11/21/2017
   
      Scegliere il database per cui si vuole crittografare di nuovo la chiave di crittografia del database.  
   
-    ```tsql  
+    ```sql  
     USE [database]  
     GO  
     ```  
   
      Crittografare di nuovo la chiave di crittografia del database.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE ENCRYPTION KEY   
     ENCRYPTION BY SERVER ASYMMETRIC KEY [MASTER_KEY2];  
     GO  
@@ -132,7 +132,7 @@ Se è in uso la versione 1.0.0.440 o una versione precedente, seguire questa pro
   
 6.  Eseguire questa istruzione per modificare il provider EKM per iniziare a usare la versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Assicurarsi che il percorso file punti alla posizione in cui è stata scaricata la versione più recente. È possibile ignorare questo passaggio se la nuova versione viene installata nello stesso percorso della versione originale. 
   
-    ```tsql  
+    ```sql  
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE =   
     'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
@@ -207,7 +207,7 @@ Per altre informazioni su Active Directory, leggere [Associare le sottoscrizioni
 ##  <a name="AppendixC"></a> C. Spiegazioni dei codici di errore per Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  **Codici di errore del provider:**  
   
-Codice di errore  |Simbolo  |Descrizione    
+Codice di errore  |Simbolo  |Description    
 ---------|---------|---------  
 0 | scp_err_Success | L'operazione è stata completata.    
 1 | scp_err_Failure | L'operazione non è riuscita.    

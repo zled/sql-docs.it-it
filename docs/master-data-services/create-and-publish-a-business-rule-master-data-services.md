@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,16 +20,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252c78c0d21d6a7bc20a969713f265735f4f9dfc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2dd2fb33456c14e995a5fb323d4e5bbe56f5c10d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Creare e pubblicare una regola business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una regola business per garantire l'accuratezza dei dati master. Dopo avere creato una regola, è necessario pubblicarla prima di poterla applicare ai dati.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Le notifiche vengono inviate soltanto per le regole che prevedono un'azione di convalida.  
   
-10. Nel blocco **If** fare clic su **Aggiungi**. Verrà visualizzato un pannello.  
+10. Nel blocco **If** fare clic su **Aggiungi**. Viene visualizzato un pannello.  
   
 11. Nell'elenco a discesa **Attributo** selezionare un attributo.  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
   
 15. Aggiungere facoltativamente più condizioni alla regola. Per altre informazioni, vedere [Aggiungere più condizioni a una regola business &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
   
-16. Nel blocco **Then** fare clic su **Aggiungi** . Verrà visualizzato un pannello.  
+16. Nel blocco **Then** fare clic su **Aggiungi** . Viene visualizzato un pannello.  
   
 17. Nell'elenco a discesa **Attributo** selezionare un attributo.  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
   
 21. Facoltativamente, per aggiungere l'azione **Else** , attenersi alla procedura seguente.  
   
-    1.  Nel blocco **Else** fare clic su **Aggiungi**. Verrà visualizzato un pannello.  
+    1.  Nel blocco **Else** fare clic su **Aggiungi**. Viene visualizzato un pannello.  
   
     2.  Nell'elenco a discesa **Attributo** selezionare un attributo.  
   
@@ -105,16 +105,16 @@ ms.lasthandoff: 11/20/2017
 ## <a name="grid-columns"></a>Colonne della griglia  
  Per ogni regola business creata viene aggiunta alla griglia una riga con sei colonne. Di seguito sono elencate le colonne.  
   
-|Nome|Descrizione|  
+|nome|Description|  
 |----------|-----------------|  
 |Stato|Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che la regola di business è in fase di aggiornamento.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Se si verificano errori durante la creazione o la modifica di una regola business, viene visualizzata l'immagine seguente.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|Nome|Nome della regola business.|  
-|Descrizione|Descrizione della regola business.|  
+|nome|Nome della regola business.|  
+|Description|Descrizione della regola business.|  
 |Stato della regola di business|Uno degli stati seguenti della regola business: Regola non definita, Attiva, Esclusa, Modifiche in sospeso, Esclusione in sospeso ed Eliminazione in sospeso.|  
 |Esclusione|Specifica se la regola business è esclusa.|  
 |Notification|Specifica l'utente o il gruppo selezionato a cui inviare la notifica tramite posta elettronica.|  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
   
 -   Applicare regole business ai dati eseguendo una delle procedure riportate di seguito:  
   

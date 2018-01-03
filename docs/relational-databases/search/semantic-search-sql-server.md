@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: abfcc7d118cf97c24fd9d73817261fc1b8293c67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b9a1fe1c33de87d0d298e530e4704f669e7675c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semantic-search-sql-server"></a>Ricerca semantica (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La ricerca semantica statistica offre una visione approfondita dei documenti non strutturati archiviati in database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'estrazione e l'indicizzazione di *frasi chiave* statisticamente pertinenti. Le frasi chiave vengono quindi usate per identificare e indicizzare *documenti simili o correlati*.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  
  Questa query chiama la funzione [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -79,7 +79,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
  
  Questa query chiama la funzione [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   
@@ -101,7 +101,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  Per altre informazioni sulla funzionalità FileTable, vedere [FileTable &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md). Per informazioni sulla funzionalità FILESTREAM, ovvero un'altra opzione per l'archiviazione di documenti nel database, vedere [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
 ##  <a name="reltasks"></a> Related tasks  
- [Installazione e configurazione della ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md)  
+ [Installare e configurare la ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md)  
  Vengono descritti i prerequisiti per la ricerca semantica statistica e viene indicato come installarli o verificarli.  
   
  [Abilitare la ricerca semantica in tabelle e colonne](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)  

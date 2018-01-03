@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a06c7cffcf4fbfc98323cdbb3e69f78b2d87c4bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7fda6bbf8ea336bc5646f2d420db8594d1faf968
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **LineString** è un oggetto unidimensionale che rappresenta una sequenza di punti e i segmenti lineari che li connettono.  
@@ -109,7 +109,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NUL
   
  Nell'esempio seguente viene illustrato come creare un'istanza `geometry LineString` con due punti uguali. Una chiamata a `IsValid` indica che l'istanza **LineString** non è valida e una chiamata a `MakeValid` convertirà l'istanza **LineString** in un'istanza **Point**.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::STGeomFromText('LINESTRING(1 3, 1 3)',0);  
 IF @g.STIsValid() = 1  

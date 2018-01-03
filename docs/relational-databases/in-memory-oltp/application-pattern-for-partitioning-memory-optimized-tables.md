@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 395967f86de07074db3a7c8cad7c49195ed54d86
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9fcd874e83a0fcecadf7dd76bb5bf67a21df6d6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Manutenzione dei dati attivi
   
  Nella prima parte di questo esempio vengono creati il database e gli oggetti necessari. Nella seconda parte di questo esempio viene illustrato come spostare i dati da una tabella ottimizzata per la memoria in una tabella partizionata.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

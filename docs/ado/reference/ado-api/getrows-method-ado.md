@@ -3,7 +3,7 @@ title: Metodo GetRows (ADO) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8a80f8619d636c13b8c76b4f867e7cbe6333a742
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 317e654699ab6e2c6abc349d91ed58d4c97a7a19
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getrows-method-ado"></a>Metodo GetRows (ADO)
 Recupera i record multipli di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto in una matrice.  
@@ -43,13 +43,13 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>Parametri  
  *Righe*  
- Facoltativa. Oggetto [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) valore che indica il numero di record da recuperare. Il valore predefinito è **adGetRowsRest**.  
+ Facoltativo. Oggetto [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) valore che indica il numero di record da recuperare. Il valore predefinito è **adGetRowsRest**.  
   
  *Inizio*  
- Facoltativa. Oggetto **stringa** valore o **Variant** che restituisce il segnalibro per il record da cui il **GetRows** deve iniziare l'operazione. È inoltre possibile utilizzare un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valore.  
+ Facoltativo. Oggetto **stringa** valore o **Variant** che restituisce il segnalibro per il record da cui il **GetRows** deve iniziare l'operazione. È inoltre possibile utilizzare un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valore.  
   
- *Campi*  
- Facoltativa. Oggetto **Variant** che rappresenta un nome di campo singolo o posizione ordinale o una matrice di nomi di campo o i numeri di posizione ordinale. ADO restituisce solo i dati in questi campi.  
+ *Fields*  
+ Facoltativo. Oggetto **Variant** che rappresenta un nome di campo singolo o posizione ordinale o una matrice di nomi di campo o i numeri di posizione ordinale. ADO restituisce solo i dati in questi campi.  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare il **GetRows** metodo per copiare i record da un **Recordset** in una matrice bidimensionale. Il primo indice identifica il campo e il secondo il numero di record. Il *matrice* variabile viene ridimensionata automaticamente per il corretto ridimensionamento quando il **GetRows** metodo restituisce i dati.  

@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5686cc0fc615c7765ea592d80b803f2beecd4c52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82eda03e726cc16476847cc8ed21ad46f77509cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Creazione e gestione dei cataloghi full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un catalogo full-text è un contenitore logico per un gruppo di indici full-text. Prima di poter creare un indice full-text è necessario creare un catalogo full-text.
@@ -34,9 +34,9 @@ Un catalogo full-text è un oggetto virtuale che non appartiene ad alcun filegro
 ##  <a name="creating"></a> Creare un catalogo full-text  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Creare un catalogo full-text con Transact-SQL
-Usare [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Esempio:
+Usare [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Ad esempio
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  
@@ -71,7 +71,7 @@ GO
   
 Nella tabella seguente sono elencate le proprietà correlate ai cataloghi full-text. Queste informazioni possono essere utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text. 
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Impostazione relativa alla distinzione tra caratteri accentati e non accentati.|
 |**ImportStatus**|Indica se il catalogo full-text viene importato o meno.|  

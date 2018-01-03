@@ -3,7 +3,7 @@ title: Dell'interazione tra i gestori eventi | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2b826bed21c5fcec7a0e6d957f3b0a03eac858c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72ca437ae2d78395632abd06169feb2b41d4fc50
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-event-handlers-work-together"></a>Dell'interazione tra i gestori eventi
 A meno che la programmazione in Visual Basic, tutti i gestori eventi per **connessione** e **Recordset** eventi devono essere implementati indipendentemente dall'effettiva elaborazione tutti gli eventi. La quantità di lavoro di implementazione che è necessario eseguire varia a seconda del linguaggio di programmazione. Per ulteriori informazioni, vedere [la creazione di istanze di ADO evento dal linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md).  

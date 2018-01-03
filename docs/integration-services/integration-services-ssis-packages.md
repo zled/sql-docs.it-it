@@ -5,7 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 953fccc13a0d3ef9d34cfe84e5ed50675eeb801b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-packages"></a>Pacchetti di Integration Services (SSIS)
   Un pacchetto è una raccolta organizzata di connessioni, elementi di flusso di controllo, elementi di flusso di dati, gestori eventi, variabili, parametri e configurazioni che possono essere assemblati usando gli strumenti di progettazione grafica disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], oppure compilati a livello di codice.  Salvare il pacchetto completo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'archivio pacchetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] o nel file system oppure distribuire il progetto ssISnoversion nel server [!INCLUDE[ssIS](../includes/ssis-md.md)] . Il pacchetto è l'unità di lavoro che viene recuperata, eseguita e salvata.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
  La configurazione viene salvata e quindi distribuita insieme al pacchetto quando questo viene installato in un altro computer. Quando il pacchetto viene installato in un ambiente diverso, i valori della configurazione possono essere aggiornati in base alle nuove esigenze. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../integration-services/packages/create-package-configurations.md).  
   
 ### <a name="logging-and-log-providers"></a>Registrazione e provider di log  
- Un log è una raccolta di informazioni sul pacchetto che vengono raccolte quando il pacchetto viene eseguito. Un log può ad esempio indicare l'ora di inizio e di fine dell'esecuzione di un pacchetto. Un provider di log definisce il tipo di destinazione e il formato che il pacchetto e i relativi contenitori e attività possono utilizzare per la registrazione delle informazioni in fase di esecuzione. I log sono associati a un pacchetto, ma le attività e i contenitori nel pacchetto possono registrare informazioni in qualsiasi log di pacchetto. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è disponibile una varietà di provider di log predefiniti per la registrazione. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include ad esempio provider di log per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e file di testo. È inoltre possibile creare provider di log personalizzati e utilizzarli per la registrazione. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
+ Un log è una raccolta di informazioni sul pacchetto che vengono raccolte quando il pacchetto viene eseguito. Un log può ad esempio indicare l'ora di inizio e di fine dell'esecuzione di un pacchetto. Un provider di log definisce il tipo di destinazione e il formato che il pacchetto e i relativi contenitori e attività possono utilizzare per la registrazione delle informazioni in fase di esecuzione. I log sono associati a un pacchetto, ma le attività e i contenitori nel pacchetto possono registrare informazioni in qualsiasi log di pacchetto. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è disponibile una varietà di provider di log predefiniti per la registrazione. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include ad esempio provider di log per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e file di testo. È inoltre possibile creare provider di log personalizzati e utilizzarli per la registrazione. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
   
 ### <a name="variables"></a>Variabili  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta variabili di sistema e variabili definite dall'utente. Le variabili di sistema contengono informazioni utili sugli oggetti del pacchetto in fase di esecuzione, mentre le variabili definite dall'utente consentono la gestione di scenari personalizzati. Entrambi i tipi di variabili possono essere utilizzati in espressioni, script e configurazioni.  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/20/2017
   
  Per modificare il GUID di un pacchetto è necessario rigenerare il GUID nella proprietà **ID** , disponibile nella finestra Proprietà in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per cambiare il nome di un pacchetto è necessario modificare il valore della proprietà **Name** nella finestra Proprietà. In alternativa è possibile usare il prompt dei comandi **dtutil** oppure modificare il nome e il GUID a livello di codice. Per altre informazioni, vedere [Impostazione delle proprietà di un pacchetto](../integration-services/set-package-properties.md) e [Utilità dtutil](../integration-services/dtutil-utility.md).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili due strumenti grafici per la creazione di pacchetti, Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , oltre al modello a oggetti [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per informazioni dettagliate, vedere gli argomenti seguenti.  
   
 -   [Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  

@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7891a781a5874653eb7d4864529630d4d2a03442
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e01ed21accad152b2ef32d012f3194458ab0440
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Distribuire un progetto SSIS con codice C# in un'app .NET
 Questa esercitazione introduttiva illustra come scrivere codice C# per connettersi a un server di database e distribuire un progetto SSIS.
 
 Per creare un'app C#, è possibile usare Visual Studio, Visual Studio Code o un altro strumento di propria scelta.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Prima di iniziare, verificare che Visual Studio o Visual Studio Code sia installato. Scaricare l'edizione Community gratuita di Visual Studio o lo strumento gratuito Visual Studio Code dalla pagina dei [download di Visual Studio](https://www.visualstudio.com/downloads/).
 

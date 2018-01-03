@@ -3,7 +3,7 @@ title: Funzionamento dei comandi con parametri | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5bce98fd15ac82cf9492b4f4454dba36146dd46f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 658d0dc9baa22006b327d826effb5687ccbc1822
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
 Se si lavora con un elemento figlio di grandi dimensioni **Recordset**, in particolare rispetto alla dimensione dell'elemento padre **Recordset**, ma è necessario accedere solo ad alcuni capitoli figlio, potrebbe essere preferibile utilizzare un comando con parametri.  
@@ -80,7 +80,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  Uso di una gerarchia senza parametri, non è possibile correlare le tabelle di giochi e i team in modo che l'elemento figlio **Recordset** per ogni team contiene la pianificazione completa. È possibile creare capitoli che contengono la pianificazione iniziale o la pianificazione di viaggio, ma non entrambi. Infatti, la clausola RELATE è limitato a relazioni padre-figlio del form (pc1 = cc1) AND (pc2 = pc2). In tal caso, se il comando include "RELATE team_id TO home_team, team_id TO visiting_team", si otterrebbe solo giochi in cui un team è stata la riproduzione di se stesso. Si desidera è "(team_id=home_team) o (team_id = visiting_team)", ma il provider Shape non supporta la clausola OR.  
   
- Per ottenere il risultato desiderato, è possibile utilizzare un comando con parametri. Esempio:  
+ Per ottenere il risultato desiderato, è possibile utilizzare un comando con parametri. Ad esempio  
   
 ```  
 SHAPE {SELECT * FROM teams}   

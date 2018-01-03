@@ -3,7 +3,7 @@ title: Modificare il layout ambiente | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec585601316887d3968dc70795a09053e54d1868
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aeb1e5f0f66a98425ab7600636510e82cfdc16c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>Lezione 1-3 - Modificare il layout ambiente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] I componenti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] si contendono lo spazio sullo schermo. Per creare spazio, è possibile chiudere, nascondere o spostare i componenti di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Le procedure descritte in questa pagina consentono di spostare i componenti in posizioni diverse.  
@@ -57,7 +57,7 @@ L'ambiente che ospita [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 
   
 1.  Fare clic con il pulsante destro del mouse sulla barra del titolo di Esplora oggetti ed esaminare le opzioni di menu seguenti:  
   
-    -   Float  
+    -   float  
   
     -   Ancora  
   

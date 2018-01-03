@@ -3,7 +3,7 @@ title: Eliminare le righe nel riquadro Risultati (Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3084fd3358aa359ddd16a20c344078a5933dabd3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b63dddd7dc856409e81a0b5ff62998a3eb91fd1b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Eliminare le righe nel riquadro Risultati (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Per eliminare record dal database, è necessario eliminare le righe nel riquadro Risultati. Per eliminare tutte le righe, è possibile utilizzare una query di eliminazione. Per altre informazioni vedere [Creazione di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md). Per eliminare righe solo dal riquadro Risultati, modificare i criteri della query. Per altre informazioni vedere [Definizione di condizioni di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  

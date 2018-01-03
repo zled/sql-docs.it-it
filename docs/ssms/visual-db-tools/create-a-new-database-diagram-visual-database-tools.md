@@ -3,7 +3,7 @@ title: Creare un nuovo diagramma di database (Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9138d33302135de59e1d2e862f31cf16784ae60e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0ba635346ceebfd444f15aaae189cf6a31ff19d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Creazione di un nuovo diagramma di database (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile usare Esplora oggetti per creare nuovi diagrammi di database. I diagrammi di database mostrano graficamente la struttura del database. Mediante i diagrammi di database è possibile creare e modificare tabelle, colonne, relazioni e chiavi. È inoltre possibile modificare indici e vincoli.  

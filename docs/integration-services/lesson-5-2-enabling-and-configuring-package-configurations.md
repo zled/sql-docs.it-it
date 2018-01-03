@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 333379e7f96322ae8212625a0f42a1018a189dd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 593c18478ee73b66d0f8402885324615615d0fcf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lezione 5-2 - Abilitazione e impostazione delle configurazioni dei pacchetti
 In questa attività si convertirà il progetto nel modello di distribuzione del pacchetto e si abiliteranno le configurazioni di pacchetto utilizzando la Configurazione guidata pacchetto. Questa procedura guidata consente di generare un file di configurazione XML contenente le impostazioni di configurazione per la proprietà **Directory** del contenitore Ciclo Foreach. Il valore della proprietà Directory è specificato da una variabile a livello di pacchetto che è possibile aggiornare in fase di esecuzione. Verrà inoltre popolata una cartella di dati di esempio da utilizzare durante il test.  
@@ -66,7 +66,7 @@ In questa attività si convertirà il progetto nel modello di distribuzione del 
   
 2.  Fare clic su **OK** nella richiesta di avviso e, una volta completata la conversione, scegliere **OK** nella finestra di dialogo **Converti nel modello di distribuzione del pacchetto** .  
   
-3.  Fare clic sullo sfondo della scheda **Flusso di controllo** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+3.  Fare clic sullo sfondo della scheda **Flusso di controllo** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 4.  Scegliere **Configurazioni pacchetto** dal menu **SSIS**.  
   

@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -24,16 +24,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90de17c77982bd2eb15575f9eb80dba48969dbf2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a894b57cbe4c6111ff0c3c986d8761228c3ff86e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Account di accesso, utenti e ruoli di database (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sono inclusi account di accesso, utenti e ruoli installati automaticamente nell'istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in cui è ospitato il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Questi account di accesso, utenti e ruoli non devono essere modificati.  
   
-## <a name="logins"></a>Account di accesso  
+## <a name="logins"></a>Logins  
   
 |Account di accesso|Description|  
 |-----------|-----------------|  
@@ -57,13 +57,13 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="master-data-services-database-role"></a>Ruolo del database Master Data Services  
   
-|Ruolo|Description|Permissions|  
+|Role|Description|Autorizzazioni|  
 |----------|-----------------|-----------------|  
 |**mds_exec**|Il ruolo contiene l'account impostato in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] quando si crea un'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] e si definisce un account per il pool di applicazioni.|Autorizzazione EXECUTE per tutti gli schemi.<br /><br /> <br /><br /> Autorizzazioni ALTER, INSERT e SELECT per queste tabelle:<br /><br /> mdm.tblStgMember<br /><br /> mdm.tblStgMemberAttribute<br /><br /> mdm.tbleStgRelationship<br /><br /> <br /><br /> Autorizzazione SELECT per queste tabelle:<br /><br /> mdm.tblUser<br /><br /> mdm.tblUserGroup<br /><br /> mdm.tblUserPreference<br /><br /> <br /><br /> Autorizzazione SELECT per queste viste:<br /><br /> mdm.viw_SYSTEM_SECURITY_NAVIGATION<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br /><br /> mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Schemi  
   
-|Ruolo|Description|  
+|Role|Description|  
 |----------|-----------------|  
 |**mdm**|Contiene tutti gli oggetti di database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] e Service Broker diversi dalle funzioni contenute nello schema mdq.|  
 |**mdq**|Sono contenute le funzioni del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relative al filtro dei risultati dei membri in base a espressioni regolari o somiglianza e per la formattazione di messaggi di posta elettronica di notifica.|  

@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ac501920047afb4d007c126fb36ac2215162bafc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 01cb38024cef71a6a19c9b79ca036270dc46a6ab
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="logging-in-to-sql-server"></a>Accesso a SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile accedere a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno degli strumenti di amministrazione a interfaccia grafica oppure dal prompt dei comandi.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
 |----------------------|-------------------------------|  
 |Connessione a un'istanza predefinita utilizzando il protocollo predefinito. (Si tratta della voce consigliata per un'istanza predefinita).|APPHOST|  
 |Connessione a un'istanza denominata utilizzando il protocollo predefinito. (Si tratta della voce consigliata per un'istanza denominata).|APPHOST\SQLEXPRESS|  
-|Connessione a un'istanza predefinita sullo stesso computer utilizzando un punto per indicare che l'istanza è in esecuzione sul computer locale.|.|  
+|Connessione a un'istanza predefinita sullo stesso computer utilizzando un punto per indicare che l'istanza è in esecuzione sul computer locale.|,|  
 |Connessione a un'istanza denominata sullo stesso computer utilizzando un punto per indicare che l'istanza è in esecuzione sul computer locale.|.\SQLEXPRESS|  
 |Connessione a un'istanza predefinita sullo stesso computer utilizzando localhost per indicare che l'istanza è in esecuzione sul computer locale.|localhost|  
 |Connessione a un'istanza denominata sullo stesso computer utilizzando localhost per indicare che l'istanza è in esecuzione sul computer locale.|localhost\SQLEXPRESS|  
@@ -77,13 +77,13 @@ ms.lasthandoff: 11/20/2017
 ## <a name="verifying-your-connection-protocol"></a>Verifica del protocollo di connessione  
  In caso di connessione a [!INCLUDE[ssDE](../../includes/ssde-md.md)], la query seguente restituirà il protocollo utilizzato per la connessione corrente, insieme al metodo di autenticazione (NTLM o Kerberos) e indicherà se la connessione è crittografata.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
 ```  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [Accedere a un'istanza di SQL Server &#40;prompt dei comandi&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Le risorse seguenti possono contribuire alla risoluzione di un problema di connessione.  

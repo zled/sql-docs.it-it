@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2d1ad6752ce23a04d3c9989d0f35660c05e904e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4072e0134a01cfa27164f3d83b867a68b097295a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lezione 2-1 - Compilazione dell'utilità di distribuzione
 In questa attività verrà configurata e compilata un'utilità di distribuzione per il progetto Deployment Tutorial.  
@@ -43,7 +43,7 @@ Per poter compilare l'utilità di distribuzione, è necessario modificare le pro
   
 5.  Nel riquadro a destra della finestra di dialogo **Deployment Tutorial Property Pages** (Pagine delle proprietà di Deployment Tutorial) verificare che **AllowConfigurationChanges** sia impostato su **true**, impostare **CreateDeploymentUtility** su **true**ed eventualmente aggiornare il valore predefinito di **DeploymentOutputPath**.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 ### <a name="to-build-the-deployment-utility"></a>Per compilare l'utilità di distribuzione  
   

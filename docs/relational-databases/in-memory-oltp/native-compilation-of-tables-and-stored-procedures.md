@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34d3f8da055577f32d1532f9ca5300960a51d383
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ac27d37604a2245346b307b0dff8d648de26ebd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilazione nativa di tabelle e stored procedure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Con OLTP in memoria viene introdotto il concetto di compilazione nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può compilare in modo nativo stored procedure che accedono alle tabelle ottimizzate per la memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è anche in grado di compilare in modo nativo tabelle ottimizzate per la memoria. Con la compilazione nativa si accede ai dati più velocemente e si eseguono le query in modo più efficiente rispetto al tradizionale [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretato. La compilazione nativa di tabelle e stored procedure produce DLL.
@@ -39,7 +39,7 @@ OLTP in memoria compila le tabelle ottimizzate per la memoria quando vengono cre
 
 La query seguente indica che tutte le DLL di tabelle e stored procedure vengono attualmente caricate in memoria nel server:
 
-```tsql
+```sql
 SELECT
         mod1.name,
         mod1.description
@@ -63,7 +63,7 @@ La creazione di una tabella ottimizzata per la memoria tramite un'istruzione **C
 
 Considerare il seguente script di esempio che crea un database e una tabella ottimizzata per la memoria:
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -156,7 +156,7 @@ Per altre informazioni sulle stored procedure compilate in modo nativo, vedere [
 
 Considerare la seguente stored procedure di esempio che inserisce righe nella tabella t1 dell'esempio precedente:
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
     with native_compilation,
          schemabinding,

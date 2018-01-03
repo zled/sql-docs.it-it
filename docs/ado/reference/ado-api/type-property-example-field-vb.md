@@ -3,7 +3,7 @@ title: "Tipo di esempio di proprietà (campo) (VB) | Documenti Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d52947b4401e7344af7b3edceea65b0b483a06ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d95ae2be27cbb842ef09b1db6a73a512bca8e7a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-example-field-vb"></a>Esempio di proprietà Type (campo) (VB)
 Questo esempio viene illustrato il [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà visualizzando il nome della costante che corrisponde al valore del [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà di tutti i [campo](../../../ado/reference/ado-api/field-object.md) gli oggetti nel ***Dipendenti*** tabella. La funzione FieldType è necessaria per eseguire questa procedura.  

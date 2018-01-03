@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 06fa7924c167236056961396e9ae8f811f867be9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 24549110df950d32ef6a1757d7adc58e1bccc1ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="cross-database-queries"></a>Query tra database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Questo esempio illustra un metodo per trasferire i dati da un database in una ta
 
 1. Creare oggetti di prova.  Eseguire il seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
-    ```tsql
+    ```sql
 
     USE master;
     GO
@@ -87,7 +87,7 @@ Questo esempio illustra un metodo per trasferire i dati da un database in una ta
 
 2.  Provare ad eseguire query tra database. Eseguire il seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
   
-    ```tsql  
+    ```sql  
     INSERT [DestinationDatabase].[dbo].[DestTable_InMem]
     SELECT * FROM [SourceDatabase].[dbo].[SourceTable]
     ```  
@@ -98,7 +98,7 @@ Questo esempio illustra un metodo per trasferire i dati da un database in una ta
 
 3.  Creare un tipo di tabella ottimizzata per la memoria.  Eseguire il seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-    ```tsql
+    ```sql
     USE DestinationDatabase;
     GO
     
@@ -114,7 +114,7 @@ Questo esempio illustra un metodo per trasferire i dati da un database in una ta
     ```
 
 4.  Riprovare ad eseguire query tra database.  Questa volta i dati di origine verranno prima trasferiti a una variabile di tabella ottimizzata per la memoria.  Quindi, i dati della variabile di tabella verranno trasferiti alla tabella ottimizzata per la memoria.
-    ```tsql
+    ```sql
     -- Declare table variable utilizing the newly created type - MemoryType
     DECLARE @InMem dbo.MemoryType;
     

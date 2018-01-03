@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: data-compression
 ms.technology: dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,13 +28,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c78a4c6f009e0c90a2a966fb605b0727f8d0ecdd
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 470ba24be23fa4e020d2119eb0408d50ca14efa4
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Abilitare la compressione in una tabella o un indice
+
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
   In questo argomento viene descritto come abilitare la compressione in una tabella o un indice in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -41,7 +46,7 @@ ms.lasthandoff: 12/01/2017
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per abilitare la compressione in una tabella o un indice utilizzando:**  
   
@@ -61,7 +66,7 @@ ms.lasthandoff: 12/01/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È richiesta l'autorizzazione ALTER per la tabella o l'indice.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -161,7 +166,7 @@ ms.lasthandoff: 12/01/2017
   
     6.  In **Descrizione**in **Riepilogo**verificare che tutte le impostazioni della pianificazione del processo siano corrette.  
   
-    7.  Scegliere **OK**.  
+    7.  Fare clic su **OK**.  
   
      Dopo aver completato questa pagina, fare clic su **Avanti**.  
   
@@ -200,7 +205,7 @@ ms.lasthandoff: 12/01/2017
   
      Al termine, fare clic su **Chiudi**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-enable-compression-on-a-table"></a>Per abilitare la compressione in una tabella  
   
@@ -208,7 +213,7 @@ ms.lasthandoff: 12/01/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene prima eseguita la stored procedure `sp_estimate_data_compression_savings` per restituire la dimensione stimata dell'oggetto qualora venisse utilizzata l'impostazione di compressione ROW. Nell'esempio viene quindi abilitata la compressione ROW in tutte le partizioni della tabella specificata.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene prima eseguita la stored procedure `sp_estimate_data_compression_savings` per restituire la dimensione stimata dell'oggetto qualora venisse utilizzata l'impostazione di compressione ROW. Nell'esempio viene quindi abilitata la compressione ROW in tutte le partizioni della tabella specificata.  
   
     ```  
     USE AdventureWorks2012;  
@@ -226,7 +231,7 @@ ms.lasthandoff: 12/01/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene innanzitutto eseguita una query sulla vista del catalogo `sys.indexes` per restituire il nome e `index_id` per ogni indice nella tabella `Production.TransactionHistory` . Viene quindi eseguita la stored procedure `sp_estimate_data_compression_savings` per restituire la dimensione stimata dell'ID indice specificato qualora venisse utilizzata l'impostazione di compressione PAGE. Viene infine ricompilato l'ID indice 2 (`IX_TransactionHistory_ProductID`), specificando la compressione PAGE.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene innanzitutto eseguita una query sulla vista del catalogo `sys.indexes` per restituire il nome e `index_id` per ogni indice nella tabella `Production.TransactionHistory` . Viene quindi eseguita la stored procedure `sp_estimate_data_compression_savings` per restituire la dimensione stimata dell'ID indice specificato qualora venisse utilizzata l'impostazione di compressione PAGE. Viene infine ricompilato l'ID indice 2 (`IX_TransactionHistory_ProductID`), specificando la compressione PAGE.  
   
     ```  
     USE AdventureWorks2012;   

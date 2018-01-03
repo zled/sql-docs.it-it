@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4c5183131893849feca62582a63a0d2c25963631
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0d876424f15b5b27972f7dd78721daad8e7f67a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lezione 2-2 - Aggiunta e configurazione del contenitore Ciclo Foreach
 In questa attività verrà aggiunta la capacità di creare un ciclo in una cartella di file flat e applicare la stessa trasformazione del flusso di dati utilizzata nella lezione 1 a ognuno di questi file flat. Ciò si ottiene tramite l'aggiunta e la configurazione di un contenitore Ciclo Foreach al flusso di controllo.  
@@ -50,7 +50,7 @@ Dopo aver apportato tali modifiche al pacchetto, quando questo viene eseguito, i
   
 3.  Fare clic con il pulsante destro del mouse sul **Contenitore Ciclo Foreach** appena aggiunto e scegliere **Modifica**.  
   
-4.  Nella pagina **Generale** della finestra di dialogo **Editor ciclo Foreach** digitare **Foreach File in Folder**per **Nome**. Scegliere **OK**.  
+4.  Nella pagina **Generale** della finestra di dialogo **Editor ciclo Foreach** digitare **Foreach File in Folder**per **Nome**. Fare clic su **OK**.  
   
 5.  Fare clic con il pulsante destro del mouse sul contenitore Ciclo Foreach, scegliere **Proprietà**e verificare che la proprietà **LocaleID** sia impostata su **Inglese (Stati Uniti)**nella finestra Proprietà.  
   
@@ -87,7 +87,7 @@ Dopo aver apportato tali modifiche al pacchetto, quando questo viene eseguito, i
     > [!IMPORTANT]  
     > Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 5.  Fare di nuovo clic su **OK** per chiudere la finestra di dialogo **Editor ciclo Foreach** .  
   

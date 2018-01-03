@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1924900d1e4237f49424808a71f40f61d769b2d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4076635be876b3ad472f6a7ac63500de9349eb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Guida di riferimento a errori ed eventi (Integration Services)
   In questa sezione della documentazione vengono fornite informazioni su diversi errori ed eventi correlati a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Sono inoltre incluse le informazioni sulle cause e la risoluzione dei messaggi di errore.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 |DTS_E_CACHELOADEDFROMFILE|Indica che non è possibile eseguire il pacchetto perché una trasformazione cache sta tentando di scrivere dati nella cache in memoria. Tuttavia, un file di cache è già stato caricato nella cache in memoria tramite una gestione connessione della cache.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Indica che il pacchetto non può essere eseguito perché non è stato possibile stabilire una connessione specificata.|  
 |DTS_E_CANNOTCONVERTBETWEENUNICODEANDNONUNICODESTRINGCOLUMN|Indica che un componente flusso di dati sta tentando di passare dati stringa Unicode a un altro componente per cui sono previsti dati non Unicode nella colonna corrispondente, o viceversa.|  
-|DTS_E_CANNOTCONVERTBETWEENUNICODEANDNONUNICODESTRINGCOLUMNS|Indica che un componente flusso di dati sta tentando di passare dati stringa Unicode a un altro componente per cui sono previsti dati non Unicode nella colonna corrispondente, o viceversa.|  
+|DTS_E_CANNOTCONVERTBETWEENUNICODEANDNONUNICODESTRINGCOLUMNS|Indica che un componente del flusso di dati sta tentando di passare dati stringa Unicode a un altro componente per cui sono previsti dati non Unicode nella colonna corrispondente, o viceversa.|  
 |DTS_E_CANTINSERTCOLUMNTYPE|Indica che non è possibile aggiungere la colonna alla tabella di database perché la conversione tra il tipo di dati della colonna di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e il tipo di dati della colonna del database non è supportata.|  
 |DTS_E_CONNECTIONNOTFOUND|Indica che il pacchetto non può essere eseguito perché non è possibile trovare la gestione connessione specificata.|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|Indica che per recuperare metadati nuovi o aggiornati per un'origine o una destinazione, è necessaria una connessione tra Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e un'origine dati, ma questa connessione non può essere eseguita correttamente.|  

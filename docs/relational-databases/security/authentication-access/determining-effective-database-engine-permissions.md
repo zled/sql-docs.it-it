@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1435effb52d063e6b51d07343a0c042e4919b2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinare le autorizzazioni valide per il motore di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Questo articolo descrive come determinare chi ha le autorizzazioni per i vari og
 I ruoli predefiniti del server e del database hanno autorizzazioni preconfigurate non modificabili. Per determinare i membri di un ruolo predefinito del server, eseguire la query seguente.    
 >  [!NOTE] 
 >  Non si applica a database SQL o SQL Data Warehouse per cui non sono disponibili autorizzazioni a livello di server. La colonna `is_fixed_role` di `sys.server_principals` è stata aggiunta in SQL Server 2012. Non è necessaria per le versioni precedenti di SQL Server.  
-```tsql
+```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
  FROM sys.server_role_members AS SRM
@@ -73,7 +73,7 @@ SELECT SP1.name AS ServerRoleName,
 >  * Questa query controlla le tabelle nel database master, ma può essere eseguita in qualsiasi database per il prodotto locale. 
 
 Per determinare i membri di un ruolo predefinito del database, eseguire la query seguente in ogni database.
-```tsql
+```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
  FROM sys.database_role_members AS DRM
@@ -113,7 +113,7 @@ Tenere presente che un utente di Windows potrebbe essere un membro di più di un
 La query seguente restituisce un elenco delle autorizzazioni concesse o negate a livello di server. Questa query deve essere eseguita nel database master.   
 >  [!NOTE] 
 >  Non è possibile concedere autorizzazioni a livello di server o eseguire query per recuperare tali autorizzazioni nel database SQL o in SQL Data Warehouse.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -127,7 +127,7 @@ SELECT pr.type_desc, pr.name,
 ### <a name="database-permissions"></a>Autorizzazioni per il database
 
 La query seguente restituisce un elenco delle autorizzazioni concesse o negate a livello di database. Questa query deve essere eseguita in ogni database.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -139,7 +139,7 @@ ORDER BY pr.name, type_desc;
 ```
 
 Ogni classe di autorizzazione per la tabella delle autorizzazioni può essere unita in join ad altre viste di sistema che forniscono informazioni correlate su tale classe di entità a protezione diretta. Ad esempio, la query seguente fornisce il nome dell'oggetto di database interessato dall'autorizzazione.    
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, pe.state_desc, 
  pe.permission_name, s.name + '.' + oj.name AS Object, major_id
  FROM sys.database_principals AS pr
@@ -151,8 +151,8 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-Usare la funzione `HAS_PERMS_BY_NAME` per determinare se un utente specifico (in questo caso `TestUser`) ha un'autorizzazione. Esempio:   
-```tsql
+Usare la funzione `HAS_PERMS_BY_NAME` per determinare se un utente specifico (in questo caso `TestUser`) ha un'autorizzazione. Ad esempio   
+```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
 REVERT;

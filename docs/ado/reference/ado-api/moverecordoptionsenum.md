@@ -3,7 +3,7 @@ title: MoveRecordOptionsEnum | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d602d52933b6f940131ffbb9cbe9198e6c13699
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c95827fcd2a78159f704a5190fc17e505f0a865
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 Specifica il comportamento del [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) metodo.  
   
-|Costante|Valore|Description|  
+|Costante|valore|Description|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|Valore predefinito. Esegue l'operazione di spostamento predefinito: l'operazione non riesce se il file di destinazione o la directory esiste già, e l'operazione Aggiorna i collegamenti ipertestuali.|  
 |**adMoveOverWrite**|1|Sovrascrive il file di destinazione o la directory, anche se esiste già.|  

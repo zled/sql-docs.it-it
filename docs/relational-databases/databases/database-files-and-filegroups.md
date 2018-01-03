@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4c18d191f0e97a2fbef5343d7b0fb7900bd2d80a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="database-files-and-filegroups"></a>Filegroup e file di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ogni database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene almeno due file del sistema operativo: un file di dati e un file di log. I file di dati contengono dati e oggetti come tabelle, indici, stored procedure e viste. I file di log contengono le informazioni necessarie per il recupero di tutte le transazioni del database. I file di dati possono essere raggruppati in filegroup ai fini dell'allocazione e dell'amministrazione.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="database-files"></a>File di database  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i database contengono tre tipi di file, come illustrato nella tabella seguente.  
   
-|File|Descrizione|  
+|File|Description|  
 |----------|-----------------|  
 |Primaria|Il file di dati primario contiene le informazioni di avvio del database e punta agli altri file del database. I dati e gli oggetti degli utenti possono essere archiviati in questo file o nei file di dati secondari. In ogni database è disponibile un unico file di dati primario. L'estensione consigliata per i file di dati primari è mdf.|  
 |Secondari|I file di dati secondari sono facoltativi e definiti dall'utente e vengono utilizzati per archiviare i dati dell'utente. Possono essere utilizzati per suddividere i dati su più dischi, memorizzandoli in unità disco distinte. Se un database supera le dimensioni massime consentite per un singolo file di Windows, è inoltre possibile utilizzare i file di dati secondari per consentire l'aumento di dimensioni del database.<br /><br /> L'estensione consigliata per i file di dati secondari è ndf.|  
@@ -97,7 +97,7 @@ La forma del file utilizzato da uno snapshot del database per archiviare i propr
   
  Tutti i file di dati vengono archiviati nei filegroup elencati nella tabella seguente.  
   
-|Filegroup|Descrizione|  
+|Filegroup|Description|  
 |---------------|-----------------|  
 |Primaria|Il filegroup che contiene il file primario. Tutte le tabelle di sistema vengono allocate al filegroup primario.|  
 |Definita dall'utente|Qualsiasi filegroup creato specificamente dall'utente in fase di creazione o di successiva modifica del database.|  
@@ -110,7 +110,7 @@ La forma del file utilizzato da uno snapshot del database per archiviare i propr
 ### <a name="file-and-filegroup-example"></a>Esempio di file e filegroup
  Nell'esempio seguente viene illustrata la creazione di un database in un'istanza di SQL Server. Nel database sono presenti un file di dati primario, un filegroup definito dall'utente e un file di log. Il file di dati primario è incluso nel filegroup primario e il filegroup definito dall'utente include due file di dati secondari. Tramite l'istruzione ALTER DATABASE viene impostato come predefinito il filegroup definito dall'utente e quindi viene creata una tabella che specifica tale filegroup. Questo esempio usa un percorso generico `c:\Program Files\Microsoft SQL Server\MSSQL.1` per evitare di specificare una versione di SQL Server.
 
-```t-sql
+```sql
 USE master;
 GO
 -- Create the database with the default data

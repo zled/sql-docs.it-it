@@ -3,7 +3,7 @@ title: Personalizza (pagina Comandi) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fec4dfbfc43e1b0ef8716af253278192bf82747
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9d748b147c19031f5f304f0233c772dbd91798b8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-commands-page"></a>Personalizza (pagina Comandi)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questa finestra di dialogo consente di aggiungere e rimuovere i comandi delle barre degli strumenti e dei menu, nonché di modificare le immagini usate per i pulsanti della barra degli strumenti o per i comandi di menu. Per accedere alla pagina **Comandi** , scegliere **Personalizza** dal menu **Strumenti** e quindi fare clic su **Comandi**.  
