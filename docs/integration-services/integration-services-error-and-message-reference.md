@@ -2082,8 +2082,8 @@ ms.lasthandoff: 12/21/2017
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|Impossibile eseguire l'operazione "%1".|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|Impossibile trovare il file/processo "%1" nel percorso.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|L'oggetto è vuoto.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|Il formato dell'indirizzo nella riga "A" non è corretto. Non è valido o manca il simbolo "@".|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|Il formato dell'indirizzo nella riga "Da" non è corretto. Non è valido o manca il simbolo "@".|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|Il formato dell'indirizzo nella riga "A" non è corretto. Non è valido o manca il simbolo "\@".|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|Il formato dell'indirizzo nella riga "Da" non è corretto. Non è valido o manca il simbolo "\@".|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|I due documenti XML sono diversi.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|La convalida DTD utilizzerà il file DTD definito nella riga DOCTYPE del documento XML anziché il valore assegnato alla proprietà "%1".|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|Impossibile convalidare "%1".|  
