@@ -3,9 +3,9 @@ title: Eseguire ricerche di testo con espressioni regolari | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d9837053135c6c0783d69d9544c84efd35cc5efe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4522ce26253a547b7cf55202f99a4e391f8fdaf3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le espressioni regolari sono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile utilizzare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **di** .  
@@ -45,9 +45,9 @@ ms.lasthandoff: 11/17/2017
   
  Nella seguente tabella vengono descritte le espressioni regolari disponibili nell'**elenco dei riferimenti**.  
   
-|Espressione|Sintassi|Descrizione|  
+|Espressione|Sintassi|Description|  
 |----------------|------------|-----------------|  
-|Qualsiasi carattere|.|Consente di ricercare un carattere qualsiasi, ad eccezione del carattere di interruzione riga.|  
+|Qualsiasi carattere|,|Consente di ricercare un carattere qualsiasi, ad eccezione del carattere di interruzione riga.|  
 |Zero o più|*|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il maggior numero di caratteri corrispondenti possibile.|  
 |Uno o più|+|Consente di ricercare almeno un'occorrenza dell'espressione precedente.|  
 |Inizio riga|^|Consente di vincolare la ricerca all'inizio di una riga.|  
@@ -57,17 +57,17 @@ ms.lasthandoff: 11/17/2017
 |Interruzione di riga|\n|Consente di ricercare un'interruzione di riga, indipendentemente dalla piattaforma. In un'espressione di sostituzione, inserisce un'interruzione di riga.|  
 |Qualsiasi carattere del set|[]|Consente di ricercare qualsiasi carattere racchiuso tra []. Per specificare un intervallo di caratteri, immettere il carattere iniziale e quello finale separati da un trattino (-), ad esempio [a-z].|  
 |Qualsiasi carattere esterno al set|[^...]|Consente di ricercare qualsiasi carattere non compreso nel set di caratteri che seguono il simbolo ^.|  
-|Oppure|&#124;|Cerca l'espressione specificata prima o dopo il simbolo OR (&#124;). In genere viene utilizzata all'interno di un gruppo. Ad esempio, (caffè&#124;latte) macchiato corrisponde a "caffè macchiato" e "latte macchiato".|  
+|e|&#124;|Cerca l'espressione specificata prima o dopo il simbolo OR (&#124;). In genere viene utilizzata all'interno di un gruppo. Ad esempio, (caffè&#124;latte) macchiato corrisponde a "caffè macchiato" e "latte macchiato".|  
 |Carattere speciale di escape|\|Cerca il carattere che segue la barra rovesciata (\\) come valore letterale. Ciò consente di trovare caratteri utilizzati nella notazione delle espressioni regolari, quali { e ^. Ad esempio, \\^ consente di cercare il carattere ^.|  
 |Espressione tag|{}|Consente di ricercare il testo con tag nell'espressione tra parentesi.|  
 |Identificatore C/C++|:i|Corrisponde all'espressione ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Stringa tra virgolette|:q|Cerca l'espressione (("[^"]*")&#124;('[^']\*')).|  
 |Spazio o tabulazione|:b|Consente di ricercare il carattere spazio o tabulazione.|  
-|Integer|:z|Corrisponde all'espressione ([0-9]+).|  
+|Valore intero|:z|Corrisponde all'espressione ([0-9]+).|  
   
  Nell'**elenco dei riferimenti** non è possibile visualizzare tutte le espressioni regolari valide per le operazioni di **ricerca e sostituzione**. In una stringa **Trova** è possibile inserire anche le seguenti espressioni regolari:  
   
-|Espressione|Sintassi|Descrizione|  
+|Espressione|Sintassi|Description|  
 |----------------|------------|-----------------|  
 |Minimo tra zero o più occorrenze|@|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
 |Minimo tra una o più occorrenze|#|Consente di ricercare una o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente viene descritta la sintassi per stabilire una corrispondenza attraverso le proprietà dei caratteri Unicode standard. Le abbreviazioni di due lettere corrispondono a quelle indicate nel database delle proprietà dei caratteri Unicode e possono essere specificate come parte di un set di caratteri. Ad esempio, l'espressione [:Nd:Nl:No] corrisponde a qualsiasi tipo di cifra.  
   
-|Espressione|Sintassi|Descrizione|  
+|Espressione|Sintassi|Description|  
 |----------------|------------|-----------------|  
 |Lettera maiuscola|:Lu|Consente di ricercare una qualsiasi lettera maiuscola. Ad esempio, :Luli corrisponde a "Gli" ma non a "gli".|  
 |Lettera minuscola|:Ll|Consente di ricercare una qualsiasi lettera minuscola. Ad esempio, :Llli corrisponde a "gli" ma non a "Gli".|  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  Oltre alle proprietà dei caratteri Unicode standard, è possibile specificare come parte di un set di caratteri le proprietà aggiuntive elencate di seguito.  
   
-|Espressione|Sintassi|Descrizione|  
+|Espressione|Sintassi|Description|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Consente di ricercare qualsiasi carattere. Ad esempio, :Alli consente di trovare parole come "Gli", "giglio" e "foglio".|  
 |Numeric|:Nu|Consente di ricercare un numero o una cifra.|  

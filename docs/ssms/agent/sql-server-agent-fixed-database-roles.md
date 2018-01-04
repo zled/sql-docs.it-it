@@ -3,7 +3,7 @@ title: Ruoli di database predefiniti di SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cc6c25e52402bcf7e4d1a3a9899e9b3ce6449b73
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a2440d64fd86feb82f49980b63fff9b3226a3f4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Ruoli di database predefiniti di SQL Server Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +57,13 @@ Nella tabella seguente vengono riepilogate le autorizzazioni per il ruolo **SQLA
   
 |Azione|Operatori|Processi locali<br /><br />(solo processi di proprietà)|Pianificazioni di processi<br /><br />(solo pianificazioni di proprietà)|Proxy|  
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
-|Creazione/modifica/eliminazione|No|Sì<br /><br />Non è possibile modificare la proprietà del processo.|Sì|No|  
+|Creazione/modifica/eliminazione|no|Sì<br /><br />Non è possibile modificare la proprietà del processo.|Sì|no|  
 |Visualizzazione di un elenco (enumerazione)|Sì<br /><br />È possibile ottenere un elenco degli operatori disponibili da usare in **sp_notify_operator** e nella finestra di dialogo **Proprietà processo** di Management Studio.|Sì|Sì|Sì<br /><br />L'elenco dei proxy è disponibile solo nella finestra di dialogo **Proprietà passaggio processo** di Management Studio.|  
-|Abilitazione/disabilitazione|No|Sì|Sì|Non applicabile|  
-|Visualizzazione di proprietà|No|Sì|Sì|No|  
+|Abilitazione/disabilitazione|no|Sì|Sì|Non applicabile|  
+|Visualizzazione di proprietà|no|Sì|Sì|no|  
 |Esecuzione/arresto/avvio|Non applicabile|Sì|Non applicabile|Non applicabile|  
 |Visualizzazione cronologia processo|Non applicabile|Sì|Non applicabile|Non applicabile|  
-|Eliminazione cronologia processo|Non applicabile|No<br /><br />Ai membri del ruolo **SQLAgentUserRole** deve essere concessa esplicitamente un'autorizzazione EXECUTE su **sp_purge_jobhistory** per l'eliminazione della cronologia processo di cui sono proprietari. I membri di tale ruolo non possono eliminare la cronologia di altri processi.|Non applicabile|Non applicabile|  
+|Eliminazione cronologia processo|Non applicabile|no<br /><br />Ai membri del ruolo **SQLAgentUserRole** deve essere concessa esplicitamente un'autorizzazione EXECUTE su **sp_purge_jobhistory** per l'eliminazione della cronologia processo di cui sono proprietari. I membri di tale ruolo non possono eliminare la cronologia di altri processi.|Non applicabile|Non applicabile|  
 |Collegamento/scollegamento|Non applicabile|Non applicabile|Sì|Non applicabile|  
   
 ### <a name="sqlagentreaderrole-permissions"></a>Autorizzazioni per SQLAgentReaderRole  
@@ -76,14 +76,14 @@ Nella tabella seguente vengono riepilogate le autorizzazioni per il ruolo **SQLA
   
 |Azione|Operatori|Processi locali|Processi multiserver|Pianificazioni di processi|Proxy|  
 |----------|-------------|--------------|--------------------|-----------------|-----------|  
-|Creazione/modifica/eliminazione|No|Sì  (solo processi di proprietà)<br /><br />Non è possibile modificare la proprietà del processo.|No|Sì (solo pianificazioni di proprietà)|No|  
+|Creazione/modifica/eliminazione|no|Sì  (solo processi di proprietà)<br /><br />Non è possibile modificare la proprietà del processo.|no|Sì (solo pianificazioni di proprietà)|no|  
 |Visualizzazione di un elenco (enumerazione)|Sì<br /><br />È possibile ottenere un elenco degli operatori disponibili da usare in **sp_notify_operator** e nella finestra di dialogo **Proprietà processo** di Management Studio.|Sì|Sì|Sì|Sì<br /><br />L'elenco dei proxy è disponibile solo nella finestra di dialogo **Proprietà passaggio processo** di Management Studio.|  
-|Abilitazione/disabilitazione|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|Non applicabile|  
-|Visualizzazione di proprietà|No|Sì|Sì|Sì|No|  
-|Modifica di proprietà|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
-|Esecuzione/arresto/avvio|Non applicabile|Sì (solo processi di proprietà)|No|Non applicabile|Non applicabile|  
+|Abilitazione/disabilitazione|no|Sì (solo processi di proprietà)|no|Sì (solo pianificazioni di proprietà)|Non applicabile|  
+|Visualizzazione di proprietà|no|Sì|Sì|Sì|no|  
+|Modifica di proprietà|no|Sì (solo processi di proprietà)|no|Sì (solo pianificazioni di proprietà)|no|  
+|Esecuzione/arresto/avvio|Non applicabile|Sì (solo processi di proprietà)|no|Non applicabile|Non applicabile|  
 |Visualizzazione cronologia processo|Non applicabile|Sì|Sì|Non applicabile|Non applicabile|  
-|Eliminazione cronologia processo|Non applicabile|No<br /><br />Ai membri del ruolo **SQLAgentReaderRole** deve essere concessa esplicitamente un'autorizzazione EXECUTE su **sp_purge_jobhistory** per l'eliminazione della cronologia processo di cui sono proprietari. I membri di tale ruolo non possono eliminare la cronologia di altri processi.|No|Non applicabile|Non applicabile|  
+|Eliminazione cronologia processo|Non applicabile|no<br /><br />Ai membri del ruolo **SQLAgentReaderRole** deve essere concessa esplicitamente un'autorizzazione EXECUTE su **sp_purge_jobhistory** per l'eliminazione della cronologia processo di cui sono proprietari. I membri di tale ruolo non possono eliminare la cronologia di altri processi.|no|Non applicabile|Non applicabile|  
 |Collegamento/scollegamento|Non applicabile|Non applicabile|Non applicabile|Sì (solo pianificazioni di proprietà)|Non applicabile|  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>Autorizzazioni per SQLAgentOperatorRole  
@@ -100,14 +100,14 @@ Nella tabella seguente vengono riepilogate le autorizzazioni per il ruolo **SQLA
   
 |Azione|Avvisi|Operatori|Processi locali|Processi multiserver|Pianificazioni di processi|Proxy|  
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
-|Creazione/modifica/eliminazione|No|No|Sì  (solo processi di proprietà)<br /><br />Non è possibile modificare la proprietà del processo.|No|Sì (solo pianificazioni di proprietà)|No|  
+|Creazione/modifica/eliminazione|no|no|Sì  (solo processi di proprietà)<br /><br />Non è possibile modificare la proprietà del processo.|no|Sì (solo pianificazioni di proprietà)|no|  
 |Visualizzazione di un elenco (enumerazione)|Sì|Sì<br /><br />È possibile ottenere un elenco degli operatori disponibili da usare in **sp_notify_operator** e nella finestra di dialogo **Proprietà processo** di Management Studio.|Sì|Sì|Sì|Sì|  
-|Abilitazione/disabilitazione|No|No|Sì<br /><br />**SQLAgentOperatorRole** possono abilitare o disabilitare processi locali di cui non sono proprietari usando la stored procedure **sp_update_job** e specificando valori per i parametri **@enabled** e **@job_id** (o **@job_name**). Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.|No|Sì<br /><br />**SQLAgentOperatorRole** possono abilitare o disabilitare pianificazioni di cui non sono proprietari usando la stored procedure **sp_update_schedule** e specificando valori per i parametri **@enabled** e **@schedule_id** (o **@name**). Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.|Non applicabile|  
+|Abilitazione/disabilitazione|no|no|Sì<br /><br />**SQLAgentOperatorRole** possono abilitare o disabilitare processi locali di cui non sono proprietari usando la stored procedure **sp_update_job** e specificando valori per i parametri **@enabled** e **@job_id** (o **@job_name**). Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.|no|Sì<br /><br />**SQLAgentOperatorRole** possono abilitare o disabilitare pianificazioni di cui non sono proprietari usando la stored procedure **sp_update_schedule** e specificando valori per i parametri **@enabled** e **@schedule_id** (o **@name**). Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.|Non applicabile|  
 |Visualizzazione di proprietà|Sì|Sì|Sì|Sì|Sì|Sì|  
-|Modifica di proprietà|No|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
-|Esecuzione/arresto/avvio|Non applicabile|Non applicabile|Sì|No|Non applicabile|Non applicabile|  
+|Modifica di proprietà|no|no|Sì (solo processi di proprietà)|no|Sì (solo pianificazioni di proprietà)|no|  
+|Esecuzione/arresto/avvio|Non applicabile|Non applicabile|Sì|no|Non applicabile|Non applicabile|  
 |Visualizzazione cronologia processo|Non applicabile|Non applicabile|Sì|Sì|Non applicabile|Non applicabile|  
-|Eliminazione cronologia processo|Non applicabile|Non applicabile|Sì|No|Non applicabile|Non applicabile|  
+|Eliminazione cronologia processo|Non applicabile|Non applicabile|Sì|no|Non applicabile|Non applicabile|  
 |Collegamento/scollegamento|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Sì (solo pianificazioni di proprietà)|Non applicabile|  
   
 ## <a name="assigning-users-multiple-roles"></a>Assegnazione di più ruoli a utenti  

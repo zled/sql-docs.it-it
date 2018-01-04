@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 860438f65035233e198177697f24d2a2d820d75f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5ae011fb40b1e20a82d92f6db4c1077910f8d735
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-package-properties"></a>Impostazione delle proprietà di un pacchetto
   Quando viene creato un pacchetto in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] utilizzando l'interfaccia grafica offerta da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è possibile impostare le proprietà dell'oggetto pacchetto nella finestra Proprietà.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Varie](#Misc)  
   
--   [Sicurezza](#Security)  
+-   [Security](#Security)  
   
 -   [Transazioni](#Transactions)  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 |**CreationDate**|Data di creazione del pacchetto.|  
 |**CreatorComputerName**|Nome del computer in cui è stato creato il pacchetto.|  
 |**CreatorName**|Nome dell'utente che ha creato il pacchetto.|  
-|**Description**|Descrizione delle funzionalità del pacchetto.|  
+|**Descrizione**|Descrizione delle funzionalità del pacchetto.|  
 |**ID**|GUID del pacchetto, assegnato al momento della creazione. Questa proprietà è di sola lettura. Per generare un nuovo valore casuale per la proprietà **ID**, selezionare **\<Genera nuovo ID\>** nell'elenco a discesa.|  
 |**Nome**|Nome del pacchetto.|  
 |**PackageType**|Tipo di pacchetto. I possibili valori sono **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**e **SQLReplication**. Il valore predefinito di questa proprietà è **Default**. Per ulteriori informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
@@ -145,7 +145,7 @@ ms.lasthandoff: 11/20/2017
   
 |Proprietà|Description|  
 |--------------|-----------------|  
-|**IsolationLevel**|Livello di isolamento della transazione del pacchetto. I valori sono **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**e **Snapshot**. Il valore predefinito di questa proprietà è **Serializable**.<br /><br /> Nota: il valore **Snapshot** della proprietà **IsolationLevel** non è compatibile con le transazioni del pacchetto e quindi non è possibile utilizzare la proprietà **IsolationLevel** per impostare il livello di isolamento delle transazioni del pacchetto su **Shapshot**. È necessario invece eseguire una query SQL per impostare le transazioni del pacchetto su **Snapshot**. Per altre informazioni, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).<br /><br /> La proprietà **IsolationLevel** viene applicata automaticamente alle transazioni del pacchetto solo quando il valore della proprietà **TransactionOption** è **Required**.<br /><br /> Il valore della proprietà **IsolationLevel** richiesta da un contenitore figlio viene ignorato quando le condizioni seguenti sono vere:<br />Il valore della proprietà **TransactionOption** del contenitore figlio è **Supported**.<br />Il contenitore figlio partecipa alla transazione di un contenitore padre.<br /><br /> Il valore della proprietà **IsolationLevel** richiesta dal contenitore viene rispettato solo quando il contenitore avvia una nuova transazione. Un contenitore avvia una nuova transazione quando le condizioni seguenti sono vere:<br />Il valore della proprietà **TransactionOption** del contenitore è **Required**.<br />Non è stata ancora avviata alcuna transazione da parte del padre.<br /><br /> <br /><br /> Per ulteriori informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|**IsolationLevel**|Livello di isolamento della transazione del pacchetto. I valori sono **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable** e **Snapshot**. Il valore predefinito di questa proprietà è **Serializable**.<br /><br /> Nota: il valore **Snapshot** della proprietà **IsolationLevel** non è compatibile con le transazioni del pacchetto e quindi non è possibile utilizzare la proprietà **IsolationLevel** per impostare il livello di isolamento delle transazioni del pacchetto su **Shapshot**. È necessario invece eseguire una query SQL per impostare le transazioni del pacchetto su **Snapshot**. Per altre informazioni, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).<br /><br /> La proprietà **IsolationLevel** viene applicata automaticamente alle transazioni del pacchetto solo quando il valore della proprietà **TransactionOption** è **Required**.<br /><br /> Il valore della proprietà **IsolationLevel** richiesta da un contenitore figlio viene ignorato quando le condizioni seguenti sono vere:<br />Il valore della proprietà **TransactionOption** del contenitore figlio è **Supported**.<br />Il contenitore figlio partecipa alla transazione di un contenitore padre.<br /><br /> Il valore della proprietà **IsolationLevel** richiesta dal contenitore viene rispettato solo quando il contenitore avvia una nuova transazione. Un contenitore avvia una nuova transazione quando le condizioni seguenti sono vere:<br />Il valore della proprietà **TransactionOption** del contenitore è **Required**.<br />Non è stata ancora avviata alcuna transazione da parte del padre.<br /><br /> <br /><br /> Per ulteriori informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |**TransactionOption**|Supporto delle transazioni da parte del pacchetto. I possibili valori sono **NotSupported**, **Supported**e **Required**. Il valore predefinito di questa proprietà è **Supported**. Per ulteriori informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
 ###  <a name="Version"></a> Version  

@@ -3,9 +3,9 @@ title: Eseguire ricerche di testo con caratteri jolly | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 97576c021e902fb460181124cbf21c24833cf7bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 538191055aedb1c2caebe062d3227742a4e12e9c
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-wildcards"></a>Testo di ricerca con caratteri jolly
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Caratteri o cifre nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Trova e sostituisci **di**  possono essere sostituiti dalle espressioni seguenti.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente sono descritti i caratteri jolly disponibili nell' **Elenco riferimenti**.  
   
-|Espressione|Sintassi|Descrizione|  
+|Espressione|Sintassi|Description|  
 |----------------|------------|-----------------|  
 |Un solo carattere|?|Individua un qualsiasi singolo carattere.|  
 |Una sola cifra|#|Individua una qualsiasi singola cifra. Ad esempio, 7# individua i numeri che comprendono 7 seguito da un altro numero. In questo caso potrebbe essere 71 ma non 17.|  
