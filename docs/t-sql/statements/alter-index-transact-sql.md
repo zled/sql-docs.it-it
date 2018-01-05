@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48926573b515a1f40fa0db983d846b4e801abfd4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -307,7 +307,8 @@ Per gli indici columnstore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 -   Gruppi di righe in cui più di 10% delle righe è stato in modo logico eliminato, SQL Server tenterà di combinare questo gruppo di righe con uno o più gruppi di righe.    Ad esempio, 1 rowgroup viene compresso con 500.000 righe e 21 rowgroup viene compresso con il numero massimo di 1.048.576 righe.  Rowgroup 21 è 60% delle righe eliminate in modo da lasciare 409,830 righe. Ottimizza per la combinazione di questi due gruppi di righe per comprimere un gruppo di righe nuove 909,830 righe con SQL Server.  
   
 RIORGANIZZA MANTENENDO (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da 2016) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], il COMPRESS_ALL_ROW_GROUPS fornisce un modo per forzare il rowgroup OPEN o CLOSED nel columnstore. Con questa opzione, non è necessario ricompilare l'indice columnstore per svuotare i rowgroup delta.  Questo, combinato con le altre remove e merge deframmentazione funzionalità rende non più necessario ricompilare l'indice nella maggior parte dei casi.    
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], il COMPRESS_ALL_ROW_GROUPS fornisce un modo per forzare il rowgroup OPEN o CLOSED nel columnstore. Con questa opzione, non è necessario ricompilare l'indice columnstore per svuotare i rowgroup delta.  Questo, combinato con le altre remove e merge deframmentazione funzionalità rende non più necessario ricompilare l'indice nella maggior parte dei casi.    
+
 -   ON impone a tutti i rowgroup in columnstore, indipendentemente dalle dimensioni e lo stato (chiusi o aperti).  
   
 -   OFF impone a tutti i rowgroup CLOSED nel columnstore.  
@@ -393,17 +394,11 @@ Fattore di riempimento = *fattore di riempimento*
  Se le statistiche per partizione non sono supportate, l'opzione viene ignorata e viene generato un avviso. Le statistiche incrementali non sono supportate per i seguenti tipi di statistiche:  
   
 -   Statistiche create con indici che non hanno il partizionamento allineato con la tabella di base.  
-  
 -   Statistiche create per i database secondari leggibili Always On.  
-  
 -   Statistiche create per i database di sola lettura.  
-  
 -   Statistiche create per gli indici filtrati.  
-  
 -   Statistiche create per le viste.  
-  
 -   Statistiche create per le tabelle interne.  
-  
 -   Statistiche create con indici spaziali o indici XML.  
  
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -414,7 +409,7 @@ Fattore di riempimento = *fattore di riempimento*
  Per un indice XML o spaziale, è supportata solo l'opzione ONLINE = OFF e se ONLINE è impostata su ON viene generato un errore.  
   
 > [!NOTE]
->  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [edizioni e delle funzionalità supportate per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [edizioni e delle funzionalità supportate per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) e [edizioni e delle funzionalità supportate per SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  ON  
  I blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine. In questo modo, le query o gli aggiornamenti relativi alla tabella e agli indici sottostanti possono continuare. All'inizio dell'operazione viene mantenuto brevemente un blocco condiviso (S) sull'oggetto di origine. Al termine dell'operazione, se è in corso la creazione di un indice non cluster, viene mantenuto un blocco S sull'origine per un periodo di tempo molto breve. Se è in corso la creazione o l'eliminazione online di un indice cluster o la ricompilazione di un indice cluster o non cluster, viene acquisito un blocco di modifica dello schema (SCH-M). L'opzione ONLINE non può essere impostata su ON quando viene creato un indice per una tabella temporanea locale.  

@@ -1,7 +1,7 @@
 ---
 title: CREARE il gruppo di carico di lavoro (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/16/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbe9d11d3b018df43eed813f8f987695f41ae189
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 CREATE WORKLOAD GROUP group_name  
 [ WITH  
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -65,13 +64,11 @@ CREATE WORKLOAD GROUP group_name
  Specifica l'importanza relativa di una richiesta nel gruppo del carico di lavoro. L'importanza è compresa fra le seguenti, MEDIUM è l'impostazione predefinita:  
   
 -   LOW  
-  
--   MEDIUM  
-  
+-   MEDIUM (valore predefinito)    
 -   HIGH  
   
 > [!NOTE]  
->  Internamente, ogni impostazione dell'importanza viene memorizzata come un numero utilizzato per i calcoli.  
+> Internamente, ogni impostazione dell'importanza viene memorizzata come un numero utilizzato per i calcoli.  
   
  IMPORTANCE è locale al pool di risorse. I gruppi di carico di lavoro con diversa importanza e interni allo stesso pool di risorse influiscono l'uno sull'altro, ma non sui gruppi di carico di lavoro in un altro pool di risorse.  
   
@@ -79,7 +76,7 @@ CREATE WORKLOAD GROUP group_name
  Specifica la quantità massima di memoria che una singola richiesta può accettare dal pool. La percentuale è relativa alla dimensioni del pool di risorse specificata da MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
->  La quantità specificata si riferisce solo alla memoria di concessione per l'esecuzione della query.  
+> La quantità specificata si riferisce solo alla memoria di concessione per l'esecuzione della query.  
   
  *valore* deve essere 0 o un numero intero positivo. L'intervallo consentito per *valore* è compreso tra 0 e 100. L'impostazione predefinita per *valore* è 25.  
   
@@ -102,7 +99,10 @@ CREATE WORKLOAD GROUP group_name
  Viene specificato il tempo massimo della CPU, in secondi, utilizzabile da una richiesta. *valore* deve essere 0 o un numero intero positivo. L'impostazione predefinita per *valore* è 0, ovvero un tempo illimitato.  
   
 > [!NOTE]  
->  Resource Governor non impedirà la continuazione di una richiesta se viene superato il tempo massimo, ma verrà generato un evento. Per ulteriori informazioni, vedere [CPU soglia di questa classe di evento](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> Per impostazione predefinita, Resource Governor non impedirà una richiesta di continuare se viene superato il tempo massimo. ma verrà generato un evento. Per ulteriori informazioni, vedere [CPU soglia di questa classe di evento](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+
+> [!IMPORTANT]
+> A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e l'utilizzo di [2422 flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor verrà interrotta una richiesta quando viene superato il tempo massimo. 
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*valore*  
  Specifica il tempo massimo, in secondi, che una query può attendere prima che una concessione di memoria (memoria buffer di lavoro) diventi disponibile.  
@@ -152,7 +152,7 @@ CREATE WORKLOAD GROUP group_name
   
  La quantità di memoria utilizzata per la creazione dell'indice in una tabella partizionata non allineata è proporzionale al numero di partizioni coinvolte. Se la memoria totale necessaria supera il limite per query (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposto dal gruppo di carico di lavoro di Resource Governor, la creazione dell'indice potrebbe non riuscire. Poiché il gruppo di carico di lavoro "default" consente a una query di superare il limite per query con la memoria minima necessaria, l'utente potrebbe essere in grado di eseguire la stessa creazione dell'indice in un gruppo di carico di lavoro "default", se nel pool di risorse "default" è configurata una quantità di memoria totale sufficiente per eseguire la query.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  

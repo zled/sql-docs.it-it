@@ -33,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9e14fa00535414673f5526c6aedb3ec349235a29
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Compatta le dimensioni dei file di dati e di log nel database specificato.
   
@@ -65,14 +65,14 @@ DBCC SHRINKDATABASE
  Percentuale di spazio che si desidera rendere disponibile nel file del database dopo la compattazione.  
   
  NOTRUNCATE  
- Compatta i dati nei file di dati spostando le pagine allocate dalla fine di un file a pagine non allocate all'inizio del file. *target_percent* è facoltativo.  
+ Compatta i dati nei file di dati spostando le pagine allocate dalla fine di un file a pagine non allocate all'inizio del file. *target_percent* è facoltativo. Questa opzione non è supportata con Azure SQL Data Warehouse. 
   
  Lo spazio disponibile alla fine del file non viene restituito al sistema operativo e le dimensioni fisiche del file rimangono invariate. Pertanto, quando si specifica NOTRUNCATE, sembra che il database non venga compattato.  
   
  NOTRUNCATE è applicabile solo ai file di dati. Il file di log non è interessato.  
   
  TRUNCATEONLY  
- Rilascia tutto lo spazio disponibile alla fine del file al sistema operativo senza eseguire alcuno spostamento di pagine all'interno del file. Il file di dati viene compattato solo fino all'ultimo extent allocato. *target_percent* viene ignorato se è specificata l'opzione TRUNCATEONLY.  
+ Rilascia tutto lo spazio disponibile alla fine del file al sistema operativo senza eseguire alcuno spostamento di pagine all'interno del file. Il file di dati viene compattato solo fino all'ultimo extent allocato. *target_percent* viene ignorato se è specificata l'opzione TRUNCATEONLY. Questa opzione non è supportata con Azure SQL Data Warehouse.
   
  TRUNCATEONLY interessa il file di log. Per troncare solo il file di dati, utilizzare DBCC SHRINKFILE.  
   
@@ -108,6 +108,9 @@ Eseguire DBCC SHRINKDATABASE senza specificare l'opzione NOTRUNCATE o TRUNCATEON
 Il database in fase di compattazione non deve essere necessariamente in modalità utente singolo. Altri utenti possono infatti utilizzare il database durante il processo di compattazione. Questo vale anche per i database di sistema.
   
 Non è possibile compattare un database mentre ne viene eseguito il backup e non è possibile eseguire il backup di un database mentre è in corso un'operazione di compattazione.
+
+>[!NOTE]
+> Azure SQL Data Warehouse non supporta attualmente, DBCC SHRINKDATABASE con TDE abilitata.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Funzionamento di DBCC SHRINKDATABASE  
 DBCC SHRINKDATABASE compatta i file di dati uno alla volta mentre i file di log vengono compattati come se fossero inclusi in un pool di log contigui. I file vengono compattati sempre a partire dalla fine.
@@ -147,7 +150,7 @@ Per risolvere il problema, è possibile eseguire una delle attività seguenti:
 -   Terminare l'operazione di compattazione. Il lavoro completato fino a quel momento viene mantenuto.  
 -   Non eseguire alcuna operazione per consentire che l'operazione di compattazione venga rimandata fino al completamento della transazione di blocco.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .  
   
 ## <a name="examples"></a>Esempi  

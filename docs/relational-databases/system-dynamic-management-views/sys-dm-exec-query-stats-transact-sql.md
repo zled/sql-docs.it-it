@@ -1,7 +1,7 @@
 ---
 title: Sys.dm exec_query_stats (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 08/21/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 89f3fe5797170f85aeb1eff6eae506a5458999f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cda9fe3ab2bc54f878e45834bca907976cb7793c
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,12 +107,20 @@ ms.lasthandoff: 11/17/2017
 |**last_used_threads**|**bigint**|Il numero di thread paralleli usato, quando il piano di ultima esecuzione. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_used_threads**|**bigint**|Il numero minimo di utilizzato thread paralleli mai utilizzato durante l'esecuzione di un piano. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**max_used_threads**|**bigint**|Utilizzato il numero massimo di thread paralleli mai utilizzato durante l'esecuzione di un piano. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|**pdw_node_id**|**int**|L'identificatore per il nodo che utilizza questo tipo di distribuzione.<br /><br /> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**total_columnstore_segment_reads**|**bigint**|La somma totale dei segmenti columnstore lette dalla query. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_reads**|**bigint**|Il numero di segmenti di columnstore lettura dall'ultima esecuzione della query. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_reads**|**bigint**|Il numero minimo di segmenti di columnstore mai lette dalla query durante l'esecuzione di uno. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_reads**|**bigint**|Il numero massimo di segmenti di columnstore mai lette dalla query durante l'esecuzione di uno. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**total_columnstore_segment_skips**|**bigint**|La somma totale dei segmenti columnstore ignorato dalla query. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_skips**|**bigint**|Il numero di segmenti di columnstore ignorati dall'ultima esecuzione della query. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_skips**|**bigint**|Il numero minimo di segmenti di columnstore mai di ignorare la query durante l'esecuzione di uno. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_skips**|**bigint**|Il numero massimo di segmenti di columnstore mai di ignorare la query durante l'esecuzione di uno. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
   
 > [!NOTE]
 > <sup>1</sup> per le stored procedure compilate in modo nativo quando la raccolta di statistiche è abilitata, il tempo del processo viene raccolto in millisecondi. Se la query viene eseguita in meno di un millisecondo, il valore sarà 0.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.
   
@@ -124,7 +132,7 @@ In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessar
 ### <a name="a-finding-the-top-n-queries"></a>A. Ricerca delle prime n query  
  Nell'esempio seguente vengono restituite informazioni sulle prime cinque query classificate in base al tempo medio della CPU. Nell'esempio le query vengono aggregate in base al relativo valore hash del piano, in modo da raggruppare le query logicamente equivalenti in base all'utilizzo di risorse cumulativo.  
   
-``` t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
@@ -141,13 +149,12 @@ FROM
      CROSS APPLY sys.dm_exec_sql_text(QS.sql_handle) as ST) as query_stats  
 GROUP BY query_stats.query_hash  
 ORDER BY 2 DESC;  
-  
 ```  
   
 ### <a name="b-returning-row-count-aggregates-for-a-query"></a>B. Restituzione di aggregazioni relative al conteggio delle righe per una query  
  Nell'esempio seguente vengono restituite le informazioni di aggregazione relative al conteggio delle righe (totale righe, numero minimo righe, numero massimo righe e ultime righe) per le query.  
   
-``` t-sql  
+```sql  
 SELECT qs.execution_count,  
     SUBSTRING(qt.text,qs.statement_start_offset/2 +1,   
                  (CASE WHEN qs.statement_end_offset = -1   

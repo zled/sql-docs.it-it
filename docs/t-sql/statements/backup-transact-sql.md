@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef97afb50c2a8d4dcf18ea342b8ac98dc6014863
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b3cdba9ffe5b8020a0e3d7c64c766cc54d89c71
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var }  
+     { 'physical_device_name' | @physical_device_name_var | NUL }  
  }   
   
 <MIRROR TO clause>::=  
@@ -196,7 +196,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  Nome logico di un filegroup o di una variabile il cui valore equivale al nome logico di un filegroup da includere nel backup. Con il modello di recupero con registrazione minima, il backup dei filegroup è consentito solo per i filegroup di sola lettura.  
   
 > [!NOTE]  
->  Prendere in considerazione l'utilizzo di backup dei file quando i requisiti relativi alle prestazioni e le dimensioni del database rendono poco conveniente il backup del database.  
+>  Prendere in considerazione l'utilizzo di backup dei file quando i requisiti relativi alle prestazioni e le dimensioni del database rendono poco conveniente il backup del database. Il dispositivo NUL può essere utilizzato per testare le prestazioni dei backup, ma non deve essere utilizzato negli ambienti di produzione.
   
  *n*  
  Segnaposto che indica la possibilità di specificare più file e filegroup in un elenco delimitato da virgole. Il numero di file e filegroup che è possibile specificare è illimitato. 
@@ -227,8 +227,11 @@ PER \<dispositivo_backup > [ **,**...  *n*  ] Indica che l'accompagna set di [di
  { *logical_device_name* | **@***logical_device_name_var* }  
  Nome logico del dispositivo di backup in cui viene eseguito il backup del database. Il nome logico deve essere conforme alle regole per gli identificatori. Se specificato come variabile (@*logical_device_name_var*), il nome di dispositivo di backup può essere specificato come costante stringa (@*logical_device_name_var*  **=**  nome dispositivo di backup logico) oppure come variabile di qualsiasi tipo di dati stringa di caratteri, ad eccezione del **ntext** o **testo** tipi di dati.  
   
- {DISCO | NASTRO | URL}  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* }  
- Specifica un file su disco o su nastro o un servizio di archiviazione Blob di Windows Azure. Il formato dell'URL viene utilizzato per la creazione di backup per il servizio di archiviazione Windows Azure. Per ulteriori informazioni ed esempi, vedere [SQL Server Backup e ripristino con il servizio di archiviazione Blob di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Per un'esercitazione, vedere [esercitazione: Backup di SQL Server e il ripristino in Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ {DISCO | NASTRO | URL}  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* | NUL}  
+ Specifica un file su disco o su nastro o un servizio di archiviazione Blob di Windows Azure. Il formato dell'URL viene utilizzato per la creazione di backup per il servizio di archiviazione Windows Azure. Per ulteriori informazioni ed esempi, vedere [SQL Server Backup e ripristino con il servizio di archiviazione Blob di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Per un'esercitazione, vedere [esercitazione: Backup di SQL Server e il ripristino in Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
+
+[!NOTE] 
+ Il dispositivo disco NUL eliminerà tutte le informazioni inviate ad esso e deve essere utilizzato solo per i test. Non si tratta di produzione.
   
 > [!IMPORTANT]  
 >  Con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 finché [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile eseguire solo backup in un singolo dispositivo per il backup su URL. Per eseguire il backup per più dispositivi per il backup su URL, è necessario usare [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ed è necessario utilizzare i token di firma di accesso condiviso (SAS). Per esempi di creazione di una firma di accesso condiviso, vedere [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [semplificando la creazione delle credenziali SQL con i token di firma di accesso condiviso (SAS) nell'archiviazione di Azure con Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
@@ -236,6 +239,8 @@ PER \<dispositivo_backup > [ **,**...  *n*  ] Indica che l'accompagna set di [di
 **URL si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 alla [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  Non è necessario che un dispositivo disco sia presente prima che venga specificato in un'istruzione BACKUP. Se il dispositivo fisico è presente e si omette l'opzione INIT nell'istruzione BACKUP, il backup viene accodato al dispositivo.  
+ 
+ Il dispositivo NUL eliminerà tutti gli input inviato a questo file, tuttavia il backup verrà comunque contrassegnare tutte le pagine come backup.
   
  Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -359,7 +364,7 @@ EXPIREDATE  **=**  { **'***data***'** |   **@**  *date_var* }
 -   Oggetto **smalldatetime**  
 -   Oggetto **datetime** variabile  
   
-Esempio:  
+Ad esempio  
   
 -   `'Dec 31, 2020 11:59 PM'`  
 -   `'1/1/2021'`  
@@ -589,7 +594,7 @@ Se non si utilizza l'opzione NO_TRUNCATE, il database deve essere ONLINE. Se lo 
  Per evitare di esaurire lo spazio nel log delle transazioni di un database, è essenziale eseguire backup di routine. Con il modello di recupero con registrazione minima il troncamento del log si verifica automaticamente dopo il backup del database, mentre con il modello di recupero con registrazione completa si verifica dopo il backup del log delle transazioni. A volte, tuttavia, il processo di troncamento può essere ritardato. Per informazioni sui fattori che possono ritardare il troncamento del log, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 > [!NOTE]  
->  Le opzioni BACKUP LOG WITH NO_LOG e WITH TRUNCATE_ONLY non sono più supportate. Se si utilizza il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk ed è necessario rimuovere la catena dei backup del log da un database, passare al modello di recupero con registrazione minima. Per altre informazioni, vedere [Visualizzare o modificare il modello di recupero di un database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
+>  Le opzioni BACKUP LOG WITH NO_LOG e WITH TRUNCATE_ONLY non sono più supportate. Se si utilizza il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk ed è necessario rimuovere la catena dei backup del log da un database, passare al modello di recupero con registrazione minima. Per altre informazioni, vedere [Visualizzazione o modifica del modello di recupero di un database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
 ###  <a name="Formatting_Media"></a>Formattare i supporti di Backup  
  I supporti di backup vengono formattati tramite l'istruzione BACKUP esclusivamente quando si verifica una delle condizioni seguenti:  
@@ -717,7 +722,7 @@ Quando viene eseguito un ripristino, se il set di backup non è già stato regis
 ## <a name="security"></a>Security  
  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], **PASSWORD** e **MEDIAPASSWORD** non sono più disponibili le opzioni per la creazione di backup. È comunque possibile ripristinare backup creati con password.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
   
  Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  

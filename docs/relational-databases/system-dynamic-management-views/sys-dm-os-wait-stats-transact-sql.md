@@ -1,7 +1,7 @@
 ---
 title: Sys.dm os_wait_stats (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 09/18/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
+ms.openlocfilehash: 1e6b1129e76717981e08ff35a97abf516c134ac3
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ Restituisce informazioni su tutte le attese rilevate dai thread eseguiti. È pos
 |signal_wait_time_ms|**bigint**|Differenza tra il momento in cui è stato rilevato il thread in attesa e quello in cui è stata avviata l'esecuzione del thread.|  
 |pdw_node_id|**int**|L'identificatore per il nodo che utilizza questo tipo di distribuzione. <br/> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.  
   
@@ -90,7 +90,7 @@ Questo comando reimposta tutti i contatori su 0.
   
  Nella tabella seguente sono elencati i tipi di attesa rilevati dalle attività.  
 
-|tipo |Description| 
+|Tipo |Description| 
 |-------------------------- |--------------------------| 
 |ABR |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -169,7 +169,8 @@ Questo comando reimposta tutti i contatori su 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXPACKET |Si verifica con i piani di query paralleli durante la sincronizzazione di iteratore di scambio di query processor e quando la produzione e l'utilizzo di righe. Se l'attesa è eccessiva e non è possibile ridurla ottimizzando la query (ad esempio aggiungendo indici), regolare l'opzione Cost threshold for parallelism o abbassare il grado di parallelismo.| 
+|CXCONSUMER |Quando un thread consumer in attesa di un thread producer inviare righe, si verifica con i piani di query parallele. Questo è normale di esecuzione delle query parallele. <br /> **Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Si verifica con i piani di query paralleli durante la sincronizzazione di iteratore di scambio di query processor e quando la produzione e l'utilizzo di righe. Se l'attesa è eccessiva e non è possibile ridurla ottimizzando la query (ad esempio aggiungendo indici), regolare l'opzione Cost threshold for parallelism o abbassare il grado di parallelismo.<br /> **Nota:** In [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET si riferisce solo per sincronizzare l'iteratore di scambio di query processor e per la produzione di righe per i thread consumer. Thread consumer vengono registrati separatamente nel tipo di attesa CXCONSUMER.| 
 |CXROWSET_SYNC |Si verifica durante un'analisi di intervalli parallela.| 
 |DAC_INIT |Si verifica durante l'inizializzazione della connessione amministrativa dedicata.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

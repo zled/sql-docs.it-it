@@ -1,7 +1,7 @@
 ---
 title: UPDATE STATISTICS (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 11/20/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b619b3cf7ea50fb87e18fd96e8a85a2a231d21f5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7c69949773ff1dae533c98d087780a2f4b436b62
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,8 @@ UPDATE STATISTICS table_or_indexed_view_name
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ] 
     ] ;  
   
 <update_stats_stream_option> ::=  
@@ -156,28 +157,42 @@ Quando **ON**, le statistiche verranno mantenute la percentuale di campionamento
  Se le statistiche per partizione non sono supportate, viene generato un errore. Le statistiche incrementali non sono supportate per i seguenti tipi di statistiche:  
   
 -   Statistiche create con indici che non hanno il partizionamento allineato con la tabella di base.  
-  
 -   Statistiche create per i database secondari leggibili Always On.  
-  
 -   Statistiche create per i database di sola lettura.  
-  
 -   Statistiche create per gli indici filtrati.  
-  
 -   Statistiche create per le viste.  
-  
 -   Statistiche create per le tabelle interne.  
-  
 -   Statistiche create con indici spaziali o indici XML.  
   
 **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+
+MAXDOP = *max_degree_of_parallelism*  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+  
+ Esegue l'override di **massimo grado di parallelismo** opzione di configurazione per la durata dell'operazione di statistiche. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
+  
+ *max_degree_of_parallelism* può essere:  
+  
+ 1  
+ Disattiva la generazione di piani paralleli.  
+  
+ \>1  
+ Limita il numero massimo di processori utilizzati in un'operazione parallela statistica per il numero specificato o meno in base al carico di lavoro di sistema corrente.  
+  
+ 0 (predefinito)  
+ Utilizza il numero effettivo di processori o un numero inferiore in base al carico di lavoro corrente del sistema.  
   
  \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
-  
+
 ## <a name="remarks"></a>Osservazioni  
   
 ## <a name="when-to-use-update-statistics"></a>Utilizzo di UPDATE STATISTICS  
  Per ulteriori informazioni sull'utilizzo di UPDATE STATISTICS, vedere [statistiche](../../relational-databases/statistics/statistics.md).  
-  
+
+## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
+* Aggiornamento delle statistiche non è supportata nelle tabelle esterne. Per aggiornare le statistiche in una tabella esterna, eliminare e ricreare le statistiche.  
+* L'opzione MAXDOP non è compatibile con opzioni STATS_STREAM, conteggio delle righe e PAGECOUNT.
+
 ## <a name="updating-all-statistics-with-spupdatestats"></a>Aggiornamento di tutte le statistiche con sp_updatestats  
  Per informazioni sull'aggiornamento delle statistiche per tutte le tabelle interne e definite dall'utente nel database, vedere la stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Il comando riportato di seguito chiama ad esempio sp_updatestats per aggiornare tutte le statistiche per il database.  
   

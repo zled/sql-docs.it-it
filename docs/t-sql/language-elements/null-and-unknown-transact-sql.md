@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d0523877d572bd644fa772713f3c7edb82d645f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6a581045af3d5ed73e9cf9736c60588d87733369
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL e sconosciuto (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,23 +39,23 @@ ms.lasthandoff: 11/17/2017
   
 -   I valori null possono essere utilizzati come le informazioni necessarie per distinguere una riga in una tabella da un'altra riga in una tabella, ad esempio le chiavi primarie, o per le informazioni utilizzate per distribuire le righe, ad esempio le chiavi di distribuzione.  
   
- Se i dati includono valori Null, gli operatori logici e di confronto possono restituire potenzialmente un terzo valore, ovvero UNKNOWN, anziché TRUE o FALSE. Questa logica a tre valori è necessaria, ma causa numerosi errori nelle applicazioni. Nelle tabelle riportate di seguito viene descritto il risultato ottenuto dal confronto tra valori Null.  
+ Se i dati includono valori Null, gli operatori logici e di confronto possono restituire potenzialmente un terzo valore, ovvero UNKNOWN, anziché TRUE o FALSE. Questa logica a tre valori è necessaria, ma causa numerosi errori nelle applicazioni. Operatori logici in un'espressione booleana che include incognite restituirà sconosciuto a meno che il risultato dell'operatore non dipende da espressione sconosciuto. Queste tabelle sono esempi di questo comportamento.  
   
- La tabella seguente illustra i risultati dell'applicazione di un operatore AND a due operandi booleani, dove un operando restituisce NULL.  
+ Nella tabella seguente mostra i risultati di applicazione di un operatore AND a due espressioni booleane in un'espressione restituisce UNKNOWN.  
   
-|Operando di 1|Operando 2|Risultato|  
+|Espressione di 1|Espressione 2|Risultato|  
 |---------------|---------------|------------|  
-|TRUE|NULL|FALSE|  
-|NULL|NULL|FALSE|  
-|FALSE|NULL|FALSE|  
+|TRUE|UNKNOWN|UNKNOWN|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|FALSE|  
   
- La tabella seguente illustra i risultati dell'applicazione di un operatore OR a due operandi booleani, dove un operando restituisce NULL.  
+ Nella tabella seguente mostra i risultati di applicazione di un operatore OR a due espressioni booleane in un'espressione restituisce UNKNOWN.  
   
-|Operando di 1|Operando 2|Risultato|  
+|Espressione di 1|Espressione 2|Risultato|  
 |---------------|---------------|------------|  
-|TRUE|NULL|TRUE|  
-|NULL|NULL|UNKNOWN|  
-|FALSE|NULL|UNKNOWN|  
+|TRUE|UNKNOWN|TRUE|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|UNKNOWN|  
   
 ## <a name="see-also"></a>Vedere anche  
  [E &#40; Transact-SQL &#41;](../../t-sql/language-elements/and-transact-sql.md)   

@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 747817e69c175e90f119906f8263920bc1851c2e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b113e50edcd72ff72717cae44166817478c959b9
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>Filtrare gli ID del processo server (SPID) in una traccia (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questo argomento viene descritto come filtrare gli identificatori di processo server (SPID) in una traccia utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -34,18 +34,18 @@ ms.lasthandoff: 12/21/2017
   
 1.  Scegliere **Nuova traccia** dal menu **File**e quindi connettersi a un'istanza di SQL Server.  
   
-     Verrà visualizzata la finestra di dialogo **Proprietà traccia**.  
+     Verrà visualizzata la finestra di dialogo **Proprietà traccia** .  
   
     > [!NOTE]  
-    >  Se l'opzione **Avvia traccia non appena viene stabilita una connessione**è selezionata, la finestra di dialogo **Proprietà traccia**non viene visualizzata e viene invece avviata la traccia. Per disabilitare questa impostazione, scegliere **Opzioni**dal menu **Strumenti**e deselezionare la casella di controllo **Avvia traccia non appena viene stabilita una connessione** .  
+    >  Se **Avvia traccia non appena viene stabilita una connessione** è selezionata, il **proprietà traccia** non viene visualizzata la finestra di dialogo e viene invece avviata la traccia. Per disabilitare questa impostazione, scegliere il **strumenti** menu, fare clic su **opzioni**e deselezionare il **Avvia traccia non appena viene stabilita una connessione** casella di controllo.  
   
 2.  Nella casella **Nome traccia** digitare un nome per la traccia.  
   
-3.  Nell'elenco dei nomi di **modello**selezionare un modello di traccia.  
+3.  Nel **utilizzare il modello** elenco dei nomi, selezionare un modello di traccia.  
   
 4.  Facoltativamente, è possibile specificare un file o una tabella di destinazione in cui salvare i risultati della traccia.  
   
-5.  Nella scheda **Selezione eventi**fare clic sull'intestazione di colonna **SPID**per visualizzare la finestra di dialogo **Modifica filtro** . È anche possibile fare clic con il pulsante destro del mouse sull'intestazione di colonna e scegliere **Modifica filtro colonne**. Se non viene visualizzata la colonna **SPID** , selezionare la casella **Mostra tutte le colonne** .  
+5.  Nel **selezione eventi** scheda, fare clic su di **SPID** sull'intestazione di colonna per avviare il **Modifica filtro** la finestra di dialogo. È anche possibile fare clic con il pulsante destro del mouse sull'intestazione di colonna e scegliere **Modifica filtro colonne**. Se non viene visualizzata la colonna **SPID** , selezionare la casella **Mostra tutte le colonne** .  
   
 6.  Nella finestra di dialogo **Modifica filtro** espandere l'operatore di confronto appropriato e immettere uno SPID come valore di confronto.  
   
