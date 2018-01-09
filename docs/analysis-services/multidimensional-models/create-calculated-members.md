@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f91c068837043959e63e5e5f99d8ba719a51bb16
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92d18934426772d34d4b63e087d235fe6c48dfe3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-calculated-members"></a>Creare membri calcolati
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile creare misure personalizzate o i membri della dimensione, denominati membri calcolati, combinando dati del cubo, operatori aritmetici, numeri e funzioni. È ad esempio possibile creare un membro calcolato denominato Euro in grado di convertire valori in dollari in euro moltiplicando una misura dollaro esistente per un tasso di conversione. Gli importi in euro potranno quindi essere visualizzati agli utenti finali in una riga o una colonna separata.  
@@ -70,7 +67,7 @@ ms.lasthandoff: 12/08/2017
  Stringa formato  
  Consente di specificare il formato dei valori di cella basati sul membro calcolato. Questa proprietà supporta gli stessi valori della proprietà **Formato di visualizzazione** delle misure. Per altre informazioni sui formati di visualizzazione, vedere [Configurare le proprietà delle misure](../../analysis-services/multidimensional-models/configure-measure-properties.md).  
   
- Visible  
+ Visibile  
  Determina se il membro calcolato è visibile o nascosto quando vengono recuperati i metadati del cubo. Se il membro calcolato è nascosto, può comunque essere utilizzato in espressioni MDX, istruzioni e script, ma non viene visualizzato come oggetto selezionabile nelle interfacce utente client.  
   
  Gestione NON EMPTY  

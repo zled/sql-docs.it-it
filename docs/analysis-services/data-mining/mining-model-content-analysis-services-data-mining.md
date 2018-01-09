@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dopo aver progettato ed elaborazione di un modello di data mining utilizzando i dati dalla struttura di data mining sottostante, il modello di data mining è stato completato e contiene *contenuto del modello di data mining*. È possibile utilizzare questo contenuto per eseguire stime o analisi di dati.  
@@ -226,7 +224,7 @@ ms.lasthandoff: 12/08/2017
 |3|Continuo|Indica che il valore dell'attributo è un valore numerico continuo che può pertanto essere rappresentato da una media, insieme alle varianza e deviazione standard.|  
 |4|Discrete|Indica che un valore di testo o numerico viene trattato come discreto.<br /><br /> **Nota** i valori discreti possono anche essere mancanti; tuttavia, vengono gestiti in modo diverso durante l'esecuzione dei calcoli. Per informazioni, vedere [Valori mancanti &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).|  
 |5|Discretizzato|Indica che l'attributo contiene valori numerici discretizzati. Il valore sarà una stringa formattata che descrive i bucket di discretizzazione.|  
-|6|Existing|Indica che l'attributo dispone di valori numerici continui e che i valori sono stati forniti nei dati, a fronte di valori mancanti o derivati.|  
+|6|Esistente|Indica che l'attributo dispone di valori numerici continui e che i valori sono stati forniti nei dati, a fronte di valori mancanti o derivati.|  
 |7|Coefficiente|Indica un valore numerico che rappresenta un coefficiente.<br /><br /> Un coefficiente è un valore che viene applicato durante il calcolo della variabile dipendente. Ad esempio, se il modello crea una formula di regressione che stima il reddito in base all'età, il coefficiente viene utilizzato nella formula di correlazione dell'età al reddito.|  
 |8|Miglioramento punteggio|Indica un valore numerico che rappresenta il miglioramento del punteggio di un attributo.|  
 |9|Statistiche|Indica un valore numerico che rappresenta una statistica per un regressore.|  
@@ -258,7 +256,7 @@ ms.lasthandoff: 12/08/2017
   
  Ad esempio, se il popolamento di tutti i clienti in un albero delle decisioni è suddiviso equamente per genere e nessun valore è mancante, la probabilità dei nodi figlio sarà uguale a 0,5. Si supponga ora che ognuno dei nodi di genere venga equamente diviso per i livelli di reddito: alto, medio e basso. In questo caso il punteggio di MARGINAL_PROBABILITY di ciascun nodo figlio deve essere sempre 0,33, ma il valore di NODE_PROBABILTY sarà il prodotto di tutte le probabilità che conducono a quel nodo e pertanto sarà sempre inferiore al valore di MARGINAL_PROBABILITY.  
   
-|Livello e valore del nodo/attributo|probabilità marginale|probabilità del nodo|  
+|Livello e valore del nodo/attributo|Probabilità marginale|probabilità del nodo|  
 |----------------------------------------|--------------------------|----------------------|  
 |Nodo radice del modello<br /><br /> Tutti i clienti di destinazione|1|1|  
 |Clienti di destinazione suddivisi per genere|.5|.5|  
@@ -288,7 +286,7 @@ ms.lasthandoff: 12/08/2017
 |Modelli Naive Bayes|[Contenuto dei modelli di data mining per i modelli Naive Bayes &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes Model Query Examples](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |Modelli di rete neurale|[Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Esempi di query sul modello di rete neurale](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |Sequence Clustering|[Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|Modelli Time Series|[Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|Modelli Time Series|[Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Esempi di query sui modelli Time Series](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Strumenti per la visualizzazione del contenuto di un modello di data mining  
  Quando si esplora un modello in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è possibile visualizzare le informazioni in **Microsoft Generic Content Tree Viewer**, disponibile sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] che in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f467621594b3ed81793d0925b600650dfa1e3599
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 93884e29674fa1a96402d23e397cddb3a1fe0bef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Naive Bayes
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes è un algoritmo di classificazione fornito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la modellazione predittiva. L'algoritmo calcola la probabilità condizionale tra colonne di input e stimabili e presuppone che le colonne siano indipendenti. Il nome Naive Bayes deriva da questo presupposto di indipendenza.  
@@ -43,12 +41,12 @@ ms.lasthandoff: 12/08/2017
   
  Per una descrizione della modifica delle probabilità in tutti i modelli in modo da tenere conto dei potenziali valori mancanti, vedere [Valori mancanti &#40;Analysis Services - Data mining &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-### <a name="feature-selection"></a>Selezione funzionalità  
+### <a name="feature-selection"></a>Selezione caratteristiche  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes esegue la selezione automatica delle caratteristiche per limitare il numero di valori considerati quando si compila il modello. Per altre informazioni, vedere [Selezione delle caratteristiche &#40;Data mining&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md).  
   
 |Algoritmo|Metodo di analisi|Commenti|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Naive Bayes accetta solo attributi discreti o discretizzati e non può pertanto utilizzare il punteggio di interesse.|  
+|Naive Bayes|Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Naive Bayes accetta solo attributi discreti o discretizzati e non può pertanto utilizzare il punteggio di interesse.|  
   
  L'algoritmo è progettato per ridurre il tempo di elaborazione e selezionare in modo efficiente gli attributi di massima importanza; è tuttavia possibile controllare i dati utilizzati dall'algoritmo impostando i parametri nel modo seguente:  
   
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes supporta le colonne di input e le colonne stimabili specifiche riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Colonna|Tipi di contenuto|  
+|colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Cyclical, Discrete, Discretized, Key, Table e Ordered|  
 |Attributo stimabile|Cyclical, Discrete, Discretized, Table e Ordered|  

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba4efe6772c6fcc668d6ce808a6c928a3af63101
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-projects"></a>Progetti di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un progetto di data mining fa parte di un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] soluzione. Durante il processo di progettazione, gli oggetti creati nel progetto sono disponibili per l'esecuzione di test e query come parte di un database dell'area di lavoro. Per consentire agli utenti di eseguire query o esplorare gli oggetti nel progetto, è necessario distribuire il progetto in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità multidimensionale.  
@@ -210,7 +208,7 @@ ms.lasthandoff: 12/08/2017
  È inoltre possibile eseguire tali attività tramite ASSL (Analysis Services Scripting Language) oppure mediante AMO (Analysis Management Objects). Per altre informazioni, vedere [Sviluppo con XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  Negli argomenti seguenti viene descritto l'utilizzo della Creazione guidata modello di data mining per creare un progetto di data mining e gli oggetti associati.  
   
 |Attività|Argomento|  

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Creare e gestire una partizione remota (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Per il partizionamento di un gruppo di misure, è possibile configurare un database secondario su una remota [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza come archiviazione della partizione.  
@@ -36,7 +33,7 @@ ms.lasthandoff: 12/08/2017
   
  Un database secondario dedicato può archiviare partizioni remote per un solo database master, ma il database master può utilizzare più database secondari, purché si trovino tutti nella stessa istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le dimensioni in un database dedicato a partizioni remote vengono create come dimensioni collegate.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Prima di creare una partizione remota, è necessario che siano soddisfatte le condizioni seguenti:  
   
 -   È necessario disporre di una seconda istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e di un database dedicato per archiviare partizioni. Il database secondario è finalizzato a un unico scopo: fornire l'archiviazione di partizioni remote per un database master.  
@@ -119,7 +116,7 @@ ms.lasthandoff: 12/08/2017
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>Configurare la partizione remota (in SSDT)  
   
-1.  Nel server master: aprire il cubo in Progettazione cubi e fare clic sulla scheda **Partizioni** . Espandere il gruppo di misure. Fare clic su **Nuova partizione** se il gruppo di misure è già configurato per più partizioni oppure fare clic sul pulsante Sfoglia (. . ) nella colonna Origine per modificare la partizione esistente.  
+1.  Nel server master: aprire il cubo in Progettazione cubi e fare clic sulla scheda **Partizioni** . Espandere il gruppo di misure. Fare clic su **Nuova partizione** se il gruppo di misure è già configurato per più partizioni oppure fare clic sul pulsante Sfoglia (. , ) nella colonna Origine per modificare la partizione esistente.  
   
 2.  In **Impostazione informazioni origine**della Creazione guidata partizione selezionare la vista origine dati originale e la tabella dei fatti.  
   

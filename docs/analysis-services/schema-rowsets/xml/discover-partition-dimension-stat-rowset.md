@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe9721a2653f962865b6d5b180bff99d4043b306
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 42bbe583c494830308c021c1adc385ec48491007
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>Set di righe DISCOVER_PARTITION_DIMENSION_STAT
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce statistiche sulla dimensione associata a una partizione  
@@ -36,10 +34,10 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Restrizione|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|Required|Nome del database.<br /><br /> Questa colonna è obbligatoria nell'elenco di restrizioni.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Required|Nome del cubo o del modello tabulare.<br /><br /> Questa colonna è obbligatoria nell'elenco di restrizioni.|  
-|**NOME_GRUPPO_MISURE**|**DBTYPE_WSTR**|Required|Nome del gruppo di misure.<br /><br /> Questa colonna è obbligatoria nell'elenco di restrizioni.|  
-|**NOME_PARTIZIONE**|**DBTYPE_WSTR**|Required|Nome della partizione.<br /><br /> Questa colonna è obbligatoria nell'elenco di restrizioni.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Obbligatorio|Nome del database.<br /><br /> Questa colonna è obbligatoria nell'elenco di restrizioni.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Obbligatorio|Nome del cubo o del modello tabulare.<br /><br /> Questa colonna è obbligatoria nell'elenco di restrizioni.|  
+|**NOME_GRUPPO_MISURE**|**DBTYPE_WSTR**|Obbligatorio|Nome del gruppo di misure.<br /><br /> Questa colonna è obbligatoria nell'elenco di restrizioni.|  
+|**NOME_PARTIZIONE**|**DBTYPE_WSTR**|Obbligatorio|Nome della partizione.<br /><br /> Questa colonna è obbligatoria nell'elenco di restrizioni.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||Nome della dimensione.<br /><br /> Questa colonna è obbligatoria nell'elenco di restrizioni.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Nome di un attributo nella dimensione.|  
 |**ATTRIBUTE_INDEXED**|**DBTYPE_BOOL**||Se true indica che l'attributo viene indicizzato; in caso contrario false.|  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
  Nella tabella seguente vengono forniti i GUID e i valori stringa che identificano questo set di righe.  
   
-|Argomento|Valore|  
+|Argomento|valore|  
 |--------------|-----------|  
 |GUID|a07ccd8e-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionDimensionStat|  

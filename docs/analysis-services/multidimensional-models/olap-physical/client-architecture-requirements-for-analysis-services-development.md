@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ad9afc1cf4b6353e68e2849754c0c138b8f54e8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5fa4192b9852d88100c1520a8c274dac199e1f48
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Requisiti di architettura client per sviluppo Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta un'architettura thin client. Il [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] il motore di calcolo è interamente basato su server, pertanto tutte le query vengono risolte nel server. Per ogni query è quindi necessario un solo round trip tra il client e il server, il che significa che le prestazioni sono scalabili a mano a mano che le query diventano più complesse.  

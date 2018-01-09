@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6a8e6a7d40efc5c2b6a6dc6a5e7721c2cf999c17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 634586ccc56d55a8678bc63a7ed4eb381f619e02
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Compilare progetti di Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], si compila un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto molto simile alla compilazione di qualsiasi progetto di programmazione in Visual Studio. Quando si compila il progetto, nella directory di output viene creato un set di file XML. Questi file XML sono basati su Analysis Services Scripting Language (ASSL), il sottolinguaggio XML utilizzato dalle applicazioni client come [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per comunicare con un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] allo scopo di creare o modificare oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi file XML permettono di distribuire definizioni di oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

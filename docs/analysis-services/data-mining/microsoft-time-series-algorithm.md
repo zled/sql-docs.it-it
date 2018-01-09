@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 245c39d7ff9366e43b1faad07fec64befa5aea0e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 27903370d69462107dffb0aecf56c4312f60a2d1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo Microsoft Time Series
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series fornisce più algoritmi ottimizzati per la previsione di valori continui, ad esempio le vendite del prodotto, nel corso del tempo. Altri algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] , come ad esempio gli alberi delle decisioni, richiedono colonne aggiuntive di nuove informazioni come input per stimare una tendenza contrariamente a quanto accade con un modello Time Series. Un modello Time Series può stimare le tendenze basate solo sul set di dati originale utilizzato per creare il modello. È anche possibile aggiungere nuovi dati al modello quando viene eseguita una stima e vengono incorporati automaticamente i nuovi dati nell'analisi della tendenza.  
@@ -111,8 +109,8 @@ ms.lasthandoff: 12/08/2017
   
 |TimeID|Product|Sales|Volume|  
 |------------|-------------|-----------|------------|  
-|1/2001|A|1000|600|  
-|2/2001|A|1100|500|  
+|1/2001|Un|1000|600|  
+|2/2001|Un|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   

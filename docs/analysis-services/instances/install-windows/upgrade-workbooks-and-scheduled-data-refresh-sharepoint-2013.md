@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d1ecdb0be095931b952b3ef93ee566db40dfb5f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2a122ab3ac28879a1fbcf3790953ba229a285df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In questo argomento illustra l'esperienza utente di cartelle di lavoro creati nelle precedenti [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ambienti e come eseguire l'aggiornamento [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] le cartelle di lavoro in modo che è possibile usufruire delle nuove funzionalità introdotte in questa versione. Per altre informazioni sulle nuove funzionalità, vedere [Novità in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  

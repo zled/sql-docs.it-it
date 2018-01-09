@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,18 +23,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b176b73816fb01ff7659e00f58dd4441bc689866
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1313c2933ba37f161edd4980a6b931388f60e13b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="association-model-query-examples"></a>Esempi di query sul modello di associazione
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce informazioni dettagliate sulle regole e set di elementi individuati durante l'analisi, oppure è possibile creare una query di stima che utilizza le associazioni individuate nei dati per eseguire stime. Per un modello di associazione, le stime sono in genere basate su regole e possono essere utilizzate per fornire indicazioni, mentre le query sul contenuto solitamente esplorano la relazione tra set di elementi. È anche possibile recuperare metadati relativi al modello.  
   
  Questa sezione illustra come creare questi tipi di query per i modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules.  
   
- **Content Queries**  
+ **Query sul contenuto**  
   
  [Recupero di dati dei metadati del modello tramite DMX](#bkmk_Query1)  
   

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Time Series (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Tutti i modelli di data mining utilizzano la stessa struttura per archiviare i propri contenuti. Tale struttura viene definita secondo il set di righe dello schema relativo al contenuto di data mining. Tuttavia, all'interno della struttura standard i nodi che contengono informazioni vengono disposti in modi diversi per rappresentare vari tipi di albero. In questo argomento vengono descritti l'organizzazione e il significato dei nodi per i modelli di data mining basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series.  
@@ -415,9 +413,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION:** visualizza i termini dell'equazione in una tabella annidata su cui è possibile eseguire query per ottenere termini specifici. La tabella di distribuzione del nodo segue la stessa struttura gerarchica delle regole XML: nel nodo radice della serie ARIMA (NODE_TYPE = 27) sono contenuti il valore di intersezione e le periodicità dell'equazione completa, che può includere più periodicità, mentre nei nodi figlio sono contenute solo informazioni specifiche su una certa struttura periodica o sui nodi figlio di tale struttura periodica.  
   
-|Tipo di nodo|Attribute|Tipo valore|  
+|Tipo di nodo|attribute|Tipo valore|  
 |---------------|---------------|----------------|  
-|27 (radice ARIMA)|Intercetta<br /><br /> periodicità|11|  
+|27 (radice ARIMA)|Intercetta<br /><br /> Periodicità|11|  
 |28 (Struttura periodica ARIMA)|periodicità<br /><br /> Ordine autoregressivo<br /><br /> ordine delle differenze<br /><br /> Ordine media mobile|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (Autoregressione ARIMA)|Coefficiente<br /><br /> (complemento del coefficiente)|7|  
 |30 (Media mobile ARIMA)|Valore a t<br /><br /> Valore a t-1<br /><br /> …<br /><br /> Valore a t-n|7|  
@@ -445,7 +443,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  Il recupero di informazioni da un albero ARTXP potrebbe risultare difficile, poiché le informazioni di ciascuna divisione si trovano in un punto diverso dell'albero. Pertanto, con un modello ARTXP è necessario ottenere tutte le parti, quindi procedere alla ricostruzione della formula completa. Il recupero di un'equazione da un modello ARIMA è più facile, poiché la formula è stata resa disponibile in tutto l'albero. Per altre informazioni su come creare una query per recuperare queste informazioni, vedere [Esempi di query sul modello di serie temporale](../../analysis-services/data-mining/time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Tempo Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  

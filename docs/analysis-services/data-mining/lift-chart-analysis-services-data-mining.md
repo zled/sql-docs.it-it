@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 79178d1319e296d1dead562440d57c25d379dbd4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Grafico di accuratezza (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto *grafico di accuratezza* graficamente rappresenta il miglioramento che un modello di data mining fornisce se confrontata con un'ipotesi casuale e misurare la modifica in termini di un *accuratezza* punteggio. Confrontando i punteggi di accuratezza per modelli differenti, è possibile determinare qual è il modello migliore. È possibile anche determinare il punto in cui le stime del modello diventano meno utili. Ad esempio, esaminando il grafico di accuratezza, si potrebbe accorgersi che una campagna promozionale ha probabilità di essere efficace solo sul 30% dei clienti e usare questa cifra per limitare l'ambito della campagna.  

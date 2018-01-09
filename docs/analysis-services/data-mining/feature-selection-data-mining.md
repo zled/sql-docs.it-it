@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 851262d2141413487aafe45456cba7748440fde6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="feature-selection-data-mining"></a>Selezione delle caratteristiche (Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Selezione delle caratteristiche* è una parte importante di machine learning. La selezione delle caratteristiche si riferisce al processo di riduzione degli input per l'elaborazione e l'analisi o di individuazione degli input più significativi. Un termine correlato, *progettazione delle caratteristiche* (o *estrazione delle caratteristiche*), si riferisce al processo di estrazione di informazioni o caratteristiche utili dai dati esistenti.  
@@ -116,7 +114,7 @@ ms.lasthandoff: 12/08/2017
   
 |Algoritmo|Metodo di analisi|Commenti|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Poiché l'algoritmo Microsoft Naive Bayes accetta solo attributi discreti o discretizzati, non può utilizzare il punteggio di interesse.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Naive Bayes](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md).|  
+|Naive Bayes|Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Poiché l'algoritmo Microsoft Naive Bayes accetta solo attributi discreti o discretizzati, non può utilizzare il punteggio di interesse.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Naive Bayes](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md).|  
 |Decision Trees|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo per implementare la caratteristica di selezione degli attributi predefinito oppure il metodo specificato quando è stato creato il modello.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md).|  
 |Neural Network|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Nell'algoritmo Microsoft Neural Network possono essere utilizzati sia i metodi Bayes sia quelli basati sull'entropia, purché nei dati siano contenute colonne continue.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md).|  
 |Logistic Regression|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Sebbene l'algoritmo Microsoft Logistic Regression sia basato sull'algoritmo Microsoft Neural Network, non è possibile personalizzare modelli di regressione logistica per controllare il comportamento della caratteristica di selezione degli attributi. Di conseguenza tale caratteristica viene impostata automaticamente sempre sul metodo più appropriato per l'attributo.<br /><br /> Se tutti gli attributi sono discreti o discretizzati, l'impostazione predefinita è BDEU.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md).|  

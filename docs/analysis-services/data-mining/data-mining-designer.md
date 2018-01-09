@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,13 +23,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eb86363e415f2e66457b2991116db18048df15c7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8ba0683192d2e0aabfce9e8c340692e48053a7f8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="data-mining-designer"></a>Progettazione modelli di data mining
+# <a name="data-mining-designer"></a>Data Mining Designer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Progettazione di Data Mining è l'ambiente principale in cui si lavora con modelli di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È possibile accedere alla finestra di progettazione selezionando una struttura di data mining esistente o utilizzando la Creazione guidata modello di data mining per creare una nuova struttura e un nuovo modello di data mining. Progettazione modelli di data mining consente di eseguire le attività seguenti:  
   
 -   Modificare la struttura e il modello di data mining creati inizialmente dalla Creazione guidata modello di data mining.  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c5729dfd1411ae533c359bfdbc9867b2c453ebc1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 19f72f294bc06ecec0e38be763afb656f7ebcc67
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programmazione di oggetti di data mining AMO
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Programmazione di oggetti di data mining tramite AMO è semplice e lineare. Il primo passaggio consiste nella creazione del modello della struttura dei dati per supportare il progetto di data mining. Successivamente viene creato il modello di data mining che supporta l'algoritmo di data mining da utilizzare per stimare o individuare le relazioni non visibili sottostanti ai dati. Dopo avere creato il progetto di data mining, inclusi la struttura e gli algoritmi, è possibile elaborare i modelli di data mining per ottenere i modelli di cui è stato eseguito il training da utilizzare in un secondo momento durante l'esecuzione di query e di stime dall'applicazione client.  

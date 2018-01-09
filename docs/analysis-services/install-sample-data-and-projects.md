@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e0372941de7d139b7e91f8e03a3ce6b903d05a9f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e73736896056f0d9b6a925292260243381046d34
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-sample-data-and-projects"></a>Installare dati di esempio e progetti 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Utilizzare le istruzioni e i collegamenti forniti in questo argomento per installare tutti i file di dati e di progetto utilizzati nelle esercitazioni di Analysis Services.  
@@ -133,7 +133,7 @@ Il file di progetto per la Lezione 4 è particolarmente importante perché costi
   
     -   Lezione 10 completa  
   
-4.  Rimuovere le autorizzazioni di sola lettura per questi file. Fare clic con il pulsante destro del mouse sulla cartella padre, "Analysis Services Tutorial SQL Server 2012", selezionare **Proprietà**e quindi deselezionare la casella di controllo **Sola lettura**. Scegliere **OK**. Applicare le modifiche a questa cartella, alle sottocartelle e ai file.  
+4.  Rimuovere le autorizzazioni di sola lettura per questi file. Fare clic con il pulsante destro del mouse sulla cartella padre, "Analysis Services Tutorial SQL Server 2012", selezionare **Proprietà**e quindi deselezionare la casella di controllo **Sola lettura**. Fare clic su **OK**. Applicare le modifiche a questa cartella, alle sottocartelle e ai file.  
   
 5.  Avviare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   

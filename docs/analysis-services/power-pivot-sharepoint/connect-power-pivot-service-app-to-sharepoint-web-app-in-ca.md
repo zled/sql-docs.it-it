@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7eacb900494941994ff38fd01f8b58e8939c1ebf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>La connessione di servizio App di Power Pivot per App Web di SharePoint nella CA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] applicazione di servizio è utilizzabile da un numero qualsiasi di applicazioni SharePoint Web nella farm. Per rendere disponibile un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , aggiungerla a un elenco di associazioni del servizio.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  Selezionare la casella di controllo accanto all'applicazione di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (indicata dal nome del tipo **Power Pivot Service Application Proxy**). Se sono presenti più applicazioni del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , sceglierne solo una.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 ##  <a name="custom"></a> Aggiungere l'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a un elenco personalizzato di associazioni del servizio  
  Il gruppo predefinito può essere sostituito da un elenco personalizzato. Un elenco personalizzato viene creato in modo specifico per una sola applicazione Web SharePoint. Il gruppo predefinito viene sostituito solo dalle associazioni al servizio specificate da un amministratore di farm o del servizio. Se sono state create più applicazioni del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , è necessario usare un elenco personalizzato per specificare quale usare. Un elenco personalizzato non può essere riutilizzato da altre applicazioni Web. Si applica solo all'applicazione Web per cui è stato creato.  
@@ -64,7 +61,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  Selezionare la casella di controllo accanto a ogni connessione all'applicazione di servizio che si desidera utilizzare. Se sono presenti più applicazioni di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ovvero il tipo è impostato su **Power Pivot Service Application Proxy**(Proxy dell'applicazione di servizio PowerPivot), assicurarsi di sceglierne una sola.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e configurare un'applicazione del servizio Power Pivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   

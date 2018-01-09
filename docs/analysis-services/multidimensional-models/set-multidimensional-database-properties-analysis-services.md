@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: properties [Analysis Services], databases
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bc30fcf0cf1aad8b9c27585913f0a5a8a4598374
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6585737ac1f796b7e9e6e8834d6ca5b5c1c11612
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Impostare le proprietà dei database multidimensionali (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esistono una serie di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proprietà che è possibile configurare nel database di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Progettazione database.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 |Confronto|Quando il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene distribuito in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il database eredita la proprietà Regole di confronto del server a meno che non venga specificato un valore diverso in questa finestra.|  
 |DataSourceImpersonationInfo|Specifica la modalità di rappresentazione predefinita per tutti gli oggetti origine dei dati nel database. Tale modalità viene usata dal servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durante l'elaborazione degli oggetti, la sincronizzazione dei server e l'esecuzione delle istruzioni di data mining OpenQuery e SystemOpenSchema.|  
 |Dimensioni stimate|Fornisce una dimensione stimata dei file di database su disco. Se i dati vengono archiviati in più percorsi, questa stima sarà limitata solo ai file di dati archiviati nella cartella del database.<br /><br /> Il valore**EstimatedSize** può essere usato anche come base per stimare la memoria. In genere i requisiti di memoria sono maggiori delle dimensioni dei dati su disco, a causa di strutture di dati aggiuntive create quando il database tabulare viene caricato in memoria.<br /><br /> Per stimare ulteriormente i requisiti di memoria, è inoltre possibile utilizzare Gestione attività per analizzare la memoria del processo di Analysis Services prima e dopo avere l'elaborazione del database e osservare la memoria utilizzata come metodo per capire i requisiti di memoria del database.|  
-|Lingua|Quando il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene distribuito in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il database eredita la proprietà Lingua del server a meno che non venga specificato un valore diverso in questa finestra.|  
+|Linguaggio|Quando il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene distribuito in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il database eredita la proprietà Lingua del server a meno che non venga specificato un valore diverso in questa finestra.|  
 |MasterDataSourceID|Utilizzata con le partizioni remote. Per altre informazioni, vedere [Partizioni remote](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).|  
   
 ## <a name="see-also"></a>Vedere anche  

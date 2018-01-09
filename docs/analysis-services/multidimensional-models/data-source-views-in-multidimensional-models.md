@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,18 +25,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa655c5c761d4ba943bad6c7f8c188b50c45a275
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9e443b461a01c7a8e2ba04e7d759984062f63d6c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Viste origine dati in modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una vista origine dati (DSV) è un'astrazione di un'origine dati relazionale che diventa la base dei cubi e dimensioni creati in un progetto multidimensionale. Lo scopo di una vista origine dati è fornire il controllo sulle strutture di dati utilizzate nel progetto e funzionare indipendentemente dalle origini dati sottostanti (ad esempio, con la possibilità di rinominare o concatenare colonne senza modificare direttamente l'origine dati originale).  
   
  In un progetto o un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile compilare più viste origine dati per una o più origini dati e costruire ognuna in modo da soddisfare i requisiti per una diversa soluzione.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [Definizione di una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
  [Aggiunta o rimozione di tabelle o viste in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  

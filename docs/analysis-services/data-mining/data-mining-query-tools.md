@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3979e01644bbec77b71a93b7a20cfc9bc4276402
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 71337bc66abab8e91fd997cd2cde635945b0ef82
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-query-tools"></a>Strumenti query di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Tutte le query di data mining utilizzano il linguaggio di Data Mining Extensions (DMX). Il linguaggio DMX può essere usato per creare modelli per tutti i tipi di attività di apprendimento automatico, tra cui la classificazione, l'analisi dei rischi, la generazione di indicazioni e la regressione lineare. È anche possibile scrivere query DMX per recuperare informazioni sui modelli e le statistiche generati durante l'elaborazione del modello.  

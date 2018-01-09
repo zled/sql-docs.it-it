@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddde9150e2e748e75cef8fb25f16377c9dcea4b0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e1bfda7f42bdc4423ee1ea1bc0ad2d59abe26347
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Grafico profitti (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un grafico dei profitti consente di visualizzare la redditività associata all'utilizzo di un modello di data mining. Si supponga, ad esempio, che il modello preveda quali sono i clienti che una società dovrebbe contattare in uno scenario aziendale. In tal caso, sarebbe necessario aggiungere le informazioni del grafico dei profitti in merito al costo della campagna di mailing diretto. Successivamente, nel grafico completato verrà visualizzato il profitto stimato della campagna indirizzata ai clienti corretti, rispetto a quello di una campagna con clienti contattati casualmente.  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
      Questa finestra di dialogo consente di specificare i costi e i vantaggi associati a una campagna di mailing diretto. Per il grafico mostrato in questi esempi, sono stati utilizzati i valori seguenti:  
   
-    |Impostazione|Valore|Commenti|  
+    |Impostazione|valore|Commenti|  
     |-------------|-----------|--------------|  
     |**Popolazione**|20,000|Impostare il valore per la popolazione target totale<br /><br /> Il database può contenere molti clienti, ma per risparmiare sulle spese di mailing è possibile scegliere di individuare come destinatari solo i primi 20.000 clienti aventi maggiore probabilità di rispondere. È possibile ottenere questo elenco eseguendo una query di stima e ordinando i dati in base alla probabilità restituita dal modello predittivo.|  
     |**Costi fissi**|500|Immettere il costo una tantum per la configurazione di una campagna di mailing diretto per 20.000 persone. Nel costo possono essere incluse le spese di stampa o le spese di configurazione di una campagna di posta elettronica.|  

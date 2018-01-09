@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6ff0c5e509a40c84850e281d2ab9f41246c4880
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4352e05555c713c5b979e4ac8e3fc279d6099fe1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Lezione 3-3-modifica della dimensione Product
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nelle attività di questo argomento, utilizzare un calcolo denominato per fornire nomi più descrittivi per le linee di prodotti, definire una gerarchia nella dimensione Product e specificare il nome del membro (totale) per la gerarchia. Si raggrupperanno inoltre gli attributi in cartelle di visualizzazione.  
@@ -169,7 +169,7 @@ Se i dati sottostanti le supportano, è consigliabile definire relazioni tra gli
   
     Nell'elenco **Tipo di relazione** lasciare il tipo di relazione impostato su **Flessibile** perché le relazioni tra i membri potrebbero cambiare nel corso del tempo. Ad esempio, un modello di prodotto può essere spostato in una linea di prodotti diversa.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 5.  Scegliere **Salva tutti** dal menu **File**.  
   

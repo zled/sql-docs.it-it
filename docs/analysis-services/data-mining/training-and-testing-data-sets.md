@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 18028674d3c6873734b9c7b67b4e03dde99ed2e3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b85aca1abd948d42710633d65e7b79ad30d0629a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="training-and-testing-data-sets"></a>Set di dati di training e di testing
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Separazione dei dati in set di training e set di testing è una parte importante della valutazione di modelli di data mining. In genere, quando si separa un set di dati in un set di training e un set di testing, la maggior parte dei dati viene utilizzata per il training e una parte più piccola per il testing. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue un campionamento casuale dei dati per assicurare che i set di testing e i training set siano simili. Utilizzando dati simili per il training e il testing, è possibile ridurre al minimo gli effetti delle discrepanze di dati e comprendere meglio le caratteristiche del modello.  

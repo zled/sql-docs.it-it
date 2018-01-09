@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 57d2db22484a8c6a8b8301e11cbd4799aae6bd91
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ebaeba0db0daaf494533cafe03f89effff2fe792
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lezione 1: Creare un nuovo modello di progetto tabulare
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ In questa lezione verrà creato un nuovo progetto di modello tabulare in [!INCLU
   
 Tempo stimato per il completamento della lezione: **10 minuti**  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 Questo argomento è la prima lezione di un'esercitazione sulla creazione di modelli tabulari. Per completare questa lezione, è necessario disporre di database di esempio AdventureWorksDW installato in un'istanza di SQL Server. Per ulteriori informazioni, vedere [modellazione tabulare &#40; Esercitazione di AdventureWorks &#41; ](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>Creare un nuovo modello di progetto tabulare  
@@ -46,7 +46,7 @@ Questo argomento è la prima lezione di un'esercitazione sulla creazione di mode
   
     Per impostazione predefinita, **Nome soluzione** corrisponde al nome del progetto. È tuttavia possibile digitare un nome diverso per la soluzione.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 5.  Nel **progettazione di modelli tabulari** nella finestra di dialogo **integrato dell'area di lavoro**.  
   
@@ -94,7 +94,7 @@ Esplorare alcune delle finestre di dialogo e posizioni per diverse funzionalità
 Per altre informazioni sui diversi tipi di progetti di modelli tabulari, vedere [Progetti di modello tabulare &#40;SSAS tabulare&#41;](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Per altre informazioni sull'ambiente di creazione di modelli tabulari, vedere [Progettazione di modelli tabulari &#40;SSAS&#41;](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
-## <a name="whats-next"></a>Operazioni successive
+## <a name="whats-next"></a>Quali sono le operazioni successive?
 Passare alla lezione successiva: [lezione 2: aggiungere dati](../analysis-services/lesson-2-add-data.md).
 
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 183fbed8a59f4f6288b321b47d30895e4a7c7394
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Restituisce le metriche di accuratezza di convalida incrociata di una struttura di data mining e tutti i modelli correlati, esclusi i modelli di clustering.  
@@ -72,12 +72,12 @@ SystemGetAccuracyResults(<mining structure>,
   
  Per un elenco completo dei valori possibili, vedere la sezione Osservazioni di questo argomento.  
   
- (Obbligatorio)  
+ (obbligatorio)  
   
  *target attribute*  
  Stringa che contiene il nome di un oggetto stimabile. Un oggetto stimabile può essere una colonna, una colonna della tabella nidificata o una colonna chiave della tabella nidificata di un modello di data mining.  
   
- (Obbligatorio)  
+ (obbligatorio)  
   
  *target state*  
  Stringa che contiene un valore specifico da stimare.  
@@ -88,19 +88,19 @@ SystemGetAccuracyResults(<mining structure>,
   
  Il valore predefinito è **null**.  
   
- (Facoltativo)  
+ (facoltativo).  
   
  *target threshold*  
  Numero compreso tra 0.0 e 1 che specifica la probabilità minima entro cui il valore della stima viene conteggiato come corretto.  
   
  Il valore predefinito è **null**, ovvero tutte le stime vengono conteggiate come corrette.  
   
- (Facoltativo)  
+ (facoltativo).  
   
  *test list*  
  Stringa che specifica le opzioni di testing. Questo parametro è riservato per usi futuri.  
   
- (Facoltativo)  
+ (facoltativo).  
   
 ## <a name="return-type"></a>Tipo restituito  
  Il set di righe restituito contiene punteggi per ogni partizione e aggregazioni per tutti i modelli.  
@@ -116,7 +116,7 @@ SystemGetAccuracyResults(<mining structure>,
 |PartitionCases|Un intero che indica il numero di righe nel set di case, in base il  *\<set di dati >* parametro.|  
 |Test|Tipo di test eseguito.|  
 |Misura|Nome della misura restituita dal test. Le misure per ogni modello dipendono dal tipo di modello e dal tipo del valore stimabile.<br /><br /> Per un elenco delle misure restituite per ogni tipo stimabile, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Per la definizione delle diverse misure, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
-|Valore|Valore per la misura specificata.|  
+|valore|Valore per la misura specificata.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente vengono forniti esempi dei valori che è possibile utilizzare per specificare i dati nella struttura di data mining utilizzata per la convalida incrociata. Se si desidera utilizzare test case per la convalida incrociata, è necessario che la struttura di data mining contenga già un set di dati di testing. Per informazioni sulla definizione di un set di dati di testing quando si crea una struttura di data mining, vedere [Set di dati di training e di testing](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
@@ -151,7 +151,7 @@ CALL SystemGetAccuracyResults (
   
  Risultati dell'esempio:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Misura|Valore|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Misura|valore|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Classificazione|Vero positivo|605|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Classificazione|Falso positivo|177|  

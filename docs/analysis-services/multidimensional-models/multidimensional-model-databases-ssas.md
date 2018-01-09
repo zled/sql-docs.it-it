@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c3e78f2941cd7729576647eb96bf21c717664fcf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 854371e81b8adf0ecf32c2685e64f5d136d00987
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Database modelli multidimensionali (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database è una raccolta di origini dati, viste origine dati, cubi, dimensioni e ruoli. Facoltativamente, in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] possono essere incluse strutture per data mining e assembly personalizzati che consentono di aggiungere funzioni definite dall'utente al database.  
@@ -47,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene utilizzata l'integrazione con software per il controllo del codice sorgente per supportare più sviluppatori che utilizzano contemporaneamente oggetti diversi all'interno di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Uno sviluppatore può inoltre interagire direttamente con un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , anziché tramite un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In questo caso, tuttavia, gli oggetti di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] potrebbero risultare non sincronizzati con il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzato per la distribuzione. Dopo la distribuzione, un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene amministrato mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Mediante [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è inoltre possibile apportare determinate modifiche a un database di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ad esempio a partizioni e ruoli, a causa delle quali gli oggetti di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] potrebbero risultare non sincronizzati con il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzato per la distribuzione.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [Collegamento e scollegamento di database di Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
  [Backup e ripristino di database di Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

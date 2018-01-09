@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ad7e0e0cbb1cf265a9944b81989b59b110602e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47272107eea7905a1e0414f42ff450e7a1ebbdb9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Restituisce le metriche di accuratezza di convalida incrociata di una struttura di data mining e modelli di clustering correlati.  
@@ -75,7 +75,7 @@ SystemGetClusterAccuracyResults(
  *elenco di test*  
  Stringa che specifica le opzioni di testing. Questo parametro è riservato per usi futuri.  
   
- (Facoltativo)  
+ (facoltativo).  
   
 ## <a name="return-type"></a>Tipo restituito  
  Tabella che contiene i punteggi per ogni singola partizione e le aggregazioni per tutti i modelli.  
@@ -91,7 +91,7 @@ SystemGetClusterAccuracyResults(
 |PartitionCases|Valore integer che indica il numero di case sottoposti a test.|  
 |Test|Tipo di test eseguito.|  
 |Misura|Nome della misura restituita dal test. Le misure per ogni modello dipendono dal tipo di modello e dal tipo del valore stimabile.<br /><br /> Per un elenco delle misure restituite per ogni tipo stimabile, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Per la definizione delle diverse misure, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
-|Valore|Punteggio di probabilità che indica la probabilità del case di cluster.|  
+|valore|Punteggio di probabilità che indica la probabilità del case di cluster.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente vengono forniti esempi dei valori che è possibile utilizzare per specificare i dati nella struttura di data mining utilizzata per la convalida incrociata. Se si desidera utilizzare test case per la convalida incrociata, è necessario che la struttura di data mining contenga già un set di dati di testing. Per informazioni sulla definizione di un set di dati di testing quando si crea una struttura di data mining, vedere [Set di dati di training e di testing](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
@@ -121,7 +121,7 @@ CALL SystemGetClusterAccuracyResults (
   
  Risultati dell'esempio:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Misura|Valore|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Misura|valore|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Cluster 1|||0|5545|Clustering|Probabilità del case|0.796514342249313|  
 |Cluster 2|||0|5545|Clustering|Probabilità del case|0.732122471228572|  

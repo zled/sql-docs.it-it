@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ff6e42f9b18df54afc83fe80574d79845cf78e4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 366c0e4f2a3238ac9e2552553f1492b9a41b46e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Creare un progetto di Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile definire un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nel progetto [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tramite l'utilizzo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modello di progetto o l'importazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] guidata Database per leggere il contenuto di un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Se in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non è attualmente caricata alcuna soluzione, creando un nuovo progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene automaticamente creata una nuova soluzione. In caso contrario, il nuovo progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sarà aggiunto alla soluzione esistente. Le procedure consigliate per lo sviluppo di soluzioni prevedono la creazione di progetti separati per tipi diversi di dati dell'applicazione, utilizzando una sola soluzione se i progetti sono correlati. Ad esempio, potrebbe essere disponibile una sola soluzione contenente progetti separati per i pacchetti di Integration Services, i database di Analysis Services e i report di Reporting Services utilizzati dalla stessa applicazione aziendale.  
@@ -71,7 +68,7 @@ ms.lasthandoff: 12/08/2017
   
      Per creare una nuova soluzione, nell'elenco a discesa **Soluzione** selezionare **Crea nuova soluzione**. Per creare una nuova cartella per la nuova soluzione, selezionare **Crea directory per soluzione**. In **Nome soluzione**digitare il nome della nuova soluzione.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 ##  <a name="bkmk_NewUsingWizard"></a> Creare un nuovo progetto utilizzando un database esistente di Analysis Services  
  Usare l'Importazione guidata database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per creare un progetto basato sugli oggetti del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente. In caso di definizione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] basato su un database esistente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , i metadati di tale database verranno aperti in un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Questi oggetti possono essere quindi modificati all'interno del progetto, senza impatto sugli oggetti originali, e successivamente essere distribuiti nello stesso database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , se le proprietà di distribuzione specificano il database, oppure in un nuovo database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creato per test di confronto. Finché le modifiche non vengono distribuite, nessuna ha impatto sul database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente.  
@@ -84,7 +81,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  Nella categoria **Modelli Visual Studio installati** nella finestra di dialogo **Nuovo progetto** selezionare **Importa database di Analysis Services**.  
   
-3.  Immettere le informazioni sulle proprietà per il progetto e la soluzione, inclusi il nome e il percorso dei file. Scegliere **OK**.  
+3.  Immettere le informazioni sulle proprietà per il progetto e la soluzione, inclusi il nome e il percorso dei file. Fare clic su **OK**.  
   
 4.  Nella pagina **Importazione guidata database di Analysis Services** fare clic su **Avanti**.  
   
@@ -122,9 +119,9 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_ProjectFolders"></a> Cartelle del progetto di Analysis Services  
  Un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiene le cartelle seguenti, usate per organizzare gli elementi inclusi nel progetto.  
   
-|Cartella|Descrizione|  
+|Cartella|Description|  
 |------------|-----------------|  
-|Origini dei dati|Contiene le origini dati di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi oggetti vengono creati tramite la Creazione guidata origine dati e modificati in Progettazione origine dati.|  
+|Origini dati|Contiene le origini dati di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi oggetti vengono creati tramite la Creazione guidata origine dati e modificati in Progettazione origine dati.|  
 |Viste origine dati|Contiene le viste origine dati di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi oggetti vengono creati tramite la Creazione guidata vista origine dati e modificati in Progettazione vista origine dati.|  
 |Cubi|Contiene i cubi di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi oggetti vengono creati tramite la Creazione guidata cubo e modificati in Progettazione cubi.|  
 |Dimensioni|Contiene le dimensioni di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi oggetti vengono creati tramite la Creazione guidata dimensione o la Creazione guidata cubo e modificati in Progettazione dimensioni.|  
@@ -141,7 +138,7 @@ ms.lasthandoff: 12/08/2017
   
  La cartella di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può contenere i tipi di file elencati nella tabella seguente.  
   
-|Tipo di file|Descrizione|  
+|Tipo di file|Description|  
 |---------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] File di destinazione del progetto (estensione dwproj)|Contiene i metadati relativi a elementi, configurazioni e riferimenti ad assembly definiti e inclusi nel progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Impostazioni utente del progetto (estensione dwproj.user)|Contiene le informazioni di configurazione del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per un utente specifico.|  
@@ -159,13 +156,13 @@ ms.lasthandoff: 12/08/2017
   
  I modelli di elemento, elencati nella tabella seguente, sono disponibili nella categoria Elementi progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , visualizzata nella finestra di dialogo **Aggiungi nuovo elemento** .  
   
-|Category|Modello di elementi|Descrizione|  
+|Category|Modello di elementi|Description|  
 |--------------|-------------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Elementi del progetto|Cubo|Avvia la Creazione guidata cubo per l'aggiunta di un nuovo cubo al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-||Origine dati|Avvia la Creazione guidata origine dati per l'aggiunta di una nuova origine dati al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Elementi del progetto|Cube|Avvia la Creazione guidata cubo per l'aggiunta di un nuovo cubo al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+||origine dati|Avvia la Creazione guidata origine dati per l'aggiunta di una nuova origine dati al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Vista origine dati|Avvia la Creazione guidata vista origine dati per l'aggiunta di una nuova vista origine dati al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Ruolo del database|Aggiunge un nuovo ruolo di database al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e determina quindi la visualizzazione di Progettazione ruoli per il nuovo ruolo.|  
-||Dimensione|Avvia la Creazione guidata dimensione per l'aggiunta di una nuova dimensione del database al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+||Dimension|Avvia la Creazione guidata dimensione per l'aggiunta di una nuova dimensione del database al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Struttura di data mining|Avvia la Creazione guidata modello di data mining per l'aggiunta di una nuova struttura di data mining e del modello di data mining associato al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Vedere anche  

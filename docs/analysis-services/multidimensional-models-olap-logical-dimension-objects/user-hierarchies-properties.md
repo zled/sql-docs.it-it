@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8193e756aeb2b7e0bc307b9012d522d288ac926e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 156d25ca9a17f2c79de133a32a74c8765b77a77d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-hierarchies---properties"></a>Gerarchie utente - proprietà
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Nella tabella seguente vengono descritte le proprietà di una gerarchia definita dall'utente.  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/08/2017
 |DisplayFolder|Specifica la cartella nella quale la gerarchia viene visualizzata per gli utenti.|  
 |ID|Contiene l'identificatore univoco (ID) della gerarchia.|  
 |MemberNamesUnique|Determina se i nomi dei membri nella gerarchia devono essere univoci. I valori sono True e False. Il valore predefinito è False.|  
-|Nome|Contiene il nome della gerarchia.|  
+|nome|Contiene il nome della gerarchia.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gerarchie definite dall'utente](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   

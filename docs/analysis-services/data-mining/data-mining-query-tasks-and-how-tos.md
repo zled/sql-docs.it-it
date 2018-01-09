@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: mining models [Analysis Services], how-to topics
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f2be13f6662ad2ed4d3cdae60eb1cc7ac458f62a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 599ad86e236619b5bfa3798a94e3cc0044746db3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Attività e procedure relative alle query di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La possibilità di creare query è fondamentale se si utilizzano i modelli di data mining. Questa sezione include collegamenti a esempi relativi alla creazione di query rispetto a un modello di data mining mediante gli strumenti disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni sulle query di data mining o sui diversi tipi di query che è possibile creare, vedere [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md).  
@@ -32,11 +30,11 @@ ms.lasthandoff: 12/08/2017
 ## <a name="creating-queries-with-prediction-query-builder"></a>Creazione di query con il generatore delle query di stima  
  Il generatore delle query di stima è disponibile sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] come strumento grafico per la creazione di query rispetto ai modelli di data mining. Negli argomenti seguenti viene illustrato come selezionare un modello, specificare un'origine dati, personalizzare le stime e salvare l'output.  
   
--   [Creare una query di stima utilizzando Generatore query di stima](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [Creare una query di stima usando Generatore di query di stima](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
 -   [Creare una query singleton in Progettazione modelli di data mining](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)  
   
--   [Creare una query di stima utilizzando Generatore query di stima](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [Creare una query di stima usando Generatore di query di stima](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
 -   [Visualizzare e salvare i risultati di una query di stima](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
  [Creare una query sul contenuto di un modello di data mining](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
  Viene illustrato come creare query che restituiscono informazioni dettagliate archiviate nel modello di data mining utilizzando i set di righe dello schema di data mining.  
   
- [Create a Data Mining Query by Using XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)  
+ [Creare una query di data mining usando XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)  
  Viene illustrato come creare una query sul contenuto del modello di data mining utilizzando i modelli XMLA in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  

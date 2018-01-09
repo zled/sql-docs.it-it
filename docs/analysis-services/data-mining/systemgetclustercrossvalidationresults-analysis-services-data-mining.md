@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54b91c7abf3f9abe366d45d2579818aee1c121a5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fdd5623be105cba70aa9404aba2c4d87cd0574cc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Partizioni struttura di data mining nel numero specificato di sezioni trasversali, esegue il training di un modello per ogni partizione e quindi restituisce la metrica di accuratezza per ogni partizione.  
@@ -102,7 +102,7 @@ SystemGetClusterCrossValidationResults(
 |PartitionSize|Valore integer che indica il numero di case inclusi in ogni partizione.|  
 |Test|Tipo di test eseguito.|  
 |Misura|Nome della misura restituita dal test. Le misure per ogni modello dipendono dal tipo del valore stimabile. Per la definizione delle diverse misure, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Per un elenco delle misure restituite per ogni tipo stimabile, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
-|Valore|Valore della misura di test specificata.|  
+|valore|Valore della misura di test specificata.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Per restituire la metrica di accuratezza per l'intero set di dati, usare [SystemGetClusterAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
@@ -129,7 +129,7 @@ CALL SystemGetClusterCrossValidationResults(
   
  Risultati dell'esempio:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Misura|Valore|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Misura|valore|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Cluster 1|||1|3025|Clustering|Probabilità del case|0.930524511864121|  
 |Cluster 1|||2|3025|Clustering|Probabilità del case|0.919184178430778|  

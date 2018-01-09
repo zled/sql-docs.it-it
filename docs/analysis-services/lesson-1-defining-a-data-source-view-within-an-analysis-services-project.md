@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ae0bf6f8f74711407a33f5b32929bfb62d75423c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d8f91c18a5150bd769c53ac24ad49346a4c6af60
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lezione 1: Definizione di una vista origine dati in un progetto di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Progettazione di un'applicazione di business intelligence in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inizia con la creazione di un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nel progetto [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Nel progetto vengono definiti tutti gli elementi della soluzione, a partire da una vista origine dati.  

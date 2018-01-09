@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d197240962d834b3da6c6e1dbdd1fb224a995192
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Progetti correlati per soluzioni di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il valore minimo richiesto per una soluzione di data mining è il progetto di data mining, che definisce le origini dati, viste origine dati, strutture di data mining e modelli di data mining. Tuttavia, quando i modelli di data mining vengono utilizzati nei processi decisionali quotidiani, è importante che il data mining sia integrato con altre parti di una soluzione analitica predittiva, che può includere i seguenti processi e componenti:  

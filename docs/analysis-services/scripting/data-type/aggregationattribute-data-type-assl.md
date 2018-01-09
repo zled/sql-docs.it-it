@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AggregationAttribute Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a9057511e92856d73525bc8d64684cc3dc119cb6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92fab692a95d928088fbe62a8006db034651ced8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregationattribute-data-type-assl"></a>Tipo di dati AggregationAttribute (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definisce un tipo di dati primitivo che rappresenta l'associazione tra un [aggregazione](../../../analysis-services/scripting/objects/aggregation-element-assl.md) elemento e un attributo.  
@@ -46,16 +44,16 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Caratteristiche tipo di dati  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipi di dati di base|Nessuno|  
-|Tipi di dati derivati|Nessuno|  
+|Tipi di dati di base|None|  
+|Tipi di dati derivati|None|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|Nessuno|  
+|Elementi padre|None|  
 |Elementi figlio|[AttributeID](../../../analysis-services/scripting/properties/attributeid-element-assl.md), [annotazioni](../../../analysis-services/scripting/collections/annotations-element-assl.md)|  
 |Elementi derivati|[Attributo](../../../analysis-services/scripting/objects/attribute-element-assl.md) ([attributi](../../../analysis-services/scripting/collections/attributes-element-assl.md) insieme di [AggregationDimension](../../../analysis-services/scripting/data-type/aggregationdimension-data-type-assl.md))|  
   

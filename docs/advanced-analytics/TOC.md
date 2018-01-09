@@ -108,6 +108,8 @@
 
 ### [Installare nuovi pacchetti R in SQL Server](r/install-additional-r-packages-on-sql-server.md)
 
+### [Installare nuovi pacchetti Python in SQL Server](python/install-additional-python-packages-on-sql-server.md)
+
 ### [Abilitare la gestione pacchetti R per SQL Server R Services](r/r-package-how-to-enable-or-disable.md)
 
 ### [Determinare i pacchetti che vengono installati in SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
@@ -137,7 +139,7 @@
 ### [Usare dati dai cubi OLAP in R](r/using-data-from-olap-cubes-in-r.md)
 ### [Creare una stored procedure con sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-## Prestazioni
+## restazioni
 
 ### [Ottimizzazione delle prestazioni per R - Panoramica](r/sql-server-r-services-performance-tuning.md)
 ### [Ottimizzazione delle prestazioni per R - Configurazione di SQL Server](r/sql-server-configuration-r-services.md)

@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 897e459ef746d90fd8756af0e19c51c076543498
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0a33445fedf93a6dce4f2bf9b4f6a90465b6c60
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Configurare Power Pivot e distribuire soluzioni (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Questo argomento vengono descritte la distribuzione e la configurazione di miglioramenti di livello intermedio per la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] le caratteristiche in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] inclusi [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] raccolta pianificazione aggiornamento dati, Dashboard di gestione e i provider di dati. Eseguire lo strumento di **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013** per eseguire queste operazioni:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_run_configuration_tool"></a> Eseguire la configurazione di Power Pivot per SharePoint 2013  
  **Nota:** tramite l'Installazione guidata di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] vengono installati due strumenti di configurazione diversi per [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Ognuno supporta una versione diversa di SharePoint.  
   
-|Nome|Descrizione|  
+|nome|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Strumento di configurazione|SharePoint 2010 con SharePoint 2010 Service Pack 1 (SP1)|  
@@ -142,7 +142,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  Verificare che l'opzione **Abilita raccolta dati integrità** sia selezionata.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
  Per altre informazioni sulla risoluzione dei problemi relativi all'aggiornamento dei dati, vedere [Troubleshooting Power Pivot Data Refresh (Risoluzione dei problemi di aggiornamento dei dati di Power Pivot)](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04170950534e6cb0020edb371ea265478fe73b97
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 510e6bbbc7155c60241b9aee4ed8b33f130652ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Gestione di errori e avvisi (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gestione degli errori è necessaria quando un XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) o [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) chiamata al metodo non viene eseguito, viene eseguito correttamente, ma genera errori o avvisi, o viene eseguito correttamente ma restituisce risultati che contengono errori.  
@@ -61,9 +59,9 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Tipo|Description|Valore null consentito<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|**ErrorCode**|**UnsignedInt**|Codice restituito che indica l'esito positivo o negativo del metodo. Il valore esadecimale deve essere convertito in un **UnsignedInt** valore.|No|  
+|**ErrorCode**|**UnsignedInt**|Codice restituito che indica l'esito positivo o negativo del metodo. Il valore esadecimale deve essere convertito in un **UnsignedInt** valore.|no|  
 |**WarningCode**|**UnsignedInt**|Codice restituito che indica una condizione di avviso. Il valore esadecimale deve essere convertito in un **UnsignedInt** valore.|Sì|  
-|**Description**|**String**|Testo o descrizione dell'errore o dell'avviso restituiti dal componente che ha generato l'errore.|Sì|  
+|**Descrizione**|**String**|Testo o descrizione dell'errore o dell'avviso restituiti dal componente che ha generato l'errore.|Sì|  
 |**Origine**|**String**|Nome del componente che ha generato l'errore o l'avviso.|Sì|  
 |**HelpFile**|**String**|Percorso o URL del file o dell'argomento della Guida in cui è descritto l'errore o l'avviso.|Sì|  
   

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85a9806ca93e6b6216d8327d785803e1de19abde
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Registrare le operazioni in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un'istanza di Analysis Services registrerà le notifiche di server, errori e avvisi per il file msmdsrv.log: uno per ogni istanza installata. Gli amministratori fanno riferimento a questo log per informazioni sulla routine nonché per eventi straordinari. Nelle versioni recenti la registrazione è stata migliorata per includere altre informazioni. I record di log includono ora informazioni sull'edizione e la versione del prodotto, nonché eventi del processore, della memoria, della connettività e di blocco. È possibile consultare l'elenco completo delle modifiche in [Miglioramenti della registrazione](http://support.microsoft.com/kb/2965035).  
@@ -54,8 +51,8 @@ ms.lasthandoff: 12/08/2017
 |Posizione o nome del file|Tipo|Utilizzo|Attivato per impostazione predefinita|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Log degli errori|Monitoraggio della routine e risoluzione dei problemi di base|Sì|  
-|Tabella OlapQueryLog in un database relazionale|Log di query|Raccolta di input per l'Ottimizzazione guidata basata sulle statistiche di utilizzo|No|  
-|File SQLDmp\<guid >. mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|No|  
+|Tabella OlapQueryLog in un database relazionale|Log di query|Raccolta di input per l'Ottimizzazione guidata basata sulle statistiche di utilizzo|no|  
+|File SQLDmp\<guid >. mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|no|  
   
  Per altre risorse di informazioni non incluse nel presente argomento, è consigliabile consultare il collegamento seguente: [Initial data collection tips from Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Suggerimenti per la raccolta dati iniziale forniti dal supporto tecnico Microsoft).  
   
@@ -161,7 +158,7 @@ ms.lasthandoff: 12/08/2017
   
  L'impostazione di configurazione che verrà modificata con maggiore probabilità è **CreateAndSendCrashReports** , usata per determinare se verrà generato o meno un file di dump di memoria.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |0|Disattiva il file di dump di memoria. Tutte le altre impostazioni nella sezione Eccezioni vengono ignorate.|  
 |1|(Impostazione predefinita) Abilita ma non invia il file di dump di memoria.|  

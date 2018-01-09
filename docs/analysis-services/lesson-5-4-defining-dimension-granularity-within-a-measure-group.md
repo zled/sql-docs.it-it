@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bef441eba4e4aa9353a496282680449bc39fa629
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1cf1f2d08108f5516ad0249d1f8e3c4314b6adf8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lezione 5-4-definizione granularità della dimensione all'interno di un gruppo di misure
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Gli utenti desiderano dati della dimensione dei fatti a vari livelli di granularità o specificità per scopi diversi. È ad esempio possibile registrare per ogni giorno i dati relativi alle vendite per rivenditore o le vendite effettuate tramite Internet, mentre le informazioni sulle quote di vendita esistono solo per il mese o il trimestre. In questi casi è possibile che la dimensione temporale abbia un livello di dettaglio diverso per ognuna di queste diverse tabelle dei fatti. Sebbene sia possibile definire una nuova dimensione del database come dimensione temporale con tale diverso livello di dettaglio, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è disponibile un modo più semplice.  
@@ -145,7 +145,7 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
 9. Verificare che la casella di controllo **Materializza** sia selezionata.  
   
-10. Scegliere **OK**.  
+10. Fare clic su **OK**.  
   
 11. Fare clic sulla cella nel punto di intersezione tra la dimensione **Sales Territory** e il gruppo di misure **Sales Quotas 1** e quindi fare clic sul pulsante Sfoglia (**…**). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
   
@@ -159,7 +159,7 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
 16. Verificare che la casella di controllo **Materializza** sia selezionata.  
   
-17. Scegliere **OK**.  
+17. Fare clic su **OK**.  
   
 18. Eliminare la dimensione **Date** del cubo.  
   
@@ -194,7 +194,7 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
 3.  Nella finestra di dialogo **Crea relazione tra attributi** l'opzione **Attributo di origine** è impostata su **Calendar Quarter**. Impostare **Attributo correlato** su **Fiscal Quarter**.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
     Si noti che verrà visualizzato un messaggio per indicare che la dimensione **Date** contiene una o più relazioni tra attributi ridondanti, le quali potrebbero impedire l'aggregazione dei dati se un attributo non chiave viene usato come attributo di granularità.  
   

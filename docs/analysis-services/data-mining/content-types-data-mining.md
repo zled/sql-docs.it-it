@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,11 +33,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d605692200b4e1c056d90070238dcce442c1e29
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="content-types-data-mining"></a>Tipi di contenuto (Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile definire il sia il tipo di dati fisico per una colonna in una struttura di data mining e un tipo di contenuto logico per la colonna quando viene utilizzata in un modello,  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
  Nell'elenco seguente vengono descritti i tipi di contenuto utilizzati nel data mining e vengono identificati i tipi di dati che supportano ogni tipo di contenuto.  
   
-## <a name="discrete"></a>Discreto  
+## <a name="discrete"></a>Discrete  
  Il tipo di contenuto*Discrete* indica che la colonna contiene un numero finito di valori senza continuità. Ad esempio, una colonna relativa al sesso è una tipica colonna attributo discreta, in quanto i dati rappresentano un numero specifico di categorie.  
   
  I valori di una colonna attributo discreta non possono implicare l'ordinamento, anche se si tratta di valori numerici. Anche se i valori utilizzati per la colonna discreta sono numerici, non è inoltre possibile calcolare valori frazionari. Gli indicativi di località telefonici sono un valido esempio di dati numerici discreti.  

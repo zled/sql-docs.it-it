@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4b806912f80b6e95a455456a992979953113a330
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 595282e28a55171ed5a528d28f37500a21f71c0d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-solutions"></a>Soluzioni di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una soluzione di data mining è un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] soluzione che contiene uno o più progetti di data mining.  
@@ -67,10 +65,10 @@ ms.lasthandoff: 12/08/2017
  [Creare una struttura di data mining relazionale](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
  Creare una struttura di data mining da dati relazionali, file di testo e altre origini che è possibile combinare in una vista origine dati.  
   
- [Create an OLAP Mining Structure](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
+ [Creare una struttura di data mining OLAP](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
  Creare una struttura di data mining basata sui dati di un cubo OLAP. È possibile salvare i modelli creati dai dati OLAP come dimensione di data mining oppure salvare il set di dati e i modelli come nuovo cubo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Progetti di data mining](../../analysis-services/data-mining/data-mining-projects.md)  
   
  [Elaborazione di oggetti di data mining](../../analysis-services/data-mining/processing-data-mining-objects.md)  

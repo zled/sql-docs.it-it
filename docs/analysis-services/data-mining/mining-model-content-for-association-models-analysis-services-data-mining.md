@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0da3079620f64d2c2b1def8225f359b6cb0d4454
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fbe96dfa6e17bda952dc2858c274df6dee231f02
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di associazione (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo argomento descrive contenuto del modello di data mining che è specifico dei modelli che utilizzano il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Microsoft Association Rules. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |ID tipo di nodo|Tipo|  
 |------------------|----------|  
 |1 (Model)|Radice o nodo padre.|  
-|7 (Itemset)|Set di elementi, ovvero raccolta di coppie attributo-valore. Esempi:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> Oppure<br /><br /> `Gender = Male`.|  
+|7 (Itemset)|Set di elementi, ovvero raccolta di coppie attributo-valore. Esempi:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> o Gestione configurazione<br /><br /> `Gender = Male`.|  
 |8 (Rule)|Regola che definisce la modalità di correlazione tra gli elementi.<br /><br /> Esempio:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  

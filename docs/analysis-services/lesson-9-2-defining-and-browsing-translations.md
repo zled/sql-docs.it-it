@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 958927bcd5f55fadfd5753702d7be012da3e882c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f340e182d8867a1560d1bf31945aced7ecfa0f22
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lezione 9-2-definizione ed esplorazione delle traduzioni
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Una traduzione è una rappresentazione dei nomi di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gli oggetti in una lingua specifica. Gli oggetti includono gruppi di misure, misure, dimensioni, attributi, gerarchie, indicatori KPI, azioni e membri calcolati. Le traduzioni offrono supporto server per applicazioni client in grado di supportare più lingue. Con un client di questo tipo, il client passa l'identificatore delle impostazioni locali (LCID) all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la quale utilizza tale LCID per determinare il set di traduzioni da utilizzare per generare metadati per oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se un oggetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non contiene una traduzione per la lingua in questione oppure per un oggetto specificato, per la restituzione dei metadati dell'oggetto al client verrà utilizzata la lingua predefinita. Se ad esempio un utente aziendale in Francia accede a un cubo da una workstation in cui vengono utilizzate le impostazioni locali francesi, le didascalie dei membri e i valori delle proprietà del membro verranno visualizzati in francese, se è disponibile una traduzione in tale lingua. Se tuttavia un utente aziendale in Germania accede allo stesso cubo da una workstation in cui vengono utilizzate le impostazioni locali tedesche, l'utente vedrà le didascalie dei membri e i valori delle proprietà del membro in tedesco. Per altre informazioni, vedere [Traduzioni delle dimensioni](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Traduzioni di cubi](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md), [Supporto delle traduzioni in Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
@@ -47,7 +47,7 @@ Nelle procedure descritte in questo argomento vengono definite traduzioni di met
   
     Viene visualizzata un'altra colonna per la lingua nella quale si definiranno le traduzioni in francese.  
   
-5.  Nella riga relativa all'oggetto **Caption** per la dimensione **Date** digitare **Fecha** nella colonna della traduzione in **Spagnolo (Spagna)** e **Temps** nella colonna della traduzione in **Francese (Francia)** .  
+5.  Nella riga relativa all'oggetto **Caption** per la dimensione **Date** digitare **Fecha** nella colonna della traduzione in **Spagnolo (Spagna)** e **Temps** nella colonna della traduzione in **Francese (Francia)**.  
   
 6.  Nella riga relativa all'oggetto **Caption** per l'attributo **Month Name** , digitare **Mes del Año** nella colonna della traduzione in **Spagnolo (Spagna)** e **Mois d'Année** nella colonna della traduzione in **Francese (Francia)** .  
   
@@ -77,7 +77,7 @@ Nelle procedure descritte in questo argomento vengono definite traduzioni di met
   
 2.  Sulla barra degli strumenti della scheda **Traduzioni** fare clic sul pulsante **Nuova traduzione** .  
   
-    Verrà visualizzato un elenco di lingue nella finestra di dialogo **Seleziona lingua** .  
+    Verrà visualizzato un elenco di lingue nella finestra di dialogo **Seleziona lingua**.  
   
 3.  Selezionare **Spagnolo (Spagna)**e fare clic su **OK**.  
   

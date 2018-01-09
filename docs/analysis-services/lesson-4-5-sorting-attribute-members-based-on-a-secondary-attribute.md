@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7e5210ee745f9ce57c7c621832804d9a90de6b5a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 33d0192fa992a8f9e6ebb8bfeb7e9155e9b2fc32
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lezione 4-5 - ordinamento dei membri dell'attributo in base a un attributo secondario
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nella lezione 3 è stato descritto come ordinare i membri dell'attributo in base al nome o al valore della chiave. È stato inoltre descritto come utilizzare una chiave composta del membro per influire sui membri dell'attributo e sul tipo di ordinamento. Per altre informazioni, vedere [Modifica della dimensione Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Tuttavia, se il nome o la chiave dell'attributo non forniscono il tipo di ordinamento desiderato, è possibile utilizzare un attributo secondario per ottenere i risultati richiesti. Definendo una relazione tra gli attributi, è possibile utilizzare il secondo attributo per ordinare i membri del primo attributo.  

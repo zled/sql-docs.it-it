@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b0d3f7c19e44f271f921a4be15a9072f03c61203
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8bcf00aa80484209477179ef34e4a795000f4cdc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lezione 4-7-che definisce il membro sconosciuto e le proprietà di elaborazione dei valori Null
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Quando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] elabora una dimensione, tutti i valori distinti delle colonne sottostanti le tabelle o viste nella vista origine dati, popola gli attributi nella dimensione. Se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rileva un valore Null durante l'elaborazione, per impostazione predefinita quest'ultimo viene convertito in un valore zero per le colonne di tipo numerico o in una stringa vuota per le colonne di tipo stringa. È possibile modificare le impostazioni predefinite oppure convertire i valori Null nell'eventuale processo di estrazione, trasformazione e caricamento del data warehouse relazionale sottostante. È anche possibile configurare [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modo che converta il valore Null in un valore designato impostando tre proprietà, ovvero **UnknownMember** e **UnknownMemberName** per la dimensione e **NullProcessing** per l'attributo chiave della dimensione.  
@@ -82,7 +82,7 @@ Nelle attività di questo argomento si aggiungeranno gli attributi della categor
   
     La tabella **DimProductCategory (dbo)** viene aggiunta all'elenco **Oggetti inclusi** .  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 5.  Scegliere **Layout automatico** dal menu [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Formato **di**e quindi fare clic su **Diagramma**.  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8dd3250558baf193890bee80ca272de30510dc5b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fe4681b3f4125242e51b41ac594bd556d06f058e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lezione 5-1-definizione di una relazione di riferimento
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Fino a questo punto dell'esercitazione, ogni dimensione del cubo definita è stata basata su una tabella direttamente collegata alla tabella dei fatti per un gruppo di misure tramite una chiave primaria per la relazione di chiave esterna. Nelle attività di questo argomento la dimensione **Geography** verrà collegata alla tabella dei fatti relativa alle vendite dei rivenditori tramite la dimensione **Reseller** , denominata *dimensione di riferimento*. Ciò consente agli utenti di dimensionare le vendite dei rivenditori in base all'area geografica. Per altre informazioni, vedere [Definire una relazione di tipo Riferimento e le relative proprietà](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -105,7 +105,7 @@ Il problema verrà risolto nell'attività successiva, definendo un attributo bas
   
     Si noti che la casella di controllo **Materializza** è selezionata. Si tratta dell'impostazione predefinita per le dimensioni MOLAP. La materializzazione del collegamento dell'attributo della dimensione determina la materializzazione o l'archiviazione del valore del collegamento tra la tabella dei fatti e la dimensione di riferimento per ogni riga nella struttura MOLAP della dimensione durante l'elaborazione. Ciò influisce in modo poco significativo sulle prestazioni di elaborazione e sui requisiti di archiviazione ma determina un miglioramento delle prestazioni di esecuzione delle query.  
   
-8.  Scegliere **OK**.  
+8.  Fare clic su **OK**.  
   
     Si noti che la dimensione **Geography** del cubo è ora collegata al gruppo di misure **Reseller Sales** . L'icona indica che la relazione è una relazione della dimensione di riferimento.  
   

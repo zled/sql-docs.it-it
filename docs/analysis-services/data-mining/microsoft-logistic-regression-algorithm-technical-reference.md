@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41ce8bab5404398328cef0a769c2163805940e44
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fd3dee20e57342542e271cfb3f153b1c35c0764d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Logistic Regression
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Logistic Regression è una variante del [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network, in cui il *HIDDEN_NODE_RATIO* parametro è impostato su 0. Questa impostazione creerà un modello di rete neurale che non contiene un livello nascosto e che pertanto è equivalente alla regressione logistica.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
  Si noti che la curva non si sposta mai su valori maggiori di 1 o minori di 0. È possibile utilizzare la regressione logistica per descrivere le colonne di input significative ai fini della determinazione dello stato della colonna stimabile.  
   
-### <a name="feature-selection"></a>Selezione funzionalità  
+### <a name="feature-selection"></a>Selezione caratteristiche  
  Tutti gli algoritmi di data mining di Analysis Services utilizzano automaticamente la caratteristica di selezione degli attributi per migliorare l'analisi e ridurre il carico di elaborazione. Il metodo utilizzato per la caratteristica di selezione degli attributi in un modello di regressione logistica dipende dal tipo di dati dell'attributo. Poiché è basata sull'algoritmo Microsoft Neural Network, la regressione logistica utilizza un subset dei metodi relativi alla caratteristica di selezione degli attributi che si applicano alle reti neurali. Per altre informazioni, vedere [Selezione delle funzionalità &#40;Data mining&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md).  
   
 ### <a name="scoring-inputs"></a>Valutazione degli input  
@@ -155,7 +153,7 @@ WHERE NODE_TYPE = 23
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression supporta i tipi di contenuto delle colonne di input, i tipi di contenuto delle colonne stimabili e i flag di modellazione specifici elencati nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Colonna|Tipi di contenuto|  
+|colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Continuous, Discrete, Discretized, Key, Table|  
 |Attributo stimabile|Continuous, Discrete, Discretized|  

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d36e47029fb6fac4a7ba0bbfc846d1c7efac8aa9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1715c22cf3976a3ad888081436bb322b38451308
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Configurare proprietà di progetti di Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto viene definito con determinate proprietà predefinite che influiscono sulla compilazione e distribuzione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 |Compila/Rimuovi password|True|Specifica l'eventuale rimozione delle password note dalle stringhe di connessione scritte nella directory di output durante il processo di compilazione. Rimuovendo le password viene incrementato il livello di sicurezza. Se vengono rimosse, le password dovranno essere immesse quando il progetto distribuito viene elaborato per consentire l'accesso di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ai dati di origine.|  
 |Debug/Oggetto di avvio|\<Oggetto attivo >|Determina l'oggetto che viene avviato all'avvio del debug.|  
 |Distribuzione/Modalità di distribuzione|Distribuisci solo modifiche|Per impostazione predefinita, vengono distribuite soltanto le modifiche agli oggetti di progetto (a condizione che non siano state apportate altre modifiche agli oggetti direttamente all'esterno del progetto). È inoltre possibile scegliere di distribuire tutti gli oggetti di progetto durante ogni distribuzione. Per prestazioni ottimali, utilizzare Distribuisci solo modifiche.|  
-|Distribuzione/Opzione di elaborazione|Valore predefinito|Per impostazione predefinita, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina il tipo di elaborazione necessario quando vengono distribuite le modifiche agli oggetti. Ciò garantisce in genere tempi di distribuzione più rapidi. È inoltre possibile, tuttavia, scegliere di eseguire con ogni distribuzione l'elaborazione completa o nessuna elaborazione.|  
+|Distribuzione/Opzione di elaborazione|Default|Per impostazione predefinita, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina il tipo di elaborazione necessario quando vengono distribuite le modifiche agli oggetti. Ciò garantisce in genere tempi di distribuzione più rapidi. È inoltre possibile, tuttavia, scegliere di eseguire con ogni distribuzione l'elaborazione completa o nessuna elaborazione.|  
 |Distribuzione/Distribuzione transazionale|False|Per impostazione predefinita, la distribuzione degli oggetti modificati o di tutti gli oggetti non è transazionale con l'elaborazione degli oggetti distribuiti. La distribuzione può avere esito positivo ed essere persistente anche in caso di esito negativo dell'elaborazione. Questa impostazione predefinita può essere modificata in modo da incorporare la distribuzione e l'elaborazione in una singola transazione.|  
 |Server di distribuzione/destinazione|localhost|Per impostazione predefinita, gli oggetti di database all'interno del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verranno distribuiti nell'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sul computer locale su cui viene usato [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Modificare questa impostazione predefinita per specificare un'istanza denominata sul computer locale o qualsiasi istanza su qualsiasi computer remoto per cui si dispone dell'autorizzazione necessaria per creare oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Distribuzione/Database|\<Nome progetto >|Per impostazione predefinita, il nome del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui verrà creata un'istanza degli oggetti del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durante la distribuzione corrisponde al nome del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al momento della relativa definizione. Modificare questa proprietà per cambiare il nome del database nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificata dalla proprietà Server.|  

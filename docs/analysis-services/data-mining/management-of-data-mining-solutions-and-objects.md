@@ -5,12 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a3f1f0dc49296c7b2b4182de5eb69abbb720f1b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 486ba5cb40f30921374a4f66040f2a080e4a1152
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestione degli oggetti e delle soluzioni di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornisce gli strumenti client che è possibile utilizzare per gestire le strutture di data mining esistenti e i modelli di data mining. In questa sezione vengono descritte le operazioni di gestione che è possibile eseguire utilizzando ciascun ambiente.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
  I collegamenti seguenti consentono di accedere a informazioni sulla possibilità di modificare oggetti di data mining tramite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   [Modificare la vista origine dati utilizzata per una struttura di data mining](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Modificare la vista origine dati usata per una struttura di data mining](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Modificare le proprietà di una struttura di data mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   

@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88e8d798f3e3a37fafab3f06ca6354310508e2b5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-properties"></a>Proprietà dei modelli di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Modelli di data mining sono i seguenti tipi di proprietà:  
@@ -60,11 +58,11 @@ ms.lasthandoff: 12/08/2017
   
 |Proprietà|Description|  
 |--------------|-----------------|  
-|**Description**|Viene descritto lo scopo della colonna di data mining.|  
+|**Descrizione**|Viene descritto lo scopo della colonna di data mining.|  
 |**Nome**|Imposta il nome della colonna del modello di data mining. È possibile digitare un nuovo nome per fornire un alias per la colonna del modello di data mining.|  
 |**ModelingFlags**|Imposta i flag specifici dell'algoritmo per la colonna.|  
 |**SourceColumnID**|Indica il nome della colonna della struttura di data mining su cui si basa la colonna del modello.<br /><br /> Questa proprietà è di sola lettura.|  
-|**Utilizzo**|Imposta la modalità di utilizzo della colonna nel modello di data mining.|  
+|**Usage**|Imposta la modalità di utilizzo della colonna nel modello di data mining.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)   

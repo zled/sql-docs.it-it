@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5aab3f639f0eb38aa10cac50564c1ad18b7f4336
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0ba0ea6e2797d15134dc6bfbf9a595a1ef83c583
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimension-relationships"></a>Relazioni tra dimensioni
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilizzo delle dimensioni definisce le relazioni tra una dimensione del cubo e i gruppi di misure in un cubo. Una dimensione di un cubo è un'istanza di una dimensione del database utilizzata in un cubo specifico. Spesso un cubo contiene dimensioni che non sono correlate direttamente a un gruppo di misure, ma che possono essere correlate indirettamente al gruppo di misure tramite un'altra dimensione o un altro gruppo di misure. Quando si aggiunge un gruppo di misura o dimensione del database a un cubo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenta di determinare l'utilizzo delle dimensioni esaminando le relazioni tra le tabelle delle dimensioni e tabelle dei fatti nella vista origine dati del cubo ed esaminando le relazioni tra attributi nelle dimensioni. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di configurare automaticamente le impostazioni delle dimensioni per le relazioni che è possibile rilevare.  

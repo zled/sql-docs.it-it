@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f836f060a52db56267cd943c1dea018c9b0732a3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-queries"></a>Query di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Query di data mining sono utili per molti scopi. È possibile effettuare le operazioni seguenti:  
@@ -118,8 +116,8 @@ ms.lasthandoff: 12/08/2017
     |-|-|  
     |[Esempi di query sul modello di associazione](../../analysis-services/data-mining/association-model-query-examples.md)|[Algoritmo Microsoft Naive Bayes](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)|  
     |[Esempi di query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)|[Esempi di query sul modello di rete neurale](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
-    |[Esempi di query sul modello di alberi delle decisioni](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|[Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-    |[Esempi di query sul modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+    |[Esempi di query sul modello di alberi delle decisioni](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|[Esempi di query su modelli Sequence Clustering](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
+    |[Esempi di query sul modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[Esempi di query sui modelli Time Series](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
     |[Esempi di query sul modello di regressione logistica](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)||  
   
      È anche possibile chiamare le funzioni VBA o creare delle proprie funzioni. Per altre informazioni, vedere [Funzioni &#40;DMX&#41;](../../dmx/functions-dmx.md).  
@@ -147,7 +145,7 @@ ms.lasthandoff: 12/08/2017
   
  Per altre informazioni sui contesti di protezione richiesti per eseguire query di data mining, vedere [Panoramica della sicurezza &#40;data mining&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  Negli argomenti di questa sezione viene presentato dettagliatamente ogni tipo di query di data mining e vengono forniti collegamenti a esempi dettagliati di creazione di query sui modelli di data mining.  
   
  [Query di stima &#40;Data Mining&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
@@ -160,7 +158,7 @@ ms.lasthandoff: 12/08/2017
   
  [Data Mining Query Tools](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  Utilizzare questi collegamenti per informazioni sulla creazione e sull'utilizzo di query di data mining.  
   
 |Attività|Collegamenti|  

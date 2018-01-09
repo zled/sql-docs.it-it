@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dc6dcc6e4383e22a3b1695cc03cd40bd6acf8fb2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a8a4319e77588c13a06a6c648bcfafa11fb7c92b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Architettura fisica (Analysis Services – Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizza i componenti server e client per fornire funzionalità di data mining per applicazioni di business intelligence:  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
  ![Diagramma dell'architettura di sistema di Analysis Services](../../analysis-services/data-mining/media/analysisservicessystemarchitecture.gif "diagramma dell'architettura di sistema di Analysis Services")  
   
-## <a name="server-configuration"></a>Configurazione del server  
+## <a name="server-configuration"></a>Configurazione server  
  Un'istanza del server è in grado di supportare più database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ognuno con la propria istanza del servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che risponde alle richieste client ed elabora oggetti.  
   
  È necessario installare istanze separate se si desidera utilizzare sia modelli tabulari sia modelli di data mining e/o multidimensionali. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta l'installazione side-by-side di istanze in esecuzione in modalità tabulare, che usa il motore di analisi in memoria xVelocity (VertiPaq), e istanze in esecuzione in una delle configurazioni OLAP, MOLAP o ROLAP convenzionali. Per altre informazioni, vedere [Determinare la modalità server di un'istanza di Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  

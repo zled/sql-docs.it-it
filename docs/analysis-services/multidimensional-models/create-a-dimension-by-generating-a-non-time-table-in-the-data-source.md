@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c2a32026cfa52b21ed994d8b218d5b80f5b0c03f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dda2fe632e3a4cae0f36d766d4778f5ff910d649
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Creare una dimensione generando una tabella non temporale nell'origine dati
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile utilizzare la creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione senza utilizzare un'origine dati esistente. A questo scopo, selezionare l'opzione **Genera una tabella diversa dalla tabella dei tempi nell'origine dati** della pagina **Seleziona metodo di creazione** della procedura guidata. Per creare una nuova tabella della dimensione nell'origine dati sottostanti è necessario disporre delle autorizzazioni per creare oggetti nell'origine dati sottostanti. In caso di definizione di una dimensione senza una vista origine dati predefinita, è possibile sia definire la dimensione da zero sia definirla in base a un modello di dimensione.  
@@ -40,7 +37,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Customer  
   
--   Data  
+-   date  
   
 -   Department  
   
@@ -98,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
  Selezionando la casella di controllo **Dimensione modificabile** , la Creazione guidata dimensione definisce gli attributi indicati nella seguente tabella:  
   
-|Attribute|Tipo|  
+|attribute|Tipo|  
 |---------------|----------|  
 |ID originale dimensione a modifica lenta|SCDOriginalID|  
 |Data fine dimensione a modifica lenta|SCDEndDate|  

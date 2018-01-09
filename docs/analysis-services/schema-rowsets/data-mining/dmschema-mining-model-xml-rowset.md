@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_MODEL_XML
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad9e631d4f434fbab098fe1d93df86c009104f38
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b27cfca519f1a5afce1a58bf89a6434f6f85bd34
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodelxml-rowset"></a>Set di righe DMSCHEMA_MINING_MODEL_XML
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce la struttura XML del modello di data mining. Il formato della stringa XML segue lo standard PMML 2.1 (Predictive Model Markup Language).  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DMSCHEMA_MINING_MODEL_XML** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
+|Nome colonna|Indicatore del tipo|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**MODEL_CATALOG**|**DBTYPE_WSTR**||Nome del catalogo. Popolato con il nome del database di cui il modello è membro.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**||Nome dello schema non qualificato. Questa colonna non è supportata da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; contiene sempre **NULL**.|  
@@ -53,10 +51,10 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_W**STR|Facoltativa.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MODEL_TYPE**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MODEL_CATALOG**|**DBTYPE_W**STR|Facoltativo.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MODEL_TYPE**|**DBTYPE_WSTR**|Facoltativo.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe dello schema di data mining](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

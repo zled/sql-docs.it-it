@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: df35d056c69bc1acd7322965afaebcf359c9cba6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2d5895160b92eded9dd50cf55cdaedc022183e0b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>Lezione 7: Creare indicatori di prestazioni chiave
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ In questa lezione verranno creati indicatori di prestazioni chiave (KPI). Gli in
   
 Tempo stimato per il completamento della lezione: **15 minuti**  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 6: creare misure](../analysis-services/lesson-6-create-measures.md).   
   
 ## <a name="create-key-performance-indicators"></a>Creare indicatori di prestazioni chiave  
@@ -85,7 +85,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 6.  In **Seleziona stile icona**selezionare un tipo di icona a rombo (rosso), triangolo (giallo) o cerchio (verde), quindi fare clic su **OK**.  
   
-## <a name="whats-next"></a>Operazioni successive
+## <a name="whats-next"></a>Quali sono le operazioni successive?
 Passare alla lezione successiva: [lezione 8: creare prospettive](../analysis-services/lesson-8-create-perspectives.md).
   
   

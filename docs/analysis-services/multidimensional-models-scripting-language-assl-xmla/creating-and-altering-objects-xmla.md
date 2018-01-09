@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 06d6b8e0460ffa303c6e365820c61f9d200dcc95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6906c6dbab99923983cbfa4e75c35c6f3c0f5073
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Creazione e modifica di oggetti (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gli oggetti principali possono essere in modo indipendente creati, modificati ed eliminati. Di seguito vengono elencati gli oggetti principali:  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Partizioni  
   
--   Prospettive  
+-   prospettive  
   
 -   Modelli di data mining  
   
@@ -106,7 +104,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="description"></a>Description  
  L'esempio seguente crea un'origine dati relazionale che fa riferimento il [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -131,7 +129,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="description"></a>Description  
  Nell'esempio seguente viene modificata l'origine dati relazionale creata nell'esempio precedente per impostare il timeout per la query per l'origine dati su 30 secondi.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 <Alter ObjectExpansion="ObjectProperties" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

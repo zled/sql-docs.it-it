@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7155763db87be5c44ae9e5718d3d72939380038b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a01f7dc9f661ffde071b54a4c738557c4f2c8dad
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Backup, ripristino e sincronizzazione di database (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In XML for Analysis, sono disponibili tre comandi che il backup, ripristinano e sincronizzare i database:  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
  Il valore di **sicurezza** proprietà è limitata a una delle stringhe elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Include nel file di backup le definizioni di sicurezza, ma ne esclude le informazioni sull'appartenenza.|  
 |*CopyAll*|Include nel file di backup le definizioni di sicurezza e le informazioni sull'appartenenza.|  
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/08/2017
   
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Include nel database le definizioni di sicurezza, ma ne esclude le informazioni sull'appartenenza.|  
 |*CopyAll*|Include nel database le definizioni di sicurezza e le informazioni sull'appartenenza.|  
@@ -136,7 +134,7 @@ ms.lasthandoff: 12/08/2017
   
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Include nel database di destinazione le definizioni di sicurezza, ma ne esclude le informazioni sull'appartenenza.|  
 |*CopyAll*|Include nel database di destinazione le definizioni di sicurezza e le informazioni sull'appartenenza.|  
@@ -152,7 +150,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="synchronizing-rolap-objects"></a>Sincronizzazione di oggetti ROLAP  
  Il **Sincronizza** comando non è possibile sincronizzare aggregazioni o dati per gli oggetti che utilizzano l'archiviazione ROLAP poiché tali informazioni vengono archiviate nelle tabelle in un'origine dati relazionale sottostante. È possibile tuttavia sincronizzare i metadati per gli oggetti ROLAP. Per sincronizzare i metadati, il **Sincronizza** comando ricrea la struttura della tabella in un'origine dati relazionale.  
   
- È possibile utilizzare il **percorso** elemento in un comando di sincronizzazione per sincronizzare oggetti ROLAP. Per ogni **percorso** elemento utilizzato per rilocare un'origine dati, il **DataSourceType** proprietà deve essere impostata in modo esplicito su *locale*. . Inoltre necessario impostare il **ConnectionString** proprietà del **percorso** elemento alla stringa di connessione della nuova posizione. Durante la sincronizzazione, il **Sincronizza** comando sostituirà la stringa di connessione per l'origine dati identificata dal **DataSourceID** proprietà del **percorso** elemento con il valore della **ConnectionString** proprietà del **percorso** elemento.  
+ È possibile utilizzare il **percorso** elemento in un comando di sincronizzazione per sincronizzare oggetti ROLAP. Per ogni **percorso** elemento utilizzato per rilocare un'origine dati, il **DataSourceType** proprietà deve essere impostata in modo esplicito su *locale*. , Inoltre necessario impostare il **ConnectionString** proprietà del **percorso** elemento alla stringa di connessione della nuova posizione. Durante la sincronizzazione, il **Sincronizza** comando sostituirà la stringa di connessione per l'origine dati identificata dal **DataSourceID** proprietà del **percorso** elemento con il valore della **ConnectionString** proprietà del **percorso** elemento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento backup &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   

@@ -5,13 +5,10 @@ ms.date: 06/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e6b67ada589c925b8737ed13ba6c07f93a75f12c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0b69db6baee27296bf9544801b627c884d68795b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>Funzionalità di Analysis Services supportate dalle edizioni di SQL Server 2016
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
@@ -33,7 +30,7 @@ In questo argomento fornisce i dettagli delle funzionalità supportate dalle div
 
 ## <a name="analysis-services-servers"></a>Analysis Services (server)
   
-|Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Sviluppatore|  
+|Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Database condivisi scalabili|Sì||||||Sì|  
 |Backup/ripristino e collegamento/scollegamento di database|Sì|Sì|||||Sì|  
@@ -43,11 +40,11 @@ In questo argomento fornisce i dettagli delle funzionalità supportate dalle div
   
 ## <a name="tabular-models"></a>Modelli tabulari 
   
-|Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Sviluppatore|  
+|Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Gerarchie|Sì|Sì|||||Sì|  
 |KPI|Sì|Sì|||||Sì|  
-|Prospettive|Sì||||||Sì|  
+|prospettive|Sì||||||Sì|  
 |Traduzioni|Sì|Sì|||||Sì|  
 |Calcoli DAX, query DAX, query MDX|Sì|Sì|||||Sì|  
 |Sicurezza a livello di riga|Sì|Sì|||||Sì|  
@@ -57,12 +54,12 @@ In questo argomento fornisce i dettagli delle funzionalità supportate dalle div
 
 ## <a name="multidimensional-models"></a>Modelli multidimensionali 
   
-|Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Sviluppatore|  
+|Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Misure semiadditive|Sì|No <sup>1</sup>|||||Sì|  
 |Gerarchie|Sì|Sì|||||Sì|  
 |KPI|Sì|Sì|||||Sì|  
-|Prospettive|Sì||||||Sì|  
+|prospettive|Sì||||||Sì|  
 |Azioni|Sì|Sì|||||Sì|  
 |Funzionalità di Business Intelligence per la contabilità|Sì|Sì|||||Sì|  
 |Business Intelligence per gerarchie temporali|Sì|Sì|||||Sì|  
@@ -93,9 +90,9 @@ In questo argomento fornisce i dettagli delle funzionalità supportate dalle div
  <sup>1</sup> La misura semiadattiva LastChild è supportata nell'edizione Standard, mentre altre misure semiadattive come None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren e ByAccount non lo sono. Le misure additive, ad esempio Sum, Count, Min, Max e quelle non additive (DistinctCount) sono supportate in tutte le edizioni.  
   <sup>2</sup> standard edition supporta il collegamento di misure e dimensioni all'interno del database stesso, ma non da altri database o istanze.
   
-## <a name="power-pivot-for-sharepoint"></a>Power Pivot per SharePoint  
+## <a name="power-pivot-for-sharepoint"></a>PowerPivot per SharePoint  
   
-|Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Sviluppatore|  
+|Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Integrazione di farm SharePoint basata sull'architettura di servizi condivisi|Sì||||||Sì|  
 |Report sull'utilizzo|Sì||||||Sì|  
@@ -106,7 +103,7 @@ In questo argomento fornisce i dettagli delle funzionalità supportate dalle div
   
 ## <a name="data-mining"></a>Data Mining  
   
-|Nome funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Sviluppatore|  
+|Nome funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Algoritmi standard|Sì|Sì|||||Sì|  
 |Strumenti di data mining (procedure guidate, editor, generatori di query)|Sì|Sì|||||Sì|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c6d92c514cb38f1277efeedaa4172968f8e150ec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c1504d26e2c7cbdbdacf943e17d7514ba20b786
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Lezione 1-2-definizione di un'origine dati
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dopo aver creato un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto, in genere iniziare a usare il progetto definendo una o più origini dati che verrà utilizzato il progetto. Quando si definisce un'origine dei dati si specificano le informazioni sulla stringa di connessione che verrà utilizzata per connettersi all'origine dei dati. Per altre informazioni, vedere [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
@@ -49,7 +49,7 @@ Nell'attività seguente il database di esempio AdventureWorksDWSQLServer2012 ver
   
 7.  Fare clic su **Test connessione** per testare la connessione al database.  
   
-8.  Fare clic su **OK**e quindi su **Avanti**.  
+8.  Fare clic su **OK** e quindi su **Avanti**.  
   
 9. Nella pagina **Impostazioni di rappresentazione** della procedura guidata si definiscono le credenziali di sicurezza per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] necessarie per connettersi all'origine dati. La rappresentazione influisce sull'account di Windows utilizzato per connettersi all'origine dati quando è selezionata l'autenticazione di Windows. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non supporta la rappresentazione per l'elaborazione di oggetti OLAP. Selezionare **Usa account del servizio**e quindi fare clic su **Avanti**.  
   

@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,13 +30,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dc7c43077650ddee110eb48ad455e7cb1ab5ce8e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8af39f31c569beb4df25d8da1dd933c902d3b4f6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Algoritmo Microsoft Neural Network
+# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Microsoft Neural Network è un'implementazione dell'architettura di rete neurale comune e flessibile per machine learning.  Il funzionamento dell'algoritmo si basa sulla verifica di ogni possibile stato dell'attributo di input rispetto a ogni possibile stato dell'attributo di stima e sul calcolo delle probabilità per ogni combinazione in base ai dati di training. Queste probabilità possono quindi essere usate a scopo di classificazione o regressione o per stimare un risultato, sulla base di alcuni attributi di input. Una rete neurale può essere usata anche per l'analisi di associazione.  
   
  Quando si crea un modello di data mining con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, è possibile includere più output e l'algoritmo creerà più reti. Il numero di reti incluse in un singolo modello di data mining dipende dal numero di stati (o valori di attributi) contenuti nelle colonne di input, nonché dal numero di colonne stimabili usate dal modello e dal numero di stati in tale colonne.  

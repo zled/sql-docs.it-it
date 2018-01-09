@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fbe2029742ba4df3c390820effa565055159f7dd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="modeling-flags-data-mining"></a>Flag di modellazione (data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile utilizzare flag di modellazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per fornire a un algoritmo di data mining informazioni aggiuntive sui dati che sono definiti in una tabella del case. L'algoritmo può utilizzare tali informazioni per compilare un modello di data mining più accurato.  
@@ -107,13 +105,13 @@ WHERE MODEL_NAME = '<model name>'
   
  È possibile utilizzare il parametro FORCED_REGRESSOR per garantire che l'algoritmo utilizzi un determinato regressore. Questo parametro può essere utilizzato con l'algoritmo Decision Trees e con l'algoritmo Linear Regression.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  Utilizzare i collegamenti seguenti per ulteriori informazioni sull'utilizzo dei flag di modellazione.  
   
 |Attività|Argomento|  
 |----------|-----------|  
 |Modificare i flag di modellazione tramite Progettazione modelli di data mining|[Visualizzare o modificare flag di modellazione &#40;Data mining&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|Specificare un hint all'algoritmo per segnalare i probabili regressori|[Specificare una colonna da utilizzare come regressore in un modello](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Specificare un hint all'algoritmo per segnalare i probabili regressori|[Specificare una colonna da usare come regressore in un modello](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |Vedere i flag di modellazione supportati da algoritmi specifici nella sezione Flag di modellazione dell'argomento di riferimento per ogni algoritmo|[Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |Vengono fornite ulteriori informazioni sulle colonne della struttura di data mining e sulle proprietà che è possibile impostare su di esse|[Colonne della struttura di data mining](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |Vengono fornite ulteriori informazioni sulle colonne del modello di data mining e sui flag di modellazione che è possibile applicare a livello del modello|[Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)|  

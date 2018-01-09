@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c88d724873a7e2a7e811a4a28c9b76b5c9b12ccd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3aaee6261a0209a2c6504c7b0809e2dc57c079d7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>Query MDX e assi di sezionamento - specificare il contenuto di un asse di sezionamento
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'asse di sezionamento Filtra i dati restituiti dall'istruzione SELECT MDX (Multidimensional Expressions), limitare i dati restituiti in modo che verranno restituiti solo i dati che si intersecano con i membri specificati. Può essere considerato un asse aggiuntivo invisibile in una query. L'asse di sezionamento è definito nella clausola WHERE dell'istruzione SELECT in MDX.  
