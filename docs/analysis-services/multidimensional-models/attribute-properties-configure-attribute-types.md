@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3a7d8d9405d27956eecef276ef9a5b80b1806667
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>Attributo di proprietà: configurare i tipi di attributo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], tipi di attributo consentono di classificare un attributo in termini di funzionalità di business. Sono disponibili numerosi tipi di attributi, la maggior parte dei quali viene utilizzata dalle applicazioni client per visualizzare o supportare un attributo. Alcuni tipi di attributi, tuttavia, hanno un significato specifico in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Alcuni tipi identificano ad esempio attributi che rappresentano periodi di tempo in calendari diversi per le dimensioni temporali.  
@@ -151,11 +148,11 @@ ms.lasthandoff: 12/08/2017
 |**RelationToParent**|Rappresenta una relazione con un elemento padre.|  
 |**Representative**|Rappresenta un rappresentante.|  
 |**Scenario**|Rappresenta uno scenario.|  
-|**Sequenza**|Rappresenta un attributo di sequenza.|  
+|**Sequence**|Rappresenta un attributo di sequenza.|  
 |**ShortCaption**|Rappresenta una didascalia breve.|  
 |**StateOrProvince**|Rappresenta uno stato o una provincia.|  
 |**Utilità**|Rappresenta un'utilità.|  
-|**Version**|Rappresenta una versione.|  
+|**Versione**|Rappresenta una versione.|  
 |**WebHtml**|Rappresenta contenuto HTML.|  
 |**WebMailAlias**|Rappresenta un alias di posta elettronica.|  
 |**WebUrl**|Rappresenta un indirizzo URL.|  

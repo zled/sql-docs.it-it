@@ -1,34 +1,39 @@
 ---
 title: Abilitare o disabilitare la gestione dei pacchetti R per SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 10/05/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e384893-04da-43f9-b100-bfe99888f085
 caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 59ab247ebdb53dbd530b3becf6e90ef45bc3a503
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 3c3dab54416d680e0d021a2edf9fbe33d5a0d81f
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-or-disable-r-package-management-for-sql-server"></a>Abilitare o disabilitare la gestione dei pacchetti R per SQL Server
 
-In questo articolo viene descritto il processo di abilitazione o disabilitazione la nuova funzionalità di gestione di pacchetto in SQL Server 2017. Questa funzionalità consente all'amministratore di database controllare l'installazione del pacchetto nell'istanza. La funzionalità si basa su nuovi ruoli del database per concedere agli utenti la possibilità di installare i pacchetti R che necessarie o condividere i pacchetti con altri utenti.
+Questo articolo descrive una nuova funzionalità di gestione pacchetti di SQL Server 2017, progettato per consentire all'amministratore di database controllare l'installazione del pacchetto nell'istanza utilizzando T-SQL anziché di R.
 
-Per impostazione predefinita, la funzionalità di gestione di pacchetto esterno per SQL Server è disabilitata, anche se le funzionalità di machine learning sono state installate.
+N seguito che frature di gestione il pacchetto è abilitato, è possibile utilizzare i comandi di R per installare i pacchetti in un frm database un client remoto.
 
-Per [abilitare](#bkmk_enable) questa funzionalità è un processo in due passaggi e richiede alcuni argomenti della Guida da un amministratore del database:
+> [!NOTE]
+> Per impostazione predefinita, la funzionalità di gestione di pacchetto esterno per SQL Server è disabilitata, anche se le funzionalità di machine learning sono state installate. 
+
+## <a name="enable-package-management"></a>Abilitare la gestione dei pacchetti
+
+Per [abilitare](#bkmk_enable) questa funzionalità è un processo in due fasi, che richiede un amministratore del database:
 
 1.  Abilitare la gestione dei pacchetti nell'istanza di SQL Server (una volta per ogni istanza di SQL Server)
 
@@ -42,27 +47,29 @@ Per [disabilitare](#bkmk_disable) la funzionalità di gestione di pacchetti, inv
 
 ## <a name="bkmk_enable"></a>Abilitare la gestione dei pacchetti
 
-Per abilitare o disabilitare la gestione dei pacchetti, è necessario l'utilità della riga di comando **RegisterRExt.exe**, inclusa la **RevoScaleR** pacchetto.
+Per abilitare o disabilitare la gestione dei pacchetti, utilizzare l'utilità della riga di comando **RegisterRExt.exe**, inclusa la **RevoScaleR** pacchetto.
 
 1. Aprire un prompt dei comandi con privilegi elevati e passare alla cartella contenente l'utilità, RegisterRExt.exe. Il percorso predefinito è `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
-2. Eseguire il comando seguente, specificare gli argomenti appropriato per l'ambiente:
+2. Eseguire il comando seguente, che fornisce gli argomenti appropriati per l'ambiente:
 
     `RegisterRExt.exe /installpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
     Questo comando crea gli oggetti a livello di istanza nel computer SQL Server che sono necessari per la gestione dei pacchetti. Il riavvio anche la finestra di avvio per l'istanza.
 
-    Se non si specifica un'istanza, viene utilizzata l'istanza predefinita.
+    Se non si specifica un'istanza, viene utilizzata l'istanza predefinita. Se non si specifica un utente, viene utilizzato il contesto di sicurezza corrente. Ad esempio, il comando seguente consente di gestione dei pacchetti nell'istanza nel percorso di RegisterRExt.exe, utilizzando le credenziali dell'utente che ha aperto il prompt dei comandi:
 
-    Se non si specifica un utente, viene utilizzato il contesto di sicurezza corrente.
+    `REgisterRExt.exe /installpkgmgmt`
 
-2.  Per aggiungere Gestione dei pacchetti a livello di database, eseguire il comando seguente da un prompt dei comandi con privilegi elevati:
+2.  Per aggiungere Gestione dei pacchetti a un database specifico, eseguire il comando seguente da un prompt dei comandi con privilegi elevati:
 
     `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
    
     Questo comando crea alcuni elementi del database, inclusi i seguenti ruoli del database che vengono utilizzati per controllare le autorizzazioni utente: `rpkgs-users`, `rpkgs-private`, e `rpkgs-shared`.
 
-    Se non si specifica un utente, viene utilizzato il contesto di sicurezza corrente.
+    Ad esempio, il comando seguente consente di gestione dei pacchetti nel database nell'istanza in cui viene eseguito RegisterRExt. Se non si specifica un utente, viene utilizzato il contesto di sicurezza corrente. 
+
+    `RegisterRExt.exe /installpkgmgmt /database:TestDB`
 
 3. Ripetere il comando per ogni database in cui installare i pacchetti.
 
@@ -83,21 +90,23 @@ Per abilitare o disabilitare la gestione dei pacchetti, è necessario l'utilità
         ON o.schema_id = s.schema_id;
     ```
 
-4.  Dopo aver abilitata la funzionalità, è possibile usare qualsiasi utente che disponga delle autorizzazioni appropriate di [creare libreria esterna](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) istruzione T-SQL per aggiungere i pacchetti. Per un esempio del funzionamento, vedere [installare pacchetti aggiuntivi su SQL Server](install-additional-r-packages-on-sql-server.md).
+4.  Dopo aver abilitata la funzionalità, è possibile connettersi al server e installare o sincronizzare i pacchetti in modalità remota, utilizzando i comandi di R. Per un esempio del funzionamento, vedere [installare pacchetti aggiuntivi su SQL Server](install-additional-r-packages-on-sql-server.md).
 
 ## <a name="bkmk_disable"></a>Disabilitare la gestione dei pacchetti
 
-1.  Da un prompt dei comandi con privilegi elevati, eseguire il comando seguente per disabilitare la gestione dei pacchetti a livello di database:
+1.  Da un prompt dei comandi con privilegi elevati, eseguire di nuovo l'utilità RegisterRExt e disabilitare la gestione dei pacchetti a livello di database:
 
     `RegisterRExt.exe /uninstallpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
 
-    Eseguire questo comando una volta per ogni database in cui è stato utilizzato Gestione dei pacchetti. Questo comando rimuoverà gli oggetti di database correlati a gestione dei pacchetti dal database specificato. Verranno rimossi anche tutti i pacchetti che sono stati installati dal percorso di sistema del file protetto nel computer SQL Server.
+    Questo comando rimuove gli oggetti di database correlati a gestione dei pacchetti dal database specificato. Inoltre, rimuove tutti i pacchetti che sono stati installati dal percorso di sistema del file protetto nel computer SQL Server.
 
-2.  (Facoltativo) Dopo che tutti i database sono stati cancellati dei pacchetti utilizzando il passaggio precedente, eseguire il comando seguente da un prompt dei comandi con privilegi elevati:
+2. Eseguire questo comando una volta per ogni database in cui è stato utilizzato Gestione dei pacchetti. 
+
+3.  (Facoltativo) Dopo che tutti i database sono stati cancellati dei pacchetti utilizzando il passaggio precedente, eseguire il comando seguente da un prompt dei comandi con privilegi elevati:
 
     `RegisterRExt.exe /uninstallpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    Questo comando rimuove la funzionalità di gestione del pacchetto dall'istanza.
+    Questo comando rimuove la funzionalità di gestione del pacchetto dall'istanza. Potrebbe essere necessario riavviare manualmente il servizio Launchpad ancora una volta per visualizzare le modifiche.
 
 ## <a name="see-also"></a>Vedere anche
 

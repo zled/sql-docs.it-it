@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DimensionPermissions Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 067ee1bf3c853c6136e3cfac4e9cdd82d036e99b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d4621358267f2741b87b739e671a0f00874d3862
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensionpermissions-element-assl"></a>Elemento DimensionPermissions (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene la raccolta di autorizzazioni applicabili a un [dimensione](../../../analysis-services/scripting/objects/dimension-element-assl.md) elemento o un [CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md) elemento.  
@@ -51,10 +49,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |Elementi padre|[CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md), [dimensione](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
 |Elementi figlio|[DimensionPermission](../../../analysis-services/scripting/objects/dimensionpermission-element-assl.md)|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per **CubePermission** elementi, **DimensionPermission** le autorizzazioni specificate in l'override di elementi nella raccolta di **DimensionPermissions** insieme di ogni dimensione in modo esplicito a cui fa riferimento. Se una dimensione non viene fatto riferimento in questa raccolta, il **CubePermission** elemento eredita le autorizzazioni specificate nel **DimensionPermissions** raccolta della dimensione.  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.DimensionPermissionCollection>.  

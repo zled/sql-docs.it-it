@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 685e5d9b0586d0c97fa686507bc1934f8fb31c1e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Distribuire soluzioni PowerPivot in SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilizzare le istruzioni seguenti per distribuire manualmente due pacchetti della soluzione che aggiungono [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] funzionalità in un ambiente SharePoint Server 2010. La distribuzione delle soluzioni è un passaggio obbligatorio per la configurazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint in un server SharePoint 2010. Per visualizzare l'elenco completo di procedure necessarie, vedere [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
@@ -112,7 +112,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 4.  In **Destinazione distribuzione**selezionare l'applicazione Web di SharePoint per cui si desidera aggiungere supporto alle funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 6.  Ripetere l'operazione per le altre applicazioni Web SharePoint che supporteranno l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   

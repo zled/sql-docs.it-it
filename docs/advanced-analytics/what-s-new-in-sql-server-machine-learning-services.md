@@ -1,26 +1,26 @@
 ---
 title: "Novità &#39; s novità di servizi di Machine Learning | Documenti Microsoft"
-ms.date: 11/16/2017
+ms.date: 01/08/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
 caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Novità di servizi di Machine Learning in SQL Server
 
@@ -34,9 +34,11 @@ Rilevare l'annuncio più recente qui! [Python in SQL Server 2017: avanzato nel d
 
 Machine Learning Server in SQL Server offre il supporto completo per la compilazione e distribuzione di soluzioni di machine learning in R o Python. Di seguito vengono evidenziate di questa versione:
 
-### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>Novità nell'aggiornamento cumulativo 1 per SQL Server 2017
+### <a name="whats-new-in-cumulative-update-3-for-sql-server-2017"></a>Novità nell'aggiornamento cumulativo 3 per SQL Server 2017
 
-È ora possibile aggiornare i componenti di Python e R in Machine Learning Server 9.2.1.24. Questa versione offre numerosi miglioramenti a **revoscalepy** e **RevoScaleR**, inclusi i miglioramenti delle prestazioni.
+Questa versione include aggiornamenti ai componenti di Python e R. 
+
++ Aggiunta del supporto per la serializzazione di modello Python in revoscalepy, utilizzando la funzione rx_serialize_model
 
 ### <a name="in-database-python-integration"></a>Integrazione di Python nel database
 

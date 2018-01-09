@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,11 +19,11 @@ helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8cc0e51a83b4c024a25caf2fe6501438a3ef8a18
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5f2ed3582341ff2824943a432e5877602b0b9ee7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predict-transact-sql"></a>STIMA (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Il `MODEL` parametro viene utilizzato per specificare il modello utilizzato per 
 
 L'oggetto modello può essere creato utilizzando R, Python o un altro strumento.
 
-**dati**
+**data**
 
 Il parametro di dati viene utilizzato per specificare i dati utilizzati per l'assegnazione dei punteggi o la stima. Dati vengono specificati sotto forma di un'origine della tabella nella query. Origine di tabella può essere una tabella, alias di tabella, alias CTE, vista o funzione con valori di tabella.
 
@@ -101,7 +101,7 @@ Non è necessario che sia installato R, Python o un altro computer, l'apprendime
 
 Il modello in uso deve essere stato creato con uno degli algoritmi supportati dal pacchetto RevoScaleR. Per un elenco di modelli attualmente supportati, vedere [punteggi in tempo reale](../../advanced-analytics/real-time-scoring.md).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 
 Non sono necessarie per autorizzazioni `PREDICT`; tuttavia, è necessario che l'utente `EXECUTE` dell'autorizzazione per il database e dell'autorizzazione per eseguire una query tutti i dati che viene utilizzati come input. L'utente deve essere in grado di leggere il modello da una tabella, anche se il modello è stato archiviato in una tabella.
 

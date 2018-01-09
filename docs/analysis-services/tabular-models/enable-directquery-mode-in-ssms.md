@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fbce2dcf30bcdeded89ab0d8ea558d18585fe6a4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2779e5f09f447e0499e2eeb87ec89ba698cc8628
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Abilitare la modalità DirectQuery in SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]È possibile modificare le proprietà di accesso ai dati di un modello tabulare che è già stata distribuita, l'attivazione della modalità DirectQuery, in cui le query eseguite su un'origine dati relazionale di back-end anziché essere memorizzati nella cache di dati che risiedono in memoria.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/08/2017
   
     |||  
     |-|-|  
-    |**Valori validi**|**Description**|  
+    |**Valori validi**|**Descrizione**|  
     |**DirectQuery**|Le query vengono eseguite in un database relazionale di back-end, tramite la connessione all'origine dati definita per il modello.<br /><br /> Le query sul modello vengono convertite in query native di database e reindirizzate all'origine dati.<br /><br /> Quando si elabora un modello impostato sulla modalità DirectQuery, vengono compilati e distribuiti solo i metadati. I dati sono esterni al modello e risiedono nei file di database dell'origine dati operativa.|  
     |**Importa**|Le query vengono eseguite nel database tabulare in MDX o DAX.<br /><br /> Quando si elabora un modello impostato sulla modalità di importazione, i dati vengono recuperati da un'origine dati back-end e archiviati su disco. Quando si carica il database, i dati vengono copiati completamente in memoria, consentendo query e scansioni di tabella rapide.<br /><br /> Si tratta della modalità predefinita per i modelli tabulari ed è l'unica modalità per determinate origini dati (non relazionali).|  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
     |||  
     |-|-|  
-    |**Valori validi**|**Description**|  
+    |**Valori validi**|**Descrizione**|  
     |**InMemory**|Le query usano solo i dati memorizzati nella cache, in memoria.|  
     |**InMemorywithDirectQuery**|le query usano la cache per impostazione predefinita, salvo diversa indicazione nella stringa di connessione del client.<br /><br /> Si tratta di una modalità ibrida in cui le partizioni sono configurate singolarmente per l'uso in memoria o in DirectQuery.|  
     |**DirectQuery**|le query usano solo l'origine dati relazionale.|  

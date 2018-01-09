@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8fb40241f031cca90bd2be5069d0c61a0c100dd1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 04edc4aeea3123ad58775fddf3a821f65decd90b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Supplementare lezione - configurare le proprietà di creazione di report per i report Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ In questa lezione supplementare si imposteranno le proprietà per il progetto AW
   
 Tempo stimato per il completamento della lezione: **30 minuti**  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 Questa lezione supplementare fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività di questa lezione supplementare, è necessario avere completato tutte le lezioni precedenti.  
 Per completare questa lezione supplementare specifica, è necessario disporre anche degli elementi seguenti:  
   
@@ -155,7 +155,7 @@ In questo esempio vengono impostate solo alcune delle diverse proprietà di colo
   
     **Customer**  
   
-    |Colonna|Proprietà|Valore|  
+    |colonna|Proprietà|valore|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Birth Date|Formato dati|Short Date|  
@@ -165,9 +165,9 @@ In questo esempio vengono impostate solo alcune delle diverse proprietà di colo
     > [!NOTE]  
     > Poiché la tabella Date è stata selezionata come tabella data dei modelli utilizzando l'impostazione Contrassegna come tabella data, illustrata nella Lezione 7: Contrassegna come tabella data, e la colonna Date dell'omonima tabella come colonna da utilizzare come identificatore univoco, la proprietà Row Identifier per la colonna Date sarà impostata automaticamente su True e non potrà essere modificata. Quando si utilizzano funzioni di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data. In questo modello sono state create diverse misure utilizzando funzioni di Business Intelligence per le gerarchie temporali per calcolare i dati di vendita per diversi periodi, ad esempio i trimestri precedente e corrente, nonché per essere utilizzati negli indicatori KPI. Per altre informazioni su come specificare una tabella con data, vedere [Specificare Contrassegna come tabella data per l'utilizzo con funzionalità di Business Intelligence per le gerarchie temporali &#40;SSAS tabulare&#41;](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) documentazione online di SQL Server.  
   
-    |Colonna|Proprietà|Valore|  
+    |colonna|Proprietà|valore|  
     |----------|------------|---------|  
-    |Date|Formato dati|Short Date|  
+    |date|Formato dati|Short Date|  
     |Day Number of Week|Hidden|True|  
     |Day Name|Sort By Column|Day Number of Week|  
     |Day of Week|Hidden|True|  
@@ -182,31 +182,31 @@ In questo esempio vengono impostate solo alcune delle diverse proprietà di colo
   
     **Geography**  
   
-    |Colonna|Proprietà|Valore|  
+    |colonna|Proprietà|valore|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |ID territorio vendita|Hidden|True|  
   
     **Product**  
   
-    |Colonna|Proprietà|Valore|  
+    |colonna|Proprietà|valore|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|Etichetta predefinita|True|  
     |Product Subcategory Id|Hidden|True|  
-    |Product Start Date|Formato dati|Short Date|  
+    |Product Start Date|Formato dei dati|Short Date|  
     |Product End Date|Formato dati|Short Date|  
   
     **Internet Sales**  
   
-    |Colonna|Proprietà|Valore|  
+    |colonna|Proprietà|valore|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  
     |Promotion Id|Hidden|True|  
     |Currency Id|Hidden|True|  
     |ID territorio vendita|Hidden|True|  
-    |Order Quantity|tipo di dati<br /><br />Formato dati<br /><br />Cifre decimali|Decimal Number<br /><br />Decimal Number<br /><br />0|  
+    |Order Quantity|tipo di dati<br /><br />Formato dati<br /><br />Cifre decimali|Decimal Number<br /><br />Numero decimale<br /><br />0|  
     |Order Date|Formato dati|Short Date|  
     |Due Date|Formato dati|Short Date|  
     |Ship Date|Formato dati|Short Date|  

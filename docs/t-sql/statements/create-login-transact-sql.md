@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d32038273e727db3b47125b26ad8293ce088672
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -196,6 +196,8 @@ CHIAVE asimmetrica *asym_key_name*
  Per uno script per trasferire account di accesso, vedere [come trasferire gli account di accesso e le password tra istanze di SQL Server 2005 e SQL Server 2008](http://support.microsoft.com/kb/918992).  
   
  La creazione automatica di un account di accesso Abilita il nuovo account e concede l'accesso a livello del server **CONNECT SQL** autorizzazione.  
+ 
+ Il server [modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md) deve corrispondere al tipo di account di accesso per consentire l'accesso.
   
  Per informazioni sulla progettazione di un sistema di autorizzazioni, vedere [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   

@@ -1,13 +1,13 @@
 ---
 title: Pacchetti R installati con SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -15,27 +15,23 @@ ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 070e1776f0a9760742e933064be569818fe200b2
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 2783d4ce6ca9cd25b41c1e658f5e3bf2a4f05f24
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="r-packages-installed-with-sql-server"></a>Pacchetti R installati con SQL Server
 
-In questo articolo vengono descritti i pacchetti R installati con SQL Server e fornisce informazioni su come gestire e visualizzare i pacchetti esistenti.
-
-In questo articolo include anche collegamenti a informazioni sull'aggiunta di nuovi pacchetti per l'utilizzo con SQL Server.
+Questo articolo descrive i pacchetti R installati con SQL Server se si installa e abilitano le funzionalità di machine learning. In questo articolo viene anche descritto come gestire e visualizzare i pacchetti esistenti o aggiungere nuovi pacchetti a un'istanza di SQL Server.
 
 **Si applica a:** SQL Server 2017 Machine Learning Services (In-Database), SQL Server 2016 R Services (In-Database)
 
 ## <a name="what-is-the-instance-library-and-where-is-it"></a>Che cos'è la libreria di istanza e in cui è?
 
-Soluzioni R che viene eseguito in SQL Server è possono utilizzare solo i pacchetti installati nella libreria R predefinita associata all'istanza.
-
-Quando si installano le funzionalità di R in SQL Server, la libreria di pacchetti R si trova sotto la cartella di istanza.
+Soluzioni R che viene eseguito in SQL Server è possono utilizzare solo i pacchetti installati nella libreria R predefinita associata all'istanza. Quando si installano le funzionalità di R in SQL Server, la libreria di pacchetti R si trova sotto la cartella di istanza.
 
 + Istanza predefinita *MSSQLSERVER* 
 
@@ -51,25 +47,44 @@ Quando si installano le funzionalità di R in SQL Server, la libreria di pacchet
 
 È possibile eseguire l'istruzione seguente per verificare la libreria predefinita per l'istanza corrente di R.
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script  @language = N'R'
 , @script = N'OutputDataSet <- data.frame(.libPaths());'
 WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
+
+Alternatiely, è possibile utilizzare il nuovo [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) funzione, se l'esecuzione di sp\_eseguire\_esterno\_script direttamente nel computer di destinazione. La funzione non può restituire i percorsi di libreria per le connessioni remote.
+
+```sql
+EXEC sp_execute_external_script
+  @language =N'R',
+  @script=N'
+  sql_r_path <- rxSqlLibPaths("local")
+  print(sql_r_path)
+```
+
+> [!NOTE]
+> Se si utilizza l'associazione per l'aggiornamento dei componenti R in un'istanza, è possibile modificare il percorso alla libreria di istanza. Assicurarsi di verificare libreria in cui è utilizzata da SQL Server.
+
 ## <a name="r-packages-installed-with-sql-server"></a>Pacchetti R installati con SQL Server
 
-Quando si installa il linguaggio R in SQL Server, per impostazione predefinita l'oggetto R **base** pacchetti installati. Pacchetti di base includono le funzionalità di base fornite da pacchetti come `stats` e `utils`.
+Per impostazione predefinita l'oggetto R **base** pacchetti installati. Pacchetti di base includono le funzionalità di base fornite da pacchetti come `stats` e `utils`.
 
-L'installazione di R in SQL Server 2016 e SQL Server 2017 include inoltre il **RevoScaleR** pacchetto e pacchetti avanzati correlati e i provider che supporta i contesti di calcolo remoto, streaming, l'esecuzione parallela di funzione rx, e molte altre funzionalità.
+Installazione di R in SQL Server 2016 o SQL Server 2017 sempre include il **RevoScaleR** pacchetto e pacchetti avanzati correlati e i provider che supporta i contesti di calcolo remoto, streaming, l'esecuzione parallela di funzione rx, e molte altre funzionalità. Per aggiornare il pacchetto RevoScaleR, di utilizzare l'associazione per l'aggiornamento solo di machine learning componenti, patch o aggiornare l'istanza in una versione più recente di SQL Server.
 
-+ Per una panoramica delle funzionalità di R avanzata, vedere [su Machine Learning Server](https://docs.microsoft.com/r-server/what-is-microsoft-r-server)
++ Per una panoramica delle funzionalità di R avanzata, vedere [su Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-microsoft-r-server)
 
-+ Per scaricare le librerie RevoScaleR in un computer client, installare [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)
++ Per scaricare le librerie RevoScaleR in un computer client, installare [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
 
 ## <a name="permissions-required-for-installing-r-packages"></a>Autorizzazioni necessarie per l'installazione di pacchetti R
 
-In SQL Server 2016, un amministratore deve installare i nuovi pacchetti di R a livello di istanza di un. In SQL Server 2017, sono state aggiunte nuove funzionalità di database l'amministratore del database che offrono la possibilità di delegare la gestione dei pacchetti agli utenti selezionati.
+In SQL Server 2016, un amministratore deve installare i nuovi pacchetti di R a livello di istanza di un. 
+
+SQL Server 2017 introdotte nuove funzionalità per la gestione e installazione del pacchetto:
+
++ È possibile utilizzare i comandi di R da un client remoto per installare i pacchetti con ambito privato o condiviso. Questa funzionalità richiede [Microsoft R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install) o [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), nonché privilegi dbo sull'istanza.
++ Database sono state aggiunte nuove funzionalità per supportare la gestione di pacchetti dagli amministratori di database senza utilizzare T-SQL. Queste funzionalità forniscono in futuro, gli amministratori di database con la possibilità di delegare la maggior parte dei facet della gestione dei pacchetti per gli utenti con privilegi.
 
 Questa sezione descrive le autorizzazioni necessarie per installare e gestire i pacchetti per ogni versione.
 
@@ -81,9 +96,9 @@ Questa sezione descrive le autorizzazioni necessarie per installare e gestire i 
 
 + SQL Server 2017 Machine Learning Services
 
-    Questa versione include funzioni di gestione dei pacchetti che consentono ad amministratori di database di delegare i diritti di installazione del pacchetto agli utenti selezionati. Se questa funzionalità è stata abilitata, richiedere che l'amministratore del database aggiunti a uno dei nuovi ruoli di pacchetto. Per ulteriori informazioni, vedere [gestione dei pacchetti R per SQL Server](r-package-management-for-sql-server-r-services.md).
-
     Se si è un amministratore nell'istanza di SQL Server, è possibile installare i nuovi pacchetti quando è necessario. Essere semplicemente accertarsi di utilizzare la libreria predefinita che viene associata all'istanza. Pacchetti installati in altre posizioni non è possibile eseguire quando viene chiamato da una stored procedure. Qualsiasi codice R che viene eseguita tramite SQL Server come un contesto di calcolo richiede inoltre che i pacchetti siano disponibili nella libreria di istanza.
+
+    Questa versione include anche alcune nuove funzionalità utilizzata per supportare la gestione più semplice di pacchetto per gli amministratori di database in una versione successiva. Per il momento, è consigliabile continuare a installare pacchetti R in base a livello di istanza.
 
 + R Server (Standalone)
 

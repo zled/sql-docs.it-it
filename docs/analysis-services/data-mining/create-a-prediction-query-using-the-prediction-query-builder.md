@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7d6511a36b9a59e20908feffdb0f61a907377ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Creare una query di stima utilizzando Generatore query di stima
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile creare query di stima sia mentre si compila una soluzione di data mining in BI Development Studio o destro del mouse su un modello di data mining esistente in SQL Server Management Studio e scegliendo l'opzione **compila Query di stima**.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/08/2017
   
 -   **Query**  
   
--   **Risultato**  
+-   **Result**  
   
  La modalità**Progettazione** consente di compilare una query di stima scegliendo dati di input, eseguendo il mapping dei dati al modello e aggiungendo quindi funzioni di stima in istruzioni compilate tramite la griglia. Nella griglia di progettazione sono presenti questi blocchi predefiniti:  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/08/2017
  **Alias**  
  Determina il nome della colonna nel set di risultati.  
   
- **Visualizza**  
+ **Mostra**  
  Determina se la selezione nella colonna **Origine** viene visualizzata o meno nei risultati.  
   
  **Gruppo**  

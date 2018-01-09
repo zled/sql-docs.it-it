@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 92207d751d305fba91bb3e5a2762918cf2451272
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f78bd8b53f358b63393b374594ce76d31791c606
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-semiadditive-behavior"></a>Definire una funzione semiadditiva
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Misure semiadditive, che non aggregano in modo uniforme tra tutte le dimensioni, sono molto comuni in numerosi scenari aziendali. Ogni cubo basato su snapshot di saldi nel tempo sono caratterizzati da questo problema. Questi snapshot si trovano in applicazioni per la gestione di titoli, saldi contabili, budget, risorse umane, polizze e risarcimenti assicurativi e numerosi altri scenari aziendali.  
@@ -57,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
 -   First Nonempty Child  
   
--   Nessuno  
+-   None  
   
  Questa opzione non modifica le misure che includono una funzione di aggregazione regolare: **Sum**, **Min**, **Max**, **Count**o **Distinct****Count**.  
   
@@ -87,7 +84,7 @@ ms.lasthandoff: 12/08/2017
 |LastNonEmpty|Il valore del membro viene valutato come il valore del relativo ultimo figlio assieme alla dimensione temporale contenente dati.|  
 |Max|Viene applicata la funzione di aggregazione massima standard.|  
 |Min|Viene applicata la funzione di aggregazione minima standard.|  
-|Nessuno|Non viene applicata alcuna funzione di aggregazione.|  
+|None|Non viene applicata alcuna funzione di aggregazione.|  
 |SUM|Viene applicata la funzione di somma standard.|  
   
  Al termine della procedura guidata le funzioni semiadditive esistenti vengono sovrascritte.  

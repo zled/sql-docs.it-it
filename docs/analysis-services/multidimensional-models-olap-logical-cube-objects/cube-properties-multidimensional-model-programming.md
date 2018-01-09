@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -41,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 473861d8ff30f272cdeaa08a0157c6ad1f9a5646
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Programmazione del modello di cubo proprietà - multidimensionale
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]I cubi dispongono di proprietà che è possibile impostare per influire sul comportamento a livello di cubo. Nella tabella seguente è disponibile un riepilogo di tali proprietà.  
@@ -58,9 +56,9 @@ ms.lasthandoff: 12/08/2017
 |Proprietà|Description|  
 |--------------|-----------------|  
 |**AggregationPrefix**|Specifica il prefisso comune utilizzato per i nomi di aggregazioni.|  
-|**Confronto**|Specifica l'identificatore delle impostazioni locali (LCID) e il flag di confronto, separati da un carattere di sottolineatura, ad esempio Latin1_General_C1_AS.|  
+|**Regole di confronto**|Specifica l'identificatore delle impostazioni locali (LCID) e il flag di confronto, separati da un carattere di sottolineatura, ad esempio Latin1_General_C1_AS.|  
 |**DefaultMeasure**|Contiene un'espressione MDX (Multidimensional Expression) che definisce la misura predefinita per il cubo.|  
-|**Description**|Fornisce una descrizione del cubo, che può essere esposta in applicazioni client.|  
+|**Descrizione**|Fornisce una descrizione del cubo, che può essere esposta in applicazioni client.|  
 |**ErrorConfiguration**|Contiene le impostazioni configurabili per la gestione degli errori, relative alla gestione di chiavi duplicate, chiavi sconosciute, limiti di errore, azione da intraprendere in caso di rilevamento di un errore, file di log degli errori e gestione della chiave Null.|  
 |**EstimatedRows**|Specifica il numero di righe stimate nel cubo.|  
 |**ID**|Contiene l'identificatore univoco (ID) del cubo.|  
