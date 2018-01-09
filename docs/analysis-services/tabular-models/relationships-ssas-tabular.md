@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c7f262045697398e2de2dabf01d59f9422191b55
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="relationships-ssas-tabular"></a>Relazioni (SSAS tabulare)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nei modelli tabulari, una relazione è una connessione tra due tabelle di dati. e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle. È ad esempio possibile mettere in correlazione una tabella Clienti e una tabella Ordini per mostrare il nome del cliente associato a ciascun ordine.  
@@ -39,17 +37,17 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="what"></a> Vantaggi  
  Una relazione è una connessione tra due tabelle di dati, in base a una o più colonne in ogni tabella. Per capire perché le relazioni sono utili, provare a immaginare di tenere traccia degli ordini di un cliente della propria azienda. È possibile tenere traccia di tutti i dati in un'unica tabella che dispone di una struttura simile alla seguente:  
   
-|CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|nome|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|07/01/2010|Compact Digital|11|  
-|1|Ashton|chris.ashton@contoso.com|.05|255|03/01/2010|SLR Camera|15|  
+|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|0,10|254|03/01/2010|Budget Movie-Maker|27|  
   
  Questo approccio può funzionare, tuttavia comporta l'archiviazione di molti dati ridondanti, ad esempio l'indirizzo di posta elettronica del cliente per ogni ordine. L'archiviazione è economica ma è necessario assicurarsi di aggiornare ogni riga relativa al cliente nel caso in cui l'indirizzo di posta elettronica cambi. Una soluzione a questo problema è suddividere i dati in più tabelle e definire relazioni tra tali tabelle. Si tratta dell'approccio utilizzato *database relazionali* come SQL Server. Ad esempio, un database importato in un modello potrebbe rappresentare i dati dell'ordine tramite tre tabelle correlate:  
   
 ### <a name="customers"></a>Customers  
   
-|[CustomerID]|Nome|EMail|  
+|[CustomerID]|nome|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/08/2017
 |[CustomerID]|OrderID|OrderDate|Product|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|07/01/2010|Compact Digital|11|  
-|1|255|03/01/2010|SLR Camera|15|  
+|1|255|2010-01-03|SLR Camera|15|  
 |2|254|03/01/2010|Budget Movie-Maker|27|  
   
  Se si importano tali tabelle dallo stesso database, l'Importazione guidata tabella consente di rilevare le relazioni tra le tabelle in base alle colonne tra [parentesi] e di riprodurre tali relazioni in Progettazione modelli. Per altre informazioni, vedere [Inferenza e rilevamento automatici delle relazioni](#detection) in questo argomento. Se si importano tabelle da più origini, è possibile creare manualmente relazioni come descritto in [creare una relazione tra due tabelle](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  

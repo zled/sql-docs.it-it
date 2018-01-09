@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f913d7d7cd223d017f617430e4beae1a6c1b8c95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3ae92fd24e3e9d5abbf3084472eac09a0e2d59fb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="monitoring-traces-xmla"></a>Monitoraggio di tracce (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile utilizzare il [Sottoscrivi](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) comando XML for Analysis (XMLA) per monitorare una traccia esistente definita in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Il **Sottoscrivi** comando restituisce i risultati di una traccia in un set di righe.  
@@ -42,14 +40,14 @@ ms.lasthandoff: 12/08/2017
   
  Nel set di righe sono contenute le colonne elencate nella tabella seguente.  
   
-|Colonna|Tipo di dati|Description|  
+|colonna|Tipo di dati|Description|  
 |------------|---------------|-----------------|  
 |EventClass|Valore intero|Classe di evento dell'evento ricevuto dalla traccia.|  
 |EventSubclass|Long integer|Sottoclasse di evento dell'evento ricevuto dalla traccia.|  
-|CurrentTime|DateTime|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|StartTime|DateTime|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|EndTime|DateTime|Ora di fine dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".<br /><br /> Questa colonna non viene popolata per classi di evento che descrivono l'inizio di un processo o di un'azione.|  
-|Durata|Long integer|Durata dell'evento (in millisecondi).|  
+|CurrentTime|DATETIME|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
+|StartTime|DATETIME|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
+|EndTime|DATETIME|Ora di fine dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".<br /><br /> Questa colonna non viene popolata per classi di evento che descrivono l'inizio di un processo o di un'azione.|  
+|Duration|Long integer|Durata dell'evento (in millisecondi).|  
 |CPUTime|Long integer|Tempo processore utilizzato per l'evento (in millisecondi).|  
 |JobID|Long integer|Identificatore di processo.|  
 |SessionID|String|Identificatore della sessione per cui si è verificato l'evento.|  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |NestLevel|Valore intero|Livello della transazione per cui si è verificato l'evento.|  
 |NumSegments|Long integer|Numero di segmenti di dati interessati o utilizzati dal comando per cui si è verificato l'evento.|  
 |Severity|Valore intero|Livello di gravità di un'eccezione per l'evento. I possibili valori della colonna sono i seguenti:<br /><br /> <br /><br /> 0: operazione riuscita<br /><br /> <br /><br /> 1: informazioni<br /><br /> <br /><br /> 2: avviso<br /><br /> <br /><br /> 3: errore|  
-|Operazione completata|Boolean|Indica se un comando ha avuto esito positivo o negativo.|  
+|Esito positivo|Boolean|Indica se un comando ha avuto esito positivo o negativo.|  
 |Errore|Long integer|Numero di errore di un evento, se applicabile.|  
 |ConnectionID|String|Identificatore della connessione per cui si è verificato l'evento.|  
 |DatabaseName|String|Nome del database per cui si è verificato l'evento.|  

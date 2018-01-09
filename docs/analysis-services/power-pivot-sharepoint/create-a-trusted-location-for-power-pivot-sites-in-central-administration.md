@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
@@ -20,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 91e058351ec0314dced6586c98cde4ca9f781be7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Creare un percorso attendibile per i siti Power Pivot in Amministrazione centrale
+# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Excel Services consente di specificare i percorsi che rappresentano repository validi per le cartelle di lavoro che vengono aperte in un server SharePoint. Questi percorsi vengono chiamati "percorsi attendibili" ed è possibile utilizzare impostazioni di configurazione diverse per ogni percorso attendibile creato. Per una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, può essere utile creare un percorso attendibile per i siti che contengono cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per poter applicare le impostazioni che funzionano meglio per l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mantenendo le impostazioni predefinite per il resto della farm.  
   
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  È necessario essere un amministratore del servizio o della farm per definire un URL come percorso attendibile.  
   
  È necessario conoscere l'indirizzo URL del sito di SharePoint contenente la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o un'altra raccolta in cui sono archiviate le cartelle di lavoro. Per ottenere l'indirizzo, aprire il sito che contiene la raccolta, fare clic con il pulsante destro del mouse su **Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, scegliere **Proprietà** e quindi copiare la prima parte dell'indirizzo (URL) che contiene il nome del server e il percorso del sito.  
@@ -67,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
 10. Anche in Dati esterni, per Avviso in caso di aggiornamento, deselezionare la casella di controllo **Attiva avviso di aggiornamento**. Se si deseleziona la casella di controllo, la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] può ignorare i messaggi di avviso di routine e mostrare le immagini di anteprima di una cartella di lavoro.  
   
-11. Scegliere **OK**.  
+11. Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta Power Pivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   

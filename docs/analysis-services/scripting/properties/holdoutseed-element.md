@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c018e11960726554b2f02a0ec7aaa537d599a6d0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 910372435e504efb7afabfe245bba65e430fe1d4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="holdoutseed-element"></a>Elemento HoldoutSeed
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Specifica il valore di inizializzazione per una partizione di dati di controllo ripetibile che contiene il set di test di un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) elemento. Questo valore di inizializzazione assicura che il contenuto del modello rimanga lo stesso durante la rielaborazione. Se non specificato o impostato su 0, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea un valore di inizializzazione utilizzando un algoritmo di hash sul nome della struttura di data mining.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|Long|  
 |Valore predefinito|0|  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  Quando si crea per la prima volta una struttura di data mining, l'ID e il nome sono gli stessi. Tuttavia, è possibile modificare il nome della struttura di data mining. Pertanto, per garantire la ripetibilità della partizione, non ci si deve basare sul valore di inizializzazione creato dal nome, ma è necessario impostare espressamente un valore di inizializzazione.  

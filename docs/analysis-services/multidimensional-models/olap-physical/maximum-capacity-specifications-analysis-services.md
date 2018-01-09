@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f0ababa5bb354b91df756bd5998967fb9b6ddf3a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Specifiche di capacità massima (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Le tabelle seguenti indicano le dimensioni e numeri massimi dei diversi oggetti definiti [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] componenti in modalità di distribuzione di server diverso.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_OLAP"></a>Multidimensionale e Data Mining (DeploymentMode = 0)  
  La modalità di archiviazione MOLAP, che prevede l'archiviazione sia di dati che di metadati, prevede limiti fisici aggiuntivi relativi alle dimensioni dei file. Per impostazione predefinita, la dimensione massima dei file di archivio delle stringhe è di 4 GB. Se sono necessari file più grandi per gli archivi di stringhe, è possibile specificare un'architettura di archiviazione di stringhe diversa. Per ulteriori informazioni, vedere [configurare l'archivio di stringhe per partizioni e dimensioni](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
-|Oggetto|Quantità/dimensioni massime|  
+|Object|Quantità/dimensioni massime|  
 |------------|----------------------------|  
 |Database in un'istanza|2^31-1 = 2,147,483,647|  
 |Dimensioni in un database|2^31-1 = 2,147,483,647|  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
   
-|Oggetto|Quantità/dimensioni massime|  
+|Object|Quantità/dimensioni massime|  
 |------------|----------------------------|  
 |Database in un'istanza|2^31-1 = 2,147,483,647|  
 |Tabelle in un database|2^31-1 = 2,147,483,647|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_vertipaq"></a>Tabulare (DeploymentMode = 2)  
 Di seguito sono limiti teorici. Prestazioni risulta diminuita in numeri più bassi.   
 
-|Oggetto|Quantità/dimensioni massime|  
+|Object|Quantità/dimensioni massime|  
 |------------|----------------------------|  
 |Database in un'istanza|16,000|  
 |Numero combinato di tabelle e colonne in un database|16,000|  

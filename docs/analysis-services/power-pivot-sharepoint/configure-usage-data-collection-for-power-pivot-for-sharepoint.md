@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f939c078a2b21cfa16a4f36228b46822f2bc8457
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Raccolta dati di utilizzo è una funzionalità a livello di farm di SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint questo sistema viene usato ed esteso per fornire i report nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in cui viene mostrato l'uso dei servizi e dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -132,7 +129,7 @@ ms.lasthandoff: 12/08/2017
   
      I dati verranno effettivamente eliminati al verificarsi dell'evento successivo. Il limite sulla cronologia dei dati sull'utilizzo viene controllato solo quando il sistema elabora un evento.  
   
-3.  Scegliere **OK**.  
+3.  Fare clic su **OK**.  
   
  Per altre informazioni sulla raccolta e sull'archiviazione dei dati di utilizzo, vedere [Raccolta dati di utilizzo di PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
@@ -155,7 +152,7 @@ ms.lasthandoff: 12/08/2017
   
      Le richieste che superano questo limite rientrano nella categoria *Superato*. Non è prevista alcuna soglia configurabile per *Superato*. Deriva dal limite superiore specificato in Limite massimo risposta lunga. Le richieste che rientrano nella categoria Superato hanno un'esecuzione più lunga di quanto non sia consentito dallo SLA definito.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 ##  <a name="ttr"></a> Specificare la frequenza con la quale le statistiche di query vengono segnalate nel sistema di raccolta dei dati di utilizzo  
  L'intervallo tempo-segnalazione specifica la frequenza con la quale le statistiche di query vengono segnalate nel sistema di raccolta dei dati sull'utilizzo. Le statistiche sulle query si accumulano in un processo e vengono riportate come un singolo evento a intervalli regolari. È possibile regolare l'intervallo per scrivere nel file di log con maggiore o minore frequenza.  
@@ -170,7 +167,7 @@ ms.lasthandoff: 12/08/2017
   
      Se questo valore viene aumentato in modo considerevole, è possibile che alcuni dati statistici vadano persi prima di essere registrati. Il riavvio di un servizio, ad esempio, causa la perdita delle statistiche relative alle query. Viceversa, se i report di attività predefiniti contengono dati insufficienti, considerare la possibilità di ridurre l'intervallo per ottenere più frequentemente eventi tempo-segnalazione.  
   
-3.  Scegliere **OK**.  
+3.  Fare clic su **OK**.  
   
 ##  <a name="openconfig"></a> Aprire la pagina dell'applicazione del servizio PowerPivot per accedere alle impostazioni di configurazione  
  Solo gli amministratori di un servizio o di una farm possono modificare le impostazioni dell'applicazione di servizio. Se nella farm sono state definite più applicazioni del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , è necessario modificare ognuna singolarmente.  

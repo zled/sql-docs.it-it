@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Discover Server State event category
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7111aaee1121c12a00d372138bc299d9e80cc695
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 192c9bc97a67f5690619ac0b0ef667e9de6c99d6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discover-server-state-events-data-columns"></a>Colonne di dati degli eventi di individuazione dello stato del server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria di eventi individuazione stato del Server include le classi di evento seguenti:  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Contiene l'ora corrente dell'evento di individuazione dello stato del server, quando disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene l'ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene l'ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Durata|5|2|Contiene la durata dell'evento in millisecondi.|  
+|Duration|5|2|Contiene la durata dell'evento in millisecondi.|  
 |CPUTime|6|2|Contiene la quantità di tempo CPU in millisecondi utilizzata dall'evento di individuazione dello stato del server.|  
 |ConnectionID|25|1|Contiene l'ID di connessione univoco associato all'evento di individuazione dello stato del server.|  
 |NTUserName|32|8|Contiene l'account utente di Windows associato all'evento di individuazione dello stato del server.|  

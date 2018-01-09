@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DISCOVER_XML_METADATA
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae0b5c6375fe196d780a8b13b13178157161ebfb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 64fe5c240808b727c0985f432bb634d83cb68e91
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverxmlmetadata-rowset"></a>Set di righe DISCOVER_XML_METADATA
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce un documento XML che descrive un oggetto richiesto. Il set di righe restituito è sempre costituito da una riga e una colonna.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il set di righe **DISCOVER_XML_METADATA** contiene la colonna seguente.  
   
-|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
+|Nome colonna|Indicatore del tipo|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**METADATI**|**DBTYPE_WSTR**||Documento XML che descrive l'oggetto richiesto dalla restrizione.|  
   
@@ -51,28 +49,28 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**DatabaseID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**DimensionID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**CubeID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MeasureGroupID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**Elemento PartitionID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**PerspectiveID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**DimensionPermissionID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**RoleID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**DatabasePermissionID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MiningModelID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MiningModelPermissionID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**DataSourceID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MiningStructureID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**AggregationDesignID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**TraceID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MiningStructurePermissionID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**CubePermissionID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**AssemblyID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MdxScriptID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**DataSourceViewID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**DataSourcePermissionID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**ObjectExpansion**|**DBTYPE_WSTR**|Facoltativa.|  
+|**DatabaseID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**DimensionID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**CubeID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MeasureGroupID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**Elemento PartitionID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**PerspectiveID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**DimensionPermissionID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**RoleID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**DatabasePermissionID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MiningModelID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MiningModelPermissionID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**DataSourceID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MiningStructureID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**AggregationDesignID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**TraceID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MiningStructurePermissionID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**CubePermissionID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**AssemblyID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MdxScriptID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**DataSourceViewID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**DataSourcePermissionID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**ObjectExpansion**|**DBTYPE_WSTR**|Facoltativo.|  
   
  La restrizione **ObjectExpansion**, è disponibile per ogni oggetto principale di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Il client utilizza in genere le restrizioni per descrivere gli oggetti OLAP per i quali deve essere restituita l'istruzione DDL e utilizza la restrizione **ObjectExpansion** per definire il grado di espansione nell'istruzione DDL restituita. Nella tabella seguente indica se il valore di enumerazione è consentito per [Alter elemento &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) comandi.  
   

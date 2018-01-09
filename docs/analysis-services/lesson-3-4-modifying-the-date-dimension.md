@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c9f593c830dbdffe9b09b6f5e44d0957a7bb1d4e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3d71a404f2b91606ec12ac08689a2c8ebefea85f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Lezione 3-4-modifica della dimensione Date
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nelle attività di questo argomento, creare una gerarchia definita dall'utente e modificare i nomi dei membri vengono visualizzati per gli attributi Date, Month, Calendar Quarter e Calendar Semester. Verranno inoltre definite chiavi composte per gli attributi, verrà controllato l'ordinamento dei membri di dimensione e verranno definite relazioni tra attributi.  
@@ -115,7 +115,7 @@ Se i dati sottostanti le supportano, è consigliabile definire relazioni tra gli
   
     Il tipo di relazione è **Rigida** perché le relazioni tra i membri non cambieranno nel corso del tempo.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 6.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Calendar Quarter** e scegliere **Nuova relazione tra attributi**.  
   
@@ -123,7 +123,7 @@ Se i dati sottostanti le supportano, è consigliabile definire relazioni tra gli
   
 8.  Nell'elenco **Tipo di relazione** impostare il tipo di relazione su **Rigida**.  
   
-9. Scegliere **OK**.  
+9. Fare clic su **OK**.  
   
 10. Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Calendar Semester** e scegliere **Nuova relazione tra attributi**.  
   
@@ -131,7 +131,7 @@ Se i dati sottostanti le supportano, è consigliabile definire relazioni tra gli
   
 12. Nell'elenco **Tipo di relazione** impostare il tipo di relazione su **Rigida**.  
   
-13. Scegliere **OK**.  
+13. Fare clic su **OK**.  
   
 14. Scegliere **Salva tutti** dal menu **File**.  
   
@@ -165,7 +165,7 @@ In questa attività si creeranno colonne con nomi descrittivi che verranno usate
   
     Questo script SQL consente di concatenare il trimestre e l'anno di calendario per ogni trimestre della tabella in una nuova colonna.  
   
-7.  Scegliere **OK**.  
+7.  Fare clic su **OK**.  
   
 8.  Fare clic con il pulsante destro del mouse su **Date** nel riquadro **Tabelle**e scegliere **Nuovo calcolo denominato**.  
   
@@ -201,7 +201,7 @@ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano 
   
 5.  Le colonne **EnglishMonthName** e **CalendarYear** sono ora visualizzate nell'elenco **Colonne chiave** .  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 7.  Per impostare la proprietà **NameColumn** dell'attributo **EnglishMonthName** , fare clic nel campo **NameColumn** nella finestra Proprietà e fare clic sul pulsante sfoglia (**...**).  
   
@@ -215,11 +215,11 @@ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano 
   
 2.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** e sul pulsante sfoglia (**..**).  
   
-3.  Nell'elenco **Colonne disponibili** della finestra di dialogo **Colonne chiave** selezionare la colonna **CalendarYear**e fare clic sul pulsante **>** .  
+3.  Nell'elenco **Colonne disponibili** della finestra di dialogo **Colonne chiave** selezionare la colonna **CalendarYear** e fare clic sul pulsante **>**.  
   
     Le colonne **CalendarQuarter** e **CalendarYear** sono ora visualizzate nell'elenco **Colonne chiave** .  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 5.  Per impostare la proprietà **NameColumn** dell'attributo **Calendar Quarter** , fare clic nel campo **NameColumn** nella finestra Proprietà e fare clic sul pulsante sfoglia (**...**).  
   
@@ -237,7 +237,7 @@ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano 
   
     Le colonne **CalendarSemester** e **CalendarYear** sono ora visualizzate nell'elenco **Colonne chiave** .  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 5.  Per impostare la proprietà **NameColumn** dell'attributo **Calendar Semester** , fare clic nel campo **NameColumn** nella finestra delle proprietà e fare clic sul pulsante sfoglia (**...**).  
   
@@ -250,7 +250,7 @@ Dopo aver modificato gli attributi e le gerarchie, prima di visualizzare le modi
   
 #### <a name="to-deploy-and-view-the-changes"></a>Per distribuire e visualizzare le modifiche  
   
-1.  Scegliere **Deploy Analysis Services Tutorial** (Distribuisci Analysis Services Tutorial) dal menu [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Compila **di**.  
+1.  Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Compila **di**.  
   
 2.  Dopo la visualizzazione del messaggio **Distribuzione completata** , fare clic sulla scheda **Esplorazione** di **Progettazione dimensioni** per la dimensione **Date** e fare clic sul pulsante Riconnetti sulla barra degli strumenti della finestra di progettazione.  
   
@@ -275,19 +275,19 @@ In questa attività verrà modificato l'ordinamento cambiando l'ordine delle chi
   
 3.  Nella finestra Proprietà fare clic sul pulsante con i puntini di sospensione (**...**) per cambiare il valore della proprietà **KeyColumns** .  
   
-4.  Nell'elenco **Colonne chiave** della finestra di dialogo **Colonne chiave** verificare che **CalendarSemester** sia selezionato e fare clic sulla freccia a discesa per invertire l'ordine dei membri di questa chiave composta. Scegliere **OK**.  
+4.  Nell'elenco **Colonne chiave** della finestra di dialogo **Colonne chiave** verificare che **CalendarSemester** sia selezionato e fare clic sulla freccia a discesa per invertire l'ordine dei membri di questa chiave composta. Fare clic su **OK**.  
   
     I membri della gerarchia dell'attributo sono ora ordinati per anno e quindi per semestre.  
   
 5.  Selezionare **Calendar Quarter** nel riquadro **Attributi** e fare clic sul pulsante con i puntini di sospensione (**...**) della proprietà **KeyColumns** nella finestra Proprietà.  
   
-6.  Nell'elenco **Colonne chiave** della finestra di dialogo **Colonne chiave** verificare che **CalendarQuarter** sia selezionato e fare clic sulla freccia a discesa per invertire l'ordine dei membri di questa chiave composta. Scegliere **OK**.  
+6.  Nell'elenco **Colonne chiave** della finestra di dialogo **Colonne chiave** verificare che **CalendarQuarter** sia selezionato e fare clic sulla freccia a discesa per invertire l'ordine dei membri di questa chiave composta. Fare clic su **OK**.  
   
     I membri della gerarchia dell'attributo sono ora ordinati per anno e quindi per trimestre.  
   
 7.  Selezionare **English Month Name** nel riquadro **Attributi** e fare clic sul pulsante con i puntini di sospensione (**...**) della proprietà **KeyColumns** nella finestra Proprietà.  
   
-8.  Nell'elenco **Colonne chiave** della finestra di dialogo **Colonne chiave** verificare che **EnglishMonthName** sia selezionato e fare clic sulla freccia a discesa per invertire l'ordine dei membri di questa chiave composta. Scegliere **OK**.  
+8.  Nell'elenco **Colonne chiave** della finestra di dialogo **Colonne chiave** verificare che **EnglishMonthName** sia selezionato e fare clic sulla freccia a discesa per invertire l'ordine dei membri di questa chiave composta. Fare clic su **OK**.  
   
     I membri della gerarchia dell'attributo sono ora ordinati per anno e quindi per mese.  
   

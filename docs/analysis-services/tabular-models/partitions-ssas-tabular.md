@@ -5,13 +5,10 @@ ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d0f9c22476a7005ed5eee055c6c95f078e743f90
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7d4d1ba933a5f927c86908f743d21093e9ded602
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions"></a>Partizioni
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Le nuove partizioni create utilizzando la finestra di dialogo partizioni in SSDT durante la creazione di modelli si applicano al database dell'area di lavoro modello. Quando il modello viene distribuito, le partizioni definite per il database dell'area di lavoro modello vengono duplicate nel database modello distribuito. È inoltre possibile creare e gestire partizioni per un database modello distribuito tramite la finestra di dialogo partizioni in SQL Server Management Studio.  In questo argomento vengono descritte le nuove partizioni create durante la creazione di modelli tramite la finestra di dialogo Gestione partizioni in SSDT. Per informazioni sulla creazione e la gestione delle partizioni per un modello distribuito, vedere [creare e gestire partizioni di modelli tabulari](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -47,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="partitions-in-a-deployed-model-database"></a>Partizioni in un database modello distribuito  
  Quando si distribuisce un modello, le partizioni per il database modello distribuito verranno visualizzate come oggetti di database in SQL Server Management Studio. È possibile creare, modificare, merge ed eliminare partizioni per un modello distribuito tramite la finestra di dialogo partizioni in SQL Server Management Studio. La gestione delle partizioni per un modello distribuito in SSMS non rientra nell'ambito di questo argomento. Per ulteriori informazioni sulla gestione delle partizioni in SQL Server Management Studio, vedere [creare e gestire partizioni di modelli tabulari](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Attività correlate  
+##  <a name="bkmk_related_tasks"></a> Related tasks  
   
 |Argomento|Description|  
 |-----------|-----------------|  

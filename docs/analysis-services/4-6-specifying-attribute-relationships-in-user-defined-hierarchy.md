@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2c9d71ea7710736a17a404a997e43e6683894cd7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-specificando le relazioni tra attributi nella gerarchia definita dall'utente
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Come già illustrato in questa esercitazione, è possibile organizzare le gerarchie di attributi in livelli all'interno di gerarchie utente per fornire i percorsi di navigazione per gli utenti in un cubo. Una gerarchia utente può rappresentare una gerarchia naturale, ad esempio una città, uno stato e un paese, oppure un percorso di navigazione, ad esempio il nome di un dipendente, la funzione e il reparto di appartenenza. Ai fini della navigazione, non esiste differenza tra questi due tipi di gerarchie utente.  
@@ -39,7 +39,7 @@ Nelle attività di questo argomento verranno illustrate le procedure per definir
   
     Nel riquadro **Gerarchie** si notino i livelli della gerarchia **Customer Geography** definita dall'utente. Questa gerarchia corrisponde attualmente solo a un percorso di drill-down per gli utenti, in quanto non è stata definita alcuna relazione tra livelli o attributi.  
   
-2.  Fare clic sulla scheda **Relazioni tra attributi** .  
+2.  Fare clic sulla scheda **Relazioni tra attributi**.  
   
     Si notino le quattro relazioni tra attributi che collegano gli attributi non chiave nella tabella **Geography** all'attributo chiave nella tabella **Geography** . L'attributo **Geography** è correlato all'attributo **Full Name** . L'attributo **Postal Code** è indirettamente collegato all'attributo **Full Name** tramite l'attributo **Geography** , in quanto **Postal Code** è collegato a **Geography** e **Geography** è collegato a **Full Name** . A questo punto le relazioni tra attributi verranno modificate in modo da non usare l'attributo **Geography** .  
   
@@ -53,7 +53,7 @@ Nelle attività di questo argomento verranno illustrate le procedure per definir
   
 6.  Nel riquadro **Relazioni tra attributi** fare clic con il pulsante destro del mouse su **Geography**-> **Postal Code** e selezionare **Elimina**.  
   
-7.  Quando viene visualizzata la finestra di dialogo **Elimina oggetti** , fare clic su **OK**.  
+7.  Quando viene visualizzata la finestra di dialogo **Elimina oggetti**, fare clic su **OK**.  
   
 8.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Postal Code** e scegliere **Nuova relazione tra attributi**.  
   
@@ -119,7 +119,7 @@ Nelle attività di questo argomento verranno illustrate le procedure per definir
   
 1.  Passare a Progettazione dimensioni per la dimensione **Date** e fare clic sulla scheda **Relazioni tra attributi** .  
   
-2.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Month Name** e scegliere **Nuova relazione tra attributi**.  
+2.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Month Name** , quindi scegliere **Nuova relazione tra attributi**.  
   
 3.  Nella finestra di dialogo **Crea relazione tra attributi** l'opzione **Attributo di origine** è impostata su **Month Name**. Impostare **Attributo correlato** su **Fiscal Quarter**. Nell'elenco **Tipo di relazione** impostare il tipo di relazione su **Rigida**.  
   

@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcc42dbd4d53a3d5a967933bebf22b1f73ac91e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Mining Model Content for Logistic Regression Models
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questo argomento descrive contenuto del modello di data mining che è specifico dei modelli che utilizzano l'algoritmo Microsoft Logistic Regression. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -41,14 +39,14 @@ ms.lasthandoff: 12/08/2017
   
  ![struttura del contenuto per il modello di regressione logistica](../../analysis-services/data-mining/media/skt-modelcontentstructure-logregc.gif "struttura del contenuto per il modello di regressione logistica")  
   
- Per impostazione predefinita, un modello di regressione logistica è visualizzato nel **Visualizzatore Microsoft Neural Network**. Con questo visualizzatore personalizzato, è possibile impostare un filtro sugli attributi di input e i relativi valori e visualizzarne graficamente l'impatto sugli output. Le descrizioni comandi nel visualizzatore mostrano la probabilità e l'accuratezza associate a ogni coppia di input e valori di output. Per altre informazioni, vedere [Visualizzare un modello usando il Visualizzatore Microsoft Neural Network](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
+ Per impostazione predefinita, un modello di regressione logistica è visualizzato nel **Visualizzatore Microsoft Neural Network**. Con questo visualizzatore personalizzato, è possibile impostare un filtro sugli attributi di input e i relativi valori e visualizzarne graficamente l'impatto sugli output. Le descrizioni comandi nel visualizzatore mostrano la probabilità e l'accuratezza associate a ogni coppia di input e valori di output. Per altre informazioni, vedere [Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
  Per esplorare la struttura degli input e delle subnet e visualizzare statistiche dettagliate, è possibile utilizzare il Microsoft Generic Content Tree Viewer. È possibile fare clic su qualsiasi nodo per espanderlo e visualizzare i nodi figlio oppure visualizzare i pesi e le altre statistiche contenute nel nodo.  
   
 ## <a name="model-content-for-a-logistic-regression-model"></a>Contenuto di un modello di regressione logistica  
  In questa sezione vengono forniti dettagli ed esempi relativi solo alle colonne del contenuto dei modelli di data mining particolarmente importanti per la regressione logistica. Il contenuto del modello è quasi identico a quello di un modello di rete neurale, ma è possibile che le descrizioni valide per i modelli di rete neurale siano ripetute in questa tabella per praticità.  
   
- Per informazioni sulle colonne generiche del set di righe dello schema, ad esempio MODEL_CATALOG e MODEL_NAME, non descritte in questo argomento o per spiegazioni sulla terminologia dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Per informazioni sulle colonne generiche del set di righe dello schema, ad esempio MODEL_CATALOG e MODEL_NAME, non descritte in questo argomento o per spiegazioni sulla terminologia dei modelli di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nome del database in cui è archiviato il modello.  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |Statistiche marginali|Vuoto|  
 |Livello di input|Vuoto|  
 |Nodo di input|Nome dell'attributo di input|  
-|hidden layer|Vuoto|  
+|Livello nascosto|Vuoto|  
 |Livello di output|Vuoto|  
 |Nodo di output|Nome dell'attributo di output|  
   
@@ -103,7 +101,7 @@ ms.lasthandoff: 12/08/2017
 |Statistiche marginali|Sempre 0.|  
 |Livello di input|Indica il numero di coppie attributo-valori di input utilizzate dal modello.|  
 |Nodo di input|Sempre 0.|  
-|Livello nascosto|In un modello di regressione logistica, è sempre 0.|  
+|hidden layer|In un modello di regressione logistica, è sempre 0.|  
 |Livello di output|Indica il numero di valori di output.|  
 |Nodo di output|Sempre 0.|  
   
@@ -121,7 +119,7 @@ ms.lasthandoff: 12/08/2017
 |Statistiche marginali|Vuoto|  
 |Livello di input|Vuoto|  
 |Nodo di input|Nome dell'attributo di input|  
-|hidden layer|Vuoto|  
+|Livello nascosto|Vuoto|  
 |Livello di output|Vuoto|  
 |Nodo di output|Se l'attributo di output è continuo, contiene il nome dell'attributo di output.<br /><br /> Se l'attributo di output è discreto o discretizzato, contiene il nome dell'attributo e il valore.|  
   
@@ -134,7 +132,7 @@ ms.lasthandoff: 12/08/2017
 |Statistiche marginali|Vuoto|  
 |Livello di input|Vuoto|  
 |Nodo di input|Frammento XML che contiene le stesse informazioni della colonna NODE_DESCRIPTION.|  
-|Livello nascosto|Vuoto|  
+|hidden layer|Vuoto|  
 |Livello di output|Vuoto|  
 |Nodo di output|Frammento XML che contiene le stesse informazioni della colonna NODE_DESCRIPTION.|  
   

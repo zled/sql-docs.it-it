@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -16,11 +16,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 50db699cc1db1af428524c3f9c263569d7a7bbc1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b1200775d4b80639c3e6e2cb5ab127e3d1bb5254
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="import-data-by-using-a-native-query"></a>Importare dati utilizzando una query nativa
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Per i modelli tabulari 1400, la nuova esperienza di recupera dati nei progetti di Visual Studio Analysis Services fornisce un'enorme flessibilità per la modalità è possibile combinare i dati durante l'importazione. Questo articolo descrive la creazione di una connessione a un'origine dati e quindi la creazione di una query SQL nativa per specificare l'importazione dei dati.

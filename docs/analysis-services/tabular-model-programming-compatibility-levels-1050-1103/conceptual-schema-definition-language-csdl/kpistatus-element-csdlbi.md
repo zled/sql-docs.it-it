@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 714326df1756cb74b862c8145d7bff2facebdb1b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: af4c2fd061dcfcce4316fd16dd0272bbac45c6c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="kpistatus-element-csdlbi"></a>Elemento KpiStatus (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento KpiStatus definisce un riferimento alla colonna che contiene il valore utilizzato come indicatore di stato in un indicatore di prestazioni chiave (KPI).  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente vengono elencati gli attributi e gli elementi che definiscono l'elemento KpiStatus.  
   
-|Nome|Obbligatorio|Description|  
+|nome|Obbligatorio|Description|  
 |----------|-----------------|-----------------|  
 |PropertyRef|Sì|Riferimento a una colonna contenente il valore utilizzato come indicatore di stato in un indicatore KPI.<br /><br /> Questo elemento DEVE contenere una sola colonna di riferimento, come definito dal tipo TPropertyRefcomplex.|  
   

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81d09a847b9bb405cd028eaa8cd1b4cb9feac9a1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9e6094d7b88ef2c8da50ced24b49c89dc9658885
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Proprietà di cella MDX - utilizzando le proprietà di cella
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Proprietà delle celle in MDX (Multidimensional Expressions) contengono informazioni sul contenuto e il formato delle celle di un'origine dati multidimensionale, ad esempio un cubo.  
@@ -59,14 +56,14 @@ SELECT [<axis_specification>
 |Proprietà|Description|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|Maschera di bit che indica i tipi di azioni esistenti sulla cella. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Nota: le operazioni di drill-through non sono incluse per le query che contengono un set nella clausola WHERE.|  
-|**BACK_COLOR**|Il colore di sfondo per la visualizzazione della proprietà **VALUE** o **FORMATTED_VALUE** . Per altre informazioni, vedere [Contenuto di FORE_COLOR e BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
+|**BACK_COLOR**|Il colore di sfondo per la visualizzazione della proprietà **VALUE** o **FORMATTED_VALUE**. Per altre informazioni, vedere [Contenuto di FORE_COLOR e BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |**CELL_ORDINAL**|Numero ordinale della cella nel set di dati.|  
 |**FONT_FLAGS**|Maschera di bit che indica in dettaglio gli effetti sul carattere. Il valore è il risultato di un'operazione con OR bit per bit su una o più delle costanti seguenti:<br /><br /> **MDFF_BOLD** = 1<br /><br /> **MDFF_ITALIC** = 2<br /><br /> **MDFF_UNDERLINE** = 4<br /><br /> **MDFF_STRIKEOUT** = 8<br /><br /> <br /><br /> Il valore 5 rappresenta ad esempio l'applicazione combinata degli effetti grassetto (**MDFF_BOLD**) e sottolineato (**MDFF_UNDERLINE**) al carattere.|  
 |**FONT_NAME**|Il tipo di carattere da usare per visualizzare la proprietà **VALUE** o **FORMATTED_VALUE** .|  
 |**FONT_SIZE**|La dimensione del carattere da usare per visualizzare la proprietà **VALUE** o **FORMATTED_VALUE** .|  
-|**FORE_COLOR**|Il colore di primo piano per la visualizzazione della proprietà **VALUE** o **FORMATTED_VALUE** . Per altre informazioni, vedere [Contenuto di FORE_COLOR e BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
+|**FORE_COLOR**|Il colore di primo piano per la visualizzazione della proprietà **VALUE** o **FORMATTED_VALUE**. Per altre informazioni, vedere [Contenuto di FORE_COLOR e BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |**FORMAT**|Come **FORMAT_STRING**.|  
-|**FORMAT_STRING**|La stringa di formato utilizzata per creare il valore della proprietà **FORMATTED_VALUE** . Per altre informazioni, vedere [Contenuto di FORMAT_STRING &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md).|  
+|**FORMAT_STRING**|La stringa di formato utilizzata per creare il valore della proprietà **FORMATTED_VALUE**. Per altre informazioni, vedere [Contenuto di FORMAT_STRING &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md).|  
 |**FORMATTED_VALUE**|La stringa di caratteri che rappresenta una visualizzazione formattata della proprietà **VALUE** .|  
 |**LANGUAGE**|Le impostazioni locali dove verrà applicato **FORMAT_STRING** . **LANGUAGE** si usa generalmente per la conversione della valuta.|  
 |**UPDATEABLE**|Valore che indica se la cella può essere aggiornata. Di seguito vengono indicati i possibili valori della proprietà.|  

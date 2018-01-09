@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21ad4c6d328c8c299a2ae34c4ac5aab27feec794
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>Elemento EntityContainer (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento EntityContainer è un tipo complesso, in base al tipo CSDL, EntityContainer, che definisce una raccolta di entità all'interno di un singolo modello di dati. In un'applicazione Business Intelligence, il modello di dati rappresentato da EntityContainer potrebbe contenere più tabelle con una colonna collegata tramite relazioni, nonché calcoli, misure e indicatori KPI. È concettualmente simile a un database o a un'origine dati.  
@@ -36,20 +34,20 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente vengono descritti gli elementi e gli attributi che definiscono EntityContainer.  
   
-|Nome|Obbligatorio|Descrizione|  
+|nome|Obbligatorio|Description|  
 |----------|-----------------|-----------------|  
-|Nome|Sì|Nome del modello di dati.|  
-|Caption|No|Descrizione del database o del modello di dati.|  
+|nome|Sì|Nome del modello di dati.|  
+|Didascalia|no|Descrizione del database o del modello di dati.|  
 |Impostazioni cultura|Sì|Stringa che contiene l'identificatore delle impostazioni locali (LCID) della richiesta.|  
 |CompareOptions|Sì|Ordinamento specifico della lingua e opzioni di confronto delle stringhe per il modello.|  
-|DirectQueryMode|No|Enumerazione che indica la modalità di query quando il modello utilizza la modalità DirectQuery.|  
+|DirectQueryMode|no|Enumerazione che indica la modalità di query quando il modello utilizza la modalità DirectQuery.|  
 |Elemento EntitySet|Sì|[Elemento EntitySet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
-|Elemento AssociationSet|No|[Elemento AssociationSet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
+|Elemento AssociationSet|no|[Elemento AssociationSet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>Elemento CompareOptions  
  L'attributo CompareOptions definisce le proprietà delle regole di confronto applicate al modello di dati. Le proprietà definite da CompareOptions derivano dalle impostazioni relative a ordinamento, distinzione dei caratteri kana e distinzione tra maiuscole e minuscole definite nel database di Analysis Services in fase di progettazione del modello. Nella tabella seguente vengono descritti i valori inclusi come parte dell'attributo CompareOptions.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |IgnoreCase|Valore booleano che indica se nei confronti di stringa si devono ignorare maiuscole e minuscole.|  
 |IgnoreNonSpace|Valore booleano che indica se nei confronti di stringhe si devono ignorare i caratteri di unione senza spaziatura, ad esempio i segni diacritici.|  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
   
  Il tipo semplice DirectQueryMode definisce il tipo di query utilizzato per impostazione predefinita quando il modello è abilitato per recuperare direttamente i dati da un'origine dati relazionale. Questa proprietà è applicabile solo ai modelli tabulari in esecuzione in modalità DirectQuery. Nella tabella seguente sono elencati i possibili valori dell'enumerazione della modalità DirectQuery.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |InMemory|Indica che le query eseguite sul modello utilizzano i dati nella cache.|  
 |InMemoryWithDirectQuery|Indica che le query eseguite sul modello utilizzano per impostazione predefinita i dati dell'origine dati relazionale.|  

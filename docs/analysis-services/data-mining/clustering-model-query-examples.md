@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,18 +21,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clustering-model-query-examples"></a>Esempi di query sul modello di clustering
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea una query su un modello di data mining, è possibile recuperare i metadati sul modello o creare una query sul contenuto che forniscono informazioni dettagliate sui modelli individuati durante l'analisi. In alternativa, è possibile creare una query di stima che utilizza i modelli nel modello per eseguire stime per i nuovi dati. Ogni tipo di query fornirà informazioni diverse. Ad esempio, tramite una query contenuto potrebbero essere forniti dettagli aggiuntivi sui cluster trovati, mentre tramite una query di stima potrebbe venir indicato a quale cluster è più probabile che appartenga un nuovo punto dati.  
   
  Questa sezione illustra come creare query per i modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering.  
   
- **Content Queries**  
+ **Query sul contenuto**  
   
  [Recupero di metadati del modello tramite DMX](#bkmk_Query1)  
   
@@ -85,7 +83,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Modello di cluster|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|Tutto|  
+|NODE_DESCRIPTION|All|  
   
  Per una definizione del significato di queste colonne in un modello di clustering, vedere [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
@@ -229,7 +227,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 |Region|North America|100|  
 |English Occupation|Skilled Manual|94.9003803898654|  
 |Region|Europe|-72.5041051379789|  
-|English Occupation|Manuale|-69.6503163202722|  
+|English Occupation|Manual|-69.6503163202722|  
   
  Queste informazioni sono identiche a quelle presentate nel grafico del visualizzatore **Analisi discriminante tra cluster** se si seleziona Cluster 9 dal primo elenco a discesa e Cluster 7 dal secondo elenco a discesa. Per confrontare il cluster 9 con il relativo complemento, utilizzare la stringa vuota nel secondo parametro, come illustrato nell'esempio seguente:  
   

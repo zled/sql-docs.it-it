@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b8d8d731552fe099d161d6b87bca87ceecd709a9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f17e0880839470e128266ae62993bceeb4457c3e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modificare le proprietà in una vista origine dati (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dopo aver definito una vista origine dati utilizzando la creazione guidata vista origine dati e l'aggiunta di tabelle, viste, calcoli denominati e query denominate all'origine dati consente di visualizzare, si desidera modificare le proprietà relative a:  
@@ -54,9 +51,9 @@ ms.lasthandoff: 12/08/2017
   
 |Proprietà|Description|  
 |--------------|-----------------|  
-|Origine dati|Specifica l'origine dei dati all'interno della vista origine dati di cui vengono visualizzate le proprietà.|  
+|origine dati|Specifica l'origine dei dati all'interno della vista origine dati di cui vengono visualizzate le proprietà.|  
 |Description|Specifica una descrizione della vista origine dati.|  
-|Nome|Specifica il nome della vista origine dati visualizzato in Esplora soluzioni o nel database di Analysis Services. Il nome della vista origine dati può essere modificato in questo contesto o in Esplora soluzioni.|  
+|nome|Specifica il nome della vista origine dati visualizzato in Esplora soluzioni o nel database di Analysis Services. Il nome della vista origine dati può essere modificato in questo contesto o in Esplora soluzioni.|  
 |NameMatchingCriteria|Criteri di corrispondenza nomi per l'origine dei dati. Se nella Creazione guidata vista origine dati sono state rilevate relazioni tra chiave primaria e chiave esterna, l'impostazione predefinita è (nessuno). È possibile specificare un valore indipendentemente dall'eventuale impostazione di questa proprietà nella Creazione guidata vista origine dati. Se esistono relazioni di database e si specificano criteri di corrispondenza nomi, entrambi verranno utilizzati per derivare le relazioni tra le tabelle esistenti e le nuove tabelle aggiunte.|  
 |RetrieveRelationships|Specifica se vengono recuperate relazioni dal database. Il valore predefinito è True.|  
 |SchemaRestriction|Specifica le eventuali restrizioni relative agli schemi recuperati da un'origine dei dati. Per impostazione predefinita, non esistono restrizioni dello schema.|  
@@ -70,9 +67,9 @@ ms.lasthandoff: 12/08/2017
 |DataSource|Specifica l'origine dei dati per l'oggetto. Questa proprietà non è modificabile.|  
 |Description|Specifica la descrizione della tabella, della vista o della query denominata. Se per la vista o la tabella di database sottostante è stata archiviata una descrizione come proprietà estesa, verrà visualizzato tale valore. Questa proprietà è modificabile.|  
 |FriendlyName|Specifica un nome per la tabella o la vista più facilmente comprensibile per gli utenti o più pertinente per l'area di interesse. Per impostazione predefinita, la proprietà **FriendlyName** di una tabella o una vista corrisponde alla proprietà **Name** della tabella o della vista. La proprietà **FriendlyName** viene usata dagli oggetti di data mining e OLAP durante la definizione dei nomi degli oggetti in base a tabelle o viste. Questa proprietà è modificabile.|  
-|Nome|Specifica il nome della vista o della tabella sottostante oppure il nome della query denominata. La proprietà **Name** viene usata dagli oggetti di data mining e OLAP durante la definizione dei nomi degli oggetti in base a query denominate. Questa proprietà è modificabile soltanto per query denominate.|  
+|nome|Specifica il nome della vista o della tabella sottostante oppure il nome della query denominata. La proprietà **Name** viene usata dagli oggetti di data mining e OLAP durante la definizione dei nomi degli oggetti in base a query denominate. Questa proprietà è modificabile soltanto per query denominate.|  
 |QueryDefinition|Specifica la definizione della query denominata. Questa proprietà è applicabile soltanto a query denominate e non è direttamente modificabile. Per modificare questa proprietà, è necessario modificare la query denominata.|  
-|Schema|Specifica lo schema di database applicabile alla tabella, alla vista o alla query denominata. Questa proprietà non è modificabile.|  
+|schema|Specifica lo schema di database applicabile alla tabella, alla vista o alla query denominata. Questa proprietà non è modificabile.|  
 |TableType|Specifica il tipo di tabella per la tabella, la vista o la query denominata. Questa proprietà non è modificabile.|  
   
 ## <a name="viewing-or-changing-datacolumn-properties"></a>Visualizzazione o modifica delle proprietà di DataColumn  
@@ -86,7 +83,7 @@ ms.lasthandoff: 12/08/2017
 |Description|Specifica la descrizione della colonna. Se per la colonna di database sottostante è stata archiviata una descrizione come proprietà estesa, verrà visualizzato tale valore. Questa proprietà è modificabile.|  
 |FriendlyName|Specifica un nome per una colonna di una tabella o una vista più facilmente comprensibile per gli utenti o più pertinente per l'area di interesse. Per impostazione predefinita, la proprietà **FriendlyName** di una colonna di una tabella o una vista corrisponde alla proprietà **Name** della colonna. La proprietà **FriendlyName** viene usata dagli oggetti di data mining e OLAP durante la definizione degli attributi in base a colonne di tabelle o viste. Questa proprietà è modificabile.|  
 |Length|Specifica la lunghezza massima della colonna, in base ai dati nella colonna della vista o della tabella sottostante.|  
-|Nome|Specifica il nome della colonna sottostante oppure il nome del calcolo denominato. La proprietà **Name** viene usata dagli oggetti di data mining e OLAP durante la definizione degli attributi in base a calcoli denominati. Questa proprietà è modificabile soltanto per calcoli denominati.|  
+|nome|Specifica il nome della colonna sottostante oppure il nome del calcolo denominato. La proprietà **Name** viene usata dagli oggetti di data mining e OLAP durante la definizione degli attributi in base a calcoli denominati. Questa proprietà è modificabile soltanto per calcoli denominati.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   

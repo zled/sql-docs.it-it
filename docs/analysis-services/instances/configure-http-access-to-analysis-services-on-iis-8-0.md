@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f2926b71ccc00d178c9a60aa5c8fc9856e6c8a81
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurare l'accesso HTTP ad Analysis Services in IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo articolo viene illustrato come configurare un endpoint HTTP per accedere a un'istanza di Analysis Services. È possibile abilitare l'accesso HTTP configurando MSMDPUMP.dll, un'estensione ISAPI che viene eseguita in IIS (Internet Information Services) e che consente di eseguire attività di data pump da applicazioni client a un server Analysis Services e viceversa. Questo approccio fornisce un'alternativa per la connessione ad Analysis Services se per le soluzioni Business Intelligence in uso sono richieste le funzionalità seguenti:  
@@ -166,7 +163,7 @@ ms.lasthandoff: 12/08/2017
   
      ![Impostazioni per la conversione di applicazioni](../../analysis-services/instances/media/ssas-httpaccess-convertedapp.png "impostazioni per la conversione di applicazioni")  
   
-4.  Scegliere **OK**. Aggiornare il sito Web. La cartella OLAP è ora un'applicazione nel sito Web predefinito. A questo punto viene stabilito il percorso virtuale per il file MSMDPUMP.  
+4.  Fare clic su **OK**. Aggiornare il sito Web. La cartella OLAP è ora un'applicazione nel sito Web predefinito. A questo punto viene stabilito il percorso virtuale per il file MSMDPUMP.  
   
      ![Cartella OLAP dopo la conversione a un'applicazione](../../analysis-services/instances/media/ssas-httpaccess-convertfolderafter.png "cartella OLAP dopo la conversione a un'applicazione")  
   

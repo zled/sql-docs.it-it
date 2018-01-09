@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 303f09187528dd7fa2c897fea5fd86ec6d7f23d9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f8eb72bef98a90f45607c8933539a5ee322dea5c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entitytype-element-csdlbi"></a>Elemento EntityType (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Il **EntityType** elemento è un tipo complesso che rappresenta la struttura di un'entità di alto livello, ad esempio un cliente o un ordine, in un modello di dati. Il **bi: EntityType** elemento estende la definizione di [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) utilizzato nel [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
@@ -34,23 +32,23 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente sono elencati gli elementi e attributi che definiscono il **EntityType** elemento. Vedere anche gli attributi applicabili al [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) elemento.  
   
-|Nome|Obbligatorio|Description|  
+|nome|Obbligatorio|Description|  
 |----------|-----------------|-----------------|  
-|Sommario|No|Stringa contenente i possibili tipi di dati in una colonna. Il valore è derivato dal valore di DimensionAttributeTypeEnumType nel modello di dati.<br /><br /> Se il valore di DimensionAttributeTypeEnumType è "ExtendedType", il valore del contenuto è derivato dall'elemento ExtendedType di DimensionAttribute. Il client non è necessario per rispondere a tali valori.|  
-|DefaultDetails|No|Elenco di riferimenti a proprietà che rappresentano il set di colonne nella tabella.<br /><br /> Vedere [elemento DefaultDetails &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
-|DefaultImage|No|Riferimento a una colonna contenente l'immagine che illustra l'entità.<br /><br /> Nei modelli multidimensionali, questo elemento corrisponde a un attributo binario dell'attributo della dimensione. Se questo attributo è presente, l'elemento deve contenere un solo elemento MemberRef.<br /><br /> Vedere [elemento MemberRef &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DefaultMeasure|No|Riferimento a una misura dell'entità che deve essere utilizzato come impostazione predefinita durante l'esecuzione dei calcoli dell'entità. Se omesso, il valore predefinito è SUM.<br /><br /> Vedere [elemento MemberRef &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DisplayKey|No|Elenco di riferimenti a colonne o estremità del ruolo che costituiscono un identificatore sicuro che identifica in modo univoco un'istanza di entità.<br /><br /> Vedere [elemento DisplayKey &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md).|  
-|Gerarchia|No|Elenco delle gerarchie nel modello.<br /><br /> Vedere [gerarchia elemento &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).|  
+|Sommario|no|Stringa contenente i possibili tipi di dati in una colonna. Il valore è derivato dal valore di DimensionAttributeTypeEnumType nel modello di dati.<br /><br /> Se il valore di DimensionAttributeTypeEnumType è "ExtendedType", il valore del contenuto è derivato dall'elemento ExtendedType di DimensionAttribute. Il client non è necessario per rispondere a tali valori.|  
+|DefaultDetails|no|Elenco di riferimenti a proprietà che rappresentano il set di colonne nella tabella.<br /><br /> Vedere [elemento DefaultDetails &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
+|DefaultImage|no|Riferimento a una colonna contenente l'immagine che illustra l'entità.<br /><br /> Nei modelli multidimensionali, questo elemento corrisponde a un attributo binario dell'attributo della dimensione. Se questo attributo è presente, l'elemento deve contenere un solo elemento MemberRef.<br /><br /> Vedere [elemento MemberRef &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
+|DefaultMeasure|no|Riferimento a una misura dell'entità che deve essere utilizzato come impostazione predefinita durante l'esecuzione dei calcoli dell'entità. Se omesso, il valore predefinito è SUM.<br /><br /> Vedere [elemento MemberRef &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
+|DisplayKey|no|Elenco di riferimenti a colonne o estremità del ruolo che costituiscono un identificatore sicuro che identifica in modo univoco un'istanza di entità.<br /><br /> Vedere [elemento DisplayKey &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md).|  
+|Gerarchia|no|Elenco delle gerarchie nel modello.<br /><br /> Vedere [gerarchia elemento &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).|  
 |ReferenceName|Sì|Identificatore che può essere utilizzato per fare riferimento a questa entità in una query DAX (Data Analysis Expressions).<br /><br /> Se tale attributo non è presente, viene utilizzato il nome completo del campo dell'entità.|  
-|SortMembers|No|Elenco di proprietà utilizzato per l'ordinamento. L'attributo SortDirection indica se l'ordinamento è crescente o decrescente.|  
+|SortMembers|no|Elenco di proprietà utilizzato per l'ordinamento. L'attributo SortDirection indica se l'ordinamento è crescente o decrescente.|  
   
 ## <a name="contents-element"></a>Elemento Contents  
  Il **contenuto** elemento è un tipo semplice che descrive il tipo di dati nell'entità.  
   
  Il contenuto dell'entità (colonna) può essere uno dei valori seguenti:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Regular|Non altrimenti definito.|  
 |Time|Attributi che rappresentano periodi di tempo, ad esempio anni, semestri, trimestri, mesi o giorni.|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -31,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d4b3c24a3bfe2b9babcc13d9e9263a4457676bb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d72d5bdfcfc7c3d461dc3bc986c7ff6106e3da51
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-objects-xmla"></a>Elaborazione di oggetti (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l'elaborazione è il passaggio o serie di passaggi necessari per trasformare dati in informazioni per l'analisi aziendale. L'elaborazione varia a seconda del tipo di oggetto, ma rappresenta sempre una fase della trasformazione dei dati in informazioni.  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
 |--------------------|------------------------|  
 |*ProcessFull*|Cubo, database, dimensione, gruppo di misure, modello di data mining, struttura di data mining, partizione|  
 |*ProcessAdd*|Dimensione, partizione|  
-|*ProcessUpdate*|Dimensione|  
+|*ProcessUpdate*|Dimension|  
 |*ProcessIndexes*|Dimensione, cubo, gruppo di misure, partizione|  
 |*ProcessData*|Dimensione, cubo, gruppo di misure, partizione|  
 |*ProcessDefault*|Cubo, database, dimensione, gruppo di misure, modello di data mining, struttura di data mining, partizione|  
@@ -124,7 +122,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="description"></a>Description  
  Nell'esempio seguente viene elaborato completamente il database di esempio [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 <Process xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="description"></a>Description  
  Nell'esempio seguente viene elaborata in modo incrementale la **Internet_Sales_2004** partizione il **Internet Sales** gruppo di misure del **Adventure Works DW** cubo il [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] esempio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Il **processo** comando aggiunge le aggregazioni per ordine di date entro il 31 dicembre 2006 alla partizione utilizzando un'associazione di query out-of-line nel **associazioni** proprietà del **processo**  comando per recuperare le righe della tabella dei fatti da cui generare le aggregazioni da aggiungere alla partizione.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 <Process ProcessAffectedObjects="true" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3679e15b62a746cba1322bdf85691e313839ba46
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 91fa99b0a5338f705cecff4d1622a2db0a262154
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovercsdlmetadata-rowset"></a>Set di righe DISCOVER_CSDL_METADATA
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce informazioni su un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] modello di dati (tabulare o multidimensionale), fornendo la definizione del modello nel formato CSDLBI (Conceptual Schema Definition Language con annotazioni Business Intelligence). CSDLBI si basa su CSDL, un XML Schema utilizzato da Entity Data Framework per la comunicazione tra un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e il client [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)]. Le annotazioni Business Intelligence forniscono metadati aggiuntivi sui modelli tabulari e sugli oggetti in essi contenuti. Per altre informazioni sui modelli di dati tabulari, vedere [Annotazioni CSDL per Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
@@ -36,12 +34,12 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il set di righe **DISCOVER_CSDL_METADATA** contiene le colonne seguenti.  
   
-|**Nome colonna**|**Indicatore del tipo**|**Restrizione**|**Description**|  
+|**Nome colonna**|**Indicatore del tipo**|**Restrizione**|**Descrizione**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Sì|Specifica il nome del database per il quale viene richiesta la descrizione CSDLBI. Se omesso, viene utilizzato il database corrente.<br /><br /> Questa restrizione è necessaria per tutti i tipi di modello.|  
 |**PERSPECTIVE_ID**|**DBTYPE_WSTR**|Sì|Specifica l'ID di una prospettiva che è stata definita nel modello specificato da CATALOG_NAME.<br /><br /> Restrizione facoltativa. Si applica a tutti i tipi di modello.|  
 |**PERSPECTIVE_NAME**|**DBTYPE_WSTR**|Sì|Viene specificato il nome di una prospettiva che è stata definita nel modello specificato da CATALOG_NAME.<br /><br /> Questa restrizione è necessaria quando il modello tabulare include le prospettive o quando una soluzione multidimensionale include più cubi o prospettive.|  
-|**METADATI**|**DBTYPE_WSTR**|No|Stringa contenente la definizione XML di un'origine dati e delle relative proprietà, in base allo schema CSDLBI.|  
+|**METADATI**|**DBTYPE_WSTR**|no|Stringa contenente la definizione XML di un'origine dati e delle relative proprietà, in base allo schema CSDLBI.|  
 |**CUBE_ID**|**DBTYPE_WSTR**|Sì|Identificatore di stringa.<br /><br /> Questa restrizione è facoltativa per i database multidimensionali. Se sono disponibili più cubi e la restrizione viene omessa, viene restituito il cubo predefinito.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
   
  È possibile che nella stringa XML restituita nel set di righe siano incluse le proprietà o i valori specifici della lingua. Se si invia ad esempio la richiesta del set di righe da un client con LCID 0403 (spagnolo catalano), tramite la proprietà verranno restituiti i valori seguenti in modo appropriato per lo spagnolo catalano. Se nel server non sono disponibili traduzioni, viene restituita la stringa per la lingua predefinita del server.  
   
--   Caption  
+-   Didascalia  
   
 -   Qualifier  
   
@@ -124,7 +122,7 @@ ms.lasthandoff: 12/08/2017
   
  Nella tabella seguente vengono forniti i GUID e i valori stringa che identificano questo set di righe.  
   
-|Argomento|Valore|  
+|Argomento|valore|  
 |--------------|-----------|  
 |GUID|3444B255-171E-4cb9-AD98-19E57888A75F|  
 |ADOMDNAME|Csdl|  

@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1bf91c2e3c09b30f5e9ea48756ae2b7c9f889644
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Database Consistency Checker (DBCC) per Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC fornisce la convalida del database su richiesta per i database multidimensionali e tabulari in un'istanza di Analysis Services. È possibile eseguire DBCC in una finestra di query MDX o XMLA in SQL Server Management Studio (SSMS) e tracciare l'output di DBCC in SQL Server Profiler o in sessioni xEvent di SSMS.  
@@ -239,17 +236,17 @@ Execution complete
 |Gerarchia|Genera un errore se l'ordinamento per la gerarchia non è un valore riconosciuto.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo della gerarchia '%{hier/}'.|  
 |Gerarchia|I controlli eseguiti sulla gerarchia dipendono dal tipo interno dello schema di mapping della gerarchia usato.<br /><br /> Tutte le gerarchie vengono controllate per verificare che lo stato di elaborazione sia corretto, che l'archivio della gerarchia sia presente e che, ove applicabile, le strutture dei dati usate per una conversione da ID dati a posizione della gerarchia siano disponibili.<br /><br /> Presupponendo che vengano superati tutti questi controlli, la struttura della gerarchia viene esaminata per verificare che ogni posizione nella gerarchia punti al membro corretto.<br />Se uno di questi test non riesce, viene generato un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo della gerarchia '%{hier/}'.|  
 |Gerarchia definita dall'utente|Controlla se i nomi dei livelli della gerarchia sono impostati.<br /><br /> Se la gerarchia è stata elaborata, verifica che il formato dell'archivio dati di gerarchia interno sia corretto.  Verifica che l'archivio di gerarchia interno non contenga valori di dati non validi.<br /><br /> Se la gerarchia è contrassegnata come non elaborata, verifica che questo stato si applichi alle strutture dei dati precedenti e che tutti i livelli della gerarchia siano contrassegnati come vuoti.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo della gerarchia '%{hier/}'.|  
-|Colonna|Genera un errore se la codifica usata per la colonna non è impostata su un valore noto.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
-|Colonna|Controlla se la colonna è stata o meno compressa dal motore in memoria.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
-|Colonna|Controlla se per il tipo di compressione nella colonna sono presenti valori noti.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
-|Colonna|Quando la colonna "tokenizzazione" non è impostata su un valore noto, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
-|Colonna|Se l'intervallo di ID archiviato per un dizionario dei dati delle colonne non corrisponde al numero di valori nel dizionario dei dati o non è compreso nell'intervallo consentito, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo del dizionario dei dati.|  
-|Colonna|Controlla che il numero di segmenti di dati per una colonna corrisponda al numero di segmenti di dati per la tabella a cui appartiene.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
-|Colonna|Controlla che il numero di partizioni nella colonna dati corrisponda al numero di partizioni della mappa di segmenti di dati per la colonna.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo della mappa di segmenti.|  
-|Colonna|Verifica che il numero di record in un segmento di colonna corrisponda al conteggio di record archiviato nell'indice per tale segmento di colonna.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
-|Colonna|Se per una colonna non sono presenti statistiche dei segmenti, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
-|Colonna|Se una colonna non contiene informazioni sulla compressione o l'archiviazione di segmenti, genera un errore.|Verifiche di coerenza non superate dai file di database.|  
-|Colonna|Segnala un errore se le statistiche dei segmenti per una colonna non corrispondono ai valori di colonna effettivi per ID dati minimo, ID dati massimo, Numero di valori Distinct, Numero di righe o presenza di valori NULL.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
+|colonna|Genera un errore se la codifica usata per la colonna non è impostata su un valore noto.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
+|colonna|Controlla se la colonna è stata o meno compressa dal motore in memoria.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
+|colonna|Controlla se per il tipo di compressione nella colonna sono presenti valori noti.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
+|colonna|Quando la colonna "tokenizzazione" non è impostata su un valore noto, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
+|colonna|Se l'intervallo di ID archiviato per un dizionario dei dati delle colonne non corrisponde al numero di valori nel dizionario dei dati o non è compreso nell'intervallo consentito, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo del dizionario dei dati.|  
+|colonna|Controlla che il numero di segmenti di dati per una colonna corrisponda al numero di segmenti di dati per la tabella a cui appartiene.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
+|colonna|Controlla che il numero di partizioni nella colonna dati corrisponda al numero di partizioni della mappa di segmenti di dati per la colonna.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo della mappa di segmenti.|  
+|colonna|Verifica che il numero di record in un segmento di colonna corrisponda al conteggio di record archiviato nell'indice per tale segmento di colonna.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
+|colonna|Se per una colonna non sono presenti statistiche dei segmenti, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
+|colonna|Se una colonna non contiene informazioni sulla compressione o l'archiviazione di segmenti, genera un errore.|Verifiche di coerenza non superate dai file di database.|  
+|colonna|Segnala un errore se le statistiche dei segmenti per una colonna non corrispondono ai valori di colonna effettivi per ID dati minimo, ID dati massimo, Numero di valori Distinct, Numero di righe o presenza di valori NULL.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
 |Segmento di colonna|Se ID dati minimo o ID dati massimo è minore del valore di sistema riservato per i valori NULL, contrassegna le informazioni sul segmento di colonna come danneggiate.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
 |Segmento di colonna|Se non sono presenti righe per questo segmento, i valori di dati minimo e massimo per la colonna devono essere impostati sul valore di sistema riservato per NULL.  Se il valore non è Null, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
 |Segmento di colonna|Se la colonna include righe e almeno un valore diverso da Null, verifica che l'ID dati minimo e massimo per la colonna sia maggiore del valore di sistema riservato per NULL.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
@@ -261,8 +258,8 @@ Execution complete
 |Tabella DBCC|Per la tabella in fase di convalida, controlla se il numero di colonne è minore di zero e genera un errore se il valore è true.  Si verifica un errore anche se l'archivio colonne per una colonna nella tabella è NULL.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di colonne nella tabella '%{parent/}' è danneggiata.|  
 |Partizione DBCC|Controlla la tabella a cui appartiene la partizione in fase di convalida e, se il numero di colonne per la tabella è minore di zero, significa che la raccolta Colonne della tabella è danneggiata. Si verifica un errore anche se l'archivio colonne per una colonna della tabella è NULL.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di colonne nella tabella '%{parent/}' è danneggiata.|  
 |Partizione DBCC|Esegue il ciclo di ogni colonna della partizione selezionata e verifica che ogni segmento della partizione abbia un collegamento valido a una struttura di segmenti di colonna.  Se un segmento qualsiasi include un collegamento NULL, la partizione viene considerata danneggiata.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
-|Colonna|Restituisce un errore se il tipo di colonna non è valido.|È stato rilevato un tipo di segmento non valido.|  
-|Colonna|Restituisce un errore se il conteggio del numero di segmenti in una colonna qualsiasi è negativo o se il puntatore alla struttura di segmenti di colonna per un segmento ha un collegamento NULL.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
+|colonna|Restituisce un errore se il tipo di colonna non è valido.|È stato rilevato un tipo di segmento non valido.|  
+|colonna|Restituisce un errore se il conteggio del numero di segmenti in una colonna qualsiasi è negativo o se il puntatore alla struttura di segmenti di colonna per un segmento ha un collegamento NULL.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
 |Comando DBCC|Il comando DBCC segnala più messaggi di stato durante l'esecuzione dell'operazione DBCC.  Visualizza un messaggio di stato che include il nome del database, della tabella o della colonna dell'oggetto prima dell'avvio e un altro messaggio al termine del controllo di ogni oggetto.|Verifica della coerenza del \<objectname > \<objecttype >. Fase: verifica preliminare.<br /><br /> Verifica della coerenza del \<objectname > \<objecttype >. Fase: verifica finale.|  
   
 ## <a name="common-resolutions-for-error-conditions"></a>Risoluzioni comuni per le condizioni di errore  

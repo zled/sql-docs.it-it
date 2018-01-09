@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42b139004de7a10c073991613abcbafb84a31688
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 51b5bd319480be4c7757d4fb642859af54f209a3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverstoragetables-rowset"></a>Set di righe DISCOVER_STORAGE_TABLES
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Consente al client determinare le tabelle in cui sono incluse in un database di Analysis Services in esecuzione in modalità tabulare o SharePoint.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DISCOVER_STORAGE_TABLES** set di righe contiene le colonne seguenti.  
   
-|**Nome colonna**|**Indicatore del tipo**|**Lunghezza**|**Description**|  
+|**Nome colonna**|**Indicatore del tipo**|**Length**|**Descrizione**|  
 |---------------------|------------------------|----------------|---------------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**||Viene specificato il nome del database contenente le tabelle.<br /><br /> Il **DISCOVER_STORAGE_TABLES** righe può essere limitato tramite questa colonna. Se per limitare il set di righe non viene utilizzata questa colonna, viene utilizzato il database corrente.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**||Viene specificato il cubo o il modello contenente le tabelle.<br /><br /> Il **DISCOVER_STORAGE_TABLES** righe può essere limitato tramite questa colonna.|  
@@ -50,8 +48,8 @@ ms.lasthandoff: 12/08/2017
   
 |**Nome colonna**|**Indicatore del tipo**|**Stato della restrizione**|  
 |---------------------|------------------------|---------------------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
 |**NOME_GRUPPO_MISURE**|**DBTYPE_WSTR**|Facoltativo|  
 |**NOME_PARTIZIONE**|**DBTYPE_WSTR**|Facoltativo|  
   

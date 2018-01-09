@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4cc8bdd0f4c3a4b212661e4ac9363ce6bdefb64f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7ca0b129013f5bdced79d8fb8245893a3db7ff06
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovertransactions-rowset"></a>Set di righe DISCOVER_TRANSACTIONS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce il set corrente di transazioni in sospeso nel sistema.  
@@ -49,15 +47,15 @@ ms.lasthandoff: 12/08/2017
   
 |**Nome colonna**|**Indicatore del tipo**|**Stato della restrizione**|  
 |---------------------|------------------------|---------------------------|  
-|**ID**|**DBTYPE_WSTR**|Facoltativa.|  
-|**SESSION_ID**|**DBTYPE_WSTR**|Facoltativa.|  
+|**ID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**SESSION_ID**|**DBTYPE_WSTR**|Facoltativo.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>Utilizzo di ADOMD.NET per restituire il set di righe  
  Quando si utilizzano ADOMD.NET e il set di righe dello schema per recuperare metadati, è possibile utilizzare il GUID o la stringa per fare riferimento a un oggetto set di righe dello schema nel metodo GetSchemaDataSet. Per altre informazioni, vedere [Working with Schema Rowsets in ADOMD.NET](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md).  
   
  Nella tabella seguente vengono forniti i GUID e i valori stringa che identificano questo set di righe.  
   
-|Argomento|Valore|  
+|Argomento|valore|  
 |--------------|-----------|  
 |GUID|a07ccd28-8148-11d0-87bb-00c04fc33942|  
 |String|DISCOVER_TRANSACTIONS|  

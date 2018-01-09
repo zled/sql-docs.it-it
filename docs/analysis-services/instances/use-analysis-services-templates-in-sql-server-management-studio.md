@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa787d2f040ac8065e4df8c68da3b6c730ff9640
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ad2bc8a5d6d440f9f8c06f17d2857e5343adfce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Utilizzare i modelli di Analysis Services in SQL Server Management Studio
+# <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usare i modelli di Analysis Services in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce un set di modelli che consentono di creare rapidamente script XMLA, query DMX o MDX, creare gli indicatori KPI in un cubo o un modello tabulare, un backup di script e le operazioni di ripristino ed eseguire molte altre attività. I modelli si trovano in **Esplora modelli** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  In questo argomento è incluso un elenco dei modelli per i modelli multidimensionali e tabulari e vengono forniti esempi di come compilare una query MDX e un'istruzione XMLA tramite Visualizzatore metadati ed Esplora modelli.  
@@ -217,14 +214,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\Management|Backup|Illustra l'uso del comando XMLA **Backup** per eseguire il backup di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un file.|  
 ||Annulla|Illustra l'uso del comando XMLA **Cancel** per annullare tutte le operazioni in corso nella sessione corrente (nel caso di utenti diversi da amministratori e amministratori del server), nel database corrente (nel caso di amministratori) o nell'istanza corrente (nel caso di amministratori del server).|  
 ||Create Remote Partition Database|Illustra l'uso del comando XMLA **Create** con l'elemento Database del linguaggio di scripting di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL) per creare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e un'origine dei dati per l'archiviazione di partizioni remote.|  
-||Elimina|Illustra l'uso del comando XMLA **Delete** per eliminare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente.|  
+||DELETE|Illustra l'uso del comando XMLA **Delete** per eliminare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente.|  
 ||Process Dimension|Illustra l'uso del comando XMLA **Batch** insieme all'elemento **Parallel** e al comando **Process** per aggiornare gli attributi di una dimensione tramite un'operazione batch parallela.|  
 ||Process Partition|Illustra l'uso del comando XMLA **Batch** insieme all'elemento **Parallel** e al comando **Process** per l'elaborazione completa di una partizione tramite un'operazione batch parallela.|  
-||Restore|Illustra l'uso del comando XMLA **Restore** per ripristinare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da un file di backup.|  
+||Ripristina|Illustra l'uso del comando XMLA **Restore** per ripristinare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da un file di backup.|  
 ||Sincronizza|Illustra l'uso del comando XMLA **Synchronize** per la sincronizzazione di un altro database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con il database corrente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con l'opzione SkipMembership per il tag SynchronizeSecurity.|  
 |XMLA\Schema Rowsets|Individuazione dei set di righe dello schema|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_SCHEMA_ROWSETS.|  
 |XMLA\Server Status|Connessioni|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_CONNECTIONS.|  
-||Processi|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_JOBS.|  
+||processi|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_JOBS.|  
 ||Percorsi|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_LOCATIONS, specificando il percorso dei file di backup.|  
 ||Locks|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_LOCKS.|  
 ||Memory Grant|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_MEMORYGRANT.|  

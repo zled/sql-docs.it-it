@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4c79cf49be9eb64e21a6a19b6c8ac540d6c655d6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e841871a7be5dd1d787854bc5fbedc86eed264f4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>Creazione di modelli multidimensionali tramite SQL Server Data Tools (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre due diversi ambienti per creare, distribuire e gestire [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] soluzioni: [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In entrambi questi ambienti viene implementato un sistema di progetto. Per altre informazioni sui progetti di Visual Studio, vedere [Progetti come contenitori](http://go.microsoft.com/fwlink/?LinkId=63960) in MSDN Library.  
@@ -74,7 +71,7 @@ ms.lasthandoff: 12/08/2017
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] consente di migliorare lo sviluppo di applicazioni di Business Intelligence poiché è possibile usare i progetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un ambiente multiutente incluso nel controllo del codice sorgente senza disporre di una connessione attiva a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente l'accesso diretto agli oggetti esistenti per l'esecuzione di query e per il testing e può essere usato per implementare più rapidamente i database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per cui è stato precedentemente generato uno script. Tuttavia, dopo avere distribuito un progetto nell'ambiente di produzione, è necessario prestare attenzione nell'usare un database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e i relativi oggetti con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per evitare di sovrascrivere le modifiche apportate agli oggetti direttamente in un database esistente e quelle apportate al progetto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da cui è stata generata la soluzione distribuita. Per altre informazioni, vedere [Utilizzo di progetti e database di Analysis Services durante la fase di sviluppo](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)e [Utilizzo di progetti e database di Analysis Services in un ambiente di produzione](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-production.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Creare un progetto di Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
@@ -91,6 +88,6 @@ ms.lasthandoff: 12/08/2017
 ## <a name="see-also"></a>Vedere anche  
  [Creare un progetto di Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [Progetto script di Analysis Services in SQL Server Management Studio](../../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)   
- [Database modelli multidimensionali &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Database di modelli multidimensionali &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

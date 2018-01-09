@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 924e945003026241f29f532ffd64393ec4623414
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8c1bb47c2273d79e320e53b49c524112b067a2d3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="memberref-element-csdlbi"></a>Elemento MemberRef (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento MemberRef identifica il nome di una proprietà che è la destinazione di un riferimento.  
@@ -32,16 +30,16 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente vengono elencati gli attributi e gli elementi che definiscono l'elemento MemberRef.  
   
-|Nome|Obbligatorio|Descrizione|  
+|nome|Obbligatorio|Description|  
 |----------|-----------------|-----------------|  
-|Nome|Sì|Nome della proprietà contenuta in un elemento MemberRef.|  
+|nome|Sì|Nome della proprietà contenuta in un elemento MemberRef.|  
   
 ## <a name="memberrefs-element"></a>Elemento MemberRefs  
  MemberRefs è un tipo complesso che definisce una raccolta di membri in cui ogni membro è contenuto in un elemento MemberRef.  
   
  Nella tabella seguente vengono elencati gli attributi e gli elementi del tipo MemberRefs.  
   
-|Nome|Obbligatorio|Descrizione|  
+|nome|Obbligatorio|Description|  
 |----------|-----------------|-----------------|  
 |MemberRef|Sì|Stringa contenente il riferimento al membro.|  
   

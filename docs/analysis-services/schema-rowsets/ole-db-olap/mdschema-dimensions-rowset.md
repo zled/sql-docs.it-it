@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_DIMENSIONS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f715672e7e5aa4c72ee149e3c335aa82c7e1aaf1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5cf0198759485452fc3fd6d82cdd2642df92b440
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemadimensions-rowset"></a>Set di righe MDSCHEMA_DIMENSIONS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descrive le dimensioni condivise e private all'interno di un database.  
@@ -62,11 +60,11 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**DIMENSION_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**DIMENSION_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Facoltativo) Restrizione predefinita è un valore pari a 1. Una bitmap con uno dei valori validi seguenti:<br /><br /> 1 CUBO<br /><br /> 2 DIMENSIONE|  
 |**DIMENSION_VISIBILITY**|**DBTYPE_UI2**|(Facoltativo) Restrizione predefinita è un valore pari a 1. Una bitmap con uno dei valori validi seguenti:<br /><br /> 1 Visibile<br /><br /> 2 Non visibile|  
   

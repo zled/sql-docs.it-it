@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23c043a3c35dd63927596c5bba0d9b8cf8d76bf4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>Proprietà di cella MDX - proprietà FORMATTED_VALUE
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]La proprietà FORMATTED_VALUE è basata sulle interazioni delle proprietà VALUE, FORMAT_STRING e LANGUAGE della cella. In questo argomento viene illustrato come interagiscono queste proprietà per compilare la proprietà FORMATTED_VALUE.  
@@ -87,14 +84,14 @@ ms.lasthandoff: 12/08/2017
   
 |Membro|FORMATTED_VALUE|Spiegazione|  
 |------------|----------------------|-----------------|  
-|A|$5,040.00|La proprietà FORMAT_STRING è impostata su `Currency` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema|  
+|Un|$5,040.00|La proprietà FORMAT_STRING è impostata su `Currency` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema|  
 |B|€ 5.040,00|La proprietà FORMAT_STRING è impostata su `Currency` (valore ereditato da A) e la proprietà LANGUAGE è impostata in modo esplicito su `1034` (Spagna), da qui il simbolo dell'euro e i separatori decimale e delle migliaia diversi.|  
-|C|$5.040,00|La proprietà FORMAT_STRING è impostata su `$#,##0.00` un override di Currency, da A, e la proprietà LANGUAGE è impostata in modo esplicito su `1034` (Spagna). Poiché la proprietà FORMAT_STRING ha impostato in modo esplicito il simbolo di valuta su $, la proprietà FORMATTED_VALUE viene presentata con il simbolo $. Tuttavia, poiché `.` (punto) e `,` (virgola) sono rispettivamente segnaposto per il separatore decimale e il separatore delle migliaia, la specifica della lingua influisce su di essi generando un output localizzato per i separatori decimali e delle migliaia.|  
+|c|$5.040,00|La proprietà FORMAT_STRING è impostata su `$#,##0.00` un override di Currency, da A, e la proprietà LANGUAGE è impostata in modo esplicito su `1034` (Spagna). Poiché la proprietà FORMAT_STRING ha impostato in modo esplicito il simbolo di valuta su $, la proprietà FORMATTED_VALUE viene presentata con il simbolo $. Tuttavia, poiché `.` (punto) e `,` (virgola) sono rispettivamente segnaposto per il separatore decimale e il separatore delle migliaia, la specifica della lingua influisce su di essi generando un output localizzato per i separatori decimali e delle migliaia.|  
 |D|5.04E+03|La proprietà FORMAT_STRING è impostata su `Scientific` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema, da qui il punto ( `.` ) come separatore decimale.|  
 |E|5,04E+03|La proprietà FORMAT_STRING è impostata su `Scientific` e la proprietà LANGUAGE è impostata in modo esplicito su `1034,` da qui la virgola ( `,` ) come separatore decimale.|  
 |F|50.40%|La proprietà FORMAT_STRING è impostata su `Percent` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema, da qui il punto ( `.` ) come separatore decimale.<br /><br /> Si noti che la proprietà VALUE è stata modificata da 5040 a 0.5040|  
 |G|50,40%|La proprietà FORMAT_STRING è impostata su `Percent`, valore ereditato da F, e la proprietà LANGUAGE è impostata in modo esplicito su `1034` , da qui la virgola ( `,` ) come separatore decimale.<br /><br /> Si noti che la proprietà VALUE è stata ereditata da F.|  
-|H|No|La proprietà FORMAT_STRING è impostata su `YES/NO`, la proprietà VALUE su 0 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Poiché non vi è differenza tra il NO inglese e quello spagnolo, l'utente non nota alcuna differenza nella proprietà FORMATTED_VALUE.|  
+|H|no|La proprietà FORMAT_STRING è impostata su `YES/NO`, la proprietà VALUE su 0 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Poiché non vi è differenza tra il NO inglese e quello spagnolo, l'utente non nota alcuna differenza nella proprietà FORMATTED_VALUE.|  
 |I|SI|La proprietà FORMAT_STRING è impostata su `YES/NO`, la proprietà VALUE su 59 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Come definito per la formattazione YES/NO, qualsiasi valore diverso da zero (0) è un YES e poiché la lingua è impostata sullo spagnolo, la proprietà FORMATTED_VALUE è SI.|  
 |J|Desactivado|La proprietà FORMAT_STRING è impostata su `ON/OFF`, la proprietà VALUE su 0 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Come definito per la formattazione ON/OFF, qualsiasi valore uguale a zero (0) è un OFF e poiché la lingua è impostata sullo spagnolo, la proprietà FORMATTED_VALUE è Desactivado.|  
 |K|Activado|La proprietà FORMAT_STRING è impostata su `ON/OFF`, la proprietà VALUE su -312 e la proprietà LANGUAGE è impostata in modo esplicito su `1034`. Come definito per la formattazione ON/OFF, qualsiasi valore diverso da zero (0) è un ON e poiché la lingua è impostata sullo spagnolo, la proprietà FORMATTED_VALUE è Activado.|  
@@ -139,7 +136,7 @@ ms.lasthandoff: 12/08/2017
 |------------|----------------------|-----------------|  
 |A|3/12/1959 6:30:00 AM|La proprietà FORMAT_STRING è impostata in modo implicito su `General Date` dall'espressione CDate() e la proprietà LANGUAGE è impostata su `1033` (Inglese), valore ereditato dalle impostazioni locali del sistema|  
 |B|Thursday, March 12, 1959|La proprietà FORMAT_STRING è impostata in modo esplicito su `Long Date` e la proprietà LANGUAGE è impostata su `1033` (inglese), valore ereditato dalle impostazioni locali del sistema|  
-|C|12/03/1959 6:30:00|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `General Date` e `1034` (spagnolo).<br /><br /> Rispetto allo stile di formattazione americano, mese e giorno sono invertiti.|  
+|c|12/03/1959 6:30:00|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `General Date` e `1034` (spagnolo).<br /><br /> Rispetto allo stile di formattazione americano, mese e giorno sono invertiti.|  
 |D|jueves, 12 de marzo de 1959|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `Long Date` e `1034` (spagnolo).<br /><br /> In spagnolo mese e giorno della settimana sono riportati per esteso|  
 |E|1959/03/12 6:30:00|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `General Date` e `1041` (giapponese).<br /><br /> La data presenta ora il formato anno/mese/giorno ora:minuti:secondi|  
 |F|1959年3月12日|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `Long Date` e `1041` (giapponese).|  

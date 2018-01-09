@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Proprietà di cella MDX - contenuto di FORMAT_STRING
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Il **FORMAT_STRING** formati di proprietà delle celle di **valore** proprietà della cella, creando il valore per il **FORMATTED_VALUE** proprietà di cella. La proprietà **FORMAT_STRING** della cella è in grado di gestire valori non elaborati di tipo stringa e numerici, applicando un'espressione di formato a un valore per restituire un valore formattato per la proprietà **FORMATTED_VALUE** . Nelle tabelle seguenti vengono indicati in dettaglio la sintassi e i caratteri di formattazione utilizzati per gestire valori di tipo stringa e numerici.  
@@ -79,7 +76,7 @@ ms.lasthandoff: 12/08/2017
   
 |Carattere|Description|  
 |---------------|-----------------|  
-|Nessuno|Visualizza il numero senza formattazione.|  
+|None|Visualizza il numero senza formattazione.|  
 |**0**|Rappresenta un segnaposto di cifra al posto del quale viene visualizzata una cifra o uno zero (0).<br /><br /> Se nel numero è presente una cifra nella posizione in cui nella stringa di formato è presente lo zero, nel valore formattato verrà visualizzata la cifra. In caso contrario, in tale posizione del valore formattato verrà visualizzato uno zero.<br /><br /> Se il numero include meno cifre di quanti sono gli zeri nella stringa di formato, su entrambi i lati del separatore decimale, nel valore formattato verranno visualizzati zeri iniziali o finali.<br /><br /> Se, a destra del separatore decimale, il numero include più cifre di quanti sono gli zeri a destra del separatore decimale nell'espressione di formato, il valore formattato verrà arrotondato specificando tante cifre decimali quanti sono gli zeri.<br /><br /> Se, a sinistra del separatore decimale, il numero include più cifre di quanti sono gli zeri a sinistra del separatore decimale nell'espressione di formato, nel valore formattato le cifre aggiuntive verranno visualizzate senza modifiche.|  
 |**#**|Rappresenta un segnaposto di cifra al posto del quale viene visualizzata una cifra oppure nulla.<br /><br /> Se nell'espressione è presente una cifra nella posizione in cui nella stringa di formato è presente il simbolo cancelletto (**#**), nel valore formattato verrà visualizzata la cifra. In caso contrario, in tale posizione del valore formattato non verrà visualizzato nulla.<br /><br /> Come segnaposto il simbolo cancelletto (**#**) funziona come lo zero (**0**), con la differenza che, se il valore include un numero di cifre minore o uguale a quello dei caratteri **#** su entrambi i lati del separatore decimale nell'espressione di formato, non verranno visualizzati gli zeri iniziali e finali.|  
 |**.**|Rappresenta un segnaposto di decimali che determina il numero di cifre visualizzate a sinistra e a destra del separatore decimale.<br /><br /> Se l'espressione di formato include solo simboli cancelletto (**#**) a sinistra del separatore decimale (**.**), i numeri inferiori a 1 inizieranno con il separatore decimale. Per visualizzare uno zero iniziale con i numeri frazionari, utilizzare zero (0) come primo segnaposto di cifra a sinistra del separatore decimale.<br /><br /> Il carattere effettivo utilizzato come segnaposto di decimali nell'output formattato dipende dal formato numerico riconosciuto dal computer in uso.<br /><br /> Nota: in alcune impostazioni locali viene usata la virgola come separatore decimale.|  

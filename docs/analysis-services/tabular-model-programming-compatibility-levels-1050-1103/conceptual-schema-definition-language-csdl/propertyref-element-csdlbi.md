@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a1793ff1c0f7094ad8b63a2f0365ec90f6b05c57
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9df2f9bfd77a854c90f08ed8b4314bfa212bf469
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="propertyref-element-csdlbi"></a>Elemento PropertyRef (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento PropertyRef è un tipo semplice che fornisce un riferimento a una colonna che fornisce un valore richiesto da un'altra proprietà.  
@@ -32,16 +30,16 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente vengono elencati gli attributi e gli elementi che definiscono l'elemento PropertyRef.  
   
-|Nome|Obbligatorio|Descrizione|  
+|nome|Obbligatorio|Description|  
 |----------|-----------------|-----------------|  
-|Nome|Sì|Stringa contenente il nome della proprietà che è la destinazione del riferimento.|  
+|nome|Sì|Stringa contenente il nome della proprietà che è la destinazione del riferimento.|  
   
 ## <a name="propertyrefs-element"></a>Elemento PropertyRefs  
  PropertyRefs è un tipo complesso che definisce una raccolta di proprietà, ciascuna contenuta in un elemento PropertyRef.  
   
  Nella tabella seguente vengono elencati gli attributi e gli elementi del tipo PropertyRefs.  
   
-|Nome|Obbligatorio|Description|  
+|nome|Obbligatorio|Description|  
 |----------|-----------------|-----------------|  
 |PropertyRef|Sì|Stringa contenente il riferimento alla proprietà.|  
   

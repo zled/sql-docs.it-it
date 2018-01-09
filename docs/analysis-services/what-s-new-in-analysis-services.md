@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b65634862df0d49c8f20383a873aafe386c2e32c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Novità &#39; s New in Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services include molti miglioramenti fornisce prestazioni migliori, più facile la creazione di soluzioni, gestione automatica del database, relazioni avanzate con, il filtro incrociato bidirezionale parallela l'elaborazione della partizione, e molto altro ancora. L'elemento centrale per la maggior parte dei miglioramenti apportati in questa versione è il nuovo livello di compatibilità 1200 per i database modello tabulari.     
@@ -154,7 +154,7 @@ Ora è possibile salvare le misure DAX incomplete direttamente in un progetto di
 - Eliminazione di join ridondanti - Una singola query al motore di archiviazione restituisce le colonne della dimensione e i valori delle misure.
 - Valutazione restrittiva di IF/SWITCH - Un ramo con una condizione false non comporterà più query del motore di archiviazione. In precedenza, i rami venivano valutati rapidamente ma i risultati erano scartati in un secondo momento.     
     
-## <a name="developer"></a>Sviluppatore    
+## <a name="developer"></a>Developer    
  ### <a name="microsoftanalysisservicestabular-namespace-for-tabular-1200-programmability-in-amo"></a>Spazio dei nomi Microsoft.AnalysisServices.Tabular per la programmabilità tabulare a livello 1200 in AMO
  Analysis Services Management Objects (AMO) viene aggiornato per includere un nuovo spazio dei nomi tabulare per la gestione di un'istanza in modalità tabulare di SQL Server 2016 Analysis Services e fornire il linguaggio DDL (Data Definition Language) per la creazione o la modifica di modelli tabulari 1200 a livello di codice. Per informazioni sull'API, vedere [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx) .    
  ### <a name="analysis-services-management-objects-amo-updates"></a>Aggiornamenti di Analysis Services Management Objects (AMO)

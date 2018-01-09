@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b75857391d8c5298db654469ada8c117926dc89
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 79e7bf085f6bd1faab6fe367a2c8319192c7f2f7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csdlbi-concepts"></a>Concetti di CSDLBI
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Conceptual Schema Definition Language con annotazioni Business Intelligence (CSDLBI) è basato su Entity Data Framework, ovvero un'astrazione per la rappresentazione di dati in modo che consente a un set di dati diversi da a livello di codice accessibile, eseguire una query o esportare. CSDLBI viene utilizzato per rappresentare i modelli di dati creati utilizzando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché supporta le applicazioni e la creazione di rapporti guidata dai dati e avanzata.  
@@ -121,7 +119,7 @@ ms.lasthandoff: 12/08/2017
   
  Quando si genera un modello per gli strumenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], i nomi creati per gli oggetti seguono le convenzioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la denominazione degli oggetti e l'univocità dei nomi. Poiché tuttavia CSDLBI si basa su Entity Data Framework (EDF), in cui è necessario che i nomi rispettino le convenzioni per gli identificatori C#, quando il server crea l'output CSDLBI per un modello, ottiene i nomi utilizzati all'interno dello schema di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e crea automaticamente nuovi nomi di oggetti conformi ai requisiti di EDF. Nella tabella seguente vengono descritte le operazioni tramite le quali vengono generati i nuovi nomi.  
   
-|Rule|Azione|  
+|Regola|Azione|  
 |----------|------------|  
 |Nessun carattere non consentito|I caratteri non consentiti vengono sostituiti da caratteri di sottolineatura.|  
 |I nomi devono essere univoci|Se due stringhe sono uguali, una viene resa univoca aggiungendovi un carattere di sottolineatura più un numero|  

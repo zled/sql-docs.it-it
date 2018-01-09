@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81357b2e0baec6545a6fec8aedf5d2c635d0c9da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Autenticazione e autorizzazione di Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint distribuzione che viene eseguito all'interno di una farm di SharePoint 2010 Usa il modello di sottosistema e l'autorizzazione di autenticazione fornito dai server SharePoint. L'infrastruttura di sicurezza di SharePoint si estende al contenuto e alle operazioni di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] poiché tutto il contenuto correlato a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]viene archiviato nei database del contenuto di SharePoint e tutte le operazioni correlate a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]vengono eseguite dai servizi condivisi [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella farm. L'autenticazione degli utenti che richiedono una cartella di lavoro contenente dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] avviene tramite un'identità utente di SharePoint basata sull'identità utente di Windows. Le autorizzazioni di visualizzazione nella cartella di lavoro consentono di determinare se la richiesta viene concessa o negata.  
@@ -96,7 +93,7 @@ ms.lasthandoff: 12/08/2017
 |Amministratore di farm o di servizio|Installazione, abilitazione e configurazione di servizi e applicazioni.<br /><br /> Uso del dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e visualizzazione dei report amministrativi.|  
 |Controllo completo|Attivazione dell'integrazione delle caratteristiche di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a livello di raccolta siti.<br /><br /> Creazione di un libreria della Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Creazione di una libreria di feed di dati.|  
 |Collaborazione|Aggiunta, modifica,eliminazione e download di cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Configurazione dell'aggiornamento dati.<br /><br /> Creazione di nuove cartelle di lavoro e report basati sulle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un sito di SharePoint.<br /><br /> Creazione di documenti di servizio dati in una libreria di feed di dati|  
-|Lettura|Accesso alle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] come un'origine dati esterna, dove l'URL della cartella di lavoro viene immesso in modo esplicito in una finestra di dialogo di connessione, ad esempio nella Connessione guidata dati di Excel.|  
+|lettura|Accesso alle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] come un'origine dati esterna, dove l'URL della cartella di lavoro viene immesso in modo esplicito in una finestra di dialogo di connessione, ad esempio nella Connessione guidata dati di Excel.|  
 |Solo visualizzazione|Visualizzazione delle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Visualizzazione della cronologia dell'aggiornamento dati.<br /><br /> Connessione di una cartella di lavoro locale a una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] su un sito di SharePoint, per la ridefinizione degli scopi dei relativi dati in altri modi.<br /><br /> Download di uno snapshot della cartella di lavoro. Lo snapshot è una copia statica dei dati, senza filtri dei dati, filtri, formule o connessioni dati. Il contenuto dello snapshot è simile alla copia di valori cella dalla finestra del browser.|  
   
 ##  <a name="excel"></a> Considerazioni sulla sicurezza di Excel Services per le cartelle di lavoro di Power Pivot  
@@ -116,7 +113,7 @@ ms.lasthandoff: 12/08/2017
 ||Impostazione dati esterni consentiti|È necessario impostare questo valore su **Raccolte di connessioni dati attendibili e connessioni incorporate**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono incorporate nella cartella di lavoro. Se non si consentono le connessioni incorporate, gli utenti possono visualizzare la cache della [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ma non saranno in grado di interagire con i dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 ||Avvisa in caso di aggiornamento|È necessario disabilitare questo valore se si usa la Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per archiviare cartelle di lavoro e report. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è inclusa una caratteristica di anteprima di documento che funziona meglio se l'aggiornamento all'apertura e l'avviso in caso di aggiornamento sono disabilitati.|  
 |Provider di dati attendibili|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 è incluso per impostazione predefinita, tuttavia per l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] viene richiesto che la versione del provider MSOLAP.4 sia SQL Server 2008 R2.<br /><br /> MSOLAP.5 è installato con la versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.<br /><br /> Non rimuovere questi provider dall'elenco di provider di dati attendibili. In alcuni casi, potrebbe essere necessario installare copie aggiuntive di questo provider negli altri server SharePoint della farm. Per altre informazioni, vedere [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).|  
-|Raccolte connessioni dati attendibili|Facoltativa.|Nelle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è possibile usare file ODC (Office Data Connection), con estensione odc. Se si usano file odc per fornire informazioni di connessione alle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locali, è possibile aggiungere gli stessi file odc a questa raccolta.|  
+|Raccolte connessioni dati attendibili|Facoltativo.|Nelle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è possibile usare file ODC (Office Data Connection), con estensione odc. Se si usano file odc per fornire informazioni di connessione alle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locali, è possibile aggiungere gli stessi file odc a questa raccolta.|  
 |Assembly per la funzione definita dall'utente|Non applicabile.|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint ignora gli assembly per la funzione definita dall'utente compilati e distribuiti per Excel Services. Se si usano assembly definiti dall'utente per un comportamento specifico, tenere presente che per l'elaborazione di query [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non verranno usate le funzioni definite dall'utente create.|  
   
 ## <a name="see-also"></a>Vedere anche  
