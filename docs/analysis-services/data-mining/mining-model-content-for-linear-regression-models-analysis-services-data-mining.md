@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cb289289301d3837ff2f82848b6fd183354b7e56
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f44a257eb21427252cd611e4bd7cbb052f27df2a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di regressione lineare (Analysis Services - Data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo argomento descrive contenuto del modello di data mining che è specifico dei modelli che utilizzano il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Linear Regression. Per una spiegazione generale del contenuto del modello di data mining valida per tutti i tipi di modello, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo argomento descrive contenuto del modello di data mining che è specifico dei modelli che utilizzano il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Linear Regression. Per una spiegazione del modello di data mining applicabile a tutti i tipi di modello, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Informazioni sulla struttura di un modello di regressione lineare  
  Un modello di regressione lineare presenta una struttura estremamente semplice. Ogni modello dispone di un singolo nodo padre che rappresenta il modello e i relativi metadati e di un nodo dell'albero di regressione (NODE_TYPE = 25) che contiene la formula di regressione per ogni attributo stimabile.  
@@ -146,7 +144,7 @@ ms.lasthandoff: 12/08/2017
  MSOLAP_NODE_SHORT_CAPTION  
  Etichetta utilizzata a scopo di visualizzazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando si crea un modello tramite l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, il motore di data mining crea un'istanza speciale di un modello di albero delle decisioni e fornisce i parametri che vincolano l'albero a contenere tutti i dati di training in un singolo nodo. Tutti gli input continui sono contrassegnati e valutati come regressori potenziali, ma solo i regressori che si adattano ai dati vengono mantenuti come regressori nel modello finale. L'analisi produce una sola formula di regressione per ogni regressore oppure non ne produce alcuna.  
   
  È possibile visualizzare la formula di regressione completa in **Legenda data mining**facendo clic sul nodo **Tutti** nel [Visualizzatore Microsoft Decision Trees](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
