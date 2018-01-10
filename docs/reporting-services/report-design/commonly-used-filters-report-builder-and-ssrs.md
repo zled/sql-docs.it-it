@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,13 +20,13 @@ ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 caps.latest.revision: "36"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5c79a0e5645cb3cd462e24f3981adcf7d95b112
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc8f2253699c71300ba234dfc24f7ee9c3193540
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Filtri di uso comune (Generatore report e SSRS)
   Per creare un filtro è necessario specificare una o più equazioni di filtro. Un'equazione di filtro include un'espressione, un tipo di dati, un operatore e un valore. In questo argomento vengono forniti esempi di filtri di uso comune.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="filter-examples"></a>Esempi di filtri  
  Nella tabella seguente sono riportati esempi di equazioni di filtro che utilizzano tipi di dati e operatori differenti. L'ambito per il confronto è determinato dall'elemento del report per il quale è definito il filtro. Per un filtro definito in un set di dati, ad esempio, **TOP% 10** si riferisce al primo 10 percento di valori nel set di dati. Per un filtro definito in un gruppo, **TOP% 10** rappresenta il primo 10 percento di valori nel gruppo.  
   
-|Espressione semplice|Tipo di dati|Operatore|Value|Description|  
+|Espressione semplice|Tipo di dati|Operatore|valore|Description|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Integer**|**>**|`7`|Sono inclusi valori di dati maggiori di 7.|  
 |`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|Include i primi 10 valori di dati.|  
@@ -54,10 +52,10 @@ ms.lasthandoff: 12/05/2017
 ## <a name="examples-with-report-parameters"></a>Esempi con parametri report  
  Nella tabella seguente sono forniti esempi di espressioni di filtro contenenti un riferimento a un parametro a valore singolo o multivalore.  
   
-|Tipo di parametro|Espressione (filtro)|Operatore|Value|Tipo di dati|  
+|Tipo di parametro|Espressione (filtro)|Operatore|valore|Tipo di dati|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
-|Valore singolo|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
-|Multivalore|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
+|Valore singolo|`[EmployeeID]`|=|`[@EmployeeID]`|Valore intero|  
+|Multivalore|`[EmployeeID]`|IN|`[@EmployeeID]`|Valore intero|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

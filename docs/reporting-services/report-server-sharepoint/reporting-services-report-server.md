@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e16bc12aa7361cd348caeb34fa73f974d4f74add
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3c595b197cab784eb3ccc1ab34257868ecdc9e87
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-report-server"></a>Server di report di Reporting Services
 
@@ -63,16 +61,16 @@ Un server di report di Reporting Services viene eseguito in una delle due modali
 |**Gestione configurazione**|Sì|**\*\* Importante \*\*** Non è possibile usare Gestione configurazione per gestire un server di report in modalità SharePoint. Usare invece Amministrazione centrale SharePoint.|  
 |**Gestione report**|Sì|Non è possibile usare Gestione report per gestire la modalità SharePoint. Usare le pagine dell'applicazione SharePoint. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Report collegati**|Sì|No.|  
-|**Report personali**|Sì|No|  
-|**Sottoscrizioni personali** e metodi di invio in batch|Sì|No|  
-|**Avvisi dati**|No|Sì|  
-|**Power View**|No|Sì<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Report personali**|Sì|no|  
+|**Sottoscrizioni personali** e metodi di invio in batch|Sì|no|  
+|**Avvisi dati**|no|Sì|  
+|**Power View**|no|Sì<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Report RDL**|Sì|Sì<br /><br /> I report RDL possono essere eseguiti nei server di report di Reporting Services in modalità nativa o SharePoint.|  
-|**Report RDLX**|No|Sì<br /><br /> I report RDLX di Power View possono essere eseguiti solo nei server di report di Reporting Services in modalità SharePoint.|  
-|**Credenziali del token utente di SharePoint per l'estensione dell'elenco SharePoint**|No|Sì|  
-|**Aree AAM per distribuzioni che si interfacciano a Internet**|No|Sì|  
-|**Backup e recupero di SharePoint**|No|Sì|  
-|**Supporto del log ULS**|No|Sì|  
+|**Report RDLX**|no|Sì<br /><br /> I report RDLX di Power View possono essere eseguiti solo nei server di report di Reporting Services in modalità SharePoint.|  
+|**Credenziali del token utente di SharePoint per l'estensione dell'elenco SharePoint**|no|Sì|  
+|**Aree AAM per distribuzioni che si interfacciano a Internet**|no|Sì|  
+|**Backup e recupero di SharePoint**|no|Sì|  
+|**Supporto del log ULS**|no|Sì|  
   
 ## <a name="native-mode"></a>Modalità nativa
 
@@ -129,7 +127,7 @@ Un server di report di Reporting Services viene eseguito in una delle due modali
   
  In Reporting Services sono disponibili estensioni predefinite che consentono di utilizzare tutte le funzionalità del server senza la necessità di sviluppare componenti personalizzati. Nella tabella seguente sono descritte le estensioni predefinite che concorrono a formare un'istanza del server di report completa con funzionalità immediatamente disponibili per l'utilizzo:  
   
-|Tipo|Valore predefinito|  
+|Tipo|Default|  
 |----------|-------------|  
 |Autenticazione|Un'istanza del server di report predefinita supporta l'autenticazione di Windows, incluse le funzionalità di rappresentazione e delega, se abilitate nel dominio.|  
 |Elaborazione dati|In un'istanza del server di report predefinita sono incluse le estensioni per l'elaborazione dati per origini dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, Parallel Data Warehouse e ODBC.|  

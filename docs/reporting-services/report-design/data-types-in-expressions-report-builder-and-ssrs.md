@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 51b8f1249bb257d3aea3752b6b593e470ae8c775
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8f9aac801e823f364070fc2b3ce2e6b4b015f78
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
   I tipi di dati rappresentano tipologie di dati diversi che possono essere archiviati ed elaborati in modo efficiente. I tipi di dati standard includono testo, noto anche come stringhe, numeri con e senza posizioni decimali, date e ore e immagini. I valori in un report devono essere costituiti da un tipo di dati RDL (Report Definition Language). È possibile formattare un valore in base alle proprie preferenze quando si lo visualizza in un report. Un campo che rappresenta la valuta, ad esempio, viene archiviato nella definizione del report come numero a virgola mobile, ma può essere visualizzato in diversi formati a seconda della proprietà di formattazione scelta.  
@@ -116,7 +114,7 @@ ms.lasthandoff: 12/05/2017
   
  Per convertire questi dati in uno o più valori CLR, è possibile adottare una delle strategie seguenti:  
   
--   In una casella di testo utilizzare un'espressione per estrarre parti della stringa. Esempio:  
+-   In una casella di testo utilizzare un'espressione per estrarre parti della stringa. Ad esempio  
   
     -   Nell'espressione seguente solo la parte relativa all'ora della differenza di fuso orario dall'ora UTC viene prima estratta e poi convertita in minuti: `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   

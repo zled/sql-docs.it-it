@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d6919cb9eea7da37cb3967b4e06d945a66ab6c1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cb2645f7db1b7e65c1fea7f72ab70b79b7565bdb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---first-function"></a>Funzioni di Generatore report - Funzione First
   Restituisce il primo valore nell'ambito specificato dell'espressione specificata.  
@@ -39,7 +37,7 @@ First(expression, scope)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *espressione*  
+ *expression*  
  (**Variant** o **Binary**) Espressione su cui eseguire l'aggregazione, ad esempio `=Fields!FieldName.Value`.  
   
  *ambito*  
@@ -48,7 +46,7 @@ First(expression, scope)
 ## <a name="return-type"></a>Tipo restituito  
  Determinato dal tipo di espressione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La funzione **First** restituisce il primo valore di un set di dati dopo l'applicazione di tutti i criteri di ordinamento e di filtro all'ambito specificato.  
   
  La funzione **First** non può essere usata in espressioni di filtro di gruppo con altri ambiti ad eccezione dell'ambito corrente (predefinito).  

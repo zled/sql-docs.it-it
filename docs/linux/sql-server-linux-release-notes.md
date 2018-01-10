@@ -4,7 +4,7 @@ description: "In questo argomento contiene le note sulla versione e tutte le fun
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 12/21/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 2e43e6f3ae6761886b2279910a69a83e756dc35f
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 5b66fa7db6547bfbb9340ce5738dff064f6a48c9
+ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 su Linux
 
@@ -49,8 +49,9 @@ Le note sulla versione seguenti si applicano a 2017 di SQL Server in esecuzione 
 
 Nella tabella seguente elenca la cronologia delle versioni per SQL Server 2017.
 
-| Versione | Versione | Data di rilascio |
+| Versione | Version | Data di rilascio |
 |-----|-----|-----|
+| [CU3](#CU3) | 14.0.3015.40| 1-2018 |
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [VERSIONE GA](#GA) | 14.0.1000.169 | 10-2017 |
@@ -65,6 +66,20 @@ Se si aggiornano i pacchetti esistenti di SQL Server, eseguire il comando di agg
 - [Installare il pacchetto di ricerca Full-text](sql-server-linux-setup-full-text-search.md)
 - [Installare il pacchetto di SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 - [Installare SQL Server Integration Services](sql-server-linux-setup-ssis.md)
+
+## <A id="CU2"></a>Aggiornamento cumulativo 3 (gennaio 2018)
+
+Questa è la versione di aggiornamento cumulativo 3 (CU3) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3015.40. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987).
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni manuali o offline del pacchetto, è possibile scaricare i pacchetti RPM e Debian con le informazioni nella tabella seguente:
+
+| Pacchetto | versione del pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto Red Hat RPM | 14.0.3015.40-1 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm)</br>[Pacchetto SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Pacchetto RPM SLES | 14.0.3015.40-1 | [pacchetto RPM motore MSSQL server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
+| Pacchetto Debian Ubuntu 16.04 | 14.0.3015.40-1 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[Pacchetto Debian di SQL Server Agent](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[Pacchetto SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <A id="CU2"></a>Aggiornamento cumulativo 2 (novembre 2017)
 
@@ -134,7 +149,7 @@ Le funzionalità e i servizi seguenti non sono disponibili su Linux in questo mo
 | &nbsp; | Change Data Capture |
 | &nbsp; | Backup gestito |
 | **Disponibilità elevata** | Mirroring del database  |
-| **Security** | Extensible Key Management |
+| **Sicurezza** | Extensible Key Management |
 | &nbsp; | Autenticazione di Active Directory per i server collegati | 
 | &nbsp; | Autenticazione di Active Directory per i gruppi di disponibilità (estensivi) | 
 | &nbsp; | strumenti di terze parti AD 3 (Centrify, Vintela, Powerbroker) | 

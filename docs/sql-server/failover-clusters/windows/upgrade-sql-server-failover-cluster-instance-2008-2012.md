@@ -1,7 +1,10 @@
 ---
 title: Aggiornare istanze di SQL Server in esecuzione in cluster di Windows Server 2008/2008 R2/2012 | Microsoft Docs
 ms.date: 11/10/2017
-ms.prod: sql-server-2017
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: database engine
+ms.component: failover-clustuers
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91fe880168482d29e796c2bbe23c278c60bfa6c1
-ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
+ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aggiornare istanze di SQL Server in esecuzione in cluster di Windows Server 2008/2008 R2/2012
 
@@ -127,7 +130,7 @@ Se la configurazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)
 
 Se la configurazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] non usa istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] autonome ma solo istanze di cluster di failover di SQL Server all'interno di almeno un gruppo di disponibilità, è possibile eseguire la migrazione in un nuovo cluster tramite metodi simili a quelli dello scenario senza gruppi di disponibilità e senza istanze autonome. Prima di copiare le tabelle di sistema nei dischi condivisi delle istanze di cluster di failover di destinazione, è necessario rilasciare tutti i gruppi di disponibilità nell'ambiente originale. Dopo la migrazione di tutti i database nei computer di destinazione, i gruppi di disponibilità verranno ricreati con gli stessi nomi di schema e di listener. In questo modo, nel cluster di destinazione le risorse WSFC verranno formate e gestite correttamente. **È necessario abilitare Always On in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager per ogni computer nell'ambiente di destinazione prima della migrazione.**
 
-###  <a name="to-perform-the-upgrade"></a>Per eseguire l'aggiornamento
+### <a name="to-perform-the-upgrade"></a>Per eseguire l'aggiornamento
 
 1.  Arrestare il traffico verso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
 

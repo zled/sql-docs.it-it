@@ -8,22 +8,22 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 7a38071816dbd945ce1b18336feedc28c5d91e73
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 395ec440e3cae0ac4013edc9c35af36e32a73d0c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-report-builder"></a>Installare Generatore report
+# <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] è un'app autonoma, installata nel computer dall'utente o da un amministratore. È possibile installarla dall'Area download Microsoft, da un server di report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  In genere un amministratore installa e configura [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede l'autorizzazione per scaricare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dal portale Web e gestisce cartelle e autorizzazioni per report, parti del report e set di dati condivisi salvati nel server di report. Per altre informazioni sull'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  Accettare i termini del contratto di licenza e fare clic su **Avanti**.  
   
-4.  Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Fare clic su **Avanti**.  
+4.  Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Scegliere **Avanti**.  
   
     > [!NOTE]  
     >  Se si intende usare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] quando è connesso a un server di report, è consigliabile specificare l'URL del server. È tuttavia possibile eseguire questa operazione dalla finestra di dialogo **Opzioni** in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  

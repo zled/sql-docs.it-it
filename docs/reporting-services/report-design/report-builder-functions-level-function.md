@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5ed59cf792bb62b1930ce3bcf6cf9ea0e505b028
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07c04ef8576eaeec00b629c045c54136cb10e463
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---level-function"></a>Funzioni di Generatore report - Funzione Level
   Restituisce il livello di nidificazione corrente in una gerarchia ricorsiva.  
@@ -45,7 +43,7 @@ Level(scope)
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore **Integer**. Se il parametro *scope* specifica un set di dati o un'area dati oppure un raggruppamento non ricorsivo, ovvero un raggruppamento privo dell'elemento **Parent** , **Level** restituirà 0. Se *scope* viene omesso, restituisce il livello dell'ambito corrente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il valore restituito dalla funzione **Level** è a base zero, ovvero il primo livello di una gerarchia viene indicato con 0.  
   
  È possibile utilizzare la funzione **Level** per consentire l'applicazione dei rientri in una gerarchia ricorsiva, ad esempio un elenco di dipendenti.  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,13 +25,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cef868a3eef5413777e8bd05101311931df9e191
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d730302cddaba05d9160489fab2bf761986fca9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="adding-data-flow-components-programmatically"></a>Aggiunta di componenti flusso di dati a livello di programmazione
+# <a name="adding-data-flow-components-programmatically"></a>Aggiunta di componenti del flusso di dati a livello di programmazione
   Il primo passaggio per la compilazione di un flusso di dati consiste nell'aggiunta di componenti. È quindi necessario configurarli e connetterli per stabilire il flusso di dati in fase di esecuzione. In questa sezione vengono descritti i passaggi per aggiungere un componente all'attività Flusso di dati, creare la relativa istanza della fase di progettazione e quindi configurarlo. Per informazioni su come connettere i componenti, vedere [Connessione di componenti flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
 ## <a name="adding-a-component"></a>Aggiunta di un componente  

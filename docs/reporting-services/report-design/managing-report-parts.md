@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff3a13d79ec0f7d3e4d4b9452b817bc804d04574
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="managing-report-parts"></a>Gestione di parti di report
   Le parti del report possono essere inoltre riusate da più utenti e in più report. Gli utenti possono cercare le parti del report nel server e aggiungerle a un report.  Possono inoltre essere informati sugli aggiornamenti apportati alla parte del report nel server e ripubblicare nuove versioni di una parte del report. Queste azioni di creazione di report possono essere interessate e controllate dalle autorizzazioni di sicurezza di Reporting Services.  In questo argomento vengono illustrate le proprietà delle parti del report e viene descritto il comportamento delle parti del report presenti nel server.  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
 |Proprietà|Description|Parte del report<br /><br /> Criteri di ricerca nella raccolta|  
 |--------------|-----------------|---------------------------------------------|  
-|Nome|Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Sì|  
+|nome|Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Sì|  
 |Description|Può essere necessario organizzare i nomi delle parti del report in modo da semplificare la ricerca nella raccolta. Ad esempio, è possibile cercare la descrizione che inizia con "Vendite>>" per trovare tutte le parti di report in cui sono presenti dati e presentazioni relativi alle vendite.|Sì|  
 |CreatedBy|ID dell'utente che ha aggiunto la parte del report al database del server di report. Il formato esatto dipende dal metodo di autenticazione. Alcuni metodi di autenticazione, ad esempio, consentono di visualizzare il nome di dominio\utente completo nei campi CreatedBy e ModifiedBy.|Sì|  
 |CreationDate|Data in cui è stata originariamente creata la parte del report.<br /><br /> Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Sì|  
@@ -81,11 +79,11 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Server in modalità integrata SharePoint  
   
-|Azioni|Ruolo|  
+|Azioni|Role|  
 |-------------|----------|  
 |Aggiunta, eliminazione, modifica delle proprietà dell'elemento, gestione della sicurezza e download di parti del report|Controllo completo|  
 |Aggiunta, eliminazione, modifica delle proprietà dell'elemento e download di parti del report|Progettazione<br /><br /> Collaborazione|  
-|Esecuzione di ricerche e riutilizzo|Lettura<br /><br /> Solo visualizzazione|  
+|Esecuzione di ricerche e riutilizzo|lettura<br /><br /> Solo visualizzazione|  
   
 ### <a name="security-considerations"></a>Considerazioni sulla sicurezza  
   

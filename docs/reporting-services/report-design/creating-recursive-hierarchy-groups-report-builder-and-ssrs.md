@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3062eacef7de155c81bab789cc808cb3e1bffc5d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 86c1fd83cfd413275c18c335a69efaa3e0fccbb4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>Creazione di gruppi di gerarchie ricorsive (Generatore report e SSRS)
 Per visualizzare dati ricorsivi in report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , dove la relazione tra padre e figlio è rappresentata mediante i campi del set di dati, impostare l'espressione di raggruppamento nell'area dati in base al campo figlio e la proprietà Parent in base al campo padre.  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae9b5358621f27a8a7f90ae60e63b23c75421bc9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 424e36f6be32da0aafb6981e923f66aed7c22139
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Preparazione all'implementazione di un'estensione per l'elaborazione dati
   Prima di implementare l'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], è necessario definire le interfacce da implementare. È possibile fornire implementazioni specifiche dell'estensione dell'intero set di interfacce oppure è possibile incentrare l'implementazione semplicemente su un subset, ad esempio le interfacce <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> in cui i client interagirebbero principalmente con un set di risultati come un oggetto **DataReader** e in cui l'estensione per l'elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] verrebbe usata come collegamento tra il set di risultati e l'origine dati.  
@@ -75,17 +73,17 @@ ms.lasthandoff: 12/05/2017
   
 |Interfaccia|Description|Implementazione|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|Rappresenta una sessione univoca con un'origine dati. Nel caso di un sistema di database client/server, la sessione può essere equivalente a una connessione di rete al server.|Required|  
+|IDbConnection|Rappresenta una sessione univoca con un'origine dati. Nel caso di un sistema di database client/server, la sessione può essere equivalente a una connessione di rete al server.|Obbligatorio|  
 |IDbConnectionExtension|Rappresenta proprietà di connessione aggiuntive che possono essere implementate dalle estensioni per l'elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] per quanto riguarda sicurezza e autenticazione.|Facoltativo|  
-|IDbTransaction|Rappresenta una transazione locale.|Required|  
+|IDbTransaction|Rappresenta una transazione locale.|Obbligatorio|  
 |IDbTransactionExtension|Rappresenta proprietà aggiuntive della transazione che possono essere implementate dalle estensioni per l'elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs-md.md)].|Facoltativo|  
-|IDbCommand|Rappresenta una query o un comando utilizzato per la connessione a un'origine dati.|Required|  
+|IDbCommand|Rappresenta una query o un comando utilizzato per la connessione a un'origine dati.|Obbligatorio|  
 |IDbCommandAnalysis|Rappresenta informazioni aggiuntive sul comando per l'analisi di una query e la restituzione di un elenco di nomi di parametri utilizzati nella query.|Facoltativo|  
-|IDataParameter|Rappresenta una coppia nome/valore o un parametro passato a un comando o a una query.|Required|  
-|IDataParameterCollection|Rappresenta una raccolta di tutti i parametri relativi a un comando o a una query.|Required|  
-|IDataReader|Fornisce un metodo per leggere un flusso di dati forward-only di sola lettura dall'origine dati.|Required|  
+|IDataParameter|Rappresenta una coppia nome/valore o un parametro passato a un comando o a una query.|Obbligatorio|  
+|IDataParameterCollection|Rappresenta una raccolta di tutti i parametri relativi a un comando o a una query.|Obbligatorio|  
+|IDataReader|Fornisce un metodo per leggere un flusso di dati forward-only di sola lettura dall'origine dati.|Obbligatorio|  
 |IDataReaderExtension|Fornisce un metodo per leggere uno o più flussi forward-only di set di risultati, ottenuti eseguendo un comando in un'origine dati. Questa interfaccia fornisce supporto aggiuntivo per le aggregazioni di campi.|Facoltativo|  
-|IExtension|Fornisce la classe di base per un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Consente inoltre a un implementatore di includere un nome localizzato per l'estensione e di passare le impostazioni di configurazione dal file di configurazione all'estensione.|Required|  
+|IExtension|Fornisce la classe di base per un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Consente inoltre a un implementatore di includere un nome localizzato per l'estensione e di passare le impostazioni di configurazione dal file di configurazione all'estensione.|Obbligatorio|  
   
  Le interfacce dell'estensione per l'elaborazione dati sono identiche a un subset delle proprietà, dei metodi e delle interfacce del provider di dati [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], quando possibile. Per ulteriori informazioni sull'implementazione di un provider di dati [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] completo, vedere l'argomento relativo all'implementazione di un provider di dati nella documentazione di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK).  
   

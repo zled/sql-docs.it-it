@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 80dda6c12477a044a8a12c9b50d8fccb18aebb23
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4fcaa7101ebdd8042d0148b4a216335a74af837b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funzioni di Generatore report - Informazioni di riferimento sulle funzioni di aggregazione
   Per includere valori aggregati nel report, è possibile utilizzare funzioni di aggregazione predefinite nelle espressioni. La funzione di aggregazione predefinita per i campi numerici è SUM. È possibile modificare l'espressione e utilizzare una funzione di aggregazione predefinita o specificare un ambito differente. L'ambito identifica il set di dati da utilizzare per il calcolo.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="CalculatingAggregates"></a> Funzioni di aggregazione predefinite  
  Le funzioni predefinite seguenti calcolano i valori di riepilogo relativi a un set di dati numerici non Null nell'ambito predefinito o nell'ambito denominato.  
   
-|**Funzione**|**Description**|  
+|**Funzione**|**Descrizione**|  
 |------------------|---------------------|  
 |[Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)|Restituisce la media di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.|  
 |[Count](../../reporting-services/report-design/report-builder-functions-count-function.md)|Restituisce il conteggio dei valori non Null specificati dall'espressione, valutato nel contesto dell'ambito specificato.|  
@@ -82,18 +80,18 @@ ms.lasthandoff: 12/05/2017
 |Percorso nel report|Campi|Parametri|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variabili|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Intestazione di pagina<br /><br /> Piè di pagina|Sì|Sì|Al massimo uno<br /><br /> Nota 1|Sì|Sì|Sì|Sì|  
-|Corpo|Sì<br /><br /> Nota 2|Sì|Solo elementi nell'ambito corrente o in un ambito contenitore<br /><br /> Nota 3|No|Sì|Sì|Sì|  
-|Parametro del report|No|Solo i parametri precedenti dell'elenco<br /><br /> Nota 4|No|No|No|No|No|  
-|Campo|Sì|Sì|No|No|No|No|No|  
-|Parametro della query|No|Sì|No|No|No|No|No|  
-|Espressione di raggruppamento|Sì|Sì|No|No|Sì|No|No|  
-|Espressione di ordinamento|Sì|Sì|No|No|Sì|Sì<br /><br /> Nota 5|No|  
-|Espressione filtro|Sì|Sì|No|No|Sì|Sì<br /><br /> Nota 6|No|  
-|codice|No|Sì<br /><br /> Nota 7|No|No|No|No|No|  
-|Lingua del report|No|Sì|No|No|No|No|No|  
-|Variabili|Sì|Sì|No|No|Sì|Ambito corrente o contenitore|No|  
-|Aggregazioni|Sì|Sì|Solo nell'intestazione di pagina/piè di pagina|Solo nelle aggregazioni dell'elemento del report|Sì|No|No|  
-|Funzioni di ricerca|Sì|Sì|Sì|No|Sì|No|No|  
+|Corpo|Sì<br /><br /> Nota 2|Sì|Solo elementi nell'ambito corrente o in un ambito contenitore<br /><br /> Nota 3|no|Sì|Sì|Sì|  
+|Parametro del report|no|Solo i parametri precedenti dell'elenco<br /><br /> Nota 4|no|no|no|no|no|  
+|Campo|Sì|Sì|no|no|no|no|no|  
+|Parametro della query|no|Sì|no|no|no|no|no|  
+|Espressione di raggruppamento|Sì|Sì|no|no|Sì|no|no|  
+|Espressione di ordinamento|Sì|Sì|no|no|Sì|Sì<br /><br /> Nota 5|no|  
+|Espressione filtro|Sì|Sì|no|no|Sì|Sì<br /><br /> Nota 6|no|  
+|codice|no|Sì<br /><br /> Nota 7|no|no|no|no|no|  
+|Lingua del report|no|Sì|no|no|no|no|no|  
+|Variabili|Sì|Sì|no|no|Sì|Ambito corrente o contenitore|no|  
+|Aggregazioni|Sì|Sì|Solo nell'intestazione di pagina/piè di pagina|Solo nelle aggregazioni dell'elemento del report|Sì|no|no|  
+|Funzioni di ricerca|Sì|Sì|Sì|no|Sì|no|no|  
   
 -   **Nota 1.** ReportItems deve essere incluso nella pagina del report visualizzabile; in caso contrario, il relativo valore è Null. Se la visibilità di un elemento del report dipende da un'espressione che restituisce False, l'elemento del report non sarà presente nella pagina.  
   
@@ -118,13 +116,13 @@ ms.lasthandoff: 12/05/2017
   
 |Contesto|RunningValue|RowNumber|Primo<br /><br /> Ultimo|Previous|Sum e altre funzioni di ordinamento preliminare|Aggregazioni ReportItem|Funzioni di ricerca|Funzione di aggregazione|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valore corrente|No|No|No|No|Sì|No|Sì|No|  
-|Primo<br /><br /> Ultimo|No|No|No|No|Sì|No|No|No|  
-|Previous|Sì|Sì|Sì|No|Sì|No|Sì|No|  
-|Sum e altre funzioni di ordinamento preliminare|No|No|No|No|Sì|No|Sì|No|  
-|Aggregazioni ReportItem|No|No|No|No|No|No|No|No|  
-|Funzioni di ricerca|Sì|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|No|No|  
-|Funzione di aggregazione|No|No|No|No|No|No|No|No|  
+|Valore corrente|no|no|no|no|Sì|no|Sì|no|  
+|Primo<br /><br /> Ultimo|no|no|no|no|Sì|no|no|no|  
+|Previous|Sì|Sì|Sì|no|Sì|no|Sì|no|  
+|Sum e altre funzioni di ordinamento preliminare|no|no|no|no|Sì|no|Sì|no|  
+|Aggregazioni ReportItem|no|no|no|no|no|no|no|no|  
+|Funzioni di ricerca|Sì|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|no|no|  
+|Funzione di aggregazione|no|no|no|no|no|no|no|no|  
   
 -   **Nota 1.** Le funzioni di aggregazione sono consentite solo all'interno dell'espressione *Source* di una funzione di ricerca se tale funzione non è contenuta in un'aggregazione. Le funzioni di aggregazione non sono consentite all'interno di espressioni *Destination* o *Result* di una funzione di ricerca.  
   
@@ -133,7 +131,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="CalculatingRunningValues"></a> Calcolo dei valori correnti  
  Nelle funzioni predefinite seguenti vengono calcolati i valori correnti per un set di dati. **RowNumber** è simile a **RunningValue** in quanto consente la restituzione del valore corrente di un conteggio che viene incrementato per ogni riga all'interno dell'ambito contenitore. Il parametro di ambito per queste funzioni deve specificare un ambito contenitore che controlla quando deve essere riavviato il conteggio.  
   
-|**Funzione**|**Description**|  
+|**Funzione**|**Descrizione**|  
 |------------------|---------------------|  
 |[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|Restituisce il conteggio parziale del numero di righe per l'ambito specificato. La funzione **RowNumber** riavvia il conteggio da 1, non da 0.|  
 |[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|Restituisce un'aggregazione parziale di tutti i valori numerici non Null specificati dall'espressione, valutata per l'ambito specificato.|  
@@ -143,7 +141,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingRowCounts"></a> Recupero di conteggi delle righe  
  La funzione predefinita seguente calcola il numero di righe nell'ambito specificato. Utilizzare questa funzione per conteggiare tutte le righe, incluse quelle con valori Null.  
   
-|**Funzione**|**Description**|  
+|**Funzione**|**Descrizione**|  
 |------------------|---------------------|  
 |[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|Restituisce il numero di righe nell'ambito specificato, incluse le righe con valori Null.|  
   
@@ -152,7 +150,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="LookupFunctions"></a> Ricerca di valori da un altro set di dati  
  Le funzioni di ricerca seguenti recuperano valori da un set di dati specificato.  
   
-|**Funzione**|**Description**|  
+|**Funzione**|**Descrizione**|  
 |------------------|---------------------|  
 |[Funzione Lookup](../../reporting-services/report-design/report-builder-functions-lookup-function.md)|Restituisce un valore da un set di dati per un'espressione specificata.|  
 |[Funzione LookupSet](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|Restituisce un set di valori da un set di dati per un'espressione specificata.|  
@@ -163,7 +161,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingPostsortValues"></a> Recupero di valori dipendenti dall'ordinamento  
  Le funzioni predefinite seguenti restituiscono il primo, l'ultimo o il precedente valore all'interno di un ambito specificato. Queste funzioni dipendono dal tipo di ordinamento dei valori dei dati. Utilizzare queste funzioni, ad esempio, per trovare il primo e l'ultimo valore in una pagina o per creare un'intestazione di pagina in formato dizionario. Usare **Previous** per confrontare il valore di una riga con il valore della riga precedente in un ambito specificato, ad esempio per trovare i valori in percentuale anno dopo anno in una tabella.  
   
-|**Funzione**|**Description**|  
+|**Funzione**|**Descrizione**|  
 |------------------|---------------------|  
 |[Primo](../../reporting-services/report-design/report-builder-functions-first-function.md)|Restituisce il primo valore nell'ambito specificato dell'espressione specificata.|  
 |[Ultimo](../../reporting-services/report-design/report-builder-functions-last-function.md)|Restituisce l'ultimo valore nell'ambito specificato dell'espressione specificata.|  
@@ -174,7 +172,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingServerAggregates"></a> Recupero di aggregazioni server  
  La funzione predefinita seguente recupera aggregazioni personalizzate dal provider di dati. Ad esempio, usando un tipo di origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile recuperare le aggregazioni calcolate sul server dell'origine dati da usare in un'intestazione di gruppo.  
   
-|**Funzione**|**Description**|  
+|**Funzione**|**Descrizione**|  
 |------------------|---------------------|  
 |[Aggregate](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Restituisce un'aggregazione personalizzata dell'espressione specificata, secondo quanto definito dal provider di dati.|  
   

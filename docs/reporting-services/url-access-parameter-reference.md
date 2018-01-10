@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: "48"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2924bd13417cbe3b9ce114516b998871abb0c89d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32a53f285348210ef551a3189a7676f87366fb17
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-access-parameter-reference"></a>Riferimento ai parametri di accesso con URL
   È possibile usare i seguenti parametri come parte di un URL per configurare l'aspetto dei [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]report. I parametri più comuni sono elencati in questa sezione: I parametri rilevano la distinzione tra maiuscole e minuscole e iniziano con i prefissi di parametro *rs:* se indirizzati al server di report e *rc:* se indirizzati a un visualizzatore HTML. È inoltre possibile specificare parametri specifici per dispositivi o estensioni per il rendering. Per altre informazioni sui parametri specifici per il dispositivo, vedere [Specificare le impostazioni relative alle informazioni sul dispositivo in un URL](../reporting-services/specify-device-information-settings-in-a-url.md).  

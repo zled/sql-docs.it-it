@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 caps.latest.revision: "42"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e424561065b7fa6889fd680335f56d1b7082ee60
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 492f85664f3a1068d32fca9910717d794fb6dc6e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="role-definitions---predefined-roles"></a>Definizioni di ruolo - Ruoli predefiniti
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato con ruoli predefiniti che è possibile utilizzare per concedere l'accesso alle operazioni del server di report. Ogni ruolo predefinito definisce una raccolta di attività correlate. È possibile assegnare account utente e di gruppo ai ruoli predefiniti per fornire accesso immediato alle operazioni del server di report.  
@@ -54,8 +52,8 @@ ms.lasthandoff: 12/05/2017
 |[Ruolo Visualizzazione](#bkmk_browser)|Elemento|Gli utenti assegnati a questo ruolo possono eseguire report, sottoscrivere report e spostarsi nella struttura di cartelle.|  
 |[Ruolo Generatore report](#bkmk_reportbuilder)|Elemento|Gli utenti assegnati a questo ruolo possono creare e modificare report in Generatore report.|  
 |[Ruolo Report personali](#bkmk_myreports)|Elemento|Gli utenti assegnati a questo ruolo possono gestire un'area di lavoro personale per l'archiviazione e l'utilizzo di report e altri elementi.|  
-|[Ruolo Amministratore sistema](#bkmk_systemadministrator)|Di sistema|Gli utenti assegnati a questo ruolo possono abilitare funzionalità e impostare valori predefiniti, impostare la sicurezza al livello del sito, creare definizioni di ruolo in Management Studio e gestire processi.|  
-|[Ruolo Utente sistema](#bkmk_systemuser)|Di sistema|Gli utenti assegnati a questo ruolo possono visualizzare informazioni di base sul server di report, ad esempio informazioni sulla pianificazione in una pianificazione condivisa.|  
+|[Ruolo Amministratore sistema](#bkmk_systemadministrator)|Sistema|Gli utenti assegnati a questo ruolo possono abilitare funzionalità e impostare valori predefiniti, impostare la sicurezza al livello del sito, creare definizioni di ruolo in Management Studio e gestire processi.|  
+|[Ruolo Utente sistema](#bkmk_systemuser)|Sistema|Gli utenti assegnati a questo ruolo possono visualizzare informazioni di base sul server di report, ad esempio informazioni sulla pianificazione in una pianificazione condivisa.|  
   
 ##  <a name="bkmk_content"></a> Ruolo Gestione contenuto  
  Il ruolo **Gestione contenuto** è un ruolo predefinito che include attività utili per gli utenti che gestiscono report e contenuto Web ma che non devono necessariamente progettare report oppure gestire un'istanza di un server Web o di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un utente con questo ruolo distribuisce i report, gestisce i modelli di report e le connessioni alle origini dei dati e decide le modalità di utilizzo dei report. Per la definizione del ruolo **Gestione contenuto** tutte le attività a livello di elemento sono selezionate per impostazione predefinita.  

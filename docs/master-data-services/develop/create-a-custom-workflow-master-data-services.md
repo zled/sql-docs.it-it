@@ -8,7 +8,7 @@ ms.service:
 ms.component: develop
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03676da7d12179dcccd1d82e0601c9fbda3c826d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 51c1529c330b6cbb6c7b1b0905a34dca3984f824
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Creare un flusso di lavoro personalizzato (Master Data Services)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] vengono utilizzate le regole business per creare soluzioni di base per il flusso di lavoro, come l'aggiornamento e la convalida automatici dei dati e l'invio di notifiche mediante posta elettronica in base alle condizioni specificate. Quando è necessaria un'elaborazione più complessa di quella fornita dalle azioni predefinite del flusso di lavoro, utilizzare un flusso di lavoro personalizzato. Un flusso di lavoro personalizzato è un assembly .NET che viene creato. Quando viene chiamato l'assembly del flusso di lavoro, il codice può eseguire qualsiasi azione richiesta dalla situazione. Se ad esempio il flusso di lavoro richiede l'elaborazione di eventi complessi, come le approvazioni multilivello o gli alberi delle decisioni complessi, è possibile configurare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in modo da avviare un flusso di lavoro personalizzato che analizza i dati e determina dove inviarli per l'approvazione.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
     </setting>  
     ```  
   
-3.  Sotto l'impostazione "ConnectionString" aggiungere l'impostazione "WorkflowTypeExtenders" per associare il nome di un tag all'assembly del gestore del flusso di lavoro. Esempio:  
+3.  Sotto l'impostazione "ConnectionString" aggiungere l'impostazione "WorkflowTypeExtenders" per associare il nome di un tag all'assembly del gestore del flusso di lavoro. Ad esempio  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  

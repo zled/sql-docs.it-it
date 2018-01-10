@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ead354a4f95b061f44728b76bbbccd6ef84606a0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3b3d4f355e52f27689dad4f157ca65edad99fa99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Aggiungere filtri per set di dati, aree dati e gruppi
   In un report un filtro è una parte di un set di dati, di un'area dati o di un gruppo di aree dati che viene creato per limitare i dati utilizzati nel report. I filtri consentono di controllare i dati del report se non è possibile modificare la query del set di dati, ad esempio se si utilizza un set di dati condiviso.  
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/05/2017
 |--------------------------------------------|-----------------------|  
 |**Boolean**|**Boolean**|  
 |**DateTime**|**DateTime**, **DateTimeOffset**|  
-|**Valore intero**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
+|**Integer**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
 |**Float**|**Single**, **Double**, **Decimal**|  
 |**Text**|**String**, **Char**, **GUID**, **Timespan**|  
   
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/05/2017
 |**Compreso tra**|Verifica se l'espressione è compresa tra due valori (inclusi).|  
 |**In**|Verifica se l'espressione è contenuta in un set di valori.|  
   
-### <a name="value"></a>Valore  
+### <a name="value"></a>valore  
  L'espressione Valore specifica la parte finale dell'equazione di filtro. Il componente Elaborazione report converte l'espressione valutata nel tipo di dati specificato dall'utente, quindi valuta l'intera equazione di filtro per determinare se i dati specificati in Espressione passano attraverso il filtro.  
   
  Per eseguire la conversione in un tipo di dati diverso da un tipo di dati CLR standard, è necessario modificare l'espressione in modo da eseguire una conversione esplicita in un tipo di dati. È possibile usare le funzioni di conversione elencate nella finestra di dialogo **Espressione** in **Funzioni comuni**, **Conversione**. Ad esempio, per un campo `ListPrice` che rappresenta i dati archiviati come tipo di dati **money** in un'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'estensione per l'elaborazione dati restituisce il valore del campo come tipo di dati <xref:System.Decimal> . Per impostare un filtro in modo da usare solo i valori maggiori di **50000,00`=CDec(50000.00)` nella valuta del report, convertire il valore in Decimal mediante l'espressione** .  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 caps.latest.revision: "25"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8cb93e668b5b9ebec50e1f97aafc680507470cdb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 641d257227cbb91421ddcc1929661c39f1fe5f94
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticazione in Reporting Services
   L'autenticazione è il processo di determinazione del diritto di un utente a un'identità. Per autenticare un utente sono disponibili numerose tecniche. La più comune consiste nell'utilizzo di password. Quando si implementa l'autenticazione basata su form, ad esempio, si sceglie un'implementazione che richiede le credenziali agli utenti (generalmente tramite un'interfaccia in cui vengono richiesti un nome di accesso e una password), quindi si convalidano gli utenti in base a un archivio dati, ad esempio una tabella di database o un file di configurazione. Se non è possibile convalidare le credenziali, il processo di autenticazione non riesce e all'utente viene assegnata un'identità anonima.  

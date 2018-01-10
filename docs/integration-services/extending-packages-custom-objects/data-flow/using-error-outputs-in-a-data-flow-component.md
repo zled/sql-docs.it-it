@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6dae159609b8bdd57375c9a9e2abd0fbd8ee0ca1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 02bddca5baa37f7dc76a8943ac5df0d270d1cb70
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Utilizzo degli output degli errori in un componente del flusso di dati
   Ai componenti è possibile aggiungere oggetti <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> speciali, denominati output degli errori, in modo che il componente possa reindirizzare le righe che non è in grado di elaborare durante l'esecuzione. I problemi che si possono verificare con un componente sono in genere classificati come errori o troncamenti e sono specifici per ogni componente. I componenti che forniscono output degli errori offrono agli utenti la flessibilità di gestire le condizioni di errore filtrando le righe di errore dal set di risultati, interrompendo il componente quando si verifica un problema oppure ignorando gli errori e continuando.  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 491ea1d4dffb7854293a25a6b0d1057e8a77f6ea
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d8f339aea53a9da7ee183bb2a6efee25bc603c13
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrare un nome dell'entità servizio (SPN) per un server di report
   Se si distribuisce [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una rete che utilizza il protocollo Kerberos per l'autenticazione reciproca, è necessario creare un nome dell'entità servizio (SPN) per il server di report se questo è configurato per l'esecuzione come account utente di dominio.  
@@ -31,7 +29,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="about-spns"></a>Informazioni sugli SPN  
  Un SPN è un identificatore univoco per un servizio in una rete che utilizza l'autenticazione Kerberos. Un SPN è costituito da una classe del servizio, un nome host e una porta. In una rete che utilizza l'autenticazione Kerberos un SPN per il server deve essere registrato con un account computer predefinito, ad esempio NetworkService o LocalSystem, o un account utente. Gli SPN vengono registrati automaticamente per gli account predefiniti. Quando, tuttavia, si esegue un servizio utilizzando un account utente di dominio, è necessario registrare manualmente l'SPN per l'account che si desidera utilizzare.  
   
- Per creare un SPN, è possibile usare l'utilità della riga di comando **SetSPN** . Per altre informazioni, vedere quanto segue:  
+ Per creare un SPN, è possibile usare l'utilità della riga di comando **SetSPN** . Per ulteriori informazioni, vedere quanto segue:  
   
 -   [Setspn](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (http://technet.microsoft.com/library/cc731241(WS.10).aspx).  
   

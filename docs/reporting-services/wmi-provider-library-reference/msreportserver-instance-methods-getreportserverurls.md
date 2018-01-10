@@ -8,23 +8,21 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: GetReportServerUrls method
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 caps.latest.revision: "12"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1d1042cfa240c6c115a8461fcd3eb1387fe66639
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fb88837f3c9393c561e65c13656bb0e87a516325
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="msreportserverinstance-methods---getreportserverurls"></a>Metodi di MSReportServer_Instance - GetReportServerUrls
   Restituisce un elenco degli URL che è possibile usare per accedere al server di report e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].  
@@ -56,7 +54,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>Valori restituiti  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I metodi esposti dagli oggetti di gestione WMI vengono chiamati tramite la funzione InvokeMethod. Per altre informazioni, vedere gli argomenti relativi all'esecuzione di metodi in oggetti di gestione all'interno della documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI.  
   
 ## <a name="requirements"></a>Requisiti  

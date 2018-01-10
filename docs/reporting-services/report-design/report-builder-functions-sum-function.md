@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 256c7da0b126b8426154327846169dc002f7b1ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f5e5e3b11422c192b2939a1c43a0b4bccb7e549
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---sum-function"></a>Funzioni di Generatore report - Funzione Sum
   Restituisce la somma di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.  
@@ -39,7 +37,7 @@ Sum(expression, scope, recursive)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *espressione*  
+ *expression*  
  (**Integer** o **Float**) Espressione su cui eseguire l'aggregazione.  
   
  *ambito*  
@@ -51,7 +49,7 @@ Sum(expression, scope, recursive)
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore **Decimal** per le espressioni decimali e un valore **Double** per tutte le altre espressioni.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il set di dati specificato nell'espressione deve essere dello stesso tipo di dati. Per convertire dati con più tipi di dati numerici nello stesso tipo di dati, usare funzioni di conversione come **CInt**, **CDbl** o **CDec**. Per altre informazioni, vedere [Funzioni di conversione del tipo](http://go.microsoft.com/fwlink/?LinkId=96142).  
   
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  

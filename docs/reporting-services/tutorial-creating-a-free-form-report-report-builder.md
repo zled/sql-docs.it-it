@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33d2dfa08fcc9b3cbf41a80642e9d67bab8d2b3f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 76a43f57cfd8c5712928dc8ee408cb517f7dceaf
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un report in formato libero (Generatore report)
 In questa esercitazione viene creato un rapporto impaginato che ha l'aspetto di un notiziario. Ogni pagina visualizza testo statico, elementi visivi di riepilogo e dati di vendita di esempio dettagliati.
@@ -67,7 +67,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 5.  Fare clic su **Credenziali**, quindi immettere le credenziali necessarie per la connessione all'istanza del motore di database di SQL Server.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 ### <a name="to-create-a-new-dataset"></a>Per creare un nuovo set di dati  
   
@@ -506,7 +506,7 @@ Nel report verranno visualizzati i dati di vendita riepilogativi in diagrammi a 
   
 
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 L'esercitazione sulla creazione di un report in formato libero è terminata.  
   
 Per altre informazioni sugli elenchi, vedere: 

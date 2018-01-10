@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,17 +25,17 @@ helpviewer_keywords:
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 32fe1afefa899880710a818c56eef4079fe90622
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6d89557d71739545d4f119363273951a20953429
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="create-modify-and-delete-schedules"></a>Creare, modificare ed eliminare pianificazioni
+# <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Questo argomento fornisce informazioni sulla creazione, la modifica e l'eliminazione di pianificazioni [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] condivise.  Per gestire le pianificazioni condivise per la modalità nativa, usare la pagina Pianificazioni del portale Web o la cartella Pianificazioni condivise in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per la modalità SharePoint, utilizzare le pagine di gestione per l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Per determinare se una pianificazione condivisa è effettivamente usata, usare uno dei metodi seguenti:  
@@ -135,7 +133,7 @@ Fare clic su **Annulla**.
 6.  Specificare una frequenza. Le opzioni di pianificazione visualizzate nella pagina possono essere modificate automaticamente in modo da supportare la frequenza selezionata. Se, ad esempio, si sceglie **Mese**, nella pagina verranno visualizzati i nomi dei singoli mesi.  
 7.  Definire la pianificazione. Non tutte le combinazioni di pianificazione sono supportate in una singola pianificazione.  
 8.  Impostare le date di inizio e di fine.  
-9. Scegliere **OK**.  
+9. Fare clic su **OK**.  
   
 ### <a name="delete-shared-schedules-sharepoint-mode"></a>Eliminare pianificazioni condivise (modalità SharePoint)  
  Tutte le pianificazioni, sia quelle condivise che quelle specifiche dei report, devono essere eliminate manualmente. Se si elimina una pianificazione condivisa attualmente in uso, tutti i riferimenti a tale pianificazione verranno sostituiti con pianificazioni personalizzate non definite, ovvero pianificazioni personalizzate prive di informazioni di data e ora.  

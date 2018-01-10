@@ -8,7 +8,7 @@ ms.service:
 ms.component: develop
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf661093a0c0851bb0c8663251bf56f273038013
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76dd2b0dd77061e029dc5b7092a21d484ac7f7ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="master-data-services-developer-documentation"></a>Guida per gli sviluppatori
   Vengono fornite informazioni su come scrivere il codice per personalizzare la modalità di interazione degli utenti con [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Viene illustrato come:  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="web-server-namespaces"></a>Spazi dei nomi del server Web  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installa un set di assembly nel computer del server Web. Questi assembly contengono spazi dei nomi utilizzabili per scenari avanzati che consentono di personalizzare il comportamento del computer del server Web. Nella tabella seguente vengono descritti tali spazi dei nomi.  
   
-|Spazio dei nomi|Description|  
+|Namespace|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|Contiene classi utilizzabili per creare un pacchetto di distribuzione da un modello e distribuire un pacchetto in un database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
 |<xref:Microsoft.MasterDataServices.Services>|Contiene una classe che riceve ed elabora operazioni del servizio Web eseguite sul computer del server Web tramite l'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  

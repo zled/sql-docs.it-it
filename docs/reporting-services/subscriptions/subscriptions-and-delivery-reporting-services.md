@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 403303e6820196353b8365975d83ed8368d8e372
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 00bc203ff747d93febf4ac625fcc261b497bc3ff
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   Una sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è una configurazione che recapita un report in un momento specifico o in risposta a un evento e in un formato file specificato. Ad esempio, è possibile salvare il report MonthlySales.rdl ogni mercoledì come documento di Microsoft Word in una condivisione file. Le sottoscrizioni possono essere usate per pianificare e automatizzare il recapito di un report e con un set specifico di valori di parametri di report.  
@@ -109,7 +107,7 @@ ms.lasthandoff: 12/05/2017
   
 |Requisito|Description|  
 |-----------------|-----------------|  
-|Permissions|È necessario poter accedere al report. Per poter sottoscrivere un report, è necessario disporre delle autorizzazioni necessarie per visualizzarlo.<br /><br /> Per i server di report in modalità nativa le assegnazioni dei ruoli seguenti influiscono sulle sottoscrizioni:<br /><br /> -   L'attività "Gestione di sottoscrizioni individuali" consente di creare, modificare ed eliminare sottoscrizioni per un report specifico. Nei ruoli predefiniti questa attività appartiene ai ruoli Visualizzazione e Generatore report. Le assegnazioni di ruolo che includono questa attività consentono a un utente di gestire solo le proprie sottoscrizioni.<br />-   L'attività "Gestione di tutte le sottoscrizioni" consente di accedere a tutte le sottoscrizioni e di modificarle. Questa attività è necessaria per creare sottoscrizioni guidate dai dati. Nei ruoli predefiniti solo il ruolo Gestione contenuto include questa attività.|  
+|Autorizzazioni|È necessario poter accedere al report. Per poter sottoscrivere un report, è necessario disporre delle autorizzazioni necessarie per visualizzarlo.<br /><br /> Per i server di report in modalità nativa le assegnazioni dei ruoli seguenti influiscono sulle sottoscrizioni:<br /><br /> -   L'attività "Gestione di sottoscrizioni individuali" consente di creare, modificare ed eliminare sottoscrizioni per un report specifico. Nei ruoli predefiniti questa attività appartiene ai ruoli Visualizzazione e Generatore report. Le assegnazioni di ruolo che includono questa attività consentono a un utente di gestire solo le proprie sottoscrizioni.<br />-   L'attività "Gestione di tutte le sottoscrizioni" consente di accedere a tutte le sottoscrizioni e di modificarle. Questa attività è necessaria per creare sottoscrizioni guidate dai dati. Nei ruoli predefiniti solo il ruolo Gestione contenuto include questa attività.|  
 |Credenziali archiviate.|Per creare una sottoscrizione, è necessario che per il report siano usate credenziali archiviate oppure nessuna credenziale per poter recuperare i dati in fase di esecuzione. Non è possibile sottoscrivere un report configurato per utilizzare credenziali rappresentate o delegate dell'utente corrente per connettersi a un'origine dati esterna. Le credenziali archiviate possono essere un account di Windows o un account utente del database. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> e si dispone delle autorizzazioni necessarie per visualizzare il report e creare sottoscrizioni individuali. È necessario che l'opzione**Eventi pianificati e recapito report** sia abilitata sul server di report. Per altre informazioni, vedere [old_Creare e gestire sottoscrizioni per server di report in modalità nativa](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
 |Valori dipendenti dall'utente in un report|Per le sole sottoscrizioni standard è possibile creare sottoscrizioni a report in cui le informazioni sull'account utente sono incluse in un filtro o sono disponibili sotto forma di testo visualizzato nel report. Nel report il nome dell'account utente viene specificato tramite un'espressione **User!UserID** che corrisponde all'utente corrente. Quando si crea una sottoscrizione, l'autore della sottoscrizione viene considerato come utente corrente.|  
 |Nessuna sicurezza degli elementi del modello|Non è possibile sottoscrivere un report di Generatore report che utilizza come origine dei dati un modello contenente impostazioni di sicurezza degli elementi del modello. La restrizione riguarda solo i report che utilizzano la sicurezza degli elementi del modello.|  

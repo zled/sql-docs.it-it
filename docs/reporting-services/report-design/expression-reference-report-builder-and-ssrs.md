@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aee59441882e6c128152d2568a3ef39c4e301b2a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e1882bcd9d22cf98e940264aa3b62569417f8a1a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Riferimento dell'espressione (Generatore report e SSRS)
   Le espressioni del report supportano vari riferimenti a funzioni e raccolte predefinite. Le espressioni devono disporre di sintassi [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] valida prima che un report possa essere pubblicato o elaborato.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/05/2017
   
  Usare gli argomenti di questa sezione per la scrittura di espressioni semplici incluse in un report.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
   
  [Costanti nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)  

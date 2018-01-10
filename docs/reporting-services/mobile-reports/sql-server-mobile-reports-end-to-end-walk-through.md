@@ -8,7 +8,7 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4d6caec3b829d7cad2434397e68f1ec97d27f6b1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata completa
 Procedura dettagliata per creare report per dispositivi mobili per schermi di qualsiasi dimensione con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e visualizzarli nell'app Power BI per dispositivi mobili.
@@ -123,7 +123,7 @@ Creare gli indicatori KPI direttamente nel portale Web di [!INCLUDE[PRODUCT_NAME
 
    ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
-6. Scegliere **OK**.
+6. Fare clic su **OK**.
 
 7. Nella casella **Set di tendenze** fare clic su **Tendenza del set di dati**.  
   

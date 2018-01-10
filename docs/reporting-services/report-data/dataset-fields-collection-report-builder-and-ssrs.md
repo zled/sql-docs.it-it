@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dfd2de97c1ed49e559ae4b991b6fc1b6ecfc05ff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 93e0f3ac2c38d3fa61ec63c65c3a5ceb664bc4d8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Raccolta di campi del set di dati (Generatore report e SSRS)
   I campi del set di dati rappresentano i dati provenienti da una connessione dati. Un campo può presentare dati numerici o non numerici. Possono essere inclusi, ad esempio, importi delle vendite, vendite totali, nomi dei clienti, identificatori di database, URL, immagini, dati spaziali e indirizzi di posta elettronica. Nell'area di progettazione i campi vengono visualizzati come espressioni in elementi del report quali caselle di testo, tabelle e grafici.  
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="DataTypes"></a> Tipi di dati dei campi  
  Quando si crea un set di dati, i tipi di dati dei campi nell'origine dati potrebbero non corrispondere esattamente ai tipi di dati utilizzati in un report. Ai tipi di dati possono essere applicati uno o due livelli di mapping. L'estensione per l'elaborazione dati o il provider di dati può eseguire il mapping dei tipi di dati dall'origine dati a tipi di dati CLR (Common Language Runtime). I tipi di dati restituiti dalle estensioni per l'elaborazione dei dati vengono su cui viene eseguito il mapping a un subset di tipi di dati CLR da [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
- Nell'origine dati i dati vengono archiviati in tipi di dati supportati dall'origine stessa. I dati presenti in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, devono essere di un tipo supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , come **nvarchar** o **datetime**. Quando vengono recuperati dall'origine dati, i dati vengono passati attraverso un'estensione per l'elaborazione dati o un provider di dati associato al tipo di origine dati. In base all'estensione per l'elaborazione dati, i dati possono essere convertiti dai tipi utilizzati dall'origine dati in tipi di dati supportati dall'estensione per l'elaborazione dati. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i tipi di dati supportati da Common Language Runtime (CLR) installato con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Il provider di dati esegue il mapping di ogni colonna nel set di risultati dal tipo di dati nativo a un tipo di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] :  
+ Nell'origine dati i dati vengono archiviati in tipi di dati supportati dall'origine stessa. I dati presenti in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, devono essere di un tipo supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , come **nvarchar** o **datetime**. Quando vengono recuperati dall'origine dati, i dati vengono passati attraverso un'estensione per l'elaborazione dati o un provider di dati associato al tipo di origine dati. In base all'estensione per l'elaborazione dati, i dati possono essere convertiti dai tipi usati dall'origine dati in tipi di dati supportati dall'estensione per l'elaborazione dati. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i tipi di dati supportati da Common Language Runtime (CLR) installato con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Il provider di dati esegue il mapping di ogni colonna nel set di risultati dal tipo di dati nativo a un tipo di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] :  
   
  In ogni fase i dati vengono rappresentati dai tipi di dati in base a quanto descritto nell'elenco seguente.  
   
@@ -101,7 +99,7 @@ ms.lasthandoff: 12/05/2017
   
     |Tipo di dati SQL|Tipo di dati CLR|Description|  
     |-------------------|-------------------|-----------------|  
-    |**Date**|**DateTime**|Solo data|  
+    |**Data**|**DateTime**|Solo data|  
     |**Time**|**TimeSpan**|Solo ora|  
     |**DateTimeTZ**|**DateTimeOffset**|Data e ora con differenza di fuso orario|  
     |**DateTime2**|**DateTime**|Data e ora con millisecondi frazionari|  

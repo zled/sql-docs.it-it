@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 21bafd5c07350c38ee14f7de27aaeab265f22e59
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f40de7d519da0def4ad65cf5f1d96a592489b5a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestione contenuto del server di report (modalità nativa SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il concetto di gestione dei contenuti fa riferimento alla gestione degli elementi del server di report. È possibile gestire tutti gli elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto. A partire da [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, è disponibile il portale Web  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . In questo articolo verranno esaminati Gestione report e la nuova esperienza del portale Web.  

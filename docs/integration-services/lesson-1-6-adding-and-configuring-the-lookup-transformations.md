@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aa364a063138708cfa48bea87abe7f0833d07575
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b596cf9e0df51127ca7acc48113d9a01004c826
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>Lezione 1-6 - Aggiunta e configurazione delle trasformazioni Ricerca
 Dopo aver configurato l'origine file flat per l'estrazione di dati dal file di origine si definiranno le trasformazioni Ricerca necessarie per ottenere i valori di **CurrencyKey** e **DateKey**. Una trasformazione Ricerca esegue una ricerca tramite l'unione in join dei dati della colonna di input specificata con una colonna di un set di dati di riferimento. Il set di dati di riferimento può essere una vista o tabella esistente, una nuova tabella o il risultato di un'istruzione SQL. In questa esercitazione, la trasformazione Ricerca utilizza una gestione connessione OLE DB per connettersi al database che contiene i dati che costituiscono l'origine del set di dati di riferimento.  
@@ -61,34 +61,11 @@ In entrambi i casi nella trasformazione Ricerca verrà utilizzata la gestione co
     2.  Selezionare **Usa i risultati di una query SQL**, quindi digitare o copiare l'istruzione SQL seguente:  
   
         ```sql
-        select * from (select * from [dbo].[DimCurrency]) as refTable  
-        where [refTable].[CurrencyAlternateKey] = 'ARS'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'AUD'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'BRL'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'CAD'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'CNY'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'DEM'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'EUR'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'FRF'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'GBP'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'JPY'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'MXN'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'SAR'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'USD'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'VEB'  
+        SELECT * FROM [dbo].[DimCurrency]
+        WHERE [CurrencyAlternateKey]
+        IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
+            'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
+            'MXN', 'SAR', 'USD', 'VEB')
         ```  
   
 7.  Nella pagina **Colonne** effettuare le selezioni seguenti:  

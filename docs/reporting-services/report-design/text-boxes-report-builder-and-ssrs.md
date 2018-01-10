@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,13 +20,13 @@ ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1ce0598ac285cd55a0a7541c367c6bdcce9f1672
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3800731909023731291417edf6228245cf93ac04
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caselle di testo (Generatore report e SSRS)
   Quando si pensa a una casella di testo, di solito si immagina una casella autonoma contenente testo in un'area, ad esempio, di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] alcune caselle di testo sono esattamente questo e possono visualizzare testo statico per titoli, descrizioni ed etichette oppure testo dinamico basato su espressioni. Tuttavia, anche ogni cella in una tabella o matrice (o in un'area dati Tablix) contiene una casella di testo, che può essere formattata esattamente allo stesso modo delle caselle di testo autonome di un report.  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 22bc8a6e1a29eb5ed4f2ddefd7ee875eb3ffb327
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 670ab7c23576cfae562e07ba0401ad4f1b9bc562
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Posizionamento di etichette in un grafico (Generatore report e SSRS)
   Poiché ogni tipo di grafico in un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è caratterizzato da una forma diversa, le etichette dei punti dati vengono collocate in una posizione ottimale in modo da non interferire con il grafico. La posizione predefinita delle etichette varia a seconda del tipo di grafico:  

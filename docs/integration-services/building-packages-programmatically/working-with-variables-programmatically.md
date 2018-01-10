@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5326ae33eada7dc692607d14779180174a045959
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 914afdde95e3b3a130cb71e5b9277f7331ee4e56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-variables-programmatically"></a>Utilizzo delle variabili a livello di programmazione
   Le variabili consentono di impostare valori in modo dinamico e di controllare i processi in pacchetti, contenitori, attività e gestori eventi. Possono inoltre essere utilizzate dai vincoli di precedenza per controllare la direzione del flusso di dati verso attività diverse. Le variabili possono essere utilizzate per effettuare le operazioni seguenti:  
@@ -169,7 +169,7 @@ End Module
   
  Le variabili di sistema disponibili variano a seconda del tipo di contenitore. Per un elenco delle variabili di sistema disponibili per pacchetti, contenitori, attività e gestori di eventi, vedere [Variabili di sistema](../../integration-services/system-variables.md).  
   
-## <a name="value"></a>Valore  
+## <a name="value"></a>valore  
  Il valore di una variabile personalizzata può essere un valore letterale o un'espressione:  
   
 -   Se si desidera che la variabile contenga un valore letterale, impostare il valore della relativa proprietà <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A>.  

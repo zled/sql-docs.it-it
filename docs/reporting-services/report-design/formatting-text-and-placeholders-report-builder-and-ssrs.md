@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,13 +22,13 @@ ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e3dbe51460c639d7574df42ad9d0a275e80cdbd5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18a17ad4befad58d70db0f52f08fe9c8bea98e06
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formattazione di testo e segnaposto (Generatore report e SSRS)
   Una casella di testo può essere un elemento del report o una cella singola all'interno di un'area dati contenente testo, un campo calcolato, un indicatore di misura a un campo in un database o una combinazione di questi tre elementi. È possibile combinare tipi di carattere e colori, aggiungere grassetto e corsivo e utilizzare stili di paragrafo, quali allineamento e rientri sporgenti. È possibile formattare un'intera casella di testo oppure testo, numeri, espressioni o campi specifici all'interno della casella.  

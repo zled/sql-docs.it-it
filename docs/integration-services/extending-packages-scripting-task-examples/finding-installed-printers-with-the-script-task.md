@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e811cdb3f704307c642335e7017775c5f4b5d129
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a5fd089dc6419b24a60663d44f681c7a5163297a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>Ricerca di stampanti installate con l'attività Script
   La destinazione finale dei dati trasformati dai pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è spesso costituita da un report stampato. Lo spazio dei nomi **System.Drawing.Printing** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce le classi da usare con le stampanti.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  Nel codice usare le istruzioni **Imports** per importare gli spazi dei nomi **System.Collections** e **System.Drawing.Printing**.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```vb  
 Public Sub Main()  

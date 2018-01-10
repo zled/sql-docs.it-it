@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,15 +26,15 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dcd1e87588539961f9cd3dcb5e764b8fec420334
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94377a58c5d61ea2d62d5c8e75cea5d4b82f9a4f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Pubblicazione dei report in un server di report
   Dopo aver progettato e testato un report o un set di report, è possibile usare le caratteristiche della distribuzione disponibili in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per pubblicare i report in un server di report. È possibile pubblicare report singoli o un progetto Server di Report che può includere più report e origini dati. La pubblicazione di un progetto server report è il modo più semplice per pubblicare più report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene usato il termine *distribuire*anziché *pubblicare*. I due termini sono perfettamente equivalenti.  

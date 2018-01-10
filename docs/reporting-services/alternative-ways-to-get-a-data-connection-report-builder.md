@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a64a3cfa445d2f79560245a674352209dc0a9624
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 82eb2c26504cee7920e0c0d67fb6faa00af70b26
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Modalità alternative di acquisizione di una connessione dati (Generatore report)
 Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . In genere, le informazioni di connessione e il tipo di credenziali da utilizzare vengono fornite dal proprietario dell'origine dati.  
@@ -38,11 +38,11 @@ Per usare un'origine dati condivisa, è necessario selezionare un server di repo
   
 ### <a name="to-specify-a-data-connection-from-a-list-of-shared-data-sources"></a>Per specificare una connessione dati da un elenco di origini dati condivise  
   
-1.  Nella procedura guidata Nuova tabella o matrice o Nuovo grafico selezionare **Crea un set di dati** nella pagina **Scegliere un set di dati**e quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dati** .  
+1.  Nella procedura guidata Nuova tabella o matrice o Nuovo grafico selezionare **Crea un set di dati** nella pagina **Scegliere un set di dati**e quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dei dati** .  
   
 2.  Nell'elenco delle origini dati selezionare un'origine dati per la quale si dispone delle autorizzazioni di accesso.  
   
-3.  Per verificare che la connessione all'origine dati possa essere eseguita, fare clic su **Test connessione**. Verrà visualizzato il messaggio "Creazione connessione completata". [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  Per verificare che la connessione all'origine dati avvenga correttamente, fare clic su **Test connessione**. Verrà visualizzato il messaggio "Creazione connessione completata". [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  Scegliere **Avanti**.  
   

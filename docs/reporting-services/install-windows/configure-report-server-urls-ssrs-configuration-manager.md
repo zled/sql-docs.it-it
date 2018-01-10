@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 87c3c32e3068d9b3d1303697b846664d2e5cadb0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4128ec3ec665dc5dff90b6d82b7aa7838d4e5d99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurare gli URL del server di report (Gestione configurazione SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gli URL vengono usati per accedere al servizio Web ReportServer e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Per poter usare una delle due applicazioni, è necessario configurare almeno un URL per il servizio Web e per [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili valori predefiniti per entrambi gli URL dell'applicazione, appropriati per la maggior parte degli scenari di distribuzione, incluse le distribuzioni side-by-side con altri servizi e applicazioni Web.  
@@ -38,10 +38,10 @@ ms.lasthandoff: 12/05/2017
 ## <a name="defining-a-report-server-url"></a>Definizione di un URL del server di report  
  L'URL identifica con precisione il percorso di un'istanza di un'applicazione del server di report nella rete. Quando si crea un URL del server di report, è necessario specificare le parti seguenti.  
   
-|Parte|Descrizione|  
+|Parte|Description|  
 |----------|-----------------|  
 |Nome host|Una rete TCP/IP utilizza un indirizzo IP per identificare in modo univoco un dispositivo in rete. È presente un indirizzo IP fisico per ogni scheda di rete installata in un computer. Se l'indirizzo IP viene risolto in un'intestazione host, è possibile specificare l'intestazione host. Se il server di report viene distribuito in una rete aziendale, è possibile utilizzare il nome di rete del computer.|  
-|Porta|Una porta TCP è un endpoint nel dispositivo. Il server di report sarà in attesa delle richieste su una porta designata.|  
+|Port|Una porta TCP è un endpoint nel dispositivo. Il server di report sarà in attesa delle richieste su una porta designata.|  
 |Directory virtuale|Una porta viene spesso condivisa da più servizi o applicazioni Web. Per tale motivo, un URL del server di report include sempre una directory virtuale corrispondente all'applicazione che riceve la richiesta. È necessario specificare nomi delle directory virtuali univoci per ogni applicazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in attesa sullo stesso indirizzo IP e sulla stessa porta.|  
 |Impostazioni SSL|È possibile configurare gli URL in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per l'utilizzo di un certificato SSL esistente precedentemente installato nel computer. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
@@ -54,10 +54,10 @@ ms.lasthandoff: 12/05/2017
   
  Le impostazioni che rendono disponibili questi URL sono incluse nella tabella seguente. Nella tabella vengono indicati i valori predefiniti che consentono la connessione del server di report tramite URL che includono un nome host:  
   
-|Parte|Valore|Spiegazione|  
+|Parte|valore|Spiegazione|  
 |----------|-----------|-----------------|  
 |Indirizzo IP|Tutti assegnati|Il DNS nella rete risolve il nome host incluso nell'URL nell'indirizzo IP del computer. Se l'indirizzo IP è incluso nell'URL definito, una richiesta inviata a un host specifico raggiungerà la destinazione desiderata.|  
-|Porta|80|La porta 80 è la porta predefinita per le connessioni TCP/IP in un computer. Poiché il server di report è in ascolto sulla porta 80, è possibile omettere il numero di porta dall'URL. Se si specifica un'altra porta, è necessario specificarla nell'URL.|  
+|Port|80|La porta 80 è la porta predefinita per le connessioni TCP/IP in un computer. Poiché il server di report è in ascolto sulla porta 80, è possibile omettere il numero di porta dall'URL. Se si specifica un'altra porta, è necessario specificarla nell'URL.|  
 |Directory virtuale|ReportServer|Si noti che entrambi gli URL di esempio includono il nome della directory virtuale. A meno che non si personalizzi la definizione dell'URL, è sempre necessario specificare il nome della directory virtuale dell'applicazione nell'URL.|  
   
 > [!NOTE]  

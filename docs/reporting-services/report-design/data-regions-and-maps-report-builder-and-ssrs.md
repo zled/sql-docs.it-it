@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data regions
@@ -18,18 +16,18 @@ ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5fc5666464075a418dbb9490095209856fb68a56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2609574eeb2c41bb4eeab2c85bebd483867ee16
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Aree dati e mappe (Generatore report e SSRS)
   Un'area dati è un oggetto in un report che consente di visualizzare dati da un set di dati del report. I dati del report possono essere visualizzati come numeri e testo in una tabella, una matrice o un elenco, graficamente in un grafico o un misuratore e su uno sfondo geografico in una mappa. Le tabelle, le matrici e gli elenchi sono tutti basati sull'area dati *Tablix* , che si espande in base alle necessità per visualizzare tutti i dati dal set di dati. Un'area dati Tablix supporta più gruppi di righe e colonne, nonché righe e colonne statiche e dinamiche. Un grafico consente di visualizzare più serie e gruppi di categorie in un'ampia gamma di formati di grafico. Un misuratore consente di visualizzare un singolo valore o un valore aggregato per un set di dati. Una mappa consente di visualizzare dati spaziali come elementi della mappa che possono variare nell'aspetto in base ai dati aggregati di un set di dati.  
   
- È possibile salvare un'area dati o eseguire il mapping come *parte del report*. Altre informazioni sulle [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ È possibile salvare un'area dati o eseguire il mapping come *parte del report*. Altre informazioni su [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

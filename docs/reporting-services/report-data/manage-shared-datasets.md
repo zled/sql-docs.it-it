@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 946210d52bfd883e4cf26e2664fef9254f7e6086
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9a7cc41553ca20061bebb29a5956cf48ebede673
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-shared-datasets"></a>Gestire set di dati condivisi
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]i set di dati condivisi consentono il recupero di dati da origini dati condivise tramite cui si esegue la connessione alle origini dati esterne. Un set di dati condiviso consente di condividere una query per fornire un set di dati coerente a più report. Nella query del set di dati possono essere inclusi i parametri di quest'ultimo. È possibile configurare un set di dati condiviso per memorizzare nella cache i risultati della query per specifiche combinazioni di parametri al primo utilizzo o specificando una pianificazione. È possibile inoltre utilizzare la memorizzazione nella cache del set di dati condiviso in combinazione con la memorizzazione nella cache dei report e con i feed di dati del report per consentire di gestire l'accesso a un'origine dati.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
  Per utilizzare un set di dati condiviso in un report, aprire un'applicazione, ad esempio Generatore report, spostarsi nel server di report oppure in un sito di SharePoint, quindi selezionare il set di dati condiviso. In questo modo un'istanza del set di dati condiviso viene aggiunta al report. Nel report non è possibile visualizzare o modificare la query o l'origine dati condivisa per il set di dati condiviso, ma è possibile specificare un set aggiuntivo di valori della proprietà del set di dati da applicare all'istanza nel report. È possibile ad esempio aggiungere un filtro o modificare le opzioni dei dati, quale la distinzione tra maiuscole e minuscole. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) nella [documentazione di Generatore report](http://go.microsoft.com/fwlink/?LinkId=154494) sul sito msdn.microsoft.com.  
   
 ## <a name="managing-shared-datasets"></a>Gestione di set di dati condivisi  
- Per gestire le proprietà di un set di dati condiviso pubblicato, è possibile utilizzare Gestione report per un server di report in modalità nativa o le pagine dell'applicazione in un sito di SharePoint se il server di report è stato distribuito in modalità integrata SharePoint. Le attività che è possibile eseguire su un set di dati condiviso dipendono dalle assegnazioni di ruolo e dalle autorizzazioni a livello di sito e di elemento, incluse le autorizzazioni sulla cartella se è attiva l'ereditarietà delle autorizzazioni. Il modello di sicurezza a livello di elemento per i set di dati condivisi è lo stesso di quello utilizzato per i report. Per altre informazioni, vedere [Proteggere gli elementi del set di dati condiviso](../../reporting-services/security/secure-shared-dataset-items.md).  
+ Per gestire le proprietà di un set di dati condiviso pubblicato, è possibile utilizzare Gestione report per un server di report in modalità nativa o le pagine dell'applicazione in un sito di SharePoint se il server di report è stato distribuito in modalità integrata SharePoint. Le attività che è possibile eseguire su un set di dati condiviso dipendono dalle assegnazioni di ruolo e dalle autorizzazioni a livello di sito e di elemento, incluse le autorizzazioni sulla cartella se è attiva l'ereditarietà delle autorizzazioni. Il modello di sicurezza a livello di elemento per i set di dati condivisi è lo stesso di quello utilizzato per i report. Per ulteriori informazioni, vedere [Proteggere gli elementi del set di dati condiviso](../../reporting-services/security/secure-shared-dataset-items.md).  
   
  È possibile gestire le proprietà dell'elemento del set di dati condiviso, ad esempio l'origine dati condivisa da utilizzare, indipendentemente dal report che utilizza il set di dati condiviso o l'origine dati condivisa dalla quale dipende. Per modificare la query o altre proprietà del set di dati che appartengono alla definizione del set di dati condiviso, è necessario modificare la definizione.  
   
@@ -100,7 +98,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |Modifica delle proprietà dell'elemento del set di dati condiviso.|Gestione report|[Pagina delle proprietà Generale, Set di dati condivisi &#40;Gestione report&#41;](http://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
 |Specifica di proprietà aggiuntive del set di dati condiviso per un'istanza del set di dati condiviso in un report.|Progettazione report di Generatore report|[Finestra di dialogo Proprietà set di dati, Query](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
 |Associazione di un set di dati condiviso a un'origine dati condivisa diversa.|Gestione report|[Pagina di selezione dell'origine dei dati &#40;Gestione report&#41;](http://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
-|Verifica di valori predefiniti per i parametri del set di dati.|Apertura in Generatore report o sintassi di accesso all'URL.|Esempio:<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|Verifica di valori predefiniti per i parametri del set di dati.|Apertura in Generatore report o sintassi di accesso all'URL.|Ad esempio<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
 |Abilitazione della memorizzazione nella cache.|Gestione report|[Memorizzare nella cache set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Pagina Memorizzazione nella cache, set di dati condivisi &#40;Gestione report&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
 |Creazione o modifica di un piano di aggiornamento della cache.|Gestione report|[Opzioni di aggiornamento cache &#40;Gestione report&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
 |Visualizzazione dello schema della definizione del set di dati condiviso.|Gestione report|`http://<reportserver>/shareddatasetdefinition.xsd`|  

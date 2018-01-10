@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4abee11e2e258561f3b5db40af11b057b8061588
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 64ca7e19f9f9246bf5b5fd130244fe8b29715d19
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---union-function"></a>Funzioni di Generatore report - Funzione Union
   Viene restituita l'unione di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.  
@@ -51,7 +49,7 @@ Union(expression, scope, recursive)
 ## <a name="return"></a>Return  
  Restituisce un oggetto spaziale, **SqlGeometry** o **SqlGeography**, in base al tipo di espressione. Per altre informazioni sui tipi di dati spaziali **SqlGeometry** e **SqlGeography** , vedere [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il set di dati specificato nell'espressione deve essere dello stesso tipo di dati.  
   
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Gli ambiti del set di dati non sono supportati. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  

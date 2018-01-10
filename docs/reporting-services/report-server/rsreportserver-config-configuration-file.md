@@ -8,24 +8,22 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 caps.latest.revision: "20"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 5f01391991a8e57d09da1888c541183962e488e5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 312db6c9454c0fca1f50d63d2d5135f2fb20f6db
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="rsreportserverconfig-configuration-file"></a>File di configurazione RsReportServer.config
+# <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 Nel file [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** vengono archiviate le impostazioni usate dal servizio Web ReportServer e dall'elaborazione in background. Tutte le applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono eseguite all'interno di un singolo processo tramite cui è possibile leggere le impostazioni di configurazione archiviate nel file RSReportServer.config. Il file RSReportServer.config viene utilizzato nei server di report sia in modalità nativa, sia in modalità SharePoint. Nelle due modalità non vengono tuttavia utilizzate tutte le stesse impostazioni disponibili nel file di configurazione. La versione per la modalità SharePoint del file è più piccola, poiché molte delle impostazioni per la modalità SharePoint sono archiviate nei database di configurazione di SharePoint anziché nel file. In questo argomento viene descritto il file di configurazione predefinito installato per la modalità nativa e la modalità SharePoint e alcune delle impostazioni e dei comportamenti importanti controllati dal file di configurazione.  
 
 In modalità SharePoint, il file di configurazione contiene le impostazioni che si applicano a tutte le istanze dell'applicazione di servizio in esecuzione nel computer. Il database di configurazione di SharePoint contiene impostazioni di configurazione che si applicano a specifiche applicazioni di servizio. Le impostazioni archiviate nel database di configurazione e gestite tramite le pagine di gestione di SharePoint possono essere diverse per ogni applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -236,7 +234,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
 |**Extension Name**|Consente di specificare un nome descrittivo e un assembly dell'estensione per il recapito. Non modificare questo valore.|  
 |**MaxRetries**|Consente di specificare il numero massimo di tentativi di recapito da parte di un server di report se il primo tentativo non viene eseguito in modo corretto. Il valore predefinito è 3.|  
 |**SecondsBeforeRetry**|Consente di specificare l'intervallo di tempo (espresso in secondi) tra due tentativi successivi. Il valore predefinito è 900.|  
-|**Configuration**|Contiene le impostazioni di configurazione specifiche per ogni estensione per il recapito.|  
+|**Configurazione**|Contiene le impostazioni di configurazione specifiche per ogni estensione per il recapito.|  
   
 ####  <a name="bkmk_fileshare_extension"></a> Impostazioni di configurazione dell'estensione per il recapito tramite la condivisione file  
  Il recapito tramite la condivisione file consente di inviare un report esportato in un formato del file dell'applicazione a una cartella condivisa sulla rete. Per ulteriori informazioni, vedere [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  

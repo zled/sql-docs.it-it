@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: acecdf5905c48a57b753726bfcc4fb3c6750e56f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6a7935916421262b5e8e5bc5ac2a1df48495ad49
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developer39s-guide-how-to-topics-replication"></a>Guida per gli sviluppatori: Procedure (replica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
--   [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md)  
+-   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)  
   
 -   [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="synchronizing-subscriptions"></a>Sincronizzazione delle sottoscrizioni  
   
--   [Creare e applicare lo snapshot iniziale](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [Creazione e applicazione dello snapshot iniziale](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
 -   [Creare uno snapshot per una pubblicazione di tipo merge con filtri con parametri](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a0f28b38685f5ffd2ddd067a054e1f23ea6e4482
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a608539635d00b07ba001e37172f3f71b6fc3465
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Creare una matrice (Generatore report e SSRS)
   Usare una matrice per visualizzare dati raggruppati e informazioni di riepilogo. È possibile raggruppare i dati per più campi o espressioni in gruppi di righe e di colonne. Le funzionalità offerte dalle matrici sono analoghe a quelle dei campi incrociati e delle tabelle pivot. In fase di esecuzione, quando si combinano i dati del report e le aree dati, la matrice si espande orizzontalmente e verticalmente nella pagina. I valori contenuti nelle celle della matrice rappresentano valori aggregati che hanno come ambito l'intersezione dei gruppi di righe e di colonne ai quali appartiene la cella. È possibile formattare le righe e le colonne in modo da evidenziare i dati sui quali concentrarsi. È inoltre possibile includere elementi Toggle di drill-down per nascondere inizialmente i dati dettaglio. Successivamente, l'utente potrà fare clic su tali elementi per visualizzare un numero maggiore o minore di dettagli in base alle necessità.  
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/05/2017
   
   
 ##  <a name="AddingAdjacentGroup"></a> Aggiunta di un gruppo adiacente a una matrice  
- Per aggiungere un gruppo adiacente basato su un singolo campo del set di dati, utilizzare il menu di scelta rapida nel riquadro Raggruppamento. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Nella figura seguente è mostrato un gruppo basato sulla geografia e un gruppo adiacente basato sull'anno.  
+ Per aggiungere un gruppo adiacente basato su un singolo campo del set di dati, usare il menu di scelta rapida nel riquadro Raggruppamento. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Nella figura seguente è mostrato un gruppo basato sulla geografia e un gruppo adiacente basato sull'anno.  
   
  ![Gruppi di colonne adiacenti per la geografia e l'anno](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Gruppi di colonne adiacenti per la geografia e l'anno")  
   

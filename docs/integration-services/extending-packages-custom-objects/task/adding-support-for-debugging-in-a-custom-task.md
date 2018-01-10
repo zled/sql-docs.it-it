@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 90156ac284967ca1446ec7a9e34416208f612b6e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fd531049f4446df4f367907d13721f194a307e52
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Aggiunta di supporto per il debug in un'attività personalizzata
   Il motore di runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] consente la sospensione di pacchetti, attività e altri tipi di contenitori durante l'esecuzione tramite l'utilizzo di punti di interruzione. L'utilizzo di punti di interruzione consente di rivedere e correggere gli errori che impediscono la corretta esecuzione dell'applicazione o delle attività. L'architettura dei punti di interruzione consente al client di valutare il valore di runtime degli oggetti nel pacchetto in determinati punti dell'esecuzione mentre l'elaborazione dell'attività è sospesa.  

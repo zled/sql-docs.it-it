@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71d13409c7905b64f4b91b365b07f9b53b58264d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 643ad56c8c758c4711d731a6c5121206e8ce0998
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintassi del percorso di elemento per i dati del report XML (SSRS)
   In Progettazione report è possibile specificare i dati da utilizzare per un report da un'origine dati XML definendo un percorso di elemento con distinzione tra maiuscole e minuscole. Un percorso di elemento indica come attraversare i nodi gerarchici XML e i relativi attributi nell'origine dei dati XML. Per usare il percorso di elemento predefinito, lasciare vuota la query del set di dati o l'elemento **ElementPath** XML dell'elemento **Query** XML. Quando vengono recuperati i dati dall'origine dei dati XML, i nodi elemento con valori di testo e gli attributi dei nodi elemento diventano colonne del set di risultati. Quando si esegue la query, i valori dei nodi e degli attributi diventano i dati delle righe. Le colonne sono visualizzate come raccolta di campi di set di dati nel riquadro Dati report. In questo argomento viene descritta la sintassi del percorso di elemento.  
@@ -74,7 +72,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Nella tabella seguente sono riepilogati i termini del percorso di elemento. Gli esempi della tabella si riferiscono al documento XML di esempio Customers.xml, incluso nella sezione relativa agli esempi di questo argomento.  
   
 > [!NOTE]  
@@ -89,7 +87,7 @@ XMLLocalName :: =
 |**FieldList**|Definisce il set di elementi e attributi da utilizzare per recuperare i dati.<br /><br /> Se non specificato, vengono utilizzati come campi tutti gli attributi e i sottoelementi. Se viene specificato l'elenco dei campi vuoto (**{}**), non verrà usato alcun campo di questo nodo.<br /><br /> L'oggetto **FieldList** non può contenere un **valore** e un **elemento** oppure un nodo **ElementNode**.|  
 |**Campo**|Specifica i dati recuperati come campo del set di dati.|  
 |**Attribute**|Coppia nome-valore contenuta in **ElementNode**. Nel nodo elemento Customer ID="1">\<, ad esempio, **ID** è un attributo e **@ID(Integer)** restituisce "1" come tipo integer nel campo dati **ID** corrispondente.|  
-|**Valore**|Valore dell'elemento. **Valore** può essere usato solo nell'ultimo **ElementNode** del percorso di elemento. Poiché, ad esempio, Return>\< è un nodo foglia, se lo si include alla fine di un percorso di elemento, il valore di **Return {@}** è **Chair**.|  
+|**Value**|Valore dell'elemento. **Valore** può essere usato solo nell'ultimo **ElementNode** del percorso di elemento. Poiché, ad esempio, Return>\< è un nodo foglia, se lo si include alla fine di un percorso di elemento, il valore di **Return {@}** è **Chair**.|  
 |**elemento**|Valore del sottoelemento denominato. Customers {}/Customer {}/LastName recupera, ad esempio, i valori solo per l'elemento LastName.|  
 |**Tipo**|Tipo di dati facoltativo da utilizzare per il campo creato da questo elemento.|  
 |**NamespacePrefix**|**NamespacePrefix** è definito nell'elemento Query XML. Se non è presente alcun elemento Query XML, gli spazi dei nomi dell'elemento **ElementPath** XML vengono ignorati. Se è presente un elemento Query XML, l'elemento **ElementPath** XML include un attributo **IgnoreNamespaces**facoltativo. Se IgnoreNamespaces è **True**, gli spazi dei nomi dell'elemento **ElementPath** XML e del documento XML vengono ignorati. Per altre informazioni, vedere [Sintassi di XML Query per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  

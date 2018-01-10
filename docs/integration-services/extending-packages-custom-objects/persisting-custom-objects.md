@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27b800182751ea40ad827c77ea71c6f2815eecc7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 588af2fe968458e7dd3718f081ca4cc1524b0f9a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="persisting-custom-objects"></a>Persistenza degli oggetti personalizzati
   Non è necessario implementare la persistenza personalizzata per gli oggetti personalizzati creati, purché le relative proprietà utilizzino solo tipi di dati semplici, ad esempio **integer** e **stringa**. L'implementazione predefinita della persistenza salva i metadati per l'oggetto insieme ai valori di tutte le relative proprietà.  

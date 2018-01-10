@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0328b2eeaa94e279a53b45e8e205c1356768e53d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f5fe7b12a667bd91e7ef19ea8051850d4e22b567
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Esecuzione di query su Active Directory tramite l'attività Script
   Le applicazioni di elaborazione di dati aziendali, ad esempio i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], devono in genere elaborare i dati in modo diverso a seconda del grado, della posizione o di altre caratteristiche dei dipendenti archiviati in Active Directory. Active Directory è un servizio directory di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows che rende disponibile un archivio centralizzato di metadati sugli utenti e su altre risorse dell'organizzazione, come computer e stampanti. Lo spazio dei nomi **System.DirectoryServices** in Microsoft .NET Framework fornisce le classi da usare con Active Directory per indirizzare il flusso di lavoro dell'elaborazione dei dati in base alle informazioni archiviate.  
@@ -49,12 +49,12 @@ ms.lasthandoff: 11/20/2017
   
 4.  Nel progetto di script aggiungere un riferimento allo spazio dei nomi **System.DirectoryServices**.  
   
-5.  . Nel codice usare un'istruzione **Imports** per importare lo spazio dei nomi **DirectoryServices**.  
+5.  , Nel codice usare un'istruzione **Imports** per importare lo spazio dei nomi **DirectoryServices**.  
   
 > [!NOTE]  
 >  Per eseguire correttamente lo script, è necessario che l'azienda utilizzi Active Directory nella propria rete e archivi le informazioni sui dipendenti utilizzati nell'esempio.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```vb  
 Public Sub Main()  

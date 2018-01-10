@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b5e95cd5974f1bcef5ed5edf6c0708d8c856cc0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a4fe779b3bae2a10452e9ae9c26ade7f8e8ea68a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-model-connection-ssrs"></a>Connessione a un modello di report (SSRS)
   Per includere dati da un modello di report, è necessario disporre di un set di dati basato su un modello di report come origine dati. A differenza di altre origini dati del report, non vi sono estensioni per i dati per un modello di report. In Generatore report individuare e selezionare il modello direttamente dal server di report. In Progettazione report specificare l'URL del modello di report.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/05/2017
   
  I parametri di report vengono creati con valori di proprietà predefiniti che all'occorrenza possono essere modificati. Per impostazione predefinita, i dati di ogni parametro di report sono di tipo **Text**. Se i dati sottostanti sono di un tipo diverso, è necessario modificare il tipo di dati del parametri.  
   
- Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
 ##  <a name="Remarks"></a> Osservazioni  

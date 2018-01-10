@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -165,13 +163,13 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f7368c5ab7fb528862d12ab79aa0e4f90365a4ed
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fa277221c184a30af7680cb6371c9c5220ceae63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Misuratori (Generatore report e SSRS)
   Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , in un'area dati del misuratore viene visualizzato un unico valore del set di dati. Un misuratore viene sempre posizionato in un pannello del misuratore, dove è possibile aggiungere misuratori figlio o adiacenti. In un singolo pannello del misuratore è possibile creare più misuratori che condividono funzioni comuni quali il filtraggio, il raggruppamento o l'ordinamento.  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 78ec76d599f212e75d5e721c5a13413a392a4f09
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94c0184320284272524932ce8d9b1bcda60f1d2b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS)
   Gli URL per le applicazioni di Reporting Services vengono definiti come prenotazioni URL in HTTP.SYS. Una prenotazione URL definisce la sintassi di un endpoint dell'URL in un'applicazione Web. Le prenotazioni URL vengono definite sia per il servizio Web ReportServer sia per Gestione report quando si configurano le applicazioni nel server di report. Le prenotazioni URL vengono create automaticamente quando si configurano gli URL tramite il programma di installazione o lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  

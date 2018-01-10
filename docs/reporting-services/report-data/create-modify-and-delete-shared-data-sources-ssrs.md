@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 caps.latest.revision: "53"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2bb9f43c7a19513edfa469779e6de9a53ce3b1be
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc63cde6f20cda1b6d302c881ca6bf5b8a294ba8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Creare, modificare ed eliminare origini dati condivise (SSRS)
   Un'origine dati condivisa è un set di proprietà di connessione dell'origine dati a cui è possibile fare riferimento in più report, modelli e sottoscrizioni guidate dai dati in esecuzione su un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Le origini dei dati condivise rappresentano una soluzione semplice per gestire proprietà dell'origine dati soggette a frequenti modifiche. Se un account utente o una password viene modificata o se si sposta il database in un server diverso, è possibile aggiornare le informazioni di connessione da una posizione centralizzata.  
@@ -47,7 +45,7 @@ Icona dell'origine dati condivisa
   
 |Parte|Description|  
 |----------|-----------------|  
-|Nome|Un nome che identifica l'elemento all'interno della gerarchia di cartelle del server di report.|  
+|nome|Un nome che identifica l'elemento all'interno della gerarchia di cartelle del server di report.|  
 |Description|Una descrizione che viene visualizzata con l'elemento in Gestione report quando si visualizza il contenuto della cartella.|  
 |Tipo di connessione|L'estensione per l'elaborazione dati utilizzata con l'origine dati. È possibile utilizzare solo estensioni per l'elaborazione dati distribuite sul server di report. Per altre informazioni sulle estensioni per l'elaborazione dati incluse in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Stringa di connessione|La stringa di connessione per il database. Per altre informazioni e per visualizzare esempi di stringhe di connessione alle origini dati più frequenti, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  

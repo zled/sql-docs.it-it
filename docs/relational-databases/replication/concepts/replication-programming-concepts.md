@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cb1ef22a3a460926dc99f2afda21d7c1ecc0ad11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f9f002cf0de0f7e6e78cd529182cb5e3d63ee3f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="replication-programming-concepts"></a>Concetti di base relativi alla programmazione della replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
  Negli argomenti seguenti vengono fornite informazioni sulla sicurezza:  
   
--   [Sicurezza e protezione &#40;replica&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+-   [Sicurezza e protezione #40;replica&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
 -   [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
 |<xref:Microsoft.SqlServer.Replication>|Codice gestito|Sincronizzazione.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Codice gestito|Creazione di gestori della logica di business per integrare la logica personalizzata con il processo di sincronizzazione di unione.|  
 |[Stored procedure per la replica &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Generazione di script|Amministrazione e monitoraggio.|  
-|[Concetti di base relativi ai file eseguibili dell'agente di replica](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Generazione di script|Sincronizzazione.|  
+|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Generazione di script|Sincronizzazione.|  
   
 ## <a name="example"></a>Esempio  
  La società [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] ha la necessità di pubblicare dati per 200 rappresentanti distribuiti in tutto il mondo. I rappresentanti viaggiano spesso e avranno quindi l'esigenza di utilizzare computer portatili o PDA per modificare i dati relativi ai clienti e aggiungere nuovi ordini. Le modifiche dovranno quindi essere sincronizzate con il server di pubblicazione nel momento in cui il rappresentante connette il computer portatile alla rete.  

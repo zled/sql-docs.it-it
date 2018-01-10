@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 12291b23c9204aaf030c3a8f093fe05bf4712721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenzioni della sintassi Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/18/2017
 |&#124; (barra verticale)|Separazione di elementi sintattici racchiusi tra parentesi quadre o graffe. Indica che è possibile utilizzare solo uno degli elementi.|  
 |`[ ]` (parentesi quadre)|Elementi sintattici facoltativi. Le parentesi quadre non devono essere digitate.|  
 |{ } (parentesi graffe)|Elementi sintattici obbligatori. Le parentesi graffe non devono essere digitate.|  
-|[**,**...*n*]|Indica che l'elemento precedente può essere ripetuto *n* volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
-|[...*n*]|Indica che l'elemento precedente può essere ripetuto *n* volte. Le varie occorrenze dell'elemento sono separate da spazi.|  
+|[**,**...*n*]|L'elemento precedente può essere ripetuto * n * numero di volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
+|[...*n*]|L'elemento precedente può essere ripetuto * n * numero di volte. Le varie occorrenze dell'elemento sono separate da spazi.|  
 |;|Carattere di terminazione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Sebbene per la maggior parte delle istruzioni in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sia necessario utilizzare il punto e virgola, questo requisito verrà introdotto in una versione futura.|  
 |\<Etichetta >:: =|Nome di un blocco della sintassi. Consente di raggruppare ed etichettare sezioni della sintassi o unità della sintassi utilizzabili in più posizioni di un'istruzione. Ogni posizione in cui è possibile utilizzare il blocco di sintassi è indicata dall'etichetta racchiusa tra parentesi angolari: \<etichetta >.<br /><br /> Un set è una raccolta di espressioni, ad esempio \<set di raggruppamenti >; e un elenco è una raccolta di set, ad esempio \<elenco di elementi composti >.|  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/18/2017
 |*server* **.** *database* **.** *schema* **.** *oggetto*|Nome composto da quattro parti.|  
 |*server* **.** *database* **...** *oggetto*|Il nome dello schema viene omesso.|  
 |*server* **...** *schema* **.** *oggetto*|Il nome del database viene omesso.|  
-|*server* **...**  *oggetto*|Il nome del database e dello schema viene omesso.|  
+|*server* **... ** *oggetto*|Il nome del database e dello schema viene omesso.|  
 |*database* **.** *schema* **.** *oggetto*|Il nome del server viene omesso.|  
 |*database* **...** *oggetto*|Il nome del server e del database viene omesso.|  
 |*schema* **.** *oggetto*|Il nome del server e del database viene omesso.|  
@@ -118,9 +118,9 @@ ms.lasthandoff: 11/18/2017
  Molti esempi di codice del prefisso costanti di stringa di caratteri Unicode con la lettera **N**. Senza il **N** prefisso, la stringa viene convertita la tabella codici predefinita del database. La tabella codici predefinita potrebbe non riconoscere certi caratteri.  
   
 ## <a name="applies-to-references"></a>Riferimenti per "Si applica a"  
- Il [!INCLUDE[tsql](../../includes/tsql-md.md)] riferimento include argomenti correlati a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], e [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. Nella parte superiore di ogni argomento è disponibile una sezione che indica i prodotti che supportano l'oggetto dell'argomento. Se un prodotto viene omesso, la funzionalità illustrata dall'argomento non sarà disponibile nel prodotto specifico. Ad esempio, i gruppi di disponibilità sono stati introdotti in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Il **CREATE AVAILABILTY GROUP** argomento indica che è applicabile a **SQL Server (SQL Server 2012 alla versione corrente)** poiché non è applicabile a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ Il [!INCLUDE[tsql](../../includes/tsql-md.md)] riferimento include articoli relativi a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], e [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. Nella parte superiore di ogni articolo è una sezione che indica i prodotti che supportano l'oggetto dell'articolo. Se un prodotto viene omesso, la funzionalità illustrata dall'articolo non è disponibile nel prodotto specifico. Ad esempio, i gruppi di disponibilità sono stati introdotti in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Il **CREATE AVAILABILITY GROUP** articolo indica che è applicabile a **SQL Server (SQL Server 2012 alla versione corrente)** poiché non è applicabile a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- In alcuni casi il tema generale di un argomento può essere usato in un prodotto, ma non sono supportati tutti gli argomenti. Ad esempio gli utenti di database indipendenti sono stati introdotti in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Il **CREATE USER** può essere usata in qualsiasi istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prodotto, ma la **con PASSWORD** sintassi non può essere utilizzata con le versioni precedenti. In questo caso alcune sezioni **Si applica a** aggiuntive vengono inserite nelle descrizioni di argomento appropriate nel corpo dell'argomento.  
+ In alcuni casi, il tema generale dell'articolo può essere utilizzato in un prodotto, ma tutti gli argomenti non sono supportati. Ad esempio gli utenti di database indipendenti sono stati introdotti in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Il **CREATE USER** può essere usata in qualsiasi istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prodotto, ma la **con PASSWORD** sintassi non può essere utilizzata con le versioni precedenti. In questo caso, aggiuntivo **si applica a** sezioni vengono inserite nelle descrizioni di argomento appropriate nel corpo dell'articolo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md)  

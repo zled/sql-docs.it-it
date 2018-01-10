@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3358baeca572cb8894eb31798932221d1809a77a
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 8be67d9cca60d3debf15cc1c10bd2ebfa171761a
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -275,7 +275,7 @@ L'attività Ripristina database include **URL** come dispositivo da cui eseguire
 -   [Ripristino temporizzato tramite STOPAT](#PITR)  
   
 > [!NOTE]  
->  Per un'esercitazione sull'uso di SQL Server 2016 con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Esercitazione: Uso del servizio di archiviazione BLOB di Windows Azure con i database di SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+>  Per un'esercitazione sull'uso di SQL Server 2016 con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server)  
   
 ###  <a name="SAS"></a> Creare una firma di accesso condiviso  
  Nell'esempio seguente vengono create firme di accesso condiviso che possono essere usate per creare credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un nuovo contenitore. Questo script crea una firma di accesso condiviso associata ai criteri di accesso archiviati. Per altre informazioni, vedere [Firme di accesso condiviso, parte 1: conoscere il modello di firma di accesso condiviso](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Lo script scrive inoltre il comando T-SQL necessario per creare le credenziali in SQL Server. 
@@ -355,7 +355,7 @@ Dopo aver completato l'esecuzione dello script, copiare il comando `CREATE CREDE
    (SELECT * FROM sys.credentials   
    WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
-      WITH IDENTITY = 'SHARED ACCESS IGNATURE',  
+      WITH IDENTITY = 'SHARED ACCESS SIGNATURE',  
       SECRET = '<SAS_TOKEN>';  
    ```  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], permissions
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fee98875fa2724a660844db868b591283c832f3d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b82638222e8fcf0a0fe6867954fc1e6f38dd071
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint
   Se le impostazioni di sicurezza predefinite non garantiscono il livello di accesso desiderato, sarà possibile creare nuovi livelli di autorizzazione per fornire l'accesso a operazioni o elementi specifici del server di report. Le impostazioni di sicurezza personalizzate possono risultare utili se si desidera limitare l'accesso a un particolare report.  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  Fare clic su **Azioni**.  
   
-6.  Fare clic su **Modifica autorizzazioni**. Scegliere **OK**.  
+6.  Fare clic su **Modifica autorizzazioni**. Fare clic su **OK**.  
   
 7.  Fare clic su **Nuovo**.  
   
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/05/2017
   
 11. Fare clic su **Controllo completo**.  
   
-12. Scegliere **OK**. Quando a un utente viene consentito di gestire le autorizzazioni per un modello specifico, questi può aprire il modello per modificarne le autorizzazioni.  
+12. Fare clic su **OK**. Quando a un utente viene consentito di gestire le autorizzazioni per un modello specifico, questi può aprire il modello per modificarne le autorizzazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ed662d5dff653fc0e245db65f6fe25b4b209c77e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7a8884691a3837d86f2210662cd9d680cda0e65b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adding-connections-programmatically"></a>Aggiunta di connessioni a livello di programmazione
   La classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> rappresenta le connessioni fisiche alle origini dati esterne. La classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> isola i dettagli di implementazione della connessione dal runtime. In questo modo il runtime è in grado di interagire con ogni gestione connessione in modo coerente e stimabile. Le gestioni connessione contengono un set di proprietà predefinite comuni a tutte le connessioni, ad esempio <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Le proprietà <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, tuttavia, sono in genere le uniche necessarie per configurare una gestione connessione. A differenza di altri paradigmi di programmazione, in cui le classi di connessione espongono metodi quali **Open** o **Connect** per stabilire fisicamente una connessione all'origine dati, il motore di runtime gestisce tutte le connessioni per il pacchetto mentre è in esecuzione.  
@@ -205,7 +205,7 @@ Public Class CreateConnection
 End Class  
 ```  
   
- **Esempio di output:**  
+ **Esempio di output**  
   
  `Connection description: OLE DB connection to the AdventureWorks database.`  
   
@@ -218,6 +218,6 @@ End Class
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Creazione di gestioni connessioni](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
+ [Creare gestioni connessioni](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   

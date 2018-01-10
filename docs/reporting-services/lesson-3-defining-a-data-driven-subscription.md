@@ -8,23 +8,23 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 22674e21246c98201fdb1ed9ae56d303e4f66756
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94e39c709c030c29d88bd874b279024c60f57fd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lezione 3: Definizione di una sottoscrizione guidata dai dati
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verranno usate le pagine di sottoscrizione guidata dai dati dei portali Web di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per connettersi a un'origine dati di sottoscrizione, verrà compilata una query che recupera i dati di sottoscrizione e sarà eseguito il mapping tra il set di risultati e le opzioni di recapito e del report.  
   
 > [!NOTE]  
@@ -49,7 +49,7 @@ In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e ch
 3.  In **Dettagli pianificazione**fare clic su **Singola occorrenza**.  
 4.  Specificare un'ora di inizio posticipata di alcuni minuti rispetto all'ora corrente.  
 5.  Fare clic su **Applica**.
-## <a name="destination"></a>Destinazione  
+## <a name="destination"></a>Destination  
 1.  Nella sezione Destinazione selezionare **Condivisione file di Windows** per il metodo di recapito.  
 
 ## <a name="dataset"></a>Set di dati
@@ -95,7 +95,7 @@ Parametro  |Origine del valore  | Valore/campo
  1. Nel campo **Numero ordine** selezionare **Ottieni il valore dal set di dati**. In Valore selezionare **Ordine**. 
  2. Fare clic su **Crea sottoscrizione**.
    
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Quando la sottoscrizione viene eseguita, nella condivisione file specificata vengono recapitati quattro file di report, uno per ogni ordine nell'origine dati *Sottoscrittori* . Ogni recapito deve essere univoco in termini di dati (che devono essere specifici dell'ordine), di formato di visualizzazione e di formato di file. È possibile aprire tutti i report dalla cartella condivisa per verificare che ogni versione sia personalizzata in base alle opzioni di sottoscrizione definite.  
   
 ![Elenco dei file creati dalla sottoscrizione](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Elenco dei file creati dalla sottoscrizione")  

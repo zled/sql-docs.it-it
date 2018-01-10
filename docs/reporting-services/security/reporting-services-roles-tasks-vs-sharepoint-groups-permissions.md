@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6dfe5a9c884008b2e5e5e744e2b2169356c6442f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d115273f5072941acde9c0f2370e7f42b484678
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Ruoli-attività di Reporting Services e autorizzazioni-gruppi di SharePoint
   In questo argomento vengono confrontate le funzionalità di autorizzazione basata su ruoli e attività nella modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con le funzionalità di sicurezza dei prodotti SharePoint. In questo argomento vengono confrontate la terminologia e le caratteristiche di ruoli, attività, gruppi di SharePoint, livelli di autorizzazione e autorizzazioni.  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/05/2017
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Ruolo|Gruppi di SharePoint|  
 |--------------------------------------|-----------------------|  
-|**Browser**<br /><br /> Visualizza|Utilizzare il gruppo **Visitatori** per concedere le autorizzazioni necessarie per visualizzare i report. Il gruppo **Visitatori** dispone di autorizzazioni a livello di lettura che consentono ai membri di un gruppo di visualizzare pagine, elementi di elenco e documenti.|  
+|**Browser**<br /><br /> Vista|Utilizzare il gruppo **Visitatori** per concedere le autorizzazioni necessarie per visualizzare i report. Il gruppo **Visitatori** dispone di autorizzazioni a livello di lettura che consentono ai membri di un gruppo di visualizzare pagine, elementi di elenco e documenti.|  
 |**Gestione contenuto**<br /><br /> Autorizzazioni complete per tutti gli elementi e le operazioni a livello di elemento, incluse le autorizzazioni per l'impostazione della sicurezza.|Utilizzare il gruppo **Proprietari** per concedere controllo completo sulla gestione degli elementi del server di report in un sito di SharePoint. Il gruppo **Proprietari** dispone di autorizzazioni di controllo completo che consentono di apportare modifiche al contenuto, alle pagine o alle funzionalità del sito. È consigliabile che l'accesso con controllo completo sia limitato agli amministratori del sito.|  
 |**Report personali**|Nessun gruppo equivalente. **Report personali** non è supportato nei server di report eseguiti in modalità SharePoint. Se si desidera utilizzare funzionalità equivalenti, è possibile utilizzare quelle di Sito personale in [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] .|  
 |**Server di pubblicazione**<br /><br /> Consente di aggiungere, aggiornare, visualizzare ed eliminare report, modelli di report, origini dei dati condivise e risorse.|Utilizzare il gruppo **Membri** per concedere le autorizzazioni necessarie per aggiungere e modificare elementi e aggiornare i riferimenti a elementi dipendenti in un sito di SharePoint. Il gruppo **Membri** dispone delle autorizzazioni di livello Collaborazione, che consentono ai membri del gruppo di visualizzare le pagine, aggiungere e aggiornare elementi, nonché inviare richieste di approvazione delle modifiche.|  
@@ -100,15 +98,15 @@ ms.lasthandoff: 12/05/2017
 |Visualizzazione di report|Elemento|Visualizzazione elementi.|  
 |Visualizzazione di risorse|Elemento|Visualizzazione elementi.|  
 ||||  
-|Esecuzione delle definizioni dei report|Di sistema|Visualizzazione elementi.|  
-|Generazione di eventi|Di sistema|Gestione sito Web.|  
-|Gestisci processi|Di sistema|Nessuna (non supportata).|  
-|Gestione delle proprietà del server di report|Di sistema|Nessuna (non applicabile). Il server di report non controlla se un utente dispone di autorizzazioni per la visualizzazione delle impostazioni di integrazione in Amministrazione centrale.|  
+|Esecuzione delle definizioni dei report|Sistema|Visualizzazione elementi.|  
+|Generazione di eventi|Sistema|Gestione sito Web.|  
+|Gestisci processi|Sistema|Nessuna (non supportata).|  
+|Gestione delle proprietà del server di report|Sistema|Nessuna (non applicabile). Il server di report non controlla se un utente dispone di autorizzazioni per la visualizzazione delle impostazioni di integrazione in Amministrazione centrale.|  
 |Gestione di ruoli|Di sistema|Gestione autorizzazioni.|  
-|Gestione di pianificazioni condivise|Di sistema|Gestione sito Web, Apertura.|  
-|Gestione della sicurezza del server di report|Di sistema|Nessuna (non applicabile). Il server di report non utilizza assegnazioni di ruolo a livello di sistema in un server eseguito in modalità integrata SharePoint.|  
-|Visualizzazione delle proprietà del server di report|Di sistema|Nessuna (non applicabile). Il server di report non controlla se un utente dispone di autorizzazioni per la visualizzazione delle impostazioni di integrazione in Amministrazione centrale.|  
-|Visualizzazione di pianificazioni condivise|Di sistema|Apertura elementi.|  
+|Gestione di pianificazioni condivise|Sistema|Gestione sito Web, Apertura.|  
+|Gestione della sicurezza del server di report|Sistema|Nessuna (non applicabile). Il server di report non utilizza assegnazioni di ruolo a livello di sistema in un server eseguito in modalità integrata SharePoint.|  
+|Visualizzazione delle proprietà del server di report|Sistema|Nessuna (non applicabile). Il server di report non controlla se un utente dispone di autorizzazioni per la visualizzazione delle impostazioni di integrazione in Amministrazione centrale.|  
+|Visualizzazione di pianificazioni condivise|Sistema|Apertura elementi.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   

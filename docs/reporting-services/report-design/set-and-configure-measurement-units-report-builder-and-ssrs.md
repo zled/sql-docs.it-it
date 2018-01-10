@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2969ef479230412180278184387a193804929fc4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 350f8da6d0a011461f6349247cdca30867b62305
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Impostare e configurare le unità di misura (Generatore report e SSRS)
   In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] gli indicatori usano una di due unità di misure, ovvero percentuale o numerica.   
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  Fare clic con il pulsante destro del mouse sull'indicatore da modificare e scegliere **Proprietà indicatore**.  
   
-2.  Fare clic su **Valori e stati** nel riquadro sinistro.  
+2.  Scegliere **Valori e stati** dal riquadro sinistro.  
   
 3.  Nell'elenco **Unità di misura stati** fare clic su **Percentuale**.  
   

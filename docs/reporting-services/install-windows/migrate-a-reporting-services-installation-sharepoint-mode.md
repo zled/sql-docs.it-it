@@ -8,22 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 515fb60031f75d0c3743628a345e415770a731fe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 627029330280cef882f631701d5ea9a0ed8a8791
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Migrazione di un'installazione di Reporting Services in modalità SharePoint
 
@@ -87,7 +85,7 @@ ms.lasthandoff: 12/05/2017
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|**Rskeymgmt.exe** o Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).|Gli strumenti indicati possono essere utilizzati per il backup ma per l'operazione di ripristino saranno necessarie le pagine di gestione dell'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oppure PowerShell.|  
 |**2**|Database del contenuto di SharePoint.||Creare il database e scollegarlo.<br /><br /> Vedere la sezione "Aggiornamento basato sul collegamento di database" nella pagina [Determinare il metodo di aggiornamento (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx).|  
 |**3**|Database di SQL Server corrispondente al database del catalogo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Backup e ripristino del database di SQL Server<br /><br /> o Gestione configurazione<br /><br /> Scollegamento e collegamento di un database di SQL Server.||  
-|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Semplice copia di file.|È sufficiente copiare rsreportserver.config se sono state apportate personalizzazioni a tale file. Esempio di percorso predefinito dei file: C:\Programmi\File comuni\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*:<br /><br /> <br /><br /> Rsreportserver.config<br /><br /> Rssvrpolicy.config<br /><br /> Web.config per l'applicazione ASP.NET del server di report.<br /><br /> Machine.config per ASP.NET.|  
+|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Semplice copia di file.|È sufficiente copiare rsreportserver.config se sono state apportate personalizzazioni a tale file. Esempio di percorso predefinito dei file: C:\Programmi\File comuni\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*:<br /><br /> <br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> Web.config per l'applicazione ASP.NET del server di report.<br /><br /> Machine.config per ASP.NET.|  
   
 ####  <a name="bkmk_restore_operations"></a> Operazioni di ripristino  
  Questa sezione descrive i tipi di informazioni necessari per eseguire la migrazione e gli strumenti o processi da usare per completare il ripristino. È possibile che gli strumenti da usare per il ripristino siano diversi da quelli che si sono usati per il backup.  

@@ -8,24 +8,22 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords: sql13.rpt.rptdesigner.projectpropertypages.general.f1
 helpviewer_keywords: Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: "35"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e38dcb5203dc4d09a24f53ec380f5af724b1bde
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e6b37d9f8cd174be9cd70339217e6dba4c7cffc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="project-property-pages-dialog-box"></a>pagine delle proprietà del progetto - finestra di dialogo
 
@@ -83,10 +81,10 @@ ms.lasthandoff: 12/05/2017
   
  Quando si pubblica in un server di report in esecuzione in modalità nativa, utilizzare l'URL della directory virtuale del server di report. Ad esempio, `http:\\<server>\reportserver`. In questa casella è necessario impostare la directory virtuale del server di report e non di Gestione report. Per impostazione predefinita, il server di report viene installato in una directory virtuale denominata "reportserver".  
   
- Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà utilizzato il sito principale predefinito, Esempio: 
+ Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà utilizzato il sito principale predefinito, Ad esempio 
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`.  
++ `http:\\<servername>\<site>\<subsite>`(Indici per tabelle con ottimizzazione per la memoria).  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

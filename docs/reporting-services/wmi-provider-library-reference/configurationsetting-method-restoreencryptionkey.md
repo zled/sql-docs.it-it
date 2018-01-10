@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: RestoreEncryptionKey method
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 946af0f4e1b87eb5661a57c795c012e7e172d332
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b1e68596bbb18811ca3221206bcc71948561db7d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---restoreencryptionkey"></a>Metodo di ConfigurationSetting - RestoreEncryptionKey
   Riapplica la chiave di crittografia specificata al database del server di report.  
@@ -64,7 +62,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se nel database del server di report esiste già una voce per il server di report , viene eliminata. La nuova voce viene quindi creata utilizzando la chiave di crittografia specificata e la chiave pubblica del server di report.  
   
  Il metodo è più efficace se viene chiamato dopo il metodo [DeleteEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md) , che svuota l'elenco delle chiavi di crittografia.  

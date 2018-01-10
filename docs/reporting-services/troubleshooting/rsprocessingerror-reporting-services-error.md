@@ -8,23 +8,21 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 caps.latest.revision: "29"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3b53303b80144b02f6e64c6d3aaeac1856773da9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ab52b302e3dddfd4ab42d2cd09019f0fa62f5a91
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Errore di Reporting Services
     
@@ -88,7 +86,7 @@ ms.lasthandoff: 12/05/2017
  Controllare l'ortografia nelle espressioni. I nomi predefiniti globali, dei parametri e dei campi rispettano la distinzione tra maiuscole e minuscole. Nell'espressione che provoca l'errore controllare che il nome esista effettivamente nel report e che sia stato digitato correttamente. Per altre informazioni, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="parameter-properties-and-null"></a>Proprietà dei parametri e valori Null  
- Il valore di un parametro multivalore non può essere Null. Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Il valore di un parametro multivalore non può essere Null. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Impossibile elaborare un report principale con sottoreport  
  È necessario che un report con sottoreport venga elaborato dalla stessa versione di Elaborazione report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante l'aggiornamento di report alla versione corrente dello schema di definizione del report, è possibile che il report principale e i sottoreport non vengano aggiornati contemporaneamente. Se la versione di un report non è compatibile con quella dei sottoreport, viene visualizzato un messaggio di errore che indica l'impossibilità di elaborare il sottoreport.  

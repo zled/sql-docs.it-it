@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e8fce3d396a163c77b3b98bd7defd583f94d72b0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d500b82566f2efaed147f7c7697bf0cf404e37b5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utilizzare un'origine dei dati esterna per i dati del Sottoscrittore (sottoscrizione guidata dai dati)
   In una sottoscrizione guidata dai dati i dati di sottoscrizione dinamici vengono ottenuti tramite una query o un comando che consente di recuperare i dati da un'origine dei dati esterna. I dati di sottoscrizione possono essere recuperati da qualsiasi origine dei dati supportata che soddisfi i requisiti per l'elaborazione della sottoscrizione guidata dai dati. La sintassi della query o del comando deve essere valida per un'estensione per l'elaborazione dati installata con il server di report.  

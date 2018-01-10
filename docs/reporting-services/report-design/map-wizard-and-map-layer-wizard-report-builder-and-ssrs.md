@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,13 +19,13 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d810c44d790b73cb9bd8050370487e25ea6870eb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8799fa0b54d60990ee701f4fef2950cf5e0d2b86
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
  Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la Creazione guidata mappa e la Creazione guidata livello mappa consentono di automatizzare l'attività di creazione di una mappa, di aggiunta di un livello mappa o di modifica delle opzioni di livello mappa in un livello esistente.  
@@ -138,7 +136,7 @@ ms.lasthandoff: 12/05/2017
  In Progettazione report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aggiungere sia il file con estensione shp sia il file con estensione dbf al progetto report, quindi specificare il nome del file con estensione shp come origine dati spaziali.  
   
 ###  <a name="GetShapefiles"></a> Dove è possibile ottenere i file di forma ESRI  
- I file di forma ESRI sono disponibili sul Web. Per altre informazioni, vedere [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814)(Ricerca di file di forma ESRI per una mappa).  
+ I file di forma ESRI sono disponibili sul Web. Per altre informazioni, vedere la pagina relativa alla [ricerca di file di forma ESRI per una mappa](http://go.microsoft.com/fwlink/?linkid=178814).  
   
 ###  <a name="SqlServerSpatial"></a> Informazioni su una query spaziale di SQL Server  
  Una query spaziale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è una query del set di dati che specifica dati che possono essere di tipo SQLGeometry o SQLGeography di un database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

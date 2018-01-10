@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords: Reporting Services, report creation
@@ -18,13 +16,13 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: "54"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b5d023c1f2fa7c8795f83e610c49e03f50f38032
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 11bf9da4b78262f75a411f847c721309abc2457b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-reports-ssrs"></a>Report di Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] I report impaginati sono definizioni di report basate su XML che includono i dati e gli elementi di layout dei report. Su un file system client, i file di definizione di report hanno estensione .rdl. Dopo la pubblicazione, il report impaginato diventa un elemento di report archiviato nel server di report o nel sito di SharePoint. I report impaginati sono una parte della piattaforma di report basata su server fornita da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È anche possibile [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="create-notifications-based-on-report-data"></a>Creare notifiche basate su dati dei report  
  È possibile creare avvisi relativi ai dati dei report pubblicati in un sito di SharePoint. Gli avvisi relativi ai dati sono basati su feed di dati dalle aree dati nel report. Per impostazione predefinita, le aree dati vengono denominate automaticamente. Gli autori del report possono agevolare la creazione di avvisi relativi ai dati nei loro report denominando le aree dati in base agli scopi aziendali. Quando si crea un avviso relativo ai dati, si riceve una notifica mediante posta elettronica nel momento in cui i dati soddisfano le condizioni specificate. Per altre informazioni, vedere [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Creare un avviso dati nella finestra di progettazione Avviso dati](../../reporting-services/create-a-data-alert-in-data-alert-designer.md) e [Avvisi dati di Reporting Services](../../reporting-services/reporting-services-data-alerts.md).  
   
-## <a name="upgrade-reports"></a>Aggiornare i report  
+## <a name="upgrade-reports"></a>Upgrade Reports  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta varie versioni di definizioni dei report, server di report e siti di SharePoint. Per aggiornare un report:  
   
 -   Aggiornare un'installazione del server di report I report compilati archiviati nel server di report vengono aggiornati automaticamente al primo utilizzo. La definizione del report (.rdl) non viene modificata. Per ulteriori informazioni, vedere [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  

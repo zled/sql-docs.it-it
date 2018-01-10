@@ -8,7 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7a017f2d0b04df41b25e093bdeccd53036aa5710
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d55e5842ec6a9e62ec75095c68e59d4df86eec36
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Caricamento ed esecuzione di un pacchetto locale a livello di codice
   È possibile eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in base alle necessità o a orari predeterminati utilizzando i metodi descritti in [Esecuzione di pacchetti](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Tuttavia, con poche righe di codice, è anche possibile eseguire un pacchetto da un'applicazione personalizzata, ad esempio un'applicazione Windows Form, un'applicazione console, un Web Form o un servizio Web ASP.NET oppure un servizio Windows.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  Avviare l'ambiente di sviluppo di Visual Studio e creare una nuova applicazione nel linguaggio di sviluppo preferito. In questo esempio viene utilizzata un'applicazione console. Tuttavia, è anche possibile eseguire un pacchetto da un'applicazione Windows Form, da un Web Form o servizio Web ASP.NET oppure da un servizio Windows.  
   
-2.  Scegliere **Aggiungi riferimento** dal menu **Progetto**, quindi aggiungere un riferimento a **Microsoft.SqlServer.ManagedDTS.dll**. Scegliere **OK**.  
+2.  Scegliere **Aggiungi riferimento** dal menu **Progetto**, quindi aggiungere un riferimento a **Microsoft.SqlServer.ManagedDTS.dll**. Fare clic su **OK**.  
   
 3.  Usare l'istruzione **Imports** di Visual Basic o l'istruzione C# **using** per importare lo spazio dei nomi **Microsoft.SqlServer.Dts.Runtime**.  
   

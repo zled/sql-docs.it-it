@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,13 +28,13 @@ ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b91a57a70fd258f71e687f18654e6445892c2657
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99dbf2e386831ec182c9c3c98680388fdb122314
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Formattazione di linee, colori e immagini (Generatore report e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile formattare linee, colori, aree dati, immagini e altri elementi del report.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="applying-background-colors"></a>Applicazione di colori di sfondo  
  È possibile impostare un colore a tinta unita come sfondo per l'intero report, una casella di testo del report o una cella oppure un gruppo di celle in un'area dati. Per impostazione predefinita, il colore di sfondo è il bianco. È tuttavia possibile selezionare un altro colore nella scheda **Riempimento** della finestra di dialogo **Proprietà** dell'elemento di report. Se ad esempio si vuole modificare il colore di sfondo di una casella di testo, fare clic con il pulsante destro del mouse sulla casella di testo, quindi scegliere **Proprietà casella di testo**. Fare clic su **Riempimento** , quindi selezionare il colore desiderato. In questa finestra di dialogo è possibile selezionare un colore di sfondo per l'elemento selezionato oppure aggiungere un'immagine da visualizzare come sfondo.  
   
- Quando si utilizza il grafico, è inoltre possibile specificare sfumature e stili del motivo per i colori di sfondo. Per altre informazioni, vedere [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md).  
+ Quando si usa il grafico, è inoltre possibile specificare sfumature e stili del motivo per i colori di sfondo. Per altre informazioni, vedere [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="using-images-as-formatting"></a>Utilizzo di immagini per la formattazione  
  A un'area dati è possibile aggiungere campi in cui sono contenute immagini. Le immagini eventualmente incluse negli appositi campi vengono visualizzate in fase di esecuzione del report.  

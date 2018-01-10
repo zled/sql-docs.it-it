@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -17,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 59b8b667a9a895b9e95388ac781ec6bb46923920
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: efb8daaa71c08e9292e7d0427e04fc0a7878f219
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importare documenti JSON in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -163,7 +162,7 @@ SELECT book.*
 
 In questo esempio, OPENROWSET(BULK) legge il contenuto del file e passa il contenuto alla funzione OPENJSON con uno schema definito per l'output. OPENJSON stabilisce le corrispondenze per le proprietà negli oggetti JSON usando i nomi di colonna. Ad esempio, la proprietà `price` viene restituita come una colonna `price` e convertita nel tipo di dati float. Ecco i risultati:
 
-|ID|Nome|price|pages_i|Autore
+|ID|nome|price|pages_i|Autore
 |---|---|---|---|---|
 978-0641723445|The Lightning Thief|12,5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6,49|304|Rick Riordan| 

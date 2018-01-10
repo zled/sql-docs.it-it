@@ -8,18 +8,18 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f282b9aacc253620a2f90da67cd5738702acd0ee
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b266fbdf4801a4b2433590cc3ee2403250702666
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installare il primo server di report in modalità SharePoint
 
@@ -402,7 +402,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  
  - [Distribuzione di SQL Server 2016 PowerPivot e Power View in una farm di SharePoint 2016 a più livelli](../../analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)
  
- Per SharePoint 2016, sarà necessario creare e configurare un'applicazione Excel Services. Per altre informazioni, vedere quanto segue:  
+ Per SharePoint 2016, sarà necessario creare e configurare un'applicazione Excel Services. Per ulteriori informazioni, vedere quanto segue:  
   
 -   Sezione "Configurare Excel Services per l'integrazione di Analysis Services" in [Installazione di Analysis Services in modalità Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   

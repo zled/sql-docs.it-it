@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 61a79fe122947e5f68de277035e72639f22f5e6b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3bc11b3c437f6a596e3778b4ccf43b54d9668bf2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Funzionalità e impostazioni del sito di Reporting Services (modalità SharePoint)
 
@@ -53,7 +51,7 @@ La modalità SharePoint di Reporting Services include diverse funzionalità pers
 |**Consenti download del controllo ActiveX RSClientPrint**|Il controllo visualizza una finestra di dialogo di stampa personalizzata che supporta funzionalità comuni ad altre finestre di dialogo di stampa, inclusi l'anteprima di stampa, la selezione delle pagine per specificare pagine e intervalli, i margini delle pagine e l'orientamento. Per altre informazioni sul controllo, vedere [Utilizzo del controllo RSClientPrint in applicazioni personalizzate](../../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
 |**Abilita i messaggi di errore in modalità locale**|Mostra o nasconde i messaggi di errore dettagliati nei computer remoti quando in esecuzione in modalità locale. Se viene visualizzato un messaggio di errore simile al seguente è possibile che l'abilitazione di errori remoti sia utile:<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  
 |**Abilita i metadati di accessibilità per i report**|Abilita i metadati di accessibilità nell'output HTML per i report|  
-|**Abilita ridimensionamento visualizzazioni di dati esatto per i report**|Configurare il comportamento di adattamento per la visualizzazione dei dati in una tablix, in modo che si adattino esattamente. Sono inclusi grafici, misuratori e mappe. Se l'opzione è disabilitata, il comportamento per la visualizzazione dei dati consiste nell'adattamento approssimativo che potrebbe lasciare spazi vuoti. Questa impostazione si applica solo al rendering nella Web part del visualizzatore di report. Per gestire questo comportamento per il rendering lato server è necessario modificare il file **rsreportserver.config**. Per altre informazioni, vedere quanto segue:<br /><br /> [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).<br /><br /> [Personalizzare i parametri di estensione per il rendering in RSReportServer.config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).<br /><br /> [Impostazioni relative alle informazioni sul dispositivo HTML](../../reporting-services/html-device-information-settings.md).<br /><br /> L'abilitazione del ridimensionamento esatto può avere impatto sulle prestazioni perché l'elaborazione per determinare la dimensione esatta potrebbe impiegare più molto tempo di un adattamento approssimativo.|  
+|**Abilita ridimensionamento visualizzazioni di dati esatto per i report**|Configurare il comportamento di adattamento per la visualizzazione dei dati in una tablix, in modo che si adattino esattamente. Sono inclusi grafici, misuratori e mappe. Se l'opzione è disabilitata, il comportamento per la visualizzazione dei dati consiste nell'adattamento approssimativo che potrebbe lasciare spazi vuoti. Questa impostazione si applica solo al rendering nella Web part del visualizzatore di report. Per gestire questo comportamento per il rendering lato server è necessario modificare il file **rsreportserver.config**. Per ulteriori informazioni, vedere quanto segue:<br /><br /> [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).<br /><br /> [Personalizzare i parametri di estensione per il rendering in RSReportServer.config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).<br /><br /> [Impostazioni relative alle informazioni sul dispositivo HTML](../../reporting-services/html-device-information-settings.md).<br /><br /> L'abilitazione del ridimensionamento esatto può avere impatto sulle prestazioni perché l'elaborazione per determinare la dimensione esatta potrebbe impiegare più molto tempo di un adattamento approssimativo.|  
   
 ## <a name="see-also"></a>Vedere anche
 

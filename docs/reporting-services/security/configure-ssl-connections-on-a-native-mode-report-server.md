@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 8012c0fd281c34e199deb6bd4daa206d113508ce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 94e454e201b2e9130b115e527ee2433f04f2ab60
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurare connessioni SSL in un server di report in modalità nativa
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] La modalità nativa usa il servizio SSL HTTP (Secure Sockets Layer) per stabilire connessioni crittografate a un server di report. Se si dispone di un file di certificato (con estensione cer) installato in un archivio certificati locale nel server di report, è possibile associare il certificato a una prenotazione di URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per supportare le connessioni al server di report tramite un canale crittografato.  

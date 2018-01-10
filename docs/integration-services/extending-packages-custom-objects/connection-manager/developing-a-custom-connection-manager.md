@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b34531a1c303d28584faea0918ae89994f3df8c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c0143cab738f36fe9d9180ff31cafbcab6e943b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-custom-connection-manager"></a>Sviluppo di una gestione connessione personalizzata
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] le gestioni connessioni vengono utilizzate per incapsulare le informazioni necessarie per la connessione a un'origine dati esterna. In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] è inclusa una varietà di gestioni connessione che supportano connessioni alle origini dati più utilizzate, dai database aziendali a file di testo e fogli di lavoro di Excel. Se le gestioni connessioni e le origini dati esterne supportate da [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] non soddisfano completamente specifici requisiti, è possibile creare una gestione connessione personalizzata.  

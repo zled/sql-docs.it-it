@@ -8,9 +8,7 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: "49"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6f105f34e6e5d5c06159c40c8958f097ca5b2512
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd273c3dd52eb3feb0ab4f5db30b4569744e78c2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="html-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo HTML
 Nella tabella seguente si elencano le impostazioni relative alle informazioni sul dispositivo per il rendering nel formato HTML.  
@@ -34,7 +32,7 @@ Nella tabella seguente si elencano le impostazioni relative alle informazioni su
 > [!IMPORTANT]  
 >  Le impostazioni relative alle informazioni sui dispositivi elencate nella tabella di seguito con un **(\*)** sono deprecate, pertanto è consigliabile non usarle nelle nuove applicazioni. Per altre informazioni, vedere [Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
   
-|Impostazione|Valore|  
+|Impostazione|valore|  
 |-------------|-----------|  
 |**AccessibleTablix**|Indica se eseguire il rendering con i metadati di accessibilità aggiuntivi per l'utilizzo con le utilità per la lettura dello schermo. I metadati di accessibilità aggiuntivi fanno in modo che il report visualizzabile sia conforme agli standard tecnici riportati di seguito definiti nella sezione 1194.22 relativa alle informazioni e alle applicazioni Intranet e Internet basate sul web nel documento Electronic and Information Technology Accessibility Standards (Sezione 508):<br /><br /> (g) Le intestazioni di riga e colonna devono essere identificate per le tabelle di dati.<br /><br /> (h) Il markup deve essere usato per associare celle di dati e celle di intestazione per le tabelle di dati che dispongono di due o più livelli logici di intestazioni di riga o colonna.|  
 |**ActionScript(\*)**|Specifica il nome della funzione JavaScript da usare quando si verifica un evento relativo alla funzione, ad esempio la scelta di un segnalibro o un drill-through. Se viene specificato questo parametro, un evento relativo all'azione genererà la funzione JavaScript anziché un postback al server.|  
@@ -64,6 +62,6 @@ Nella tabella seguente si elencano le impostazioni relative alle informazioni su
 ## <a name="see-also"></a>Vedere anche  
  [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Guida di riferimento tecnico &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Riferimento tecnico &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

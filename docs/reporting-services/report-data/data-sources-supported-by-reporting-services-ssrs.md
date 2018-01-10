@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 caps.latest.revision: "96"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 96b080d0244783a3af13c8bbe4a7f1587cb10f18
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 29c605b8a41fefd8d4cdc1bebe3131823aa6ca20
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Origini dei dati supportate da Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera i dati di report dalle origini dati tramite un livello di dati modulare ed estensibile che usa estensioni per l'elaborazione dati. Per recuperare dati di report da un'origine dati, è necessario selezionare un'estensione per l'elaborazione dati che supporti il tipo di origine dati, la versione del software in esecuzione su di essa e la relativa piattaforma (32 bit o 64 bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="DataSourcesTable"></a> Tipi di origini dei dati  
   
-|Origine di<br /><br /> Dati di report|Tipo di origine dati di Reporting Services|Nome dell'estensione per l'elaborazione dati/provider di dati|Versione del provider di dati sottostante<br /><br /> (Facoltativo)|Dati<br /><br /> Origine<br /><br /> Piattaforma x86|Dati<br /><br /> Origine<br /><br /> Piattaforma x64|Versione dell'origine dati|RS<br /><br /> Piattaforma x86|RS<br /><br /> Piattaforma x64|  
+|Origine di<br /><br /> Dati di report|Tipo di origine dati di Reporting Services|Nome dell'estensione per l'elaborazione dati/provider di dati|Versione del provider di dati sottostante<br /><br /> (Facoltativo)|data<br /><br /> Origine<br /><br /> Piattaforma x86|Dati<br /><br /> Origine<br /><br /> Piattaforma x64|Versione dell'origine dati|RS<br /><br /> Piattaforma x86|RS<br /><br /> Piattaforma x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database relazionale|[Microsoft SQL Server](#MicrosoftSQLServer)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.SqlClient|S|S|SQL Server 2008 e versioni successive.|S|S|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database relazionale|OLEDB|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.OledbClient|S|S|SQL Server 2008 e versioni successive.|S|S|  
@@ -302,7 +300,7 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
  Le credenziali specificate dipendono dall'implementazione utilizzata dall'applicazione client. Per altre informazioni, vedere [Tipo di connessione Elenco Microsoft SharePoint &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md).  
   
 ###  <a name="XML"></a> Estensione per l'elaborazione dati XML  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per l'elaborazione dati XML che consente di usare dati XML in un report. I dati possono essere recuperati da un documento XML, da un servizio Web o da un'applicazione Web a cui è possibile accedere tramite un URL. Per altre informazioni, vedere [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere la sezione relativa alla progettazione di query basata su testo in [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Per consultare degli esempi, vedere [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654)(Reporting Services: Uso di origini dati XML e servizio Web).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per l'elaborazione dati XML che consente di usare dati XML in un report. I dati possono essere recuperati da un documento XML, da un servizio Web o da un'applicazione Web a cui è possibile accedere tramite un URL. Per altre informazioni, vedere [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere la sezione relativa alla progettazione di query basata su testo in [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Per consultare degli esempi, vedere [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654).  
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   

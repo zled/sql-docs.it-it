@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28f9eae733499868505133cde58982da2754aff2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 744a0c4536283a9143bc423c123da319d0ce05a6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Chiavi di crittografia SSRS - Eliminare e ricreare chiavi di crittografia
   Le attività di eliminazione e ricreazione di chiavi di crittografia non rientrano nella manutenzione di routine delle chiavi di crittografia. Tali attività vengono eseguite in risposta a una specifica minaccia al server di report oppure come ultima risorsa quando non è più possibile accedere a un database del server di report.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Eliminare le chiavi di crittografia esistenti e il contenuto crittografato inutilizzabile quando non è possibile ripristinare la chiave simmetrica.  
   
-## <a name="re-creating-encryption-keys"></a>Ricreazione di chiavi di crittografia  
+## <a name="re-creating-encryption-keys"></a>ricreazione di chiavi di crittografia  
  Se si ha la prova che la chiave simmetrica sia nota a utenti non autorizzati oppure se il server di report è stato attaccato, come misura di sicurezza è possibile ricreare la chiave simmetrica in modo da reimpostarla. Se si ricrea la chiave simmetrica, tutti i valori crittografati verranno crittografati nuovamente utilizzando il nuovo valore. Se si eseguono più server in una distribuzione con scalabilità orizzontale, tutte le copie della chiave simmetrica verranno aggiornate in base al nuovo valore. Il server di report utilizza le chiavi pubbliche disponibili per aggiornare la chiave simmetrica per ogni server presente nella distribuzione.  
   
  La chiave simmetrica può essere ricreata solo quando il server di report è in uno stato attivo. La ricreazione delle chiavi di crittografia e la riesecuzione della crittografia del contenuto interferisce con le operazioni del server. Durante l'operazione di riesecuzione della crittografia il server deve essere offline e il server di report non deve ricevere richieste.  

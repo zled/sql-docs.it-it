@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f3fccc743eba7809d368771c5e5d942ea954f25
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d7c5c99922e82652ecbd4d7ad2f526f7f4c3d89c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
 In questa esercitazione si creerà un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con un istogramma che visualizza una serie come set di barre verticali raggruppate per categoria. 
@@ -274,7 +274,7 @@ Nel grafico viene visualizzata una riga in cui è riportata la media mobile dell
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Nell'area di progettazione scegliere **Fare clic per aggiungere il titolo**.  
+2.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
 3.  Digitare **Grafico a barre - Vendite**, premere INVIO, quindi digitare **Gennaio - dicembre 2015**in modo da ottenere un risultato simile al seguente:  
   
@@ -306,7 +306,7 @@ Nel grafico viene visualizzata una riga in cui è riportata la media mobile dell
   
 4.  Fare clic su **Salva**.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Questo passaggio conclude l'esercitazione relativa all'aggiunta di un istogramma al report. Per altre informazioni sui grafici, vedere [Grafici &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  

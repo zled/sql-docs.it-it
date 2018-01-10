@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3fcd13b5395ddb1a2e8438d26b631f62a332370e
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 66988188b2f0ce0550384392b6f90a0b8f93d489
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Invio di un messaggio di posta HTML con l'attività Script
   L'attività SendMail di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta solo messaggi di posta in formato di testo normale. Tuttavia è possibile inviare facilmente messaggi di posta HTML tramite l'attività Script e le funzionalità di posta di .NET Framework.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/28/2017
   
 1.  Creare le variabili di stringa denominate `HtmlEmailTo`, `HtmlEmailFrom` e `HtmlEmailSubject` e assegnare i valori appropriati per un messaggio di prova valido.  
   
-2.  Creare una variabile di stringa denominata `HtmlEmailBody` e assegnarle una stringa di markup HTML. Esempio:  
+2.  Creare una variabile di stringa denominata `HtmlEmailBody` e assegnarle una stringa di markup HTML. Ad esempio  
   
     ```  
     <html><body><h1>Testing</h1><p>This is a <b>test</b> message.</p></body></html>  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/28/2017
       smtpConnectionString.Split(New Char() {"="c, ";"c})(1)  
     ```  
   
-## <a name="code"></a>Codice  
+## <a name="code"></a>codice  
   
 ```vb  
 Public Sub Main()  

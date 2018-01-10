@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 caps.latest.revision: "4"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6c047dd94d6ed56ccb3fb108107695b72bb9e52
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e95e444172974de41cfea15bc651ddfae9a5cabb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Risolvere i problemi di rendering del report di Reporting Services
 Dopo che le informazioni sul layout e i dati del report sono stati combinati, il report compilato viene inviato a un renderer di report. Ad esempio, quando si visualizza in anteprima un report in locale, si utilizza il renderer HTML per visualizzare il report compilato. Utilizzare le informazioni riportate in questo argomento per risolvere i problemi specifici del rendering del report.   

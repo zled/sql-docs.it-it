@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b439c6e0c9214415b7192116f5c726c820763488
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dfaf5fec90d334ef19dcf3b5de715322164253e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginazione in Reporting Services (Generatore report e SSRS)
   Il termine paginazione si riferisce al numero di pagine all'interno di un report e alla disposizione degli elementi del report in tali pagine. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la paginazione varia a seconda dell'estensione per il rendering usata per visualizzare e recapitare il report. Quando si esegue un report sul server di report, viene usato il renderer HTML. Tale renderer si attiene a un set specifico di regole di paginazione. Se ad esempio si esporta lo stesso report in formato PDF, viene usato il renderer PDF e viene applicato un set di regole differente, pertanto il report viene impaginato in modo diverso. Per progettare correttamente un report di facile lettura e ottimizzato per il renderer che si intende usare per recapitare il report, è necessario comprendere le regole usate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

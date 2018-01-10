@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3a004db77f5c137742542a729ced6e79c708c43
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 22a2d5eec19c545771fb5791b37aa50b90124b94
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo di connessione SAP NetWeaver BI (SSRS)
   Per includere dati da un'origine dati esterna SAP NetWeaver® Business Intelligence nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Questo tipo di origine dati incorporata si basa sull'estensione per i dati per il provider di dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 per [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -97,7 +95,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |**BackgroundColor**|**String**|Restituisce il colore di sfondo definito nel database per il campo.|  
 |**Colore**|**String**|Restituisce il colore di primo piano definito nel database per l'elemento.|  
 |**Key**|**Oggetto**|Restituisce la chiave per un livello.|  
-|**LevelNumber**|**Valore intero**|Per gerarchie padre-figlio, questa proprietà restituisce il numero del livello o della dimensione.|  
+|**LevelNumber**|**Integer**|Per gerarchie padre-figlio, questa proprietà restituisce il numero del livello o della dimensione.|  
 |**ParentUniqueName**|**String**|Per gerarchie padre-figlio, restituisce un nome completo del livello padre.|  
 |**UniqueName**|**String**|Restituisce il nome completo di un livello. Ad esempio, il valore **UniqueName** di un dipendente potrebbe essere *[0D_Azienda]. [ 10D_Reparto]. [11]*.|  
   

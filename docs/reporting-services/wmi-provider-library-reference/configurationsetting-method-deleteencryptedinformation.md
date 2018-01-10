@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: DeleteEncryptedInformation method
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e6803c945ca5ea6c67416fb846b1319c01b76c69
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e7cf6a6dc966f97b7b85fcb6521cf73c7675721a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---deleteencryptedinformation"></a>Metodo di ConfigurationSetting - DeleteEncryptedInformation
   Elimina le informazioni crittografate dal database del server di report.  
@@ -52,7 +50,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando viene richiamato questo metodo, i seguenti dati vengono eliminati:  
   
 -   Informazioni sulle origini dati crittografate, tra cui nome utente e password.  

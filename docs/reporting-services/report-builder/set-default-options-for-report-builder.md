@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10427"
@@ -18,13 +16,13 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 43f304a78091c9b70abea274ae28e7ad180f27a5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f50138fa4045822456105962aec3c8a6c2305fbe
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-default-options-for-report-builder"></a>Impostare le opzioni predefinite per Generatore Report
   In Generatore Report è possibile impostare alcuni valori predefiniti utili per semplificare e accelerare la creazione di report.  Ad esempio, se è si può impostare o modificare il server di report predefinito, Generatore Report salva i report nello stesso server di report automaticamente, se non diversamente specificato.  

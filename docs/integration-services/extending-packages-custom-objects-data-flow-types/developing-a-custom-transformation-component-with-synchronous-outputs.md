@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c6999fbcc1dccdf7a79802bdc9a2d49630f908e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7783a48301eb69e6105bf2219c6b31f084feaf00
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Sviluppo di un componente di trasformazione personalizzato con output sincroni
   I componenti di trasformazione con output sincroni ricevono righe dai componenti a monte, quindi leggono o modificano i valori nelle colonne di queste righe mentre le passano ai componenti a valle. Possono anche definire colonne di output aggiuntive derivate dalle colonne fornite dai componenti a monte, ma non aggiungono righe al flusso di dati. Per altre informazioni sulla differenza tra componenti sincroni e asincroni, vedere [Informazioni sulle trasformazioni sincrone e asincrone](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  

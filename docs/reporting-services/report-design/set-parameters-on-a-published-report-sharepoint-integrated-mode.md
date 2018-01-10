@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,13 +18,13 @@ ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c1057911b1443b5d83777ec7a6e7fff90d73ece
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eb7d195139e3fd34ad6ac749bf0e09e7b13e0d3d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Impostare i parametri in un report pubblicato - Modalità integrata SharePoint
   Un report con parametri è un report che accetta valori di input, che verranno utilizzati per filtrare i dati durante l'esecuzione del report. I parametri vengono definiti al momento della creazione del report. A seconda di come sono definiti i parametri nella definizione del report, un report può accettare un solo valore, più valori o valori dinamici, che cambiano in risposta a una selezione precedente. Se ad esempio si sceglie una categoria di prodotti, la selezione successiva dovrà essere un prodotto specifico di tale categoria. Un parametro può avere un valore predefinito, che può essere utilizzato per eseguire automaticamente una versione filtrata del report o essere sostituito da un altro valore.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
   
      A volte la combinazione di valori specificata non restituisce i risultati previsti. Se non si ottengono le informazioni desiderate, potrebbe essere necessario richiedere all'autore di modificare il report.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 ### <a name="to-set-parameter-properties"></a>Per impostare le proprietà dei parametri  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9c15c407c7fae442d7d96b6679d177e864aa632
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fea3020fe77c6f5ac3f69f489a4ab1f0c4af8ccb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coding-a-custom-task"></a>Scrittura del codice di un'attività personalizzata
   Dopo avere creato una classe che eredita dalla classe di base <xref:Microsoft.SqlServer.Dts.Runtime.Task> e avere applicato l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> alla classe, è necessario eseguire l'override dell'implementazione delle proprietà e dei metodi della classe di base per fornire la funzionalità personalizzata.  
@@ -176,7 +176,7 @@ End Class
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Contiene le variabili disponibili per l'attività. Le attività utilizzano le variabili tramite VariableDispenser, non direttamente. VariableDispenser blocca e sblocca le variabili e impedisce il verificarsi di deadlock o sovrascritture.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|Contiene i metodi chiamati dall'attività per generare eventi nel motore di runtime.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|Contiene i metodi e le proprietà utilizzati dall'attività per scrivere voci nel registro eventi.|  
-|Oggetto|Contiene l'oggetto transazione di cui fa parte il contenitore, se presente. Questo valore viene passato come parametro al metodo <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> di un oggetto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
+|Object|Contiene l'oggetto transazione di cui fa parte il contenitore, se presente. Questo valore viene passato come parametro al metodo <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> di un oggetto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
   
 ### <a name="providing-execution-feedback"></a>Feedback dell'esecuzione  
  Le attività eseguono il wrapping del codice in blocchi **try/catch** per evitare che vengano generate eccezioni nel motore di runtime. In questo modo l'esecuzione del pacchetto viene completata senza arresti imprevisti. Tuttavia, il motore di runtime prevede altri meccanismi per la gestione delle condizioni di errore che possono verificarsi durante l'esecuzione di un'attività, tra cui l'invio di messaggi di errore e di avviso, la restituzione di un valore dalla struttura <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>, l'invio di messaggi, la restituzione del valore <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> e la diffusione di informazioni sui risultati dell'esecuzione dell'attività tramite la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A>.  
