@@ -1,9 +1,9 @@
 ---
 title: Versioni precedenti di SQL Server Data Tools (SSDT e SSDT-BI) | Microsoft Docs
 ms.custom: 
-ms.date: 09/28/2017
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7ab22071b1f85d14e1a1e01f50a2924af702334e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 72f038b58f16dfaebb7ca64569afe76757ff3540
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versioni precedenti di SQL Server Data Tools (SSDT e SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Data Tools (SSDT) fornisce modelli di progetto e aree di progettazione per la creazione di tipi di contenuto di SQL Server, quali database relazionali, modelli di Analysis Services, report di Reporting Services e pacchetti di Integration Services.  
@@ -39,6 +39,7 @@ Gli ultimi download messi a disposizione possono essere usati nel caso molto imp
 
 |Versione| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.3|[SSDT per VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| \* n/d|
 |17.2|[SSDT per VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| \* n/d|
 |17.1|[SSDT per Visual Studio 2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* n/d|
 |17.0|[SSDT for VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* n/d|

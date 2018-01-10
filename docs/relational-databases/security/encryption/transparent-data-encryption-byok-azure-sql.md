@@ -6,26 +6,29 @@ services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
-editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.custom: 
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 11/15/2017
 ms.author: aliceku
-ms.openlocfilehash: 5a0b56974d85f63e3382f26b1388e7d30dfbd6f8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5aaa55cc04e4844889266dc434ac92a0ed22ed00
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption con supporto Bring Your Own Key per i database e data warehouse SQL di Azure
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption con supporto Bring Your Own Key (ANTEPRIMA) per database SQL di Azure e SQL Data Warehouse
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Il supporto di Bring Your Own Key (BYOK) per [Transparent Data Encryption (TDE)](transparent-data-encryption.md) consente all'utente di assumere il controllo delle chiavi di crittografia TDE personali e di limitare chi può accedervi e quando. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), il sistema di Azure per la gestione delle chiavi esterne basato sul cloud, è il primo servizio di gestione delle chiavi che offre TDE con il supporto integrato per BYOK. Con BYOK, la chiave di crittografia del database è protetta da una chiave asimmetrica archiviata in Key Vault. La chiave asimmetrica viene impostata a livello di server ed ereditata da tutti i database presenti nel server. 
+Il supporto di Bring Your Own Key (BYOK) per [Transparent Data Encryption (TDE)](transparent-data-encryption.md) consente all'utente di assumere il controllo delle chiavi di crittografia TDE personali e di limitare chi può accedervi e quando. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), il sistema di Azure per la gestione delle chiavi esterne basato sul cloud, è il primo servizio di gestione delle chiavi che offre TDE con il supporto integrato per BYOK. Con BYOK, la chiave di crittografia del database è protetta da una chiave asimmetrica archiviata in Key Vault. La chiave asimmetrica viene impostata a livello di server ed ereditata da tutti i database presenti nel server. Questa funzionalità è attualmente in anteprima e fino a quando non ne verrà dichiarata la disponibilità generale, l'uso nei carichi di lavoro di produzione non è consigliato.
 
 Con il supporto BYOK, gli utenti possono ora controllare le attività di gestione delle chiavi, tra cui le rotazioni delle chiavi, le autorizzazioni dell'insieme di credenziali delle chiavi e l'eliminazione delle chiavi, nonché abilitare il controllo e la creazione di report relativi a tutte le chiavi di crittografia. Key Vault consente di gestire le chiavi in modo centralizzato, usa moduli di protezione hardware accuratamente monitorati e consente la separazione delle responsabilità tra la gestione delle chiavi e quella dei dati per contribuire a soddisfare la conformità alle normative. 
 
@@ -57,6 +60,7 @@ L'uso di TDE con BYOK comporta un maggior impegno da parte dell'utente in termin
 Assumere la gestione delle chiavi di crittografia delle risorse di un'applicazione è una responsabilità importante. Se gestisce la protezione TDE con supporto BYOK usando Key Vault, l'utente si assume le seguenti responsabilità riguardo alla gestione delle chiavi:
 - **Rotazioni delle chiavi:** le protezioni TDE devono essere ruotate in base ai criteri interni o ai requisiti di conformità. Le rotazioni delle chiavi possono essere eseguite usando l'insieme di credenziali delle chiavi della protezione TDE.  
 - **Autorizzazioni dell'insieme di credenziali delle chiavi**: il provisioning delle autorizzazioni di Key Vault viene eseguito a livello di server e di insieme di credenziali delle chiavi. Le autorizzazioni del server per un insieme di credenziali delle chiavi possono essere revocate in qualsiasi momento usando i criteri di accesso dell'insieme di credenziali.
+- **Ridondanza dell'insieme di credenziali delle chiavi**: poiché il materiale della chiave rimane sempre in Azure Key Vault e il server non ha accesso alle copie memorizzate nella cache all'esterno dell'insieme di credenziali delle chiavi, è necessario configurare la replica geografica di Azure Key Vault per mantenere l'accesso al materiale della chiave nel caso in cui si verificasse un'interruzione in un'area di Azure Key Vault.  Se viene usato un solo Azure Key Vault, i database con replica geografica perderanno l'accesso al materiale della chiave.
 - **Eliminazione di chiavi**: le chiavi possono essere eliminate da Key Vault e dal server SQL per garantire una maggiore sicurezza o rispettare i requisiti di conformità.
 - **Controllo/creazione di report per tutte le chiavi di crittografia**: Key Vault offre log che si inseriscono facilmente in altri strumenti per la gestione delle informazioni e degli eventi relativi alla sicurezza (SIEM). [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) di Operations Management Suite (OMS) è un esempio di servizio già integrato.
 
@@ -91,12 +95,11 @@ Le protezioni TDE univoche per un database o data warehouse non sono supportate.
 
 ### <a name="high-availability-and-disaster-recovery"></a>Disponibilità elevata e ripristino di emergenza
   
-Esistono due modalità di configurazione della replica geografica per i server con Key Vault: 
+Per mantenere la disponibilità elevata del materiale della chiave in Azure Key Vault è necessario configurare la replica geografica:
 
-- **Insieme di credenziali delle chiavi separato**: ogni server ha accesso a un insieme di credenziali delle chiavi separato, idealmente ognuno all'interno della propria area di Azure. Questa è la configurazione consigliata, poiché ogni server ha una propria copia della protezione TDE per i database con replica geografica crittografati. Se una delle aree di Azure del server è offline, gli altri server possono continuare ad accedere ai database con replica geografica.   
+- **Insieme di credenziali delle chiavi ridondante**: ogni server con replica geografica ha accesso a un insieme di credenziali delle chiavi separato che idealmente si trova nella stessa area di Azure. Questa è la configurazione consigliata, poiché ogni server ha una propria copia della protezione TDE per i database con replica geografica crittografati. Se una delle aree di Azure del server è offline, gli altri server possono continuare ad accedere ai database con replica geografica.  Per assicurarsi che se un insieme di credenziali delle chiavi non è disponibile, il server possa comunque accedere al backup della protezione TDE nell'altro insieme di credenziali delle chiavi, è necessario configurare correttamente questa funzionalità.     
 
-- **Insieme di credenziali delle chiavi condiviso**: tutti i server condividono lo stesso insieme di credenziali delle chiavi. Questa configurazione è più semplice da configurare, ma se l'area di Azure in cui si trova l'insieme di credenziali delle chiavi passa in modalità offline, nessun server sarà più in grado di leggere i database con replica geografica crittografati o i propri database crittografati. 
- 
+
 Per iniziare, usare il cmdlet [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) per aggiungere la chiave Key Vault di ogni server agli altri server nel collegamento alla replica geografica.  
 Un esempio di ID chiave di Key Vault: *https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h*
 

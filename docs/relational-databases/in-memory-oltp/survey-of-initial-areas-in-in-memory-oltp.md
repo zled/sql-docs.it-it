@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ee66a454da8bfdc23e9beb382c0ac22939268e80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31f39703450ba5fdb157a7d3fd88f6459d222c77
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Indagine sulle aree iniziali di OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -414,30 +414,25 @@ Nel resto di questa sezione sono elencate alcune delle principali considerazioni
 - [Partizionamento a livello di applicazione](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
   
-  
 <a name="trade-offs-of-native-procs-38p"></a>  
   
 ### <a name="trade-offs-of-native-procs"></a>Vantaggi e svantaggi delle procedure native  
   
-  
 - Con una stored procedure compilata in modo nativo non è possibile accedere a una tabella basata su disco. Una procedura nativa può accedere solo alle tabelle ottimizzate per la memoria.  
 - Quando viene eseguita una procedura nativa per la prima volta dopo aver riportato online il server o il database, è necessario ricompilare la procedura nativa. Ciò causa un ritardo nell'avvio dell'esecuzione della procedura nativa.  
-  
   
 <a name="advanced-considerations-for-memory-optimized-tables-39n"></a>  
   
 ## <a name="advanced-considerations-for-memory-optimized-tables"></a>Considerazioni avanzate sulle tabelle ottimizzate per la memoria  
   
-  
-Gli[indici delle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) sono per alcuni aspetti diversi dagli indici delle tabelle tradizionali su disco.  
-  
-- Gli [indici hash](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) sono disponibili solo in tabelle ottimizzate per la memoria.  
-  
+Gli[indici delle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) sono per alcuni aspetti diversi dagli indici delle tabelle tradizionali su disco. Gli indici hash sono disponibili solo in tabelle ottimizzate per la memoria.
+    
+- [Hash Indexes for Memory-Optimized Tables (Indici hash per tabelle con ottimizzazione per la memoria)](../../relational-databases/sql-server-index-design-guide.md#hash_index)
+- [Indice non cluster per tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
 È necessario eseguire una pianificazione per garantire una quantità di memoria attiva sufficiente per la tabella ottimizzata per la memoria pianificata e i relativi indici. Vedere:  
   
 - [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
   
 Una tabella ottimizzata per la memoria può essere dichiarata con DURABILITY = SCHEMA_ONLY:  
   
@@ -445,17 +440,13 @@ Una tabella ottimizzata per la memoria può essere dichiarata con DURABILITY = S
 - Quando il database viene riportato online, la tabella ottimizzata per la memoria viene ricaricata nella memoria attiva senza alcun dato.  
 - Le tabelle SCHEMA_ONLY possono essere un'alternativa superiore alle [tabelle #temporary](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) in tempdb, quando sono coinvolte molte migliaia di righe.  
   
-  
 Le variabili di tabella possono anche essere dichiarate come ottimizzate per la memoria. Vedere:  
   
 - [Tabella temporanea più rapida e variabile di tabella tramite l'ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
-  
-  
 <a name="advanced-considerations-for-natively-compiled-modules-40k"></a>  
   
 ## <a name="advanced-considerations-for-natively-compiled-modules"></a>Considerazioni avanzate sui moduli compilati in modo nativo  
-  
   
 I tipi di moduli compilati in modo nativo disponibili da Transact-SQL sono:  
   
@@ -465,7 +456,6 @@ I tipi di moduli compilati in modo nativo disponibili da Transact-SQL sono:
   - Nelle tabelle ottimizzate per la memoria sono consentiti solo i trigger che vengono compilati in modo nativo.  
 - [Funzioni con valori di tabella](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)compilate in modo nativo.  
   - [Miglioramento delle prestazioni della tabella temporanea e della variabile di tabella con l'ottimizzazione della memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
-  
   
 Una funzione definita dall'utente (UDF) e compilata in modo nativo viene eseguita in maniera più rapida di un'UDF interpretata. Alcuni aspetti da considerare con le UDF:  
   
@@ -477,15 +467,13 @@ Una funzione definita dall'utente (UDF) e compilata in modo nativo viene eseguit
 Per spiegazioni e dati di prova sulle prestazioni delle UDF native, vedere:  
   
   - [Il blog che spiega come attenuare l'impatto RBAR con funzioni definite dall'utente compilate in modo nativo in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - Il post di blog [scritto da Gail Shaw](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)di gennaio 2016.  
-  
+  - [Il post di Gail Shaw del gennaio 2016 sulle funzioni definite dall'utente compilate in modo nativo](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/).  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
 ## <a name="documentation-guide-for-memory-optimized-tables"></a>Guida alla documentazione per le tabelle ottimizzate per la memoria  
   
-  
-Di seguito sono forniti i collegamenti ad altri articoli che presentano alcune considerazioni particolari relative alle tabelle ottimizzate per la memoria:  
+Vedere gli articoli seguenti che presentano alcune considerazioni particolari relative alle tabelle ottimizzate per la memoria:  
   
 - [Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   - [Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
@@ -498,9 +486,7 @@ Di seguito sono forniti i collegamenti ad altri articoli che presentano alcune c
 - [Supporto di Transact-SQL per OLTP in memoria](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - Tipi di dati e istruzioni T-SQL supportati e non supportati per le tabelle ottimizzate per la memoria e le procedure native.  
 - [Associazione di un database con tabelle con ottimizzazione per la memoria a un pool di risorse](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md), che illustra una considerazione avanzata facoltativa.  
-  
-  
-  
+
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## <a name="documentation-guide-for-native-procs"></a>Guida alla documentazione per le procedure native  
@@ -513,9 +499,8 @@ Il seguente articolo e gli articoli correlati indicati nel sommario spiegano in 
   
 ## <a name="related-links"></a>Collegamenti correlati  
   
-- Articolo iniziale: [OLTP in memoria (ottimizzazione in memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+- Articolo iniziale: [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+    
 Gli articoli seguenti offrono codice per dimostrare il miglioramento delle prestazioni che è possibile raggiungere tramite OLTP in memoria:  
   
 - [Dimostrazione: miglioramento delle prestazioni di OLTP in memoria](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) offre una breve dimostrazione dei potenziali miglioramenti delle prestazioni.  

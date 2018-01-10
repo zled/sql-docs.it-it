@@ -18,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad780f4f49f99c0537e5ff560d1addab59627d9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 09801cfab4da23ee4c4b082d649d0ff40649b257
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>Lezione 4: Ripristinare il database in una macchina virtuale da un URL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In questa lezione il database AdventureWorks2014 viene ripristinato nell'istanza di SQL Server 2016 nella macchina virtuale di Azure.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In questa lezione il database AdventureWorks2014 viene ripristinato nell'istanza di SQL Server 2016 nella macchina virtuale di Azure.
   
 > [!NOTE]  
 > Ai fini della semplicità dell'esercitazione, viene usato lo stesso contenitore per i file di dati e di log usato per il backup del database. In un ambiente di produzione probabilmente si usano più contenitori e spesso anche più file di dati. Con SQL Server 2016 si può anche considerare lo striping del backup in più BLOB per migliorare le prestazioni del backup quando si esegue il backup di un database di grandi dimensioni.  

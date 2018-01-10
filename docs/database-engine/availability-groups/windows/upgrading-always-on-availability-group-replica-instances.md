@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a05d33191df12f115cea94a10eb1b2bd3a9a3498
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Aggiornamento delle istanze di replica dei gruppi di disponibilità AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  In questo argomento viene illustrata esclusivamente la modalità di aggiornamento di SQL Server. Non viene descritto l'aggiornamento del sistema operativo che contiene il cluster Windows Server Failover Clustering (WSFC). L'aggiornamento del sistema operativo Windows che ospita il cluster di failover non è supportato per i sistemi operativi precedenti a Windows Server 2012 R2. Per aggiornare un nodo del cluster in esecuzione su Windows Server 2012 R2, vedere [Aggiornamento in sequenza del sistema operativo del cluster](https://technet.microsoft.com/library/dn850430.aspx)  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Prima di iniziare, esaminare le informazioni seguenti:  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a SQL Server 2016 dalla versione del sistema operativo Windows e di SQL Server. Ad esempio, non è possibile eseguire l'aggiornamento diretto da un'istanza di SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -41,7 +41,10 @@ ms.lasthandoff: 11/20/2017
 -   [Pianificare e testare il piano di aggiornamento del motore di database](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): esaminare le note sulla versione, i problemi di aggiornamento noti e l'elenco di controllo pre-aggiornamento e sviluppare e testare il piano di aggiornamento.  
   
 -   [Hardware and Software Requirements for Installing SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): esaminare i requisiti software per l'installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
-  
+
+> [!NOTE]  
+>  La combinazione di più versioni di SQL Server nello stesso gruppo di disponibilità non è supportata. Per eseguire la migrazione a una nuova versione usando i gruppi di disponibilità, l'unico metodo supportato è un gruppo di disponibilità distribuito in SQL Server 2016 Enterprise Edition o versioni successive.
+
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Procedure consigliate relative all'aggiornamento in sequenza per i gruppi di disponibilità AlwaysOn  
  Quando si eseguono aggiornamenti dei server, è opportuno attenersi alle procedure consigliate illustrate di seguito allo scopo di ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi di disponibilità:  
   

@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: eb8267d4e8549f377da83d48e0c6b27ac71379f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b8ae3d55f72f6dc54eaa9a3e9a49b96e57ebcab5
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Vincoli di chiavi primarie ed esterne
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  Quando si specifica un vincolo di chiave primaria per una tabella, [!INCLUDE[ssDE](../../includes/ssde-md.md)] assicura l'univocità dei dati creando automaticamente un indice univoco per le colonne chiave primaria. Questo indice consente inoltre di accedere rapidamente ai dati quando si utilizza la chiave primaria nelle query. Se un vincolo di chiave primaria viene definito per più colonne, possono essere presenti valori duplicati nella stessa colonna, ma ogni combinazione di valori di tutte le colonne nella definizione del vincolo di chiave primaria deve essere univoca.  
   
- Le colonne **ProductID** e **VendorID** nella tabella **Purchasing.ProductVendor** costituiscono un vincolo di chiave primaria composto per la tabella, come illustrato nella figura seguente. Ciò assicura che ogni riga nella tabella **ProductVendor** presenti una combinazione univoca di **ProductID** e **VendorID**. e impedisce l'inserimento di righe duplicate.  
+ Le colonne **ProductID** e **VendorID** nella tabella **Purchasing.ProductVendor** costituiscono un vincolo di chiave primaria composto per la tabella, come illustrato nella figura seguente. Ciò assicura che ogni riga nella tabella **ProductVendor** contenga una combinazione univoca di **ProductID** e **VendorID**. e impedisce l'inserimento di righe duplicate.  
   
  ![Vincolo PRIMARY KEY composto](../../relational-databases/tables/media/fund04.gif "Vincolo PRIMARY KEY composto")  
   
