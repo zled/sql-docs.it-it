@@ -40,7 +40,7 @@ Per iniziare, installare SQL Server in Linux con una delle esercitazioni di avvi
 
 ## <a name="connect"></a>Connect
 
-Dopo l'installazione, connettersi all'istanza di SQL Server nel computer Linux. È possibile connettersi in locale o in modalità remota e con un'ampia gamma di strumenti e i driver. Le esercitazioni di Guida introduttiva viene illustrato come utilizzare il [sqlcmd](sql-server-linux-setup-tools.md) strumento da riga di comando. Altri strumenti comprendono quanto segue:
+Dopo l'installazione, connettersi all'istanza di SQL Server nel computer Linux. È possibile connettersi in locale o in modalità remota e con un'ampia gamma di strumenti e i driver. Nella esercitazioni della Guida introduttiva viene illustrato come utilizzare il [sqlcmd](sql-server-linux-setup-tools.md) strumento da riga di comando. Altri strumenti comprendono quanto segue:
 
 | Strumento | Esercitazione |
 |-----|-----|
