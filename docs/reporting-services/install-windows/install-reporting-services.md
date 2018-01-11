@@ -1,33 +1,31 @@
 ---
-title: Installare SQL Server Reporting Services | Microsoft Docs
-ms.date: 10/10/2017
+title: Installare SQL Server Reporting Services 2017 e versioni successive | Microsoft Docs
+ms.date: 12/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+ms.topic: get-started-article
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3cc3d78c22bbb4b32696692074e2dad2d6809a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2f09b475d42657c8c9ce8ef60d6b5b7c36b30cc2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-sql-server-reporting-services"></a>Installare SQL Server Reporting Services
+# <a name="install-sql-server-reporting-services-2017-and-later"></a>Installare SQL Server Reporting Services 2017 e versioni successive
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-L'installazione di SQL Server Reporting Services richiede i componenti server per archiviare gli elementi dei report, il rendering dei report e l'elaborazione della sottoscrizione e altri servizi report.  Di seguito vengono illustrate le informazioni per installare il server di report di Power BI.
+L'installazione di SQL Server Reporting Services richiede i componenti server per archiviare gli elementi dei report, il rendering dei report e l'elaborazione della sottoscrizione e altri servizi report. 
 
 Per scaricare SQL Server 2017 Reporting Services, accedere all'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=55252).
 
@@ -55,11 +53,11 @@ L'installazione di un server di report è semplice. Occorrono solo pochi passagg
 
     ![Scegliere l'edizione](media/install-reporting-services/report-server-install-edition.png)
 
-    Nell'elenco a discesa è possibile scegliere l'Evaluation Edition o la Developer Edition.
+    Per l'edizione gratuita, nell'elenco a discesa scegliere Evaluation o Developer.
 
     ![Evaluation o Developer Edition](media/install-reporting-services/report-server-install-edition-select.png)
 
-    In alternativa, è possibile immettere un codice Product Key.
+    In alternativa, immettere un codice Product Key. [Find the product key for SQL Server 2017 Reporting Services](find-reporting-services-product-key-ssrs.md) (Trovare il codice Product Key per SQL Server Reporting Services 2017)
 
 4. Leggere e accettare le condizioni di licenza e scegliere **Avanti**.
 
@@ -104,11 +102,11 @@ Come parte dell'installazione viene creato un servizio di Windows che viene visu
 
 Le prenotazioni URL sono composte da un prefisso, un nome host, una porta e una directory virtuale:
 
-|Parte|Descrizione|
+|Parte|Description|
 |----------|-----------------|
 |Prefisso|Il prefisso predefinito è HTTP. Se in precedenza è stato installato un certificato SSL (Secure Sockets Layer), il programma di installazione tenta di creare prenotazioni URL che usano il prefisso HTTPS.|
 |Nome host|Il nome host predefinito è un carattere jolly complesso (+). Specifica che il server di report accetta le richieste HTTP sulla porta designata per qualsiasi nome host risolto nel computer, tra cui `http://<computername>/reportserver`, `http://localhost/reportserver`, o `http://<IPAddress>/reportserver.`|
-|Porta|La porta predefinita è 80. Se si usa un numero di porta diverso da 80, sarà necessario aggiungerlo in modo esplicito all'URL quando si apre il portale Web in una finestra del browser.|
+|Port|La porta predefinita è 80. Se si usa un numero di porta diverso da 80, sarà necessario aggiungerlo in modo esplicito all'URL quando si apre il portale Web in una finestra del browser.|
 |Directory virtuale|Per impostazione predefinita, le directory virtuali vengono create nel formato ReportServer per il servizio Web ReportServer e Reports per il portale Web. Per il servizio Web ReportServer, la directory virtuale predefinita è **reportserver**. Per il portale Web, la directory virtuale predefinita è **reports**.|
 
 Di seguito viene fornito un esempio di stringa dell'URL completa:
