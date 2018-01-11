@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c068430c44eaad1df894fc5c67849ff438ffcbc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 04a6baad7239d9a9203e4b71bbe23ea0e7318f2b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Aggiungere visualizzazioni nei report per dispositivi mobili di Reporting Services
 I grafici sono una parte essenziale della visualizzazione dati. Informazioni sui grafici da usare nei report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] per coprire una gamma di scenari. 
@@ -124,7 +124,7 @@ Nei grafici di confronto è possibile scegliere gli stessi colori per i valori p
 ## <a name="pie-and-funnel-charts"></a>Grafici a torta e a imbuto  
   
 I grafici a torta e a imbuto sono tra le visualizzazioni più semplici. È possibile strutturare i dati per righe o per colonne. 
-* I**grafici a torta** nei report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports can be pies, donuts, or donuts with a total nei report per dispositivi mobili di the center. I grafici a torta sono utili per visualizzare le dimensioni relative delle varie parti di un intero. Se è presente un numero eccessivo di sezioni, risultano difficili da leggere.
+* I **grafici a torta** nei report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] possono essere a torta, ad anello o ad anello con un totale al centro. I grafici a torta sono utili per visualizzare le dimensioni relative delle varie parti di un intero. Se è presente un numero eccessivo di sezioni, risultano difficili da leggere.
 * I**grafici a imbuto** vengono spesso usati per mostrare le fasi di un processo, ad esempio le vendite.
 
 ![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)

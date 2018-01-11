@@ -1,12 +1,13 @@
 ---
 title: Modificare l'account per la registrazione di SSIS Scale Out | Microsoft Docs
+ms.description: This article describes how to change the user account for SSIS Scale Out logging
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
@@ -14,36 +15,41 @@ ms.topic: article
 caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dcedbe0d2c2ef2c2089af1e2a8b31fbeb75ce2fc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8976c44653ea37b7571d4e54d405be223f9728a4
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Modificare l'account per la registrazione di Scale Out
-Durante l'esecuzione di pacchetti in Scale Out, i messaggi di evento vengono registrati in SSISDB con un **##MS_SSISLogDBWorkerAgentLogin##** creato automaticamente. L'account di accesso di questo utente usa l'autenticazione di SQL Server. Per cambiare l'account, seguire questa procedura:
+Durante l'esecuzione di pacchetti SSIS in Scale Out, i messaggi di evento vengono registrati nel database SSISDB con un account utente creato automaticamente, denominato **##MS_SSISLogDBWorkerAgentLogin##**. L'account di accesso dell'utente usa l'autenticazione di SQL Server.
 
-## <a name="1-create-a-user-of-ssisdb"></a>1. Creare un utente di SSISDB
-Per istruzioni per la creazione di un utente del database, vedere [Creare un utente del database](../../relational-databases/security/authentication-access/create-a-database-user.md).
-
-## <a name="2-add-the-user-to-database-role-ssisclusterworker"></a>2. Aggiungere l'utente al ruolo del database ssis_cluster_worker
-
-Per istruzioni per l'aggiunta di un ruolo del database, vedere [Aggiungere un ruolo](../../relational-databases/security/authentication-access/join-a-role.md).
-
-## <a name="3-update-logging-information-in-ssisdb"></a>3. Aggiornare le informazioni di registrazione in SSISDB
-Chiamare la stored procedure [catalog].[update_logdb_info] con il nome del server SQL e la stringa di connessione come parametri.
-
-#### <a name="example"></a>Esempio
-```sql
-SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
-SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
-EXEC [internal].[update_logdb_info] @serverName, @connectionString
-GO
-```
-
-## <a name="4-restart-scale-out-worker-service"></a>4. Riavviare il servizio Scale Out Worker
+Se si vuole modificare l'account usato per la registrazione in Scale Out, eseguire le operazioni seguenti:
 
 > [!NOTE]
-> Se si usa un account utente di Windows per la registrazione, deve essere lo stesso account che esegue il servizio Scale Out Worker. In caso contrario, l'accesso al server SQL non riuscirà.
+> Se si usa un account utente di Windows per la registrazione, usare lo stesso account che esegue il servizio Scale Out Worker. In caso contrario, l'accesso a SQL Server non riesce.
+
+## <a name="1-create-a-user-for-ssisdb"></a>1. Creare un utente di SSISDB
+Per istruzioni sulla creazione di un utente del database, vedere [Creare un utente di database](../../relational-databases/security/authentication-access/create-a-database-user.md).
+
+## <a name="2-add-the-user-to-the-database-role-ssisclusterworker"></a>2. Aggiungere l'utente al ruolo del database ssis_cluster_worker
+
+Per istruzioni sull'aggiunta di un ruolo del database, vedere [Aggiungere un ruolo](../../relational-databases/security/authentication-access/join-a-role.md).
+
+## <a name="3-update-the-logging-information-in-ssisdb"></a>3. Aggiornare le informazioni di registrazione in SSISDB
+Chiamare la stored procedure `[catalog].[update_logdb_info]` con la stringa del nome del server SQL Server e la stringa di connessione come parametri, come illustrato nell'esempio seguente:
+
+    ```sql
+    SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
+    SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
+    EXEC [internal].[update_logdb_info] @serverName, @connectionString
+    GO
+    ```
+
+## <a name="4-restart-the-scale-out-worker-service"></a>4. Riavviare il servizio Scale Out Worker
+Riavviare il servizio Scale Out Worker per rendere effettiva la modifica.
+
+## <a name="next-steps"></a>Passaggi successivi
+-   [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md)
