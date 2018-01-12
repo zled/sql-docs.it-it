@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 424e7d86a00901c22220d19e86b1bbced698d850
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 54e685e285f2040ec13b84aa7e0e4b020457560b
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>L'aggiornamento dei componenti di machine learning in un'istanza di SQL Server
 
@@ -38,7 +38,7 @@ Se in qualsiasi momento si desidera interrompere l'aggiornamento in base alla pi
 
 Il processo di aggiornamento di machine learning componenti è detto **associazione**, perché il modello di supporto per i componenti di SQL Server machine learning usare i nuovi criteri di ciclo di vita del Software più recenti viene modificato. 
 
-In generale, il passaggio al modello di licenze nuovo assicura che il data Scientist può utilizzare sempre la versione più recente di R o Python. Per ulteriori informazioni sulle condizioni dei criteri del ciclo di vita moderna, vedere [sequenza temporale del supporto per Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
+In generale, il passaggio al nuovo modello di manutenzione garantisce che il data Scientist può utilizzare sempre la versione più recente di R o Python. Per ulteriori informazioni sulle condizioni dei criteri del ciclo di vita moderna, vedere [sequenza temporale del supporto per Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
 
 > [!NOTE]
 > L'aggiornamento non modifica il modello di supporto per il database di SQL Server e non modifica la versione di SQL Server.
@@ -189,7 +189,7 @@ Se si ritiene di cartelle con un nome simile al seguente, è possibile rimuoverl
 
 ### <a name="parameters"></a>Parametri
 
-|nome|Description|
+|Nome|Description|
 |------|------|
 |*list*| Visualizza un elenco di tutti gli ID delle istanze di database SQL nel computer corrente|
 |*bind*| Aggiorna l'istanza di database SQL specificata alla versione più recente di R Server e assicura che all'istanza vengano applicati automaticamente gli aggiornamenti successivi di R Server|
