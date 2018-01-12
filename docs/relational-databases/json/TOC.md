@@ -1,7 +1,7 @@
 # [Panoramica](json-data-sql-server.md)  
 # [Archiviare documenti JSON in SQL Server](store-json-documents-in-sql-tables.md)
-# [Importare documenti JSON in SQL Server](import-json-documents-into-sql-server.md)  
 # [Indicizzazione dei dati JSON](index-json-data.md)  
+# [Importare documenti JSON in SQL Server](import-json-documents-into-sql-server.md)  
 # [Formattare i risultati delle query in formato JSON con FOR JSON (SQL Server)](format-query-results-as-json-with-for-json-sql-server.md)  
 ## [Formattare l'output JSON annidato con la modalità PATH](format-nested-json-output-with-path-mode-sql-server.md)  
 ## [Formattare automaticamente l'output JSON con la modalità AUTO](format-json-output-automatically-with-auto-mode-sql-server.md)  
