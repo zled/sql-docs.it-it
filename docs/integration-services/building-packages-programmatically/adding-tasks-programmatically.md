@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cbd8f1d0ac4a942fae2305f7841fe25dc185e463
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bc2f6cfb11910a3a9cd79860468e591e6ffe8165
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adding-tasks-programmatically"></a>Aggiunta di attività a livello di programmazione
   È possibile aggiungere attività ai tipi di oggetti seguenti nel motore di runtime:  
@@ -206,7 +206,7 @@ Module Module1
 End Module  
 ```  
   
- **Esempio di output:**  
+ **Esempio di output**  
   
  `Type Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask`  
   
@@ -308,7 +308,7 @@ Module Module1
 End Module  
 ```  
   
- **Esempio di output:**  
+ **Esempio di output**  
   
  `Found task of type Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask`  
   
@@ -324,7 +324,7 @@ End Module
   
  L'utilizzo della classe <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> nel codice, invece dell'esecuzione del cast nella classe specifica dell'attività, presenta i vantaggi seguenti:  
   
--   Il provider <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> non richiede un riferimento all'assembly nel codice.  
+-   Il provider <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost><xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> non richiede un riferimento all'assembly nel codice.  
   
 -   È possibile progettare routine generiche che funzionano per qualsiasi attività, perché non è necessario conoscere il nome dell'attività in fase di compilazione. Tali routine generiche includono i metodi in cui si passa il nome dell'attività al metodo e il codice del metodo funziona per tutte le attività. Si tratta di un metodo efficace per la scrittura di codice di test.  
   

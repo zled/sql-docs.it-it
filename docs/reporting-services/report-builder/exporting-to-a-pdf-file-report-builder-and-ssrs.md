@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 94243b80d154ef5c35bb94e9e3ac8c46afd39eda
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1cd71e9803dce9b7f0739bc93a849a2aa08c4547
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Esportazione in un file PDF (Generatore report e SSRS)
   L'estensione per il rendering PDF consente di eseguire il rendering di un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] in file che possono essere aperti in Adobe Acrobat e in altri visualizzatori PDF di terze parti che supportano il formato PDF 1.3. Anche se PDF 1.3 è compatibile con Adobe Acrobat 4.0 e versioni successive, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta Adobe Acrobat 11.0 e versioni successive. Non è necessaria l'applicazione Adobe per convertire i report mediante l'estensione per il rendering. Per visualizzare o stampare i report in formato PDF è tuttavia necessario disporre di visualizzatori PDF, ad esempio Adobe Acrobat.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="verifying-fonts-in-a-pdf-file"></a>Verifica dei tipi di carattere in un file PDF  
  Le differenze nell'output PDF si verificano più spesso quando si utilizza un tipo di carattere che non supporta caratteri non latini in un report nel quale vengono successivamente aggiunti caratteri non latini. Per assicurarsi che il rendering del report venga eseguito correttamente, è consigliabile verificare l'output del rendering in formato PDF sia nel server di report che nei computer client.  
   
- A tale scopo, la visualizzazione dell'anteprima del report o l'esportazione in HTML non risultano affidabili poiché il report verrà visualizzato in modo corretto grazie alla sostituzione automatica dei tipi di caratteri eseguita rispettivamente dall'interfaccia di progettazione grafica o da Microsoft Internet Explorer. Se nel server non sono disponibili glifi Unicode, è possibile che i caratteri vengano sostituiti da un punto interrogativo (?). Se nel client non è disponibile un tipo di carattere, è possibile che i caratteri vengano sostituiti da riquadri (□).  
+ A tale scopo, la visualizzazione dell'anteprima del report o l'esportazione in HTML non risultano affidabili poiché il report verrà visualizzato in modo corretto grazie alla sostituzione automatica dei tipi di caratteri eseguita rispettivamente dall'interfaccia di progettazione grafica o da Microsoft Internet Explorer. Se nel server non sono disponibili glifi Unicode, è possibile che i caratteri vengano sostituiti da un punto interrogativo (?). Se nel client non è disponibile un determinato tipo di carattere, è possibile che i caratteri vengano sostituiti da riquadri (□).  
   
  I tipi di carattere incorporati nel file PDF sono inclusi come metadati nella proprietà Fonts salvata con il file.  
   

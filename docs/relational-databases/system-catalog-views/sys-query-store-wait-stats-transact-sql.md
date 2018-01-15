@@ -12,10 +12,8 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- SYS.QUERY_STORE_WAIT_STATS_TSQL
-- QUERY_STORE_WAIT_STATS_TSQL
-- SYS.QUERY_STORE_WAIT_STATS
-- QUERY_STORE_WAIT_STATS
+- sys.query_store_wait_stats
+- query_store_wait_stats
 dev_langs: TSQL
 helpviewer_keywords:
 - query_store_wait_stats catalog view
@@ -26,11 +24,11 @@ author: AndrejsAnt
 ms.author: AndrejsAnt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a75e00467fbee053a05144d67f9d9a68469daeed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bed8035413a61c2bc5e4e644874bec9115c07d68
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>Sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -43,10 +41,10 @@ ms.lasthandoff: 11/17/2017
 |**plan_id**|**bigint**|Chiave esterna. Crea un join tra [Sys. query_store_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Chiave esterna. Crea un join tra [sys.query_store_runtime_stats_interval &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Tipi di attesa sono suddivisi in categorie utilizzando la tabella seguente e quindi il tempo di attesa verrà aggregato queste categorie di attesa. Per le varie categorie di attesa è necessario un'analisi di completamento diversa per risolvere il problema. Per i tipi di attesa della stessa categoria la risoluzione dei problemi è invece molto simile. Specificando la query interessata come prima nelle attese, si indica la parte mancante necessaria a completare le analisi in modo corretto.|
-|**wait_category_desc**|**nvarchar (128)**|Per la descrizione testuale del campo categoria attesa, vedere la tabella seguente.|
+|**wait_category_desc**|**nvarchar(128)**|Per la descrizione testuale del campo categoria attesa, vedere la tabella seguente.|
 |**execution_type**|**tinyint**|Determina l'esecuzione di query di tipo:<br /><br /> 0 – esecuzione normale (completata)<br /><br /> 3-client ha avviato interrotto l'esecuzione<br /><br /> 4 - eccezione interrotto l'esecuzione|  
-|**execution_type_desc**|**nvarchar (128)**|Descrizione testuale del campo di tipo di esecuzione:<br /><br /> 0-normale<br /><br /> 3 – interrotta<br /><br /> 4 - eccezione|  
-|**total_query_wait_time_ms**|**bigint**|CPU totale tempo di attesa per il piano di query entro l'intervallo di aggregazione e categoria (espresso in microsecondi) di attesa.|
+|**execution_type_desc**|**nvarchar(128)**|Descrizione testuale del campo di tipo di esecuzione:<br /><br /> 0-normale<br /><br /> 3 – interrotta<br /><br /> 4 - eccezione|  
+|**total_query_wait_time_ms**|**bigint**|CPU totale tempo di attesa per il piano di query entro l'intervallo di aggregazione e categoria (espresso in millisecondi) di attesa.|
 |**avg_query_wait_time_ms**|**float**|Media durata dell'attesa per il piano di query per ogni esecuzione all'interno della categoria di attesa e di intervallo di aggregazione (espresso in millisecondi).|
 |**last_query_wait_time_ms**|**bigint**|Ultima durata dell'attesa per il piano di query entro l'intervallo di aggregazione e categoria (espresso in millisecondi) di attesa.|
 |**min_query_wait_time_ms**|**bigint**|CPU minima di tempo di attesa per il piano di query entro l'intervallo di aggregazione e categoria (espresso in millisecondi) di attesa.|
@@ -86,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 ***Compilazione** categoria di attesa non è attualmente supportato. 
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede il **VIEW DATABASE STATE** autorizzazione.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -22,18 +22,20 @@ helpviewer_keywords:
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bf1d65068cc72b7fda04be8b98ac999b22e010fd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 12728d80dbae777438b4b9d63a2bc736d2f4ece5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Backup e ripristino dei database e dei log delle transazioni
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In SMO la <xref:Microsoft.SqlServer.Management.Smo.Backup> classe e <xref:Microsoft.SqlServer.Management.Smo.Restore> classe sono classi di utilità che forniscono gli strumenti per eseguire le attività specifiche di backup e ripristino. Oggetto <xref:Microsoft.SqlServer.Management.Smo.Backup> oggetto rappresenta un'attività di backup specifica che è necessaria invece di un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oggetto nell'istanza del server.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  In SMO la classe <xref:Microsoft.SqlServer.Management.Smo.Backup> e la classe <xref:Microsoft.SqlServer.Management.Smo.Restore> sono classi di utilità che forniscono gli strumenti necessari per portare a termine le attività specifiche di backup e ripristino. Oggetto <xref:Microsoft.SqlServer.Management.Smo.Backup> oggetto rappresenta un'attività di backup specifica che è necessaria invece di un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oggetto nell'istanza del server.  
   
  In caso di perdita o danneggiamento di dati, è necessario ripristinare il backup, completamente o parzialmente. Per il ripristino parziale viene utilizzata la raccolta <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> per segmentare i dati da ripristinare. Se il backup riguarda un log delle transazioni, è possibile ripristinare i dati fino a un momento specifico tramite la proprietà <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Restore>. È possibile convalidare i dati anche tramite il metodo <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. La procedura di backup consigliata prevede il controllo dell'integrità del backup tramite un'operazione di ripristino e il controllo regolare dei dati nel database.  
   

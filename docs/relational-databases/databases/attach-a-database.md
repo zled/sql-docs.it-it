@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3abcab5e233c45e1fda0bf5fb53499ac9ca21732
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea11babb95bfd727d4171f78f819b66eafc682b1
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="attach-a-database"></a>Collegare un database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Non è consigliabile usare le operazioni di collegamento e scollegamento da Back
 ###  <a name="Security"></a> Sicurezza  
  Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di alcune operazioni del database, inclusi il collegamento e lo scollegamento. Per informazioni sulle autorizzazioni per i file impostate quando un database viene collegato o scollegato, vedere [Protezione dei dati e dei file di log](http://technet.microsoft.com/library/ms189128.aspx) dalla [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] documentazione online (lettura ancora valida). 
   
- È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di usare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare anche il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente. Per altre informazioni sul collegamento di database e sulle modifiche apportate ai metadati in caso di collegamento di un database, vedere [Collegamento e scollegamento di un database (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+ È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di utilizzare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente. Per altre informazioni sul collegamento di database e sulle modifiche apportate ai metadati in caso di collegamento di un database, vedere [Collegamento e scollegamento di un database (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
 ####  <a name="Permissions"></a> Permissions  
  È richiesta l'autorizzazione CREATE DATABASE, CREATE ANY DATABASE o ALTER ANY DATABASE.  
@@ -91,13 +91,13 @@ Non è consigliabile usare le operazioni di collegamento e scollegamento da Back
      **Stato**  
      Consente di visualizzare lo stato del base in base alla tabella seguente.  
   
-    |Icona|Testo Stato|Descrizione|  
+    |Icona|Testo Stato|Description|  
     |----------|-----------------|-----------------|  
     |(Nessuna icona)|(Nessun testo)|L'operazione di collegamento non è stata avviata o può essere sospesa per questo oggetto. È il valore predefinito all'apertura della finestra di dialogo.|  
     |Triangolo verde che punta a destra|In corso|L'operazione di collegamento è stata avviata ma non ancora completata.|  
-    |Segno di spunta verde|Operazione completata|L'oggetto è stato collegato.|  
+    |Segno di spunta verde|Esito positivo|L'oggetto è stato collegato.|  
     |Cerchio rosso con croce bianca|Errore|Si è verificato un errore durante l'operazione. Il collegamento non è stato completato.|  
-    |Cerchio con due quadranti neri a destra e a sinistra e due quadranti bianchi in alto e in basso|Stopped|L'operazione di collegamento non è stata completata perché l'utente ne ha arrestato l'esecuzione.|  
+    |Cerchio con due quadranti neri a destra e a sinistra e due quadranti bianchi in alto e in basso|Arrestato|L'operazione di collegamento non è stata completata perché l'utente ne ha arrestato l'esecuzione.|  
     |Cerchio con freccia curva che punta in senso antiorario.|È stato eseguito il rollback|L'operazione di collegamento è stata completata ma ne è stato eseguito il rollback a causa di un errore durante il collegamento di un altro oggetto.|  
   
      **Message**  
@@ -127,7 +127,7 @@ Non è consigliabile usare le operazioni di collegamento e scollegamento da Back
      **Message**  
      Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale**Impossibile trovare il file**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-attach-a-database"></a>Per collegare un database  
   
@@ -137,7 +137,7 @@ Non è consigliabile usare le operazioni di collegamento e scollegamento da Back
   
 3.  Utilizzare l'istruzione [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) con la clausola FOR ATTACH.  
   
-     Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si collegano i file del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e si rinomina il database in `MyAdventureWorks`.  
+     Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio si collegano i file del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e si rinomina il database in `MyAdventureWorks`.  
   
     ```  
     CREATE DATABASE MyAdventureWorks   

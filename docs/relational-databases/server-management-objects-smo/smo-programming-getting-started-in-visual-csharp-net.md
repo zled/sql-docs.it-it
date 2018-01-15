@@ -14,18 +14,20 @@ ms.topic: get-started-article
 helpviewer_keywords: Visual C# [SMO]
 ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce395d68112824bf56bf7f778cd6f6a671e4ee1c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bbb5175dbb7fe5b29bbb959dbc4c5c806d7f8e9
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="smo-programming---getting-started-in-visual-c-net"></a>Programmazione di SMO - introduttiva a Visual c# .NET
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET è uno dei linguaggi di programmazione gestiti supportati da common language runtime (CLR) in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Per ulteriori informazioni sull'utilizzo del linguaggio c#, vedere il [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentazione di .NET. È possibile utilizzare [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] e [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] per sviluppare applicazioni SMO.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[csprcs](../../includes/csprcs-md.md)].NET è uno dei linguaggi di programmazione gestiti supportati da common language runtime (CLR) in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Per ulteriori informazioni sull'utilizzo del linguaggio c#, vedere il [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentazione di .NET. È possibile utilizzare [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] e [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] per sviluppare applicazioni SMO.  
   
 ## <a name="references-and-imports"></a>Riferimenti e importazioni  
  Dopo avere avviato il progetto [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], è necessario aggiungere riferimenti agli assembly SMO. È quindi possibile importare gli spazi dei nomi necessari in modo che il programma possa riconoscere i tipi SMO.  

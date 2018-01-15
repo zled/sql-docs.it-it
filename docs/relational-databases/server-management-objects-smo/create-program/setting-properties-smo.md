@@ -17,25 +17,27 @@ helpviewer_keywords:
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 625b34647312ffb31fbe3821ed8e893d883f3298
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cd919d2a53a2731e348c1570ef80ffe1714ff0e5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="setting-properties---smo"></a>Impostazione delle proprietà - SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le proprietà sono valori che archiviano informazioni descrittive sull'oggetto. Ad esempio, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] opzioni di configurazione sono rappresentate dal <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> proprietà dell'oggetto. Alle proprietà è possibile accedere direttamente o indirettamente utilizzando la relativa raccolta. Per l'accesso diretto alle proprietà viene utilizzata la sintassi seguente:  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Le proprietà sono valori in cui sono archiviate informazioni descrittive sull'oggetto. Ad esempio, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] opzioni di configurazione sono rappresentate dal <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> proprietà dell'oggetto. Alle proprietà è possibile accedere direttamente o indirettamente utilizzando la relativa raccolta. Per l'accesso diretto alle proprietà viene utilizzata la sintassi seguente:  
   
  `objInstance.PropertyName`  
   
  Un valore di proprietà può essere modificato o recuperato a seconda che la proprietà disponga di accesso in lettura/scrittura o di accesso in sola lettura. È inoltre necessario impostare determinate proprietà prima che sia possibile creare un oggetto. Per ulteriori informazioni, vedere la documentazione di riferimento di SMO per l'oggetto specifico.  
   
 > [!NOTE]  
->  Le raccolte di oggetti figlio vengono visualizzate come proprietà di un oggetto. La raccolta **Tables** è ad esempio una proprietà di un oggetto **Server** . Per ulteriori informazioni, vedere [utilizzo di raccolte](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md).  
+>  Le raccolte di oggetti figlio vengono visualizzate come proprietà di un oggetto. La raccolta **Tables** è ad esempio una proprietà di un oggetto **Server** . Per altre informazioni, vedere [Using Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md).  
   
  Le proprietà di un oggetto sono membri della raccolta Properties. Tale raccolta può essere utilizzata per scorrere tutte le proprietà di un oggetto.  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 -   La versione del server non supporta la proprietà, ad esempio se si tenta di accedere a una proprietà che rappresenta una nuova funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in una versione precedente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Il server non fornisce dati per la proprietà, ad esempio se si tenta di accedere a una proprietà che rappresenta un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] componente che non è installato.  
+-   Il server non fornisce dati per la proprietà, ad esempio se si tenta di accedere a una proprietà che rappresenta un componente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non installato.  
   
  Per gestire queste situazioni è possibile individuare le eccezioni SMO <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> e <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException>.  
   

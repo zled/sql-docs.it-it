@@ -20,11 +20,11 @@ caps.latest.revision: "91"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 6f354a0639adf1db8e99a5f4e245f9df16211f51
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: abe14292f0984fb3493c73ad5888abce6bd962ea
+ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installare SQL Server dall'Installazione guidata (programma di installazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ In questo argomento vengono fornite istruzioni dettagliate per installare una nu
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rivedere gli argomenti in [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
->  Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura ed esecuzione relative a tale condivisione.  
+> Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura ed esecuzione relative a tale condivisione.  
  
  ###  <a name="bkmk_ga_instalpatch"></a> Requisito di installazione patch 
 
@@ -62,27 +62,27 @@ Microsoft ha rilevato un problema con una versione specifica dei file binari di 
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella cartella radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione da una condivisione di rete, individuare la cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe.  
   
-1.  L'Installazione guidata esegue il Centro installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per creare una nuova installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fare clic su **Installazione** a sinistra dell'area di navigazione, quindi fare clic su **Nuova installazione autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o aggiunta di funzionalità a un'installazione esistente**.  
+2.  L'Installazione guidata esegue il Centro installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per creare una nuova installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fare clic su **Installazione** a sinistra dell'area di navigazione, quindi fare clic su **Nuova installazione autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o aggiunta di funzionalità a un'installazione esistente**.  
 
-1.  Nella pagina relativa al codice Product Key selezionare un'opzione per indicare se si intende installare una versione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una versione di produzione del prodotto con una chiave PID. Per altre informazioni, vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+3.  Nella pagina relativa al codice Product Key selezionare un'opzione per indicare se si intende installare una versione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una versione di produzione del prodotto con una chiave PID. Per altre informazioni, vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
      Scegliere **Avanti**per continuare.  
 
-1.  Nella pagina Condizioni di licenza leggere il contratto di licenza e, per accettare, selezionare la casella di controllo **Accetto le condizioni di licenza** , quindi fare clic su **Avanti**. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  Nella pagina Condizioni di licenza leggere il contratto di licenza e, per accettare, selezionare la casella di controllo **Accetto le condizioni di licenza** , quindi fare clic su **Avanti**. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-1.  Nella finestra Regole globali, con la procedura di installazione si passerà automaticamente alla finestra Aggiornamenti prodotti se non vi sono errori di regole.  
+5.  Nella finestra Regole globali, con la procedura di installazione si passerà automaticamente alla finestra Aggiornamenti prodotti se non vi sono errori di regole.  
   
-1.  La pagina di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update verrà visualizzata successivamente se la casella di controllo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update non è selezionata in Pannello di controllo\Tutti gli elementi del Pannello di controllo\Windows Update\Modifica impostazioni. Se si seleziona la pagina [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, le impostazioni del computer vengono modificate per includere gli aggiornamenti quando si effettua l'analisi di Windows Update.  
+6.  La pagina di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update verrà visualizzata successivamente se la casella di controllo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update non è selezionata in Pannello di controllo\Tutti gli elementi del Pannello di controllo\Windows Update\Modifica impostazioni. Se si seleziona la pagina [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, le impostazioni del computer vengono modificate per includere gli aggiornamenti quando si effettua l'analisi di Windows Update.  
 
-1.  Nella pagina Aggiornamenti prodotto vengono visualizzati gli aggiornamenti più recenti sul prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se non viene individuato alcun aggiornamento del prodotto, durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa pagina non viene visualizzata e viene aperta automaticamente la pagina **Installazione dei file di installazione** .  
+7.  Nella pagina Aggiornamenti prodotto vengono visualizzati gli aggiornamenti più recenti sul prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se non viene individuato alcun aggiornamento del prodotto, durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa pagina non viene visualizzata e viene aperta automaticamente la pagina **Installazione dei file di installazione** .  
 
-1.  Nella pagina Installa i file di installazione viene mostrato lo stato di avanzamento del download, dell'estrazione e dell'installazione dei file di installazione. Se viene individuato un aggiornamento per il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ne viene specificata l'inclusione, verrà installato anche questo aggiornamento. Se non viene trovato alcun aggiornamento, il programma di installazione proseguirà automaticamente. 
+8.  Nella pagina Installa i file di installazione viene mostrato lo stato di avanzamento del download, dell'estrazione e dell'installazione dei file di installazione. Se viene individuato un aggiornamento per il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ne viene specificata l'inclusione, verrà installato anche questo aggiornamento. Se non viene trovato alcun aggiornamento, il programma di installazione proseguirà automaticamente. 
   
-1. In **Regole di installazione** il programma di installazione di SQL Server esegue un controllo per rilevare i problemi potenziali che potrebbero verificarsi durante l'esecuzione dell'installazione. Se si verificano errori, fare clic sulla colonna **Stato** per altre informazioni. In caso contrario, fare clic su **Avanti**. 
+9. In **Regole di installazione** il programma di installazione di SQL Server esegue un controllo per rilevare i problemi potenziali che potrebbero verificarsi durante l'esecuzione dell'installazione. Se si verificano errori, fare clic sulla colonna **Stato** per altre informazioni. In caso contrario, fare clic su **Avanti**. 
 
-1. Da **Tipo di installazione** scegliere di eseguire una nuova installazione o di aggiungere funzionalità a un'installazione esistente. Scegliere **Avanti**. 
+10. Da **Tipo di installazione** scegliere di eseguire una nuova installazione o di aggiungere funzionalità a un'installazione esistente. Scegliere **Avanti**. 
   
-1. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Per installare una nuova istanza del motore di database di SQL Server, ad esempio, selezionare **Servizi motore di database**.
+11. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Per installare una nuova istanza del motore di database di SQL Server, ad esempio, selezionare **Servizi motore di database**.
 
     Una volta selezionato il nome della funzionalità desiderata, nel riquadro **Descrizione funzionalità** viene visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo. Per altre informazioni, vedere [Edizioni e componenti di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) e [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
@@ -100,9 +100,9 @@ Microsoft ha rilevato un problema con una versione specifica dei file binari di 
   
      Il percorso specificato per ogni opzione descritta in precedenza deve essere diverso.  
   
-11. Se tutte le regole vengono soddisfatte si procede automaticamente dalla finestra Regole funzionalità.  
+12. Se tutte le regole vengono soddisfatte si procede automaticamente dalla finestra Regole funzionalità.  
   
-12. Nella pagina Configurazione dell'istanza specificare se si desidera installare un'istanza predefinita o un'istanza denominata. Per ulteriori informazioni, vedere [Instance Configuration](../../sql-server/install/instance-configuration.md#instance-configuration).  
+13. Nella pagina Configurazione dell'istanza specificare se si desidera installare un'istanza predefinita o un'istanza denominata. Per ulteriori informazioni, vedere [Instance Configuration](../../sql-server/install/instance-configuration.md#instance-configuration).  
   
      **ID istanza** : per impostazione predefinita, come ID istanza viene utilizzato il nome dell'istanza. Tale nome viene utilizzato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Per un'istanza predefinita, il nome di istanza e l'ID istanza sono MSSQLSERVER. Per usare un ID istanza non predefinito, specificare un valore differente nella casella di testo **ID istanza** .  
   
@@ -113,20 +113,23 @@ Microsoft ha rilevato un problema con una versione specifica dei file binari di 
   
      **Istanze installate** : nella griglia vengono visualizzate le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguito il programma di installazione. Se nel computer è già installata un'istanza predefinita, è necessario installare un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)].  
   
-     Il flusso di lavoro relativo alla parte rimanente dell'installazione dipende dalle funzionalità specificate per l'installazione. Le pagine visualizzate dipendono dalle selezioni effettuate.  
+     Il flusso di lavoro della parte rimanente dell'installazione dipende dalle funzionalità specificate per l'installazione. Le pagine visualizzate dipendono dalle selezioni effettuate.  
   
-13. Utilizzare la pagina Configurazione server - Account di servizio per specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
+14. Utilizzare la pagina Configurazione server - Account di servizio per specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
   
      È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per assegnare i privilegi minimi a ogni servizio, in modo che ai servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengano concesse le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Per specificare lo stesso account di accesso per tutti gli account del servizio in questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], immettere le credenziali nei campi visualizzati nella parte inferiore della pagina.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+    > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+    
+    > [!NOTE]
+    > Iniziare con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e selezionare la casella di controllo *Concedi il privilegio Esecuzione attività di manutenzione volume al servizio del motore di database di SQL Server* per consentire all'account di servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l'uso di [Inizializzazione immediata dei file di database](../../relational-databases/databases/database-instant-file-initialization.md).
   
      Utilizzare la pagina Configurazione server - Regole di confronto per specificare regole di confronto non predefinite per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-14. Utilizzare la pagina Configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Configurazione server per specificare gli elementi seguenti:  
+15. Utilizzare la pagina Configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Configurazione server per specificare gli elementi seguenti:  
   
     -   Modalità di sicurezza: selezionare l'autenticazione di Windows o l'autenticazione mista per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si seleziona l'autenticazione Modalità mista, è necessario specificare una password complessa per l'account amministratore di sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito.  
   
@@ -134,10 +137,10 @@ Microsoft ha rilevato un problema con una versione specifica dei file binari di 
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Amministratori: è necessario specificare almeno un amministratore di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiungere l'account usato per eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Utilizzare la pagina Configurazione [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Directory dati per specificare directory di installazione non predefinite. Per eseguire l'installazione in directory predefinite, scegliere **Avanti**.  
+     Utilizzare la pagina Configurazione [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Directory dati per specificare directory di installazione non predefinite. Per eseguire l'installazione in directory predefinite, fare clic su **Avanti**.  
   
     > [!IMPORTANT]  
-    >  Se si specificano directory di installazione non predefinite, verificare che le cartelle di installazione siano univoche per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nessuna delle directory presenti in questa finestra di dialogo deve essere condivisa con le directory di altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    > Se si specificano directory di installazione non predefinite, verificare che le cartelle di installazione siano univoche per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nessuna delle directory presenti in questa finestra di dialogo deve essere condivisa con le directory di altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Per altre informazioni, vedere [Configurazione Motore di database - Directory dati](../../sql-server/install/instance-configuration.md#database-engine-configuration---data-directories).  
   
@@ -145,16 +148,16 @@ Microsoft ha rilevato un problema con una versione specifica dei file binari di 
   
      Usare la pagina Configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] - TempDB per configurare le dimensioni dei file, il numero di file, le directory di installazione non predefinite e le impostazioni di aumento delle dimensioni dei file per TempDB. Per altre informazioni, vedere [Configurazione del motore di database - TempDB](../../sql-server/install/instance-configuration.md#database-engine-configuration---tempdb).  
   
-15. Utilizzare la pagina Configurazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Provisioning account per specificare la modalità server e gli utenti o gli account che disporranno delle autorizzazioni di amministratore per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La modalità server determina quali sottosistemi di memoria e archiviazione vengono utilizzati nel server. Tipi di soluzione diversi eseguiti nelle modalità server diverse. Se si intende eseguire database di cubi multidimensionali nel server, scegliere l'opzione predefinita, vale a dire quella relativa alla modalità server multidimensionale e di data mining. Relativamente alle autorizzazioni di amministratore, è necessario specificare almeno un amministratore di sistema per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per aggiungere l'account usato per eseguire il programma di installazione di SQL Server, fare clic su **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer che disporranno di privilegi di amministratore per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulle autorizzazioni della modalità server e amministratore, vedere [Configurazione di Analysis Services - Provisioning account](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning).  
+16. Utilizzare la pagina Configurazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Provisioning account per specificare la modalità server e gli utenti o gli account che disporranno delle autorizzazioni di amministratore per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La modalità server determina quali sottosistemi di memoria e archiviazione vengono utilizzati nel server. Tipi di soluzione diversi eseguiti nelle modalità server diverse. Se si intende eseguire database di cubi multidimensionali nel server, scegliere l'opzione predefinita, vale a dire quella relativa alla modalità server multidimensionale e di data mining. Relativamente alle autorizzazioni di amministratore, è necessario specificare almeno un amministratore di sistema per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per aggiungere l'account usato per eseguire il programma di installazione di SQL Server, fare clic su **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer che disporranno di privilegi di amministratore per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulle autorizzazioni della modalità server e amministratore, vedere [Configurazione di Analysis Services - Provisioning account](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning).  
 
    Dopo aver modificato l'elenco, fare clic su **OK**. Verificare l'elenco di amministratori nella finestra di dialogo di configurazione. Quando l'elenco è completo, scegliere **Avanti**.
    
    Utilizzare la pagina Configurazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Directory dati per specificare directory di installazione non predefinite. Per eseguire l'installazione in directory predefinite, scegliere **Avanti**.  
    
-   >[!IMPORTANT]  
-   >Quando si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se si specifica lo stesso percorso di directory per INSTANCEDIR e SQLUSERDBDIR, SQL Server Agent e la ricerca full-text non vengono avviati perché mancano le autorizzazioni.  
+   > [!IMPORTANT]  
+   > Quando si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se si specifica lo stesso percorso di directory per INSTANCEDIR e SQLUSERDBDIR, SQL Server Agent e la ricerca full-text non vengono avviati perché mancano le autorizzazioni.  
    >  
-   >Se si specificano directory di installazione non predefinite, verificare che le cartelle di installazione siano univoche per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nessuna delle directory presenti in questa finestra di dialogo deve essere condivisa con le directory di altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+   > Se si specificano directory di installazione non predefinite, verificare che le cartelle di installazione siano univoche per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nessuna delle directory presenti in questa finestra di dialogo deve essere condivisa con le directory di altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
    
    Per altre informazioni, vedere [Configurazione di Analysis Services - Directory dati](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories).  
    

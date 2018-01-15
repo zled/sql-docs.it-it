@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 231e49bce1350370917871c131d3558b02b82d8d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 220c190a88a1b5c5d38591905e9bb1060a2f4509
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Come creare un progetto Visual c# SMO in Visual Studio .NET
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questa sezione viene descritto come compilare un'applicazione console SMO semplice.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  In questa sezione viene descritto come compilare un'applicazione console SMO semplice.  
   
  In questo esempio vengono importati spazi dei nomi affinché il programma faccia riferimento ai tipi SMO. L'importazione del **agente** dello spazio dei nomi è facoltativo. Utilizzarla quando si scrive un programma che utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il **comuni** dello spazio dei nomi è necessario per stabilire una connessione sicura per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il **SqlClient** dello spazio dei nomi viene utilizzato per elaborare gli errori di eccezione SQL.  
   

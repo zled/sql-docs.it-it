@@ -18,18 +18,20 @@ helpviewer_keywords:
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d9a4e8529fdb24060db49e2263576f492570e64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: abd6caba2945c9b435033d75d7c0b353e98a26f7
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Concessione, revoca e negazione delle autorizzazioni
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> oggetto viene utilizzato per assegnare un set di autorizzazioni o una singola autorizzazione del server per il <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> oggetto. Per le autorizzazioni al livello del server, l'utente autorizzato fa riferimento a un account di accesso. Gli account di accesso autenticati da Windows sono elencati come nomi utente di Windows. Quando viene eseguito questo esempio di codice, l'autorizzazione viene revocata all'utente autorizzato e ne viene verificata la rimozione con il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  L'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> viene utilizzato per assegnare un set di autorizzazioni o una singola autorizzazione del server all'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Per le autorizzazioni al livello del server, l'utente autorizzato fa riferimento a un account di accesso. Gli account di accesso autenticati da Windows sono elencati come nomi utente di Windows. Quando viene eseguito questo esempio di codice, l'autorizzazione viene revocata all'utente autorizzato e ne viene verificata la rimozione con il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
   
  Le autorizzazioni per i database e gli oggetti di database possono essere assegnate analogamente tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> e l'oggetto <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   

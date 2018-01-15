@@ -13,18 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 caps.latest.revision: "69"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 96293d1bf121ac3697d494f1c5a6fc22f4dffb64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8121a42034c748e6acd1265dee06f1552cae1cc0
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="overview-smo"></a>Panoramica (SMO)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) sono progettati per la gestione a livello di programmazione di oggetti [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare SMO per compilare applicazioni di gestione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizzate. Sebbene [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sia un'applicazione potente e completa per la gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in alcuni casi è possibile che sia necessario utilizzare un'applicazione SMO.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) sono progettati per la gestione a livello di programmazione di oggetti [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare SMO per compilare applicazioni di gestione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizzate. Sebbene [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sia un'applicazione potente e completa per la gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in alcuni casi è possibile che sia necessario utilizzare un'applicazione SMO.  
   
  È possibile, ad esempio, che sia necessario semplificare le applicazioni utente che controllano le attività di gestione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per soddisfare le necessità di nuovi utenti e ridurre i costi di formazione. È possibile dovere creare database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizzati o creare un'applicazione per la creazione e il controllo dell'efficienza degli indici. Un'applicazione SMO può anche essere utilizzata per includere perfettamente hardware o software di terze parti nell'applicazione per la gestione di database.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
  In SMO sono inoltre rappresentati come nuovi oggetti o proprietà molte funzionalità e componenti introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Queste nuove funzionalità e componenti includono:  
   
--   Partizionamento di tabelle e indici per l'archiviazione di dati in uno schema di partizione. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+-   Partizionamento di tabelle e indici per l'archiviazione di dati in uno schema di partizione. Per altre informazioni, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 -   Endpoint HTTP per la gestione di richieste SOAP. Per ulteriori informazioni, vedere [implementazione endpoint](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
   

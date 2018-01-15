@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
-ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
+ms.openlocfilehash: 76d8f9fd55eb9129f31dba4dcbea9799e09148da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Aggiornamento delle istanze di replica dei gruppi di disponibilità AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/16/2017
 -   [Hardware and Software Requirements for Installing SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): esaminare i requisiti software per l'installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
 
 > [!NOTE]  
->  La combinazione di più versioni di SQL Server nello stesso gruppo di disponibilità non è supportata. Per eseguire la migrazione a una nuova versione usando i gruppi di disponibilità, l'unico metodo supportato è un gruppo di disponibilità distribuito in SQL Server 2016 Enterprise Edition o versioni successive.
+>  L'uso di più versioni di SQL Server nello stesso gruppo di disponibilità è supportato solo nel contesto di un aggiornamento in sequenza che aggiorna le repliche nelle posizioni originali. Ciò significa che una versione successiva di SQL Server non può essere aggiunta come nuova replica a un gruppo di disponibilità esistente. Ad esempio non è possibile aggiungere una replica SQL Server 2017 a un gruppo di disponibilità SQL Server 2016 esistente. Per la migrazione a una nuova versione di SQL Server usando i gruppi di disponibilità, l'unico metodo supportato è un gruppo di disponibilità distribuito, disponibile in SQL Server 2016 Enterprise Edition o versioni successive.
 
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Procedure consigliate relative all'aggiornamento in sequenza per i gruppi di disponibilità AlwaysOn  
  Quando si eseguono aggiornamenti dei server, è opportuno attenersi alle procedure consigliate illustrate di seguito allo scopo di ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi di disponibilità:  

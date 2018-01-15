@@ -1,7 +1,7 @@
 ---
 title: Filegroup e file di database | Microsoft Docs
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 01/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="database-files-and-filegroups"></a>Filegroup e file di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ogni database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene almeno due file del sistema operativo: un file di dati e un file di log. I file di dati contengono dati e oggetti come tabelle, indici, stored procedure e viste. I file di log contengono le informazioni necessarie per il recupero di tutte le transazioni del database. I file di dati possono essere raggruppati in filegroup ai fini dell'allocazione e dell'amministrazione.  
@@ -62,27 +62,36 @@ ms.lasthandoff: 01/02/2018
  Per impostazione predefinita, i dati e i log delle transazioni vengono archiviati nella stessa unità e nello stesso percorso. Ciò consente la gestione nei sistemi a disco singolo, ma può non essere la soluzione ottimale per gli ambienti di produzione. È consigliabile archiviare i dati e i file di log in dischi separati.  
 
 ### <a name="logical-and-physical-file-names"></a>Nomi di file logici e fisici
-I file di SQL Server hanno due nomi: 
+I file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hanno due tipi di nome file: 
 
-**logical_file_name:**  logical_file_name è il nome del file fisico in tutte le istruzioni Transact-SQL. Il nome di file logico deve essere conforme alle regole per gli identificatori di SQL Server e deve essere univoco tra i nomi di file logici nel database.
+**logical_file_name:**  logical_file_name è il nome del file fisico in tutte le istruzioni Transact-SQL. Il nome di file logico deve essere conforme alle regole per gli identificatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve essere univoco tra i nomi di file logici nel database. Viene impostato dall'argomento `NAME` in `ALTER DATABASE`. Per altre informazioni, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-**os_file_name:** os_file_name è il nome del file fisico che include il percorso di directory. Tale nome deve essere conforme alle regole relative ai nomi di file del sistema operativo.
+**os_file_name:** os_file_name è il nome del file fisico che include il percorso di directory. Tale nome deve essere conforme alle regole relative ai nomi di file del sistema operativo. Viene impostato dall'argomento `FILENAME` in `ALTER DATABASE`. Per altre informazioni, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-I dati e i file di log di SQL Server possono essere memorizzati sia in file system FAT che NTFS. È consigliabile utilizzare il file system NTFS per i vantaggi di sicurezza intrinseci di NTFS. I file di log e i filegroup di dati di lettura/scrittura possono essere memorizzati in un file system compresso NTFS. Solo i database e i filegroup secondari di sola lettura possono essere memorizzati in un file system compresso NTFS.
+> [!IMPORTANT]
+> I dati e i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere memorizzati sia in file system FAT che NTFS. Nei sistemi Windows è consigliabile utilizzare il file system NTFS per i vantaggi di sicurezza intrinseci di NTFS. 
 
-Se nello stesso computer sono in esecuzione più istanze di SQL Server, a ogni istanza viene assegnata una directory predefinita diversa in cui verranno archiviati i file dei database creati nell'istanza. Per altre informazioni, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
+> [!WARNING]
+> I file di log e i filegroup di dati di lettura/scrittura possono essere memorizzati in un file system compresso NTFS. Solo i database e i filegroup secondari di sola lettura possono essere memorizzati in un file system compresso NTFS.
+> Per un risparmio di spazio, è consigliabile utilizzare la [compressione dei dati](../../relational-databases/data-compression/data-compression.md) anziché la compressione del file system.
+
+Se nello stesso computer sono in esecuzione più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a ogni istanza viene assegnata una directory predefinita specifica in cui verranno archiviati i file dei database creati nell'istanza. Per altre informazioni, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
 ### <a name="data-file-pages"></a>Pagine di file di dati
-Le pagine dei file di dati di SQL Server sono numerate modo sequenziale a partire dalla prima, che corrisponde al numero zero (0). A ogni file di un database è associato un numero di ID file univoco. Per identificare in modo univoco una pagina in un database, sono necessari sia ID file che numero di pagina. Nell'esempio seguente vengono illustrati i numeri di pagina di un database che include un file di dati primario di 4 MB e un file di dati secondario di 1 MB.
+Le pagine dei file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono numerate progressivamente a partire dalla prima, che corrisponde al numero zero (0). A ogni file di un database è associato un numero di ID file univoco. Per identificare in modo univoco una pagina in un database, sono necessari sia ID file che numero di pagina. Nell'esempio seguente vengono illustrati i numeri di pagina di un database che include un file di dati primario di 4 MB e un file di dati secondario di 1 MB.
 
 ![data_file_pages](../../relational-databases/databases/media/data-file-pages.gif)
 
-La prima pagina di ogni file è la pagina dell'intestazione, che include informazioni sugli attributi del file. Anche molte altre pagine all'inizio del file contengono informazioni di sistema, ad esempio mappe delle allocazioni. Una delle pagine di sistema archiviate sia nel file di dati primario che nel primo file di log è una pagina di avvio del database contenente informazioni sugli attributi del database. Per altre informazioni sulle pagine e sui tipi di pagina, vedere Informazioni su pagine ed extent.
+La prima pagina di ogni file è la pagina dell'intestazione, che include informazioni sugli attributi del file. Anche molte altre pagine all'inizio del file contengono informazioni di sistema, ad esempio mappe delle allocazioni. Una delle pagine di sistema archiviate sia nel file di dati primario che nel primo file di log è una pagina di avvio del database contenente informazioni sugli attributi del database. Per altre informazioni su pagine e tipi di pagina, vedere [Guida all'architettura di pagine ed extent](../..//relational-databases/pages-and-extents-architecture-guide.md).
 
 ### <a name="file-size"></a>Dimensioni file
-Le dimensioni dei file di SQL Server possono aumentare automaticamente rispetto ai valori originari. Quando si definisce un file, è possibile specificare un incremento di crescita specifico. Quando lo spazio assegnato al file si esaurisce, le sue dimensioni aumentano in base all'incremento specificato. Se un filegroup include più file, le loro dimensioni non aumentano automaticamente finché lo spazio di tutti i file non si esaurisce. L'aumento delle dimensioni avviene quindi in base a un meccanismo round robin.
+Le dimensioni dei file di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono aumentare automaticamente rispetto ai valori originari. Quando si definisce un file, è possibile specificare un incremento di crescita specifico. Quando lo spazio assegnato al file si esaurisce, le sue dimensioni aumentano in base all'incremento specificato. Se un filegroup include più file, le loro dimensioni non aumentano automaticamente finché lo spazio di tutti i file non si esaurisce. L'aumento delle dimensioni avviene quindi in base a un meccanismo round robin utilizzando il [riempimento proporzionale](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill).
 
-È inoltre possibile specificare le dimensioni massime di ogni file. Se non vengono specificate le dimensioni massime, il file può continuare ad aumentare fino a occupare tutto lo spazio disponibile nel disco. Questa caratteristica è particolarmente utile quando SQL Server viene usato come database incorporato in un'applicazione per cui l'utente non può rivolgersi direttamente all'amministratore di sistema. L'utente può lasciare aumentare i file in base alle necessità per alleggerire il carico amministrativo derivante dal monitoraggio dello spazio libero nel database e dall'allocazione manuale di spazio aggiuntivo. 
+È inoltre possibile specificare le dimensioni massime di ogni file. Se non vengono specificate le dimensioni massime, il file può continuare ad aumentare fino a occupare tutto lo spazio disponibile nel disco. Questa caratteristica è particolarmente utile quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzato come database incorporato in un'applicazione per cui l'utente non può rivolgersi direttamente all'amministratore di sistema. L'utente può lasciare aumentare i file in base alle necessità per alleggerire il carico amministrativo derivante dal monitoraggio dello spazio libero nel database e dall'allocazione manuale di spazio aggiuntivo.  
+
+Se [l'inizializzazione dei file immediata](../../relational-databases/databases/database-instant-file-initialization.md) è abilitata per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], durante l'allocazione di spazio aggiuntivo per i file di dati l'overhead è minimo.
+
+Per altre informazioni sulla gestione del file di log delle transazioni, vedere [Gestione delle dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 
 ## <a name="database-snapshot-files"></a>File di snapshot di database
 La forma del file utilizzato da uno snapshot del database per archiviare i propri dati copy-on-write cambia a seconda che lo snapshot venga creato da un utente o utilizzato internamente:
@@ -174,21 +183,22 @@ Per i file e i filegroup sono valide le regole seguenti:
 - Un file può essere membro di un solo filegroup.
 - I file di log delle transazioni non fanno mai parte di un filegroup.
 
-## <a name="recommendations"></a>Indicazioni
+## <a name="Recommendations"></a> Indicazioni
 Vengono riportate di seguito alcune indicazioni di carattere generale relative all'utilizzo di file e filegroup: 
 - La maggior parte dei database funziona in modo ottimale con un singolo file di dati e un unico file di log delle transazioni.
-- Se si utilizzano più file, creare un secondo filegroup per i file aggiuntivi e impostarlo come filegroup predefinito. In questo modo, il file primario conterrà unicamente le tabelle e gli oggetti di sistema.
+- Se si utilizzano più file di dati, creare un secondo filegroup per i file aggiuntivi e impostarlo come filegroup predefinito. In questo modo, il file primario conterrà unicamente le tabelle e gli oggetti di sistema.
 - Per ottimizzare le prestazioni, creare i file o i filegroup sul numero maggiore possibile di dischi disponibili. Posizionare in filegroup diversi gli oggetti che creano conflitti di spazio.
 - Utilizzare i filegroup per la posizione di oggetti su dischi fisici specifici.
 - Posizionare in filegroup diversi le diverse tabelle utilizzate nelle stesse query di join. Questa operazione consente di ottimizzare le prestazioni, grazie al fatto che i dati uniti in join vengono cercati con operazioni di I/O su disco in parallelo.
 - Posizionare in filegroup diversi le tabelle utilizzate molto frequentemente e gli indici non cluster che appartengono a queste tabelle. Questa operazione consente di ottimizzare le prestazioni, grazie al fatto che vengono eseguite operazioni di I/O in parallelo se i file si trovano su dischi fisici diversi.
 - Non posizionare il file o i file di log delle transazioni sullo stesso disco fisico in cui si trovano gli altri file o filegroup.
 
+Per altre informazioni sulle raccomandazioni relative alla gestione del file di log delle transazioni, vedere [Gestione delle dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
+
 ## <a name="related-content"></a>Contenuto correlato  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
- [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)    
+ [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)      
  [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
-  
- [Architettura e gestione del log delle transazioni di SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) 
+ [Architettura e gestione del log delle transazioni di SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)    
+ [Guida sull'architettura di pagina ed extent](../../relational-databases/pages-and-extents-architecture-guide.md)    
+ [Gestione delle dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)     

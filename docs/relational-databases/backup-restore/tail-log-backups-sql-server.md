@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3396d9d6ec351550509300f760db8e5fc58836d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a1254e44ac2fcc110a81d9ac7f566a348812f80
+ms.sourcegitcommit: 1eac335235847c3578e376e0854413710d345dee
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="tail-log-backups-sql-server"></a>Backup della parte finale del log [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le informazioni contenute in questo argomento sono rilevanti solo per il backup e il ripristino di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che usano il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 |Opzione BACKUP LOG|Commenti|  
 |-----------------------|--------------|  
-|NORECOVERY|Utilizzare NORECOVERY ogni volta che si intende procedere con un'operazione di ripristino sul database. NORECOVERY porta il database nello stato di ripristino. Questo assicura che il database non si modifichi dopo il backup della parte finale del log. Il log verrà troncato a meno che non venga specificata anche l'opzione NO_TRUNCATE o COPY_ONLY.<br /><br /> **\*\* Importante \*\*** Non usare NO_TRUNCATE, a meno che il database non sia danneggiato.|  
+|NORECOVERY|Utilizzare NORECOVERY ogni volta che si intende procedere con un'operazione di ripristino sul database. NORECOVERY porta il database nello stato di ripristino. Questo assicura che il database non si modifichi dopo il backup della parte finale del log. Il log verrà troncato a meno che non venga specificata anche l'opzione NO_TRUNCATE o COPY_ONLY.<br /><br /> **Importante**: non usare NO_TRUNCATE, a meno che il database non sia danneggiato.|  
 |CONTINUE_AFTER_ERROR|Utilizzare CONTINUE_AFTER_ERROR solo se si sta eseguendo il backup della parte finale di un database danneggiato.<br /><br /> Quando si utilizza il backup della parte finale di un database danneggiato, alcuni dei metadati normalmente acquisiti nei backup dei log potrebbero essere non disponibili. Per altre informazioni, vedere [Backup della parte finale del log con metadati di backup incompleti](#IncompleteMetadata)in questo argomento.|  
   
 ##  <a name="IncompleteMetadata"></a> Backup della parte finale del log con metadati di backup incompleti  
@@ -63,13 +63,9 @@ ms.lasthandoff: 11/17/2017
  Se i metadati in un backup della parte finale del log sono incompleti, nella tabella [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) mancheranno la maggioranza delle informazioni sui filegroup al momento dell'esecuzione del backup della parte finale del log. La maggioranza delle colonne della tabella **backupfilegroup** sono NULL. Le uniche colonne significative sono le seguenti:  
   
 -   **backup_set_id**  
-  
 -   **filegroup_id**  
-  
 -   **tipo**  
-  
 -   **type_desc**  
-  
 -   **is_readonly**  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
@@ -83,6 +79,6 @@ ms.lasthandoff: 11/17/2017
  [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Backup di sola copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [Backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [Applicazione dei backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
-  
+ [Applicare backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [Architettura e gestione del log delle transazioni di SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
   

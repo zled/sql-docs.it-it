@@ -18,18 +18,20 @@ helpviewer_keywords:
 - SMO [SQL Server], connections
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 066bee36d4dabdf6b11894d5d0158451d601adb9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 721e0fdf56fe26bc4c9484bce8dea091a479aba7
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Connessione a un'istanza di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]La prima fase di programmazione un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applicazione Management Objects (SMO) consiste nel creare un'istanza di <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto e per stabilire la connessione a un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  La prima fase di programmazione un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applicazione Management Objects (SMO) consiste nel creare un'istanza di <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto e per stabilire la connessione a un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  È possibile creare un'istanza dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server> e stabilire una connessione all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tre modi diversi. Il primo metodo consiste nell'utilizzare una variabile oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> per fornire le informazioni di connessione. Il secondo consiste nel fornire le informazioni di connessione impostando in modo esplicito le proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. Il terzo consiste infine nel passare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel costruttore dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. 
   

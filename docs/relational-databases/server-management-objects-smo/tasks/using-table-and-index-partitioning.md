@@ -18,18 +18,20 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], SMO
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae5b30ad5cab9d7e9ceb34103e64b7a782367b1e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 820ef3737125c82296655db5cfba1a4265223796
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-table-and-index-partitioning"></a>Utilizzo del partizionamento di tabelle e indici
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dati possono essere archiviati tramite gli algoritmi di archiviazione forniti da [tabelle e indici partizionati](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Il partizionamento semplifica la gestione delle tabelle e degli indici di grandi dimensioni e li rende più scalabili.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Dati possono essere archiviati tramite gli algoritmi di archiviazione forniti da [tabelle e indici partizionati](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Il partizionamento semplifica la gestione delle tabelle e degli indici di grandi dimensioni e li rende più scalabili.  
   
 ## <a name="index-and-table-partitioning"></a>Partizionamento di indici e tabelle  
  La funzionalità consente la distribuzione di dati relativi a indici e tabelle in più filegroup all'interno delle partizioni. Una funzione di partizione definisce la modalità di mapping delle righe di una tabella o di un indice a un set di partizioni in base ai valori di alcune colonne definite colonne di partizionamento. Uno schema di partizione consente di eseguire il mapping di ogni partizione specificata dalla funzione di partizione a un filegroup. In questo modo, è possibile sviluppare strategie di archiviazione che prevedano la scalabilità delle tabelle tra filegroup e di conseguenza tra dispositivi fisici.  
@@ -136,6 +138,6 @@ $ps.Create()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [Tabelle e indici partizionati](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

@@ -24,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e72f863a4746bf091c15e48349943906e172c616
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8c82b7d40310c22d9c064367ba5437106ff32422
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] Questo argomento illustra come creare una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il primo indice creato per una vista deve essere un indice cluster univoco. Dopo aver creato l'indice cluster univoco, è possibile creare più indici non cluster. La creazione di un indice cluster univoco per una vista consente un miglioramento delle prestazioni delle query, in quanto la vista viene archiviata nel database in modo analogo a una tabella con un indice cluster. Le viste indicizzate possono essere usate da Query Optimizer per velocizzare l'esecuzione delle query. Non è necessario fare riferimento alla vista nella query affinché venga usata da Query Optimizer per una sostituzione.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] In questo argomento viene descritto come creare indici in una vista. Il primo indice creato per una vista deve essere un indice cluster univoco. Dopo aver creato l'indice cluster univoco, è possibile creare più indici non cluster. La creazione di un indice cluster univoco per una vista consente un miglioramento delle prestazioni delle query, in quanto la vista viene archiviata nel database in modo analogo a una tabella con un indice cluster. Le viste indicizzate possono essere usate da Query Optimizer per velocizzare l'esecuzione delle query. Non è necessario fare riferimento alla vista nella query affinché venga usata da Query Optimizer per una sostituzione.  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Per la creazione e la corretta implementazione di una vista indicizzata, è fondamentale effettuare le operazioni seguenti:  
@@ -155,10 +155,10 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Sono richieste l'autorizzazione CREATE VIEW per il database e l'autorizzazione ALTER per lo schema in cui viene creata la vista.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-an-indexed-view"></a>Per creare una vista indicizzata  
   
@@ -166,7 +166,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio vengono creati una vista e un indice per tale vista, quindi vengono eseguite due query in cui viene usata la vista indicizzata.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio vengono creati una vista e un indice per tale vista, quindi vengono eseguite due query in cui viene usata la vista indicizzata.  
   
     ```  
     USE AdventureWorks2012;  

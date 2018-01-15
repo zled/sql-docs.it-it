@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cda9fe3ab2bc54f878e45834bca907976cb7793c
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 26cc8e4ea520560452b59b9a08da198882ba96cd
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ ms.lasthandoff: 01/05/2018
 |**last_used_threads**|**bigint**|Il numero di thread paralleli usato, quando il piano di ultima esecuzione. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_used_threads**|**bigint**|Il numero minimo di utilizzato thread paralleli mai utilizzato durante l'esecuzione di un piano. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**max_used_threads**|**bigint**|Utilizzato il numero massimo di thread paralleli mai utilizzato durante l'esecuzione di un piano. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**pdw_node_id**|**int**|L'identificatore per il nodo che utilizza questo tipo di distribuzione.<br /><br /> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_columnstore_segment_reads**|**bigint**|La somma totale dei segmenti columnstore lette dalla query. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
 |**last_columnstore_segment_reads**|**bigint**|Il numero di segmenti di columnstore lettura dall'ultima esecuzione della query. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
 |**min_columnstore_segment_reads**|**bigint**|Il numero minimo di segmenti di columnstore mai lette dalla query durante l'esecuzione di uno. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
@@ -116,7 +115,12 @@ ms.lasthandoff: 01/05/2018
 |**last_columnstore_segment_skips**|**bigint**|Il numero di segmenti di columnstore ignorati dall'ultima esecuzione della query. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
 |**min_columnstore_segment_skips**|**bigint**|Il numero minimo di segmenti di columnstore mai di ignorare la query durante l'esecuzione di uno. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
 |**max_columnstore_segment_skips**|**bigint**|Il numero massimo di segmenti di columnstore mai di ignorare la query durante l'esecuzione di uno. Non può essere null.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
-  
+|**total_spills**|**bigint**|Il numero totale di pagine distribuite tramite l'esecuzione della query dopo l'ultima compilazione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Il numero di pagine distribuite l'ora dell'ultima che esecuzione della query.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Il numero minimo di pagine che questa query è sempre distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Il numero massimo di pagine che questa query è sempre distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**pdw_node_id**|**int**|L'identificatore per il nodo che utilizza questo tipo di distribuzione.<br /><br /> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+
 > [!NOTE]
 > <sup>1</sup> per le stored procedure compilate in modo nativo quando la raccolta di statistiche è abilitata, il tempo del processo viene raccolto in millisecondi. Se la query viene eseguita in meno di un millisecondo, il valore sarà 0.  
   
@@ -133,8 +137,6 @@ In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessar
  Nell'esempio seguente vengono restituite informazioni sulle prime cinque query classificate in base al tempo medio della CPU. Nell'esempio le query vengono aggregate in base al relativo valore hash del piano, in modo da raggruppare le query logicamente equivalenti in base all'utilizzo di risorse cumulativo.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
     SUM(query_stats.total_worker_time) / SUM(query_stats.execution_count) AS "Avg CPU Time",  
     MIN(query_stats.statement_text) AS "Statement Text"  
@@ -172,11 +174,12 @@ ORDER BY qs.execution_count DESC;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- 
- [Funzioni e viste a gestione dinamica &#40; relative all'esecuzione Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys.dm exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [Sys.dm exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
-  
+[Funzioni e viste a gestione dinamica &#40; relative all'esecuzione Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+[Sys.dm exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[Sys.dm exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[Sys.dm exec_procedure_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[Sys.dm exec_trigger_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[Sys.dm exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
 

@@ -17,18 +17,20 @@ helpviewer_keywords:
 - users [SMO]
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0400fbda2bbd512bdceefba78cde24dbf7dd0000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 47c2cf548bdc703f86a7ff90f2e32e44fceb9a7f
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-users-roles-and-logins"></a>Gestione di utenti, ruoli e account di accesso
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In SMO gli account di accesso sono rappresentati dal <xref:Microsoft.SqlServer.Management.Smo.Login> oggetto. Quando l'account di accesso è presente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], può essere aggiunto a un ruolo del server. Il ruolo del server è rappresentato dal <xref:Microsoft.SqlServer.Management.Smo.ServerRole> oggetto. Il ruolo del database è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole>, mentre il ruolo dell'applicazione è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  In SMO gli account di accesso sono rappresentati dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login>. Quando l'account di accesso è presente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], può essere aggiunto a un ruolo del server. Il ruolo del server è rappresentato dal <xref:Microsoft.SqlServer.Management.Smo.ServerRole> oggetto. Il ruolo del database è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole>, mentre il ruolo dell'applicazione è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
   
  Privilegi associati al livello di server sono elencati come proprietà del <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> oggetto. I privilegi al livello del server possono essere concessi, negati o revocati da account di accesso singoli.  
   

@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6e7fe6186be8bbf546f44d881528181a5e4b4979
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d485487e2256a8bfab98a30f179d749bfb583529
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Panoramica di Gruppi di disponibilità AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +61,10 @@ ms.lasthandoff: 11/20/2017
   
  Di seguito viene illustrato un gruppo di disponibilità contenente una replica primaria e quattro repliche secondarie. Sono supportate fino a otto repliche secondarie, incluse una replica primaria e due repliche secondarie con commit sincrono.  
   
- ![Gruppo di disponibilità con 5 repliche](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Gruppo di disponibilità con 5 repliche")  
+ ![Gruppo di disponibilità con cinque repliche](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Gruppo di disponibilità con cinque repliche")  
   
 ##  <a name="AvDbs"></a> Availability Databases  
- Per poter essere aggiunto a un gruppo di disponibilità, il database deve essere online, di lettura e scrittura ed esistere sull'istanza del server che ospita la replica primaria. Il database viene aggiunto al gruppo di disponibilità come database primario, pur rimanendo disponibile ai client. Non esiste alcun database secondario corrispondente finché i backup del nuovo database primario non sono ripristinati sull'istanza del server che ospita la replica secondaria (tramite RESTORE WITH NORECOVERY). Il nuovo database secondario rimane nello stato RESTORING finché non ne viene creato un join al gruppo di disponibilità. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+ Per poter essere aggiunto a un gruppo di disponibilità, il database deve essere online, di lettura e scrittura ed esistere sull'istanza del server che ospita la replica primaria. Il database viene aggiunto al gruppo di disponibilità come database primario, pur rimanendo disponibile ai client. Non esiste alcun database secondario corrispondente finché i backup del nuovo database primario non sono ripristinati sull'istanza del server che ospita la replica secondaria (tramite RESTORE WITH NORECOVERY). Il nuovo database secondario rimane nello stato RESTORING finché non ne viene creato un join al gruppo di disponibilità. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
  Dopo la creazione di un join, il database secondario passa allo stato ONLINE e avvia la sincronizzazione dati con il database primario corrispondente. La*sincronizzazione dati* è il processo tramite cui le modifiche apportate a un database primario sono riprodotte in un database secondario. La sincronizzazione dei dati comporta che il database primario invia i record del log delle transazioni al database secondario.  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Esecuzione di operazioni di backup sulle repliche secondarie**  
   
-     Le repliche secondarie supportano l'esecuzione di backup del log e backup di [sola copia](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) di un database completo, di file o di un filegroup. È possibile configurare il gruppo di disponibilità per specificare una preferenza per la destinazione dei backup. È importante comprendere che la preferenza non viene applicata da SQL Server, pertanto non incide sui backup ad hoc. L'interpretazione di questa preferenza dipende dalla logica, se presente, di cui viene generato lo script nei processi di backup per ogni database di un determinato gruppo di disponibilità. Per una replica di disponibilità singola, è possibile specificare la priorità di esecuzione dei backup in questa replica rispetto alle altre repliche dello stesso gruppo di disponibilità. Per altre informazioni, vedere [Repliche secondarie attive: Backup in repliche secondarie &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Le repliche secondarie supportano l'esecuzione di backup del log e backup di [sola copia](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) di un database completo, di file o di un filegroup. È possibile configurare il gruppo di disponibilità per specificare una preferenza per la destinazione dei backup. È importante comprendere che la preferenza non viene applicata da SQL Server, pertanto non incide sui backup ad hoc. L'interpretazione di questa preferenza dipende dalla logica, se presente, di cui viene generato lo script nei processi di backup per ogni database di un determinato gruppo di disponibilità. Per una replica di disponibilità singola, è possibile specificare la priorità di esecuzione dei backup in questa replica rispetto alle altre repliche dello stesso gruppo di disponibilità. Per altre informazioni, vedere [Repliche secondarie attive: Backup in repliche secondarie &#40;gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Accesso in sola lettura a una o più repliche secondarie (repliche secondarie leggibili)**  
   

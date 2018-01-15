@@ -17,18 +17,20 @@ helpviewer_keywords:
 - SMO [SQL Server], capture mode
 ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76f407dc02ff95535c456f21debe3d208ff475e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6452457dfb60a0a99f405907fb2ae01658b30412
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-capture-mode"></a>Utilizzo della modalità di acquisizione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]I programmi SMO possono acquisire e registrare l'equivalente [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni eseguite dal programma al posto di o in aggiunta, le istruzioni che vengono eseguite dal programma. Per abilitare la modalità di acquisizione, utilizzare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> oppure la proprietà <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  I programmi SMO possono acquisire e registrare le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] equivalenti eseguite dal programma al posto delle, o oltre alle, istruzioni eseguite dal programma. Per abilitare la modalità di acquisizione, utilizzare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> oppure la proprietà <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>.  
   
 ## <a name="example"></a>Esempio  
 Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per ulteriori informazioni, vedere [crea un Visual C &#35; Progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

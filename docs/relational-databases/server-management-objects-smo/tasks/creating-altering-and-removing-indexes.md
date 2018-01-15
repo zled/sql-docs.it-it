@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: indexes [SMO]
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2175136e512a6c1e4c4759f073445f5ca5234a0e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d20eca4b6c27aee5f19b2b15cf51c374874d4415
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Creazione, modifica e rimozione di indici
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Nel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gerarchia Management Objects (SMO), gli indici sono rappresentati dal <xref:Microsoft.SqlServer.Management.Smo.Index> oggetto. Le colonne indicizzate sono rappresentate da una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> rappresentati dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Nella gerarchia SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) gli indici sono rappresentati dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Index>. Le colonne indicizzate sono rappresentate da una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> rappresentati dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>.  
   
  È possibile creare un indice in una colonna XML specificando la proprietà <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   

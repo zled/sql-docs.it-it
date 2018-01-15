@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 615e7513018ef686be549f10f2d6ae708d6eb6d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dda6526ab21fca7285166dc9c5196eb1d2afa01a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Creazione, modifica e rimozione di schemi
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il <xref:Microsoft.SqlServer.Management.Smo.Schema> oggetto rappresenta un contesto di proprietà per l'oggetto di database. La proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> rappresenta una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.Schema>.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Schema> rappresenta un contesto di proprietà per un oggetto di database. La proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> rappresenta una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.Schema>.  
   
 ## <a name="example"></a>Esempio  
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per ulteriori informazioni, vedere [crea un Visual C &#35; Progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

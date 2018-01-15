@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: 6d54a849630bece0fba6456a516cbd68aecf2eb5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7658d69ae0b59e079e40348962d11fe202a85235
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Eseguire la migrazione di un database di SQL Server da Windows per Linux tramite backup e ripristino
 
@@ -195,6 +195,7 @@ In questa esercitazione è stato descritto come eseguire il backup di un databas
 > * Spostare il file di backup di preparazione del ripristino
 > * Utilizzare **sqlcmd** per eseguire i comandi Transact-SQL
 > * Ripristinare il backup di database con il **RESTORE DATABASE** comando 
+> * Eseguire la query per verificare la migrazione
 
 Successivamente, è possibile esplorare altri scenari di migrazione per SQL Server in Linux. 
 

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud
 È ora possibile spostare pacchetti e i carichi di lavoro di SQL Server Integration Services (SSIS) nel cloud di Azure.
@@ -54,7 +54,7 @@ Quando si esegue il provisioning di SSIS IR è possibile applicare la scalabilit
 
 Data Factory supporta anche altri tipi di runtime di integrazione. Per altre informazioni sul runtime di integrazione SSIS e altri tipi di runtime di integrazione, vedere [Runtime di integrazione in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 Le funzionalità descritte in questo articolo non richiedono SQL Server 2017 o SQL Server 2016.
 
 Le funzionalità richiedono le seguenti versioni di SQL Server Data Tools (SSDT):
@@ -68,7 +68,7 @@ Per altre informazioni sui prerequisiti in Azure, vedere [Distribuire pacchetti 
 
 ## <a name="ssis-features-on-azure"></a>Funzionalità SSIS in Azure
 
-Quando si esegue il provisioning di un'istanza del database SQL per ospitare SSISDB, vengono installati anche Azure Feature Pack per SSIS e le funzionalità di accesso ridistribuibili. Questi componenti offrono la connettività ai file di **Excel e Access** e a varie origini dati di **Azure**, oltre alle origini dati supportate dai componenti predefiniti. Al momento non è possibile installare **componenti di terze parti** per SSIS, inclusi i componenti di terze parti da Microsoft, ad esempio i componenti di Attunity e SAP BI.
+Quando si esegue il provisioning di un'istanza del database SQL per ospitare SSISDB, vengono installati anche Azure Feature Pack per SSIS e le funzionalità di accesso ridistribuibili. Questi componenti offrono la connettività ai file di **Excel e Access** e a varie origini dati di **Azure**, oltre alle origini dati supportate dai componenti predefiniti. Al momento non è possibile installare **componenti di terze parti** per SSIS, inclusi i componenti di terze parti da Microsoft come i componenti Oracle e Teradata di Attunity e SAP BI.
 
 Il **nome del database SQL** che ospita SSISDB diventa la prima parte del nome in quattro parti da usare quando si distribuiscono e si gestiscono i pacchetti da SSDT e SSMS, `<sql_database_name>.database.windows.net`.
 

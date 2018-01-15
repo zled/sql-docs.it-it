@@ -1,5 +1,5 @@
 ---
-title: Connettersi a origini dati locali e condivisioni file di Azure con autenticazione di Windows | Microsoft Docs
+title: Connettersi a origini dati e condivisioni file con autenticazione di Windows | Microsoft Docs
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0f5e1e2319e58e9013b1f67e8a81efa9a07d556
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b84fdd15fa4a6393b2350aaf75985653b6273f31
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Connettersi a origini dati locali e condivisioni file di Azure con autenticazione di Windows
 In questo articolo viene descritto come configurare il catalogo SSIS nel database SQL di Azure per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati locali e condivisioni file di Azure. È possibile usare l'autenticazione di Windows per connettersi alle origini dati nella stessa rete virtuale del runtime di integrazione SSIS di Azure, sia in locale che nelle macchine virtuali di Azure e in File di Azure.
@@ -80,7 +80,7 @@ Per verificare se è possibile connettersi a un'istanza di SQL Server locale, es
 
 3.  Controllare da SSMS se è possibile connettersi all'istanza di SQL Server locale che si prevede di usare.
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>Prerequisites
 Per connettersi a SQL Server locale da un pacchetto in esecuzione in Azure, è necessario abilitare i prerequisiti seguenti:
 
 1.  In Gestione configurazione SQL Server abilitare il protocollo TCP/IP.

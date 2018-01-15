@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7123c7dde876fb5ec8cceb3088816df9a92360d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd1193331cc9658a4703a39201219896c0e921d0
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Funzionalità di Integration Services supportate dalle edizioni di SQL Server
  Questo argomento illustra i dettagli delle funzionalità di SQL Server Integration Services (SSIS) supportate dalle diverse edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
@@ -63,7 +63,7 @@ SQL Server Evaluation Edition è disponibile per un periodo di valutazione di 18
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Connettori origine dati incorporati|Sì|Sì|||| 
 |Attività e trasformazioni predefinite|Sì|Sì||||  
-|Origine e destinazione ODBC di Attunity|Sì|Sì|||| 
+|Origine e destinazione ODBC |Sì|Sì|||| 
 |Attività e connettori di origine dati di Azure|Sì|Sì||||  
 |Connettori e attività Hadoop/HDFS|Sì|Sì||||  
 |Strumenti di profiling dei dati di base|Sì|Sì|||| 

@@ -18,18 +18,20 @@ helpviewer_keywords:
 - inner exceptions [SMO]
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f566aea6e37a41af0866df53a985f40eabf56c92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3b2041a8a83780c1ef601c9dce6c031ac1b37eb7
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="handling-smo-exceptions"></a>Gestione delle eccezioni SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Nel codice gestito, vengono generate eccezioni quando si verifica un errore. Proprietà e metodi SMO non indicano l'esito positivo o negativo nel valore restituito. Le eccezioni possono invece essere rilevate e gestite da un gestore di eccezioni.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Nel codice gestito vengono generate eccezioni quando si verifica un errore. Proprietà e metodi SMO non indicano l'esito positivo o negativo nel valore restituito. Le eccezioni possono invece essere rilevate e gestite da un gestore di eccezioni.  
   
  In SMO esistono classi di eccezioni diverse. È possibile estrarre informazioni sull'eccezione dalle proprietà dell'eccezione, ad esempio la proprietà **Message** fornisce un messaggio di testo sull'eccezione.  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/08/2018
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per ulteriori informazioni, vedere [crea un Visual C &#35; Progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Rilevamento di un'eccezione in Visual Basic  
- Questo esempio di codice viene illustrato come utilizzare il **provare... Catch... Infine** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] istruzione per rilevare un'eccezione SMO. Tutte le eccezioni SMO sono di tipo SmoException e sono elencate nella documentazione di riferimento di SMO. La sequenza di eccezioni interne viene visualizzata per mostrare la radice dell'errore. Per ulteriori informazioni, vedere il [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] documentazione di .NET.  
+ Questo esempio di codice viene illustrato come utilizzare il **provare... Catch... Infine** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] istruzione per rilevare un'eccezione SMO. Tutte le eccezioni SMO sono di tipo SmoException e sono elencate nella documentazione di riferimento di SMO. La sequenza di eccezioni interne viene visualizzata per mostrare la radice dell'errore. Per ulteriori informazioni, vedere la documentazione di [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.

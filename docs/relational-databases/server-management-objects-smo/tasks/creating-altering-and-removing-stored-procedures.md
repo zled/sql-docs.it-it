@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: stored procedures [SMO]
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12c37fba399ab82757303b58a2e1536c3170f67d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 22ab7b6ab6ee687a0d5dba1c37be5f72f308b117
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Creazione, modifica e rimozione di stored procedure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), stored procedure sono rappresentate dal <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> oggetto.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), stored procedure sono rappresentate dal <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> oggetto.  
   
  Creazione di un <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> SMO richiede l'impostazione di <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> proprietà per il [!INCLUDE[tsql](../../../includes/tsql-md.md)] script che definisce la stored procedure. I parametri richiedono il prefisso @ e devono essere creati singolarmente utilizzando oggetti <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> e aggiungendoli alla raccolta  <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   

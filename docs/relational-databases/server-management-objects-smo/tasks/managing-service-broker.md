@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: Service Broker [SMO]
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 211edf4746ab07cd65ce189c4279e91e1e956a0d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 80784d2a5df6d8bd6a2514da6451da6496688ed4
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-service-broker"></a>Gestione di Service Broker
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In SMO la [!INCLUDE[ssSB](../../../includes/sssb-md.md)] oggetti vengono individuati nel **Microsoft.SqlServer.Management.Smo.Broker** spazio dei nomi, che richiede un riferimento a Microsoft.SqlServer.Smo.dll. Un riferimento a Microsoft.SqlServer.ServiceBrokerEnum.dll è richiesto anche per supportare informazioni sulle classi.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  In SMO la [!INCLUDE[ssSB](../../../includes/sssb-md.md)] oggetti vengono individuati nel **Microsoft.SqlServer.Management.Smo.Broker** spazio dei nomi, che richiede un riferimento a Microsoft.SqlServer.Smo.dll. Un riferimento a Microsoft.SqlServer.ServiceBrokerEnum.dll è richiesto anche per supportare informazioni sulle classi.  
   
  SMO fornisce un set di oggetti [!INCLUDE[ssSB](../../../includes/sssb-md.md)] che permettono la gestione a livello di programmazione (DDL) dell'implementazione di [!INCLUDE[ssSB](../../../includes/sssb-md.md)], inclusa la definizione di tipi di messaggio, contratti, code e servizi. Poiché SMO è un strumento di gestione che non è destinato alla modifica dei dati, l'invio e la ricezione di messaggi [!INCLUDE[ssSB](../../../includes/sssb-md.md)] non sono supportati in SMO.  
   
