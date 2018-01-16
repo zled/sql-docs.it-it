@@ -26,6 +26,7 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 ## [7_Distribuire un cluster Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md)
 ## [8_Creare e configurare gruppi di disponibilità](sql-server-linux-create-availability-group.md)
+## [9_Configurare in Kubernetes per una disponibilità elevata](tutorial-sql-server-containers-kubernetes.md)
 
 # Concetti
 ## Install
@@ -85,11 +86,11 @@
 #### [Creare solo per la scalabilità in lettura]()
 ##### [Configurare AG](sql-server-linux-availability-group-configure-rs.md)
 
-## [Sicurezza](sql-server-linux-security-overview.md)
+## [Security](sql-server-linux-security-overview.md)
 ### [Introduzione alle funzionalità di sicurezza](sql-server-linux-security-get-started.md)
 ### [Crittografia delle connessioni](sql-server-linux-encrypted-connections.md)
 
-## Prestazioni
+## restazioni
 ### [Procedure consigliate](sql-server-linux-performance-best-practices.md)
 ### [Introduzione alle funzionalità relative alle prestazioni](sql-server-linux-performance-get-started.md)
 
