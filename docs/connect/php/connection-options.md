@@ -1,7 +1,7 @@
 ---
 title: Le opzioni di connessione | Documenti Microsoft
 ms.custom: 
-ms.date: 07/14/2017
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,31 +17,34 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4fcec3597676efa5feebc3fdb562a6dd19878278
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3fdc9277c24dc7fdec267c593862aa8ca45802b8
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="connection-options"></a>Opzioni di connessione
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In questo argomento sono elencate le opzioni che sono consentite nella matrice associativa (quando si utilizza [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) nel driver SQLSRV) o le parole chiave che sono consentite nel nome dell'origine dati (dsn) (quando si utilizza [PDO::__construct ](../../connect/php/pdo-construct.md) nel driver PDO_SQLSRV).  
 
-|Key|Valore|Descrizione|Valore predefinito|  
+|Key|Valore|Description|Valore predefinito|  
 |-------|---------|---------------|-----------|  
 |APP|String|Specifica il nome dell'applicazione usato nella traccia.|Nessun valore impostato.|  
 |ApplicationIntent|String|Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. I valori possibili sono ReadOnly e ReadWrite.<br /><br />Per altre informazioni sul supporto dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] per [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vedere [PHP Driver for SQL Server Support for High Availability, Disaster Recovery (Driver PHP per il supporto di SQL Server per il ripristino di emergenza a disponibilità elevata)](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|  
 |AttachDBFileName|String|Specifica il file di database a cui associare il server.|Nessun valore impostato.|  
 |Autenticazione|Una delle seguenti stringhe:<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|Specifica la modalità di autenticazione.|Non è impostata.|  
+|CEKeystoreProvider<br />CEKeystoreName<br />CEKeystoreEncryptKey|String|Specificare il percorso, il nome e la chiave di crittografia per un Provider dell'archivio chiavi personalizzato per la funzionalità sempre crittografato. Per configurare correttamente il Provider dell'archivio chiavi personalizzato quando viene stabilita una connessione, è necessario impostare tutti i tre valori. Per ulteriori informazioni, vedere [abilitare Always Encrypted in un'applicazione PHP](../../connect/php/enabling-always-encrypted-php-application.md).|Nessun valore impostato.|
 |CharacterSet<br /><br />(non supportato nel driver PDO_SQLSRV)|String|Specifica il set di caratteri usato per l'invio di dati al server.<br /><br />I valori possibili sono SQLSRV_ENC_CHAR e UTF-8. Per altre informazioni, vedere [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
+|ColumnEncryption|**Abilitato** o **disabilitato**|Specifica se la funzionalità Always Encrypted è abilitata o meno. Per ulteriori informazioni, vedere [abilitare Always Encrypted in un'applicazione PHP](../../connect/php/enabling-always-encrypted-php-application.md).|Disabilitata|  
 |ConnectionPooling|1 o **true** per il pool di connessioni attivato.<br /><br />0 o **false** per il pool di connessioni disattivato.|Specifica se la connessione viene assegnata da un pool di connessioni (1 o **true**) o non (0 o **false**).<sup> 1</sup>|**true** (1)|  
 |Database|String|Specifica il nome del database in uso per la connessione stabilita<sup>2</sup>.|Il database predefinito per l'accesso in uso.|  
+|Driver|String|Specifica di Microsoft ODBC driver utilizzato per comunicare con SQL Server.<br /><br />I valori possibili sono:<br />Driver ODBC 17 per SQL Server<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (solo Windows).|Quando non viene specificata la parola chiave Driver, Microsoft Drivers for PHP per SQL Server tenta di trovare l'esistenza dei driver Microsoft ODBC supportati nel sistema, a partire con la versione più recente di ODBC e così via.|  
 |Encrypt|1 o **true** per la crittografia attivata.<br /><br />0 o **false** per la crittografia disattivata.|Specifica se la comunicazione con SQL Server è crittografata (1 o **true**) o non crittografata (0 o **false**)<sup>3</sup>.|**false** (0)|  
 |Failover_Partner|String|Specifica il server e l'istanza di mirroring del database (se abilitato e configurato) da usare quando il server primario non è disponibile.<br /><br />L'uso di Failover_Partner con MultiSubnetFailover presenta alcune limitazioni. Per altre informazioni, vedere [PHP Driver for SQL Server Support for High Availability, Disaster Recovery (Driver PHP per il supporto di SQL Server per il ripristino di emergenza a disponibilità elevata)](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Nessun valore impostato.|  
-|LoginTimeout|Integer (SQLSRV driver<br /><br />String (PDO_SQLSRV driver|Specifica il numero di secondi trascorsi i quali il tentativo di connessione ha esito negativo.|Nessun timeout.|  
+|LoginTimeout|Integer (driver SQLSRV)<br /><br />Stringa (driver PDO_SQLSRV)|Specifica il numero di secondi trascorsi i quali il tentativo di connessione ha esito negativo.|Nessun timeout.|  
 |MultipleActiveResultSets|1 o **true** per usare più set di risultati attivi.<br /><br />0 o **false** per disabilitare più set di risultati attivi.|Disabilita o abilita in modo esplicito il supporto di più set di risultati attivi (MARS).<br /><br />Per ulteriori informazioni, vedere [procedura: disabilitare più set di risultati attivi &#40; MARS &#41; ](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).|true (1)|  
-|MultiSubnetFailover|String|Specificare sempre **multiSubnetFailover = yes** quando ci si connette al listener del gruppo di disponibilità di un [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] gruppo di disponibilità o un [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] istanza Cluster di Failover. **multiSubnetFailover = yes** configura [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] per fornire un rilevamento più veloce e connessione al server attualmente attivo. I valori possibili sono Yes e No.<br /><br />Per altre informazioni sul supporto dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] per [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vedere [PHP Driver for SQL Server Support for High Availability, Disaster Recovery (Driver PHP per il supporto di SQL Server per il ripristino di emergenza a disponibilità elevata)](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|No|  
+|MultiSubnetFailover|String|Specificare sempre **multiSubnetFailover = yes** quando ci si connette al listener del gruppo di disponibilità di un [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] gruppo di disponibilità o un [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] istanza Cluster di Failover. **multiSubnetFailover = yes** configura [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] per fornire un rilevamento più veloce e connessione al server attualmente attivo. I valori possibili sono Yes e No.<br /><br />Per altre informazioni sul supporto dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] per [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vedere [PHP Driver for SQL Server Support for High Availability, Disaster Recovery (Driver PHP per il supporto di SQL Server per il ripristino di emergenza a disponibilità elevata)](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|no|  
 |PWD<br /><br />(non supportato nel driver PDO_SQLSRV)|String|Specifica la password associata all'ID utente da utilizzare durante la connessione con autenticazione di SQL Server<sup>4</sup>.|Nessun valore impostato.|  
 |QuotedId|1 o **true** per utilizzare le regole SQL-92.<br /><br />0 o **false** per usare le regole precedenti.|Specifica se utilizzare le regole SQL-92 per gli identificatori delimitati (1 o **true**) o per utilizzare le regole Transact-SQL legacy (0 o **false**).|**true** (1)|  
 |ReturnDatesAsStrings<br /><br />(non supportato nel driver PDO_SQLSRV)|1 o **true** per restituire i tipi di data e ora come stringhe.<br /><br />0 o **false** per restituire i tipi di data e ora come tipi **DateTime** PHP.|Recupera i tipi di data e ora (datetime, date, time, datetime2 e datetimeoffset) come stringhe o come tipi PHP. Quando si usa il driver PDO_SQLSRV, le date vengono restituite come stringhe. Il driver PDO_SQLSRV non ha alcun **datetime** tipo.<br /><br />Per altre informazioni, vedere [Procedura: Recuperare il tipo data e ora come stringhe usando il driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).|**false**|  

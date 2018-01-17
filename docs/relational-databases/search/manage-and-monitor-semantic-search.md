@@ -20,14 +20,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d318e818800a2f1cf8591ba6f35f31d55b0cd564
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f6613fd3036a141f018082f988aa4c3365d0325b
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gestire e monitorare la ricerca semantica
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Illustra il processo di indicizzazione semantica e le attività correlate alla gestione e al monitoraggio degli indici.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Illustra il processo di indicizzazione semantica e le attività correlate alla gestione e al monitoraggio degli indici.  
   
 ##  <a name="HowToMonitorStatus"></a> Verificare lo stato dell'indicizzazione semantica  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>Verifica del completamento della prima fase dell'indicizzazione semantica

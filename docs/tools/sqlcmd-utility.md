@@ -33,13 +33,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 711ac727b68dbd6ee3c1697e7933ead413919a29
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 44464415177cffc2e09c5218ecd9440801be7d96
+ms.sourcegitcommit: 0c6d858a507bd38b9b06eb7676736de5d38a1c87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="sqlcmd-utility"></a>sqlcmd
+# <a name="sqlcmd-utility"></a>Utilità sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Per SQL Server 2014 e inferiore, vedere [utilità sqlcmd](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
@@ -49,6 +49,8 @@ ms.lasthandoff: 12/21/2017
   
 > [!NOTE]
 > Le versioni più recenti dell'utilità sqlcmd sono disponibili come versione Web nell' [Area download](http://go.microsoft.com/fwlink/?LinkID=825643). È necessario versione 13.1 o superiore per il supporto di Always Encrypted (`-g`) e l'autenticazione di Azure Active Directory (`-G`). Nel computer potrebbero essere installate diverse versioni di sqlcmd.exe. Assicurarsi di usare la versione corretta. Per determinare la versione, eseguire `sqlcmd -?`.
+
+L'utilità sqlcmd dalla Shell di Cloud di Azure è possibile pre-installata per impostazione predefinita: [ ![avviare Shell Cloud](https://shell.azure.com/images/launchcloudshell.png "avviare Shell Cloud")](https://shell.azure.com)
 
   Per eseguire istruzioni sqlcmd in SSMS, selezionare la modalità SQLCMD dal menu a discesa Query nella parte superiore della struttura di navigazione.  
   
@@ -214,14 +216,14 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  Se l'opzione **-P** è seguita da più di un argomento, viene generato un messaggio di errore e il programma viene chiuso.  
   
- **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
+ **-S** [*protocollo*:]*server*[**\\***instance_name*] [**, * **porta*]  
  Specifica l'istanza di SQL Server a cui connettersi. Imposta la variabile di scripting SQLCMDSERVER di **sqlcmd** .  
   
- Specificare *nome_server* per connettersi all'istanza predefinita di SQL Server nel computer server. Specificare *nome_server* [  **\\**  *instance_name* ] per connettersi a un'istanza denominata di SQL Server nel computer server. Se si specifica alcun server, **sqlcmd** si connette all'istanza predefinita di SQL Server nel computer locale. Questa opzione è necessaria per l'esecuzione di **sqlcmd** da un computer remoto in rete.  
+ Specificare *nome_server* per connettersi all'istanza predefinita di SQL Server nel computer server. Specificare *nome_server* [**\\* * * instance_name* ] per connettersi a un'istanza denominata di SQL Server nel computer server. Se si specifica alcun server, **sqlcmd** si connette all'istanza predefinita di SQL Server nel computer locale. Questa opzione è necessaria per l'esecuzione di **sqlcmd** da un computer remoto in rete.  
   
  *protocol* può essere **tcp** (TCP/IP), **lpc** (memoria condivisa) o **np** (named pipe).  
   
- Se non si specifica un *nome_server* [  **\\**  *instance_name* ] quando si avvia **sqlcmd**, SQL Server cerca e Usa la variabile di ambiente SQLCMDSERVER.  
+ Se non si specifica un *nome_server* [**\\* * * instance_name* ] quando si avvia **sqlcmd**, SQL Server cerca e Usa l'ambiente SQLCMDSERVER variabile.  
   
 > [!NOTE]  
 >  La variabile di ambiente OSQLSERVER è disponibile per motivi di compatibilità con le versioni precedenti. La variabile di ambiente SQLCMDSERVER è prioritaria rispetto alla variabile di ambiente OSQLSERVER. Questo significa che è possibile usare **sqlcmd** e **osql** insieme senza creare conflitti e che gli script precedenti continueranno a funzionare correttamente.  
@@ -247,7 +249,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Opzioni di input/output**  
-  **-f** *codepage* | **i:***codepage*[**,o:***codepage*] | **o:***codepage*[**,i:***codepage*]  
+  **-f** *codepage* | **ricerca per categorie: * **codepage*[**, /o:***codepage *] | **/o: * **codepage*[**, ricerca per categorie:***codepage *]  
  Specifica le tabelle codici di input e output. Il numero specificato per codepage è un valore numerico che indica una tabella codici di Windows installata.  
   
  Regole di conversione delle tabelle codici  
@@ -262,7 +264,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  Immettere **chcp** al prompt dei comandi per verificare la tabella codici di Cmd.exe.  
   
- **-i** *input_file*[**,***input_file2*...]  
+ **-i** *input_file*[**, * * * input_file2*...]  
  Identifica il file che include un batch di istruzioni SQL o stored procedure. È possibile specificare più file che verranno letti ed elaborati nell'ordine in cui sono stati indicati. Non utilizzare alcuno spazio tra i nomi di file. **sqlcmd** verificherà prima di tutto che tutti i file specificati esistano. Se uno o più file non esistono, l'utilità **sqlcmd** viene chiusa. Le opzioni -i e -Q/-q si escludono a vicenda.  
   
  Percorsi di esempio:  
@@ -275,7 +277,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  È necessario racchiudere tra virgolette i percorsi dei file contenenti spazi.  
   
- Questa opzione può essere usata più di una volta: **-i***input_file* **-I***I input_file.*  
+ Questa opzione può essere utilizzata più volte: **-i * * * input_file* **-I * * * I input_file.*  
   
  **-o** *output_file*  
  Identifica il file che riceve l'output di **sqlcmd**.  
@@ -338,13 +340,13 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  Se insieme a questa opzione si specifica **-b** , l'utilità **sqlcmd** viene chiusa in caso di errore. L'opzione**-b** è descritta più avanti in questo argomento.  
   
  **-t** *query_timeout*  
- Specifica il numero di secondi prima del timeout del comando o dell'istruzione SQL. Questa opzione imposta la variabile di scripting SQLCMDSTATTIMEOUT di **sqlcmd** . Se per *time_out* non viene specificato un valore, non si verifica il timeout del comando. Il valore di *query**time_out* deve essere un numero compreso tra 1 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, **sqlcmd** genera un messaggio di errore.  
+ Specifica il numero di secondi prima del timeout del comando o dell'istruzione SQL. Questa opzione imposta la variabile di scripting SQLCMDSTATTIMEOUT di **sqlcmd** . Se per *time_out* non viene specificato un valore, non si verifica il timeout del comando. Il *query * * time_out* deve essere un numero compreso tra 1 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, **sqlcmd** genera un messaggio di errore.  
   
 > [!NOTE]  
 >  Il valore di timeout effettivo può variare di diversi secondi rispetto al valore specificato per *time_out* .  
   
  **-vvar =**  *value*[ **var =** *value*...]  
- Crea una variabile di scripting di **sqlcmd**che può essere usata in uno script **sqlcmd** . Se il valore contiene spazi, racchiuderlo tra virgolette. È possibile specificare più valori ***var***=**"***values***"** . Se in uno dei valori specificati è incluso un errore, l'utilità **sqlcmd** genera un messaggio di errore e viene chiusa.  
+ Crea una variabile di scripting di **sqlcmd**che può essere usata in uno script **sqlcmd** . Se il valore contiene spazi, racchiuderlo tra virgolette. È possibile specificare più ***var***=**"***valori***"** valori. Se in uno dei valori specificati è incluso un errore, l'utilità **sqlcmd** genera un messaggio di errore e viene chiusa.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -505,24 +507,24 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
 ## <a name="sqlcmd-scripting-variables"></a>Variabili di scripting di sqlcmd  
   
-|Variabile|Opzione correlata|L/S|Default|  
+|Variabile|Opzione correlata|L/S|Valore predefinito|  
 |--------------|--------------------|----------|-------------|  
-|SQLCMDUSER|-U|R|""|  
+|SQLCMDUSER|-U|L|""|  
 |SQLCMDPASSWORD|-P|--|""|  
-|SQLCMDSERVER|-S|R|"DefaultLocalInstance"|  
-|SQLCMDWORKSTATION|-H|R|"ComputerName"|  
-|SQLCMDDBNAME|-d|R|""|  
+|SQLCMDSERVER|-S|L|"DefaultLocalInstance"|  
+|SQLCMDWORKSTATION|-H|L|"ComputerName"|  
+|SQLCMDDBNAME|-d|L|""|  
 |SQLCMDLOGINTIMEOUT|-l|L/S|"8" (secondi)|  
 |SQLCMDSTATTIMEOUT|-t|L/S|"0" = attesa illimitata|  
 |SQLCMDHEADERS|-H|L/S|"0"|  
 |SQLCMDCOLSEP|-S|L/S|" ".|  
 |SQLCMDCOLWIDTH|-w|L/S|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
+|SQLCMDPACKETSIZE|-A|L|"4096"|  
 |SQLCMDERRORLEVEL|-M|L/S|0|  
 |SQLCMDMAXVARTYPEWIDTH|-y|L/S|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|L/S|"0" = numero illimitato|  
 |SQLCMDEDITOR||L/S|"edit.com"|  
-|SQLCMDINI||R|""|
+|SQLCMDINI||L|""|
 |SQLCMDUSEAAD  | -G | L/S | "" |  
   
  Le variabili SQLCMDUSER, SQLCMDPASSWORD e SQLCMDSERVER vengono impostate quando viene usato **:Connect** .  
@@ -576,7 +578,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  Stampa il contenuto della cache dell'istruzione.  
   
  **Variabili**  
-  **:Setvar** \<**var**> [ **"***value***"** ]  
+  **: Setvar** \< **var**> [ **"***valore***"** ]  
  Definisce le variabili di scripting di **sqlcmd** . Il formato delle variabili di scripting è il seguente: `$(VARNAME)`.  
   
  I nomi delle variabili non fanno distinzione tra maiuscole e minuscole.  
@@ -637,12 +639,12 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  [**:**] **QUIT**  
  Provoca la chiusura di **sqlcmd** .  
   
- [**:**] **EXIT**[ **(***statement***)** ]  
+ [**:**] **Uscita**[ **(***istruzione***)** ]  
  Consente di usare il risultato di un'istruzione SELECT come valore restituito da **sqlcmd**. Se numerica, la prima colonna dell'ultima riga di risultati viene convertita in un valore integer di 4 byte (long). MS-DOS passa il byte di ordine inferiore al processo padre o al livello di errore del sistema operativo. Windows 200x passa l'intero valore intero di 4 byte. La sintassi è:  
   
  `:EXIT(query)`  
   
- Ad esempio  
+ Esempio:  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -668,7 +670,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  L'utilità esegue il batch in cui è inclusa la query e quindi viene chiusa dopo aver restituito i risultati della query.  
   
- Se in uno script **sqlcmd** si usa RAISERROR e si verifica una condizione con stato 127, l'utilità **sqlcmd** viene chiusa e restituisce al client l'ID di messaggio. Ad esempio  
+ Se in uno script **sqlcmd** si usa RAISERROR e si verifica una condizione con stato 127, l'utilità **sqlcmd** viene chiusa e restituisce al client l'ID di messaggio. Esempio:  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -676,7 +678,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  I valori restituiti, -1 e -99 sono riservati da SQL Server. **sqlcmd** definisce i valori restituiti aggiuntivi seguenti:  
   
-|Valori restituiti|Description|  
+|Valori restituiti|Descrizione|  
 |-------------------|-----------------|  
 |-100|Si è verificato un errore prima di selezionare il valore restituito.|  
 |-101|Selezionando il valore restituito non si sono trovate righe.|  
@@ -687,7 +689,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  **Comandi vari**  
   **:r \<** *filename***>**  
- Analizza le istruzioni Transact-SQL aggiuntive e **sqlcmd** comandi dal file specificato da  **\<**  *filename***>**nella cache dell'istruzione.  
+ Analizza le istruzioni Transact-SQL aggiuntive e **sqlcmd** comandi dal file specificato da  **\< ***filename***>**nell'istruzione cache.  
   
  Se il file contiene istruzioni Transact-SQL che non sono seguite da **passare**, è necessario immettere **passare** nella riga che segue **: r**.  
   
@@ -702,7 +704,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  **:Serverlist**  
  Elenca i server configurati localmente e i nomi dei server che trasmettono in rete tramite broadcast.  
   
- **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **: Connessione***nome_server*[**\\* * * instance_name*] [-l *timeout*] [-U *nome_utente* [-P *password*]]    
  Si connette a un'istanza di SQL Server. e inoltre chiude la connessione corrente.  
   
  Opzioni di timeout:  
@@ -729,7 +731,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  `:connect $(myservername) $(myusername)`  
   
  [**:**] **!!**< *comando*>  
- Esegue i comandi del sistema operativo. Per eseguire un comando del sistema operativo, digitare due punti esclamativi all'inizio della riga (**!!**) seguiti dal comando del sistema operativo. Ad esempio  
+ Esegue i comandi del sistema operativo. Per eseguire un comando del sistema operativo, digitare due punti esclamativi all'inizio della riga (**!!**) seguiti dal comando del sistema operativo. Esempio:  
   
  `:!! Dir`  
   
@@ -745,7 +747,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 ### <a name="sqlcmd-file-names"></a>Nomi di file per sqlcmd  
  È possibile specificare i file di input di**sqlcmd** con l'opzione **-i** o il comando **:r** . I file di output possono essere specificati con l'opzione **-o** oppure con i comandi **:Error**, **:Out** e **:Perftrace** . Di seguito vengono illustrate alcune linee guida per l'utilizzo di tali file:  
   
--   **:Error**, **:Out** e **:Perftrace** è consigliabile usare valori **\<***filename***>**distinti. Se viene usato lo stesso valore **\<***filename***>** , è possibile che gli input di tali comandi vengano confusi.  
+-   **: Errore**, **: Out** e **: Perftrace** deve utilizzare separato  **\< ***filename***>**. Se lo stesso  **\< ***filename*** >**  è utilizzato, gli input dai comandi che vengano confusi.  
   
 -   Se un file di input che si trova in un server remoto viene chiamato da **sqlcmd** in un computer locale e contiene un percorso di file con unità come :out c:\OutputFile.txt, il file di output verrà creato nel computer locale e non nel server remoto.  
   
