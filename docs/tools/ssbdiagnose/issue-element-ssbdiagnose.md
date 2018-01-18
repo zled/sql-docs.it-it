@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb73030cc1a2788a30deea03da2892351e614d2c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e4f82ff987d465b6dc765d06b83652e398069274
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="issue-element-ssbdiagnose"></a>Elemento Issue (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Segnala un problema che è stato trovato il **ssbdiagnose** utilità. Nel file di output XML di **ssbdiagnose** è presente un solo elemento Issue per ogni problema segnalato.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|attribute|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**type**|Identifica la categoria del problema segnalato dall'elemento Issue:<br /><br /> **"Diagnosis"** segnala un problema di configurazione rilevato quando si analizza una configurazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> **"Problem"** segnala un problema che ha impedito a **ssbdiagnose** di completare l'analisi. Correggere il problema ed eseguire di nuovo **ssbdiagnose**.<br /><br /> **"Event"** segnala un evento di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] rilevato quando si esegue un controllo **-RUNTIME** . Gli eventi vengono segnalati solo se è specificata l'opzione **-SHOWEVENTS** .|  
 |**codice**|Identifica il numero di errore relativo al messaggio.|  
@@ -56,18 +56,18 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**string**, lunghezza illimitata.|  
-|**Value**|Restituisce il testo del messaggio di errore.|  
+|**Valore**|Restituisce il testo del messaggio di errore.|  
 |**Occorrenza**|Una volta per ogni errore segnalato.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento DiagnosticInformation &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
-|**Elementi figlio**|None|  
+|**Elemento padre**|[Elemento DiagnosticInformation &#40; ssbdiagnose &#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
+|**Elementi figlio**|Nessuno|  
   
 ## <a name="example"></a>Esempio  
  Questo elemento segnala un errore 1102 per un database che non dispone di una chiave master, in cui l'errore è stato rilevato quando è stata analizzata una configurazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
@@ -77,6 +77,6 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilità ssbdiagnose &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+ [Utilità ssbdiagnose &#40; Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   

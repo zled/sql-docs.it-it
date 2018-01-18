@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15243df46fad807a3078c9dfcd2c9043670ab05f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 91141f2ae083baf9792e4de9248de488b4146d07
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Proprietà di SQL Server (scheda Parametri di avvio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilizzare questa finestra di dialogo per aggiungere o rimuovere i parametri di avvio per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I parametri di avvio possono avere un effetto significativo sulle prestazioni di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Prima di aggiungere o modificare i parametri di avvio, vedere l'argomento "Utilizzo delle opzioni di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
  Per rimuovere un parametro, selezionarlo e quindi fare clic su **Rimuovi**.  
   
 ## <a name="parameter-format"></a>Formato dei parametri  
- Non inserire un separatore tra parametri. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione aggiunge automaticamente il separatore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione applica i requisiti dei parametri seguenti.  
+ Non inserire un separatore tra parametri. Il separatore viene aggiunto automaticamente in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager consente di applicare i seguenti requisiti di parametro.  
   
 -   Spazi iniziali e finali vengono tagliati da qualsiasi parametro di avvio.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 |Parametro|Breve descrizione|  
 |---------------|-----------------------|  
-|-M|Avvia un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo.|  
+|-m|Avvia un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo.|  
 |-T1204|Restituisce le risorse e i tipi di blocco coinvolti in un deadlock nonché il comando corrente interessato.|  
 |-T1224|Disabilita l'escalation di blocchi in base al numero di blocchi.|  
 |-T3608|Impedisce l'avvio e il recupero automatico dei database ad eccezione del database master in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

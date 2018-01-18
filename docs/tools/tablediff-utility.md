@@ -21,15 +21,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Il **tablediff** utilità viene utilizzato per confrontare i dati in due tabelle per la convergenza e risulta particolarmente utile per la risoluzione dei problemi non convergenza in una topologia di replica. Questa utilità può essere utilizzata dal prompt dei comandi oppure in un file batch per eseguire le attività seguenti:  
@@ -170,7 +170,7 @@ tablediff
   
 ## <a name="return-value"></a>Valore restituito  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Esito positivo|  
 |**1**|Errore critico|  

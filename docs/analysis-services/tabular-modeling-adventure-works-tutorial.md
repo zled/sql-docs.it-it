@@ -1,7 +1,7 @@
 ---
-title: Modellazione tabulare (esercitazione di Adventure Works) | Documenti Microsoft
+title: "(Livello di compatibilità 1200) di modellazione tabulare | Documenti Microsoft"
 ms.custom: 
-ms.date: 04/19/2017
+ms.date: 01/17/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -23,13 +23,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f8c49a838abe5cc6948c59f3d0d67984122136a0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="tabular-modeling-adventure-works-tutorial"></a>Modellazione tabulare (esercitazione di AdventureWorks)
+# <a name="tabular-modeling-1200-compatibility-level"></a>Modellazione tabulare (livello di compatibilità 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Questa esercitazione sono incluse lezioni sulla creazione di un modello tabulare di Analysis Services con il [livello di compatibilità 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) utilizzando [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)e distribuire il modello di Analysis Services server locale o in Azure.  
@@ -66,7 +66,7 @@ Lo scopo delle lezioni è illustrata la creazione di un modello tabulare di base
   
 Questa esercitazione non fornisce lezioni o informazioni sulla gestione di un database di modello tabulare distribuito tramite SQL Server Management Studio o sull'utilizzo di un'applicazione client di creazione di report per la connessione a un modello distribuito per l'esplorazione dei dati del modello.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Per completare questa esercitazione, è necessario utilizzare i seguenti prerequisiti:  
   
 -   La versione più recente di [! INCLUDERE[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md).

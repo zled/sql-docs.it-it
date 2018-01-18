@@ -2,7 +2,7 @@
 title: Scaricare e installare Microsoft SQL operazioni Studio (anteprima) | Documenti Microsoft
 description: Scaricare e installare Microsoft SQL operazioni Studio (preview per Windows, Mac OS o Linux)
 ms.custom: tools|sos
-ms.date: 12/19/2017
+ms.date: 01/17/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a34a03b447e26f072b6c8064cd115333600fef4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0621d5af62b5f5b8b694d47cf16d766215a0c819
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Scaricare e installare Studio operazioni SQL (anteprima)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]viene eseguito in Windows, macOS e Linux.
 
-Scaricare e installare la versione più recente, il *anteprima pubblica di dicembre*:
+Scaricare e installare la versione più recente, il *anteprima pubblica di gennaio*:
 
 |Piattaforma|Scarica|Data di rilascio|
 |:---|:---|:---|
-|Windows|[Programma di installazione](https://go.microsoft.com/fwlink/?linkid=865305)<br>[con estensione zip](https://go.microsoft.com/fwlink/?linkid=865304)|19 dicembre 2017 |
-|MacOS|[con estensione zip](https://go.microsoft.com/fwlink/?linkid=865306)|19 dicembre 2017 |
-|Linux|[DEB](https://go.microsoft.com/fwlink/?linkid=865308)<br>[rpm](https://go.microsoft.com/fwlink/?linkid=865309)<br>[. gz](https://go.microsoft.com/fwlink/?linkid=865307)|19 dicembre 2017|
+|Windows|[Programma di installazione](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|17 gennaio 2018 |
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|17 gennaio 2018 |
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|17 gennaio 2018|
 
 Per informazioni dettagliate sulla versione più recente, vedere il [note sulla versione](release-notes.md).
 
@@ -40,27 +40,27 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 
 **Programma di installazione**
 
-1. Scaricare ed eseguire il [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] programma di installazione per Windows](https://go.microsoft.com/fwlink/?linkid=865305).
+1. Scaricare ed eseguire il [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] programma di installazione per Windows](https://go.microsoft.com/fwlink/?linkid=866480).
 1. Avviare il [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
 **file con estensione zip**
 
-1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP per Windows](https://go.microsoft.com/fwlink/?linkid=865304).
+1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP per Windows](https://go.microsoft.com/fwlink/?linkid=866479).
 2. Individuare il file scaricato e decomprimerlo.
 3. Eseguire `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>Ottenere Studio operazioni SQL (anteprima) per macOS
 
-1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] per macOS](https://go.microsoft.com/fwlink/?linkid=865306).
+1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] per macOS](https://go.microsoft.com/fwlink/?linkid=866481).
 2. Per espandere il contenuto del file zip, fare doppio clic.
 3. Per rendere [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibile nel *Launchpad*, trascinare *sqlops.app* per il *applicazioni* cartella.
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Ottenere Studio operazioni SQL (anteprima) per Linux
 
-1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Linux](https://go.microsoft.com/fwlink/?linkid=865307).
+1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Linux](https://go.microsoft.com/fwlink/?linkid=866482).
 1. Per estrarre il file e avviare [!INCLUDE[name-sos](../includes/name-sos-short.md)], aprire una nuova finestra terminale e digitare i comandi seguenti:
 
    ```bash
@@ -109,7 +109,7 @@ Se è stato installato [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]
 - Windows Server 2012 (64 bit)
 - Windows Server 2008 R2 (64 bit)
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 - macOS 10.13 Sierra elevata
 - macOS 10.12 Sierra
 
@@ -121,7 +121,7 @@ Se è stato installato [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]
 
 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 
 Vedere una delle Guide rapide seguenti per iniziare:
 - [Connetti & Query in SQL Server](quickstart-sql-server.md)

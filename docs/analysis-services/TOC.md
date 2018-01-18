@@ -19,7 +19,7 @@
 ## [Esempi di Analysis Services](analysis-services-samples.md)
 
 # Esercitazioni
-## [Modellazione tabulare (esercitazione di AdventureWorks)](tabular-modeling-adventure-works-tutorial.md)  
+## [Modellazione tabulare (livello di compatibilità 1200)](tabular-modeling-adventure-works-tutorial.md)  
 ### [Lezione 1: Creare un nuovo modello di progetto tabulare](lesson-1-create-a-new-tabular-model-project.md)  
 ### [Lezione 2: Aggiungere dati](lesson-2-add-data.md)  
 ### [Lezione 3: Contrassegna come tabella data](lesson-3-mark-as-date-table.md)  
@@ -36,7 +36,7 @@
 ### [Lezione aggiuntiva: Implementare la sicurezza dinamica mediante i filtri di riga](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [Lezione aggiuntiva: Configurare le proprietà di creazione di report per i report Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [Modellazione multidimensionale (esercitazione di AdventureWorks)](multidimensional-modeling-adventure-works-tutorial.md)  
+## [Modellazione multidimensionale](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [Scenario dell'esercitazione](analysis-services-tutorial-scenario.md)  
 ### [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](install-sample-data-and-projects.md)  
 ### [Lezione 1: Definizione di una vista origine dati in un progetto di Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  
@@ -93,7 +93,7 @@
 ## [Gestire i server](../analysis-services/instances/analysis-services-instance-management.md)
 ## [Eventi di traccia](../analysis-services/trace-events/analysis-services-trace-events.md)
 
-# Sviluppatore
+# Developer
 ## Modelli tabulari
 ### [Livello di compatibilità di programmazione dei modelli tabulari 1200 e superiori](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
 #### [Supporto per TMSL (Tabular Model Scripting Language) in SSMS](tabular-model-scripting-language-tmsl-reference.md)

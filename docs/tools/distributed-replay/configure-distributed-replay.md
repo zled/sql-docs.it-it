@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc41572e269bda127f8d725960944d40acacdfae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a2ded636f3ded5a8821b6675ef5d18c21a31b968
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dettagli di configurazione di Distributed Replay sono specificati in file XML nel controller di riesecuzione distribuita, i client, e in cui è installato lo strumento di amministrazione. ovvero i file seguenti:  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  Nel livello di registrazione specificato nel file di configurazione del controller è inclusa la seguente impostazione:  
   
-|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Description|Valori consentiti|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Livello di registrazione|`<LoggingLevel>`|Specifica il livello di registrazione per il servizio controller.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|No. Per impostazione predefinita, il valore è `CRITICAL`.|  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
  Di seguito vengono indicate le impostazioni specificate nel file di configurazione del client:  
   
-|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Description|Valori consentiti|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Controller|`<Controller>`|Specifica il nome computer del controller. Il client tenterà di registrarsi nell'ambiente Distributed Replay contattando il controller.|È possibile utilizzare "`localhost`" o "`.`" per fare riferimento al computer locale.|No. Per impostazione predefinita, viene effettuato un tentativo di registrazione del client nell'istanza del controller eseguita in locale ("`.`"), se presente.|  
 |Directory di lavoro client|`<WorkingDirectory>`|Percorso locale nel client in cui vengono salvati i file di recapito.<br /><br /> I file inclusi in questa directory vengono sovrascritti alla riproduzione successiva.|Nome di directory completo, che inizia con la lettera di unità.|No. Se non è specificato alcun valore, i file di recapito verranno salvati nello stesso percorso del file di configurazione del client predefinito. Se viene specificato un valore e la cartella non esiste nel client, il servizio client non verrà avviato.|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/21/2017
   
  Le impostazioni di configurazione della pre-elaborazione vengono specificate in elementi XML figli dell'elemento `<PreprocessModifiers>` nel file di configurazione della pre-elaborazione. Sono incluse le seguenti impostazioni:  
   
-|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Description|Valori consentiti|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Inclusione delle attività della sessione di sistema|`<IncSystemSession>`|Indica se le attività della sessione di sistema eseguite durante l'acquisizione verranno incluse durante la riproduzione.|`Yes` &#124; `No`|No. Per impostazione predefinita, il valore è `No`.|  
 |Tempo massimo di inattività|`<MaxIdleTime>`|Fissa il tempo di inattività su un numero assoluto (in secondi).|Numero intero >= -1.<br /><br /> `-1` indica nessuna modifica rispetto al valore originale nel file di traccia originale.<br /><br /> `0` indica che sono in corso una o più attività in un momento specificato.|No. Per impostazione predefinita, il valore è `-1`.|  
@@ -125,9 +125,9 @@ ms.lasthandoff: 12/21/2017
 ### <a name="replayoptions-element"></a>\<ReplayOptions > elemento  
  Di seguito vengono indicate le impostazioni specificate dal file di configurazione della riproduzione nell'elemento `<ReplayOptions>` :  
   
-|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Description|Valori consentiti|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (server di prova)|`<Server>`|Specifica il nome del server e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi.|*server_name*[\\*instance_name*]<br /><br /> Non è possibile utilizzare "`localhost`" o "`.`" per rappresentare l'host locale.|No, se il nome del server è già specificato con il parametro **-s***target server* con l'opzione **replay** dello strumento di amministrazione.|  
+|Istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (server di prova)|`<Server>`|Specifica il nome del server e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi.|*server_name*[\\*instance_name*]<br /><br /> Non è possibile utilizzare "`localhost`" o "`.`" per rappresentare l'host locale.|No, se il nome del server è già specificato tramite il **-s * * * server di destinazione* parametro con il **riprodurre** opzione dello strumento di amministrazione.|  
 |Modalità di sequenza|`<SequencingMode>`|Specifica la modalità utilizzata per la pianificazione degli eventi.|`synchronization` &#124; `stress`|No. Per impostazione predefinita, il valore è `stress`.|  
 |Granularità di scala di stress|`<StressScaleGranularity>`|Specifica se tutte le connessioni nel Servizio Profilo l'Identificatore (SPID) devono essere ridimensionate, insieme (SPID) o indipendentemente (Connessione), in modalità di stress.|SPID &#124; Connessione|Sì. Per impostazione predefinita, il valore è `SPID`.|  
 |Scala del tempo di connessione|`<ConnectTimeScale>`|Viene utilizzata per ridimensionare il tempo di connessione in modalità di stress.|Numero intero compreso tra `1` e `100`.|No. Per impostazione predefinita, il valore è `100`.|  
@@ -140,7 +140,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="outputoptions-element"></a>\<OutputOptions > elemento  
  Di seguito vengono indicate le impostazioni specificate dal file di configurazione della riproduzione nell'elemento `<OutputOptions>` :  
   
-|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Description|Valori consentiti|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Registrazione del conteggio delle righe|`<RecordRowCount>`|Indica se deve essere registrato il conteggio delle righe per ogni set di risultati.|`Yes` &#124; `No`|No. Per impostazione predefinita, il valore è `Yes`.|  
 |Registrazione del set di risultati|`<RecordResultSet>`|Indica se deve essere registrato il contenuto di tutti i set di risultati.|`Yes` &#124; `No`|No. Per impostazione predefinita, il valore è `No`.|  
@@ -171,9 +171,9 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni della riga di comando dello strumento di amministrazione &#40;Utilità Riesecuzione distribuita&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Riesecuzione distribuita di SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Forum di SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Utilizzo della funzionalità Distributed Replay per testare il caricamento SQL Server-parte 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Utilizzo della funzionalità Distributed Replay per testare il caricamento SQL Server - parte 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Utilizzo della funzionalità Distributed Replay per testare il caricamento di SQL Server, seconda parte](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Utilizzo della funzionalità Distributed Replay per testare il caricamento di SQL Server, prima parte](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

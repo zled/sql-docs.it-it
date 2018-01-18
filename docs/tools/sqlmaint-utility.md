@@ -21,15 +21,15 @@ helpviewer_keywords:
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5eb402990dd9859a957c64d8d6bf47f7d2b3213
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlmaint-utility"></a>utilità sqlmaint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il**sqlmaint** utilità consente di eseguire un set specificato di operazioni di manutenzione su uno o più database. Usare l'utilità **sqlmaint** per eseguire controlli DBCC, backup di un database e del relativo log delle transazioni, aggiornare statistiche e ricompilare indici. Tutte le attività di manutenzione dei database generano un report che può essere inviato a un file di testo, un file HTML o un account di posta elettronica specificato. **sqlmaint** esegue i piani di manutenzione dei database creati con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per eseguire i piani di manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi, usare l' [utilità dtexec](../integration-services/packages/dtexec-utility.md).  
@@ -85,8 +85,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Specifica che deve essere restituito il diagramma della sintassi di **sqlmaint** . Questo parametro deve essere utilizzato da solo.  
   
- **-S** *nome_server*[ **\\***instance_name*]  
- Specifica l'istanza di destinazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare *server_name* per connettersi all'istanza predefinita di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] nel server. Specificare *server_name***\\***instance_name* per connettersi a un'istanza denominata del [!INCLUDE[ssDE](../includes/ssde-md.md)] nel server. Se non si specifica alcun server, **sqlmaint** si connette all'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer locale.  
+ **-S** *server_name*[ **\\***instance_name*]  
+ Specifica l'istanza di destinazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare il *nome_server* per connettersi all'istanza predefinita di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] su tale server. Specificare *nome_server***\\***instance_name* per connettersi a un'istanza denominata di [!INCLUDE[ssDE](../includes/ssde-md.md)] su tale server. Se non si specifica alcun server, **sqlmaint** si connette all'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer locale.  
   
  **-U** *login_ID*  
  Specifica l'ID di accesso utilizzato per la connessione al server. Se omesso, **sqlmaint** prova a usare l'autenticazione di Windows [!INCLUDE[msCoName](../includes/msconame-md.md)] . Se *login_ID* contiene caratteri speciali, il valore deve essere racchiuso tra virgolette doppie ("). In caso contrario, le virgolette doppie sono facoltative.  

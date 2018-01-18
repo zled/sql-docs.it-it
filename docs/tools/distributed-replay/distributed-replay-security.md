@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c49b865f8db2b57e95f4c2c5746e1d40090b15d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3779b55923a5fd3ac803060c0ed8990dcffcead8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-replay-security"></a>Sicurezza di Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Prima di installare e utilizzare il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità di riesecuzione distribuita, è necessario rivedere le informazioni di sicurezza importanti in questo argomento. In questo argomento vengono descritti i passaggi per la configurazione della sicurezza post-installazione che è necessario eseguire prima di poter utilizzare Distributed Replay. Questo argomento illustra anche considerazioni importanti sulla protezione dei dati e importanti passaggi relativi alla rimozione.  
@@ -135,7 +135,7 @@ ms.lasthandoff: 12/21/2017
 -   Eliminare qualsiasi file di traccia, intermedio, di recapito e di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzati per i test. I file intermedi e di recapito vengono archiviati nella directory di lavoro rispettivamente nel controller e nel client.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Riesecuzione distribuita di SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

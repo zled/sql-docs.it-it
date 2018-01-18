@@ -15,13 +15,13 @@ ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99cb53df96c3b675274c5940edcf1e9bd4c8516a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 88758300356023e7a97df0b87cce3a44ed06897f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-distributed-replay"></a>Installare Riesecuzione distribuita
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]È possibile installare riesecuzione distribuita in tre modi:  
@@ -163,11 +163,11 @@ ms.lasthandoff: 12/21/2017
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Facoltativo**|Account del servizio per controller di Riesecuzione distribuita.|Vengono controllati l'account e la password|  
 |/CTLRSVCPASSWORD<br /><br /> **Facoltativo**|Password per l'account del servizio controller di Riesecuzione distribuita.|Vengono controllati l'account e la password|  
-|/CTLRSTARTUPTYPE<br /><br /> **Facoltativo**|Tipo di avvio per il servizio controller di Riesecuzione distribuita.|Automatico<br /><br /> Disabilitata<br /><br /> Manual|  
+|/CTLRSTARTUPTYPE<br /><br /> **Facoltativo**|Tipo di avvio per il servizio controller di Riesecuzione distribuita.|Automatic<br /><br /> Disabilitata<br /><br /> Manual|  
 |/CTLRUSERS<br /><br /> **Facoltativo**|Specifica gli utenti che dispongono di autorizzazioni per il servizio controller di Riesecuzione distribuita.|Set di stringhe di account utente in cui vengono utilizzati i caratteri " " (spazio) come delimitatore<br /><br /> **Importante**: quando si configura il servizio controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da utilizzare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:<br /><br /> Account utente di dominio<br /><br /> Account utente locale creato dall'utente<br /><br /> Amministratore<br /><br /> Amministratore<br /><br /> Account virtuale e account del servizio gestito<br /><br /> Servizi di rete, Servizi locali e Sistema<br /><br /> <br /><br /> Nota: gli account di gruppo (locali o di dominio) e gli altri account predefiniti (come Everyone) non sono accettati.|  
 |/CLTSVCACCOUNT<br /><br /> **Facoltativo**|Account del servizio per client Riesecuzione distribuita.|Vengono controllati l'account e la password|  
 |/CLTSVCPASSWORD<br /><br /> **Facoltativo**|Password per l'account del servizio client Riesecuzione distribuita.|Vengono controllati l'account e la password|  
-|/CLTSTARTUPTYPE<br /><br /> **Facoltativo**|Tipo di avvio per il servizio client Riesecuzione distribuita.|Automatico<br /><br /> Disabilitata<br /><br /> Manual|  
+|/CLTSTARTUPTYPE<br /><br /> **Facoltativo**|Tipo di avvio per il servizio client Riesecuzione distribuita.|Automatic<br /><br /> Disabilitata<br /><br /> Manual|  
 |/CLTCTLRNAME<br /><br /> **Facoltativo**|Nome del computer con cui il client comunica per il servizio controller di Riesecuzione distribuita.||  
 |/CLTWORKINGDIR<br /><br /> **Facoltativo**|Directory di lavoro per il servizio client Riesecuzione distribuita.|Percorso valido|  
 |/CLTRESULTDIR<br /><br /> **Facoltativo**|Directory dei risultati per il servizio client Riesecuzione distribuita.|Percorso valido|  
@@ -222,9 +222,9 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisiti relativi a Riesecuzione distribuita](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opzioni della riga di comando dello strumento di amministrazione &#40;Utilità Riesecuzione distribuita&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurare Riesecuzione distribuita](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Riesecuzione distribuita di SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Requisiti relativi a riesecuzione distribuita](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opzioni della riga di comando dello strumento di amministrazione &#40; utilità riesecuzione distribuita &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configurare Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

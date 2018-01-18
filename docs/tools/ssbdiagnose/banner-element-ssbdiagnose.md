@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4da84a33034bc664ddefd264d9346034ac69ba49
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 67483820a6f6b9e0033808df7233d1908002fa69
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="banner-element-ssbdiagnose"></a>Elemento Banner (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Identifica quale utilità ha generato il **ssbdiagnose** file XML di output.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|attribute|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**title**|Identifica l'utilità che ha generato il file di output XML di **ssbdiagnose** .|  
 |**product**|Identifica il prodotto che ha generato il file di output XML di **ssbdiagnose** .|  
@@ -50,18 +50,18 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|nessuna.|  
-|**Valore predefinito**|nessuna.|  
+|**Tipo di dati e lunghezza**|Nessuno|  
+|**Valore predefinito**|Nessuno|  
 |**Occorrenza**|Una volta per ogni file di output XML di **ssbdiagnose** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento DiagnosticInformation &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
-|**Elementi figlio**|nessuna.|  
+|**Elemento padre**|[Elemento DiagnosticInformation &#40; ssbdiagnose &#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
+|**Elementi figlio**|Nessuno|  
   
 ## <a name="example"></a>Esempio  
  Di seguito viene riportato un esempio di un elemento Banner.  
@@ -71,6 +71,6 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilità ssbdiagnose &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+ [Utilità ssbdiagnose &#40; Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   

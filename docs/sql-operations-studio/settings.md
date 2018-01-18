@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2edea069c05e7ac0316042250f336f1a8c455af0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>Impostazioni utente e dell'area di lavoro
 
@@ -47,12 +47,22 @@ Le modifiche alle impostazioni vengono ricaricate da [!INCLUDE[name-sos](../incl
 
 A seconda della piattaforma, il file di impostazioni utente si trova qui:
 
-* **Windows**`%APPDATA%\sqlops\User\settings.json`
-* **Mac**`$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux**`$HOME/.config/sqlops/User/settings.json`
+* **Windows** `%APPDATA%\sqlops\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
+* **Linux** `$HOME/.config/sqlops/User/settings.json`
 
 Il file di impostazione dell'area di lavoro si trova sotto il `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` cartella nel progetto.
 
+## <a name="hot-exit"></a>Uscita a caldo
+
+Operazioni SQL Studio verranno memorizzate le modifiche non salvate per i file quando si esce per impostazione predefinita. Questo è lo stesso come la funzionalità di uscita di frequente in Visual Studio Code.
+
+Per impostazione predefinita, uscita frequente è disattivata. Abilitare l'area uscita modificando il `files.hotExit` impostazione. Per informazioni dettagliate, vedere [Exit a caldo (nella documentazione di Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+
+
+## <a name="tab-color"></a>Colore della scheda
+
+Per semplificare l'identificazione le connessioni che si sta utilizzando, le schede aperte nell'editor possono avere i loro colori impostati in modo che corrisponda il colore del gruppo di Server a cui appartiene la connessione. Per impostazione predefinita, i colori delle schede sono disattivati per impostazione predefinita. Abilitare i colori delle schede modificando il `sql.tabColorMode` impostazione.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

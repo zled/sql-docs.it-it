@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aaa8f844875745aff792771df4085e59f7808a54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fc385ac38ff22a0b07231aa1ae81c332eb91c63f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analizzare query con risultati SHOWPLAN in SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]È possibile aggiungere classi di evento Showplan per una definizione di traccia che causano [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per raccogliere e visualizzare informazioni sul piano di query nella traccia. È inoltre possibile estrarre eventi Showplan dagli altri eventi raccolti nella traccia e salvarli in un file XML distinto.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="showplan-events"></a>Eventi Showplan  
  Nella tabella seguente sono elencati e descritti gli eventi di traccia Showplan.  
   
-|Nome evento|Description|  
+|Nome evento|Descrizione|  
 |----------------|-----------------|  
 |**Performance statistics**|Indica la prima volta che uno Showplan compilato viene inserito nella cache, quando viene ricompilato e quando viene eliminato dalla cache del piano. La colonna **TextData** contiene Showplan in formato XML. Per altre informazioni, vedere [Classe di evento Performance Statistics](../../relational-databases/event-classes/performance-statistics-event-class.md).|  
 |**Showplan All**|Visualizza il piano della query dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguita con dettagli completi sulla compilazione, ad esempio i costi stimati e gli elenchi di colonne. Per altre informazioni, vedere [Classe di evento Showplan All](../../relational-databases/event-classes/showplan-all-event-class.md).|  

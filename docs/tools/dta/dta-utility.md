@@ -23,15 +23,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: "58"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dta-utility"></a>dta - utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il **dta** utilità è la versione del prompt dei comandi di ottimizzazione guidata motore di Database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
@@ -134,7 +134,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** *database_name*  
- Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Ad esempio  
+ Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Esempio:  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -158,7 +158,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*database_name* specificato con l'opzione **–D**||  
 |*owner_name*|**dbo**|*owner_name* deve essere **dbo**. Se si specifica un qualsiasi altro valore, l'esecuzione di **dta** ha esito negativo e viene restituito un errore.|  
-|*table_name*|None||  
+|*table_name*|Nessuno||  
   
  Se si utilizza un file, specificare l'estensione xml, ad esempio TuningLog.xml.  
   
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Specifica i tipi di strutture di progettazione fisica che **dta** deve includere nell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento. Se non si specifica alcun valore, **dta** usa l'argomento predefinito **-fa****IDX**.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
 |IDX_IV|Indici e viste indicizzate.|  
 |IDX|Solo indici.|  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Specifica le strutture di progettazione fisica esistenti che **dta** deve conservare durante la generazione dell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
 |Nessuno|Nessuna struttura esistente.|  
 |ALL|Tutte le strutture esistenti.|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Specifica se le nuove strutture di progettazione fisica, ovvero indici e viste indicizzate, proposte da **dta** devono essere partizionate e definisce la modalità di partizionamento. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
 |Nessuno|Nessun partizionamento.|  
 |FULL|Partizionamento completo (scegliere questo valore per ottimizzare le prestazioni).|  
@@ -231,7 +231,7 @@ dta -d AdventureWorks2012 ...
  Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
   
  **-it** *workload_trace_table_name*  
- Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome viene specificato in formato [*database_name*]**.**[*owner_name*]**.***table_name*.  
+ Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome è specificato nel formato: [*database_name*]**.** [*owner_name*] **. * * * table_name*.  
   
  Nella tabella seguente sono riportati i valori predefiniti per ogni parametro.  
   
@@ -239,7 +239,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|  
 |*database_name*|*database_name* specificato con l'opzione **–D** .|  
 |*owner_name*|**dbo**|  
-|*table_name*|nessuna.|  
+|*table_name*|Nessuno|  
   
 > [!NOTE]  
 >  *owner_name* deve essere **dbo**. Se viene specificato un altro valore, l'esecuzione di **dta** ha esito negativo e viene restituito un errore. È inoltre necessario specificare una tabella o un file del carico di lavoro.  
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Specifica se le strutture di progettazione fisica vengono create online. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
 |OFF|Le strutture di progettazione fisica indicate non possono essere create online.|  
 |ON|Tutte le strutture di progettazione fisica indicate possono essere create online.|  
@@ -306,7 +306,7 @@ In questo caso, DTA verrà usare archivio Query come origine del carico di lavor
  **-rl** *analysis_report_list*  
  Specifica l'elenco dei report di analisi da generare. Nella tabella seguente sono riportati i valori che è possibile specificare per questo argomento.  
   
-|valore|Report|  
+|Valore|Report|  
 |-----------|------------|  
 |ALL|Tutti i report di analisi|  
 |STMT_COST|Report costo istruzioni|  

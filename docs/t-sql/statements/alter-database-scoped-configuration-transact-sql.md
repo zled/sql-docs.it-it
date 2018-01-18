@@ -28,30 +28,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cc17063b8f74e296562a460677121c5ef1c85016
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 9638d94c2bd6f461650b15f96c7a75c95eaeb861
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Questa istruzione consente di alcuni database le impostazioni di configurazione di **singoli database** livello. Questa istruzione è disponibile in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e in SQL Server a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Tali impostazioni sono:  
+  Questa istruzione consente di alcuni database le impostazioni di configurazione di **singoli database** livello. Questa istruzione è disponibile in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Tali impostazioni sono:  
   
 - Cancellare la cache delle procedure.  
-  
 - Impostare il parametro MAXDOP su un valore arbitrario (1,2,...) per il database primario in base a ciò che è adatto per un particolare database e imposta un valore diverso (ad esempio, 0) per tutti i database secondari usati di (ad esempio per le query di report).  
-  
 - Impostare il modello di stima della cardinalità di Query Optimizer su un livello di compatibilità, indipendentemente dal database.  
-  
 - Abilitare o disabilitare l'analisi dei parametri a livello di database.
-  
 - Abilitare o disabilitare gli hotfix di ottimizzazione query a livello di database.
-
 - Abilitare o disabilitare la cache delle identità a livello di database.
-
-- Abilitare o disabilitare uno stub del piano compilato per essere memorizzati nella cache quando un batch viene compilato per la prima volta. 
+- Abilitare o disabilitare uno stub del piano compilato per essere memorizzati nella cache quando un batch viene compilato per la prima volta.    
   
  ![icona di collegamento](../../database-engine/configure-windows/media/topic-link.gif "icona collegamento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -145,13 +139,13 @@ Abilita o disabilita la cache delle identità a livello di database. Il valore p
 > [!NOTE] 
 > Questa opzione può essere impostata solo per il database primario. Per ulteriori informazioni, vedere [colonne identity](create-table-transact-sql-identity-property.md).  
 
-OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON | **OFF** }  
+OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
 
 **Si applica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 Abilita o disabilita un stub del piano compilato per essere memorizzati nella cache quando un batch viene compilato per la prima volta. Il valore predefinito è OFF. Dopo la configurazione con ambito database che optimize_for_ad_hoc_workloads è abilitato per un database, uno stub del piano compilato verrà archiviata nella cache quando un batch viene compilata per la prima volta. Gli stub piano avere un footprint di memoria più piccolo rispetto alle dimensioni del piano compilato completo.  Se un batch viene compilato o eseguito di nuovo, lo stub del piano compilato verrà rimosso e sostituito con un piano compilato completo.
 
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  È necessario modificare qualsiasi configurazione di ambito DATABASE   
 nel database. Questa autorizzazione può essere concessa da un utente con autorizzazione CONTROL per un database.  
   
@@ -163,6 +157,8 @@ nel database. Questa autorizzazione può essere concessa da un utente con autori
  Per le query di nome 3 parti, le impostazioni per la connessione al database corrente per la query viene presa in considerazione diversi per i moduli SQL (ad esempio procedure, funzioni e trigger) che vengono compilati nel contesto del database corrente e quindi utilizza le opzioni del database in cui risiedono.  
   
  L'evento ALTER_DATABASE_SCOPED_CONFIGURATION viene aggiunto come un evento DDL che può essere usato per la generazione di un trigger DDL. Questo è un figlio del gruppo ALTER_DATABASE_EVENTS trigger.  
+ 
+ Configurazione delle impostazioni verranno proseguite con il database con ambito database. Ciò significa che quando un database viene ripristinato o collegato, le impostazioni di configurazione esistenti rimangono.
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
 **MAXDOP**  
@@ -311,8 +307,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 * [SQL Server query optimizer hotfix trace flag 4199 modello di manutenzione](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>Ulteriori informazioni  
- [database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [Sys. Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [Viste di database e i file del catalogo](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Opzioni di configurazione server](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [Sys. Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
  
