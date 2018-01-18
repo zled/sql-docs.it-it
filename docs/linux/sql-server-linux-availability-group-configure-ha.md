@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 25fc141818d0e0d638cf463990da8d44955fef17
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e75ae9a6f3c48f0ece0c95be9f3836c8205a1b8c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Configura gruppo di disponibilità AlwaysOn per SQL Server in Linux
 
@@ -92,7 +92,7 @@ Eseguire **sola** degli script di seguito:
 
 - [Creare un gruppo di disponibilità con repliche sincrone tre](#threeSynch).
 - [Creare un gruppo di disponibilità con due repliche sincrone e una replica di configurazione](#configOnly)
-- [Creare un gruppo di disponibilità con repliche sincrone tre](#readScale).
+- [Creare un gruppo di disponibilità con due repliche sincrone](#readScale).
 
 <a name="threeSynch"></a>
 

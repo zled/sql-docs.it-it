@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: "1"
 author: shkale-msft
-ms.author: shkale
+ms.author: shkale;barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4ca6de15012a8fb929c207ab1a79a41607bd74cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-graph-architecture"></a>Architettura di Graph SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -104,20 +104,20 @@ Nella tabella seguente sono elencati i valori validi per `graph_type` colonna
 Colonne implicite in una tabella di nodo  
 |Nome colonna    |Tipo di dati  |is_hidden  |Commento  |
 |---  |---|---|---  |
-|graph_id_\<hex_string > |bigint |1  |colonna graph_id interno  |
-|$node_id_\<hex_string > |NVARCHAR   |0  |Colonna di id di nodo esterno  |
+|graph_id_\<hex_string> |bigint |1  |colonna graph_id interno  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |Colonna di id di nodo esterno  |
 
 Colonne implicite in una tabella edge  
 |Nome colonna    |Tipo di dati  |is_hidden  |Commento  |
 |---  |---|---|---  |
-|graph_id_\<hex_string > |bigint |1  |colonna graph_id interno  |
-|$edge_id_\<hex_string > |NVARCHAR   |0  |colonna di id lato esterno  |
-|from_obj_id_\<hex_string >  |INT    |1  |interno dall'oggetto con id nodo  |
-|from_id_\<hex_string >  |bigint |1  |Interno dal nodo graph_id  |
-|$from_id_\<hex_string > |NVARCHAR   |0  |esterno dall'id di nodo  |
-|to_obj_id_\<hex_string >    |INT    |1  |id oggetto del nodo interno  |
-|to_id_\<hex_string >    |bigint |1  |Il nodo graph_id  |
-|$to_id_\<hex_string >   |NVARCHAR   |0  |all'id di nodo esterno  |
+|graph_id_\<hex_string> |bigint |1  |colonna graph_id interno  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |colonna di id lato esterno  |
+|from_obj_id_\<hex_string>  |INT    |1  |interno dall'oggetto con id nodo  |
+|from_id_\<hex_string>  |bigint |1  |Interno dal nodo graph_id  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |esterno dall'id di nodo  |
+|to_obj_id_\<hex_string>    |INT    |1  |id oggetto del nodo interno  |
+|to_id_\<hex_string>    |bigint |1  |Il nodo graph_id  |
+|$to_id_\<hex_string>   |NVARCHAR   |0  |all'id di nodo esterno  |
  
 ### <a name="system-functions"></a>Funzioni di sistema
 Le funzioni predefinite seguenti vengono aggiunti. Questi consente agli utenti di estrarre informazioni da colonne generate. Si noti che, questi metodi non convaliderà l'input dell'utente. Se l'utente specifica un oggetto non valido `sys.node_id` il metodo estrarre la parte appropriata e restituirlo. Ad esempio, si avranno OBJECT_ID_FROM_NODE_ID un `$node_id` come input e restituiscono object_id della tabella, il nodo appartiene. 
@@ -142,7 +142,7 @@ Informazioni di [!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni introd
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE `è ora esteso per supportare la creazione di una tabella come nodo o un bordo AS. Si noti che una tabella edge può o può non avere eventuali attributi definiti dall'utente.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|È possibile modificare le tabelle di nodo e bordo nello stesso modo, viene usato una tabella relazionale di `ALTER TABLE`. Gli utenti possono aggiungere o modificare le colonne definite dall'utente, gli indici o vincoli. Tuttavia, la modifica di colonne interno grafico, come `$node_id` o `$edge_id`, si verificherà un errore.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Gli utenti possono creare indici in pseudo- colonne e le colonne definite dall'utente nelle tabelle di nodo e bordo. Sono supportati tutti i tipi di indice, inclusi gli indici columnstore cluster e non cluster.  |
-|DROP TABLE |[DROP TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)  |È possibile eliminare le tabelle di nodo e bordo esattamente una tabella relazionale, utilizza il `DROP TABLE`. Tuttavia, in questa versione, non sono presenti vincoli per garantire che nessun bordi puntare a un nodo eliminato e sottomenu l'eliminazione dei bordi, in seguito all'eliminazione di un nodo o una tabella del nodo non è supportata. È consigliabile se viene eliminata una tabella di nodo, gli utenti eliminare tutti i bordi connessi ai nodi di tale tabella nodo manualmente per mantenere l'integrità del grafico.  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |È possibile eliminare le tabelle di nodo e bordo esattamente una tabella relazionale, utilizza il `DROP TABLE`. Tuttavia, in questa versione, non sono presenti vincoli per garantire che nessun bordi puntare a un nodo eliminato e sottomenu l'eliminazione dei bordi, in seguito all'eliminazione di un nodo o una tabella del nodo non è supportata. È consigliabile se viene eliminata una tabella di nodo, gli utenti eliminare tutti i bordi connessi ai nodi di tale tabella nodo manualmente per mantenere l'integrità del grafico.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Istruzioni di Data Manipulation Language (DML)
@@ -158,7 +158,7 @@ Informazioni di [!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni introd
 |Attività   |Argomento correlato  |Note
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|I nodi e bordi vengono archiviati internamente come tabelle, pertanto la maggior parte delle operazioni supportate in una tabella in SQL Server o Database SQL di Azure sono supportata per le tabelle di nodo e bordo  |
-|MATCH  | [CORRISPONDENZA &#40; Transact-SQL &#41;](../../t-sql/queries/match-sql-graph.md)|Predefinite di corrispondenza sono stato introdotto per supportare i criteri di ricerca e l'attraversamento tramite graph.  |
+|MATCH  | [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|Predefinite di corrispondenza sono stato introdotto per supportare i criteri di ricerca e l'attraversamento tramite graph.  |
 
 
 

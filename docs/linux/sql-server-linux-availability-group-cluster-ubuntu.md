@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 501fd7eac7f7905a03a2861a462d4c1179beb15c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurare il Cluster Ubuntu e risorsa gruppo di disponibilità
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. Creare il cluster. 
 
    >[!WARNING]
-   >A causa di un problema noto che il fornitore clustering è in corso, a partire dal cluster ('PC cluster start') avrà esito negativo con errore di seguito. In questo modo il file di log configurato in /etc/corosync/corosync.conf non è corretto. Per risolvere questo problema, modificare il file di log: /var/log/corosync/corosync.log. In alternativa è possibile creare il file /var/log/cluster/corosync.log.
+   >A causa di un problema noto che il fornitore clustering è in corso, a partire dal cluster ('PC cluster start') avrà esito negativo con errore di seguito. Questo avviene perché il file di log configurati in /etc/corosync/corosync.conf che viene creato quando il comando di installazione del cluster viene eseguito, non è corretto. Per risolvere questo problema, modificare il file di log: /var/log/corosync/corosync.log. In alternativa è possibile creare il file /var/log/cluster/corosync.log.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 

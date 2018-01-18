@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: aliases [SQL Server], <Alias> properties
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cadb0bdb27b29c3f1a34e5db94154d0aaeda0382
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2a181114aabbd109bad9d3c77688f8bc28b40a3f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; proprietà (scheda Alias)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Un alias è un nome alternativo che può essere utilizzato per stabilire una connessione. L'alias incapsula gli elementi necessari di una stringa di connessione e li espone con un nome scelto dall'utente. Usare la pagina **Alias** nella finestra di dialogo **Proprietà \<**Nome alias**>** per visualizzare o specificare gli elementi della stringa di connessione di un alias.  
@@ -41,8 +41,8 @@ ms.lasthandoff: 12/21/2017
  Nome dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si esegue la connessione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di una stringa di connessione valida mediante il protocollo di memoria condivisa](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
+ [Creazione di una stringa di connessione valida tramite il protocollo Shared Memory](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [Creazione di una stringa di connessione valida con TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [Creazione di una stringa di connessione valida tramite named pipe](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+ [Creazione di una stringa di connessione valida tramite Named pipe](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

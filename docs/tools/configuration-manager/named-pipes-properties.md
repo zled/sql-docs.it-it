@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Named Pipes [SQL Server], listening on pipes
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6122004c46c36f21d2b301e70be91b26fa06c701
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 72fecdede46024eae399d9a762b0f8cdf7bb3a6b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="named-pipes-properties"></a>Proprietà Named Pipes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilizzare il **protocollo**pagina il **proprietà-Named Pipes** la finestra di dialogo per visualizzare o modificare la named pipe su cui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in ascolto, quando si utilizza il protocollo Named Pipes.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere riavviato per abilitare o disabilitare il protocollo oppure modificare la named pipe.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]deve essere riavviato per abilitare o disabilitare il protocollo oppure modificare la named pipe.  
   
 ## <a name="options"></a>Opzioni  
  **Abilitata**  
@@ -49,8 +49,8 @@ ms.lasthandoff: 12/21/2017
  Digitare **\\\\.\pipe\acct** per impostare l'attesa sulla pipe **acct** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
+ [Abilitare o disabilitare un protocollo di rete del Server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Scelta di un protocollo di rete](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
- [Creazione di una stringa di connessione valida tramite named pipe](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+ [Creazione di una stringa di connessione valida tramite Named pipe](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 88e0f096-d746-4b7d-a5a4-73c5dc139f30
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f13670410d9e6e0032b0fd49521658bb7906d028
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b3e4b05106265872d9b41681c739072b9b0332af
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analysis-server-ltservergt-sql-server-configuration-manager"></a>Analysis Server &lt;server&gt; (Gestione configurazione SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Si tratta del servizio che supporta Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per visualizzare le proprietà del servizio, fare clic con il pulsante destro del mouse sul servizio nel riquadro dei dettagli, quindi scegliere **Proprietà**.  

@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Recommendation element
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eb0e1bb738e4f84fe537a47d585e384da8609ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: affac3964b25761341c5ac39e3987a107636fae1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="recommendation-element-dta"></a>Elemento Recommendation (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contiene informazioni sugli indici ipotetici che fanno parte di una configurazione specificata dall'utente.  
@@ -43,17 +43,17 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|nessuna.|  
-|**Valore predefinito**|nessuna.|  
-|**Occorrenza**|Facoltativo. Può essere usato una volta per ogni elemento **Table** .|  
+|**Tipo di dati e lunghezza**|Nessuno|  
+|**Valore predefinito**|Nessuno|  
+|**Occorrenza**|Facoltativa. Può essere usato una volta per ogni elemento **Table** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento Table per Schema &#40;DTA&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
+|**Elemento padre**|[Elemento TABLE per Schema &#40; DTA &#41;](../../tools/dta/table-element-for-schema-dta.md)|  
 |**Elementi figlio**|[Elemento Create &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Elemento **Drop**. Per ulteriori informazioni, vedere l' [XML Schema di Ottimizzazione guidata motore di database](http://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -63,6 +63,6 @@ ms.lasthandoff: 12/21/2017
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e090b89ed827e1ea8a7700a2503fed95ace84501
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eacd9f77d0794038ce3d4df00f4af06d8e232e6e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tcpip-properties-protocols-tab"></a>Proprietà TCP/IP (scheda Protocolli)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilizzare il **proprietà TCP/IP** la finestra di dialogo per configurare le opzioni per il protocollo TCP/IP. Fare clic su **TCP/IP** nel riquadro sinistro per visualizzare le configurazioni dei singoli indirizzi IP nel riquadro dei dettagli.  

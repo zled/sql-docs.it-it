@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
-ms.openlocfilehash: bd807454b9b1b946dc396ec53a920fd198c5b5c0
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0b12200da9b4e0967c8057d807d19919fb07f331
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Backup e ripristino di database di SQL Server in Linux
 
@@ -59,7 +59,7 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 Se il database nel modello di recupero con registrazione completa, è anche possibile rendere i backup del log delle transazioni per le opzioni di ripristino più granulari. Nell'esempio seguente, **sqlcmd** si connette all'istanza locale di SQL Server ed esegue il backup un log delle transazioni.
 
 ```bash
-sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT, NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
 ```
 
 ## <a name="restore-a-database"></a>Ripristinare un database
@@ -67,7 +67,7 @@ sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/da
 Nell'esempio seguente **sqlcmd** si connette all'istanza locale di SQL Server e ripristina il database demodb. Si noti che il `NORECOVERY` opzione viene utilizzata per consentire ulteriori ripristini di file di backup del log. Se non si intende ripristinare i file di log aggiuntivi, rimuovere il `NORECOVERY` opzione.
 
 ```bash
-sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE, NORECOVERY, STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/mssql/data/demodb.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
 ```
 
 > [!TIP]

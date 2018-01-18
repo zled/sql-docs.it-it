@@ -1,5 +1,5 @@
 ---
-title: "Registrare il repository disponibilità generale per SQL Server in Linux | Documenti Microsoft"
+title: "Registrare il repository di disponibilità generale per SQL Server in Linux | Documenti Microsoft"
 description: "Modificare repository dal repository anteprima 2017 di SQL Server nel repository General Availability (GA) in Linux (GA è talvolta anche detto RTM)."
 author: annashres
 ms.author: anshrest
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c2c674c90b327cfe4baf2d109fab09d045f890
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f74c74bddf8337bf4555ce4ecdf0b6e2c869e44f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>Repository di modifica dal repository di anteprima per il repository GA
 
@@ -62,11 +62,11 @@ Per modificare dal repository di anteprima per un repository di origine (CU o GD
 
    | Piattaforma | Archivio | Command |
    |-----|-----|-----|
-   | RHEL | AGGIORNAMENTO CUMULATIVO | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-   | SLES | AGGIORNAMENTO CUMULATIVO  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+   | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
    | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | AGGIORNAMENTO CUMULATIVO | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
    | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
 1. [Installare](sql-server-linux-setup.md#platforms) o [aggiornare](sql-server-linux-setup.md#upgrade) SQL Server tramite il repository GA.

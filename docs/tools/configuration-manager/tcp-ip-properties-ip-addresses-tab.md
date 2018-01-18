@@ -16,15 +16,15 @@ helpviewer_keywords:
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9db69a0432f5f9f85001c4443e27c5b08a272f5c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6f40f56dcf2f46f78ebad2e8095e21cd5e012b3c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Proprietà TCP/IP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilizzare il **proprietà TCP/IP (scheda indirizzi IP)** la finestra di dialogo per configurare le opzioni del protocollo TCP/IP per un indirizzo IP specifico. Solo le opzioni **Porte dinamiche TCP** e **Porta TCP** possono essere configurate contemporaneamente per tutti gli indirizzi selezionando **IPAll**.  

@@ -15,13 +15,13 @@ ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: ondemand
-ms.openlocfilehash: 951f403905f260532c5d4aa806597e916142d15d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 42ebca3b21404aa59509917ce229b274ab2ece6c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-replay-requirements"></a>Requisiti relativi a Riesecuzione distribuita
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Prima di utilizzare il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riesecuzione distribuita di funzionalità, considerare i requisiti del prodotto indicati in questo argomento.  
@@ -163,7 +163,7 @@ ms.lasthandoff: 12/21/2017
  La riproduzione degli eventi associati ad account di accesso mancanti o non corretti genera errori di riproduzione, ma l'operazione non viene interrotta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Riesecuzione distribuita di SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Sicurezza di Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md)   
  [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
