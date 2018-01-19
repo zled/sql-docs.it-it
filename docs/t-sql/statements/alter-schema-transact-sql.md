@@ -1,7 +1,7 @@
 ---
 title: L'autorizzazione ALTER SCHEMA (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 05/01/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bcbc6cf4ed18bef5d4736375dd7eddaaa1167a33
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 30ef553ccfba1f30be9b75f8d0290115be395925
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,11 +67,11 @@ ALTER SCHEMA schema_name
  *schema_name*  
  Nome di uno schema nel database corrente in cui verrà spostata l'entità a protezione diretta. Non può essere SYS o INFORMATION_SCHEMA.  
   
- \<entity_type >  
+ \<entity_type>  
  Classe dell'entità per la quale viene modificato il proprietario. L'oggetto rappresenta l'impostazione predefinita.  
   
  *securable_name*  
- Nome composto da una o due parti di un'entità a protezione diretta inclusa nello schema da spostare nello schema.  
+ È il nome di uno o due parti di schema con ambito a protezione diretta da spostare nello schema.  
   
 ## <a name="remarks"></a>Osservazioni  
  Utenti e schemi sono completamente distinti.  
@@ -82,15 +82,19 @@ ALTER SCHEMA schema_name
   
  Tutte le autorizzazioni associate all'entità a sicurezza diretta vengono eliminate quando l'entità viene spostata nel nuovo schema. Se è stato impostato in modo esplicito, il proprietario dell'entità a sicurezza diretta rimarrà invariato. Se impostato su SCHEMA OWNER, il proprietario dell'entità a protezione diretta rimarrà SCHEMA OWNER. Tuttavia, in seguito allo spostamento SCHEMA OWNER verrà risolto nel nome del proprietario del nuovo schema. Il valore di principal_id del nuovo proprietario sarà NULL.  
   
- Per modificare lo schema di una tabella o vista utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Esplora oggetti, fare doppio clic su tabella o della vista e quindi fare clic su **progettazione**. Premere **F4** per aprire la finestra Proprietà. Nel **Schema** , selezionare un nuovo schema.  
+ Lo spostamento di una stored procedure, funzione, vista o trigger non modificherà il nome dello schema, se presente, dell'oggetto corrispondente dell'oggetto in una colonna di definizione del [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catalogo o ottenuto utilizzando il [ OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) funzione predefinita. È pertanto consigliabile non utilizzare ALTER SCHEMA per spostare questi tipi di oggetto. In alternativa, eliminare e ricreare l'oggetto nel nuovo schema.  
+  
+ Spostamento di un oggetto, ad esempio una tabella o di un sinonimo non aggiorna automaticamente i riferimenti a tale oggetto. È necessario modificare tutti gli oggetti che fanno riferimento l'oggetto trasferito manualmente. Ad esempio, se si sposta una tabella e di cui viene fatto riferimento in un trigger, è necessario modificare il trigger in modo da riflettere il nuovo nome dello schema. Utilizzare [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) per elencare le dipendenze per l'oggetto prima di spostarlo.  
+
+ Per modificare lo schema di una tabella utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Esplora oggetti, fare doppio clic sulla tabella e quindi fare clic su **progettazione**. Premere **F4** per aprire la finestra Proprietà. Nel **Schema** , selezionare un nuovo schema.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per trasferire un'entità a sicurezza diretta da un altro schema, l'utente deve disporre dell'autorizzazione CONTROL per l'entità (non per lo schema) e dell'autorizzazione ALTER per lo schema di destinazione.  
   
- Se l'entità a sicurezza diretta è associata a una specifica dell'istruzione EXECUTE AS OWNER e il proprietario è impostato su SCHEMA OWNER, l'utente deve inoltre disporre dell'autorizzazione IMPERSONATION per il proprietario dello schema di destinazione.  
+ Se l'entità a protezione diretta è una specifica EXECUTE AS OWNER su di esso e il proprietario è impostato su SCHEMA OWNER, l'utente deve inoltre disporre dell'autorizzazione IMPERSONATE per sul proprietario dello schema di destinazione.  
   
  Tutte le autorizzazioni associate all'entità a protezione diretta in fase di trasferimento vengono eliminate al momento dello spostamento.  
   
@@ -155,8 +159,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREAZIONE dello SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [DROP SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

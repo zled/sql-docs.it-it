@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_sessions (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/21/2017
 ms.prod: sql-non-specified
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 48af63d80b801b677d9f0f6225f84ba63c09f344
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e0cd35b044d4a5016442ddae4384aea094cc655
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/02/2018
 |login_name|**nvarchar(128)**|Nome dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui la sessione è attualmente in esecuzione. Per il nome dell'account di accesso originale che ha creato la sessione, vedere original_login_name. Può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticato nome account di accesso o un nome utente di dominio autenticato di Windows. Non ammette i valori Null.|  
 |nt_domain|**nvarchar(128)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Dominio di Windows per il client se la sessione utilizza l'autenticazione di Windows o una connessione trusted. Il valore è NULL per le sessioni interne e per gli utenti non di dominio. Ammette i valori Null.|  
 |nt_user_name|**nvarchar(128)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nome utente di Windows per il client se la sessione utilizza l'autenticazione di Windows o una connessione trusted. Il valore è NULL per le sessioni interne e per gli utenti non di dominio. Ammette i valori Null.|  
-|status|**nvarchar (30)**|Stato della sessione. I valori possibili sono:<br /><br /> **Esecuzione** -attualmente in esecuzione una o più richieste<br /><br /> **Sospensione** -nessuna richiesta è in esecuzione<br /><br /> **Inattivo** : sessione è stata reimpostata a causa del pool di connessioni e trova ora nello stato di handshake.<br /><br /> **Preconnect** -sessione trova nel classificatore di Resource Governor.<br /><br /> Non ammette i valori Null.|  
+|status|**nvarchar(30)**|Stato della sessione. I valori possibili sono:<br /><br /> **Esecuzione** -attualmente in esecuzione una o più richieste<br /><br /> **Sospensione** -nessuna richiesta è in esecuzione<br /><br /> **Inattivo** : sessione è stata reimpostata a causa del pool di connessioni e trova ora nello stato di handshake.<br /><br /> **Preconnect** -sessione trova nel classificatore di Resource Governor.<br /><br /> Non ammette i valori Null.|  
 |context_info|**varbinary(128)**|Valore di CONTEXT_INFO per la sessione. Le informazioni di contesto viene impostate dall'utente tramite il [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) istruzione. Ammette i valori Null.|  
 |cpu_time|**int**|Tempo della CPU, espresso in millisecondi, utilizzato dalla sessione. Non ammette i valori Null.|  
 |memory_usage|**int**|Numero di pagine da 8 KB utilizzate dalla sessione. Non ammette i valori Null.|  
@@ -109,6 +109,10 @@ Tutti gli utenti possono vedere le proprie informazioni di sessione.
 -   unsuccessful_logons  
   
  Se l'opzione non è abilitata, tali colonne restituiranno valori Null. Per ulteriori informazioni su come impostare l'opzione di configurazione di questo server, vedere [opzione di configurazione Server attiva conformità criteri comuni](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
+ 
+ 
+ Connessioni di amministrazione sul Database SQL di Azure verranno visualizzato una riga per ogni sessione autenticata, mentre le connessioni amministrative verranno visualizzati solo informazioni correlate alle proprie sessioni utente di database. 
+ 
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
@@ -117,7 +121,7 @@ Tutti gli utenti possono vedere le proprie informazioni di sessione.
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|Uno-a-zero o uno-a-molti|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|Uno-a-zero o uno-a-molti|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|Uno-a-zero o uno-a-molti|  
-|sys.dm_exec_sessions|[Sys.dm exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Uno-a-zero o uno-a-molti|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Uno-a-zero o uno-a-molti|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|Uno-a-uno|  
   
 ## <a name="examples"></a>Esempi  

@@ -1,5 +1,5 @@
 ---
-title: '@@ERROR (Transact-SQL) | Documenti Microsoft'
+title: '@@ERROR (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5481957e399f072e400a042825c2966f06d2e782
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ce2b79b12af1ae4894cd33867bccc27b2354185
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40; Errore (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. Tramite@ERROR uscire in modo condizionale una stored procedure  
- L'esempio seguente usa `IF...ELSE` istruzioni per testare `@@ERROR` dopo un `INSERT` istruzione in una stored procedure. Il valore della variabile `@@ERROR` determina il codice restituito inviato al programma chiamante per segnalare se la procedura ha avuto esito positivo o negativo.  
+ L'esempio seguente usa `IF...ELSE` istruzioni per testare `@@ERROR` dopo un `DELETE` istruzione in una stored procedure. Il valore della variabile `@@ERROR` determina il codice restituito inviato al programma chiamante per segnalare se la procedura ha avuto esito positivo o negativo.  
   
 ```  
 USE AdventureWorks2012;  

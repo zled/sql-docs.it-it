@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STLineFromWKB method
 ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 65ebfaad371c5057464c834437ac5e1054381494
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fe7347c33659f14247917c724f3269ed96f2f4f7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stlinefromwkb-geography-data-type"></a>STLineFromWKB (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
  *WKB_linestring*  
  Rappresentazione WKB del **LineString geography** istanza da restituire. *WKB_linestring* è un **varbinary (max)** espressione.  
   
- *IDENTIFICATORE SRID*  
+ *SRID*  
  È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **LineString geography** istanza da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  

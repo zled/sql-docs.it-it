@@ -1,7 +1,7 @@
 ---
-title: Sys. column_store_segments (Transact-SQL) | Documenti Microsoft
+title: sys.column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 12/30/2016
+ms.date: 01/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 322cd5a22f3d23db02984e13f87989c0585db13e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f73379d3ae23570f95209631444d1335279a5ef5
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ Restituisce una riga per ogni segmento di colonna in un indice columnstore. È u
 |**encoding_type**|**int**|Tipo di codifica utilizzato per il segmento:<br /><br /> 1 = VALUE_BASED - non stringa o binari con alcun dizionario (molto simile a 4 con alcune variazioni interni)<br /><br /> 2 = VALUE_HASH_BASED - colonna stringa/binario con i valori comuni nel dizionario<br /><br /> 3 = STRING_HASH_BASED - colonna stringa/binario con i valori comuni nel dizionario<br /><br /> 4 = STORE_BY_VALUE_BASED - non stringa o binari con alcun dizionario<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - stringa o binario con alcun dizionario<br /><br /> Tutte le codifiche sfruttano i vantaggi della compressione di bit e la lunghezza di esecuzione codifica quando possibile.|  
 |**row_count**|**int**|Numero di righe nel gruppo di righe.|  
 |**has_nulls**|**int**|1 se il segmento di colonna contiene valori Null.|  
-|**base_id**|**bigint**|Viene usato l'id di valore di base se il tipo di codifica 1.  Se non viene utilizzato tipo di codifica 1, base_id viene impostato su 1.|  
-|**ordine di grandezza**|**float**|Magnitude se viene utilizzato il tipo di codifica 1.  Se non viene utilizzato 1 tipo di codifica, magnitude viene impostato su 1.|  
+|**base_id**|**bigint**|Viene usato l'id di valore di base se il tipo di codifica 1.  Se non viene utilizzato tipo di codifica 1, base_id viene impostato su -1.|  
+|**magnitude**|**float**|Magnitude se viene utilizzato il tipo di codifica 1.  Se non viene utilizzato 1 tipo di codifica, magnitude viene impostato su -1.|  
 |**primary_dictionary_id**|**int**|Il valore 0 rappresenta il dizionario globale. Il valore-1 indica che non vi sia alcun dizionario globale creato per questa colonna.|  
 |**secondary_dictionary_id**|**int**|Un valore diverso da zero punta al dizionario locale per la colonna nel segmento corrente (ad esempio il gruppo di righe). Il valore-1 indica che il dizionario non è locale per questo segmento.|  
 |**min_data_id**|**bigint**|ID dati minimo nel segmento di colonna.|  
@@ -80,8 +80,8 @@ GO
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [L'esecuzione di query di catalogo di sistema SQL Server domande frequenti](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Sys.ALL_COLUMNS &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [Sys. computed_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Guida agli indici columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   

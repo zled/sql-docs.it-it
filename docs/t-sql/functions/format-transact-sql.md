@@ -1,5 +1,5 @@
 ---
-title: FORMATO (Transact-SQL) | Documenti Microsoft
+title: FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 43d702accc0611030c1c7ad0eda74d456711b694
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ FORMAT ( value, format [, culture ] )
  *Valore*  
  Espressione di un tipo di dati supportato da formattare. Per un elenco di tipi validi, vedere la tabella nella sezione Osservazioni indicata di seguito.  
   
- *formato*  
+ *format*  
  **nvarchar** modello di formato.  
   
  Il *formato* argomento deve contenere una stringa di formato .NET Framework valida, come una stringa di formato standard (ad esempio, "C" o "D"), o come una serie di caratteri personalizzati per date e valori numerici (ad esempio "MMMM gg, aaaa (gggg)") . La formattazione composta non è supportata. Per una spiegazione completa di questi schemi di formattazione, consultare la documentazione di .NET Framework nella stringa di formattazione in generale, data personalizzato e formati di ora e formati di numero personalizzati. Un buon punto di partenza è l'argomento "[formattazione dei tipi di](http://go.microsoft.com/fwlink/?LinkId=211776)."  
@@ -212,5 +212,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35
   
 ## <a name="see-also"></a>Vedere anche  
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

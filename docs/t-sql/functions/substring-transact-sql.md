@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4407538e956f268f4d9bb868c1fcb70c2447cf6b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,10 +52,10 @@ SUBSTRING ( expression ,start , length )
  *espressione*  
  È un **carattere**, **binario**, **testo**, **ntext**, o **immagine**[espressione](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *inizio*  
+ *start*  
  È un numero intero o **bigint** espressione che specifica il punto di inizio dei caratteri restituiti. (La numerazione è 1 base, significa che il primo carattere dell'espressione è 1). Se *avviare* è minore di 1, l'espressione restituita inizierà con il primo carattere specificato in *espressione*. In questo caso, il numero di caratteri restituiti è il valore massimo della somma delle *avviare* + *lunghezza*- 1 oppure 0. Se *avviare* è maggiore del numero di caratteri nell'espressione valore, viene restituita un'espressione di lunghezza zero.  
   
- *length*  
+ *lunghezza*  
  È un numero intero positivo o **bigint** espressione che specifica il numero di caratteri del *espressione* verranno restituiti. Se *lunghezza* è negativo, viene generato un errore e l'istruzione viene terminata. Se la somma di *avviare* e *lunghezza* è maggiore del numero di caratteri in *espressione*, l'intera espressione valore iniziando *avviare*viene restituito.  
   
 ## <a name="return-types"></a>Tipi restituiti  
@@ -63,9 +63,9 @@ SUBSTRING ( expression ,start , length )
   
 |Espressione specificata|Tipo restituito|  
 |--------------------------|-----------------|  
-|**Char**/**varchar**/**testo**|**varchar**|  
+|**char**/**varchar**/**text**|**varchar**|  
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
-|**binario**/**varbinary**/**immagine**|**varbinary**|  
+|**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>Osservazioni  
  I valori per *avviare* e *lunghezza* deve essere specificato nel numero di caratteri per **ntext**, **char**, o **varchar**  tipi di dati e i byte per **testo**, **immagine**, **binario**, o **varbinary** tipi di dati.  
@@ -91,10 +91,10 @@ WHERE database_id < 5;
 
 |name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|master  |m  |ST |
-|tempdb  |t  |Management Pack |
+|master  |m  |st |
+|tempdb  |t  |mp |
 |model   |m  |de |
-|msdb    |m  |DB |
+|msdb    |m  |db |
 
 
   
@@ -222,6 +222,12 @@ bcd
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

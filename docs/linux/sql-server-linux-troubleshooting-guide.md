@@ -3,8 +3,8 @@ title: Risolvere i problemi relativi a SQL Server in Linux | Documenti Microsoft
 description: Vengono forniti suggerimenti sulla risoluzione dei problemi per l'utilizzo di SQL Server 2017 in Linux.
 author: annashres
 ms.author: anshrest
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,17 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: a65ee3607cb2bbe2a1a30135950e611e4456f8ba
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: da16bc7126d39bcdf86152b3ae8b21d7b58805eb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Risolvere i problemi relativi a SQL Server in Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Questo documento viene descritto come risolvere i problemi relativi a Microsoft SQL Server in esecuzione in Linux o in un contenitore Docker. Quando la risoluzione dei problemi di SQL Server in Linux, ricordarsi di esaminare le funzionalità supportate e le limitazioni note nel [SQL su note sulla versione di Linux](sql-server-linux-release-notes.md).
+Questo documento viene descritto come risolvere i problemi relativi a Microsoft SQL Server in esecuzione in Linux o in un contenitore Docker. Quando la risoluzione dei problemi di SQL Server in Linux, è necessario esaminare le funzionalità supportate e le limitazioni note nel [SQL su note sulla versione di Linux](sql-server-linux-release-notes.md).
 
 ## <a id="connection"></a>Risoluzione dei problemi di connessione
 Se si verificano problemi di connessione a SQL Server Linux, esistono alcuni elementi da controllare. 
@@ -51,7 +51,7 @@ Se si verificano problemi di connessione a SQL Server Linux, esistono alcuni ele
 
 - Verificare che il nome utente e la password non contenga errori di digitazione o spazi aggiuntivi o maiuscole e minuscole non corretta.
 
-- Tenta di impostare in modo esplicito il numero di porta e protocollo con il nome del server simile al seguente: **tcp:servername, 1433**.
+- Tenta di impostare in modo esplicito il numero di porta e protocollo con il nome del server come nell'esempio seguente: **tcp:servername, 1433**.
 
 - Problemi di connettività di rete possono causare errori di connessione e timeout. Dopo aver verificato le informazioni di connessione e la connettività di rete, provare a riconnettersi.
 
@@ -61,7 +61,7 @@ Nelle sezioni seguenti viene illustrato come avviare, arrestare, riavviare e con
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Gestire il servizio mssql server Red Hat Enterprise Linux (RHEL) e Ubuntu 
 
-Verificare lo stato dello stato del servizio SQL Server con il seguente comando:
+Verificare lo stato del servizio SQL Server con il seguente comando:
 
    ```bash
    sudo systemctl status mssql-server
@@ -77,7 +77,7 @@ Verificare lo stato dello stato del servizio SQL Server con il seguente comando:
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>Gestire l'esecuzione del contenitore Docker mssql
 
-È possibile ottenere l'ID di contenitore e lo stato della versione più recente contenitore Docker di SQL Server creato eseguendo il comando seguente (ID è sotto la colonna "ID contenitore"):
+È possibile ottenere l'ID di contenitore e lo stato della versione più recente contenitore Docker di SQL Server creato eseguendo il comando seguente (incluso l'ID di **ID contenitore** colonna):
 
    ```bash
    sudo docker ps -l
@@ -151,7 +151,7 @@ Avvio di SQL Server in modalità utente singolo con SQLCMD
 > [!WARNING]  
 >  Avviare SQL Server in Linux con l'utente "mssql" per evitare problemi di avvio futuri. Esempio "sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]" 
 
-Se si è iniziato a accidentalmente SQL Server con un altro utente, è necessario modificare il proprietario dei file di database di SQL Server all'utente prima dell'avvio di SQL Server con systemd 'mssql'. Ad esempio, eseguire il comando seguente per modificare la proprietà di tutti i file di database in /var/opt/mssql all'utente 'mssql',
+Se si è iniziato a accidentalmente SQL Server con un altro utente, è necessario modificare la proprietà del file di database di SQL Server all'utente prima dell'avvio di SQL Server con systemd 'mssql'. Ad esempio, eseguire il comando seguente per modificare la proprietà di tutti i file di database in /var/opt/mssql all'utente 'mssql',
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
@@ -159,9 +159,9 @@ Se si è iniziato a accidentalmente SQL Server con un altro utente, è necessari
 
 ## <a name="common-issues"></a>Problemi comuni
 
-1. È possibile non connettersi all'istanza di SQL Server remoto.
+1. È possibile connettersi all'istanza di SQL Server remoto.
 
-   Vedere la sezione sulla risoluzione dei problemi dell'argomento, [Connetti a SQL Server in Linux](#connection).
+   Vedere la sezione sulla risoluzione dei problemi dell'articolo, [Connetti a SQL Server in Linux](#connection).
 
 2. Errore: Nome host deve essere 15 caratteri o meno.
 
@@ -169,10 +169,10 @@ Se si è iniziato a accidentalmente SQL Server con un altro utente, è necessari
 
 3. Reimpostazione della password di amministrazione (SA) di sistema.
 
-   Se si hanno dimenticato la password di amministratore (SA) di sistema o ripristinare le impostazioni per qualche altro motivo è necessario seguire questi passaggi.
+   Se si hanno dimenticato la password di amministratore (SA) di sistema o è necessario reimpostare il valore per altri motivi, seguire questi passaggi.
 
    > [!NOTE]
-   > La procedura seguente verrà interrotta temporaneamente il servizio SQL Server.
+   > La procedura seguente arresta temporaneamente il servizio SQL Server.
 
    Accedere al terminale di host, eseguire i comandi seguenti e seguire le istruzioni per reimpostare la password dell'amministratore di sistema:
 
@@ -207,5 +207,5 @@ Il supporto è disponibile tramite la community e monitorato dal team di progett
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): porre domande di amministrazione di database
 - [Overflow dello stack](http://stackoverflow.com/questions/tagged/sql-server): porre domande di sviluppo
 - [Forum MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): porre domande tecniche
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): i bug e funzionalità di richiesta Report
+- [Inviare commenti e suggerimenti](https://feedback.azure.com/forums/908035-sql-server): i bug e funzionalità di richiesta Report
 - [Reddit](https://www.reddit.com/r/SQLServer/): discutere di SQL Server

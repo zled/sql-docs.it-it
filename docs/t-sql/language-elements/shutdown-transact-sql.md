@@ -1,5 +1,5 @@
 ---
-title: Arresto del sistema (Transact-SQL) | Documenti Microsoft
+title: SHUTDOWN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - immediately stopping SQL Server
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 10a6b2c5bf093eaee3eacf183f98ecb644d2fc68
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e4cf8ea2b61d4f1acb69ea489a5116a701264469
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   Utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Eseguendo **net stop mssqlserver** da un prompt dei comandi per un'istanza predefinita oppure eseguendo **net stop mssql$***instancename* da un prompt dei comandi per un'istanza denominata.  
+-   Eseguendo **net stop mssqlserver** da un prompt dei comandi per un'istanza predefinita oppure eseguendo **net stop mssql$ * * * instancename* da un prompt dei comandi per un'istanza denominata.  
   
 -   Utilizzando Servizi nel Pannello di controllo.  
   
@@ -78,13 +78,13 @@ SHUTDOWN [ WITH NOWAIT ]
 > [!NOTE]  
 >  Se si utilizza uno di questi metodi per arrestare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene inviato il messaggio `SERVICE_CONTROL_STOP` a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di arresto vengono assegnate ai membri del **sysadmin** e **serveradmin** ruoli predefiniti del server e non sono trasferibili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
- [sp_lock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sp_who &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [CHECKPOINT &#40; Transact-SQL &#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Applicazione sqlservr](../../tools/sqlservr-application.md)   
  [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   

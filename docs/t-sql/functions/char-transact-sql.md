@@ -1,5 +1,5 @@
 ---
-title: CHAR (Transact-SQL) | Documenti Microsoft
+title: CHAR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 71b8ce296640f1d205335be7d5f58d8c8e22b7c4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5dd3a4f8b6fd308560ddcf2db3c6940625dc6ee3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,16 +56,16 @@ CHAR ( integer_expression )
 Valore intero compreso tra 0 e 255. `NULL`viene restituito se l'espressione integer non è incluso in questo intervallo.
   
 ## <a name="return-types"></a>Tipi restituiti
-**Char (1)**
+**char(1)**
   
 ## <a name="remarks"></a>Osservazioni  
 `CHAR`può essere utilizzato per inserire i caratteri di controllo nelle stringhe di caratteri. Nella tabella seguente vengono descritti i caratteri di controllo più comunemente utilizzati.
   
 |Carattere di controllo|Valore|  
 |---|---|
-|Scheda|**Char(9)**|  
-|Avanzamento riga|**Char (10)**|  
-|Ritorno a capo|**Char (13)**|  
+|Scheda|**char(9)**|  
+|Avanzamento riga|**char(10)**|  
+|Ritorno a capo|**char(13)**|  
   
 ## <a name="examples"></a>Esempi  
   
@@ -172,8 +172,11 @@ AdventureWorksPDW2012    is currently  ONLINE
 ```
   
 ## <a name="see-also"></a>Vedere anche
-[+ &#40; Concatenazione di stringhe &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
-[Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
+ [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
+ [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

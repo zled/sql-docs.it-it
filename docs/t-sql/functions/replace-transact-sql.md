@@ -1,5 +1,5 @@
 ---
-title: REPLACE (Transact-SQL) | Documenti Microsoft
+title: REPLACE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a50c0b7220eba654df21349e2fd3cd57b9a0d7d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 330a3d79893bd24e3253eced054fa029b7f8d1d9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,10 +50,10 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  *string_expression*  
  È la stringa [espressione](../../t-sql/language-elements/expressions-transact-sql.md) da cercare. *string_expression* può essere un tipo di dati carattere o binario.  
   
- *string_*modello  
+ *string_*pattern  
  Sottostringa da individuare. *string_pattern* può essere un tipo di dati carattere o binario. *string_pattern* non può essere una stringa vuota (") e non deve superare il numero massimo di byte che rientra in una pagina.  
   
- *string_*sostituzione  
+ *string_*replacement  
  Stringa di sostituzione. *string_replacement* può essere un tipo di dati carattere o binario.  
   
 ## <a name="return-types"></a>Tipi restituiti  
@@ -102,6 +102,15 @@ This is a desk
 
   
 ## <a name="see-also"></a>Vedere anche  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   

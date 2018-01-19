@@ -1,5 +1,5 @@
 ---
-title: WAITFOR (Transact-SQL) | Documenti Microsoft
+title: WAITFOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - timing executions
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a434aeca7601637ae5e0231497ad07293d6d83ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 75a3c1d272d39d17fbd35f10a797ce52a9310241
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,26 +68,26 @@ WAITFOR
  TIME  
  Ora specificata di esecuzione del batch, della stored procedure o della transazione.  
   
- '*ora*'  
+ '*time_to_execute*'  
  Ora in cui l'istruzione WAITFOR viene interrotta. *ora* può essere specificato in uno dei formati validi per **datetime** dati oppure può essere specificato come una variabile locale. Non è possibile specificare date; Pertanto, la parte della data del **datetime** valore non è consentito.  
   
  *receive_statement*  
  Istruzione RECEIVE valida.  
   
 > [!IMPORTANT]  
->  Utilizzo di WAITFOR con un *receive_statement* è applicabile solo a [!INCLUDE[ssSB](../../includes/sssb-md.md)] messaggi. Per ulteriori informazioni, vedere [ricezione &#40; Transact-SQL &#41; ](../../t-sql/statements/receive-transact-sql.md).  
+>  Utilizzo di WAITFOR con un *receive_statement* è applicabile solo a [!INCLUDE[ssSB](../../includes/sssb-md.md)] messaggi. Per ulteriori informazioni, vedere [ricezione & #40; Transact-SQL & #41; ](../../t-sql/statements/receive-transact-sql.md).  
   
  *get_conversation_group_statement*  
  Istruzione GET CONVERSATION GROUP valida.  
   
 > [!IMPORTANT]  
->  Utilizzo di WAITFOR con un *get_conversation_group_statement* è applicabile solo a [!INCLUDE[ssSB](../../includes/sssb-md.md)] messaggi. Per ulteriori informazioni, vedere [GET CONVERSATION GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  Utilizzo di WAITFOR con un *get_conversation_group_statement* è applicabile solo a [!INCLUDE[ssSB](../../includes/sssb-md.md)] messaggi. Per ulteriori informazioni, vedere [GET CONVERSATION GROUP & #40; Transact-SQL & #41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
  TIMEOUT *timeout*  
  Specifica il periodo di tempo, espresso in millisecondi, di attesa dell'arrivo di un messaggio nella coda.  
   
 > [!IMPORTANT]  
->  La specifica di WAITFOR con TIMEOUT è consentita solo per i messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Per ulteriori informazioni, vedere [ricezione &#40; Transact-SQL &#41; ](../../t-sql/statements/receive-transact-sql.md) e [GET CONVERSATION GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  La specifica di WAITFOR con TIMEOUT è consentita solo per i messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Per ulteriori informazioni, vedere [ricezione & #40; Transact-SQL & #41; ](../../t-sql/statements/receive-transact-sql.md) e [GET CONVERSATION GROUP & #40; Transact-SQL & #41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
 ## <a name="remarks"></a>Osservazioni  
  Durante l'esecuzione dell'istruzione WAITFOR la transazione è in esecuzione e pertanto non possono essere eseguite altre richieste nell'ambito della stessa transazione.  
@@ -174,8 +174,8 @@ GO
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Il controllo di flusso Language &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [DateTime &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)   
+ [Il controllo di flusso Language & #40; Transact-SQL & #41;](~/t-sql/language-elements/control-of-flow.md)   
+ [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   
