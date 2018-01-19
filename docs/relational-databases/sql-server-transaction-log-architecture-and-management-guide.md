@@ -18,17 +18,20 @@ helpviewer_keywords:
 - transaction log guidance
 - vlfs
 - virtual log files
+- virtual log size
+- vlf size
+- transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d98d7d65ebfa88ca9bdaa620c136f78dfe6c339c
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +70,7 @@ Nel log delle transazioni vengono registrati molti tipi di operazioni, tra cui:
   
  Nel log vengono registrate anche le operazioni di rollback. Ogni transazione riserva una determinata quantità di spazio nel log delle transazioni per garantire che nel log sia disponibile spazio sufficiente per supportare un rollback causato da un'istruzione di rollback esplicita o dal verificarsi di un errore. La quantità di spazio riservata varia in base alle operazioni eseguite nella transazione, ma in genere equivale alla quantità di spazio utilizzata per registrare nel log ogni operazione. Lo spazio riservato viene liberato al completamento della transazione.  
   
-<a name="minlsn"></a> La sezione del file di log dal primo record di log che deve essere presente per la corretta esecuzione del rollback a livello di database all'ultimo record di log scritto è definita parte attiva del log o *log attivo*. Questa sezione del log è necessaria per il recupero completo del database. Non è possibile troncare nessuna parte del log attivo. Il [numero di sequenza del file di log (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) di questo primo record di log è anche detto **LSN minimo del recupero (*MinLSN*).  
+<a name="minlsn"></a> La sezione del file di log dal primo record di log che deve essere presente per la corretta esecuzione del rollback a livello di database all'ultimo record di log scritto è definita parte attiva del log o *log attivo*. Questa sezione del log è necessaria per il recupero completo del database. Non è possibile troncare nessuna parte del log attivo. Il [numero di sequenza del file di log (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) di questo primo record di log è anche detto ***LSN minimo del recupero (*MinLSN**).  
   
 ##  <a name="physical_arch"></a> Architettura fisica del log delle transazioni  
 Del log delle transazioni di un database viene eseguito il mapping su uno o più file fisici. Concettualmente, il file di log è una stringa di record di log. Fisicamente, la sequenza di record di log viene archiviata in modo efficiente nel set di file fisici che implementano il log delle transazioni. È necessario che sia disponibile almeno un file di log per ogni database.  
@@ -77,9 +80,10 @@ In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ogni file di log f
 > [!NOTE]
 > La creazione di file di log virtuali (VLF) avviene nel modo seguente:
 > - Se il valore growth successivo è inferiore a 1/8 del valore size del log fisico attuale, creare 1 file di log virtuale che copra l'aumento delle dimensioni (a partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)])
-> - Se il valore growth è inferiore a 64 MB, creare 4 file di log virtuali che coprano l'aumento delle dimensioni (ad esempio con growth di 1 MB, creare quattro file virtuali di log da 256 KB)
-> - Se il valore growth è compreso tra 64 MB e 1 GB, creare 8 file di log virtuali che coprano l'aumento delle dimensioni (ad esempio con growth di 512 MB, creare otto file virtuali di log da 64 MB)
-> - Se il valore growth è superiore a 1 GB, creare 16 file di log virtuali che coprano l'aumento delle dimensioni (ad esempio con growth di 8 GB, creare sedici file virtuali di log da 512 MB)
+> - Se l'aumento successivo è superiore a 1/8 della dimensione corrente del log, usare il metodo pre-2014:
+>    -  Se il valore growth è inferiore a 64 MB, creare 4 file di log virtuali che coprano l'aumento delle dimensioni (ad esempio con growth di 1 MB, creare quattro file virtuali di log da 256 KB)
+>    -  Se il valore growth è compreso tra 64 MB e 1 GB, creare 8 file di log virtuali che coprano l'aumento delle dimensioni (ad esempio con growth di 512 MB, creare otto file virtuali di log da 64 MB)
+>    -  Se il valore growth è superiore a 1 GB, creare 16 file di log virtuali che coprano l'aumento delle dimensioni (ad esempio con growth di 8 GB, creare sedici file virtuali di log da 512 MB)
 
 Se le dimensioni dei file di log aumentano in modo considerevole in seguito a una serie di piccoli incrementi, in essi verrà incluso un numero elevato di file di log virtuali. **Questo può provocare un rallentamento delle operazioni di avvio del database e di backup e ripristino del log.** È consigliabile assegnare ai file di log un valore *size* simile a quello delle dimensioni finali necessarie e un valore *growth_increment* relativamente alto. Vedere il suggerimento seguente per determinare la distribuzione dei file di log virtuali ottimale per le dimensioni correnti del log delle transazioni.
  - Il valore *size*, impostato dall'argomento `SIZE` di `ALTER DATABASE`, corrisponde alle dimensioni iniziali del file di log.

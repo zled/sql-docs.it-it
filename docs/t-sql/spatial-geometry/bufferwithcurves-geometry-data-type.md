@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d68384a06978c598754d96752cfa26449549cc93
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2651ae4e2a4d245f61115438e959a6881ff1935f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *distanza*  
+ *distance*  
  È un **float** che indica la distanza massima che punti che compongono il buffer deve essere compresa la **geometry** istanza.  
   
 ## <a name="return-types"></a>Tipi restituiti  

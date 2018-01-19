@@ -1,6 +1,6 @@
 ---
 title: Connettersi a origini dati e condivisioni file con autenticazione di Windows | Microsoft Docs
-ms.date: 11/27/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -13,16 +13,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b84fdd15fa4a6393b2350aaf75985653b6273f31
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a8dc3c1f39ca65e9616372fee7995dfa41cd89a1
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Connettersi a origini dati locali e condivisioni file di Azure con autenticazione di Windows
 In questo articolo viene descritto come configurare il catalogo SSIS nel database SQL di Azure per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati locali e condivisioni file di Azure. È possibile usare l'autenticazione di Windows per connettersi alle origini dati nella stessa rete virtuale del runtime di integrazione SSIS di Azure, sia in locale che nelle macchine virtuali di Azure e in File di Azure.
 
-Le credenziali del dominio specificate quando si esegue la procedura illustrata in questo articolo sono valide per tutte le esecuzioni di pacchetti nell'istanza del database SQL finché non si modificano o rimuovono le credenziali.
+> [!WARNING]
+> Se non si specificano credenziali di dominio valide per l'autenticazione di Windows eseguendo `catalog`.`set_execution_credential` come descritto in questo articolo, i pacchetti che dipendono dall'autenticazione di Windows non possono connettersi alle origini dati e restituiscono errori in fase di esecuzione.
+
+Le credenziali del dominio specificate quando si esegue la procedura illustrata in questo articolo sono valide per tutte le esecuzioni di pacchetti interattive o pianificate sull'istanza del database SQL, finché non si modificano o rimuovono le credenziali.
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Fornire le credenziali di dominio per l'autenticazione di Windows
 Per specificare le credenziali del dominio che consentono ai pacchetti che usano l'autenticazione di Windows di connettersi alle origini dati locali, eseguire le operazioni seguenti:

@@ -1,5 +1,5 @@
 ---
-title: PRINT (Transact-SQL) | Documenti Microsoft
+title: PRINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bc40ee58fe6037d7ad29ced76232f84fe91c2c15
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 320c54c81b8c4bdb782d4b685816f10150a075e0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,11 +48,11 @@ PRINT msg_str | @local_variable | string_expr
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *argomento msg_str*  
+ *msg_str*  
  Costante di stringa Unicode o stringa di caratteri. Per ulteriori informazioni, vedere [costanti &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).  
   
- **@***local_variable*  
- Variabile costituita da un qualunque tipo di dati character valido. **@***local_variable* deve essere **char**, **nchar**, **varchar**, o **nvarchar**, o deve essere in grado di essere Questo campo viene convertito in modo implicito per i tipi di dati.  
+ **@** *local_variable*  
+ Variabile costituita da un qualunque tipo di dati character valido. **@ * * * local_variable* deve essere **char**, **nchar**, **varchar**, o **nvarchar**, o deve essere in grado di essere Questo campo viene convertito in modo implicito per i tipi di dati.  
   
  *string_expr*  
  Espressione che restituisce una stringa. Può includere variabili, funzioni e valori letterali concatenati. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  

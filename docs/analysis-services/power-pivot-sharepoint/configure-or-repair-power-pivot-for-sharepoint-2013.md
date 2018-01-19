@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5f72d312cff6b0660faa1ebbd30890d53c43f2d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0986792fb9c8e7d6300e85d9a700e75cac783aeb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>Configurare o ripristinare Power Pivot per SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Per configurare o ripristinare un'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013, utilizzare il [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per lo strumento di configurazione di SharePoint. Tramite lo strumento di configurazione viene innanzitutto analizzato il sistema, dopodiché viene restituito un elenco di azioni necessarie per completare o ripristinare l'installazione. L'Installazione guidata [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consente di installare lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2010 e lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013. In questo argomento viene descritto lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013. Per altre informazioni su SharePoint 2010, vedere [Configurare o ripristinare Power Pivot per SharePoint 2010 (strumento di configurazione Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
@@ -130,9 +130,9 @@ ms.lasthandoff: 01/08/2018
 ||Porta di Amministrazione centrale SharePoint|Predefinito, se necessario|Se la farm non è configurata, vengono fornite opzioni per creare la farm e un endpoint HTTP ad Amministrazione centrale. Viene selezionato un numero di porta generato casualmente che non è in uso.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel Services ([NomeServer]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Input dell'utente|Il server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è necessario in Excel Services per abilitare le caratteristiche principali di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del server digitato in questa pagina viene aggiunto anche all'elenco nella pagina **Configura server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.|  
 |**Configurare la nuova farm**|Server di database<br /><br /> Account farm<br /><br /> Passphrase<br /><br /> Porta di Amministrazione centrale SharePoint|Predefinito, se necessario|Per le impostazioni, vengono usati come predefiniti i valori immessi nella pagina principale.|  
-|**Creare un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nome applicazione di servizio|Default|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è **Valore predefinito [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. È possibile usare un valore diverso nello strumento.|  
-||Server di database|Default|Server di database che ospita il database dell'applicazione di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del server predefinito corrisponde al server di database usato per la farm. Questo nome può essere sostituito con un valore diverso.|  
-||Nome database|Default|Nome del database da creare per il database dell'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del database predefinito è basato sul nome dell'applicazione del servizio, seguito da un GUID per assicurarne l'univocità. È possibile usare un valore diverso nello strumento.|  
+|**Creare un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nome applicazione di servizio|Valore predefinito|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è **Valore predefinito [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. È possibile usare un valore diverso nello strumento.|  
+||Server di database|Valore predefinito|Server di database che ospita il database dell'applicazione di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del server predefinito corrisponde al server di database usato per la farm. Questo nome può essere sostituito con un valore diverso.|  
+||Nome database|Valore predefinito|Nome del database da creare per il database dell'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del database predefinito è basato sul nome dell'applicazione del servizio, seguito da un GUID per assicurarne l'univocità. È possibile usare un valore diverso nello strumento.|  
 |**Creare applicazione Web predefinita**|Nome applicazione Web|Predefinito, se necessario|Se non esistono applicazioni Web, ne viene creata una. L'applicazione Web è configurata per l'autenticazione in modalità classica ed è in ascolto sulla porta 80. Le dimensioni di caricamento file massime vengono impostate su 2047, il massimo consentito in SharePoint. Tali dimensioni di caricamento sono necessarie per i file [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] di grandi dimensioni che verranno caricati nel server.|  
 ||URL|Predefinito, se necessario|Viene creato un URL in base al nome del server, usando le stesse convenzioni di denominazione per i nomi file di SharePoint.|  
 ||Pool di applicazioni|Predefinito, se necessario|Viene creato un pool di applicazioni predefinito in IIS.|  
@@ -215,12 +215,12 @@ ms.lasthandoff: 01/08/2018
  Nel tempo, se si rendessero necessarie ulteriori funzionalità di elaborazione e archiviazione dati, sarà possibile aggiungere ulteriori server Analysis Services in modalità SharePoint alla farm. Per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013, installare nuovi server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità SharePoint, quindi configurare Excel Services. Per altre informazioni, vedere la sezione "Oltre l'installazione in un server singolo" di [Installazione di Analisi Services in modalità Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ## <a name="additional-resources"></a>Risorse aggiuntive  
- ![Impostazioni SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni SharePoint")[Inviare commenti e suggerimenti e informazioni di contatto tramite Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![Le impostazioni di SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni SharePoint") [Invia commenti e suggerimenti e informazioni di contatto tramite SQL Server Feedback](https://feedback.azure.com/forums/908035-sql-server).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Strumenti di configurazione Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [Eseguire l'aggiornamento delle cartelle di lavoro e l'aggiornamento dati pianificato &#40; SharePoint 2013 &#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

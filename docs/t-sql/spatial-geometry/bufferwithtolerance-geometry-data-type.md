@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6a932ffe43e978bdc9e06f96cac300d45a035b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d929476cd48275249c5ac78a75ed22d6822fb21a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Restituisce i valori di un oggetto geometrico che rappresenta l'unione di tutti 
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *distanza*  
+ *distance*  
  È un **float** espressione che specifica la distanza tra il **geometry** istanza intorno alla quale calcolare il buffer.  
   
  *tolleranza di errore*  
@@ -51,7 +51,7 @@ Restituisce i valori di un oggetto geometrico che rappresenta l'unione di tutti 
   
  La distanza ideale del buffer di un punto ad esempio è un cerchio, che però deve essere approssimato da un poligono. Minore è il valore della tolleranza, maggiore sarà il numero di punti del poligono. In questo caso aumenterà la complessità del risultato, ma diminuirà l'errore.  
   
- *relativo*  
+ *relative*  
  È un **bit** che specifica se il *tolleranza* valore è relativo o assoluto. Se 'TRUE' o 1, quindi tolleranza è relativa e viene calcolata come prodotto tra il *tolleranza* parametro e il diametro del rettangolo di selezione dell'istanza. Se 'FALSE' o 0, tolleranza è assoluta e *tolleranza* valore è la variazione massima assoluta nella distanza del buffer ideale per l'approssimazione lineare restituita.  
   
 ## <a name="return-types"></a>Tipi restituiti  

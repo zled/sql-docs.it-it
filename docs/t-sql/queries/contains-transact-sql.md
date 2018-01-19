@@ -1,5 +1,5 @@
 ---
-title: CONTIENE (Transact-SQL) | Documenti Microsoft
+title: CONTAINS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -36,15 +36,15 @@ helpviewer_keywords:
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 caps.latest.revision: "117"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 317b65134ca49dc3305fe03871a88b5c1ad3fadc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6c2f2f2f6bca2048ead7dc9565b5338bc2505c8e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -204,26 +204,26 @@ WHERE CONTAINS(Description, @SearchWord);
   
  È inoltre possibile utilizzare l'hint per la query OPTIMIZE FOR per i casi in cui viene generato un piano non ottimale.  
   
- *Word*  
+ *word*  
  Stringa di caratteri senza spazi o punteggiatura.  
   
- *frase*  
+ *phrase*  
  Una o più parole separate da uno spazio.  
   
 > [!NOTE]  
 >  In alcune lingue, ad esempio quelle asiatiche, sono possibili frasi composte da una o più parole non separate da alcuno spazio.  
   
-\<simple_term >  
+\<simple_term>  
 Specifica che deve essere trovata l'esatta corrispondenza di una parola o di una frase. Esempi di termini semplici validi sono "copri capo", copricapo e "Microsoft SQL Server". Le frasi devono essere racchiuse tra virgolette doppie (""). Parole in una frase devono trovarsi nello stesso ordine come specificato in  *\<contains_search_condition >* come vengono visualizzati nella colonna del database. La distinzione tra maiuscole e minuscole non è rilevante per la ricerca di caratteri nella parola o nella frase. Le parole non significative (o [parole non significative](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (ad esempio a e, o) in colonne indicizzate full-text non vengono archiviati nell'indice full-text. Se una parola non significativa viene utilizzata nella ricerca di una singola parola, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un messaggio di errore che indica che la query contiene solo parole non significative. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include un elenco standard di parole non significative, disponibile nella directory \Mssql\Binn\FTERef di ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La punteggiatura viene ignorata. `CONTAINS(testing, "computer failure")`, pertanto, consente di trovare una riga contenente il valore "Where is my computer? Failure to find it would be expensive". Per ulteriori informazioni sul comportamento del word breaker, vedere [configurare e gestire Word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- \<prefix_term >  
+ \<prefix_term>  
  Specifica che devono essere trovate parole o frasi che iniziano con il testo specificato. Racchiudere un prefisso tra virgolette doppie ("") e aggiungere un asterisco (\*) prima delle virgolette finale, in modo che tutto il testo inizia con il termine semplice specificato prima dell'asterisco esiste una corrispondenza. La clausola deve essere specificata nel seguente modo: `CONTAINS (column, '"text*"')` L'asterisco corrisponde a zero, uno o più caratteri della parola o delle parole radice della parola o della frase. Se il testo e l'asterisco non sono racchiusi tra virgolette doppie, per cui vengono letti dal predicato come `CONTAINS (column, 'text*')`, nella ricerca full-text l'asterisco viene interpretato come carattere e viene eseguita la ricerca esatta di `text*`. Il motore full-text non troverà parole con l'asterisco (\*) perché word breaker ignorano in genere tali caratteri.  
   
  Quando  *\<prefix_term >* è una frase, ogni parola della frase viene considerata un prefisso distinto. Una query che specifica il prefisso "sviluppo foto*", pertanto, consente di individuare tutte le righe che includono il testo "sviluppo fotografie", "sviluppo fotografie e ritocco" e così via.  
   
- \<generation_term >  
+ \<generation_term>  
  Specifica che devono essere trovate le parole i cui termini semplici includono varianti della parola originale da cercare.  
   
  INFLECTIONAL  
@@ -234,7 +234,7 @@ Specifica che deve essere trovata l'esatta corrispondenza di una parola o di una
  THESAURUS  
  Specifica che verrà utilizzato il thesaurus corrispondente alla lingua full-text per le colonne oppure alla lingua specificata nella query. Il modello o i modelli da più lungo di  *\<simple_term >* vengono confrontati con il thesaurus e vengono generati termini aggiuntivi per espandere o sostituire il modello originale. Se non viene trovata una corrispondenza per tutta o parte di  *\<simple_term >*, la parte non corrispondente viene considerata come un *simple_term*. Per ulteriori informazioni sul thesaurus ricerca full-text, vedere [configurare e gestire i file del Thesaurus per la ricerca Full-Text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
- \<generic_proximity_term >  
+ \<generic_proximity_term>  
  Specifica che devono essere trovate parole o frasi incluse nel documento in cui viene eseguita la ricerca.  
   
 > [!IMPORTANT]  
@@ -249,7 +249,7 @@ Specifica che deve essere trovata l'esatta corrispondenza di una parola o di una
   
  Per ulteriori informazioni sui termini vicini generici, vedere [cercare parole vicine a un'altra parola con NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
- \<custom_proximity_term >  
+ \<custom_proximity_term>  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
  Specifica una corrispondenza di parole o frasi e facoltativamente la distanza massima consentita tra termini di ricerca. è inoltre possibile specificare che i termini di ricerca devono trovarsi nell'ordine esatto in cui vengono specificati (\<match_order >).  
@@ -264,7 +264,7 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  I parametri facoltativi sono i seguenti:  
   
- \<distanza_massima >  
+ \<maximum_distance>  
  Specifica la distanza massima consentita tra i termini di ricerca all'inizio e alla fine di una stringa affinché tale stringa possa essere ritenuta una corrispondenza.  
   
  *integer*  
@@ -291,7 +291,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **MAX**  
  Restituisce le righe che contengono i termini specificati indipendentemente dalla distanza esistente tra di essi. Impostazione predefinita.  
   
- \<match_order >  
+ \<match_order>  
  Specifica se i termini devono trovarsi nell'ordine specificato che deve essere restituito da una query di ricerca. Per specificare \<match_order >, è necessario specificare anche \<distanza_massima >.  
   
  \<match_order > accetta uno dei valori seguenti:  
@@ -312,7 +312,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
   
  Per ulteriori informazioni sull'uso di termini di prossimità personalizzato, vedere [cercare parole vicine a un'altra parola con NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
- \<weighted_term >  
+ \<weighted_term>  
  Specifica che le righe restituite dalla query corrispondono a un elenco di parole e di frasi, a ognuna delle quali può essere associato un valore di ponderazione facoltativo.  
   
  ISABOUT  
@@ -327,13 +327,13 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  { AND | & } | { AND NOT | &! } | { OR | | }   
  Specifica un'operazione logica tra due condizioni di ricerca del predicato CONTAINS.  
   
- {E | &}  
+ { AND | & }  
  Indica che devono essere soddisfatte entrambe le condizioni di ricerca del predicato CONTAINS. Per rappresentare l'operatore AND, è possibile utilizzare il carattere e commerciale (&) anziché la parola chiave AND.  
   
  {E NON | &! }  
  Indica che la seconda condizione di ricerca non deve essere soddisfatta. Per rappresentare l'operatore AND NOT, è possibile utilizzare il carattere e commerciale seguito dal punto esclamativo (&!) anziché la parola chiave AND NOT.  
   
- {O | |}  
+ { OR | | }  
  Indica che deve essere soddisfatta una delle due condizioni di ricerca del predicato CONTAINS. Per rappresentare l'operatore OR, è possibile utilizzare il carattere barra (|) anziché la parola chiave OR.  
   
  Quando  *\<contains_search_condition >* include gruppi tra parentesi, queste tra parentesi gruppi vengono valutati per primi. In seguito alla valutazione dei gruppi tra parentesi, gli operatori logici che includono condizioni di ricerca vengono valutati in base alle regole seguenti:  
@@ -550,9 +550,9 @@ GO
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [Query con ricerca Full-Text](../../relational-databases/search/query-with-full-text-search.md)   
- [Ricerca full-text](../../relational-databases/search/full-text-search.md)   
+ [Ricerca full-Text](../../relational-databases/search/full-text-search.md)   
  [Creare query di ricerca full-text &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [IN &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

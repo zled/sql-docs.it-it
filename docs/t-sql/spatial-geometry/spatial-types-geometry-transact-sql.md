@@ -1,5 +1,5 @@
 ---
-title: Geometry (Transact-SQL) | Documenti Microsoft
+title: geometry (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - geometry data type [SQL Server], Transact-SQL
 ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 32a064570e66de5e2bde0bb539221c04366d5a73
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 988bfaaa5e1b28fa871836641b12517626aa7ed3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>Tipi spaziali - geometry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/02/2018
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. Informazioni su come aggiungere ed eseguire una query su dati geometry  
- Nei due esempi seguenti viene illustrato come aggiungere ed eseguire query su dati di tipo geometry. Nel primo esempio viene creata una tabella con una colonna Identity e una colonna `geometry`, ovvero `GeomCol1`. Una terza colonna effettua il rendering della colonna `geometry` nella rappresentazione Well-Known Text (WKT) OGC (Open Geospatial Consortium) e utilizza il metodo `STAsText()` . Vengono quindi inserite due righe: in una riga è contenuta un'istanza `LineString` di `geometry`e in una seconda è contenuta un'istanza `Polygon` .  
+ Nei due esempi seguenti viene illustrato come aggiungere ed eseguire query su dati di tipo geometry. Nel primo esempio viene creata una tabella con una colonna Identity e una colonna `geometry`, ovvero `GeomCol1`. Una terza colonna effettua il rendering della colonna `geometry` nella rappresentazione Well-Known Text (WKT) OGC (Open Geospatial Consortium) e utilizza il metodo `STAsText()`. Vengono quindi inserite due righe: in una riga è contenuta un'istanza `LineString` di `geometry`e in una seconda è contenuta un'istanza `Polygon` .  
   
 ```sql 
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

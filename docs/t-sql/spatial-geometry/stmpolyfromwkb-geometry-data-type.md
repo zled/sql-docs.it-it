@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STMPolyFromWKB (geometry Data Type)
 ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1d248e91a1c101d490e9facd9ac30e5d48f9e98
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 10c9856e836420e66f1ba659acaaf196805e2b36
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
  *WKB_multipolygon*  
  Rappresentazione WKB del **geometryMultiPolygon** istanza da restituire. *WKB_multipolygon* è un **varbinary (max)** espressione.  
   
- *IDENTIFICATORE SRID*  
+ *SRID*  
  È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **geometryMultiPolygon** istanza da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  

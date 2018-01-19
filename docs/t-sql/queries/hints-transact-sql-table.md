@@ -38,15 +38,15 @@ helpviewer_keywords:
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 caps.latest.revision: "174"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ca76e248bc8f3fe0c3b0edff73254e05a6f4f26
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - tabella
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 > [!IMPORTANT]  
 >  L'omissione della parola chiave WITH è una funzionalità deprecata: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Gli hint di tabella seguenti sono supportati sia con, sia senza la parola chiave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Ad esempio  
+ Gli hint di tabella seguenti sono supportati sia con, sia senza la parola chiave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Esempio:  
   
 ```  
 FROM t (TABLOCK)  
@@ -153,7 +153,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Specifica che qualsiasi vista indicizzata non verrà espansa per accedere alle tabelle sottostanti quando Query Optimizer elabora la query. In Query Optimizer la vista viene gestita come una tabella con indici cluster. L'hint NOEXPAND è applicabile solo alle viste indicizzate. Per altre informazioni, vedere la sezione Osservazioni.  
   
- INDICE **(***index_value* [**,**... *n* ] ) | INDICE = ( *index_value***)**  
+ INDICE  **(* * * index_value* [**,**... *n* ] ) | INDICE = ( *index_value * * *)**  
  La sintassi INDEX() consente di specificare i nomi o gli ID di uno o più indici che devono essere usati in Query Optimizer quando viene elaborata l'istruzione. La sintassi alternativa INDEX = specifica un singolo valore di indice. È possibile specificare solo un hint per l'indice per ogni tabella.  
   
  Se esiste un indice cluster, INDEX(0) attiva un'analisi degli indici cluster, mentre INDEX(1) esegue un'analisi o una ricerca degli indici cluster. Se non esiste alcun indice cluster, INDEX(0) attiva un'analisi di tabella, mentre INDEX(1) viene interpretato come errore.  
@@ -184,11 +184,11 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Per un esempio di utilizzo di questo hint in un'istruzione INSERT ... Selezionare * FROM OPENROWSET, vedere [mantenere i valori null o utilizzo predefinito valori durante l'importazione Bulk &#40; SQL Server &#41; ](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+ FORCESEEK [**(***index_value***(* * * index_column_name* [ **,**... *n* ] **))** ]  
  Specifica che Query Optimizer deve usare solo un'operazione di ricerca nell'indice come percorso di accesso ai dati della tabella o della vista. A partire da SQL Server 2008 R2 SP1, è anche possibile specificare i parametri di indice. In questo caso, in Query Optimizer vengono considerate solo le operazioni di ricerca nell'indice specificato, utilizzando almeno le colonne dell'indice specificate.  
   
  *index_value*  
- Nome o valore ID dell'indice. Non è possibile specificare un ID di indice pari a 0 (heap). Per restituire il nome dell'indice o l'ID, eseguire una query di **Sys. Indexes** vista del catalogo.  
+ Nome o valore ID dell'indice. Non è possibile specificare un ID di indice pari a 0 (heap). Per restituire il nome dell'indice o l'ID, eseguire una query di **Sys.Indexes** vista del catalogo.  
   
  *index_column_name*  
  Nome della colonna dell'indice da includere nell'operazione di ricerca. L'utilizzo di FORCESEEK con i parametri di indice è analogo all'utilizzo di FORCESEEK con un hint INDEX. È tuttavia possibile ottenere un maggior controllo sul percorso di accesso usato da Query Optimizer specificando sia l'indice su cui eseguire la ricerca, sia le colonne dell'indice da prendere in considerazione durante l'operazione di ricerca. Se necessario, possono essere considerate ulteriori colonne. A esempio, se si specifica un indice non cluster, è possibile che in Query Optimizer vengano usate le colonne chiave dell'indice cluster oltre alle colonne specificate.  
@@ -501,7 +501,7 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
   
 ## <a name="see-also"></a>Vedere anche  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Hint per la &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Hint di query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
   
   

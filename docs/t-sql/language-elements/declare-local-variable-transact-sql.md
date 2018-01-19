@@ -22,17 +22,17 @@ helpviewer_keywords:
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 caps.latest.revision: "76"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 182e3443a9baf73fdbda096c11b4320feb53edda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 70bfea2777f5f96769d4296c8fbb7f2acbd20e4f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="declare-localvariable-transact-sql"></a>DICHIARARE @local_variable (Transact-SQL)
+# <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Le variabili vengono dichiarate nel corpo di un batch o di una routine tramite l'istruzione DECLARE e i relativi valori vengono assegnati tramite un'istruzione SET o SELECT. È possibile dichiarare variabili di cursore con questa istruzione e utilizzarle insieme ad altre istruzioni correlate ai cursori. Dopo la dichiarazione, tutte le variabili vengono inizializzate con valore NULL, a meno che non venga fornito un valore nella dichiarazione.  
@@ -138,7 +138,7 @@ Definisce il **tabella** tipo di dati. La dichiarazione di tabella include defin
  IDENTITY  
  Indica che la nuova colonna è una colonna Identity. Quando si aggiunge una nuova riga alla tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un valore univoco e incrementale alla colonna. Le colonne Identity vengono comunemente utilizzate in combinazione con vincoli PRIMARY KEY per fungere da identificatore di riga univoco per la tabella. La proprietà IDENTITY può essere assegnata a **tinyint**, **smallint**, **int**, **decimal(p,0)**, o **numeric(p,0)** colonne. Ogni tabella può includere una sola colonna Identity. Non è consentito associare valori predefiniti e vincoli DEFAULT alle colonne Identity. È necessario specificare sia il valore di inizializzazione che l'incremento oppure è possibile omettere entrambi questi valori. In questo secondo caso, il valore predefinito è (1,1).  
   
- *valore di inizializzazione*  
+ *seed*  
  Valore di inizializzazione utilizzato per la prima riga caricata nella tabella.  
   
  *incremento*  
@@ -159,7 +159,7 @@ Definisce il **tabella** tipo di dati. La dichiarazione di tabella include defin
  CHECK  
  Vincolo che impone l'integrità di dominio tramite la limitazione dei valori che è possibile inserire in una o più colonne.  
   
- *Logical_Expression*  
+ *logical_expression*  
  Espressione logica che restituisce TRUE o FALSE.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -321,7 +321,7 @@ WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [tabella &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [Confrontare dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)  
   
   

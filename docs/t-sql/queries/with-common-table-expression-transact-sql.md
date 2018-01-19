@@ -28,15 +28,15 @@ helpviewer_keywords:
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a45cb91754fdff2aaafb90d33b7d89a70702dfb2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b0f259b51b993c777b27fe8c43c58268ca3dace
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
  *column_name*  
  Specifica un nome di colonna nell'espressione di tabella comune. Non sono consentiti nomi duplicati all'interno di una singola definizione CTE. Il numero di nomi di colonna specificato deve corrispondere al numero di colonne nel set di risultati del *elementi CTE_query_definition*. L'elenco dei nomi di colonna è facoltativo solo se i nomi distinti di tutte le colonne risultanti sono specificati nella definizione della query.  
   
- *Elementi CTE_query_definition*  
+ *CTE_query_definition*  
  Specifica un'istruzione SELECT il cui set di risultati popola l'espressione di tabella comune. L'istruzione SELECT per *elementi CTE_query_definition* deve soddisfare i requisiti necessari per creare una vista, ad eccezione del fatto una CTE non è possibile definire un'altra CTE stessi. Per ulteriori informazioni, vedere la sezione Osservazioni e [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
   
  Se più oggetti *elementi CTE_query_definition* è definito, le definizioni di query devono essere aggiunti da uno di questi operatori sui set: UNION ALL, UNION, EXCEPT o INTERSECT.  
@@ -528,7 +528,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a>K. Utilizzo di funzioni analitiche in un'espressione CTE ricorsiva  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. Utilizzo di funzioni analitiche in un'espressione CTE ricorsiva  
  Nell'esempio seguente viene illustrata una trappola in cui si può cadere quando si utilizza una funzione analitica o di aggregazione nella parte ricorsiva di un'espressione CTE.  
   
 ```  
@@ -682,7 +682,7 @@ SELECT TableName, TotalAvg FROM CountCustomer;
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [Ad eccezione di e INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   

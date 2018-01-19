@@ -40,15 +40,15 @@ helpviewer_keywords:
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 caps.latest.revision: "68"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e718c2d35b1627abee53c3214294372fb23d61a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 322bca602925cd959ca5de076fcbbdeacd7ba63a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Selezionare, ordinare per clausola (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,7 +96,7 @@ ORDER BY order_by_expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *argomento order_by_expression*  
+ *order_by_expression*  
  Specifica una colonna o un'espressione sulla quale ordinare il set di risultati della query. Per specificare una colonna di ordinamento è possibile utilizzare il nome, l'alias di colonna o un intero non negativo che rappresenta la posizione della colonna nell'elenco di selezione.  
   
  È possibile specificare più colonne di ordinamento. I nomi delle colonne devono essere univoci. La sequenza delle colonne di ordinamento nella clausola ORDER BY definisce l'organizzazione del set di risultati ordinato. Ciò significa che il set di risultati viene ordinato in base alla prima colonna e che l'elenco ordinato viene ordinato in base alla seconda colonna e così via.  
@@ -109,7 +109,7 @@ ORDER BY order_by_expression
  **ASC** | DESC  
  Specifica che i valori nella colonna specificata devono essere ordinati in ordine crescente o decrescente. ASC consente di ordinare i valori dal più piccolo al più grande. DESC consente di ordinare i valori dal più grande al più piccolo. ASC è l'ordinamento predefinito. I valori Null vengono considerati i valori in assoluto più piccoli.  
   
- OFFSET { *integer_constant* | *offset_row_count_expression* } {riga | RIGHE}  
+ OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Specifica il numero di righe da ignorare prima della restituzione delle righe dall'espressione di query. Il valore può essere un valore costante intero o un'espressione maggiore o uguale a zero.  
   
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. s  
@@ -547,14 +547,14 @@ ORDER BY LastName, FirstName;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Rango funzioni &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
- [Torna all'inizio &#40; Transact-SQL &#41;](../../t-sql/queries/top-transact-sql.md)   
+ [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [Hint di query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
  [Ad eccezione di e INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
- [UNIONE &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
+ [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   

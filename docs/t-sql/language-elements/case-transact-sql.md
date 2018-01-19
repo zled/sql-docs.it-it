@@ -1,5 +1,5 @@
 ---
-title: CASE (Transact-SQL) | Documenti Microsoft
+title: CASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 283484ce00b3f0c19dea00b47826926a2b86df43
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: df29d72722d665e9595105a01a3a89841ec2b4ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,7 +82,7 @@ END
  Quando *when_expression*  
  Un'espressione semplice in cui *input_expression* viene confrontato quando viene utilizzato il formato CASE semplice. *when_expression* è qualsiasi espressione valida. I tipi di dati di *input_expression* e ogni *when_expression* deve essere lo stesso o deve essere una conversione implicita.  
   
- QUINDI *result_expression*  
+ THEN *result_expression*  
  Espressione restituita quando *input_expression* è uguale a *when_expression* restituisce TRUE, o *argomento Boolean_expression* restituisce TRUE. *espressione di risultato* valida [espressione](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  ELSE *else_result_expression*  
@@ -355,11 +355,11 @@ WHERE SalariedFlag = 0;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [COALESCE &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [IIF &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
- [Scegliere &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
 

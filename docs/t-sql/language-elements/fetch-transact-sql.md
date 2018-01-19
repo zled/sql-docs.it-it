@@ -1,5 +1,5 @@
 ---
-title: Operazione di recupero (Transact-SQL) | Documenti Microsoft
+title: FETCH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ccf0fc44e9be488c7c07cdb159270056bba0adc6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b4bf41cecb0c99a38e340c6596d99dde3da8319
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ FETCH
   
  Il @@FETCH_STATUS funzione segnala lo stato dell'ultima istruzione FETCH. Le stesse informazioni vengono registrate nella colonna fetch_status del cursore restituito dalla stored procedure sp_describe_cursor. In base a queste informazioni sullo stato, è necessario determinare la validità dei dati restituiti da un'istruzione FETCH prima di eseguire qualsiasi operazione con i dati. Per ulteriori informazioni, vedere [@@FETCH_STATUS &#40; Transact-SQL &#41; ](../../t-sql/functions/fetch-status-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per l'istruzione FETCH vengono assegnate per impostazione predefinita a qualsiasi utente valido.  
   
 ## <a name="examples"></a>Esempi  
@@ -213,9 +213,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Chiudi &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
- [DEALLOCARE &#40; Transact-SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [Apri &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

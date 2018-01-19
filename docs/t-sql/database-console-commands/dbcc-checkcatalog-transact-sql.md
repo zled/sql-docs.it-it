@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKCATALOG (Transact-SQL) | Documenti Microsoft
+title: DBCC CHECKCATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c554f15df3eae68ea3b5cda1ba5bb316f5dcc17
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b1608f86abf8605b707f8b72e7baac3b9b794e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -78,27 +77,27 @@ DBCC CHECKCATALOG esegue vari controlli di consistenza tra le tabelle di metadat
 Se risulta impossibile creare uno snapshot, DBCC CHECKCATALOG acquisisce un blocco esclusivo a livello di database per ottenere la consistenza richiesta. Le eventuali inconsistenze rilevate non potranno essere riparate e pertanto sarà necessario ripristinare il database da un backup.
   
 > [!NOTE]  
->  Esecuzione di DBCC CHECKCATALOG su **tempdb** non esegue alcun controllo. Questo avviene perché, per motivi di prestazioni, gli snapshot del database non sono disponibili in **tempdb**. Ciò significa che non è possibile ottenere la consistenza delle transazioni necessaria. Riciclare il server per risolvere gli eventuali **tempdb** problemi relativi ai metadati.  
+> Esecuzione di DBCC CHECKCATALOG su **tempdb** non esegue alcun controllo. Questo avviene perché, per motivi di prestazioni, gli snapshot del database non sono disponibili in **tempdb**. Ciò significa che non è possibile ottenere la consistenza delle transazioni necessaria. Riciclare il server per risolvere gli eventuali **tempdb** problemi relativi ai metadati.  
   
 > [!NOTE]  
->  I dati di FILESTREAM non vengono controllati da DBCC CHECKCATALOG. Tramite FILESTREAM vengono archiviati oggetti binari di grandi dimensioni (BLOB) nel file system.  
+> I dati di FILESTREAM non vengono controllati da DBCC CHECKCATALOG. Tramite FILESTREAM vengono archiviati oggetti binari di grandi dimensioni (BLOB) nel file system.  
   
 DBCC CHECKCATALOG viene inoltre eseguita come parte di [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
   
 ## <a name="result-sets"></a>Set di risultati  
 Se non si specifica alcun database, DBCC CHECKCATALOG restituisce:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 Se come nome del database si specifica [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], DBCC CHECKCATALOG restituisce:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza di **sysadmin** ruolo predefinito del server, o **db_owner** ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
@@ -115,5 +114,5 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[Tabelle di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
+[System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
   

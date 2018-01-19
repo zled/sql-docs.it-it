@@ -1,5 +1,5 @@
 ---
-title: FROM (Transact-SQL) | Documenti Microsoft
+title: FROM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -35,15 +35,15 @@ helpviewer_keywords:
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 caps.latest.revision: "97"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 9ddc3ee291d4e3b498dd6dfd9bbb49ca4299bea6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,7 +161,7 @@ FROM { <table_source> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-\<table_source >  
+\<table_source>  
  Specifica una tabella, vista, variabile di tabella o origine di tabella derivata con o senza un alias, da utilizzare nell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. In un'istruzione sono consentite fino a 256 origini di tabella. Il limite varia tuttavia in base alla memoria disponibile e alla complessità delle altre espressioni nella query, ovvero alcune query specifiche potrebbero non supportare 256 origini di tabella.  
   
 > [!NOTE]  
@@ -213,7 +213,7 @@ FROM { <table_source> [ ,...n ] }
   
  Consente di visualizzare un documento XML come set di righe. Per ulteriori informazioni, vedere [OPENXML &#40; Transact-SQL &#41; ](../../t-sql/functions/openxml-transact-sql.md).  
   
- *argomento derived_table*  
+ *derived_table*  
  Sottoquery che recupera le righe dal database. *l'argomento derived_table* viene utilizzato come input per la query esterna.  
   
  *derivato* *Table* possibile utilizzare il [!INCLUDE[tsql](../../includes/tsql-md.md)] funzionalità costruttore valore di tabella per specificare più righe. Ad esempio, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Per ulteriori informazioni, vedere [il costruttore di valori di tabella &#40; Transact-SQL &#41; ](../../t-sql/queries/table-value-constructor-transact-sql.md).  
@@ -228,7 +228,7 @@ FROM { <table_source> [ ,...n ] }
   
  Specifica che la tabella temporale specificata e la relativa tabella di cronologia delle versioni di sistema collegato viene restituita una versione specifica di dati  
   
-\<tablesample_clause >  
+\<tablesample_clause>  
  Specifica che vengono restituiti dati di esempio dalla tabella. I dati di esempio possono essere approssimativi. Questa clausola può essere utilizzata in ogni tabella primaria o unita in join in un'istruzione SELECT, UPDATE o DELETE. Non è possibile specificare TABLESAMPLE con le viste.  
   
 > [!NOTE]  
@@ -252,10 +252,10 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Espressione di tipo integer costante utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per generare un numero casuale. *repeat_seed* è **bigint**. Se *repeat_seed* non viene specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un valore in modo casuale. Per uno specifico *repeat_seed* valore, il risultato del campionamento è sempre lo stesso se delle modifiche sono state applicate alla tabella. Il *repeat_seed* espressione deve restituire un numero intero maggiore di zero.  
   
- \<joined_table >  
+ \<joined_table>  
  Set di risultati che rappresenta il prodotto di due o più tabelle. In caso di più join, utilizzare le parentesi per modificarne l'ordine standard.  
   
-\<tipo di join >  
+\<join_type>  
  Specifica il tipo di operazione di join.  
   
  **INTERNA**  
@@ -270,7 +270,7 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  Specifica che, oltre alle righe restituite dall'inner join, vengono incluse nel set di risultati tutte le righe della tabella destra che non rispettano le condizioni di join e le colonne di output che corrispondono all'altra tabella sono impostate su NULL.  
   
-\<join_hint >  
+\<join_hint>  
  Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], specifica che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer utilizza un hint di join, o algoritmo di esecuzione, per ogni join specificato nella clausola FROM della query. Per ulteriori informazioni, vedere [hint di Join &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-join.md).  
   
  Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], si applicano questi hint di join INNER join in due colonne non compatibile di distribuzione. È possibile migliorare le prestazioni di query per limitare la quantità di spostamento dei dati che si verifica durante l'elaborazione delle query. Gli hint di join consentiti per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sono i seguenti:  
@@ -287,7 +287,7 @@ FROM { <table_source> [ ,...n ] }
  JOIN  
  Indica che l'operazione di join specificata deve essere eseguita tra le viste o le origini di tabella specificate.  
   
- ON \<search_condition >  
+ ON \<search_condition>  
  Specifica la condizione su cui è basato il join. La condizione può includere qualsiasi predicato, ma vengono in genere utilizzati nomi di colonne e operatori di confronto, ad esempio:  
   
 ```sql
@@ -322,14 +322,14 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Origine di tabella definita nell'argomento precedente. Per altre informazioni, vedere la sezione Osservazioni.  
   
- *table_source* PIVOT \<pivot_clause >  
+ *table_source* PIVOT \<pivot_clause>  
  Specifica che il *table_source* viene trasformata tramite pivot in base il *pivot_column*. *table_source* è una tabella o espressione di tabella. L'output è una tabella che contiene tutte le colonne di *table_source* ad eccezione di *pivot_column* e *value_column*. Le colonne di *table_source*, ad eccezione di *pivot_column* e *value_column*, sono definite colonne di raggruppamento dell'operatore pivot. Per ulteriori informazioni su PIVOT e UNPIVOT, vedere [tramite PIVOT e UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  PIVOT esegue un'operazione di raggruppamento sulla tabella di input relativamente alle colonne di raggruppamento e restituisce una riga per ogni gruppo. Inoltre, l'output contiene una colonna per ogni valore specificato nel *column_list* che compare nella *pivot_column* del *input_table*.  
   
  Per ulteriori informazioni, vedere la sezione Osservazioni riportata di seguito.  
   
- *funzione_aggregata*  
+ *aggregate_function*  
  Funzione di aggregazione di sistema o definita dall'utente che accetta uno o più input. La funzione di aggregazione deve essere invariante rispetto ai valori Null. Una funzione di aggregazione invariante rispetto ai valori Null non considera i valori Null nel gruppo mentre valuta il valore di aggregazione.  
   
  La funzione di aggregazione di sistema COUNT(*) non è consentita.  
@@ -337,7 +337,7 @@ ON (p.ProductID = v.ProductID);
  *value_column*  
  Indica la colonna dei valori dell'operatore PIVOT. Se utilizzato con UNPIVOT, *value_column* non può essere il nome di una colonna esistente nell'input *table_source*.  
   
- PER *pivot_column*  
+ FOR *pivot_column*  
  Colonna pivot dell'operatore PIVOT. *pivot_column* deve essere di un tipo convertibile in modo implicito o esplicito in **nvarchar()**. Questa colonna non può essere **immagine** o **rowversion**.  
   
  Quando viene utilizzato UNPIVOT, *pivot_column* è il nome della colonna di output risultante dal raggruppamento di *table_source*. Non possono essere presenti una colonna esistente in *table_source* con lo stesso nome.  
@@ -857,9 +857,9 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [OPENQUERY &#40; Transact-SQL &#41;](../../t-sql/functions/openquery-transact-sql.md)   
+ [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [IN &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

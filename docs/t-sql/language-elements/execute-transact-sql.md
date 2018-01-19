@@ -1,5 +1,5 @@
 ---
-title: ESEGUIRE (Transact-SQL) | Documenti Microsoft
+title: EXECUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -32,15 +32,15 @@ helpviewer_keywords:
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 caps.latest.revision: "104"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 52a896293ad991509884b45979be0129bd56f287
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5c9081d53346bda14d507688547f37589bd153da
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -206,7 +206,7 @@ Execute a character string
   
  Se utilizzata per richiamare una a valori scalari definita dall'utente (funzione), il @*return_status* variabile può essere di qualsiasi tipo di dati scalare.  
   
- *nome_modulo*  
+ *module_name*  
  Nome completo o non qualificato della stored procedure o della funzione con valori scalari definita dall'utente da chiamare. I nomi di modulo devono essere conforme alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md). Per i nomi delle stored procedure estese la combinazione di maiuscole e minuscole è sempre rilevante, indipendentemente dalle regole di confronto del server.  
   
  Un modulo che è possibile creare in un altro database può essere eseguito se l'utente che lo esegue è il proprietario del modulo o dispone delle autorizzazioni appropriate per eseguirlo in tale database. È possibile eseguire un modulo in un altro server che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se l'utente che lo esegue dispone delle autorizzazioni appropriate per l'utilizzo di tale server (accesso remoto) e per l'esecuzione del modulo nel database specifico. Se si specifica il nome del server ma non quello del database, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] esegue automaticamente la ricerca del modulo nel database predefinito dell'utente.  
@@ -265,7 +265,7 @@ Execute a character string
  [N] '*tsql_string*'  
  Valore stringa costante. *tsql_string* può essere qualsiasi **nvarchar** o **varchar** tipo di dati. Se il valore N è incluso, la stringa viene interpretata come **nvarchar** tipo di dati.  
   
- AS \<context_specification >  
+ AS \<context_specification>  
  Specifica il contesto in cui viene eseguita l'istruzione.  
   
  Account di accesso  
@@ -292,7 +292,7 @@ Execute a character string
  [?]  
  Indica i parametri per il quale i valori vengono forniti nel \<arg-list > di comandi pass-through che vengono utilizzati in EXEC('...', \<arg-list>) in \<server collegato > istruzione.  
   
- IN *linked_server_name*  
+ AT *linked_server_name*  
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Specifica che *command_string* viene eseguita su *linked_server_name* e, se presenti, vengono restituiti al client. *linked_server_name* deve fare riferimento a una definizione di server collegato esistente nel server locale. Server collegati definiti tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
@@ -305,7 +305,7 @@ Execute a character string
 |RECOMPILE|Forza la compilazione, l'utilizzo e l'eliminazione di un nuovo piano dopo l'esecuzione del modulo. Se per il modulo è disponibile un piano di query esistente, tale piano rimane nella cache.<br /><br /> Utilizzare questa opzione se il parametro fornito è atipico oppure se i dati sono cambiati notevolmente. Questa opzione non viene utilizzata per stored procedure estese. È consigliabile utilizzarla solo quando è strettamente necessario, in quanto si tratta di un'opzione onerosa.<br /><br /> **Nota:** non è possibile utilizzare WITH RECOMPILE quando si chiama una stored procedure che utilizza la sintassi OPENDATASOURCE. Quando viene specificato un nome di oggetto composto da quattro parti, l'opzione WITH RECOMPILE viene ignorata.<br /><br /> **Nota:** RECOMPILE non è supportato con le funzioni compilate in modo nativo e scalari definite dall'utente. Se è necessario ricompilare, utilizzare [sp_recompile &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**SET DI RISULTATI NON DEFINITI**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Questa opzione non fornisce alcuna garanzia sugli eventuali risultati restituiti e non viene specificata alcuna definizione. L'istruzione viene eseguita senza errore se vengono restituiti risultati o se non ne vengono restituiti. RESULT SETS UNDEFINED rappresenta il comportamento predefinito se result_sets_option non viene specificato.<br /><br /> Per interpretare funzioni scalari definite dall'utente e funzioni definite dall'utente scalare compilate in modo nativo, questa opzione non è operativa perché le funzioni non restituiscono mai un set di risultati.|  
 |RESULT SETS NONE|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garantisce che l'istruzione di esecuzione non restituirà risultati. Se vengono restituiti risultati il batch viene interrotto.<br /><br /> Per interpretare funzioni scalari definite dall'utente e funzioni definite dall'utente scalare compilate in modo nativo, questa opzione non è operativa perché le funzioni non restituiscono mai un set di risultati.|  
-|*\<result_sets_definition >*|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garantisce che il risultato verrà restituito come specificato in result_sets_definition. Per istruzioni che restituiscono più set di risultati, specificare più *result_sets_definition* sezioni. Racchiudere ogni *result_sets_definition* tra parentesi, separate da virgole. Per ulteriori informazioni, vedere \<result_sets_definition > più avanti in questo argomento.<br /><br /> Sempre questa opzione comporta un errore per le funzioni compilate in modo nativo e scalari definite dall'utente, poiché le funzioni non restituiscono mai un set di risultati.|
+|*\<result_sets_definition>*|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garantisce che il risultato verrà restituito come specificato in result_sets_definition. Per istruzioni che restituiscono più set di risultati, specificare più *result_sets_definition* sezioni. Racchiudere ogni *result_sets_definition* tra parentesi, separate da virgole. Per ulteriori informazioni, vedere \<result_sets_definition > più avanti in questo argomento.<br /><br /> Sempre questa opzione comporta un errore per le funzioni compilate in modo nativo e scalari definite dall'utente, poiché le funzioni non restituiscono mai un set di risultati.|
   
 \<result_sets_definition > **si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
@@ -313,7 +313,7 @@ Execute a character string
   
 |Nome|Definizione|  
 |----------|----------------|  
-|{<br /><br /> column_name<br /><br /> data_type<br /><br /> [ COLLATE collation_name]<br /><br /> [NULL &#124; NON È NULL]<br /><br /> }|Vedere la tabella riportata di seguito.|  
+|{<br /><br /> column_name<br /><br /> data_type<br /><br /> [ COLLATE collation_name]<br /><br /> [NULL &#124; NOT NULL]<br /><br /> }|Vedere la tabella riportata di seguito.|  
 |db_name|Nome del database contenente la tabella, la vista o la funzione con valori di tabella.|  
 |schema_name|Nome dello schema proprietario della tabella, della vista o della funzione con valori di tabella.|  
 |table_name &#124; view_name &#124; table_valued_function_name|Specifica che le colonne restituite saranno quelle specificate nella tabella, nella vista o nella funzione con valori di tabella denominata. La sintassi degli oggetti AS non supporta i sinonimi, le tabelle temporanee e le variabili di tabella.|  
@@ -325,7 +325,7 @@ Execute a character string
 |column_name|Nomi di ogni colonna. Se il numero di colonne è diverso dal set di risultati, si verifica un errore e il batch viene interrotto. Se il nome di una colonna è diverso dal set di risultati, il nome della colonna restituito verrà impostato sul nome definito.|  
 |data_type|Tipi di dati di ogni colonna. Se i tipi di dati sono diversi, viene eseguita una conversione implicita al tipo di dati definito. Se la conversione ha esito negativo il batch viene interrotto|  
 |COLLATE collation_name|Regole di confronto di ogni colonna. In caso di mancata corrispondenza tra regole di confronto, vengono tentate regole di confronto implicite. Se la conversione ha esito negativo il batch viene interrotto.|  
-|NULL &#124; NON È NULL|Ammissione di valori Null di ogni colonna. Se l'ammissione di valori Null definita è NOT NULL e i dati restituiti contengono NULL si verifica un errore e il batch viene interrotto. Se non è specificato, il valore predefinito si allinea all'impostazione delle opzioni ANSI_NULL_DFLT_ON e ANSI_NULL_DFLT_OFF.|  
+|NULL &#124; NOT NULL|Ammissione di valori Null di ogni colonna. Se l'ammissione di valori Null definita è NOT NULL e i dati restituiti contengono NULL si verifica un errore e il batch viene interrotto. Se non è specificato, il valore predefinito si allinea all'impostazione delle opzioni ANSI_NULL_DFLT_ON e ANSI_NULL_DFLT_OFF.|  
   
  Il set di risultati effettivo restituito durante l'esecuzione può essere diverso dal risultato definito tramite la clausola WITH RESULT SETS in uno dei modi seguenti: numero di set di risultati, numero di colonne, nome della colonna, ammissione di valori Null e tipo di dati. Se il numero di set di risultati è diverso, si verifica un errore e il batch viene interrotto.  
   
@@ -732,14 +732,14 @@ GO
  [Clausola EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [Utilità osql](../../tools/osql-utility.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Ripristina &#40; Transact-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [Utilità sqlcmd](../../tools/sqlcmd-utility.md)   
- [SUSER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/suser-name-transact-sql.md)   
+ [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [USER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
- [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
+ [OPENDATASOURCE &#40; Transact-SQL &#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [Funzioni scalari definite dall'utente per OLTP in memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
   
   

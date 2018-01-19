@@ -28,15 +28,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acc0566abe5865284a39680136f0535e8b801d90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8aa26314b450d859760f69b61887827b73b456fc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select-clause-transact-sql"></a>SELECT Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,10 +116,10 @@ SELECT [ ALL | DISTINCT ]
  *property_name*  
  È una proprietà pubblica di *udt_column_name*.  
   
- *nome_campo*  
+ *field_name*  
  È un membro dati pubblico di *udt_column_name*.  
   
- *nome_metodo*  
+ *method_name*  
  È un metodo pubblico di *udt_column_name* che accetta uno o più argomenti. *nome_metodo* non può essere un metodo mutatore.  
   
  Nell'esempio seguente vengono selezionati i valori per la colonna `Location`, definita come tipo `point`, dalla tabella `Cities`, richiamando un metodo del tipo `Distance`:  
@@ -163,7 +163,7 @@ FROM Cities;
   
 ## <a name="see-also"></a>Vedere anche  
  [Selezionare esempi &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

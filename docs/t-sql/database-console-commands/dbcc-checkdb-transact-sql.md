@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 15c991ba9e987d5dc7ed39b2b8edb8bf6b428956
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 49cf7311995d2760306e6050e6bae6efc1db41d8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ DATA_PURITY
  Gli errori di convalida rilevati da questa opzione non possono essere corretti utilizzando le opzioni di correzione DBCC. Per informazioni sulla correzione manuale di questi errori, vedere l'articolo 923247 della Knowledge Base: [risoluzione dell'errore DBCC 2570 in SQL Server 2005 e versioni successive](http://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
     
  Esegue l'override di **massimo grado di parallelismo** opzione di configurazione di **sp_configure** per l'istruzione. Il MAXDOP può superare il valore configurato con sp_configure. Se MAXDOP supera il valore configurato con Resource Governor il [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] utilizza il valore MAXDOP di Resource Governor, descritto in [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Quando si utilizza l'hint per la query MAXDOP sono valide tutte le regole semantiche utilizzate con l'opzione di configurazione max degree of parallelism. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  

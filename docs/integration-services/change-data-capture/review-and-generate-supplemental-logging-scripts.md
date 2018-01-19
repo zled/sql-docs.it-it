@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b5587d6def935cf31d4bf96056b21cfd2c263a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 492a21e51a6bdc1dbcf0a39451a81caee737dba4
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Rivedere e generare script di registrazione supplementare
   Usare la scheda **Scripts** per eseguire o rieseguire uno script nel database di origine Oracle per la configurazione della registrazione supplementare.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Quando si eseguono gli script di registrazione supplementare, viene visualizzata la finestra di dialogo Oracle Credentials for Running Script in cui immettere un nome utente e una password Oracle validi. Per informazioni su come fornire le credenziali Oracle appropriate, vedere [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
- Se necessario, è anche possibile eseguire gli script manualmente tramite SQL * Plus.  
+ Se necessario è anche possibile eseguire gli script manualmente tramite SQL\*Plus.  
   
 ### <a name="to-run-the-scripts-manually"></a>Per eseguire gli script manualmente  
   

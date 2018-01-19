@@ -28,15 +28,15 @@ helpviewer_keywords:
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f7cb61a12af903aa444462a7a67c9c71231b96fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenzioni della sintassi Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,27 +48,27 @@ ms.lasthandoff: 01/09/2018
 |MAIUSCOLE|Parole chiave [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |*corsivo*|Parametri della sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] specificati dall'utente.|  
 |**grassetto**|Nomi di database, tabelle, colonne, indici, stored procedure, utilità, tipi di dati e testo che deve essere digitato esattamente come indicato.|  
-|**carattere di sottolineatura**|Indica il valore predefinito applicato quando la clausola che include il valore sottolineato viene omessa dall'istruzione.|  
+|**underline**|Indica il valore predefinito applicato quando la clausola che include il valore sottolineato viene omessa dall'istruzione.|  
 |&#124; (barra verticale)|Separazione di elementi sintattici racchiusi tra parentesi quadre o graffe. Indica che è possibile utilizzare solo uno degli elementi.|  
 |`[ ]` (parentesi quadre)|Elementi sintattici facoltativi. Le parentesi quadre non devono essere digitate.|  
 |{ } (parentesi graffe)|Elementi sintattici obbligatori. Le parentesi graffe non devono essere digitate.|  
-|[**,**...*n*]|L'elemento precedente può essere ripetuto * n * numero di volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
-|[...*n*]|L'elemento precedente può essere ripetuto * n * numero di volte. Le varie occorrenze dell'elemento sono separate da spazi.|  
+|[**,**...*n*]|L'elemento precedente può essere ripetuto  *n*  numero di volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
+|[...*n*]|L'elemento precedente può essere ripetuto  *n*  numero di volte. Le varie occorrenze dell'elemento sono separate da spazi.|  
 |;|Carattere di terminazione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Sebbene per la maggior parte delle istruzioni in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sia necessario utilizzare il punto e virgola, questo requisito verrà introdotto in una versione futura.|  
-|\<Etichetta >:: =|Nome di un blocco della sintassi. Consente di raggruppare ed etichettare sezioni della sintassi o unità della sintassi utilizzabili in più posizioni di un'istruzione. Ogni posizione in cui è possibile utilizzare il blocco di sintassi è indicata dall'etichetta racchiusa tra parentesi angolari: \<etichetta >.<br /><br /> Un set è una raccolta di espressioni, ad esempio \<set di raggruppamenti >; e un elenco è una raccolta di set, ad esempio \<elenco di elementi composti >.|  
+|\<label> ::=|Nome di un blocco della sintassi. Consente di raggruppare ed etichettare sezioni della sintassi o unità della sintassi utilizzabili in più posizioni di un'istruzione. Ogni posizione in cui è possibile utilizzare il blocco di sintassi è indicata dall'etichetta racchiusa tra parentesi angolari: \<etichetta >.<br /><br /> Un set è una raccolta di espressioni, ad esempio \<set di raggruppamenti >; e un elenco è una raccolta di set, ad esempio \<elenco di elementi composti >.|  
   
 ## <a name="multipart-names"></a>Nomi composti da più parti  
  Se non specificato diversamente, tutti i riferimenti [!INCLUDE[tsql](../../includes/tsql-md.md)] al nome di un oggetto di database possono essere composti da quattro elementi nel formato seguente:  
   
- *nome_server* **.** [*database_name*]**.** [*schema_name*]**.** *object_name*  
+ *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
- | *database_name***.** [*schema_name*]**.** *object_name*  
+ | *database_name***.**[*schema_name*]**.***object_name*  
   
- | *schema_name***.** *object_name*  
+ | *schema_name***.***object_name*  
   
  *| object_name*  
   
- *nome_server*  
+ *server_name*  
  Specifica il nome del server collegato o remoto.  
   
  *database_name*  
@@ -91,8 +91,8 @@ ms.lasthandoff: 01/09/2018
 |-----------------------------|-----------------|  
 |*server* **.** *database* **.** *schema* **.** *oggetto*|Nome composto da quattro parti.|  
 |*server* **.** *database* **...** *oggetto*|Il nome dello schema viene omesso.|  
-|*server* **...** *schema* **.** *oggetto*|Il nome del database viene omesso.|  
-|*server* **... ** *oggetto*|Il nome del database e dello schema viene omesso.|  
+|*server* **..** *schema* **.** *oggetto*|Il nome del database viene omesso.|  
+|*server* **...** *object*|Il nome del database e dello schema viene omesso.|  
 |*database* **.** *schema* **.** *oggetto*|Il nome del server viene omesso.|  
 |*database* **...** *oggetto*|Il nome del server e del database viene omesso.|  
 |*schema* **.** *oggetto*|Il nome del server e del database viene omesso.|  

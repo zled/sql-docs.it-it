@@ -24,15 +24,15 @@ helpviewer_keywords:
 - '| (bitwise OR operator)'
 ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65a39571e4cd02b9bbb20d42463301d38d0f8836
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e77a2e7132b7d32a27b7f5be236d75576cb0fcf
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (OR bit per bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ expression | expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *expression*  
+ *espressione*  
  È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) della categoria di tipi di dati integer, o **bit**, **binario**, o **varbinary** tipi di dati. *espressione* viene considerato come un numero binario per l'operazione bit per bit.  
   
 > [!NOTE]  
@@ -60,7 +60,7 @@ expression | expression
 ## <a name="remarks"></a>Osservazioni  
  L'operatore | esegue un'operazione con OR logico bit per bit tra due espressioni, considerando tutti i bit corrispondenti in entrambe le espressioni. I bit nel risultato sono impostati su 1 se il valore di uno o di entrambi i bit (per il bit in fase di risoluzione) delle espressioni di input è uguale a 1. Se nessuno dei bit è uguale a 1, il bit del risultato è impostato su 0.  
   
- Se le espressioni sinistra e destra sono tipi di dati integer diverso (ad esempio, sinistra *espressione* è **smallint** e destra *espressione* è  **int**), l'argomento del tipo di dati più piccolo viene convertito nel tipo di dati più grande. In questo esempio, il **smallint***espressione* viene convertito in un **int**.  
+ Se le espressioni sinistra e destra sono tipi di dati integer diverso (ad esempio, sinistra *espressione* è **smallint** e destra *espressione* è  **int**), l'argomento del tipo di dati più piccolo viene convertito nel tipo di dati più grande. In questo esempio, il **smallint * * * espressione* viene convertito in un **int**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una tabella con **int** tipi per mostrare i valori originali di dati e lo inserisce nella tabella in un'unica riga.  
@@ -104,9 +104,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Operatori bit per bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [&#124; = &#40; OR bit per bit assegnazione &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+ [&#124;= &#40;Bitwise OR Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
  [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 caps.latest.revision: "53"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 000b5c3177db29b173ee836df9c194c2af322d39
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f2a3e554a7a3b46242c44c38137609322e6d89f4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reserved-keywords-transact-sql"></a>Parole chiave riservate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/18/2017
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
 |DOUBLE|OPTION|Utente|  
-|DROP|o|VALUES|  
+|DROP|OPPURE|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/18/2017
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
 |EXEC|PRECISION|con|  
-|Eseguire|PRIMARY|WITHIN GROUP|  
+|EXECUTE|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||  
   
@@ -115,84 +115,84 @@ ms.lasthandoff: 11/18/2017
   
 ||||  
 |-|-|-|  
-|**ASSOLUTO**|**EXEC**|**SI SOVRAPPONE**|  
-|**AZIONE**|**EXECUTE**|**RIEMPIMENTO**|  
+|**ABSOLUTE**|**EXEC**|**SI SOVRAPPONE**|  
+|**AZIONE**|**EXECUTE**|**PAD**|  
 |**ADA**|**EXISTS**|**PARZIALE**|  
-|**AGGIUNGI**|**EXTERNAL**|**CONVENZIONE PASCAL**|  
-|**ALL**|**ESTRARRE**|**POSIZIONE**|  
+|**ADD**|**EXTERNAL**|**PASCAL**|  
+|**ALL**|**EXTRACT**|**POSIZIONE**|  
 |**ALLOCARE**|**FALSE**|**PRECISIONE**|  
 |**ALTER**|**FETCH**|**PREPARARE**|  
-|**AND**|**PRIMO**|**MANTENERE**|  
+|**AND**|**FIRST**|**MANTENERE**|  
 |**ANY**|**FLOAT**|**PRIMARY**|  
 |**SONO**|**PER**|**PRIMA**|  
 |**Analysis Services**|**ESTERNA**|**PRIVILEGI**|  
 |**ASC**|**FORTRAN**|**PROCEDURE**|  
-|**ASSERZIONE**|**TROVATO**|**PUBBLICA**|  
-|**AT**|**FROM**|**LETTURA**|  
-|**AUTHORIZATION**|**FULL**|**REALE**|  
-|**AVG**|**OTTIENI**|**RIFERIMENTI**|  
+|**ASSERZIONE**|**TROVATO**|**PUBLIC**|  
+|**AT**|**FROM**|**READ**|  
+|**AUTHORIZATION**|**FULL**|**REAL**|  
+|**AVG**|**GET**|**RIFERIMENTI**|  
 |**BEGIN**|**GLOBALE**|**RELATIVO**|  
-|**BETWEEN**|**GO**|**LIMITARE**|  
+|**BETWEEN**|**GO**|**RESTRICT**|  
 |**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
 |**ENTRAMBI**|**GRUPPO**|**ROLLBACK**|  
-|**DA**|**CON**|**RIGHE**|  
+|**BY**|**CON**|**ROWS**|  
 |**CASCADE**|**ORA**|**SCHEMA**|  
-|**A CASCATA**|**IDENTITÀ**|**SCORRIMENTO**|  
+|**CASCADED**|**IDENTITÀ**|**SCORRIMENTO**|  
 |**CASE**|**CONTROLLO IMMEDIATO**|**SECONDO**|  
 |**CAST**|**IN**|**SEZIONE**|  
-|**CATALOGO**|**INCLUDERE**|**SELECT**|  
+|**CATALOG**|**INCLUDE**|**SELECT**|  
 |**CHAR**|**INDEX**|**SESSIONE**|  
 |**CHAR_LENGTH**|**INDICATORE**|**SESSION_USER**|  
 |**CARATTERE**|**INIZIALMENTE**|**SET**|  
 |**CHARACTER_LENGTH**|**INTERNA**|**DIMENSIONI**|  
-|**CONTROLLO**|**INPUT**|**SMALLINT**|  
+|**CHECK**|**INPUT**|**SMALLINT**|  
 |**CLOSE**|**DISTINZIONE**|**ALCUNI**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
 |**COLLATE**|**INT**|**SQL**|  
 |**REGOLE DI CONFRONTO**|**VALORE INTEGER**|**SQLCA**|  
-|**COLONNA**|**SI INTERSECANO**|**SQLCODE**|  
-|**ESEGUIRE IL COMMIT**|**INTERVALLO**|**SQLERROR**|  
-|**LA CONNESSIONE**|**IN**|**SQLSTATE**|  
-|**CONNESSIONE**|**IS**|**SQLWARNING**|  
-|**VINCOLO**|**ISOLAMENTO**|**SUBSTRING**|  
+|**COLONNA**|**INTERSECT**|**SQLCODE**|  
+|**COMMIT**|**INTERVALLO**|**SQLERROR**|  
+|**CONNECT**|**IN**|**SQLSTATE**|  
+|**CONNESSIONE**|**È**|**SQLWARNING**|  
+|**CONSTRAINT**|**ISOLAMENTO**|**SUBSTRING**|  
 |**VINCOLI**|**CREARE UN JOIN**|**SUM**|  
-|**CONTINUE**|**CHIAVE**|**SYSTEM_USER**|  
+|**CONTINUE**|**KEY**|**SYSTEM_USER**|  
 |**CONVERTI**|**LANGUAGE**|**TABLE**|  
-|**CORRISPONDENTE**|**ULTIMO**|**TEMPORANEO**|  
+|**CORRISPONDENTE**|**LAST**|**TEMPORANEO**|  
 |**COUNT**|**INIZIALI**|**QUINDI**|  
 |**CREARE**|**LEFT**|**ORA**|  
-|**CROSS**|**LIVELLO**|**TIMESTAMP**|  
+|**CROSS**|**LEVEL**|**TIMESTAMP**|  
 |**CORRENTE**|**LIKE**|**TIMEZONE_HOUR**|  
-|**CURRENT_DATE**|**LOCALE**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**LOWER**|**A**|  
+|**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
+|**CURRENT_TIME**|**LOWER**|**TO**|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**FINALI**|  
 |**CURRENT_USER**|**MAX**|**TRANSAZIONE**|  
 |**CURSORE**|**MIN**|**TRANSLATE**|  
-|**DATA**|**MINUTO**|**CONVERSIONE**|  
+|**DATA**|**MINUTO**|**TRANSLATION**|  
 |**DAY**|**MODULO**|**TRIM**|  
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
 |**DEC**|**NOMI**|**UNIONE**|  
 |**DECIMALE**|**NAZIONALE**|**UNIVOCO**|  
-|**DICHIARARE**|**NATURALE**|**SCONOSCIUTO**|  
+|**DICHIARARE**|**NATURALE**|**UNKNOWN**|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
-|**PUÒ ESSERE RINVIATO**|**AVANTI**|**UPPER**|  
-|**POSTICIPATA**|**NO**|**UTILIZZO**|  
+|**PUÒ ESSERE RINVIATO**|**NEXT**|**UPPER**|  
+|**POSTICIPATA**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
 |**DESC**|**NOT**|**UTILIZZO**|  
-|**DESCRIVERE**|**NULL**|**VALUE**|  
+|**DESCRIBE**|**NULL**|**VALUE**|  
 |**DESCRITTORE**|**NULLIF**|**VALORI**|  
-|**DIAGNOSTICA**|**NUMERICO**|**VARCHAR**|  
-|**DISCONNETTI**|**OCTET_LENGTH**|**VARIABILE**|  
-|**DISTINCT**|**DI**|**VIEW**|  
+|**DIAGNOSTICA**|**NUMERIC**|**VARCHAR**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**VARIABILE**|  
+|**DISTINCT**|**OF**|**VIEW**|  
 |**DOMINIO**|**ON**|**QUANDO**|  
-|**DOPPIA**|**SOLO**|**OGNI VOLTA CHE**|  
-|**ELIMINARE**|**OPEN**|**WHERE**|  
-|**ELSE**|**OPZIONE**|**CON**|  
-|**END**|**OR**|**LAVORO**|  
-|**FINE-EXEC**|**ORDINE**|**SCRITTURA**|  
-|**CARATTERE DI ESCAPE**|**ESTERNO**|**YEAR**|  
-|**LA DIFFERENZA**|**OUTPUT**|**ZONA**|  
+|**DOPPIA**|**ONLY**|**OGNI VOLTA CHE**|  
+|**DROP**|**OPEN**|**WHERE**|  
+|**ELSE**|**OPZIONE**|**WITH**|  
+|**END**|**OPPURE**|**LAVORO**|  
+|**END-EXEC**|**ORDINE**|**SCRITTURA**|  
+|**ESCAPE**|**ESTERNO**|**YEAR**|  
+|**EXCEPT**|**OUTPUT**|**ZONE**|  
 |**ECCEZIONE**|||  
   
 ## <a name="future-keywords"></a>Parole chiave di versioni future  
@@ -244,7 +244,7 @@ ms.lasthandoff: 11/18/2017
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|timestamp|  
+|CUME_DIST|NEW|TIMESTAMP|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|No|TIMEZONE_MINUTE|  
 |CURRENT_PATH|Nessuno|TRAILING|  
@@ -258,7 +258,7 @@ ms.lasthandoff: 11/18/2017
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALUE|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|Parametro|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  

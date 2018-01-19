@@ -17,22 +17,22 @@ helpviewer_keywords:
 - methods [XML in SQL Server]
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e607f76007473b0ca53788b2a934221ef68d1e0d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c6f213d6e016d876afe68429c582f9ac343896bb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-data-type-methods"></a>Metodi con tipo di dati XML
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   È possibile utilizzare il **xml** metodi per eseguire query di un'istanza XML archiviata in una variabile o colonna di tipo di dati **xml** tipo. Negli argomenti di questa sezione viene illustrato come utilizzare il **xml** metodi con tipo di dati.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Description|  
 |-----------|-----------------|  

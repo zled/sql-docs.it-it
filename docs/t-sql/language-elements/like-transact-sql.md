@@ -1,5 +1,5 @@
 ---
-title: Ad esempio (Transact-SQL) | Documenti Microsoft
+title: LIKE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -32,15 +32,15 @@ helpviewer_keywords:
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 993ba7467ada3a69fed043e2d6322efa7538b190
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) del tipo di dati carattere.  
   
- *modello*  
+ *pattern*  
  È la stringa di caratteri da cercare nella *match_expression*e possono includere i seguenti caratteri jolly validi. *modello* può contenere un massimo di 8.000 byte.  
   
 |Carattere jolly|Description|Esempio|  
@@ -187,7 +187,7 @@ GO
 |Simbolo|Significato|  
 |------------|-------------|  
 |LIKE '5[%]'|5%|  
-|LIKE '[_]n'|n|  
+|LIKE '[_]n'|_n|  
 |LIKE '[a-cdf]'|a, b, c, d oppure f|  
 |LIKE '[-acdf]'|-, a, c, d oppure f|  
 |LIKE '[ [ ]'|[|  
@@ -333,7 +333,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Utilizzo dell'operatore NOT LIKE con il carattere jolly %  
- Nell'esempio seguente consente di individuare tutti i numeri di telefono di `DimEmployee` tabella che non iniziano con `612`.  ,  
+ Nell'esempio seguente consente di individuare tutti i numeri di telefono di `DimEmployee` tabella che non iniziano con `612`.  tramite tabelle annidate.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -357,8 +357,8 @@ ORDER by LastName;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [IN &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
  

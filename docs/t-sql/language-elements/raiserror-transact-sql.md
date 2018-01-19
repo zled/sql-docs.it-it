@@ -1,5 +1,5 @@
 ---
-title: RAISERROR (Transact-SQL) | Documenti Microsoft
+title: RAISERROR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
@@ -30,15 +30,15 @@ helpviewer_keywords:
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: eaebe21d731916e0ed6906e7d916df4c8cac2d90
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: de9b90e46c344c4d287d677c9aa17e5d635aca6d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ RAISERROR ( { msg_str | @local_variable }
  *msg_id*  
  Un numero di messaggio di errore definiti dall'utente viene archiviato nella vista del catalogo sys. Messages mediante sp_addmessage. I numeri di errore per i messaggi di errore definiti dall'utente devono essere maggiori di 50000. Quando *msg_id* viene omesso, RAISERROR genera un messaggio di errore con numero di errore pari a 50000.  
   
- *argomento msg_str*  
+ *msg_str*  
  È simile a un messaggio definito dall'utente con la formattazione di **printf** funzione nella libreria standard C. Il messaggio di errore può contenere un massimo di 2.047 caratteri. Se contiene più di 2.048 caratteri, vengono visualizzati solo i primi 2.044 e vengono aggiunti tre punti a indicare che il messaggio è stato troncato. I parametri di sostituzione utilizzano un maggior numero di caratteri rispetto a quanto viene visualizzato nell'output a causa della gestione dell'archiviazione interna. Ad esempio, il parametro di sostituzione *%d* con un valore assegnato di 2 genera effettivamente un carattere nella stringa di messaggio, ma internamente occupa fino a tre caratteri aggiuntivi dell'archiviazione. Questo requisito a livello di archiviazione riduce il numero di caratteri disponibili per l'output del messaggio.  
   
  Quando *argomento msg_str* viene specificato, RAISERROR genera un messaggio di errore con numero di errore pari a 50000.  
@@ -94,7 +94,7 @@ RAISERROR ( { msg_str | @local_variable }
 |# (simbolo di cancelletto)|Prefisso 0x per tipi esadecimali di x o di X|Quando viene utilizzato con il formato o, x o X, il simbolo di cancelletto (#) inserisce rispettivamente i caratteri 0, 0x o 0X all'inizio di qualsiasi valore diverso da zero. Il simbolo di cancelletto (#) viene ignorato se utilizzato come prefisso di d, i oppure u.|  
 |' ' (spazio)|Riempimento con spazi|Inserisce spazi vuoti all'inizio di un valore con segno positivo. Viene ignorato quando è specificato con il segno più (+).|  
   
- *Larghezza*  
+ *width*  
   
  Valore intero che definisce la larghezza minima del campo nel quale viene inserito il valore dell'argomento. Se la lunghezza del valore dell'argomento è maggiore o uguale a *larghezza*, il valore viene stampato senza alcun riempimento. Se il valore è inferiore a *larghezza*, il valore viene riempito alla lunghezza specificata *larghezza*.  
   
@@ -126,10 +126,10 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  Per convertire un valore di [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** del tipo di dati, specificare **% I64d**.  
   
- **@***local_variable*  
- È una variabile di qualsiasi tipo di dati carattere valido contenente una stringa formattata in modo analogo *argomento msg_str*. **@***local_variable* deve essere **char** o **varchar**, o essere in grado di convertire in modo implicito in questi tipi di dati.  
+ **@** *local_variable*  
+ È una variabile di qualsiasi tipo di dati carattere valido contenente una stringa formattata in modo analogo *argomento msg_str*. **@ * * * local_variable* deve essere **char** o **varchar**, o essere in grado di convertire in modo implicito in questi tipi di dati.  
   
- *livello di gravità*  
+ *severity*  
  Livello di gravità definito dall'utente associato al messaggio. Quando si utilizza *msg_id* per generare un messaggio definito dall'utente creato mediante sp_addmessage, la gravità specificata in RAISERROR sostituisce quella specificata in sp_addmessage.  
   
  I livelli di gravità da 0 a 18 possono essere specificati da qualsiasi utente, Livelli di gravità da 19 a 25 possono essere specificati solo dai membri del ruolo predefinito del ruolo del server o gli utenti dispongono dell'autorizzazione ALTER TRACE. I livelli di gravità da 19 a 25 richiedono l'opzione WITH LOG. I livelli di gravità inferiori a 0 vengono interpretati come 0. I livelli di gravità superiori a 25 vengono interpretati come 25.  
@@ -150,12 +150,12 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
  ```  
   
- *stato*  
+ *state*  
  Valore intero compreso tra 0 e 255. Per impostazione predefinita i valori negativi su 1. I valori maggiori di 255 non devono essere utilizzati. 
   
  Se in più posizioni viene generato lo stesso errore definito dall'utente, lo stesso numero di stato univoco per ogni posizione può semplificare l'individuazione della sezione di codice in cui si sono verificati gli errori.  
   
- *argomento*  
+ *argument*  
  Parametri utilizzati nella sostituzione delle variabili definite in *argomento msg_str* o il messaggio corrispondente *msg_id*. Possono essere presenti 0 o più parametri di sostituzione, ma il numero complessivo di tali parametri non può essere maggiore di 20. Ogni parametro di sostituzione può essere una variabile locale o uno di questi tipi di dati: **tinyint**, **smallint**, **int**, **char**, **varchar**, **nchar**, **nvarchar**, **binario**, o **varbinary**. Non sono supportati altri tipi di dati.  
   
  *opzione*  
@@ -289,10 +289,10 @@ GO
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [sp_addmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_dropmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [xp_logevent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
+ [xp_logevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
