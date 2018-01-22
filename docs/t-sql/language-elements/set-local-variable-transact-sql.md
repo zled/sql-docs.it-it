@@ -19,15 +19,15 @@ helpviewer_keywords:
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b7d855f491a4f9482308df6f3ed2dcca8b067398
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fd65fea39ac3f9a9cba0d47ec94365bff9155332
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-localvariable-transact-sql"></a>IMPOSTARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,13 +74,13 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **@***local_variable*  
+ **@** *local_variable*  
  È il nome di una variabile di qualsiasi tipo tranne **cursore**, **testo**, **ntext**, **immagine**, o **tabella**. I nomi delle variabili devono iniziare con un simbolo di chiocciola (**@**). I nomi delle variabili devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  *property_name*  
  Proprietà di un tipo definito dall'utente.  
   
- *nome_campo*  
+ *field_name*  
  Campo pubblico di un tipo definito dall'utente.  
   
  *udt_name*  
@@ -92,7 +92,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *nome_metodo* **(** *argomento* [ **,**... *n* ] **)**  
  Metodo di un tipo definito dall'utente che accetta uno o più argomenti per modificare lo stato di un'istanza di un tipo. I metodi statici devono essere pubblici.  
   
- **@***SQLCLR_local_variable*  
+ **@** *SQLCLR_local_variable*  
  È una variabile il cui tipo è situato in un assembly. Per altre informazioni, vedere [Concetti relativi alla programmazione dell'integrazione con CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -174,25 +174,25 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Impedisce l'esecuzione di aggiornamenti tramite il cursore. Non è possibile fare riferimento al cursore in una clausola WHERE CURRENT OF di un'istruzione UPDATE o DELETE. Questa opzione è prioritaria rispetto alla funzionalità di aggiornamento predefinita di un cursore. Questa parola chiave si differenzia dalla parola chiave READ_ONLY descritta in precedenza in quanto tra READ e ONLY esiste uno spazio anziché un carattere di sottolineatura.  
   
  AGGIORNAMENTO [OF *column_name*[ **,**... *n* ] ]  
- Definisce le colonne aggiornabili nel cursore. Se viene specificato OF *column_name* [**,**...  *n* ] viene fornito, solo le colonne elencate è possibile apportare modifiche. Se non viene specificata alcuna colonna, è possibile aggiornare tutte le colonne, a meno che il cursore non sia stato definito come READ_ONLY.  
+ Definisce le colonne aggiornabili nel cursore. Se viene specificato OF *column_name* [**,**... * n *] viene fornito, solo le colonne elencate è possibile apportare modifiche. Se non viene specificata alcuna colonna, è possibile aggiornare tutte le colonne, a meno che il cursore non sia stato definito come READ_ONLY.  
   
 ## <a name="remarks"></a>Osservazioni  
  Dopo la dichiarazione, le variabili vengono inizializzate sul valore NULL. Per assegnare un valore diverso da NULL a una variabile dichiarata, utilizzare l'istruzione SET. L'istruzione SET che assegna un valore alla variabile restituisce un solo valore. Per inizializzare più variabili, utilizzare un'istruzione SET separata per ogni variabile locale.  
   
  Le variabili possono essere utilizzate solo nelle espressioni e non in sostituzione di parole chiave o nomi di oggetto. Per creare istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] dinamiche, utilizzare EXECUTE.  
   
- Le regole di sintassi per SET  **@**  *cursor_variable* non includono le parole chiave LOCAL e GLOBAL. Quando il SET di  **@**  *cursor_variable* = CURSOR... viene utilizzata la sintassi, viene creato un cursore GLOBAL o LOCAL a seconda dell'impostazione del valore predefinito per l'opzione di database locale di cursore.  
+ Le regole di sintassi per SET **@ * * * cursor_variable* non includono le parole chiave LOCAL e GLOBAL. Quando il SET **@ * * * cursor_variable* = CURSOR... viene utilizzata la sintassi, viene creato un cursore GLOBAL o LOCAL a seconda dell'impostazione del valore predefinito per l'opzione di database locale di cursore.  
   
  Le variabili di cursore sono sempre locali, anche quando fanno riferimento a un cursore globale. Quando una variabile di cursore fa riferimento a un cursore globale, esistono sia un riferimento al cursore locale che un riferimento al cursore globale. Per ulteriori informazioni, vedere l'esempio C.  
   
- Per ulteriori informazioni, vedere [DECLARE CURSOR &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
+ Per ulteriori informazioni, vedere [DECLARE CURSOR & #40; Transact-SQL & #41; ](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
   
  L'operatore di assegnazione composto può essere utilizzato in tutti i casi in cui è presente un'assegnazione con un'espressione a destra dell'operatore, incluse variabili e un'istruzione SET in un'istruzione UPDATE, SELECT o RECEIVE.  
   
  Non utilizzare una variabile in un'istruzione SELECT per concatenare valori, ovvero per elaborare valori aggregati. Si potrebbero verificare risultati di query imprevisti. Ciò è dovuto al fatto che non è garantito che tutte le espressioni nell'elenco SELECT, incluse le assegnazioni, siano eseguite esattamente una volta per ciascuna riga di output. Per ulteriori informazioni, vedere [questo articolo della Knowledge Base](http://support.microsoft.com/kb/287515).  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'appartenenza al ruolo public. Tutti gli utenti possono utilizzare SET  **@**  *local_variable*.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo public. Tutti gli utenti possono utilizzare SET **@ * * * local_variable*.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -367,7 +367,7 @@ SELECT TOP 1 @rows FROM sys.tables;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Composta operatori & #40; Transact-SQL & #41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
