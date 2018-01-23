@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4bdf8563587ef08dd89634676a56324dc0191edb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b4cc8514f957d0b9337d8466b5cd130c852b334c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>Lezione 1-3-definizione di una vista origine dati
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dopo aver definito le origini dati che verrà utilizzato in un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto, il passaggio successivo consiste in genere per definire una vista origine dati per il progetto. Una vista origine dati è una vista singola unificata dei metadati delle tabelle e delle viste specificate definite dall'origine dati nel progetto. L'archiviazione dei metadati nella vista origine dati consente di lavorare con i metadati durante lo sviluppo senza una connessione aperta con un'origine dati sottostante. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Dopo aver definito le origini dati che si utilizzeranno in un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], il passaggio successivo consiste in genere nella definizione di una vista origine dati per il progetto. Una vista origine dati è una vista singola unificata dei metadati delle tabelle e delle viste specificate definite dall'origine dati nel progetto. L'archiviazione dei metadati nella vista origine dati consente di lavorare con i metadati durante lo sviluppo senza una connessione aperta con un'origine dati sottostante. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 Nell'attività che segue si definirà una vista origine dati che include cinque tabelle dell'origine dati **AdventureWorksDW2012** .  
   
@@ -38,7 +40,7 @@ Nell'attività che segue si definirà una vista origine dati che include cinque 
 3.  In **Origine dati relazionali**è selezionata l'origine dati **Adventure Works DW 2012** . Scegliere **Avanti**.  
   
     > [!NOTE]  
-    > Per creare una vista origine dati basata su più origini dati, definire innanzitutto una vista origine dati basata su una singola origine dati che viene chiamata origine dati primaria. Successivamente, è possibile aggiungere tabelle e viste di un'origine dati secondaria. Quando si progettano dimensioni contenenti attributi basati su tabelle correlate in più origini dati, potrebbe essere necessario definire un'origine dati di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come origine dati primaria allo scopo di usare le funzionalità del motore delle query distribuite.  
+    > Per creare una vista origine dati basata su più origini dati, definire innanzitutto una vista origine dati basata su una singola origine dati che viene chiamata origine dati primaria. Successivamente, è possibile aggiungere tabelle e viste di un'origine dati secondaria. Quando si progettano dimensioni contenenti attributi basati su tabelle correlate in più origini dati, è necessario definire un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] origine dati come origine dati primaria da utilizzare le funzionalità del motore query distribuita.  
   
 4.  Nella pagina **Selezione tabelle e viste** selezionare le tabelle e le viste nell'elenco di oggetti disponibili nell'origine dati selezionata. Questo elenco può essere filtrato in modo da agevolare la selezione di tabelle e viste.  
   
@@ -84,10 +86,10 @@ Nell'attività che segue si definirà una vista origine dati che include cinque 
     A questo punto è possibile visualizzare tutte le tabelle e le relative relazioni nel riquadro **Diagramma** . Si noti che tra la tabella FactInternetSales e la tabella DimDate esistono tre relazioni. A ogni vendita sono associate tre date: data di ordine, di scadenza e di spedizione. Per visualizzare i dettagli di una relazione, fare doppio clic sulla relativa freccia nel riquadro **Diagramma** .  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Modifica dei nomi predefiniti delle tabelle](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
+[Modifica di nomi di tabella predefinito](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Viste origine dati in modelli multidimensionali](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+[Viste origine dati nei modelli multidimensionali](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
   

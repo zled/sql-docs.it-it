@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3c2d9626ff12593f6192ab6b3a6bec1bb6ab4a7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b454d405b6175c200d8be9426fafb7e79be25e70
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversioni di valuta (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)] Multidimensionali solo  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[applies](../includes/applies-md.md)] solo a Multidimensional  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa una serie di funzionalità, basate su script MDX (Multidimensional Expressions), che implementano il supporto per la conversione di valuta nei cubi che supportano più valute.  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="defining-currency-conversions"></a>Definizione delle conversioni di valuta  
  La Configurazione guidata funzionalità di Business Intelligence consente di definire la funzionalità di conversione di valuta per un cubo. In alternativa, le conversioni di valuta possono essere definite in modo manuale tramite script MDX.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
  Per poter definire una conversione di valuta in un cubo tramite la Configurazione guidata funzionalità di Business Intelligence, è prima necessario definire almeno una dimensione di tipo Valuta, una dimensione temporale e un gruppo di misure di tipo Tasso. Quando si esegue la Configurazione guidata funzionalità di Business Intelligence, questi oggetti vengono usati per recuperare i dati e i metadati per la creazione della dimensione di tipo Valuta report e dello script MDX necessari per l'implementazione della funzionalità di conversione di valuta.  
   
 ### <a name="decisions"></a>Decisioni  

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9f8206a854379bd95a41d271d3c5f9dc45bd200c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a7430bd3692788b8977d4c1849a599ada77dfc59
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Lezione 4-2-definizione di proprietà dell'attributo padre in una gerarchia padre-figlio
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Una gerarchia padre-figlio è una gerarchia in una dimensione che si basa su due colonne della tabella. Nell'insieme, queste colonne definiscono le relazioni gerarchiche tra i membri della dimensione. La prima colonna, denominata *colonna chiave membro*, identifica ogni membro della dimensione. L'altra colonna, denominata *colonna padre*, identifica l'elemento padre di ogni membro della dimensione. La proprietà **NamingTemplate** di un attributo padre consente di determinare il nome di ogni livello nella gerarchia padre-figlio e la proprietà **MembersWithData** consente di determinare se i dati del membro padre devono essere visualizzati.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Una gerarchia padre-figlio è una gerarchia in una dimensione basata su due colonne di tabella. Nell'insieme, queste colonne definiscono le relazioni gerarchiche tra i membri della dimensione. La prima colonna, denominata *colonna chiave membro*, identifica ogni membro della dimensione. L'altra colonna, denominata *colonna padre*, identifica l'elemento padre di ogni membro della dimensione. La proprietà **NamingTemplate** di un attributo padre consente di determinare il nome di ogni livello nella gerarchia padre-figlio e la proprietà **MembersWithData** consente di determinare se i dati del membro padre devono essere visualizzati.  
   
 Per altre informazioni, vedere [Dimensioni padre-figlio](../analysis-services/multidimensional-models/parent-child-dimension.md), [Attributi nelle gerarchie padre-figlio](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  
   
@@ -88,7 +90,7 @@ Questo argomento illustra le attività che consentono di creare un modello di de
   
     ![Finestra di dialogo Modello denominazione livello](../analysis-services/media/l4-namingtemplate.gif "la finestra di dialogo Modello denominazione livelli")  
   
-5.  Fare clic su **OK**.  
+5.  Scegliere **OK**.  
   
 6.  Nella cella della proprietà **MembersWithData** della finestra Proprietà dell'attributo **Employees** selezionare **NonLeafDataHidden** per modificare questo valore per l'attributo **Employees** .  
   

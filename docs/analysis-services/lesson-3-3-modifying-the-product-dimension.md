@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4352e05555c713c5b979e4ac8e3fc279d6099fe1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bbed44f2b02b0d94678513185dbf682a537e9e5
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Lezione 3-3-modifica della dimensione Product
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nelle attività di questo argomento, utilizzare un calcolo denominato per fornire nomi più descrittivi per le linee di prodotti, definire una gerarchia nella dimensione Product e specificare il nome del membro (totale) per la gerarchia. Si raggrupperanno inoltre gli attributi in cartelle di visualizzazione.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Nelle attività di questo argomento si utilizzerà un calcolo denominato per fornire nomi più descrittivi per le linee di prodotti, si definirà una gerarchia nella dimensione Product e si specificherà il nome membro (Totale) per la gerarchia. Si raggrupperanno inoltre gli attributi in cartelle di visualizzazione.  
   
 ## <a name="adding-a-named-calculation"></a>Aggiunta di un calcolo denominato  
 È possibile aggiungere un calcolo denominato a una tabella in una vista origine dati. Nell'attività seguente verrà creato un calcolo denominato che consente di visualizzare il nome completo della linea di prodotti.  
@@ -169,7 +171,7 @@ Se i dati sottostanti le supportano, è consigliabile definire relazioni tra gli
   
     Nell'elenco **Tipo di relazione** lasciare il tipo di relazione impostato su **Flessibile** perché le relazioni tra i membri potrebbero cambiare nel corso del tempo. Ad esempio, un modello di prodotto può essere spostato in una linea di prodotti diversa.  
   
-4.  Fare clic su **OK**.  
+4.  Scegliere **OK**.  
   
 5.  Scegliere **Salva tutti** dal menu **File**.  
   
@@ -189,7 +191,7 @@ Se i dati sottostanti le supportano, è consigliabile definire relazioni tra gli
 [Modifica della dimensione Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[Definire calcoli denominati in una vista origine dati &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [Creare gerarchie definite dall'utente](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [Configurare il livello &#40;Totale&#41; per le gerarchie di attributi](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

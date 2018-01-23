@@ -17,19 +17,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dafe91acc4a753b9b6335d1b8b5bbd56c30586f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: db03f796d3271a7141f3cd754dd04d0e312bdc33
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-features-and-tasks"></a>Funzionalità e attività di Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]La documentazione fondamentale di Analysis Services è organizzata dalla modalità server e di tipo di modello in modo che sia possibile concentrarsi su solo gli strumenti, attività e le funzionalità disponibili nelle modalità installata. Le attività amministrative del server estese a più modalità si trovano nella gestione delle istanze.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  La documentazione fondamentale per Analysis Services è organizzata in base al tipo di modello e alla modalità server affinché sia possibile soffermarsi solo sugli strumenti, sulle attività e sulle funzionalità disponibili nella modalità installata. Le attività amministrative del server estese a più modalità si trovano nella gestione delle istanze.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
- [Confronto tra soluzioni tabulari e multidimensionali &#40;SSAS&#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Confronto tra soluzioni tabulari e multidimensionali &#40; SSAS &#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- [Strumenti e applicazioni usati in Analysis Services](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
+ [Strumenti e applicazioni usate in Analysis Services](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
  [Gestione di un'istanza di Analysis Services](../analysis-services/instances/analysis-services-instance-management.md)  
   

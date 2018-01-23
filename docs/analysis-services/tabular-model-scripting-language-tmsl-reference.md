@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3e1a38f2d4466c70259d9f58787b88c939459f59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de637476cd0aa2577c850062dffebc0e4fc66238
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>Scripting Language (TMSL) riferimento del modello tabulare
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Tabular Model Scripting Language (TMSL) è la sintassi di definizione del modello di comando e oggetti per i database modello tabulare di Analysis Services a livello di compatibilità 1200 o superiore. TMSL comunica con Analysis Services tramite il protocollo XMLA, in cui il [XMLA. Eseguire](../analysis-services/xmla/xml-elements-methods-execute.md) metodo accetta sia basata su JSON **istruzione** script TMSL, nonché gli script tradizionale basato su XML in [Analysis Services Scripting Language &#40; ASSL per XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Tabular Model Scripting Language (TMSL) è la sintassi di definizione del modello di comando e oggetti per i database modello tabulare di Analysis Services a livello di compatibilità 1200 o superiore. TMSL comunica con Analysis Services tramite il protocollo XMLA, in cui il [XMLA. Eseguire](../analysis-services/xmla/xml-elements-methods-execute.md) metodo accetta sia basata su JSON **istruzione** script TMSL, nonché gli script tradizionale basato su XML in [Analysis Services Scripting Language &#40; ASSL per XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  Gli elementi chiave del linguaggio TMSL, tra cui:  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 
 ||||||  
 |-|-|-|-|-|  
-|**Versione**|**Multidimensionale**|**Tabulari 110x**|**Tabulari 1200**| **1400 tabulare** |
+|**Version**|**Multidimensionale**|**Tabulari 110x**|**Tabulari 1200**| **1400 tabulare** |
 |Azure Analysis Services|ND|ND|TMSL|TMSL| 
 |SQL Server 2017|ASSL|ASSL|TMSL|TMSL| 
 |SQL Server 2016|ASSL|ASSL|TMSL|TMSL| 

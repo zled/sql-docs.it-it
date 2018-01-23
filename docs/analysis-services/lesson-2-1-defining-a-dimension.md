@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 25f648f53ca3af33b846711076eb91b3548174a6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0a6a1056c4b778dbc4cb71faa4e7b05111512285
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>Lezione 2-1-definizione di una dimensione
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nell'attività seguente si utilizzerà la creazione guidata dimensione per compilare una dimensione di Data.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Nell'attività seguente si utilizzerà la Creazione guidata dimensione per compilare una dimensione Date.  
   
 > [!NOTE]  
 > Per questa lezione è necessario aver completato tutte le procedure nella lezione 1.  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/08/2018
   
     -   **Calendar Semester**  
   
-8.  Modificare l'impostazione della colonna **Tipo attributo** per l'attributo **Full Date Alternate Key** da **Regolare** a **Data**. A tale scopo, fare clic su **Regolare** nella colonna **Tipo attributo** . Fare quindi clic sulla freccia per espandere le opzioni. Fare poi clic su **Data** > **Calendario** > **Data**. Fare clic su **OK**. Ripetere questi passaggi per modificare il tipo di attributo per gli attributi seguenti:  
+8.  Modificare l'impostazione della colonna **Tipo attributo** per l'attributo **Full Date Alternate Key** da **Regolare** a **Data**. A tale scopo, fare clic su **Regolare** nella colonna **Tipo attributo** . Fare quindi clic sulla freccia per espandere le opzioni. Fare poi clic su **Data** > **Calendario** > **Data**. Scegliere **OK**. Ripetere questi passaggi per modificare il tipo di attributo per gli attributi seguenti:  
   
     -   **English Month Name** in **Mese**  
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9a97816c16eda294e89d1c9f9b21aa854c398846
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f7b95813f17802e22e4b9308cc0a3805f65f5ff2
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-6---browsing-the-cube"></a>Lezione 2-6-esplorazione del cubo
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dopo aver distribuito un cubo, i dati del cubo sono visibili nella **Browser** è visibile nella scheda della finestra di Progettazione cubi e i dati della dimensione di **Browser** scheda in Progettazione dimensioni. L'esplorazione dei dati del cubo e delle dimensioni consente di controllare il lavoro in modo incrementale. È possibile verificare che le piccole modifiche a proprietà, relazioni e altri oggetti abbiano l'effetto desiderato dopo l'elaborazione dell'oggetto. Sebbene la scheda Esplorazione venga utilizzata per visualizzare sia i dati del cubo che quelli delle dimensioni, le funzionalità da essa fornite variano a seconda dell'oggetto visualizzato.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Dopo aver distribuito un cubo, è possibile visualizzarne i dati nella scheda **Esplorazione** di Progettazione cubi, mentre i dati della dimensione possono essere visualizzati nella scheda **Esplorazione** di Progettazione dimensioni. L'esplorazione dei dati del cubo e delle dimensioni consente di controllare il lavoro in modo incrementale. È possibile verificare che le piccole modifiche a proprietà, relazioni e altri oggetti abbiano l'effetto desiderato dopo l'elaborazione dell'oggetto. Sebbene la scheda Esplorazione venga utilizzata per visualizzare sia i dati del cubo che quelli delle dimensioni, le funzionalità da essa fornite variano a seconda dell'oggetto visualizzato.  
   
 Per le dimensioni la scheda Esplorazione consente di visualizzare i membri o di spostarsi nella gerarchia fino al nodo foglia. È possibile esplorare i dati della dimensione in diverse lingue, a condizione che siano state aggiunte le traduzioni al modello.  
   

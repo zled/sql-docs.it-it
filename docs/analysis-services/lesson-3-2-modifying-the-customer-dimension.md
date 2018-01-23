@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bfb369e21e5d57768d79e07cfe066d89033909ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4fe3a7adab5e0c4f87abaf09b04efa64f27e124f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lezione 3-2: modifica della dimensione Customer
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Esistono molti modi diversi, che è possibile aumentare l'usabilità e le funzionalità delle dimensioni in un cubo. Nelle attività di questo argomento verrà modificata la dimensione Customer.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+È possibile migliorare l'usabilità e le funzionalità delle dimensioni di un cubo in diversi modi. Nelle attività di questo argomento verrà modificata la dimensione Customer.  
   
 ## <a name="renaming-attributes"></a>Ridenominazione di attributi  
 È possibile modificare i nomi degli attributi con la scheda **Struttura dimensione** di Progettazione dimensioni.  
@@ -190,7 +192,7 @@ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano 
   
     Le colonne **City** e **StateProvinceName** sono ora visualizzate nell'elenco **Colonne chiave** .  
   
-5.  Fare clic su **OK**.  
+5.  Scegliere **OK**.  
   
 6.  Per impostare la proprietà **NameColumn** dell'attributo **City** , fare clic nel campo **NameColumn** della finestra Proprietà e fare clic sul pulsante Sfoglia (**...**).  
   
@@ -210,7 +212,7 @@ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano 
   
     Le colonne **EnglishCountryRegionName** e **StateProvinceName** sono ora visualizzate nell'elenco **Colonne chiave** .  
   
-5.  Fare clic su **OK**.  
+5.  Scegliere **OK**.  
   
 6.  Per impostare la proprietà **NameColumn** dell'attributo **State-Province** fare clic nel campo **NameColumn** della finestra Proprietà e fare clic sul pulsante Sfoglia (**...**).  
   
@@ -241,7 +243,7 @@ Se i dati sottostanti le supportano, è consigliabile definire relazioni tra gli
   
 8.  Nell'elenco **Tipo di relazione** impostare il tipo di relazione su **Rigida**.  
   
-9. Fare clic su **OK**.  
+9. Scegliere **OK**.  
   
 10. Scegliere **Salva tutti** dal menu **File**.  
   

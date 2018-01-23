@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 486d4c78c92f9de8f70a8d3cdb70cced525b3e4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de9c7debe0b21d3f5d72a021f8bf6eb03bf7d06f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lezione 4: Definizione di attributo avanzato e proprietà dimensione
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In questa lezione si imparerà a utilizzare alcune delle proprietà avanzate degli attributi, gerarchie di attributi e le proprietà di dimensione.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+In questa lezione verranno illustrate le procedure per l'utilizzo di alcune proprietà avanzate degli attributi, delle gerarchie degli attribuiti e delle proprietà delle dimensioni.  
   
 > [!NOTE]  
 > Questa lezione è basata su una versione migliorata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial completato nelle prime tre lezioni di questa esercitazione. Nella prima attività di questa lezione viene descritto dove individuare il progetto di esempio appropriato da utilizzare per questa lezione e vengono illustrate le differenze tra questo progetto e il progetto creato nelle prime tre lezioni.  
@@ -41,7 +43,7 @@ In questa attività vengono illustrate le procedure per definire i nomi dei live
 [Raggruppamento automatico dei membri degli attributi](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
 In questa attività vengono illustrate le procedure per creare automaticamente gruppi di membri dell'attributo in base alla distribuzione dei membri all'interno della gerarchia dell'attributo. Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
-[Come nascondere e disabilitare le gerarchie degli attributi](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+[Come nascondere e disabilitare le gerarchie di attributi](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
 In questa attività vengono illustrate le procedure per disabilitare o nascondere le gerarchie degli attributi.  
   
 [Ordinamento dei membri dell'attributo in base a un attributo secondario](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
@@ -58,7 +60,7 @@ In questa attività vengono configurate le proprietà UnknownMember e UnknownMem
   
 ## <a name="see-also"></a>Vedere anche  
 [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modellazione multidimensionale &#40; Esercitazione di AdventureWorks &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Dimensioni nei modelli multidimensionali](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

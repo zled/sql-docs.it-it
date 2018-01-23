@@ -19,14 +19,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a401073a7bcf0d7e8559c65ab6b05d25bd2a681e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 38db9eddac7c7b753b680714f53d6ad01a49ea00
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-programming"></a>Programmazione di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Se si scoprire che gli strumenti predefiniti e i visualizzatori di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non soddisfano i requisiti, è possibile estendere le potenzialità di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] codificando le estensioni personalizzate. Questo approccio rende disponibili due opzioni:  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  Se gli strumenti e i visualizzatori predefiniti disponibili in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non soddisfano i propri requisiti, è possibile estendere le funzionalità di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mediante la codifica di estensioni personalizzate. Questo approccio rende disponibili due opzioni:  
   
 -   **XMLA**  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
      È possibile utilizzare DMX per incapsulare istruzioni di comando, query di stima e query sui metadati e per restituire i risultati in un formato tabulare, presupponendo che sia stata creata una connessione a un server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [OLE DB per Data Mining](../analysis-services/data-mining-programming-ole-db.md)  
  Vengono descritte le aggiunte alla specifica per il supporto di data mining e dati multidimensionali, ovvero nuovi set di righe e colonne dello schema e linguaggio DMX (Data Mining Extensions) per la creazione e la gestione di strutture di data mining.  
   

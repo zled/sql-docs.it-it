@@ -20,14 +20,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 12b3c89ac68cd633c50ea96ded258a91cc066ae8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 69f16ef4141ca467063a84bf2305ccbe6d8f8996
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Guida per gli sviluppatori (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]In Analysis Services, quasi tutti gli oggetti e un carico di lavoro è programmabile ed è spesso più approcci tra cui scegliere.  Le opzioni includono scrittura di codice gestito, script o mediante standard aperti come XMLA e MSOLAP se i requisiti della soluzione precludono l'utilizzo di .NET framework.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+In Analysis Services, quasi tutti gli oggetti e un carico di lavoro è programmabile ed è spesso più approcci tra cui scegliere.  Le opzioni includono scrittura di codice gestito, script o mediante standard aperti come XMLA e MSOLAP se i requisiti della soluzione precludono l'utilizzo di .NET framework.
 
 ## <a name="what-you-can-accomplish-in-code"></a>Cosa è possibile eseguire nel codice
 Gli scenari di programmazione tipici includono server e la distribuzione del database, amministrazione, modello e la creazione del database e accesso ai dati dai report che utilizzano dati di Analysis Services e applicazioni personalizzate. Comune a tutti questi scenari è una fisso architettura e oggetto definizione gerarchia, con operazioni ben definite che comprendono la definizione di dati, elaborazione e i carichi di lavoro di query.

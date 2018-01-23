@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c9d71ea7710736a17a404a997e43e6683894cd7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 77b8a5621b71eec40546d79d73ab1672dfff6a7e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-specificando le relazioni tra attributi nella gerarchia definita dall'utente
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Come già illustrato in questa esercitazione, è possibile organizzare le gerarchie di attributi in livelli all'interno di gerarchie utente per fornire i percorsi di navigazione per gli utenti in un cubo. Una gerarchia utente può rappresentare una gerarchia naturale, ad esempio una città, uno stato e un paese, oppure un percorso di navigazione, ad esempio il nome di un dipendente, la funzione e il reparto di appartenenza. Ai fini della navigazione, non esiste differenza tra questi due tipi di gerarchie utente.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Come è già stato illustrato in questa esercitazione, è possibile organizzare le gerarchie degli attributi in livelli all'interno delle gerarchie utente in modo da offrire agli utenti percorsi di navigazione in un cubo. Una gerarchia utente può rappresentare una gerarchia naturale, ad esempio una città, uno stato e un paese, oppure un percorso di navigazione, ad esempio il nome di un dipendente, la funzione e il reparto di appartenenza. Ai fini della navigazione, non esiste differenza tra questi due tipi di gerarchie utente.  
   
 Nel caso di una gerarchia naturale, se vengono definite relazioni tra gli attributi che costituiscono i livelli, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consente di utilizzare un'aggregazione di un attributo per ottenere i risultati di un attributo correlato. Se non esistono relazioni definite tra gli attributi, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutti gli attributi non chiave verranno aggregati dall'attributo chiave. Pertanto, se i dati sottostanti le supportano, è consigliabile definire relazioni tra gli attributi. La definizione di relazioni tra attributi consente di migliorare le prestazioni di elaborazione di dimensioni, partizioni e query. Per altre informazioni, vedere [Definire relazioni tra attributi](../analysis-services/multidimensional-models/attribute-relationships-define.md) e [Relazioni tra attributi](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
@@ -188,7 +190,7 @@ Nelle attività di questo argomento verranno illustrate le procedure per definir
 14. Scegliere **Deploy Analysis Services Tutorial** (Distribuisci Analysis Services Tutorial) dal menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Compila **di**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Definizione delle proprietà UnknownMember e NullProcessing](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+[Che definisce il membro sconosciuto e le proprietà di elaborazione dei valori Null](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Definire relazioni tra attributi](../analysis-services/multidimensional-models/attribute-relationships-define.md)  

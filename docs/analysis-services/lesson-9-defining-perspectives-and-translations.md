@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b6d074b6aee9d6fe70258f22e95b48cb690419c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 13bfc06cb0a9d2e5a61d023a2b0ea24f91d48446
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lezione 9: Definizione di prospettive e traduzioni
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In questa lezione vengono definiti prospettive e traduzioni. Le prospettive possono essere definite per ridurre la complessità evidente di un cubo e le traduzioni possono essere definite per consentire agli utenti di visualizzare i metadati di un cubo nella lingua di preferenza.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+In questa lezione verranno descritte le procedure per definire prospettive e traduzioni. Le prospettive possono essere definite per ridurre la complessità evidente di un cubo e le traduzioni possono essere definite per consentire agli utenti di visualizzare i metadati di un cubo nella lingua di preferenza.  
   
 > [!NOTE]  
 > I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
@@ -43,7 +45,7 @@ In questa procedura vengono definite ed esplorate traduzioni di metadati specifi
   
 ## <a name="see-also"></a>Vedere anche  
 [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modellazione multidimensionale &#40; Esercitazione di AdventureWorks &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Prospettive](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  
 [Prospettive nei modelli multidimensionali](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
 [Traduzioni delle dimensioni](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d4d2a87b4e387d48c6f9537ee402a10a253bf202
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d48a36254eb24dd59a9f915d6129b090ae2e7ebc
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lezione 2-3-aggiunta di attributi alle dimensioni
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dopo avere definito le dimensioni, è possibile popolare con attributi che rappresentano ogni elemento di dati nella dimensione. Gli attributi si basano in genere sui campi di una vista origine dati. Quando si aggiungono gli attributi a una dimensione, è possibile includere campi di qualsiasi tabella nella vista origine dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Dopo avere definito le dimensioni, è possibile popolarle con gli attributi che rappresentano ogni elemento dati nella dimensione. Gli attributi si basano in genere sui campi di una vista origine dati. Quando si aggiungono gli attributi a una dimensione, è possibile includere campi di qualsiasi tabella nella vista origine dati.  
   
 In questa attività verrà utilizzato Progettazione dimensioni per aggiungere attributi alle dimensioni Customer e Product. La dimensione Customer includerà gli attributi basati sui campi delle tabelle Customer e Geography.  
   
@@ -79,7 +81,7 @@ In questa attività verrà utilizzato Progettazione dimensioni per aggiungere at
   
     -   **PostalCode**  
   
-6.  Scegliere **Salva tutto**dal menu File.  
+6.  Scegliere **Salva tutti**dal menu File.  
   
 ## <a name="adding-attributes-to-the-product-dimension"></a>Aggiunta di attributi alla dimensione Product  
   
@@ -127,13 +129,13 @@ In questa attività verrà utilizzato Progettazione dimensioni per aggiungere at
   
     -   **Stato**  
   
-5.  Scegliere **Salva tutto**dal menu File.  
+5.  Scegliere **Salva tutti**dal menu File.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Esame delle proprietà del cubo e delle dimensioni](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+[Esame delle proprietà di dimensione e del cubo](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Riferimento alle proprietà degli attributi delle dimensioni](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+[Dimension Attribute Properties Reference](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
   

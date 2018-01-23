@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Confronto tra soluzioni tabulari e multidimensionali
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services fornisce diversi approcci per la creazione di business intelligence semantic model: tabulare, multidimensionale e PowerPivot per SharePoint.
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  SQL Server Analysis Services fornisce diversi approcci per la creazione di business intelligence semantic model: tabulare, multidimensionale e PowerPivot per SharePoint.
   
  La disponibilità di più approcci consente esperienze di modellazione commisurate ai diversi requisiti di aziende e utenti. L'approccio multidimensionale è una tecnologia avanzata basata su standard aperti, adottato da numerosi fornitori di software di Business Intelligence, ma può essere difficile da gestire. L'approccio tabulare offre una modellazione relazionale che molti sviluppatori trovano più intuitiva. PowerPivot è ancora più semplice, poiché offre una modellazione dei dati visiva in Excel, con supporto server tramite SharePoint.  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |Gerarchie incomplete|Sì|Sì<sup>1</sup>|  
 |Gerarchie padre-figlio|Sì|Sì (tramite DAX)|
 |Partizioni|Sì|Sì| 
-|prospettive|Sì|Sì|
+|Prospettive|Sì|Sì|
 |Sicurezza a livello di riga|Sì|Sì| 
 |Sicurezza a livello di oggetto|Sì|Sì<sup>1</sup>|
 |Misure semiadditive|Sì|Sì| 

@@ -18,19 +18,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1d080c99d9d3fc1a1fcdfb8e6a4e183850462f94
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c34913be54a2eb74401d602f1ecafee25d5921c6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-8-defining-actions"></a>Lezione 8: Definizione di azioni
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In questa lezione verrà descritto come definire le azioni nel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto. Un'azione è semplicemente un'istruzione MDX (Multidimensional Expressions) archiviata in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , che può essere incorporata in applicazioni client e avviata da un utente.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+In questa lezione verranno descritte le procedure per definire le azioni del progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Un'azione è semplicemente un'istruzione MDX (Multidimensional Expressions) archiviata in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , che può essere incorporata in applicazioni client e avviata da un utente.  
   
 > [!NOTE]  
 > I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
   
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta i tipi di azioni descritti nella tabella seguente.  
+Nella tabella seguente vengono descritti i tipi di azioni supportati da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 |||  
 |-|-|  
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/08/2018
 |Proprietario|Esegue un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  
 |Report|Invia una richiesta con parametri basata sull'URL a un server di report e restituisce un report a un'applicazione client.|  
 |Set di righe|Restituisce un set di righe a un'applicazione client.|  
-|.|Esegue un comando OLE DB.|  
+|Istruzione|Esegue un comando OLE DB.|  
 |URL|Visualizza una pagina Web dinamica in un browser Internet|  
   
 Le azioni consentono agli utenti di avviare un'applicazione o di eseguire altre procedure nell'ambito di un elemento selezionato. Per altre informazioni, vedere [Azioni &#40;Analysis Services - Dati multidimensionali&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md), [Azioni nei modelli multidimensionali](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
@@ -60,7 +62,7 @@ In questa procedura viene definita, utilizzata e utilizzerà e quindi modificata
 ## <a name="see-also"></a>Vedere anche  
 [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)  
 [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[Azioni &#40;Analysis Services - Dati multidimensionali&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
+[Azioni &#40; Analysis Services - dati multidimensionali &#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [Azioni nei modelli multidimensionali](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

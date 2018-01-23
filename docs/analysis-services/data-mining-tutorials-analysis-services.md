@@ -19,15 +19,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33717f3b72c46ba55e2e774fde62eba0646fa9c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e1c600dddc4ab87c0f5290d90fdecda49f95045
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Esercitazioni sul data mining (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] semplifica la creazione di soluzioni di data mining utilizzando le procedure guidate e le visualizzazioni integrate. In particolare, se non si ha dimestichezza con Machine Learning, gli strumenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sono un modo semplice per progettare, provare ed esplorare i modelli di data mining. I dati nei modelli possono essere archiviati in un cubo, un database relazionale o qualsiasi altro supporto di origine da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Dopo aver creato un modello, è possibile inserirlo nell'ambiente di produzione eseguendo l'accesso al modello per creare stime usando più client, tra cui [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e ASP.NET.  
+
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consente di creare soluzioni di data mining usando le procedure guidate e le visualizzazioni integrate. In particolare, se non si ha dimestichezza con Machine Learning, gli strumenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sono un modo semplice per progettare, provare ed esplorare i modelli di data mining. I dati nei modelli possono essere archiviati in un cubo, un database relazionale o qualsiasi altro supporto di origine da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Dopo aver creato un modello, è possibile inserirlo nell'ambiente di produzione eseguendo l'accesso al modello per creare stime usando più client, tra cui [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e ASP.NET.  
   
 > [!NOTE]  
 >Le esercitazioni descritte di seguito non sono state aggiornate per [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. È possibile usare le esercitazioni create per SQL Server 2014. Dal punto di vista funzionale, non sono state apportate modifiche alle funzioni di data mining per [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. I passaggi dovrebbero essere identici.  

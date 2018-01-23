@@ -39,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Programmazione del modello di cubo proprietà - multidimensionale
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]I cubi dispongono di proprietà che è possibile impostare per influire sul comportamento a livello di cubo. Nella tabella seguente è disponibile un riepilogo di tali proprietà.  
@@ -56,9 +56,9 @@ ms.lasthandoff: 01/08/2018
 |Proprietà|Description|  
 |--------------|-----------------|  
 |**AggregationPrefix**|Specifica il prefisso comune utilizzato per i nomi di aggregazioni.|  
-|**Regole di confronto**|Specifica l'identificatore delle impostazioni locali (LCID) e il flag di confronto, separati da un carattere di sottolineatura, ad esempio Latin1_General_C1_AS.|  
+|**Confronto**|Specifica l'identificatore delle impostazioni locali (LCID) e il flag di confronto, separati da un carattere di sottolineatura, ad esempio Latin1_General_C1_AS.|  
 |**DefaultMeasure**|Contiene un'espressione MDX (Multidimensional Expression) che definisce la misura predefinita per il cubo.|  
-|**Descrizione**|Fornisce una descrizione del cubo, che può essere esposta in applicazioni client.|  
+|**Description**|Fornisce una descrizione del cubo, che può essere esposta in applicazioni client.|  
 |**ErrorConfiguration**|Contiene le impostazioni configurabili per la gestione degli errori, relative alla gestione di chiavi duplicate, chiavi sconosciute, limiti di errore, azione da intraprendere in caso di rilevamento di un errore, file di log degli errori e gestione della chiave Null.|  
 |**EstimatedRows**|Specifica il numero di righe stimate nel cubo.|  
 |**ID**|Contiene l'identificatore univoco (ID) del cubo.|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/08/2018
 |**ScriptErrorHandlingMode**|Determina la gestione degli errori. Le opzioni sono **IgnoreNone** o **IgnoreAll**|  
 |**Origine**|Visualizza la vista origine dati utilizzata per il cubo.|  
 |**StorageLocation**|Specifica il percorso di archiviazione nel file system per il cubo. Se non viene specificato alcun valore, il percorso viene ereditato dal database contenente l'oggetto del cubo.|  
-|**StorageMode**|Specifica la modalità di archiviazione per il cubo. I valori sono **MOLAP**, **ROLAP**, o **HOLAP * * *.**|  
+|**StorageMode**|Specifica la modalità di archiviazione per il cubo. I valori sono **MOLAP**, **ROLAP**, o **HOLAP**.|  
 |**Visible**|Determina la visibilità del cubo.|  
   
 > [!NOTE]  

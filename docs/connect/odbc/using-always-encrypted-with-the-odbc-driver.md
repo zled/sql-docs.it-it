@@ -18,10 +18,10 @@ manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
 ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilizzo di Always Encrypted con il Driver ODBC per SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -350,7 +350,7 @@ Il Driver ODBC per SQL Server viene fornito con i provider di archivio chiavi pr
 
 | Nome | Description | Nome del provider (metadati) |Disponibilità|
 |:---|:---|:---|:---|
-|Insieme di credenziali chiave di Azure |CMK archivi in un insieme di credenziali chiave di Azure | `AZURE_KEY_VAULT` |Windows, Mac OS, Linux|
+|Insieme di credenziali chiave di Azure |CMK archivi in un insieme di credenziali chiave di Azure | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Archivio certificati di Windows|Archivia CMK localmente nell'archivio di Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
 
 - È necessario assicurarsi che il nome del provider, configurato nei metadati della chiave master della colonna, sia corretto e che il percorso della chiave master di colonna conformi al formato del percorso della chiave per il provider è (o l'amministratore del database). È consigliabile configurare le chiavi usando strumenti come SQL Server Management Studio, che genera automaticamente i nomi di provider e i percorsi di chiave validi quando viene eseguita l'istruzione [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) .
@@ -371,20 +371,20 @@ Per consentire al driver di utilizzare una CMK archiviati nell'insieme per la cr
 
 |Tipo di credenziali| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|Nome utente/password| `KeyVaultPassword`|Nome dell'entità utente|Password|
+|Username/password| `KeyVaultPassword`|Nome dell'entità utente|Password|
 |ID/chiave privata client| `KeyVaultClientSecret`|ID client|Segreto|
 
 #### <a name="example-connection-strings"></a>Stringhe di connessione di esempio
 
 Le stringhe di connessione seguente viene illustrato come l'autenticazione a insieme di credenziali chiave di Azure con i due tipi di credenziali:
 
-**ClientID/segreto**:
+**ClientID/Secret**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Nome utente/Password**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>

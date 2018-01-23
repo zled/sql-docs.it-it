@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9d10942e6942e4c307bc6c8fed9c7cb391d5f368
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e81b2dda4ddf65105da50dede9b3a82a5436dcec
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Lezione 6-2 - definizione di set denominati
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Un set denominato è un'espressione MDX (Multidimensional Expressions) che restituisce un set di membri della dimensione. È possibile definire set denominati e salvarli come parte della definizione del cubo, nonché creare set denominati in applicazioni client. I set denominati possono essere creati combinando dati del cubo, operatori aritmetici, numeri e funzioni. I set denominati possono essere utilizzati dagli utenti nelle query MDX in applicazioni client, nonché per definire set nei sottocubi. Un sottocubo è una raccolta di set di crossjoin che limita lo spazio del cubo nel sottospazio definito per istruzioni successive. La definizione di uno spazio del cubo limitato costituisce un concetto fondamentale dello scripting MDX.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Un set denominato è un'espressione MDX (Multidimensional Expressions) che restituisce un set di membri della dimensione. È possibile definire set denominati e salvarli come parte della definizione del cubo, nonché creare set denominati in applicazioni client. I set denominati possono essere creati combinando dati del cubo, operatori aritmetici, numeri e funzioni. I set denominati possono essere utilizzati dagli utenti nelle query MDX in applicazioni client, nonché per definire set nei sottocubi. Un sottocubo è una raccolta di set di crossjoin che limita lo spazio del cubo nel sottospazio definito per istruzioni successive. La definizione di uno spazio del cubo limitato costituisce un concetto fondamentale dello scripting MDX.  
   
 I set denominati semplificano le query MDX e generano alias utili per espressioni set complesse utilizzate spesso. È possibile ad esempio definire un set denominato chiamato Large Resellers contenente il set di membri nella dimensione Reseller con il numero più elevato di dipendenti. Gli utenti finali potrebbero quindi utilizzare il set denominato Large Resellers nelle query, oppure utilizzarlo per definire un set in un sottocubo. Le definizioni dei set denominati vengono archiviate nei cubi, ma i loro valori si trovano solo nella memoria. Per creare un set denominato usare il comando **Nuovo set denominato** nella scheda **Calcoli** di Progettazione cubi. Per altre informazioni, vedere [Calcoli](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)e [Creare set denominati](../analysis-services/multidimensional-models/create-named-sets.md).  
   
@@ -84,7 +86,7 @@ Nelle procedure descritte in questo argomento si definiranno due set denominati:
   
 9. Nella finestra Proprietà modificare la proprietà **DiscretizationMethod** in **Automatic**, quindi modificare la proprietà **DiscretizationBucketCount** in **5**. Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
-10. Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Compila **di**.  
+10. Nel menu **Compila** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], scegliere **Distribuisci Analysis Services Tutorial**.  
   
 11. Dopo aver completato la distribuzione, passare a Progettazione cubi per il cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial e fare clic su **Riconnetti** nella barra degli strumenti della scheda **Calcoli** .  
   
@@ -114,7 +116,7 @@ Nelle procedure descritte in questo argomento si definiranno due set denominati:
   
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>Esplorazione del cubo utilizzando i nuovi set denominati  
   
-1.  Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Compila **di**.  
+1.  Nel menu **Compila** di [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], scegliere **Distribuisci Analysis Services Tutorial**.  
   
 2.  Al termine delle operazioni di distribuzione, fare clic sulla scheda **Esplorazione** e fare clic su **Riconnetti**.  
   
@@ -139,7 +141,7 @@ Nelle procedure descritte in questo argomento si definiranno due set denominati:
     ![Riquadro filtro contenente due denominato imposta](../analysis-services/media/l6-named-set-05.gif "riquadro filtro contenente due denominato imposta")  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Lezione 7: Definizione di indicatori di prestazioni chiave &#40; Gli indicatori KPI &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Calcoli](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

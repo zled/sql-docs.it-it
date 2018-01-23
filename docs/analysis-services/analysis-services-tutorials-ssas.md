@@ -18,22 +18,24 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3d535cf6f8bc65ef44393527a46441332fd5aea0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a2578633c1ccce72d866c40882eaf4c95669d6c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Esercitazioni su Analysis Services (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In questa sezione è incluse esercitazioni per SQL Server Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+In questa sezione è incluse esercitazioni per SQL Server Analysis Services.  
   
 [Modellazione tabulare &#40;esercitazione di AdventureWorks&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 Questa esercitazione sono incluse lezioni sulla creazione di un modello tabulare di Analysis Services base per la società fittizia Adventure Works, utilizzando SQL Server Data Tools (SSDT).  
   
-[Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modellazione multidimensionale &#40; Esercitazione di AdventureWorks &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 In questa esercitazione illustra i concetti di modellazione multidimensionale in SSDT e le competenze fondamentali. Al termine, sarà necessario un database del cubo in base ai dati di Adventure Works che è possibile accedere da qualsiasi altra applicazione client che si connette ad Analysis Services, Reporting Services o Excel.  
   
-[Data mining](../analysis-services/data-mining-tutorials-analysis-services.md)  
+[Data Mining](../analysis-services/data-mining-tutorials-analysis-services.md)  
 Questa raccolta di esercitazioni spiega come creare soluzioni di data mining usando le procedure guidate e le visualizzazioni integrate.  
   
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e73736896056f0d9b6a925292260243381046d34
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 609d8f220df38081e5f14b3aa9154eb86350e014
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="install-sample-data-and-projects"></a>Installare dati di esempio e progetti 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Utilizzare le istruzioni e i collegamenti forniti in questo argomento per installare tutti i file di dati e di progetto utilizzati nelle esercitazioni di Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+Utilizzare le istruzioni e i collegamenti forniti in questo argomento per installare tutti i file di dati e di progetto utilizzati nelle esercitazioni su Analysis Services.  
   
 ## <a name="step-1-install-sql-server-software"></a>Passaggio 1: Installare il software SQL Server  
 Nelle lezioni di questa esercitazione si presuppone che siano installati i programmi software seguenti: Tutti i programmi software indicati di seguito vengono installati tramite il supporto di installazione di SQL Server. Per semplificare la distribuzione, è possibile installare tutte le funzionalità in un solo computer. Per installare queste funzionalità, eseguire il programma di installazione di SQL Server e selezionarle dalla pagina Selezione funzionalità. Per altre informazioni, vedere [Installare SQL Server 2016 dall'Installazione guidata &#40;programma di installazione&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
@@ -133,7 +135,7 @@ Il file di progetto per la Lezione 4 è particolarmente importante perché costi
   
     -   Lezione 10 completa  
   
-4.  Rimuovere le autorizzazioni di sola lettura per questi file. Fare clic con il pulsante destro del mouse sulla cartella padre, "Analysis Services Tutorial SQL Server 2012", selezionare **Proprietà**e quindi deselezionare la casella di controllo **Sola lettura**. Fare clic su **OK**. Applicare le modifiche a questa cartella, alle sottocartelle e ai file.  
+4.  Rimuovere le autorizzazioni di sola lettura per questi file. Fare clic con il pulsante destro del mouse sulla cartella padre, "Analysis Services Tutorial SQL Server 2012", selezionare **Proprietà**e quindi deselezionare la casella di controllo **Sola lettura**. Scegliere **OK**. Applicare le modifiche a questa cartella, alle sottocartelle e ai file.  
   
 5.  Avviare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   

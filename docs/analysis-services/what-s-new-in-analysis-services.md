@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b65634862df0d49c8f20383a873aafe386c2e32c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Novità &#39; s New in Analysis Services
-[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services include molti miglioramenti fornisce prestazioni migliori, più facile la creazione di soluzioni, gestione automatica del database, relazioni avanzate con, il filtro incrociato bidirezionale parallela l'elaborazione della partizione, e molto altro ancora. L'elemento centrale per la maggior parte dei miglioramenti apportati in questa versione è il nuovo livello di compatibilità 1200 per i database modello tabulari.     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
+
+SQL Server 2016 Analysis Services include molti miglioramenti fornisce prestazioni migliori, più facile la creazione di soluzioni, gestione automatica del database, relazioni avanzate con, il filtro incrociato bidirezionale parallela l'elaborazione della partizione, e molto altro ancora. L'elemento centrale per la maggior parte dei miglioramenti apportati in questa versione è il nuovo livello di compatibilità 1200 per i database modello tabulari.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
 Annunciato in occasione della 2016 SQL PASS Conference, Analysis Services è ora disponibile nel cloud come servizio di Azure. **Azure Analysis Services** supporta i modelli tabulari con i livelli di compatibilità 1200 e versioni successive. DirectQuery, partizioni, sicurezza a livello di riga, relazioni bidirezionali e traduzioni sono tutte funzioni supportate. Per altre informazioni e per una prova gratuita, vedere [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
@@ -130,7 +132,7 @@ Il payload è un documento JSON che può essere minimo, come nell'esempio illust
 
 A livello di database, i comandi CREATE, ALTER e DELETE restituiscono script TMSL nella finestra XMLA classica.  In questa versione è possibile generare script anche di altri comandi, ad esempio, Process. Per molte altre azioni il supporto per gli script potrebbe essere aggiunto in una versione futura.    
 
-**Comandi gestibili tramite script** | **Descrizione**
+**Comandi gestibili tramite script** | **Description**
 --------------- | ----------------
 create|Aggiunge un database, una connessione o una partizione. L'equivalente ASSL è CREATE.
 createOrReplace|Aggiorna una definizione di oggetto esistente (database, connessione o partizione) sovrascrivendo una versione precedente. L'equivalente ASSL è ALTER con AllowOverwrite impostato su true e ObjectDefinition impostato su ExpandFull.
