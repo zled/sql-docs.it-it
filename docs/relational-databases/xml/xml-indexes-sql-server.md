@@ -36,15 +36,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b9dccca2e644bf5d02d47165b02d75241e40695
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ca2fd82971fa8d4eb8c874b809961f5052d5fbf5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-indexes-sql-server"></a>Indici XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] È possibile creare indici XML sulle colonne con tipo di dati **xml**. Tutti i tag, i valori e i percorsi delle istanze XML presenti nella colonna vengono indicizzati, migliorando le prestazioni delle query. Per le applicazioni in uso l'utilizzo di un indice XML può risultare vantaggioso nelle situazioni seguenti:  
@@ -99,11 +99,11 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   Chiave primaria della tabella di base. La chiave primaria della tabella di base viene duplicata nell'indice XML primario per eseguire un join all'indietro con la tabella di base e il numero massimo di colonne nella chiave primaria della tabella di base è limitato a 15.  
   
- Le informazioni sul nodo vengono utilizzate per valutare e costruire i risultati XML di una query specificata. A scopo di ottimizzazione, il nome di tag e le informazioni sul tipo di nodo vengono codificati come valori integer e per la colonna Path viene utilizzata la stessa codifica. Inoltre, i percorsi vengono archiviati in ordine inverso per consentirne la corrispondenza quando è noto solo il relativo suffisso. Esempio:  
+ Le informazioni sul nodo vengono utilizzate per valutare e costruire i risultati XML di una query specificata. A scopo di ottimizzazione, il nome di tag e le informazioni sul tipo di nodo vengono codificati come valori integer e per la colonna Path viene utilizzata la stessa codifica. Inoltre, i percorsi vengono archiviati in ordine inverso per consentirne la corrispondenza quando è noto solo il relativo suffisso. Ad esempio  
   
 -   `//ContactRecord/PhoneNumber` in cui sono noti solo gli ultimi due passaggi  
   
- OPPURE  
+ o  
   
 -   `/Book/*/Title` in cui il carattere jolly (`*`) viene specificato nella parte centrale dell'espressione.  
   
@@ -147,7 +147,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` che specifica solo un percorso  
   
- OPPURE  
+ o  
   
 -   `/root/Location/@LocationID[.="10"]` in cui vengono specificati sia il valore di percorso che il valore di nodo.  
   

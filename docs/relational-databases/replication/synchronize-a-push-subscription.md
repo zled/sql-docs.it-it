@@ -17,15 +17,15 @@ helpviewer_keywords:
 - push subscriptions [SQL Server replication], synchronizing
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41040dbb6c399f45f3aebdb961640910742162d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 00becd2c1e202ec06aa3f47b2d8bc2f9325c44ab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizzazione di una sottoscrizione push
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Questo argomento illustra come sincronizzare una sottoscrizione push in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agenti di replica](../../relational-databases/replication/agents/replication-agents-overview.md) o RMO (Replication Management Objects).  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Fare clic con il pulsante destro del mouse sulla sottoscrizione che si desidera sincronizzare e quindi scegliere **Visualizza stato sincronizzazione**.  
   
-4.  Viene visualizzato un messaggio in cui si chiede di stabilire una connessione al server di distribuzione. Scegliere **OK**.  
+4.  Viene visualizzato un messaggio in cui si chiede di stabilire una connessione al server di distribuzione. Fare clic su **OK**.  
   
 5.  Nella finestra di dialogo **Visualizza stato sincronizzazione - \<Sottoscrittore>:\<DatabaseSottoscrizione>** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
   

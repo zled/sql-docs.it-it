@@ -18,13 +18,13 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 55051d755bb2fb2abec5668fb21328905c0dbf82
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 092a000b7b942a3b26a7bafedcc65ed2b19944f7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Mirroring del database e log shipping (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per un database specifico è possibile eseguire il mirroring o il log shipping oppure eseguire le due operazioni simultaneamente. Per scegliere l'approccio da utilizzare, considerare gli aspetti seguenti:  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
  ![Log shipping e mirroring del database](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Log shipping e mirroring del database")  
   
- In seguito a un failover del mirroring, il nome del server primario definito nel server secondario risulta inalterato .  
+ In seguito a un failover del mirroring, il nome del server primario definito nel server secondario risulta inalterato ,  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>Impatto del mirroring del database su un'istanza di monitoraggio remota  
  Quando il log shipping viene utilizzato con un'istanza di monitoraggio remota, la combinazione della sessione di log shipping e del mirroring del database influisce sulle informazioni incluse nelle tabelle di monitoraggio. Le informazioni sul server primario rappresentano una combinazione di quelle configurate nel server principale/primario e del server di monitoraggio configurato in ogni server secondario.  

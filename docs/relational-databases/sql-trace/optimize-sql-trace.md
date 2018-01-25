@@ -18,15 +18,15 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8994a4c12de53e82ff45dd5c587b00390a4ac0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04c90ac8025d4939c6c9606d63c5d35c5d68aabe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-sql-trace"></a>Ottimizzare l'utilizzo di Traccia SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sebbene l'esecuzione di Traccia SQL comporti costi di prestazioni significativi, in quanto la funzionalità usa le risorse di sistema per raccogliere dati, è possibile adottare numerosi accorgimenti per ridurre tali costi. Per ridurre i costi di prestazioni provocati dall'utilizzo di una traccia, provare le soluzioni seguenti:  

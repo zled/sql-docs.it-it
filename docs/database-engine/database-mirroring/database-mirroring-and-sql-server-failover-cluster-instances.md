@@ -19,13 +19,13 @@ ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 caps.latest.revision: "42"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4a180fe2ed117c92207a768745dd86a99fd39661
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e1ae46bb5ff40113cb61d27882c86f84c87ef546
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Mirroring del database e istanze del cluster di failover di SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per cluster di failover si intende una combinazione di uno o più dischi fisici inclusi in un gruppo cluster di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Services (MSCS), noto come gruppo di risorse, che partecipano ai nodi del cluster. Il gruppo di risorse viene configurato come istanza cluster di failover che ospita un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un'istanza cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzata nella rete come singolo computer, ma include funzionalità che consentono il failover tra nodi nel caso in cui un nodo non sia più disponibile. Per altre informazioni, vedere [Istanze del cluster di failover AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  

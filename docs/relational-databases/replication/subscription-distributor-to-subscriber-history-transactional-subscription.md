@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.subscription.disttosub.f1
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b916eccd05ff75d8809c6f3934af7db9b0eab242
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e975b4d43532fe7f9aa8219570c9e8869dab4805
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Sottoscrizione, Cronologia server di distribuzione - Sottoscrittore (Sottoscrizione transazionale)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La scheda **Cronologia server di distribuzione - Sottoscrittore** mostra informazioni dettagliate sull'agente di distribuzione, tra cui lo stato, la cronologia, i messaggi informativi ed eventuali messaggi di errore.  
@@ -69,6 +69,6 @@ ms.lasthandoff: 11/17/2017
  [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Monitoraggio della replica](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Panoramica degli agenti di replica](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

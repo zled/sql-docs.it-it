@@ -16,15 +16,15 @@ helpviewer_keywords:
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0280a49bf91f078355dedab297ffd75102f5faa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7374751ae2fd74f93ed0744853eb472689538347
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promuovere i valori XML di uso frequente mediante colonne calcolate
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Se le query vengono eseguite principalmente su un piccolo numero di valori di attributi e di elementi, sarà possibile promuovere tali quantità al livello di colonne relazionali. Ciò risulta utile quando le query vengono eseguite su una piccola parte dei dati XML mentre viene recuperata l'intera istanza XML. Non è necessario creare un indice XML sulla colonna XML, ma è possibile indicizzare la colonna promossa. Le query devono essere scritte in modo da utilizzare la colonna promossa, poiché il Query Optimizer non reindirizza alla colonna promossa le query eseguite sulla colonna XML.  
@@ -161,7 +161,7 @@ end
 ```  
   
 ### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Esempio: ricerca di istanze XML i cui autori hanno lo stesso nome  
- È possibile creare la query nella colonna XML oppure è possibile ricercare il nome "David" nella tabella di proprietà ed eseguire un join all'indietro alla tabella di base, per restituire l'istanza XML. Esempio:  
+ È possibile creare la query nella colonna XML oppure è possibile ricercare il nome "David" nella tabella di proprietà ed eseguire un join all'indietro alla tabella di base, per restituire l'istanza XML. Ad esempio  
   
 ```  
 SELECT xCol   

@@ -16,13 +16,13 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 876f9013b4213af366363c8c6a84a6233b5fb79c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 44df0c5a019f46b2a085dc1fbfeb85148439cd85
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-replica-properties-general-page"></a>Proprietà replica di disponibilità (Pagina Generale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa finestra di dialogo per visualizzare le proprietà di una replica di disponibilità.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/20/2017
  **Commit sincrono**  
  La replica primaria attende che la replica secondaria salvi la transazione su disco prima di eseguirne il commit.  
   
- Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  **Failover mode**  
  Modalità di failover della replica. I valori possibili sono:  

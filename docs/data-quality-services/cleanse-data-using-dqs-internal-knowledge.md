@@ -18,15 +18,15 @@ f1_keywords:
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75eb80e656e390cd6ad931e29b94776630214708
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e837002fb9060fa87bdd2588e8c72570687345
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Pulizia dei dati mediante le informazioni interne di DQS
   In questo argomento viene descritto come eseguire la pulizia dei dati utilizzando un progetto Data Quality in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La pulizia dei dati viene eseguita sui dati di origine utilizzando una Knowledge Base incorporata in DQS e confrontando tali dati con un set di dati di alta qualità. Per altre informazioni, vedere [Compilazione di una Knowledge Base](../data-quality-services/building-a-knowledge-base.md).  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per eseguire la pulizia dei dati è necessario disporre del ruolo dqs_kb_editor o dqs_kb_operator nel database DQS_MAIN.  
   
 ##  <a name="Create"></a> Creazione di un progetto Data Quality per la pulizia dei dati  
@@ -109,10 +109,10 @@ ms.lasthandoff: 11/20/2017
   
  In base al livello di confidenza, i valori vengono visualizzati nelle cinque schede seguenti:  
   
-|Scheda|Descrizione|  
+|Scheda|Description|  
 |---------|-----------------|  
 |**Suggeriti**|Mostra i valori del dominio per il quale tramite DQS sono stati trovati valori suggeriti che dispongono di un livello di confidenza più elevato del valore *soglia di suggerimento automatico* , ma inferiore al valore *soglia di correzione automatica* .<br /><br /> Nella colonna **Correggi in** vengono visualizzati i valori suggeriti rispetto al valore originale. È possibile fare clic sul pulsante di opzione nella colonna **Approva** o **Rifiuta** rispetto a un valore nella griglia superiore per accettare o rifiutare il suggerimento per tutte le istanze di tale valore. In questo caso, il valore accettato viene spostato nella scheda **Con correzione** e il valore respinto viene spostato nella scheda **Non validi** .|  
-|**Nuovi**|Mostra il dominio valido per il quale DQS non dispone di informazioni sufficienti e del quale non è pertanto possibile eseguire il mapping a nessuna altra scheda. Questa scheda contiene inoltre valori che presentano un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.<br /><br /> Se il valore è ritenuto corretto, fare clic sul pulsante di opzione nella colonna **Approva** . Altrimenti, fare clic sul pulsante di opzione nella colonna **Rifiuta** . Il valore accettato viene spostato nella scheda **Corretti** e il valore respinto viene spostato nella scheda **Non validi** . È anche possibile digitare il valore corretto manualmente sostituendo il valore originale nella colonna **Correggi in** e fare clic sul pulsante di opzione nella colonna **Approva** per accettare la modifica. In questo caso, il valore viene spostato nella scheda **Con correzione** .|  
+|**Nuova**|Mostra il dominio valido per il quale DQS non dispone di informazioni sufficienti e del quale non è pertanto possibile eseguire il mapping a nessuna altra scheda. Questa scheda contiene inoltre valori che presentano un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.<br /><br /> Se il valore è ritenuto corretto, fare clic sul pulsante di opzione nella colonna **Approva** . Altrimenti, fare clic sul pulsante di opzione nella colonna **Rifiuta** . Il valore accettato viene spostato nella scheda **Corretti** e il valore respinto viene spostato nella scheda **Non validi** . È anche possibile digitare il valore corretto manualmente sostituendo il valore originale nella colonna **Correggi in** e fare clic sul pulsante di opzione nella colonna **Approva** per accettare la modifica. In questo caso, il valore viene spostato nella scheda **Con correzione** .|  
 |**Non validi**|Mostra i valori del dominio contrassegnati come non validi nel dominio della Knowledge Base o i valori che non hanno superato una regola di dominio. Questa scheda contiene inoltre i valori rifiutati dall'utente in qualsiasi delle altre quattro schede.<br /><br /> Se il valore è ritenuto corretto, tuttavia, è possibile fare clic sul pulsante di opzione nella colonna **Approva** . Il valore accettato viene spostato nella scheda **Corretti** . È anche possibile digitare il valore corretto manualmente sostituendo il valore originale nella colonna **Correggi in** e fare clic sul pulsante di opzione nella colonna **Approva** per accettare la modifica. In questo caso, il valore viene spostato nella scheda **Con correzione** .|  
 |**Con correzione**|Visualizza i valori di dominio corretti da DQS durante il processo automatico di pulizia, nel caso in cui sia stata trovata una correzione per il valore con un livello di confidenza superiore al valore soglia di correzione automatica.<br /><br /> Nella colonna **Correggi in** vengono visualizzati i valori con correzione rispetto al valore originale. Per impostazione predefinita, il pulsante di opzione nella colonna **Approva** per il valore viene selezionato. Se necessario, è possibile rifiutare la correzione proposta facendo clic sul pulsante di opzione nella colonna **Rifiuta** per spostarlo nella scheda **Non validi** o digitare manualmente il valore corretto nella colonna **Correggi in** , quindi fare clic sul pulsante di opzione nella colonna **Approva** per accettare la modifica e spostare il valore nella scheda **Con correzione** .|  
 |**Corretti**|Mostra i valori di dominio che sono risultati corretti, Ad esempio, un valore corrispondente a un valore di dominio. Questa scheda contiene anche valori approvati dall'utente facendo clic sul pulsante di opzione nella colonna **Approva** nelle schede **Nuovi** e **Non validi** .<br /><br /> Per impostazione predefinita, il pulsante di opzione nella colonna **Approva** è selezionato per ciascun valore. Se tuttavia si ritiene che un valore in questa scheda sia errato, è possibile fare clic sul pulsante di opzione nella colonna **Rifiuta** per quel valore e spostarlo nella scheda **Non validi** oppure digitare manualmente il valore corretto con cui sostituirlo nella colonna **Correggi in** , quindi fare clic sul pulsante di opzione nella colonna **Approva** per accettare la modifica e spostarlo nella scheda **Con correzione** .|  

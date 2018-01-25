@@ -19,13 +19,13 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3643ec9676ef251bb022b16e50529b1bdfeae45c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0b89518482de615615229457a7195311ece7ab6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="logins-and-jobs-for-availability-group-databases"></a>Account di accesso e processi per i database di gruppi di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È necessario gestire periodicamente lo stesso set di account di accesso utente e processi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent in ogni database primario di un gruppo di disponibilità AlwaysOn e nei database secondari corrispondenti. Gli account di accesso e i processi devono essere riprodotti in ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è ospitata una replica di disponibilità per il gruppo di disponibilità.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
      Le istanze del server che ospitano le repliche di disponibilità di un gruppo di disponibilità potrebbero essere configurate in modo diverso, con lettere di unità nastro diverse e così via. I processi per ogni replica di disponibilità devono supportare eventuali differenze di questo tipo.  
   
-     I processi di backup possono usare la funzione [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) per identificare se la replica locale è quella preferita per i backup, in base alle preferenze di backup del gruppo di disponibilità. I processi di backup creati tramite la [Creazione guidata piano di manutenzione](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) a livello nativo usano questa funzione. Per altri processi di backup, è consigliabile utilizzare questa funzione come condizione nei processi di backup, pertanto vengono eseguiti solo nella replica preferita. Per altre informazioni, vedere [Repliche secondarie attive: Backup in repliche secondarie &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     I processi di backup possono usare la funzione [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) per identificare se la replica locale è quella preferita per i backup, in base alle preferenze di backup del gruppo di disponibilità. I processi di backup creati tramite la [Creazione guidata piano di manutenzione](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) a livello nativo usano questa funzione. Per altri processi di backup, è consigliabile utilizzare questa funzione come condizione nei processi di backup, pertanto vengono eseguiti solo nella replica preferita. Per altre informazioni, vedere [Repliche secondarie attive: Backup in repliche secondarie &#40;gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Account di accesso**  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
      Se una o più applicazioni usano l'autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o un account Windows locale, vedere [Account di accesso di applicazioni in cui viene utilizzata l'autenticazione di SQL Server o un account di accesso di Windows locale](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md#SSauthentication), più avanti in questo argomento.  
   
     > [!NOTE]  
-    >  Un utente del database il cui account di accesso di SQL Server non è definito o è definito in modo errato in un'istanza del server non potrà accedere a tale istanza. Questo utente viene definito *utente orfano* del database nell'istanza del server. Se un utente è isolato in una determinata istanza del server, è possibile impostare account di accesso utente in qualsiasi momento. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
+    >  Un utente del database il cui account di accesso di SQL Server non è definito o è definito in modo errato in un'istanza del server non potrà accedere a tale istanza. Questo utente viene definito *utente orfano* del database nell'istanza del server. Se un utente è isolato in una determinata istanza del server, è possibile impostare account di accesso utente in qualsiasi momento. Per altre informazioni, vedere [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
   
 -   **Metadati aggiuntivi**  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/20/2017
 -   [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Database indipendenti](../../../relational-databases/databases/contained-databases.md)   
  [Crea processi](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)  
   

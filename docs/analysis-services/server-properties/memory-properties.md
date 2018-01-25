@@ -1,7 +1,7 @@
 ---
 title: "Le proprietà della memoria | Documenti Microsoft"
 ms.custom: 
-ms.date: 11/17/2016
+ms.date: 01/23/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -30,18 +30,20 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8aa2f5f5c3e39680a9b0fe41e1b92443db4c8509
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 15e0fc6fa123fd4d9ca71f35804d2f06d0342b5a
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="memory-properties"></a>Proprietà della memoria
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prealloca una quantità una quantità di memoria all'avvio adeguata backup in modo che le richieste possono essere gestite immediatamente. La memoria aggiuntiva viene allocata come query e i carichi di lavoro di elaborazione aumentano. 
   
   Tramite la specifica delle impostazioni di configurazione è possibile controllare le soglie di rilascio della memoria. L'impostazione **HardMemoryLimit** consente ad esempio di specificare una condizione di memoria esaurita imposta automaticamente (per impostazione predefinita, questa soglia non è abilitata), in cui le nuove richieste vengono rifiutate completamente finché non diventano disponibili altre risorse.
+
+Per ulteriori informazioni sulla memoria massima utilizzata per ogni istanza di Analysis Services dall'edizione, vedere [edizioni e le funzionalità supportate di SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
- **Si applica a:** modalità server multidimensionale e tabulare, se non specificato diversamente.  
+ Se non diversamente specificato, le impostazioni seguenti si applicano sia in modalità server multidimensionale e tabulare.  
  
 ## <a name="default-memory-configuration"></a>Configurazione di memoria predefinita
 
@@ -146,5 +148,3 @@ Quando è impostata su 1, è meno probabile che l'elaborazione non venga complet
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
-  [Guida operativa di SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)
-  

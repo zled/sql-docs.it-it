@@ -17,15 +17,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 caps.latest.revision: "63"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1a5c74d49ff35255399caf10a74bffa91c3edc2b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ed7efe20ed53b63b615ad358bbabcb8e00fe3df
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="non-xml-format-files-sql-server"></a>File in formato non XML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono supportati due tipi di file di formato per l'esportazione e l'importazione bulk: *file di formato non XML* e *file di formato XML*.  
@@ -62,14 +62,14 @@ ms.lasthandoff: 11/17/2017
   
  I campi **Versione** e **Numero di colonne** sono presenti una sola volta. I significati di questi campi sono descritti nella tabella seguente.  
   
-|Campo del file di formato|Descrizione|  
+|Campo del file di formato|Description|  
 |------------------------|-----------------|  
 |Versione|Numero di versione dell'utilità **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Il numero di versione viene riconosciuto solo dall'utilità **bcp**, non da [!INCLUDE[tsql](../../includes/tsql-md.md)].<br /><br /> <br /><br /> Nota: la versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, l'utilità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** può leggere un file di formato versione 10.0 generato dall'utilità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**; tuttavia l'utilità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** non riesce a leggere un file di formato versione 12.0 generato dall'utilità [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**.|  
 |Numero di colonne|Numero di campi del file di dati. Tutte le righe devono contenere lo stesso numero di campi.|  
   
  Gli altri campi del file di formato descrivono i campi dati di cui viene eseguita l'importazione o l'esportazione bulk. Per ogni campo dati è necessaria una riga separata nel file di formato. Ogni riga del file di formato contiene i valori dei campi del file di formato descritti nella tabella seguente.  
   
-|Campo del file di formato|Descrizione|  
+|Campo del file di formato|Description|  
 |------------------------|-----------------|  
 |**Ordine dei campi nel file host**|Numero che indica la posizione di ogni campo nel file di dati. Il primo campo della riga è 1 e così via.|  
 |**Tipo di dati del file host**|Indica il tipo di dati archiviati in un determinato campo del file di dati. Per i file di dati ASCII, utilizzare SQLCHAR. Per i file di dati in formato nativo, utilizzare i tipi di dati predefiniti. Per altre informazioni, vedere [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilità bcp](../../tools/bcp-utility.md)   

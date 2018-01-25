@@ -26,17 +26,17 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4613a7ee6306ba86b5748377f20c1cf48117815
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8f88fca63abe24ce7093d628062c4ae90b40733
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="subscribe-to-publications"></a>Sottoscrizione delle pubblicazioni
+# <a name="subscribe-to-publications"></a>Subscribe to Publications
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Una sottoscrizione è la richiesta di una copia di dati o di oggetti di database in una pubblicazione. Una sottoscrizione definisce quale pubblicazione verrà ricevuta, insieme alla posizione e al momento in cui verrà ricevuta. Quando si pianificano le sottoscrizioni, è necessario decidere dove si desidera eseguire l'elaborazione dell'agente. La posizione di esecuzione dell'agente varia in base al tipo di sottoscrizione selezionato. In una sottoscrizione push, l'agente di merge o l'agente di distribuzione viene eseguito nel server di distribuzione, mentre in una sottoscrizione pull gli agenti vengono eseguiti nei Sottoscrittori. Dopo la creazione di una sottoscrizione non è più possibile modificarne il tipo.  
   
 |Sottoscrizione|Caratteristiche|Situazioni in cui utilizzarla|  
@@ -96,6 +96,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Proteggere il Sottoscrittore](../../relational-databases/replication/security/secure-the-subscriber.md)   
- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [Scadenza e disattivazione delle sottoscrizioni](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

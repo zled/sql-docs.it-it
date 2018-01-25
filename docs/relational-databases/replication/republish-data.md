@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], republishing data
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0db0fb6d7469e431b9248a173a3cf2606fbdefb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f560429493fe0182159ad66e89535ff017739678
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="republish-data"></a>Ripubblicazione dei dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In un modello di ripubblicazione il server di pubblicazione invia i dati a un Sottoscrittore, il quale ripubblica i dati in un numero qualsiasi di altri Sottoscrittori. Si tratta di un comportamento utile quando un server di pubblicazione deve inviare dati ai Sottoscrittori tramite un collegamento di comunicazione lento o costoso. Se all'altro capo del collegamento sono presenti più Sottoscrittori, l'utilizzo di un server di ripubblicazione consente di trasferirvi il carico dell'attività di distribuzione.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
  \*È consigliabile impostare la proprietà **@published_in_tran_pub** sulla pubblicazione di tipo merge. Per impostazione predefinita, la replica transazionale prevede che le tabelle nel Sottoscrittore vengano considerate di sola lettura. Se durante la replica di tipo merge vengono apportate modifiche a una tabella in una sottoscrizione transazionale, si potrà verificare una mancata convergenza dei dati. Per evitare questo rischio, si suggerisce di specificare queste tabelle come di solo download nella pubblicazione di tipo merge. In tal modo si impedisce al Sottoscrittore di tipo merge di caricare le modifiche ai dati nella tabella. Per altre informazioni, vedere [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare la distribuzione](../../relational-databases/replication/configure-distribution.md)   
+ [Configura distribuzione](../../relational-databases/replication/configure-distribution.md)   
  [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Inizializzare una sottoscrizione](../../relational-databases/replication/initialize-a-subscription.md)   

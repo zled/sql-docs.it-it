@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1ec4e5b55560085a0de3036bbc877b2dc7425467
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 50e25190819d71c8972613c1e31879fdffaf16ff
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="examples-using-auto-mode"></a>Esempi di utilizzo della modalità AUTO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Gli esempi seguenti illustrano l'uso della modalità AUTO. Molte di queste query vengono eseguite sui documenti XML con istruzioni per la produzione di biciclette, archiviati nella colonna Instructions della tabella ProductModel del database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
@@ -208,7 +208,7 @@ FOR XML AUTO, BINARY BASE64;
   
  Per impostazione predefinita, quando si utilizza la modalità AUTO per recuperare dati binari, al posto dei dati binari viene restituito un riferimento a un URL relativo alla radice virtuale del database in cui è stata eseguita la query. Questa situazione si presenta se non è specificata l'opzione BINARY BASE64.  
   
- Quando la modalità AUTO restituisce un riferimento URL a dati binari in database senza distinzione tra maiuscole e minuscole, in cui un nome di tabella o colonna specificato nella query non corrisponde al nome della tabella o della colonna nel database, la query viene eseguita, ma la combinazione di maiuscole e minuscole nel riferimento non sarà consistente. Esempio:  
+ Quando la modalità AUTO restituisce un riferimento URL a dati binari in database senza distinzione tra maiuscole e minuscole, in cui un nome di tabella o colonna specificato nella query non corrisponde al nome della tabella o della colonna nel database, la query viene eseguita, ma la combinazione di maiuscole e minuscole nel riferimento non sarà consistente. Ad esempio  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  

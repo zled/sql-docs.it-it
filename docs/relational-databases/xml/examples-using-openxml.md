@@ -29,15 +29,15 @@ helpviewer_keywords:
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9e77b2c648517d2d48d3537dd5f180b77bc0e979
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ce5f1474f03cad13c45eefe88202d15e706eb7bc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="examples-using-openxml"></a>Esempi: utilizzo di OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Gli esempi presentati in questo argomento illustrano come usare l'istruzione OPENXML per visualizzare un documento XML come set di righe. Per informazioni sulla sintassi di OPENXML, vedere [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Negli esempi vengono illustrati tutti gli aspetti dell'istruzione OPENXML, ma non ne vengono specificate le metaproprietà. Per altre informazioni su come specificare le metaproprietà in OPENXML, vedere [Specificare metaproprietà in OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Il parametro *rowpattern* (/ROOT/Customer) identifica i nodi <`Customer`> da elaborare.  
   
--   Il valore del parametro *flags* è impostato su **1**, per indicare che il mapping è incentrato sugli attributi. Per gli attributi XML viene eseguito il mapping alle colonne del set di righe definite in *SchemaDeclaration*.  
+-   Il valore del parametro *flags* è impostato su **1** , per indicare che il mapping è incentrato sugli attributi. Per gli attributi XML viene eseguito il mapping alle colonne del set di righe definite in *SchemaDeclaration*.  
   
 -   In *SchemaDeclaration*, nella clausola WITH, i valori specificati per *ColName* corrispondono ai nomi degli attributi XML associati. Quindi, in *SchemaDeclaration* non è specificato il parametro *ColPattern*.  
   
@@ -448,7 +448,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Il risultato viene restituito sotto forma di tabella edge. È possibile creare query da eseguire sulla tabella edge per recuperare informazioni specifiche. Esempio:  
+ Il risultato viene restituito sotto forma di tabella edge. È possibile creare query da eseguire sulla tabella edge per recuperare informazioni specifiche. Ad esempio  
   
 -   La query seguente restituisce il numero di nodi **Customer** presenti nel documento. Poiché non è stata specificata la clausola WITH, l'istruzione OPENXML restituisce una tabella edge. L'istruzione SELECT esegue la query sulla tabella edge.  
   
@@ -529,7 +529,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Impostazione di un documento XML con più nodi di testo  
- Se in un documento XML sono presenti più nodi di testo, un'istruzione SELECT con un parametro *ColPattern*di tipo **text()**restituirà solo il primo, invece di tutti i nodi di testo. Esempio:  
+ Se in un documento XML sono presenti più nodi di testo, un'istruzione SELECT con un parametro *ColPattern*di tipo **text()**restituirà solo il primo, invece di tutti i nodi di testo. Ad esempio  
   
 ```  
 DECLARE @h int  

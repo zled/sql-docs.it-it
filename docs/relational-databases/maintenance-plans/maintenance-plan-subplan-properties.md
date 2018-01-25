@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.swb.maint.subplanproperties.f1
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2951f131e6579ac0fb5f7ecc831114123c106dbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cbc5a0312ae87ac372491b4f5b2e7d295642ef3c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Piano di manutenzione (Proprietà sottopiano)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la finestra di dialogo **Piano di manutenzione (Proprietà sottopiano)** per specificare il nome, la descrizione e la pianificazione per un sottopiano di un piano di manutenzione. Per visualizzare questa finestra di dialogo, fare clic su **Proprietà sottopiano** nella scheda **Progettazione** del piano di manutenzione o fare doppio clic su un sottopiano nella griglia della finestra di progettazione.  

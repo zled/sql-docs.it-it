@@ -15,12 +15,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: f8f670c4eb380a5fb4a43d547133c64d616e1b54
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 87615ca4a3601ab92b37e97a8392b392accb1695
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installare SQL Server con SysPrep
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
   
 - [Installare SQL Server tramite un file di configurazione](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rivedere gli argomenti in [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
   
 Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sui requisiti hardware e software, vedere [Requisiti hardware e software per l'installazione di SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
@@ -54,7 +54,7 @@ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/s
   
 3. Creare il cluster di failover di Windows. 
   
-4. Eseguire setup.exe con **/ACTION=PrepareFailoverCluster** su tutti i nodi. Esempio:  
+4. Eseguire setup.exe con **/ACTION=PrepareFailoverCluster** su tutti i nodi. Ad esempio  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -246,7 +246,7 @@ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/s
   
 9. Nella pagina **Regole di preparazione immagine** Controllo configurazione sistema consente di eseguire le regole di preparazione immagine per convalidare la configurazione del computer rispetto alle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarlo come report HTML. 
   
-10. Nella pagina **Inizio preparazione immagine** viene illustrata una visualizzazione albero delle opzioni di installazione specificate durante l'installazione. Per continuare, fare clic su **Installa**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione consentirà innanzitutto di installare i prerequisiti obbligatori per le funzionalità selezionate e, successivamente, le funzionalità stesse. 
+10. Nella pagina **Inizio preparazione immagine** viene illustrata una visualizzazione albero delle opzioni di installazione specificate durante l'installazione. Per continuare, fare clic su **Installa**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno innanzitutto installati i prerequisiti obbligatori per le funzionalità selezionate e, successivamente, le funzionalità stesse. 
   
 11. Durante l'installazione, nella pagina **Avanzamento preparazione immagine** è possibile monitorare lo stato di avanzamento del processo. 
   

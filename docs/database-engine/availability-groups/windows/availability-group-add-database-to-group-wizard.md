@@ -19,13 +19,13 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4fbbbb723c1e1b1f7ddcd8ff1396e9ca563efd03
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e7a24cc777a0b13329c38fe4a276fae1c8b22d36
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group---add-database-to-group-wizard"></a>Procedura guidata Aggiungi database a gruppo di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la procedura guidata Aggiungi database a gruppo di disponibilità per aggiungere uno o più database a un gruppo di disponibilità AlwaysOn esistente.  
@@ -33,13 +33,13 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Per informazioni sull'uso di [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell per aggiungere un database, vedere [Aggiungere un database a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'argomento:**  
   
 -   **Prima di iniziare:**  
   
      [Prerequisiti e restrizioni](#Prerequisites)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per aggiungere un database usando**  [Procedura guidata Aggiungi database a gruppo di disponibilità (SQL Server Management Studio)](#SSMSProcedure)  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo della procedura guidata Aggiungi database a gruppo di disponibilità (SQL Server Management Studio)  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/20/2017
   
     -   **Full**  
   
-         Selezionare questa opzione se l'ambiente soddisfa i requisiti per l'avvio automatico della sincronizzazione dei dati iniziale. Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli](#Prerequisites)in una sezione precedente di questo argomento.  
+         Selezionare questa opzione se l'ambiente soddisfa i requisiti per l'avvio automatico della sincronizzazione dei dati iniziale. Per altre informazioni, vedere [Prerequisiti, restrizioni e raccomandazioni](#Prerequisites), più indietro in questo argomento.  
   
          Se si seleziona **Completo**, dopo avere creato il gruppo di disponibilità verrà tentato il backup di ogni database primario e del relativo log delle transazioni su una condivisione di rete e verranno ripristinati i backup su ogni istanza del server in cui è ospitata una replica secondaria. Ogni database secondario verrà quindi aggiunto al gruppo di disponibilità.  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 11/20/2017
 -   [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Aggiungere un database a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)   
  [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a59b93a9877eb6e58c34fc1aeb54795aaee52d3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 779cd2f34ae30c2e21d632e3359861452c4f652a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Definizione della lunghezza di campo tramite bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La lunghezza del campo indica il numero massimo di caratteri necessari per rappresentare i dati in formato carattere. Se i dati sono archiviati in formato nativo, la lunghezza di campo è già nota. Ad esempio, il tipo di dati **int** accetta 4 byte. Se si è indicato 0 come lunghezza del prefisso, il comando **bcp** chiede di specificare la lunghezza del campo, le lunghezze di campo predefinite e l'impatto della lunghezza del campo sull'archiviazione dei dati in file di dati contenenti dati **char** .  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
 |**numeric**|41*|  
 |**uniqueidentifier**|37|  
 |**timestamp**|17|  
-|**varchar(max)**|0|  
+|**ntext**|0|  
 |**varbinary(max)**|0|  
 |**nvarchar(max)**|0|  
 |UDT (tipo definito dall'utente)|Lunghezza della colonna UDT|  

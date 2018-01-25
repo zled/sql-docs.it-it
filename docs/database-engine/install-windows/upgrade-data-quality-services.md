@@ -15,12 +15,12 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: bc1b70a3c4707976539d13222b088bd744e2d436
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 42f27ae342fdd30ac608e1071029eb2415c9b896
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-data-quality-services"></a>Aggiornare Data Quality Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come aggiornare l'installazione esistente di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). Come parte dell'aggiornamento di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, è inoltre necessario aggiornare lo schema dei database DQS.  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Nell'output verrà visualizzata una voce per ogni aggiornamento, insieme alla data di aggiornamento. Il valore massimo di VERSION_ID e ASSEMBLY_VERSION nella data più recente è la versione corrente. Un valore pari a 2 nella colonna STATUS indica l'esito positivo. Se si è verificato un errore, questo verrà visualizzato nella colonna ERROR. Esempio di output:  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|error|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMINIO\NomeUtente>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMINIO\NomeUtente>|2||  

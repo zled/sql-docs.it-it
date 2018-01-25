@@ -20,13 +20,13 @@ ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d663f053d417f02a3249ddec2b4174d30db7595
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2b2fc6a0c8f840bb51eb758506c08240a66820a5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>Nascondi oggetti di sistema in Esplora oggetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questo argomento descrive come nascondere gli oggetti di sistema in Esplora oggetti in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Il nodo **Database** di Esplora oggetti contiene oggetti di sistema, ad esempio i database di sistema. Per nascondere gli oggetti di sistema, usare le pagine **Strumenti**/**Opzioni** . Questa impostazione non ha effetto su alcuni oggetti di sistema, quali funzioni di sistema e tipi di dati di sistema.  

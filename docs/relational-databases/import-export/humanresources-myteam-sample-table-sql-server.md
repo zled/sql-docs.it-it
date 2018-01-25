@@ -17,15 +17,15 @@ helpviewer_keywords:
 - bulk exporting [SQL Server], examples
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7c82b62908b8004c9ef93c77b5d980cb65b0787
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d1175f8be3cdd8ebf15227ea46ceca7180a44e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Tabella di esempio HumanResources.myTeam (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Molti degli esempi di codice inclusi in [Importazione ed esportazione di dati per operazioni bulk](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) richiedono una tabella di test speciale denominata **myTeam**. Prima che sia possibile eseguire gli esempi, è necessario creare la tabella **myTeam** nello schema **HumanResources** del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella **myTeam** sono incluse le colonne seguenti.  
   
-|Colonna|Tipo di dati|Supporto di valori Null|Descrizione|  
+|colonna|Tipo di dati|Supporto di valori Null|Description|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|Non Null|Chiave primaria per le righe. ID dipendente di un membro del team.|  
 |**Nome**|**nvarchar(50)**|Non Null|Nome di un membro del team.|  

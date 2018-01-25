@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7952076c536818d8a272a6eed35566c3e413ed21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9433d94683396ab9fbeb057c4af1b681a628cd4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accesso ai dati FILESTREAM con OpenSqlFilestream
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'API OpenSqlFilestream ottiene un handle di file compatibile con Win32 per un oggetto binario di grandi dimensioni (BLOB) FILESTREAM archiviato nel file system. L'handle può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Se si passa questo handle a qualsiasi altra API Win32, viene restituito l'errore ERROR_ACCESS_DENIED. L'handle deve essere chiuso passandolo all'API [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) Win32 prima che venga eseguito il commit o il rollback della transazione. La mancata chiusura dell'handle provoca perdite di risorse sul lato server.  
@@ -57,7 +57,7 @@ HANDLE OpenSqlFilestream (
  *DesiredAccess*  
  [in] Imposta la modalità utilizzata per accedere ai dati BLOB FILESTREAM. Questo valore viene passato alla [funzione DeviceIoControl](http://go.microsoft.com/fwlink/?LinkId=105527).  
   
-|Nome|Valore|Significato|  
+|nome|valore|Significato|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|I dati possono essere letti dal file.|  
 |SQL_FILESTREAM_WRITE|1|I dati possono essere scritti nel file.|  
@@ -69,7 +69,7 @@ HANDLE OpenSqlFilestream (
  *OpenOptions*  
  [in] Attributi e flag del file. Questo parametro può includere inoltre qualsiasi combinazione dei flag seguenti.  
   
-|Flag|Valore|Significato|  
+|Flag|valore|Significato|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_OPEN_NONE|0x00000000:|Il file è aperto o creato senza opzioni speciali.|  
 |SQL_FILESTREAM_OPEN_FLAG_ASYNC|0x00000001L|Il file è aperto o creato per gli I/O asincroni.|  
@@ -99,7 +99,7 @@ HANDLE OpenSqlFilestream (
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per utilizzare questa API, è necessario che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sia installato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client viene installato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o con gli strumenti client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Installazione di SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>Vedere anche  

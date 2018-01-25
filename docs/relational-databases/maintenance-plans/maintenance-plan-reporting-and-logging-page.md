@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.maint.reportinglogging.f1
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c3a26d6e0cdf6e356fa65035cff28f99b86bbb6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05d9eac7b81f5a17d5f2b9de71cc0a7027896354
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>Piano di manutenzione (pagina Report e registrazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la finestra di dialogo **Report e registrazione** per configurare i report e i log generati durante l'esecuzione dei piani di manutenzione.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
  **Connessione**  
  Consente di specificare le informazioni di connessione da utilizzare per la registrazione in un server remoto.  
   
- **Nuovi**  
+ **Nuova**  
  Consente di visualizzare la finestra di dialogo **Proprietà connessione** . utilizzata per configurare le informazioni per una nuova connessione per la registrazione in un server remoto.  
   
 ## <a name="see-also"></a>Vedere anche  

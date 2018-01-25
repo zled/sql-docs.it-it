@@ -18,13 +18,13 @@ ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e334ba23daa658900e6977811d1305a1ad0b16e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bf344815c90bbabcab08d75880fb2605f6683a36
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Aggiunta o sostituzione di un server di controllo del mirroring del database (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se gli endpoint del mirroring del database usano l'autenticazione di Windows, è possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per aggiungere o sostituire un server di controllo del mirroring. L'aggiunta di un server di controllo del mirroring in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] comporta l'attivazione della modalità a sicurezza elevata con failover automatico.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="see-also"></a>Vedere anche  
  [Server di controllo del mirroring del database](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Proprietà database &#40;pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Proprietà del database &#40;Pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)   
  [Server di controllo del mirroring del database](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

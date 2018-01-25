@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 103210e4164a9d4faf014a044a22ee13a28fcee9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4f90816f11420f3bef3885c66199144666e903bb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-foreign-key-relationships"></a>Creare relazioni di chiave esterna
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
     
 
     
-##   <a name="permissions"></a>Permissions    
+##   <a name="permissions"></a>Autorizzazioni    
  Per la creazione di una nuova tabella con una chiave esterna è richiesta l'autorizzazione CREATE TABLE per il database e l'autorizzazione ALTER per lo schema in cui viene creata la tabella.    
     
  Per la creazione di una chiave esterna in una tabella esistente è richiesta l'autorizzazione ALTER per la tabella.    
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/17/2017
     
 2.  Sulla barra Standard fare clic su **Nuova query**.    
     
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio si crea una tabella e si definisce un vincolo di chiave esterna nella colonna `TempID` alla quale fa riferimento la colonna `SalesReasonID` nella tabella `Sales.SalesReason` . Le clausole ON DELETE CASCADE e ON UPDATE CASCADE vengono utilizzate per garantire che le modifiche apportate alla tabella `Sales.SalesReason` vengano propagate automaticamente alla tabella `Sales.TempSalesReason` .    
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio si crea una tabella e si definisce un vincolo di chiave esterna nella colonna `TempID` alla quale fa riferimento la colonna `SalesReasonID` nella tabella `Sales.SalesReason` . Le clausole ON DELETE CASCADE e ON UPDATE CASCADE vengono utilizzate per garantire che le modifiche apportate alla tabella `Sales.SalesReason` vengano propagate automaticamente alla tabella `Sales.TempSalesReason` .    
     
     ```    
     USE AdventureWorks2012;    
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/17/2017
     
 2.  Sulla barra Standard fare clic su **Nuova query**.    
     
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio si crea una chiave esterna nella colonna `TempID` e si fa riferimento alla colonna `SalesReasonID` nella tabella `Sales.SalesReason`.    
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio si crea una chiave esterna nella colonna `TempID` e si fa riferimento alla colonna `SalesReasonID` nella tabella `Sales.SalesReason`.    
     
     ```    
     USE AdventureWorks2012;    

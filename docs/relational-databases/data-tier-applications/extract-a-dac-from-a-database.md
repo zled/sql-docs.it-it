@@ -24,15 +24,15 @@ helpviewer_keywords:
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a3fe80df8624968a5bf71f3fd7976bc838a0abf4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 510eb23505fde879a82d3ded7282cabd410cacaf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>Estrarre un'applicazione livello dati da un database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la procedura guidata **Estrai applicazione livello dati** o uno script di Windows PowerShell per estrarre un pacchetto di applicazione livello dati da un database di SQL Server esistente. Il processo di estrazione crea un file di pacchetto DAC che contiene le definizioni degli oggetti di database e i relativi elementi a livello di istanza. Ad esempio, un file di pacchetto di applicazione livello dati contiene tutte le tabelle di database, le stored procedure, le viste e gli utenti, nonché gli account di accesso che eseguono il mapping agli utenti del database.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  Un'applicazione livello dati può essere estratta solo da un database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive. Non è possibile estrarre un'applicazione livello dati se il database include oggetti non supportati nell'applicazione livello dati o utenti contenuti. Per ulteriori informazioni sui tipi di oggetti supportati in un'applicazione livello dati, vedere [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="Permissions"></a> Permissions  
  L'estrazione di un'applicazione livello dati richiede almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, oltre alle autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'estrazione di un'applicazione del livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene estratta l'applicazione del livello dati. Possono estrarre un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .  
   
 ##  <a name="UsingDACExtractWizard"></a> Utilizzo della Procedura guidata Estrai applicazione livello dati  

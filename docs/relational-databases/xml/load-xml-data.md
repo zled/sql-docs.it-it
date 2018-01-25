@@ -16,18 +16,18 @@ helpviewer_keywords:
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c91865471a8d25f0ff8dff5ff626931a24e3478a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b880084271d88a23e7b31a7a82ea51fda388f2b5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="load-xml-data"></a>Caricamento dati XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] È possibile trasferire dati XML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in diversi modi. Esempio:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] È possibile trasferire dati XML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in diversi modi. Ad esempio  
   
 -   Se i dati si trovano in una colonna di tipo [n]text o image in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile importare la tabella utilizzando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Modificare il tipo di colonna in XML utilizzando l'istruzione ALTER TABLE.  
   
@@ -50,7 +50,7 @@ FROM    (SELECT *
 ```  
   
 ## <a name="text-encoding"></a>Codifica del testo  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia i dati XML in formato Unicode (UTF-16). I dati XML recuperati dal server vengono restituiti con la codifica UTF-16. Se si desidera una codifica diversa, sarà necessario eseguire la conversione appropriata sui dati recuperati. Per i dati XML viene talvolta utilizzata una codifica diversa. In questo caso è necessario prestare particolare attenzione durante il caricamento dei dati. Esempio:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia i dati XML in formato Unicode (UTF-16). I dati XML recuperati dal server vengono restituiti con la codifica UTF-16. Se si desidera una codifica diversa, sarà necessario eseguire la conversione appropriata sui dati recuperati. Per i dati XML viene talvolta utilizzata una codifica diversa. In questo caso è necessario prestare particolare attenzione durante il caricamento dei dati. Ad esempio  
   
 -   Se il testo XML è in formato Unicode (UCS-2, UTF-16), sarà possibile assegnarlo senza problemi a una colonna, una variabile o un parametro XML.  
   
@@ -68,14 +68,14 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>Stringa che codifica le incompatibilità  
- Se si copia e si incolla XML come un valore letterale stringa nella finestra dell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], potrebbero verificarsi incompatibilità di codifica delle stringhe [N]VARCHAR, che dipendono dalla codifica dell'istanza XML utilizzata. In molti casi, è possibile rimuovere la dichiarazione XML. Esempio:  
+ Se si copia e si incolla XML come un valore letterale stringa nella finestra dell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], potrebbero verificarsi incompatibilità di codifica delle stringhe [N]VARCHAR, che dipendono dalla codifica dell'istanza XML utilizzata. In molti casi, è possibile rimuovere la dichiarazione XML. Ad esempio  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
   <xsd:schema …  
 ```  
   
- È quindi consigliabile inserire una N per rendere l'istanza XML un'istanza di Unicode. Esempio:  
+ È quindi consigliabile inserire una N per rendere l'istanza XML un'istanza di Unicode. Ad esempio  
   
 ```  
 -- Assign XML instance to a variable.  

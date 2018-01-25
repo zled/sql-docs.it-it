@@ -20,15 +20,15 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b5ba4a4f8b3a52859e4873e8f3eb9f76ea5e579
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fadbd13868423a4defc38dad56653e745634fdb4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Esecuzione di logiche di business durante la sincronizzazione di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Il framework di gestione della logica di business consente di scrivere un assembly di codice gestito che viene chiamato durante il processo di sincronizzazione di tipo merge. L'assembly include la logica di business che consente di rispondere a diverse situazioni durante la sincronizzazione, ad esempio modifiche ai dati, conflitti ed errori. Il framework di gestione della logica di business offre un semplice modello di programmazione e i dati forniti all'assembly dal processo di merge sono sotto forma di set di dati ADO.NET. In questo modo, è possibile approfondire la propria conoscenza di ADO.NET anziché apprendere un'interfaccia specifica. Per ulteriori informazioni sulla programmazione dei gestori della logica di business, vedere:  

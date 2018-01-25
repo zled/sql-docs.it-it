@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.monitor.queuereaderagent.f1
 helpviewer_keywords: Queue Reader Agent dialog box
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bf6f3f133c480315373f73665858c21088cfa37
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 536010c7312cc33b7ee7b394ac2761be7aefc8dc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="queue-reader-agent"></a>Agente di lettura coda
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La finestra di dialogo **Agente di lettura coda** visualizza informazioni dettagliate sull'agente di lettura coda, tra cui lo stato, la cronologia, i messaggi informativi ed eventuali messaggi di errore.  
@@ -70,6 +70,6 @@ ms.lasthandoff: 11/17/2017
  [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Monitoraggio della replica](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Panoramica degli agenti di replica](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

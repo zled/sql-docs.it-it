@@ -22,13 +22,13 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 caps.latest.revision: "49"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27a259a48aee0f852e6088bb17e6765ea37c057c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7269f0e591ec1846af196a6b7c996b8eeb852351
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Monitorare Gruppi di disponibilità (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per monitorare le repliche e i gruppi di disponibilità e i database associati tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] offre un set di viste del catalogo, di DMV e di proprietà del server. Tramite le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT, è possibile utilizzare le viste per monitorare i gruppi di disponibilità e i relativi database e repliche. Le informazioni restituite per un gruppo di disponibilità variano a seconda che l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui si è connessi ospiti la replica primaria o una replica secondaria.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 > [!TIP]  
 >  Molte di queste viste possono essere unite tramite le relative colonne ID in modo che le informazioni vengano restituite da più viste in una singola query.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Autorizzazioni](#Permissions)  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="Permissions"></a> Permissions  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] richiedono l'autorizzazione VIEW ANY DEFINITION sull'istanza del server. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] richiedono l'autorizzazione VIEW SERVER STATE sul server.  
   
 ##  <a name="AoAgFeatureOnSI"></a> Monitoraggio della funzionalità Gruppi di disponibilità Always On su un'istanza del server  
@@ -224,7 +224,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Visualizzare le proprietà dei gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
   
--   [Visualizzare le proprietà della replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
+-   [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   
 -   [Visualizzare le proprietà del listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   
@@ -286,19 +286,19 @@ ms.lasthandoff: 11/20/2017
   
 -   [SQL Server, replica di disponibilità](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)  
   
--   [SQL Server, replica di database](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
+-   [Replica di database di SQL Server](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
 -   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   
  **Gestione basata su criteri per gruppi di disponibilità Always On**  
   
--   [Usare i criteri Always On per visualizzare l'integrità di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Utilizzare i criteri AlwaysOn per visualizzare l'integrità di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 -   [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   

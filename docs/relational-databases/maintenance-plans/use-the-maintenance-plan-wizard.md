@@ -37,15 +37,15 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21c05a6f8d841bc32cbcebd0830042c8b17c2421
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f389187e628fde1bca50542449230264055a49f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utilizzare la Creazione guidata piano di manutenzione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come creare un piano di manutenzione con uno o più server usando la Creazione guidata piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tramite la Creazione guidata piano di manutenzione è possibile creare un piano di manutenzione che potrà essere regolarmente eseguito in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. In questo modo è possibile eseguire a intervalli specificati varie attività di amministrazione di database, tra cui backup, controlli di integrità del database o aggiornamenti delle statistiche del database.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 
 Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di manutenzione, set di raccolta dati e altri pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo che usino un account proxy con privilegi limitati o aggiungere solo i membri **sysadmin** ai ruoli **db_ssisadmin** e **dc_admin** .  
 
-##  <a name="Prerequisite"></a> Prerequisiti 
+##  <a name="Prerequisite"></a> Prerequisites 
 È necessario abilitare [Opzione di configurazione del server Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md).
   
   
@@ -135,9 +135,9 @@ Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di ma
   
         6.  In **Descrizione**in **Riepilogo**verificare che tutte le impostazioni della pianificazione del processo siano corrette.  
   
-        7.  Scegliere **OK**.  
+        7.  Fare clic su **OK**.  
   
-    6.  Fare clic su **Avanti**.  
+    6.  Scegliere **Avanti**.  
   
 6.  Nella pagina **Selezione server di destinazione** selezionare i server in cui si desidera eseguire il piano di manutenzione. Questa pagina viene visualizzata solo nelle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurate come server master.  
   
@@ -206,7 +206,7 @@ Casella di controllo**Includi indici**
      Il database viene organizzato in pagine contigue, ma queste ultime non vengono deallocate, né i file del database vengono compattati. Utilizzare questa opzione se si prevede una nuova espansione del database e non si desidera riallocare lo spazio. Con questa opzione, i file del database non verranno compattati al massimo. L'opzione utilizza l'istruzione NOTRUNCATE.  
   
      **Restituisci spazio liberato al sistema operativo**  
-     Il database viene organizzato in pagine contigue e queste ultime vengono rilasciate al sistema operativo per essere utilizzate da altri programmi. L'opzione utilizza l'istruzione TRUNCATEONLY. Si tratta dell'impostazione predefinita.  
+     Il database viene organizzato in pagine contigue e queste ultime vengono rilasciate al sistema operativo per essere utilizzate da altri programmi. L'opzione utilizza l'istruzione TRUNCATEONLY. Si tratta dell'opzione predefinita.  
   
 ## <a name="define-the-index-tasks"></a>Definizione delle attività dell'indice  
   
@@ -243,7 +243,7 @@ Casella di controllo**Includi indici**
      Contiene opzioni relative all'applicazione del fattore di riempimento a indici e tabelle.  
   
      **Spazio libero predefinito per pagina**  
-     Riorganizza le pagine mantenendo la quantità predefinita di spazio disponibile. Selezionando questa opzione verranno eliminati gli indici delle tabelle del database e verranno ricreati utilizzando il fattore di riempimento specificato al momento della creazione degli indici. Si tratta dell'impostazione predefinita.  
+     Riorganizza le pagine mantenendo la quantità predefinita di spazio disponibile. Selezionando questa opzione verranno eliminati gli indici delle tabelle del database e verranno ricreati utilizzando il fattore di riempimento specificato al momento della creazione degli indici. Si tratta dell'opzione predefinita.  
   
      Casella**Modifica percentuale di spazio disponibile per pagina**   
      Elimina gli indici delle tabelle del database e li ricrea utilizzando un nuovo fattore di riempimento calcolato automaticamente, riservando in tal modo la quantità di spazio disponibile specificata nelle pagine dell'indice. Maggiore è la percentuale, maggiore sarà la quantità di spazio disponibile riservata nelle pagine dell'indice e maggiori saranno le dimensioni dell'indice. I valori validi sono compresi tra 0 e 100. Utilizza l'opzione `FILLFACTOR` .  

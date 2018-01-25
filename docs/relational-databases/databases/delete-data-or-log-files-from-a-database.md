@@ -21,15 +21,15 @@ helpviewer_keywords:
 - deleting data
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c5020fdcf04f15db3af797d377c261ac2e0f603
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8378a8478c63cb34a2e9d10eda05160c1bcfffb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>Eliminare file di dati o file di log da un database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come eliminare file di dati o di log in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
      [Prerequisiti](#Prerequisites)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per eliminare file di dati o di log da un database tramite:**  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È richiesta l'autorizzazione ALTER per il database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -71,9 +71,9 @@ ms.lasthandoff: 11/17/2017
   
 4.  Nella griglia **File di database** selezionare il file da eliminare, quindi fare clic su **Rimuovi**.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-delete-data-or-log-files-from-a-database"></a>Per eliminare file di dati o di log da un database  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si rimuove il file `test1dat4`.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio si rimuove il file `test1dat4`.  
   
  [!code-sql[DatabaseDDL#AlterDatabase4](../../relational-databases/databases/codesnippet/tsql/delete-data-or-log-files_1.sql)]  
   

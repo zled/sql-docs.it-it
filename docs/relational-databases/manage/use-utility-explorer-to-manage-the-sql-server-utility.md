@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f586f008a1a646698e01e75f3175f7b56f8a311
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 663d8b3a7f8dbb27813ecbdd3f2aafdb64ed94d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizzo di Esplora utilità per gestire Utilità SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gestione Utilità, un componente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consente di connettersi alle istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per fornire una visualizzazione albero di tutti gli oggetti in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il riquadro del contenuto di Esplora utilità fornisce diverse soluzioni per visualizzare dati riepilogativi e dettagliati sullo stato dell'integrità delle istanze gestite di SQL Server. Esplora utilità fornisce anche un'interfaccia utente per visualizzare e gestire le definizioni dei criteri. Le funzionalità di Esplora utilità variano leggermente a seconda degli oggetti di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma generalmente includono oggetti, dati e criteri gestiti da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -73,6 +73,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Configurare i criteri di integrità &#40;Utilità SQL Server&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
- [Esplora oggetti](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
+ [Visualizza](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
   
   

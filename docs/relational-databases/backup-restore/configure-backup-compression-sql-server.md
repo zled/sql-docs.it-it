@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 95aa946af1ef6945ebbe25cb87c002e172053135
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43f1fbed7a953bf8989764c9c835a047fb65d4c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-backup-compression-sql-server"></a>Configura compressione backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In fase di installazione, la compressione dei backup è disattivata per impostazione predefinita. Il comportamento predefinito della compressione dei backup è determinato dall'opzione di configurazione a livello di server **backup compression default** . È possibile tuttavia eseguire l'override dell'impostazione predefinita a livello del server durante la creazione di un singolo backup o la pianificazione di una serie di backup di routine. Per modificare il valore predefinito a livello di server, vedere [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).  

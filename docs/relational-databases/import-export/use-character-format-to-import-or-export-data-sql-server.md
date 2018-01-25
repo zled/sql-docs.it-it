@@ -16,15 +16,15 @@ helpviewer_keywords:
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53a3bd656302c47c1ccd69fa484a4d87b050c41f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9c15b0e22e91fb3a478a7b91a14292609b81a22
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere per l'importazione o l'esportazione di dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È consigliabile adottare il formato carattere per l'esportazione bulk in file di testo utilizzati in altri programmi o per l'importazione bulk da file di testo creati in altri programmi.  
@@ -34,7 +34,7 @@ Quando si utilizza il formato carattere, in tutte le colonne viene applicato il 
 > [!NOTE]
 >  Quando si esegue il trasferimento bulk dei dati tra le istanze di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il file di dati contiene dati di tipo carattere Unicode ma nessun carattere esteso o DBCS, usare il formato carattere Unicode. Per altre informazioni, vedere [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
   
-|Contenuto dell'argomento|
+|Contenuto dell'argomento:|
 |---|
 |[Considerazioni sull'utilizzo del formato carattere](#considerations)|
 |[Opzioni del comando per il formato carattere](#command_options)|
@@ -47,7 +47,7 @@ Quando si utilizza il formato carattere, in tutte le colonne viene applicato il 
 ## Considerazioni sull'utilizzo del formato carattere<a name="considerations"></a>
 Quando si utilizza il formato carattere, è necessario tenere presenti i fattori seguenti:  
   
--   Per impostazione predefinita, quando si esegue l'[utilità bcp](../../tools/bcp-utility.md) i campi dei dati di tipo carattere vengono separati da un carattere di tabulazione e alla fine dei record viene inserito un carattere di nuova riga.  Per informazioni su come specificare caratteri di terminazione alternativi, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+-   Per impostazione predefinita, quando si esegue l' [utilità bcp](../../tools/bcp-utility.md) i campi dei dati di tipo carattere vengono separati da un carattere di tabulazione e alla fine dei record viene inserito un carattere di nuova riga.  Per informazioni su come specificare caratteri di terminazione alternativi, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
 -   Per impostazione predefinita, prima dell'esportazione o dell'importazione bulk di dati in modalità carattere, vengono eseguite le conversioni seguenti:  
   
@@ -67,13 +67,13 @@ Quando si utilizza il formato carattere, è necessario tenere presenti i fattori
   
 Il formato carattere è supportato dalle opzioni di comando seguenti:  
   
-|Comando|Opzione|Descrizione|  
+|Comando|Opzione|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Determina l'uso dei dati di tipo carattere da parte dell'utilità bcp.*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Durante l'importazione bulk dei dati viene applicato il formato carattere.|  
 |OPENROWSET|N/D|Deve usare un file di formato|
   
- \*Per caricare dati di tipo carattere (**-c**) in un formato compatibile con le versioni precedenti dei client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare l'opzione **-V** . Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ \**Per caricare dati di tipo carattere (**-c**) in un formato compatibile con le versioni precedenti dei client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usare l'opzione **-V** . Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
    
 > [!NOTE]
 >  In alternativa, è possibile definire la formattazione di ogni singolo campo in un file di formato. Per altre informazioni, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
@@ -218,7 +218,7 @@ Per utilizzare formati di dati per l'importazione o l'esportazione bulk
   
 -   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   

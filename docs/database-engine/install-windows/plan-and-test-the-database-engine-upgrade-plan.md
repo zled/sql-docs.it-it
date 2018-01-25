@@ -15,12 +15,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ef0de3c547ac843807bf9e8e906ea19fa1e3a5b5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: fd45301f5ce4497a672ffd4a684f972b08ac8013
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Pianificare e testare il piano di aggiornamento del motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per eseguire correttamente l'aggiornamento di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], indipendentemente dall'approccio, è opportuna un'accurata pianificazione.  

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a688b5d0da43f4c49e22c70bf1faf3bc1773097d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7b1785dc0435baf024a68c62e256e54498d1c8d3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-matching"></a>Corrispondenza di dati
   Il processo di corrispondenza tra dati [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente di ridurre la duplicazione dei dati e di migliorarne l'accuratezza in un'origine dati. Il processo analizza il livello di duplicazione in tutti i record di una singola origine dati, restituendo le probabilità ponderate di una corrispondenza per ciascun set di record confrontato. È possibile quindi decidere quali record corrispondono ed eseguire le azioni appropriate sui dati di origine.  

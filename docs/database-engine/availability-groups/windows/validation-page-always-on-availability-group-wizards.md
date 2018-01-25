@@ -20,13 +20,13 @@ ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abeef005bb624d85af9a62ff5c467087f0bd82bd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7068522fbb73363053151da7140dcfa2ad365aef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>Pagina Convalida (procedure guidate gruppi di disponibilità Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.lasthandoff: 11/20/2017
  **Nome**  
  Visualizza una frase che descrive un passaggio specifico.  
   
- **Risultato**  
+ **Result**  
  Visualizza uno dei seguenti testi di collegamenti ipertestuali. Per ulteriori informazioni sul risultato del passaggio di convalida specificato, fare clic sul collegamento ipertestuale.  
   
-|Risultato|Descrizione|  
+|Risultato|Description|  
 |------------|-----------------|  
 |**Errore**|Indica che il passaggio di convalida non è riuscito. Fare clic sul collegamento per visualizzare il messaggio di errore.|  
 |**Operazione ignorata**|Indica che il passaggio di convalida è stato ignorato perché non è necessario in base alle selezioni. Fare clic sul collegamento per visualizzare il motivo per cui un passaggio è stato ignorato.|  
-|**Operazione completata**|Indica che il passaggio di convalida è riuscito.|  
+|**Esito positivo**|Indica che il passaggio di convalida è riuscito.|  
 |**Avviso**|Indica un potenziale problema con la configurazione del gruppo di disponibilità.  Fare clic sul collegamento per visualizzare il messaggio di avviso.|  
   
  **Ripeti convalida**  
@@ -57,9 +57,9 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Usare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Utilizzare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [Usare la procedura guidata Aggiungi database a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   

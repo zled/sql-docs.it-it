@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2815c700005b9debb5ee02a675ad37b7e4444762
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a691fe8063a6cfd62d8be010acf34244bd4d671
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato nativo per importare o esportare dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L'uso del formato nativo è consigliabile per il trasferimento bulk dei dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un file di dati in cui non sono inclusi caratteri estesi o DBCS (Double Byte Character Set).  
@@ -40,7 +40,7 @@ Il formato nativo mantiene i tipi di dati nativi di un database e viene utilizza
   
 L'utilizzo del formato nativo tra tabelle identiche consente di evitare la conversione di tipi di dati nel/dal formato carattere, risparmiando tempo e spazio. Per raggiungere la velocità di trasferimento ottimale, tuttavia, vengono eseguiti solo alcuni controlli relativi alla formattazione dei dati. Per evitare problemi relativi ai dati caricati, vedere l'elenco di restrizioni seguente.  
 
-|Contenuto dell'argomento|
+|Contenuto dell'argomento:|
 |---|
 |[Restrizioni](#restrictions)|
 |[Gestione dei dati in formato nativo mediante l'utilità bcp](#considerations)|
@@ -90,7 +90,7 @@ Per importare correttamente i dati in formato nativo, verificare quanto segue:
 
 Il formato nativo è supportato dalle opzioni di comando seguenti:  
 
-|Comando|Opzione|Descrizione|  
+|Comando|Opzione|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|Determina l'uso del tipo di dati nativo da parte dell'utilità bcp.*|  
 |BULK INSERT|DATAFILETYPE **='native'**|Utilizza i tipi di dati nativi o nativi estesi. Si noti che DATAFILETYPE non è necessario se i tipi di dati vengono specificati in un file di formato.|  

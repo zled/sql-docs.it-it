@@ -23,13 +23,13 @@ ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8655f18aec310a10ac133fb79ee2230cc119f712
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4399ef7bef888655c6c69926b622612ba9bb84d8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Monitorare il log shipping (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dopo aver configurato il log shipping, è possibile monitorare le informazioni relative allo stato di tutti i server di log shipping. La cronologia e lo stato delle operazioni di log shipping vengono salvati sempre in locale dai processi per il log shipping. La cronologia e lo stato dell'operazione di backup vengono memorizzati sul server primario, mentre la cronologia e lo stato delle operazioni di copia e ripristino sono memorizzati sul server secondario. Se è stato implementato un server di monitoraggio remoto, queste informazioni vengono memorizzate anche sul server di monitoraggio.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
  È possibile eseguire query su queste tabelle per monitorare lo stato di una sessione di log shipping. Ad esempio, per ottenere lo stato del log shipping, verificare lo stato e la cronologia dei processi di backup, di copia e di ripristino. È possibile visualizzare i dettagli specifici relativi agli errori e alla cronologia del log shipping eseguendo query sulle tabelle di monitoraggio seguenti.  
   
-|Tabella|Descrizione|  
+|Tabella|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Memorizza l'ID del processo per la gestione degli avvisi.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Memorizza i dettagli relativi agli errori per i processi di log shipping. È possibile eseguire query su questa tabella per visualizzare gli errori relativi a una sessione di agente. Facoltativamente, è possibile ordinare gli errori in base alla data e all'ora di registrazione. Ogni errore viene registrato come una sequenza di eccezioni, mentre più errori (sequenze) possono essere ordinati per sessione di agente.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>Stored procedure per il monitoraggio del log shipping  
  Le informazioni relative al monitoraggio e alla cronologia vengono archiviate nelle tabelle di **msdb**, accessibili con le stored procedure di log shipping. Eseguire le stored procedure sui server specificati nella tabella seguente.  
   
-|Stored procedure|Descrizione|Eseguire la stored procedure su|  
+|Stored procedure|Description|Eseguire la stored procedure su|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|Restituisce i record di monitoraggio per il database primario specificato dalla tabella **log_shipping_monitor_primary** .|Server di monitoraggio o server primario|  
 |[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|Restituisce i record di monitoraggio per il database secondario specificato dalla tabella **log_shipping_monitor_secondary** .|Server di monitoraggio oppure server secondario|  

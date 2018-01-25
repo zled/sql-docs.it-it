@@ -13,17 +13,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cda0e712bd4473972c1beb0afc6c530a6d48ef1c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 61bdf391348154a3b395c5934ab7b60173f4eb47
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="manage-dqs-databases"></a>Gestire i database DQS
+# <a name="manage-dqs-databases"></a>Manage DQS Databases
   In questa sezione vengono fornite le informazioni sulle attività di gestione di database che possono essere eseguite nei database DQS, ad esempio il backup e il ripristino oppure il collegamento o lo scollegamento.  
   
 ##  <a name="BackupRestore"></a> Backup e ripristino dei database DQS  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
  Per informazioni dettagliate sui fattori da considerare prima e durante lo scollegamento e il collegamento dei database in SQL Server, vedere [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

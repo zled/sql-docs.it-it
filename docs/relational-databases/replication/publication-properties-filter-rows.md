@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.filterrows.f1
 ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9101fca39dc70f29e1681bdb6718d8847a66df67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9f279d06d1be056edf486e0a9a8c4ee0184a9bd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-filter-rows"></a>Proprietà pubblicazione, Filtra righe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione** consente di aggiungere, modificare o eliminare filtri progettati per eseguire le operazioni seguenti:  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
  **Modifica**  
  Selezionare un filtro di riga o un filtro join nel riquadro dei filtri e fare clic su **Modifica** per visualizzare la finestra di dialogo **Modifica filtro** o **Modifica join** .  
   
- **Delete**  
+ **Elimina**  
  Selezionare un filtro di riga o un filtro join nel riquadro dei filtri e fare clic su **Elimina** per eliminare il filtro.  
   
  **Trova tabella**  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
  Selezionare un nodo collegamento nel riquadro e fare clic su **Trova tabella** . Il riquadro verrà espanso e la tabella verrà evidenziata. Se si fa clic su **Trova tabella** senza aver selezionato un nodo collegamento verrà visualizzata la finestra di dialogo **Trova tabella** .  
   
- **Filtra**  
+ **Filter**  
  Contiene la definizione [!INCLUDE[tsql](../../includes/tsql-md.md)] del filtro selezionato nel riquadro dei filtri.  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
  [Reinizializzare una sottoscrizione](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Visualizzare e modificare le proprietà della pubblicazione](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrare i dati pubblicati](../../relational-databases/replication/publish/filter-published-data.md)   
- [Filtri di join](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

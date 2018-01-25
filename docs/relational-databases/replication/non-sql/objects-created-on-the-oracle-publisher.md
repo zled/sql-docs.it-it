@@ -14,20 +14,20 @@ ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84b3cf9e41c659753e428daff07b1c11efadaa94
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 18040967f55457a2c5d1f43dd9e84a56720daf74
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Oggetti creati nel server di pubblicazione Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replica [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installa oggetti di database nel server di pubblicazione Oracle in modo da abilitare il rilevamento e l'inoltro delle modifiche. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non installa file binari nel server di pubblicazione Oracle. Nella tabella seguente vengono elencati gli oggetti creati nel server di pubblicazione Oracle quando viene identificato come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le descrizioni degli oggetti hanno esclusivamente scopo informativo. Non modificare tali oggetti.  
   
-|Nome oggetto|Tipo oggetto|Descrizione|  
+|Nome oggetto|Tipo oggetto|Description|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Tabella|Tabella di rilevamento delle modifiche utilizzata per archiviare informazioni quando vengono apportate modifiche alla tabella pubblicata. Viene creata una tabella di rilevamento delle modifiche per ogni tabella pubblicata.|  
 |HREPL_Changes|Tabella|Tabella utilizzata internamente dal processo Xactset per determinare il numero di modifiche in attesa di assegnazione a un set di transazioni. Per altre informazioni su questo processo, vedere [Ottimizzazione delle prestazioni per i server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
@@ -50,12 +50,12 @@ ms.lasthandoff: 11/17/2017
 |HREPL_ExecuteCommand|Procedura|Procedura definita all'esterno del codice del package di pubblicazione Oracle, utilizzata per eseguire un comando nel server di pubblicazione.|  
 |HREPL_ArticleN_Trigger_Row|Trigger|Trigger generato per ogni tabella pubblicata, utilizzato per rilevare le modifiche alle righe.|  
 |HREPL_ArticleN_Trigger_Stmt|Trigger|Trigger generato per ogni tabella pubblicata, utilizzato per rilevare le modifiche a livello di istruzione.|  
-|HREPL_Article_I_J|Visualizza|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella pubblicata.|  
-|HREPL_Log_I_J_K|Visualizza|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella di rilevamento delle modifiche.|  
+|HREPL_Article_I_J|Vista|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella pubblicata.|  
+|HREPL_Log_I_J_K|Vista|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella di rilevamento delle modifiche.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Glossario dei termini per la pubblicazione Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Panoramica della pubblicazione Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

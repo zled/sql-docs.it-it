@@ -18,15 +18,15 @@ helpviewer_keywords:
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8c204e1ed53a4969b903d7821e151dd6cb183848
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c267615cb7970d7833821662cfd97662093a2edb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="rebuild-system-databases"></a>Ricompilare database di sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Il processo di ricompilazione deve essere eseguito per correggere problemi di danneggiamento nei database di sistema [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md) e [resource](../../relational-databases/databases/resource-database.md) oppure per modificare le regole di confronto predefinite a livello di server. In questo argomento sono incluse istruzioni dettagliate per la ricompilazione di database di sistema in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=NomeIstanza /SQLSYSADMINACCOUNTS=account [ /SAPWD=PasswordComplessa ] [ /SQLCOLLATION=NomeRegoleConfronto]**  
   
-    |Nome parametro|Descrizione|  
+    |Nome parametro|Description|  
     |--------------------|-----------------|  
     |/QUIET o /Q|Specifica che il programma di installazione verrà eseguito senza alcuna interfaccia utente.|  
     |/ACTION=REBUILDDATABASE|Specifica che il programma di installazione dovrà ricreare i database di sistema.|  
@@ -114,11 +114,11 @@ ms.lasthandoff: 11/17/2017
     |[ /SAPWD=*StrongPassword* ]|Specifica la password per l'account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **di** . Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> **\*\* Nota sulla sicurezza \*\***L'account **sa** è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che viene spesso preso di mira da utenti malintenzionati. È estremamente importante utilizzare una password complessa per l'accesso all'account **sa** .<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
     |[ /SQLCOLLATION=*CollationName* ]|Vengono specificate nuove regole di confronto a livello di server. Questo parametro è facoltativo. Se non viene specificato, verranno utilizzate le regole di confronto correnti del server.<br /><br /> **\*\* Importante \*\***La modifica delle regole di confronto a livello di server non comporta la modifica delle regole di confronto dei database utente esistenti. Tutti i nuovi database utente creati utilizzeranno le nuove regole di confronto per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare o modificare le regole di confronto del server](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Specifica il numero di file di dati di tempdb. Questo valore può essere aumentato fino al valore più elevato tra 8 e il numero di core.<br /><br /> Valore predefinito: 8 o il numero di core, a seconda di quale dei due valori risulta inferiore.|  
-    |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Specifica le dimensioni iniziali di ogni file di dati tempdb in MB. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 8|  
+    |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Vengono specificate le dimensioni iniziali di ogni file di dati tempdb in MB. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Specifica l'incremento in MB dell'aumento delle dimensioni di ogni file di dati tempdb. Un valore 0 indica che l'opzione per l'aumento automatico è disattivata e non è consentito spazio aggiuntivo. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 64|  
     |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Specifica le dimensioni iniziali del file di log tempdb in MB. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 8.<br /><br /> Intervallo consentito: Min = 8, max = 1024.|  
     |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Specifica l'incremento in MB dell'aumento delle dimensioni del file di log tempdb. Un valore 0 indica che l'opzione per l'aumento automatico è disattivata e non è consentito spazio aggiuntivo. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 64<br /><br /> Intervallo consentito: Min = 8, max = 1024.|  
-    |[ /SQLTEMPDBDIR=Directories ]|Specifica la directory per i file di dati tempdb. Se si specificano più directory, separarle con uno spazio vuoto. Se vengono specificate più directory, i file di dati tempdb verranno distribuiti tra le directory secondo uno schema round-robin.<br /><br /> Valore predefinito: directory dei dati di sistema|  
+    |[ /SQLTEMPDBDIR=Directories ]|Viene specificata la directory per i file di dati di tempdb. Se si specificano più directory, separarle con uno spazio vuoto. Se vengono specificate più directory, i file di dati tempdb verranno distribuiti tra le directory secondo uno schema round-robin.<br /><br /> Valore predefinito: directory dei dati di sistema|  
     |[ /SQLTEMPDBLOGDIR=Directory ]|Specifica la directory per il file di log tempdb.<br /><br /> Valore predefinito: directory dei dati di sistema|  
   
 3.  Al termine della ricompilazione dei database di sistema, verrà visualizzato di nuovo il prompt dei comandi senza messaggi. Esaminare il file di log Summary.txt per verificare che il processo sia stato completato correttamente. Il percorso di questo file è C:\Programmi\Microsoft SQL Server\130\Setup Bootstrap\Logs.  
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="post-rebuild-tasks"></a>Attività successive alla ricompilazione  
  Al termine della ricompilazione del database, potrebbe essere necessario effettuare le attività aggiuntive seguenti:  
   
--   Ripristinare i backup completi più recenti dei database master, modello e msdb. Per altre informazioni, vedere [Backup e ripristino di database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+-   Ripristinare i backup completi più recenti dei database master, modello e msdb. Per altre informazioni, vedere [Backup e ripristino di Database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
     > [!IMPORTANT]  
     >  Se sono state modificate le regole di confronto del server, non ripristinare i database di sistema. In caso contrario, le nuove regole di confronto verranno sostituite con quelle precedenti.  

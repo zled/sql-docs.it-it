@@ -24,13 +24,13 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: "50"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 61c067e2ece8cc222a281e48ebfa9026c48f9ae9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 93d9b6b359098577dfec9f7ba02b3c0e4d0de46d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Cambio di ruolo durante una sessione di mirroring del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nel contesto di una sessione di mirroring del database, in genere i ruoli principale e mirror sono intercambiabili tramite un processo denominato *cambio di ruolo*. Nel cambio di ruolo, il server mirror funge da *partner di failover* per il server principale, assumendo il ruolo principale e recuperando la propria copia del database e portandola online come nuovo database principale. Il server principale precedente, quando disponibile, assume il ruolo di mirror, e il suo database diventa il nuovo database mirror. Potenzialmente, i ruoli possono essere scambiati nei due sensi in seguito a più errori o per scopi amministrativi.  
@@ -73,9 +73,9 @@ ms.lasthandoff: 11/20/2017
   
 ||Prestazioni elevate|Modalità a sicurezza elevata senza un server di controllo del mirroring|Modalità a sicurezza elevata con un server di controllo del mirroring|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|Failover automatico|No|No|Sì|  
-|Failover manuale|No|Sì|Sì|  
-|Servizio forzato|Sì|Sì|No|  
+|Failover automatico|no|no|Sì|  
+|Failover manuale|no|Sì|Sì|  
+|Servizio forzato|Sì|Sì|no|  
   
  Dopo un cambio di ruolo è necessario che alcuni metadati siano disponibili su entrambi i partner per garantire che tutti gli utenti del database possano accedere al nuovo database principale. È inoltre necessario che i processi di backup vengano creati sul nuovo server principale per garantire che i backup del database continuino regolarmente in base alla pianificazione. Per altre informazioni, vedere [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 11/20/2017
   
  **Per iniziare il failover manuale**  
   
--   [Eseguire il failover manuale di una sessione di mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+-   [Failover manuale di una sessione di mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
 -   [Failover manuale in una sessione di mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   

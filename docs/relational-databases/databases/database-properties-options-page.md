@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: "67"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 367562c82bd9ed041dbd12e2fa195f75fcf99f05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 342f7d2f57d8832ca0188ceea9112673746690b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-options-page"></a>Proprietà database (pagina Opzioni)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   Utilizzare questa pagina per visualizzare o modificare le opzioni per il database selezionato. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
 ## <a name="page-header"></a>Intestazione di pagina  
- **Confronto**  
+ **Regole di confronto**  
  È possibile specificare le regole di confronto del database selezionandole nell'elenco. Per altre informazioni, vedere [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Modello di recupero**  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  L'abilitazione dei delegati di database parzialmente indipendenti controlla l'accesso all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i proprietari del database. Per altre informazioni, vedere [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
-## <a name="automatic"></a>Automatic  
+## <a name="automatic"></a>Automatico  
  **Chiusura automatica**  
  Specifica se il database viene chiuso correttamente e se le risorse corrispondenti vengono liberate dopo la disconnessione dell'ultimo utente. I valori possibili sono **True** e **False**. Quando il valore è **True**, il database viene chiuso correttamente e le relative risorse vengono liberate dopo la disconnessione dell'ultimo utente.  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
  L'impostazione di questa opzione su **True** non produce effetti a meno che anche l'opzione **Aggiornamento automatico statistiche** non sia impostata su **True**.  
   
-## <a name="containment"></a>Indipendenza  
+## <a name="containment"></a>Containment  
  In un database indipendente alcune impostazioni che in genere sono configurate a livello di server possono essere configurate a livello di database.  
   
  **LCID lingua full-text predefinita**  

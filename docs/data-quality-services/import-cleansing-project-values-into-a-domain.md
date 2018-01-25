@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d6ab6c2be3f6a05ea04d93b68c75505e9482aec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d3197335d84fcfd79f3188580d908d2d435577ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importazione dei valori di un progetto di pulizia in un dominio
   In [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), è possibile importare informazioni sulla qualità dei dati raccolta durante il processo di pulizia in un processo di pulizia Data Quality o in un pacchetto di Integration Services contenente il componente di pulizia di DQS in un dominio. Ciò garantisce che le informazioni attendibili non vadano perse e che la Knowledge Base venga continuamente migliorata.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per importare in un dominio informazioni sulla qualità dei dati raccolta durante il processo di pulizia, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Import"></a> Importazione dei valori di un progetto di pulizia  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
     -   Selezionare **Aggiungere i valori dalla scheda Nuova** per importare valori nella nuova scheda, oltre a valori nelle schede **Corretti** e **Con correzione** .  
   
-    -   Scegliere **OK**.  
+    -   Fare clic su **OK**.  
   
 6.  Si torna nella scheda **Valori di dominio** e viene visualizzato un messaggio sulla corretta importazione dei valori. I valori importati, e quindi nuovi per il dominio, verranno visualizzati nella tabella **Valori** .  
   

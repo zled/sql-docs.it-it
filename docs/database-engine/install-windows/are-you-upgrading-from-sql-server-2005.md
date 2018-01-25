@@ -15,12 +15,12 @@ ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
 caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0d0f68c51cfc99f8ff6b6af2e048fbbb7f951ae9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: eae5931014a84ff1169412b830a20e217627918c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Aggiornamento da SQL Server 2005
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La fine del supporto esteso per SQL Server 2005 è uno dei motivi per cui si consiglia di aggiornare subito il sistema a una nuova versione di SQL Server e al database SQL di Azure. L'aggiornamento consente di garantire sicurezza e conformità, di raggiungere eccellenti livelli di prestazioni e di ottimizzare l'infrastruttura della piattaforma di dati.  
@@ -75,7 +75,7 @@ Per un'analisi più completa di queste opzioni, [fare clic qui](http://sql05upgr
 ## <a name="get-sql-server"></a>Ottieni SQL Server  
  Per scaricare una copia di valutazione di SQL Server, [fare clic qui](http://www.microsoft.com/evalcenter/evaluate-sql-server-2016).  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
  [SQL Server 2017](http://www.microsoft.com/sql-server/sql-server-2017)   
  [Fine del supporto di SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
   

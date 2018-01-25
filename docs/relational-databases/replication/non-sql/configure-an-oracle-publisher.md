@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57b1971bbd25071242b35f32b25ffebbaf4fe6f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 674e78687e89e01126205971a3a070924c6e664f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurazione di un server di pubblicazione Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La creazione di una pubblicazione nei server di pubblicazione Oracle avviene in maniera analoga al processo di creazione delle comuni pubblicazioni snapshot e transazionali, ma prima di poter effettivamente eseguire questo processo è necessario completare la procedura seguente (i passaggi uno, tre e quattro sono descritti in dettaglio in questo argomento):  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
  In Oracle Universal Installer è necessario inserire le informazioni seguenti:  
   
-|Informazioni|Descrizione|  
+|Informazioni|Description|  
 |-----------------|-----------------|  
 |Oracle Home|Percorso della directory di installazione del software Oracle. Accettare il percorso predefinito (C:\oracle\ora90 o simile) o inserirne un altro. Per ulteriori informazioni su Oracle Home, vedere la sezione relativa alle considerazioni su Oracle Home più avanti in questo argomento.|  
 |Oracle home name|Alias del percorso di Oracle Home.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/17/2017
   
  Dopo aver completato la procedura di Oracle Universal Installer, utilizzare Net Configuration Assistant per configurare la connettività di rete. È necessario indicare quattro informazioni per configurare la connettività di rete. L'amministratore del database Oracle definisce la configurazione di rete quando imposta il database e il listener e deve essere in grado di offrire queste informazioni se l'utente non le possiede. Eseguire le operazioni seguenti:  
   
-|Azione|Descrizione|  
+|Azione|Description|  
 |------------|-----------------|  
 |Identificazione del database|Per l'identificazione del database sono disponibili due modalità. La prima modalità utilizza il SID (Oracle System Identifier) ed è disponibile in ogni release di Oracle. La seconda utilizza il Service Name, disponibile a partire da Oracle 8.0. Entrambe le modalità utilizzano un valore configurato alla creazione del database ed è importante che la configurazione di rete del client utilizzi la stessa modalità di denominazione utilizzata dall'amministratore nella configurazione del listener per il database.|  
 |Identificazione di un alias di rete per il database|È necessario specificare un alias di rete che verrà utilizzato per accedere al database Oracle. L'alias deve inoltre essere specificato quando si identifica il database Oracle come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si tratta in sostanza di un puntatore al Service Name o al SID remoto che è stato configurato quando è stato creato il database. Per l'alias di rete sono stati utilizzati diversi nomi nelle diverse release e nei diversi prodotti Oracle, tra cui Net Service Name e TNS Alias. SQL*Plus richiede questo alias come parametro "Host String" al momento dell'accesso.|  
@@ -150,6 +150,6 @@ ms.lasthandoff: 11/17/2017
  [Considerazioni amministrative per i server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
  [Mapping dei tipi di dati per i server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Glossario dei termini per la pubblicazione Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Panoramica della pubblicazione Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

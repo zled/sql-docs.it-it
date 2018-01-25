@@ -19,15 +19,15 @@ helpviewer_keywords:
 - CHECK constraints, attaching
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 985ad5303608fd44c8d43fb2017d633ff8ea469f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a7fb39dd90a2df6a7567fecaaa9638f855c405c4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-check-constraints"></a>Creare vincoli CHECK
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per creare un nuovo vincolo CHECK:**  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario disporre delle autorizzazioni ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  Tutti i valori di vincolo non numerici devono essere racchiusi tra virgolette singole (').  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 5.  Nella categoria **Identità** è possibile modificare il nome del vincolo CHECK e aggiungere una descrizione (proprietà estesa) per il vincolo.  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Scegliere **Chiudi**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-new-check-constraint"></a>Per creare un nuovo vincolo CHECK  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     ALTER TABLE dbo.DocExc   

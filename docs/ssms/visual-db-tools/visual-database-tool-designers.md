@@ -25,13 +25,13 @@ ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69528faf39230c9c268457896e6c692a6fc93305
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6f9174882f49b0307617ddc0576c146cabe6d22d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="visual-database-tool-designers"></a>Strumenti di progettazione di Visual Database Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Visual Database Tools è una combinazione di strumenti di progettazione che consentono di lavorare con un'origine dati creando query, progettando o modificando una struttura di database o aggiornando dati. Tali strumenti sono Progettazione diagrammi di database, Progettazione tabelle e Progettazione query e Progettazione viste.  

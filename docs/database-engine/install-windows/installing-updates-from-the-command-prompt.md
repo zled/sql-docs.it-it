@@ -15,12 +15,12 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c04481fbe3cb71606509483e542747140b565ca8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: cbbd9d7008457009925f20a74fd2a80866bc6419
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Installazione degli aggiornamenti dal prompt dei comandi
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Provare gli script di installazione e adattarli alle esigenze della propria azienda. 
@@ -33,7 +33,7 @@ Il nome del pacchetto di aggiornamento può variare e includere una lingua, un'e
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
     ```
-    o 
+    o Gestione configurazione 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
     ```
@@ -76,7 +76,7 @@ Il nome del pacchetto di aggiornamento può variare e includere una lingua, un'e
 > [!IMPORTANT] 
 > Se possibile, specificare le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file di script, proteggere tale file per impedire l'accesso non autorizzato. 
  
-|Opzione|Descrizione| 
+|Opzione|Description| 
 |------------|-----------------| 
 |**/?**|Visualizza la Guida del prompt dei comandi per l'installazione automatica| 
 |**/action=Patch or /action=RemovePatch**|Specifica l'azione di installazione: Patch o RemovePatch.| 

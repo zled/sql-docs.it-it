@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7290b3701425411f0ba7d05e6790737057274762
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ab8c2fa693b264707e89f4438d408f4c513e565
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-sql-statistics-object"></a>Oggetto SQL Statistics di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'oggetto **SQLServer:SQL Statistics** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce contatori per il monitoraggio della compilazione e del tipo di richieste inviate a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il monitoraggio del numero di compilazioni e ricompilazioni di query e del numero di batch ricevuti da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di determinare la velocità di elaborazione delle query utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'efficienza di Query Optmizer.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente sono elencati i contatori dell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **di** .  
   
-|Contatori dell'oggetto SQL Statistics|Descrizione|  
+|Contatori dell'oggetto SQL Statistics|Description|  
 |----------------------------------------|-----------------|  
 |**Tentativi parametrizzazioni automatiche/sec**|Numero di tentativi di parametrizzazione automatica al secondo. Il totale deve corrispondere alla somma delle parametrizzazioni automatiche non riuscite, sicure e non sicure. Una parametrizzazione automatica si verifica quando in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito un tentativo di parametrizzazione di una richiesta [!INCLUDE[tsql](../../includes/tsql-md.md)] tramite la sostituzione di alcuni valori letterali con parametri in modo da consentire il riutilizzo del piano di esecuzione memorizzato nella cache risultante in più richieste con struttura simile. Si noti che nelle versioni più recenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le parametrizzazioni automatiche sono note anche come parametrizzazioni semplici. Sono escluse le parametrizzazioni forzate.|  
 |**Richieste batch/sec**|Numero di batch di comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] ricevuti al secondo. Il valore dipende da tutti i vincoli (I/O, numero di utenti, dimensioni della cache, complessità delle richieste e così via). Un valore elevato indica una velocità effettiva ottimale.|  
@@ -55,6 +55,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Plan Cache di SQL Server](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
- [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

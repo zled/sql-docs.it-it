@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e86cd34a6a4a2f51b86a84bd6eaa1f123fb6ea8
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: 00a724d305e55a58b257b699f298cbd5044a3510
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="contained-database-collations"></a>Regole di confronto dei database indipendenti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Varie proprietà incidono sull'ordinamento e sulla semantica di uguaglianza dei dati testuali, ad esempio distinzione maiuscole/minuscole, distinzione caratteri accentati/non accentati e linguaggio di base usato. Queste qualità vengono espresse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite la scelta di regole di confronto per i dati. Per informazioni dettagliate sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8ef239563e768ee5044e07e8bca666bdd4169158
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: b37e7cc96300a3bba0e83f2458820afd20d1b004
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifiche allo schema nei database di pubblicazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si apporta una delle modifiche di schema seguenti nell'oggetto pubblicato appropriato in un server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la modifica viene propagata per impostazione predefinita a tutti i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/05/2017
   
 -   La colonna da eliminare non può essere utilizzata nelle clausole di filtro degli articoli contenuti nelle pubblicazioni del database.  
   
--   Quando si elimina una colonna da un articolo pubblicato, considerare eventuali vincoli, indici o proprietà della colonna che potrebbero avere conseguenze sul database. Esempio:  
+-   Quando si elimina una colonna da un articolo pubblicato, considerare eventuali vincoli, indici o proprietà della colonna che potrebbero avere conseguenze sul database. Ad esempio  
   
     -   Non è possibile eliminare le colonne utilizzate in una chiave primaria dagli articoli nelle pubblicazioni transazionali, in quanto vengono utilizzate dalla replica.  
   

@@ -27,15 +27,15 @@ helpviewer_keywords:
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 caps.latest.revision: "61"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0d6c0536543d77b323684869a42349e614dd48cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a7a6c256b102c43decf8cc003ce2ceae808e621
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Informazioni sull'importazione ed esportazione bulk di dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'esportazione in blocco dei dati (*dati in blocco*) da una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'importazione in blocco dei dati in una tabella o in una vista non partizionata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -48,11 +48,11 @@ ms.lasthandoff: 11/17/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'esportazione bulk dei dati da una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'importazione bulk dei dati in una tabella o in una vista non partizionata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sono disponibili le modalità di base seguenti.  
  
   
-|Metodo|Descrizione|Importazione dei dati|Esportazione dei dati|  
+|Metodo|Description|Importazione dei dati|Esportazione dei dati|  
 |------------|-----------------|------------------|------------------|  
 |[utilità bcp](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Utilità della riga di comando (Bcp.exe) che esegue l'esportazione e l'importazione bulk dei dati e genera file di formato.|Sì|Sì|  
-|[BULK INSERT - istruzione](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che importa i dati direttamente da un file di dati in una tabella di database o in una vista non partizionata.|Sì|No|  
-|[INSERT ... Istruzione SELECT * FROM OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che utilizza il provider di set di righe con lettura bulk OPENROWSET per eseguire l'importazione bulk dei dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificando la funzione OPENROWSET(BULK…) per selezionare i dati in un'istruzione INSERT.|Sì|No| 
+|[BULK INSERT - istruzione](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che importa i dati direttamente da un file di dati in una tabella di database o in una vista non partizionata.|Sì|no|  
+|[INSERT ... Istruzione SELECT * FROM OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che utilizza il provider di set di righe con lettura bulk OPENROWSET per eseguire l'importazione bulk dei dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificando la funzione OPENROWSET(BULK…) per selezionare i dati in un'istruzione INSERT.|Sì|no| 
 |[Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|La procedura guidata crea pacchetti semplici che importano ed esportano dati tra numerosi formati di dati comuni, inclusi database, fogli di calcolo e file di testo.|Sì|Sì|  
   
 > [!IMPORTANT]
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di file di formato: file di formato XML e file di formato non XML.  
   
- L' [utilità bcp](../../tools/bcp-utility.md) è il solo strumento in grado di generare un file di formato. Per altre informazioni, vedere [Creare un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md). Per altre informazioni sui file di formato, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+ L' [utilità bcp](../../tools/bcp-utility.md) è il solo strumento in grado di generare un file di formato. Per altre informazioni, vedere [Creazione di un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md). Per altre informazioni sui file di formato, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
 > [!NOTE]
 > Nei casi in cui un file di formato non viene fornito durante un'operazione di esportazione o importazione bulk, è possibile ignorare la formattazione predefinita nella riga di comando.

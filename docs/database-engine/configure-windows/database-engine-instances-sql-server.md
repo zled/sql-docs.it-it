@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 906150705dabca37cfee4eae1d0e19cecc641e4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 64065e9cf9ce2429ba98b8ca46bac3b000020d6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-engine-instances-sql-server"></a>Istanza del motore di database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è una copia del file eseguibile **sqlservr.exe** che viene eseguita come servizio del sistema operativo. Ogni istanza gestisce diversi database di sistema e uno o più database utente. Ciascun computer può eseguire più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le applicazioni si connettono all'istanza per eseguire attività in un database gestito dall'istanza.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
  È possibile eseguire più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sullo stesso computer. Un'istanza può essere l'istanza predefinita. L'istanza predefinita non ha nome. Se una richiesta di connessione specifica solo il nome del computer, viene effettuata la connessione all'istanza predefinita. Un'istanza denominata è un'istanza di cui si specifica il nome al momento della relativa installazione. Una richiesta di connessione deve specificare il nome del computer e il nome dell'istanza affinché sia stabilita la connessione all'istanza. Non c'è nessun requisito per installare un'istanza predefinita; tutte le istanze in esecuzione su un computer possono essere istanze denominate.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

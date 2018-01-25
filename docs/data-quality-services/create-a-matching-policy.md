@@ -17,15 +17,15 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 464292aaf1081616f64ba8dd0787603286149b8c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0cffe1699c221e37e353cad1269f675aac89db15
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-matching-policy"></a>Creazione di criteri di corrispondenza
   In questo argomento viene descritto come creare dei criteri di corrispondenza in una Knowledge Base di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La preparazione del processo di corrispondenza in DQS si effettua eseguendo l'attività dei criteri di corrispondenza su dati di esempio. In tale attività vengono create e testate una o più regole di corrispondenza nei criteri, quindi viene pubblicata la Knowledge Base per rendere le regole di corrispondenza pubblicamente disponibili per l'uso. In una Knowledge Base può essere presente solo un set di criteri di corrispondenza, ma tali criteri possono contenere più regole di corrispondenza.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per creare i criteri di corrispondenza, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="MatchingRules"></a> Modalità di impostazione dei parametri relativi alle regole di corrispondenza  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
  La creazione di una regola di corrispondenza è un processo iterativo perché nella regola stessa potrebbe essere necessario modificare i pesi relativi dei domini, la somiglianza o la proprietà di prerequisito per un dominio oppure il punteggio di corrispondenza minimo per la regola, al fine di realizzare i risultati attesi. È inoltre possibile che si debbano creare più regole, ognuna delle quali verrà eseguita per creare il punteggio di corrispondenza. Ottenere il risultato previsto con una sola regola potrebbe risultare difficile, mentre con più regole si otterranno visualizzazioni diverse di una corrispondenza richiesta. Mediante l'utilizzo di più regole è possibile includere meno domini in ogni regola, utilizzare pesi superiori per ogni dominio e ottenere risultati migliori. Se i dati sono meno accurati e completi, potrebbe essere necessario un numero maggiore di regole per trovare le corrispondenze richieste. Se i dati sono più accurati e completi, saranno necessarie meno regole.  
   
- Il profiling fornisce informazioni essenziali quanto a completezza e univocità. Completezza e univocità sono qualità da prendere in considerazione in parallelo. Utilizzare i dati di completezza e univocità per determinare il peso da assegnare a un campo nel processo di corrispondenza. Se vi è un livello elevato di univocità in un campo, l'utilizzo di tale campo nei criteri di corrispondenza può ridurre il numero di risultati di corrispondenza, pertanto è consigliabile impostare il peso per il campo su un valore relativamente basso. Se si dispone di un basso livello di univocità per una colonna, ma anche di un basso livello di completezza, non è consigliabile includere un dominio per tale colonna. Con un basso livello di univocità, ma un elevato livello di completezza, è consigliabile includere il dominio. È possibile che alcune colonne, ad esempio di tipo genere, forniscano naturalmente un basso livello di univocità. Per altre informazioni, vedere [Profiler and Results Tabs](#Tabs).  
+ Il profiling fornisce informazioni essenziali quanto a completezza e univocità. Completezza e univocità sono qualità da prendere in considerazione in parallelo. Utilizzare i dati di completezza e univocità per determinare il peso da assegnare a un campo nel processo di corrispondenza. Se vi è un livello elevato di univocità in un campo, l'utilizzo di tale campo nei criteri di corrispondenza può ridurre il numero di risultati di corrispondenza, pertanto è consigliabile impostare il peso per il campo su un valore relativamente basso. Se si dispone di un basso livello di univocità per una colonna, ma anche di un basso livello di completezza, non è consigliabile includere un dominio per tale colonna. Con un basso livello di univocità, ma un elevato livello di completezza, è consigliabile includere il dominio. È possibile che alcune colonne, ad esempio di tipo genere, forniscano naturalmente un basso livello di univocità. Per altre informazioni, vedere [Schede Profiler e Risultati](#Tabs).  
   
 ##  <a name="Starting"></a> Primo passaggio: creazione di un set di criteri di corrispondenza  
  L'attività relativa ai criteri di corrispondenza viene eseguita nell'area di gestione della Knowledge Base dell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -170,7 +170,7 @@ ms.lasthandoff: 11/20/2017
   
     -   Se si fa doppio clic su un record nella tabella dei risultati di corrispondenza, in DQS viene visualizzata la schermata popup **Dettagli punteggio corrispondente** in cui sono visibili il record pivot e il record di origine (nonché i valori in tutti i relativi campi), il punteggio tra tali record e un drill-down della loro corrispondenza. Nel drill-down vengono visualizzati i valori in ogni campo del record pivot e del record di origine, in modo da poterli confrontare, e il punteggio di corrispondenza tramite cui ogni campo contribuisce al punteggio di corrispondenza complessivo per i due record.  
   
-5.  Visualizzare le statistiche nelle schede **Profiler** e **Risultati corrispondenza** per assicurarsi che si stiano ottenendo i risultati desiderati. Fare clic sulla scheda **Regole di corrispondenza** per verificare le impostazioni di dominio per ciascuna regola. Per altre informazioni, vedere [Profiler and Results Tabs](#Tabs).  
+5.  Visualizzare le statistiche nelle schede **Profiler** e **Risultati corrispondenza** per assicurarsi che si stiano ottenendo i risultati desiderati. Fare clic sulla scheda **Regole di corrispondenza** per verificare le impostazioni di dominio per ciascuna regola. Per altre informazioni, vedere [Schede Profiler e Risultati](#Tabs).  
   
 6.  Se non si è soddisfatti dei risultati di tutte le regole, fare clic su **Indietro** per tornare alla pagina **Criteri di corrispondenza** , modificare una o più regole come desiderato, tornare alla pagina **Risultati corrispondenza** , quindi fare clic su **Riavvia**.  
   

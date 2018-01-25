@@ -21,14 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e424279e5136d8334d37de754f5e3b5a087296b8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 62c23859b14e9c9fc3e4663a0ec813c8dca25ff1
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Creare script per Analysis Services in Management Studio
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include editor che è possibile utilizzare per creare script di oggetti di Analysis Services e le attività, modelli e le funzionalità di generazione di script.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono incluse funzionalità di generazione di script, modelli ed editor che è possibile utilizzare per generare script per oggetti e attività di Analysis Services.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Generare script per attività di Analysis Services in Management Studio  
  La generazione di script per attività in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] viene effettuata facendo clic su una delle opzioni Script in una finestra di dialogo orientata all'attività. Tutte le finestre di dialogo utilizzate per eseguire attività quali backup o ripristino del database, elaborazione di un oggetto o progettazione di un'aggregazione includono un'opzione Script nella parte superiore. La selezione di una di queste opzioni consente di generare uno script XMLA basato sulle informazioni e le impostazioni nella finestra di dialogo.  

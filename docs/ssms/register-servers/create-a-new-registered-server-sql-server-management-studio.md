@@ -19,13 +19,13 @@ ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 caps.latest.revision: "31"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eafb023f631824a41ba4e86ebb51f1ca392e6f45
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fa26a8ce5bc17a2c1f0528321f01129b7d861782
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Creazione di un nuovo server registrato (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questo argomento descrive come salvare le informazioni di connessione per i server ai quali si accede di frequente, registrando il server nel componente Server registrati di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La registrazione di un server può essere eseguita prima della connessione o durante la connessione da Esplora oggetti. È disponibile un comando di menu speciale che consente di registrare le istanze del server nel computer locale.  

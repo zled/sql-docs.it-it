@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9cb620530972d0b8f1999f70d2a5a3996794cd8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2bb4803233db54eea8d3acfb5cb5e2284cc606fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-storage"></a>Archiviazione XTP di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente sono descritti i contatori dell' **archiviazione XTP di SQL Server** .  
   
-|Contatore|Descrizione|  
+|Contatore|Description|  
 |-------------|-----------------|  
 |**Checkpoint chiusi**|Conteggio di checkpoint chiusi eseguiti dall'agente online.|  
 |**Checkpoint completati**|Conteggio di checkpoint elaborati dal thread offline dei checkpoint.|  

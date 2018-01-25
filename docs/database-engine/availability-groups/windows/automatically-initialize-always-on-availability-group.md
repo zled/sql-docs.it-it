@@ -15,12 +15,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
-ms.openlocfilehash: 083530811bd1dcee460e10566d9ddf94b8aa5f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Inizializzare automaticamente un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ SQL Server 2016 introduce il seeding automatico dei gruppi di disponibilità. Qu
 
 Per informazioni generali, vedere [Seeding automatico per le repliche secondarie](automatic-seeding-secondary-replicas.md).
  
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 In SQL Server 2016 il seeding automatico richiede che il percorso dei dati e del file di log sia lo stesso in ogni istanza di SQL Server inclusa nel gruppo di disponibilità. In SQL Server 2017 è possibile usare percorsi diversi, ma Microsoft consiglia di usare gli stessi percorsi quando tutte le repliche sono ospitate nella stessa piattaforma, ad esempio Windows o Linux. I gruppi di disponibilità multipiattaforma hanno percorsi diversi per le repliche. Per informazioni dettagliate, vedere [Layout dei dischi](automatic-seeding-secondary-replicas.md#disklayout).
 
@@ -150,7 +150,7 @@ Le viste di sistema seguenti indicano lo stato del seeding automatico di SQL Ser
 
 **sys.dm_hadr_automatic_seeding** 
 
-Nella replica primaria eseguire una query su `sys.dm_hadr_automatic_seeding` per controllare lo stato del processo di seeding automatico. La vista restituisce una riga per ogni processo di seeding. Esempio:
+Nella replica primaria eseguire una query su `sys.dm_hadr_automatic_seeding` per controllare lo stato del processo di seeding automatico. La vista restituisce una riga per ogni processo di seeding. Ad esempio
 
 ```sql
 SELECT start_time, 
@@ -215,7 +215,7 @@ GO
 
 La tabella seguente elenca gli eventi estesi correlati al seeding automatico: 
 
-| Nome | Descrizione|
+| nome | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  Messaggio di richiesta di seeding.
 |hadr_physical_seeding_backup_state_change |    Modifica dello stato lato backup del seed fisico.
@@ -236,7 +236,7 @@ La tabella seguente elenca gli eventi estesi correlati al seeding automatico:
 
 **Monitorare il seeding automatico**
 
-Eseguire una query `sys.dm_hadr_physical_seeding_stats` per il processo di seeding automatico in esecuzione. La vista restituisce una riga per ogni database. Esempio:
+Eseguire una query `sys.dm_hadr_physical_seeding_stats` per il processo di seeding automatico in esecuzione. La vista restituisce una riga per ogni database. Ad esempio
 
 ```sql
 SELECT local_database_name, 

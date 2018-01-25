@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: "44"
-author: MightyPen
-ms.author: genemi
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 826f59f9b61e95091edf8a0c47c528f8cc83b488
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bfca544879559953ed3c70d5137edd17ae9d89e1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gestito di SQL Server in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Prereqs"></a> Prerequisiti  
  Archiviazione di Microsoft Azure è usata da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per l'archiviazione dei file di backup. Sono richiesti i prerequisiti seguenti:  
   
-|Prerequisiti|Descrizione|  
+|Prerequisiti|Description|  
 |------------------|-----------------|  
 |**Account di Microsoft Azure**|È possibile iniziare a usare Azure con una [versione di valutazione gratuita](http://azure.microsoft.com/pricing/free-trial/) prima di esaminare le [opzioni per l'acquisto](http://azure.microsoft.com/pricing/purchase-options/).|  
 |**Account di archiviazione di Microsoft Azure**|I backup vengono archiviati nel servizio di archiviazione BLOB Azure associato a un account di archiviazione Azure. Per istruzioni dettagliate per creare un account di archiviazione, vedere [Informazioni sugli account di archiviazione Azure](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/).|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|Oggetto di sistema|Descrizione|  
+|Oggetto di sistema|Description|  
 |**MSDB**|Vengono archiviati i metadati e la cronologia di backup di tutti i backup creati da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Abilita [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Configura le impostazioni avanzate per [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], ad esempio la crittografia.|  

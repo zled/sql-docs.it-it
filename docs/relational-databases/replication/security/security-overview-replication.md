@@ -19,15 +19,15 @@ helpviewer_keywords:
 - authentication [SQL Server replication]
 ms.assetid: 27828fe4-3b54-4c33-886e-08e8279e34b5
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52216840839e67e6b7b8036a1a954e75a4aaa2c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9e0bcbe317e86f9562f28a339bb4e5ce4c81dfe5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-overview-replication"></a>Panoramica della sicurezza (replica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La modalità di protezione dell'ambiente di replica dipende essenzialmente dalla comprensione delle opzioni di autenticazione e autorizzazione, dell'uso corretto delle funzionalità di filtro della replica e delle misure specifiche per la protezione di ogni componente dell'ambiente di replica. L'ambiente di replica include il server di distribuzione, il server di pubblicazione, i Sottoscrittori e la cartella snapshot. In questo capitolo vengono fornite informazioni sulla sicurezza della replica, la quale è basata sulla sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e di Windows. È pertanto necessario conoscere questi ambiti di base e le specifiche della sicurezza della replica. Per altre informazioni, vedere [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md). Per ulteriori informazioni sulla sicurezza per la pubblicazione Oracle, vedere la sezione relativa al modello di sicurezza della replica nell'argomento [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  

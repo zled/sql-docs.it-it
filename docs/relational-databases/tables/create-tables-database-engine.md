@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: table creation [SQL Server], Visual Database Tools
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4ee3aeccb0b6c84fbd265ab1ad2f566ef9f30a0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6710911638bf23755bf31450d8d4c82054c48be6
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-tables-database-engine"></a>Creare tabelle (motore di database)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -73,7 +73,7 @@ Questa attività richiede l'autorizzazione CREATE TABLE per il database e l'auto
   
 11. Per visualizzare la nuova tabella, in **Esplora oggetti**espandere il nodo **Tabelle** e premere **F5** per aggiornare l'elenco di oggetti. La nuova tabella viene visualizzata nell'elenco di tabelle.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 ## <a name="using-query-editor"></a>Uso dell'editor di query  
   
@@ -81,7 +81,7 @@ Questa attività richiede l'autorizzazione CREATE TABLE per il database e l'auto
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     CREATE TABLE dbo.PurchaseOrderDetail  

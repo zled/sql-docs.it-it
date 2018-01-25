@@ -16,15 +16,15 @@ helpviewer_keywords:
 - transactional replication
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 316e3e56bae45eacf7f833115cecb546ed396821
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 26ff46dbe2f3a404f09ee4d30741f38f941205a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transactional-replication"></a>Replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replica transazionale in genere ha inizio con la creazione di uno snapshot degli oggetti e dei dati del database di pubblicazione. Dopo la creazione dello snapshot iniziale, le successive modifiche ai dati e allo schema eseguite nel server di pubblicazione vengono generalmente recapitate al Sottoscrittore nel momento in cui vengono eseguite. Le modifiche ai dati vengono applicate al Sottoscrittore nello stesso ordine e negli stessi limiti della transazione con cui vengono eseguite nel server di pubblicazione. Di conseguenza, la consistenza transazionale all'interno di una pubblicazione è garantita.  

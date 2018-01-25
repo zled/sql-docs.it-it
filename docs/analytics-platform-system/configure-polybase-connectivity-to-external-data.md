@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
 caps.latest.revision: "43"
-ms.openlocfilehash: 391b088af58f7c231d9d95e6940332f8f78dd1d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65a10ada824b291e37e61a421882cf012c7b8ddc
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>Configurazione della connettività di PolyBase per i dati esterni
 Viene descritto come configurare PolyBase in SQL Server PDW per connettersi a Microsoft Azure o Hadoop archiviazione blob le origini dati esterne. Usare PolyBase per eseguire query che si integrano dati da più origini, tra cui Hadoop, archiviazione blob di Azure e SQL Server PDW.  
@@ -132,7 +132,35 @@ Viene descritto come configurare PolyBase in SQL Server PDW per connettersi a Mi
 10. Connessione a WASB richiede anche l'inoltro di DNS da configurare nel dispositivo. Per configurare l'inoltro di DNS, vedere [utilizzare un server d'inoltro DNS per risolvere nomi DNS Non dispositivo &#40; Sistema della piattaforma Analitica &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 Gli utenti autorizzati a questo punto è possono creare origini dati esterne, formati di file esterni e le tabelle esterne. È possibile utilizzarli per integrare dati da più origini, tra cui Hadoop, archiviazione blob di Microsoft Azure e SQL Server PDW.  
+
+## <a name="kerberos-configuration"></a>Configurazione di Kerberos  
+Si noti che se PolyBase esegue l'autenticazione in un cluster protetto con Kerberos, il parametro hadoop.rpc.protection deve essere impostato su authentication. La comunicazione dei dati tra i nodi Hadoop rimarrà non crittografata. 
+
+ Per connettersi a un cluster Hadoop protetto con Kerberos tramite MIT KDC:
+   
   
+1.  Trovare la directory di configurazione Hadoop nel percorso di installazione nel nodo di controllo:  
+  
+    ```  
+    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
+    ```  
+  
+2.  Trovare il valore di configurazione lato Hadoop delle chiavi di configurazione elencate nella tabella. Nel computer Hadoop trovare i file nella directory di configurazione Hadoop.  
+  
+3.  Copiare i valori di configurazione nella proprietà del valore nei file corrispondenti sul computer SQL Server.  
+  
+    |**#**|**File di configurazione**|**Chiave di configurazione**|**Azione**|  
+    |------------|----------------|---------------------|----------|   
+    |1|core-site.xml|polybase.kerberos.kdchost|Specificare il nome host KDC. Ad esempio: kerberos.area-di-autenticazione.com.|  
+    |2|core-site.xml|polybase.kerberos.realm|Specificare l'area di autenticazione Kerberos. Ad esempio: AREA-DI-AUTENTICAZIONE.COM|  
+    |3|core-site.xml|hadoop.security.authentication|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: KERBEROS<br></br>**Nota sulla sicurezza:** è necessario scrivere KERBEROS in maiuscolo. Se si usano lettere minuscole, potrebbe non essere disponibile.|   
+    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: hdfs/_HOST@YOUR-REALM.COM|  
+    |5|mapred-site.xml|mapreduce.jobhistory.principal|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: mapred/_HOST@YOUR-REALM.COM|  
+    |6|mapred-site.xml|mapreduce.jobhistory.address|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: 10.193.26.174:10020|  
+    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: yarn/_HOST@YOUR-REALM.COM|  
+  
+4.  Creare un oggetto credenziali con ambito database per specificare le informazioni di autenticazione per ogni utente di Hadoop. Vedere [Oggetti T-SQL PolyBase](../relational-databases/polybase/polybase-t-sql-objects.md).  
+ 
 ## <a name="see-also"></a>Vedere anche  
 [Configurazione del dispositivo &#40; Sistema della piattaforma Analitica &#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  

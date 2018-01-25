@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: "65"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3ead52966c2c827140d05877596f4275dea9bde4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15e1fe1efcd8b2e0e1afc8ac4d64a26d7e274454
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Esempi di importazione ed esportazione bulk di documenti XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Osservazioni  
+#### <a name="remarks"></a>Remarks  
  L'utilizzo di SINGLE_BLOB in questo caso consente di evitare una mancata corrispondenza tra la codifica del documento XML (come specificata dalla dichiarazione di codifica XML) e la tabella codici della stringa implicita del server.  
   
  Se si utilizzano tipi di dati NCLOB o CLOB e si verifica un conflitto di tabella codici o di codifica, è necessario eseguire una delle operazioni seguenti:  

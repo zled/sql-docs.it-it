@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5fd105a2da0e4822ee3da0b2f8929f70d0185cb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca0bca9210691a4c53cc2c39cb0110159994192b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È consigliabile usare il formato carattere Unicode per il trasferimento bulk di dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un file di dati contenente caratteri estesi o DBCS. Questo formato di dati consente di trasferire i dati da un server utilizzando una tabella codici diversa da quella del client che esegue l'operazione. In questi casi, l'utilizzo del formato di dati carattere Unicode offre i vantaggi seguenti:  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 * Se i dati di origine e di destinazione non sono di tipo Unicode, il formato carattere Unicode consente di ridurre al minimo la perdita dei caratteri estesi nei dati di origine che non possono essere rappresentati nella destinazione.
 
-|Contenuto dell'argomento|
+|Contenuto dell'argomento:|
 |---|
 |[Considerazioni sull'uso del formato carattere Unicode](#considerations)|
 |[Considerazioni speciali sull'uso del formato carattere Unicode, di bcp e di un file di formato](#special_considerations)|
@@ -47,7 +47,7 @@ Quando si usa il formato carattere Unicode, è necessario tenere presenti i fatt
 
 * Per impostazione predefinita, quando si esegue l'[utilità bcp](../../tools/bcp-utility.md) i campi dei dati di tipo carattere vengono separati da un carattere di tabulazione e alla fine dei record viene inserito un carattere di nuova riga.  Per informazioni su come specificare caratteri di terminazione alternativi, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
-* I dati [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) archiviati in un file di dati in formato carattere Unicode funzionano così come in un file in formato carattere, con la differenza che vengono archiviati come dati [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) anziché [char](../../t-sql/data-types/char-and-varchar-transact-sql.md). Per altre informazioni sul formato carattere, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+* I dati [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) archiviati in un file di dati in formato carattere Unicode funzionano così come in un file in formato carattere, con la differenza che vengono archiviati come dati [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) anziché [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) . Per altre informazioni sul formato carattere, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
 
 ## Considerazioni speciali sull'uso del formato carattere Unicode, di bcp e di un file di formato<a name="special_considerations"></a>
 Per i file in formato carattere Unicode vengono rispettate le convenzioni dei file Unicode.  I primi due byte del file sono rappresentati da numeri esadecimali, 0xFFFE.  Tali byte hanno la funzione di indicatori per l'ordine dei byte (BOM) e specificano se archiviare il byte più significativo come primo o ultimo byte del file.  L' [utilità bcp](../../tools/bcp-utility.md) può interpretare il BOM in modo errato causando la non riuscita di parte del processo di importazione. È possibile che venga visualizzato un messaggio di errore simile a quello indicato di seguito:
@@ -86,7 +86,7 @@ Provare a usare una delle soluzioni alternative seguenti, a seconda della situaz
   
 Il formato carattere Unicode è supportato dalle opzioni di comando seguenti:  
   
-|Comando|Opzione|Descrizione|  
+|Comando|Opzione|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|Utilizza il formato carattere Unicode.|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|Utilizza il formato carattere Unicode durante l'importazione bulk di dati.|  
@@ -235,7 +235,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
 Per utilizzare formati di dati per l'importazione o l'esportazione bulk  
 -   [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   

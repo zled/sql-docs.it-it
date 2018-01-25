@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: "61"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 61898f292e44da04152eeb3ebeb2e7221eb1bb68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5555b305edf4ac249959e77d4a68c07c72efef5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiare database tramite backup e ripristino
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Considerazioni aggiuntive che possono avere effetto su questo processo:
  Per evitare errori e conseguenze impreviste, prima dell'operazione di ripristino è possibile usare la tabella della cronologia [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) per trovare i file di database e di log nel backup che si intende ripristinare.  
   
 ## <a name="moving-the-database-files"></a>Spostamento dei file di database  
- Se non è possibile ripristinare i file di backup del database nel computer di destinazione, sarà necessario spostarli in un nuovo percorso man mano che vengono ripristinati. Esempio:  
+ Se non è possibile ripristinare i file di backup del database nel computer di destinazione, sarà necessario spostarli in un nuovo percorso man mano che vengono ripristinati. Ad esempio  
   
 -   Si supponga di voler ripristinare un database da backup creati nella posizione predefinita di versioni precedenti.  
   

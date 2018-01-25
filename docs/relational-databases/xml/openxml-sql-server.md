@@ -26,15 +26,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 493e78f36abc0e45c74278407f607a56b1572d88
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd801f6a94a10e43432fc650b689ffccf88ced7b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] La parola chiave OPENXML di [!INCLUDE[tsql](../../includes/tsql-md.md)] restituisce un set di righe simile a una tabella o a una vista da documenti XML in memoria. OPENXML consente di accedere ai dati XML come se si trattasse di un set di righe relazionali, visualizzando la rappresentazione interna di un documento XML come un set di righe. I record del set di righe possono essere archiviati in tabelle di database.  
@@ -143,7 +143,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  Nella tabella seguente viene descritta la struttura della tabella edge.  
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ID univoco del nodo del documento.<br /><br /> Il valore dell'ID dell'elemento radice è 0. I valori di ID negativi sono riservati.|  
 |**parentid**|**bigint**|Identifica il padre del nodo. Il padre identificato da questo ID non è necessariamente l'elemento padre, ma dipende dalla proprietà NodeType del nodo il cui padre è identificato da questo ID. Se ad esempio il nodo è di tipo testo, il relativo elemento padre potrebbe essere un nodo attributo.<br /><br /> Se il nodo si trova al livello principale nel documento XML, il relativo valore **ParentID** è NULL.|  

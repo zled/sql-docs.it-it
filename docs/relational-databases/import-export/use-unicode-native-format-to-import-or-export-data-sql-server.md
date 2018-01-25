@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8301c9cf1b0e3494a6a146f16b4f9a86ba0926e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b3217ebde3a1d9b3424b2fcb9c53954504a853a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Utilizzare il formato Unicode nativo per importare o esportare dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Il formato Unicode nativo risulta particolarmente utile quando è necessario copiare informazioni da un'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra. L'utilizzo del formato nativo per i dati non carattere consente di risparmiare tempo evitando di dover eseguire la conversione dei tipi di dati in formato carattere e viceversa. L'utilizzo del formato carattere Unicode per tutti i dati di tipo carattere consente di evitare la perdita dei caratteri estesi durante il trasferimento bulk dei dati tra server che utilizzano tabelle codici diverse. Un file di dati in formato nativo Unicode è leggibile con qualsiasi metodo di importazione bulk.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
  I dati [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) memorizzati come SQLVARIANT in un file di dati in formato nativo Unicode vengono gestiti in modo analogo a quanto avviene per un file di dati in formato nativo, fatta eccezione per il fatto che i valori [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) e [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) vengono convertiti in [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) e [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), raddoppiando lo spazio necessario per le colonne interessate. I metadati originali vengono mantenuti e i valori riconvertiti nel tipo di dati [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) e [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) originale quando viene eseguita l'importazione in blocco in una colonna di tabella.  
  
- |Contenuto dell'argomento|
+ |Contenuto dell'argomento:|
 |---|
 |[Opzioni di comando per il formato nativo Unicode](#command_options)|
 |[Condizioni di test di esempio](#etc)<br />&emsp;&#9679;&emsp;[Tabella di esempio](#sample_table)<br />&emsp;&#9679;&emsp;[File di formato non XML di esempio](#nonxml_format_file)|
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 Il formato nativo Unicode è supportato dalle opzioni di comando seguenti:  
   
-|Comando|Opzione|Descrizione|  
+|Comando|Opzione|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-N**|Determina l'uso del formato nativo Unicode da parte dell'utilità **bcp** . Questo formato usa i tipi di dati (database) nativi per tutti i dati di tipo non carattere e il formato di dati carattere Unicode per tutti i dati di tipo carattere (**char**, **nchar**, **varchar**, **nvarchar**, **text**e **ntext**).|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|Usa il formato nativo Unicode per l'importazione bulk dei dati.|  
@@ -182,7 +182,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 Per utilizzare formati di dati per l'importazione o l'esportazione bulk  
 -   [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   

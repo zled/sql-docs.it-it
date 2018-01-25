@@ -23,15 +23,15 @@ helpviewer_keywords:
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 645f300a349a9b34533f247dcabebf8f116c3eb7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d65ee60ef2e855501bab43f2d1f6d697960b5e3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantenimento dei valori Null o utilizzo dei valori predefiniti durante un'importazione bulk (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Un'istruzione INSERT regolare mantiene invece il valore Null anziché inserire u
 ## Mantenimento dei valori Null<a name="keep_nulls"></a>  
 I qualificatori seguenti specificano che un campo vuoto del file di dati mantiene il relativo valore Null durante l'importazione bulk anziché ereditare un valore predefinito (se disponibile) per le colonne della tabella.  Per impostazione predefinita, per [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)le colonne non specificate nell'operazione di importazione vengono impostate su NULL.
   
-|Command|Qualifier|Tipo di qualificatore|  
+|Comando|Qualifier|Tipo di qualificatore|  
 |-------------|---------------|--------------------|  
 |bcp|-k|Opzione|  
 |BULK INSERT|KEEPNULLS**\***|Argomento|  
@@ -337,11 +337,11 @@ SELECT * FROM TestDatabase.dbo.myNulls;
   
 -   [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
@@ -356,7 +356,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
   

@@ -22,13 +22,13 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b83e4fedf8ee39ceb90b2156852de4698ae273a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f21ea2afcf50beb80ec3cdfdc39c0d1f79d5adbe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Listener, connettività client e failover dell'applicazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento contiene informazioni sulla funzionalità di failover delle applicazioni e sulla connettività client di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Per la maggior parte delle configurazioni comuni del listener, è possibile creare il listener del primo gruppo di disponibilità tramite cmdlet di PowerShell o istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Per ulteriori informazioni, vedere [Attività correlate](#RelatedTasks)più avanti in questo argomento.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Listener del gruppo di disponibilità](#AGlisteners)  
   
@@ -247,7 +247,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Connettività client AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   

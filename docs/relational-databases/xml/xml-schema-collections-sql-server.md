@@ -24,15 +24,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 581c46bbb59d9339bc91712a4e100d922e76813f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e32ecad2ca9d89f31e7a6b7e05c650a66ffc8c3a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Come descritto nell'argomento [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md), SQL Server offre funzionalità per l'archiviazione nativa dei dati XML tramite il tipo di dati **xml**. È facoltativamente possibile associare schemi XSD a una variabile o colonna di tipo **xml** tramite una raccolta di XML Schema. Una raccolta di XML Schema archivia gli elementi XML Schema importati e può essere quindi utilizzata per eseguire le operazioni seguenti:  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 -   MODELGROUP  
   
- Esempio:  
+ Ad esempio  
   
 -   **SomeAttribute** è un componente di tipo ATTRIBUTE.  
   
@@ -214,6 +214,6 @@ N'http://www.microsoft.com/books')
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare una raccolta di XML Schema archiviata](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Pre-elaborazione di uno schema per unire schemi inclusi](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
- [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisiti e limitazioni per le raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

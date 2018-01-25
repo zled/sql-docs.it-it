@@ -22,13 +22,13 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: "4"
 author: JasonWHowell
 ms.author: jasonh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe422c7445debc085f9d610550f365ccc4f1b8f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opzione di failover di rilevamento dell'integrità a livello di database di un gruppo di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A partire da SQL Server 2016, quando si configura un gruppo di disponibilità Always On è disponibile l'opzione di rilevamento dell'integrità a livello di database (DB_FAILOVER). Il rilevamento dell'integrità a livello di database avvisa quando un database non è più nello stato online, quando si verifica un errore, e attiverà il failover automatico del gruppo di disponibilità. 
@@ -102,7 +102,7 @@ select name, db_failover from sys.availability_groups
 
 Output di esempio della dmv:
 
-name  |  db_failover  
+NAME  |  db_failover  
 ---------|---------
 | Contoso-ag |  1  |
 
@@ -172,7 +172,7 @@ Descrizione dei campi:
 
 In questo output di esempio fault_type indica che si è verificato un evento critico nel gruppo di disponibilità Contoso-ag nella replica denominata SQLSERVER-1, a causa del nome di database AutoHa-Sample2, con tipo di errore 2: arresto.
 
-|Campo  | Valore
+|Campo  | valore
 |---------|---------
 |availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
 |availability_group_name |  Contoso-ag

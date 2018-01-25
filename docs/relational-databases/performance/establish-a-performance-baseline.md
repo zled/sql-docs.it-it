@@ -23,15 +23,15 @@ helpviewer_keywords:
 - database monitoring [SQL Server], baselines
 ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef8bc2586219538cedc61e7623e09ff16b3f0066
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 622c54ecdcf60bbc4ea734317d62890719aefdd5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="establish-a-performance-baseline"></a>Definire una base di riferimento delle prestazioni
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Per stabilire se le prestazioni del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono ottimali, misurare le prestazioni a intervalli di tempo regolari, anche quando non si è verificato alcun problema, in modo da definire una baseline per le prestazioni del server. Confrontare ogni set di misurazioni con i set precedenti.  

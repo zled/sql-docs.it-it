@@ -17,15 +17,15 @@ f1_keywords:
 helpviewer_keywords: Back Up Database Task dialog box
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df4f47031ab68912a67a3ca66c4d738c69a25b3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49e8fb933c835ff58dbb8efb3aa91881abdbc807
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Opzioni dell'attività Backup database per il piano di manutenzione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la finestra di dialogo **Attività Backup database** per aggiungere un'attività di backup al piano di manutenzione. L'esecuzione di backup del database è importante in caso di guasti al sistema o all'hardware, nonché di errori degli utenti, che possono danneggiare il database e rendere pertanto necessaria la disponibilità di una copia di backup per il ripristino. Questa attività consente di eseguire backup completi e differenziali, di file e filegroup, nonché del log delle transazioni.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
- **Nuovi**  
+ **Nuova**  
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** è descritta di seguito.  
   
  **Database**  
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/17/2017
  **Usa nome utente e password specifici**  
  Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione non è disponibile.  
   
- **Nome utente**  
+ **User name**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
  **Password**  

@@ -29,15 +29,15 @@ helpviewer_keywords:
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85b344cdd5149c332d3cfd34638db668d49e88d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dcaa37454f30618c42c3cce8bf9f61b896303e90
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -277,10 +277,10 @@ ms.lasthandoff: 11/17/2017
  Definizione di **Destinazione indicazione**. Fare clic sulla colonna per aprire la finestra di dialogo Anteprima script SQL, contenente uno script per l'azione consigliata.  
   
 ##### <a name="index-recommendations"></a>Indicazioni relative agli indici  
- **Nome database**  
+ **Database Name**  
  Database contenente gli oggetti che è consigliabile modificare.  
   
- **Nome oggetto**  
+ **nome oggetto**  
  Tabella relativa all'indicazione.  
   
  **Consiglio**  

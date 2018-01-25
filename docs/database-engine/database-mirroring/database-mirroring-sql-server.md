@@ -28,13 +28,13 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 caps.latest.revision: "125"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 80a2fe944fcd81eb55de368360875b47ebf5a8a0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 019751fa1dc2775fc38206d8e98e41283a44bd72
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-sql-server"></a>Mirroring del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ ms.lasthandoff: 11/20/2017
  Per ulteriori informazioni, vedere [Cambio di ruolo](#RoleSwitching), più avanti in questo argomento.  
   
 > [!NOTE]  
->  Per avviare una nuova sessione di mirroring o aggiungere un server di controllo del mirroring a una configurazione di mirroring esistente, è necessario che in tutte le istanze server coinvolte venga eseguita la stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, quando viene eseguito l'aggiornamento a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o a una versione successiva, possono verificarsi variazioni nelle istanze coinvolte. Per altre informazioni, vedere [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)(Aggiornamento di istanze con mirroring).  
+>  Per avviare una nuova sessione di mirroring o aggiungere un server di controllo del mirroring a una configurazione di mirroring esistente, è necessario che in tutte le istanze server coinvolte venga eseguita la stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, quando viene eseguito l'aggiornamento a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o a una versione successiva, possono verificarsi variazioni nelle istanze coinvolte. Per altre informazioni, vedere [Aggiornamento di istanze con mirroring](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
   
 ####  <a name="TxnSafety"></a> Sicurezza delle transazioni e modalità operative  
@@ -253,7 +253,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Replica](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="InThisSection"></a> Argomenti della sezione  
+##  <a name="InThisSection"></a> Contenuto della sezione  
  [Prerequisiti, restrizioni e indicazioni per il mirroring del database](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Vengono descritti i prerequisiti e le indicazioni per la configurazione del mirroring del database.  
   

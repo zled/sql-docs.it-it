@@ -18,15 +18,15 @@ helpviewer_keywords:
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4f6256d3c0b3be70f32b246ef24b996d7545fc5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d749784b0a89d8307e0f2be23f25a836ba9a9c14
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="msdb-database"></a>Database msdb
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 |Opzione di database|Valore predefinito|Modificabile|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|no|  
 |ANSI_NULL_DEFAULT|OFF|Sì|  
 |ANSI_NULLS|OFF|Sì|  
 |ANSI_PADDING|OFF|Sì|  
@@ -66,20 +66,20 @@ ms.lasthandoff: 11/17/2017
 |AUTO_SHRINK|OFF|Sì|  
 |AUTO_UPDATE_STATISTICS|ON|Sì|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
-|CHANGE_TRACKING|OFF|No|  
+|CHANGE_TRACKING|OFF|no|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sì|  
 |CURSOR_DEFAULT|GLOBAL|Sì|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sì<br /><br /> Sì|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> Sì<br /><br /> Sì|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
 |DB_CHAINING|ON|Sì|  
-|ENCRYPTION|OFF|No|  
-|MIXED_PAGE_ALLOCATION|ON|No|  
+|ENCRYPTION|OFF|no|  
+|MIXED_PAGE_ALLOCATION|ON|no|  
 |NUMERIC_ROUNDABORT|OFF|Sì|  
 |PAGE_VERIFY|CHECKSUM|Sì|  
 |PARAMETERIZATION|SIMPLE|Sì|  
 |QUOTED_IDENTIFIER|OFF|Sì|  
-|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|READ_COMMITTED_SNAPSHOT|OFF|no|  
 |RECOVERY|SIMPLE|Sì|  
 |RECURSIVE_TRIGGERS|OFF|Sì|  
 |Opzioni relative a Service Broker|ENABLE_BROKER|Sì|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
  Per una descrizione di queste opzioni di database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restrizioni  
+## <a name="restrictions"></a>Restrictions  
  Nel database **msdb** non è possibile eseguire le operazioni seguenti:  
   
 -   Modifica delle regole di confronto. Le regole di confronto predefinite corrispondono a quelle del server.  

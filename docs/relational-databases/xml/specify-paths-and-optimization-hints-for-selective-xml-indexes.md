@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: feae81d56a340583d9a48a36abba01cacc7049c4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 869e73bab4308c36bb54ae3dee3550b9c254fbf0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Specificare percorsi e hint di ottimizzazione per indici XML selettivi
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come specificare i percorsi del nodo da indicizzare e gli hint di ottimizzazione per l'indicizzazione in fase di creazione o modifica di indici XML selettivi.  

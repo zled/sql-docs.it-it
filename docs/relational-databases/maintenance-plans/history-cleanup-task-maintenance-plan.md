@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.maint.historycleanup.f1
 helpviewer_keywords: History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d88b3e5b54b2ede47272d58717b7088f0e0825f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aeace432c78f5a8179997697e316e874767b57fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Attività Pulizia contenuto cronologia (Piano di manutenzione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la finestra di dialogo **Attività Pulizia contenuto cronologia** per eliminare le informazioni cronologiche meno recenti dalle tabelle del database msdb. Questa attività supporta l'eliminazione della cronologia delle operazioni di backup e ripristino, della cronologia processo agente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e della cronologia del piano di manutenzione.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
- **Nuovi**  
+ **Nuova**  
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** viene descritta più avanti in questo argomento.  
   
  **Cronologia operazioni di backup e ripristino**  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
  **Usa nome utente e password specifici**  
  Consente di connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di SQL Server utilizzando l'autenticazione di SQL Server. Questa opzione non è disponibile.  
   
- **Nome utente**  
+ **User name**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
  **Password**  

@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.maint.tsql.f1
 helpviewer_keywords: Execute T-SQL Statement Task dialog box
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b26175cca19d94ba8d5cf0d9c6cf4f34a03fdf15
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a507e5599faec3047ec861e8c72d618b33c27bdf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Attività Esegui istruzione T-SQL (Piano di manutenzione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la finestra di dialogo **Attività Esegui istruzione T-SQL** per personalizzare il piano di manutenzione con l'aggiunta delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] desiderate.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
- **Nuovi**  
+ **Nuova**  
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** è descritta di seguito.  
   
  **Timeout esecuzione**  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
  **Usa nome utente e password specifici**  
  Consente di connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione non è disponibile.  
   
- **Nome utente**  
+ **User name**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
  **Password**  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d146aaae7ef0a3e033deb1fb3a3cc51b49663abc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a31fed7f22953170b443c42b6394786e6fa9a60e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Sottoscrizioni aggiornabili - Per la replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
  **Per passare da una modalità di aggiornamento all'altra**  
   
- Per passare da una modalità di aggiornamento all'altra, è necessario abilitare la pubblicazione e la sottoscrizione per entrambe le modalità e quindi passare da una all'altra, se necessario. Per altre informazioni, vedere  
+ Per passare da una modalità di aggiornamento all'altra, è necessario abilitare la pubblicazione e la sottoscrizione per entrambe le modalità e quindi passare da una all'altra, se necessario. Per ulteriori informazioni, vedere  
 [Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Considerazioni per l'utilizzo di sottoscrizioni aggiornabili  
@@ -131,9 +131,9 @@ ms.lasthandoff: 11/17/2017
     -   Se si prevedono conflitti, quando si utilizza l'opzione di risoluzione dei conflitti "Prevale il Sottoscrittore", è consigliabile non utilizzare vincoli di chiave esterna nel server di pubblicazione e nel Sottoscrittore, mentre, quando si utilizza l'opzione di risoluzione dei conflitti "Prevale il server di pubblicazione", è consigliabile non utilizzare vincoli di chiave esterna nel Sottoscrittore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Replica transazionale peer-to-peer](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Tipi di pubblicazioni per la replica transazionale](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
  [Pubblicare dati e oggetti di database](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Sottoscrivere le pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Sottoscrizione delle pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

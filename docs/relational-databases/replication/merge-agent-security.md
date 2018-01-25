@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.security.MA.f1
 helpviewer_keywords: Merge Agent Security dialog box
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65555f66e205e6502b07ba09105ee1de2fe411f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6f95cce617a490f37f4f8171ebf0e67e1d781d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="merge-agent-security"></a>Sicurezza agente di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La finestra di dialogo **Sicurezza agente di merge** consente di specificare l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] con cui viene eseguito l'agente di merge. L'agente di merge viene eseguito nel server di distribuzione per le sottoscrizioni push e nel Sottoscrittore per le sottoscrizioni pull. L'account di Windows è detto anche *account di processo*, poiché si tratta dell'account con cui viene eseguito il processo dell'agente. Le opzioni aggiuntive disponibili in questa finestra di dialogo dipendono dalla modalità con cui si accede a tale finestra di dialogo:  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
  [Gestire gli account di accesso e le password nella replica](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Modello di sicurezza dell'agente di replica](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Panoramica degli agenti di replica](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Procedure consigliate per la sicurezza della replica](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Sottoscrizione delle pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

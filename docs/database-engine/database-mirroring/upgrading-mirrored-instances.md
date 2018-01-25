@@ -19,13 +19,13 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8b3e3b72900fe64a8925b6ebc9e8901b63e2dde
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 06f9d525bc46843dcf5456fc70db0cdd4bd78b74
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrading-mirrored-instances"></a>Aggiornamento di istanze con mirroring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si aggiorna un'istanza con mirroring di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nuova versione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a un nuovo Service Pack o aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure a un nuovo Service Pack o aggiornamento cumulativo di Windows, è possibile ridurre i tempi di inattività per ogni database con mirroring a un singolo failover manuale eseguendo un aggiornamento in sequenza o due failover manuali in caso di failback all'istanza primaria originale. L'aggiornamento in sequenza è un processo in più fasi che, nella forma più semplice, implica l'aggiornamento dell'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che in quel momento funge da server mirror in una sessione di mirroring, seguito dal failover manuale del database con mirroring, dall'aggiornamento della prima istanza principale di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e dalla ripresa del mirroring. Nella pratica, il processo esatto dipende dalla modalità operativa, nonché dal numero e dal layout della sessione di mirroring in esecuzione nelle istanze di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da aggiornare.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Per informazioni sull'uso del mirroring del database con log shipping durante una migrazione, scaricare il [white paper Database Mirroring and Log Shipping](https://t.co/RmO6ruCT4J)(Mirroring del database e log shipping).  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Prima di iniziare, esaminare le informazioni seguenti:  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a SQL Server 2016 dalla versione del sistema operativo Windows e di SQL Server. Ad esempio, non è possibile eseguire l'aggiornamento diretto da un'istanza di SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  Eseguire un failover manuale di prova su almeno una delle sessioni di mirroring:  
   
-    -   [Eseguire il failover manuale di una sessione di mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+    -   [Failover manuale di una sessione di mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
     -   [Failover manuale in una sessione di mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire l'aggiornamento a SQL Server 2016 usando l'Installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Installazione di SQL Server 2016 dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Installare SQL Server 2016 dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Mirroring del database di ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Visualizzazione dello stato di un database con mirroring &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 377fe0363d6884f7912cc67afecaa25af6ab2d6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dd30fb239fa8d57609321af659eb461008ca80a4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Impostazione di valore soglia e avvisi in Monitoraggio replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In Monitoraggio replica per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono visualizzate informazioni sullo stato delle pubblicazioni e delle sottoscrizioni. Per impostazione predefinita, in Monitoraggio replica vengono visualizzati avvisi solo per le sottoscrizioni non inizializzate, ma è possibile abilitarli anche per altre condizioni. È consigliabile abilitare gli avvisi per la topologia, in modo da poter essere informati tempestivamente sullo stato e sulle prestazioni.  

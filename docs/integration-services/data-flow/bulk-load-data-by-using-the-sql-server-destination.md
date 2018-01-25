@@ -21,13 +21,13 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72c335cab197a6adcb85f0b0e7c05cc9f8c3e7dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9cdd73f56e17dbe97a2075d33a0ceefc032fc345
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Caricamento bulk dei dati tramite la destinazione SQL Server
   È possibile aggiungere e configurare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine dati.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  Fare doppio clic sulla destinazione.  
   
-6.  Nella pagina **Gestione connessione**della finestra di dialogo **Editor destinazione SQL Server** selezionare una gestione connessione OLE DB esistente oppure fare clic su **Nuova** per creare una nuova gestione connessione. Per altre informazioni, vedere [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+6.  Nella pagina **Gestione connessione**della finestra di dialogo **Editor destinazione SQL Server** selezionare una gestione connessione OLE DB esistente oppure fare clic su **Nuova** per creare una nuova gestione connessione. Per altre informazioni, vedere [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 7.  Per specificare la tabella o vista in cui caricare i dati, eseguire una delle operazioni seguenti:  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Il tipo di ordinamento è determinato dall'ordine in cui sono elencate le colonne.  
   
-10. Scegliere **OK**.  
+10. Fare clic su **OK**.  
   
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   

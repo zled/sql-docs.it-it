@@ -19,13 +19,13 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fde99df0bca010b8920267b1b41de87fbe38e2bf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e1532ade775800e7688fca8efa844ba535b95bab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Possibili errori durante le sessioni tra repliche di disponibilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gli errori in una sessione tra due repliche di disponibilità possono essere causati da problemi di tipo fisico, del sistema operativo o di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Una replica di disponibilità non controlla regolarmente i componenti sui quali Sqlservr.exe si basa per verificare se stiano funzionando correttamente o abbiano generato un errore. In alcuni casi, tuttavia, il componente interessato invia una segnalazione di errore a Sqlservr.exe. Un errore segnalato da un altro componente è denominato *errore hardware*. Per rilevare altri errori che altrimenti non verrebbero rilevati, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa un proprio meccanismo di timeout della sessione. Specifica il periodo di timeout della sessione in secondi. Il periodo di timeout indica l'intervallo di attesa massimo rispettato dall'istanza del server per la ricezione di un messaggio PING da un'altra istanza, prima che l'altra istanza venga considerata disconnessa. Quando si verifica un timeout della sessione tra due repliche di disponibilità, le repliche di disponibilità presuppongono che si sia verificato un errore e viene dichiarato un *errore software*.  
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="responding-to-an-error"></a>Risposta a un errore  
  Indipendentemente dal tipo di errore, un'istanza del server che rileva un errore esegue l'azione appropriata in base al proprio ruolo, alla modalità di disponibilità della sessione e allo stato delle altre connessioni della sessione. Per informazioni sulle conseguenze della perdita di un partner, vedere [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  **Per modificare il valore di timeout (solo modalità di disponibilità con commit sincrono)**  
   
 -   [Modificare il periodo di timeout della sessione per una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  

@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4d2bc32eb76882c00b411e7eff81fd3cf5b45b77
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d8872cadbcbd7da67212fa26417ac66debc5f79c
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Pianificare attività amministrative SSAS con SQL Server Agent
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Usa il servizio Agente SQL Server, è possibile pianificare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] attività amministrative da eseguire nell'ordine e gli orari in cui è necessario. Le attività pianificate consentono di automatizzare processi eseguiti in cicli regolari o prevedibili. È possibile pianificare l'esecuzione di attività amministrative, ad esempio l'elaborazione di cubi, nei periodi in cui l'attività aziendale è ridotta. È inoltre possibile determinare l'ordine di esecuzione delle attività creando passaggi di processo in un processo di SQL Server Agent. È possibile ad esempio elaborare un cubo ed eseguirne quindi un backup.  
@@ -30,10 +30,10 @@ ms.lasthandoff: 01/08/2018
   
  In questo argomento è disponibile una procedura dettagliata che illustra due modalità di utilizzo di SQL Server Agent per eseguire script XMLA. Nel primo esempio viene dimostrato come pianificare l'elaborazione di una singola dimensione. Nel secondo esempio viene illustrato come combinare attività di elaborazione in uno singolo script eseguito in una pianificazione. Per completare la procedura dettagliata, è necessario soddisfare i requisiti riportati di seguito.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  È necessario che il servizio SQL Server Agent sia installato.  
   
- Per impostazione predefinita, i processi vengono eseguiti con l'account del servizio. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l'account predefinito per SQL Server Agent è NT Service\SQLAgent$\<instancename >. Per eseguire un backup o un'attività di elaborazione, è necessario utilizzare un account amministratore di sistema nell'istanza di Analysis Services. Per altre informazioni, vedere [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Per impostazione predefinita, i processi vengono eseguiti con l'account del servizio. L'account predefinito per SQL Server Agent è NT Service\SQLAgent$\<instancename >. Per eseguire un backup o un'attività di elaborazione, è necessario utilizzare un account amministratore di sistema nell'istanza di Analysis Services. Per altre informazioni, vedere [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
  È consigliabile utilizzare un database di test. È possibile distribuire il database di esempio multidimensionale AdventureWorks o un progetto dell'esercitazione multidimensionale di Analysis Services da utilizzare in questa procedura dettagliata. Per altre informazioni, vedere [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../../analysis-services/install-sample-data-and-projects.md).  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
 9. In **Comando**fare clic con il pulsante destro del mouse e scegliere **Incolla**. Lo script XMLA generato nel passaggio precedente verrà visualizzato nella finestra di comando.  
   
-10. Fare clic su **OK**.  
+10. Scegliere **OK**.  
   
 11. In **Selezione pagina**fare clic su **Pianificazioni**e quindi su **Nuovo**.  
   
@@ -211,7 +211,7 @@ ms.lasthandoff: 01/08/2018
   
 10. In **Comando**fare clic con il pulsante destro del mouse e scegliere **Incolla**.  
   
-11. Fare clic su **OK**.  
+11. Scegliere **OK**.  
   
 12. Nella pagina **Pianificazioni** fare clic su **Nuova**.  
   

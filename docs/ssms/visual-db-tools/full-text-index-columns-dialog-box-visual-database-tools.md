@@ -16,13 +16,13 @@ ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f709af2ec4950efa7c1c864222638fb444b9f57c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0ec4029fc816c963a2a0ac5ddc61ffc354e50589
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Colonne indice full-text (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In questa finestra di dialogo sono elencate le colonne usate nell'indice full-text per la tabella aperta in Progettazione tabelle. Per accedere a tale finestra di dialogo, fare clic con il pulsante destro del mouse sulla tabella in Progettazione tabelle, scegliere **Indice full-text**e nella finestra di dialogo **Indice full-text** fare clic sull'indice con le colonne da visualizzare o modificare, sul campo **Colonne** nella griglia a destra e infine sui puntini di sospensione (**…**).  

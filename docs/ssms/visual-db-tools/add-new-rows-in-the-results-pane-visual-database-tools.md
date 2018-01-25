@@ -22,13 +22,13 @@ ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 456b54e01cf02c27f1dcb0714104365b53e8a875
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7e6585253bd81c11059d8021cf972ca57129730a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Aggiunta di nuove righe nel riquadro Risultati (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Per aggiungere nuovi dati, è possibile digitarli o incollarli da un altro programma, ad esempio Blocco note o Excel. Per incollare una riga è necessario che presenti esattamente lo stesso numero e tipo di colonne della tabella in cui la si desidera incollare. È possibile incollare nel riquadro Risultati più righe contemporaneamente.  
