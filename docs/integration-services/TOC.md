@@ -25,11 +25,11 @@
 
 # [Migrazione lift and shift di pacchetti SSIS in Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [Esercitazione: distribuire, eseguire e monitorare un pacchetto in Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Connettersi al catalogo SSIS in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Pianificare l'esecuzione di pacchetti in Azure](lift-shift/ssis-azure-schedule-packages.md)
-## [Convalidare i pacchetti distribuiti in Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Connettersi a origini dati con l'autenticazione di Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Connettersi a file e condivisioni file](lift-shift/ssis-azure-files-file-shares.md)
+## [Convalidare i pacchetti distribuiti in Azure](lift-shift/ssis-azure-validate-packages.md)
+## [Connettersi al catalogo SSIS in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Pianificare l'esecuzione di pacchetti in Azure](lift-shift/ssis-azure-schedule-packages.md)
 
 # [Installare o aggiornare](../integration-services/install-windows/install-integration-services.md)
 
@@ -175,11 +175,8 @@
 #### [Lezione 3-3 - Test dei pacchetti distribuiti](lesson-3-3-testing-the-deployed-packages.md)
 
 # Risorse
-## Seguire il blog
-### [Blog del team di SSIS](https://blogs.msdn.microsoft.com/ssis/)
-## Supporto
-### [Forum di SSIS su MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-### [Tag SSIS su Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
-## Lascia un commento
-### [Forum dei commenti de SQL Server](https://feedback.azure.com/forums/908035-sql-server)  
+## [Informazioni del forum SSIS](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Informazioni su Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## [Seguire il blog del team SSIS](https://blogs.msdn.microsoft.com/ssis/)
+## [Segnalare problemi e richiedere funzionalità](https://feedback.azure.com/forums/908035-sql-server)
 ## [Scaricare i documenti sul PC](../sql-server/sql-server-help-installation.md)
