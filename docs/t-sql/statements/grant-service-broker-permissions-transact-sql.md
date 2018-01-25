@@ -22,15 +22,15 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fc317c36ae0cc14891be3a4f3a9c17c7a41fc3e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0383e0b5446537b77e02ce4b8e4d3e54c850bdd1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT - autorizzazioni per Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,22 +57,22 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere concessa per un'entità a protezione diretta di Service Broker.  Vedere l'elenco riportato di seguito.  
   
- CONTRATTO **::***contract_name*  
+ CONTRATTO **:: * * * contract_name*  
  Specifica il contratto per cui viene concessa l'autorizzazione. Il qualificatore di ambito ":" è obbligatorio.  
   
- TIPO di messaggio **::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  Specifica il tipo di messaggio per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- L'associazione al servizio remoto **::***remote_binding_name*  
+ L'associazione al servizio remoto **:: * * * remote_binding_name*  
  Specifica l'associazione al servizio remoto per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  ROUTE **::***route_name*  
  Specifica la route per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- SERVIZIO **::***service_name*  
+ SERVICE **::***service_name*  
  Specifica il servizio per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -171,7 +171,7 @@ GRANT permission  [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa.  
   
  Se si usano l'opzione AS, sono previsti questi requisiti aggiuntivi.  
@@ -195,6 +195,6 @@ GRANT permission  [ ,...n ] ON
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Entità &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

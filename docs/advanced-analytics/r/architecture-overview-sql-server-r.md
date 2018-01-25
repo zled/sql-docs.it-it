@@ -14,13 +14,13 @@ ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
 caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7630d06085eaff3c5e255bacc4103dc1d9962189
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8017e0a54bef6885a6622d46ee9d2cf92af247ba
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>Panoramica dell'architettura di R in SQL Server
 
@@ -48,7 +48,7 @@ Il ruolo di questi componenti aggiuntivi consiste nel migliorare la velocità di
 
 Per una descrizione dettagliata dei componenti che supportano R, ad esempio il [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] e RLauncher, vedere [nuovi componenti](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md).
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 Quando si esegue codice R con Machine Learning Services o SQL Server R Services, tutti gli script R vengono eseguiti all'esterno del processo di SQL Server, per fornire sicurezza e maggiore facilità di gestione. L'isolamento dei processi vale indipendentemente dal fatto se è eseguire lo script R come parte di una stored procedure, o connettersi al processo di computer SQL Server da un computer remoto e avviare un processo che utilizza il server come contesto di calcolo.
 

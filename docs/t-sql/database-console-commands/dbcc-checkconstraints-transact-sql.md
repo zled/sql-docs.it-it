@@ -25,15 +25,15 @@ helpviewer_keywords:
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 358dddc25f1265f344387cc75ef12f79182c27e3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2ff75ba3c32d138d9124eba5cfe170cf146d5778
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DBCC CHECKCONSTRAINTS
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *TABLE_NAME* | *table_id* | *constraint_name* | *constraint_id*  
+ *table_name* | *table_id* | *constraint_name* | *constraint_id*  
  Tabella o vincolo da controllare. Quando *table_name* o *table_id* è specificato, vengono controllati tutti i vincoli abilitati in tale tabella. Quando *constraint_name* o *constraint_id* è specificato, solo tale vincolo viene controllato. Se non si specifica un identificatore di tabella o un identificatore di vincolo, vengono controllati tutti i vincoli abilitati in tutte le tabelle del database corrente.  
  Un nome di vincolo identifica in modo univoco la tabella a cui appartiene. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
@@ -100,7 +100,7 @@ Se *table_name* o *table_id* specificato e viene abilitata per il controllo dell
 |Controlla|Informazioni aggiuntive nell'output se il controllo non riuscito|  
 |-----------|-----------------------------------------------|  
 |PeriodEndColumn ≥ PeriodStartColumn (corrente)|[sys_end] = '{0}' e MAX(DATETIME2) = "9999-12-31 23:59:59.99999'|  
-|PeriodEndColumn ≥ PeriodStartColumn (corrente, cronologia)|[sys_start] = '{0}' e [sys_end] = '\\{1 \\}'|  
+|PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' e [sys_end] = '\\{1 \\}'|  
 |PeriodStartColumn < current_utc_time (corrente)|[sys_start] = '{0}' e SYSUTCTIME|  
 |PeriodEndColumn < current_utc_time (cronologia)|[sys_end] = '{0}' e SYSUTCTIME|  
 |Si sovrappone|(sys_start1, sys_end1), (sys_start2, sys_end2) per due record di sovrapposizione.<br /><br /> Se sono presenti più di 2 record sovrapposti, output includerà più righe di ogni coppia di sovrapposizioni di visualizzazione.|  
@@ -116,7 +116,7 @@ DBCC CHECKCONSTRAINTS restituisce un set di righe con le colonne seguenti.
 |Constraint Name|**varchar**|Nome del vincolo violato.|  
 |Where|**varchar**|Assegnazioni di valori di colonna che identificano una o più righe che violano il vincolo.<br /><br /> È possibile utilizzare il valore di questa colonna in una clausola WHERE di un'istruzione SELECT che esegue una query per individuare le righe che violano il vincolo.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .
   
 ## <a name="examples"></a>Esempi  

@@ -15,13 +15,13 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b1c445662f29241d8a2a1a547ef498f7491590b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a44f5f46a60959b38b3e8121847e0c80c1ba82b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -61,7 +61,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  La tabella remota viene creata come un heap. Non dispone di vincoli check o trigger. Le regole di confronto delle colonne della tabella remota corrisponde alle regole di confronto delle colonne della tabella di origine. Questo vale per le colonne di tipo **char**, **nchar**, **varchar**, e **nvarchar**.  
   
- *stringa_connessione*  
+ *connection_string*  
  Una stringa di caratteri che specifica il `Data Source`, `User ID`, e `Password` parametri per la connessione al server remoto e del database.  
   
  La stringa di connessione è un elenco delimitato da punto e virgola di coppie chiave / valore. Parole chiave non sono rilevanti. Gli spazi tra coppie chiave / valore vengono ignorati. Tuttavia, i valori possono essere tra maiuscole e minuscole, a seconda dell'origine dati.  
@@ -78,7 +78,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
 > [!NOTE]  
 >  È consigliabile connettersi a un server remoto utilizzando l'indirizzo IP. A seconda della configurazione di rete, la connessione utilizzando il nome del computer potrebbero richiedere passaggi aggiuntivi per utilizzare il server DNS non strumento per risolvere il nome server corretto. Questo passaggio non è necessario quando ci si connette con un indirizzo IP. Per ulteriori informazioni, vedere "Utilizzo di un server d'inoltro DNS per i nomi DNS Non accessorio Resolve (Analitica Platform System)" nel [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- *USER_NAME*  
+ *user_name*  
  Un valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome account di accesso di autenticazione. Numero massimo di caratteri è 128.  
   
  *password*  
@@ -87,12 +87,12 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  *batch_size*  
  Il numero massimo di righe per batch. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Invia le righe in batch nel server di destinazione. *Batch_size* è un numero intero positivo > = 0. Valore predefinito è 0.  
   
- CON *common_table_expression*  
+ WITH *common_table_expression*  
  Indica un set di risultati denominato temporaneo, noto come espressione di tabella comune (CTE). Per ulteriori informazioni, vedere [con common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  Selezionare \<select_criteria > il predicato della query che specifica quali dati popolerà la nuova tabella remota. Per informazioni sull'istruzione SELECT, vedere [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario:  
   
 -   Autorizzazione SELECT per ogni oggetto nella clausola SELECT.  
@@ -129,7 +129,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
 ## <a name="metadata"></a>Metadati  
  Utilizzare [sys.dm_pdw_dms_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md) per visualizzare lo stato di avanzamento della copia dei dati selezionati al server remoto SMP. Le righe con tipo PARALLEL_COPY_READER contengono queste informazioni.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  CREATE REMOTE TABLE Usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione per connettersi all'istanza remota [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza; non utilizza l'autenticazione di Windows.  
   
  Il [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] rete con connessione esterna deve proteggere tramite firewall, con l'eccezione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porte porte amministrative e porte di gestione.  

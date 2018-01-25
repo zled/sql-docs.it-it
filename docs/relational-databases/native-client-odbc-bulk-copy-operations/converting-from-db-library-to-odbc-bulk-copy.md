@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df98f0513252765781d2030b1597aec50bbd246e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: abdb8b529914a3ebb09ed0d5d933c30e0ef43f9d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversione della copia bulk da DB-Library a ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client non supportano i gestori di messaggi ed errori di DB-Library, è necessario chiamare **SQLGetDiagRec** per ottenere gli errori e i messaggi generati dalle funzioni di copia bulk ODBC. Le versioni ODBC delle funzioni di copia bulk restituiscono i codici restituiti standard di copia bulk SUCCEED o FAILED, non codici restituiti di tipo ODBC, come SQL_SUCCESS o SQL_ERROR.  
   
--   I valori specificati per DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* parametro vengono interpretati in modo diverso rispetto a ODBC **bcp_bind***cbData*parametro.  
+-   I valori specificati per DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* parametro vengono interpretati in modo diverso rispetto a ODBC **bcp_bind * * * cbData* parametro.  
   
     |Condizione indicata|DB-Library *varlen* valore|ODBC *cbData* valore|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
      In DB-Library, un *varlen* valore -1 indica che vengono forniti dati di lunghezza variabile, in ODBC *cbData* viene interpretato in modo da indicare che vengono forniti solo valori NULL. Modificare qualsiasi DB-Library *varlen* specifiche di -1 su SQL_VARLEN_DATA e qualsiasi *varlen* specifiche 0 su SQL_NULL_DATA.  
   
--   DB-Library **bcp_colfmt***file_collen* e ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* hanno lo stesso problema di  **bcp_bind***varlen* e *cbData* parametri indicati in precedenza. Modificare qualsiasi DB-Library *file_collen* specifiche di -1 su SQL_VARLEN_DATA e qualsiasi *file_collen* specifiche 0 su SQL_NULL_DATA.  
+-   DB-Library  **bcp_colfmt * * * file_collen* e ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData * presentano lo stesso problema come il **bcp_bind * * * varlen*e *cbData* parametri indicati in precedenza. Modificare qualsiasi DB-Library *file_collen* specifiche di -1 su SQL_VARLEN_DATA e qualsiasi *file_collen* specifiche 0 su SQL_NULL_DATA.  
   
 -   Il *iValue* parametro di ODBC [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) funzione è un puntatore void. In DB-Library, *iValue* è un numero intero. Il cast dei valori per ODBC *iValue* a void *.  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/08/2018
   
 -   ODBC **bcp_colfmt** funzione non supporta il *file_type* indicatore di SQLCHAR perché è in conflitto con il typedef di ODBC SQLCHAR. Utilizzare invece SQLCHARACTER per **bcp_colfmt**.  
   
--   Nelle versioni ODBC delle funzioni di copia bulk, il formato per l'utilizzo di **datetime** e **smalldatetime** valori nelle stringhe di caratteri è il formato ODBC yyyy-mm-gg ss.SSS **smalldatetime** valori utilizzano il formato ODBC yyyy-mm-gg hh: mm:.  
+-   Nelle versioni ODBC delle funzioni di copia bulk, il formato per l'utilizzo di **datetime** e **smalldatetime** valori in stringhe di caratteri è il formato ODBC yyyy-mm-dd hh:mm:ss. **smalldatetime** valori utilizzano il formato ODBC yyyy-mm-dd hh:mm:ss.  
   
      Le versioni DB-Library di funzioni di copia bulk accettano **datetime** e **smalldatetime** valori nelle stringhe di caratteri con diversi formati:  
   

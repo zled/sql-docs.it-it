@@ -18,13 +18,13 @@ ms.assetid: 7fe670f3-5e62-43ef-97eb-b9af54df9128
 caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8048bc1eff7437e2a96bd8995f0362b341cbf092
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e9ebd9be2603222f3faecfcd84314014bc6229c1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lezione 3: Esplorare e visualizzare i dati
 
@@ -56,7 +56,7 @@ Nel set di dati originale gli identificatori di taxi e i record delle corse si t
   
 -   I valori utilizzati per le colonne di etichetta sono tutti basati sul _suggerimento\_quantità_ colonna utilizzando le regole business:
   
-    |Nome colonna derivata|Regola|
+    |Nome colonna derivata|Rule|
     |-|-|
      |tipped|Se tip_amount > 0, tipped = 1, altrimenti tipped = 0|
     |tip_class|Classe 0: tip_amount = $0<br /><br />Classe 1: tip_amount > $0 e tip_amount <= $5<br /><br />Classe 2: tip_amount > $5 e tip_amount <= $10<br /><br />Classe 3: tip_amount > $10 e tip_amount <= $20<br /><br />Classe 4: tip_amount > $20|
@@ -130,7 +130,7 @@ La stored procedure restituisce l'immagine come un flusso di dati varbinary, che
   
     **Risultati**
     
-    *tracciato*
+    *plot*
     *0xFFD8FFE000104A4649...*
   
 2.  Aprire un prompt dei comandi di PowerShell ed eseguire il comando seguente specificando il nome dell'istanza appropriata, il nome del database, il nome utente e le credenziali come argomenti:

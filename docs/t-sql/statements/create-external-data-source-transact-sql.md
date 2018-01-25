@@ -23,15 +23,15 @@ ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
 caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-data-source-transact-sql"></a>CREARE l'origine dati esterna (Transact-SQL)
+# <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Crea un'origine dati esterna per PolyBase, query di Database elastico o archiviazione Blob di Azure. A seconda dello scenario, la sintassi è notevolmente diverso. Un'origine dati creata per PolyBase non può essere utilizzata per le query di Database elastico.  Analogamente, un'origine dati creata per le query di Database elastico non può essere utilizzata per PolyBase e così via. 
@@ -135,7 +135,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>Argomenti  
  *data_source_name* specifica il nome definito dall'utente per l'origine dati. Il nome deve essere univoco all'interno del database in SQL Server, Database SQL di Azure e Azure SQL Data Warehouse. Il nome deve essere univoco all'interno del server in Parallel Data Warehouse.
   
- TIPO = [HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
+ TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
  Specifica il tipo di origine dati. Usare HADOOP quando l'origine dati esterna è Hadoop o blob di archiviazione di Azure per Hadoop. Utilizzare SHARD_MAP_MANAGER durante la creazione di un'origine dati esterna per la query di Database elastico per il partizionamento orizzontale nel Database SQL Azure. Per le query tra database con query di Database elastico sul Database SQL di Azure, usare il sistema RDBMS con origini dati esterne.  Utilizzare BLOB_STORAGE durante l'esecuzione di operazioni bulk utilizzando [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) con [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
   
 PERCORSO = \<location_path > **HADOOP**    
@@ -202,7 +202,7 @@ Per le operazioni bulk, solo `LOCATION` deve essere valido l'URL di archiviazion
 La credenziale utilizzata, deve essere creata usando `SHARED ACCESS SIGNATURE` come identità. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Per un esempio di accesso all'archiviazione blob, vedere l'esempio F di [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
 
   
- RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*porta*]'  
+ RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
  Specifica il percorso di gestione risorse di Hadoop. Quando specificato, query optimizer può decidere in base al costo di pre-elaborare i dati di una query di PolyBase con funzionalità di calcolo di Hadoop MapReduce. La distribuzione del predicato di chiamata, questo può ridurre notevolmente il volume di dati trasferiti tra Hadoop e SQL e pertanto migliorare le prestazioni delle query.  
   
  Quando non viene specificato, l'inserimento di calcolo in Hadoop è disabilitata per le query PolyBase.  
@@ -480,12 +480,12 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 Per questo esempio in uso, vedere [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).
   
 ## <a name="see-also"></a>Vedere anche
-[MODIFICARE l'origine dati esterna (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
+[ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
-[CREATE EXTERNAL TABLE AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+[CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
 [CREATE TABLE AS SELECT &#40; Azure SQL Data Warehouse &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
-[Sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
+[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
 

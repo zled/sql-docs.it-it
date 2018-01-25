@@ -21,13 +21,13 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd65fea39ac3f9a9cba0d47ec94365bff9155332
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-localvariable-transact-sql"></a>IMPOSTARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -174,7 +174,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Impedisce l'esecuzione di aggiornamenti tramite il cursore. Non è possibile fare riferimento al cursore in una clausola WHERE CURRENT OF di un'istruzione UPDATE o DELETE. Questa opzione è prioritaria rispetto alla funzionalità di aggiornamento predefinita di un cursore. Questa parola chiave si differenzia dalla parola chiave READ_ONLY descritta in precedenza in quanto tra READ e ONLY esiste uno spazio anziché un carattere di sottolineatura.  
   
  AGGIORNAMENTO [OF *column_name*[ **,**... *n* ] ]  
- Definisce le colonne aggiornabili nel cursore. Se viene specificato OF *column_name* [**,**... * n *] viene fornito, solo le colonne elencate è possibile apportare modifiche. Se non viene specificata alcuna colonna, è possibile aggiornare tutte le colonne, a meno che il cursore non sia stato definito come READ_ONLY.  
+ Definisce le colonne aggiornabili nel cursore. Se viene specificato OF *column_name* [**,**...  *n* ] viene fornito, solo le colonne elencate è possibile apportare modifiche. Se non viene specificata alcuna colonna, è possibile aggiornare tutte le colonne, a meno che il cursore non sia stato definito come READ_ONLY.  
   
 ## <a name="remarks"></a>Osservazioni  
  Dopo la dichiarazione, le variabili vengono inizializzate sul valore NULL. Per assegnare un valore diverso da NULL a una variabile dichiarata, utilizzare l'istruzione SET. L'istruzione SET che assegna un valore alla variabile restituisce un solo valore. Per inizializzare più variabili, utilizzare un'istruzione SET separata per ogni variabile locale.  
@@ -185,7 +185,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Le variabili di cursore sono sempre locali, anche quando fanno riferimento a un cursore globale. Quando una variabile di cursore fa riferimento a un cursore globale, esistono sia un riferimento al cursore locale che un riferimento al cursore globale. Per ulteriori informazioni, vedere l'esempio C.  
   
- Per ulteriori informazioni, vedere [DECLARE CURSOR & #40; Transact-SQL & #41; ](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
+ Per ulteriori informazioni, vedere [DECLARE CURSOR &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
   
  L'operatore di assegnazione composto può essere utilizzato in tutti i casi in cui è presente un'assegnazione con un'espressione a destra dell'operatore, incluse variabili e un'istruzione SET in un'istruzione UPDATE, SELECT o RECEIVE.  
   
@@ -367,7 +367,7 @@ SELECT TOP 1 @rows FROM sys.tables;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Composta operatori & #40; Transact-SQL & #41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

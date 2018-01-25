@@ -1,5 +1,5 @@
 ---
-title: RIPRISTINO (Transact-SQL) | Documenti Microsoft
+title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -41,15 +41,15 @@ helpviewer_keywords:
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 caps.latest.revision: "248"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b5f6424589d13652095b43ffcefa63e8916ecf39
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements-transact-sql"></a>RIPRISTINARE le istruzioni (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -254,7 +254,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   Solo recupero  
   
-     Vengono recuperati i dati che sono già coerenti con il database e che devono solo essere resi disponibili. Per altre informazioni, vedere [Recupero di un database senza ripristino dei dati &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
+     Vengono recuperati i dati che sono già coerenti con il database e che devono solo essere resi disponibili. Per altre informazioni, vedere [Recuperare un database senza il ripristino dei dati &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
 -   Ripristino del log delle transazioni  
   
@@ -266,7 +266,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   Preparare un database mirror per il mirroring del database  
   
-     Per altre informazioni, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     Per altre informazioni, vedere [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md),  
   
 -   Ripristino online  
   
@@ -327,7 +327,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
  Non è possibile utilizzare RESTORE in una transazione esplicita o implicita.  
   
- Ripristino di un danneggiato **master** database viene eseguito tramite una procedura speciale. Per altre informazioni, vedere [Backup e ripristino di database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+ Ripristino di un danneggiato **master** database viene eseguito tramite una procedura speciale. Per altre informazioni, vedere [Backup e ripristino di Database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
  Il ripristino di un database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.  
   
@@ -396,7 +396,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
  Per ulteriori informazioni, vedere [ripristinare un Database a uno Snapshot del Database](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Per un'operazione di backup è possibile specificare password per un set di supporti o un set di backup oppure per entrambi. Se è stata impostata una password per un set di supporti o un set di backup, la password o le password corrette devono essere specificate nell'istruzione RESTORE. Queste password impediscono operazioni di ripristino non autorizzate e l'aggiunta non autorizzata di set di backup ai supporti tramite gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I supporti protetti con password possono tuttavia essere sovrascritti con l'opzione FORMAT dell'istruzione BACKUP.  
   
 > [!IMPORTANT]  
@@ -404,10 +404,10 @@ Note: URL is the format used to specify the location and the file name for the W
 >   
 >  Per informazioni specifiche di SQL Server backup e ripristino con l'archiviazione Blob di Windows Azure, vedere [SQL Server Backup e ripristino con il servizio di archiviazione Blob di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
- Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
+ Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. L'appartenenza ai ruoli predefiniti del database può essere controllata solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, quindi i membri del ruolo predefinito del database **db_owner** non hanno le autorizzazioni per l'istruzione RESTORE.  
   
 ##  <a name="examples"></a> Esempi  
  In tutti gli esempi si presuppone che sia stato eseguito un backup completo del database.  
@@ -538,7 +538,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
  [&#91; Inizio dell'esempi &#93;](#examples)  
   
-###  <a name="restoring_transaction_log_to_mark"></a>G. Ripristino del log delle transazioni fino a un contrassegno  
+###  <a name="restoring_transaction_log_to_mark"></a> G. Ripristino del log delle transazioni fino a un contrassegno  
  Nell'esempio seguente viene ripristinato il log delle transazioni fino al contrassegno nella transazione contrassegnata denominata `ListPriceUpdate`.  
   
 ```  
@@ -576,7 +576,7 @@ RESTORE LOG AdventureWorks2012
   
  [&#91; Inizio dell'esempi &#93;](#examples)  
   
-###  <a name="restoring_using_TAPE"></a>H. Ripristino con la sintassi TAPE  
+###  <a name="restoring_using_TAPE"></a> H. Ripristino con la sintassi TAPE  
  Nell'esempio seguente viene ripristinato un backup completo del database da un dispositivo di backup di tipo `TAPE`.  
   
 ```  
@@ -586,7 +586,7 @@ RESTORE DATABASE AdventureWorks2012
   
  [&#91; Inizio dell'esempi &#93;](#examples)  
   
-###  <a name="restoring_using_FILE_n_FG"></a>I. Ripristino con la sintassi FILE e FILEGROUP  
+###  <a name="restoring_using_FILE_n_FG"></a> I. Ripristino con la sintassi FILE e FILEGROUP  
  Nell'esempio seguente viene ripristinato un database denominato `MyDatabase` che include due file, un filegroup secondario e un log delle transazioni. Per il database viene utilizzato il modello di recupero con registrazione completa.  
   
  Il backup del database è il nono set di backup nel set di supporti in un dispositivo di backup logico denominato `MyDatabaseBackups`. Vengono quindi ripristinati tre backup del log, disponibili nei tre set di backup successivi (`10`, `11` e `12`) nel dispositivo `MyDatabaseBackups`, utilizzando `WITH NORECOVERY`. Dopo il ripristino dell'ultimo backup del log, il database viene recuperato.  
@@ -628,7 +628,7 @@ GO
   
  [&#91; Inizio dell'esempi &#93;](#examples)  
   
-###  <a name="reverting_from_db_snapshot"></a>J. Ripristino da uno snapshot del database  
+###  <a name="reverting_from_db_snapshot"></a> J. Ripristino da uno snapshot del database  
  Nell'esempio seguente viene eseguito il ripristino di un database con uno snapshot del database. Nell'esempio si presuppone che per il database esista un solo snapshot. Per un esempio di come creare questo snapshot di database, vedere [creare uno Snapshot del Database &#40; Transact-SQL &#41; ](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 > **Nota:** verrà ripristinato come snapshot Elimina tutti i cataloghi full-text.  
@@ -642,7 +642,7 @@ GO
 
  [&#91; Inizio dell'esempi &#93;](#examples)  
   
-###  <a name="Azure_Blob"></a>K. Ripristino dal servizio di archiviazione Blob di Microsoft Azure  
+###  <a name="Azure_Blob"></a> K. Ripristino dal servizio di archiviazione Blob di Microsoft Azure  
 Nei tre esempi seguenti comportano l'utilizzo del servizio di archiviazione di Microsoft Azure.  Il nome dell'account di archiviazione è `mystorageaccount`, mentre  Il contenitore per i file di dati è denominato `myfirstcontainer`.  Il contenitore per i file di backup è denominato `mysecondcontainer`.  Criteri di accesso archiviati sono stato creato con diritti di lettura, scrittura, eliminazione ed elenco, per ogni contenitore.  Le credenziali di SQL Server sono state create tramite firme di accesso condiviso che sono associati i criteri di accesso archiviati.  Per informazioni specifiche di SQL Server backup e ripristino con l'archiviazione Blob di Microsoft Azure, vedere [SQL Server Backup e ripristino con il servizio di archiviazione Blob di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
 
 **K1.  Ripristinare un backup completo del database dal servizio di archiviazione di Microsoft Azure**  

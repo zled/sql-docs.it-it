@@ -14,12 +14,12 @@ ms.topic: language-reference
 dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 51db5c7cbaa2932cfcb819538d743fe1368f6442
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>CREARE DATABASE (SQL Azure Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -81,7 +81,7 @@ Utilizzare [ALTER DATABASE &#40; Azure SQL Data Warehouse &#41; ](../../t-sql/st
 
 SQL Data Warehouse è impostato su 130 COMPATIBILITY_LEVEL e non può essere modificato. Per ulteriori informazioni, vedere [migliorate le prestazioni delle Query con 130 livello di compatibilità in Database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Autorizzazioni necessarie:  
   
 -   Server livello principale account di accesso, creato dal processo di provisioning, o  
@@ -117,8 +117,8 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[ALTER DATABASE &#40; Azure SQL Data Warehouse &#40; ](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) 
- [Crea una tabella &#40; Azure SQL Data Warehouse &#41; ](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)  
- [DROP DATABASE &#40; Transact-SQL &#40;](../../t-sql/statements/drop-database-transact-sql.md) 
+[ALTER DATABASE &#40;Azure SQL Data Warehouse&#40;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
+[CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) 
+[DROP DATABASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
   
 

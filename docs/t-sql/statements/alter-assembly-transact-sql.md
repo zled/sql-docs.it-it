@@ -1,5 +1,5 @@
 ---
-title: MODIFICARE l'ASSEMBLY (Transact-SQL) | Documenti Microsoft
+title: ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1a0a6da27bc534e22da2995fa592d6b430d418
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8b8918d653d6d9ff5f26588ad1626bfc62e3679d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ALTER ASSEMBLY assembly_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *nome_assembly*  
+ *assembly_name*  
  Nome dell'assembly da modificare. *nome_assembly* deve esistere nel database.  
   
  DA \<client_assembly_specifier > | \<assembly_bits >  
@@ -115,7 +115,7 @@ ALTER ASSEMBLY assembly_name
   
  Per ulteriori informazioni, vedere [gli assembly che implementa](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [DROP FILE { *file_name*[ **,***... n*] | ALL}]  
+ [DROP FILE { *file_name*[**, *... n*] | ALL}]  
  Rimuove il nome file associato all'assembly oppure tutti i file associati all'assembly dal database. Se specificata assieme all'opzione ADD FILE (descritto di seguito), l'opzione DROP FILE viene eseguita per prima. Ciò consente di sostituire un file con lo stesso nome.  
   
 > [!NOTE]  
@@ -169,7 +169,7 @@ ALTER ASSEMBLY assembly_name
   
  Se l'istruzione ALTER ASSEMBLY viene eseguita senza la clausola di dati UNCHECKED, vengono eseguite le verifiche per controllare che la nuova versione dell'assembly non abbia un impatto negativo sui dati delle tabelle. Le prestazioni potrebbero dipendere dalla quantità di dati che devono essere sottoposti a verifica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione ALTER per l'assembly. È inoltre necessario disporre dei requisiti seguenti:  
   
 -   Per modificare un assembly la cui autorizzazione esistente è EXTERNAL_ACCESS set, è necessario**EXTERNAL ACCESS ASSEMBLY**autorizzazione nel server.  
@@ -222,8 +222,8 @@ ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREAZIONE di ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
- [DROP ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

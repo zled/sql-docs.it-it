@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: e679664f02ffcb08d811a66229a21f1bdaf08077
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>LIBRERIA esterna ALTER (Transact-SQL)  
 
@@ -88,7 +88,7 @@ Specifica il contenuto del pacchetto come valore letterale esadecimale, simile a
 
 Specifica la piattaforma per il contenuto della libreria. Questo valore è obbligatorio quando si modifica una raccolta esistente per aggiungere una piattaforma diversa. Windows è l'unica piattaforma supportata.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Per il linguaggio R, è necessario preparare i pacchetti sotto forma di file di archivio compresso con il. Estensione ZIP per Windows. Attualmente è supportata solo la piattaforma Windows.  
 

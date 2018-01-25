@@ -24,15 +24,15 @@ helpviewer_keywords:
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 caps.latest.revision: "95"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ea17d9f848a47639b748e6f243f604e0e3e2bb2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 840793c4bbfee8282676cf90d42d6e7a6c4d6b42
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Istruzioni - RESTORE HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,23 +88,23 @@ FROM <backup_device>
  Per ogni backup nel dispositivo specificato, il server invia una riga di informazioni sull'intestazione con le colonne riportate di seguito.  
   
 > [!NOTE]  
->  RESTORE HEADERONLY esamina tutti i set di backup nei supporti. Pertanto, se si utilizzano unità nastro ad alta capacità, la generazione di questo set di risultati può richiedere tempo. Per ottenere una panoramica dei supporti senza visualizzare informazioni per ogni set di backup, utilizzare RESTORE LABELONLY oppure specificare FILE  **=**  *backup_set_file_number*.  
+>  RESTORE HEADERONLY esamina tutti i set di backup nei supporti. Pertanto, se si utilizzano unità nastro ad alta capacità, la generazione di questo set di risultati può richiedere tempo. Per un esame rapido dei supporti senza visualizzare informazioni per ogni set di backup, utilizzare RESTORE LABELONLY oppure specificare FILE **=** *backup_set_file_number*.  
   
 > [!NOTE]  
 >  A causa della natura del [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format, è possibile set di backup di altri programmi software a occupare spazio sullo stesso supporto come [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di backup. Il set di risultati restituito da RESTORE HEADERONLY include una riga per ognuno degli altri set di backup.  
   
 |Nome colonna|Tipo di dati|Descrizione per i set di backup SQL Server|  
 |-----------------|---------------|--------------------------------------------|  
-|**Nomebackup**|**nvarchar (128)**|Nome del set di backup.|  
+|**Nomebackup**|**nvarchar(128)**|Nome del set di backup.|  
 |**BackupDescription**|**nvarchar(255)**|Descrizione del set di backup.|  
 |**BackupType**|**smallint**|Tipo di backup:<br /><br /> **1** = database<br /><br /> **2** = log delle transazioni<br /><br /> **4** = file<br /><br /> **5** = database differenziale<br /><br /> **6** = file differenziale<br /><br /> **7** = parziale<br /><br /> **8** = parziale differenziale|  
 |**ExpirationDate**|**datetime**|Data di scadenza del set di backup.|  
-|**Compresso**|**BYTE(1)**|Specifica se il set di backup viene compresso utilizzando la compressione software:<br /><br /> **0** = No<br /><br /> **1** = Sì|  
+|**Compressed**|**BYTE(1)**|Specifica se il set di backup viene compresso utilizzando la compressione software:<br /><br /> **0** = No<br /><br /> **1** = Sì|  
 |**Posizione**|**smallint**|Posizione del set di backup nel volume (da utilizzare con l'opzione FILE =).|  
-|**DeviceType**|**tinyint**|Numero corrispondente a tipo di dispositivo utilizzato per l'operazione di backup.<br /><br /> Disco:<br /><br /> **2** = logica<br /><br /> **102** = fisico<br /><br /> Nastro:<br /><br /> **5** = logica<br /><br /> **105** = fisico<br /><br /> Dispositivo virtuale:<br /><br /> **7** = logica<br /><br /> **107** = fisico<br /><br /> Nomi dei dispositivi logici e i numeri presenti **backup_devices**; per ulteriori informazioni, vedere [backup_devices &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
-|**UserName**|**nvarchar (128)**|Nome dell'utente che ha eseguito l'operazione di backup.|  
-|**ServerName**|**nvarchar (128)**|Nome del server che ha scritto il set di backup.|  
-|**DatabaseName**|**nvarchar (128)**|Nome del database di cui è stato eseguito il backup.|  
+|**DeviceType**|**tinyint**|Numero corrispondente a tipo di dispositivo utilizzato per l'operazione di backup.<br /><br /> Disco:<br /><br /> **2** = logica<br /><br /> **102** = fisico<br /><br /> Nastro:<br /><br /> **5** = Logical<br /><br /> **105** = fisico<br /><br /> Dispositivo virtuale:<br /><br /> **7** = logica<br /><br /> **107** = fisico<br /><br /> Nomi dei dispositivi logici e i numeri presenti **backup_devices**; per ulteriori informazioni, vedere [backup_devices &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**UserName**|**nvarchar(128)**|Nome dell'utente che ha eseguito l'operazione di backup.|  
+|**ServerName**|**nvarchar(128)**|Nome del server che ha scritto il set di backup.|  
+|**DatabaseName**|**nvarchar(128)**|Nome del database di cui è stato eseguito il backup.|  
 |**DatabaseVersion**|**int**|Versione del database da cui è stato creato il backup.|  
 |**DatabaseCreationDate**|**datetime**|Data e ora di creazione del database.|  
 |**BackupSize**|**Numeric(20,0)**|Dimensioni del backup in byte.|  
@@ -123,11 +123,11 @@ FROM <backup_device>
 |**SoftwareVersionMajor**|**int**|Numero di versione principale del server in cui è stato creato il set di backup.|  
 |**SoftwareVersionMinor**|**int**|Numero di versione secondario del server in cui è stato creato il set di backup.|  
 |**SoftwareVersionBuild**|**int**|Numero di build del server in cui è stato creato il set di backup.|  
-|**MachineName**|**nvarchar (128)**|Nome del computer in cui è stato eseguito il backup.|  
+|**MachineName**|**nvarchar(128)**|Nome del computer in cui è stato eseguito il backup.|  
 |**Flag**|**int**|Singoli flag di bit significati se impostato su **1**:<br /><br /> **1** = log di backup contiene operazioni bulk registrate.<br /><br /> **2** = backup snapshot.<br /><br /> **4** = database era di sola lettura quando il backup.<br /><br /> **8** = il database era in modalità utente singolo quando il backup.<br /><br /> **16** = backup contiene checksum di backup.<br /><br /> **32** = database era danneggiato al momento del backup, ma l'operazione di backup è stato richiesto di continuare nonostante gli errori.<br /><br /> **64** = backup della parte finale del log.<br /><br /> **128** = backup della parte finale del log con metadati incompleti.<br /><br /> **256** = backup della parte finale del log con NORECOVERY.<br /><br /> **Importante:** si consiglia invece di **flag** utilizzare le singole colonne booleane (elencate di seguito a partire da **HasBulkLoggedData** e terminando con  **IsCopyOnly**).|  
-|**BindingID**|**uniqueidentifier**|ID di associazione per il database. Corrisponde a **sys.database_recovery_status***database_guid**. In caso di ripristino di un database viene assegnato un nuovo valore. Vedere anche **FamilyGUID** (sotto).|  
+|**BindingID**|**uniqueidentifier**|ID di associazione per il database. Corrisponde a **sys.database_recovery_status****database_guid**. In caso di ripristino di un database viene assegnato un nuovo valore. Vedere anche **FamilyGUID** (sotto).|  
 |**RecoveryForkID**|**uniqueidentifier**|ID per il fork di recupero finale. Questa colonna corrisponde a **last_recovery_fork_guid** nel [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) tabella.<br /><br /> Per i backup di dati, **RecoveryForkID** è uguale a **FirstRecoveryForkID**.|  
-|**Confronto**|**nvarchar (128)**|Regole di confronto utilizzate dal database.|  
+|**Confronto**|**nvarchar(128)**|Regole di confronto utilizzate dal database.|  
 |**FamilyGUID**|**uniqueidentifier**|ID del database originale al momento della creazione. Il valore non cambia quando il database viene ripristinato.|  
 |**HasBulkLoggedData**|**bit**|**1** = backup del log contenente operazioni bulk registrate.|  
 |**IsSnapshot**|**bit**|**1** = backup snapshot.|  
@@ -158,13 +158,13 @@ FROM <backup_device>
 ## <a name="general-remarks"></a>Osservazioni generali  
  In un client è possibile utilizzare l'istruzione RESTORE HEADERONLY per il recupero delle informazioni di intestazione di tutti i backup di un dispositivo di backup specifico. Per ogni backup nel dispositivo di backup il server invia le informazioni di intestazione sotto forma di riga.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Per un'operazione di backup è possibile specificare password per un set di supporti o un set di backup oppure per entrambi. Se è stata impostata una password per un set di supporti o un set di backup, la password o le password corrette devono essere specificate nell'istruzione RESTORE. Queste password impediscono operazioni di ripristino non autorizzate e non autorizzato aggiunge set di backup ai supporti tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumenti. Tuttavia, la password non impedisce la sovrascrittura dei supporti tramite l'opzione FORMAT dell'istruzione BACKUP.  
   
 > [!IMPORTANT]  
 >  Il livello di protezione garantito da questa password è ridotto. Lo scopo è impedire un ripristino non corretto da parte di utenti autorizzati o non autorizzati mediante gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non impedisce la lettura dei dati di backup eseguita con altri mezzi o la sostituzione della password. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]La procedura consigliata per la protezione dei backup consiste nell'archiviare i nastri di backup in un luogo sicuro oppure eseguire il backup su disco i file protetti da elenchi di controllo di accesso (ACL). Gli elenchi di controllo di accesso devono essere impostati a livello della directory radice in cui vengono creati i backup.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Per ottenere informazioni su un set o dispositivo di backup è necessario disporre dell'autorizzazione CREATE DATABASE. Per altre informazioni, vedere [GRANT - autorizzazioni per database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  

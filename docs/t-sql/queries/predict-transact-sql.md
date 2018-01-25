@@ -18,14 +18,14 @@ dev_langs: TSQL
 helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 5f2ed3582341ff2824943a432e5877602b0b9ee7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="predict-transact-sql"></a>STIMA (Transact-SQL)  
+# <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Genera un valore stimato o punteggi in base a un modello archiviato.  
@@ -73,7 +73,7 @@ Il nome di ogni parametro è specifico per il tipo di modello. Ad esempio, la fu
 
 > [NOTA] Questa opzione non è supportata nella versione precedente di SQL Server 2017 e viene inclusa solo a fini di compatibilità di inoltro.
 
-**CON ( \<result_set_definition >)**
+**WITH ( \<result_set_definition> )**
 
 La clausola WITH viene utilizzata per specificare lo schema dell'output restituito dal `PREDICT` (funzione).
 

@@ -28,15 +28,15 @@ helpviewer_keywords:
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c71b5fd2c6fb873889eafdb4bceafeba7699208d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,13 +84,13 @@ WHERE database_id = DB_ID()
   
  Se si omette la clausola BROKER_INSTANCE, per la route viene utilizzata qualsiasi istanza di Service Broker. Le route impostate per qualsiasi istanza di Service Broker hanno una priorità maggiore di corrispondenza rispetto alle route con un'istanza di Service Broker esplicita quando la conversazione non specifica un'istanza di Service Broker. Per le conversazioni che specificano un'istanza di Service Broker, invece, le route impostate per un'istanza specifica di Service Broker hanno una priorità maggiore rispetto a quelle impostate per qualsiasi istanza.  
   
- DURATA  **=**  *route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  Specifica per quanti secondi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene la route nella tabella di routing. Al termine di questo periodo di tempo, la route scade e non viene più presa in considerazione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la scelta della route per una nuova conversazione. Se questa clausola viene omessa, il *route_lifetime* è NULL e la route non scade mai.  
   
- INDIRIZZO **='***next_hop_address***'**  
+ ADDRESS **='***next_hop_address***'**  
  Specifica l'indirizzo di rete per la route. Il *next_hop_address* specifica un indirizzo TCP/IP nel formato seguente:  
   
- **TCP: / /**{ *dns_name* | *nome_NetBIOS* | *indirizzo_IP* } **:**  *numero_porta*  
+ **TCP: / /**{ *dns_name* | *nome_NetBIOS* | *indirizzo_IP* } **: * * * numero_porta*  
   
  Specificato *numero_porta* deve corrispondere al numero di porta per il [!INCLUDE[ssSB](../../includes/sssb-md.md)] endpoint di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato. Per ottenere tale valore, eseguire la query seguente nel database selezionato:  
   
@@ -108,7 +108,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Quando una route specifica **'TRANSPORT'** per il *next_hop_address*, l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. Una route che specifica **'TRANSPORT'** non è necessario specificare un nome o del gestore di istanza del servizio.  
   
- Valore di MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
+ MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  Specifica l'indirizzo di rete per un database con mirroring con un database con mirroring ospitato nel *next_hop_address*. Il *next_hop_mirror_address* specifica un indirizzo TCP/IP nel formato seguente:  
   
  **TCP: / /**{ *dns_name* | *nome_NetBIOS* | *indirizzo_IP* } **:**  *numero_porta*  
@@ -138,7 +138,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Una route non può essere un oggetto temporaneo. Nomi di route che iniziano con  **#**  sono consentiti, ma sono oggetti permanenti.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Autorizzazione per la creazione di impostazioni predefinite per i membri di una route di **db_ddladmin** o **db_owner** ruoli predefiniti del database e **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
@@ -227,8 +227,8 @@ CREATE ROUTE TransportRoute
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ALTER ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-route-transact-sql.md)   
- [DROP ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-route-transact-sql.md)   
+ [ALTER ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-route-transact-sql.md)   
+ [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

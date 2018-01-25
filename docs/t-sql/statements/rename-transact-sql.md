@@ -1,5 +1,5 @@
 ---
-title: RENAME (Transact-SQL) | Documenti Microsoft
+title: RENAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/20/2017
 ms.prod: 
@@ -15,13 +15,13 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 caps.latest.revision: "15"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee5395145b72108b63256a7e3742eca6a9289e06
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/20/2017
   Rinomina una tabella creata dall'utente in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Rinomina una tabella creata dall'utente o un database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  Per rinominare un database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare la stored procedure [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Per rinominare un database SQL di Azure, utilizzare il [ALTER DATABASE (Database SQL di Azure)](/statements/alter-database-azure-sql-database.md) istruzione. 
+>  Per rinominare un database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare la stored procedure [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Per rinominare un database nel database SQL di Azure, usare l'istruzione [ALTER DATABASE (database SQL di Azure)](/statements/alter-database-azure-sql-database.md). 
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -85,7 +85,7 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 -   DWQueue  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa autorizzazione è necessaria per eseguire questo comando:  
   
 -   **ALTER** autorizzazione per la tabella  

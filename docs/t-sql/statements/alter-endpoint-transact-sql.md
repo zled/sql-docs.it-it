@@ -1,5 +1,5 @@
 ---
-title: ALTER ENDPOINT (Transact-SQL) | Documenti Microsoft
+title: ALTER ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - endpoints [SQL Server], modifying
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a035e71325993e088b9910d6538c8bdd61e03f7e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f33dfa3c49397a5f69a59420b74e3cfdeae25857
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ FOR DATABASE_MIRRORING (
  **AUTORIZZAZIONE** *account di accesso*  
  Il **autorizzazione** opzione non è disponibile in **ALTER ENDPOINT**. La proprietà può essere assegnata solo quando l'endpoint viene creato.  
   
- **PER** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
+ **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  Non è possibile modificare il tipo di payload con **ALTER ENDPOINT**.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -127,7 +127,7 @@ FOR DATABASE_MIRRORING (
 >   
 >  RC4 è un algoritmo relativamente vulnerabile, mentre AES costituisce un algoritmo relativamente avanzato ma notevolmente più lento rispetto a RC4. Se la sicurezza ha una priorità superiore rispetto alla velocità, è consigliabile utilizzare AES.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Utente deve essere un membro del **sysadmin** ruolo predefinito del server, il proprietario dell'endpoint oppure disporre dell'autorizzazione ALTER ANY ENDPOINT.  
   
  Per modificare la proprietà di un endpoint esistente, è necessario utilizzare l'autorizzazione ALTER AUTHORIZATION. Per ulteriori informazioni, vedere [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
@@ -135,7 +135,7 @@ FOR DATABASE_MIRRORING (
  Per altre informazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [DROP ENDPOINT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

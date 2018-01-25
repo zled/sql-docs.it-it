@@ -1,5 +1,5 @@
 ---
-title: CREARE una funzione di aggregazione (Transact-SQL) | Documenti Microsoft
+title: CREATE AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 877e72a18d11fbf31a6ea61f6abed515f5b746f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 07509e36b76aad995297cfae0147df7e8db41c20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  Nome di un tipo CLR definito dall'utente già creato nel database corrente. Se *udt_schema_name* non viene specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si presuppone che il tipo appartenga allo schema dell'utente corrente.  
   
- *nome_assembly* [ **.** *class_name* ]  
+ *nome_assembly* [**. * * * class_name* ]  
  Specifica l'assembly da associare alla funzione di aggregazione definita dall'utente e, facoltativamente, il nome dello schema a cui l'assembly appartiene e il nome della classe nell'assembly che implementa la funzione di aggregazione definita dall'utente. È necessario che l'assembly sia già stato creato nel database tramite un'istruzione CREATE ASSEMBLY. *CLASS_NAME* deve essere un valore valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificatore e corrispondere al nome di una classe esistente nell'assembly. *CLASS_NAME* può essere un nome completo dello spazio dei nomi se il linguaggio di programmazione utilizzato per scrivere la classe utilizza spazi dei nomi, ad esempio c#. Se *class_name* non viene specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si presuppone che sia identico *aggregate_name*.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -91,7 +91,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  La classe dell'assembly a cui fa riferimento *nome_assembly* e i relativi metodi devono soddisfare tutti i requisiti per l'implementazione di una funzione di aggregazione definita dall'utente in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [aggregazioni CLR definite dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione CREATE AGGREGATE e anche dell'autorizzazione REFERENCES per l'assembly specificato nella clausola EXTERNAL NAME.  
   
 ## <a name="examples"></a>Esempi  
@@ -121,6 +121,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ELIMINARE l'aggregazione &#40; Transact-SQL &#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
+ [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   

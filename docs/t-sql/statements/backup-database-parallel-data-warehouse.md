@@ -15,13 +15,13 @@ ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
 caps.latest.revision: "11"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ced03c90d0f30a1e8749d09f00d293bdee53b06e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cc87423b3444daf6d44f590c283b52ce948da193
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>BACKUP DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -103,7 +103,7 @@ BACKUP DATABASE database_name
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede il **BACKUP DATABASE** autorizzazione o l'appartenenza di **db_backupoperator** ruolo predefinito del database. Il database master non può essere sottoposti a backup, ma da un utente regolare che è stato aggiunto per il **db_backupoperator** ruolo predefinito del database. Solo essere eseguito il backup del database master da **sa**, l'amministratore dell'infrastruttura o i membri del **sysadmin** ruolo predefinito del server.  
   
  Richiede un account di Windows che dispone dell'autorizzazione per accedere, creare e scrivere nella directory di backup. È inoltre necessario archiviare il nome dell'account Windows e la password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Per aggiungere le credenziali di rete per [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il [sp_pdw_add_network_credentials &#40; SQL Data Warehouse &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) stored procedure.  
@@ -160,13 +160,13 @@ BACKUP DATABASE database_name
 ## <a name="metadata"></a>Metadati  
  Queste viste a gestione dinamica contengono informazioni su tutti i backup, ripristino e operazioni di caricamento. Le informazioni persiste tra i riavvii del sistema.  
   
--   [Sys.pdw_loader_backup_runs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [Sys.pdw_loader_backup_run_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
--   [Sys.pdw_loader_run_stages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
+-   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
-## <a name="performance"></a>Prestazioni  
+## <a name="performance"></a>restazioni  
  Per eseguire un backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue il primo backup i metadati e quindi si esegue il backup dei dati di database archiviati nei nodi di calcolo parallelo. La directory di backup, i dati vengono copiati direttamente da ogni nodi di calcolo. Per ottenere prestazioni ottimali per lo spostamento dei dati dei nodi di calcolo per la directory di backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] controlla il numero di nodi di calcolo che sono la copia dei dati contemporaneamente.  
   
 ## <a name="locking"></a>Utilizzo di blocchi  

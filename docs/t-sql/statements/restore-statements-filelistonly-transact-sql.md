@@ -23,15 +23,15 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 caps.latest.revision: "83"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54e5a186bc7beaa13cfb1fef8d69cc1fbf34cbf0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Istruzioni - RESTORE FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +88,10 @@ FROM <backup_device>
   
 |Nome colonna|Tipo di dati|Description|  
 |-|-|-|  
-|LogicalName|**nvarchar (128)**|Nome logico del file.|  
-|PhysicalName|**nvarchar (260)**|Nome fisico o del sistema operativo del file.|  
-|Tipo|**Char (1)**|Tipo di file. I tipi possibili sono:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di log<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di dati<br /><br /> **F** = catalogo Full-Text<br /><br /> **S** = FileStream, FileTable o [!INCLUDE[hek_2](../../includes/hek-2-md.md)] contenitore|  
-|FileGroupName|**nvarchar (128)**|Nome del filegroup che contiene il file.|  
+|LogicalName|**nvarchar(128)**|Nome logico del file.|  
+|PhysicalName|**nvarchar(260)**|Nome fisico o del sistema operativo del file.|  
+|Tipo|**char(1)**|Tipo di file. I tipi possibili sono:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di log<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di dati<br /><br /> **F** = catalogo Full-Text<br /><br /> **S** = FileStream, FileTable o [!INCLUDE[hek_2](../../includes/hek-2-md.md)] contenitore|  
+|FileGroupName|**nvarchar(128)**|Nome del filegroup che contiene il file.|  
 |Dimensione|**Numeric(20,0)**|Dimensioni correnti in byte.|  
 |MaxSize|**Numeric(20,0)**|Dimensioni massime consentite in byte.|  
 |FileID|**bigint**|Identificatore del file, univoco all'interno del database.|  
@@ -111,13 +111,13 @@ FROM <backup_device>
 |TDEThumbprint|**varbinary(32)**|Indica l'identificazione digitale della chiave di crittografia del database. L'identificazione digitale del componente di crittografia è un hash SHA-1 del certificato con cui viene crittografata la chiave. Per informazioni sulla crittografia del database, vedere [Transparent Data Encryption &#40; Transparent Data Encryption &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
 |SnapshotURL|**nvarchar(360)**|L'URL per lo snapshot del file di database contenuto nel backup FILE_SNAPSHOT Azure. Restituisce NULL se il backup non FILE_SNAPSHOT.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Per un'operazione di backup è possibile specificare password per un set di supporti o un set di backup oppure per entrambi. Se è stata impostata una password per un set di supporti o un set di backup, la password o le password corrette devono essere specificate nell'istruzione RESTORE. Queste password impediscono operazioni di ripristino non autorizzate e non autorizzato aggiunge set di backup ai supporti tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumenti. Tuttavia, la password non impedisce la sovrascrittura dei supporti tramite l'opzione FORMAT dell'istruzione BACKUP.  
   
 > [!IMPORTANT]  
 >  Il livello di protezione garantito da questa password è ridotto. Lo scopo è impedire un ripristino non corretto da parte di utenti autorizzati o non autorizzati mediante gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non impedisce la lettura dei dati di backup eseguita con altri mezzi o la sostituzione della password. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Per ottenere un livello di protezione adeguato dei backup è consigliabile archiviare i nastri di backup in un luogo sicuro oppure eseguire il backup su file su disco protetti da elenchi di controllo di accesso (ACL) appropriati. Gli elenchi di controllo di accesso devono essere impostati a livello della directory radice in cui vengono creati i backup.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], per ottenere informazioni su un set o dispositivo di backup è necessario disporre dell'autorizzazione CREATE DATABASE. Per altre informazioni, vedere [GRANT - autorizzazioni per database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  

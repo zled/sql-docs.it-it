@@ -1,5 +1,5 @@
 ---
-title: CREARE una tabella esterna (Transact-SQL) | Documenti Microsoft
+title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/27/2017
 ms.prod: sql-non-specified
@@ -24,15 +24,15 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 caps.latest.revision: "30"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab36ee612c3e559bf13db948c128ea6428063ae
-ms.sourcegitcommit: 3cc7ffde800b451923c523fd549e8f4b4994f052
+ms.openlocfilehash: 97381b5381491b98c81a6863b3cfcdc6a340c79e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-table-transact-sql"></a>CREARE una tabella esterna (Transact-SQL)
+# <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Crea una tabella esterna PolyBase che fa riferimento a dati archiviati in un cluster Hadoop o archiviazione blob di Azure. Può anche essere utilizzato per creare una tabella esterna per [query di Database elastico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
@@ -159,18 +159,18 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |real|Single|float|FloatWritable||  
 |money|Decimal|double|DoubleWritable||  
 |smallmoney|Decimal|double|DoubleWritable||  
-|nchar|String<br /><br /> Char]|string|text||  
+|NCHAR|String<br /><br /> Char]|string|text||  
 |nvarchar|String<br /><br /> Char]|string|Text||  
 |char|String<br /><br /> Char]|string|Text||  
 |varchar|String<br /><br /> Char]|string|Text||  
-|binary|Byte[]|binary|BytesWritable|Si applica all'Hive 0,8 e versioni successive.|  
-|varbinary|Byte[]|binary|BytesWritable|Si applica all'Hive 0,8 e versioni successive.|  
-|data|DateTime|timestamp|TimestampWritable||  
-|smalldatetime|DateTime|timestamp|TimestampWritable||  
-|datetime2|DateTime|timestamp|TimestampWritable||  
-|datetime|DateTime|timestamp|TimestampWritable||  
-|time|TimeSpan|timestamp|TimestampWritable||  
-|decimal|Decimal|decimal|BigDecimalWritable|Si applica a Hive0.11 e versioni successive.|  
+|BINARY|Byte[]|BINARY|BytesWritable|Si applica all'Hive 0,8 e versioni successive.|  
+|varbinary|Byte[]|BINARY|BytesWritable|Si applica all'Hive 0,8 e versioni successive.|  
+|data|DateTime|TIMESTAMP|TimestampWritable||  
+|smalldatetime|DateTime|TIMESTAMP|TimestampWritable||  
+|datetime2|DateTime|TIMESTAMP|TimestampWritable||  
+|datetime|DateTime|TIMESTAMP|TimestampWritable||  
+|time|TimeSpan|TIMESTAMP|TimestampWritable||  
+|Decimal|Decimal|Decimal|BigDecimalWritable|Si applica a Hive0.11 e versioni successive.|  
   
  PERCORSO = '*folder_or_filepath*'  
  Specifica la cartella o il percorso del file e il nome di file per i dati effettivi nell'archiviazione blob di Hadoop o Azure. Il percorso inizia dalla cartella radice. la cartella radice è il percorso di dati specificato nell'origine dati esterna.  
@@ -192,7 +192,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  Rifiutare opzioni  
  È possibile specificare i parametri di rifiuto che determinano come gestire PolyBase *dirty* Registra Recupera dall'origine dati esterna. Un record di dati viene considerato "dirty" se è il numero di colonne o i tipi di dati effettivi non corrispondono le definizioni delle colonne della tabella esterna.  
   
- Quando non si specifica o modificare i valori di rifiuto, PolyBase utilizza valori predefiniti. Queste informazioni sui parametri di rifiuto sono archiviate come metadati aggiuntivi quando si crea una tabella esterna con l'istruzione CREATE EXTERNAL TABLE.   Quando un'istruzione SELECT futuri o selezionare INTO SELECT seleziona dati dalla tabella esterna, PolyBase utilizzerà le opzioni di rifiuti per determinare il numero o la percentuale di righe che può essere rifiutata prima che la query effettiva non riesca. . La query restituirà risultati (parziali) fino a quando non viene superata la soglia di rifiuti; quindi, si verifica un errore con il messaggio di errore appropriato.  
+ Quando non si specifica o modificare i valori di rifiuto, PolyBase utilizza valori predefiniti. Queste informazioni sui parametri di rifiuto sono archiviate come metadati aggiuntivi quando si crea una tabella esterna con l'istruzione CREATE EXTERNAL TABLE.   Quando un'istruzione SELECT futuri o selezionare INTO SELECT seleziona dati dalla tabella esterna, PolyBase utilizzerà le opzioni di rifiuti per determinare il numero o la percentuale di righe che può essere rifiutata prima che la query effettiva non riesca. tramite tabelle annidate. La query restituirà risultati (parziali) fino a quando non viene superata la soglia di rifiuti; quindi, si verifica un errore con il messaggio di errore appropriato.  
   
  REJECT_TYPE = **valore** | percentuale  
  Chiarisce se l'opzione REJECT_VALUE è specificata come valore letterale o percentuale.  
@@ -251,7 +251,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  DISTRIBUZIONE  
  Facoltativa. Questo è solo necessario solo per i database di tipo SHARD_MAP_MANAGER. Controlla se una tabella viene considerata come una tabella partizionata o una tabella replicata. Con **SHARDED** (*nome di colonna*) le tabelle, i dati da tabelle diverse non si sovrappongano. **REPLICATI** specifica tabelle dispongano degli stessi dati in ogni partizione. **ROUND_ROBIN** indica che un metodo specifico dell'applicazione viene utilizzato per distribuire i dati.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede le autorizzazioni utente:  
   
 -   **CREATE TABLE**  
@@ -317,7 +317,7 @@ In SQL Data Warehouse, questa limitazione è stata aumentata a 1MB.
 ## <a name="locking"></a>Utilizzo di blocchi  
  Condiviso blocco sull'oggetto SCHEMARESOLUTION.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  I file di dati per una tabella esterna viene archiviato nell'archiviazione blob di Hadoop o Azure. Questi file di dati vengono creati e gestiti dai propri processi. È responsabilità dell'utente per gestire la sicurezza dei dati esterni.  
   
 ## <a name="examples"></a>Esempi  
@@ -563,7 +563,7 @@ FROM ClickStream
  [Esempi di Query di metadati comuni (SQL Server PDW)](http://msdn.microsoft.com/en-us/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
- [CREATE EXTERNAL TABLE AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+ [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
  [CREATE TABLE AS SELECT &#40; Azure SQL Data Warehouse &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
   
   

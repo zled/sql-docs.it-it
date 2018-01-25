@@ -26,13 +26,13 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 caps.latest.revision: "152"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d9f18ee709fde7c9f239b08f553eaf43fad6e9d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ ALTER AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *nome_gruppo*  
+ *group_name*  
  Specifica il nome del nuovo gruppo di disponibilità. *nome_gruppo* deve essere un valore valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificatore e deve essere univoco in tutti i gruppi di disponibilità nel cluster WSFC.  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {PRIMARIO | SECONDARY_ONLY | SECONDARIO | NONE}  
@@ -249,7 +249,7 @@ ALTER AVAILABILITY GROUP group_name
   
  È necessario creare un join di ogni nuova replica secondaria al gruppo di disponibilità. Per altre informazioni, vedere la descrizione dell'opzione JOIN più avanti in questa sezione.  
   
- \<istanza_server >  
+ \<server_instance>  
  Specifica l'indirizzo dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è l'host per una replica. Il formato dell'indirizzo dipende dal fatto che l'istanza sia l'istanza predefinita o un'istanza denominata e se si tratti di un'istanza autonoma o un'istanza del cluster di failover (FCI). La sintassi è la seguente:  
   
  { '*_sistema*[\\*nome_istanza*]' | '*nome_rete_FCI*[\\*nome_istanza*]' }  
@@ -270,12 +270,12 @@ ALTER AVAILABILITY GROUP group_name
   
  Per informazioni sui prerequisiti per i nodi WSFC e le istanze del server, vedere [prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL ='TCP: / /*indirizzo-sistema*:*porta*'  
+ ENDPOINT_URL ='TCP://*system-address*:*port*'  
  Specifica il percorso URL per il [endpoint del mirroring del database](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospiterà la replica di disponibilità che desidera aggiungere o modificare.  
   
- ENDPOINT_URL è obbligatorio nella clausola ADD REPLICA ON e facoltativo nella clausola MODIFY REPLICA ON.  Per altre informazioni, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
+ ENDPOINT_URL è obbligatorio nella clausola ADD REPLICA ON e facoltativo nella clausola MODIFY REPLICA ON.  Per altre informazioni, vedere [Specificare l'URL dell'Endpoint quando si aggiunge o modifica una Replica di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'**TCP**://***indirizzo-sistema***:***porta***'**  
+ **'**TCP**://***system-address***:***port***'**  
  Specifica un URL per definire un URL di endpoint o un URL di routing di sola lettura. I parametri URL sono i seguenti:  
   
  *system-address*  
@@ -330,7 +330,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  Specifica il seeding manuale (impostazione predefinita). Questo metodo è necessario creare un backup del database nella replica primaria e ripristinare manualmente il backup nella replica secondaria.  
   
- BACKUP_PRIORITY**=***n*  
+ BACKUP_PRIORITY **=***n*  
  Specifica la priorità di esecuzione dei backup nella replica rispetto alle altre repliche nello stesso gruppo di disponibilità. Il valore è un numero intero compreso nell'intervallo 0-100. I valori hanno il significato seguente:  
   
 -   1..100 indica che la replica di disponibilità potrebbe essere scelta per l'esecuzione dei backup. 1 indica la priorità più bassa e 100 indica la priorità più alta. Se BACKUP_PRIORITY = 1, la replica di disponibilità verrà scelta per l'esecuzione dei backup solo se non sono attualmente disponibili repliche di disponibilità con priorità più alta.  
@@ -382,7 +382,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  Sono consentite tutte le connessioni ai database nella replica primaria. Questo è il comportamento predefinito.  
   
- READ_ONLY_ROUTING_LIST  **=**  { **('**\<istanza_server >**'** [ **,**... *n* ] **)** | NONE}  
+ READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE }  
  Specifica un elenco delimitato da virgole di istanze del server in cui sono ospitate repliche di disponibilità per questo gruppo di disponibilità che soddisfano i requisiti seguenti quando vengono eseguite nel ruolo secondario:  
   
 -   Sono configurate per consentire tutte le connessioni o connessioni in sola lettura (vedere l'argomento ALLOW_CONNECTIONS dell'opzione SECONDARY_ROLE, sopra).  
@@ -391,7 +391,7 @@ ALTER AVAILABILITY GROUP group_name
   
  I valori di READ_ONLY_ROUTING_LIST sono i seguenti:  
   
- \<istanza_server >  
+ \<server_instance>  
  Specifica l'indirizzo dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che funge da host per una replica di disponibilità che è una replica secondaria leggibile quando è in esecuzione nel ruolo secondario.  
   
  Usare un elenco delimitato da virgole per specificare tutte le istanze del server che potrebbero ospitare una replica secondaria leggibile. Il routing di sola lettura seguirà l'ordine nel quale le istanze del server vengono specificate nell'elenco. Se si include l'istanza del server host di una replica nell'elenco di routing di sola lettura della replica, il posizionamento di questa istanza del server alla fine dell'elenco costituisce in genere buona pratica, poiché le connessioni con finalità di lettura vengono indirizzate a una replica secondaria, se ne è disponibile una.  
@@ -401,7 +401,7 @@ ALTER AVAILABILITY GROUP group_name
  Nessuno  
  Specifica che quando questa replica di disponibilità è la replica primaria, il routing di sola lettura non è supportato. Questo è il comportamento predefinito. In caso di utilizzo con MODIFY REPLICA ON, questo valore disabilita un elenco esistente, se presente.  
   
- SESSION_TIMEOUT  **=**  *secondi*  
+ SESSION_TIMEOUT **=***seconds*  
  Specifica il periodo di timeout della sessione in secondi. Se non si specifica questa opzione, il periodo di timeout predefinito è di 10 secondi. Il valore minimo è 5 secondi.  
   
 > [!IMPORTANT]  
@@ -427,7 +427,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Supportato solo in una replica secondaria non ancora aggiunta al gruppo di disponibilità.  
   
- Per altre informazioni, vedere [Creare un join di una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+ Per altre informazioni, vedere [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
  FAILOVER  
  Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nella replica secondaria a cui si è connessi. La replica in cui si immette un comando di failover di destinazione di failover è noto come il.  La destinazione di failover subentrerà al ruolo primario e recupererà la copia di ogni database per portarli online come nuovi database primari. La replica primaria precedente passa contemporaneamente al ruolo secondario e i relativi database diventano database secondari e vengono immediatamente sospesi. Potenzialmente, questi ruoli possono alternati in successione da una serie di errori.  
@@ -476,7 +476,7 @@ ALTER AVAILABILITY GROUP group_name
  GRUPPO DI DISPONIBILITÀ DI JOIN IN  
  Crea un join tra una *gruppo di disponibilità distribuito*. Quando si crea un gruppo di disponibilità distribuito, il gruppo di disponibilità nel cluster in cui viene creato è il gruppo di disponibilità primaria. Il gruppo di disponibilità che esegue il join del gruppo di disponibilità distribuiti è il gruppo di disponibilità secondaria.  
   
- \<ag_name >  
+ \<ag_name>  
  Specifica il nome del gruppo di disponibilità che costituisce una parte del gruppo di disponibilità distribuito.  
   
  LISTENER **='**TCP**://***indirizzo-sistema***:***porta***'**  
@@ -484,7 +484,7 @@ ALTER AVAILABILITY GROUP group_name
   
  La clausola LISTENER è obbligatoria.  
   
- **'**TCP**://***indirizzo-sistema***:***porta***'**  
+ **'**TCP**://***system-address***:***port***'**  
  Specifica un URL per il listener associato al gruppo di disponibilità. I parametri URL sono i seguenti:  
   
  *system-address*  
@@ -533,7 +533,7 @@ ALTER AVAILABILITY GROUP group_name
  NEGARE CREATE ANY DATABASE  
  Rimuove il possibilità per creare database per conto della replica primaria del gruppo di disponibilità.  
   
- \<add_listener_option >  
+ \<add_listener_option>  
  ADD LISTENER accetta una delle opzioni seguenti:  
   
  CON DHCP [ON { **('***four_part_ipv4_address***','***four_part_ipv4_mask***')** }]  
@@ -542,14 +542,14 @@ ALTER AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  Non è consigliabile utilizzare DHCP negli ambienti di produzione. Se si verifica un periodo di inattività e il lease IP DHCP scade, è necessario del tempo aggiuntivo per registrare il nuovo indirizzo IP della rete DHCP che è associato al nome DNS del listener e influisce sulla connettività client. DHCP può essere tranquillamente usato per la configurazione dell'ambiente di sviluppo e test per verificare le funzioni di base di gruppi di disponibilità e per l'integrazione con le applicazioni.  
   
- Ad esempio  
+ Esempio:  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- CON IP **(** { **('***four_part_ipv4_address***','***four_part_ipv4_mask* **')** | **('***ipv6_address***')** } [ **,** ...  *n*  ] **)** [ **,** Porta  **=**  *listener_port* ]  
+ CON IP **(** { **('***four_part_ipv4_address***','***four_part_ipv4_mask***')** | **('***ipv6_address***')** } [ **,** ...  *n*  ] **)** [ **,** Porta **= * * * listener_port* ]  
  Specifica che, anziché usare DHCP, nel listener del gruppo di disponibilità saranno usati uno o più indirizzi IP statici. Per creare un gruppo di disponibilità tra più subnet, viene richiesto un indirizzo IP statico nella configurazione del listener per ogni subnet. Per una determinata subnet, l'indirizzo IP statico può essere un indirizzo IPv4 o IPv6. Contattare l'amministratore di rete per ottenere un indirizzo IP statico per ogni subnet in cui verrà ospitata una replica di disponibilità per il nuovo gruppo di disponibilità.  
   
- Ad esempio  
+ Esempio:  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
@@ -567,15 +567,15 @@ ALTER AVAILABILITY GROUP group_name
   
  È supportato il numero di porta predefinito, 1433. Tuttavia, per motivi di sicurezza, è consigliabile usare un numero di porta diverso.  
   
- Ad esempio: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
+ Esempio: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
  MODIFY LISTENER **'***dns_name***' (** \<modify_listener_option > **)**  
  Modifica un listener del gruppo di disponibilità esistente. Supportato solo nella replica primaria.  
   
- \<modify_listener_option >  
+ \<modify_listener_option>  
  MODIFY LISTENER accetta una delle opzioni seguenti:  
   
- Aggiungi IP { **('***four_part_ipv4_address***','***four_part_ipv4_mask***')**  |  **('**dns_name*ipv6_address***')** }  
+ ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘**dns_name*ipv6_address***’)** }  
  Aggiunge l'indirizzo IP specificato per il listener del gruppo di disponibilità specificato da *dns_name*.  
   
  PORTA  **=**  *listener_port*  
@@ -599,7 +599,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Per informazioni sulle restrizioni sulle istruzioni AVAILABILITY GROUP Transact-SQL, vedere [Cenni preliminari su istruzioni Transact-SQL per gruppi di disponibilità AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  Richiede l'autorizzazione ALTER ANY DATABASE.   
@@ -623,13 +623,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [CREARE il gruppo di disponibilità &#40; Transact-SQL &#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [DROP AVAILABILITY GROUP &#40; Transact-SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
- [Sys. availability_replicas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
- [availability_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Risolvere i problemi sempre sulla configurazione di gruppi di disponibilità &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [Listener del gruppo di disponibilità, connettività Client e Failover dell'applicazione &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   

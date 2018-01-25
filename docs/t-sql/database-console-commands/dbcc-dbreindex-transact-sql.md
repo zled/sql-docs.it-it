@@ -1,5 +1,5 @@
 ---
-title: DBCC DBREINDEX (Transact-SQL) | Documenti Microsoft
+title: DBCC DBREINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DBCC DBREINDEX statement
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ec9cbe9b5b8d7757c63b5dcca3b9011245ec0fd3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 991c16eea9a651270ca299e72cafbc822465a9b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ricompila uno o più indici per una tabella nel database specificato.
@@ -62,7 +62,7 @@ DBCC DBREINDEX
  *index_name*  
  Nome dell'indice da ricompilare. I nomi degli indici devono essere conformi alle regole per gli identificatori. Se *index_name* è specificato, *table_name* deve essere specificato. Se *index_name* non è specificato o è "", vengono ricompilati tutti gli indici per la tabella.  
   
- *fattore di riempimento*  
+ *fillfactor*  
  Percentuale di spazio su ogni pagina di indice per l'archiviazione di dati quando l'indice viene creato o ricompilato. *fattore di riempimento* sostituisce il fattore di riempimento quando l'indice è stato creato, diventando il nuovo valore predefinito per l'indice e per altri indici non cluster ricompilati perché viene ricompilato un indice cluster.  
  Quando *fillfactor* è 0, DBCC DBREINDEX utilizza il valore del fattore di riempimento specificato per ultimo per l'indice. Questo valore viene archiviato nel **Sys. Indexes** vista del catalogo.   
  Se *fillfactor* è specificato, *table_name* e *index_name* deve essere specificato. Se *fillfactor* non viene specificato, il fattore di riempimento predefinito, 100, viene utilizzato. Per altre informazioni, vedere [Specificare un fattore di riempimento per un indice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
@@ -75,7 +75,7 @@ DBCC DBREINDEX ricompila un indice di tabella o tutti gli indici definiti per un
 
 L'istruzione DBCC DBREINDEX può ricompilare tutti gli indici di una tabella in un'unica istruzione. Ciò risulta più semplice rispetto alla specificazione di più istruzioni DROP INDEX e CREATE INDEX a livello di codice. Poiché l'intera operazione viene eseguita da un'unica istruzione, DBCC DBREINDEX risulta automaticamente un'istruzione atomica. Le singole istruzioni DROP INDEX e CREATE INDEX invece risultano atomiche solo quando vengono inserite in una transazione. L'istruzione DBCC DBREINDEX è inoltre caratterizzata da un maggior numero di ottimizzazioni rispetto alle singole istruzioni DROP INDEX e CREATE INDEX.
 
-A differenza di DBCC INDEXDEFRAG oppure di ALTER INDEX con l'opzione REORGANIZE, l'istruzione DBCC DBREINDEX viene eseguita in modalità offline. In caso di ricostruzione di un indice non cluster, viene mantenuto attivo un blocco condiviso sulla tabella in questione per l'intera durata dell'operazione. Ciò impedisce che vengano apportate modifiche alla tabella. In caso di ricostruzione di un indice cluster, viene mantenuto attivo un blocco esclusivo a livello di tabella. Ciò impedisce qualsiasi tipo di accesso alla tabella e la rende effettivamente offline. Per eseguire la ricompilazione di un indice in modalità online oppure per controllare il grado di parallelismo durante l'operazione di ricompilazione dell'indice, utilizzare l'istruzione ALTER INDEX REBUILD con l'opzione ONLINE..
+A differenza di DBCC INDEXDEFRAG oppure di ALTER INDEX con l'opzione REORGANIZE, l'istruzione DBCC DBREINDEX viene eseguita in modalità offline. In caso di ricostruzione di un indice non cluster, viene mantenuto attivo un blocco condiviso sulla tabella in questione per l'intera durata dell'operazione. Ciò impedisce che vengano apportate modifiche alla tabella. In caso di ricostruzione di un indice cluster, viene mantenuto attivo un blocco esclusivo a livello di tabella. Ciò impedisce qualsiasi tipo di accesso alla tabella e la rende effettivamente offline. Per eseguire la ricompilazione di un indice in modalità online oppure per controllare il grado di parallelismo durante l'operazione di ricompilazione dell'indice, utilizzare l'istruzione ALTER INDEX REBUILD con l'opzione ONLINE.
 
 Per ulteriori informazioni sulla selezione di un metodo per ricompilare o riorganizzare un indice, vedere [riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md) .
   
@@ -92,7 +92,7 @@ A meno che l'opzione NO_INFOMSGS non sia specificata (è necessario specificare 
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Chiamante deve essere proprietario della tabella o essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database, o **db_ddladmin** ruolo predefinito del database.
   
 ## <a name="examples"></a>Esempi  

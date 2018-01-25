@@ -1,5 +1,5 @@
 ---
-title: Operazione DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Documenti Microsoft
+title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: 
@@ -15,15 +15,15 @@ dev_langs: TSQL
 caps.latest.revision: "12"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1429ba18470b0881065bb0a851ff09faecd181c3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: af6b466df18df3df0535a2de8f582f57484255aa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>Operazione DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
+# <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Consente di visualizzare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] piano di esecuzione per una query in esecuzione in uno specifico [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] del nodo di controllo o del nodo di calcolo. Consente di risolvere i problemi relativi alle prestazioni di query durante l'esecuzione di query sui nodi di calcolo e nodo del controllo.
@@ -53,10 +53,10 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
  *pdw_node_id*  
  Identificatore per il nodo che esegue il piano di query. Questo è un numero intero e non può essere NULL. Utilizzato quando un dispositivo di destinazione.  
   
- *SPID*  
+ *spid*  
  Identificatore per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sessione che esegue il piano di query. Questo è un numero intero e non può essere NULL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione CONTROL su [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 È richiesta l'autorizzazione SERVER-dello stato di visualizzazione nel dispositivo.
@@ -100,5 +100,5 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );
 ```  
 
 ## <a name="see-also"></a>Vedere anche
-[DBCC PDW_SHOWPARTITIONSTATS &#40; Transact-SQL &#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40; Transact-SQL &#41;](dbcc-pdw-showspaceused-transact-sql.md)
+[DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
+[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)

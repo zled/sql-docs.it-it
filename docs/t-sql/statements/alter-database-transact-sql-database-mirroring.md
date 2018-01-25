@@ -19,22 +19,22 @@ helpviewer_keywords:
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b08f208ce80eb1e8c79d2e47a06fdd9f1de8a986
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 54396925abb0e8eb2d6006ffdd4048551792d6db
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-transact-sql-database-mirroring"></a>Database ALTER DATABASE (Transact-SQL) del Mirroring 
+# <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) Database Mirroring 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilizzare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] invece.  
   
  Controlla il mirroring del database per un database. I valori specificati per le opzioni di mirroring del database vengono applicati a entrambe le copie del database e alla sessione di mirroring del database nella sua globalità. Un solo \<database_mirroring_option > è consentito per l'istruzione ALTER DATABASE.  
   
@@ -88,7 +88,7 @@ SET { <partner_option> | <witness_option> }
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
 ```  
   
- **\<partner_option >:: =**  
+ **\<partner_option> ::=**  
   
 > [!NOTE]  
 >  Un solo \<partner_option > è consentito per ogni clausola SET PARTNER.  
@@ -96,11 +96,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *partner_server* **'**  
  Specifica l'indirizzo di rete del server di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che fungerà da partner di failover in una nuova sessione di mirroring del database. Ogni sessione deve includere due partner, uno avviato come server principale e l'altro come server mirror. È consigliabile che tali partner si trovino in computer diversi.  
   
- Questa opzione viene specificata una sola volta per sessione in ogni partner. Avviare una sessione di mirroring del database richiede due ALTER DATABASE *database* SET PARTNER **='***partner_server***'** istruzioni . L'ordine con cui vengono specificate è significativo. In primo luogo, connettersi al server mirror e specificare l'istanza del server principale come *partner_server* (SET PARTNER **='***principal_server***'**). In secondo luogo, connettersi al server principale e specificare l'istanza del server mirror come *partner_server* (SET PARTNER **='***mirror_server***'**); verrà avviata una sessione tra i due partner di mirroring del database. Per ulteriori informazioni, vedere [Impostazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ Questa opzione viene specificata una sola volta per sessione in ogni partner. Avviare una sessione di mirroring del database richiede due ALTER DATABASE *database* SET PARTNER **='***partner_server***'** istruzioni. L'ordine con cui vengono specificate è significativo. In primo luogo, connettersi al server mirror e specificare l'istanza del server principale come *partner_server* (SET PARTNER **='***principal_server***'**). In secondo luogo, connettersi al server principale e specificare l'istanza del server mirror come *partner_server* (SET PARTNER **='***mirror_server***'**); verrà avviato un database sessione tra i due partner di mirroring. Per ulteriori informazioni, vedere [Impostazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
  Il valore di *partner_server* è un indirizzo di rete. La sintassi è la seguente:  
   
- TCP**://***\<indirizzo_sistema>***:***\<porta>*  
+ TCP **://***\<indirizzo-sistema >***: * * *\<porta >*  
   
  dove  
   
@@ -194,7 +194,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  Non è possibile impostare le proprietà del database nel server di controllo del mirroring.  
   
- **\<witness_option >:: =**  
+ **\<witness_option> ::=**  
   
 > [!NOTE]  
 >  Un solo \<witness_option > è consentito per ogni clausola SET WITNESS.  
@@ -202,7 +202,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *witness_server* **'**  
  Specifica un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] da utilizzare come server di controllo del mirroring per una sessione di mirroring del database. È possibile specificare istruzioni SET WITNESS solo nel server principale.  
   
- In un SET WITNESS **='***witness_server***'** istruzione, la sintassi di *witness_server* è uguale alla sintassi di  *partner_server*.  
+ In un SET WITNESS **='***witness_server***'** istruzione, la sintassi di *witness_server* è uguale alla sintassi di *partner_server*.  
   
  OFF  
  Rimuove il server di controllo del mirroring da una sessione di mirroring del database. L'impostazione del server di controllo del mirroring su OFF disabilita il failover automatico. Se per il database l'opzione SAFETY è impostata su FULL e il server di controllo del mirroring è impostato su OFF, in caso di errore nel server mirror, il server principale rende il database non disponibile.  
@@ -253,6 +253,6 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
- [database_mirroring_witnesses &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
+ [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
   
   

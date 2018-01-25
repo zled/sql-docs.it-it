@@ -16,12 +16,12 @@ ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
 caps.latest.revision: "20"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 758f303efd228d806db53075f92cc8dd4664d40b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 71737beb817cfeebed195c90d056768aef678a3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE (SQL Azure Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -74,7 +74,7 @@ La dimensione massima consentita per i dati del rowstore nel database. Dati arch
 SERVICE_OBJECTIVE  
 Specifica il livello di prestazioni. Per ulteriori informazioni su obiettivi di servizio per [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], vedere [livelli di prestazioni](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Queste autorizzazioni sono necessarie:  
   
 -   Account di accesso dell'entità di livello server (quello creato dal processo di provisioning), o  

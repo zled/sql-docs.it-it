@@ -1,5 +1,5 @@
 ---
-title: RAGGRUPPAMENTO (Transact-SQL) | Documenti Microsoft
+title: GROUP BY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -35,15 +35,15 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 caps.latest.revision: "80"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 49b572a8ce91287faa4c162efa8de8e7f0113235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---group-by--transact-sql"></a>Selezionare - GROUP - BY Transact-SQL
+# <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Una clausola dell'istruzione SELECT che divide il risultato della query in gruppi di righe, in genere per eseguire una o più aggregazioni su ogni gruppo. L'istruzione SELECT restituisce una riga per ogni gruppo.  
@@ -100,7 +100,7 @@ GROUP BY {
   
 ## <a name="arguments"></a>Argomenti 
  
-### <a name="column-expression"></a>*espressione di colonna*  
+### <a name="column-expression"></a>*column-expression*  
 Specifica una colonna o un calcolo non di aggregazione su una colonna. Questa colonna può appartenere a una tabella, una tabella derivata o una vista. La colonna deve essere presente nella clausola FROM dell'istruzione SELECT, ma non è necessaria visualizzare nell'elenco di selezione. 
 
 Per le espressioni valide, vedere [espressione](~/t-sql/language-elements/expressions-transact-sql.md).    
@@ -176,7 +176,7 @@ L'ordine delle colonne influisce sull'output di ROLLUP e può influire sul numer
 
 Ad esempio, `GROUP BY ROLLUP (col1, col2, col3, col4)` crea gruppi per ogni combinazione di espressioni di colonna negli elenchi seguenti.  
 
-- Col1, col2, col3, col4 
+- col1, col2, col3, col4 
 - Col1, col2, col3, NULL
 - Col1, col2, NULL, NULL
 - Col1, NULL, NULL, NULL
@@ -347,16 +347,16 @@ La clausola GROUP BY supporta tutte le funzionalità GROUP BY incluse nello stan
 |Funzionalità|SQL Server Integration Services|Livello di compatibilità di SQL Server 100 o superiore|Livello di compatibilità di SQL Server 2008 o versioni successive pari a 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Aggregazioni DISTINCT|Non supportate per WITH CUBE o WITH ROLLUP.|Supportate per WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE o ROLLUP.|Comportamento analogo al livello di compatibilità pari a 100.|  
-|Funzione definita dall'utente denominata CUBE o ROLLUP nella clausola GROUP BY|Funzione definita dall'utente **dbo. CUBE (***arg1***,***... argN***)** o  **dbo. rollup (***arg1***,**... *argN***)** in GROUP BY clausola è consentita.<br /><br /> Ad esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Funzione definita dall'utente **dbo. CUBE (***arg1***,**... argN**)** o **dbo. rollup (**arg1**,***... argN***)** in GROUP BY clausola non è consentita.<br /><br /> Ad esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Viene restituito il seguente messaggio di errore: "sintassi non corretta in prossimità del cubo' parola chiave' &#124;' rollup'. "<br /><br /> Per evitare questo problema, sostituire `dbo.cube` con `[dbo].[cube]` oppure `dbo.rollup` con `[dbo].[rollup]`.<br /><br /> Nell'esempio seguente è consentito:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Funzione definita dall'utente **dbo. CUBE (***arg1***,***... argN*) o **dbo. rollup (** *arg1***,***... argN***)** in GROUP BY clausola è consentita<br /><br /> Ad esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|Non supportato|Supportato|Supportato|  
-|CUBE|Non supportato|Supportato|Non supportato|  
-|ROLLUP|Non supportato|Supportato|Non supportato|  
-|Totale complessivo, ad esempio GROUP BY ()|Non supportato|Supportato|Supportato|  
-|GROUPING_ID - funzione|Non supportato|Supportato|Supportato|  
-|GROUPING - funzione|Supportato|Supportato|Supportato|  
-|WITH CUBE|Supportato|Supportato|Supportato|  
-|WITH ROLLUP|Supportato|Supportato|Supportato|  
-|Rimozione di raggruppamenti duplicati relativa a WITH CUBE o WITH ROLLUP|Supportato|Supportato|Supportato| 
+|Funzione definita dall'utente denominata CUBE o ROLLUP nella clausola GROUP BY|Funzione definita dall'utente **dbo. CUBE (***arg1***,***... argN***)** o **dbo. rollup (***arg1***,**... *argN * * *)* * in GROUP BY clausola è consentita.<br /><br /> Esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Funzione definita dall'utente **dbo. CUBE (***arg1***,**... argN**)** o **dbo. rollup (**arg1**,***... argN*** )** in GROUP BY clausola non è consentita.<br /><br /> Esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Viene restituito il seguente messaggio di errore: "sintassi non corretta in prossimità del cubo' parola chiave' &#124;' rollup'. "<br /><br /> Per evitare questo problema, sostituire `dbo.cube` con `[dbo].[cube]` oppure `dbo.rollup` con `[dbo].[rollup]`.<br /><br /> Nell'esempio seguente è consentito:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Funzione definita dall'utente **dbo. CUBE (***arg1***, *... argN*) o **dbo. rollup (***arg1***,***... argN***)**in GROUP BY clausola è consentita<br /><br /> Esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUPING SETS|Non supportato|Supported|Supported|  
+|CUBE|Non supportato|Supported|Non supportato|  
+|ROLLUP|Non supportato|Supported|Non supportato|  
+|Totale complessivo, ad esempio GROUP BY ()|Non supportato|Supported|Supported|  
+|GROUPING_ID - funzione|Non supportato|Supported|Supported|  
+|GROUPING - funzione|Supported|Supported|Supported|  
+|WITH CUBE|Supported|Supported|Supported|  
+|WITH ROLLUP|Supported|Supported|Supported|  
+|Rimozione di raggruppamenti duplicati relativa a WITH CUBE o WITH ROLLUP|Supported|Supported|Supported| 
  
   
 ## <a name="examples"></a>Esempi  
@@ -468,10 +468,10 @@ ORDER BY OrderDateKey;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [GROUPING_ID &#40; Transact-SQL &#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
- [RAGGRUPPAMENTO &#40; Transact-SQL &#41;](~/t-sql/functions/grouping-transact-sql.md)   
+ [GROUPING_ID &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
+ [GROUPING &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
- [Clausola SELECT &#40; Transact-SQL &#41;](~/t-sql/queries/select-clause-transact-sql.md)  
+ [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)  
   
   
 

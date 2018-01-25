@@ -32,13 +32,13 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 caps.latest.revision: "76"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -260,7 +260,7 @@ Crea l'indice specificato nel filegroup predefinito.
   
 In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e deve essere delimitato, ad esempio ON **"**predefinito**"** oppure ON **[**predefinito**]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="GenRemarks"></a>Osservazioni generali  
@@ -300,32 +300,32 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 ##  <a name="LimitRest"></a> Limitazioni e restrizioni  
 
 **Ogni colonna in un indice columnstore deve essere uno dei seguenti tipi di dati di business comuni:** 
--   DateTimeOffset [(  *n*  )]  
+-   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [(  *n*  )]  
--   DATETIME  
+-   datetime  
 -   smalldatetime  
--   Data  
--   tempo [(  *n*  )]  
--   float [(  *n*  )]  
--   reale [(  *n*  )]  
+-   data  
+-   time [ ( *n* ) ]  
+-   float [ ( *n* ) ]  
+-   real [ ( *n* ) ]  
 -   decimale [( *precisione* [ *, scala* ] **)** ]
 -   numerico [( *precisione* [ *, scala* ] **)** ]    
 -   money  
--   SMALLMONEY  
--   BIGINT  
--   INT  
+-   smallmoney  
+-   bigint  
+-   int  
 -   smallint  
--   TINYINT  
+-   tinyint  
 -   bit  
--   nvarchar [(  *n*  )] 
+-   nvarchar [ ( *n* ) ] 
 -   nvarchar (max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e Database SQL di Azure a premium tariffario, solo gli indici columnstore cluster)   
--   nchar [(  *n*  )]  
--   varchar [(  *n*  )]  
+-   nchar [ ( *n* ) ]  
+-   varchar [ ( *n* ) ]  
 -   varchar (max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e Database SQL di Azure a premium tariffario, solo gli indici columnstore cluster)
--   Char [(  *n*  )]  
--   varbinary [(  *n*  )] 
+-   char [ ( *n* ) ]  
+-   varbinary [ ( *n* ) ] 
 -   varbinary (max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e Database SQL di Azure a premium tariffario, solo gli indici columnstore cluster)
--   binario [(  *n*  )]  
+-   binary [ ( *n* ) ]  
 -   uniqueidentifier (si applica a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive)
   
 Se la tabella sottostante contiene una colonna di un tipo di dati che non è supportata per gli indici columnstore, è necessario omettere la colonna dall'indice columnstore non cluster.  

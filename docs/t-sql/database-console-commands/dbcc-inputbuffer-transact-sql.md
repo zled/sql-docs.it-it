@@ -1,5 +1,5 @@
 ---
-title: DBCC INPUTBUFFER (Transact-SQL) | Documenti Microsoft
+title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23ac916dccb2f8d4c6511f9e672aa07834001cad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0d36f0e25c0f5959053e028cdfc95babf69c4e48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ L'istruzione DBCC INPUTBUFFER restituisce un set di righe che include le colonne
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar (30)**|Tipo di evento. Potrebbe trattarsi di **RPC Event** o **evento del linguaggio**. L'output sarà **No Event** quando è non stato rilevato alcun ultimo evento.|  
+|**EventType**|**nvarchar(30)**|Tipo di evento. Potrebbe trattarsi di **RPC Event** o **evento del linguaggio**. L'output sarà **No Event** quando è non stato rilevato alcun ultimo evento.|  
 |**Parametri**|**smallint**|0 = Testo<br /><br /> 1 -  *n*  = parametri|  
 |**EventInfo**|**nvarchar(4000)**|Per un **EventType** di RPC, **EventInfo** contiene solo il nome della routine. Per un **EventType** del linguaggio, vengono visualizzati solo i primi 4000 caratteri dell'evento.|  
   
@@ -92,7 +92,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]
 > A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, utilizzare [Sys.dm exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) per restituire informazioni sulle istruzioni inviate a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede uno dei seguenti:
 -   Utente deve essere un membro del **sysadmin** ruolo predefinito del server.  
 -   L'utente deve disporre di autorizzazione VIEW SERVER STATE.  
@@ -126,6 +126,6 @@ DBCC INPUTBUFFER (52);
 ## <a name="see-also"></a>Vedere anche  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-[Sys.dm exec_input_buffer &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
+[sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   

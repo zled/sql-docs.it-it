@@ -25,17 +25,17 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a06e868a26e0da160e70e7f2923496e73f136ff7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a601a5f93f7a922228232c8ef4a91b5775eded91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-transact-sql-set-hadr"></a>HADR di SET di ALTER DATABASE (Transact-SQL) 
+# <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento contiene la sintassi di ALTER DATABASE per l'impostazione [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] opzioni in un database secondario. Solo una delle opzioni SET HADR è consentita per l'istruzione ALTER DATABASE. Queste opzioni sono supportate solo su repliche secondarie.  
@@ -62,10 +62,10 @@ ALTER DATABASE database_name
  SET HADR  
  Esegue il comando [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] indicato nel database specificato.  
   
- {GRUPPO di disponibilità  **=**  *nome_gruppo* | OFF}  
+ {GRUPPO di disponibilità **= * * * nome_gruppo* | OFF}  
  Crea un join del database di disponibilità o lo rimuove dal gruppo di disponibilità specificato come segue:  
   
- *nome_gruppo*  
+ *group_name*  
  Crea un join del database specificato nella replica secondaria ospitata dall'istanza del server in cui si esegue il comando al gruppo di disponibilità specificato da group_name.  
   
  I prerequisiti per questa operazione sono i seguenti:  
@@ -131,7 +131,7 @@ ALTER DATABASE database_name
 ## <a name="restrictions"></a>Restrizioni  
  Eseguire le istruzioni ALTER DATABASE all'esterno sia delle transazioni che dei batch.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database. Aggiunta di un database a un gruppo di disponibilità richiede l'appartenenza di **db_owner** ruolo predefinito del database.  
@@ -149,7 +149,7 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 ## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [CREARE il gruppo di disponibilità &#40; Transact-SQL &#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Panoramica di gruppi di disponibilità AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [Risolvere i problemi di configurazione di gruppi di disponibilità AlwaysOn &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   

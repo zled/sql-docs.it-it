@@ -16,13 +16,13 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a21ee8a4a525e2b8c522de140a3f482915cdb361
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorizzazioni: GRANT, DENY o REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -81,14 +81,14 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- \<autorizzazione > [ **,**... *n* ]  
+ \<permission>[ **,**...*n* ]  
  Uno o più autorizzazioni da concedere, negare o revocare.  
   
  ON [ \<class_type >::] *entità a protezione diretta* il **ON** clausola è descritto il parametro di entità a protezione diretta in cui si desidera concedere, negare o revocare le autorizzazioni.  
   
- \<class_type > tipo di classe del tipo di entità a protezione diretta. Può trattarsi di **accesso**, **DATABASE**, **oggetto**, **SCHEMA**, **ruolo**, o **utente** . Inoltre è possibile concedere autorizzazioni per il **SERVER***class_type*, ma **SERVER** per tali autorizzazioni non è specificato. **DATABASE** non viene specificato quando l'autorizzazione include la parola **DATABASE** (ad esempio **ALTER ANY DATABASE**). Se non si *class_type* specificato e il tipo di autorizzazione non è limitato alla classe di database o server, viene utilizzata la classe sia **oggetto**.  
+ \<class_type > tipo di classe del tipo di entità a protezione diretta. Può trattarsi di **accesso**, **DATABASE**, **oggetto**, **SCHEMA**, **ruolo**, o **utente** . Inoltre è possibile concedere autorizzazioni per il **SERVER * * * class_type*, ma **SERVER** per tali autorizzazioni non è specificato. **DATABASE** non viene specificato quando l'autorizzazione include la parola **DATABASE** (ad esempio **ALTER ANY DATABASE**). Se non si *class_type* specificato e il tipo di autorizzazione non è limitato alla classe di database o server, viene utilizzata la classe sia **oggetto**.  
   
- *entità a protezione diretta*  
+ *securable*  
  Il nome di account di accesso, database, tabella, vista, schema, procedure, ruolo o utente su cui si desidera concedere, negare o revocare le autorizzazioni. Il nome dell'oggetto può essere specificato con le regole di denominazione in tre parti sono descritti in [convenzioni della sintassi Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  PER *principale* [ **,**... *n* ]  
@@ -109,7 +109,7 @@ REVOKE
 > [!IMPORTANT]  
 >  Se l'entità dispone dell'autorizzazione specificata senza la **GRANT** opzione, l'autorizzazione stessa verrà revocata.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per concedere un'autorizzazione, l'utente che concede deve avere l'autorizzazione stessa con la **WITH GRANT OPTION**, o deve avere un'autorizzazione di livello superiore che include l'autorizzazione viene concessa.  I proprietari degli oggetti possono concedere autorizzazioni per gli oggetti di cui sono proprietari. Le entità con **controllo** autorizzazione sull'entità a protezione diretta possa concedere l'autorizzazione per quella entità.  I membri del **db_owner** e **db_securityadmin** ruoli predefiniti del database possono concedere qualsiasi autorizzazione nel database.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 caps.latest.revision: "154"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 387e808d57395db8978611b311f54df441eabc91
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: db010db48a42113c147751021404ac0dbc29ecaf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Argomenti dell'istruzione RESTORE - istruzioni (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,12 +67,12 @@ ms.lasthandoff: 11/17/2017
   
  Per altre informazioni, vedere [Applicazione dei backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
- { *database_name* | **@***database_name_var*}  
+ { *database_name* | **@ * * * database_name_var*}  
  **Supportato da:**[ripristino  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- Database in cui viene ripristinato il log o il database completo. Se specificato come variabile (**@***database_name_var*), questo nome può essere specificato come costante stringa ( **@**   *database_name_var* = *database*_*nome*) o come una variabile di tipo carattere, ad eccezione di **ntext** o **testo** tipi di dati.  
+ Database in cui viene ripristinato il log o il database completo. Se specificato come variabile (**@***database_name_var*), questo nome può essere specificato come costante stringa (**@***database_name_var*   =  *database*_*nome *) o come una variabile di tipo carattere, ad eccezione di **ntext** o **testo**tipi di dati.  
   
- \<file_or_filegroup_or_page > [ **,**... *n* ]  
+ \<file_or_filegroup_or_page> [ **,**...*n* ]  
  **Supportato da:**[ripristino  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Specifica il nome di un file, una pagina o un filegroup logico da includere in un'istruzione RESTORE DATABASE o RESTORE LOG. È possibile specificare un elenco di file o filegroup.  
@@ -85,10 +85,10 @@ ms.lasthandoff: 11/17/2017
   
 -   Se il backup contiene il filegroup primario e viene eseguito un ripristino parziale. In questo caso, l'applicazione del log non è necessaria perché il log viene ripristinato automaticamente dal set di backup.  
   
-FILE  **=**  { *logical_file_name_in_backup*| **@***logical_file_name_in_backup_var*}  
+FILE  **=**  { *logical_file_name_in_backup*| **@ * * * logical_file_name_in_backup_var*}  
  Specifica il nome di un file da includere nell'operazione di ripristino del database.  
   
-FILEGROUP  **=**  { *nome_filegroup_logico* | **@***logical_filegroup_name_var* }  
+FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
  Specifica il nome di un filegroup da includere nell'operazione di ripristino del database.  
   
  **Nota** FILEGROUP è consentito nel modello di recupero con registrazione minima solo se il filegroup specificato è di sola lettura e si tratta di un ripristino parziale (ovvero se viene utilizzato con parziale). Tutti i filegroup di lettura/scrittura non ripristinati vengono contrassegnati come inattivi e non possono pertanto essere ripristinati nel database risultante  
@@ -96,7 +96,7 @@ FILEGROUP  **=**  { *nome_filegroup_logico* | **@***logical_filegroup_name_var* 
 READ_WRITE_FILEGROUPS  
  Seleziona tutti i filegroup di lettura/scrittura. Questa opzione risulta particolarmente utile quando sono presenti filegroup di sola lettura che si desidera ripristinare dopo i filegroup di lettura/scrittura.  
   
-PAGINA = **'***file***:***pagina* [ **,**... *n* ]**'**  
+PAGINA =  **'***file***: * * * pagina* [ **,**...* n *] **'**  
  Specifica un elenco di una o più pagine per un ripristino della pagina, supportato solo nei database che utilizzano i modelli di recupero con registrazione completa o con registrazione minima delle operazioni bulk. Sono disponibili i valori seguenti:  
   
 PAGE  
@@ -105,7 +105,7 @@ PAGE
  *file*  
  ID del file contenente una pagina specifica da ripristinare.  
   
- *pagina*  
+ *page*  
  ID della pagina da ripristinare nel file.  
   
  *n*  
@@ -131,11 +131,9 @@ DA { \<dispositivo_backup > [ **,**... *n* ]| \<database_snapshot >} In genere, 
   
  \<dispositivo_backup >:: = specifica un dispositivo di backup logico o fisico da utilizzare per l'operazione di backup, come indicato di seguito:  
   
- { *logical_backup_device_name* | **@***logical_backup_device_name_var* }  
- Nome logico, conforme alle regole per gli identificatori, dei dispositivi di backup creati da **sp_addumpdevice** da cui viene ripristinato il database. Se specificato come variabile (**@***logical_backup_device_name_var*), il nome di dispositivo di backup può essere specificato come costante stringa ( **@**  *logical_backup_device_name_var* = *logical_backup_device_name*) o come una variabile di tipo carattere, ad eccezione di **ntext** o **testo** tipi di dati.  
+ { *logical_backup_device_name* | **@ * * * logical_backup_device_name_var* } è il nome logico, conforme alle regole per gli identificatori, dei dispositivi di backup creato da **sp_addumpdevice** da cui viene ripristinato il database. Se specificato come variabile (**@***logical_backup_device_name_var*), il nome di dispositivo di backup può essere specificato come costante stringa (**@ * * * logical_backup_device_name_var*  =   *logical_backup_device_name*) o come una variabile di tipo carattere, ad eccezione di **ntext** o **testo** tipi di dati.  
   
- {DISCO | NASTRO}  **=**  { **'***nome_dispositivo_backup_fisico***'**  |   **@**  *physical_backup_device_name_var* }  
- Consente di ripristinare i backup dal dispositivo disco o nastro specificato. I tipi di dispositivo del disco e nastro devono essere specificati con il nome effettivo (ad esempio, percorso e il nome completo) del dispositivo: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` o `TAPE ='\\\\.\TAPE0'`. Se specificato come variabile (**@***physical_backup_device_name_var*), il nome del dispositivo può essere specificato come costante stringa ( **@**  *physical_backup_device_name_var* = '*physical_backup_device_name*') o come una variabile di tipo carattere, ad eccezione di **ntext**o **testo** tipi di dati.  
+ {DISCO | NASTRO}  **=**  { **'***nome_dispositivo_backup_fisico***'** | **@ * * * physical_backup_device_name_var*  } Consente il backup da ripristinare dal dispositivo disco o nastro denominato. I tipi di dispositivo del disco e nastro devono essere specificati con il nome effettivo (ad esempio, percorso e il nome completo) del dispositivo: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` o `TAPE ='\\\\.\TAPE0'`. Se specificato come variabile (**@***physical_backup_device_name_var*), il nome del dispositivo può essere specificato come costante stringa (**@ * * * physical_backup_device_name_var* = '* physical_backup_device_name *') o come una variabile di tipo carattere, ad eccezione di **ntext** o **testo** tipi di dati.  
   
  Se si utilizza un server di rete avente un nome UNC (che deve contenere il nome del server), specificare un dispositivo disco. Per ulteriori informazioni su come usare i nomi UNC, vedere [dispositivi di Backup &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -155,10 +153,10 @@ DA { \<dispositivo_backup > [ **,**... *n* ]| \<database_snapshot >} In genere, 
 > [!NOTE]  
 >  Per eseguire il ripristino di un backup da un set di supporti con mirroring, è possibile specificare un solo mirror per ogni gruppo di supporti. In presenza di errori, tuttavia, la disponibilità degli altri mirror può consentire una risoluzione rapida di alcuni problemi di ripristino. È possibile sostituire un volume di un supporto danneggiato con il volume corrispondente da un altro mirror. Per i ripristini non in linea, è possibile eseguire il ripristino da un numero minore di dispositivi che di gruppi di supporti, ma ogni gruppo viene elaborato una sola volta.  
   
-\<database_snapshot >:: =  
+\<database_snapshot>::=  
 **Supportato da:**[ripristinare il DATABASE  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
-DATABASE_SNAPSHOT  **=**  *database_snapshot_name*  
+DATABASE_SNAPSHOT **=***database_snapshot_name*  
  Ripristina il database per lo snapshot del database specificato da *database_snapshot_name*. L'opzione DATABASE_SNAPSHOT è disponibile solo per un ripristino di database completo. In un'operazione di ripristino di questo tipo, lo snapshot del database sostituisce un backup completo del database.  
   
  Per eseguire un'operazione di ripristino è necessario che lo snapshot del database specificato sia l'unico esistente per il database. Durante l'operazione, sia lo snapshot del database che il database di destinazione vengono contrassegnati come `In restore`. Per ulteriori informazioni, vedere la sezione "Osservazioni" in [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md).  
@@ -204,7 +202,7 @@ DATABASE_SNAPSHOT  **=**  *database_snapshot_name*
   
  In alcuni casi, l'istruzione RESTORE WITH NORECOVERY esegue il rollforward del set di rollforward fino al punto di renderlo consistente con il database. In questi casi il rollback non viene eseguito e i dati rimangono offline, come previsto con questa opzione. [!INCLUDE[ssDE](../../includes/ssde-md.md)], tuttavia, genera un messaggio informativo indicante che il set di rollforward è pronto per essere recuperato utilizzando l'opzione RECOVERY.  
   
-STANDBY  **=**  *standby_file_name*  
+STANDBY **=***standby_file_name*  
  Specifica il nome del file standby che consente di eseguire il rollback degli effetti del recupero. L'opzione STANDBY è consentita per il ripristino non in linea, inclusi ripristini parziali. Non è invece consentita per il ripristino in linea. Se si tenta di specificare l'opzione STANDBY per un'operazione di ripristino in linea, l'operazione avrà esito negativo. L'opzione STANDBY non è inoltre consentita quando è necessario l'aggiornamento del database.  
   
  Il file standby viene utilizzato per memorizzare una pre-immagine "copy-on-write" per le pagine modificate durante la fase di rollback di un'istruzione RESTORE WITH STANDBY. Il file standby consente di attivare un database per l'accesso in sola lettura tra due operazioni di ripristino del log delle transazioni e può essere utilizzato in server warm standby o in situazioni di recupero speciali in cui risulta utile controllare il database tra operazioni di ripristino del log successive. Dopo il completamento di un'operazione RESTORE WITH STANDBY, il file di rollback viene eliminato automaticamente dalla successiva operazione RESTORE. Se il file standby viene eliminato manualmente prima della successiva operazione RESTORE, sarà necessario ripetere il ripristino dell'intero database. Mentre il database è in stato STANDBY, è consigliabile gestire questo file standby con la stessa cautela utilizzata per qualsiasi altro file del database. A differenza degli altri file di database, questo file viene mantenuto aperto da [!INCLUDE[ssDE](../../includes/ssde-md.md)] solo durante le operazioni di ripristino attive.  
@@ -229,7 +227,7 @@ LOADHISTORY
 ##### <a name="restore-operation-options"></a>Opzioni relative all'operazione di ripristino  
  Queste opzioni influiscono sul comportamento dell'operazione di ripristino.  
   
-SPOSTARE **'***logical_file_name_in_backup***'** a **'***operating_system_file_name* **'** [ ... *n* ]  
+SPOSTARE **'***logical_file_name_in_backup***'** a **'***operating_system_file_name***'** [... *n* ]  
  **Supportato da:**[ripristinare](../../t-sql/statements/restore-statements-transact-sql.md) e [RESTORE VERIFYONLY  ](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Specifica che i dati o log file il cui nome logico è specificato da *logical_file_name_in_backup* deve essere spostato ripristinandolo nel percorso specificato da *operating_system_file_name*. Il nome di file logico di un file di dati o di log in un set di backup corrisponde al relativo nome logico nel database al momento della creazione del set di backup.  
@@ -289,7 +287,7 @@ RESTRICTED_USER
 ##### <a name="backup-set-options"></a>Opzioni relative al set di backup  
  Queste opzioni riguardano il set di backup contenente il backup da ripristinare.  
   
-FILE  **=** { *backup_set_file_number* | **@***backup_set_file_number* }  
+FILE  **=** { *backup_set_file_number* | **@ * * * backup_set_file_number* }  
  **Supportato da:**[ripristinare](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Identifica il set di backup da ripristinare. Il valore *1* per **backup_set_file_number** indica il primo set di backup nel supporto di backup, mentre il valore *2* per **backup_set_file_number** indica il secondo set di backup. È possibile ottenere il valore *backup_set_file_number* di un backup usando l'istruzione [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
@@ -297,9 +295,9 @@ FILE  **=** { *backup_set_file_number* | **@***backup_set_file_number* }
  Quando non viene specificato, il valore predefinito è **1**, ad eccezione di RESTORE HEADERONLY nel qual caso in cui vengono elaborati tutti i set di backup nel set di supporti. Per ulteriori informazioni, vedere "Specifica di un set di backup" di seguito in questo argomento.  
   
 > [!IMPORTANT]  
->  Questa opzione FILE è correlata all'opzione FILE per specificare un file di database, FILE  **=**  { *logical_file_name_in_backup*  |   **@**  *logical_file_name_in_backup_var* }.  
+>  Questa opzione FILE è correlata all'opzione FILE per specificare un file di database, FILE  **=**  { *logical_file_name_in_backup* | **@ * * * logical_file_name_in_backup_var*  }.  
   
- PASSWORD  **=**  { *password* | **@***password_variable* }  
+ PASSWORD  **=**  { *password* | **@ * * * password_variable* }  
  **Supportato da:**[ripristinare](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Specifica la password per il set di backup. La password di un set di backup è una stringa di caratteri.  
@@ -315,7 +313,7 @@ FILE  **=** { *backup_set_file_number* | **@***backup_set_file_number* }
 ##### <a name="media-set-options"></a>Opzioni relative ai set di supporti  
  Queste opzioni vengono applicate all'intero set di supporti.  
   
- MEDIANAME  **=**  { *nome_supporto* | **@***variabile_nome_supporto*}  
+ MEDIANAME  **=**  { *nome_supporto* | **@ * * * variabile_nome_supporto*}  
  **Supportato da:**[ripristinare](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)e [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Specifica il nome del supporto. Se specificato, il nome deve corrispondere al nome del supporto nei volumi di backup. In caso contrario, l'operazione di ripristino viene interrotta. Se non viene specificato alcun nome di supporto nell'istruzione RESTORE, non viene eseguita la ricerca di un nome di supporto corrispondente nei volumi di backup.  
@@ -323,7 +321,7 @@ FILE  **=** { *backup_set_file_number* | **@***backup_set_file_number* }
 > [!IMPORTANT]  
 >  Un utilizzo coerente dei nomi dei supporti nelle operazioni di backup e ripristino rappresenta un ulteriore controllo di sicurezza dei supporti selezionati per l'operazione di ripristino.  
   
- MEDIAPASSWORD  **=**  { *mediapassword* | **@***mediapassword_variable* }  
+ MEDIAPASSWORD  **=**  { *mediapassword* | **@ * * * mediapassword_variable* }  
  **Supportato da:**[ripristinare](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)e [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Specifica la password per il set di supporti. La password di un set di supporti è una stringa di caratteri.  
@@ -336,7 +334,7 @@ FILE  **=** { *backup_set_file_number* | **@***backup_set_file_number* }
 > [!IMPORTANT]  
 >  Il livello di protezione del set di supporti garantito da questa password è ridotto. Per ulteriori informazioni, vedere la sezione "Autorizzazioni" per l'istruzione specifica.  
   
- BLOCKSIZE  **=**  { *blocksize* | **@***blocksize_variable* }  
+ BLOCKSIZE  **=**  { *blocksize* | **@ * * * blocksize_variable* }  
  **Supportato da:**[ripristino  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Specifica le dimensioni fisiche del blocco, in byte. Le dimensioni supportate sono 512, 1024, 2048, 4096, 8192, 16384, 32768 e 65536 (64 KB) byte. Il valore predefinito è 65536 per i dispositivi nastro e 512 negli altri casi. Questa opzione non è in genere necessaria, poiché le dimensioni del blocco appropriate per il dispositivo vengono selezionate automaticamente. L'impostazione esplicita delle dimensioni del blocco ha la priorità sulla selezione automatica.  
@@ -349,14 +347,14 @@ FILE  **=** { *backup_set_file_number* | **@***backup_set_file_number* }
 ##### <a name="data-transfer-options"></a>Opzioni di trasferimento dei dati  
  Queste opzioni consentono di ottimizzare il trasferimento dei dati dal dispositivo di backup.  
   
- BUFFERCOUNT  **=**  { *buffercount* | **@***buffercount_variable* }  
+ BUFFERCOUNT  **=**  { *buffercount* | **@ * * * buffercount_variable* }  
  **Supportato da:**[ripristino  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Specifica il numero totale di buffer di I/O da utilizzare per l'operazione di ripristino. È possibile specificare qualsiasi numero intero positivo. Un numero elevato di buffer può tuttavia causare errori di memoria insufficiente dovuti a spazio degli indirizzi virtuali non adeguato nel processo Sqlservr.exe.  
   
  Lo spazio totale utilizzato dai buffer viene determinato da: *buffercount***\****maxtransfersize*.  
   
- MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@***maxtransfersize_variable* }  
+ MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@ * * * maxtransfersize_variable* }  
  **Supportato da:**[ripristino  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Specifica le dimensioni massime, espresse in byte, per il trasferimento tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il supporto di backup. I valori possibili sono i multipli di 65536 byte (64 KB) fino a 4194304 byte (4 MB).  
@@ -450,7 +448,7 @@ FILE  **=** { *backup_set_file_number* | **@***backup_set_file_number* }
  NOUNLOAD  
  Specifica che dopo l'operazione di ripristino, il nastro rimane caricato sull'unità nastro.  
   
-#### <a name="replicationwithoption"></a>< replication_WITH_option >  
+#### <a name="replicationwithoption"></a><replication_WITH_option>  
  Questa opzione è pertinente solo se è stata eseguita la replica del database al momento della creazione del backup.  
   
  KEEP_REPLICATION  
@@ -462,7 +460,7 @@ Utilizzare KEEP_REPLICATION quando si configura la replica per lavorare con il l
   
 -   È necessario rinominare il server warm standby per utilizzare lo stesso nome del server primario.  
   
-#### <a name="changedatacapturewithoption"></a>< change_data_capture_WITH_option >  
+#### <a name="changedatacapturewithoption"></a><change_data_capture_WITH_option>  
  Questa opzione è pertinente solo se il database è stato abilitato per Change Data Capture al momento della creazione del backup.  
   
  KEEP_CDC  
@@ -474,10 +472,10 @@ Utilizzare KEEP_REPLICATION quando si configura la replica per lavorare con il l
   
  Per informazioni sull'utilizzo di change data capture con il mirroring del database, vedere [Change Data Capture e altre funzionalità di SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options >  
+#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
  Attiva o disattiva il recapito dei messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o imposta un nuovo identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Questa opzione è pertinente solo se [!INCLUDE[ssSB](../../includes/sssb-md.md)] è stato abilitato (attivato) per il database al momento della creazione del backup.  
   
- {ENABLE_BROKER | ERROR_BROKER_CONVERSATIONS | NEW_BROKER}  
+ { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
  **Supportato da:**[ripristinare il DATABASE  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  ENABLE_BROKER  
@@ -489,7 +487,7 @@ Utilizzare KEEP_REPLICATION quando si configura la replica per lavorare con il l
  NEW_BROKER  
  Specifica che al database deve essere assegnato un nuovo identificatore di Service Broker. Poiché il database viene considerato una nuova istanza di Service Broker, tutte le conversazioni esistenti nel database vengono rimosse immediatamente senza generare messaggi di fine dialogo. Tutte le route che fanno riferimento all'identificatore di Service Broker precedente devono essere ricreate con il nuovo identificatore.  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options >  
+#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
  **Supportato da:**[RESTORE {DATABASE | LOG}](../../t-sql/statements/restore-statements-transact-sql.md) e solo per i modelli di recupero con registrazione completa o con registrazione bulk.  
   
  Per ripristinare un database fino a uno specifico punto nel tempo o fino a una specifica transazione, indicare il punto di recupero di destinazione in una clausola STOPAT, STOPATMARK o STOPBEFOREMARK. Un'ora o una transazione specifica viene sempre ripristinata da un backup del log. In ogni istruzione RESTORE LOG della sequenza di ripristino, è necessario specificare l'ora o la transazione di destinazione in una clausola STOPAT, STOPATMARK o STOPBEFOREMARK identica.  
@@ -501,8 +499,8 @@ Utilizzare KEEP_REPLICATION quando si configura la replica per lavorare con il l
   
  { STOPAT | STOPATMARK | STOPBEFOREMARK }   
  
- STOPAT  **=**  { **'***datetime***'**  |   **@**  *datetime_var* }  
- Specifica che per lo stato corrispondenza della data e ora specificate da ripristinare il database di *datetime* o  **@**  *datetime_var* parametro. Per informazioni su come specificare una data e ora, vedere [data e ora i tipi di dati e funzioni &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ STOPAT  **=**  { **'***datetime***'** | **@ * * * datetime_var* }  
+ Specifica che per lo stato corrispondenza della data e ora specificate da ripristinare il database di *datetime* o **@ * * * datetime_var* parametro. Per informazioni su come specificare una data e ora, vedere [data e ora i tipi di dati e funzioni &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  Se viene utilizzata una variabile per STOPAT, la variabile deve essere **varchar**, **char**, **smalldatetime**, o **datetime** tipo di dati. Al database vengono applicati solo i record del log delle transazioni scritti prima della data e ora specificate.  
   
@@ -511,7 +509,7 @@ Utilizzare KEEP_REPLICATION quando si configura la replica per lavorare con il l
   
  Per altre informazioni, vedere [Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
- STOPATMARK  **=**  { **'***nome_contrassegno***'** | **'**lsn: *numero_lsn***'** } [AFTER **'***datetime***'** ]  
+ STOPATMARK  **=**  { **'***nome_contrassegno***'** | **'**lsn:*numero_lsn * * * '**} [AFTER **'***datetime***'** ]  
  Specifica il recupero fino a un punto di recupero specificato. La transazione specificata viene inclusa nel recupero. Il commit della transazione viene eseguito solo se è stato eseguito al momento della generazione effettiva della transazione.  
   
  Supporto di RESTORE DATABASE e RESTORE LOG il *numero_lsn* parametro. che specifica un numero di sequenza del file di log (LSN).  
@@ -525,7 +523,7 @@ Utilizzare KEEP_REPLICATION quando si configura la replica per lavorare con il l
   
  Per ulteriori informazioni, vedere [usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40; Modello di recupero con registrazione completa &#41; ](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) e [recupero fino a un numero di sequenza del Log &#40; SQL Server &#41; ](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md).  
   
- STOPBEFOREMARK  **=**  { **'***nome_contrassegno***'** | **'**lsn: *numero_lsn***'** } [AFTER **'***datetime***'** ]  
+ STOPBEFOREMARK  **=**  { **'***nome_contrassegno***'** | **'**lsn:*numero_lsn * * * '**} [AFTER **'***datetime***'** ]  
  Specifica il recupero fino a un punto di recupero specificato. La transazione specificata non viene inclusa nel recupero. Il rollback della transazione viene eseguito quando si utilizza WITH RECOVERY.  
   
  Supporto di RESTORE DATABASE e RESTORE LOG il *numero_lsn* parametro. che specifica un numero di sequenza del file di log (LSN).  
@@ -564,7 +562,7 @@ Utilizzare KEEP_REPLICATION quando si configura la replica per lavorare con il l
   
  L'opzione per specificare il set di backup da ripristinare è:  
   
- FILE  **=** { *backup_set_file_number* | **@***backup_set_file_number* }  
+ FILE  **=** { *backup_set_file_number* | **@ * * * backup_set_file_number* }  
   
  Dove *backup_set_file_number* indica la posizione del backup nel set di supporti. Oggetto *backup_set_file_number* 1 (FILE = 1) indica il primo set di backup nel supporto di backup e un *backup_set_file_number* di 2 (FILE = 2) indica il secondo set di backup e così via.  
   
@@ -578,7 +576,7 @@ Utilizzare KEEP_REPLICATION quando si configura la replica per lavorare con il l
 |RESTORE VERIFYONLY|Il valore predefinito *backup_set_file_number* è 1.|  
   
 > [!NOTE]  
->  L'opzione FILE per la specifica di un set di backup è correlata all'opzione FILE per specificare un file di database, FILE  **=**  { *logical_file_name_in_backup*  |   **@**  *logical_file_name_in_backup_var* }.  
+>  L'opzione FILE per la specifica di un set di backup è correlata all'opzione FILE per specificare un file di database, FILE  **=**  { *logical_file_name_in_backup* | **@ * * * logical_ file_name_in_backup_var* }.  
   
 ## <a name="summary-of-support-for-with-options"></a>Riepilogo del supporto delle opzioni WITH  
  Le opzioni WITH seguenti sono supportati da solo l'istruzione RESTORE: BLOCKSIZE, BUFFERCOUNT, MAXTRANSFERSIZE, PARTIAL, KEEP_REPLICATION, {RECOVERY | NORECOVERY | Modalità STANDBY}, REPLACE, RESTART, RESTRICTED_USER e {STOPAT | STOPATMARK | STOPBEFOREMARK}  
@@ -590,8 +588,8 @@ Utilizzare KEEP_REPLICATION quando si configura la replica per lavorare con il l
   
 |Opzione WITH|RESTORE|RESTORE FILELISTONLY|RESTORE HEADERONLY|RESTORE LABELONLY|RESTORE REWINDONLY|RESTORE VERIFYONLY|  
 |-----------------|-------------|--------------------------|------------------------|-----------------------|------------------------|------------------------|  
-|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM}|√|√|√|√|—|√|  
-|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR}|√|√|√|√|—|√|  
+|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|—|√|  
+|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|—|√|  
 |FILE<sup>1</sup>|√|√|√|—|—|√|  
 |LOADHISTORY|—|—|—|—|—|√|  
 |MEDIANAME|√|√|√|√|—|√|  
@@ -600,11 +598,11 @@ Utilizzare KEEP_REPLICATION quando si configura la replica per lavorare con il l
 |PASSWORD|√|√|√|—|—|√|  
 |{REWIND &#124; OPZIONE NOREWIND}|√|Solo REWIND|Solo REWIND|Solo REWIND|—|√|  
 |STATS|√|—|—|—|—|√|  
-|{UNLOAD &#124; UTILIZZO DI NOUNLOAD}|√|√|√|√|√|√|  
+|{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
- <sup>1</sup> FILE  **=**  *backup_set_file_number*, distinta da {FILE | FILEGROUP}.  
+ <sup>1</sup> FILE **= * * * backup_set_file_number*, distinta da {FILE | FILEGROUP}.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per informazioni sulle autorizzazioni, vedere gli argomenti seguenti:  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

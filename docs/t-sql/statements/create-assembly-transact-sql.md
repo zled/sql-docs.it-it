@@ -1,5 +1,5 @@
 ---
-title: CREAZIONE di ASSEMBLY (Transact-SQL) | Documenti Microsoft
+title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 8/07/2017
 ms.prod: sql-non-specified
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 caps.latest.revision: "94"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4e7587bfb20c110dd28e6b59bba0fde1e937cb6e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,18 +61,18 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *nome_assembly*  
+ *assembly_name*  
  Nome dell'assembly. Il nome deve essere univoco all'interno del database e un valore valido [identificatore](../../relational-databases/databases/database-identifiers.md).  
   
  AUTORIZZAZIONE *owner_name*  
  Viene specificato il nome di un utente o un ruolo come proprietario dell'assembly. *owner_name* deve essere il nome di un ruolo di cui l'utente corrente è un membro oppure l'utente corrente deve disporre dell'autorizzazione IMPERSONATE *owner_name*. Se viene omesso, la proprietà viene assegnata all'utente corrente.  
   
- \<client_assembly_specifier >  
+ \<client_assembly_specifier>  
 Viene specificato il percorso locale o di rete in cui viene posizionato l'assembly caricato e il nome del file di manifesto che corrisponde all'assembly.  \<client_assembly_specifier > può essere espresso come stringa fissa o espressione che restituisce una stringa fissa, con variabili. CREATE ASSEMBLY non supporta il caricamento di assembly in più moduli. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono cercati anche tutti gli assembly dipendenti di questo assembly nello stesso percorso e tali assembly vengono caricati con lo stesso proprietario dell'assembly a livello di radice. Se tali assembly dipendenti non vengono trovati e non sono già caricati nel database corrente, CREATE ASSEMBLY ha esito negativo. Se gli assembly dipendenti sono già caricati nel database corrente, il proprietario degli assembly deve corrispondere al proprietario dell'assembly appena creato.
   
  \<client_assembly_specifier > non è possibile specificare se l'utente connesso viene rappresentato.  
   
- \<assembly_bits >  
+ \<assembly_bits>  
  Elenco dei valori binari che costituiscono l'assembly e i relativi assembly dipendenti. Il primo valore dell'elenco viene considerato l'assembly a livello di radice. I valori corrispondenti agli assembly dipendenti possono essere specificati in qualsiasi ordine. I valori non corrispondenti alle dipendenze dell'assembly radice vengono ignorati.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ Viene specificato il percorso locale o di rete in cui viene posizionato l'assemb
  *varbinary_expression*  
  È un'espressione di tipo **varbinary**.  
   
- PERMISSION_SET { **PROVVISORIA** | EXTERNAL_ACCESS | UNSAFE}  
+ PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
  >  [!IMPORTANT]  
  >  Il `PERMISSION_SET` opzione è interessato dal `clr strict security` opzione, descritto nel messaggio di avviso di apertura. Quando `clr strict security` è abilitata, tutti gli assembly vengono considerati come `UNSAFE`.
  
@@ -149,7 +149,7 @@ Quando si tenta di accedere all'assembly specificato \<client_assembly_specifier
   
  Per ulteriori informazioni, vedere [progettazione assembly](../../relational-databases/clr-integration/assemblies-designing.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CREATE ASSEMBLY.  
   
  Se si specifica PERMISSION_SET = EXTERNAL_ACCESS viene specificato, richiede**EXTERNAL ACCESS ASSEMBLY** autorizzazione nel server. Se si specifica PERMISSION_SET = UNSAFE è specificato, è necessario **UNSAFE ASSEMBLY** autorizzazione nel server.  
@@ -193,13 +193,13 @@ WITH PERMISSION_SET = SAFE;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ALTER ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
- [DROP ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
+ [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
+ [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
- [CREARE una funzione di aggregazione &#40; Transact-SQL &#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
+ [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Scenari di utilizzo ed esempi di Common Language Runtime &#40; Common Language Runtime &#41; Integrazione di](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
   

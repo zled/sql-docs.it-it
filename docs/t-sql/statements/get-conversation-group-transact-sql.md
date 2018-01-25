@@ -26,15 +26,15 @@ helpviewer_keywords:
 - conversations [Service Broker], groups
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66f405811e867b6c9212cd0b650c497f31a75011
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 04035a9ccbe406b9fa50b5003ab109c3f1ff997d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
  *schema_name*  
  Nome dello schema proprietario della coda da cui recuperare il gruppo di messaggi. Se non si *schema_name* viene omesso, viene utilizzato lo schema predefinito per l'utente corrente.  
   
- *nome_coda*  
+ *queue_name*  
  Nome della coda da cui recuperare il gruppo di conversazioni.  
   
  TIMEOUT *timeout*  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
  GET CONVERSATION GROUP non è valida in una funzione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per recuperare un identificatore di un gruppo di conversazioni da una coda, l'utente corrente deve disporre dell'autorizzazione RECEIVE per la coda.  
   
 ## <a name="examples"></a>Esempi  
@@ -142,7 +142,7 @@ FROM AdventureWorks.dbo.ExpenseQueue ;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [MOVE CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
   
   

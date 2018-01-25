@@ -26,15 +26,15 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 caps.latest.revision: "78"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 85822d9351e0f0ce5a8c5a7542fbd7df57d13d74
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ DBCC SHOWCONTIG
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *TABLE_NAME* | *table_id* | *view_name* | *view_id*  
+ *table_name* | *table_id* | *view_name* | *view_id*  
  Tabella o vista di cui controllare le informazioni sulla frammentazione. Se viene omesso, vengono controllate tutte le tabelle e le viste indicizzate nel database corrente. Per ottenere la tabella o visualizzare l'ID, utilizzare il [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) (funzione).  
   
  *index_name* | *index_id*  
@@ -118,7 +118,7 @@ Se si specifica TABLERESULTS, DBCC SHOWCONTIG restituisce le colonne seguenti ol
   
 |Statistiche|Description|  
 |---|---|
-|**nome oggetto**|Nome della tabella o vista elaborata.|  
+|**Nome oggetto**|Nome della tabella o vista elaborata.|  
 |**ObjectId**|ID del nome di oggetto.|  
 |**IndexName**|Nome dell'indice elaborato. NULL per un heap.|  
 |**IndexId**|ID dell'indice. 0 per un heap.|  
@@ -190,7 +190,7 @@ Il **Media Byte disponibili per pagina** e **Media Densità pagina (completa)** 
     > [!NOTE]  
     >  Il **frammentazione analisi Extent** valore sarà elevato se l'indice si estende su più file. Per ridurre questo valore, è necessario ridurre la frammentazione dell'indice.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 L'utente deve proprietario della tabella oppure essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database, o **db_ddladmin** ruolo predefinito del database.
   
 ## <a name="examples"></a>Esempi  

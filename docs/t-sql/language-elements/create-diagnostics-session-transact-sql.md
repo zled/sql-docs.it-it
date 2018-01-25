@@ -1,5 +1,5 @@
 ---
-title: CREARE una sessione di diagnostica (Transact-SQL) | Documenti Microsoft
+title: CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -16,15 +16,15 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bda2e9c6813e53bffeab974e5e01b475cdfebe26
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d869ed18b07f824ffa4cc3fc8b746ded5242ed99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-diagnostics-session-transact-sql"></a>CREARE una sessione di diagnostica (Transact-SQL)
+# <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Le sessioni di diagnostica consentono di salvare le informazioni di diagnostica dettagliate definite dall'utente, sulle prestazioni del sistema o di query.  
@@ -67,7 +67,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *max_item_count_num*  
  Il numero di eventi che deve essere mantenuta in una vista. Ad esempio, se si specifica di 100, 100 eventi più recenti corrispondenti ai criteri di filtro verranno resa persistente per la sessione di diagnostica. Se vengono trovati meno di 100 eventi, la sessione di diagnostica conterrà minore di 100 eventi. *max_item_count_num* deve essere almeno pari a 100 e minore o uguale a 100.000.  
   
- *EVENT_NAME*  
+ *event_name*  
  Definisce gli eventi effettivi per raccogliere i dati della sessione di diagnostica.  *EVENT_NAME* è uno degli eventi elencati in [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) in `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
@@ -98,7 +98,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
   
  Le sessioni di diagnostica continuerà a raccogliere i metadati fino all'eliminazione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede il **ALTER SERVER STATE** autorizzazione.  
   
 ## <a name="locking"></a>Utilizzo di blocchi  

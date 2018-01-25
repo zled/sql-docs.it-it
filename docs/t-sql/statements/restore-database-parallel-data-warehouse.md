@@ -15,13 +15,13 @@ ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cd72d13f4c953f9b15963655d437709bfc71fa7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ba8aa12f38fce6ac00f88f0015008da25a59b88
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RIPRISTINO di DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -90,7 +90,7 @@ RESTORE HEADERONLY
   
  Risultati di RESTORE HEADERONLY vengono creati dopo il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risultati RESTORE HEADERONLY. Il risultato ha più di 50 colonne, che non utilizzate dalla [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Per una descrizione delle colonne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risultati RESTORE HEADERONLY, vedere [RESTORE HEADERONLY &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede il **CREATE ANY DATABASE** autorizzazione.  
   
  Richiede un account di Windows che dispone dell'autorizzazione per accedere e leggere dalla directory di backup. È inoltre necessario archiviare il nome dell'account Windows e la password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  

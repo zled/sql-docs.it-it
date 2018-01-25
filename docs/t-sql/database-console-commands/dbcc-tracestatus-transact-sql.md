@@ -26,15 +26,15 @@ helpviewer_keywords:
 - displaying trace flag status
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c0241e43f4d9516eefb73e65889df8944ccd018
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4f373d7cf31a4dbc53318245b8ba2800ab9e90b8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*Trace #*  
+*trace#*  
 Numero del flag di traccia per cui è visualizzato lo stato. Se *trace #*e -1 non sono specificati, vengono visualizzati tutti i flag di traccia sono abilitati per la sessione.
   
 *n*  
@@ -68,9 +68,9 @@ Nella tabella seguente vengono descritte le informazioni del set di risultati.
   
 |Nome colonna|Description|  
 |---|---|
-|**Flag di traccia**|Nome del flag di traccia|  
+|**TraceFlag**|Nome del flag di traccia|  
 |**Stato**|Indica se il flag di traccia è impostato su ON o OFF, a livello globale o a livello di sessione.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|**Globale**|Indica se il flag di traccia è impostato a livello globale<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**Global**|Indica se il flag di traccia è impostato a livello globale<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**Sessione**|Indica se il file di traccia è impostato per la sessione<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS restituisce una colonna per il numero del flag di traccia e una colonna per lo stato. Indica se il flag di traccia è impostato su ON (1) o OFF (0). L'intestazione di colonna per il numero del flag di traccia è **Global Trace Flag** o **Session Trace Flag**, a seconda che si stia controllando lo stato di globale o di un flag di traccia di sessione.
@@ -78,7 +78,7 @@ DBCC TRACESTATUS restituisce una colonna per il numero del flag di traccia e una
 ## <a name="remarks"></a>Osservazioni  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili due tipi di flag di traccia: di sessione e globali. I flag di traccia di sessione sono attivi per una connessione e sono visibili solo per tale connessione. I flag di traccia globali vengono impostati a livello del server e sono visibili per tutte le connessioni nel server.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo **public** .
   
 ## <a name="examples"></a>Esempi  

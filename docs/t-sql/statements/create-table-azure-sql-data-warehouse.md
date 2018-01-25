@@ -16,13 +16,13 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 caps.latest.revision: "59"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42b3f397fa93b2134594e10476138d5d30e0015f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREARE una tabella (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -109,7 +109,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
    
 ### <a name="ColumnOptions"></a>Opzioni colonne
 
- `COLLATE`*Windows_collation_name*  
+ `COLLATE` *Windows_collation_name*  
  Specifica le regole di confronto per l'espressione. Le regole di confronto deve essere una delle regole di confronto di Windows supportate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco di regole di confronto di Windows supportata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [windows_collation_name (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/).  
   
  `NULL` | `NOT NULL`  
@@ -142,7 +142,7 @@ Archiviare la tabella come indice columnstore cluster. L'indice columnstore clus
 ### <a name="TableDistributionOptions"></a>Opzioni di distribuzione di tabella
 Per comprendere come scegliere il migliore metodo di distribuzione e usare tabelle distribuite, vedere [la distribuzione di tabelle in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
-`DISTRIBUTION = HASH`( *distribution_column_name* )   
+`DISTRIBUTION = HASH` ( *distribution_column_name* )   
 Assegna ogni riga a una distribuzione mediante l'hashing il valore archiviato *distribution_column_name*. L'algoritmo è deterministica, ovvero che l'hashing viene sempre eseguito sullo stesso valore per la stessa distribuzione.  La colonna di distribuzione deve essere definita come NOT NULL, poiché tutte le righe verranno NULL è possibile assegnare la stessa distribuzione.
 
 `DISTRIBUTION = ROUND_ROBIN`   
@@ -274,7 +274,7 @@ Uguale a `datetime`, ad eccezione del fatto che è possibile specificare il nume
  GUID a 16 byte.  
    
 <a name="Permissions"></a>  
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Creazione di una tabella richiede l'autorizzazione di `db_ddladmin` ruolo predefinito del database, o:
  - `CREATE TABLE`autorizzazione per il database
  - `ALTER SCHEMA`autorizzazione per lo schema che conterrà la tabella. 
@@ -447,7 +447,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a>G. Creare una tabella replicata  
+### <a name="Replicated"></a> G. Creare una tabella replicata  
  L'esempio seguente crea una tabella replicata simile agli esempi precedenti. Le tabelle replicate vengono copiate in modo completo per ogni nodo di calcolo. Con questa copia in ogni nodo di calcolo, lo spostamento dei dati verrà ridotte per le query. In questo esempio viene creato con un indice cluster, che offre una migliore compressione dei dati a un heap e non può contenere un numero di righe sufficiente per ottenere buoni risultati con indice COLUMNSTORE cluster.  
   
 ```  
@@ -467,7 +467,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Esempi per le partizioni di tabella
 
-###  <a name="PartitionedTable"></a>H. Creare una tabella partizionata  
+###  <a name="PartitionedTable"></a> H. Creare una tabella partizionata  
  L'esempio seguente crea la tabella stessa, come illustrato nell'esempio A, con l'aggiunta di partizionamento RANGE LEFT nel `id` colonna. Specifica i valori di limite di quattro partizioni, dando luogo a cinque partizioni.  
   
 ```  
@@ -501,7 +501,7 @@ WITH
 -   Partizione 4:30 < = col < 40   
 -   Partizione 5:40 < = col  
   
-### <a name="OnePartition"></a>I. Creare una tabella partizionata con una partizione  
+### <a name="OnePartition"></a> I. Creare una tabella partizionata con una partizione  
  L'esempio seguente crea una tabella partizionata con un'unica partizione. Non specifica alcun valore di limite, dando luogo a una partizione.  
   
 ```  
@@ -517,7 +517,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a>J. Creare una tabella con il partizionamento di data  
+### <a name="DatePartition"></a> J. Creare una tabella con il partizionamento di data  
  L'esempio seguente crea una nuova tabella denominata `myTable`, con il partizionamento in un `date` colonna. Per i valori limite, con date e RANGE RIGHT, inserisce un mese di dati in ogni partizione.  
   
 ```  

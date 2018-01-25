@@ -16,12 +16,12 @@ ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 5ff7287937e2bddd57d4b155c254bcd29bfc0d68
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 2fc213534da32bf529acdb85fd5b0288bf686068
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Procedura dettagliata di analisi scientifica dei dati end-to-end per R e SQL Server
 
@@ -57,7 +57,7 @@ Questa procedura dettagliata è destinata agli sviluppatori di R o SQL. Offre un
 + Tutti gli script SQL e R sono inclusi.
 + Si potrebbe essere necessario modificare le stringhe di script, per l'esecuzione nell'ambiente in uso. È possibile farlo con qualsiasi editor di codice, ad esempio [codice di Visual Studio](https://code.visualstudio.com/Download).
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
 + È necessario avere accesso a un'istanza di SQL Server 2016, o una versione di valutazione di SQL Server 2017.
 + [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] deve essere installato in almeno un'istanza del computer SQL Server.

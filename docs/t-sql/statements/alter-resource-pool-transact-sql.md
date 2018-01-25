@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 357dab163aca094928f5c417c605dcb699c922b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4edf3d8f20cc3705a6303d55f471dfa74c250f74
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  MIN_CPU_PERCENT =*valore*  
  Specifica la larghezza di banda media garantita della CPU concessa per tutte le richieste nel pool di risorse, in caso di contesa di CPU. *valore* è un intero con valore predefinito è 0. L'intervallo consentito per *valore* è compreso tra 0 e 100.  
   
- MAX_CPU_PERCENT =*valore*  
+ MAX_CPU_PERCENT =*value*  
  Specifica la larghezza di banda media massima della CPU ricevuta da tutte le richieste nel pool di risorse in caso di contesa di CPU. *valore* è un intero con valore predefinito è pari a 100. L'intervallo consentito per *valore* è compreso tra 1 e 100.  
   
  Valore di CAP_CPU_PERCENT =*valore*  
@@ -108,12 +108,12 @@ INNER JOIN sys.dm_os_schedulers AS sc
  MAX_MEMORY_PERCENT =*valore*  
  Specifica la memoria totale del server utilizzabile dalle richieste in questo pool di risorse. *valore* è un intero con valore predefinito è pari a 100. L'intervallo consentito per *valore* è compreso tra 1 e 100.  
   
- MIN_IOPS_PER_VOLUME =*valore*  
+ MIN_IOPS_PER_VOLUME =*value*  
  **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifica il numero minimo di operazioni di I/O al secondo per volume di disco da riservare per il pool di risorse. L'intervallo consentito per *valore* è compreso tra 0 e 2 ^ 31-1 (2.147.483.647). Specificare 0 per indicare che non è impostata alcuna soglia minima per il pool.  
   
- MAX_IOPS_PER_VOLUME =*valore*  
+ MAX_IOPS_PER_VOLUME =*value*  
  **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifica il numero massimo di operazioni di I/O al secondo per volume di disco da riservare per il pool di risorse. L'intervallo consentito per *valore* è compreso tra 0 e 2 ^ 31-1 (2.147.483.647). Specificare 0 per impostare una soglia illimitata per il pool. Il valore predefinito è 0.  
@@ -138,7 +138,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 > [!CAUTION]  
 >  La cancellazione di piani memorizzati nella cache da un pool di risorse che è associata a più di un gruppo di carico di lavoro avranno effetto su tutti i gruppi di carico di lavoro con il pool di risorse definiti dall'utente identificato da *pool_name*.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  

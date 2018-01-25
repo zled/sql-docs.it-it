@@ -25,15 +25,15 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c63c3d62d0104642953545da75b0f7fa1b988eb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (autorizzazioni di Service Broker) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,22 +59,22 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere negata per un'entità a sicurezza diretta di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- CONTRATTO **::***contract_name*  
+ CONTRATTO **:: * * * contract_name*  
  Specifica il contratto per il quale viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- TIPO di messaggio **::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  Specifica il tipo di messaggio per il quale viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- L'associazione al servizio remoto **::***remote_binding_name*  
+ L'associazione al servizio remoto **:: * * * remote_binding_name*  
  Specifica l'associazione al servizio remoto per la quale viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  ROUTE **::***route_name*  
  Specifica la route per la quale viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- SERVIZIO **::***message_type_name*  
+ SERVICE **::***message_type_name*  
  Specifica il servizio per il quale viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  *database_principal*  
@@ -159,7 +159,7 @@ CASCADE
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il contratto, il tipo di messaggio, l'associazione al servizio remoto, la route o il servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Se si utilizza la clausola AS, l'entità specificata deve essere proprietaria dell'entità a protezione diretta per cui vengono negate le autorizzazioni.  
   
 ## <a name="see-also"></a>Vedere anche  

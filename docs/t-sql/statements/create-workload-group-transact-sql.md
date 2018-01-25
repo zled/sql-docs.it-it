@@ -20,15 +20,15 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ CREATE WORKLOAD GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *nome_gruppo*  
+ *group_name*  
  Nome definito dall'utente per il gruppo di carico di lavoro. *nome_gruppo* è un valore alfanumerico, può essere fino a 128 caratteri, deve essere univoco all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e deve essere conforme alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  IMPORTANZA = {BASSO | **MEDIA** | ELEVATA}  
@@ -72,7 +72,7 @@ CREATE WORKLOAD GROUP group_name
   
  IMPORTANCE è locale al pool di risorse. I gruppi di carico di lavoro con diversa importanza e interni allo stesso pool di risorse influiscono l'uno sull'altro, ma non sui gruppi di carico di lavoro in un altro pool di risorse.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*valore*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  Specifica la quantità massima di memoria che una singola richiesta può accettare dal pool. La percentuale è relativa alla dimensioni del pool di risorse specificata da MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ CREATE WORKLOAD GROUP group_name
 >   
 >  In entrambi i casi, è possibile che si verifichi l'errore di timeout 8645 se il server non dispone di memoria fisica sufficiente.  
   
- REQUEST_MAX_CPU_TIME_SEC =*valore*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Viene specificato il tempo massimo della CPU, in secondi, utilizzabile da una richiesta. *valore* deve essere 0 o un numero intero positivo. L'impostazione predefinita per *valore* è 0, ovvero un tempo illimitato.  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ CREATE WORKLOAD GROUP group_name
 > [!IMPORTANT]
 > A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e l'utilizzo di [2422 flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor verrà interrotta una richiesta quando viene superato il tempo massimo. 
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*valore*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Specifica il tempo massimo, in secondi, che una query può attendere prima che una concessione di memoria (memoria buffer di lavoro) diventi disponibile.  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ CREATE WORKLOAD GROUP group_name
   
  *valore* deve essere 0 o un numero intero positivo. L'impostazione predefinita per *valore*, 0, utilizza un calcolo interno basato sul costo della query per determinare il tempo massimo.  
   
- MAX_DOP =*valore*  
+ MAX_DOP =*value*  
  Viene specificato il grado massimo di parallelismo (DOP) per le richieste parallele. *valore* deve essere 0 o un numero intero positivo. L'intervallo consentito per *valore* è compreso tra 0 e 64. L'impostazione predefinita per *valore*, 0, utilizza l'impostazione globale. MAX_DOP viene gestito nel modo seguente:  
   
 -   MAX_DOP, inteso come hint per la query, è efficace fintanto che non supera il valore MAX_DOP del gruppo del carico di lavoro. Se l'hint per la query MAXDOP supera il valore configurato con Resource Governor, nel motore di database viene utilizzato il valore MAXDOP di Resource Governor.  
@@ -125,7 +125,7 @@ CREATE WORKLOAD GROUP group_name
   
 -   Dopo la configurazione di DOP, è possibile diminuire solo la richiesta di memoria concessa. La riconfigurazione del gruppo di carico di lavoro non è visibile durante l'attesa nella coda della memoria concessa.  
   
- GROUP_MAX_REQUESTS =*valore*  
+ GROUP_MAX_REQUESTS =*value*  
  Viene specificato il numero massimo di richieste simultanee eseguibili nel gruppo del carico di lavoro. *valore* deve essere 0 o un numero intero positivo. L'impostazione predefinita per *valore*, 0 consente richieste illimitate. Quando viene raggiunto il numero massimo di richieste simultanee, un utente in quel gruppo può effettuare l'accesso, ma viene posizionato in uno stato di attesa fino a quando le richieste simultanee non sono inferiori al valore specificato.  
   
  Utilizzare { *pool_name* | **"default"** }  
