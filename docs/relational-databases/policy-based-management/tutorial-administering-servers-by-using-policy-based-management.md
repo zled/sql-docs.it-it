@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Policy-Based Management, tutorials
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bda7d7ffbd562dc27acad4ee8eb5d427d3f542f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae72070feb083068eb173bd551773727d4a3528f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Esercitazione: Amministrazione di server tramite la gestione basata su criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa esercitazione sull'amministrazione di server tramite criteri della gestione basata su criteri è destinata agli utenti che hanno familiarità con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma che non conoscono i concetti relativi alla gestione basata su criteri.  
@@ -38,7 +38,7 @@ L'esercitazione è suddivisa in due lezioni:
 [Lezione 1: Creazione e applicazione di criteri Disattivata per impostazione predefinita](../../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md)  
 In questa lezione vengono creati i criteri che consentono di specificare la disabilitazione di Posta elettronica database nel server. Viene quindi verificato se il server è conforme ai criteri e viene configurato il server disabilitando Posta elettronica database.  
   
-[Lezione 2: Creazione e applicazione di criteri per gli standard di denominazione](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
+[Lezione 2: Creare e applicare criteri per gli standard di denominazione](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
 Questa lezione consente di creare criteri che definiscono e applicano uno standard di denominazione per le tabelle.  
   
 ## <a name="requirements"></a>Requisiti  

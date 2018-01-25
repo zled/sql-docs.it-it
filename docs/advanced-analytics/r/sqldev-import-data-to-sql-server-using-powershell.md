@@ -18,13 +18,13 @@ ms.assetid: 3c5b5145-fa57-455a-b153-0400fc062dc0
 caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 720ef1ea70566b2b18febef3146aab9755a7ac5c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b526c291fe101210188554b872ace0577670f3fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>Lezione 2: Importare dati in SQL Server tramite PowerShell
 
@@ -56,7 +56,7 @@ Tra i file scaricati, verrà visualizzato uno script di PowerShell che è possib
   
     - Il nome utente e la password di un account nell'istanza. L'account deve disporre delle autorizzazioni necessarie per creare database, creare tabelle e stored procedure e caricare i dati di tabelle. Se non si specifica il nome utente e password, l'identità di Windows viene utilizzata per accedere a SQL Server.
   
-    - Il percorso e il nome del file con i dati di esempio appena scaricato. Ad esempio
+    - Il percorso e il nome del file con i dati di esempio appena scaricato. Esempio:
   
         `C:\tempRSQL\nyctaxi1pct.csv`
   

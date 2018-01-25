@@ -12,12 +12,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aa07f181ef8a17b79bd978ffd58174bf28d870f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: dd64f680a288f144e14104aedc99d4c6eda85934
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="introducing-revoscalepy"></a>Introduzione a revoscalepy
 
@@ -65,7 +65,7 @@ Crei l'oggetto origine dati mediante le funzioni elencate nella tabella seguente
 > [!IMPORTANT]
 > Numero di nomi di funzione è cambiati dalla versione iniziale di Python nella versione CTP 2.0.
 
-**Dati di SQL Server**
+**SQL Server data**
 
 + Utilizzare [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) per definire un'origine dati da una query o una tabella
 + Utilizzare [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserver) per creare un contesto di calcolo di SQL Server
@@ -83,12 +83,12 @@ I seguenti algoritmi di machine learning e funzioni di riepilogo da RevoScaleR s
 
 | Funzione| Description|Note|
 | ------ | ------ |------ |
-|`rx_btrees` | Gli alberi delle decisioni con Boosting di Adatta sfumatura stocastica|`rx_btrees_ex`Nella versione CTP 2.0|
-|`rx_dforest` | Adatta una classificazione e regressione foreste delle decisioni|`rx_dforest_ex`Nella versione CTP 2.0|
-|`rx_dtree` | Alberi di classificazione e regressione appropriati |`rx_dtree_ex`Nella versione CTP 2.0|
-|`rx_lin_mod` | Creare un modello lineare|`rx_lin_mod_ex`Nella versione CTP 2.0|
-|`rx_logit` | Creare un modello di regressione logistica|`rx_logit_ex`Nella versione CTP 2.0|
-|`rx_predict` | Generare stime da un modello con training|`rx_predict_ex`Nella versione CTP 2.0|
+|`rx_btrees` | Gli alberi delle decisioni con Boosting di Adatta sfumatura stocastica|`rx_btrees_ex` in CTP 2.0|
+|`rx_dforest` | Adatta una classificazione e regressione foreste delle decisioni|`rx_dforest_ex` in CTP 2.0|
+|`rx_dtree` | Alberi di classificazione e regressione appropriati |`rx_dtree_ex` in CTP 2.0|
+|`rx_lin_mod` | Creare un modello lineare|`rx_lin_mod_ex` in CTP 2.0|
+|`rx_logit` | Creare un modello di regressione logistica|`rx_logit_ex` in CTP 2.0|
+|`rx_predict` | Generare stime da un modello con training|`rx_predict_ex` in CTP 2.0|
 |`rx_summary` | Generare un riepilogo del modello||
 
 Nuovi algoritmi di machine learning vengono anche forniti dalla versione di Python [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):

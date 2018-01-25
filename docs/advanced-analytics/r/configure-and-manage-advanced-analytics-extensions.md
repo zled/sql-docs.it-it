@@ -14,13 +14,13 @@ ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
 caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 27ecbb2ca677523d6bcb97af8ee9c0c961ae718f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f8a886e48067c80f112e86c9d7ba07da79502691
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Opzioni di configurazione avanzate per i servizi di Machine Learning
 
@@ -97,10 +97,10 @@ Per poter apportare modifiche a questo file è necessario essere amministratore 
 
 La tabella seguente elenca le impostazioni avanzate per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], con i valori consentiti. 
 
-|**Nome impostazione**|**Tipo**|**Descrizione**|
+|**Nome impostazione**|**Tipo**|**Description**|
 |----|----|----|
-|PROCESSO\_PULIZIA\_ON\_USCITA|Valore intero |Questa è un'impostazione esclusivamente interna, non modificare questo valore. </br></br>Specifica se la cartella di lavoro temporanea creata per ogni sessione di runtime esterno deve essere pulita al termine della sessione. L'impostazione è utile per il debug. </br></br>Valori supportati sono **0** (disattivato) o **1** (abilitato). </br></br>Il valore predefinito è 1, i file di log di significato sono rimossi all'uscita.|
-|TRACCIA\_LIVELLO|Valore intero |Consente di configurare il livello di dettaglio di traccia di MSSQLLAUNCHPAD a scopo di debug. Ciò influisce sui file di traccia nel percorso specificato dall'impostazione LOG_DIRECTORY. </br></br>Valori supportati sono: **1** (errore), **2** (prestazioni), **3** (avviso), **4** (informazioni). </br></br>Il valore predefinito è 1, vale a dire solo avvisi di output.|
+|PROCESSO\_PULIZIA\_ON\_USCITA|Integer |Questa è un'impostazione esclusivamente interna, non modificare questo valore. </br></br>Specifica se la cartella di lavoro temporanea creata per ogni sessione di runtime esterno deve essere pulita al termine della sessione. L'impostazione è utile per il debug. </br></br>Valori supportati sono **0** (disattivato) o **1** (abilitato). </br></br>Il valore predefinito è 1, i file di log di significato sono rimossi all'uscita.|
+|TRACCIA\_LIVELLO|Integer |Consente di configurare il livello di dettaglio di traccia di MSSQLLAUNCHPAD a scopo di debug. Ciò influisce sui file di traccia nel percorso specificato dall'impostazione LOG_DIRECTORY. </br></br>Valori supportati sono: **1** (errore), **2** (prestazioni), **3** (avviso), **4** (informazioni). </br></br>Il valore predefinito è 1, vale a dire solo avvisi di output.|
 
 Tutte le impostazioni assumono la forma di coppie chiave-valore e ogni impostazione si trova su una riga diversa. Ad esempio, per modificare il livello di traccia, aggiungere la riga `Default: TRACE_LEVEL=4`.
 

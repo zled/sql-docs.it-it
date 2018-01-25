@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7cc579d5f4c5d84dcec335e69d12334725f60741
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="collations"></a>Regole di confronto
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,6 @@ ms.lasthandoff: 01/02/2018
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 COLLATE { <collation_name> | database_default }  
 <collation_name> :: =   
      { Windows_collation_name } | { SQL_collation_name }  
@@ -87,11 +86,11 @@ COLLATE { <collation_name> | database_default }
   
  COLLATE utilizza *collate_name* per fare riferimento al nome di regole di confronto di SQL Server o le regole di confronto di Windows da applicare per l'espressione, una definizione di colonna o una definizione di database. *collation_name* può essere solo un oggetto specificato *Windows_collation_name* o *SQL_collation_name* e il parametro deve contenere un valore letterale. *collation_name* non può essere rappresentato da una variabile o espressione.  
   
- Le regole di confronto sono identificate in genere da un nome, ad eccezione che nel programma di installazione. Nel programma di installazione viene invece specificata la designazione delle regole di confronto radice (le impostazioni locali delle regole di confronto) per le regole di confronto di Windows, quindi vengono specificate le opzioni di ordinamento che possono rispettare o meno la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati.  
+ Le regole di confronto sono identificate in genere da un nome, ad eccezione che nel programma di installazione. Nel programma di installazione, specificare invece Designazione regole di confronto radice (le impostazioni locali delle regole di confronto) per le regole di confronto di Windows e quindi specificare le opzioni di ordinamento che sono sensibili o senza distinzione tra maiuscole minuscole o degli accenti.  
   
  È possibile eseguire la funzione di sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) per recuperare un elenco di tutti i nomi di regole di confronto valide per le regole di confronto di Windows e le regole di confronto di SQL Server:  
   
-```  
+```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
@@ -104,9 +103,11 @@ FROM fn_helpcollations();
   
 -   Durante il ripristino o collegamento di un database, le regole di confronto predefinite del database e le regole di confronto di qualsiasi **char**, **varchar**, e **testo** colonne o parametri del database deve essere supportato dal sistema operativo.  
   
-     Conversioni di tabella codici sono supportate per **char** e **varchar** tipi di dati, ma non per **testo** tipo di dati. L'eventuale perdita di dati che si verifica durante la conversione tra tabelle codici non viene segnalata.  
+> [!NOTE]
+> Conversioni di tabella codici sono supportate per **char** e **varchar** tipi di dati, ma non per **testo** tipo di dati. L'eventuale perdita di dati che si verifica durante la conversione tra tabelle codici non viene segnalata.  
   
- Se le regole di confronto specificate o le regole di confronto utilizzate dall'oggetto cui viene fatto riferimento utilizza una tabella codici non supportata da Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzato un errore.  
+> [!NOTE]
+> Se le regole di confronto specificate o le regole di confronto utilizzate dall'oggetto cui viene fatto riferimento utilizza una tabella codici non supportata da Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzato un errore.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -132,39 +133,39 @@ COLLATE Traditional_Spanish_ci_ai ASC;
 GO  
 ```  
 
- Di seguito vengono riportati i risultati dalla prima query.  
+Di seguito vengono riportati i risultati dalla prima query.  
   
- ```
- Place 
- ------------- 
- California 
- Chiapas 
- Cinco Rios 
- Colima
- ```  
+```
+Place 
+------------- 
+California 
+Chiapas 
+Cinco Rios 
+Colima
+```  
   
- Di seguito vengono riportati i risultati dalla seconda query.  
-  
- ```
- Place 
- ------------- 
- California 
- Cinco Rios 
- Colima 
- Chiapas
- ```  
+Di seguito vengono riportati i risultati dalla seconda query.  
+ 
+```
+Place 
+------------- 
+California 
+Cinco Rios 
+Colima 
+Chiapas
+```  
   
 ### <a name="b-additional-examples"></a>B. Esempi aggiuntivi  
- Per ulteriori esempi che utilizzano **COLLATE**, vedere [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md) esempio **g. creazione di un database e specificando un nome di regole di confronto e le opzioni**, e [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) esempio **v. modifica delle regole di confronto colonna**.  
+ Per ulteriori esempi che utilizzano **COLLATE**, vedere [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) esempio **g. creazione di un database e specificando un nome di regole di confronto e le opzioni**, e [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md#alter_column) esempio **v. modifica delle regole di confronto colonna**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
- [Precedenza delle regole di confronto &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [Costanti &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [tabella &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)  
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Precedenza delle regole di confronto &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)     
   
   

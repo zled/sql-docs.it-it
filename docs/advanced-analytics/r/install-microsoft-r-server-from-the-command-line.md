@@ -14,13 +14,13 @@ ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
 caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 19ecd44707cd6a94b9a521184b0c588806a63869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 35194b08e43c98985e0ae0d03f1e470fe8370383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Installazione dalla riga di comando di Machine Learning Server (Standalone) o Microsoft R Server (Standalone)
 
@@ -33,7 +33,7 @@ Un **automatica** installazione è necessario specificare il percorso dell'utili
 
 Per un'installazione **non interattiva** , specificare gli stessi argomenti e aggiungere l'opzione **/q** . Nessuna richiesta viene fornita e l'intervento del non è obbligatorio. Tuttavia, il programma di installazione non riesce se vengono omessi gli argomenti richiesti.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 È necessario sapere eseguire un'installazione da riga di comando di SQL Server e acquisire familiarità con i relativi argomenti di scripting.
 
@@ -95,8 +95,8 @@ Al termine dell'installazione, è possibile esaminare il file di configurazione 
 
 Per impostazione predefinita, tutti del programma di installazione dei riepiloghi e i registri per SQL Server e le funzionalità correlate vengono create nelle cartelle seguenti:
 
-+ SQL Server 2017:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
-+ SQL Server 2016:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
++ SQL Server 2017: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016:  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
 Viene creata una sottocartella di separato per ogni funzionalità che è stato installato.
 
