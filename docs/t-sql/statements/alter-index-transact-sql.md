@@ -8,13 +8,15 @@ ms.service:
 ms.component: tsql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs: t-sql
+dev_langs:
+- t-sql
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -46,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -244,7 +246,7 @@ PARTITION
 > [!WARNING]
 >  La creazione e la ricompilazione di indici non allineati per una tabella con oltre 1.000 partizioni sono possibili, ma non supportate. Questo tipo di operazioni può causare riduzioni delle prestazioni e un eccessivo consumo della memoria. Quando il numero di partizioni supera 1.000, si consiglia di utilizzare solo indici allineati.  
   
- *numero_partizione*  
+ *partition_number*  
    
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
@@ -307,7 +309,10 @@ Per gli indici columnstore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 -   Gruppi di righe in cui più di 10% delle righe è stato in modo logico eliminato, SQL Server tenterà di combinare questo gruppo di righe con uno o più gruppi di righe.    Ad esempio, 1 rowgroup viene compresso con 500.000 righe e 21 rowgroup viene compresso con il numero massimo di 1.048.576 righe.  Rowgroup 21 è 60% delle righe eliminate in modo da lasciare 409,830 righe. Ottimizza per la combinazione di questi due gruppi di righe per comprimere un gruppo di righe nuove 909,830 righe con SQL Server.  
   
 RIORGANIZZA MANTENENDO (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], il COMPRESS_ALL_ROW_GROUPS fornisce un modo per forzare il rowgroup OPEN o CLOSED nel columnstore. Con questa opzione, non è necessario ricompilare l'indice columnstore per svuotare i rowgroup delta.  Questo, combinato con le altre remove e merge deframmentazione funzionalità rende non più necessario ricompilare l'indice nella maggior parte dei casi.    
+
+ **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+COMPRESS_ALL_ROW_GROUPS fornisce un modo per forzare il rowgroup OPEN o CLOSED nel columnstore. Con questa opzione, non è necessario ricompilare l'indice columnstore per svuotare i rowgroup delta.  Questo, combinato con le altre remove e merge deframmentazione funzionalità rende non più necessario ricompilare l'indice nella maggior parte dei casi.    
 
 -   ON impone a tutti i rowgroup in columnstore, indipendentemente dalle dimensioni e lo stato (chiusi o aperti).  
   
@@ -481,7 +486,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}
 > [!IMPORTANT]
 >  Sebbene l'opzione MAXDOP sia supportata a livello di sintassi per tutti gli indici XML, per un indice XML primario o spaziale ALTER INDEX utilizza attualmente solo un processore singolo.  
   
- *max_degree_of_parallelism* può essere:  
+ *max_degree_of_parallelism* can be:  
   
  1  
  Disattiva la generazione di piani paralleli.  
@@ -880,9 +885,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Comprimere tutti i rowgroup delta aperto e chiuso nel columnstore  
- Non si applica a: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+ **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile eseguire REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) per comprimere ogni rowgroup delta aperto e chiuso in columnstore come un gruppo di righe compresso. Questo Svuota il deltastore e forza tutte le righe per ottenere compressi nel columnstore. Ciò risulta utile in particolare dopo l'esecuzione di molte operazioni di inserimento poiché queste operazioni archiviano le righe di uno o più deltastore.  
+ Il comando REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) compreses ogni aperti e chiusi delta rowgroup in columnstore come un gruppo di righe compresso. Questo Svuota il deltastore e forza tutte le righe per ottenere compressi nel columnstore. Ciò risulta utile in particolare dopo l'esecuzione di molte operazioni di inserimento poiché queste operazioni archiviano le righe di uno o più deltastore.  
   
  REORGANIZE combina rowgroup per riempire i rowgroup fino a un numero massimo di righe \<= 1,024,576. Pertanto, quando si comprime tutti i rowgroup aperto e chiuso non alla fine si con un numero elevato di rowgroup compressi che hanno solo poche righe in esse contenuti. Si desidera rowgroup come complete possibile in modo da ridurre la dimensione compressa e migliorare le prestazioni delle query.  
   
@@ -1165,9 +1170,9 @@ Per esempi sulla compressione dei dati aggiuntivi, vedere [la compressione dei d
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [CREATE SPATIAL INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [CREATE XML INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
- [DROP INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/drop-index-transact-sql.md)   
+ [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [Disabilitazione di indici e vincoli](../../relational-databases/indexes/disable-indexes-and-constraints.md)   
  [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [Eseguire operazioni sugli indici Online](../../relational-databases/indexes/perform-index-operations-online.md)   

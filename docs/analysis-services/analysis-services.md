@@ -1,6 +1,6 @@
 ---
 title: Analysis Services | Documenti Microsoft
-ms.date: 05/11/2017
+ms.date: 01/26/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 00b88b320118df9649b546b35259ec1c8acdc7cf
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: d4bdda48d7518d0560e3b5dff8d0a7139de700ae
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="what-is-analysis-services"></a>Che cos'è Analysis Services?
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,7 +59,7 @@ Analysis Services è ora disponibile nel cloud come servizio di Azure. Azure Ana
 In generale, la documentazione per Azure Analysis Services è inclusa con la documentazione di Azure. E la documentazione per SQL Server Analysis Services è inclusa con la documentazione di SQL. Tuttavia, almeno per i modelli tabulari, come creare e distribuire i progetti è analogo a indipendentemente dalla piattaforma in uso.  
    
 *  [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)
-*  [Novità di SQL Server Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)   
+*  [Novità di SQL Server Analysis Services](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)   
 *  [Confronto tra soluzioni tabulari e multidimensionali](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
 *  [Modelli tabulari](../analysis-services/tabular-models/tabular-models-ssas.md)  
 *  [Modelli multidimensionali](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
