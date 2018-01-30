@@ -8,10 +8,12 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: SSIS
+keywords:
+- SSIS
 helpviewer_keywords:
 - SSIS
 - DTS [Integration Services]
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - data integration [Integration Services]
 - Data Transformation Services
 ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f1580e8d59c391b5721fc89ea2b58712ec34364
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cc7137128954a11774bfa99b66ac3ca27621b67c
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -43,12 +45,9 @@ ms.lasthandoff: 12/21/2017
 - [![Download da Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![Download da Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Scaricare SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Supporto
- 
-- [Forum MSDN su SSIS - Per porre domande](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-- [Forum MSDN su SSDT e SSMS - Per porre domande](https://social.msdn.microsoft.com/Forums/home?forum=sqltool)
-- [Stack Overflow (tag *ssis*) - Per porre domande](http://stackoverflow.com/questions/tagged/ssis)
-- [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - Discussione generale su SSIS](https://www.reddit.com/r/SQLServer/search?q=ssis&restrict_sr=on)
-- [Opzioni di supporto Microsoft per utenti aziendali](https://support.microsoft.com/gp/support-options-for-business)
-- [Opzioni di contatto Microsoft per utenti aziendali](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
+##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) Risorse
+-   [Informazioni del forum SSIS](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+-   [Informazioni su Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+-   [Seguire il blog del team SSIS](https://blogs.msdn.microsoft.com/ssis/)
+-   [Segnalare problemi e richiedere funzionalità](https://feedback.azure.com/forums/908035-sql-server)
+-   [Scaricare i documenti sul PC](../sql-server/sql-server-help-installation.md)

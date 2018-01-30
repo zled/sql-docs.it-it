@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.registermirroreddb.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e967a036c5dd230c2ea5c84d0a69b98b368a0ec7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d670b9efc8bcbe67bb12758318fb72cf99c2218f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="register-mirrored-database"></a>Registra database con mirroring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa finestra di dialogo per registrare uno o più database con mirroring su una determinata istanza del server aggiungendo il database o i database a Monitoraggio mirroring del database. Quando viene aggiunto un database, Monitoraggio mirroring del database memorizza nella cache le informazioni relative al database, ai suoi partner e alla modalità di connessione a questi ultimi.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Per registrare i database in più istanze del server, dopo aver terminato il controllo dei database desiderati per un'istanza del server, fare clic su **Applica**, quindi selezionare un'altra istanza del server.  
   
- **Connetti**  
+ **Connect**  
  Per specificare nuove credenziali per l'istanza del server, fare clic su **Connetti** e stabilire la connessione usando le nuove credenziali. Durante la connessione a un'istanza del server, Monitoraggio mirroring del database visualizza il messaggio **In attesa di dati**.  
   
  **Database con mirroring**  
@@ -49,12 +51,12 @@ ms.lasthandoff: 11/20/2017
   
  La griglia include le colonne seguenti:  
   
-|Nome colonna|Descrizione|  
+|Nome colonna|Description|  
 |-----------------|-----------------|  
 |**Registra**|Consente di controllare ogni database da registrare. Se un database è attualmente monitorato, la relativa casella di controllo è selezionata e disabilitata.<br /><br /> Nota: per annullare la registrazione di un database, chiudere la finestra di dialogo **Registra database con mirroring** , selezionare il database nell'albero di navigazione e scegliere **Annulla registrazione** dal menu **Azione** .|  
 |**Database**|Nome di un database con mirroring sull'istanza del server selezionata.|  
 |**Ruolo corrente**|Ruolo del mirroring corrente del database, Principale o Mirror, sull'istanza del server selezionata.|  
-|**Partner (Connetti come)**|Nome del partner di failover per il database. **Autenticazione di Windows dell'utente della console** o **Autenticazione di SQL Server di '***\<nome account di accesso>***'** viene visualizzato tra parentesi. Si tratta delle informazioni di autenticazione attualmente utilizzate, se l'istanza è stata aggiunta in precedenza, o che verranno utilizzate se l'istanza non è stata aggiunta al monitoraggio.|  
+|**Partner (Connetti come)**|Nome del partner di failover per il database. **Autenticazione di Windows dell'utente della console** o **Autenticazione di SQL Server di '***\<nome account di accesso>***'** sono le stringhe visualizzate tra parentesi. Si tratta delle informazioni di autenticazione attualmente utilizzate, se l'istanza è stata aggiunta in precedenza, o che verranno utilizzate se l'istanza non è stata aggiunta al monitoraggio.|  
   
  **Quando viene scelto OK visualizza la finestra di dialogo Gestione connessioni a istanze server.**  
  Per impostazione predefinita, Monitoraggio mirroring del database utilizza le credenziali per l'autenticazione di Windows per le istanze del server partner per le quali le credenziali non siano state specificate in precedenza. Abilitare l'opzione per modificare le credenziali per una o più istanze del server al termine della registrazione dei database.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a44aa4fc4389da7e319d272736d0ec67334dc309
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8d7a9a047bb1f60ea5e9c1d91d823af30ca35ff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Procedura guidata Failover del gruppo di disponibilità (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Questo argomento illustra come eseguire un failover manuale pianificato o un failover manuale forzato (failover forzato) su un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Se si esegue il failover su a una replica secondaria con stato SYNCHRONIZED, tramite la procedura guidata viene eseguito un failover manuale pianificato (senza perdita di dati). Se si esegue il failover su una replica secondaria con stato UNSYNCHRONIZED o NOT SYNCHRONIZING, la procedura guidata esegue un failover manuale forzato, noto anche come *failover forzato* (con possibile perdita di dati). In entrambe le forme di failover manuale la replica secondaria a cui si è connessi assume il ruolo primario. Con un failover manuale pianificato attualmente comporta il passaggio della replica primaria precedente al ruolo secondario. Dopo un failover forzato, quando la replica primaria precedente torna online assume il ruolo secondario.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -59,13 +60,13 @@ ms.lasthandoff: 11/20/2017
   
 1.  In Esplora oggetti connettersi all'istanza del server in cui viene ospitata una replica secondaria del gruppo di disponibilità di cui è necessario eseguire il failover ed espandere l'albero di server.  
   
-2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità** .  
+2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità**.  
   
 3.  Per avviare la procedura guidata di failover del gruppo di disponibilità, fare clic con il pulsante destro del mouse sul gruppo di disponibilità di cui eseguire il failover e selezionare **Failover**.  
   
 4.  Le informazioni presentate nella pagina **Introduzione** variano a seconda che una replica secondaria sia idonea per un failover pianificato. Se in questa pagina è indicato "**Eseguire un failover pianificato per il gruppo di disponibilità**", è possibile eseguire failover del gruppo di disponibilità senza perdita di dati.  
   
-5.  Nella pagina **Seleziona nuova replica primaria** è possibile visualizzare lo stato della replica primaria corrente e del quorum WSFC, prima di scegliere la replica secondaria che diventerà la nuova replica primaria (la *destinazione di failover*). Per un failover manuale pianificato assicurarsi di selezionare una replica secondaria il cui valore **Conformità failover** sia "**Senza perdita di dati**". Per un failover forzato, per tutte le possibili destinazioni di failover, questo valore sarà "**Perdita di dati, Avvisi(***#***)**", dove *#* indica il numero di avvisi presenti per una replica secondaria specificata. Per visualizzare gli avvisi per una destinazione del failover specificata, fare clic sul valore "Conformità failover".  
+5.  Nella pagina **Seleziona nuova replica primaria** è possibile visualizzare lo stato della replica primaria corrente e del quorum WSFC, prima di scegliere la replica secondaria che diventerà la nuova replica primaria (la *destinazione di failover*). Per un failover manuale pianificato assicurarsi di selezionare una replica secondaria il cui valore **Conformità failover** sia "**Senza perdita di dati**". Per un failover forzato e per tutte le possibili destinazioni di failover, questo valore sarà "**Perdita di dati, Avvisi(***#***)**", dove *#* indica il numero di avvisi presenti per una replica secondaria specificata. Per visualizzare gli avvisi per una destinazione del failover specificata, fare clic sul valore "Conformità failover".  
   
      Per ulteriori informazioni, vedere [Pagina Seleziona nuova replica primaria](#SelectNewPrimaryReplica)più avanti in questo argomento.  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/20/2017
  **Stato quorum**  
  Per i tipi di cluster WSFC, visualizza lo stato del quorum per la replica di disponibilità, tra i seguenti:  
   
-   |Valore|Descrizione|  
+   |valore|Description|  
    |-----------|-----------------|  
    |**Quorum normale**|Il cluster è stato avvito con un quorum normale.|  
    |**Quorum forzato**|Il cluster è stato avvito con un quorum forzato.|  
@@ -133,17 +134,17 @@ ms.lasthandoff: 11/20/2017
  **Modalità di disponibilità**  
  Visualizza la modalità di disponibilità dell'istanza del server, tra le seguenti:  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Commit sincrono**|Nella modalità commit sincrono, prima di eseguire il commit delle transazioni, una replica primaria con commit sincrono attende l'acknowledgement della finalizzazione del log da parte della replica secondaria con commit sincrono. Nella modalità commit sincrono si può essere sicuri che al termine della sincronizzazione di un determinato database secondario con il database primario, le transazioni di cui è stato eseguito il commit sono completamente protette.|  
 |**Commit asincrono**|Nella modalità commit asincrono, la replica primaria esegue il commit delle transazioni senza attendere l'acknowledgement della finalizzazione del log da parte di una replica con commit asincrono. La modalità commit asincrono riduce la latenza delle transazioni sui database secondari, ma consente un certo ritardo rispetto ai database primari, rendendo possibile la perdita di dati.|  
   
- Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  **Modalità di failover**  
  Visualizza la modalità di failover dell'istanza del server, tra le seguenti:  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Automatic**|Una replica secondaria configurata per il failover automatico supporta inoltre il failover manuale pianificato quando la replica secondaria viene sincronizzata con la replica primaria.|  
 |**Manual**|Sono disponibili due tipi di failover manuale: pianificato (con perdita di dati) e forzato (con possibile perdita di dati). Per una determinata replica secondaria è supportato solo uno di questi tipi, a seconda della modalità di disponibilità e, per la modalità commit sincrono, dello stato di sincronizzazione della replica secondaria. Per determinare quale forma di failover manuale è supportata attualmente da una replica secondaria specificata, vedere la colonna **Conformità failover** di questa griglia.|  
@@ -153,7 +154,7 @@ ms.lasthandoff: 11/20/2017
  **Conformità failover**  
  Visualizza la conformità failover della replica secondaria, tra le seguenti:  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Senza perdita di dati**|Questa replica secondaria attualmente supporta il failover pianificato. Questo valore è presente solo quando una replica secondaria in modalità commit sincrono viene attualmente sincronizzata con la replica primaria.|  
 |**Perdita di dati, Avvisi(** *#* **)**|Questa replica secondaria supporta attualmente il failover forzato (con possibile perdita di dati). Questo valore è presente quando la replica secondaria non viene sincronizzata con la replica primaria. Per informazioni sulla potenziale perdita di dati, fare clic sul collegamento relativo agli avvisi per la perdita di dati.|  
@@ -187,7 +188,7 @@ ms.lasthandoff: 11/20/2017
  **Connesso come**  
  Visualizza l'account connesso all'istanza del server, dopo che è stata stabilita la connessione. Se in questa colonna viene visualizzato "**Non connesso**" per un'istanza del server specificata, sarà necessario fare clic sul pulsante **Connetti** .  
   
- **Connetti**  
+ **Connect**  
  Fare clic su questo pulsante se l'istanza del server viene eseguita con un account diverso rispetto ad altre istanze del server a cui è necessario connettersi.  
   
  **Annulla**  

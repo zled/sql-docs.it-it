@@ -8,21 +8,23 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: spatial indexes [SQL Server]
+helpviewer_keywords:
+- spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d312b518c0dd48cbdf2a536ee02391ba77ba447f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1f78e577a704b4d1dc8bb62e0edf0f6c60c785ee
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="spatial-indexes-overview"></a>Panoramica degli indici spaziali
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta dati e indici spaziali. Un *indice spaziale* è un tipo di indice esteso che consente di indicizzare una colonna spaziale. Una colonna spaziale è una colonna della tabella che contiene dati spaziali, ad esempio **geometry** o **geography**.  
@@ -67,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 >  Le densità della griglia di un indice spaziale sono visibili nelle colonne level_1_grid, level_2_grid, level_3_grid e level_4_grid della vista del catalogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) quando il livello di compatibilità del database è impostato su 100 o su un valore inferiore. Le opzioni dello schema a mosaico **GEOMETRY_AUTO_GRID**/**GEOGRAPHY_AUTO_GRID** non popolano queste colonne. La vista del catalogo sys.spatial_index_tessellations ha valori **NULL** per queste colonne quando si usano le opzioni della griglia automatiche.  
   
 ###  <a name="tessellation"></a> Suddivisione a mosaico  
- Dopo la scomposizione di uno spazio indicizzato in una gerarchia di griglie, l'indice spaziale legge i dati dalla colonna spaziale, riga per riga. Al termine della lettura dei dati per un oggetto spaziale (o istanza), l'indice spaziale esegue un *processo di suddivisione a mosaico* per l'oggetto. Il processo di suddivisione a mosaico adatta l'oggetto alla gerarchia di griglie associandolo a un set di celle della griglia interessate dall'oggetto stesso (*celle interessate*). Partendo dal livello 1 della gerarchia di griglie, la suddivisione a mosaico procede *prima in profondità* attraverso il livello. Potenzialmente, il processo può continuare per tutti i quattro livelli, uno dopo l'altro.  
+ Dopo la scomposizione di uno spazio indicizzato in una gerarchia di griglie, l'indice spaziale legge i dati dalla colonna spaziale, riga per riga. Al termine della lettura dei dati per un oggetto spaziale (o istanza), l'indice spaziale esegue un *processo di suddivisione a mosaico* per l'oggetto. Il processo di suddivisione a mosaico adatta l'oggetto nella gerarchia di griglie associandolo a un set di celle della griglia interessate dall'oggetto stesso (*celle interessate*). Partendo dal livello 1 della gerarchia di griglie, la suddivisione a mosaico procede *prima in profondità* attraverso il livello. Potenzialmente, il processo può continuare per tutti i quattro livelli, uno dopo l'altro.  
   
  L'output del processo a mosaico è un set di celle interessate registrate nell'indice spaziale per l'oggetto. Riferendosi a queste celle registrate, l'indice spaziale può trovare l'oggetto nello spazio in relazione ad altri oggetti nella colonna spaziale che sono archiviati anche nell'indice.  
   
@@ -104,7 +106,7 @@ ms.lasthandoff: 11/17/2017
   
  Ad esempio, nell'illustrazione precedente viene mostrato un ottagono che si inserisce perfettamente nella cella 15 della griglia di livello 1. Nella figura, la cella 15 è stata suddivisa a mosaico, sezionando l'ottagono in nove celle di livello 2. In questa illustrazione si presuppone che il limite di celle per oggetto sia 9 o più. Se tuttavia il limite di celle per oggetto è pari o inferiore a 8, la cella 15 non viene suddivisa e viene conteggiata da sola per l'oggetto.  
   
- Per impostazione predefinita il limite di celle per oggetto è pari a 16, una soluzione intermedia soddisfacente tra spazio e precisione per la maggior parte di indici spaziali. Tuttavia, l'istruzione [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] supporta una clausola CELLS_PER_OBJECT**=***n* che consente di specificare un limite di celle per oggetto compreso tra 1 e 8192 inclusi.  
+ Per impostazione predefinita il limite di celle per oggetto è pari a 16, una soluzione intermedia soddisfacente tra spazio e precisione per la maggior parte di indici spaziali. Tuttavia, l'istruzione [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] supporta una clausola CELLS_PER_OBJECT**=***n* che consente di specificare un valore di celle per oggetto compreso tra 1 a 8192 (inclusi).  
   
 > [!NOTE]  
 >  L'impostazione **cells_per_object** di un indice spaziale è visibile nella vista del catalogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
@@ -187,7 +189,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="geometry"></a> Metodi di geometria supportati da indici spaziali  
  In alcuni casi, gli indici spaziali supportano i metodi geometry orientati ai set seguenti: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() e STWithin(). Per essere supportati da un indice spaziale questi metodi devono essere utilizzati all'interno della clausola WHERE o JOIN ON di una query e devono verificarsi all'interno di un predicato del seguente form generale:  
   
- *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
+ *geometry1*.*nome_metodo*(*geometry2*)*operatore_confronto**numero_valido*  
   
  Per ottenere un risultato non Null, *geometry1* e *geometry2* devono avere lo stesso [identificatore SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md). In caso contrario, il metodo restituisce NULL.  
   
@@ -212,7 +214,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="geography"></a> Metodi di geografia supportati da indici spaziali  
  In alcuni casi, gli indici spaziali supportano i metodi geography orientati ai set seguenti: STIntersects(),STEquals() e STDistance(). Per essere supportati da un indice spaziale questi metodi devono essere utilizzati all'interno della clausola WHERE di una query e devono verificarsi all'interno di un predicato del seguente form generale:  
   
- *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
+ *geography1*.*nome_metodo*(*geography2*)*operatore_confronto**numero_valido*  
   
  Per ottenere un risultato non Null, *geography1* e *geography2* devono avere lo stesso [identificatore SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md). In caso contrario, il metodo restituisce NULL.  
   

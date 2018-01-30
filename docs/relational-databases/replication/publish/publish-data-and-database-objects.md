@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: "83"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7df7cad2ce05a9f18f9950b769e4f3b62aa7c984
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21e6296382acf84d5ca1aa6a7ec84cd1e171c321
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publish-data-and-database-objects"></a>Pubblicazione di dati e oggetti di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si crea una pubblicazione è possibile scegliere le tabelle e gli altri oggetti di database che si vuole pubblicare. Tramite la replica è possibile pubblicare gli oggetti di database elencati di seguito.  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
--   [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md)  
+-   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)  
   
 -   [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
@@ -125,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  Per specificare le opzioni dello schema, vedere [Specificare le opzioni dello schema](../../../relational-databases/replication/publish/specify-schema-options.md) oppure <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
-### <a name="partitioned-tables-and-indexes"></a>Tabelle e indici partizionati  
+### <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes  
  La replica supporta la pubblicazione di tabelle e indici partizionati. Il livello di supporto dipende dal tipo di replica utilizzato, nonché dalle opzioni specificate per la pubblicazione e dagli articoli associati alle tabelle partizionate. Per altre informazioni, vedere [Replicare tabelle e indici partizionati](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
 ## <a name="publishing-stored-procedures"></a>Pubblicazione di stored procedure  
@@ -253,14 +254,14 @@ ms.lasthandoff: 11/17/2017
   
      Per altre informazioni su questi parametri, vedere [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
   
--   La replica transazionale e la replica di tipo merge non filtrata supportano la pubblicazione di una tabella in più pubblicazioni e quindi la sottoscrizione all'interno di una singola tabella del database di sottoscrizione, in base allo scenario comunemente denominato di rollup. Il rollup viene frequentemente utilizzato per aggregare subset di dati da più posizioni all'interno di una tabella in un Sottoscrittore centrale. Le pubblicazioni di tipo merge filtrate non supportano lo scenario con Sottoscrittore centrale. Per la replica di tipo merge, il rollup viene in genere implementato tramite una singola pubblicazione con filtri di riga con parametri. Per altre informazioni, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   La replica transazionale e la replica di tipo merge non filtrata supportano la pubblicazione di una tabella in più pubblicazioni e quindi la sottoscrizione all'interno di una singola tabella del database di sottoscrizione, in base allo scenario comunemente denominato di rollup. Il rollup viene frequentemente utilizzato per aggregare subset di dati da più posizioni all'interno di una tabella in un Sottoscrittore centrale. Le pubblicazioni di tipo merge filtrate non supportano lo scenario con Sottoscrittore centrale. Per la replica di tipo merge, il rollup viene in genere implementato tramite una singola pubblicazione con filtri di riga con parametri. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Configurare la distribuzione](../../../relational-databases/replication/configure-distribution.md)   
+ [Configura distribuzione](../../../relational-databases/replication/configure-distribution.md)   
  [Inizializzare una sottoscrizione](../../../relational-databases/replication/initialize-a-subscription.md)   
  [Creazione di script di replica](../../../relational-databases/replication/scripting-replication.md)   
  [Proteggere il server di pubblicazione](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [Sottoscrivere le pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Sottoscrizione delle pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

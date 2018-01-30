@@ -11,13 +11,14 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -75,7 +76,7 @@ Per utilizzare l'esercitazione è necessario che nel computer sia installato qua
   
 -   Il database di esempio **AdventureWorks2014** che contiene i dati per il report di esempio.  
   
--   Un'assegnazione di ruolo [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] che include l'attività Gestione di tutte le sottoscrizioni nel report di esempio. Questa attività è necessaria per la definizione di una sottoscrizione guidata dai dati. Per gli amministratori del computer, l'assegnazione di ruolo predefinita per gli amministratori locali fornisce le autorizzazioni necessarie per la creazione di sottoscrizioni guidate dai dati. Per altre informazioni, vedere [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+-   Un'assegnazione di ruolo [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] che include l'attività Gestione di tutte le sottoscrizioni nel report di esempio. Questa attività è necessaria per la definizione di una sottoscrizione guidata dai dati. Per gli amministratori del computer, l'assegnazione di ruolo predefinita per gli amministratori locali fornisce le autorizzazioni necessarie per la creazione di sottoscrizioni guidate dai dati. Per altre informazioni, vedere [Concessione di autorizzazioni in un server di report in modalità nativa](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   Una cartella condivisa per la quale si dispone di autorizzazioni di scrittura. La cartella condivisa deve essere accessibile su una connessione di rete.  
   

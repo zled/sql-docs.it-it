@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b6239b8e7ad2f4383eac1764a211880325eedf3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e2f902b7afaadf936102b90c542d97d5450c7995
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Per i campi dati di tipo carattere è facoltativamente possibile contrassegnare la fine di ogni campo di un file di dati con un *carattere di terminazione del campo* e la fine di ogni riga con un *carattere di terminazione della riga*. I caratteri di terminazione costituiscono un mezzo per indicare ai programmi che leggono il file di dati dove termina un campo o una riga e dove inizia un altro campo o un'altra riga.  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/17/2017
         >  Dopo l'impostazione interattiva di tutti i campi in un comando **bcp**, viene richiesto di salvare le risposte relative a ogni campo in un file di formato non XML. Per altre informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Linee guida per l'utilizzo dei caratteri di terminazione  
- In alcuni casi, un carattere di terminazione può essere utile per un campo dati **char** o **nchar** . Esempio:  
+ In alcuni casi, un carattere di terminazione può essere utile per un campo dati **char** o **nchar** . Ad esempio  
   
 -   Per una colonna di dati che contiene un valore null in un file di dati da importare in un programma che non riconosce le informazioni sulla lunghezza del prefisso.  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
  Per il comando **bcp** sono disponibili le opzioni seguenti.  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**-c**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
 |**-t** `,`|Specifica la virgola (,) come carattere di terminazione del campo.|  
@@ -131,10 +132,10 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      È possibile specificare i caratteri di terminazione per i singoli campi di un file di formato o per l'intero file di dati utilizzando i qualificatori illustrati nella tabella seguente:  
   
-    |Qualifier|Descrizione|  
+    |Qualifier|Description|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='***field_terminator***'**|Specifica il carattere di terminazione del campo da utilizzare per i file di dati di tipo carattere e carattere Unicode.<br /><br /> Il valore predefinito è il carattere di tabulazione (\t).|  
-    |ROWTERMINATOR **='***row_terminator***'**|Specifica il carattere di terminazione della riga da utilizzare per i file di dati di tipo carattere e carattere Unicode.<br /><br /> Il valore predefinito è \n (carattere di nuova riga).|  
+    |FIELDTERMINATOR **='***carattere_terminazione_campo***'**|Specifica il carattere di terminazione del campo da utilizzare per i file di dati di tipo carattere e carattere Unicode.<br /><br /> Il valore predefinito è il carattere di tabulazione (\t).|  
+    |ROWTERMINATOR **='***carattere_terminazione_riga***'**|Specifica il carattere di terminazione della riga da utilizzare per i file di dati di tipo carattere e carattere Unicode.<br /><br /> Il valore predefinito è \n (carattere di nuova riga).|  
   
      Per altre informazioni, vedere [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
@@ -172,7 +173,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Utilizzo dell'istruzione BULK INSERT per l'impostazione interattiva dei caratteri di terminazione  
  Nell'esempio seguente viene eseguita l'importazione bulk del file di dati `Department-c-t.txt` utilizzando un'istruzione `BULK INSERT` con i qualificatori illustrati nella tabella seguente:  
   
-|Opzione|Attribute|  
+|Opzione|attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='**char**'**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
 |FIELDTERMINATOR **='**`,`**'**|Specifica la virgola (`,`) come carattere di terminazione del campo.|  

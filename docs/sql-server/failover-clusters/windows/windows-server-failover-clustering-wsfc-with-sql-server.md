@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5fdd2a6aed90983a38c4a34cd48588d157c036df
-ms.sourcegitcommit: 719bcc010dd1ca6f2acfcdf6f9bd9f73451ca8ca
+ms.openlocfilehash: 520b6480f584fcd26563c675548b0a60fd204e1f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server Failover Clustering con SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un cluster di failover WSFC (*Windows Server Failover Clustering*) è un gruppo di server indipendenti usati congiuntamente per aumentare la disponibilità di applicazioni e servizi. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] vengono utilizzate le funzionalità e i servizi di WSFC per supportare le istanze del cluster di failover di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -42,7 +43,8 @@ ms.lasthandoff: 12/20/2017
  Risorsa cluster  
  Entità fisica o logica che può essere di proprietà di un nodo e che è possibile portare online e offline, spostare tra nodi e gestire come oggetto cluster. Una risorsa cluster può essere solo di proprietà di un nodo singolo in qualsiasi punto nel tempo.  
   
- Ruolo Raccolta di risorse cluster gestita come singolo oggetto cluster per ottenere funzionalità specifiche. Per SQL Server, un ruolo sarà un gruppo di disponibilità Always On (AG) o un'istanza di cluster di failover Always On (FCI). Un ruolo contiene tutte le risorse cluster necessarie per un gruppo di disponibilità o un'istanza di cluster di failover. Failover e failback vengono sempre eseguiti in un contesto di ruoli. Per un'istanza FCI, il ruolo conterrà una risorsa indirizzo IP, una risorsa nome di rete e le risorse di SQL Server. Un ruolo AG conterrà la risorsa gruppo di disponibilità e, se un è configurato un listener, un nome networm e una risorsa IP. 
+ Role  
+ Raccolta di risorse cluster gestita come singolo oggetto cluster per offrire funzionalità specifiche. Per SQL Server, un ruolo sarà un gruppo di disponibilità Always On (AG) o un'istanza di cluster di failover Always On (FCI). Un ruolo contiene tutte le risorse cluster necessarie per un gruppo di disponibilità o un'istanza di cluster di failover. Failover e failback vengono sempre eseguiti in un contesto di ruoli. Per un'istanza FCI, il ruolo conterrà una risorsa indirizzo IP, una risorsa nome di rete e le risorse di SQL Server. Un ruolo AG conterrà la risorsa gruppo di disponibilità e, se un è configurato un listener, un nome networm e una risorsa IP. 
 
  Risorsa nome di rete  
  Nome di server logico gestito come risorsa cluster. Una risorsa nome di rete deve essere utilizzata con una risorsa indirizzo IP. Queste voci possono richiedere oggetti in Active Directory Domain Services e/o DNS. 

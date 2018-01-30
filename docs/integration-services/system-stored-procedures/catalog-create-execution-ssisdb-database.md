@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 5c557108a98a0063cb0dad14e0d40f10deb03698
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +66,9 @@ catalog.create_execution [@folder_name = folder_name
 [@useanyworker =] *useanyworker*  
 Indica se a un qualsiasi ruolo di lavoro Scale Out è consentita l'esecuzione.
 
--   Usare il valore 1 per eseguire il pacchetto con un ruolo di lavoro Scale Out. Quando si imposta `@useanyworker` su true, qualsiasi ruolo di lavoro il cui numero massimo di attività (specificato nel file di configurazione di del ruolo di lavoro) non è stato ancora raggiunto è disponibile per l'esecuzione del pacchetto.
+-   Usare il valore 1 per eseguire il pacchetto con un ruolo di lavoro Scale Out. Quando si imposta `@useanyworker` su true, qualsiasi ruolo di lavoro il cui numero massimo di attività (specificato nel file di configurazione di del ruolo di lavoro) non è stato ancora raggiunto è disponibile per l'esecuzione del pacchetto. Per informazioni sul file di configurazione del ruolo di lavoro, vedere [Ruolo di lavoro di scalabilità orizzontale di Integration Services (SSIS)](../scale-out/integration-services-ssis-scale-out-worker.md).
 
--   Usare il valore 0 per indicare che non tutti i ruoli di lavoro Scale Out sono autorizzati a eseguire il pacchetto. Quando si imposta `@useanyworker` su false è necessario specificare i ruoli di lavoro autorizzati a eseguire il pacchetto mediante Scale Out Manager oppure chiamando l'istruzione `[catalog].[add_execution_worker]` della stored procedure.
+-   Usare il valore 0 per indicare che non tutti i ruoli di lavoro Scale Out sono autorizzati a eseguire il pacchetto. Quando si imposta `@useanyworker` su false è necessario specificare i ruoli di lavoro autorizzati a eseguire il pacchetto mediante Scale Out Manager oppure chiamando l'istruzione `[catalog].[add_execution_worker]` della stored procedure. Se si specifica un ruolo di lavoro che esegue già un altro pacchetto, il ruolo di lavoro completa l'esecuzione del pacchetto corrente prima di richiedere un'altra esecuzione.
 
 Questo parametro è facoltativo. Se non specificato, il valore viene impostato su 1. *useanyworker* è di tipo **bit**. 
   

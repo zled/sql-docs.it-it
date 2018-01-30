@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 69637be0ea958bf908210df298b210959e3afc17
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,14 +86,16 @@ In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ogni file di log f
 >    -  Se il valore growth è compreso tra 64 MB e 1 GB, creare 8 file di log virtuali che coprano l'aumento delle dimensioni (ad esempio con growth di 512 MB, creare otto file virtuali di log da 64 MB)
 >    -  Se il valore growth è superiore a 1 GB, creare 16 file di log virtuali che coprano l'aumento delle dimensioni (ad esempio con growth di 8 GB, creare sedici file virtuali di log da 512 MB)
 
-Se le dimensioni dei file di log aumentano in modo considerevole in seguito a una serie di piccoli incrementi, in essi verrà incluso un numero elevato di file di log virtuali. **Questo può provocare un rallentamento delle operazioni di avvio del database e di backup e ripristino del log.** È consigliabile assegnare ai file di log un valore *size* simile a quello delle dimensioni finali necessarie e un valore *growth_increment* relativamente alto. Vedere il suggerimento seguente per determinare la distribuzione dei file di log virtuali ottimale per le dimensioni correnti del log delle transazioni.
+Se le dimensioni dei file di log aumentano in modo considerevole a piccoli ma numerosi incrementi, il numero di file di log virtuali sarà elevato. **Questo può provocare un rallentamento delle operazioni di avvio del database e di backup e ripristino del log.** Se invece i file di log sono impostati su dimensioni elevate con uno o pochi incrementi, il numero di file di log virtuali molto grandi sarà ridotto. Per altre informazioni su una stima corretta per impostare le **dimensioni richieste** e l'**aumento di dimensioni automatico** di un log delle transazioni, fare riferimento alla sezione *Indicazioni* di [Gestire le dimensioni del file di log delle transazioni](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
+
+È consigliabile assegnare ai file di log un valore *size* simile a quello delle dimensioni finali necessarie, usando gli incrementi necessari per ottenere una distribuzione dei file di log virtuali ottimale, e un valore *growth_increment* relativamente alto. Vedere il suggerimento seguente per determinare la distribuzione dei file di log virtuali ottimale per le dimensioni correnti del log delle transazioni. 
  - Il valore *size*, impostato dall'argomento `SIZE` di `ALTER DATABASE`, corrisponde alle dimensioni iniziali del file di log.
- - Il valore *growth_increment*, impostato dall'argomento `FILEGROWTH` di `ALTER DATABASE`, è la quantità di spazio che viene aggiunta al file ogni volta che è richiesto spazio nuovo. 
+ - Il valore *growth_increment*, vale a dire il valore di aumento automatico, impostato dall'argomento `FILEGROWTH` di `ALTER DATABASE`, è la quantità di spazio che viene aggiunta al file ogni volta che è richiesto spazio nuovo. 
  
 Per altre informazioni sugli argomenti `FILEGROWTH` e `SIZE` di `ALTER DATABASE`, vedere [Opzioni per file e filegroup ALTER DATABASE &#40; Transact-SQL &#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
-> Per determinare la distribuzione VLF ottimale per le dimensioni correnti del log delle transazioni di tutti i database in un'istanza specifica, vedere questo [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+> Per determinare la distribuzione dei file di log virtuali ottimale per le dimensioni correnti del log delle transazioni di tutti i database in un'istanza specifica e gli incrementi della crescita necessari per ottenere le dimensioni richieste, vedere questo [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
  Il log delle transazioni è un file circolare. Si consideri ad esempio un database con un file di log fisico diviso in quattro file di log virtuali. Quando viene creato il database, il file di log logico comincia all'inizio del file di log fisico. Vengono aggiunti nuovi record di log alla fine del log logico, che si espandono verso la fine del log fisico. Il troncamento del log libera tutti i log virtuali i cui record vengono visualizzati tutti davanti al numero minimo di sequenza del file di log (MinLSN, Minimum Log Sequence Number) per il recupero. *MinLSN* è il numero di sequenza del file di log del record di log meno recente necessario per un corretto rollback a livello di database. Il log delle transazioni del database di esempio sarebbe simile a quello illustrato nella figura seguente.  
   

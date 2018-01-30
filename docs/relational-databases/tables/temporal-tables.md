@@ -8,20 +8,21 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e7f2945bcceefdd7613a44a292fa5794554607ce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba3bc1642b2b266c030f8ec326d001a8fb56b4ab
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-tables"></a>Tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -123,7 +124,7 @@ CREATE TABLE dbo.Employee
 >  I tempi registrati nelle colonne datetime2 del sistema sono basati sull'ora di inizio della transazione stessa. Ad esempio, tutte le righe inserite all'interno di una singola transazione avranno la stessa ora UTC registrata nella colonna corrispondente all'inizio del periodo **SYSTEM_TIME** .  
   
 ## <a name="how-do-i-query-temporal-data"></a>Come si esegue una query sui dati temporali?  
- La clausola **FROM***\<tabella>* dell'istruzione **SELECT** usa una nuova clausola **FOR SYSTEM_TIME** con cinque sottoclausole specifiche per i dati temporali per eseguire query sui dati nelle tabelle correnti e di cronologia. La nuova sintassi dell'istruzione **SELECT** è supportata direttamente su una singola tabella, propagata attraverso diversi join e viste su più tabelle temporali.  
+ Nell'istruzione **SELECT** la clausola **FROM***\<tabella>* dispone di una nuova clausola **FOR SYSTEM_TIME** con cinque sottoclausole specifiche per i dati temporali, per eseguire query sui dati nelle tabelle correnti e di cronologia. La nuova sintassi dell'istruzione **SELECT** è supportata direttamente su una singola tabella, propagata attraverso diversi join e viste su più tabelle temporali.  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -144,7 +145,7 @@ SELECT * FROM Employee
   
  Nella tabella seguente il valore SysStartTime della colonna delle righe risultanti rappresenta il valore presente nella colonna **SysStartTime** della tabella su cui si esegue la query e **SysEndTime** rappresenta il valore presente nella colonna **SysEndTime** della tabella su cui si esegue la query. Per la sintassi completa e per esempi, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) e [Query sui dati in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
-|Espressione|Righe risultanti|Descrizione|  
+|Espressione|Righe risultanti|Description|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Restituisce una tabella con una singola riga contenente i valori che erano effettivi (correnti) in un momento specificato nel passato. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori nella riga che era valida nel momento specificato dal parametro *<date_time>*. Il valore per una riga viene considerato valido se il valore *system_start_time_column_name* è minore o uguale al valore del parametro *<date_time>* e il valore *system_end_time_column_name* è maggiore del valore del parametro *<date_time>*.|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Restituisce una tabella con i valori per tutte le versioni di riga che erano attive nell'intervallo di tempo specificato, indipendentemente dal fatto che abbiano iniziato a essere attive prima del valore del parametro *<start_date_time>* per l'argomento FROM o non siano più state attive dopo il valore del parametro *<end_date_time>* per l'argomento TO. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori per tutte le versioni di riga che erano attive in qualsiasi momento durante l'intervallo di tempo specificato. Le righe che non sono più state attive esattamente in corrispondenza del limite inferiore definito dall'endpoint FROM non sono incluse e le righe diventate attive esattamente in corrispondenza del limite superiore definito dall'endpoint TO non sono incluse.|  
@@ -153,7 +154,7 @@ SELECT * FROM Employee
 |**ALL**|Tutte le righe|Restituisce l'unione di righe che appartengono alla tabella corrente e a quella di cronologia.|  
   
 > [!NOTE]  
->  Facoltativamente, è possibile scegliere di nascondere le colonne periodo in modo tale che le query che non fanno riferimento in modo esplicito alle colonne periodo non le restituiscano (scenario **SELECT \* FROM***\<tabella>*). Per restituire una colonna nascosta, basta fare riferimento in modo esplicito alla colonna nella query. Allo stesso modo, le istruzioni **INSERT** e **BULK INSERT** continueranno come se le nuove colonne periodo non fossero presenti (e i valori delle colonne saranno popolati automaticamente). Per altre informazioni sull'uso della clausola **HIDDEN** , vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
+>  Facoltativamente, è possibile scegliere di nascondere le colonne periodo per far sì che le query senza riferimenti espliciti a tali colonne non le restituiscano (scenario **SELECT \* FROM***\<tabella>*). Per restituire una colonna nascosta, basta fare riferimento in modo esplicito alla colonna nella query. Allo stesso modo, le istruzioni **INSERT** e **BULK INSERT** continueranno come se le nuove colonne periodo non fossero presenti (e i valori delle colonne saranno popolati automaticamente). Per altre informazioni sull'uso della clausola **HIDDEN** , vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Commenti e suggerimenti  
  Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Microsoft incoraggia gli utenti a inviare i propri commenti per migliorare i contenuti Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
