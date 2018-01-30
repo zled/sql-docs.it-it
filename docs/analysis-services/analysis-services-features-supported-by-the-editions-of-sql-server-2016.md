@@ -12,18 +12,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b69db6baee27296bf9544801b627c884d68795b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 14c64237e32d433592f44fcbd0d56bd661cc4940
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>Funzionalità di Analysis Services supportate dalle edizioni di SQL Server 2016
+# <a name="analysis-services-features-supported-by-sql-server-editions"></a>Caratteristiche di Analysis Services supportate dalle edizioni di SQL Server
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 In questo argomento fornisce i dettagli delle funzionalità supportate dalle diverse edizioni di SQL Server 2016 Analysis Services. Per le funzionalità supportate dalle edizioni Evaluation e Developer, vedere Enterprise edition.
@@ -44,7 +44,7 @@ In questo argomento fornisce i dettagli delle funzionalità supportate dalle div
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Gerarchie|Sì|Sì|||||Sì|  
 |KPI|Sì|Sì|||||Sì|  
-|prospettive|Sì||||||Sì|  
+|Prospettive|Sì||||||Sì|  
 |Traduzioni|Sì|Sì|||||Sì|  
 |Calcoli DAX, query DAX, query MDX|Sì|Sì|||||Sì|  
 |Sicurezza a livello di riga|Sì|Sì|||||Sì|  
@@ -59,7 +59,7 @@ In questo argomento fornisce i dettagli delle funzionalità supportate dalle div
 |Misure semiadditive|Sì|No <sup>1</sup>|||||Sì|  
 |Gerarchie|Sì|Sì|||||Sì|  
 |KPI|Sì|Sì|||||Sì|  
-|prospettive|Sì||||||Sì|  
+|Prospettive|Sì||||||Sì|  
 |Azioni|Sì|Sì|||||Sì|  
 |Funzionalità di Business Intelligence per la contabilità|Sì|Sì|||||Sì|  
 |Business Intelligence per gerarchie temporali|Sì|Sì|||||Sì|  
@@ -122,6 +122,6 @@ In questo argomento fornisce i dettagli delle funzionalità supportate dalle div
   
  ## <a name="see-also"></a>Vedere anche  
  [Specifiche di prodotto per SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Installazione per SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md) (Installazione per SQL Server)  
 
 

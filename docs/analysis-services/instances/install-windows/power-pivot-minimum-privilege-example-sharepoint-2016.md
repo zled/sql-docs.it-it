@@ -12,30 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 35757f68-7bfc-4906-a985-f369690b9237
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 258bb0a43d8f3e507327594f9db399ef82745754
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 683a00ae0c3c300ee5734b9e9d45b05c9c4b1442
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot con privilegi minimi esempio - SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Questo argomento viene illustrato un esempio [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per la configurazione di SharePoint 2016 con privilegi minimi. Nella configurazione viene utilizzato un account diverso per ognuno dei tre componenti e ogni account dispone del livello minimo di privilegi.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ## <a name="summary-of-accounts"></a>Riepilogo degli account  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2016 supporta l'uso dell'account Servizio di rete per l'account del servizio Analysis Services. L'account Servizio di rete non è supportato con SharePoint 2010. Per altre informazioni sugli account di servizio, vedere [Configurare account di servizio e autorizzazioni di Windows](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  Nella tabella seguente sono riepilogati i tre account utilizzati nell'esempio di configurazione con privilegi minimi.  
   
-|Ambito|nome|  
+|Ambito|Nome|  
 |-----------|----------|  
 |Account amministratore di SharePoint|**SPAdmin**|  
 |Account farm SharePoint|**SPFarm**|  

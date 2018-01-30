@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 499e2929691553884a7c52d3d46918455c8d39a8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7066ed9aafe287f5ed4a2bb5ed2981d27bd0e35f
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>Installare o disinstallare il componente aggiuntivo Power Pivot per SharePoint (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] è una raccolta di componenti del server applicazioni e servizi di back-end che forniscono [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] di accesso ai dati un [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] farm. Il componente aggiuntivo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint (**spPowerpivot.msi**) è un pacchetto di installazione utilizzato per installare i componenti del server applicazioni.  
@@ -33,24 +33,6 @@ ms.lasthandoff: 01/08/2018
  **Nota:** in questo argomento vengono fornite informazioni sull'installazione dei file di soluzione [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e dello strumento di configurazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013. Al termine dell'installazione, vedere l'argomento seguente per informazioni sullo strumento di configurazione e sulle funzionalità aggiuntive: [Configurare Power Pivot e distribuire soluzioni &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
  Per informazioni su come scaricare **spPowerPivot.msi**, vedere la pagina relativa a [Microsoft® SQL Server® 2014 Power Pivot® per Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854).  
-  
- **Contenuto dell'argomento:**  
-  
--   [Informazioni preliminari](#bkmk_background)  
-  
--   [Percorso in cui installare il file spPowerPivot.msi](#bkmk_where_to_install)  
-  
--   [Requisiti e prerequisiti](#bkmk_prereq)  
-  
--   [Per disinstallare Power Pivot per SharePoint](#bkmk_install)  
-  
--   [Distribuire i file della soluzione di SharePoint con lo strumento di configurazione di Power Pivot per SharePoint 2013](#bkmk_deploy_solution)  
-  
--   [Disinstallare o ripristinare il componente aggiuntivo](#bkmk_remove_addin)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
 ##  <a name="bkmk_background"></a> Background  
   
@@ -115,7 +97,7 @@ ms.lasthandoff: 01/08/2018
 6.  Fare clic su **Installa** per completare l'installazione.  
   
 ### <a name="command-line-installation"></a>Installazione dalla riga di comando  
- Per un'installazione dalla riga di comando, aprire un prompt dei comandi con autorizzazioni amministrative, quindi eseguire il file **spPowerPivot.msi**. Ad esempio  
+ Per un'installazione dalla riga di comando, aprire un prompt dei comandi con autorizzazioni amministrative, quindi eseguire il file **spPowerPivot.msi**. Esempio:  
   
  `Msiexec.exe /i SpPowerPivot.msi`.  
   
@@ -210,7 +192,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
     msiexec.exe /f spPowerPivot.msi  
     ```  
   
- o  
+ OPPURE  
   
 -   Per effettuare la disinstallazione, eseguire il comando riportato di seguito:  
   

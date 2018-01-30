@@ -8,20 +8,21 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2a122ab3ac28879a1fbcf3790953ba229a285df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In questo argomento illustra l'esperienza utente di cartelle di lavoro creati nelle precedenti [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ambienti e come eseguire l'aggiornamento [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] le cartelle di lavoro in modo che è possibile usufruire delle nuove funzionalità introdotte in questa versione. Per altre informazioni sulle nuove funzionalità, vedere [Novità in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -29,17 +30,6 @@ ms.lasthandoff: 01/08/2018
 > [!WARNING]  
 >  Non è possibile eseguire il rollback dell'aggiornamento per cartelle di lavoro aggiornate automaticamente nel server. Una volta aggiornata, una cartella di lavoro rimane in questo stato. Per utilizzare una versione precedente, è possibile ripubblicare la cartella di lavoro precedente in SharePoint, ripristinare una versione precedente oppure riciclare la cartella di lavoro. Per ulteriori informazioni sul ripristino o riciclo di un documento in SharePoint, vedere [Pianificare di proteggere il contenuto tramite i Cestini e il controllo delle versioni](http://go.microsoft.com/fwlink/?LinkId=238669).  
   
- In questo argomento sono incluse le sezioni seguenti:  
-  
--   [Panoramica dell'aggiornamento delle cartelle di lavoro](#bkmk_overview)  
-  
--   [Eseguire l'aggiornamento a cartelle di lavoro di SQL Server 2012 Service Pack 1 (SP1) da cartelle di lavoro di SQL Server 2008 R2](#bkmk_to_2012sp1_from_2008r2)  
-  
--   [Eseguire l'aggiornamento a cartelle di lavoro di Office 2013 da versioni create tramite il componente aggiuntivo SQL Server 2012 Power Pivot per Excel](#bkmk_to_2012sp1_from_2012)  
-  
--   [Eseguire l'aggiornamento a cartelle di lavoro di SQL Server 2012 da versioni create tramite il componente aggiuntivo SQL Server 2008 R2 Power Pivot per Excel 2010](#bkmk_to_2012_from_2008R2)  
-  
--   [Esecuzione di più versioni di cartelle di lavoro in un server più recente](#bkmk_runold)  
   
 ##  <a name="bkmk_overview"></a> Panoramica dell'aggiornamento delle cartelle di lavoro  
  Una cartella di lavoro di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] è una cartella di lavoro di Excel che contiene dati di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] incorporati. L'aggiornamento di una cartella di lavoro offre due vantaggi:  

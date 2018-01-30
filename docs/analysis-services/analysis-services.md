@@ -1,5 +1,5 @@
 ---
-title: Analysis Services | Documenti Microsoft
+title: Informazioni su SQL Server Analysis Services | Documenti Microsoft
 ms.date: 01/26/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
@@ -25,42 +25,32 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d4bdda48d7518d0560e3b5dff8d0a7139de700ae
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: 66bbbad6d55b8abb5e902e6d44355fc9c6c8cb29
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/29/2018
 ---
-# <a name="what-is-analysis-services"></a>Che cos'è Analysis Services?
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+# <a name="about-sql-server-analysis-services"></a>Informazioni su SQL Server Analysis Services
 
-  Analysis Services è un motore dati analitici utilizzato per il supporto decisionale e analitica di business, fornisce i dati analitici per i report di business e applicazioni client quali Power BI, Excel, report di Reporting Services e altri strumenti di visualizzazione di dati.  
-  
- Un tipico flusso di lavoro include la creazione di un modello di dati tabulari o multidimensionali, distribuzione del modello come database in un'istanza del server SQL Server Analysis Services o Azure Analysis Services locale, l'impostazione ricorrente l'elaborazione dati e l'assegnazione autorizzazioni per consentire l'accesso ai dati per gli utenti finali. Quando è pronto, il modello di dati sono accessibili da qualsiasi applicazione client che supporta Analysis Services come origine dati.  
+Analysis Services è un motore dati analitici utilizzato in analitica di business e di supporto decisionale. Fornisce aziendale modelli dati semantici per i report di business e applicazioni client quali Power BI, Excel, report e altri strumenti di visualizzazione dati Reporting Services.  
+
+Un tipico flusso di lavoro include la creazione di un progetto di modello di dati tabulari o multidimensionali in Visual Studio, distribuzione del modello come database in un'istanza del server, configurare l'elaborazione dati ricorrente e assegnazione di autorizzazioni per consentire l'accesso ai dati per gli utenti finali. Quando è pronto, il modello di dati semantici accessibili dalle applicazioni client che supporta Analysis Services come origine dati.  
+
+Analysis Services è disponibile in due piattaforme diverse: 
+
+**Azure Analysis Services** -supporta i modelli tabulari con i livelli di compatibilità 1200 e versioni successive. DirectQuery, partizioni, sicurezza a livello di riga, relazioni bidirezionali e traduzioni sono tutte funzioni supportate. Per ulteriori informazioni, vedere [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/).
+
+**SQL Server Analysis Services** -supporta i modelli tabulari a tutti i livelli di compatibilità, i modelli multidimensionali, il data mining e Power Pivot per SharePoint.
  
-## <a name="analysis-services-on-premises-and-in-the-cloud"></a>Analysis Services locale e nel cloud
-Analysis Services è ora disponibile nel cloud come servizio di Azure. Azure Analysis Services supporta i modelli tabulari con i livelli di compatibilità 1200 e versioni successive. DirectQuery, partizioni, sicurezza a livello di riga, relazioni bidirezionali e traduzioni sono tutte funzioni supportate. Per altre informazioni e per una prova gratuita, vedere [Azure Analysis Services](https://azure.microsoft.com/en-us/services/analysis-services/). 
-  
-## <a name="server-mode"></a>Modalità server  
- Quando si installa Analysis Services tramite il programma di installazione di SQL Server, durante la configurazione specificare una modalità server per quell'istanza.  Ogni modalità include diverse funzionalità specifiche di una particolare soluzione di Analysis Services.   
-  
--   **Modalità tabulare** - i dati relazionali in memoria di implementare (modello, tabelle, colonne, misure, gerarchie) di costrutti di modellazione.  
+ ## <a name="documentation-by-area"></a>Documentazione per area  
+In generale, [documentazione di Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/) è incluso con la documentazione di Azure. Se si desidera che i modelli tabulari del server nel cloud, è consigliabile partire da qui. 
 
--   **Modalità multidimensionale e di data mining** -Implementare costrutti di modellazione OLAP (cubi, dimensioni, misure). 
+Questo articolo e la documentazione in questa sezione è principalmente per SQL Server Analysis Services. Tuttavia, almeno per i modelli tabulari, come creare e distribuire i progetti è molto simile, indipendentemente dalla piattaforma in uso. Queste sezioni per ulteriori informazioni, consultare:
 
--   **Power Pivot Mode** -modelli di dati di implementare Power Pivot e di Excel in SharePoint (PowerPivot per SharePoint è un motore dati di livello intermedio che carica, esegue una query e aggiorna i modelli di dati ospitati in SharePoint).  
-  
- Una singola istanza può essere configurata con un'unica modalità e non può essere modificata in un secondo momento.  È possibile installare più istanze con modalità diverse sullo stesso server, ma è necessario eseguire il programma di installazione e specificare le impostazioni di configurazione per ogni istanza. Per informazioni dettagliate e per un confronto delle diverse funzionalità offerte da ognuna delle modalità, vedere [confronto tabulari e multidimensionali](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).
-  
-## <a name="authoring-and-managing-solutions"></a>Creazione e gestione di soluzioni  
- Per creare un modello e distribuirlo a un server, utilizzare SQL Server Data Tools, scegliere il modello di progetto sia tabulare o multidimensionale e Data Mining. Il modello di progetto include cartelle per tutti gli oggetti necessari in un modello. Procedure guidate e finestre di progettazione consente di creare molti degli elementi di base come la connessione a origini dati, relazioni, misure e i ruoli. Quando il database del modello viene distribuito a un server, utilizzare SQL Server Management Studio (SSMS) per configurare l'elaborazione dati, monitorare e gestire i server e i database. Per ulteriori informazioni, vedere [strumenti e applicazioni usate in Analysis Services](../analysis-services/tools-and-applications-used-in-analysis-services.md). 
-  
-## <a name="documentation-by-area"></a>Documentazione per area  
-In generale, la documentazione per Azure Analysis Services è inclusa con la documentazione di Azure. E la documentazione per SQL Server Analysis Services è inclusa con la documentazione di SQL. Tuttavia, almeno per i modelli tabulari, come creare e distribuire i progetti è analogo a indipendentemente dalla piattaforma in uso.  
    
-*  [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)
-*  [Novità di SQL Server Analysis Services](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)   
 *  [Confronto tra soluzioni tabulari e multidimensionali](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
+*  [Installare SQL Server Analysis Services](../analysis-services/instances/install-windows/install-analysis-services.md)
 *  [Modelli tabulari](../analysis-services/tabular-models/tabular-models-ssas.md)  
 *  [Modelli multidimensionali](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
 *  [Data Mining](../analysis-services/data-mining/data-mining-ssas.md)  
@@ -68,4 +58,9 @@ In generale, la documentazione per Azure Analysis Services è inclusa con la doc
 *  [Gestione di un'istanza](../analysis-services/instances/analysis-services-instance-management.md)    
 *  [Esercitazioni](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [Documentazione per sviluppatori](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
-*  [Riferimento tecnico (SSAS)](../analysis-services/powershell/technical-reference-ssas.md)
+*  [Riferimento tecnico](../analysis-services/powershell/technical-reference-ssas.md)
+
+Vedere anche
+
+[Documentazione di Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)   
+[Documentazione di SQL Server](../sql-server/sql-server-technical-documentation.md)

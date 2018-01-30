@@ -12,23 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6e2dad4e17ebee4497c4e62f15c5706affb62182
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6d745e0de3f7d18571d904a31cf34a8e30217555
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Verificare un'installazione Power Pivot per SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Oggetto [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint viene amministrato istanza installata in una farm di SharePoint tramite Amministrazione centrale SharePoint. Come minimo, è possibile controllare le pagine in Amministrazione centrale e nei siti di SharePoint per verificare che le funzionalità e i componenti server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] siano disponibili. Tuttavia, per verificare completamente un'installazione, è necessario disporre di una cartella di lavoro di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pubblicabile in SharePoint e accessibile da una raccolta. A scopo di test, è possibile pubblicare una cartella di lavoro di esempio già contenente dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e usarla per confermare la corretta configurazione dell'integrazione SharePoint.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
+
   
 ##  <a name="verifyinstall"></a> Verifica dell'integrazione con Amministrazione centrale  
  Per verificare l'integrazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] con Amministrazione centrale, eseguire queste operazioni:  

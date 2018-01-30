@@ -8,20 +8,21 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: power-view
+ms.technology:
+- power-view
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e0a33445fedf93a6dce4f2bf9b4f6a90465b6c60
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a815c21f442c615217fdc863448f18b49fdb3588
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Configurare Power Pivot e distribuire soluzioni (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Questo argomento vengono descritte la distribuzione e la configurazione di miglioramenti di livello intermedio per la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] le caratteristiche in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] inclusi [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] raccolta pianificazione aggiornamento dati, Dashboard di gestione e i provider di dati. Eseguire lo strumento di **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013** per eseguire queste operazioni:  
@@ -34,22 +35,10 @@ ms.lasthandoff: 01/08/2018
   
  Per informazioni sull'installazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per lo strumento di configurazione di SharePoint 2013, vedere [Installare o disinstallare il componente aggiuntivo Power Pivot per SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
- In questo argomento sono incluse le sezioni seguenti:  
-  
- [Eseguire la configurazione di Power Pivot per SharePoint 2013](#bkmk_run_configuration_tool)  
-  
- [Verificare la configurazione di Power Pivot](#bkmk_verify_powerpivot)  
-  
- [Risolvere eventuali problemi](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
-  
 ##  <a name="bkmk_run_configuration_tool"></a> Eseguire la configurazione di Power Pivot per SharePoint 2013  
  **Nota:** tramite l'Installazione guidata di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] vengono installati due strumenti di configurazione diversi per [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Ognuno supporta una versione diversa di SharePoint.  
   
-|nome|Description|  
+|Nome|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Strumento di configurazione|SharePoint 2010 con SharePoint 2010 Service Pack 1 (SP1)|  
@@ -142,7 +131,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  Verificare che l'opzione **Abilita raccolta dati integrità** sia selezionata.  
   
-5.  Fare clic su **OK**.  
+5.  Scegliere **OK**.  
   
  Per altre informazioni sulla risoluzione dei problemi relativi all'aggiornamento dei dati, vedere [Troubleshooting Power Pivot Data Refresh (Risoluzione dei problemi di aggiornamento dei dati di Power Pivot)](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cec454c2fe5dc832879a8a320b3e921c4f71ceb2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1540e9a5422b3a15081b1a25c813ef87ed8d6c0c
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="analysis-services-instance-management"></a>Gestione di un'istanza di Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un'istanza di Analysis Services è una copia del **msmdsrv.exe** eseguibile che viene eseguito come un servizio del sistema operativo. Ogni istanza è completamente indipendente dalle altre istanze nello stesso server, disponendo di impostazioni proprie di configurazione, autorizzazioni, porte, account di avvio, archiviazione di file e proprietà della modalità server.  
+
+  Un'istanza di Analysis Services è una copia del file eseguibile **msmdsrv.exe** che viene eseguita come un servizio del sistema operativo. Ogni istanza è completamente indipendente dalle altre istanze nello stesso server, disponendo di impostazioni proprie di configurazione, autorizzazioni, porte, account di avvio, archiviazione di file e proprietà della modalità server.  
   
  Ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguita come servizio Windows, Msmdsrv.exe, nel contesto di sicurezza di un account di accesso definito.  
   
@@ -48,12 +49,12 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  L'eccezione è [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. L'amministrazione server di una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è sempre all'interno del contesto di una farm SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] si differenzia dalle altre modalità server perché è sempre a istanza singola ed è sempre gestito da Amministrazione centrale SharePoint o dallo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Benché sia possibile, non è consigliabile connettersi a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint in SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In una farm SharePoint è presente un'infrastruttura mediante la quale viene sincronizzato lo stato del server e controllata la disponibilità del server. L'utilizzo di altri strumenti può interferire con queste operazioni. Per altre informazioni sull'amministrazione server di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], vedere [Power Pivot per SharePoint &#40;SSAS&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Collegamento|Descrizione dell'attività|  
 |----------|----------------------|  
-|[Configurazione successiva all'installazione &#40;Analysis Services&#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Descrive le attività necessarie e facoltative per completare o modificare un'installazione di Analysis Services.|  
-|[Connetti ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|Descrive le proprietà delle stringhe di connessione, le librerie client, le metodologie di autenticazione e le procedure per stabilire o cancellare le connessioni.|  
+|[Configurazione post-installazione &#40; Analysis Services &#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Descrive le attività necessarie e facoltative per completare o modificare un'installazione di Analysis Services.|  
+|[Connettersi ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|Descrive le proprietà delle stringhe di connessione, le librerie client, le metodologie di autenticazione e le procedure per stabilire o cancellare le connessioni.|  
 |[Monitorare un'istanza di Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Vengono descritti strumenti e tecniche per monitorare un'istanza del server, incluso il modo di utilizzare Performance Monitor e SQL Server Profiler.|  
 |[Disponibilità elevata e scalabilità](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|Descrive le tecniche usate più di frequente per garantire ai database di Analysis Services disponibilità elevata e scalabilità. |  
 |[Scenari di globalizzazione per Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)|Illustra il supporto per la lingua e le regole di confronto, i passaggi per modificare entrambe le proprietà e i suggerimenti per l'impostazione e il test dei comportamenti della lingua e delle regole di confronto.|  

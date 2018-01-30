@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a8a5e6517b0bbd44d17f07d5185722914ecfc51
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c2f754a253e2c33555712dd456002ed69b608188
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>Installare o disinstallare il componente aggiuntivo Power Pivot per SharePoint (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] è una raccolta di componenti del server applicazioni e servizi di back-end che forniscono [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] di accesso ai dati un [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] farm. Il componente aggiuntivo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint (**spPowerpivot16.msi**) è un pacchetto di installazione usato per installare i componenti del server applicazioni.  
@@ -29,23 +29,6 @@ ms.lasthandoff: 01/08/2018
  **Nota:** questo argomento descrive l'installazione dei file di soluzione [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e dello strumento di configurazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2016. Al termine dell'installazione, per informazioni sullo strumento di configurazione e sulle funzionalità aggiuntive, vedere [Configurare Power Pivot e distribuire soluzioni &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
  Per informazioni su come scaricare **spPowerPivot16.msi**, vedere [Microsoft® SQL Server® 2016 Power Pivot® per Microsoft SharePoint®](https://www.microsoft.com/download/details.aspx?id=52675).  
-  
- **Contenuto dell'argomento:**  
-  
--   [Background](#bkmk_background)  
-  
--   [Percorso in cui installare il file spPowerPivot16.msi](#bkmk_where_to_install)  
-  
--   [Requisiti e prerequisiti](#bkmk_prereq)  
-  
--   [Per disinstallare Power Pivot per SharePoint](#bkmk_install)  
-  
--   [Distribuire i file della soluzione di SharePoint con lo strumento di configurazione di PowerPivot per SharePoint 2016](#bkmk_deploy_solution)  
-  
--   [Disinstallare o ripristinare il componente aggiuntivo](#bkmk_remove_addin)  
-  
-
-**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 
   
 ##  <a name="bkmk_background"></a> Background  
   
@@ -110,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 6.  Selezionare **Installa** per completare l'installazione.  
   
 ### <a name="command-line-installation"></a>Installazione dalla riga di comando  
- Per un'installazione dalla riga di comando, aprire un prompt dei comandi con autorizzazioni amministrative e quindi eseguire il file **spPowerPivot16.msi**. Ad esempio  
+ Per un'installazione dalla riga di comando, aprire un prompt dei comandi con autorizzazioni amministrative e quindi eseguire il file **spPowerPivot16.msi**. Esempio:  
   
  `Msiexec.exe /i spPowerPivot16.msi`.  
   
@@ -203,7 +186,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
     msiexec.exe /f spPowerPivot16.msi  
     ```  
   
- o  
+ OPPURE  
   
 -   Per effettuare la disinstallazione, eseguire il comando riportato di seguito:  
   
