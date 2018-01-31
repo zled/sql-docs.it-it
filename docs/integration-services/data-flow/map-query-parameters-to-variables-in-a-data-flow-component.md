@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - mapping query parameters to variables [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 25f7da499f4ee62a6cdc8093c92d8d9002897edb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 306d22adf7e49ab9eb8ae2844ad0cc322c96479f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Mapping dei parametri di query a variabili in un componente del flusso di dati
   Quando viene configurata l'origine OLE DB per utilizzare query con parametri, è possibile eseguire il mapping dei parametri alle variabili.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  Fare clic su **Parametri**.  
   
-8.  Nella finestra di dialogo **Imposta parametri query** eseguire il mapping di ogni parametro nell'elenco **Parametri** a una variabile nell'elenco **Variabili** oppure fare clic su **\<Nuova variabile>** per creare una nuova variabile. Scegliere **OK**.  
+8.  Nella finestra di dialogo **Imposta parametri query** eseguire il mapping di ogni parametro nell'elenco **Parametri** a una variabile nell'elenco **Variabili** oppure fare clic su **\<Nuova variabile>** per creare una nuova variabile. Fare clic su **OK**.  
   
     > [!NOTE]  
     >  Sono disponibili per il mapping solo le variabili di sistema e le variabili definite dall'utente nell'ambito del pacchetto, di un contenitore padre quale Ciclo Foreach o dell'attività Flusso di dati che contiene il componente del flusso di dati. La variabile deve avere un tipo di dati compatibile con la colonna nella clausola WHERE a cui è assegnato il parametro.  

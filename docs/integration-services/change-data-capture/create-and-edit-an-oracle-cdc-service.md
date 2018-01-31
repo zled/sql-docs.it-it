@@ -8,28 +8,30 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: createSrv
+f1_keywords:
+- createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de6ad94c01126dbdf32fefe75761f3aa2774446c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df020f2a63ece4d45fdd1b4eb944ca3c87dae530
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Creare e modificare un servizio Oracle CDC
   Da CDC Service Configuration Console viene creato e modificato un nuovo servizio Windows di Oracle CDC.  
   
  Per creare un nuovo servizio Windows di Oracle CDC, selezionare **Local CDC Services** dal riquadro sinistro, quindi fare clic su **New service** nel riquadro **Actions** . È inoltre possibile fare clic con il pulsante destro del mouse su **Local CDC Services** (Servizi CDC locali) e selezionare **New Service**(Nuovo servizio). Verrà aperta la finestra di dialogo New Oracle CDC Windows Service.  
   
- **OPPURE**  
+ **OR**  
   
  Per modificare le proprietà del servizio CDC, selezionare il servizio di cui si desidera modificare le proprietà e fare clic su **Properties** dal riquadro **Actions** . È inoltre possibile fare clic con il pulsante destro del mouse sul servizio usato e selezionare **Properties**. Verrà visualizzata la finestra di dialogo CDC Service Properties.  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 > Questa opzione non è disponibile quando si modifica il servizio. Non è possibile modificare il nome di un servizio Windows già esistente.  
   
- **Description**  
+ **Descrizione**  
  Digitare una descrizione del servizio per consentirne l'identificazione.  
   
  **Account servizio**  

@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.previewdata.f1
+f1_keywords:
+- sql13.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3800757837068ba6a1608d1138399c79b84cae98
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4d0f0772336614e81e1b29c8a4e54fb73d2ed5c2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Finestra di dialogo Anteprima dati (Importazione/Esportazione guidata SQL Server)
   Dopo aver specificato i dati che si desidera copiare, è possibile scegliere facoltativamente **Anteprima** per aprire la finestra di dialogo **Anteprima dati** . In questa pagina è possibile visualizzare in anteprima fino a 200 righe di dati di esempio dall'origine dati. Questo permette di verificare che la procedura guidata sta per copiare i dati desiderati.
@@ -45,7 +47,7 @@ Se è stata selezionata una tabella da copiare, il campo **Origine** mostra una 
 ## <a name="thats-not-right-i-want-to-change-something"></a>Se sono necessarie modifiche
 Dopo aver visualizzato i dati in anteprima, potrebbe essere necessario modificare le opzioni selezionate nelle pagine precedenti della procedura guidata. Per apportare queste modifiche, fare clic su **OK** per tornare alla pagina **Seleziona tabelle e viste di origine** e quindi fare clic su **Indietro** per tornare alle pagine precedenti in cui modificare le opzioni selezionate.
 
-## <a name="whats-next"></a>Operazioni successive  
+## <a name="whats-next"></a>Quali sono le operazioni successive?  
  Dopo aver visualizzato in anteprima i dati che si stanno per copiare e aver fatto clic su **OK**, la finestra di dialogo **Anteprima dati** consente di tornare alla pagina **Seleziona tabelle e viste di origine** o **Configurare la destinazione del file flat** . Per altre informazioni, vedere [Seleziona tabelle e viste di origine](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) o [Configurare la destinazione del file flat](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
  
  ## <a name="see-also"></a>Vedere anche

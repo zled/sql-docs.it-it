@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdce8273a2a1ed7cfa725f1933ab99de40cfe3f6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Database Oracle CDC
   Un'istanza di Oracle CDC è associata a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dallo stesso nome nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione. Questo database è denominato database Oracle CDC o CDC.  
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/20/2017
   
  Nella tabella seguente vengono descritte le opzioni disponibili.  
   
-|Nome|Valore predefinito|Min|Max|Statico|Description|  
+|nome|Default|Min|Max|Statico|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |traccia|False|-|-|False|I valori disponibili sono:<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|La dimensione in Kbyte dei blocchi di memoria allocati per una transazione; una transazione può allocare più di un blocco. Vedere la colonna memory_limit nella tabella [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/20/2017
 |active|Valore booleano che può essere:<br /><br /> **0**: il processo dell'istanza di Oracle CDC non è attivo.<br /><br /> **1**: il processo dell'istanza di Oracle CDC è attivo.|  
 |errore|Valore booleano che può essere:<br /><br /> **0**: il processo dell'istanza di Oracle CDC non è in stato di errore.<br /><br /> **1**: il processo dell'istanza di Oracle CDC è in stato di errore.|  
 |status_message|Stringa che fornisce una descrizione dell'errore o dello stato.|  
-|timestamp|Timestamp con l'ora (UTC) dell'ultimo aggiornamento dello stato di acquisizione.|  
+|TIMESTAMP|Timestamp con l'ora (UTC) dell'ultimo aggiornamento dello stato di acquisizione.|  
 |active_capture_node|Nome dell'host, che può essere un nodo su un cluster, in cui sono attualmente in esecuzione il servizio Oracle CDC e l'istanza di Oracle CDC, mediante cui vengono elaborati i log delle transazioni Oracle.|  
 |last_transaction_timestamp|Timestamp con l'ora (UTC) della scrittura dell'ultima transazione nelle tabelle delle modifiche.|  
 |last_change_timestamp|Timestamp con l'ora (UTC) della lettura del record delle modifiche più recente dal log delle transazioni Oracle di origine. Il timestamp consente di identificare la latenza corrente del processo CDC.|  
@@ -170,7 +171,7 @@ ms.lasthandoff: 11/20/2017
   
 |Elemento|Description|  
 |----------|-----------------|  
-|timestamp|Timestamp UTC esatto della scrittura del record di traccia.|  
+|TIMESTAMP|Timestamp UTC esatto della scrittura del record di traccia.|  
 |tipo|Contiene uno dei valori seguenti.<br /><br /> errore<br /><br /> INFO<br /><br /> traccia|  
 |node|Nome del nodo in cui è stato scritto il record.|  
 |status|Codice di stato utilizzato dalla tabella dello stato.|  
@@ -189,7 +190,7 @@ ms.lasthandoff: 11/20/2017
 |seq_num|Numero di riga **xcbcdc_staged_transactions** per la transazione corrente (inizia con 0).|  
 |data_start_cn|Numero della prima modifica (CN) nei dati in questa riga.|  
 |data_end_cn|Numero dell'ultima modifica (CN) nei dati in questa riga.|  
-|dati|Modifiche gestite temporaneamente per la transazione nel formato di BLOB.|  
+|data|Modifiche gestite temporaneamente per la transazione nel formato di BLOB.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione Change Data Capture per Oracle di Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  

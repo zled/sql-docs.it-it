@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c7292503d94efdfa4fb9a7788750a746434dfd9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b576561f0d49a6a3008fe59176fe2ec2c1368fa3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="look-up-infopackage"></a>Cerca InfoPackage
   Utilizzare la finestra di dialogo **Cerca InfoPackage** per cercare un InfoPackage definito nel sistema SAP Netweaver BW. Quando viene visualizzato l'elenco di InfoPackage, selezionare l'InfoPackage desiderato e le opzioni associate verranno compilate con i valori richiesti dalla destinazione.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
  **Sistema di origine**  
  Immettere il nome del sistema di origine o un nome parziale con il carattere jolly asterisco (*). In alternativa, utilizzare il carattere jolly asterisco da solo per includere tutti gli InfoPackage indipendentemente dai sistemi di origine.  
   
- **Ricerca**  
+ **Cerca**  
  Cercare gli InfoPackage corrispondenti definiti nel sistema SAP Netweaver BW.  
   
 ## <a name="lookup-results"></a>Risultati di ricerca  
@@ -65,13 +66,13 @@ ms.lasthandoff: 11/20/2017
  **Tipo**  
  Visualizza il tipo di InfoPackage. Nella tabella seguente sono elencati i valori possibili per il tipo.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |transazioni|Dati di transazione.|  
 |Attr.|Dati dell'attributo.|  
 |Testi|Testi.|  
   
- **Description**  
+ **Descrizione**  
  Visualizza la descrizione dell'InfoPackage.  
   
  **InfoSource**  

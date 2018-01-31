@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aea4b25c91b2282085070152da6f7c34d2373848
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0796a4b0f07f249e2f7e882ec11b9a843a2e29ca
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="request-log"></a>Log richieste
   Usare la finestra di dialogo **Log richieste** per visualizzare gli eventi registrati durante la richiesta fatta al sistema SAP Netweaver BW per i dati di esempio. Queste informazioni possono essere utili se è necessario risolvere i problemi relativi alla configurazione dell'origine SAP BW.  
@@ -54,13 +55,13 @@ ms.lasthandoff: 11/20/2017
  **Tipo**  
  Visualizza il tipo dell'evento registrato. Nella tabella seguente sono elencati i tipi di eventi possibili.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |S|Messaggio di operazione completata.|  
 |E|Messaggio di errore|  
 |W|Messaggio di avviso.|  
 |I|Messaggio informativo.|  
-|A|L'operazione è stata interrotta.|  
+|Un|L'operazione è stata interrotta.|  
   
  **Message**  
  Visualizza il testo del messaggio associato all'evento registrato.  

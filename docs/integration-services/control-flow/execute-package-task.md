@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 703f8c2dbcc954c4603ec0ff73b0928c6afaf70c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-package-task"></a>Attività Esegui pacchetto
   L'attività Esegui pacchetto permette di estendere le funzionalità aziendali di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentendo ai pacchetti di eseguire altri pacchetti nell'ambito di un flusso di lavoro.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/20/2017
  Poiché la transazione utilizzata dal pacchetto padre può essere estesa al pacchetto figlio, è possibile eseguire in un'unica operazione il commit o il rollback di tutte le operazioni eseguite dai due pacchetti. È ad esempio possibile eseguire il commit o il rollback degli inserimenti nel database eseguiti dal pacchetto padre a seconda dell'esito degli inserimenti nel database eseguiti dal pacchetto figlio e viceversa. Per altre informazioni, vedere [Transazioni ereditate](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
   
 ## <a name="propagating-logging-details"></a>Propagazione dei dettagli di registrazione  
- Il pacchetto figlio eseguito dall'attività Esegui pacchetto invia sempre i dettagli di registrazione al pacchetto padre, anche se non è configurato per l'utilizzo della registrazione. I dettagli ricevuti dal pacchetto figlio verranno tuttavia registrati solo se l'attività Esegui pacchetto è configurata per l'utilizzo della registrazione. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Il pacchetto figlio eseguito dall'attività Esegui pacchetto invia sempre i dettagli di registrazione al pacchetto padre, anche se non è configurato per l'utilizzo della registrazione. I dettagli ricevuti dal pacchetto figlio verranno tuttavia registrati solo se l'attività Esegui pacchetto è configurata per l'utilizzo della registrazione. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="passing-values-to-child-packages"></a>Passaggio di valori ai pacchetti figlio  
  I pacchetti figlio utilizzano in genere valori ricevuti dal pacchetto chiamante, che normalmente è il pacchetto padre. L'utilizzo di valori ricevuti da un pacchetto padre può essere utile negli scenari seguenti:  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
   
- **Description**  
+ **Descrizione**  
  Digitare una descrizione dell'attività Esegui pacchetto.  
   
 ###  <a name="package"></a> Impostare le opzioni nella pagina Pacchetto  
@@ -174,7 +175,7 @@ ms.lasthandoff: 11/20/2017
  **Percorso**  
  Selezionare il percorso del pacchetto figlio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**SQL Server**|Impostare il percorso su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**File system**|Impostare il percorso sul file system.|  
@@ -202,7 +203,7 @@ ms.lasthandoff: 11/20/2017
   
 ##### <a name="location--file-system"></a>Percorso = File system  
  **Connessione**  
- Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md)  
   
