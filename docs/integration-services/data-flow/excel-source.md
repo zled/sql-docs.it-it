@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 61e28171171a822f25da6979340785bc5c114e1c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-source"></a>Origine Excel
   L'origine Excel consente di estrarre dati da fogli di lavoro o intervalli di una cartella di lavoro di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
  Per informazioni sul ciclo tramite un gruppo di file Excel, vedere [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Mapping dei parametri di query a variabili in un componente del flusso di dati](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/20/2017
 >  La proprietà **CommandTimeout** dell'origine Excel non è disponibile nell' **Editor origine Excel**, tuttavia può essere impostata usando l' **Editor avanzato**. Per altre informazioni su questa proprietà, vedere la sezione relativa all'origine Excel in [Proprietà personalizzate di Excel](../../integration-services/data-flow/excel-custom-properties.md).  
   
 ### <a name="static-options"></a>Opzioni statiche  
- **gestione connessione OLE DB**  
+ **Gestione connessione OLE DB**  
  Consente di selezionare una gestione connessione Excel esistente dall'elenco o di creare una nuova connessione facendo clic su **Nuova**.  
   
  **Nuova**  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/20/2017
  **Modalità di accesso ai dati**  
  Consente di specificare il metodo per la selezione dei dati dall'origine.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Tabella o vista|Consente di recuperare dati da un foglio di lavoro o da un intervallo denominato nel file di Excel.|  
 |Variabile nome vista o nome tabella|Consente di specificare il foglio di lavoro o il nome dell'intervallo in una variabile.<br /><br /> **Informazioni correlate:** [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
  **Troncamento**  
  Consente di specificare l'azione da eseguire in caso di troncamenti, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
- **Description**  
+ **Descrizione**  
  Consente di visualizzare la descrizione dell'errore.  
   
  **Imposta questo valore nelle celle selezionate**  

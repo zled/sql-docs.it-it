@@ -11,19 +11,21 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: custom objects [Integration Services]
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- custom objects [Integration Services]
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 661ca09d032e09e8f9599b7b8093f95fcc975731
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fef5b6d4039fe8cc6448204f943ecc61260ed7de
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Compilazione, distribuzione e debug di oggetti personalizzati
   Dopo avere scritto il codice di un oggetto personalizzato per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], è necessario compilare l'assembly, distribuirlo e integrarlo in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] per renderlo disponibile per l'uso nei pacchetti e quindi sottoporlo a test e debug.  

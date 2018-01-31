@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1bbe58e6c0503a7def766dc59d5911ecb4ef61f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82aad5cf36717e374cdb3e45d231504efac16549
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-component"></a>Componente script
   Il componente Script ospita lo script e consente a un pacchetto di includere ed eseguire codice script personalizzato. È possibile utilizzare il componente script nei pacchetti per gli scopi seguenti:  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
--   [Impostare le proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="select-script-component-type"></a>Seleziona tipo componente script
   Utilizzare la finestra di dialogo **Seleziona tipo componente script** per specificare la creazione di una trasformazione Script preconfigurata da utilizzare come origine, trasformazione o destinazione.  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **Gestione connessione**  
  Selezionare una gestione connessione nell'elenco delle gestioni connessioni disponibili oppure selezionare **\<Nuova connessione>** per aprire la finestra di dialogo **Aggiungi gestione connessione SSIS**.  
   
- **Description**  
+ **Descrizione**  
  Consente di digitare una descrizione per la connessione.  
   
  **Aggiungi**  
@@ -207,9 +208,9 @@ ms.lasthandoff: 11/20/2017
  **Proprietà**  
  Consente di visualizzare e modificare le proprietà della trasformazione Script. Molte delle proprietà visualizzate sono di sola lettura. È possibile modificare le proprietà seguenti:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
-|**Description**|Consente di descrivere gli scopi della trasformazione Script.|  
+|**Descrizione**|Consente di descrivere gli scopi della trasformazione Script.|  
 |**LocaleID**|Consente di stabilire le impostazioni locali per specificare informazioni sul paese/regione relative all'ordinamento e alla conversione di data e ora.|  
 |**Nome**|Consente di digitare un nome descrittivo per il componente.|  
 |**ValidateExternalMetadata**|Consente di specificare se la trasformazione Script convalida i metadati delle colonne in fase di progettazione utilizzando origini dei dati esterne. Il valore **false** consente di ritardare la convalida fino al momento dell'esecuzione.|  

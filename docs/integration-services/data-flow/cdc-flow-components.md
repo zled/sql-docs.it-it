@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82e50a6cb72d5b26810493f656eff82f3b7cdccc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 96311a68d7d003889f88ed91987f1d9a2775c72f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-flow-components"></a>Componenti di flusso CDC
   I componenti Change Data Capture di Attunity per Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] consentono agli sviluppatori SSIS di utilizzare CDC e riducono la complessità dei pacchetti CDC.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
  [CDC Splitter](../../integration-services/data-flow/cdc-splitter.md)  
   
-## <a name="installation"></a>Installation  
+## <a name="installation"></a>Installazione  
  Questa sezione descrive le procedure di installazione dei componenti CDC per Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
  I componenti CDC per SSIS sono inclusi nel pacchetto con Microsoft® Change Data Capture Designer and Service per Oracle di Attunity per Microsoft SQL Server®. Questo download fa parte del Feature Pack di SQL Server. I componenti del Feature Pack sono disponibili per il download nella [pagina Web del Feature Pack di SQL Server 2016](http://go.microsoft.com/fwlink/?LinkId=746297).  
@@ -194,13 +195,13 @@ Al termine dell'installazione dei componenti, viene visualizzato un messaggio. F
   
  Dopo avere eseguito correttamente il pacchetto di caricamento iniziale, il pacchetto di aggiornamento Trickle-Feed viene eseguito ripetutamente in base a una pianificazione predeterminata per elaborare le modifiche alle tabelle di origine. Ogni esecuzione del pacchetto di aggiornamento Trickle-Feed è un'esecuzione CDC.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Origine CDC](../../integration-services/data-flow/cdc-source.md)  
   
 -   [CDC Splitter](../../integration-services/data-flow/cdc-splitter.md)  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Indirizzare il flusso CDC in base al tipo di modifica](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   

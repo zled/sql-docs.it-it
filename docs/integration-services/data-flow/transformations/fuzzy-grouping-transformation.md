@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,18 +31,18 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 817cb1690c8b166a0e1760c3e3bb298dfd130278
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 03ffaa3d6dda388fc660feafc68a57fd8ce6346c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="fuzzy-grouping-transformation"></a>Trasformazione Raggruppamento fuzzy
+# <a name="fuzzy-grouping-transformation"></a>Raggruppamento fuzzy - trasformazione
   La trasformazione Raggruppamento fuzzy consente di eseguire attività di pulizia dei dati identificando le righe che con maggiore probabilità sono duplicate e selezionando una riga canonica di dati da utilizzare per la standardizzazione dei dati.  
   
 > [!NOTE]  
@@ -96,12 +97,12 @@ ms.lasthandoff: 11/20/2017
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  Per informazioni dettagliate sull'impostazione di questa attività, fare clic su uno degli argomenti seguenti:  
   
 -   [Identificazione di righe di dati simili tramite la trasformazione Raggruppamento fuzzy](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
--   [Impostare le proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>Editor trasformazione Raggruppamento fuzzy (scheda Gestione connessione)
   Utilizzare la scheda **Gestione connessione** della finestra di dialogo **Editor trasformazione Raggruppamento fuzzy** per selezionare una connessione esistente o crearne una nuova.  
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/20/2017
 >  Sul server specificato dalla connessione deve essere in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La trasformazione Raggruppamento fuzzy crea in tempdb oggetti dati temporanei che possono avere le stesse dimensioni dell'intero input della trasformazione. Durante l'esecuzione della trasformazione vengono eseguite query del server su tali oggetti temporanei. Queste query possono influire sulle prestazioni generali del server.  
   
 ### <a name="options"></a>Opzioni  
- **gestione connessione OLE DB**  
+ **Gestione connessione OLE DB**  
  Consente di selezionare una gestione connessione OLE DB esistente usando la casella di riepilogo o di creare una nuova connessione tramite il pulsante **Nuova** .  
   
  **Nuova**  
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/20/2017
  **Numerali**  
  Consente di specificare l'importanza dei numerali iniziali e finali nel confronto dei dati della colonna. Ad esempio, se i numerali iniziali sono significativi, "2005 Vendite" non verrà raggruppato con "2004 Vendite".  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Nessuno**|I numerali iniziali e finali non sono significativi.|  
 |**Iniziali**|Sono significativi solo i numerali iniziali.|  

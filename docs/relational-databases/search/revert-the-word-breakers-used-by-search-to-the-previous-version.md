@@ -8,11 +8,12 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
@@ -28,7 +29,7 @@ ms.lasthandoff: 11/17/2017
   
  In questo argomento non vengono prese in considerazione le lingue seguenti:  
   
--   **Inglese**. Per ripristinare i componenti per la lingua inglese, vedere [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Inglese**. Per ripristinare i componenti per la lingua inglese, vedere [Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Danese, polacco e turco**. I word breaker di terze parti per il danese, il polacco e il turco inclusi con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono stati sostituiti con i componenti [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -383,7 +384,7 @@ ms.lasthandoff: 11/17/2017
 |Nome file corrente|MsWb70804.dll|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Differenze di comportamento nella ricerca full-text](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   
