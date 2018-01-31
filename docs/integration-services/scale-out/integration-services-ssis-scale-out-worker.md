@@ -9,19 +9,20 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e73695e21e8055d3c27079f106390e8d44894db
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 0cd80620f668e87eba8a77f1ac6a9e5faa2378da
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Ruolo di lavoro di scalabilità orizzontale di Integration Services (SSIS)
 
@@ -63,7 +64,7 @@ Il file di log del servizio Scale Out Worker si trova nella cartella `\<drive\>:
 
 Il percorso del log di ogni singola attività è configurato nel file `WorkerSettings.config` in `TasksRootFolder`. Se non è specificato alcun valore, il log si trova nella cartella `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. 
 
-Il parametro *[account]* è l'account che esegue il servizio Scale Out Worker. Per impostazione predefinita, tale account è `SSISScaleOutWorker140`.
+Il parametro *[account]* è l'account che esegue il servizio Scale Out Worker. Per impostazione predefinita, l'account è `SSISScaleOutWorker140`.
 
 ## <a name="next-steps"></a>Passaggi successivi
 [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)

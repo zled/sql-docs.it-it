@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.reviewissues.f1
+f1_keywords:
+- sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f73734f20bcda435f099066852d84101192fb212
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f9c2ddd8834d5ff3dbef2d0aff725343fae4f41
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server)
 Se nell'elenco **Mapping** della finestra di dialogo **Mapping colonne** è stato specificato un mapping tra i tipi di dati che può avere esito negativo, l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Importazione/Esportazione guidata mostra la pagina **Verifica mapping tra i tipi di dati** . In questa pagina è possibile esaminare le informazioni dettagliate sulle conversioni dei tipi di dati da eseguire tramite la procedura guidata per rendere i dati di origine compatibili con la destinazione. Queste informazioni includono segnali visivi che consentono di distinguere le conversioni dei tipi di dati per cui si prevede un esito positivo da quelle che possono provocare errori o troncamenti. Per ogni conversione, decidere se accettare la conversione suggerita dalla procedura guidata e specificare come gestire gli eventuali errori restituiti.   
@@ -49,7 +51,7 @@ In questo esempio, i risultati della query dell'utente verranno copiati nella ta
   
  La tabella seguente descrive le colonne dell'elenco **Tabella** .  
   
-|Colonna|Description|  
+|colonna|Description|  
 |------------|-----------------|  
 |(Icona di origine)|Indica la probabilità di esito positivo per le conversioni dei tipi di dati:<br /> -   Un'icona raffigurante un segno di spunta **verde** indica che la procedura guidata prevede l'esito positivo di tutte le conversioni dei tipi di dati per la tabella.<br />-   Un'icona di avviso **gialla** indica che è consigliabile verificare le singole conversioni eseguite dalla procedura guidata. Per verificare tali conversioni, selezionare la tabella, quindi controllare le conversioni per singole colonne nell'elenco **Mapping dei tipi di dati** .<br />-   Un'icona di errore **rossa** indica che la procedura guidata non è in grado di eseguire in modo affidabile alcune delle conversioni per la tabella.|  
 |**Origine**|Nome della tabella di origine.|  
@@ -65,7 +67,7 @@ In questo esempio, ogni colonna di origine verrà copiata in una colonna con lo 
 
 La tabella seguente descrive le colonne dell'elenco **Mapping dei tipi di dati** . 
 
-|Colonna|Description|  
+|colonna|Description|  
 |------------|-----------------|  
 |(Icona di conversione)|Indica la probabilità di esito positivo per le conversioni dei tipi di dati:<br /> -   Un'icona raffigurante un segno di spunta **verde** indica che la procedura guidata prevede l'esito positivo della conversione del tipo di dati per la colonna specifica.<br />-   Un'icona di avviso **gialla** indica che è consigliabile verificare la conversione eseguita dalla procedura guidata. Per verificare la conversione, fare doppio clic sulla colonna per visualizzare la finestra di dialogo **Dettagli conversione colonna** . Per altre informazioni, vedere [Finestra di dialogo Dettagli conversione colonna (Importazione/Esportazione guidata SQL Server)](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md).<br />-   Un'icona di errore **rossa** indica che la procedura guidata non è in grado di eseguire in modo affidabile la conversione.|  
 |**Colonna di origine**|Nome della colonna di origine.|  
@@ -96,7 +98,7 @@ Questo esempio visualizza i valori predefiniti per le due opzioni di gestione de
  -   Generare un errore e arrestare il processo di importazione o esportazione. Si tratta del valore predefinito.
  -   Ignorare il troncamento e continuare il processo di importazione o esportazione.  
    
-## <a name="whats-next"></a>Operazioni successive  
+## <a name="whats-next"></a>Quali sono le operazioni successive?  
  Dopo aver verificato gli avvisi e aver specificato le opzioni di conversione e gestione degli errori, dalla pagina **Verifica mapping tra i tipi di dati** tornare alla finestra di dialogo **Mapping colonne** . Per altre informazioni, vedere [Mapping colonne](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
  
  ## <a name="see-also"></a>Vedere anche

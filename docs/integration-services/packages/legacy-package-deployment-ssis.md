@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,16 +34,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 486fa573b955848828bff349f364543e6a1e23f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f0a4d37996a1add0c028f9481b1dc232190a19a3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="legacy-package-deployment-ssis"></a>distribuzione del pacchetto legacy (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include strumenti e procedure guidate per la distribuzione di pacchetti dal computer di sviluppo al server di produzione o ad altri computer.  
@@ -221,7 +222,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Nella tabella seguente vengono descritte le colonne dell'elenco delle configurazioni visualizzato nella finestra di dialogo **Libreria configurazioni pacchetto** .  
   
-|Colonna|Description|  
+|colonna|Description|  
 |------------|-----------------|  
 |**Nome configurazione**|Nome della configurazione.|  
 |**Tipo configurazione**|Tipo di configurazione.|  
@@ -231,7 +232,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ### <a name="to-create-a-package-configuration"></a>Per creare una configurazione di pacchetto  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
@@ -323,7 +324,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Tipo configurazione**  
  Selezionare una delle opzioni seguenti per impostare il tipo di origine in cui archiviare la configurazione:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**File di configurazione XML**|Consente di archiviare la configurazione come file in formato XML. Tramite la selezione di questo valore le opzioni dinamiche vengono visualizzate nella sezione **Tipo configurazione**.|  
 |**Variabile di ambiente**|Consente di archiviare la configurazione in una delle variabili di ambiente. Tramite la selezione di questo valore le opzioni dinamiche vengono visualizzate nella sezione **Tipo configurazione**.|  
@@ -340,7 +341,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Nome file di configurazione**|Consente di digitare il percorso del file di configurazione generato dalla procedura guidata.|  
 |**Sfoglia**|Usare la finestra di dialogo **Selezionare il percorso del file di configurazione** per impostare il percorso del file di configurazione generato dalla procedura guidata. Se il file non esiste, verrà creato durante la procedura guidata.|  
@@ -348,7 +349,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui memorizzare la configurazione.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
@@ -360,14 +361,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Voce del Registro di sistema**|Digitare la chiave del Registro di sistema contenente le informazioni di configurazione Il formato è \<chiave del Registro di sistema>.<br /><br /> È necessario che la chiave del Registro di sistema esista già in HKEY_CURRENT_USER e che il suo valore sia denominato Value. Il valore può essere un DWORD o una stringa.<br /><br /> Se si vuole usare una chiave del Registro di sistema che non si trova nella radice HKEY_CURRENT_USER, per identificare la chiave usare il formato \<chiave Registro di sistema\chiave Registro di sistema\\...>.|  
   
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui memorizzare la configurazione.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
@@ -375,14 +376,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Variabile padre**|Consente di specificare la variabile inclusa nel pacchetto padre contenente le informazioni di configurazione.|  
   
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui viene memorizzata la configurazione.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
@@ -390,7 +391,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Connessione**|Consente di selezionare una connessione nell'elenco o di creare una nuova connessione facendo clic su **Nuova** .|  
 |**Tabella configurazione**|Consente di selezionare una tabella esistente o di creare una nuova tabella facendo clic su **Nuova** per scrivere un'apposita istruzione SQL.|  
@@ -399,7 +400,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui è memorizzata la configurazione.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
@@ -508,7 +509,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 6.  Facoltativamente, aggiornare la posizione dell'utilità di distribuzione modificando la proprietà **DeploymentOutputPath** .  
   
-7.  Scegliere **OK**.  
+7.  Fare clic su **OK**.  
   
 8.  In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e quindi scegliere **Compila**.  
   
@@ -675,7 +676,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Usa autenticazione di SQL Server**  
  Consente di specificare se il pacchetto deve utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'accesso al server. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario specificare un nome utente e una password.  
   
- **Nome utente**  
+ **User name**  
  Consente di specificare un nome utente.  
   
  **Password**  
