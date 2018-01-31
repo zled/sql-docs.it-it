@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sapbwsource.connection.f1
+f1_keywords:
+- sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eba966d7321d44088c197d0f5a8829ff591a9bdd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0373c0142f2b466b12dd6c2ff1619f09b2b8b26f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor origine SAP BW (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine SAP BW** per selezionare la gestione connessione SAP BW per l'origine SAP BW. In questa pagina vengono inoltre selezionati la modalità di esecuzione e i parametri per estrarre i dati dal sistema SAP Netweaver BW.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/20/2017
 >  Se non si conoscono tutti i valori richiesti per configurare l'origine, può essere necessario consultare l'amministratore SAP.  
   
  **Gestione connessione SAP BW**  
- Selezionare una gestione connessione esistente nell'elenco oppure crearne una nuova facendo clic su **Nuova**.  
+ Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
  **Nuova**  
  Creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione SAP BW** .  
@@ -95,7 +97,7 @@ ms.lasthandoff: 11/20/2017
  **ID programma**  
  Immettere l'ID programma associato alla destinazione RFC.  
   
- **Ricerca**  
+ **Cerca**  
  Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca destinazione RFC](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
 #### <a name="process-chain-options"></a>Opzioni della catena di processi  
@@ -104,7 +106,7 @@ ms.lasthandoff: 11/20/2017
  **Catena di processi**  
  Immettere il nome della catena di processi che verrà attivata da parte dell'origine.  
   
- **Ricerca**  
+ **Cerca**  
  Individuare la catena di processi usando la finestra di dialogo **Cerca ProcessChain** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca ProcessChain](../../integration-services/data-flow/look-up-process-chain.md).  
   
 ### <a name="execution-mode--w---wait-for-notify"></a>Modalità di esecuzione = W - Attesa notifica  
@@ -121,7 +123,7 @@ ms.lasthandoff: 11/20/2017
  **ID programma**  
  Immettere l'ID programma associato alla destinazione RFC.  
   
- **Ricerca**  
+ **Cerca**  
  Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca destinazione RFC](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
 ### <a name="execution-mode--e---extract-only"></a>Modalità di esecuzione = E - Solo estrazione  

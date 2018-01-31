@@ -16,7 +16,7 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -213,7 +213,7 @@ ms.lasthandoff: 01/09/2018
 |Visualizzazione delle proprietà del server di report|Visualizzare proprietà relative al server di report, ad esempio il nome dell'applicazione, lo stato di attivazione della funzionalità Report personali e le impostazioni predefinite della cronologia dei report.<br /><br /> Se si rimuove questa attività dal ruolo **Utente sistema** , la pagina Impostazioni sito non sarà più disponibile. Non verrà inoltre visualizzato il titolo dell'applicazione nella parte superiore di ogni pagina. Per impostazione predefinita, il titolo per Gestione report è "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  
 |Visualizzazione di pianificazioni condivise|Visualizzare le pianificazioni condivise che sono utilizzate per eseguire o aggiornare i report.<br /><br /> Se si rimuove questa attività dal ruolo **Utente sistema** , gli utenti non potranno selezionare le pianificazioni condivise da utilizzare con sottoscrizioni e altre operazioni pianificate.|  
   
- Il ruolo **Utente sistema** può essere utilizzato per integrare la sicurezza predefinita. È possibile includerlo in nuove assegnazioni di ruolo per estendere le autorizzazioni di accesso al server di report agli utenti dei report. Per altre informazioni, vedere [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+ Il ruolo **Utente sistema** può essere utilizzato per integrare la sicurezza predefinita. È possibile includerlo in nuove assegnazioni di ruolo per estendere le autorizzazioni di accesso al server di report agli utenti dei report. Per altre informazioni, vedere [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.configureflatfiledest.f1
+f1_keywords:
+- sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e312251291cbf2e8850b7900793b8d32e7c3d53b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9384b498ea78369278261a3334504e5d1b29b58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurazione destinazione file flat (Importazione/Esportazione guidata SQL Server)
   Se è stata selezionata una destinazione file flat, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Configurazione destinazione file flat** dopo aver specificato che si vuole copiare una tabella o dopo aver indicato una query. In questa pagina è possibile specificare le opzioni di formattazione per il file flat di destinazione. Facoltativamente, è possibile esaminare il mapping di singole colonne e visualizzare in anteprima i dati di esempio.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitatore di riga**  
  Selezionare dall'elenco i delimitatori per separare le righe nell'output. Non è possibile specificare un delimitatore di riga *personalizzato*.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Consente di delimitare le righe con una combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Consente di delimitare le righe con un ritorno a capo.|  
@@ -59,7 +61,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitatore di colonna**  
  Selezionare dall'elenco i delimitatori per separare le colonne nell'output. Non è possibile specificare un delimitatore di colonna *personalizzato*.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Consente di delimitare le colonne con una combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Consente di delimitare le colonne con un ritorno a capo.|  
@@ -84,6 +86,6 @@ Facoltativamente, fare clic su **Anteprima** per visualizzare in anteprima fino 
   
 Dopo aver visualizzato i dati in anteprima, potrebbe essere necessario modificare le opzioni selezionate nelle pagine precedenti della procedura guidata. Per apportare queste modifiche, tornare alla pagina **Configurare la destinazione del file flat** e quindi fare clic su **Indietro** per tornare alle pagine precedenti nelle quali modificare le opzioni selezionate.  
 
-## <a name="whats-next"></a>Operazioni successive  
+## <a name="whats-next"></a>Quali sono le operazioni successive?  
  Dopo aver specificato le opzioni di formattazione per il file flat di destinazione, la pagina successiva è **Salvare ed eseguire il pacchetto**. In questa pagina specificare se eseguire immediatamente l'operazione. A seconda della configurazione, è anche possibile salvare le proprie informazioni come pacchetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per personalizzarlo e usarlo di nuovo in seguito. Per altre informazioni, vedere [Salvare ed eseguire il pacchetto](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
 

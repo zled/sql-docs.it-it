@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 488a95178554c7caee4d44a55b03c972065bdfb0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05b3941ccc90394999a8af6b9f8d10aaf25f0921
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|Identificatore (ID) univoco del progetto.|  
 |folder_id|**bigint**|ID univoco della cartella in cui si trova il progetto.|  
-|name|**sysname**|Nome del progetto.|  
+|NAME|**sysname**|Nome del progetto.|  
 |description|**nvarchar(1024)**|Descrizione del progetto (facoltativa).|  
 |project_format_version|**int**|Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata per lo sviluppo del progetto.|  
 |deployed_by_sid|**varbinary(85)**|ID di sicurezza (SID) dell'utente che ha installato il pacchetto.|  
@@ -43,10 +44,10 @@ ms.lasthandoff: 11/20/2017
 |validation_status|**char(1)**|Stato di convalida.|  
 |last_validation_time|**datetimeoffset(7)**|Ora dell'ultima convalida.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  In questa vista viene visualizzata una riga per ogni progetto nel catalogo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa vista è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazione READ per il progetto  
