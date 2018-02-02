@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c52546eab7dc5c52fb38e03616df648d3d5d67d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7262db9da133a2aa6f82f501e8dab3228de16efb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="aggregate-transformation"></a>Trasformazione Aggregazione
   La trasformazione Aggregazione applica funzioni di aggregazione, ad esempio Media, ai valori delle colonne e copia i risultati nell'output della trasformazione. Oltre alle funzioni di aggregazione, per questa trasformazione è disponibile la clausola GROUP BY, che consente di specificare i gruppi su cui eseguire l'aggregazione.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |Operazione|Description|  
 |---------------|-----------------|  
 |Group by|Consente di dividere i set di dati in gruppi. Per il raggruppamento è possibile utilizzare colonne con qualsiasi tipo di dati. Per altre informazioni, vedere [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
-|Sum|Consente di sommare i valori di una colonna. È possibile sommare solo le colonne con tipi di dati numerici. Per altre informazioni, vedere [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
+|SUM|Consente di sommare i valori di una colonna. È possibile sommare solo le colonne con tipi di dati numerici. Per altre informazioni, vedere [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
 |Medio|Consente di restituire la media dei valori di una colonna. È possibile calcolare la media soltanto delle colonne con tipi di dati numerici. Per altre informazioni, vedere [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
 |Count|Consente di restituire il numero di elementi di un gruppo. Per altre informazioni, vedere [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
 |Count Distinct|Consente di restituire il numero di valori non Null univoci di un gruppo.|  
@@ -130,9 +131,9 @@ ms.lasthandoff: 11/20/2017
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinare i dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [Aggregare valori in un set di dati tramite la trasformazione Aggregazione](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor trasformazione Aggregazione (scheda Aggregazioni)
@@ -156,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **Scala chiavi**  
  Nella sezione delle opzioni avanzate è inoltre possibile specificare il numero approssimativo di chiavi che possono essere scritte dall'aggregazione. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se le proprietà **Scala chiavi** e **Chiavi** sono entrambe impostate, il valore della proprietà **Chiavi** ha la precedenza.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Non specificata|La proprietà Scala chiavi non viene utilizzata.|  
 |Bassa|L'aggregazione può scrivere circa 500.000 chiavi.|  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
  **Count Distinct Scale**  
  È possibile specificare il numero approssimativo di valori distinct che l'aggregazione può scrivere. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se le proprietà **CountDistinctScale** e **CountDistinctKeys** sono entrambe specificate, la proprietà **CountDistinctKeys** ha la precedenza.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Non specificata|La proprietà **CountDistinctScale** non viene usata.|  
 |Bassa|L'aggregazione può scrivere circa 500.000 valori distinct.|  
@@ -214,12 +215,12 @@ ms.lasthandoff: 11/20/2017
   
 ### <a name="options"></a>Opzioni  
  **Scala chiavi**  
- Consente di specificare facoltativamente il numero approssimativo di chiavi previste dall'aggregazione. La trasformazione utilizza tale informazione per ottimizzare la dimensione iniziale della cache. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se vengono specificate sia **Scala chiavi** sia **Numero di chiavi**, **Numero di chiavi** ha priorità.  
+ Consente di specificare facoltativamente il numero approssimativo di chiavi previste dall'aggregazione. La trasformazione utilizza tale informazione per ottimizzare la dimensione iniziale della cache. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se vengono specificate sia **Scala chiavi** sia **Numero di chiavi**, **quest'ultima** ha priorità.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Non specificata|La proprietà **Scala chiavi** non viene usata.|  
-|Basso|L'aggregazione può scrivere circa 500.000 chiavi.|  
+|Bassa|L'aggregazione può scrivere circa 500.000 chiavi.|  
 |Media|L'aggregazione può scrivere circa 5.000.000 di chiavi.|  
 |Alto|L'aggregazione può scrivere oltre 25.000.000 di chiavi.|  
   
@@ -229,10 +230,10 @@ ms.lasthandoff: 11/20/2017
  **Scala conteggio valori distinct**  
  È possibile specificare il numero approssimativo di valori distinct che l'aggregazione può scrivere. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se vengono specificate sia **Scala conteggio valori distinct** sia **Chiavi conteggio valori distinct**, **Numero di chiavi** ha priorità.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Non specificata|La proprietà CountDistinctScale non viene utilizzata.|  
-|Basso|L'aggregazione può scrivere circa 500.000 valori distinct.|  
+|Bassa|L'aggregazione può scrivere circa 500.000 valori distinct.|  
 |Media|L'aggregazione può scrivere circa 5.000.000 di valori distinct.|  
 |Alto|L'aggregazione può scrivere oltre 25.000.000 di valori distinct.|  
   
