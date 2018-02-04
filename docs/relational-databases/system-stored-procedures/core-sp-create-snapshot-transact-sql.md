@@ -1,5 +1,5 @@
 ---
-title: Core. sp_create_snapshot (Transact-SQL) | Documenti Microsoft
+title: core.sp_create_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - management data warehouse, data collector stored procedures
 - data collector [SQL Server], stored procedures
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 674968b7b981755ea0f67f8657116537d2a5791c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 559eed3c2ae0a5bada1453e21347fee791625eb5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,22 +54,22 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collection_set_uid =] '*collection_set_uid*'  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
  GUID per il set di raccolta. *collection_set_uid* è **uniqueidentifier** non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collection_sets nel database msdb.  
   
  [ @collector_type_uid =] '*collector_type_uid*'  
  GUID per un tipo agente di raccolta. *collector_type_uid* è **uniqueidentifier** non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collector_types nel database msdb.  
   
- [ @machine_name=] '*nome_computer*'  
+ [ @machine_name= ] '*machine_name*'  
  Nome del server in cui risiede l'insieme di raccolta. *nome_computer* è **sysname**, senza alcun valore predefinito.  
   
  [ @named_instance=] '*named_instance*'  
  Nome dell'istanza per l'insieme di raccolta. *named_instance* è **sysname**, senza alcun valore predefinito.  
   
- [ @log_id =] *log_id*  
+ [ @log_id = ] *log_id*  
  Identificatore univoco tramite cui viene eseguito il mapping al registro eventi del set di raccolta nel server da cui sono stati raccolti i dati. *log_id* è **bigint** non prevede alcun valore predefinito. Per ottenere il valore per *log_id*, query sulla vista syscollector_execution_log nel database msdb.  
   
- [ @snapshot_id =] *snapshot_id*  
+ [ @snapshot_id = ] *snapshot_id*  
  Identificatore univoco per una riga inserita nella vista snapshots. *snapshot_id* è **int** e viene restituito come OUTPUT.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -84,7 +86,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
  Se una delle due precedenti verifiche non ha esito positivo, la procedura ha esito negativo e viene restituito un errore.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza di **mdw_writer** (con autorizzazione EXECUTE) ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  

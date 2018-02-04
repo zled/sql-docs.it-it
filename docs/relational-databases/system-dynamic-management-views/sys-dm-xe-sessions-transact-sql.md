@@ -1,5 +1,5 @@
 ---
-title: Sys.dm xe_sessions (Transact-SQL) | Documenti Microsoft
+title: sys.dm_xe_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_xe_sessions
 - sys.dm_xe_sessions_TSQL
 - sys.dm_xe_sessions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_sessions dynamic management view
 - extended events [SQL Server], views
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d16dbc718232a6c3953e391d255986340d4f011
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6c871158b5085d14eda8974530e392b5ed24baf5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
     
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|address|**varbinary (8)**|Indirizzo di memoria della sessione. indirizzo è univoco nel sistema locale. Non ammette i valori Null.|  
+|address|**varbinary(8)**|Indirizzo di memoria della sessione. indirizzo è univoco nel sistema locale. Non ammette i valori Null.|  
 |name|**nvarchar(256)**|Nome della sessione. nome è univoco nel sistema locale. Non ammette i valori Null.|  
 |pending_buffers|**int**|Numero di buffer completi in sospeso per l'elaborazione. Non ammette i valori Null.|  
 |total_regular_buffers|**int**|Numero totale di buffer standard associati alla sessione. Non ammette i valori Null.<br /><br /> Nota: I buffer standard vengono utilizzati la maggior parte dei casi. Tali buffer sono di dimensioni sufficienti per contenere molti eventi. In genere, vengono utilizzati tre o più buffer per sessione. Il numero di buffer standard viene determinato automaticamente dal server, in base alla partizione della memoria impostata tramite l'opzione MEMORY_PARTITION_MODE. Le dimensioni dei buffer standard corrispondono al valore dell'opzione MAX_MEMORY (4 MB per impostazione predefinita) diviso per il numero di buffer. Per ulteriori informazioni su MEMORY_PARTITION_MODE e le opzioni di MAX_MEMORY, vedere [CREATE EVENT SESSION &#40; Transact-SQL &#41; ](../../t-sql/statements/create-event-session-transact-sql.md).|  
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |create_time|**datetime**|Ora di creazione della sessione. Non ammette i valori Null.|  
 |largest_event_dropped_size|**int**|Dimensione del più grande evento che non si è integrato nel buffer della sessione. Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="change-history"></a>Cronologia modifiche  

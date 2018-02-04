@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_start_collection_set (Transact-SQL) | Documenti Microsoft
+title: sp_syscollector_start_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_start_collection_set_TSQL
 - sp_syscollector_start_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_start_collection_set
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32ab8a570febc69a91346e39c8f200a36a263aa8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 54381b4d9b0baab7d9b726fd209a3cfb598fb8e1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +50,7 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@collection_set_id =** ] *collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  Identificatore univoco locale del set di raccolta. *collection_set_id* è **int** con un valore predefinito null. *collection_set_id* deve avere un valore se *nome* è NULL.  
   
  [  **@name =** ] '*nome*'  
@@ -66,7 +68,7 @@ sp_syscollector_start_collection_set
   
  Se il set di raccolta non contiene alcun elemento della raccolta, questa operazione non ha alcun effetto. Viene restituito l'errore 14685 come avviso.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è necessaria l'appartenenza al ruolo predefinito del database dc_operator. Se al set di raccolta non è associato un account proxy, è richiesta l'appartenenza al ruolo predefinito del server sysadmin.  
   
 ## <a name="examples"></a>Esempi  

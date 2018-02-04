@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobsteps (Transact-SQL) | Documenti Microsoft
+title: dbo.sysjobsteps (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dbo.sysjobsteps_TSQL
 - sysjobsteps
 - sysjobsteps_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysjobsteps system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobsteps system table
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4f316e40cc6bf89cf7296b5a2d864406142f7f87
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f29d3ef22b724abc095da01ea5eef70aa9c447dd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +43,9 @@ ms.lasthandoff: 11/17/2017
 |**job_id**|**uniqueidentifier**|ID del processo.|  
 |**step_id**|**int**|ID del passaggio del processo.|  
 |**step_name**|**sysname**|Nome del passaggio del processo.|  
-|**sottosistema**|**nvarchar (40)**|Nome del sottosistema utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per eseguire il passaggio del processo|  
+|**subsystem**|**nvarchar(40)**|Nome del sottosistema utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per eseguire il passaggio del processo|  
 |**comando**|**nvarchar(max)**|Comando deve essere eseguito da **sottosistema**.|  
-|**flag**|**int**|Riservato.|  
+|**flags**|**int**|Riservato.|  
 |**additional_parameters**|**ntext**|Riservato.|  
 |**cmdexec_success_code**|**int**|Valore a livello di errore restituito da **CmdExec** passaggi del sottosistema per indicare l'esito positivo.|  
 |**on_success_action**|**tinyint**|Azione da eseguire quando un passaggio viene eseguito correttamente.|  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |**retry_attempts**|**int**|Numero di tentativi in caso di esecuzione errata del passaggio.|  
 |**retry_interval**|**int**|Periodo di attesa tra un tentativo e il successivo.|  
 |**os_run_priority**|**int**|Riservato.|  
-|**nome_file_output.**|**nvarchar (200)**|Nome del file in cui l'output dei passaggi viene salvato quando **sottosistema** è TSQL, PowerShell o **CmdExec***.*|  
+|**output_file_name**|**nvarchar(200)**|Nome del file in cui l'output dei passaggi viene salvato quando **sottosistema** è TSQL, PowerShell o **CmdExec * * *.*|  
 |**last_run_outcome**|**int**|Risultato dell'esecuzione precedente del passaggio del processo.<br /><br /> **0** = non riuscito<br /><br /> **1** = ha avuto esito positivo<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**last_run_duration**|**int**|Durata (hhmmss) dell'ultima esecuzione del passaggio.|  
 |**last_run_retries**|**int**|Numero di tentativi durante l'ultima esecuzione del passaggio del processo.|  

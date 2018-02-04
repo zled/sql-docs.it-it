@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobactivity (Transact-SQL) | Documenti Microsoft
+title: sp_help_jobactivity (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobactivity_TSQL
 - sp_help_jobactivity
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobactivity
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cb0d3d344b97f0ce14e3bd156b5915a1721c8f4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a4b1b81a94f272ffed56c26f4ede9080f80527c7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  Numero di identificazione del processo. *job_id*è **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  Nome del processo. *job_name*è **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@session_id**  =] *session_id*  
+ [ **@session_id** = ] *session_id*  
  ID della sessione su cui segnalare informazioni. *session_id* è **int**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -74,9 +77,9 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**last_executed_step_id**|**int**|ID dell'ultimo passaggio del processo eseguito.|  
 |**last_exectued_step_date**|**datetime**|Data e ora di inizio dell'esecuzione dell'ultimo passaggio del processo.|  
 |**stop_execution_date**|**datetime**|Data e ora di arresto dell'esecuzione del processo.|  
-|**colonna next_scheduled_run_date**|**datetime**|Data e ora pianificate per la successiva esecuzione del processo.|  
+|**next_scheduled_run_date**|**datetime**|Data e ora pianificate per la successiva esecuzione del processo.|  
 |**job_history_id**|**int**|Identificatore della cronologia processo nella tabella delle cronologie processi.|  
-|**Messaggio**|**nvarchar (1024)**|Messaggio generato durante l'ultima esecuzione del processo.|  
+|**message**|**nvarchar(1024)**|Messaggio generato durante l'ultima esecuzione del processo.|  
 |**run_status**|**int**|Stato restituito dall'ultima esecuzione del processo:<br /><br /> **0** = operazione non riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = stato sconosciuto|  
 |**operator_id_emailed**|**int**|ID dell'operatore comunicato tramite posta elettronica al completamento del processo.|  
 |**operator_id_netsent**|**int**|Numero di ID dell'operatore comunicato tramite **net send** al completamento del processo.|  
@@ -85,13 +88,13 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Osservazioni  
  Tramite questa procedura viene generato uno snapshot dello stato corrente dei processi. I risultati restituiti rappresentano le informazioni disponibili al momento dell'elaborazione della richiesta.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent crea un ID di sessione ogni volta che viene avviato. L'id di sessione viene archiviato nella tabella **msdb.dbo**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent crea un id di sessione ogni volta che viene avviato il servizio agente. L'id di sessione viene archiviato nella tabella **msdb.dbo**.  
   
  Se non si *session_id* è specificato, elenca le informazioni relative alla sessione più recente.  
   
  Se non si *job_name* o *job_id* è specificato, elenca le informazioni per tutti i processi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, i membri del **sysadmin** ruolo predefinito del server può eseguire questa stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  

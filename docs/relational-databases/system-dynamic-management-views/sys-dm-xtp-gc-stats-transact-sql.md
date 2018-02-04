@@ -1,5 +1,5 @@
 ---
-title: Sys.dm xtp_gc_stats (Transact-SQL) | Documenti Microsoft
+title: sys.dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_xtp_gc_stats_TSQL
 - sys.dm_xtp_gc_stats_TSQL
 - sys.dm_xtp_gc_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_xtp_gc_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a690854a31bb01d3b998ae70b8f682750416b72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 76269043863211bc0c531cea9ea9a75915e5f6d7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|Numero di righe esaminate dal sottosistema di Garbage Collection dal momento in cui è stato avviato il server.|  
 |rows_no_sweep_needed|**bigint**|Numero di righe che sono state rimosse senza analisi di elementi nascosti.|  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |sweep_rows_expired|**bigint**|Righe scadute lette dall'elaborazione degli elementi nascosti.|  
 |sweep_rows_expired_removed|**bigint**|Righe scadute rimosse dall'elaborazione degli elementi nascosti.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per l'istanza.  
   
 ## <a name="usage-scenario"></a>Scenario di utilizzo  

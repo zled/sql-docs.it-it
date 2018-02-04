@@ -1,5 +1,5 @@
 ---
-title: backupfilegroup (Transact-SQL) | Documenti Microsoft
+title: backupfilegroup (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupfilegroup_TSQL
 - backupfilegroup
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 244658ccae187622bf1d67b312867d7b41584182
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2787b6a012268378421017c0a2912385c669da17
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |**name**|**sysname**|Nome del filegroup|  
 |**filegroup_id**|**int**|ID del filegroup, univoco all'interno del database. Corrisponde a **data_space_id** in **Sys. FileGroups**.|  
 |**filegroup_guid**|**uniqueidentifier**|Identificatore univoco globale per il filegroup. Può essere NULL.|  
-|**tipo**|**Char(2)**|Tipo di contenuto, può corrispondere a:<br /><br /> FG = Filegroup "Rows"<br /><br /> SL = Filegroup di log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**type**|**char(2)**|Tipo di contenuto, può corrispondere a:<br /><br /> FG = Filegroup "Rows"<br /><br /> SL = Filegroup di log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo di funzione, può corrispondere a:<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
 |**is_default**|**bit**|Il filegroup predefinito, utilizzato quando non è specificato alcun filegroup in CREATE TABLE o CREATE INDEX.|  
 |**is_readonly**|**bit**|1 = Il filegroup è di sola lettura.|  
@@ -65,6 +67,6 @@ ms.lasthandoff: 11/17/2017
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Tabelle di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

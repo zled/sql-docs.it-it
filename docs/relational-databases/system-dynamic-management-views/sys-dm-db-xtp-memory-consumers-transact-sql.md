@@ -1,5 +1,5 @@
 ---
-title: Sys.dm db_xtp_memory_consumers (Transact-SQL) | Documenti Microsoft
+title: sys.dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_memory_consumers
 - dm_db_xtp_memory_consumers_TSQL
 - sys.dm_db_xtp_memory_consumers_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_memory_consumers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_memory_consumers dynamic management view
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29a4fae7f62f76dc6d7f1256eed6e681fe0ff9e4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b34320f2a94ce971bae2cd4406078b9b60669a3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,8 +44,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|ID interno del consumer di memoria.|  
 |memory_consumer_type|**int**|Tipo di consumer di memoria:<br /><br /> 0=Aggregazione. Aggrega l'utilizzo della memoria due o più consumer. Non deve essere visualizzato.<br /><br /> 2=VARHEAP. Tiene traccia dell'utilizzo di memoria per un heap a lunghezza variabile.<br /><br /> 3=HASH. Tiene traccia dell'utilizzo di memoria per un indice.<br /><br /> 5=pool di pagine del DB. Tiene traccia dell'utilizzo di memoria per un pool di pagine del database per le operazioni di runtime. Ad esempio, le variabili di tabella e alcune analisi serializzabili. È disponibile un solo consumer di memoria di questo tipo per database).|  
-|memory_consumer_type_desc|**nvarchar (64)**|Tipo di consumer di memoria: VARHEAP, HASH o PGPOOL.<br /><br /> 0 – Non deve essere visualizzato.<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar (64)**|Descrizione dell'istanza del consumer di memoria:<br /><br /> VARHEAP: <br />Heap del database. Utilizzo per allocare i dati utente per un database (righe).<br />Heap di sistema del database. Utilizzato per allocare i dati del database che verranno inclusi nei dump della memoria e non includono dati utente.<br />Heap dell'indice dell'intervallo. Heap privato utilizzato dall'indice dell'intervallo per allocare pagine BW.<br /><br /> HASH: Nessuna descrizione poiché object_id indica la tabella e index_id l'indice hash.<br /><br /> PGPOOL: Per il database è presente una sola pagina pool riserva di paging da 64K del Database.|  
+|memory_consumer_type_desc|**nvarchar(64)**|Tipo di consumer di memoria: VARHEAP, HASH o PGPOOL.<br /><br /> 0 – Non deve essere visualizzato.<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|Descrizione dell'istanza del consumer di memoria:<br /><br /> VARHEAP: <br />Heap del database. Utilizzo per allocare i dati utente per un database (righe).<br />Heap di sistema del database. Utilizzato per allocare i dati del database che verranno inclusi nei dump della memoria e non includono dati utente.<br />Heap dell'indice dell'intervallo. Heap privato utilizzato dall'indice dell'intervallo per allocare pagine BW.<br /><br /> HASH: Nessuna descrizione poiché object_id indica la tabella e index_id l'indice hash.<br /><br /> PGPOOL: Per il database è presente una sola pagina pool riserva di paging da 64K del Database.|  
 |object_id|**bigint**|ID oggetto a cui è attribuita la memoria allocata. Un valore negativo per gli oggetti di sistema.|  
 |xtp_object_id|**bigint**|L'ID di oggetto per la tabella con ottimizzazione per la memoria.|  
 |index_id|**int**|ID dell'indice del consumer, se disponibile. NULL per le tabelle di base.|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>Osservazioni  
  Nell'output gli allocatori a livello di database fanno riferimento a tabelle utente, indici e tabelle di sistema. VARHEAP con object_id = NULL indica la memoria allocata alle tabelle con colonne a lunghezza variabile.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Vengono restituite tutte le righe se si dispone dell'autorizzazione VIEW DATABASE STATE per il database corrente. In caso contrario, viene restituito un set di righe vuoto.  
   
  Se non si dispone dell'autorizzazione VIEW DATABASE, verranno restituite tutte le colonne per le righe nelle tabelle per cui si dispone dell'autorizzazione SELECT.  

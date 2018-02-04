@@ -1,5 +1,5 @@
 ---
-title: sysmail_delete_mailitems_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_delete_mailitems_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_mailitems_sp_TSQL
 - sysmail_delete_mailitems_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_mailitems_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a0142e48fba0338c1271da1eb7aa0edc13a4847f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6a7843e44e42de868c3748dbf31794d4c69e361e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@sent_before=** ] **'***sent_before***'**  
+ [ **@sent_before=** ] **'***sent_before***'**  
  Elimina i messaggi di posta elettronica anteriori alla data e ora fornito come il *sent_before* argomento. *sent_before* è **datetime** con valore predefinito è NULL. che indica tutte le date.  
   
  [  **@sent_status=** ] **'***sent_status***'**  
@@ -58,7 +61,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
   
  L'eliminazione di un messaggio di posta elettronica comporta la rimozione degli allegati correlati a tale messaggio, L'eliminazione di posta elettronica non elimina le voci corrispondenti nel **sysmail_event_log**. Utilizzare [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) eliminare elementi dal log.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure viene concessa per l'esecuzione ai membri disattivato il **sysadmin** ruolo predefinito del server e **DatabaseMailUserRole**. I membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura per eliminare i messaggi di posta elettronica inviati da tutti gli utenti. I membri di **DatabaseMailUserRole** possibile eliminare solo i messaggi di posta elettronica inviati da tale utente.  
   
 ## <a name="examples"></a>Esempi  
@@ -92,9 +95,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sysmail_allitems &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_attachments &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
- [Creare un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
+ [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+ [Creazione di un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

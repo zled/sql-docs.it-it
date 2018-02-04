@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3136f7ae-b3f1-4932-a5da-95175907671c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8232f9c1c5ae5dccfae4d31719120dc3bb02e1ed
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 08885df32557164e6d2219a3b522ec00d0f7a3e6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-integration-services-100-sql-server-configuration-manager"></a>SQL Server Integration Services 10.0 (Gestione configurazione SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Si tratta del servizio che supporta [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Per visualizzare le proprietà del servizio, fare clic con il pulsante destro del mouse sul servizio nel riquadro dei dettagli, quindi scegliere **Proprietà**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Si tratta del servizio che supporta [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Per visualizzare le proprietà del servizio, fare clic con il pulsante destro del mouse sul servizio nel riquadro dei dettagli, quindi scegliere **Proprietà**.  
   
  Per informazioni su [!INCLUDE[ssIS](../../includes/ssis-md.md)], vedere la documentazione online.  
   

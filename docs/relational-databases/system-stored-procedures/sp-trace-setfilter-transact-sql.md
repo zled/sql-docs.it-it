@@ -1,5 +1,5 @@
 ---
-title: sp_trace_setfilter (Transact-SQL) | Documenti Microsoft
+title: sp_trace_setfilter (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
 - sp_trace_setfilter_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_setfilter
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 659544a47bc142ed430ac6406e2bfde0f60f6845
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +53,16 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  ID della traccia a cui applicare il filtro. *trace_id* è **int**, non prevede alcun valore predefinito. L'utente può *trace_id* valore per identificare, modificare e controllare la traccia.  
   
- [  **@columnid=** ] *column_id*  
+ [ **@columnid=** ] *column_id*  
  ID della colonna a cui applicare il filtro. *column_id* è **int**, non prevede alcun valore predefinito. Se *column_id* è NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cancella tutti i filtri per la traccia specificata.  
   
- [  **@logical_operator**  =] *logical_operator*  
+ [ **@logical_operator** = ] *logical_operator*  
  Specifica se l'operazione di AND (**0**) o OR (**1**) viene applicato l'operatore. *logical_operator* è **int**, non prevede alcun valore predefinito.  
   
- [  **@comparison_operator=** ] *operatore_confronto*  
+ [ **@comparison_operator=** ] *comparison_operator*  
  Specifica il tipo di confronto da eseguire. *operatore_confronto* è **int**, non prevede alcun valore predefinito. Nella tabella seguente vengono descritti gli operatori di confronto e i valori che li rappresentano.  
   
 |Valore|Operatore di confronto|  
@@ -107,7 +110,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
  I parametri di traccia SQL tutte le stored procedure (**sp_trace_xx**) sono fortemente tipizzati. Se tali parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituisce un errore.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente deve disporre delle autorizzazioni ALTER TRACE.  
   
 ## <a name="examples"></a>Esempi  

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_category (Transact-SQL) | Documenti Microsoft
+title: sp_delete_category (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_category_TSQL
 - sp_delete_category
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2cc7a85623daf6a21c65750b9e15a3d6886f67ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d2ce1cd0406cbb69b6dd280bc8c36fdbd31c5d2e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +52,8 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**PROCESSO**|Elimina una categoria di processi.|  
-|**AVVISO**|Elimina una categoria di avvisi.|  
+|**JOB**|Elimina una categoria di processi.|  
+|**ALERT**|Elimina una categoria di avvisi.|  
 |**(OPERATORE)**|Elimina una categoria di operatori.|  
   
  [  **@name =**] **'***nome***'**  
@@ -67,7 +70,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
   
  Quando si elimina una categoria, tutti i processi, gli avvisi o gli operatori di tale categoria vengono riclassificati nella categoria predefinita per la classe.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  
@@ -84,9 +87,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_help_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

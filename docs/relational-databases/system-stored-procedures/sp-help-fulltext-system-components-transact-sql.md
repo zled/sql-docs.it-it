@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_system_components (Transact-SQL) | Documenti Microsoft
+title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_components_TSQL
 - sp_help_fulltext_components
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_system_components
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54f529fcb0130479ef30af742fe58fd05b4bc4d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8bb8278204aa3b710875d3bab91a41abfe43a553
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -57,7 +60,7 @@ sp_help_fulltext_system_components
   
 -   **gestore di protocollo**  
   
--   **FullPath**  
+-   **fullpath**  
   
  Se viene specificato un percorso completo, *param* deve essere specificato anche con il percorso completo per il componente DLL, altrimenti viene restituito un messaggio di errore.  
   
@@ -72,21 +75,21 @@ sp_help_fulltext_system_components
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**componentType**|**sysname**|Tipo di componente. I tipi validi sono:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
+|**componenttype**|**sysname**|Tipo di componente. I tipi validi sono:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|Nome del componente.|  
-|**CLSID**|**uniqueidentifier**|Identificatore della classe del componente.|  
-|**FullPath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è un membro di **serveradmin** ruolo predefinito del server.|  
-|**version**|**nvarchar (30)**|Versione del componente.|  
-|**produttore**|**sysname**|Nome del produttore del componente.|  
+|**clsid**|**uniqueidentifier**|Identificatore della classe del componente.|  
+|**fullpath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è un membro di **serveradmin** ruolo predefinito del server.|  
+|**version**|**nvarchar(30)**|Versione del componente.|  
+|**manufacturer**|**sysname**|Nome del produttore del componente.|  
   
  Il set di risultati seguente viene restituito solo se uno o più di un catalogo full-text esistente che utilizza *component_type*.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**DBID**|**int**|ID del database.|  
+|**dbid**|**int**|ID del database.|  
 |**ftcatid**|**int**|ID del catalogo full-text.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza di **pubblica** ruolo; tuttavia, gli utenti possono solo visualizzare o meno informazioni sui cataloghi full-text per cui dispongono dell'autorizzazione VIEW DEFINITION. Solo i membri del **serveradmin** ruolo predefinito del server è possibile visualizzare valori di **fullpath** colonna.  
   
 ## <a name="remarks"></a>Osservazioni  

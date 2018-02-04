@@ -1,5 +1,5 @@
 ---
-title: sp_addmessage (Transact-SQL) | Documenti Microsoft
+title: sp_addmessage (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
 - sp_addmessage_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_addmessage
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: efb582779e55287699cd60f642b50a88205ee992
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1b8b71c14da2b38bbc16c63b39143fd0a85ebf30
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@msgnum* * * =** ] *msg_id*  
+ [ **@msgnum****=** ] *msg_id*  
  ID del messaggio. *msg_id* è **int** con un valore predefinito è NULL. *msg_id* per errore definito dall'utente, i messaggi possono essere un numero intero compreso tra 50.001 e 2.147.483.647. La combinazione di *msg_id* e *language* devono essere univoci; se l'ID esiste già per la lingua specificata, viene restituito un errore.  
   
  [  **@severity =** ]*gravità*  
  Livello di gravità dell'errore. *gravità* è **smallint** con un valore predefinito è NULL. I livelli validi sono compresi tra 1 e 25. Per altre informazioni sui livelli di gravità, vedere [Gravità degli errori del Motore di database](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
- [  **@msgtext =** ] **'***msg***'**  
+ [ **@msgtext =** ] **'***msg***'**  
  Testo del messaggio di errore. *MSG* è **nvarchar (255)** con un valore predefinito è NULL.  
   
  [  **@lang =** ] **'***language***'**  
  Lingua del messaggio. *lingua* è **sysname** con un valore predefinito è NULL. Poiché nello stesso server, è possono installare più lingue *language* specifica la lingua in cui viene scritto ogni messaggio. Quando *language* viene omesso, la lingua è la lingua predefinita per la sessione.  
   
- [  **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
+ [ **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
  Indica se il messaggio deve essere scritto nel registro applicazioni di Windows quando si verifica l'errore. **@with_log**è **varchar (5)** con un valore predefinito è FALSE. Se è TRUE, l'errore viene sempre scritto nel registro applicazioni di Windows. Se è FALSE, l'errore viene scritto nel registro applicazioni di Windows a seconda della modalità con cui è stato generato. Solo i membri del **sysadmin** ruolo del server è possibile utilizzare questa opzione.  
   
 > [!NOTE]  
@@ -84,7 +87,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
  A causa delle differenze nella sintassi delle varie lingue, i numeri di parametro nel messaggio localizzato potrebbero non essere nella stessa sequenza del messaggio originale.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza di **sysadmin** o **serveradmin** ruoli predefiniti del server.  
   
 ## <a name="examples"></a>Esempi  
@@ -168,8 +171,8 @@ GO                                       -- parameters.
   
 ## <a name="see-also"></a>Vedere anche  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_altermessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_dropmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

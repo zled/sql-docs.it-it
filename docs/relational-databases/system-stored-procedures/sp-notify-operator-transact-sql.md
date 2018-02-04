@@ -1,5 +1,5 @@
 ---
-title: sp_notify_operator (Transact-SQL) | Documenti Microsoft
+title: sp_notify_operator (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_notify_operator_TSQL
 - sp_notify_operator
-dev_langs: TSQL
-helpviewer_keywords: sp_notify_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_notify_operator
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ff7b50b5eef5d5ff753039bf4dd7ab501160eda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7683e0150c41810c14981e0c6b6364c59ae19ae3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +57,7 @@ sp_notify_operator
  [  **@profile_name=** ] **'***profilename***'**  
  Nome del profilo di Posta elettronica database da utilizzare per inviare il messaggio. *ProfileName* è **nvarchar (128)**. Se *profilename* viene omesso, viene utilizzato il profilo di posta elettronica Database predefinito.  
   
- [  **@id=** ] *id*  
+ [ **@id=** ] *id*  
  Identificatore dell'operatore a cui inviare il messaggio. *ID* è **int**, con un valore predefinito è NULL. Uno dei *id* o *nome* deve essere specificato.  
   
  [  **@name=** ] **'***nome***'**  
@@ -71,7 +74,7 @@ sp_notify_operator
  [  **@file_attachments=** ] **'***allegato***'**  
  Nome del file da allegare al messaggio di posta elettronica. *allegato* è **nvarchar (512)**, non prevede alcun valore predefinito.  
   
- [  **@mail_database=** ] **'***mail_host_database***'**  
+ [ **@mail_database=** ] **'***mail_host_database***'**  
  Specifica il nome del computer host. *mail_host_database* è **nvarchar (128)**. Se non *mail_host_database* è specificato, il **msdb** database viene utilizzato per impostazione predefinita.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -82,7 +85,7 @@ sp_notify_operator
   
  Per poter inviare una notifica a un operatore, è necessario innanzitutto configurare Posta elettronica database e un database host della posta elettronica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -110,8 +113,8 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Agent Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_help_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_delete_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
   
   

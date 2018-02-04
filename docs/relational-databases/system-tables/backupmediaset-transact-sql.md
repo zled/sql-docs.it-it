@@ -1,5 +1,5 @@
 ---
-title: backupmediaset (Transact-SQL) | Documenti Microsoft
+title: backupmediaset (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupmediaset
 - backupmediaset_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup media [SQL Server], backupmediaset system table
 - backupmediaset system table
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e86380a170009fbfd8ee7fd2f891dc210cab856
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 334c7cbcb3afb00685049aafbb2c0a290ba97a2a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +43,9 @@ ms.lasthandoff: 11/17/2017
 |**media_set_id**|**int**|Numero di identificazione univoco del set di supporti. Identità, chiave primaria.|  
 |**media_uuid**|**uniqueidentifier**|UUID del set di supporti. Tutti [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di supporti è associato un UUID.<br /><br /> Per le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia, se un set di supporti contiene solo un gruppo di supporti, il **media_uuid** colonna può essere NULL (**media_family_count** è 1).|  
 |**media_family_count**|**tinyint**|Numero di gruppi di supporti nel set di supporti. Può essere NULL.|  
-|**name**|**nvarchar (128)**|Nome del set di supporti. Può essere NULL.<br /><br /> Per ulteriori informazioni, vedere MEDIANAME e MEDIADESCRIPTION nell'argomento [BACKUP &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
-|**Descrizione**|**nvarchar(255)**|Descrizione in formato testo del set di supporti. Può essere NULL.<br /><br /> Per ulteriori informazioni, vedere MEDIANAME e MEDIADESCRIPTION nell'argomento [BACKUP &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
-|**software_name**|**nvarchar (128)**|Nome del software di backup con cui è stata scritta l'etichetta del supporto. Può essere NULL.|  
+|**name**|**nvarchar(128)**|Nome del set di supporti. Può essere NULL.<br /><br /> Per ulteriori informazioni, vedere MEDIANAME e MEDIADESCRIPTION nell'argomento [BACKUP &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
+|**description**|**nvarchar(255)**|Descrizione in formato testo del set di supporti. Può essere NULL.<br /><br /> Per ulteriori informazioni, vedere MEDIANAME e MEDIADESCRIPTION nell'argomento [BACKUP &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
+|**software_name**|**nvarchar(128)**|Nome del software di backup con cui è stata scritta l'etichetta del supporto. Può essere NULL.|  
 |**software_vendor_id**|**int**|Numero di identificazione del produttore del software con cui è stata scritta l'etichetta del supporto di backup. Può essere NULL.<br /><br /> Il valore per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è l'esadecimale 0x1200.|  
 |**MTF_major_version**|**tinyint**|Numero principale della versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format utilizzata per generare il set di supporti. Può essere NULL.|  
 |**mirror_count**|**tinyint**|Numero di mirroring nel set di supporti.|  
@@ -62,6 +64,6 @@ ms.lasthandoff: 11/17/2017
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Tabelle di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

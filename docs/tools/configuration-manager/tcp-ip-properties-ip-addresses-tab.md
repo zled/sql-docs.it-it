@@ -8,26 +8,28 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6f40f56dcf2f46f78ebad2e8095e21cd5e012b3c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 78513a9ebe1a0418a5dac367dc49b790d3197019
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Proprietà TCP/IP
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilizzare il **proprietà TCP/IP (scheda indirizzi IP)** la finestra di dialogo per configurare le opzioni del protocollo TCP/IP per un indirizzo IP specifico. Solo le opzioni **Porte dinamiche TCP** e **Porta TCP** possono essere configurate contemporaneamente per tutti gli indirizzi selezionando **IPAll**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+La finestra di dialogo **Proprietà TCP/IP** (scheda Indirizzi IP) consente di configurare le opzioni del protocollo TCP/IP per un indirizzo IP specifico. Solo le opzioni **Porte dinamiche TCP** e **Porta TCP** possono essere configurate contemporaneamente per tutti gli indirizzi selezionando **IPAll**.  
   
  Le modifiche hanno effetto dopo il riavvio di SQL Server. Per informazioni sull'avvio e l'arresto del servizio SQL Server Browser, vedere [Avvio e arresto del servizio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   

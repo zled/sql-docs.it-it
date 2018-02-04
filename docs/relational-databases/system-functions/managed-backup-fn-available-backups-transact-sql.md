@@ -1,5 +1,5 @@
 ---
-title: fn_available_backups (Transact-SQL) | Documenti Microsoft
+title: managed_backup.fn_available_backups (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - smart_admin.fn_available_backups_TSQL
 - fn_available_backups_TSQL
 - fn_available_backups
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_available_backups
 - smart_admin.fn_available_backups
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c83285118f584351172a3722427697479bb1bb7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 1db926d3539587c411056a59135fb028899566de
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="managedbackupfnavailablebackups-transact-sql"></a>fn_available_backups (Transact-SQL)
+# <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una tabella di 0, una o più righe dei file di backup disponibili per il database specificato. I file di backup restituiti sono backup creati dal [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -73,7 +75,7 @@ Se sono presenti gap in LSN significa che è presente un'interruzione nella cate
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Richiede **selezionare** le autorizzazioni per questa funzione.  

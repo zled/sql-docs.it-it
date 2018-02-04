@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_nodes_column_store_segments (Transact-SQL) | Documenti Microsoft
+title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b10564c7736dce2ab21cc83bed819606230e7b9
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c5982fa99effc211d23c7e92557d96e20d131ad4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>Sys.pdw_nodes_column_store_segments (Transact-SQL)
+# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene una riga per ogni colonna in un indice columnstore.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/02/2018
 |**row_count**|**int**|Numero di righe nel gruppo di righe.|  
 |**has_nulls**|**int**|1 se il segmento di colonna contiene valori Null.|  
 |**base_id**|**bigint**|Viene usato l'id di valore di base se il tipo di codifica 1.  Se non viene utilizzato tipo di codifica 1, base_id viene impostato su 1.|  
-|**ordine di grandezza**|**float**|Magnitude se viene utilizzato il tipo di codifica 1.  Se non viene utilizzato 1 tipo di codifica, magnitude viene impostato su 1.|  
+|**magnitude**|**float**|Magnitude se viene utilizzato il tipo di codifica 1.  Se non viene utilizzato 1 tipo di codifica, magnitude viene impostato su 1.|  
 |**primary__dictionary_id**|**int**|ID del dizionario primario.|  
 |**secondary_dictionary_id**|**int**|ID del dizionario secondario. Restituisce -1 se non esiste alcun dizionario secondario.|  
 |**min_data_id**|**bigint**|ID dati minimo nel segmento di colonna.|  
@@ -86,9 +88,9 @@ ORDER BY css.hobt_id, css.column_id;
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Data Warehouse e viste del catalogo Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [CREATE COLUMNSTORE INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [Sys.pdw_nodes_column_store_row_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [Sys.pdw_nodes_column_store_dictionaries &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   
 

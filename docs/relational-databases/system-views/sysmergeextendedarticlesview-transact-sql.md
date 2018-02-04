@@ -1,5 +1,5 @@
 ---
-title: sysmergeextendedarticlesview (Transact-SQL) | Documenti Microsoft
+title: sysmergeextendedarticlesview (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sysmergeextendedarticlesview
 - sysmergeextendedarticlesview_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmergeextendedarticlesview view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmergeextendedarticlesview view
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3902f8b0486928ea1b8601f9d4d225156d9874be
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c517abaa4c5ffdc5e0d84ac6d4c6268ddd524ac9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +41,15 @@ ms.lasthandoff: 11/17/2017
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome dell'articolo.|  
-|**tipo**|**tinyint**|Specifica il tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **10** = tabella.<br /><br /> **32** = solo schema Proc.<br /><br /> **64** = solo schema della vista o solo schema di vista indicizzata.<br /><br /> **128** = solo schema funzione.<br /><br /> **160** = solo schema sinonimo.|  
-|**ObjID**|**int**|Identificatore dell'oggetto del server di pubblicazione.|  
+|**type**|**tinyint**|Specifica il tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **10** = tabella.<br /><br /> **32** = solo schema Proc.<br /><br /> **64** = solo schema della vista o solo schema di vista indicizzata.<br /><br /> **128** = solo schema funzione.<br /><br /> **160** = solo schema sinonimo.|  
+|**objid**|**int**|Identificatore dell'oggetto del server di pubblicazione.|  
 |**sync_objid**|**int**|Identificatore della vista che rappresenta il set di dati sincronizzato.|  
 |**view_type**|**tinyint**|Tipo di vista:<br /><br /> **0** = non è una vista, utilizzare tutti gli dell'oggetto di base.<br /><br /> **1** = vista permanente.<br /><br /> **2** = vista temporanea.|  
 |**artid**|**uniqueidentifier**|Identificatore univoco per l'articolo specificato.|  
-|**Descrizione**|**nvarchar(255)**|Breve descrizione dell'articolo.|  
+|**description**|**nvarchar(255)**|Breve descrizione dell'articolo.|  
 |**pre_creation_command**|**tinyint**|Azione predefinita da eseguire quando viene creato l'articolo nel database di sottoscrizione:<br /><br /> **0** = Nessuna: se la tabella esiste già nel Sottoscrittore, viene eseguita alcuna azione.<br /><br /> **1** = eliminazione: Elimina la tabella prima di crearne uno nuovo.<br /><br /> **2** = eliminazione specifica: esegue un'operazione di eliminazione in base alla clausola WHERE nel filtro di subset.<br /><br /> **3** = troncamento: equivale al 2, ma Elimina pagine anziché righe. La clausola WHERE in questo caso non viene utilizzata.|  
 |**pubid**|**uniqueidentifier**|ID della pubblicazione a cui appartiene l'articolo corrente.|  
-|**nome alternativo**|**int**|Mapping di un nome alternativo per l'identificazione dell'articolo.|  
+|**nickname**|**int**|Mapping di un nome alternativo per l'identificazione dell'articolo.|  
 |**column_tracking**|**int**|Specifica se viene implementato il rilevamento a livello di colonna per l'articolo.|  
 |**status**|**tinyint**|Specifica lo stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = non sincronizzato: lo script di elaborazione iniziale per pubblicare la tabella verrà eseguito alla successiva esecuzione dell'agente Snapshot.<br /><br /> **2** = attivo: è stato eseguito lo script di elaborazione iniziale per pubblicare la tabella.<br /><br /> **5** = New_inactive: da aggiungere.<br /><br /> **6** = New_active: da aggiungere.|  
 |**conflict_table**|**sysname**|Nome della tabella locale che include i record in conflitto per l'articolo corrente. Lo scopo di questa tabella è esclusivamente informativo. Il contenuto può essere modificato o eliminato da routine di risoluzione dei conflitti personalizzate oppure direttamente dall'amministratore.|  
@@ -56,10 +60,10 @@ ms.lasthandoff: 11/17/2017
 |**insert_proc**|**sysname**|Procedura utilizzata dal sistema di risoluzione dei conflitti predefinito per l'inserimento di righe durante la sincronizzazione.|  
 |**update_proc**|**sysname**|Procedura utilizzata dal sistema di risoluzione dei conflitti predefinito per l'aggiornamento di righe durante la sincronizzazione.|  
 |**select_proc**|**sysname**|Nome di una stored procedure generata automaticamente utilizzata dall'agente di merge per l'implementazione di blocchi e l'individuazione di righe e colonne per un articolo.|  
-|**schema_option**|**Binary (8)**|Per i valori supportati di *schema_option*, vedere [sp_addmergearticle &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**binary(8)**|Per i valori supportati di *schema_option*, vedere [sp_addmergearticle &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|Nome della tabella creata nel Sottoscrittore.|  
 |**resolver_clsid**|**nvarchar(50)**|ID del sistema di risoluzione dei conflitti personalizzato.|  
-|**subset_filterclause**|**nvarchar (1000)**|Clausola di filtro per l'articolo.|  
+|**subset_filterclause**|**nvarchar(1000)**|Clausola di filtro per l'articolo.|  
 |**missing_col_count**|**int**|Numero di colonne mancanti.|  
 |**missing_cols**|**varbinary(128)**|Mappa di bit delle colonne mancanti.|  
 |**colonne**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -81,14 +85,14 @@ ms.lasthandoff: 11/17/2017
 |**processing_order**|**int**|Indica l'ordine di elaborazione degli articoli in una pubblicazione di tipo merge. valore **0** indicato che l'articolo non è ordinato e gli articoli vengono elaborati in ordine dal valore più basso al più alto. Se due articoli hanno lo stesso valore, essi vengono elaborati simultaneamente. Per altre informazioni, vedere [Specificare l'ordine di elaborazione degli articoli di merge](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).|  
 |**published_in_tran_pub**|**bit**|Indica che un articolo in una pubblicazione di tipo merge viene pubblicato anche in una pubblicazione transazionale.<br /><br /> **0** = articolo non viene pubblicato in un articolo transazionale.<br /><br /> **1** = articolo è pubblicato anche in un articolo transazionale.|  
 |**upload_options**|**tinyiny**|Specifica se è possibile apportare modifiche nel Sottoscrittore o caricare modifiche dal Sottoscrittore. I possibili valori sono i seguenti.<br /><br /> **0** = non esistono restrizioni per gli aggiornamenti eseguiti nel Sottoscrittore; tutte le modifiche vengono caricate nel server di pubblicazione.<br /><br /> **1** = sono consentite modifiche nel Sottoscrittore, ma non vengono caricate nel server di pubblicazione.<br /><br /> **2** = non sono consentite modifiche nel Sottoscrittore.|  
-|**Lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**delete_proc**|**sysname**|Procedura utilizzata dal sistema di risoluzione dei conflitti predefinito per l'eliminazione di righe durante la sincronizzazione.|  
 |**before_upd_view_objid**|**int**|ID della vista di una tabella prima degli aggiornamenti.|  
 |**delete_tracking**|**bit**|Specifica se le eliminazioni vengono replicate.<br /><br /> **0** = le eliminazioni non vengono replicate.<br /><br /> **1** = le eliminazioni vengono replicate, ovvero il comportamento predefinito per la replica di tipo merge.<br /><br /> Quando il valore di *delete_tracking* è **0**, le righe eliminate nel Sottoscrittore devono essere rimosse manualmente nel server di pubblicazione e le righe eliminate nel server di pubblicazione devono essere rimosse manualmente nel Sottoscrittore.<br /><br /> Nota: Il valore **0** risultati non convergenza.|  
 |**compensate_for_errors**|**bit**|Specifica se devono essere eseguite azioni di compensazione quando vengono rilevati errori durante la sincronizzazione.<br /><br /> **0** = Compensating azioni sono disabilitate.<br /><br /> **1** = le modifiche che non possono essere applicate in un sottoscrittore o un server di pubblicazione generano sempre azioni di compensazione per annullare queste modifiche, ovvero il comportamento predefinito per la replica di tipo merge.<br /><br /> Nota: Il valore **0** risultati non convergenza.|  
-|**sp_changearticle**|**bigint**|Dimensioni dell'intervallo di valori Identity del server di pubblicazione.|  
-|**intervallo**|**bigint**|Dimensioni dei valori Identity consecutivi che verrebbero assegnati nei Sottoscrittori durante un intervento di regolazione.|  
-|**soglia**|**int**|Percentuale di soglia dell'intervallo di valori Identity.|  
+|**pub_range**|**bigint**|Dimensioni dell'intervallo di valori Identity del server di pubblicazione.|  
+|**range**|**bigint**|Dimensioni dei valori Identity consecutivi che verrebbero assegnati nei Sottoscrittori durante un intervento di regolazione.|  
+|**threshold**|**int**|Percentuale di soglia dell'intervallo di valori Identity.|  
 |**metadata_select_proc**|**sysname**|Nome della stored procedure generata automaticamente utilizzata per accedere a metadati nelle tabelle del sistema di replica di tipo merge.|  
 |**stream_blob_columns**|**bit**|Specifica se viene utilizzata l'ottimizzazione del flusso di dati per la replica di colonne BLOB (Binary Large Object). **1** indica che l'ottimizzazione verrà tentato di eseguire.|  
 |**preserve_rowguidcol**|**bit**|Specifica se per la replica viene utilizzata una colonna rowguid esistente. Il valore **1** indica che viene utilizzata una colonna ROWGUIDCOL esistente. **0** significa che la replica di aggiunta la colonna ROWGUIDCOL.|  
@@ -96,9 +100,9 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergearticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
- [sysmergearticles &#40; Transact-SQL &#41;](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)  
+ [sysmergearticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)  
   
   

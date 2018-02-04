@@ -1,5 +1,5 @@
 ---
-title: GetFileNamespacePath (Transact-SQL) | Documenti Microsoft
+title: GetFileNamespacePath (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GetFileNamespacePath
 - GetFileNamespacePath_TSQL
-dev_langs: TSQL
-helpviewer_keywords: GetFileNamespacePath function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e7ba6d9582a0eb3660f206dc68087f4fa4852a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ccab7d6345d49490f936c5080e9e034be7c79855
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ ms.lasthandoff: 01/02/2018
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Nome colonna*  
+ *column-name*  
  Il nome della colonna del varbinary (max) **file_stream** colonna in una tabella FileTable.  
   
  Il *-nome della colonna* valore deve essere un nome di colonna valido. Non può essere un'espressione o un valore convertito o di cui sia stato eseguito il cast da una colonna di un altro tipo di dati.  
@@ -49,7 +52,7 @@ ms.lasthandoff: 01/02/2018
  *is_full_path*  
  Espressione Integer che specifica se restituire un percorso relativo o assoluto. *is_full_path* può avere uno dei valori seguenti:  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Restituisce il percorso relativo all'interno della directory a livello di database.<br /><br /> Si tratta del valore predefinito.|  
 |**1**|Restituisce il percorso UNC completo, che inizia con `\\computer_name`.|  
@@ -57,7 +60,7 @@ ms.lasthandoff: 01/02/2018
  *@option*  
  Espressione Integer che definisce la formattazione del componente server del percorso. *@option*può avere uno dei valori seguenti:  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Restituisce il nome del server convertito in formato NetBIOS, ad esempio:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> Si tratta del valore predefinito.|  
 |**1**|Restituisce il nome del server senza conversione, ad esempio:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
@@ -106,6 +109,6 @@ WHERE Name = N’document.docx’;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Utilizzare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

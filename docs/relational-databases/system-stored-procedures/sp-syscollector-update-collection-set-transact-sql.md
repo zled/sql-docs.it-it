@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_update_collection_set (Transact-SQL) | Documenti Microsoft
+title: sp_syscollector_update_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
 - sp_syscollector_update_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90f034f59bc7430e059fb276ec0111a4af2f807c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9863651eca95bcd4eafd263b205ddeef5ba4e438
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +62,7 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@collection_set_id =** ] *collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  Identificatore univoco locale del set di raccolta. *collection_set_id* è **int** e deve avere un valore se *nome* è NULL.  
   
  [  **@name =** ] '*nome*'  
@@ -69,7 +71,7 @@ sp_syscollector_update_collection_set
  [  **@new_name =** ] '*nuovo_nome*'  
  Nuovo nome per il set di raccolta. *nuovo_nome* è **sysname**, e se utilizzato, non può essere una stringa vuota. *nuovo_nome* deve essere univoco. Per un elenco dei nomi dei set di raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_sets.  
   
- [  **@target =** ] '*destinazione*'  
+ [ **@target =** ] '*target*'  
  Riservato per utilizzi futuri.  
   
  [  **@collection_mode =** ] *collection_mode*  
@@ -81,13 +83,13 @@ sp_syscollector_update_collection_set
   
  Se si modifica dalla modalità non in cache alla modalità cache (0), è necessario anche specificare *valore schedule_uid* o *schedule_name*.  
   
- [  **@days_until_expiration=** ] *days_until_expiration*  
+ [ **@days_until_expiration=** ] *days_until_expiration*  
  Numero di giorni per cui i dati raccolti vengono salvati nel data warehouse di gestione. *days_until_expiration* è **smallint**. *days_until_expiration* deve essere 0 o un numero intero positivo.  
   
- [  **@proxy_id =** ] *proxy_id*  
+ [ **@proxy_id =** ] *proxy_id*  
  Identificatore univoco per un account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* è **int**.  
   
- [  **@proxy_name =** ] '*proxy_name*'  
+ [ **@proxy_name =** ] '*proxy_name*'  
  Nome del proxy. *proxy_name* è **sysname** e ammette valori null.  
   
  [  **@schedule_uid**  =] '*valore schedule_uid*'  
@@ -136,7 +138,7 @@ sp_syscollector_update_collection_set
   
  Se il set di raccolta è in esecuzione, è possibile aggiornare solo *valore schedule_uid* e *descrizione*. Per arrestare il set di raccolta, usare [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è necessaria l'appartenenza al ruolo predefinito del database dc_admin o dc_operator (con autorizzazione EXECUTE). Anche se dc_operator è in grado di eseguire questa stored procedure, i membri di questo ruolo possono modificare solo determinate proprietà. Le proprietà seguenti possono essere modificate solo da dc_admin:  
   
 -   @new_name  
@@ -198,7 +200,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [dbo. sysschedules &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
+ [dbo.sysschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sysdac_history_internal (Transact-SQL) | Documenti Microsoft
+title: sysdac_history_internal (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdac_history_internal
 - sysdac_history_internal_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysdac_history_internal
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b8b8d735800315011eea29b123c8dc3e1652732a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tabelle di applicazione livello dati - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,21 +41,21 @@ ms.lasthandoff: 01/02/2018
 |**action_id**|**int**|Identificatore dell'azione|  
 |**sequence_id**|**int**|Consente di identificare un passaggio all'interno di un'azione.|  
 |**instance_id**|**uniqueidentifier**|Identificatore dell'istanza di applicazione livello dati. Questa colonna può essere unita di **instance_id** colonna [dbo.sysdac_instances &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
-|**action_type**|**tinyint**|Identificatore del tipo di azione:<br /><br /> **0** = distribuire<br /><br /> **1** = creare<br /><br /> **2** = ridenominazione<br /><br /> **3** = scollegamento<br /><br /> **4** = eliminazione|  
-|**action_type_name**|**varchar (19)**|Nome del tipo di azione:<br /><br /> **distribuire**<br /><br /> **creare**<br /><br /> **rinominare**<br /><br /> **Disconnetti**<br /><br /> **eliminare**|  
+|**action_type**|**tinyint**|Identificatore del tipo di azione:<br /><br /> **0** = distribuire<br /><br /> **1** = creare<br /><br /> **2** = ridenominazione<br /><br /> **3** = detach<br /><br /> **4** = eliminazione|  
+|**action_type_name**|**varchar(19)**|Nome del tipo di azione:<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Identificatore del tipo di oggetto interessato dall'azione:<br /><br /> **0** = dacpac<br /><br /> **1** = account di accesso<br /><br /> **2** = database|  
-|**dac_object_type_name**|**varchar (8)**|Nome del tipo di oggetto interessato dall'azione:<br /><br /> **dacpac** = istanza di applicazione livello dati<br /><br /> **account di accesso**<br /><br /> **database**|  
-|**action_status**|**tinyint**|Codice di identificazione dello stato corrente dell'azione:<br /><br /> **0** = in sospeso<br /><br /> **1** = esito positivo<br /><br /> **2** = esito negativo|  
-|**action_status_name**|**varchar (11)**|Stato corrente dell'azione:<br /><br /> **in sospeso**<br /><br /> **operazione riuscita**<br /><br /> **esito negativo**|  
-|**Obbligatorio**|**bit**|Utilizzato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per il rollback di un'operazione dell'applicazione livello dati.|  
+|**dac_object_type_name**|**varchar(8)**|Nome del tipo di oggetto interessato dall'azione:<br /><br /> **dacpac** = istanza di applicazione livello dati<br /><br /> **login**<br /><br /> **database**|  
+|**action_status**|**tinyint**|Codice di identificazione dello stato corrente dell'azione:<br /><br /> **0** = in sospeso<br /><br /> **1** = esito positivo<br /><br /> **2** = fail|  
+|**action_status_name**|**varchar(11)**|Stato corrente dell'azione:<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
+|**Required**|**bit**|Utilizzato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per il rollback di un'operazione dell'applicazione livello dati.|  
 |**dac_object_name_pretran**|**sysname**|Nome dell'oggetto prima dell'esecuzione del commit della transazione contenente l'azione. Utilizzato solo per database e account di accesso.|  
 |**dac_object_name_posttran**|**sysname**|Nome dell'oggetto dopo l'esecuzione del commit della transazione contenente l'azione. Utilizzato solo per database e account di accesso.|  
-|**in SqlScript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] che implementa un'azione in un database o account di accesso.|  
+|**sqlscript**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] script che implementano un'azione su un database o un account di accesso.|  
 |**payload**|**varbinary(max)**|Definizione del pacchetto di applicazione livello dati salvata in una stringa codificata binaria.|  
 |**Commenti**|**ntext**|Consente di registrare l'accesso di un utente che ha accettato la possibile perdita dei dati in un aggiornamento dell'applicazione livello dati.|  
-|**ERROR_STRING**|**nvarchar(max)**|Messaggio di errore generato se l'azione rileva un errore.|  
+|**error_string**|**nvarchar(max)**|Messaggio di errore generato se l'azione rileva un errore.|  
 |**created_by**|**sysname**|Account di accesso che ha avviato l'azione di creazione questa voce.|  
-|**Date_Created**|**datetime**|Data e ora di creazione della voce.|  
+|**date_created**|**datetime**|Data e ora di creazione della voce.|  
 |**date_modified**|**datetime**|Data e ora dell'ultima modifica della voce.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -63,8 +66,8 @@ ms.lasthandoff: 01/02/2018
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|create|dacpac|  
 |12|1|create|login|  
-|12|2|create|Database|  
-|12|3|ridenominazione|Database|  
+|12|2|create|database|  
+|12|3|ridenominazione|database|  
   
  Operazioni di applicazione livello dati, ad esempio elimina, non rimuovono le righe da **sysdac_history_internal**. È possibile utilizzare la query seguente per eliminare manualmente le righe per le applicazioni livello dati non più distribuite su un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
@@ -85,7 +88,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo.sysdac_instances &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [sysdac_instances_internal &#40; Transact-SQL &#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+ [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [sysdac_instances_internal &#40;Transact-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

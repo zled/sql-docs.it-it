@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_rda_deauthorize_db (Transact-SQL) | Documenti Microsoft
+title: sys.sp_rda_deauthorize_db (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_deauthorize_db
 - sys.sp_rda_deauthorize_db_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_deauthorize_db stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_deauthorize_db stored procedure
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6524ced433a0b4b58de1fd857ce32f02cfb64923
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d6ad14f46d0fece2e33fcf9bae5c8c124828bcf2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syssprdadeauthorizedb-transact-sql"></a>Sys. sp_rda_deauthorize_db (Transact-SQL)
+# <a name="syssprdadeauthorizedb-transact-sql"></a>sys.sp_rda_deauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Rimuove la connessione autenticata tra un database locale abilitata per l'estensione e sul database Azure remoto. Eseguire **sp_rda_deauthorize_db** quando il database remoto non è raggiungibile o in uno stato incoerente e che si desidera modificare il comportamento di query per tutte le tabelle abilitate per l'estensione nel database.  
@@ -44,7 +47,7 @@ sp_rda_deauthorize_db
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o >0 (esito negativo)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede autorizzazioni db_owner.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -55,8 +58,8 @@ sp_rda_deauthorize_db
 -   Eseguire [sp_rda_set_query_mode &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) con l'argomento LOCAL_ONLY per consentire le query di continuare a eseguire solo i dati locali.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_rda_set_query_mode &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)   
- [Sys. sp_rda_reauthorize_db &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)   
+ [sys.sp_rda_set_query_mode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)   
+ [sys.sp_rda_reauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

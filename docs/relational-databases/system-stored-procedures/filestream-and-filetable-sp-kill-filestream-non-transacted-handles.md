@@ -1,5 +1,5 @@
 ---
-title: sp_kill_filestream_non_transacted_handles (Transact-SQL) | Documenti Microsoft
+title: sp_kill_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_kill_filestream_non_transacted_handles_TSQL
 - sp_kill_filestream_non_transacted_handles
-dev_langs: TSQL
-helpviewer_keywords: sp_kill_filestream_non_transacted_handles
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_kill_filestream_non_transacted_handles
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d06550f0a9cd322e26acfa8f29890833c15f947
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: cb1054ec1ce9bab7311417e109ac0cece16c9c88
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="filestream-and-filetable---spkillfilestreamnontransactedhandles"></a>FileStream e FileTable - sp_kill_filestream_non_transacted_handles
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +59,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-set"></a>Set di risultati  
- nessuna.  
+ Nessuno  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Il *handle_id* richiesto da **sp_kill_filestream_non_transacted_handles** non è correlato a session_id o all'unità di lavoro che viene utilizzato in altre **kill** comandi.  
@@ -66,7 +69,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 ## <a name="metadata"></a>Metadati  
  Per informazioni sugli handle di file non transazionali aperti, eseguire una query sulla DMV [Sys.dm filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È necessario disporre di **VIEW DATABASE STATE** dell'autorizzazione per gli handle di file da ottenere il **Sys.dm filestream_non_transacted_handles** vista a gestione dinamica e per eseguire **sp_kill_filestream_non_ transacted_handles**.  
@@ -99,6 +102,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
+ [Gestione di tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
   
   

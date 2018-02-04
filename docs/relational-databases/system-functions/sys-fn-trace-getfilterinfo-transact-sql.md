@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_trace_getfilterinfo (Transact-SQL) | Documenti Microsoft
+title: sys.fn_trace_getfilterinfo (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_getfilterinfo
 - fn_trace_getfilterinfo_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - status information [SQL Server], filters
 - sys.fn_trace_getfilterinfo function
 - filters [SQL Server], traces
 - fn_trace_getfilterinfo function
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9792a3a4d3e6bb0d0c9732eab89388614a5af84
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e29c80f8a8c0999e1c635c7271c48f4d87697283
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,13 +63,13 @@ fn_trace_getfilterinfo ( trace_id )
 |-----------------|---------------|-----------------|  
 |**columnid**|**int**|ID della colonna a cui è applicato il filtro.|  
 |**logical_operator**|**int**|Specifica se viene applicato l'operatore AND o OR.|  
-|**operatore_confronto**|**int**|Specifica il tipo di confronto eseguito:<br /><br /> 0 = Uguale a<br /><br /> 1 = Diverso da<br /><br /> 2 = Maggiore di<br /><br /> 3 = Minore di<br /><br /> 4 = Maggiore o uguale a<br /><br /> 5 = Minore o uguale a<br /><br /> 6 = Simile a<br /><br /> 7 = Non simile a|  
-|**valore**|**sql_variant**|Specifica il valore a cui viene applicato il filtro.|  
+|**comparison_operator**|**int**|Specifica il tipo di confronto eseguito:<br /><br /> 0 = Uguale a<br /><br /> 1 = Diverso da<br /><br /> 2 = Maggiore di<br /><br /> 3 = Minore di<br /><br /> 4 = Maggiore o uguale a<br /><br /> 5 = Minore o uguale a<br /><br /> 6 = Simile a<br /><br /> 7 = Non simile a|  
+|**Valore**|**sql_variant**|Specifica il valore a cui viene applicato il filtro.|  
   
 ## <a name="remarks"></a>Osservazioni  
  L'utente imposta *trace_id* valore per identificare, modificare e controllare la traccia. Quando viene passato l'ID di una traccia specifica, **fn_trace_getfilterinfo** restituisce informazioni su qualsiasi filtro relativo a tale traccia. Se alla traccia specificata non è associato un filtro, questa funzione restituisce un set di righe vuoto. Se viene passato un ID non valido, questa funzione restituisce un set di righe vuoto. Per informazioni analoghe sulle tracce, vedere [sys.fn_trace_getinfo &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER TRACE nel server.  
   
 ## <a name="examples"></a>Esempi  
@@ -83,11 +85,11 @@ GO
  [Creare una traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
- [sp_trace_generateevent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
- [Sys. fn_trace_geteventinfo &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [Sys.fn_trace_gettable &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
+ [sys.fn_trace_gettable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

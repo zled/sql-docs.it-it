@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobservers (Transact-SQL) | Documenti Microsoft
+title: dbo.sysjobservers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sysjobservers_TSQL
 - dbo.sysjobservers
 - dbo.sysjobservers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysjobservers system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobservers system table
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e9d004a79ec106f06e4b15b9c3e54e46c7dcef3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 60a5062226e97be3e7c3a38086f0e88dbf9fb023
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +42,8 @@ ms.lasthandoff: 11/27/2017
 |-----------------|---------------|-----------------|  
 |job_id|**uniqueidentifier**|Numero di identificazione del processo.|  
 |server_id|**int**|Numero di identificazione del server.|  
-|last_run_outcome|**tinyint**|Risultato dell'ultima esecuzione del processo:<br /><br /> **0** = esito negativo<br /><br /> **1** = esito positivo<br /><br /> **3** = Annulla|  
-|messaggio last_outcome_|**nvarchar (1024)**|Eventuale messaggio associato alla colonna last_run_outcome.|  
+|last_run_outcome|**tinyint**|Risultato dell'ultima esecuzione del processo:<br /><br /> **0** = Fail<br /><br /> **1** = esito positivo<br /><br /> **3** = Annulla|  
+|last_outcome_ message|**nvarchar(1024)**|Eventuale messaggio associato alla colonna last_run_outcome.|  
 |last_run_date|**int**|Data dell'ultima esecuzione del processo.|  
 |last_run_time|**int**|Ora dell'ultima esecuzione del processo.|  
 |last_run_duration|**int**|Durata di esecuzione del processo, in ore, minuti e secondi. Calcolata mediante la formula: (*ore*\*10000) + (*minuti*\*100) + *secondi*.|  

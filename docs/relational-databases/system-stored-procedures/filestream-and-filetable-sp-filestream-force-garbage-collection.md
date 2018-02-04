@@ -1,5 +1,5 @@
 ---
-title: sp_filestream_force_garbage_collection (Transact-SQL) | Documenti Microsoft
+title: sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/22/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
 - sp_filestream_force_garbage_collection_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba1b60621e23160ce9e951e17cf4777b016fe90f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>FileStream e FileTable - sp_filestream_force_garbage_collection
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +55,7 @@ sp_filestream_force_garbage_collection
 > [!NOTE]  
 >  *dbname* è **sysname**. Se viene omesso, verrà considerato il database corrente.  
   
- **@filename** = *nome_file_logico*  
+ **@filename** = *logical_file_name*  
  Indica il nome logico del contenitore FILESTREAM in cui eseguire il Garbage Collector. **@filename**è facoltativo. Se non viene specificato alcun nome di file logico, il garbage collector Elimina tutti i contenitori FILESTREAM nel database specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -87,7 +89,7 @@ A causa di operazioni in fase di 2, la stored procedure deve essere eseguita due
 Operazione di Garbage Collection (GC) si basa sul troncamento del log. Pertanto, se i file sono stati eliminati di recente in un database con modello di recupero con registrazione completa, sono GC ed solo dopo che viene eseguito un backup del log di tali parti del log delle transazioni e la parte del log è contrassegnata come inattiva. In un database con modello di recupero con registrazione minima, si verifica un troncamento del log dopo un `CHECKPOINT` è stata eseguita sul database.  
 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo del database db_owner.  
   
 ## <a name="examples"></a>Esempi  

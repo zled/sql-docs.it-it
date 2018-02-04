@@ -1,5 +1,5 @@
 ---
-title: Sys.dm tran_locks (Transact-SQL) | Documenti Microsoft
+title: sys.dm_tran_locks (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_locks
 - sys.dm_tran_locks_TSQL
 - dm_tran_locks_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_locks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_locks dynamic management view
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ef513e5c0442b465f7a7bc65739bb811058eca3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 77f18549714e52e2d5681084b0b2246c838b5467
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,10 +63,10 @@ ms.lasthandoff: 11/17/2017
 |**request_owner_id**|**bigint**|ID del proprietario specifico della richiesta.<br /><br /> Quando una transazione è il proprietario della richiesta, questo valore contiene l'ID transazione.<br /><br /> Quando una tabella FileTable è il proprietario della richiesta, **request_owner_id** è uno dei valori seguenti.<br /><br /> <br /><br /> -4: un blocco di database è stato applicato da una tabella FileTable.<br /><br /> -3: è stato applicato un blocco di tabella con una FileTable.<br /><br /> Altro valore: il valore rappresenta un handle di file. Questo valore viene inoltre visualizzato come **fcb_id** nella vista a gestione dinamica [Sys.dm filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
 |**request_owner_guid**|**uniqueidentifier**|GUID del proprietario specifico della richiesta. Questo valore viene utilizzato soltanto da una transazione distribuita nei casi in cui corrisponde al GUID MS DTC della transazione.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Questo valore rappresenta l'ID dello spazio di blocco del richiedente. L'ID dello spazio di blocco determina se due richiedenti sono reciprocamente compatibili e possono ottenere blocchi in modalità altrimenti in conflitto.|  
-|**lock_owner_address**|**varbinary (8)**|Indirizzo di memoria della struttura dei dati interna utilizzata per tener traccia della richiesta. Questa colonna può essere unita di con **resource_address** colonna **Sys.dm os_waiting_tasks**.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|**lock_owner_address**|**varbinary(8)**|Indirizzo di memoria della struttura dei dati interna utilizzata per tener traccia della richiesta. Questa colonna può essere unita di con **resource_address** colonna **Sys.dm os_waiting_tasks**.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.  
  
@@ -202,10 +205,10 @@ In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessar
 |Risorsa|Formato|Description|  
 |--------------|------------|-----------------|  
 |DATABASE|Non applicabile|ID del database è già disponibile nel **resource_database_id** colonna.|  
-|FILE|< file_id >|ID del file rappresentato dalla risorsa.|  
-|OBJECT|< object_id >|ID dell'oggetto rappresentato dalla risorsa. Questo oggetto può essere qualsiasi oggetto elencato in **Sys. Objects**, non solo una tabella.|  
+|FILE|<file_id>|ID del file rappresentato dalla risorsa.|  
+|OBJECT|<object_id>|ID dell'oggetto rappresentato dalla risorsa. Questo oggetto può essere qualsiasi oggetto elencato in **Sys. Objects**, non solo una tabella.|  
 |PAGE|<file_id>:<page_in_file>|Rappresenta l'ID di pagina e di file della pagina rappresentata dalla risorsa.|  
-|KEY|< hash_value >|Rappresenta un hash delle colonne chiave dalla riga rappresentata dalla risorsa.|  
+|KEY|<hash_value>|Rappresenta un hash delle colonne chiave dalla riga rappresentata dalla risorsa.|  
 |EXTENT|<file_id>:<page_in_files>|Rappresenta l'ID di pagina e di file dell'extent rappresentato dalla risorsa. L'ID di extent corrisponde all'ID di pagina della prima pagina nell'extent.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Rappresenta l'ID di pagina e l'ID di riga della riga rappresentata dalla risorsa. Se l'ID dell'oggetto associato è 99, la risorsa rappresenta uno degli otto slot di pagine miste nella prima pagina IAM di una catena IAM.|  
 |APPLICATION|\<DbPrincipalId >:\<fino a 32 caratteri > :(< hash_value >)|Rappresenta l'ID dell'entità di database utilizzata per definire l'ambito della risorsa di blocco dell'applicazione. È incluso anche un massimo di 32 caratteri della stringa della risorsa corrispondente alla risorsa di blocco dell'applicazione. In certi casi, è possibile visualizzare solo 2 caratteri perché la stringa completa non è più disponibile. Ciò si verifica solo in fase di recupero del database per i blocchi dell'applicazione che vengono riacquisiti nell'ambito del processo di recupero. Il valore hash rappresenta un hash della stringa di risorsa completa corrispondente a questa risorsa di blocco dell'applicazione.|  
@@ -387,7 +390,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys.dm tran_database_transactions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
+ [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative alle transazioni &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

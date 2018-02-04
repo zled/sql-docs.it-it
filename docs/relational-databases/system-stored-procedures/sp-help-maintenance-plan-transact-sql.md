@@ -1,5 +1,5 @@
 ---
-title: sp_help_maintenance_plan (Transact-SQL) | Documenti Microsoft
+title: sp_help_maintenance_plan (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
 - sp_help_maintenance_plan
-dev_langs: TSQL
-helpviewer_keywords: sp_help_maintenance_plan
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a48991c0baec6c8466d0ce33bee730d0948c97e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e5669438c159010e1b5011418df913c3c2743aff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +51,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@plan_id =**] **'***plan_id***'**  
+ [ **@plan_id =**] **'***plan_id***'**  
  Viene specificato l'ID del piano di manutenzione. *plan_id* è **UNIQUEIDENTIFIER**. Il valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -63,13 +66,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|ID del piano di manutenzione.|  
 |**plan_name**|**sysname**|Nome del piano di manutenzione.|  
-|**Date_Created**|**datetime**|Data di creazione del piano di manutenzione.|  
+|**date_created**|**datetime**|Data di creazione del piano di manutenzione.|  
 |**proprietario**|**sysname**|Proprietario del piano di manutenzione.|  
 |**max_history_rows**|**int**|Numero massimo di righe assegnate per la registrazione della cronologia del piano di manutenzione nella tabella di sistema.|  
 |**remote_history_server**|**int**|Nome del server remoto in cui è possibile scrivere il report della cronologia.|  
 |**max_remote_history_rows**|**int**|Numero massimo di righe assegnate nella tabella di sistema di un server remoto in cui è possibile scrivere il report della cronologia.|  
 |**user_defined_1**|**int**|Il valore predefinito è NULL.|  
-|**user_defined_2**|**nvarchar (100)**|Il valore predefinito è NULL.|  
+|**user_defined_2**|**nvarchar(100)**|Il valore predefinito è NULL.|  
 |**user_defined_3**|**datetime**|Il valore predefinito è NULL.|  
 |**user_defined_4**|**uniqueidentifier**|Il valore predefinito è NULL.|  
   
@@ -88,7 +91,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ## <a name="remarks"></a>Osservazioni  
  **sp_help_maintenance_plan** è il **msdb** database.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_help_maintenance_plan**.  
   
 ## <a name="examples"></a>Esempi  

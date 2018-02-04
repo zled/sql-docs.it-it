@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_cdc_get_min_lsn (Transact-SQL) | Documenti Microsoft
+title: sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn_TSQL
 - sys.fn_cdc_get_min_lsn_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_cdc_get_min_lsn
 - sys.fn_cdc_get_min_lsn
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b54b199b86c14f4a7b100f231d0b91d0e0a133a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6d77250f4e595d121f89a112366dfbc9ee9600ad
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +62,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
  Questa funzione è utilizzata in genere per identificare l'endpoint inferiore della cronologia dell'acquisizione dei dati delle modifiche associati a un'istanza di acquisizione. È inoltre possibile utilizzare questa funzione per verificare che gli endpoint di una query di intervallo si trovino all'interno della cronologia dell'istanza di acquisizione prima di richiedere i dati delle modifiche. È importante eseguire tali controlli perché l'endpoint inferiore di un'istanza di acquisizione cambia quando viene eseguito il processo di pulizia sulle tabelle delle modifiche. Se il tempo tra le richieste dei dati delle modifiche è significativo, anche un endpoint inferiore impostato sull'endpoint superiore della richiesta precedente dei dati delle modifiche potrebbe cadere al di fuori della cronologia corrente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database.  
   
 ## <a name="examples"></a>Esempi  
@@ -101,7 +104,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys. fn_cdc_get_max_lsn &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+ [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

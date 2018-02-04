@@ -1,5 +1,5 @@
 ---
-title: sp_enum_login_for_proxy (Transact-SQL) | Documenti Microsoft
+title: sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_login_for_proxy_TSQL
 - sp_enum_login_for_proxy
-dev_langs: TSQL
-helpviewer_keywords: sp_enum_login_for_proxy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3c19ebb2104500b3d394a10cabb8589bc4ded0b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8235a8c0fa9febcad446f9a6c48eecf6c470d592
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +52,10 @@ sp_enum_login_for_proxy
  [  **@name** =] '*nome*'  
  Il nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entità, l'account di accesso, ruolo del server o **msdb** ruolo del database per l'elenco dei proxy. Il nome è **nvarchar (256)**, con un valore predefinito è NULL.  
   
- [  **@proxy_id** =] *id*  
+ [ **@proxy_id**= ] *id*  
  Numero di identificazione del proxy per cui visualizzare un elenco di informazioni. Il *proxy_id* è **int**, con un valore predefinito è NULL. Entrambi i *id* o *proxy_name* può essere specificato.  
   
- [  **@proxy_name** =] **'***proxy_name***'**  
+ [ **@proxy_name**= ] **'***proxy_name***'**  
  Nome del proxy per cui visualizzare un elenco di informazioni. Il *proxy_name* è **sysname**, con un valore predefinito è NULL. Entrambi i *id* o *proxy_name* può essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -65,7 +68,7 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|Numero di identificazione del proxy.|  
 |**proxy_name**|**sysname**|Nome del proxy.|  
 |**name**|**sysname**|Nome dell'entità di sicurezza per l'associazione.|  
-|**flag**|**int**|Tipo dell'entità di sicurezza.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso<br /><br /> **1** = ruolo predefinito del sistema<br /><br /> **2** = ruolo del database in **msdb**|  
+|**flags**|**int**|Tipo dell'entità di sicurezza.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso<br /><br /> **1** = ruolo predefinito del sistema<br /><br /> **2** = ruolo del database in **msdb**|  
   
 ## <a name="remarks"></a>Osservazioni  
  Quando viene specificato alcun parametro, **sp_enum_login_for_proxy** Elenca informazioni su tutti gli account di accesso nell'istanza per ogni proxy.  
@@ -76,7 +79,7 @@ sp_enum_login_for_proxy
   
  Questa stored procedure si trova in **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
@@ -105,8 +108,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_help_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
- [sp_grant_login_to_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
+ [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

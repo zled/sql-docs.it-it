@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_secondary_database (Transact-SQL) | Documenti Microsoft
+title: sp_add_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
 - sp_add_log_shipping_secondary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_shipping_secondary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_shipping_secondary_database
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e66faa24b29b3d3279b3d85b5c834f7420b96abf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 965f2191ba9dbdbba5be91412c1459064972c22c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +63,7 @@ sp_add_log_shipping_secondary_database
  [  **@secondary_database**  =] '*secondary_database*'  
  Nome del database secondario. *secondary_database* è **sysname**, non prevede alcun valore predefinito.  
   
- [  **@primary_server**  =] '*primary_server*'  
+ [ **@primary_server** = ] '*primary_server*'  
  Il nome dell'istanza primaria del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione di log shipping. *primary_server* è **sysname** e non può essere NULL.  
   
  [  **@primary_database**  =] '*primary_database*'  
@@ -69,7 +72,7 @@ sp_add_log_shipping_secondary_database
  [  **@restore_delay**  =] '*restore_delay*'  
  Indica per quanti minuti il server secondario deve attendere prima di ripristinare un file di backup specifico. *restore_delay* è **int** e non può essere NULL. Il valore predefinito è 0.  
   
- [  **@restore_all**  =] '*restore_all*'  
+ [ **@restore_all** = ] '*restore_all*'  
  Se impostato su 1, il server secondario ripristina tutti i backup del log delle transazioni disponibili al momento dell'esecuzione del processo di ripristino. In caso contrario, l'operazione viene arrestata dopo il ripristino di un file. *restore_all* è **bit** e non può essere NULL.  
   
  [  **@restore_mode**  =] '*restore_mode*'  
@@ -81,16 +84,16 @@ sp_add_log_shipping_secondary_database
   
  *ripristinare* è **bit** e non può essere NULL.  
   
- [  **@disconnect_users**  =] '*disconnect_users*'  
+ [ **@disconnect_users** = ] '*disconnect_users*'  
  Se impostato su 1, gli utenti vengono disconnessi dal database secondario quando viene eseguita un'operazione di ripristino. Predefinito = 0. *disconnettere* utenti è **bit** e non può essere NULL.  
   
  [  **@block_size**  =] '*block_size*'  
  Dimensioni, in byte, per il blocco del dispositivo di backup. *block_size* è **int** con un valore predefinito-1.  
   
- [  **@buffer_count**  =] '*buffer_count*'  
+ [ **@buffer_count** = ] '*buffer_count*'  
  Numero totale di buffer utilizzati dall'operazione di backup o di ripristino. *buffer_count* è **int** con un valore predefinito-1.  
   
- [  **@max_transfer_size**  =] '*max_transfer_size*'  
+ [ **@max_transfer_size** = ] '*max_transfer_size*'  
  Dimensione, espressa in byte, della richiesta di input o output massimo emessa da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il dispositivo di backup. *max_transfersize* è **int** e può essere NULL.  
   
  [  **@restore_threshold**  =] '*restore_threshold*'  
@@ -122,7 +125,7 @@ sp_add_log_shipping_secondary_database
   
 4.  Se il server di monitoraggio è diverso dal server secondario, aggiunge un record di monitoraggio in **log_shipping_monitor_secondary** sul monitor di server utilizzando gli argomenti specificati.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  
@@ -143,7 +146,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul Log Shipping &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
 - sp_addumpdevice
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa3e7996f56f71b3028022b869b3e3c3a5480fb5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dad0547ea803cfbf709b36f078d552435c848900
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +59,8 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**disco**|File del disco rigido impostato come dispositivo di backup.|  
-|**nastro**|Qualsiasi dispositivo nastro supportato da [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> Nota: il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
+|**disk**|File del disco rigido impostato come dispositivo di backup.|  
+|**tape**|Qualsiasi dispositivo nastro supportato da [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> Nota: il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
   
  [  **@logicalname =** ] **'***logical_name***'**  
  Nome logico del dispositivo di backup utilizzato nelle istruzioni BACKUP e RESTORE. *logical_name* è **sysname**, senza impostazione predefinita e non può essere NULL.  
@@ -73,7 +75,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  Questa procedura consente di immettere nel catalogo il nome fisico specificato ma non di accedere o creare il dispositivo.  
   
- [  **@cntrltype =** ] **'***tipo_controller***'**  
+ [  **@cntrltype =** ] **'***controller_type***'**  
  Obsoleto. Se specificato, questo parametro viene ignorato. È supportato solo per motivi di compatibilità con le versioni precedenti. Utilizzando **sp_addumpdevice** omettere questo parametro.  
   
  [  **@devstatus =** ] **'***stato_periferica***'**  
@@ -98,7 +100,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  Per eliminare un dispositivo, usare [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) o[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **diskadmin** .  
   
  Richiede l'autorizzazione di scrittura sul disco.  
@@ -151,7 +153,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [Definire un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [Definizione di un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
  [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   

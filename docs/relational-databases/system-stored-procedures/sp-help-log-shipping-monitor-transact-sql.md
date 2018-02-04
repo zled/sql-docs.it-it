@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_monitor (Transact-SQL) | Documenti Microsoft
+title: sp_help_log_shipping_monitor (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_TSQL
 - sp_help_log_shipping_monitor
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_monitor
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_monitor
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85677235addc7a6508f482dfa7f944518efddd0d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 96e9b3f2fa8e040789b15e0969fbb4de6ccb9e00
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sp_help_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- nessuna.  
+ Nessuno  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -57,13 +60,13 @@ sp_help_log_shipping_monitor
 |**server**|**sysname**|Nome del server primario o secondario contenente il database.|  
 |**database_name**|**sysname**|Nome del database.|  
 |**time_since_last_backup**|**int**|Periodo di tempo, in minuti, dall'ultimo backup del log.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.|  
-|**colonne last_backup_file**|**nvarchar (500)**|Nome dell'ultimo file di backup del log.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.|  
+|**last_backup_file**|**nvarchar(500)**|Nome dell'ultimo file di backup del log.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.|  
 |**backup_threshold**|**int**|Periodo di tempo, in minuti, dall'ultimo backup trascorso il quale viene generato un errore threshold_alert. **backup_threshold** è **int**, il valore predefinito è **60 minuti**.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.<br /><br /> Questo valore può essere modificato tramite [sp_add_log_shipping_primary_database &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
 |**is_backup_alert_enabled**|**bit**|Specifica se un avviso verrà generato quando **backup_threshold** viene superato. Il valore di uno (**1**), il valore predefinito, indica che verrà generato l'avviso.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.<br /><br /> Questo valore può essere modificato tramite [sp_add_log_shipping_primary_database &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
 |**time_since_last_copy**|**int**|Periodo di tempo, in minuti, dall'ultima copia del backup del log.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.|  
-|**last_copied_file**|**nvarchar (500)**|Nome dell'ultimo file di backup del log copiato.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.|  
+|**last_copied_file**|**nvarchar(500)**|Nome dell'ultimo file di backup del log copiato.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.|  
 |**time_since_last_restore**|**int**|Periodo di tempo, in minuti, dall'ultimo ripristino del backup del log.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.|  
-|**last_restored_file**|**nvarchar (500).**|Nome dell'ultimo file di backup del log ripristinato.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.|  
+|**last_restored_file**|**nvarchar(500).**|Nome dell'ultimo file di backup del log ripristinato.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.|  
 |**last_restored_latency**|**int**|Periodo di tempo, in minuti, dalla creazione dell'ultimo backup al ripristino del backup.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.|  
 |**restore_threshold**|**int**|Numero di minuti che può trascorrere tra operazioni di ripristino prima che venga generato un avviso. **restore_threshold** non può essere NULL.|  
 |**is_restore_alert_enabled**|**bit**|Specifica se viene generato un avviso quando **restore_threshold** viene superato. Il valore di uno (**1**), il valore predefinito, indica che l'avviso viene generato.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.<br /><br /> Per impostare una soglia per il ripristino, utilizzare [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md).|  
@@ -71,11 +74,11 @@ sp_help_log_shipping_monitor
 ## <a name="remarks"></a>Osservazioni  
  **sp_help_log_shipping_monitor** deve essere eseguita la **master** database nel server di monitoraggio.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul Log Shipping &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

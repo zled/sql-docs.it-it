@@ -1,5 +1,5 @@
 ---
-title: Sys.dm repl_traninfo (Transact-SQL) | Documenti Microsoft
+title: sys.dm_repl_traninfo (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_traninfo
 - sys.dm_repl_traninfo_TSQL
 - dm_repl_traninfo_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_traninfo dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8667321964f457ae05c6b7768be4b22220b50da
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 45fd6246b7a98f16c86a6f7e2c7052c70b2af039
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,28 +42,28 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|Indica se la transazione si trova in un database pubblicato tramite la replica transazionale peer-to-peer. Se è true, il valore è 1; altrimenti è 0.|  
 |**db_ver**|**int**|Versione del database.|  
-|**comp_range_address**|**varbinary (8)**|Definisce un intervallo di rollback parziale che deve essere ignorato.|  
-|**textinfo_address**|**varbinary (8)**|Indirizzo in memoria della struttura di informazioni in formato testo nella cache.|  
-|**fsinfo_address**|**varbinary (8)**|Indirizzo in memoria della struttura di informazioni in formato filestream nella cache.|  
-|**begin_lsn**|**nvarchar (64)**|Numero di sequenza del file di log (LSN) corrispondente al record di log iniziale per la transazione.|  
-|**commit_lsn**|**nvarchar (64)**|LSN del record di log del commit per la transazione.|  
-|**DBID**|**smallint**|ID del database.|  
-|**righe**|**int**|ID del comando replicato nella transazione.|  
-|**xdesid**|**nvarchar (64)**|ID della transazione.|  
-|**artcache_table_address**|**varbinary (8)**|Indirizzo in memoria dell'ultima struttura della tabella di articoli nella cache utilizzata per la transazione.|  
+|**comp_range_address**|**varbinary(8)**|Definisce un intervallo di rollback parziale che deve essere ignorato.|  
+|**textinfo_address**|**varbinary(8)**|Indirizzo in memoria della struttura di informazioni in formato testo nella cache.|  
+|**fsinfo_address**|**varbinary(8)**|Indirizzo in memoria della struttura di informazioni in formato filestream nella cache.|  
+|**begin_lsn**|**nvarchar(64)**|Numero di sequenza del file di log (LSN) corrispondente al record di log iniziale per la transazione.|  
+|**commit_lsn**|**nvarchar(64)**|LSN del record di log del commit per la transazione.|  
+|**dbid**|**smallint**|ID del database.|  
+|**rows**|**int**|ID del comando replicato nella transazione.|  
+|**xdesid**|**nvarchar(64)**|ID della transazione.|  
+|**artcache_table_address**|**varbinary(8)**|Indirizzo in memoria dell'ultima struttura della tabella di articoli nella cache utilizzata per la transazione.|  
 |**server**|**nvarchar(514)**|Nome del server.|  
 |**server_len_in_bytes**|**smallint**|Lunghezza in caratteri, espressa in byte, del nome del server.|  
 |**database**|**nvarchar(514)**|Nome del database.|  
 |**db_len_in_bytes**|**smallint**|Lunghezza in caratteri, espressa in byte, del nome del database.|  
-|**iniziatore**|**nvarchar(514)**|Nome del server in cui ha origine la transazione.|  
+|**originator**|**nvarchar(514)**|Nome del server in cui ha origine la transazione.|  
 |**originator_len_in_bytes**|**smallint**|Lunghezza in caratteri, espressa in byte, del server in cui ha origine la transazione.|  
 |**orig_db**|**nvarchar(514)**|Nome del database in cui ha origine la transazione.|  
 |**orig_db_len_in_bytes**|**smallint**|Lunghezza in caratteri, espressa in byte, del database in cui ha origine la transazione.|  
 |**cmds_in_tran**|**int**|Numero di comandi replicati nella transazione corrente. Questo numero viene utilizzato per determinare quando è necessario eseguire il commit di una transazione logica.|  
 |**is_boundedupdate_singleton**|**tinyint**|Specifica se l'aggiornamento di una colonna univoca interessa solo una singola riga.|  
-|**begin_update_lsn**|**nvarchar (64)**|LSN utilizzato nell'aggiornamento di una colonna univoca.|  
-|**delete_lsn**|**nvarchar (64)**|LSN da eliminare come parte di un aggiornamento.|  
-|**last_end_lsn**|**nvarchar (64)**|Ultimo LSN in una transazione logica.|  
+|**begin_update_lsn**|**nvarchar(64)**|LSN utilizzato nell'aggiornamento di una colonna univoca.|  
+|**delete_lsn**|**nvarchar(64)**|LSN da eliminare come parte di un aggiornamento.|  
+|**last_end_lsn**|**nvarchar(64)**|Ultimo LSN in una transazione logica.|  
 |**fcomplete**|**tinyint**|Specifica se il comando è un aggiornamento parziale.|  
 |**fcompensated**|**tinyint**|Specifica se la transazione è interessata da un rollback parziale.|  
 |**fprocessingtext**|**tinyint**|Specifica se la transazione include una colonna di dati di tipo binario di grandi dimensioni.|  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 |**is_known_cdc_tran**|**bit**|Indica che la transazione è controllata dall'acquisizione dei dati delle modifiche.<br /><br /> 0 = Transazione di replica della transazione.<br /><br /> 1 = Transazione di acquisizione dati delle modifiche.|  
 |**error_count**|**int**|Numero di errori.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione VIEW DATABASE STATE per il database di pubblicazione o il database abilitato per l'acquisizione dei dati delle modifiche.  
   
 ## <a name="remarks"></a>Osservazioni  
