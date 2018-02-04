@@ -1,5 +1,5 @@
 ---
-title: sysmail_event_log (Transact-SQL) | Documenti Microsoft
+title: sysmail_event_log (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_event_log
 - sysmail_event_log_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_event_log database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aadbf36412f02f9a785d078d6fa949fcbeabc5f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9dca8c14d7ea9fefbe566d7f0770b395df48bf25
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +39,9 @@ ms.lasthandoff: 11/17/2017
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**Log_id**|**int**|Identificatore degli elementi nel log.|  
-|**event_type**|**varchar (11)**|Tipo di avviso inserito nel log. I possibili valori sono errori, avvisi, messaggi informativi, messaggi di operazione riuscita e altri messaggi interni.|  
+|**event_type**|**varchar(11)**|Tipo di avviso inserito nel log. I possibili valori sono errori, avvisi, messaggi informativi, messaggi di operazione riuscita e altri messaggi interni.|  
 |**log_date**|**datetime**|Data e ora di creazione della voce del log.|  
-|**Descrizione**|**nvarchar(max)**|Testo del messaggio registrato.|  
+|**description**|**nvarchar(max)**|Testo del messaggio registrato.|  
 |**process_id**|**int**|ID di processo del programma esterno Posta elettronica database. In genere, viene modificato a ogni avvio del programma esterno Posta elettronica database.|  
 |**mailitem_id**|**int**|Identificatore dell'elemento di posta nella coda della posta. Se il messaggio non è correlato a un elemento di posta elettronica specifico, viene restituito NULL.|  
 |**account_id**|**int**|Il **account_id** dell'account correlato all'evento. Se il messaggio non è correlato a un account specifico, viene restituito NULL.|  
@@ -50,11 +53,11 @@ ms.lasthandoff: 11/17/2017
   
  Quando i tentativi di recapito con singoli account hanno esito negativo, i messaggi di errore rimangono visualizzati durante i successivi tentativi di invio fino a quando il recapito dell'elemento di posta non ha definitivamente esito positivo o negativo. In caso di esito positivo finale, tutti gli errori accumulati vengono registrati come avvisi separati tra cui la **account_id**. Pertanto, è possibile che vengano visualizzati messaggi di avviso anche se il messaggio di posta elettronica è stato inviato. In caso di errore di recapito finale, tutti gli avvisi precedenti vengono registrati come messaggio di errore senza un **account_id**, dal momento che tutti gli account non sono riuscita.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario essere un membro del **sysadmin** ruolo predefinito del server o **DatabaseMailUserRole** ruolo del database per accedere a questa vista. I membri di **DatabaseMailUserRole** che non sono membri del **sysadmin** ruolo, è possibile visualizzare solo gli eventi per i messaggi di posta elettronica che hanno inviato personalmente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sysmail_faileditems &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+ [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [Programma esterno di Posta elettronica database](../../relational-databases/database-mail/database-mail-external-program.md)  
   
   

@@ -3,7 +3,7 @@ title: "Novità di SQL Server, 2017 in Linux | Documenti Microsoft"
 description: "Questo argomento sono incluse nuove funzionalità per 2017 di SQL Server in Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 11/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: 3e4a3e19fd9d03d3f6e4dd4a68a5a15b922f348d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 768d939d0014ca1818f8195627f57e0110d149fb
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novità di SQL Server 2017 su Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Questo articolo descrive le principali funzionalità e i servizi disponibili per SQL Server 2017 su Linux.
 
@@ -46,7 +46,7 @@ Questo articolo descrive le principali funzionalità e i servizi disponibili per
 - Abilitato [SQL Server Agent](sql-server-linux-setup-sql-agent.md) il supporto per le attività seguenti:
   - [Processi di Transact-SQL](sql-server-linux-run-sql-server-agent-job.md)
   - [Posta elettronica database](sql-server-linux-db-mail-sql-agent.md)
-  - [Log shipping](sql-server-linux-use-log-shipping.md)
+  - [Il log shipping](sql-server-linux-use-log-shipping.md)
 
 ## <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
 

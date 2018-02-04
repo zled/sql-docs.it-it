@@ -1,5 +1,5 @@
 ---
-title: Sys.dm os_nodes (Transact-SQL) | Documenti Microsoft
+title: sys.dm_os_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/19/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_nodes_TSQL
 - dm_os_nodes
 - sys.dm_os_nodes_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_nodes dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_nodes dynamic management view
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cf36f7156f9297231fc232e8fecafee5e77427c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2abdd42300c8264f87513f428c7c6f4aa22645d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,9 +46,9 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ID del nodo.|  
 |node_state_desc|**nvarchar(256)**|Descrizione dello stato del nodo. I valori sono visualizzati con i valori reciprocamente esclusivi all'inizio, seguiti dai valori combinabili. Esempio:<br /><br /> Online, Thread Resources Low, Lazy Preemptive<br /><br /> Esistono quattro valori node_state_desc reciprocamente esclusivi. Elencati di seguito con le relative descrizioni.<br /><br /> ONLINE: Il nodo è online<br /><br /> OFFLINE: Nodo è offline<br /><br /> INATTIVO: Nodo non dispone di alcuna richiesta di lavoro in sospeso e ha attivato uno stato di inattività.<br /><br /> IDLE_READY: Nodo non è in attesa di richieste di lavoro ed è pronto per lo stato inattivo.<br /><br /> Esistono cinque valori node_state_desc combinabili, elencati di seguito con le relative descrizioni.<br /><br /> Applicazione livello dati: Questo nodo è riservato per la connessione amministrativa dedicata.<br /><br /> THREAD_RESOURCES_LOW: Nessun nuovo thread è possibile creare nel nodo a causa di una condizione di memoria insufficiente.<br /><br /> AGGIUNTA a caldo: Indica l'aggiunta di nodi in risposta a un caldo evento della CPU.|  
-|memory_object_address|**varbinary (8)**|Indirizzo dell'oggetto memoria associato al nodo. Vi è una relazione uno-a-uno con sys.dm_os_memory_objects.memory_object_address.|  
-|memory_clerk_address|**varbinary (8)**|Indirizzo del clerk di memoria associato al nodo. Vi è una relazione uno-a-uno con sys.dm_os_memory_clerks.memory_clerk_address.|  
-|io_completion_worker_address|**varbinary (8)**|Indirizzo del thread di lavoro assegnato al completamento I/O per il nodo. Vi è una relazione uno-a-uno con sys.dm_os_workers.worker_address.|  
+|memory_object_address|**varbinary(8)**|Indirizzo dell'oggetto memoria associato al nodo. Vi è una relazione uno-a-uno con sys.dm_os_memory_objects.memory_object_address.|  
+|memory_clerk_address|**varbinary(8)**|Indirizzo del clerk di memoria associato al nodo. Vi è una relazione uno-a-uno con sys.dm_os_memory_clerks.memory_clerk_address.|  
+|io_completion_worker_address|**varbinary(8)**|Indirizzo del thread di lavoro assegnato al completamento I/O per il nodo. Vi è una relazione uno-a-uno con sys.dm_os_workers.worker_address.|  
 |memory_node_id|**smallint**|ID del nodo di memoria al quale questo nodo appartiene. Vi è una relazione molti-a-uno con sys.dm_os_memory_nodes.memory_node_id.|  
 |cpu_affinity_mask|**bigint**|Bitmap che identifica le CPU alle quali questo nodo è associato.|  
 |online_scheduler_count|**smallint**|Numero di utilità di pianificazione online gestite da questo nodo.|  
@@ -58,9 +61,9 @@ ms.lasthandoff: 11/17/2017
 |online_scheduler_mask|**bigint**|Identifica la maschera di affinità del processo per questo nodo.|  
 |processor_group|**smallint**|Identifica il gruppo di processori per questo nodo.|  
 |cpu_count |**int** |Numero di CPU disponibili per questo nodo. |
-|pdw_node_id|**int**|L'identificatore per il nodo che utilizza questo tipo di distribuzione.<br /><br /> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|L'identificatore per il nodo che utilizza questo tipo di distribuzione.<br /><br /> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.  
   

@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 37bb0b6c2252a213824e24c51178711a704d2e85
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>Sys.dm_geo_replication_link_status (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/14/2017
 |ruolo|**tinyint**|Ruolo di replica geografica, uno di:<br /><br /> 0 = database primario. Il database_id fa riferimento al database primario della relazione di replica geografica.<br /><br /> 1 = secondario.  Il database_id fa riferimento al database primario della relazione di replica geografica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Il tipo secondario, uno di:<br /><br /> 0 non = Nessun direct sono consentite connessioni al database secondario e il database non è disponibile per l'accesso in lettura.<br /><br /> 2 = tutte le connessioni sono consentite al database nella replica secondaria; ication per l'accesso in sola lettura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|no<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar(256)**|no<br /><br /> Tutto|  
 |last_commit|**datetimeoffset**|Ora dell'ultima transazione di commit nel database. Se recuperata nel database primario, indica l'ultima ora di commit nel database primario. Se recuperata nel database secondario, indica l'ultima ora di commit nel database secondario. Se quando il database primario del collegamento di replica è attivo, recuperare nel database secondario, indica fino a quando il punto il database secondario viene aggiornato rispetto.|
   
 > [!NOTE]  

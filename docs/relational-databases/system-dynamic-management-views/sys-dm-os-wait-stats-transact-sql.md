@@ -1,5 +1,5 @@
 ---
-title: Sys.dm os_wait_stats (Transact-SQL) | Documenti Microsoft
+title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_wait_stats
 - sys.dm_os_wait_stats
 - sys.dm_os_wait_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_wait_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: "111"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 355aefa1b0cb4d8acbc215a3afc72709d8b811e9
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
-ms.translationtype: MT
+ms.openlocfilehash: c7e4859e69328535a89d0c2abc3122340176eaec
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +48,7 @@ Restituisce informazioni su tutte le attese rilevate dai thread eseguiti. È pos
 |wait_time_ms|**bigint**|Tempo di attesa totale, espresso in millisecondi, per il tipo di attesa specifico. Il tempo comprende signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tempo di attesa massimo per il tipo di attesa specifico.|  
 |signal_wait_time_ms|**bigint**|Differenza tra il momento in cui è stato rilevato il thread in attesa e quello in cui è stata avviata l'esecuzione del thread.|  
-|pdw_node_id|**int**|L'identificatore per il nodo che utilizza questo tipo di distribuzione. <br/> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|L'identificatore per il nodo che utilizza questo tipo di distribuzione. <br/> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
@@ -127,7 +130,7 @@ Questo comando reimposta tutti i contatori su 0.
 |BROKER_FORWARDER |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_INIT |Si verifica durante l'inizializzazione di Service Broker in ciascun database attivo. Questo tipo di attesa si verifica raramente.| 
 |BROKER_MASTERSTART |Si verifica quando un'attività è in attesa per il gestore di eventi primario di Service Broker per avviare. Questo tipo di attesa si verifica per brevissimi periodi.| 
-|BROKER_RECEIVE_WAITFOR |Si verifica quando l'istruzione RECEIVE WAITFOR è in attesa. Questo tipo di attesa è comune se nessun messaggio è pronto per la ricezione.| 
+|BROKER_RECEIVE_WAITFOR |Si verifica quando l'istruzione RECEIVE WAITFOR è in attesa. Ciò significa che nessun messaggio è pronto per essere ricevuto nella coda o un conflitto di blocco impedisce la ricezione di messaggi dalla coda.| 
 |BROKER_REGISTERALLENDPOINTS |Si verifica durante l'inizializzazione di un endpoint di connessione di Service Broker. Questo tipo di attesa si verifica per brevissimi periodi.| 
 |BROKER_SERVICE |Si verifica quando l'elenco di Service Broker di destinazione associato a un servizio di destinazione viene aggiornato o riordinato.| 
 |BROKER_SHUTDOWN |Si verifica in caso di chiusura pianificata di Service Broker. Questo tipo di attesa si verifica saltuariamente ed eventualmente per brevissimi periodi.| 
@@ -169,7 +172,7 @@ Questo comando reimposta tutti i contatori su 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Quando un thread consumer in attesa di un thread producer inviare righe, si verifica con i piani di query parallele. Questo è normale di esecuzione delle query parallele. <br /> **Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXCONSUMER |Quando un thread consumer in attesa di un thread producer inviare righe, si verifica con i piani di query parallele. Questo è normale di esecuzione delle query parallele. <br /> **Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
 |CXPACKET |Si verifica con i piani di query paralleli durante la sincronizzazione di iteratore di scambio di query processor e quando la produzione e l'utilizzo di righe. Se l'attesa è eccessiva e non è possibile ridurla ottimizzando la query (ad esempio aggiungendo indici), regolare l'opzione Cost threshold for parallelism o abbassare il grado di parallelismo.<br /> **Nota:** In [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET si riferisce solo per sincronizzare l'iteratore di scambio di query processor e per la produzione di righe per i thread consumer. Thread consumer vengono registrati separatamente nel tipo di attesa CXCONSUMER.| 
 |CXROWSET_SYNC |Si verifica durante un'analisi di intervalli parallela.| 
 |DAC_INIT |Si verifica durante l'inizializzazione della connessione amministrativa dedicata.| 
@@ -1024,7 +1027,7 @@ Questo comando reimposta tutti i contatori su 0.
 ## <a name="see-also"></a>Vedere anche  
     
  [Relative al sistema operativo SQL Server viste a gestione dinamica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [Sys.dm exec_session_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [Sys.dm db_wait_stats &#40; Database SQL di Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   

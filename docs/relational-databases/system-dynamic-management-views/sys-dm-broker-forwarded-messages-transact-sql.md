@@ -1,5 +1,5 @@
 ---
-title: Sys.dm broker_forwarded_messages (Transact-SQL) | Documenti Microsoft
+title: sys.dm_broker_forwarded_messages (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_broker_forwarded_messages
 - sys.dm_broker_forwarded_messages_TSQL
 - dm_broker_forwarded_messages_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_broker_forwarded_messages dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_broker_forwarded_messages dynamic management view
 ms.assetid: 5576376d-6364-417a-8475-aa770e060845
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c7292ca6344c7492da82c3d65ff4003f23f95f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a6bfdaa9e43129a67c7be9aec6d2c2df9bbc11d0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmbrokerforwardedmessages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +51,16 @@ ms.lasthandoff: 11/17/2017
 |**message_sequence_number**|**bigint**|Numero di sequenza del messaggio nella finestra del dialogo. Ammette valori Null.|  
 |**message_fragment_number**|**int**|Se il messaggio di dialogo è frammentato, indica il numero di frammento contenuto nel messaggio di trasporto. Ammette valori Null.|  
 |**hops_remaining**|**tinyint**|Numero di volte che il messaggio può essere ritrasmesso prima di raggiungere la destinazione finale. Ogni volta che il messaggio viene inoltrato, il numero viene ridotto di un'unità. Ammette valori Null.|  
-|**valore time_to_live**|**int**|Tempo massimo durante il quale il messaggio può rimanere attivo. Se questo valore raggiunge 0, il messaggio viene eliminato. Ammette valori Null.|  
+|**time_to_live**|**int**|Tempo massimo durante il quale il messaggio può rimanere attivo. Se questo valore raggiunge 0, il messaggio viene eliminato. Ammette valori Null.|  
 |**time_consumed**|**int**|Tempo durante il quale il messaggio è stato attivo. Ogni volta che il messaggio viene inoltrato, questo numero viene aumentato in base al tempo impiegato per l'inoltro del messaggio. Non ammette i valori Null.|  
 |**message_id**|**uniqueidentifier**|ID del messaggio. Ammette valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica relative a Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica &#40; relative a Service Broker Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

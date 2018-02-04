@@ -3,7 +3,7 @@ title: La gestione di SQL Server in Linux con SSMS | Documenti Microsoft
 description: In questa esercitazione viene illustrato come utilizzare SQL Server Management Studio in Windows per connettersi a SQL Server in esecuzione in Linux.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
-ms.openlocfilehash: 784c2c01365eba64fb8e19925c176033af9a1339
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 98fdce174be9f7a3dc67d910a84f8558ede1b317
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Utilizzare SQL Server Management Studio (SSMS) in Windows per la gestione di SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In questo argomento viene illustrato come utilizzare [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) per connettersi a SQL Server 2017 in Linux. SQL Server Management Studio è un'applicazione Windows, pertanto utilizzare SQL Server Management Studio, quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux.
 

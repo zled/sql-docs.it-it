@@ -15,15 +15,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2ecd66763b0fbcdff8eb0d776b9c7b7df98e60b0
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 40213ffd43b629e3679cd8d4549aeb147db97f67
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Estrarre, trasformare e caricare i dati in Linux con SSIS
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In questo articolo viene descritto come eseguire i pacchetti di SQL Server Integration Services (SSIS) in Linux. SSIS consente di risolvere i problemi di integrazione di dati complessi estrarre dati da più origini e formati, trasformazione e pulizia dei dati e caricare i dati in più destinazioni. 
 
@@ -31,7 +31,7 @@ Pacchetti SSIS in esecuzione in Linux possono connettersi a Microsoft SQL Server
 
 Per ulteriori informazioni sulle funzionalità di SSIS, vedere [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per eseguire pacchetti SSIS in un computer Linux, è prima necessario installare SQL Server Integration Services. SSIS non è incluso nell'installazione di SQL Server per i computer Linux. Per istruzioni sull'installazione, vedere [installare SQL Server Integration Services](sql-server-linux-setup-ssis.md).
 

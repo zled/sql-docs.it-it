@@ -3,7 +3,7 @@ title: "Configurare più subnet gruppi di disponibilità AlwaysOn e istanze del 
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/1/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2af1b8a50d446fee46418302a598de7a37f79bda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurare più subnet gruppi di disponibilità AlwaysOn e istanze del cluster di failover
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Quando un'istanza del cluster sempre nel gruppo di disponibilità (AG) o il failover (FCI) si estende su più di un sito, ogni sito in genere ha una propria rete. Spesso questo significa che ogni sito ha un proprio gli indirizzi IP. Gli indirizzi del sito, ad esempio, avviare con 192.168.1. *x* e gli indirizzi del sito B iniziano con 192.168.2. *x*, dove *x* fa parte dell'indirizzo IP univoco per il server. Senza una qualche forma di routing sul posto a livello di rete, questi server non sarà in grado di comunicare tra loro. Esistono due modi per gestire questo scenario: configurare una rete che collega le due diverse subnet, nota come una VLAN, oppure configurare il routing tra subnet.
 

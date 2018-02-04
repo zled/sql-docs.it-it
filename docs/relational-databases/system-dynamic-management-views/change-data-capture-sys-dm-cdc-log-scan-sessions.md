@@ -1,5 +1,5 @@
 ---
-title: Sys.dm cdc_log_scan_sessions (Transact-SQL) | Documenti Microsoft
+title: sys.dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_cdc_log_scan_sessions_TSQL
 - sys.dm_cdc_log_scan_sessions_TSQL
 - sys.dm_cdc_log_scan_sessions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6db4f34391cf36757ed086b24ddfe3618ebbe529
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7d81782bac9590aac7fb1905304aec53f531db1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>Change Data Capture - Sys.dm cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**start_time**|**datetime**|Ora di inizio della sessione.<br /><br /> Quando **session_id** = 0, l'ora di inizio della raccolta dei dati aggregati.|  
 |**end_time**|**datetime**|Ora di fine della sessione.<br /><br /> NULL = la sessione è attiva.<br /><br /> Quando **session_id** = 0, l'ora di fine dell'ultima sessione.|  
 |**duration**|**bigint**|Durata della sessione espressa in secondi.<br /><br /> 0 = la sessione non contiene transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, la somma della durata (in secondi) di tutte le sessioni con transazioni di acquisizione dati delle modifiche.|  
-|**scan_phase**|**nvarchar (200)**|La fase corrente della sessione. Di seguito sono i valori possibili e le relative descrizioni:<br /><br /> 1: lettura della configurazione<br />2: prima analisi, compilazione della tabella hash<br />3: seconda analisi<br />4: seconda analisi<br />5: seconda analisi<br />6: controllo delle versioni dello schema<br />7: ultima analisi<br />8: eseguita<br /><br /> Quando **session_id** = 0, questo valore è sempre "Aggregato".|  
+|**scan_phase**|**nvarchar(200)**|La fase corrente della sessione. Di seguito sono i valori possibili e le relative descrizioni:<br /><br /> 1: lettura della configurazione<br />2: prima analisi, compilazione della tabella hash<br />3: seconda analisi<br />4: seconda analisi<br />5: seconda analisi<br />6: controllo delle versioni dello schema<br />7: ultima analisi<br />8: eseguita<br /><br /> Quando **session_id** = 0, questo valore è sempre "Aggregato".|  
 |**error_count**|**int**|Numero di errori.<br /><br /> Quando **session_id** = 0, il numero totale di errori in tutte le sessioni.|  
 |**start_lsn**|**nvarchar(23)**|Avvio di LSN per la sessione.<br /><br /> Quando **session_id** = 0, il numero LSN iniziale per l'ultima sessione.|  
 |**current_lsn**|**nvarchar(23)**|LSN corrente in corso di analisi.<br /><br /> Quando **session_id** = 0, il valore LSN corrente è 0.|  
@@ -57,14 +59,14 @@ ms.lasthandoff: 11/17/2017
 |**first_begin_cdc_lsn**|**nvarchar(23)**|Primo numero LSN contenente transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, il primo numero LSN contenente transazioni di acquisizione dati delle modifiche.|  
 |**last_commit_cdc_lsn**|**nvarchar(23)**|Numero LSN dell'ultimo record di log del commit contenente transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, l'ultimo record di log commit LSN per qualsiasi sessione contenente transazioni di acquisizione dei dati di modifica|  
 |**last_commit_cdc_time**|**datetime**|Ora di elaborazione dell'ultimo record di log del commit contenente transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, l'ora in cui l'ultimo log commit registrare per qualsiasi sessione contenente transazioni di acquisizione dei dati di modifica.|  
-|**latenza**|**int**|La differenza in secondi, tra **end_time** e **last_commit_cdc_time** nella sessione. Questo contatore viene popolato al termine della fase 7.<br /><br /> Quando **session_id** = 0, l'ultimo valore di latenza diverso da zero registrato da una sessione.|  
-|**valore di empty_scan_count**|**int**|Numero di sessioni consecutive che non contengono transazioni di acquisizione dei dati delle modifiche.|  
+|**latency**|**int**|La differenza in secondi, tra **end_time** e **last_commit_cdc_time** nella sessione. Questo contatore viene popolato al termine della fase 7.<br /><br /> Quando **session_id** = 0, l'ultimo valore di latenza diverso da zero registrato da una sessione.|  
+|**empty_scan_count**|**int**|Numero di sessioni consecutive che non contengono transazioni di acquisizione dei dati delle modifiche.|  
 |**failed_sessions_count**|**int**|Numero di sessioni non riuscite.|  
   
 ## <a name="remarks"></a>Osservazioni  
  I valori in questa vista a gestione dinamica vengono reimpostati ogni volta che l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviata.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per eseguire query di **Sys.dm cdc_log_scan_sessions** vista a gestione dinamica. Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Esempi  
@@ -84,7 +86,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys.dm cdc_errors &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
+ [sys.dm_cdc_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   
 

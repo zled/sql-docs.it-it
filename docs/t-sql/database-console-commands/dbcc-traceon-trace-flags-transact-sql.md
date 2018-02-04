@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - trace flags [SQL Server], about trace flags
 - trace flags [SQL Server]
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 - debugging [SQL Server], trace flags
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
-caps.latest.revision: "171"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6011c66716e96347b295325ab020739e41c04370
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 396216c00fc4c474164d98e47d0185f479e61b48
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - flag di traccia (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -143,6 +145,7 @@ Nella tabella seguente vengono elencati e descritti i flag di traccia disponibil
 |**9567**|Abilita la compressione del flusso di dati per gruppi di disponibilità AlwaysOn durante il seeding automatico. La compressione può ridurre notevolmente il tempo di trasferimento durante il seeding automatico e aumenta il carico del processore. Per ulteriori informazioni, vedere [inizializzare automaticamente un gruppo di disponibilità Always On](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) e [ottimizzare la compressione per il gruppo di disponibilità](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Ambito**: globale o sessione|
 |**9591**|Disabilita la compressione di blocchi di log in gruppi di disponibilità AlwaysOn. La compressione di blocchi di log è il comportamento predefinito utilizzato con le repliche sincrone e asincrone di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la compressione viene utilizzata solo con la replica asincrona. <br /><br />**Ambito**: globale o sessione|
 |**9592**|Abilita la compressione del flusso per gruppi di disponibilità sincrona di registrazione. Questa funzionalità è disabilitata per impostazione predefinita nei gruppi di disponibilità sincrono perché la compressione aggiunge latenza. Per altre informazioni, vedere [Tune compression for availability group (Ottimizzare la compressione per il gruppo di disponibilità)](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Ambito**: globale o sessione| 
+|**9929**|Consente di ridurre i file del checkpoint In memoria a 1 MB. Per ulteriori informazioni, vedere questo [articolo di supporto Microsoft](http://support.microsoft.com/kb/3147012).<br /><br />**Ambito**: globali solo|  
 |**9939**|Abilita parallela piani e l'analisi parallela di tabelle con ottimizzazione per la memoria e le variabili di tabella nelle operazioni DML che fanno riferimento a tabelle con ottimizzazione per la memoria o le variabili di tabella, fino a quando non sono la destinazione dell'operazione DML in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Per ulteriori informazioni, vedere questo [articolo di supporto Microsoft](http://support.microsoft.com/kb/4013877).<br /><br />**Nota:** 9939 flag di traccia non è necessario se il flag di traccia 4199 è abilitato anche in modo esplicito.<br /><br />**Ambito**: globale o sessione o query|   
 |**10204**|Disabilita merge/ricompressione durante la riorganizzazione di indici columnstore. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], quando un indice columnstore è stato riorganizzato, vi è una nuova funzionalità per unire automaticamente i piccoli gruppi di righe compresso più grande rowgroup compressi, nonché come la ricompressione i gruppi di righe che hanno un numero elevato di righe eliminate.<br /><br />**Nota:** flag di traccia 10204 non si applica agli indici columnstore che vengono creati nelle tabelle con ottimizzazione per la memoria.<br /><br />**Ambito**: globale o sessione|   
 |**10316**|Consente la creazione di indici aggiuntivi su [interna con ottimizzazione per la memoria temporale tabella di gestione temporanea](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), accanto a quello predefinito. Se si dispone di modello di query specifico che include colonne che non sono coperte dall'indice predefinito può essere utile aggiungere aggiuntive.<br /><br />**Nota:** versioni di sistema temporale nelle tabelle per le tabelle di ottimizzazione per la memoria sono progettate per fornire elevata velocità effettiva transazionale. Tenere presente che creando altri indici può comportare un sovraccarico per le operazioni DML che aggiornano o eliminano righe nella tabella corrente. Con gli indici aggiuntivi, è consigliabile puntare a trovare il giusto equilibrio tra prestazioni delle query temporali e un ulteriore sovraccarico DML.<br /><br />**Ambito**: globale o sessione|

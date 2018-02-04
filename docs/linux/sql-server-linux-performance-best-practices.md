@@ -3,7 +3,7 @@ title: Procedure consigliate per SQL Server in Linux | Documenti Microsoft
 description: Questo argomento fornisce linee guida e procedure consigliate per l'esecuzione di SQL Server 2017 in Linux.
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: 565ede5c15f6e4e34a7a5cbbdcd6fa7d145c8ff5
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Procedure consigliate e linee guida di configurazione per SQL Server 2017 su Linux
 
@@ -76,7 +76,7 @@ Nella tabella seguente vengono forniti consigli per le impostazioni del disco:
 | Impostazione | Valore | Ulteriori informazioni |
 |---|---|---|
 | Read-ahead disco | 4096 | Vedere il **blockdev** comando |
-| impostazioni sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>VM.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>VM.swappiness=10 | Vedere il **sysctl** comando |
+| impostazioni sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Vedere il **sysctl** comando |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Kernel impostazione automatica numa bilanciamento del carico per i sistemi a più nodi NUMA
 
@@ -102,7 +102,7 @@ Utilizzare il **noatime** attributo con il file system che viene utilizzato per 
 
 La maggior parte delle installazioni di Linux devono disporre questa opzione per impostazione predefinita. È consigliabile per un'esperienza più coerenza delle prestazioni mantenere abilitata questa opzione di configurazione.
 
-### <a name="swapfile"></a>file di scambio
+### <a name="swapfile"></a>swapfile
 
 Assicurarsi di disporre di un file di scambio configurato correttamente per evitare eventuali problemi di memoria insufficiente. Consultare la documentazione di Linux per informazioni su come creare e impostare correttamente le dimensioni di un file di scambio.
 

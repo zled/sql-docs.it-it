@@ -3,7 +3,7 @@ title: "Configurare SLES Cluster per il gruppo di disponibilità di SQL Server |
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: 7bb98b8da1af1b97b9c06b58e5b8264a653547d3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c33c1cea948e64c69e52475e8c63ecce0c52bd6d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare SLES Cluster per il gruppo di disponibilità di SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Questa guida vengono fornite istruzioni per creare un cluster di tre nodi per SQL Server su SUSE Linux Enterprise Server (SLES) 12 SP2. Per la disponibilità elevata, un gruppo di disponibilità in Linux richiede tre nodi, vedere [elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità](sql-server-linux-availability-group-ha.md). Il livello di clustering si basa su SUSE [estensione a disponibilità elevata (Georgiano)](https://www.suse.com/products/highavailability) compilato in cima [Pacemaker](http://clusterlabs.org/). 
 
@@ -122,9 +122,9 @@ In server Linux configurare il gruppo di disponibilità e quindi configurare le 
 
 3. Per configurare il livello di comunicazione del cluster (Corosync): 
 
-   a. Immettere un indirizzo di rete da associare. Per impostazione predefinita, lo script propone di eth0 l'indirizzo di rete. In alternativa, immettere un indirizzo di rete diversi, ad esempio l'indirizzo di bond0. 
+   A. Immettere un indirizzo di rete da associare. Per impostazione predefinita, lo script propone di eth0 l'indirizzo di rete. In alternativa, immettere un indirizzo di rete diversi, ad esempio l'indirizzo di bond0. 
 
-   b. Immettere un indirizzo multicast. Lo script propone un indirizzo casuale che è possibile utilizzare come valore predefinito. 
+   B. Immettere un indirizzo multicast. Lo script propone un indirizzo casuale che è possibile utilizzare come valore predefinito. 
 
    c. Immettere una porta multicast. Lo script viene proposto 5405 come predefinito. 
 

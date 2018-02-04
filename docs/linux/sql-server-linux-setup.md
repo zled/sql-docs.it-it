@@ -3,7 +3,7 @@ title: Installazione di SQL Server 2017 in Linux | Documenti Microsoft
 description: Installare, aggiornare e disinstallare SQL Server in Linux. Questo argomento descrive scenari online, offline e automatici.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 114bbd717ad7d0d244b7290bd612547c9226f941
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In questo argomento viene illustrato come installare, aggiornare e disinstallare 2017 di SQL Server in Linux. 2017 di SQL Server è supportato in Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) e Ubuntu. È inoltre disponibile come un'immagine di Docker, che può essere eseguita nel motore Docker in Linux o Docker per Windows/Mac.
 
@@ -37,8 +37,8 @@ In questo argomento viene illustrato come installare, aggiornare e disinstallare
 | Piattaforma | Versioni supportate | Recupero
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3 o 7.4 | [Ottenere RHEL 7.4](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | SP2 (V12) | [Ottenere SLES v12 SP2](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Ottenere Ubuntu 16.04](http://www.ubuntu.com/download/server)
+| **SUSE Linux Enterprise Server** | v12 SP2 | [Ottenere SLES v12 SP2](https://www.suse.com/products/server)
+| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Motore docker** | 1.8+ | [Ottenere Docker](http://www.docker.com/products/overview)
 
 Microsoft supporta la distribuzione e la gestione dei contenitori di SQL Server utilizzando OpenShift e Kubernetes.
@@ -52,7 +52,7 @@ SQL Server 2017 presenta i requisiti di sistema seguenti per Linux:
 |||
 |-----|-----|
 | **Memoria** | 2 GB |
-| **File System** | **XFS** o **EXT4** (altri file System, ad esempio **BTRFS**, non sono supportati) |
+| **File system** | **XFS** o **EXT4** (altri file System, ad esempio **BTRFS**, non sono supportati) |
 | **Spazio su disco** | 6 GB |
 | **Velocità del processore** | 2 GHz |
 | **Core del processore** | 2 core |
@@ -159,7 +159,7 @@ Fine dell'URL del repository conferma che il tipo di repository:
 
 - **MSSQL server**: repository di anteprima.
 - **MSSQL-server-2017**: CU repository.
-- **MSSQL-server-2017-gdr**: repository GDR.
+- **mssql-server-2017-gdr**: GDR repository.
 
 ### <a name="change-the-source-repository"></a>Modificare il repository di origine
 
@@ -174,10 +174,10 @@ Per configurare il repository CU o GDR, attenersi alla procedura seguente:
    |---|---|---|
    | RHEL | **Tutto** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
    | SLES | **CTP** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-   | | **AGGIORNAMENTO CUMULATIVO** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+   | | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
    | | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
    | Ubuntu | **CTP** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
-   | | **AGGIORNAMENTO CUMULATIVO** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+   | | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
    | | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 1. Per **Ubuntu solo**, importare le chiavi GPG archivio pubblico.
@@ -188,13 +188,13 @@ Per configurare il repository CU o GDR, attenersi alla procedura seguente:
 
 1. Configurare il nuovo repository.
 
-   | Piattaforma | Archivio | Comando |
+   | Piattaforma | Archivio | Command |
    |-----|-----|-----|
-   | RHEL | AGGIORNAMENTO CUMULATIVO | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-   | SLES | AGGIORNAMENTO CUMULATIVO  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+   | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
    | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | AGGIORNAMENTO CUMULATIVO | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
    | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
 1. [Installare](#platforms) o [aggiornare](#upgrade) SQL Server e i relativi pacchetti dal repository di nuovo.

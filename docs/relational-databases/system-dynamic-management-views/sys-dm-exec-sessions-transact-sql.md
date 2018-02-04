@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_sessions
 - dm_exec_sessions
 - sys.dm_exec_sessions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_sessions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5e0cd35b044d4a5016442ddae4384aea094cc655
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: aa248e9733c17b734eb60095f65b462e42e8b0c7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +52,7 @@ ms.lasthandoff: 01/18/2018
 |client_version|**int**|Versione del protocollo TDS dell'interfaccia utilizzata dal client per connettersi al server. Il valore è NULL per le sessioni interne. Ammette i valori Null.|  
 |client_interface_name|**nvarchar(32)**|Nome della libreria del driver utilizzato dal client per comunicare con il server. Il valore è NULL per le sessioni interne. Ammette i valori Null.|  
 |security_id|**varbinary(85)**|ID di sicurezza di Microsoft Windows associato all'account di accesso. Non ammette i valori Null.|  
-|login_name|**nvarchar(128)**|Nome dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui la sessione è attualmente in esecuzione. Per il nome dell'account di accesso originale che ha creato la sessione, vedere original_login_name. Può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticato nome account di accesso o un nome utente di dominio autenticato di Windows. Non ammette i valori Null.|  
+|login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome dell'account con cui la sessione è attualmente in esecuzione. Per il nome dell'account di accesso originale che ha creato la sessione, vedere original_login_name. Può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticato nome account di accesso o un nome utente di dominio autenticato di Windows. Non ammette i valori Null.|  
 |nt_domain|**nvarchar(128)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Dominio di Windows per il client se la sessione utilizza l'autenticazione di Windows o una connessione trusted. Il valore è NULL per le sessioni interne e per gli utenti non di dominio. Ammette i valori Null.|  
 |nt_user_name|**nvarchar(128)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nome utente di Windows per il client se la sessione utilizza l'autenticazione di Windows o una connessione trusted. Il valore è NULL per le sessioni interne e per gli utenti non di dominio. Ammette i valori Null.|  
 |status|**nvarchar(30)**|Stato della sessione. I valori possibili sono:<br /><br /> **Esecuzione** -attualmente in esecuzione una o più richieste<br /><br /> **Sospensione** -nessuna richiesta è in esecuzione<br /><br /> **Inattivo** : sessione è stata reimpostata a causa del pool di connessioni e trova ora nello stato di handshake.<br /><br /> **Preconnect** -sessione trova nel classificatore di Resource Governor.<br /><br /> Non ammette i valori Null.|  
@@ -82,8 +85,8 @@ ms.lasthandoff: 01/18/2018
 |deadlock_priority|**int**|Impostazione DEADLOCK_PRIORITY per la sessione. Non ammette i valori Null.|  
 |row_count|**bigint**|Numero di righe restituite nella sessione fino a questo punto. Non ammette i valori Null.|  
 |prev_error|**int**|ID dell'ultimo errore restituito nella sessione. Non ammette i valori Null.|  
-|original_security_id|**varbinary(85)**|ID di sicurezza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows associato a original_login_name. Non ammette i valori Null.|  
-|original_login_name|**nvarchar(128)**|Nome dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato dal client per creare la sessione. Può essere un nome di un account di accesso autenticato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un nome di un utente di dominio autenticato di Windows o un utente di un database indipendente. Si noti che nella sessione potrebbero essersi verificati numerosi cambi di contesto impliciti o espliciti dopo la connessione iniziale, Ad esempio, se [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) viene utilizzato. Non ammette i valori Null.|  
+|original_security_id|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ID di sicurezza di Windows associato a original_login_name. Non ammette i valori Null.|  
+|original_login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome dell'account utilizzato dal client per creare la sessione. Può essere un nome di un account di accesso autenticato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un nome di un utente di dominio autenticato di Windows o un utente di un database indipendente. Si noti che nella sessione potrebbero essersi verificati numerosi cambi di contesto impliciti o espliciti dopo la connessione iniziale, Ad esempio, se [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) viene utilizzato. Non ammette i valori Null.|  
 |last_successful_logon|**datetime**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Data e ora dell'ultimo accesso riuscito di original_login_name prima dell'avvio della sessione corrente.|  
 |last_unsuccessful_logon|**datetime**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Data e ora dell'ultimo accesso non riuscito di original_login_name prima dell'avvio della sessione corrente.|  
 |unsuccessful_logons|**bigint**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di tentativi di accesso non riusciti per original_login_name tra last_successful_logon e login_time.|  
@@ -91,7 +94,7 @@ ms.lasthandoff: 01/18/2018
 |database_id|**smallint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID del database corrente per ogni sessione.|  
 |authenticating_database_id|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID del database che ha eseguito l'autenticazione dell'entità. Per gli account di accesso, il valore sarà 0. Per gli utenti di database indipendenti, il valore sarà l'ID del database indipendente.|  
 |open_transaction_count|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di transazioni aperte per sessione.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
 Tutti gli utenti possono vedere le proprie informazioni di sessione.  

@@ -3,7 +3,7 @@ title: Configurare il cluster di dischi condivisi SLES per SQL Server | Document
 description: "Implementare la disponibilità elevata mediante la configurazione cluster disco condiviso SUSE Linux Enterprise Server (SLES) per SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 71671e0103916d6a539b730ce4bac141d29c417e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi SLES per SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Questa guida fornisce istruzioni su come creare un cluster di dischi condivisi due nodi per SQL Server su SUSE Linux Enterprise Server (SLES). Il livello di clustering si basa su SUSE [estensione a disponibilità elevata (Georgiano)](https://www.suse.com/products/highavailability) compilato in cima [Pacemaker](http://clusterlabs.org/). 
 

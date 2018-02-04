@@ -1,6 +1,6 @@
 ---
 title: Problemi noti di Machine Learning Services | Documenti Microsoft
-ms.date: 01/19/2018
+ms.date: 01/31/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 197bfc48d000246b59b983fbf890e998cc2b5beb
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
-ms.translationtype: MT
+ms.openlocfilehash: a0cbdbed1f1563c888a383c8901288ace8ddad67
+ms.sourcegitcommit: 553bcfbee67a510c2c0b055ce1d7673504941d11
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemi noti in servizi di Machine Learning
 
@@ -165,6 +165,41 @@ Se si verificano i limiti delle risorse, controllare il valore predefinito. Se i
 In questa sezione contiene i problemi noti che sono specifici per l'esecuzione di R in SQL Server, nonché alcuni problemi che sono correlate alle librerie R e strumenti pubblicati da Microsoft, tra cui RevoScaleR.
 
 Per altri problemi noti che potrebbero influire sulle soluzioni R, vedere il [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues) sito.
+
+### <a name="access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>Accesso negato avviso durante l'esecuzione di script R in SQL Server in un percorso non predefinito
+
+Se l'istanza di SQL Server è stato installato in un percorso non predefinito, ad esempio di fuori di `Program Files` cartella, l'avviso ACCESS_DENIED viene generato quando si tenta di eseguire gli script che installa un pacchetto. Esempio:
+
+```text
+In normalizePath(path.expand(path), winslash, mustWork) :
+  path[2]="E:/SQL17.data/MSSQL14.SQL17/MSSQL/ExternalLibraries/R/8/1": Access is denied
+```
+
+Il motivo è che tenta di leggere il percorso di una funzione di R e non riesce se il gruppo users predefinito **SQLRUserGroup**, non dispone dell'accesso in lettura. L'avviso che viene generato non blocca l'esecuzione dello script R corrente, ma può ricorrere più volte il messaggio di avviso ogni volta che l'utente esegue tutti gli altri script R.
+
+Se è stato installato SQL Server nel percorso predefinito, questo errore si verifica, perché le autorizzazioni di lettura in tutti gli utenti di Windows il `Program Files` cartella.
+
+Questo problema verrà risolto in una prossima service release. In alternativa, specificare il gruppo, **SQLRUserGroup**, con accesso in lettura per tutte le cartelle padre di `ExternalLibraries`.
+
+### <a name="serialization-error-between-old-and-new-versions-of-revoscaler"></a>Errore di serializzazione tra le versioni precedenti e nuove di RevoScaleR
+
+Quando si passa un modello utilizzando un formato serializzato a un'istanza remota di SQL Server, è possibile che venga visualizzato l'errore: "errore memDecompress (dati, tipo = decomprimere) Errore interno -3 memDecompress(2)."
+
+Questo errore viene generato se è stato salvato il modello utilizzando una versione aggiornata della funzione di serializzazione, [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), ma l'istanza di SQL Server in cui si esegue la deserializzazione del modello è una versione precedente di APIs RevoScaleR, da SQL Server 2017 CU2 o versioni precedenti.
+
+In alternativa, è possibile aggiornare l'istanza di SQL Server per l'utilizzo di una versione successiva di RevoScaleR. È anche possibile installare la stessa versione di RevoScaleR nel client che viene installato nell'istanza di SQL Server. 
+
+L'errore non viene visualizzata se la versione dell'API è lo stesso, o se si sta spostando un modello salvato con funzione di serializzazione precedente a un server utilizzando una versione più recente dell'API.
+
+In altre parole, è possibile utilizzare la stessa versione di RevoScaleR operazioni di serializzazione e deserializzazione.
+
+### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>Punteggi in tempo reale non gestisce correttamente il parametro learningRate nei modelli di albero e foresta
+
+Se si crea un modello utilizzando un albero delle decisioni o un metodo di foresta delle decisioni e specifica la velocità di apprendimento, si potrebbero riscontrare risultati incoerenti quando si utilizza `sp_rxpredict` o SQL `PREDICT` (funzione), invece del `rxPredict`.
+
+La causa è un errore dell'API che modella i processi di serializzazione ed è limitata al `learningRate` parametro: ad esempio, in [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees), o
+
+Questo problema verrà risolto in una prossima service release.
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>Limitazioni relative all'affinità processori per i processi R
 

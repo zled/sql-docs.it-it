@@ -3,7 +3,7 @@ title: "Nozioni fondamentali sulla disponibilità di SQL Server per le distribuz
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: b137d8badf44bf1c7d181b490bcf6d06e2bd087f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni di Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 A partire da [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] è supportato in Linux e Windows. Ad esempio basato su Windows [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] le distribuzioni, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] istanze e database è necessario essere a disponibilità elevata in Linux. In questo articolo vengono illustrati gli aspetti tecnici di pianificazione e distribuzione a disponibilità elevata basate su Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] database e istanze, nonché alcune delle differenze di installazioni basate su Windows. Poiché [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] potrebbero essere nuovi per professionisti IT di Linux e Linux potrebbero essere nuovi per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] professionisti, l'articolo a volte vengono introdotti i concetti che possono essere familiare ad alcune e non si ha dimestichezza ad altri utenti.
 
@@ -90,18 +90,18 @@ Simile a Windows, le distribuzioni Linux dispone di un firewall incorporato. Se 
 
 | Numero di porta | Tipo     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS:`rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (se usati): Mapper di endpoint                                                                                          |
 | 137         | UDP      | Samba (se usati)-servizio nomi NetBIOS                                                                                      |
 | 138         | UDP      | Samba (se usati) – datagrammi NetBIOS                                                                                          |
 | 139         | TCP      | Samba (se usati) – sessione NetBIOS                                                                                           |
 | 445         | TCP      | Samba (se usati) – SMB su TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: porta; predefinita Se si desidera, è possibile modificare con`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] : porta; predefinita Se si desidera, è possibile modificare con`mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (se usate)                                                                                                               |
 | 2224        | TCP      | Pacemaker – usato da`pcsd`                                                                                                |
 | 3121        | TCP      | Pacemaker-richiesto se sono presenti nodi remoti Pacemaker                                                                    |
 | 3260        | TCP      | Iniziatore (se usati) – iSCSI può essere modificato `/etc/iscsi/iscsid.config` (RHEL), ma deve corrispondere a una porta di destinazione software iSCSI |
-| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-utilizzata per un endpoint del gruppo di disponibilità; porta predefinita può essere modificato durante la creazione dell'endpoint                                |
+| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -utilizzata per un endpoint del gruppo di disponibilità; porta predefinita può essere modificato durante la creazione dell'endpoint                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
 | 5404        | UDP      | Pacemaker – richiesto dal Corosync se utilizzando UDP multicast                                                                     |
 | 5405        | UDP      | Pacemaker – richiesto da Corosync                                                                                            |

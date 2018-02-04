@@ -1,5 +1,5 @@
 ---
-title: Sys.dm server_services (Transact-SQL) | Documenti Microsoft
+title: sys.dm_server_services (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/07/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_server_services
 - sys.dm_server_services_TSQL
 - dm_server_services_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_server_services dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 08a4cd914783a094cf9d9ae681d3a3695af34e4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 205d755e46b472cfca44170819ba177e523e4f3f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +54,11 @@ ms.lasthandoff: 01/08/2018
 |cluster_nodename|**nvarchar(256)**|Il nome del nodo del cluster su cui è installato il servizio. Ammette i valori Null.|
 |instant_file_initialization_enabled|**nvarchar(1)**|Specifica se l'inizializzazione immediata dei file è abilitata per il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servizio.<br /><br />Y = inizializzazione immediata dei file è abilitata per il servizio.<br /><br />N = inizializzazione immediata dei file è disabilitato per il servizio.<br /><br /> Ammette i valori Null.<br /><br /> **Nota:** non si applica ad altri servizi, ad esempio SQL Server Agent.<br /><br /> **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 tramite tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
 
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW SERVER STATE` per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys.dm_server_registry &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
+ [sys.dm_server_registry &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_stats_histogram (Transact-SQL) | Documenti Microsoft
+title: sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - sys.dm_db_stats_histogram_TSQL
 - dm_db_stats_histogram
 - dm_db_stats_histogram_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_stats_histogram dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f43afdac5972dd5f01c192dbbc755911a83a341
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4ce36dbcac1e0df3f8cbe4020e87fc32af36920a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmdbstatshistogram-transact-sql"></a>Sys.dm_db_stats_histogram (Transact-SQL)
+# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Restituisce l'istogramma delle statistiche per l'oggetto di database specificato (tabella o vista indicizzata) nell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Simile a `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
@@ -59,9 +62,9 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |stats_id |**int**|ID dell'oggetto statistiche. Univoco all'interno della tabella o della vista indicizzata. Per altre informazioni, vedere [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
 |step_number |**int** |Il numero di passaggio nell'istogramma. |
 |range_high_key |**sql_variant** |Valore di colonna pari al limite superiore per un intervallo dell'istogramma. Il valore di colonna viene denominato anche valore chiave.|
-|RANGE_ROWS |**real** |Numero stimato di righe il cui valore di colonna è compreso in un intervallo dell'istogramma, escluso il limite superiore. |
+|range_rows |**real** |Numero stimato di righe il cui valore di colonna è compreso in un intervallo dell'istogramma, escluso il limite superiore. |
 |equal_rows |**real** |Numero stimato di righe il cui valore di colonna è uguale al limite superiore dell'intervallo dell'istogramma. |
-|DISTINCT_RANGE_ROWS |**bigint** |Numero stimato di righe con un valore distinct di colonna compreso in un intervallo dell'istogramma, escluso il limite superiore. |
+|distinct_range_rows |**bigint** |Numero stimato di righe con un valore distinct di colonna compreso in un intervallo dell'istogramma, escluso il limite superiore. |
 |average_range_rows |**real** |Numero medio di righe con valori di colonna duplicati in un istogramma, escluso il limite superiore (`RANGE_ROWS / DISTINCT_RANGE_ROWS` per `DISTINCT_RANGE_ROWS > 0`). |
   
  ## <a name="remarks"></a>Osservazioni  
@@ -150,4 +153,4 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ## <a name="see-also"></a>Vedere anche  
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Funzioni (Transact-SQL) e viste a gestione dinamica relative agli oggetti](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
-[Sys.dm db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

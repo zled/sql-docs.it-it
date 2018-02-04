@@ -3,7 +3,7 @@ title: "Creare e configurare un gruppo di disponibilità per SQL Server in Linux
 description: "In questa esercitazione viene illustrato come creare e configurare i gruppi di disponibilità per SQL Server in Linux."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 53256f0cf5e18d8fb250cb5c67ae092771585de1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creare e configurare un gruppo di disponibilità per SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In questa esercitazione viene illustrato come creare e configurare un gruppo di disponibilità (AG) per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux. A differenza di [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] e in precedenza in Windows, è possibile abilitare estensivi con o senza creare prima il cluster Pacemaker sottostante. Integrazione con il cluster, se necessario, non viene eseguita fino a quando in un secondo momento.
 

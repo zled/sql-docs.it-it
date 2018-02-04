@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_dms_workers (Transact-SQL) | Documenti Microsoft
+title: sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1b24d8da86c779a9964d41921aa614bcd2d8d4f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aac00b2fd1ba5a5922c2618ccfadad6fc2d2b8ac
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwdmsworkers-transact-sql"></a>Sys.dm_pdw_dms_workers (Transact-SQL)
+# <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene informazioni su tutti i ruoli worker procedura DMS.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |bytes_per_sec|**bigint**|Velocità effettiva di lettura o scrittura nell'ultimo secondo.|Maggiore o uguale a 0. NULL se la query è stata annullata o non è riuscita prima di eseguire il processo di lavoro.|  
 |bytes_processed|**bigint**|Numero totale di byte elaborati dal thread di lavoro.|Maggiore o uguale a 0. NULL se la query è stata annullata o non è riuscita prima di eseguire il processo di lavoro.|  
 |rows_processed|**bigint**|Numero di righe lette o scritte per il thread di lavoro.|Maggiore o uguale a 0. NULL se la query è stata annullata o non è riuscita prima di eseguire il processo di lavoro.|  
-|start_time|**datetime**|Ora di inizio dell'esecuzione del thread di lavoro.|Maggiore o uguale all'ora di inizio del passaggio della query di questo processo di lavoro a cui appartiene. Vedere [sys.dm_pdw_request_steps &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|start_time|**datetime**|Ora di inizio dell'esecuzione del thread di lavoro.|Maggiore o uguale all'ora di inizio del passaggio della query di questo processo di lavoro a cui appartiene. See [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |end_time|**datetime**|Ora in cui esecuzione è terminata, non è riuscita o annullata.|NULL per i lavori in corso o in coda. In caso contrario, maggiore di start_time.|  
 |total_elapsed_time|**int**|Tempo totale impiegato per l'esecuzione, in millisecondi.|Maggiore o uguale a 0.<br /><br /> Tempo totale trascorso dal sistema avviare o riavviare. Se total_elapsed_time supera il valore massimo per un numero intero (24.8 giorni, in millisecondi), errore di materializzazione scadenza comporterà un overflow.<br /><br /> Il valore massimo in millisecondi è equivalente a 24.8 giorni.|  
 |cpu_time|**bigint**|Tempo di CPU utilizzato dal thread di lavoro, in millisecondi.|Maggiore o uguale a 0.|  

@@ -1,7 +1,7 @@
 ---
 title: Modellazione multidimensionale (esercitazione di Adventure Works) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 02/02/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,21 +11,22 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - tutorials [Analysis Services]
 - Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e5955c54a3b5e92632cd421294bb85b834374ead
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 1a6323632e17efab87ecf64358b5055288dfa5db
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Modellazione multidimensionale (esercitazione di AdventureWorks)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +53,7 @@ Per completare questa esercitazione sono inoltre necessarie le autorizzazioni se
   
 -   È necessario essere membro del gruppo Administrators nel computer locale di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o membro del ruolo di amministrazione del server nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
--   È necessario disporre di autorizzazioni di lettura per il database di esempio **AdventureWorksDW2012** . Questo database di esempio è valido per la versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
+-   È necessario avere autorizzazioni di lettura di **AdventureWorksDW** database di esempio. Questo database di esempio è valido per la versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
 ## <a name="lessons"></a>Lezioni  
 L'esercitazione include le lezioni seguenti.  

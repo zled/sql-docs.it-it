@@ -3,7 +3,7 @@ title: Configurare le impostazioni di SQL Server con le variabili di ambiente | 
 description: In questo argomento viene descritto come usare le variabili di ambiente per configurare impostazioni specifiche di SQL Server 2017 in Linux.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 07/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 44c33e0f5619349dfa32b48d7745ae6f9ddcc155
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b32330aee4fcd427ecd05d27fba3ffb8539bffa6
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurare le impostazioni di SQL Server con le variabili di ambiente in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Per configurare SQL Server 2017 in Linux, è possibile utilizzare diverse variabili di ambiente diverso. Queste variabili vengono utilizzate in due scenari:
 
@@ -39,7 +39,7 @@ Per configurare SQL Server 2017 in Linux, è possibile utilizzare diverse variab
 |-----|-----|
 | **ACCEPT_EULA** | Accettare il contratto di licenza di SQL Server quando è impostato su un valore (ad esempio, ' Y'). |
 | **MSSQL_SA_PASSWORD** | Configurare la password dell'utente amministratore. |
-| **MSSQL_PID** | Impostare la chiave di prodotto o edizione di SQL Server. I valori possibili includono: </br></br>**Copia di valutazione**</br>**Sviluppatore**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Un codice product key**</br></br>Se si specifica un codice product key, deve essere nel formato # # #-# # #-# # #-# # #-# # #, dove '#' è un numero o una lettera.|
+| **MSSQL_PID** | Impostare la chiave di prodotto o edizione di SQL Server. I valori possibili includono: </br></br>**Copia di valutazione**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Un codice product key**</br></br>Se si specifica un codice product key, deve essere nel formato # # #-# # #-# # #-# # #-# # #, dove '#' è un numero o una lettera.|
 | **MSSQL_LCID** | Imposta l'ID di lingua da usare per SQL Server. Ad esempio 1036 è il francese. |
 | **MSSQL_COLLATION** | Imposta le regole di confronto predefinito per SQL Server. Esegue l'override il mapping predefinito degli id di lingua (LCID) per le regole di confronto. |
 | **MSSQL_MEMORY_LIMIT_MB** | Imposta la quantità massima di memoria (in MB) che è possibile utilizzare SQL Server. Per impostazione predefinita è 80% della memoria fisica totale. |

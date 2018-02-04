@@ -3,8 +3,8 @@ title: "Configurare il Cluster Ubuntu per il gruppo di disponibilità di SQL Ser
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.date: 03/17/2017
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,26 +15,26 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurare il Cluster Ubuntu e risorsa gruppo di disponibilità
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Questo documento illustra come creare un cluster di tre nodi in Ubuntu e aggiungere un gruppo di disponibilità creato in precedenza come risorsa nel cluster. Per la disponibilità elevata, un gruppo di disponibilità in Linux richiede tre nodi, vedere [elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> A questo punto, integrazione di SQL Server con Pacemaker in Linux non è accoppiata come con WSFC in Windows. All'interno di SQL, non è possibile sapere sulla presenza del cluster, tutte le orchestrazioni non rientra e il servizio viene controllato come istanza autonoma da Pacemaker. Inoltre, il nome di rete virtuale è specifico di WSFC, è disponibile un equivalente dello stesso in Pacemaker. Always On viste a gestione dinamica informazioni del cluster per le query restituirà le righe vuote. È comunque possibile creare un listener per poterlo utilizzare per la riconnessione dopo il failover trasparente, ma è necessario registrare manualmente il nome del listener nel server DNS con l'indirizzo IP utilizzato per creare la risorsa IP virtuale (come illustrato di seguito).
+> A questo punto, integrazione di SQL Server con Pacemaker in Linux non è accoppiata come con WSFC in Windows. All'interno di SQL, non è possibile sapere sulla presenza del cluster, tutte le orchestrazioni non rientra e il servizio viene controllato in base a un'istanza autonoma da Pacemaker. Inoltre, il nome di rete virtuale è specifico di WSFC, è disponibile un equivalente dello stesso in Pacemaker. Always On viste a gestione dinamica informazioni del cluster per le query restituirà le righe vuote. È comunque possibile creare un listener per poterlo utilizzare per la riconnessione dopo il failover trasparente, ma è necessario registrare manualmente il nome del listener nel server DNS con l'indirizzo IP utilizzato per creare la risorsa IP virtuale (come illustrato di seguito).
 
 Nelle sezioni seguenti viene illustrata la procedura per configurare una soluzione di cluster di failover. 
 
 ## <a name="roadmap"></a>Guida di orientamento
 
-I passaggi per creare un gruppo di disponibilità nel server Linux per la disponibilità elevata sono diversi da quelle in un cluster di failover di Windows Server. L'elenco seguente descrive i passaggi di alto livelli: 
+I passaggi per creare un gruppo di disponibilità nel server Linux per la disponibilità elevata sono diversi da quelle in un cluster di failover di Windows Server. L'elenco seguente descrive i passaggi generali: 
 
 1. [Configurare SQL Server nei nodi del cluster](sql-server-linux-setup.md).
 
@@ -139,7 +139,7 @@ Il comando seguente crea un cluster di tre nodi. Prima di eseguire lo script, so
 
 I fornitori di cluster pacemaker richiedono STONITH deve essere abilitata e un dispositivo fencing configurato per l'installazione del cluster supportate. Quando il gestore delle risorse cluster non è possibile determinare lo stato di un nodo o di una risorsa in un nodo, fencing viene utilizzato per visualizzare di nuovo il cluster in uno stato noto. Fencing livello risorse principalmente garantisce che non vi sia alcun danneggiamento dei dati in caso di interruzione tramite la configurazione di una risorsa. È possibile utilizzare fencing livello di risorse, ad esempio, con DRBD (Distributed replicati blocco dispositivo) per contrassegnare il disco in un nodo come obsoleta quando il collegamento di comunicazione si arresta. Fencing livello di nodo garantisce che un nodo non viene eseguito tutte le risorse. In tal caso, reimpostare il nodo e l'implementazione Pacemaker di esso viene chiamato STONITH (che è l'acronimo di "riprendere l'altro nodo nell'intestazione"). Pacemaker supporta una vasta gamma di dispositivi fencing, ad esempio un continuità o gestione delle schede di interfaccia di per i server. Per ulteriori informazioni, vedere [cluster Pacemaker novo](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) e [Fencing e Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
-Perché il livello del nodo conflitti di configurazione dipende molto dall'ambiente, si verrà disabilitata per questa esercitazione (può essere configurato in un secondo momento). Nel nodo primario, eseguire lo script seguente: 
+Poiché il livello del nodo conflitti di configurazione dipende molto dall'ambiente, verrà disabilitata per questa esercitazione (può essere configurato in un secondo momento). Nel nodo primario, eseguire lo script seguente: 
 
 ```bash
 sudo pcs property set stonith-enabled=false
@@ -160,7 +160,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 
 >[!WARNING]
->Dopo un failover automatico, quando `start-failure-is-fatal = true` Gestione risorse tenterà di avviare la risorsa. Se si verifica un errore durante il primo tentativo è necessario eseguire manualmente `pcs resource cleanup <resourceName>` di pulizia, il numero di errore delle risorse e reimpostare la configurazione.
+>Dopo un failover automatico, quando `start-failure-is-fatal = true` il gestore di risorse tenta di avviare la risorsa. Se si verifica un errore durante il primo tentativo è necessario eseguire manualmente `pcs resource cleanup <resourceName>` per pulire il conteggio degli errori di risorse e reimpostare la configurazione.
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Installare SQL Server agent di risorsa per l'integrazione con Pacemaker
 

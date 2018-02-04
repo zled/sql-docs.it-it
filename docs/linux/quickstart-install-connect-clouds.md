@@ -3,7 +3,7 @@ title: Introduzione a SQL Server 2017 nel Cloud | Documenti Microsoft
 description: Questa esercitazione rapida viene illustrato come eseguire il 2017 di SQL Server in Linux nel cloud di propria scelta.
 author: annashres
 ms.author: annashres
-manager: jhubbard
+manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -11,15 +11,15 @@ ms.prod_service: database-engine
 ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 9fa5f2751b515b86574165e6f6cda8f0b9e6661a
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>Eseguire il 2017 di SQL Server nel cloud
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In questa esercitazione di avvio rapido, verrà installato 2017 di SQL Server su Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) o Ubuntu nel cloud di propria scelta. Passare a [il provisioning di una macchina virtuale Linux SQL Server nel portale di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) per l'esecuzione di SQL Server in Linux in Azure.
 

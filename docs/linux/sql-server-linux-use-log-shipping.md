@@ -3,7 +3,7 @@ title: Configurare il log shipping per SQL Server in Linux | Documenti Microsoft
 description: "Questa esercitazione viene illustrato un esempio di base della modalità di replica di un'istanza di SQL Server in Linux a un'istanza secondaria utilizzando la distribuzione dei log."
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.date: 04/19/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 4317dd2b7dc32f552988eb3c33c33b8bbe8a3dfb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 48f1782ca1da3e730181402ed947453b6eeefc35
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introduzione a Log Shipping in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 La distribuzione dei Log di SQL Server è una configurazione a disponibilità elevata in un database da un server primario verrà replicato in uno o più server secondari. In breve, un backup del database di origine viene ripristinato nel server secondario. Il server primario crea quindi i backup del log delle transazioni periodicamente e i server secondari ripristino, aggiornare la copia del database secondaria. 
 

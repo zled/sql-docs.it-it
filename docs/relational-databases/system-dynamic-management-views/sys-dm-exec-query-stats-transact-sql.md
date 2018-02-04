@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_query_stats (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_query_stats
 - sys.dm_exec_query_stats
 - sys.dm_exec_query_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 26cc8e4ea520560452b59b9a08da198882ba96cd
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 8874b5ba3eca2f3e9d72874af7440934fc2ec20f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 01/12/2018
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**valore di sql_handle**|**varbinary(64)**  |Token che fa riferimento al batch o alla stored procedure di cui fa parte la query.<br /><br /> **valore di sql_handle**, insieme a **statement_start_offset** e **statement_end_offset**, può essere utilizzato per recuperare il testo SQL della query chiamando la **sys.dm_exec_sql Text** funzione a gestione dinamica.|  
+|**sql_handle**|**varbinary(64)**  |Token che fa riferimento al batch o alla stored procedure di cui fa parte la query.<br /><br /> **valore di sql_handle**, insieme a **statement_start_offset** e **statement_end_offset**, può essere utilizzato per recuperare il testo SQL della query chiamando la **sys.dm_exec_sql Text** funzione a gestione dinamica.|  
 |**statement_start_offset**|**int**|Indica, in byte e a partire da 0, la posizione iniziale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente.|  
 |**statement_end_offset**|**int**|Indica, in byte e a partire da 0, la posizione finale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente. Per le versioni precedenti [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], il valore-1 indica la fine del batch. I commenti finali non sono più inclusi.|  
 |**plan_generation_num**|**bigint**|Numero di sequenza utilizzabile per distinguere le istanze dei piani dopo una ricompilazione.|  
@@ -75,8 +78,8 @@ ms.lasthandoff: 01/12/2018
 |**last_elapsed_time**|**bigint**|Tempo trascorso, espresso in microsecondi (con precisione al millisecondo), per le ultime esecuzioni completate di questo piano.|  
 |**min_elapsed_time**|**bigint**|Tempo minimo trascorso, espresso in microsecondi (con precisione al millisecondo), per un'esecuzione completata di questo piano.|  
 |**max_elapsed_time**|**bigint**|Tempo massimo trascorso, espresso in microsecondi (con precisione al millisecondo), per un'esecuzione completata di questo piano.|  
-|**query_hash**|**Binary (8)**|Valore hash binario calcolato sulla query che consente di identificare query con logica analoga. È possibile utilizzare il valore hash della query per determinare l'utilizzo delle risorse aggregate per query che differiscono solo per valori letterali.|  
-|**valore query_plan_hash**|**Binary (8)**|Valore hash binario calcolato sul piano di esecuzione di query che consente di identificare piani di esecuzioni analoghi. È possibile utilizzare il valore hash del piano di query per individuare il costo cumulativo di query con piani di esecuzione analoghi.<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
+|**query_hash**|**Binary(8)**|Valore hash binario calcolato sulla query che consente di identificare query con logica analoga. È possibile utilizzare il valore hash della query per determinare l'utilizzo delle risorse aggregate per query che differiscono solo per valori letterali.|  
+|**query_plan_hash**|**binary(8)**|Valore hash binario calcolato sul piano di esecuzione di query che consente di identificare piani di esecuzioni analoghi. È possibile utilizzare il valore hash del piano di query per individuare il costo cumulativo di query con piani di esecuzione analoghi.<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**total_rows**|**bigint**|Numero totale di righe restituite dalla query. Non può essere null.<br /><br /> È sempre 0 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**last_rows**|**bigint**|Numero di righe restituite durante l'ultima esecuzione della query. Non può essere null.<br /><br /> È sempre 0 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**min_rows**|**bigint**|Numero minimo di righe restituito dalla query durante l'esecuzione di uno. Non può essere null.<br /><br /> È sempre 0 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
@@ -86,7 +89,7 @@ ms.lasthandoff: 01/12/2018
 |**total_dop**|**bigint**|La somma totale dei gradi di parallelismo questo piano utilizzato dopo l'ultima compilazione. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**last_dop**|**bigint**|Il grado di parallelismo quando il piano di ultima esecuzione. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_dop**|**bigint**|Il grado di parallelismo minimo piano utilizzato durante l'esecuzione di uno. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**MAX_DOP**|**bigint**|Il massimo grado di parallelismo piano utilizzato durante l'esecuzione di uno. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**max_dop**|**bigint**|Il massimo grado di parallelismo piano utilizzato durante l'esecuzione di uno. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**total_grant_kb**|**bigint**|La quantità totale di memoria riservata concedere in KB piano ricevuto dopo l'ultima compilazione. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**last_grant_kb**|**bigint**|Quando il piano di ultima esecuzione, la quantità di memoria riservata concedere in KB. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_grant_kb**|**bigint**|La quantità minima di memoria riservata concedere in KB mai ricevuto durante l'esecuzione di un piano. Sarà sempre 0 per l'esecuzione di query su una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -119,7 +122,7 @@ ms.lasthandoff: 01/12/2018
 |**last_spills**|**bigint**|Il numero di pagine distribuite l'ora dell'ultima che esecuzione della query.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Il numero minimo di pagine che questa query è sempre distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Il numero massimo di pagine che questa query è sempre distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**int**|L'identificatore per il nodo che utilizza questo tipo di distribuzione.<br /><br /> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**pdw_node_id**|**int**|L'identificatore per il nodo che utilizza questo tipo di distribuzione.<br /><br /> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 
 > [!NOTE]
 > <sup>1</sup> per le stored procedure compilate in modo nativo quando la raccolta di statistiche è abilitata, il tempo del processo viene raccolto in millisecondi. Se la query viene eseguita in meno di un millisecondo, il valore sarà 0.  
@@ -175,11 +178,11 @@ ORDER BY qs.execution_count DESC;
   
 ## <a name="see-also"></a>Vedere anche  
 [Funzioni e viste a gestione dinamica &#40; relative all'esecuzione Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
-[Sys.dm exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
-[Sys.dm exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[Sys.dm exec_procedure_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
-[Sys.dm exec_trigger_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
-[Sys.dm exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
+[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
 

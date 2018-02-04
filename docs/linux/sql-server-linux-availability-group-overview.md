@@ -3,7 +3,7 @@ title: "Gruppi di disponibilità per SQL Server in Linux Always On | Documenti M
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 3c708d4e06f32515b96b22099990007d58db20f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d7f9dec114fd17025081c4a139537b11dd4fde45
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Gruppi di disponibilità in Linux Always On
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In questo articolo descrive le caratteristiche di gruppi di disponibilità AlwaysOn (estensivi) in basati su Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] installazioni. Vengono inoltre illustrate le differenze tra il cluster di failover di Windows Server (WSFC) e Linux-base estensivi. Vedere il [documentazione basati su Windows](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) per le nozioni di base di estensivi, come funzionano nello stesso modo in Windows e Linux, ad eccezione di WSFC.
 
@@ -53,7 +53,7 @@ Un tipo di cluster None indica che non c'è Nessun requisito per né verrà util
 
 Tipo di cluster è archiviato nel [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] vista a gestione dinamica (DMV) `sys.availability_groups`, nelle colonne `cluster_type` e `cluster_type_desc`.
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>obbligatorio\_sincronizzato\_secondari\_a\_commit
+## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
 
 Novità di [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] è un'impostazione che viene utilizzata da estensivi chiamati `required_synchronized_secondaries_to_commit`. In questo modo il gruppo di disponibilità il numero di repliche secondarie che deve essere in contemporanea con la replica primaria. Ciò consente ad esempio il failover automatico (solo quando è integrato con Pacemaker con un tipo di cluster di esterni) e controlla il comportamento delle operazioni come la disponibilità del database primario, se il numero di repliche secondarie è online oppure offline. Per comprendere meglio il funzionamento, vedere [elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità](sql-server-linux-availability-group-ha.md). Il `required_synchronized_secondaries_to_commit` valore è impostato per impostazione predefinita e gestita da Pacemaker /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. È possibile eseguire manualmente l'override di questo valore.
 

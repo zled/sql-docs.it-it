@@ -1,5 +1,5 @@
 ---
-title: Sys.dm fts_index_population (Transact-SQL) | Documenti Microsoft
+title: sys.dm_fts_index_population (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_index_population
 - sys.dm_fts_index_population_TSQL
 - dm_fts_index_population_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_index_population dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_index_population dynamic management view
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 719da7d41ba34adcf7a3aa7ccc53a14217e657ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f118b1be30119e7328ee20477a0c18808fbdc3e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |**database_id**|**int**|ID del database contenente l'indice full-text in fase di popolamento.|  
 |**catalog_id**|**int**|ID del catalogo full-text contenente l'indice full-text.|  
 |**table_id**|**int**|ID della tabella per la quale l'indice full-text è in fase di popolamento.|  
-|**memory_address**|**varbinary (8)**|Indirizzo di memoria della struttura dei dati interna utilizzata per rappresentare un popolamento attivo.|  
+|**memory_address**|**varbinary(8)**|Indirizzo di memoria della struttura dei dati interna utilizzata per rappresentare un popolamento attivo.|  
 |**population_type**|**int**|Tipo di popolamento. I tipi validi sono:<br /><br /> 1 = Popolamento completo<br /><br /> 2 = Popolamento incrementale basato su timestamp<br /><br /> 3 = Aggiornamento manuale delle modifiche rilevate<br /><br /> 4 = Aggiornamento in background delle modifiche rilevate|  
 |**population_type_description**|**nvarchar(120)**|Descrizione del tipo di popolamento.|  
 |**is_clustered_index_scan**|**bit**|Indica se il popolamento implica un'analisi dell'indice cluster.|  
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>Osservazioni  
  Quando l'indicizzazione semantica statistica è abilitata in aggiunta all'indicizzazione full-text, l'estrazione semantica e il popolamento di frasi chiave, nonché l'estrazione dei dati di somiglianza del documento, si verificano contemporaneamente all'indicizzazione full-text. Il popolamento dell'indice di somiglianza del documento si verifica successivamente, in una seconda fase. Per ulteriori informazioni, vedere [gestire e monitorare la ricerca semantica](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.  
  
@@ -69,7 +72,7 @@ In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessar
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|Per|Relazione|  
+|From|Per|Relazione|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Uno-a-uno|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Uno-a-uno|  

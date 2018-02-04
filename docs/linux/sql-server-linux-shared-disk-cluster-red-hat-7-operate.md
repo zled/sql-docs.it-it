@@ -3,7 +3,7 @@ title: Funzioni di cluster condiviso Red Hat Enterprise Linux per SQL Server | D
 description: "Implementare la disponibilità elevata mediante la configurazione cluster disco condiviso Red Hat Enterprise Linux per SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: e0a7c5078526b46a8cfa518eeb1d0b5708343115
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d3abecd450bbb734304c8c04909c38ae216595ad
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Funzioni di Red Hat Enterprise Linux cluster dei dischi condivisi per SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Questo documento viene descritto come eseguire le attività seguenti per SQL Server in un cluster di failover del disco condiviso con Red Hat Enterprise Linux.
 
@@ -265,7 +265,7 @@ Quando un nodo è offline, verificare quanto segue.
 
     Le seguenti porte devono essere aperte in tutti i nodi per Pacemaker essere in grado di comunicare.
     
-    - * * TCP: 2224, 3121, 21064
+    - **TCP: 2224, 3121, 21064
 
 - **Pacemaker o Corosync servizi in esecuzione**
 

@@ -1,5 +1,5 @@
 ---
-title: Sys.internal_partitions (Transact-SQL) | Documenti Microsoft
+title: sys.internal_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,26 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
 - SQL Server 2016 Preview
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83cb1a2bc846f21a12b3d83b0499edf70b404656
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3280403d6194bd3f5370985d31e672752ed8c25
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>Sys.internal_partitions (Transact-SQL)
+# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni set di righe che tiene traccia di dati interne per gli indici columnstore nelle tabelle basate su disco. Questi set di righe sono interni per gli indici columnstore e le righe di traccia eliminato, il mapping di gruppo di righe e delta archivio rowgroup. Consentono di tenere traccia dei dati per ciascuno di essi per ogni partizione della tabella; ogni tabella dispone di almeno una partizione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Consente di ricreare i set di righe ogni volta che venga ricompilato l'indice columnstore.   
@@ -46,11 +48,11 @@ ms.lasthandoff: 11/17/2017
 |data_compression|**tinyint**|Lo stato di compressione per il set di righe:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|Lo stato di compressione per ogni partizione. I valori possibili per le tabelle rowstore sono NONE, ROW e PAGE. I valori possibili per le tabelle columnstore sono COLUMNSTORE e COLUMNSTORE_ARCHIVE.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Crea nuovi indici interna columnstore nuovamente ogni volta che crea o si ricompila un indice columnstore.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Crea nuovi indici interna columnstore nuovamente ogni volta che crea o si ricompila un indice columnstore.  
   
 ## <a name="examples"></a>Esempi  
   

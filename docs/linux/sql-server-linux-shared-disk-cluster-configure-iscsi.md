@@ -3,7 +3,7 @@ title: Configurare il failover del cluster istanza archiviazione iSCSI, SQL Serv
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9d4ab14772f78370563c6117553ea9e45203a8b9
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurare l'istanza del cluster di failover SQL Server in Linux - iSCSI:
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In questo articolo viene illustrato come configurare l'archiviazione iSCSI per un'istanza cluster di failover (FCI) in Linux. 
 
@@ -57,7 +57,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
 
     - iface.net_ifacename è il nome della scheda di rete, come illustrato nel sistema operativo.
     - iface.hwaddress è l'indirizzo MAC di un nome univoco che verrà creato per questa interfaccia riportata di seguito.
-    - iface.IPAddress
+    - iface.ipaddress
     - iface.subnet_Mask 
 
     Vedere l'esempio seguente:
@@ -99,7 +99,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
     ```bash
     sudo grep “Attached SCSI” /var/log/messages
     ```
-    ![30 iSCSIattachedDisks][7]
+    ![30-iSCSIattachedDisks][7]
 
 7.  Creare un volume fisico sul disco iSCSI.
 
@@ -200,7 +200,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
     ls /var/opt/mssql/data
     ```
 
-    ![45 CopyMove][8]
+    ![45-CopyMove][8]
  
    *    Tipo `exit` per tornare all'utente root.
 
@@ -358,7 +358,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
 
     \<ListOfVGsNotUsedByPacemaker > è riportato l'elenco di gruppi di volumi dall'output del passaggio 20 che non verrà utilizzato dall'istanza FCI. Inserire ognuno racchiuso tra virgolette e separato da una virgola. Di seguito è riportato un esempio.
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. All'avvio di Linux, esegue il montaggio del file system. Per assicurarsi che solo Pacemaker possibile montare il disco iSCSI, ricompilare l'immagine del file System radice. 

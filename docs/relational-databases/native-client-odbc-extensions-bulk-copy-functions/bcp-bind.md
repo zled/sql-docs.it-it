@@ -8,24 +8,28 @@ ms.service:
 ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: bcp_bind
-apilocation: sqlncli11.dll
+apiname:
+- bcp_bind
+apilocation:
+- sqlncli11.dll
 apitype: DLLExport
-helpviewer_keywords: bcp_bind function
+helpviewer_keywords:
+- bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9efa0570e0ffe698fccb7decb6eafbf5877842db
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.openlocfilehash: 7bba3e1785df98b4f023d5296205503202cbc59c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -123,7 +127,51 @@ bcp_bind(hdbc, szName, 0,
   
  Il *eDataType* parametro viene enumerato in base il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] token dei tipi di dati in SQLNCLI. h, non gli enumeratori tipo di dati C ODBC. È ad esempio possibile specificare un numero intero a due byte, SQL_C_SHORT di tipo ODBC, utilizzando il tipo specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLINT2.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]stato introdotto il supporto per i token tipo dati SQLXML e SQLUDT nel ***eDataType*** parametro.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] stato introdotto il supporto per i token tipo dati SQLXML e SQLUDT nel ***eDataType*** parametro.  
+ 
+ Nella tabella seguente sono elencati i tipi di dati enumerato validi e i tipi di dati C ODBC corrispondenti.
+  
+|eDataType|Tipo C|  
+|-----------------------|------------|  
+|SQLTEXT|Char *|  
+|SQLNTEXT|wchar_t *|  
+|SQLCHARACTER|Char *|  
+|SQLBIGCHAR|Char *|  
+|SQLVARCHAR|Char *|  
+|SQLBIGVARCHAR|Char *|  
+|SQLNCHAR|wchar_t *|  
+|SQLNVARCHAR|wchar_t *|  
+|SQLBINARY|unsigned char *|  
+|SQLBIGBINARY|unsigned char *|  
+|SQLVARBINARY|unsigned char *|  
+|SQLBIGVARBINARY|unsigned char *|  
+|SQLBIT|char|  
+|SQLBITN|char|  
+|SQLINT1|char|  
+|SQLINT2|short int|  
+|SQLINT4|int|  
+|SQLINT8|_int64|  
+|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
+|SQLFLT4|float|  
+|SQLFLT8|float|  
+|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
+|SQLDECIMALN|SQL_NUMERIC_STRUCT|  
+|SQLNUMERICN|SQL_NUMERIC_STRUCT|  
+|SQLMONEY|DBMONEY|  
+|SQLMONEY4|DBMONEY4|  
+|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|  
+|SQLTIMEN|SQL_SS_TIME2_STRUCT|  
+|SQLDATEN|SQL_DATE_STRUCT|  
+|SQLDATETIM4|DBDATETIM4|  
+|SQLDATETIME|DBDATETIME|  
+|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|  
+|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
+|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
+|SQLIMAGE|unsigned char *|  
+|SQLUDT|unsigned char *|  
+|SQLUNIQUEID|SQLGUID|  
+|SQLVARIANT|*Qualsiasi tipo di dati ad eccezione di:*<br />-testo<br />-ntext<br />-immagine<br />-   varchar(max)<br />-   varbinary(max)<br />-nvarchar (max)<br />-   xml<br />-timestamp|  
+|SQLXML|*Tipi di dati C supportati:*<br />-   char*<br />-wchar_t *<br />-unsigned char *|  
   
  *idxServerCol*  
  Posizione ordinale della colonna nella tabella di database in cui vengono copiati i dati. La prima colonna di una tabella è la colonna 1. La posizione ordinale di una colonna è indicata da [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  

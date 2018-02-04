@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_plan_attributes (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_plan_attributes_TSQL
 - dm_exec_plan_attributes
 - sys.dm_exec_plan_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_plan_attributes dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c9a90a964bd8c1fce911e62ac9081b47d349e0a5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +54,13 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|attributo|**varchar (128)**|Nome dell'attributo associato al piano. Nella tabella immediatamente sotto quella sono elencati i possibili attributi, i tipi di dati e le relative descrizioni.|  
+|attributo|**varchar(128)**|Nome dell'attributo associato al piano. Nella tabella immediatamente sotto quella sono elencati i possibili attributi, i tipi di dati e le relative descrizioni.|  
 |Valore|**sql_variant**|Valore dell'attributo associato al piano.|  
 |is_cache_key|**bit**|Indica se l'attributo viene utilizzato come parte della chiave di ricerca nella cache per il piano.|  
 
 La tabella precedente, **attributo** può avere i valori seguenti:
 
-|attribute|Tipo di dati|Description|  
+|Attribute|Tipo di dati|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Indica i valori delle opzioni con cui è stato compilato il piano.|  
 |objectid|**int**|Una delle chiavi principali utilizzate per la ricerca di un oggetto nella cache. Questo è l'ID di oggetto archiviato in [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) per gli oggetti di database (procedure, viste, trigger e così via). Per i piani di tipo ad hoc o preparati, questo attributo corrisponde a un hash interno del testo del batch.|  
@@ -96,7 +99,7 @@ La tabella precedente, **attributo** può avere i valori seguenti:
 ### <a name="evaluating-set-options"></a>Valutazione delle opzioni SET  
  Per convertire il valore restituito in **set_options** opzioni con cui è stato compilato il piano, sottrarre i valori di **set_options** valore, che inizia con il valore massimo possibile, finché non si raggiungere 0. Ogni valore sottratto corrisponde a un'opzione utilizzata nel piano di query. Ad esempio, se il valore in **set_options** è 251, le opzioni con cui è stato compilato il piano sono ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS(32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), Parallel Plan(2) e ANSI_PADDING (1).  
   
-|Opzione|valore|  
+|Opzione|Valore|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -116,7 +119,7 @@ La tabella precedente, **attributo** può avere i valori seguenti:
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Indica che l'opzione di database PARAMETERIZATION era impostata su FORCED al momento della compilazione del piano.|131072|  
-|ROWCOUNT|**Si applica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] per[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**Si applica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>Cursori  
  I cursori inattivi vengono memorizzati nella cache in un piano compilato in modo che la memoria utilizzata per archiviare il cursore possa essere riutilizzata da utenti simultanei dei cursori. Si supponga, ad esempio, che un batch dichiari e utilizzi un cursore senza deallocarlo. Se due utenti eseguono lo stesso batch, saranno presenti due cursori attivi. Dopo la deallocazione dei cursori, potenzialmente in batch diversi, la memoria utilizzata per archiviare il cursore viene assegnata alla cache e non rilasciata. Questo elenco dei cursori inattivi viene mantenuto nel piano compilato. In occasione della successiva esecuzione del batch, la memoria per il cursore nella cache verrà riutilizzata e inizializzata in modo appropriato come cursore attivo.  
@@ -124,9 +127,9 @@ La tabella precedente, **attributo** può avere i valori seguenti:
 ### <a name="evaluating-cursor-options"></a>Valutazione delle opzioni di cursore  
  Per convertire il valore restituito in **required_cursor_options** e **acceptable_cursor_options** opzioni con cui è stato compilato il piano, sottrarre i valori dal valore della colonna, a partire da il valore massimo possibile, fino a raggiungere 0. Ogni valore sottratto corrisponde a un'opzione di cursore utilizzata nel piano di query.  
   
-|Opzione|valore|  
+|Opzione|Valore|  
 |------------|-----------|  
-|None|0|  
+|Nessuno|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -174,9 +177,9 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica &#40; relative all'esecuzione Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [Sys.dm exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Sys. Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

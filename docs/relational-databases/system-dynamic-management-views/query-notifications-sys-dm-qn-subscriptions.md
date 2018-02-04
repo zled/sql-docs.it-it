@@ -1,5 +1,5 @@
 ---
-title: Sys.dm qn_subscriptions (Transact-SQL) | Documenti Microsoft
+title: sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,38 +17,40 @@ f1_keywords:
 - dm_qn_subscriptions_TSQL
 - sys.dm_qn_subscriptions
 - sys.dm_qn_subscriptions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_qn_subscriptions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd318140e5c3eed17a5440ebf1a3135e7e01dc90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2fdc34ae033de8baf0173bc7c86bd0fe05c7668f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>-Notifiche di query Sys.dm qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce informazioni sulle sottoscrizioni di notifica delle query attive nel server. È possibile utilizzare questa vista per individuare le sottoscrizioni attive nel server o in un database specificato oppure per individuare un'entità server specificata.  
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID di una sottoscrizione.|  
 |**database_id**|**int**|ID del database in cui la query di notifica viene eseguita. In questo database vengono archiviate le informazioni relative alla sottoscrizione.|  
-|**SID**|**varbinary (85)**|ID di sicurezza (SID) dell'entità server che ha creato la sottoscrizione e di cui è proprietaria.|  
+|**sid**|**varbinary(85)**|ID di sicurezza (SID) dell'entità server che ha creato la sottoscrizione e di cui è proprietaria.|  
 |**object_id**|**int**|ID della tabella interna in cui sono archiviate le informazioni sui parametri di sottoscrizione.|  
-|**creato**|**datetime**|Data e ora di creazione della sottoscrizione.|  
+|**created**|**datetime**|Data e ora di creazione della sottoscrizione.|  
 |**timeout**|**int**|Timeout in secondi per la sottoscrizione. La notifica verrà contrassegnata per l'esecuzione non appena è trascorso l'intervallo di tempo specificato.<br /><br /> Nota: Il tempo di esecuzione effettiva potrebbe essere maggiore del timeout specificato. Se, tuttavia, si verifica una modifica che invalida la sottoscrizione dopo il timeout specificato ma prima dell'esecuzione della sottoscrizione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fa sì che l'esecuzione si verifichi in corrispondenza dell'ora in cui viene apportata la modifica.|  
 |**status**|**int**|Indica lo stato della sottoscrizione. Per un elenco dei codici, vedere la tabella in Note.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|Per|On|Tipo|  
+|From|Per|On|Tipo|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Molti-a-uno|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Molti-a-uno|  
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |Codice|Stato minore|Info|  
 |----------|------------------|----------|  
 |65798|La sottoscrizione è stata attivata perché i dati sono stati modificati|sottoscrizione attivata dall'inserimento|  
-|65799|La sottoscrizione è stata attivata perché i dati sono stati modificati|DELETE|  
+|65799|La sottoscrizione è stata attivata perché i dati sono stati modificati|Delete|  
 |65800|La sottoscrizione è stata attivata perché i dati sono stati modificati|Update|  
 |65801|La sottoscrizione è stata attivata perché i dati sono stati modificati|Merge|  
 |65802|La sottoscrizione è stata attivata perché i dati sono stati modificati|troncamento di tabella|  
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |199168|La sottoscrizione è attiva|modalità informazioni non definita|  
 |199424|La sottoscrizione è stata inizializzata ma non è ancora attiva|modalità informazioni non definita|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE nel server.  
   
 > [!NOTE]  
@@ -138,6 +141,6 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Le notifiche delle query relative viste a gestione dinamica &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
- [KILL QUERY NOTIFICATION SUBSCRIPTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

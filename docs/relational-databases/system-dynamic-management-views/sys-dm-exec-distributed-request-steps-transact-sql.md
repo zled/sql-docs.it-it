@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_distributed_request_steps (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_distributed_request_steps (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,32 +8,34 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SYS.DM_EXEC_DISTRIBUTED_REQUEST_STEPS_TSQL
 - DM_EXEC_DISTRIBUTED_REQUEST_STEPS_TSQL
 - DM_EXEC_DISTRIBUTED_REQUEST_STEPS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 - dm_exec_distributed_request_steps
 - sys.dm_exec_distributed_request_steps management view
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ae648f06b9224cf1545a0984e904c8845e6b88b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 348b78de034f252f5ea9561df53dc69c267d8257
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecdistributedrequeststeps-transact-sql"></a>Sys.dm_exec_distributed_request_steps (Transact-SQL)
+# <a name="sysdmexecdistributedrequeststeps-transact-sql"></a>sys.dm_exec_distributed_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contiene informazioni su tutti i passaggi che compongono una query o una richiesta di PolyBase. Contiene una riga per ogni passaggio della query.  
@@ -42,8 +44,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|valore di execution_id e step_index costituiscono la chiave per la visualizzazione. Id numerico univoco associato alla richiesta.|Vedere ID in [Sys.dm exec_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |step_index|**int**|La posizione di questo passaggio della sequenza di passaggi che costituiscono la richiesta.|0 (n-1) per una richiesta con passaggi n.|  
-|operation_type|**nvarchar (128)**|Tipo di operazione rappresentato da questo passaggio.|'MoveOperation', 'OnOperation', 'RandomIDOperation', 'RemoteOperation', 'ReturnOperation', 'ShuffleMoveOperation', 'TempTablePropertiesOperation', 'DropDiagnosticsNotifyOperation', 'HadoopShuffleOperation', 'HadoopBroadCastOperation', 'HadoopRoundRobinOperation'|  
-|distribution_type|**nvarchar(32)**|In cui è in esecuzione il passaggio.|'AllComputeNodes ',' AllDistributions', 'ComputeNode', 'Distribution', 'AllNodes', 'SubsetNodes', 'SubsetDistributions',' non viene specificato'.|  
+|operation_type|**nvarchar(128)**|Tipo di operazione rappresentato da questo passaggio.|'MoveOperation','OnOperation','RandomIDOperation','RemoteOperation','ReturnOperation','ShuffleMoveOperation','TempTablePropertiesOperation','DropDiagnosticsNotifyOperation', ‘HadoopShuffleOperation', ‘HadoopBroadCastOperation', ‘HadoopRoundRobinOperation'|  
+|distribution_type|**nvarchar(32)**|In cui è in esecuzione il passaggio.|‘AllComputeNodes','AllDistributions','ComputeNode','Distribution','AllNodes','SubsetNodes','SubsetDistributions','Unspecified'.|  
 |location_type|**nvarchar(32)**|In cui è in esecuzione il passaggio.|'Compute', 'Testa' o 'DMS'. Tutti i passaggi di spostamento di dati mostrano 'DMS'.|  
 |status|**nvarchar(32)**|Stato del passaggio|'Sospeso', 'Running', 'Completato', 'Non riuscita', 'UndoFailed', 'PendingCancel', 'annullato', 'Annullate', 'Interrotta'|  
 |error_id|**nvarchar(36)**|Id univoco dell'errore associato con questo passaggio, se presente|Id di vedere [sys.dm_exec_compute_node_errors &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md), NULL se si è verificato alcun errore.|  

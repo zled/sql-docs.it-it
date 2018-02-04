@@ -3,7 +3,7 @@ title: Configurare le impostazioni di SQL Server in Linux | Documenti Microsoft
 description: In questo argomento viene descritto come utilizzare lo strumento mssql conf per configurare le impostazioni di SQL Server 2017 in Linux.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 9aca5fe7905f06269bd07b7946c3bb6ef4e37492
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fe0a3bc095e1dcd76f9fdc98e1621974dca6693e
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql conf
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 **MSSQL-conf** è uno script di configurazione installato con SQL Server 2017 per Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Ubuntu. È possibile utilizzare questa utilità per impostare i parametri seguenti:
 
@@ -223,8 +223,8 @@ La prima acquisizione fase viene controllata dal **coredump.coredumptype** impos
     |-----|-----|
     | **mini** | Mini è il più piccolo tipo di file di dump. Usa le informazioni di sistema di Linux per determinare il thread e i moduli del processo. Il dump contiene solo i moduli e gli stack di thread di ambiente host. Non contiene riferimenti di memoria indiretto o globali. |
     | **miniplus** | MiniPlus è simile a mini, ma include memoria aggiuntiva. Riconosce le caratteristiche interne di SQLPAL e l'ambiente host, aggiungere le seguenti aree di memoria per il dump:</br></br> -Varie funzioni globali</br> -Tutta la memoria oltre 64TB</br> -All denominata area trovata nella **/proc/$ pid e mappe**</br> -Memoria indiretto dal thread e stack</br> -Informazioni sul thread</br> -Del Teb e associati di Peb</br> -Informazioni sul modulo</br> -Struttura ad albero VMM e VAD |
-    | **filtrati** | Progettazione filtrato viene utilizzata una sottrazione basate su tutta la memoria del processo in cui è inclusa specificamente esclusi. La struttura in grado di comprendere le caratteristiche interne di SQLPAL e l'ambiente host, escludendo il dump di determinate aree geografiche.
-    | **completo** | Completa un dump del processo completo che include tutte le aree si trova **/proc/$ pid e mappe**. Non è controllato dalla **coredump.captureminiandfull** impostazione. |
+    | **filtered** | Progettazione filtrato viene utilizzata una sottrazione basate su tutta la memoria del processo in cui è inclusa specificamente esclusi. La struttura in grado di comprendere le caratteristiche interne di SQLPAL e l'ambiente host, escludendo il dump di determinate aree geografiche.
+    | **full** | Completa un dump del processo completo che include tutte le aree si trova **/proc/$ pid e mappe**. Non è controllato dalla **coredump.captureminiandfull** impostazione. |
 
 ## <a id="dbmail"></a>Impostare il profilo di posta elettronica database predefinito per SQL Server in Linux
 
@@ -338,12 +338,12 @@ Le opzioni seguenti configurare TLS per un'istanza di SQL Server in esecuzione i
 
 |Opzione |Description |
 |--- |--- |
-|**Network.forceencryption** |Se è 1, quindi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] forza tutte le connessioni da crittografare. Per impostazione predefinita, questa opzione è 0. |
-|**Network.tlscert** |Il percorso assoluto per il certificato di file che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza per TLS. Esempio: `/etc/ssl/certs/mssql.pem` il file del certificato deve essere accessibile dall'account mssql. Si consiglia di limitare l'accesso al file usando `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**Network.tlskey** |Il percorso assoluto per la chiave privata del file che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza per TLS. Esempio: `/etc/ssl/private/mssql.key` il file del certificato deve essere accessibile dall'account mssql. Si consiglia di limitare l'accesso al file usando `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**Network.tlsprotocols** |Elenco delimitato da virgole di quali TLS sono consentiti i protocolli da SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]tenta sempre di negoziazione del protocollo consentito più attendibili. Se un client non supporta alcun protocollo consentito, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rifiuta il tentativo di connessione.  Per garantire la compatibilità, sono consentiti tutti i protocolli supportati per impostazione predefinita (1.2, 1.1, 1.0).  Se i client supportano TLS 1.2, si consiglia di consentire solo TLS 1.2. |
-|**Network.tlsciphers** |Specifica le crittografie consentite dal [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per TLS. Questa stringa deve essere formattata [formato di elenco di pacchetti di crittografia di OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). In generale, non è necessario modificare questa opzione. <br /> Per impostazione predefinita, sono consentite le crittografie seguenti: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
-| **Network.kerberoskeytabfile** |Percorso del file keytab Kerberos |
+|**network.forceencryption** |Se è 1, quindi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] forza tutte le connessioni da crittografare. Per impostazione predefinita, questa opzione è 0. |
+|**network.tlscert** |Il percorso assoluto per il certificato di file che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza per TLS. Esempio: `/etc/ssl/certs/mssql.pem` il file del certificato deve essere accessibile dall'account mssql. Si consiglia di limitare l'accesso al file usando `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**network.tlskey** |Il percorso assoluto per la chiave privata del file che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza per TLS. Esempio: `/etc/ssl/private/mssql.key` il file del certificato deve essere accessibile dall'account mssql. Si consiglia di limitare l'accesso al file usando `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**network.tlsprotocols** |Elenco delimitato da virgole di quali TLS sono consentiti i protocolli da SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]tenta sempre di negoziazione del protocollo consentito più attendibili. Se un client non supporta alcun protocollo consentito, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rifiuta il tentativo di connessione.  Per garantire la compatibilità, sono consentiti tutti i protocolli supportati per impostazione predefinita (1.2, 1.1, 1.0).  Se i client supportano TLS 1.2, si consiglia di consentire solo TLS 1.2. |
+|**network.tlsciphers** |Specifica le crittografie consentite dal [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per TLS. Questa stringa deve essere formattata [formato di elenco di pacchetti di crittografia di OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). In generale, non è necessario modificare questa opzione. <br /> Per impostazione predefinita, sono consentite le crittografie seguenti: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+| **network.kerberoskeytabfile** |Percorso del file keytab Kerberos |
 
 Per un esempio di usando le impostazioni di TLS, vedere [crittografia delle connessioni a SQL Server in Linux](sql-server-linux-encrypted-connections.md).
 
