@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a0cbdbed1f1563c888a383c8901288ace8ddad67
-ms.sourcegitcommit: 553bcfbee67a510c2c0b055ce1d7673504941d11
-ms.translationtype: HT
+ms.openlocfilehash: 5a262bb73d5989ebf3ad961ee7c2e84e75415f26
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemi noti in servizi di Machine Learning
 
@@ -28,16 +28,16 @@ Questo articolo descrive i problemi noti o limitazioni con i componenti che veng
 
 Le informazioni riportate di seguito si applicano a tutte le operazioni seguenti, se non diversamente indicato:
 
-* SQL Server 2016
+SQL Server 2016
 
-  - R Services (In-Database)
-  - Microsoft R Server (Standalone)
+- R Services (In-Database)
+- Microsoft R Server (Standalone)
 
-* SQL Server 2017
+SQL Server 2017
 
-  - Machine Learning servizi per R (In-Database)
-  - Machine Learning Services per Python (In-Database)
-  - Machine Learning Server (Standalone)
+- Machine Learning servizi per R (In-Database)
+- Machine Learning Services per Python (In-Database)
+- Machine Learning Server (Standalone)
 
 ## <a name="setup-and-configuration-issues"></a>Problemi di installazione e configurazione
 
@@ -47,11 +47,11 @@ Per una descrizione dei processi e domande comuni che riguardano l'installazione
 
 Se si tenta di installare SQL Server 2016 R Services o i servizi di SQL Server 2017 Machine Learning in un controller di dominio, l'installazione non riesce, con questi errori:
 
->*"Si è verificato un errore durante il processo di installazione della funzionalità".*
+> *Si è verificato un errore durante il processo di installazione della funzionalità*
 > 
->*"Impossibile trovare il gruppo con identità..."*
+> *Impossibile trovare il gruppo con identità*
 > 
->*"Codice di errore componente: 0x80131509"*
+> *Codice di errore componente: 0x80131509*
 
 L'errore si verifica perché, in un controller di dominio, il servizio non è possibile creare gli account locali 20 necessari per eseguire l'apprendimento. In generale, non è consigliabile installare SQL Server in un controller di dominio. Per ulteriori informazioni, vedere [bollettino supporto 2032911](https://support.microsoft.com/en-us/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
 
@@ -59,7 +59,7 @@ L'errore si verifica perché, in un controller di dominio, il servizio non è po
 
 Se si installa la versione più recente di Microsoft R Client e utilizzarlo per l'esecuzione di R in SQL Server in un contesto di calcolo remoto, è possibile che venga visualizzato un errore simile al seguente:
 
->*Si esegue 9.x.x versione di Microsoft R Client nel computer, non è compatibile con Microsoft R Server versione 8.x.x. Download and install a compatible version.* (Sul computer è in esecuzione la versione 9.0.0 di Microsoft R, che non è compatibile con Microsoft R Server versione 8.0.3. Scaricare e installare una versione compatibile.)
+> *Si esegue 9.x.x versione di Microsoft R Client nel computer, non è compatibile con Microsoft R Server versione 8.x.x. Download and install a compatible version.* (Sul computer è in esecuzione la versione 9.0.0 di Microsoft R, che non è compatibile con Microsoft R Server versione 8.0.3. Scaricare e installare una versione compatibile.)
 
 SQL Server 2016 richiede che le librerie di R nel client corrispondano esattamente le librerie di R nel server. La restrizione è stata rimossa per le versioni successive a R Server 9.0.1. Tuttavia, se si verifica questo errore, verificare la versione delle librerie R che viene utilizzata dal client e server e, se necessario, aggiorna il client in modo che corrisponda alla versione del server.
 
@@ -83,12 +83,12 @@ Questo problema viene risolto nella versione di rilascio. Se si verifica questo 
 
 Quando si esegue codice R in un contesto di calcolo di SQL Server 2016, verrà visualizzato un errore simile al seguente:
 
-*Si esegue la versione 9.0.0 del Client di Microsoft R nel computer, non è compatibile con la versione 8.0.3 Microsoft R Server. Download and install a compatible version.* (Sul computer è in esecuzione la versione 9.0.0 di Microsoft R, che non è compatibile con Microsoft R Server versione 8.0.3. Scaricare e installare una versione compatibile.)
+> *Si esegue la versione 9.0.0 del Client di Microsoft R nel computer, non è compatibile con la versione 8.0.3 Microsoft R Server. Download and install a compatible version.* (Sul computer è in esecuzione la versione 9.0.0 di Microsoft R, che non è compatibile con Microsoft R Server versione 8.0.3. Scaricare e installare una versione compatibile.)
 
 Questo messaggio viene visualizzato in presenza di una delle due istruzioni seguenti,
 
 + R Server (Standalone) è stato installato in un computer client tramite installazione guidata di [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
-+ Si è installato Microsoft R Server mediante il [separare Windows installer](https://docs.microsoft.com/r-server/install/r-server-install-windows).
++ Si è installato Microsoft R Server mediante il [separare Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
 Per garantire che il server e i client usano la stessa versione potrebbe essere necessario utilizzare _associazione_supportati per Microsoft R Server 9.0 e versioni successive aggiornare i componenti di R in istanze di SQL Server 2016. Per determinare se il supporto per gli aggiornamenti disponibili per la versione di R Services, vedere [aggiornare un'istanza di servizi di R usando SqlBindR.exe](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
@@ -110,13 +110,13 @@ Per ottenere i programmi di installazione più recente, vedere [installare i com
 
 Se si installa SQL Server R Services separatamente dal motore di database e le versioni di compilazione sono diverse, si potrebbe vedere il seguente errore nel registro eventi di sistema:
 
->_Il servizio Launchpad di SQL Server non è stato possibile avviare a causa del seguente errore: il servizio non ha risposto alla richiesta di avvio o di controllo in modo tempestivo._
+> *Il servizio Launchpad di SQL Server non è stato possibile avviare a causa del seguente errore: il servizio non ha risposto alla richiesta di avvio o di controllo in modo tempestivo.*
 
 Ad esempio, questo errore potrebbe verificarsi se si installa il motore di database utilizzando la versione di rilascio, applicare una patch per aggiornare il motore di database e quindi aggiungere la funzionalità di R Services utilizzando la versione di rilascio.
 
 Per evitare questo problema, utilizzare un'utilità di gestione di File, ad esempio per confrontare le versioni di Launchpad.exe con la versione dei file binari SQL, ad esempio sqldk.dll. Tutti i componenti devono avere lo stesso numero di versione. Se si aggiorna un componente, assicurarsi di applicare lo stesso aggiornamento a tutti gli altri componenti installati.
 
-Cercare nella finestra di avvio di `Binn` cartella per l'istanza. In un'installazione predefinita di SQL Server 2016, ad esempio, il percorso potrebbe essere "C:\Program Files\Microsoft SQL Server\MSSQL.13.InstanceNameMSSQL\Binn". 
+Cercare nella finestra di avvio di `Binn` cartella per l'istanza. Ad esempio, in un'installazione predefinita di SQL Server 2016, il percorso potrebbe essere `C:\Program Files\Microsoft SQL Server\MSSQL.13.InstanceNameMSSQL\Binn`. 
 
 ### <a name="remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>Contesti di calcolo remoto bloccati da un firewall nelle istanze di SQL Server in esecuzione in macchine virtuali di Azure
 
@@ -130,7 +130,7 @@ Quando si eseguono i processi R da una workstation di analisi scientifica dei da
 
 Per risolvere il problema, è consigliabile eseguire l'aggiornamento a una versione più recente del servizio.
 
-In alternativa, è possibile usare un account di accesso SQL per eseguire processi R remoti che potrebbero richiedere chiamate ODBC incorporate.
+Se l'aggiornamento non è possibile, in alternativa, utilizzare un account di accesso SQL per eseguire processi remoti di R che potrebbero richiedere chiamate ODBC incorporate.
 
 **Si applica a:** SQL Server 2016 R Services Express Edition
 
@@ -140,13 +140,13 @@ In alternativa, è possibile usare un account di accesso SQL per eseguire proces
 
 Ad esempio, anche se si utilizza SQL Server Enterprise Edition, R viene eseguito in modalità a thread singolo quando si esegue il codice R con strumenti esterni. Per ottenere i vantaggi delle prestazioni in SQL Server, avviare una connessione di SQL Server e utilizzare [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per chiamare il runtime dello script esterno.
 
-+ In generale, evitare le chiamate di machine learning librerie utilizzate da SQL Server da strumenti esterni. Se è necessario debug R o codice Python, risulta in genere più semplice eseguire questa operazione all'esterno di SQL Server. Per ottenere le stesse librerie che sono in SQL Server, è possibile installare Microsoft R Client o [Machine Learning Server](r/create-a-standalone-r-server.md).
+In generale, evitare le chiamate di machine learning librerie utilizzate da SQL Server da strumenti esterni. Se è necessario debug R o codice Python, risulta in genere più semplice eseguire questa operazione all'esterno di SQL Server. Per ottenere le stesse librerie che sono in SQL Server, è possibile installare Microsoft R Client o [Machine Learning Server](r/create-a-standalone-r-server.md).
 
 ### <a name="sql-server-data-tools-does-not-support-permissions-required-by-external-scripts"></a>SQL Server Data Tools non supporta le autorizzazioni necessarie per gli script esterni
 
 Quando si utilizza Visual Studio o SQL Server Data Tools per pubblicare un progetto di database, se un'entità dispone delle autorizzazioni specifiche per l'esecuzione dello script esterno, si potrebbe ricevere un errore simile alla seguente:
 
-"Modello TSQL: errore rilevato durante la progettazione del database. L'autorizzazione non è stato riconosciuto e non è stato importato."
+> *Modello TSQL: Errore durante la progettazione del database. L'autorizzazione non è stato riconosciuto e non è stato importato.*
 
 Il modello DACPAC non supporta attualmente le autorizzazioni utilizzate servizi R e Machine Learning Services, ad esempio GRANT ANY EXTERNAL SCRIPT o EXECUTE ANY EXTERNAL SCRIPT. Questo problema verrà risolto in una versione futura.
 
@@ -170,10 +170,7 @@ Per altri problemi noti che potrebbero influire sulle soluzioni R, vedere il [Ma
 
 Se l'istanza di SQL Server è stato installato in un percorso non predefinito, ad esempio di fuori di `Program Files` cartella, l'avviso ACCESS_DENIED viene generato quando si tenta di eseguire gli script che installa un pacchetto. Esempio:
 
-```text
-In normalizePath(path.expand(path), winslash, mustWork) :
-  path[2]="E:/SQL17.data/MSSQL14.SQL17/MSSQL/ExternalLibraries/R/8/1": Access is denied
-```
+> *NormalizePath(path.expand(path), winslash, mustWork): percorso [2] = "~ExternalLibraries/R/8/1": accesso negato*
 
 Il motivo è che tenta di leggere il percorso di una funzione di R e non riesce se il gruppo users predefinito **SQLRUserGroup**, non dispone dell'accesso in lettura. L'avviso che viene generato non blocca l'esecuzione dello script R corrente, ma può ricorrere più volte il messaggio di avviso ogni volta che l'utente esegue tutti gli altri script R.
 
@@ -183,13 +180,15 @@ Questo problema verrà risolto in una prossima service release. In alternativa, 
 
 ### <a name="serialization-error-between-old-and-new-versions-of-revoscaler"></a>Errore di serializzazione tra le versioni precedenti e nuove di RevoScaleR
 
-Quando si passa un modello utilizzando un formato serializzato a un'istanza remota di SQL Server, è possibile che venga visualizzato l'errore: "errore memDecompress (dati, tipo = decomprimere) Errore interno -3 memDecompress(2)."
+Quando si passa un modello utilizzando un formato serializzato a un'istanza remota di SQL Server, si potrebbe ricevere l'errore: 
+
+> *Errore in memDecompress (dati, tipo = decomprimere) Errore interno -3 memDecompress(2).*
 
 Questo errore viene generato se è stato salvato il modello utilizzando una versione aggiornata della funzione di serializzazione, [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), ma l'istanza di SQL Server in cui si esegue la deserializzazione del modello è una versione precedente di APIs RevoScaleR, da SQL Server 2017 CU2 o versioni precedenti.
 
-In alternativa, è possibile aggiornare l'istanza di SQL Server per l'utilizzo di una versione successiva di RevoScaleR. È anche possibile installare la stessa versione di RevoScaleR nel client che viene installato nell'istanza di SQL Server. 
+In alternativa, è possibile aggiornare l'istanza di SQL Server 2017 a CU3 o versioni successive.
 
-L'errore non viene visualizzata se la versione dell'API è lo stesso, o se si sta spostando un modello salvato con funzione di serializzazione precedente a un server utilizzando una versione più recente dell'API.
+L'errore non viene visualizzata se la versione dell'API è lo stesso, o se si sta spostando un modello salvato con una funzione di serializzazione precedente a un server che utilizza una versione più recente dell'API di serializzazione.
 
 In altre parole, è possibile utilizzare la stessa versione di RevoScaleR operazioni di serializzazione e deserializzazione.
 
@@ -215,7 +214,7 @@ Se il contesto di calcolo è impostato sull'istanza di SQL Server, non è possib
 
 L'istruzione seguente, ad esempio, causerebbe un errore se la colonna CRSDepTimeStr non fosse già un numero intero:
 
-```r
+```R
 data <- RxSqlServerData(
   sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM AirlineDemoSmall", 
   connectionString = connectionString, 
@@ -277,9 +276,9 @@ Per una descrizione di questo problema e altri suggerimenti, vedere [delle prest
 
 Quando si utilizza la funzione rxDataStep per scrivere i risultati in una tabella, usando il *varsToKeep* e *varsToDrop* è un modo pratico per specificare le colonne da includere o escludere come parte dell'operazione. Tuttavia, questi argomenti non sono supportati per le origini dati di SQL Server.
 
-### <a name="limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>Supporto limitato per tipi di dati SQL`sp_execute_external_script`
+### <a name="limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>Un supporto limitato per i tipi di dati SQL in sp\_eseguire\_esterno\_script
 
-Non tutti i tipi di dati supportati in SQL possono essere usati in R. Come soluzione alternativa, valutare la possibilità di eseguire il cast del tipo di dati non supportato in un tipo di dati supportato prima di passare i dati a sp_execute_external_script.
+Non tutti i tipi di dati che sono supportati in SQL possono essere utilizzati in R. In alternativa, prendere in considerazione il cast di tipo di dati non supportato su un tipo di dati supportati prima di passare i dati sp\_eseguire\_esterno\_script.
 
 Per ulteriori informazioni, vedere [R librerie e tipi di dati](r/r-libraries-and-data-types.md).
 
@@ -305,11 +304,13 @@ Poiché [!INCLUDE[tsql](../includes/tsql-md.md)] e R supportano diversi tipi di 
 
 Per ulteriori informazioni sulla conversione implicita del tipo di dati, vedere [R librerie e tipi di dati](r/r-libraries-and-data-types.md).
 
-### <a name="variable-scoping-error-when-you-use-the-transformfunc-parameter-the-sample-data-set-for-the-analysis-has-no-variables"></a>Variabile di errore dell'ambito quando si usa il parametro transformFunc: *il set di dati di esempio per l'analisi non dispone di variabili*
+### <a name="variable-scoping-error-when-you-use-the-transformfunc-parameter"></a>Variabile di errore dell'ambito quando si usa il parametro transformFunc
 
 Per trasformare i dati mentre si modellano, è possibile passare un *transformFunc* argomento in una funzione, ad esempio `rxLinmod` o `rxLogit`. Tuttavia, le chiamate di funzione nidificata possono causare errori di ambito nel contesto di calcolo di SQL Server, anche se le chiamate funzionano correttamente nel contesto di calcolo locale.
 
-Ad esempio, si supponga che siano state definite due funzioni, `f` e `g`, nell'ambiente globale locale, e `g` chiamate `f`. Nelle chiamate remote o distribuite che implicano `g`, la chiamata a `g` potrebbe non riuscire perché non è stato trovato `f` , anche se sono stati passati `f` e `g` alla chiamata remota.
+> *Il set di dati di esempio per l'analisi non dispone di variabili*
+
+Ad esempio, si supponga che siano state definite due funzioni, `f` e `g`, nell'ambiente globale locale, e `g` chiamate `f`. Nelle chiamate che implica remote o distribuite `g`, la chiamata a `g` potrebbe non riuscire con l'errore, perché `f` non viene trovato, anche se sono stati passati `f` e `g` alla chiamata remota.
 
 Se si verifica questo problema, è possibile risolverlo incorporando la definizione di `f` all'interno della definizione di `g`, in qualsiasi punto prima che `g` chiamerebbe normalmente `f`.
 
@@ -378,6 +379,16 @@ Esistono diverse potenziali soluzioni alternative:
 + Utilizzare l'utilità Windows [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) per creare un collegamento fisso che esegue il mapping a un percorso più breve il file del modello. 
 + Aggiornare alla versione più recente del servizio.
 
+### <a name="error-when-saving-serialized-model-to-sql-server"></a>Errore durante il salvataggio serializzato modello in SQL Server
+
+Quando si passa un modello a un'istanza remota di SQL Server e tentare di leggere il modello binario utilizzando il `rx_unserialize` funzionare in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), è possibile che venga visualizzato l'errore: 
+
+> *NameError: rx_unserialize_model' name' non definito.*
+
+Questo errore viene generato se è stato salvato il modello utilizzando una versione aggiornata della funzione di serializzazione, ma l'istanza di SQL Server in cui si esegue la deserializzazione del modello non riconosce l'API di serializzazione.
+
+Per risolvere il problema, aggiornare l'istanza di SQL Server 2017 a CU3 o versioni successive.
+
 ### <a name="failure-to-initialize-a-varbinary-variable-causes-an-error-in-bxlserver"></a>Errore di inizializzazione di una variabile di tipo varbinary causa un errore in BxlServer
 
 Se si esegue codice Python in SQL Server utilizzando `sp_execute_external_script`e il codice include variabili di tipo varbinary (max), varchar (max) o tipi simili di output, la variabile deve essere inizializzata o impostare come parte dello script. In caso contrario, il componente di scambio di dati, BxlServer, genera un errore e smette di funzionare.
@@ -408,10 +419,10 @@ go
 
 A partire da SQL Server 2017 CU2, potrebbe essere visualizzato il seguente messaggio anche se il codice Python in caso contrario viene eseguito correttamente:
 
-```text
-STDERR message(s) from external script:  ~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger
-SyntaxWarning: telemetry_state is used prior to global declaration
-```
+> *Messaggi STDERR dallo script esterno:*
+> **~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
+> *SyntaxWarning: telemetry_state viene utilizzato prima della dichiarazione globale*
+
 
 Questo problema è stato risolto in SQL Server 2017 aggiornamento cumulativo 3 (CU3). 
 
