@@ -55,7 +55,7 @@ ms.lasthandoff: 01/25/2018
   
          Verrà aperta la finestra di dialogo New Oracle CDC Service.  
   
-         Per informazioni su come utilizzare questa finestra di dialogo, vedere [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Per informazioni sulla procedura di creazione o modifica di un servizio CDC, vedere [How to Create and Edit a CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
+         Per informazioni su come utilizzare questa finestra di dialogo, vedere [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Per informazioni sulla procedura di creazione o modifica di un servizio CDC, vedere [Procedura di creazione e modifica di un servizio CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
   
          È sufficiente che l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato dal servizio Oracle CDC sia membro del ruolo predefinito del server `public` , non sono necessari altri privilegi. Tuttavia, per creare il servizio Oracle CDC, l'account di accesso deve avere l'autorizzazione di scrittura per il database MSXDBCDC, ad esempio è necessario che all'account di accesso sia assegnato il ruolo del database **db_owner** . Quando si tenta di creare una nuova istanza di Oracle CDC da un account di accesso senza autorizzazione di scrittura per il database MSXDBDCDC, viene visualizzato un messaggio di errore. Fare clic su **OK** nella finestra di dialogo per visualizzare la finestra di dialogo Connect to SQL Server.  
   
