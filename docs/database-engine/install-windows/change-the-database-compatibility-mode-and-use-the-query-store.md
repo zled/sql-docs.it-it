@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,52 +17,39 @@ helpviewer_keywords:
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0f4d36ec95ab9d6a1a714b597331bd4d24bb9e85
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6fa6e9e16be729fba7334b26b130c8e22525e479
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>Modificare la modalità di compatibilità del database e usare l'archivio query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In SQL Server 2016 e SQL Server 2017 alcune modifiche vengono abilitate solo dopo aver modificato il livello DATABASE_COMPATIBILITY di un database. Questa operazione viene eseguita per diversi motivi:  
+Da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] alcune modifiche vengono abilitate solo dopo che il [livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) è stato modificato. Questa operazione viene eseguita per diversi motivi:  
   
-- Poiché l'aggiornamento è un'operazione unidirezionale, in quanto non è possibile effettuare il downgrade del formato del file, è utile impostare l'abilitazione delle nuove funzionalità come un'operazione separata all'interno del database.  È possibile ripristinare un'impostazione a un livello di DATABASE_COMPATIBILITY precedente.  Il nuovo modello riduce il numero di operazioni che devono essere eseguite durante un intervallo di interruzione.  
+- Poiché l'aggiornamento è un'operazione unidirezionale, in quanto non è possibile effettuare il downgrade del formato del file, è utile impostare l'abilitazione delle nuove funzionalità come un'operazione separata all'interno del database. È possibile ripristinare un'impostazione a un livello di compatibilità del database precedente.  Il nuovo modello riduce il numero di operazioni che devono essere eseguite durante un intervallo di interruzione.  
   
-- Le modifiche apportate a Query Processor possono avere effetti complessi.  Anche se una modifica "positiva" al sistema è ideale per la maggior parte dei clienti, potrebbe causare una regressione inaccettabile altrove in una query importante.  Separare la logica dal processo di aggiornamento consente a funzionalità quali l'archivio di query di ridurre rapidamente le regressioni della scelta del piano o persino di evitarle completamente nei server di produzione.  
+- Le modifiche apportate a Query Processor possono avere effetti complessi. Anche se una modifica "positiva" al sistema è ideale per la maggior parte dei carichi di lavoro, potrebbe causare una regressione inaccettabile altrove in una query importante. Separare la logica dal processo di aggiornamento consente a funzionalità quali Query Store di ridurre rapidamente le regressioni della scelta del piano o persino di evitarle completamente nei server di produzione.  
   
-> [!NOTE]  
->  Se il livello di compatibilità di un database utente era 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. I livelli di compatibilità dei database tempdb, model, msdb e Resource vengono impostati sul livello di compatibilità corrente dopo l'aggiornamento. Per il database di sistema master viene mantenuto il livello di compatibilità precedente l'aggiornamento. 
+> [!IMPORTANT]  
+> Se il livello di compatibilità di un database utente era 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità di un database utente è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. I livelli di compatibilità dei database tempdb, model, msdb e Resource vengono impostati sul livello di compatibilità corrente dopo l'aggiornamento.
+> Per il database di sistema master viene mantenuto il livello di compatibilità precedente l'aggiornamento. 
   
- Il processo di aggiornamento per abilitare nuove funzionalità di Query Processor è correlato al modello di manutenzione post-rilascio del prodotto.  Alcune di queste correzioni vengono rilasciate con il flag di traccia 4199.  I clienti che necessitano di correzioni possono acconsentire esplicitamente a esse senza causare regressioni impreviste per altri clienti.  Il modello di manutenzione post-rilascio per gli aggiornamenti rapidi di Query Processor è documentato [qui](https://support.microsoft.com/en-us/kb/974006). A partire da SQL Server 2016 il passaggio a un nuovo livello di compatibilità implica che il flag di traccia 4199 non è più necessario, in quanto tali correzioni sono ora abilitate per impostazione predefinita nel livello di compatibilità più recente.  Come parte del processo di aggiornamento, è pertanto importante verificare che al termine del processo di aggiornamento il flag di traccia 4199 non sia abilitato.  
-  
- Il flusso di lavoro consigliato per l'aggiornamento di Query Processor alla versione più recente del codice è:  
-  
-1.  Aggiornare un database a SQL Server 2016 senza modificare il livello di compatibilità del database, mantenendolo al livello precedente  
-  
-2.  Abilitare l'archivio query nel database. Per altre informazioni sull'abilitazione e l'uso dell'archivio query, vedere [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
-  
-3.  Attendere un tempo sufficiente per raccogliere dati rappresentativi del carico di lavoro.  
-  
-4.  Impostare il livello di compatibilità del database su quello attuale. 
+Il processo di aggiornamento per abilitare nuove funzionalità di Query Processor è correlato al modello di manutenzione post-rilascio del prodotto.  Alcune di queste correzioni vengono rilasciate con il [flag di traccia 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  I clienti che necessitano di correzioni possono acconsentire esplicitamente a esse senza causare regressioni impreviste per altri clienti. Il modello di manutenzione post-rilascio per gli aggiornamenti rapidi di Query Processor è documentato [qui](http://support.microsoft.com/kb/974006). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] il passaggio a un nuovo livello di compatibilità implica che il flag di traccia 4199 non è più necessario, perché tali correzioni sono ora abilitate per impostazione predefinita nel livello di compatibilità più recente. Come parte del processo di aggiornamento, è pertanto importante verificare che al termine del processo di aggiornamento il flag di traccia 4199 non sia abilitato.  
 
-   >[!NOTE]
-   >Il livello di compatibilità più recente dipende dalla versione di SQL Server.
-   >- SQL Server 2016: 130
-   >- SQL Server 2017: 140
-
-5. Valutare mediante SQL Server Management Studio se sono presenti regressioni delle prestazioni in query specifiche dopo la modifica del livello di compatibilità.
+> [!NOTE]
+> Il flag di traccia 4199 tuttavia è ancora necessario per abilitare eventuali nuove correzioni di Query Processor rilasciate dopo la versione RTM, se applicabile.
   
-6.  Per i casi in cui sono presenti regressioni, forzare il piano precedente nell'archivio query.  
+Il flusso di lavoro consigliato per aggiornare Query Processor alla versione più recente del codice è documentato nella [sezione Mantenere la stabilità delle prestazioni durante l'aggiornamento alla nuova versione di SQL Server in Scenari di utilizzo di Query Store](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), come illustrato di seguito.  
   
-7.  Se non è possibile forzare i piani di query o se le prestazioni sono ancora insufficienti, è consigliabile ripristinare il livello di compatibilità all'impostazione precedente e contattare il supporto tecnico Microsoft.  
-  
+![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+ 
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
-  
+ [Scenari d'uso dell'archivio query](../../relational-databases/performance/query-store-usage-scenarios.md) 
   
