@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: ac570feda5ce20ee8d255abb25b83a327c84c7f3
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 3f9435a43e57cc8d528e70c7376ba9ccd1c85c95
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Installazione di SQL Server e creare un database in Ubuntu
 
@@ -61,7 +61,7 @@ Per configurare SQL Server in Ubuntu, eseguire i comandi seguenti in un terminal
    ```
 
    > [!NOTE]
-   > Questo è il repository di aggiornamento cumulativo (CU). Per ulteriori informazioni sulle opzioni di repository e le differenze, vedere [modificare repository del codice sorgente](sql-server-linux-setup.md#repositories).
+   > Questo è il repository di aggiornamento cumulativo (CU). Per ulteriori informazioni sulle opzioni di repository e le differenze, vedere [configurare repository per SQL Server in Linux](sql-server-linux-change-repo.md).
 
 1. Eseguire i comandi seguenti per installare SQL Server:
 

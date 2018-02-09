@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: CursorOptionEnum
-helpviewer_keywords: CursorOptionEnum enumeration [ADO]
+f1_keywords:
+- CursorOptionEnum
+helpviewer_keywords:
+- CursorOptionEnum enumeration [ADO]
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c63c915bddd54bafecb20ac7d02595b6d18da84
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 93999724b38f670f8462ae62c9052b10028bf929
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Specifica il tipo di funzionalità di [supporta](../../../ado/reference/ado-api/supports-method.md) consigliabile testare il metodo per.  
   
-|Costante|valore|Description|  
+|Costante|Valore|Description|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|Supporta il [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) metodo per aggiungere nuovi record.|  
 |**adApproxPosition**|0x4000|Supporta il [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) proprietà.|  
@@ -42,11 +45,11 @@ Specifica il tipo di funzionalità di [supporta](../../../ado/reference/ado-api/
 |**adNotify**|0x40000|Indica che il provider di dati sottostante supporti le notifiche (che determina se **Recordset** gli eventi sono supportati).|  
 |**adResync**|0x20000|Supporta il [Resync](../../../ado/reference/ado-api/resync-method.md) per aggiornare il cursore con i dati che sono visibili nel database sottostante.|  
 |**adSeek**|0x200000|Supporta il [Seek](../../../ado/reference/ado-api/seek-method.md) metodo per individuare una riga in un **Recordset**.|  
-|**valori adUpdate**|0x1008000|Supporta il [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo per modificare i dati esistenti.|  
+|**adUpdate**|0x1008000|Supporta il [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo per modificare i dati esistenti.|  
 |**adUpdateBatch**|0x10000|Supporta l'aggiornamento batch ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) e [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) metodi) per la trasmissione di gruppi di modifiche al provider.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacchetto: **com.ms. wfc.**  
+ Package: **com.ms.wfc.data**  
   
 |Costante|  
 |--------------|  

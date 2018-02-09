@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Recordset object [ADO]
+helpviewer_keywords:
+- Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a861030b8ec30e176d7535d6e2f7976a87c0832a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-recordsets"></a>Utilizzo di recordset
 Il **Recordset** oggetto dispone di funzionalità incorporate che consentono ridisporre l'ordine dei dati nel set di risultati, per cercare un record specifico in base a criteri specificati e anche per ottimizzare le operazioni di ricerca tramite gli indici. Se queste funzionalità sono disponibili per l'uso dipende dal provider e in alcuni casi, ad esempio quelle del [indice](../../../ado/reference/ado-api/index-property.md) proprietà, ovvero la struttura dell'origine dati stessa.  

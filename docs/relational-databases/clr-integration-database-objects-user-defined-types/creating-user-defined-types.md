@@ -11,24 +11,26 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - user-defined types [CLR integration], creating
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a98e8438ab41e1f8dad5dd333d033d86ffcc4da2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c9b8c9781e445e55b1b59d60db5d8e054da0d060
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types"></a>Creare tipi definiti dall'utente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Per creare un tipo definito dall'utente (UDT) che possa essere installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è innanzitutto necessario creare una classe in uno dei linguaggi di programmazione, ad esempio Visual c# o Visual Basic, che è conforme alle specifiche per la creazione di tipi definiti dall'utente di .NET Framework supportati. La classe può quindi essere compilata come DLL che può essere caricata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile creare e distribuire tipi definiti dall'utente utilizzando Visual Studio.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Per creare un tipo definito dall'utente (UDT) che possa essere installato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario prima creare una classe in uno dei linguaggi di programmazione di .NET Framework supportati, ad esempio Visual C# o Visual Basic che sia conforme alle specifiche per la creazione di tipi definiti dall'utente. La classe può quindi essere compilata come DLL che può essere caricata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile creare e distribuire tipi definiti dall'utente utilizzando Visual Studio.  
   
  L'esecuzione di codice CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disattivata per impostazione predefinita. Common Language Runtime può essere abilitato utilizzando il **sp_configure** stored procedure di sistema come mostrato nell'esempio seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni:  
   
@@ -37,7 +39,7 @@ sp_configure 'clr enabled', 1
 Reconfigure  
 ```  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Requisiti del tipo definito dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)  
  Vengono descritti i requisiti per la codifica dei tipi definiti dall'utente.  
   
@@ -336,6 +338,6 @@ End Structure
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi definiti dall'utente per CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

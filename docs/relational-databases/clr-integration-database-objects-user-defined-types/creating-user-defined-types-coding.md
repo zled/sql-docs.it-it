@@ -33,19 +33,20 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1abec952d7ad6ca57b38ff1bda37134312da4b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5bf3a762eb8e8435972d4813d8b3e852d39c8b2d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>Creazione di tipi definiti dall'utente - codice
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Quando si codifica la definizione di tipo definito dall'utente (UDT), è necessario implementare varie funzionalità, a seconda se si implementa il tipo definito dall'utente come una classe o una struttura, nonché opzioni di formato e serializzazione scelto.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Quando si codifica la definizione del tipo definito dall'utente (UDT), è necessario implementare varie caratteristiche a seconda che il tipo UDT venga implementato come classe o come struttura, nonché a seconda delle opzioni di formato e di serializzazione scelte.  
   
  Nell'esempio riportato in questa sezione viene illustrata l'implementazione un **punto** tipo definito dall'utente come un **struct** (o **struttura** in Visual Basic). Il **punto** tipo definito dall'utente costituito X e Y coordinate implementate come routine della proprietà.  
   
@@ -63,10 +64,10 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;  
 ```  
   
- Il **Microsoft.SqlServer.Server** spazio dei nomi contiene gli oggetti richiesti per vari attributi dell'UDT e **System.Data.SqlTypes** spazio dei nomi contiene le classi che rappresentano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipi di dati nativi disponibili per l'assembly. Naturalmente, per il corretto funzionamento dell'assembly potrebbero essere necessari altri spazi dei nomi. Il **punto** tipo definito dall'utente utilizza inoltre il **System. Text** dello spazio dei nomi per l'utilizzo di stringhe.  
+ Il **Microsoft.SqlServer.Server** spazio dei nomi contiene gli oggetti richiesti per vari attributi dell'UDT e **System.Data.SqlTypes** spazio dei nomi contiene le classi che rappresentano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipi di dati nativi disponibili per l'assembly. Naturalmente, per il corretto funzionamento dell'assembly potrebbero essere necessari altri spazi dei nomi. Il **punto** tipo definito dall'utente utilizza inoltre il **System.Text** dello spazio dei nomi per l'utilizzo di stringhe.  
   
 > [!NOTE]  
->  Visual C++ oggetti di database quali tipi definiti dall'utente, compilati con **/clr: pure** non sono supportati per l'esecuzione.  
+>  Database degli oggetti Visual C++, ad esempio tipi definiti dall'utente, compilati con **/clr:pure** non sono supportati per l'esecuzione.  
   
 ## <a name="specifying-attributes"></a>Specifica degli attributi  
  Gli attributi consentono di determinare la modalità di utilizzo della serializzazione per costruire la rappresentazione di archiviazione dei tipi definiti dall'utente e per trasmettere tali tipi al client in base al valore.  
@@ -98,7 +99,7 @@ public struct Point : INullable
   
  È necessario creare una proprietà denominata **IsNull**, che è necessario per determinare se un valore è null dal codice CLR. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trova un'istanza Null di un tipo definito dall'utente, tale tipo viene reso persistente utilizzando i normali metodi di gestione dei valori Null. Se non è necessario, nel server non viene eseguita la serializzazione o la deserializzazione del tipo definito dall'utente. Non viene inoltre occupato spazio per l'archiviazione di un tipo definito dall'utente Null. La verifica della presenza di valori Null viene eseguita ogni volta che un tipo definito dall'utente viene importato da CLR. Questo significa che l'utilizzo del costrutto [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL per la verifica dei tipi definiti dall'utente Null dovrebbe funzionare sempre. Il **IsNull** proprietà viene inoltre utilizzata dal server per verificare se un'istanza è null. Una volta stabilito che il tipo definito dall'utente è Null, il server è in grado di utilizzare la relativa funzionalità di gestione nativa dei valori Null.  
   
- Il **Get ()** metodo **IsNull** non è speciale le maiuscole/minuscole in alcun modo. Se un **punto** variabile  **@p**  è **Null**, quindi  **@p.IsNull**  , per impostazione predefinita, restituirà "NULL", non "1". In questo modo il **SqlMethod(OnNullCall)** attributo del **Get () IsNull** metodo valore predefinito è false. Poiché l'oggetto è **Null**, quando viene richiesta la proprietà non viene deserializzato l'oggetto e non viene chiamato il metodo viene restituito un valore predefinito "Null".  
+ Il **Get ()** metodo **IsNull** non è speciale le maiuscole/minuscole in alcun modo. Se un **punto** variabile **@p** è **Null**, quindi  **@p.IsNull** restituirà, per impostazione predefinita, il valore su "NULL", non "1". In questo modo il **SqlMethod(OnNullCall)** attributo il **IsNull Get()** metodo il valore predefinito è false. Poiché l'oggetto è **Null**, quando viene richiesta la proprietà non viene deserializzato l'oggetto e non viene chiamato il metodo viene restituito un valore predefinito "Null".  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente la variabile `is_Null` è privata e mantiene lo stato Null per l'istanza del tipo definito dall'utente. Il codice deve gestire un valore appropriato per `is_Null`. Il tipo definito dall'utente deve avere anche una proprietà statica denominata **Null** che restituisce un'istanza di un valore null del tipo in questione. In questo modo il tipo definito dall'utente può restituire un valore Null se l'istanza è Null nel database.  
@@ -242,7 +243,7 @@ public override string ToString()
 ```  
   
 ## <a name="exposing-udt-properties"></a>Esposizione delle proprietà dei tipi definiti dall'utente  
- Il **punto** UDT espone le coordinate X e Y implementate come proprietà pubbliche di lettura / scrittura di tipo **System. Int32**.  
+ Il **punto** UDT espone le coordinate X e Y implementate come proprietà pubbliche di lettura e scrittura di tipo **System.Int32**.  
   
 ```vb  
 Public Property X() As Int32  

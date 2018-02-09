@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b9357706047dbcf6e69968ce289fb59a7e055b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b84ab8335e94adecf130fd2301f697a02eceee37
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="forward-only-cursors"></a>Cursori forward-Only
 Il tipo di cursore predefinito tipico, chiamato di un cursore forward-only (o non scorrevole), può passare solo tramite il set di risultati. Un cursore forward-only non supporta lo scorrimento (la possibilità di spostare in avanti e indietro nel set di risultati); supporta solo il recupero delle righe dall'inizio alla fine del set di risultati. Con alcuni cursori forward-only (ad esempio con la libreria di cursori di SQL Server), tutte le istruzioni delete, update e insert eseguite dall'utente corrente (o da altri utenti) che coinvolgono le righe nel set di risultati sono visibili come le righe vengono recuperate. Poiché non è possibile scorrere indietro il cursore, tuttavia, le modifiche apportate alle righe nel database dopo l'operazione di recupero non sono visibili tramite il cursore.  

@@ -24,19 +24,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - bytes [CLR integration]
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 971e75599c1b0d0ac6960a8db45a9ed6cfab9041
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bf8ac790f91779407bb60fa1f3cfe8f675a7e8f0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>L'accesso a tipi definiti dall'utente, il recupero dei dati di tipo definito dall'utente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Per creare un tipo definito dall'utente (UDT) nel client, l'assembly è stato registrato come un tipo definito dall'utente in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database deve essere disponibile per l'applicazione client. L'assembly UDT può essere posizionato nella stessa directory dell'applicazione oppure nella Global Assembly Cache (GAC). È inoltre possibile impostare un riferimento all'assembly nel progetto.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Per creare un tipo definito dall'utente (UDT) nel client, l'assembly registrato come tipo definito dall'utente in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere disponibile per l'applicazione client. L'assembly UDT può essere posizionato nella stessa directory dell'applicazione oppure nella Global Assembly Cache (GAC). È inoltre possibile impostare un riferimento all'assembly nel progetto.  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>Requisiti per l'utilizzo di tipi definiti dall'utente in ADO.NET  
  Per consentire la creazione del tipo definito dall'utente sul client, è necessario che l'assembly caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'assembly sul client siano compatibili. Per i tipi definiti dall'utente definito con il **nativo** formato di serializzazione, gli assembly devono essere strutturalmente compatibili. Per gli assembly definiti con la **UserDefined** formato, l'assembly deve essere disponibile nel client.  
@@ -459,6 +460,6 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso ai tipi definiti dall'utente in ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
+ [L'accesso a tipi definiti dall'utente in ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

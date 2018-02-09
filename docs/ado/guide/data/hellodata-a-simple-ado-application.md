@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,21 +16,21 @@ helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1c2733381221139373764577df07afa22e40e49
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 007f2842279607c722f6216d771751209ff723bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Una semplice applicazione ADO
 Questa semplice applicazione passaggi per ognuna delle quattro operazioni ADO principali: recupero, esame, la modifica e aggiornamento dei dati. Queste operazioni vengono eseguite sul database di esempio Northwind incluso in Microsoft® SQL Server. Per concentrarsi sui fondamenti di ADO e per evitare confusione codice, gestione degli errori nell'esempio è minimo.  
   
-### <a name="to-run-hellodata"></a>Per eseguire HelloData  
+### <a name="to-run-hellodata"></a>To run HelloData  
   
 1.  Creare un nuovo progetto Standard EXE Visual Basic che fa riferimento alla libreria ADO. Per ulteriori informazioni, vedere [riferimenti alle librerie ADO](../../../ado/guide/referencing-the-ado-libraries.md).  
   
@@ -48,19 +49,19 @@ Questa semplice applicazione passaggi per ognuna delle quattro operazioni ADO pr
   
  ![Mostra Form1 per l'applicazione VB HelloData](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Tipo di controllo|Proprietà|valore|  
+|Tipo di controllo|Proprietà|Valore|  
 |------------------|--------------|-----------|  
-|Form|nome|Form1|  
+|Form|Nome|Form1|  
 ||Altezza|6500|  
 ||Larghezza|6500|  
-|DataGrid MS|nome|grdDisplay1|  
-|TextBox|nome|txtDisplay1|  
+|MS DataGrid|Nome|grdDisplay1|  
+|TextBox|Nome|txtDisplay1|  
 ||Su più righe|true|  
-|Pulsante di comando|nome|cmdGetData|  
-||Didascalia|Get Data|  
-|Pulsante di comando|nome|cmdExamineData|  
-||Didascalia|Esaminare i dati|  
-|Pulsante di comando|nome|cmdEditData|  
-||Didascalia|Modificare i dati|  
-|Pulsante di comando|nome|cmdUpdateData|  
-||Didascalia|Dati di aggiornamento|
+|Pulsante di comando|Nome|cmdGetData|  
+||Caption|Get Data|  
+|Pulsante di comando|Nome|cmdExamineData|  
+||Caption|Esaminare i dati|  
+|Pulsante di comando|Nome|cmdEditData|  
+||Caption|Modificare i dati|  
+|Pulsante di comando|Nome|cmdUpdateData|  
+||Caption|Dati di aggiornamento|

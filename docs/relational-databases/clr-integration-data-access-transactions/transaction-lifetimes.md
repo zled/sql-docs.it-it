@@ -15,19 +15,20 @@ helpviewer_keywords:
 - lifetimes [SQL Server]
 - Transact-SQL vs. managed code
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97f594dde59411f05b60d8d778d617955526cad6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f24c0e6642a01b5f1d59ae82c7c09ce9ed94e7fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="transaction-lifetimes"></a>Durata delle transazioni
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Un'importante differenza tra le transazioni avviate [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure e quelle avviate in codice gestito: codice common language runtime (CLR) non può sbilanciare lo stato della transazione in ingresso o uscita di una chiamata CLR. Tenere presenti le implicazioni seguenti correlate a questa differenza:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Vi è un'importante differenza tra le transazioni avviate nelle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] e quelle avviate in codice gestito: il codice CLR (Common Language Runtime) non può sbilanciare lo stato della transazione all'immissione o all'uscita di una chiamata CLR. Tenere presenti le implicazioni seguenti correlate a questa differenza:  
   
 -   È necessario eseguire il commit o il rollback di una transazione avviata all'interno di un frame CLR. In caso contrario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un errore quando si esce dal frame.  
   
@@ -38,6 +39,6 @@ ms.lasthandoff: 01/08/2018
 -   Un tentativo di esecuzione del rollback di una transazione non avviato nella stessa procedura fa in modo che la transazione si blocchi, impedendo il verificarsi di qualsiasi altra operazione con effetto collaterale. La transazione viene interrotta fino a quando il codice CLR non abbandona l'ambito. Si noti che questo comportamento può risultare utile quando si rileva un errore all'interno della procedura e si desidera verificare che venga terminata l'intera transazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integrazione con CLR e transazioni](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [Le transazioni e integrazione con CLR](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

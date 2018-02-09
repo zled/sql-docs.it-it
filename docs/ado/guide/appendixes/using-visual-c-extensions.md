@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions"></a>Estensioni di Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>L'interfaccia IADORecordBinding
@@ -94,12 +96,12 @@ Update(CADORecordBinding *binding)
  **Le macro BEGIN_ADO_BINDING**(*classe*)
 
 ### <a name="fixed-length-data"></a>Dati a lunghezza fissa
- **ADO_FIXED_LENGTH_ENTRY**(*ordinale, tipo di dati, Buffer, stato, modificare*)
+ **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*ordinale, tipo di dati, del Buffer, modificare*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
 ### <a name="numeric-data"></a>Dati numerici
- **ADO_NUMERIC_ENTRY**(*ordinale, tipo di dati, Buffer, precisione, scala, stato, modificare*)
+ **ADO_NUMERIC_ENTRY**(*Ordinal, DataType, Buffer, Precision, Scale, Status, Modify*)
 
  **ADO_NUMERIC_ENTRY2**(*ordinale, tipo di dati, i Buffer, precisione, scala, modificare*)
 
@@ -113,27 +115,27 @@ Update(CADORecordBinding *binding)
  **ADO_VARIABLE_LENGTH_ENTRY4**(*ordinale, tipo di dati, Buffer, dimensioni, modificare*)
 
 ### <a name="end-binding-entries"></a>Associazione di voci finali
- **END_ADO_BINDING**)
+ **END_ADO_BINDING**()
 
 |Parametro|Description|
 |---------------|-----------------|
 |*Classe*|Classe in cui vengono definite voci di associazione e le variabili di C/C++.|
 |*Ordinal*|Numero ordinale, a partire da uno, del **Recordset** campo corrispondente alla variabile di C/C++.|
-|*Tipo di dati*|Tipo di dati ADO equivalente della variabile C/C++ (vedere [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) per un elenco di tipi di dati validi). Il valore di **Recordset** campo verrà convertito in questo tipo di dati se necessario.|
+|*DataType*|Tipo di dati ADO equivalente della variabile C/C++ (vedere [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) per un elenco di tipi di dati validi). Il valore di **Recordset** campo verrà convertito in questo tipo di dati se necessario.|
 |*Buffer*|Nome della variabile C/C++ in cui il **Recordset** campo verrà archiviato.|
 |*Dimensione*|Dimensione massima in byte di *Buffer*. Se *Buffer* conterrà una stringa di lunghezza variabile, consentire spazio per un terminazione zero.|
 |*Stato*|Nome di una variabile che indica se il contenuto di *Buffer* validi e se la conversione del campo da *DataType* ha avuto esito positivo.<br /><br /> I due valori più importanti per questa variabile sono **adFldOK**, ovvero la conversione ha avuto esito positivo; e **adFldNull**, ovvero il valore del campo è una variante del tipo VT_NULL e non semplicemente vuoto.<br /><br /> I valori possibili per *stato* sono elencati nella tabella seguente, "Valori di Status".|
 |*Modificare*|Flag booleano. Se TRUE, indica ad ADO è consentito aggiornare corrispondente **Recordset** campo con il valore contenuto in *Buffer*.<br /><br /> Impostare il valore booleano *modificare* parametro su TRUE per abilitare ADO aggiornare il campo associato e FALSE se si desidera esaminare il campo, ma non modificarlo.|
 |*Precisione*|Numero di cifre che può essere rappresentato in una variabile numerica.|
 |*Scala*|Numero di posizioni decimali in una variabile numerica.|
-|*Lunghezza*|Nome di una variabile a quattro byte che contiene la lunghezza effettiva dei dati in *Buffer*.|
+|*Length*|Nome di una variabile a quattro byte che contiene la lunghezza effettiva dei dati in *Buffer*.|
 
 ## <a name="status-values"></a>Valori di stato
  Il valore di *stato* variabile indica se un campo è stato copiato correttamente a una variabile.
 
  Durante l'impostazione di dati, *stato* può essere impostata su **adFldNull** per indicare il **Recordset** campo deve essere impostato su null.
 
-|Costante|valore|Description|
+|Costante|Valore|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|È stato restituito un valore di campo non null.|
 |**adFldBadAccessor**|1|Associazione non è valida.|

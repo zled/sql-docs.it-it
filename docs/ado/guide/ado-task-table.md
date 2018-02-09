@@ -15,16 +15,16 @@ helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1eab2fac5e1d2f944228e75f00fb8ecc8596b9c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e0a245945c5dbe9262d251af67a138739b1888da
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-programming-task-table"></a>Tabella di attività di programmazione ADO
 Nella tabella seguente sono elencati i contenuti in attività di programmazione il *manuale del programmatore ADO* e vengono forniti i riferimenti per ogni attività. Tali riferimenti possono essere visualizzate le descrizioni testuali o esempi di codice in cui è possibile trovare informazioni sulla funzionalità ADO che esegue l'attività.

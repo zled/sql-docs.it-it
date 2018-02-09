@@ -19,19 +19,20 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 37d547672455e794854d2143819a445fc25edef2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b93a1955adb6f38eebd8de86599e1861a80ff75b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-code-access-security"></a>Sicurezza da accesso di codice dell'integrazione con CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Common language runtime (CLR) supporta un modello di sicurezza definito sicurezza dall'accesso di codice per il codice gestito. che prevede che le autorizzazioni vengano concesse agli assembly in base all'identità del codice. Per ulteriori informazioni, vedere la sezione relativa alla sicurezza da accesso di codice in .NET Framework SDK (Software Development Kit).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Common Language Runtime (CLR) supporta un modello di sicurezza definito sicurezza dall'accesso di codice per il codice gestito che prevede che le autorizzazioni vengano concesse agli assembly in base all'identità del codice. Per ulteriori informazioni, vedere la sezione relativa alla sicurezza da accesso di codice in .NET Framework SDK (Software Development Kit).  
   
  I criteri di sicurezza che determinano le autorizzazioni concesse agli assembly vengono definiti in tre punti diversi:  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sql-server-host-policy-level-permission-sets"></a>Set di autorizzazioni a livello di criteri host di SQL Server  
  Il set di autorizzazioni della sicurezza da accesso di codice concesso agli assembly al livello di criteri host di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è determinato dal set di autorizzazioni specificato durante la creazione dell'assembly. Sono disponibili tre set di autorizzazioni: **provvisoria**, **EXTERNAL_ACCESS** e **UNSAFE** (specificati mediante il **PERMISSION_SET** opzione di [ CREAZIONE di ASSEMBLY &#40; Transact-SQL &#41; ](../../../t-sql/statements/create-assembly-transact-sql.md)).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre criteri di sicurezza a livello host per CLR, quando ospita tale ambiente. Questo livello di criteri aggiuntivo è sottostante ai due livelli sempre attivi e viene impostato per ogni dominio applicazione creato da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Non è indicato per il dominio applicazione predefinito che sarebbe attivo quando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crea un'istanza di CLR.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre un livello di criteri di sicurezza a livello di host per CLR quando ospita tale ambiente. Questo criterio è un ulteriore livello di criteri di sotto di due livelli di criteri che sono sempre attivi. e viene impostato per ogni dominio applicazione creato da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Non è indicato per il dominio applicazione predefinito che sarebbe attivo quando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crea un'istanza di CLR.  
   
  I criteri a livello host di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono una combinazione dei criteri fissi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per gli assembly di sistema e dei criteri specificati dall'utente per gli assembly utente.  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 |Autorizzazione|Valori/Descrizione|  
 |----------------|-----------------------------|  
 |**SecurityPermission**|**Esecuzione:** dell'autorizzazione per eseguire il codice gestito.|  
-|**Autorizzazione SqlClientPermission completa**|**Connessione di contesto = true**, **connessione contesto = yes**: solo la connessione di contesto può essere utilizzata e la stringa di connessione può specificare solo un valore di "connessione di contesto = true" o "connessione di contesto = yes".<br /><br /> **AllowBlankPassword = false:** password vuote non sono consentite.|  
+|**SqlClientPermission**|**Connessione di contesto = true**, **connessione contesto = yes**: solo la connessione di contesto può essere utilizzata e la stringa di connessione può specificare solo un valore di "connessione di contesto = true" o "connessione di contesto = yes".<br /><br /> **AllowBlankPassword = false:** password vuote non sono consentite.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Gli assembly EXTERNAL_ACCESS dispongono delle stesse autorizzazioni come **provvisoria** assembly, con la possibilità aggiuntiva di accedere alle risorse di sistema esterne, ad esempio file, reti, variabili di ambiente e il Registro di sistema.  
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
 |**SecurityPermission**|**Asserzione:** capacità di asserire che tutti i chiamanti del codice dispongono dell'autorizzazione necessaria per l'operazione.<br /><br /> **ControlPrincipal:** possibilità di modificare l'oggetto principal.<br /><br /> **Esecuzione:** dell'autorizzazione per eseguire il codice gestito.<br /><br /> **SerializationFormatter:** possibilità di fornire servizi di serializzazione.|  
 |**SmtpPermission**|**L'accesso:** sono consentite le connessioni in uscita porta 25 dell'host SMTP.|  
 |**SocketPermission**|**Connettersi:** sono consentite le connessioni in uscita (tutte le porte, tutti i protocolli) su un indirizzo di trasporto.|  
-|**Autorizzazione SqlClientPermission completa**|**Unrestricted:** completo è consentito l'accesso all'origine dati.|  
+|**SqlClientPermission**|**Unrestricted:** completo è consentito l'accesso all'origine dati.|  
 |**StorePermission**|**Unrestricted:** accesso completo al certificato x. 509 è consentito archivi.|  
 |**WebPermission**|**Connettersi:** sono consentite le connessioni in uscita a risorse web.|  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 01/08/2018
 |**Restrizioni del modello di programmazione**|Sì|Sì|Nessuna restrizione|  
 |**Requisito di verificabilità**|Sì|Sì|no|  
 |**Accesso ai dati locali**|Sì|Sì|Sì|  
-|**Possibilità di chiamare codice nativo**|no|no|Sì|  
+|**Possibilità di chiamare codice nativo**|no|No|Sì|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza dell'integrazione con CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

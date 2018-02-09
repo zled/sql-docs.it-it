@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: SchemaEnum
-helpviewer_keywords: SchemaEnum enumeration [ADO]
+f1_keywords:
+- SchemaEnum
+helpviewer_keywords:
+- SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75e8380ba12f6390f8db4661fc570b40f18e7c49
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dc84741e1963b2c484e82eea7bc3de08cf12da13
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Specifica il tipo di schema **Recordset** che il [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) recupera metodo.  
@@ -38,25 +41,25 @@ Specifica il tipo di schema **Recordset** che il [OpenSchema](../../../ado/refer
   
  ADO genera risultati dello schema per le costanti, **adSchemaDBInfoKeywords** e **adSchemaDBInfoLiterals**. ADO crea un **Recordset**e ogni riga viene riempita con i valori restituiti rispettivamente dal **IDBInfo:: GetKeywords** e **IDBInfo::** metodi. Ulteriori informazioni su questi metodi, vedere il [IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) sezione di riferimento di OLE DB Programmer.  
   
-|Costante|valore|Description|Colonne del vincolo|  
+|Costante|Valore|Description|Colonne del vincolo|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Restituisce le asserzioni definite nel catalogo che appartengono a un determinato utente.<br /><br /> ASSERZIONI (set di righe)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Restituisce gli attributi fisici associati a cataloghi accessibili dal DBMS.<br /><br /> I cataloghi (set di righe)|CATALOG_NAME|  
 |**adSchemaCharacterSets**|2|Restituisce il set di caratteri definiti nel catalogo accessibili a un determinato utente.<br /><br /> (Rowset CHARACTER_SETS)|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
-|**adSchemaCheckConstraints**|5|Restituisce i vincoli check definiti nel catalogo che appartengono a un determinato utente.<br /><br /> (CHECK_CONSTRAINTS) Set di righe)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
+|**adSchemaCheckConstraints**|5|Restituisce i vincoli check definiti nel catalogo che appartengono a un determinato utente.<br /><br /> (CHECK_CONSTRAINTS) Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCollations**|3|Restituisce i carattere le regole di confronto definite nel catalogo accessibili a un determinato utente.<br /><br /> Le regole di confronto (set di righe)|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  
 |**adSchemaColumnPrivileges**|13|Restituisce i privilegi sulle colonne di tabelle definite nel catalogo che sono disponibili o concessi da un determinato utente.<br /><br /> COLUMN_PRIVILEGES (set di righe)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
 |**adSchemaColumns**|4|Restituisce le colonne di tabelle, incluse le viste, definite nel catalogo accessibili a un determinato utente.<br /><br /> (Set di righe COLUMNS)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
-|**adSchemaColumnsDomainUsage**|11|Restituisce le colonne definite nel catalogo che dipendono da un dominio definite nel catalogo e di proprietà di un determinato utente.<br /><br /> COLUMN_DOMAIN_USAGE (set di righe)|DOMAIN_CATALOG DOMAIN_SCHEMA NOME_DOMINIO COLUMN_NAME|  
+|**adSchemaColumnsDomainUsage**|11|Restituisce le colonne definite nel catalogo che dipendono da un dominio definite nel catalogo e di proprietà di un determinato utente.<br /><br /> COLUMN_DOMAIN_USAGE (set di righe)|DOMAIN_CATALOG DOMAIN_SCHEMA DOMAIN_NAME COLUMN_NAME|  
 |**adSchemaConstraintColumnUsage**|6|Restituisce le colonne utilizzate da vincoli referenziali, vincoli unique, vincoli check e le asserzioni definite nel catalogo e appartenenti a un determinato utente.<br /><br /> CONSTRAINT_COLUMN_USAGE (set di righe)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
-|**adSchemaConstraintTableUsage**|7|Restituisce le tabelle utilizzate da vincoli referenziali, vincoli unique, vincoli check e le asserzioni definite nel catalogo e di proprietà di un determinato utente.<br /><br /> CONSTRAINT_TABLE_USAGE (set di righe)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
+|**adSchemaConstraintTableUsage**|7|Restituisce le tabelle utilizzate da vincoli referenziali, vincoli unique, vincoli check e le asserzioni definite nel catalogo e di proprietà di un determinato utente.<br /><br /> (CONSTRAINT_TABLE_USAGE Rowset)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|Restituisce informazioni sui cubi disponibili in uno schema (o nel catalogo, se il provider non supporta gli schemi).<br /><br /> (Set di righe di CUBI *)|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
-|**adSchemaDBInfoKeywords**|30|Restituisce un elenco di parole chiave specifiche del provider.<br /><br /> (IDBInfo:: GetKeywords)|\<Nessuno >|  
-|**adSchemaDBInfoLiterals**|31|Restituisce un elenco di valori letterali di specifica del provider utilizzato nei comandi di testo.<br /><br /> (IDBInfo::)|\<Nessuno >|  
+|**adSchemaDBInfoKeywords**|30|Restituisce un elenco di parole chiave specifiche del provider.<br /><br /> (IDBInfo::GetKeywords)|\<Nessuno >|  
+|**adSchemaDBInfoLiterals**|31|Restituisce un elenco di valori letterali di specifica del provider utilizzato nei comandi di testo.<br /><br /> (IDBInfo::GetLiteralInfo)|\<Nessuno >|  
 |**adSchemaDimensions**|33|Restituisce informazioni sulle dimensioni nel cubo specificato. Contiene una riga per ogni dimensione.<br /><br /> (Set di righe di dimensioni)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
 |**adSchemaForeignKeys**|27|Restituisce le colonne chiave esterne definite nel catalogo di un determinato utente.<br /><br /> (Nel set di righe)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|Restituisce informazioni sulle gerarchie disponibili in una dimensione.<br /><br /> GERARCHIE (set di righe)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
-|**adSchemaIndexes**|12|Restituisce gli indici definiti nel catalogo che appartengono a un determinato utente.<br /><br /> (Set di righe INDEXES)|TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TIPO TABLE_NAME|  
+|**adSchemaIndexes**|12|Restituisce gli indici definiti nel catalogo che appartengono a un determinato utente.<br /><br /> (Set di righe INDEXES)|TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TYPE TABLE_NAME|  
 |**adSchemaKeyColumnUsage**|8|Restituisce le colonne definite nel catalogo che sono vincolate come chiavi di un determinato utente.<br /><br /> KEY_COLUMN_USAGE (set di righe)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaLevels**|35|Restituisce informazioni sui livelli di una dimensione.<br /><br /> (Set di righe livelli)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_NAME LEVEL_UNIQUE_NAME|  
 |**adSchemaMeasures**|36|Restituisce informazioni sulle misure disponibili.<br /><br /> MISURE (set di righe)|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
@@ -68,22 +71,22 @@ Specifica il tipo di schema **Recordset** che il [OpenSchema](../../../ado/refer
 |**adSchemaProperties**|37|Restituisce informazioni sulle proprietà disponibili per ogni livello della dimensione.<br /><br /> (Proprietà set di righe)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME MEMBER_UNIQUE_NAME PROPERTY_TYPE PROPERTY_NAME|  
 |**adSchemaProviderSpecific**|-1|Utilizzato se il provider definisce il proprio query dello schema non standard.|\<Specifico del provider >|  
 |**adSchemaProviderTypes**|22|Restituisce i tipi di dati (base) supportati dal provider di dati.<br /><br /> (Set di righe PROVIDER_TYPES)|DATA_TYPE BEST_MATCH|  
-|**AdSchemaReferentialConstraints**|9|Restituisce i vincoli referenziali definiti nel catalogo che appartengono a un determinato utente.<br /><br /> REFERENTIAL_CONSTRAINTS (set di righe)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
+|**AdSchemaReferentialConstraints**|9|Restituisce i vincoli referenziali definiti nel catalogo che appartengono a un determinato utente.<br /><br /> (REFERENTIAL_CONSTRAINTS Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaSchemata**|17|Restituisce gli schemi (oggetti di database) che appartengono a un determinato utente.<br /><br /> (Set di righe degli schemi)|CATALOG_NAME SCHEMA_NAME SCHEMA_OWNER|  
-|**adSchemaSQLLanguages**|18|Restituisce i livelli di conformità, opzioni e i sottolinguaggi supportati dai dati di elaborazione di implementazione SQL definiti nel catalogo.<br /><br /> (Set di righe SQL_LANGUAGES)|\<Nessuno >|  
+|**adSchemaSQLLanguages**|18|Restituisce i livelli di conformità, opzioni e i sottolinguaggi supportati dai dati di elaborazione di implementazione SQL definiti nel catalogo.<br /><br /> (SQL_LANGUAGES Rowset)|\<Nessuno >|  
 |**adSchemaStatistics**|19|Restituisce le statistiche definite nel catalogo che appartengono a un determinato utente.<br /><br /> (Set di righe di statistiche)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaTableConstraints**|10|Restituisce i vincoli di tabella definiti nel catalogo che appartengono a un determinato utente.<br /><br /> TABLE_CONSTRAINTS (set di righe)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME CONSTRAINT_TYPE|  
 |**adSchemaTablePrivileges**|14|Restituisce i privilegi per le tabelle definite nel catalogo che sono disponibili o concessi da un determinato utente.<br /><br /> TABLE_PRIVILEGES (set di righe)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  
 |**adSchemaTables**|20|Restituisce le tabelle (incluse le viste) definite nel catalogo accessibili a un determinato utente.<br /><br /> (Set di righe TABLES)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
 |**adSchemaTranslations**|21|Restituisce le conversioni dei caratteri definite nel catalogo accessibili a un determinato utente.<br /><br /> TRADUZIONI (set di righe)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
 |**adSchemaTrustees**|39|Riservato per utilizzi futuri.||  
-|**adSchemaUsagePrivileges**|15|Restituisce i privilegi di utilizzo per gli oggetti definiti nel catalogo che sono disponibili o concessi da un determinato utente.<br /><br /> (Set di righe USAGE_PRIVILEGES)|UTENTE AUTORIZZATO GRANTOR DI OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE|  
-|**adSchemaViewColumnUsage**|24|Restituisce le colonne in cui le tabelle visualizzate, definite nel catalogo e proprietà di un determinato utente sono dipendenti.<br /><br /> VIEW_COLUMN_USAGE (set di righe)|VIEW_NAME VIEW_SCHEMA VIEW_CATALOG|  
+|**adSchemaUsagePrivileges**|15|Restituisce i privilegi di utilizzo per gli oggetti definiti nel catalogo che sono disponibili o concessi da un determinato utente.<br /><br /> (Set di righe USAGE_PRIVILEGES)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE GRANTOR GRANTEE|  
+|**adSchemaViewColumnUsage**|24|Restituisce le colonne in cui le tabelle visualizzate, definite nel catalogo e proprietà di un determinato utente sono dipendenti.<br /><br /> VIEW_COLUMN_USAGE (set di righe)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|Restituisce le visualizzazioni definite nel catalogo accessibili a un determinato utente.<br /><br /> VISTE (set di righe)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
-|**adSchemaViewTableUsage**|25|Restituisce le tabelle in cui le tabelle visualizzate, definite nel catalogo e proprietà di un determinato utente sono dipendenti.<br /><br /> VIEW_TABLE_USAGE (set di righe)|VIEW_NAME VIEW_SCHEMA VIEW_CATALOG|  
+|**adSchemaViewTableUsage**|25|Restituisce le tabelle in cui le tabelle visualizzate, definite nel catalogo e proprietà di un determinato utente sono dipendenti.<br /><br /> VIEW_TABLE_USAGE (set di righe)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacchetto: **com.ms. wfc.**  
+ Package: **com.ms.wfc.data**  
   
 |Costante|  
 |--------------|  

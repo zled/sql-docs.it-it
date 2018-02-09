@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Current property
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be30c3c81333080fdcf3bc40bd6abad7c7449d5b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: abcc68d96e7516b31a231efeb4c5c851b10dee45
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-the-current-transaction"></a>Accesso alla transazione corrente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Se una transazione è attiva nel punto in cui codice common language runtime (CLR) in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene immesso, la transazione viene esposta tramite il **Transactions** classe. Il **Current** proprietà viene utilizzata per accedere alla transazione corrente. Nella maggior parte dei casi non è necessario accedere in modo esplicito alla transazione. Per le connessioni di database, ADO.NET controlla **Current** automaticamente quando il **Connection** metodo viene chiamato e integra in modo trasparente la connessione in tale transazione (a meno che il **Integra** parola chiave è impostata su false nella stringa di connessione).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Se una transazione è attiva nel punto in cui codice common language runtime (CLR) in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene immesso, la transazione viene esposta tramite il **Transactions** classe. Il **Current** proprietà viene utilizzata per accedere alla transazione corrente. Nella maggior parte dei casi non è necessario accedere in modo esplicito alla transazione. Per le connessioni di database, ADO.NET controlla **Current** automaticamente quando il **Connection** metodo viene chiamato e integra in modo trasparente la connessione in tale transazione (a meno che il **Integra** parola chiave è impostata su false nella stringa di connessione).  
   
  È possibile utilizzare il **transazione** oggetto direttamente negli scenari seguenti:  
   
@@ -207,6 +208,6 @@ Go
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integrazione con CLR e transazioni](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [Le transazioni e integrazione con CLR](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

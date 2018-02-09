@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Command15::raw_CreateParameter
 - Command15::CreateParameter
-helpviewer_keywords: CreateParameter method [RDS]
+helpviewer_keywords:
+- CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 070b1fed1f5d38da0a3f8275abf9933339a8f5dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c293e3a6e337e3c0331884bf1ee1eed57ad36003
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createparameter-method-ado"></a>Metodo CreateParameter (ADO)
 Crea un nuovo [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetto con le proprietà specificate.  
@@ -43,19 +45,19 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Parametri  
  *Nome*  
- Facoltativo. Oggetto **stringa** valore contenente il nome del **parametro** oggetto.  
+ Facoltativa. Oggetto **stringa** valore contenente il nome del **parametro** oggetto.  
   
  *Tipo*  
- Facoltativo. Oggetto [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore che specifica il tipo di dati di **parametro** oggetto.  
+ Facoltativa. Oggetto [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore che specifica il tipo di dati di **parametro** oggetto.  
   
  *Direzione*  
- Facoltativo. Oggetto [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) valore che specifica il tipo di **parametro** oggetto.  
+ Facoltativa. Oggetto [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) valore che specifica il tipo di **parametro** oggetto.  
   
  *Dimensione*  
- Facoltativo. Oggetto **lungo** valore che specifica la lunghezza massima per il valore del parametro in caratteri o byte.  
+ Facoltativa. Oggetto **lungo** valore che specifica la lunghezza massima per il valore del parametro in caratteri o byte.  
   
  *Valore*  
- Facoltativo. Oggetto **Variant** che specifica il valore per il **parametro** oggetto.  
+ Facoltativa. Oggetto **Variant** che specifica il valore per il **parametro** oggetto.  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare il **CreateParameter** metodo per creare un nuovo **parametro** oggetto con un nome, tipo, direzione, dimensioni e valore specificati. Vengono scritti i valori passati negli argomenti corrispondenti **parametro** proprietà.  

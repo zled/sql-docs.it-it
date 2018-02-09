@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,22 +16,22 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f3e79fcbef3c9a07ac43de13865632fef2ca6ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e35be40ea3023338048bf729b9f4cea5b6048449
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-methods"></a>Metodi ADO
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Crea un nuovo record per un aggiornabile **Recordset** oggetto.|  
-|[Aggiungere](../../../ado/reference/ado-api/append-method-ado.md)|Aggiunge un oggetto a una raccolta. Se la raccolta è **campi**, un nuovo **campo** oggetto può essere creato prima di essere aggiunto alla raccolta.|  
+|[Accoda](../../../ado/reference/ado-api/append-method-ado.md)|Aggiunge un oggetto a una raccolta. Se la raccolta è **campi**, un nuovo **campo** oggetto può essere creato prima di essere aggiunto alla raccolta.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Aggiunge dati a un testo di grandi dimensioni o dati binari **campo**, o a un **parametro** oggetto.|  
 |[BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|All'interno di elaborazione delle transazioni gestisce un **connessione** come illustrato di seguito:<br /><br /> **BeginTrans** , inizia una nuova transazione.<br /><br /> **CommitTrans** , Salva le modifiche e termina la transazione corrente. È possibile anche avviare una nuova transazione.<br /><br /> **RollbackTrans** -Annulla le modifiche e termina la transazione corrente. È possibile anche avviare una nuova transazione.|  
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Annulla l'esecuzione di un in sospeso, chiamata asincrona.|  
@@ -73,13 +74,13 @@ ms.lasthandoff: 12/21/2017
 |[Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md)|Aggiorna gli oggetti in una raccolta in modo da riflettere gli oggetti disponibili e specifiche del provider.|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Aggiorna i dati in un **Recordset** oggetto rieseguendo la query in cui si basa l'oggetto.|  
 |[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|Aggiorna i dati nell'oggetto **Recordset** oggetto, o **campi** raccolta di un **Record** oggetto dal database sottostante.|  
-|[Salvare](../../../ado/reference/ado-api/save-method.md)|Salva il **Recordset** in un file o **flusso** oggetto.|  
+|[Salva](../../../ado/reference/ado-api/save-method.md)|Salva il **Recordset** in un file o **flusso** oggetto.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Salva il contenuto binario di un **flusso** in un file.|  
 |[Ricerca](../../../ado/reference/ado-api/seek-method.md)|Cerca l'indice di un **Recordset** per individuare rapidamente la riga che corrisponde ai valori specificati e modifica la posizione della riga corrente di tale riga.|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Imposta la posizione che rappresenta la fine del flusso.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Ignora un'intera riga durante la lettura di un flusso di testo.|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|Ottiene informazioni statistiche su un flusso aperto.|  
-|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Determina se un oggetto **Recordset** oggetto supporta un determinato tipo di funzionalità.|  
+|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Determina se un oggetto **Recordset** oggetto supporta un determinato tipo di funzionalità.|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|Salva le modifiche apportate alla riga corrente di un **Recordset** oggetto, o **campi** raccolta di un **Record** oggetto.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Scrive tutti gli aggiornamenti di batch in sospeso sul disco.|  
 |[Scrittura](../../../ado/reference/ado-api/write-method.md)|Scrive dati binari in un **flusso** oggetto.|  

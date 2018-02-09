@@ -11,21 +11,23 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: assemblies [CLR integration], implementing
+helpviewer_keywords:
+- assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c37fa6946f4b400b666d43040fe805c50053a2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---implementing"></a>Assembly - implementazione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questo argomento vengono fornite informazioni sulle aree seguenti che consentono di implementare e utilizzare assembly nel database:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In questo argomento vengono fornite informazioni sull'implementazione e l'utilizzo degli assembly nei database, suddivise nelle sezioni seguenti:  
   
 -   Creazione di assembly  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 01/08/2018
   
  Solo i membri del **db_owner** e **db_ddlowner** ruolo predefinito del database è possibile eseguire ALTER ASSEMBLY utilizzando la clausola WITH UNCHECKED DATA.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] invia al registro eventi applicazioni di Windows il messaggio che l'assembly è stato modificato con dati non controllati nelle tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrassegna quindi le eventuali tabelle che contengono dati dipendenti dall'assembly come contenenti dati non controllati. Il **has_unchecked_assembly_data** colonna il **Sys. Tables** vista del catalogo contiene il valore 1 per le tabelle che contengono dati non controllati e 0 per le tabelle senza dati non controllati.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Invia un messaggio al registro eventi applicazioni di Windows che l'assembly è stato modificato con dati non controllati nelle tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrassegna quindi le eventuali tabelle che contengono dati dipendenti dall'assembly come contenenti dati non controllati. Il **has_unchecked_assembly_data** colonna il **Sys. Tables** vista del catalogo contiene il valore 1 per le tabelle che contengono dati non controllati e 0 per le tabelle senza dati non controllati.  
   
  Per risolvere l'integrità dei dati non controllati, eseguire DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS su ogni tabella con dati non controllati. Se DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS non riesce, è necessario eliminare le righe della tabella che non sono validi oppure modificare il codice assembly per risolvere i problemi e quindi eseguire le istruzioni ALTER ASSEMBLY aggiuntive.  
   

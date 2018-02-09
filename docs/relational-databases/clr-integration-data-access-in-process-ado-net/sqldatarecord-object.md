@@ -15,19 +15,20 @@ helpviewer_keywords:
 - SqlDataRecord object
 - custom result sets [CLR integration]
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f9336adaca5a3e0aebd1e18dce5c58e97b1d2be
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d9fa7d4465af4de1534e220ffa06d39cf854c3b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sqldatarecord-object"></a>Oggetto SqlDataRecord
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il **SqlDataRecord** oggetto rappresenta una singola riga di dati, insieme ai relativi metadati.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Il **SqlDataRecord** oggetto rappresenta una singola riga di dati, insieme ai relativi metadati.  
   
  Stored procedure gestite possono inviare al client set di risultati che non provengono da un **SqlDataReader**. Il **SqlDataRecord** class, insieme con **SendResultsStart**, **SendResultsRow**, e **SendResultsEnd** metodi di **SqlPipe** oggetto, che consente alle stored procedure di inviare set di risultati personalizzati al client.  
   

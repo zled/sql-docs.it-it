@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - VBScript error handling [ADO]
 - errors [ADO], VBScript
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 362e34cdb8c5b4ae5d9e6fc33ae20dca4b25bf60
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df4db3ae987690fdf27212e71a726cff2f636e88
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handling-errors-in-vbscript"></a>Gestione degli errori in VBScript
 Non c'è differenza minima tra i metodi usati in Visual Basic e quelli utilizzati con VBScript. La differenza principale è che VBScript non supporta il concetto di continuando l'esecuzione in un'etichetta di gestione degli errori. In altre parole, non è possibile utilizzare `On Error GoTo` in VBScript. Utilizzare invece `On Error Resume Next` e quindi selezionare entrambi **Err** e **conteggio** proprietà del **errori** insieme, come illustrato nell'esempio seguente:  

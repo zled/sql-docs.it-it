@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d6a49bc2f3fb815cecda0e8a24a63993b5423103
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurare il Cluster Ubuntu e risorsa gruppo di disponibilità
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/01/2018
 Questo documento illustra come creare un cluster di tre nodi in Ubuntu e aggiungere un gruppo di disponibilità creato in precedenza come risorsa nel cluster. Per la disponibilità elevata, un gruppo di disponibilità in Linux richiede tre nodi, vedere [elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> A questo punto, integrazione di SQL Server con Pacemaker in Linux non è accoppiata come con WSFC in Windows. All'interno di SQL, non è possibile sapere sulla presenza del cluster, tutte le orchestrazioni non rientra e il servizio viene controllato in base a un'istanza autonoma da Pacemaker. Inoltre, il nome di rete virtuale è specifico di WSFC, è disponibile un equivalente dello stesso in Pacemaker. Always On viste a gestione dinamica informazioni del cluster per le query restituirà le righe vuote. È comunque possibile creare un listener per poterlo utilizzare per la riconnessione dopo il failover trasparente, ma è necessario registrare manualmente il nome del listener nel server DNS con l'indirizzo IP utilizzato per creare la risorsa IP virtuale (come illustrato di seguito).
+> A questo punto, integrazione di SQL Server con Pacemaker in Linux non è accoppiata come con WSFC in Windows. All'interno di SQL, non è possibile sapere sulla presenza del cluster, tutte le orchestrazioni non rientra e il servizio viene controllato in base a un'istanza autonoma da Pacemaker. Inoltre, il nome di rete virtuale è specifico di WSFC, è disponibile un equivalente dello stesso in Pacemaker. Always On viste a gestione dinamica informazioni del cluster per le query restituiscono righe vuote. È comunque possibile creare un listener per poterlo utilizzare per la riconnessione dopo il failover trasparente, ma è necessario registrare manualmente il nome del listener nel server DNS con l'indirizzo IP utilizzato per creare la risorsa IP virtuale (come illustrato di seguito).
 
 Nelle sezioni seguenti viene illustrata la procedura per configurare una soluzione di cluster di failover. 
 
@@ -95,13 +95,13 @@ sudo systemctl start pcsd
 sudo systemctl enable pacemaker
 ```
 >[!NOTE]
->Comando pacemaker Enable verrà completata con l'errore 'pacemaker avvio predefinita non contiene alcun runlevels, l'interruzione'. Si tratta puramente informativo, può continuare la configurazione del cluster. Ci stiamo nelle comunicazioni con i fornitori di cluster per risolvere questo problema.
+>Comando pacemaker Enable potrebbe completare con l'errore 'pacemaker avvio predefinita non contiene alcun runlevels, l'interruzione'. Si tratta puramente informativo, può continuare la configurazione del cluster. 
 
 ## <a name="create-the-cluster"></a>Creare il Cluster
 
 1. Rimuovere qualsiasi configurazione esistente del cluster da tutti i nodi. 
 
-   In esecuzione 'PC apt get installa sudo' Installa pacemaker, corosync e PC nello stesso momento e viene avviata l'esecuzione di tutte le 3 dei servizi.  Avvio corosync genera un modello di ' / etc/cluster/corosync.conf' file.  Passaggi successivi di esito positivo di questo file non devono essere presenti: la soluzione alternativa consiste nell'arrestare pacemaker / corosync ed eliminare ' / etc/cluster/corosync.conf', e quindi passaggi successivi verranno completata correttamente. 'PC cluster destroy' svolge la stessa funzione e utilizzarlo come una fase di installazione iniziale del cluster.
+   In esecuzione 'PC apt get installa sudo' Installa pacemaker, corosync e PC nello stesso momento e viene avviata l'esecuzione di tutte le 3 dei servizi.  Avvio corosync genera un modello di ' / etc/cluster/corosync.conf' file.  Passaggi successivi di esito positivo di questo file non devono essere presenti: la soluzione alternativa consiste nell'arrestare pacemaker / corosync ed eliminare ' / etc/cluster/corosync.conf', e quindi passaggi successivi completata correttamente. 'PC cluster destroy' svolge la stessa funzione e utilizzarlo come una fase di installazione iniziale del cluster.
    
    Il comando seguente rimuove qualsiasi file di configurazione del cluster esistenti e Arresta tutti i servizi del cluster. Ciò elimina definitivamente il cluster. Eseguirlo come primo passaggio in un ambiente di pre-produzione. Si noti che 'PC cluster destroy' disabilitato il servizio pacemaker e deve essere riabilitati. Eseguire il comando seguente in tutti i nodi.
    
@@ -116,18 +116,18 @@ sudo systemctl enable pacemaker
 1. Creare il cluster. 
 
    >[!WARNING]
-   >A causa di un problema noto che il fornitore clustering è in corso, a partire dal cluster ('PC cluster start') avrà esito negativo con errore di seguito. Questo avviene perché il file di log configurati in /etc/corosync/corosync.conf che viene creato quando il comando di installazione del cluster viene eseguito, non è corretto. Per risolvere questo problema, modificare il file di log: /var/log/corosync/corosync.log. In alternativa è possibile creare il file /var/log/cluster/corosync.log.
+   >A causa di un problema noto che il fornitore clustering è in corso, a partire dal cluster ('PC cluster start') ha esito negativo con errore di seguito. Questo avviene perché il file di log configurati in /etc/corosync/corosync.conf che viene creato quando il comando di installazione del cluster viene eseguito, non è corretto. Per risolvere questo problema, modificare il file di log: /var/log/corosync/corosync.log. In alternativa è possibile creare il file /var/log/cluster/corosync.log.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-Il comando seguente crea un cluster di tre nodi. Prima di eseguire lo script, sostituire i valori compresi tra `**< ... >**`. Eseguire il comando seguente nel nodo primario. 
+Il comando seguente crea un cluster di tre nodi. Prima di eseguire lo script, sostituire i valori compresi tra `< ... >`. Eseguire il comando seguente nel nodo primario. 
 
    ```bash
-   sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
-   sudo pcs cluster setup --name **<clusterName>** **<node1>** **<node2…>** **<node3>**
+   sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
    sudo pcs cluster start --all
    ```
    
@@ -146,11 +146,11 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->La disattivazione STONITH è solo a scopo di test. Se si prevede di utilizzare Pacemaker in un ambiente di produzione, pianificare un'implementazione STONITH a seconda dell'ambiente e mantenerla abilitato. Si noti che a questo punto nessun agente fencing per ambienti cloud (Azure inclusi) o Hyper-V. Consequentially, il fornitore del cluster non offre il supporto per i cluster di produzione in esecuzione in questi ambienti. Stiamo lavorando su una soluzione per questo spazio che sarà disponibile nelle versioni future.
+>La disattivazione STONITH è solo a scopo di test. Se si prevede di utilizzare Pacemaker in un ambiente di produzione, pianificare un'implementazione STONITH a seconda dell'ambiente e mantenerla abilitato. Si noti che a questo punto nessun agente fencing per ambienti cloud (Azure inclusi) o Hyper-V. Consequentially, il fornitore del cluster non offre il supporto per i cluster di produzione in esecuzione in questi ambienti. 
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Impostare la proprietà cluster start-errore-è-errore irreversibile per false
 
-`start-failure-is-fatal`indica se un errore di avvio di una risorsa in un nodo impedisce ulteriori tentativi di avvio in tale nodo. Se impostato su `false`, il cluster stabilirà se provare ad avviare nello stesso nodo in base alle corrente conteggio e la migrazione soglia di errore della risorsa. In tal caso, dopo che si verifica il failover, Pacemaker tenterà di avviare la risorsa del gruppo di disponibilità sulla prima primario quando l'istanza SQL è disponibile. Pacemaker verrà abbassare di livello la replica secondaria e verrà automaticamente aggiunto nuovamente il gruppo di disponibilità. 
+`start-failure-is-fatal`indica se un errore di avvio di una risorsa in un nodo impedisce ulteriori tentativi di avvio in tale nodo. Se impostato su `false`, il cluster decide di provare ad avviare nello stesso nodo in base alle corrente conteggio e la migrazione soglia di errore della risorsa. In tal caso, dopo il failover si verifica, tentativi Pacemaker avvio la disponibilità gruppo risorsa per il primo primario quando l'istanza SQL è disponibile. Pacemaker Abbassa di livello la replica secondaria e viene automaticamente aggiunto nuovamente il gruppo di disponibilità. 
 
 Per aggiornare il valore della proprietà da `false` eseguire lo script seguente:
 
@@ -187,17 +187,17 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## <a name="create-virtual-ip-resource"></a>Creare la risorsa IP virtuale
 
-Per creare la risorsa di indirizzo IP virtuale, eseguire il comando seguente in un nodo. Utilizzare un indirizzo IP statico disponibile dalla rete. Prima di eseguire lo script, sostituire i valori compresi tra `**< ... >**` con un indirizzo IP valido.
+Per creare la risorsa di indirizzo IP virtuale, eseguire il comando seguente in un nodo. Utilizzare un indirizzo IP statico disponibile dalla rete. Prima di eseguire lo script, sostituire i valori compresi tra `< ... >` con un indirizzo IP valido.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 Nessun nome server virtuale è equivalente al Pacemaker. Per utilizzare una stringa di connessione che punta al nome di un server di stringa e non usare l'indirizzo IP, registrare l'indirizzo risorsa IP e nome del server virtuale desiderato nel DNS. Per le configurazioni di ripristino di emergenza, registrare il nome del server virtuale desiderato e l'indirizzo IP con i server DNS primario sia del sito di ripristino di emergenza.
 
 ## <a name="add-colocation-constraint"></a>Aggiungere il vincolo di percorso condiviso
 
-Quasi ogni decisione in un cluster Pacemaker, ad esempio la scelta in cui deve essere eseguita una risorsa, viene eseguita confrontando i punteggi. I punteggi vengono calcolati per ogni risorsa e la gestione delle risorse cluster sceglie il nodo con il punteggio più alto per una particolare risorsa. (Se un nodo ha un punteggio negativo per una risorsa, la risorsa non è possibile eseguire su tale nodo.) È possibile modificare le decisioni di cluster con vincoli. I vincoli hanno un punteggio. Se un vincolo ha un punteggio inferiore a infinito, è solo un'indicazione. Un punteggio di infinito indica che è necessario. È necessario assicurarsi che primaria del gruppo di disponibilità e virtuale risorsa ip vengono quindi eseguite nello stesso host, quindi verrà definito un vincolo di percorso condiviso con un punteggio pari a infinito. Per aggiungere il vincolo di percorso condiviso, eseguire il comando seguente in un nodo. 
+Quasi ogni decisione in un cluster Pacemaker, ad esempio la scelta in cui deve essere eseguita una risorsa, viene eseguita confrontando i punteggi. I punteggi vengono calcolati per ogni risorsa e la gestione delle risorse cluster sceglie il nodo con il punteggio più alto per una particolare risorsa. (Se un nodo ha un punteggio negativo per una risorsa, la risorsa non è possibile eseguire su tale nodo.) Utilizzare i vincoli per configurare le decisioni del cluster. I vincoli hanno un punteggio. Se un vincolo ha un punteggio inferiore a infinito, è solo un'indicazione. Un punteggio di infinito indica che è obbligatorio. Per garantire che la replica primaria e la risorsa indirizzo ip virtuale nello stesso host, definire un vincolo di percorso condiviso con un punteggio di infinito. Per aggiungere il vincolo di percorso condiviso, eseguire il comando seguente in un nodo. 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master

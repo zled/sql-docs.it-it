@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SqlPipe object
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
-caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e99da62dd46ff34e13cb009ef1dd20141be75ead
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5db45b3c67fcf865214ad422662acfb80bab293e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sqlpipe-object"></a>Oggetto SqlPipe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è molto comune scrivere una stored procedure (o una stored procedure estesa) che invia i risultati o parametri di output al client chiamante.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è molto comune scrivere una stored procedure (o una stored procedure estesa) per l'invio di risultati o parametri di output al client chiamante.  
   
  In un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, di qualsiasi **selezionare** istruzione che restituisce zero o più righe invia i risultati del chiamante connesso "pipe."  
   

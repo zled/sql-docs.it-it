@@ -20,19 +20,20 @@ helpviewer_keywords:
 - table-valued functions [CLR integration]
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-caps.latest.revision: "88"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 220c83c7378e634745a7edc71f521d30c3f812b6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b39532e93eba5784bbc9925f3140c26ced977ede
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-table-valued-functions"></a>Funzioni CLR con valori di tabella
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Una funzione con valori di tabella è una funzione definita dall'utente che restituisce una tabella.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Una funzione con valori di tabella è una funzione definita dall'utente che restituisce una tabella.  
   
  A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estende la funzionalità delle funzioni con valori di tabella consentendo la definizione di una funzione di questo tipo in qualsiasi linguaggio gestito. Dati vengono restituiti da una funzione con valori di tabella tramite un **IEnumerable** o **IEnumerator** oggetto.  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
  Per ulteriori informazioni sulle funzioni con valori di tabella CLR, vedere 'MSSQLTips [funzioni con valori di tabella Introduzione a CLR di SQL Server.](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Differenze tra funzioni con valori di tabella CLR e Transact-SQL  
- Le funzioni con valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)] materializzano i risultati della chiamata alla funzione in una tabella intermedia. Poiché utilizzano una tabella intermedia, possono supportare vincoli e indici univoci sui risultati. Queste caratteristiche possono rivelarsi estremamente utili quando vengono restituiti risultati di grandi dimensioni.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] funzioni con valori di tabella di materializzare i risultati della chiamata della funzione in una tabella intermedia. Poiché utilizzano una tabella intermedia, possono supportare vincoli e indici univoci sui risultati. Queste caratteristiche possono rivelarsi estremamente utili quando vengono restituiti risultati di grandi dimensioni.  
   
  Le funzioni con valori di tabella CLR rappresentano invece un modello di flusso alternativo. Non è necessario che l'intero set di risultati venga materializzato in una singola tabella. Il **IEnumerable** oggetto restituito dalla funzione gestita viene chiamato direttamente dal piano di esecuzione della query che chiama la funzione con valori di tabella e i risultati vengono utilizzati in modo incrementale. Questo modello di flusso consente di utilizzare i risultati non appena è disponibile la prima riga invece di dover attendere il popolamento dell'intera tabella. Rappresenta inoltre un'alternativa migliore in presenza di grandi quantità di righe restituite, in quanto non devono essere materializzate interamente in memoria. Una funzione con valori di tabella gestita, ad esempio, può essere utilizzata per analizzare un file di testo e restituire ogni riga del file come riga di tabella.  
   
@@ -62,7 +63,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Definizione di una funzione con valori di tabella in Transact-SQL  
- La sintassi per la definizione di una funzione con valori di tabella CLR è simile a quello di un [!INCLUDE[tsql](../../includes/tsql-md.md)] funzione con valori di tabella, con l'aggiunta del **nome esterno** clausola. Ad esempio  
+ La sintassi per la definizione di una funzione con valori di tabella CLR è simile a quello di un [!INCLUDE[tsql](../../includes/tsql-md.md)] funzione con valori di tabella, con l'aggiunta del **nome esterno** clausola. Esempio:  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  

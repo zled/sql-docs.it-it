@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5f3652eba15968b40a6d8a33902e1ca757275dd8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: abeb037ed89277082fce38c833baadc5a4170e3c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Utilizzo di ADO con Microsoft Visual Basic e Visual Basic Applications
 Impostazione di un progetto ADO e la scrittura di codice ADO è simile se si utilizza Visual Basic o Visual Basic per le applicazioni. In questo argomento risolve l'utilizzo di ADO con Visual Basic e Visual Basic per le applicazioni e rileva eventuali differenze.
@@ -47,7 +49,7 @@ Impostazione di un progetto ADO e la scrittura di codice ADO è simile se si uti
 
     -   automazione OLE
 
-3.  Fare clic su **OK**.
+3.  Scegliere **OK**.
 
  È possibile utilizzare ADO con la stessa facilità con Visual Basic per le applicazioni con Microsoft Access, ad esempio.
 
@@ -65,7 +67,7 @@ Impostazione di un progetto ADO e la scrittura di codice ADO è simile se si uti
 
     -   Libreria oggetti di Microsoft DAO 3.5 (o versioni successive)
 
-4.  Fare clic su **OK**.
+4.  Scegliere **OK**.
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Creazione di oggetti ADO in Visual Basic
  Per creare una variabile di automazione e un'istanza di un oggetto per tale variabile, è possibile utilizzare due metodi: **Dim** o **CreateObject**.
@@ -103,7 +105,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- Creare istanze degli oggetti con **CreateObject** sono ad associazione tardiva, il che significa che non sono fortemente tipizzati e il completamento della riga di comando è disattivato. Tuttavia, consentono di ignorare che fa riferimento alla libreria ADO dal progetto e consente di creare un'istanza di versioni specifiche di oggetti. Ad esempio
+ Creare istanze degli oggetti con **CreateObject** sono ad associazione tardiva, il che significa che non sono fortemente tipizzati e il completamento della riga di comando è disattivato. Tuttavia, consentono di ignorare che fa riferimento alla libreria ADO dal progetto e consente di creare un'istanza di versioni specifiche di oggetti. Esempio:
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

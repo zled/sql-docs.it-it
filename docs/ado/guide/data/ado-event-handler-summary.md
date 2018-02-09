@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c00af6ce5dcdff509b04d25bc09a42a6e9e89fd7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d9e182d5b1e1b8755250cbf620ac102a7eacde0f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-connection-and-recordset-events"></a>Connessione di ADO e gli eventi di Recordset
 Due oggetti ADO possono generare eventi: il [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto. Il **ConnectionEvent** famiglia relativa alle operazioni sul **connessione** oggetto e **RecordsetEvent** famiglia relativa alle operazioni sul  **Recordset** oggetto.
@@ -37,8 +38,8 @@ Due oggetti ADO possono generare eventi: il [connessione](../../../ado/reference
 
 |ConnectionEvent|Description|
 |---------------------|-----------------|
-|[RollbackTransComplete BeginTransComplete, CommitTransComplete,](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Gestione delle transazioni** : notifica che è stata avviata la transazione corrente sulla connessione, il commit o rollback.|
-|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, disconnessione](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gestione delle connessioni** : notifica che è possibile avviare la connessione corrente, è stata avviata o è stata terminata.|
+|[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Gestione delle transazioni** : notifica che è stata avviata la transazione corrente sulla connessione, il commit o rollback.|
+|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gestione delle connessioni** : notifica che è possibile avviare la connessione corrente, è stata avviata o è stata terminata.|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**Gestione dell'esecuzione di comandi** : notifica che l'esecuzione del comando corrente per la connessione verrà avviato o è stata terminata.|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Informativo** : notifica di informazioni aggiuntive relative all'operazione corrente.|
 

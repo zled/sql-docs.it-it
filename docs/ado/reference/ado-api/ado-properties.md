@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f77f31c7dcb3a52e25b359d146669284d43b1dce
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 22d01847cb4d2a4bc6e1019fda0d29458af751c8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-properties"></a>Proprietà ADO
 |||  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|Indica la lunghezza effettiva del valore di un campo.|  
 |[Attributi](../../../ado/reference/ado-api/attributes-property-ado.md)|Indica una o più caratteristiche di un oggetto.|  
 |[BOF ed EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF** indica che la posizione del record corrente è precedente al primo record in un oggetto Recordset.<br /><br /> **EOF** indica che la posizione del record corrente è successiva all'ultimo record in un oggetto Recordset.|  
-|[Segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md)|Indica un segnalibro che identifica in modo univoco il record corrente in un **Recordset** dell'oggetto o imposta il record corrente in un **Recordset** oggetto sul record identificato da un segnalibro valido.|  
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|Indica un segnalibro che identifica in modo univoco il record corrente in un **Recordset** dell'oggetto o imposta il record corrente in un **Recordset** oggetto sul record identificato da un segnalibro valido.|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Indica il numero di record da un **Recordset** oggetti memorizzati nella cache in locale.|  
 |[Capitolo](../../../ado/reference/ado-api/chapter-property-ado.md)|Ottiene o imposta OLE DB **capitolo** oggetto da/su un **ADORecordsetConstruction** oggetto.|  
 |[Set di caratteri](../../../ado/reference/ado-api/charset-property-ado.md)|Indica il set di caratteri in cui il contenuto di un testo **flusso** devono essere convertite.|  
@@ -46,19 +47,19 @@ ms.lasthandoff: 12/21/2017
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Indica il tipo di un **comando** oggetto.|  
 |[Proprietà ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Indica le informazioni utilizzate per stabilire una connessione a un'origine dati.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Indica il tempo di attesa durante il tentativo di stabilire una connessione prima di terminare il tentativo e generare un errore.|  
-|[Conteggio](../../../ado/reference/ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Indica la posizione del servizio di cursore.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Indica il tipo di cursore utilizzato in un **Recordset** oggetto.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Indica il nome del membro dati che verrà recuperato dall'oggetto a cui fa riferimento il **DataSource** proprietà.|  
-|[Origine dati](../../../ado/reference/ado-api/datasource-property-ado.md)|Indica un oggetto che contiene i dati per essere rappresentato come un **Recordset** oggetto.|  
+|[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|Indica un oggetto che contiene i dati per essere rappresentato come un **Recordset** oggetto.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|Indica il database predefinito per un **connessione** oggetto.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Indica la capacità di dati di un **campo** oggetto.|  
-|[Descrizione](../../../ado/reference/ado-api/description-property.md)|Viene descritto un **errore** oggetto.|  
+|[Description](../../../ado/reference/ado-api/description-property.md)|Viene descritto un **errore** oggetto.|  
 |[Sottolinguaggio](../../../ado/reference/ado-api/dialect-property.md)|Indica la sintassi e regole generali utilizzate per analizzare il provider di **CommandText** o **CommandStream** proprietà.|  
 |[Direzione](../../../ado/reference/ado-api/direction-property.md)|Indica se il **parametro** rappresenta un parametro di input, un parametro di output o entrambi, o se il parametro è il valore restituito da una stored procedure.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Indica lo stato di modifica del record corrente.|  
-|[FINE DEL FLUSSO](../../../ado/reference/ado-api/eos-property.md)|Indica se la posizione corrente è alla fine del flusso.|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|Indica un filtro per i dati in un **Recordset**.|  
+|[EOS](../../../ado/reference/ado-api/eos-property.md)|Indica se la posizione corrente è alla fine del flusso.|  
+|[Filtra](../../../ado/reference/ado-api/filter-property.md)|Indica un filtro per i dati in un **Recordset**.|  
 |[HelpContext e HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Indica il file e l'argomento associato a un **errore** oggetto.<br /><br /> **ID argomento Guida** restituisce un ID di contesto, come un **lungo** valore, per un argomento in un file della Guida.<br /><br /> **HelpFile** restituisce un **stringa** valore che restituisce un percorso completamente risolto di un file della Guida.|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|Indica il nome dell'indice attualmente attivo per un **Recordset** oggetto.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Indica il livello di isolamento per una **connessione** oggetto.|  

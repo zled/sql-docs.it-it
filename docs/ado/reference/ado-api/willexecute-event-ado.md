@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - WillExecute
 - Connection::WillExecute
-helpviewer_keywords: WillExecute event [ADO]
+helpviewer_keywords:
+- WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66a04a7bf45771c9c6f16b32bfd9c8bac54db4ad
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dafc71b9f9da6dde5cf9ef7acf7909236441f656
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 Il **WillExecute** eventi viene chiamato prima dell'esecuzione di un comando in sospeso su una connessione.  
@@ -69,7 +71,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** consente di esaminare e modificare i parametri di esecuzione in sospeso. Questo evento può restituire una richiesta di annullamento che il comando in sospeso.  
   
 > [!NOTE]
->  Se l'origine originale per un **comando** è un flusso specificato dal [proprietà CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) proprietà, l'assegnazione di una nuova stringa per il **WillExecute** *Origine* l'origine della modifica parametro di **comando**. Il **CommandStream** proprietà verrà cancellata e [proprietà CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) proprietà verrà aggiornata con la nuova origine. Il flusso originale specificato dal parametro **CommandStream** verrà rilasciato e non è accessibile.  
+>  Se l'origine originale per un **comando** è un flusso specificato dal [proprietà CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) proprietà, l'assegnazione di una nuova stringa per il **WillExecute * * * origine* l'origine della modifica parametro di **comando**. Il **CommandStream** proprietà verrà cancellata e [proprietà CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) proprietà verrà aggiornata con la nuova origine. Il flusso originale specificato dal parametro **CommandStream** verrà rilasciato e non è accessibile.  
   
  Se il sottolinguaggio della nuova stringa di origine è diverso dall'impostazione originale del [proprietà Dialect](../../../ado/reference/ado-api/dialect-property.md) proprietà (che corrisponde alla **CommandStream**), il sottolinguaggio corretto deve essere specificato impostando il **sottolinguaggio** proprietà dell'oggetto comando a cui fa riferimento *pCommand*.  
   

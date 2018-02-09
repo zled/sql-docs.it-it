@@ -15,19 +15,20 @@ helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9273db56dfc99f76325ee9938678d2dc24aad8e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---designing"></a>Assembly - progettazione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questo argomento vengono descritti i seguenti fattori da considerare quando si progetta l'assembly:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In questo argomento vengono illustrati alcuni fattori da prendere in considerazione durante la progettazione degli assembly:  
   
 -   Assemblaggio di assembly  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
  Specificando UNSAFE si consente inoltre al codice dell'assembly di eseguire operazioni considerate non indipendenti dai tipi da CLR Verifier. Tali operazioni potrebbero accedere ai buffer di memoria nello spazio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo incontrollato. Gli assembly UNSAFE possono anche compromettere il sistema di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o del CLR. Si consiglia di concedere le autorizzazioni UNSAFE solo ad assembly assolutamente attendibili, creati da sviluppatori o amministratori esperti. Solo i membri del **sysadmin** ruolo predefinito del server possono creare assembly UNSAFE.  
   
 ## <a name="restrictions-on-assemblies"></a>Limitazioni relative agli assembly  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono imposte restrizioni sul codice gestito negli assembly per garantirne l'affidabilità e la scalabilità. Alcune operazioni potenzialmente in grado di compromettere l'affidabilità del server non sono consentite negli assembly SAFE ed EXTERNAL_ACCESS.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono imposte restrizioni sul codice gestito negli assembly per assicurarsi che possano essere eseguite in modo affidabile e scalabile. Alcune operazioni potenzialmente in grado di compromettere l'affidabilità del server non sono consentite negli assembly SAFE ed EXTERNAL_ACCESS.  
   
 ### <a name="disallowed-custom-attributes"></a>Attributi personalizzati non consentiti  
  Non è possibile annotare gli assembly con gli attributi personalizzati seguenti:  
@@ -124,6 +125,6 @@ System.Configuration
   
 ## <a name="see-also"></a>Vedere anche  
  [Assembly &#40; motore di Database &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [Sicurezza per l'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
+ [Sicurezza dell'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

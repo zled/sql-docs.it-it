@@ -1,33 +1,40 @@
 ---
 title: "Novità di Data Migration Assistant (SQL Server) | Documenti Microsoft"
 ms.custom: 
-ms.date: 10/03/2017
+ms.date: 02/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, new features
+helpviewer_keywords:
+- Data Migration Assistant, new features
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07d72eb6c4d40c3e61f4292616f9eda99d6d4742
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b72ea21423b96a1dbd19eb5fb8f0a3b99c59e0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novità di Data Migration Assistant
 
 Questo argomento elenca le aggiunte in ogni versione di dati della migrazione guidata (DMA).
+
+## <a name="dma-v34"></a>V3.4 DMA
+La versione di v3.4 di DMA include le seguenti aggiunte:
+- Supporto per SQL Server 2017 come origine per le migrazioni a Database SQL di Azure.
+- Miglioramenti alla stabilità, prestazioni e valutazione correttezza di regola.
 
 ## <a name="dma-v33"></a>3.3 DMA
 La versione 3.3 di DMA consente la migrazione di un'istanza di SQL Server locale per la nuova versione di SQL Server 2017, su Windows e Linux. Mentre il flusso di lavoro globale migrazione per Windows e Linux è lo stesso, lo spostamento 2017 di SQL Server per Linux richiede alcune considerazioni aggiuntive.
@@ -51,21 +58,21 @@ La versione v 3.2 di DMA include le seguenti aggiunte:
 
 - Durante la migrazione dello schema per Database SQL di Azure, DMA generare script per oggetti di database di origine, vengono fornite indicazioni su come risolvere eventuali problemi di compatibilità e quindi distribuisce lo schema in Azure.
 
-## <a name="dma-v31"></a>V 3.1 DMA
+## <a name="dma-v31"></a>DMA v3.1
 La versione v 3.1 di DMA include le seguenti aggiunte:
 
 - Valutazione migliorata consigli per i database SQL di Azure in termini di regole di confronto del database, l'uso di non supportate stored procedure di sistema e gli oggetti CLR.
 
 - Guida di valutazione per i livelli di compatibilità 130, 120, 110 e 100 durante la migrazione a database SQL di Azure.
 
-## <a name="dma-v30"></a>V 3.0 DMA
+## <a name="dma-v30"></a>DMA v3.0
 La versione 3.0 di DMA estende la valutazione di database SQL di Azure per fornire indicazioni complete per aiutare a risolvere i problemi relativi a:
 
 - Problemi di blocco di migrazione.
 
 - Parzialmente o non supportato di funzioni e funzionalità.
 
-## <a name="dma-v21"></a>V 2.1 DMA
+## <a name="dma-v21"></a>DMA v2.1
 La versione 2.1 di DMA include le seguenti aggiunte:
 - Supporto della riga di comando per eseguire valutazioni in modalità automatica, che consente di eseguire valutazioni su larga scala. Per ulteriori dettagli, vedere l'argomento [eseguire Data Migration Assistant dalla riga di comando](dma-commandline.md).
 
@@ -73,10 +80,10 @@ La versione 2.1 di DMA include le seguenti aggiunte:
 
 - La possibilità di configurare il timeout della connessione SQL. Per ulteriori dettagli, vedere l'argomento [impostazioni di configurazione per dati Migration Assistant](dma-configurationsettings.md).
 
-## <a name="dma-v20"></a>V 2.0 DMA
+## <a name="dma-v20"></a>DMA v2.0
 La versione 2.0 di DMA include migliorate indicazioni di funzionalità di database di estensione per fornire le tabelle con priorità appropriate che ottimizzano il risparmio di spazio di archiviazione.
 
-## <a name="dma-v10"></a>V 1.0 DMA
+## <a name="dma-v10"></a>DMA v1.0
 La versione 1.0 di DMA è la versione iniziale, e consente di:
 - Individuazione dei problemi che possono influire sull'aggiornamento a una versione locale di SQL Server. Le conclusioni sono descritte come problemi di compatibilità e la classificazione nelle aree seguenti:
     -   Modifiche di rilievo
@@ -85,7 +92,7 @@ La versione 1.0 di DMA è la versione iniziale, e consente di:
 
 - Individuazione di nuove funzionalità della piattaforma di SQL Server di destinazione che il database può trarre vantaggio da un aggiornamento. Le conclusioni sono descritte come indicazioni di funzionalità e la classificazione nelle aree seguenti:
     - restazioni
-    - Security
+    - Sicurezza
     - Archiviazione
 
 -   Esperienza utente moderna per eseguire valutazioni.

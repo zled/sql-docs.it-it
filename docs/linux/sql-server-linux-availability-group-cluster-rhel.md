@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: dd997e9d3f235d841cd5706b9c81b9335360540d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 860d3571aa1edf7c467125de1cc2920a968eb704
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurare RHEL Cluster per il gruppo di disponibilità di SQL Server
 
@@ -160,10 +160,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 
 ## <a name="create-virtual-ip-resource"></a>Creare la risorsa IP virtuale
 
-Per creare la risorsa di indirizzo IP virtuale, eseguire il comando seguente in un nodo. Utilizzare un indirizzo IP statico disponibile dalla rete. Sostituire l'indirizzo IP tra `**<10.128.16.240>**` con un indirizzo IP valido.
+Per creare la risorsa di indirizzo IP virtuale, eseguire il comando seguente in un nodo. Utilizzare un indirizzo IP statico disponibile dalla rete. Sostituire l'indirizzo IP tra `<10.128.16.240>` con un indirizzo IP valido.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 Nessun nome server virtuale è equivalente al Pacemaker. Per utilizzare una stringa di connessione che punta a un nome di server stringa anziché un indirizzo IP, registrare il nome del server virtuale desiderata e l'indirizzo di risorse IP virtuale nel DNS. Per le configurazioni di ripristino di emergenza, registrare il nome del server virtuale desiderato e l'indirizzo IP con i server DNS primario sia del sito di ripristino di emergenza.

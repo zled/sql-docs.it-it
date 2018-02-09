@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0bbd79ff71ffe17c9fb33903501ab7302766fbf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolute-and-relative-urls"></a>URL assoluto e relativo
 Un URL specifica il percorso di una destinazione memorizzata in un computer locale o in rete. La destinazione può essere un file, directory, una pagina HTML, immagine, programma e così via*.*  
@@ -38,16 +39,16 @@ Un URL specifica il percorso di una destinazione memorizzata in un computer loca
   
  Un URL relativo in genere è costituito solo il *percorso*e, facoltativamente, il *risorse*, ma non *schema* o *server*. Nelle tabelle seguenti definiscono le singole parti del formato di URL completo.  
   
- *schema*  
+ *scheme*  
  Specifica il modo in *risorse* viene eseguito.  
   
  *server*  
  Specifica il nome del computer in cui il *risorse* si trova.  
   
- *percorso*  
+ *path*  
  Specifica la sequenza di directory che conduce alla destinazione. Se *risorse* viene omesso, la destinazione è l'ultima directory in *percorso*.  
   
- *risorsa*  
+ *resource*  
  Se incluso, *risorse* è la destinazione e in genere è il nome di un file. Potrebbe essere un *file semplice,* contenente un singolo flusso binario di byte, o un *documento strutturato,* contenente uno o più flussi e archivi flussi binari di byte.  
   
 ## <a name="url-scheme-registration"></a>Registrazione dello schema URL  

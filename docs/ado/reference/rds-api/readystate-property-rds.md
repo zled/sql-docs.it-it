@@ -1,6 +1,7 @@
 ---
 title: "Proprietà ReadyState (RDS) | Documenti Microsoft"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: ReadyState property [ADO]
+helpviewer_keywords:
+- ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52d32f6b2ba1e3a85b0d374a4d11b4e0bf3c742c
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: c5496f5b5c98efa6f4754d131d74627f9ab75984
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="readystate-property-rds"></a>Proprietà ReadyState (RDS)
 Indica lo stato di un [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto mentre recupera i dati nel relativo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -33,7 +35,7 @@ Indica lo stato di un [DataControl](../../../ado/reference/rds-api/datacontrol-o
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Imposta o restituisce uno dei valori seguenti.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|La query corrente è ancora in esecuzione e non di righe recuperate. Il **DataControl** dell'oggetto **Recordset** non è disponibile per l'utilizzo.|  
 |**adcReadyStateInteractive**|Un set iniziale di righe recuperate dalla query corrente è stato archiviato nel **DataControl** dell'oggetto **Recordset** e sono disponibili per l'utilizzo. Le righe rimanenti sono ancora recuperate.|  
