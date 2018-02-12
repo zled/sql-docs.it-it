@@ -65,7 +65,7 @@ DATEPART ( datepart , date )
 |**DayOfYear**|**dy**, **y**|  
 |**giorno**|**gg**, **d**|  
 |**settimana**|**wk**, **ww**|  
-|**giorno della settimana**|**data warehouse**|  
+|**giorno della settimana**|**dw**|  
 |**ora**|**hh**|  
 |**minuto**|**mi, n**|  
 |**secondo**|**ss**, **s**|  
@@ -97,7 +97,7 @@ Nella tabella seguente sono elencati tutti *datepart* argomenti con corrisponden
 |**DayOfYear, dy, y**|303|  
 |**giorno, gg, d**|30|  
 |**settimana, wk, ss**|45|  
-|**giorno della settimana, data warehouse**|1|  
+|**giorno della settimana, dw**|1|  
 |**ora, hh**|12|  
 |**minuto, n**|15|  
 |**in secondo luogo, ss, s**|32|  
