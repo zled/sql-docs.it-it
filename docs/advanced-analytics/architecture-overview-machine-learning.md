@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 737087692cff4d5b76336b1a31b58e2f9390abfc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Panoramica dell'architettura di servizi di SQL Server Machine Learning 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo argomento descrive gli obiettivi di framework di estendibilità che supporta l'esecuzione dello script Python e R in SQL Server.
 
@@ -60,7 +61,7 @@ Per soddisfare questi obiettivi, l'architettura di SQL Server 2016 R Services e 
 
    Inoltre, Microsoft fornisce un set di librerie proprietarie che consentono l'integrazione con SQL Server, incluse la conversione dei dati, la compressione e dell'ottimizzazione destinata a ogni lingua supportata.
 
-+ **Security**
++ **Sicurezza**
 
    Migliora la sicurezza significa supporto per autenticazione integrata di Windows sia basata su password account di accesso SQL, come la gestione e la protezione delle credenziali, per la protezione dei dati e l'uso di SQL Server Trusted Launchpad per la gestione di script esterni vengono usati in SQL Server l'esecuzione e la protezione dei dati utilizzati negli script.
 

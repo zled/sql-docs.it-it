@@ -1,6 +1,7 @@
 ---
 title: R Server (Standalone) | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 06/22/2017
 ms.reviewer: 
 ms.suite: sql
@@ -10,19 +11,21 @@ ms.component: r
 vms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: d7136f051317f7ffeb26d779b3cf611edef13592
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3f0c567463c25a54829a988516890bead171f5ec
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-server-standalone"></a>R Server (Standalone)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In SQL Server 2016, Microsoft ha rilasciato **R Server (Standalone)**, come parte della piattaforma per il supporto analitica di classe enterprise.  Microsoft R Server garantisce scalabilità e sicurezza per il linguaggio R e risolve le limitazioni in memoria di open source R. Ad esempio SQL Server R Services, Microsoft R Server (Standalone) fornisce l'elaborazione parallela sia blocchi di dati, consentendo agli utenti di R utilizzare i dati di dimensioni molto maggiori rispetto a possono adattarsi alla memoria.
 

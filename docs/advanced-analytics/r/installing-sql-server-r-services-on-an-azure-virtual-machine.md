@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0f1e597d4b6ddda30938108badc0bf31b0108bc4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5d52dd25059dcc8204fbc2598a595de9e208f308
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>L'installazione delle funzionalità in una macchina virtuale Azure di apprendimento automatico di SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 Se si distribuisce una macchina virtuale di Azure che include [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è ora possibile selezionare l'apprendimento come funzionalità da aggiungere all'istanza quando viene creata la macchina virtuale.
 
@@ -43,7 +44,7 @@ Per un elenco di offerte di macchina virtuale SQL Server, vedere l'articolo: [Pa
 ### <a name="new"></a>Creare una nuova VM SQL Server Enterprise con machine learning
 
 1. Nel portale di Azure, fare clic su macchine VIRTUALI e quindi fare clic su nuovo.
-2. Selezionare l'edizione Enterprise SQL Server 2017.
+2. Select SQL Server 2017 Enterprise Edition.
 3. Configurare il nome del server e le autorizzazioni dell'account e selezionare un piano tariffario.
 4. In **impostazioni di SQL Server** (passaggio 4 dell'installazione guidata macchina virtuale), individuare **Machine Learning Services (Advanced Analitica)** e fare clic su **abilitare**.
 5. Esaminare il riepilogo visualizzato per la convalida e fare clic su **OK**.
@@ -106,7 +107,7 @@ Per altre informazioni, vedere [Configurare SQL Server R Services](../../advance
 
 + Abilitare Named Pipes
   
-  Attualmente, [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] usa il protocollo Named Pipes per le connessioni tra i computer client e server e per alcune connessioni interne. Se il protocollo Named Pipes non è abilitato, è necessario installarlo e abilitarlo sia nella macchina virtuale di Azure che nei client di data science che si connettono al server.
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilizza il protocollo Named Pipes per le connessioni tra i computer client e server e per alcune connessioni interne. Se il protocollo Named Pipes non è abilitato, è necessario installarlo e abilitarlo sia nella macchina virtuale di Azure che nei client di data science che si connettono al server.
   
 + Abilitare TCP/IP
 

@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dfb238cc1ba7c981dbeec22e76616e45d93f72dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>Creare un pool di risorse per machine learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo argomento viene descritto come creare un pool di risorse in modo specifico per la gestione dei carichi di lavoro di machine learning in SQL Server. Si presuppone di aver installato e abilitato di machine learning, funzionalità e si desidera riconfigurare l'istanza per supportare più granulari per le gestione delle risorse utilizzate da un processo esterno, ad esempio R o Python.
 
@@ -34,7 +35,7 @@ Il processo include più passaggi:
 4.  Creare una funzione di classificazione per identificare richieste dello script esterno.
 5.  Verificare che il nuovo pool di risorse esterno esegue l'acquisizione processi R o Python dagli account o di client specificati.
 
-**Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] e [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] e [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ##  <a name="bkmk_ReviewStatus"></a> Esaminare lo stato dei pool di risorse esistenti
   
@@ -46,7 +47,7 @@ Il processo include più passaggi:
 
     **Risultati di esempio**
 
-    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|predefiniti|0|100|0|100|100|0|0|
 
@@ -58,7 +59,7 @@ Il processo include più passaggi:
 
     **Risultati di esempio**
 
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|predefiniti|100|20|0|2|
  
@@ -168,7 +169,7 @@ Per verificare che le modifiche sono state apportate, controllare la configurazi
 
     **Risultati di esempio**
 
-    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
     |1|interno|Media|25|0|0|0|0|1|2|
     |2|predefiniti|Media|25|0|0|0|0|2|2|
@@ -182,7 +183,7 @@ Per verificare che le modifiche sono state apportate, controllare la configurazi
 
     **Risultati di esempio**
     
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|predefiniti|100|20|0|2|
     |256|ds_ep|100|40|0|1|

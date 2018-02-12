@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9267a2f0740f92f023f94fea3a26ca42de134b2c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ab95ffe13fafa6e54d129ae155ddd58c16f07044
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="api-reference-for-sql-server-machine-learning-services"></a>Riferimento API per servizi di SQL Server Machine Learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo fornisce collegamenti alla documentazione di riferimento per machine learning API utilizzate da SQL Server.
 
@@ -31,7 +32,7 @@ La maggior parte, SQL Server utilizza le stesse librerie R e Python disponibili 
 > [!NOTE]
 > Documentazione relativa a tutte le API deriva da codice sorgente e non è stata modificata. Se si verificano errori, aggiungere un commento nella documentazione di riferimento dell'API. 
 
-## <a name="r"></a>R
+## <a name="r"></a>L
 
 + [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 

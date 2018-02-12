@@ -11,17 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d15ee956-918f-40e0-b986-2bf929ef303a
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 58a86d2268e318470d1d05799e9146e877966263
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>Configurare un client di analisi scientifica dei dati per l'utilizzo con SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dopo aver configurato un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per supportare l'apprendimento, è necessario impostare un ambiente di sviluppo che è in grado di connettersi al server per l'esecuzione in modalità remota e la distribuzione.
 
@@ -35,7 +36,7 @@ Per ottenere queste librerie, installare uno dei seguenti:
   
 + [Microsoft R Client](http://aka.ms/rclient/download)
 
-+ Microsoft R Server (per SQL Server 2016)
++ Microsoft R Server (for SQL Server 2016)
 
     - Per installare dal programma di installazione di SQL Server, vedere [creare un Server R autonomo](../../advanced-analytics/r/create-a-standalone-r-server.md)
 

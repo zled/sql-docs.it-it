@@ -16,18 +16,19 @@ keywords:
 - Configurare R Services
 - installare l'apprendimento SQL
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 04f2502853e21968f2edaac927247eb45730d000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Configurare SQL Server Machine Learning Services (In-Database)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo argomento viene descritto come installare e configurare il computer seguente apprendimento delle funzionalità che supportano analitica nel database di SQL Server:
 
@@ -41,7 +42,7 @@ In questo argomento viene descritto come installare e configurare il computer se
 
 + Un server di machine learning con **non** SQL Server
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il programma di installazione include anche l'opzione per installare una versione di "in modo autonomo" di machine learning componenti che non richiede il motore di database e non viene eseguito in SQL Server.  In genere, si consiglia di installare questa opzione in un computer diverso rispetto al computer che ospita SQL Server.
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il programma di installazione include anche l'opzione per installare una versione di "in modo autonomo" di machine learning componenti che non richiede il motore di database e non viene eseguito in SQL Server.  In genere, si consiglia di installare questa opzione in un computer diverso rispetto al computer che ospita SQL Server.
     
     [Configurare un server autonomo apprendimento](create-a-standalone-r-server.md).
 

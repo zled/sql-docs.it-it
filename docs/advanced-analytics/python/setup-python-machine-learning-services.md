@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abc79124569635f3aafaaa309e25e2c827fa5d9b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Impostare Python Machine Learning Services (In-Database)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   In questo articolo viene descritto come installare i componenti necessari per Python eseguendo il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione guidata e seguendo le istruzioni interattive.
 
@@ -32,7 +33,7 @@ Il **Caratteristiche condivise di** sezione contiene un'opzione di installazione
 
 Al termine dell'installazione, è possibile riconfigurare l'istanza per consentire l'esecuzione di script che utilizzano un eseguibile esterno. Potrebbe essere necessario apportare ulteriori modifiche al server per supportare carichi di lavoro di machine learning. Modifiche di configurazione in genere richiedono il riavvio dell'istanza o un riavvio del servizio Launchpad.
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
 + SQL Server 2017 è obbligatorio. Integrazione di Python non è supportata nelle versioni precedenti di SQL Server.
 + Assicurarsi di installare il motore di database. Per eseguire script Python nel database è necessaria un'istanza di SQL Server.
@@ -273,7 +274,7 @@ Se si dispone di SQL Server Enterprise Edition, utilizzo di resource governor pe
   
      [Opzioni di configurazione server server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
   
--   Modificare il numero di account di lavoro che può essere avviato[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
+-   Modificare il numero di account di lavoro che può essere avviato [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
   
      [Modificare il pool di account utente per SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md)
 

@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0708a96a8ee4e22f3eec5587f87ac09c8408301a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f58cb0fbc6ca62bbd4fe02e0c29d71569140fde2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>Evitare gli errori di pacchetti R installati nelle librerie utente
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Gli utenti esperti di R sono abituati a installare pacchetti R in una raccolta di utente, ogni volta che la libreria predefinita è bloccato o non disponibile. Tuttavia, questo approccio non è supportato in SQL Server e installazione di una libreria utente termina in genere un errore "Impossibile trovare il pacchetto".
 

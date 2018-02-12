@@ -10,24 +10,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2e31ecde894070c9b7b38dbe5e2c9e310ad71c5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d12de2f8298e23d5396d7caf2496b293f1bf28ed
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>Modificare il pool di account utente per l'apprendimento automatico di SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Come parte del processo di installazione di [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], viene creato un nuovo *pool di account utente* Windows per supportare l'esecuzione delle attività tramite il servizio [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]. Lo scopo di questi account di lavoro è per isolare l'esecuzione simultanea di script esterni da utenti diversi di SQL.
 
 Questo articolo descrive la configurazione predefinita, sicurezza e la capacità per gli account di lavoro e come modificare la configurazione predefinita.
 
-**Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-accounts-used-for-external-script-execution"></a>Account di lavoro usati per l'esecuzione dello script esterno
 
@@ -70,7 +71,7 @@ Per ulteriori informazioni sulla gestione di machine learning capacità di attiv
 - [Configurazione di SQL Server per R Services](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 -  [Case study di prestazioni per R Services](../../advanced-analytics/r/performance-case-study-r-services.md)
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 Ogni gruppo di utenti è associato al servizio [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] in un'istanza specifica e non può supportare i processi R eseguiti in altre istanze.
 
