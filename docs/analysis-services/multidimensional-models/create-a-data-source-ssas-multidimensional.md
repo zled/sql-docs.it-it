@@ -20,19 +20,20 @@ helpviewer_keywords:
 - data sources [Analysis Services], creating
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 213bc7a17344f42cd10258962f91711a5ee3acba
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crea un' origine dati (SSAS multidimensionale)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modello multidimensionale, un oggetto origine dati rappresenta una connessione all'origine dati da cui sono l'elaborazione (o l'importazione) dei dati. Un modello multidimensionale deve contenere almeno un oggetto di origine dati, tuttavia è possibile aggiungerne altri per combinare dati provenienti da diversi data warehouse. Utilizzare le istruzioni in questo argomento per creare un oggetto di origine dati per il modello. Per altre informazioni sull'impostazione delle proprietà per questo oggetto, vedere [Impostare le proprietà dell'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In un modello multidimensionale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un oggetto di origine dati rappresenta una connessione all'origine dati dalla quale si elaborano o si importano dati. Un modello multidimensionale deve contenere almeno un oggetto di origine dati, tuttavia è possibile aggiungerne altri per combinare dati provenienti da diversi data warehouse. Utilizzare le istruzioni in questo argomento per creare un oggetto di origine dati per il modello. Per altre informazioni sull'impostazione delle proprietà per questo oggetto, vedere [Impostare le proprietà dell'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
   
  In questo argomento sono contenute le sezioni seguenti:  
   
@@ -179,6 +180,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Origini dati supportate &#40;SSAS - multidimensionale&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

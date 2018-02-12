@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,23 +18,23 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>Le istruzioni di eliminazione e aggiornamento posizionato
 Le applicazioni possono aggiornare o eliminare la riga corrente in un set di risultati con un aggiornamento posizionato o istruzione delete. Posizionato update e delete sono supportate le istruzioni per alcune origini dati, ma non tutte. Per determinare se un'origine dati supporta posizionato istruzioni update e delete, un'applicazione chiama **SQLGetInfo** con SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ Oggetti ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (a seconda del tipo di cursore). Si noti che la libreria di cursori ODBC simula posizionato istruzioni update e delete.  
   
  Per utilizzare un aggiornamento posizionato o istruzione delete, l'applicazione deve creare un set di risultati con una **selezionare per aggiornare** istruzione. La sintassi di questa istruzione è:  
   
- **Selezionare** [**tutti** &#124; **DISTINCT**] *elenco select*  
+ **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
   
  **DA** *elenco di riferimento di tabella*  
   
@@ -45,7 +46,7 @@ Le applicazioni possono aggiornare o eliminare la riga corrente in un set di ris
   
  **AGGIORNAMENTO** *-nome della tabella*  
   
- **IMPOSTARE** *colonna identificatore*  **=**  {*espressione* &#124; **NULL**}  
+ **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
  [**,** *colonna identificatore*  **=**  {*espressione* &#124; **NULL**}]...  
   

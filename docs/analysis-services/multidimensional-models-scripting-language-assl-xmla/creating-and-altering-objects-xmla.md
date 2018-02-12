@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [XML for Analysis]
 - subordinate objects [XML for Analysis]
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - deleting objects
 - XMLA, objects
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6906c6dbab99923983cbfa4e75c35c6f3c0f5073
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Creazione e modifica di oggetti (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gli oggetti principali possono essere in modo indipendente creati, modificati ed eliminati. Di seguito vengono elencati gli oggetti principali:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Gli oggetti principali possono essere creati, modificati ed eliminati in modo indipendente. Di seguito vengono elencati gli oggetti principali:  
   
 -   Server  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Partizioni  
   
--   prospettive  
+-   Prospettive  
   
 -   Modelli di data mining  
   
@@ -104,7 +106,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="description"></a>Description  
  L'esempio seguente crea un'origine dati relazionale che fa riferimento il [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -129,7 +131,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="description"></a>Description  
  Nell'esempio seguente viene modificata l'origine dati relazionale creata nell'esempio precedente per impostare il timeout per la query per l'origine dati su 30 secondi.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 <Alter ObjectExpansion="ObjectProperties" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

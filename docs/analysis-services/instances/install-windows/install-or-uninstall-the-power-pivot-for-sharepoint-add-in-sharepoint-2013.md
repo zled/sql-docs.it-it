@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7066ed9aafe287f5ed4a2bb5ed2981d27bd0e35f
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>Installare o disinstallare il componente aggiuntivo Power Pivot per SharePoint (SharePoint 2013)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] è una raccolta di componenti del server applicazioni e servizi di back-end che forniscono [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] di accesso ai dati un [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] farm. Il componente aggiuntivo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint (**spPowerpivot.msi**) è un pacchetto di installazione utilizzato per installare i componenti del server applicazioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] è una raccolta di servizi back-end e componenti del server applicazioni che forniscono l'accesso a dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in una farm di [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] . Il componente aggiuntivo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint (**spPowerpivot.msi**) è un pacchetto di installazione utilizzato per installare i componenti del server applicazioni.  
   
 -   Il componente aggiuntivo non è necessario per le distribuzioni di SharePoint 2010.  
   
