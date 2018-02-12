@@ -10,20 +10,22 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2783d4ce6ca9cd25b41c1e658f5e3bf2a4f05f24
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 082aea3b1cde3c335dd7fa51b8ef219fc30f7efd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-packages-installed-with-sql-server"></a>Pacchetti R installati con SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo descrive i pacchetti R installati con SQL Server se si installa e abilitano le funzionalità di machine learning. In questo articolo viene anche descritto come gestire e visualizzare i pacchetti esistenti o aggiungere nuovi pacchetti a un'istanza di SQL Server.
 
@@ -35,15 +37,15 @@ Soluzioni R che viene eseguito in SQL Server è possono utilizzare solo i pacche
 
 + Istanza predefinita *MSSQLSERVER* 
 
-    SQL Server 2017:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` 
+    SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` 
     
-    SQL Server 2016:`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
+    SQL Server 2016: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
 
 + Istanza denominata *Istanzadenominatautente* 
 
-    SQL Server 2017:`C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` 
+    SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` 
     
-    SQL Server 2016:`C:\Program Files\Microsoft SQL Server\MSSQL13.MyNamedInstance\R_SERVICES\library`
+    SQL Server 2016: `C:\Program Files\Microsoft SQL Server\MSSQL13.MyNamedInstance\R_SERVICES\library`
 
 È possibile eseguire l'istruzione seguente per verificare la libreria predefinita per l'istanza corrente di R.
 

@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 93c3dcf6dc4a64d116b8a660aaafa1d7a9092531
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configurazione di SQL Server per l'uso con R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo è il secondo in una serie che descrive l'ottimizzazione delle prestazioni per R Services in base alle due case study.  In questo articolo vengono fornite indicazioni sulla configurazione hardware e di rete del computer in cui viene utilizzato per eseguire SQL Server R Services. Contiene inoltre informazioni su come configurare l'istanza di SQL Server, database o tabelle utilizzate in una soluzione. Poiché l'utilizzo di NUMA in SQL Server applica una sfocatura la riga tra le ottimizzazioni di hardware e del database, una terza sezione vengono illustrati CPU affinità e regolamentazione delle risorse in modo dettagliato.
 

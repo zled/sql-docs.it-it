@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 801a29c07d55b9388d5be0edab33690399f2dde9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Installazione automatica di Machine Learning Services (In-Database)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo viene descritto come utilizzare gli argomenti della riga di comando con l'installazione di SQL Server per l'installazione di machine learning componenti.
 
@@ -34,7 +35,7 @@ Per l'installazione automatica, si intende non utilizzare le funzionalità inter
 
 **Si applica a: SQL Server 2017 Machine Learning Services (In-Database), SQL Server 2016 R Services**
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 + È necessario installare il motore di database in ogni istanza in cui verrà utilizzato l'apprendimento.
 
@@ -72,7 +73,7 @@ Si noti il flag necessari per R in SQL Server 2017:
 
 + `ADVANCEDANALYTICS`
 + `SQL_INST_MR`
-+ `IACCEPTROPENLICENSETERMS`(Indici per tabelle con ottimizzazione per la memoria).
++ `IACCEPTROPENLICENSETERMS`.
 
 ### <a name="install-python-only"></a>Solo l'installazione di Python
 

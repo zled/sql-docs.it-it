@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 141d0e3114a59a9b280ceee6d599f97ef16919c7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 565041e140178055b4839985c10ba4633b5f0334
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Monitoraggio Machine Learning Services utilizzando i report personalizzati in Management Studio
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Per rendere più facile da gestire istanza usato per machine learning, il team del prodotto ha fornito un numero di report personalizzato di esempio che è possibile aggiungere a SQL Server Management Studio. In questi rapporti, è possibile visualizzare i dettagli, ad esempio:
 
