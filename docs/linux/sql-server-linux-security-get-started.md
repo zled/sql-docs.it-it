@@ -1,6 +1,6 @@
 ---
 title: Introduzione alla protezione di SQL Server in Linux | Documenti Microsoft
-description: In questo argomento vengono descritte le azioni di protezione tipiche.
+description: In questo articolo vengono descritte le azioni di protezione tipiche.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d927bf68b06050c8067d6f6d63d737f084219341
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 00c222c601cdf314f04db3cb9e3b818d9ea3a65f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procedura dettagliata per le funzionalità di sicurezza di SQL Server in Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Nel caso di un utente di Linux che è una novità di SQL Server, le attività seguenti illustrano alcune delle attività di protezione. Queste non sono specifiche di Linux o univoco, ma consente di farsi un'idea delle aree per approfondire la verifica. In ogni esempio viene fornito un collegamento alla documentazione approfondita per tale area.
 
@@ -38,7 +40,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 ```
 
 >  [!NOTE]
->  Utilizzare sempre una password complessa al posto di asterischi precedente.
+>  Utilizzare sempre una password complessa al posto di asterischi nel comando precedente.
 
 Gli account di accesso possono connettersi a SQL Server e dispongono di accesso (con autorizzazioni limitate) al database master. Per connettersi a un database utente, un'identità corrispondente a livello di database, denominato di un utente del database è necessario un account di accesso. Gli utenti sono specifici di ogni database e devono essere creati separatamente in ogni database per concedere l'accesso. Nell'esempio seguente consente di passare al database AdventureWorks2014 e quindi utilizza il [CREATE USER](../t-sql/statements/create-user-transact-sql.md) istruzione per creare un utente denominato Larry che è associato con l'account di accesso denominato Larry. Se l'account di accesso e l'utente sono correlati (mapping reciproco) sono oggetti diversi. L'account di accesso è un'entità a livello di server. L'utente è un'entità a livello di database.
 
@@ -101,7 +103,7 @@ Per ulteriori informazioni sul sistema di autorizzazione, vedere [Introduzione a
 
 [Sicurezza a livello di riga](../relational-databases/security/row-level-security.md) consente di limitare l'accesso alle righe in un database in base all'utente che esegue una query. Questa funzionalità è utile per scenari come garantire che i clienti possono accedere solo i propri dati o che lavoratori possano accedere solo dati inerenti al proprio reparto.   
 
-Accesso a livello di riga descritta di seguito una procedura di impostazione di due utenti diversi di `Sales.SalesOrderHeader` tabella. 
+I passaggi seguenti con la configurazione di due utenti con accesso a livello di riga diverso per il `Sales.SalesOrderHeader` tabella. 
 
 Creare due account utente per testare la sicurezza a livello di riga:    
    
@@ -247,7 +249,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-Per rimuovere Transparent Data Encryption, eseguire`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+Per rimuovere Transparent Data Encryption, eseguire `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 Le operazioni di crittografia e decrittografia sono pianificate sui thread di background da SQL Server. Per visualizzare lo stato di queste operazioni, è possibile usare le viste del catalogo e le viste a gestione dinamica nell'elenco illustrato di seguito in questo argomento.   
 

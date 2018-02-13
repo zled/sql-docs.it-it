@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: ae79f5e7a2f526b5ef1d153f333adab5c9a8c8a1
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 31bff0cb43048585fb03246b683ad71e673bb7f4
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Utilizzare SQL Server Management Studio in Windows per la gestione di SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo argomento vengono presentate [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) e viene descritto un paio di attività comuni. SQL Server Management Studio è un'applicazione Windows, pertanto utilizzare SQL Server Management Studio, quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux.
+Questo articolo descrive [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) e viene descritto un paio di attività comuni. SQL Server Management Studio è un'applicazione Windows, pertanto utilizzare SQL Server Management Studio, quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux.
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) fa parte di un gruppo di strumenti SQL che offerte Microsoft gratuitamente alle proprie esigenze di sviluppo e gestione. SQL Server Management Studio è un ambiente integrato per accedere, configurare, gestire, amministrare e sviluppare tutti i componenti di SQL Server in esecuzione in locale o nel cloud, Linux, Windows o Docker macOS e Database SQL di Azure e Azure SQL Data Warehouse. SSMS integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per fornire l'accesso a SQL Server a sviluppatori e amministratori di tutti i livelli di.
 

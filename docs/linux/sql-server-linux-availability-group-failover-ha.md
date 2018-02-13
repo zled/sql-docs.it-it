@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: cf0a61c924a10066a41bcf4127e444b60f0f50bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 68e41573c107725ef7af12e8b990678f8991bb02
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Utilizzare sempre i gruppi di disponibilità su Linux
 
@@ -129,7 +129,7 @@ Per ulteriori informazioni:
  [Guida all'amministrazione SLES - risorse](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-### <a name="forceManual"></a>Manuale spostare quando gli strumenti di cluster non risponde 
+### <a name="forceManual"></a> Manuale spostare quando gli strumenti di cluster non risponde 
 
 In casi estremi, se un utente non è possibile utilizzare gli strumenti di gestione di cluster per l'interazione con il cluster (ad esempio il cluster non risponde, gli strumenti di gestione di cluster hanno un comportamento non corretto), l'utente potrebbe essere necessario eseguire il failover manualmente, ignorando la gestione del cluster esterno. Questo non è consigliabile per le normali operazioni e deve essere utilizzato in cluster non riesce a eseguire l'azione di failover utilizzando gli strumenti di Gestione cluster di case.
 
@@ -158,7 +158,7 @@ Se è possibile eseguire il failover del gruppo di disponibilità con gli strume
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. Failover del gruppo di disponibilità con Transact-SQL. Nell'esempio seguente sostituire `<**MyAg**>` con il nome del gruppo di disponibilità. Connettersi all'istanza di SQL Server che ospita la replica secondaria di destinazione ed eseguire il comando seguente:
+1. Failover del gruppo di disponibilità con Transact-SQL. Nell'esempio seguente, sostituire `<**MyAg**>` con il nome del gruppo di disponibilità. Connettersi all'istanza di SQL Server che ospita la replica secondaria di destinazione ed eseguire il comando seguente:
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
@@ -185,7 +185,7 @@ Le sezioni seguenti illustrano come eseguire un aggiornamento in sequenza con is
 
 Quando repliche del gruppo di disponibilità si trovano in istanze di SQL Server in Linux, il tipo di cluster del gruppo di disponibilità è `EXTERNAL` o `NONE`. Un gruppo di disponibilità che è gestito da Gestione cluster di diversi da Windows Server Failover Cluster (WSFC) `EXTERNAL`. Pacemaker con Corosync è riportato un esempio di Gestione cluster esterno. Dispone di un gruppo di disponibilità con alcuna Gestione cluster di tipo cluster `NONE` i passaggi di aggiornamento descritti di seguito sono specifici per i gruppi di disponibilità di tipo cluster `EXTERNAL` o `NONE`.
 
-1. Prima di iniziare, eseguire il backup ogni database.
+1. Prima di iniziare, eseguire il backup di ogni database.
 2. Aggiornare le istanze di SQL Server di ospitare le repliche secondarie.
 
     A. Prima di tutto aggiornare repliche secondarie asincrone.
@@ -244,7 +244,7 @@ Quando repliche del gruppo di disponibilità si trovano in istanze di SQL Server
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. Dopo il failover, è possibile aggiornare SQL Server nella replica primaria precedente ripetendo la stessa procedura descritta nei passaggi da b. 1-b. 3 punto precedente.
+1. Dopo il failover, è possibile aggiornare SQL Server nella replica primaria precedente ripetendo la stessa procedura descritta nei passaggi da b. 1-b. 3.
 
    Nell'esempio seguente viene aggiornata `mssql-server` e `mssql-server-ha` pacchetti.
 
@@ -267,7 +267,7 @@ Quando repliche del gruppo di disponibilità si trovano in istanze di SQL Server
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. Per un gruppi di disponibilità con un cluster esterno manager - tipo di cluster in cui è esterno, il vincolo di percorso che è stato causato dal failover manuale di pulizia. 
+1. Per un gruppi di disponibilità con un gestore cluster esterno - tipo di cluster in cui è esterno, eliminare il vincolo di percorso che è stato causato dal failover manuale. 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  

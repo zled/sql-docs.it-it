@@ -1,6 +1,6 @@
 ---
 title: Crittografia delle connessioni a SQL Server in Linux | Documenti Microsoft
-description: Questo argomento descrive la crittografia delle connessioni a SQL Server in Linux.
+description: Questo articolo descrive la crittografia delle connessioni a SQL Server in Linux.
 author: tmullaney
 ms.date: 01/30/2018
 ms.author: meetb
@@ -9,25 +9,25 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.workload: Inactive
-ms.openlocfilehash: c8d57e65d060ff6958f07fbb57ab97806d99402c
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 646a876fb7cedc4733e4d3a60ef86361ab151c4f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Crittografia delle connessioni a SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux possono usare Transport Layer Security (TLS) per crittografare i dati trasmessi in una rete tra un'applicazione client e un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]supporta gli stessi protocolli TLS in Windows e Linux: TLS 1.0, 1.1 e 1.2. Tuttavia, i passaggi per configurare TLS sono specifici del sistema operativo in cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux possono usare Transport Layer Security (TLS) per crittografare i dati trasmessi in una rete tra un'applicazione client e un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta gli stessi protocolli TLS in Windows e Linux: TLS 1.0, 1.1 e 1.2. Tuttavia, i passaggi per configurare TLS sono specifici del sistema operativo in cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione.  
 
 ## <a name="requirements-for-certificates"></a>Requisiti per i certificati 
 Prima di iniziare, è necessario assicurarsi che i certificati di rispettare i requisiti seguenti:
@@ -70,9 +70,9 @@ TLS è utilizzato per crittografare le connessioni da un'applicazione client [!I
         - **SUSE**: il certificato di copia al ```/usr/share/pki/trust/anchors/``` utilizzare ```update-ca-certificates``` per abilitarlo come autorità di certificazione del certificato.
         - **Windows**: Importa il file con estensione PEM come un certificato in utente corrente -> attendibile l'autorità di certificazione radice -> certificati
         - **macOS**: 
-           - Copiare il certificato```/usr/local/etc/openssl/certs```
-           - Eseguire il comando seguente per ottenere il valore hash:```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - Rinominare il certificato come valore. Esempio: ```mv mssql.pem dc2dd900.0```. Verificare che sia dc2dd900.0 in```/usr/local/etc/openssl/certs```
+           - Copiare il certificato ```/usr/local/etc/openssl/certs```
+           - Eseguire il comando seguente per ottenere il valore hash: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - Rinominare il certificato come valore. Esempio: ```mv mssql.pem dc2dd900.0```. Verificare che sia dc2dd900.0 in ```/usr/local/etc/openssl/certs```
     
 -   **Esempi di stringhe di connessione** 
 

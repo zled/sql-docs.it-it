@@ -9,16 +9,16 @@ ms.topic: tutorial
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: mvc
+ms.custom: sql-linux,mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 4ada1034b64f710f4eeae995b771ef8be5bf4fe2
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a21856b3a864373f84ad304484ecdd88ac17f52a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Configurazione di un contenitore di SQL Server in Kubernetes per la disponibilità elevata
 
@@ -119,7 +119,7 @@ Configurare un [volume permanente](http://kubernetes.io/docs/concepts/storage/pe
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
-   `<Path to pvc.yaml file>`è il percorso in cui è stato salvato il file.
+   `<Path to pvc.yaml file>` è il percorso in cui è stato salvato il file.
 
    Il volume permanente è automaticamente creato come un account di archiviazione di Azure e associato al attestazione volume permanente. 
 
@@ -131,7 +131,7 @@ Configurare un [volume permanente](http://kubernetes.io/docs/concepts/storage/pe
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
-   `<PersistentVolumeClaim>`è il nome dell'attestazione volume permanente.
+   `<PersistentVolumeClaim>` è il nome dell'attestazione volume permanente.
 
    Nel passaggio precedente, l'attestazione permanente volume denominato `mssql-data`. Per visualizzare i metadati sull'attestazione permanente volume, eseguire il comando seguente:
 
@@ -153,7 +153,7 @@ Configurare un [volume permanente](http://kubernetes.io/docs/concepts/storage/pe
    kubectl describe pv
    ```
 
-   `kubectl`Restituisce i metadati sul volume persistente che è stato automaticamente creato e associato al volume permanente attestazione. 
+   `kubectl` Restituisce i metadati sul volume persistente che è stato automaticamente creato e associato al volume permanente attestazione. 
 
 ## <a name="create-the-deployment"></a>Creare la distribuzione
 
@@ -242,7 +242,7 @@ In questo passaggio, creare un manifesto per descrivere il contenitore in base a
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
-   `<Path to sqldeployment.yaml file>`è il percorso in cui è stato salvato il file.
+   `<Path to sqldeployment.yaml file>` è il percorso in cui è stato salvato il file.
 
    ![Schermata del comando di distribuzione](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
 
@@ -293,8 +293,8 @@ Per connettersi all'istanza di SQL Server, è possibile utilizzare le seguenti a
 
    Sostituire i valori seguenti:
       
-    - `<External IP Address>`con l'indirizzo IP per il `mssql-deployment` servizio 
-    - `MyC0m9l&xP@ssw0rd`con la password
+    - `<External IP Address>` con l'indirizzo IP per il `mssql-deployment` servizio 
+    - `MyC0m9l&xP@ssw0rd` con la password
 
 ## <a name="verify-failure-and-recovery"></a>Verificare l'errore e ripristino
 
@@ -313,7 +313,7 @@ Per verificare l'errore e il ripristino, è possibile eliminare il pod. Effettua
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
-   `mssql-deployment-0`il valore viene restituito nel passaggio precedente per nome pod. 
+   `mssql-deployment-0` il valore viene restituito nel passaggio precedente per nome pod. 
 
 Kubernetes ricrea automaticamente le unità per il ripristino di un'istanza di SQL Server, connettersi all'archivio permanente. Utilizzare `kubectl get pods` per verificare che venga distribuito un nuovo pod. Utilizzare `kubectl get services` per verificare che l'indirizzo IP per il nuovo contenitore sia lo stesso. 
 

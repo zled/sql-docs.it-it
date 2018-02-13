@@ -9,25 +9,25 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.workload: Inactive
-ms.openlocfilehash: 2f9d7d8697aa82caf3822cefefe83a2525a72e24
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 0e5a08655bcfea396bcf599ef65e7a8e1f126575
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Librerie di connettività e altri framework per Microsoft SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Estrarre il nostro [esercitazioni introduttive](http://aka.ms/sqldev) per iniziare a utilizzare linguaggi di programmazione quali c#, Java, Node.js, PHP e Python e compilare un'app usando SQL Server in Linux o di Windows o di Docker su macOS rapidamente.
+Estrarre il [esercitazioni introduttive](http://aka.ms/sqldev) per iniziare a utilizzare linguaggi di programmazione quali c#, Java, Node.js, PHP e Python e compilare un'app usando SQL Server in Linux o di Windows o di Docker su macOS rapidamente.
 
-La tabella seguente elenca le librerie di connettività o *driver* utilizzata dalle applicazioni client da una vasta gamma di linguaggi per connettersi e utilizzare Microsoft SQL Server in esecuzione in locale o nel cloud, in Linux, Windows o Docker, nonché per Database SQL di Azure e Azure SQL Data Warehouse. 
+La tabella seguente elenca le librerie di connettività o *driver* utilizzata dalle applicazioni client da una vasta gamma di linguaggi per connettersi e utilizzare Microsoft SQL Server in esecuzione in locale o nel cloud, Linux, Windows o Docker e anche il Database SQL di Azure e Azure SQL Data Warehouse. 
 
 | Lingua | Piattaforma | Risorse aggiuntive | Scarica | Introduzione |
 | :-- | :-- | :-- | :-- | :-- |

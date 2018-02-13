@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: e0e0a2d10db1bddf93b098051e1db70a6a32e248
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utilizzare Visual Studio per creare database per SQL Server in Linux
 
@@ -103,7 +103,7 @@ SQL Server Data Tools (SSDT) diventa un potente database lifecycle management (D
 
 5. Archiviare lo stato di pubblicazione di **operazioni degli strumenti dati** finestra.
 
-6. Fare clic su **vista Reulst** o **Visualizza Script** per visualizzare i dettagli di Microsoft Azure di pubblicare i risultati in SQL Server in Linux.
+6. Fare clic su **vista Reulst** o **Visualizza Script** per visualizzare i dettagli del database di pubblicare i risultati in SQL Server in Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 

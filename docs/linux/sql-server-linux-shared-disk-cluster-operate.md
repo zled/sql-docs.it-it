@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 6f8ba6ed2e56ea4dc97ab68fa85601d94edfe1fc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 5e557c2ef6005a9e2822b973748928bae991875c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Utilizzare l'istanza del cluster di failover, SQL Server in Linux
 
@@ -38,7 +38,7 @@ La modalità di failover dipende dalla distribuzione di Linux. Seguire le istruz
 - [RHEL o Ubuntu](#rhelFailover)
 - [SLES](#slesFailover)
 
-## <a name = "#rhelFailover"></a>Failover manuale (RHEL o Ubuntu)
+## <a name = "#rhelFailover"></a> Failover manuale (RHEL o Ubuntu)
 
 Per eseguire un failover manuale, bopomofo Red Hat Enterprise Linux (RHEL) o il server Ubuntu eseguita i passaggi seguenti.
 1.  Il comando seguente: 
@@ -59,7 +59,7 @@ Per eseguire un failover manuale, bopomofo Red Hat Enterprise Linux (RHEL) o il 
 
 \<FCIResourceName > è il nome della risorsa Pacemaker per l'istanza FCI. 
 
-## <a name = "#slesFailover"></a>Failover manuale (SLES)
+## <a name = "#slesFailover"></a> Failover manuale (SLES)
 
 
 In Suse Linux Enterprise Server (SLES), utilizzare il `migrate` comando per eseguire il failover manuale di una FCI di SQL Server. Esempio:

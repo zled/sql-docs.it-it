@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,23 +20,24 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 803772c967bfb1fb0eaa621abbea8ceecaad4a05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1801fcd260dd674489a851361044ff6c9110c63
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recupero di dati non utilizzati mediante sql:overflow-field (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Quando vengono inseriti i record in un database da un documento XML utilizzando il [!INCLUDE[tsql](../../includes/tsql-md.md)] funzione OPENXML, tutti i dati non utilizzati dal documento XML di origine possono essere archiviati in una colonna. Quando si recuperano dati da un database utilizzando schemi con annotazioni, è possibile specificare il **SQL: overflow-campo** attributo per identificare la colonna nella tabella in cui vengono archiviati i dati di overflow. Il **SQL: overflow-campo** attributo può essere specificato in  **\<elemento >**.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Quando i record vengono inseriti in un database da un documento XML tramite la funzione OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)], tutti i dati non utilizzati dal documento XML di origine possono essere archiviati in una colonna. Quando si recuperano dati da un database utilizzando schemi con annotazioni, è possibile specificare il **SQL: overflow-campo** attributo per identificare la colonna nella tabella in cui vengono archiviati i dati di overflow. Il **SQL: overflow-campo** attributo può essere specificato in  **\<elemento >**.  
   
  I dati vengono quindi recuperati nei modi seguenti:  
   
--   Gli attributi archiviati nella colonna di overflow vengono aggiunti all'elemento che contiene il **SQL: overflow-campo** annotazione.  
+-   Gli attributi archiviati nella colonna di overflow vengono aggiunti all'elemento che contiene il **SQL:overflow-campo** annotazione.  
   
 -   Gli elementi figlio e i relativi discendenti, archiviati nella colonna di overflow nel database, vengono aggiunti come elementi figlio dopo il contenuto specificato in modo esplicito nello schema. Non viene rispettato alcun ordine.  
   

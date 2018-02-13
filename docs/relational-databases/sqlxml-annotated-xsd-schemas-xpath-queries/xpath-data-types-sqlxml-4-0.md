@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -29,19 +30,20 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d028ddf781edba7cc610966facc2e08b6bba58bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d36d141e552750650ede74ba2aba92b203825558
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipi di dati XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e XML Schema (XSD) hanno tipi di dati molto diversi. XPath, ad esempio, non include tipi di dati integer o di data, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e XSD ne includono diversi. XSD utilizza una precisione in nanosecondi per i valori di ora, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza al massimo una precisione di 1/300 secondi. Di conseguenza, il mapping di un tipo di dati a un altro non è sempre possibile. Per ulteriori informazioni sul mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati a tipi di dati XSD, vedere [coercizioni dei tipi di dati e l'annotazione SQL: DataType &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e gli elementi XML Schema (XSD) utilizzano tipi di dati molto diversi. XPath, ad esempio, non include tipi di dati integer o di data, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e XSD ne includono diversi. XSD utilizza una precisione in nanosecondi per i valori di ora, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza al massimo una precisione di 1/300 secondi. Di conseguenza, il mapping di un tipo di dati a un altro non è sempre possibile. Per ulteriori informazioni sul mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati a tipi di dati XSD, vedere [coercizioni dei tipi di dati e l'annotazione SQL: DataType &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  XPath utilizza tre tipi di dati: **stringa**, **numero**, e **booleano**. Il **numero** tipo di dati è sempre una valore IEEE 754 a precisione doppia. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float (53)** tipo di dati è il più vicino a XPath **numero**. Tuttavia, **float (53)** non è esattamente IEEE 754. Ad esempio, non viene utilizzato né un valore diverso da un numero (NaN, Not-a-Number) né un valore infinito. Il tentativo di convertire una stringa di un valore numerico in **numero** e il tentativo di divisione per zero genera un errore.  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 11/17/2017
  Le conversioni dei set di nodi non sono sempre intuitive. Un set di nodi viene convertito in un **stringa** prendendo il valore di stringa di solo il primo nodo nel set. Un set di nodi viene convertito in **numero** tramite la conversione a **stringa**e quindi la conversione **stringa** a **numero**. Un set di nodi viene convertito in **booleano** eseguendo i test di esistenza.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegue la selezione della posizione nei set di nodi: la query XPath `Customer[3]`, ad esempio, indica il terzo cliente. Questo tipo di selezione della posizione non è supportato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di conseguenza, il nodo-set-per-**stringa** o nodo-set-per-**numero** conversioni come descritto dalla specifica XPath non sono implementate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza le semantiche "any" dove la specifica XPath specifica la semantica "first". Ad esempio, in base alla specifica W3C XPath, la query XPath `Order[OrderDetail/@UnitPrice > 10.0]` seleziona gli ordini con il primo **OrderDetail** che ha un **UnitPrice** maggiore di 10.0. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa query XPath seleziona gli ordini con qualsiasi **OrderDetail** che ha un **UnitPrice** maggiore di 10.0.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegue selezione della posizione nel set di nodi: ad esempio, la query XPath `Customer[3]` indica il terzo cliente; questo tipo di selezione della posizione non è supportato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di conseguenza, il nodo-set-per-**stringa** o nodo-set-per-**numero** conversioni come descritto dalla specifica XPath non sono implementate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza le semantiche "any" dove la specifica XPath specifica la semantica "first". Ad esempio, in base alla specifica W3C XPath, la query XPath `Order[OrderDetail/@UnitPrice > 10.0]` seleziona gli ordini con il primo **OrderDetail** che ha un **UnitPrice** maggiore di 10.0. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa query XPath seleziona gli ordini con qualsiasi **OrderDetail** che ha un **UnitPrice** maggiore di 10.0.  
   
  La conversione a **booleano** genera un esistenza test; pertanto, la query XPath `Products[@Discontinued=true()]` equivale all'espressione SQL "Products. Discontinued is not null", non all'espressione SQL "Products. Discontinued = 1". Per rendere la query è equivalente all'espressione SQL, convertire innanzitutto il set di nodi in un non -**booleano** digitare, ad esempio **numero**. Ad esempio, `Products[number(@Discontinued) = true()]`.  
   

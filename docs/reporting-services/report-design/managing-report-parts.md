@@ -18,10 +18,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="managing-report-parts"></a>Gestione di parti di report
   Le parti del report possono essere inoltre riusate da più utenti e in più report. Gli utenti possono cercare le parti del report nel server e aggiungerle a un report.  Possono inoltre essere informati sugli aggiornamenti apportati alla parte del report nel server e ripubblicare nuove versioni di una parte del report. Queste azioni di creazione di report possono essere interessate e controllate dalle autorizzazioni di sicurezza di Reporting Services.  In questo argomento vengono illustrate le proprietà delle parti del report e viene descritto il comportamento delle parti del report presenti nel server.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/09/2018
  Quando le parti del report vengono pubblicate da un'applicazione di creazione di report come Generatore report in un server di report in modalità integrata SharePoint, viene aggiornato anche il catalogo del server di report e vengono eseguite ricerche nella raccolta per riflettere in maniera accurata la parte del report nuova o aggiornata.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Caricamento diretto di parti del report in una cartella di SharePoint  
- Se una parte del report viene caricata direttamente in una cartella di documenti di SharePoint anziché essere pubblicata da un'applicazione di creazione di report, il catalogo del server di report non viene aggiornato. La parte del report caricata non verrà pertanto trovata mediante le ricerche eseguite nella raccolta di parti del report. Per garantire la sincronizzazione delle cartelle di SharePoint e del catalogo del server di report, è possibile attivare la caratteristica di sincronizzazione dei file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nel server SharePoint. Per altre informazioni, vedere [Attivare la funzionalità Sincronizzazione file server di report in Amministrazione centrale SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
+ Se una parte del report viene caricata direttamente in una cartella di documenti di SharePoint anziché essere pubblicata da un'applicazione di creazione di report, il catalogo del server di report non viene aggiornato. La parte del report caricata non verrà pertanto trovata mediante le ricerche eseguite nella raccolta di parti del report. Per garantire la sincronizzazione delle cartelle di SharePoint e del catalogo del server di report, è possibile attivare la caratteristica di sincronizzazione dei file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nel server SharePoint. Per altre informazioni, vedere [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
  È inoltre possibile sincronizzare i file mediante la chiamata di alcune API di gestione di Reporting Services, ad esempio GetProperties e SetProperties.  
   

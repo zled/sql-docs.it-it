@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 84195d2451664b2bee81ebbb1dc3b7d9d89060d5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurare più subnet gruppi di disponibilità AlwaysOn e istanze del cluster di failover
 
@@ -58,7 +58,7 @@ Nel mondo Windows, un Failover del Cluster WSFC (Windows Server) in modo nativo 
 
     Dove *filename* è il nome che si desidera chiamare l'implementazione.
 
-2.  Modificare il file che è stato generato. Cercare il `<resources>` sezione. Si noterà che le varie risorse che sono state create per il gruppo di disponibilità o FCI. Individuare quello associato all'indirizzo IP. Aggiungere un `<instance attributes>` sezione con le informazioni per il secondo indirizzo IP di sopra o di sotto di quello esistente, ma prima `<operations>`. Avrà un aspetto simile la sintassi seguente:
+2.  Modificare il file che è stato generato. Cercare il `<resources>` sezione. Si noterà che le varie risorse che sono state create per il gruppo di disponibilità o FCI. Individuare quello associato all'indirizzo IP. Aggiungere un `<instance attributes>` sezione con le informazioni per il secondo indirizzo IP di sopra o di sotto di quello esistente, ma prima `<operations>`. È simile alla sintassi seguente:
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">

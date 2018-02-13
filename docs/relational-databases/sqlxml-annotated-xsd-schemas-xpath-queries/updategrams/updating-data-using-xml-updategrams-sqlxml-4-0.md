@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c6ff13edf01370778da9361d5834e70ebfdb20a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01df178b47bb3aac688d12e54760cd530706fd94
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aggiornamento di dati tramite updategram XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Quando si aggiornano dati esistenti, è necessario specificare sia il  **\<prima >** e  **\<dopo >** blocchi. Gli elementi specificati nel  **\<prima >** e  **\<dopo >** blocchi descrivono la modifica desiderata. L'updategram utilizza gli elementi vengono specificati nel  **\<prima >** blocco per identificare i record esistenti nel database. Gli elementi corrispondenti nel  **\<dopo >** blocco indicare come i record devono apparire dopo l'esecuzione dell'operazione di aggiornamento. Tali informazioni, l'updategram crea un'istruzione SQL che corrisponde alla  **\<dopo >** blocco. L'updategram utilizza quindi questa istruzione per aggiornare il database.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Quando si aggiornano dati esistenti, è necessario specificare sia il  **\<prima >** e  **\<dopo >** blocchi. Gli elementi specificati nel  **\<prima >** e  **\<dopo >** blocchi descrivono la modifica desiderata. L'updategram utilizza gli elementi vengono specificati nel  **\<prima >** blocco per identificare i record esistenti nel database. Gli elementi corrispondenti nel  **\<dopo >** blocco indicare come i record devono apparire dopo l'esecuzione dell'operazione di aggiornamento. Tali informazioni, l'updategram crea un'istruzione SQL che corrisponde alla  **\<dopo >** blocco. L'updategram utilizza quindi questa istruzione per aggiornare il database.  
   
  Di seguito viene illustrato il formato dell'updategram per un'operazione di aggiornamento:  
   
@@ -59,10 +61,10 @@ ms.lasthandoff: 11/17/2017
 </ROOT>  
 ```  
   
- **\<updg: prima di >**  
+ **\<updg:before>**  
  Gli elementi di  **\<prima >** blocco identificano record esistenti nelle tabelle del database.  
   
- **\<updg: dopo >**  
+ **\<updg:after>**  
  Gli elementi nel  **\<dopo >** blocco vengono descritti i record specificati nel  **\<prima >** blocco dovrebbe essere dopo gli aggiornamenti vengono applicati.  
   
  Il **dello schema di mapping** attributo identifica lo schema di mapping da utilizzare dall'updategram. Se l'updategram specifica uno schema di mapping, i nomi degli elementi e attributi specificati nel  **\<prima >** e  **\<dopo >** blocchi devono corrispondere ai nomi nello schema. Lo schema di mapping esegue il mapping di questi nomi degli elementi o degli attributi ai nomi delle tabelle e delle colonne del database.  

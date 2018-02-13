@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: d6a49bc2f3fb815cecda0e8a24a63993b5423103
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5f52c5f83ca91b196f0bf2f05e98fb73133b4c8a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurare il Cluster Ubuntu e risorsa gruppo di disponibilità
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/09/2018
 Questo documento illustra come creare un cluster di tre nodi in Ubuntu e aggiungere un gruppo di disponibilità creato in precedenza come risorsa nel cluster. Per la disponibilità elevata, un gruppo di disponibilità in Linux richiede tre nodi, vedere [elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> A questo punto, integrazione di SQL Server con Pacemaker in Linux non è accoppiata come con WSFC in Windows. All'interno di SQL, non è possibile sapere sulla presenza del cluster, tutte le orchestrazioni non rientra e il servizio viene controllato in base a un'istanza autonoma da Pacemaker. Inoltre, il nome di rete virtuale è specifico di WSFC, è disponibile un equivalente dello stesso in Pacemaker. Always On viste a gestione dinamica informazioni del cluster per le query restituiscono righe vuote. È comunque possibile creare un listener per poterlo utilizzare per la riconnessione dopo il failover trasparente, ma è necessario registrare manualmente il nome del listener nel server DNS con l'indirizzo IP utilizzato per creare la risorsa IP virtuale (come illustrato di seguito).
+> A questo punto, integrazione di SQL Server con Pacemaker in Linux non è accoppiata come con WSFC in Windows. All'interno di SQL, non è possibile sapere sulla presenza del cluster, tutte le orchestrazioni non rientra e il servizio viene controllato in base a un'istanza autonoma da Pacemaker. Inoltre, il nome di rete virtuale è specifico di WSFC, è disponibile un equivalente dello stesso in Pacemaker. Always On viste a gestione dinamica informazioni del cluster per le query restituiscono righe vuote. È comunque possibile creare un listener per poterlo utilizzare per la riconnessione dopo il failover trasparente, ma è necessario registrare manualmente il nome del listener nel server DNS con l'indirizzo IP utilizzato per creare la risorsa IP virtuale (come descritto nelle sezioni riportate di seguito).
 
 Nelle sezioni seguenti viene illustrata la procedura per configurare una soluzione di cluster di failover. 
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. Creare il cluster. 
 
    >[!WARNING]
-   >A causa di un problema noto che il fornitore clustering è in corso, a partire dal cluster ('PC cluster start') ha esito negativo con errore di seguito. Questo avviene perché il file di log configurati in /etc/corosync/corosync.conf che viene creato quando il comando di installazione del cluster viene eseguito, non è corretto. Per risolvere questo problema, modificare il file di log: /var/log/corosync/corosync.log. In alternativa è possibile creare il file /var/log/cluster/corosync.log.
+   >A causa di un problema noto che il fornitore clustering è in corso, a partire dal cluster ('PC cluster start') ha esito negativo con il seguente errore. Questo avviene perché il file di log configurati in /etc/corosync/corosync.conf che viene creato quando il comando di installazione del cluster viene eseguito, non è corretto. Per risolvere questo problema, modificare il file di log: /var/log/corosync/corosync.log. In alternativa è possibile creare il file /var/log/cluster/corosync.log.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -150,7 +150,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Impostare la proprietà cluster start-errore-è-errore irreversibile per false
 
-`start-failure-is-fatal`indica se un errore di avvio di una risorsa in un nodo impedisce ulteriori tentativi di avvio in tale nodo. Se impostato su `false`, il cluster decide di provare ad avviare nello stesso nodo in base alle corrente conteggio e la migrazione soglia di errore della risorsa. In tal caso, dopo il failover si verifica, tentativi Pacemaker avvio la disponibilità gruppo risorsa per il primo primario quando l'istanza SQL è disponibile. Pacemaker Abbassa di livello la replica secondaria e viene automaticamente aggiunto nuovamente il gruppo di disponibilità. 
+`start-failure-is-fatal` indica se un errore di avvio di una risorsa in un nodo impedisce ulteriori tentativi di avvio in tale nodo. Se impostato su `false`, il cluster decide di provare ad avviare nello stesso nodo in base alle corrente conteggio e la migrazione soglia di errore della risorsa. In tal caso, dopo il failover si verifica, tentativi Pacemaker avvio la disponibilità gruppo risorsa per il primo primario quando l'istanza SQL è disponibile. Pacemaker Abbassa di livello la replica secondaria e viene automaticamente aggiunto nuovamente il gruppo di disponibilità. 
 
 Per aggiornare il valore della proprietà da `false` eseguire lo script seguente:
 

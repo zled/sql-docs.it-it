@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: b2251e306098c2f4e9c0fe7a7cbe0200eddf8a4e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 005757c0a1b1f4309201fc7b7c63987f4ff3bcb8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Esecuzione in Linux con cron del pacchetto di pianificazione di SQL Server Integration Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Quando si esegue SQL Server Integration Services (SSIS) e SQL Server in Windows, è possibile automatizzare l'esecuzione di pacchetti SSIS utilizzando SQL Server Agent. Quando si esegue SQL Server e SSIS in Linux, tuttavia, l'utilità di SQL Server Agent non è disponibile per pianificare i processi in Linux. È invece necessario utilizzare il servizio cron, che è ampiamente utilizzato su piattaforme Linux per automatizzare l'esecuzione del pacchetto.
 

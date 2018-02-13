@@ -8,28 +8,30 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, about SQLXML
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3e47e3a55ebc0bf94dabbb2ca71c78f42ce3231
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 99780e4985f2406d5f0a394ae427ad6342106bb6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Concetti relativi alla programmazione SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]SQLXML 3.0 è stato offerto come versione Web per fornire funzionalità aggiuntive di XML sul lato client e miglioramenti alle funzionalità esistenti, ad esempio schemi XSD con annotazioni, caricamento bulk XML, supporto di Web services (SOAP) e Updategram.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SQLXML 3.0 è stato offerto come versione Web per offrire ulteriori miglioramenti e funzionalità XML sul lato client alle caratteristiche esistenti, ad esempio schemi XSD con annotazioni, caricamento bulk XML, supporto per servizi Web (SOAP) e updategram.  
   
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è stato introdotto SQLXML 4.0, che continua a fornire le stesse funzionalità di SQLXML 3.0 con l'aggiunta tuttavia di nuovi aggiornamenti forniti per supportare le nuove caratteristiche introdotte con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdotto SQLXML 4.0, che continua a fornire la stessa funzionalità di SQLXML 3.0 con altri aggiornamenti forniti per supportare le nuove funzionalità introdotte con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  In questa sezione vengono fornite informazioni su SQLXML 4.0.  
   
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/17/2017
  [Uso di query XPath in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  Viene descritto come utilizzare un subset del linguaggio XPath per eseguire query sulle viste XML create da uno schema XSD con annotazioni, con l'ausilio di alcuni esempi.  
   
- [Uso di updategram per modificare dati in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [Utilizzo di updategram per modificare i dati in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Vengono fornite informazioni sugli updategram che consentono di modificare i dati in un database agendo sulle viste XML fornite dagli schemi XSD o XDR con annotazioni.  
   
  [Esecuzione del caricamento Bulk di dati XML &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  

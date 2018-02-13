@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,24 +18,25 @@ helpviewer_keywords:
 - number function
 - XPath queries [SQLXML], explicit conversion functions
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e73e80583af61899d2ed8b219861c7a2868ec96a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bd554000ca2982ad265cdd0e45856baa592d2be0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Specifica di funzioni di conversione esplicita in query XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Gli esempi seguenti mostrano come conversione esplicita nelle query XPath vengono specificate funzioni. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Negli esempi seguenti viene illustrato come specificare le funzioni di conversione esplicita nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. Utilizzo della funzione di conversione esplicita number ()  
- Il **Number ()** funzione converte un argomento a un numero.  
+ Il **Number()** funzione converte un argomento a un numero.  
   
  Supponendo che il valore di **ContactID** è un valore numerico, la query seguente converte **ContactID** a un numero e lo confronta con il valore 4. La query restituisce quindi tutti  **\<dipendente >** gli elementi figlio del nodo di contesto con il **ContactID** attributo con un valore numerico 4:  
   
@@ -83,7 +85,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. Utilizzo della funzione di conversione esplicita string ()  
- Il **String ()** funzione converte un argomento in una stringa.  
+ Il **String()** funzione converte un argomento in una stringa.  
   
  La query seguente converte **ContactID** in una stringa e viene confrontato con la stringa di valore "4". La query restituisce tutti  **\<dipendente >** gli elementi figlio del nodo di contesto con un **ContactID** con un valore stringa "4":  
   

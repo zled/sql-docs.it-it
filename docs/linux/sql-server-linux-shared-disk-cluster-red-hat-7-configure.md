@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 519728819aa79534a1c8cc3a079164d276924a44
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi Red Hat Enterprise Linux per SQL Server
 
@@ -30,16 +30,16 @@ Questa guida fornisce istruzioni su come creare un cluster di dischi condivisi a
 > [!NOTE] 
 > Accesso alla documentazione e componente aggiuntivo Red Hat a disponibilità elevata richiede una sottoscrizione. 
 
-Come illustrato nella figura seguente viene illustrata l'archiviazione è presentata a due server. I componenti di clustering - Corosync e Pacemaker - coordinano le comunicazioni e gestione delle risorse. Uno dei server con la connessione attiva per le risorse di archiviazione e SQL Server. Quando il Pacemaker rileva un errore i componenti di clustering gestiscono lo spostamento di risorse a altro nodo.  
+Come illustrato nella figura seguente, l'archiviazione è presentata a due server. I componenti di clustering - Corosync e Pacemaker - coordinano le comunicazioni e gestione delle risorse. Uno dei server con la connessione attiva per le risorse di archiviazione e SQL Server. Quando il Pacemaker rileva un errore i componenti di clustering gestiscono lo spostamento di risorse a altro nodo.  
 
 ![Red Hat Enterprise Linux 7 condiviso del Cluster SQL disco](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Per ulteriori informazioni su configurazione cluster, le opzioni di agenti di risorsa e la gestione, visitare [la documentazione di riferimento RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Per ulteriori informazioni sulla configurazione del cluster, le opzioni di agenti di risorse e gestione, visitare [la documentazione di riferimento RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
 > Integrazione di SQL Server con Pacemaker a questo punto, non è accoppiata come con WSFC in Windows. All'interno di SQL, non è possibile sapere sulla presenza del cluster, tutte le orchestrazioni non rientra e il servizio viene controllato come istanza autonoma da Pacemaker. Inoltre, ad esempio, sys.dm os_cluster_properties e Sys.dm os_cluster_nodes DMV cluster non sarà alcun record.
-Per utilizzare una stringa di connessione che punta al nome di un server di stringa e non usa l'indirizzo IP, sarà necessario registrare in un server DNS l'indirizzo IP utilizzato per creare la risorsa IP virtuale (come illustrato di seguito) con il nome del server selezionato.
+Per utilizzare una stringa di connessione che punta al nome di un server di stringa e non usa l'indirizzo IP, sarà necessario registrare i server DNS l'indirizzo IP utilizzato per creare la risorsa IP virtuale (come descritto nelle sezioni seguenti) con il nome di server selezionato.
 
 Nelle sezioni seguenti viene illustrata la procedura per configurare una soluzione di cluster di failover. 
 
@@ -53,7 +53,7 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Installare e configurare SQL Server in ogni nodo del cluster
 
-1. Installare e configurare SQL Server in entrambi i nodi.  Per informazioni dettagliate vedere [installazione di SQL Server in Linux](sql-server-linux-setup.md).
+1. Installare e configurare SQL Server in entrambi i nodi.  Per istruzioni dettagliate, vedere [installazione di SQL Server in Linux](sql-server-linux-setup.md).
 
 1. Specificare un nodo primario e l'altro come secondario, ai fini di configurazione. Utilizzare questi termini per le operazioni seguenti in questa Guida.  
 
@@ -68,7 +68,7 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
 > [!NOTE] 
 > In fase di installazione, viene generato per l'istanza di SQL Server e inserito in una chiave Master del Server `/var/opt/mssql/secrets/machine-key`. In Linux, SQL Server viene sempre eseguito come un account locale denominato mssql. Poiché si tratta di un account locale, l'identità non è condivise tra i nodi. Pertanto, è necessario copiare la chiave di crittografia dal nodo primario a ogni nodo secondario in modo che ogni account locale mssql possono accedervi per decrittografare la chiave Master del Server. 
 
-1. Nel nodo primario, creare un account di accesso SQL server per Pacemaker e concedere l'autorizzazione di accesso per l'esecuzione `sp_server_diagnostics`. Pacemaker utilizzerà questo account per verificare quale sia il nodo è in esecuzione SQL Server. 
+1. Nel nodo primario, creare un account di accesso SQL server per Pacemaker e concedere l'autorizzazione di accesso per l'esecuzione `sp_server_diagnostics`. Pacemaker utilizza questo account per verificare quale sia il nodo è in esecuzione SQL Server. 
 
    ```bash
    sudo systemctl start mssql-server
@@ -131,13 +131,13 @@ Il Server NFS eseguire le operazioni seguenti:
    sudo yum -y install nfs-utils
    ```
 
-1. Abilitare e avviare`rpcbind`
+1. Abilitare e avviare `rpcbind`
 
    ```bash
    sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. Abilitare e avviare`nfs-server`
+1. Abilitare e avviare `nfs-server`
  
    ```bash
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
@@ -233,7 +233,7 @@ Per ulteriori informazioni sull'utilizzo di NFS, vedere le risorse seguenti:
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->Se si utilizza una risorsa del File System (FS), come indicato di seguito, non è necessario per mantenere il comando di montaggio in /etc/fstab. Pacemaker si occuperà di montare la cartella quando avvia la risorsa di ADFS in cluster. Con l'aiuto di geofencing, si verifica un schermo ADFS non è montato due volte. 
+>Se si utilizza una risorsa del File System (FS) come consigliato in questo caso, non è necessario per mantenere il comando di montaggio in /etc/fstab. Pacemaker si occuperà di montare la cartella quando avvia la risorsa di ADFS in cluster. Con l'aiuto di geofencing, garantisce che l'ADFS non è montato due volte. 
 
 1.  Eseguire `mount -a` comando per il sistema aggiornare i percorsi montati.  
 
@@ -332,7 +332,7 @@ A questo punto, entrambe le istanze di SQL Server sono configurate per eseguire 
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. Configurare le risorse del cluster per SQL Server, File System e le risorse IP virtuali e il push della configurazione per il cluster. È necessario che le informazioni seguenti:
+2. Configurare le risorse del cluster per SQL Server, File System e le risorse IP virtuali e il push della configurazione per il cluster. Sono necessarie le seguenti informazioni:
 
    - **Nome di risorsa di SQL Server**: un nome per la risorsa cluster di SQL Server. 
    - **Nome risorsa IP mobile**: un nome per la risorsa di indirizzo IP virtuale.

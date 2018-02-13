@@ -8,28 +8,29 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a0828b1e50472ecec5f256c9ddfe13e8f0db8b7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 77a50d48ee5c6d5baa8b05b327146e74b5eff815
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Grafico di elaborazione con SQL Server e Database SQL di Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre funzionalità di database di graph di modellare relazioni molti-a-molti. Le relazioni di grafico sono integrate [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e ricevere i vantaggi dell'utilizzo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come sistema di gestione di database fondamentali.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre funzionalità di database di graph di modellare relazioni molti-a-molti. Le relazioni di grafico sono integrate [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e ricevere i vantaggi dell'utilizzo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come sistema di gestione di database fondamentali.
 
 
 ## <a name="what-is-a-graph-database"></a>Che cos'è un database grafico?  
@@ -46,12 +47,12 @@ Non è possibile ottenere un database di grafico, che non può essere ottenuta u
 -   L'applicazione include relazioni molti-a-molti complesse; Quando l'applicazione continua a evolvere, vengono aggiunte nuove relazioni.
 -   È necessario analizzare le relazioni e i dati interconnessi.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Funzionalità di grafico introdotte in[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Funzionalità di grafico introdotte in [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Si inizierà aggiungere estensioni graph a SQL Server, per semplificare l'esecuzione di query e l'archiviazione dei dati del grafico. Le funzionalità seguenti vengono introdotti nella prima versione. 
 
 
 ### <a name="create-graph-objects"></a>Creare gli oggetti del grafico
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]estensioni consentirà agli utenti di creare tabelle di nodo o bordo. I nodi e bordi possono disporre di proprietà associate ad essi. Poiché, nodi e bordi vengono archiviati come tabelle, tutte le operazioni che sono supportate nelle tabelle relazionali sono supportate nella tabella di nodo o bordo. Esempio:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni consentirà agli utenti di creare tabelle di nodo o bordo. I nodi e bordi possono disporre di proprietà associate ad essi. Poiché, nodi e bordi vengono archiviati come tabelle, tutte le operazioni che sono supportate nelle tabelle relazionali sono supportate nella tabella di nodo o bordo. Esempio:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

@@ -1,6 +1,6 @@
 ---
 title: La gestione di SQL Server in Linux | Documenti Microsoft
-description: "In questo argomento vengono forniti collegamenti a strumenti e attività comuni di gestione per SQL Server in esecuzione in Linux."
+description: "Questo articolo fornisce collegamenti a strumenti e attività comuni di gestione per SQL Server in esecuzione in Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: f6710b3e7bd40a2589333cebbf94c8b07f9aaa5d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: de19f1952465c62bf026dbd3d92666b7a1b968ae
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Scegliere lo strumento appropriato per la gestione di SQL Server in Linux
 
@@ -36,7 +36,7 @@ Quasi tutte le operazioni eseguite in uno strumento client può essere eseguita 
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server operazioni Studio (anteprima)
 
-Nuovo Microsoft SQL operazioni Studio (anteprima) è uno strumento multipiattaforma per la gestione di SQL Server. Per ulteriori informazioni, vedere [che cos'è Microsoft SQL operazioni Studio (anteprima)](../sql-operations-studio/what-is.md).
+Nuovo Microsoft SQL operazioni Studio (anteprima) è uno strumento multipiattaforma per la gestione di SQL Server. Per ulteriori informazioni, vedere [Studio operazioni di Microsoft SQL (anteprima)](../sql-operations-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio in Windows
 

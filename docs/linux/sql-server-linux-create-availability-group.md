@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creare e configurare un gruppo di disponibilità per SQL Server in Linux
 
@@ -64,7 +64,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Riavvio[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Riavvio [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Dopo aver abilitato gruppi di disponibilità, come in Windows, è necessario riavviare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Che può essere eseguita nel modo seguente:
 
 ```bash
@@ -365,7 +365,7 @@ In questa sezione viene illustrato come creare un gruppo di disponibilità con u
 
 12. Scegliere **Avanti**.
 
-13. Scegliere la modalità di inizializzazione nelle repliche secondarie. Il valore predefinito consiste nell'usare [il seeding automatico](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), che richiede lo stesso percorso in tutti i server che fanno parte del gruppo di disponibilità. È anche possibile la procedura guidata eseguire una copia di backup e ripristino (la seconda opzione); aggiungerlo se si dispone manualmente il backup, copiare e ripristinare il database di repliche (terza opzione); o aggiungere il database in un secondo momento (ultima opzione). Come con i certificati, se si è la creazione di backup e copiarli manualmente, le autorizzazioni per i file di backup saranno necessario impostare le altre repliche. Scegliere **Avanti**.
+13. Scegliere la modalità di inizializzazione nelle repliche secondarie. Il valore predefinito consiste nell'usare [il seeding automatico](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), che richiede lo stesso percorso in tutti i server che fanno parte del gruppo di disponibilità. È anche possibile la procedura guidata eseguire una copia di backup e ripristino (la seconda opzione); aggiungerlo se si dispone manualmente il backup, copiare e ripristinare il database di repliche (terza opzione); o aggiungere il database in un secondo momento (ultima opzione). Come con i certificati, se si è la creazione di backup e copiarli manualmente, è necessario che le autorizzazioni per i file di backup da impostare per le altre repliche. Scegliere **Avanti**.
 
 14. Nella finestra di dialogo convalida, se tutti gli elementi non torna come esito positivo, provare a utilizzare. Alcuni avvisi sono accettabili e non irreversibile, ad esempio se non si crea un listener. Scegliere **Avanti**.
 
@@ -596,7 +596,7 @@ La risorsa del gruppo di disponibilità creato è un tipo speciale di risorsa ch
     ```
 
     >[!NOTE]
-    >Su RHEL 7.4, è possibile riscontrare un avviso con l'utilizzo di - master. Per evitare questo problema, utilizzare`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+    >Su RHEL 7.4, è possibile riscontrare un avviso con l'utilizzo di - master. Per evitare questo problema, utilizzare `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**
     

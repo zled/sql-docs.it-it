@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: bfd36553e4ac30b6d551e60cde02d57a7eec8fbc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9dd4b05cf69b8556c4c021e2ede576b1a805c5e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Gruppi di disponibilità in Linux Always On
 
@@ -65,9 +65,9 @@ Sono disponibili tre valori che possono essere impostati per `required_synchroni
 -   Da 1 a una replica secondaria deve essere in uno stato sincronizzato con la replica primaria; failover automatico è possibile. Il database primario non è disponibile fino a quando non è disponibile una replica secondaria sincrona.
 -   2 – sia nelle repliche secondarie in una configurazione di gruppo di disponibilità tre o più nodi deve essere sincronizzati con la replica primaria; failover automatico è possibile.
 
-`required_synchronized_secondaries_to_commit`Controlla non solo il comportamento di failover con repliche sincrone, ma la perdita di dati. Con un valore pari a 1 o 2, una replica secondaria deve sempre essere sincronizzati, pertanto sarà sempre presente la ridondanza dei dati. Ciò non significa che perdita di dati.
+`required_synchronized_secondaries_to_commit` Controlla non solo il comportamento di failover con repliche sincrone, ma la perdita di dati. Con un valore pari a 1 o 2, una replica secondaria deve sempre essere sincronizzati, pertanto sarà sempre presente la ridondanza dei dati. Ciò non significa che perdita di dati.
 
-Per modificare il valore di `required_synchronized_secondaries_to_commit`, utilizzare la sintassi riportata di seguito.
+Per modificare il valore di `required_synchronized_secondaries_to_commit`, utilizzare la sintassi seguente:
 
 >[!NOTE]
 >La modifica del valore determina la risorsa per il riavvio vale a dire brevi interruzioni. L'unico modo per evitare questo problema consiste nell'impostare la risorsa a non essere gestito dal cluster temporaneamente.
@@ -132,7 +132,7 @@ Come in estensivi basati su Windows, la struttura di unità e la cartella per i 
 
 Il listener è una funzionalità facoltativa per un gruppo di disponibilità. Fornisce un singolo punto di ingresso per tutte le connessioni (lettura/scrittura per la replica primaria e/o le repliche di sola lettura al database secondario) in modo che le applicazioni e gli utenti finali non è necessario conoscere il server che ospita i dati. In un cluster WSFC, è la combinazione di una risorsa nome di rete e una risorsa IP, che viene quindi registrata nel dominio di Active Directory (se necessario) e DNS. In combinazione con la risorsa del gruppo di disponibilità se stesso, fornisce tale astrazione. Per ulteriori informazioni su un listener, vedere [listener, connettività Client e Failover dell'applicazione](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).
 
-Il listener in Linux è configurato in modo diverso, ma la relativa funzionalità è lo stesso. Non è previsto di una risorsa nome di rete in Pacemaker, né viene creato un oggetto in Active Directory; è solo una risorsa di indirizzo IP creata in Pacemaker eseguibili su uno dei nodi. Sarà necessario creare una voce associata alla risorsa IP per il listener in DNS con un "nome descrittivo". La risorsa IP per il listener solo sarà attiva nel server che ospita la replica primaria per tale gruppo di disponibilità.
+Il listener in Linux è configurato in modo diverso, ma la relativa funzionalità è lo stesso. Non è previsto di una risorsa nome di rete in Pacemaker, né viene creato un oggetto in Active Directory; è solo una risorsa di indirizzo IP creata in Pacemaker eseguibili su uno dei nodi. È necessario creare una voce associata alla risorsa IP per il listener in DNS con un "nome descrittivo". La risorsa IP per il listener solo sarà attiva nel server che ospita la replica primaria per tale gruppo di disponibilità.
 
 Se viene utilizzato il Pacemaker e viene creata una risorsa indirizzo IP che è associato il listener, esisterà brevi interruzioni come l'indirizzo IP si arresta in un server e viene avviata da altro, se si tratta di failover automatico o manuale. Sebbene offra astrazione tramite la combinazione di un solo nome e indirizzo IP, non maschera l'interruzione. Un'applicazione deve essere in grado di gestire la disconnessione con un tipo di funzionalità rileva il problema e riconnettersi.
 
@@ -147,11 +147,11 @@ L'istanza associata quindi l'indirizzo IP specificato diventa il coordinatore pe
 
 Un gruppo di disponibilità di un cluster di tipo esterno o di un WSFC non può avere le relative repliche tra piattaforme. È true se il gruppo di disponibilità è [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] o [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]. Ciò significa che in una configurazione gruppo di disponibilità tradizionali con un cluster sottostante, una replica non può essere in un cluster WSFC e l'altro in Linux con Pacemaker.
 
-Un gruppo di disponibilità con un tipo di cluster None può avere le relative repliche tra i limiti del sistema operativo, in modo stesso AG possono essere entrambe le repliche basate su Linux e Windows. Un esempio è illustrato di seguito in cui la replica primaria è basato su Windows, mentre il database secondario è su una delle distribuzioni di Linux.
+Un gruppo di disponibilità con un tipo di cluster None può avere le relative repliche tra i limiti del sistema operativo, in modo stesso AG possono essere entrambe le repliche basate su Linux e Windows. Come illustrato di seguito in cui la replica primaria è basato su Windows, mentre il database secondario è su una delle distribuzioni di Linux.
 
 ![Ibrida nessuno](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Un gruppo di disponibilità distribuita anche può attraversare i limiti del sistema operativo. Gli estensivi sottostante associati dalle regole per la relativa configurazione, ad esempio quello configurato con l'esterno da Linux sola, ma il gruppo di disponibilità unita in join a potrebbe essere configurato utilizzando un cluster WSFC. Di seguito è riportato un esempio.
+Un gruppo di disponibilità distribuita anche può attraversare i limiti del sistema operativo. Gli estensivi sottostante associati dalle regole per la relativa configurazione, ad esempio quello configurato con l'esterno da Linux sola, ma il gruppo di disponibilità unita in join a potrebbe essere configurato utilizzando un cluster WSFC. Si consideri l'esempio descritto di seguito.
 
 ![Gruppo di disponibilità Dist ibrida](./media/sql-server-linux-availability-group-overview/image2.png)
 

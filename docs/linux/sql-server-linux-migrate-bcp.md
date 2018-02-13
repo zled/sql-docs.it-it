@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.workload: On Demand
-ms.openlocfilehash: 12a0f16762cac5411616d2add3fe548d7f7ec6c7
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a7cc0015af2ca7af7821175cdb836f71ba0ac6f5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Copia bulk di dati con bcp per SQL Server in Linux
 
@@ -35,7 +35,7 @@ In questo articolo illustra come a:
 
 ## <a name="install-the-sql-server-command-line-tools"></a>Installare gli strumenti da riga di comando di SQL Server
 
-`bcp`fa parte di strumenti della riga di comando di SQL Server, che non vengono installati automaticamente con SQL Server in Linux. Se non è già installato gli strumenti da riga di comando di SQL Server nel computer Linux, è necessario installarli. Per ulteriori informazioni su come installare gli strumenti, selezionare la distribuzione di Linux dall'elenco seguente:
+`bcp` fa parte di strumenti della riga di comando di SQL Server, che non vengono installati automaticamente con SQL Server in Linux. Se non è già installato gli strumenti da riga di comando di SQL Server nel computer Linux, è necessario installarli. Per ulteriori informazioni su come installare gli strumenti, selezionare la distribuzione di Linux dall'elenco seguente:
 
 - [Red Hat Enterprise Linux (RHEL)](sql-server-linux-setup-tools.md#RHEL)
 - [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
@@ -62,7 +62,7 @@ Creare la tabella **TestEmployees** nel database **BcpSampleDB**:
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
 ### <a name="create-the-source-data-file"></a>Creare il file di dati di origine
-Copiare e incollare il comando seguente nella finestra del terminale. Verrà utilizzato l'elemento predefinito `cat` comando per creare un file di dati di testo di esempio con tre record salvare il file nella directory principale come **~/test_data.txt**. I campi nei record sono delimitati da una virgola.
+Copiare e incollare il comando seguente nella finestra del terminale. Utilizziamo predefinito `cat` comando per creare un file di dati di testo di esempio con tre record salvare il file nella directory principale come **~/test_data.txt**. I campi nei record sono delimitati da una virgola.
 
 ```bash
 cat > ~/test_data.txt << EOF

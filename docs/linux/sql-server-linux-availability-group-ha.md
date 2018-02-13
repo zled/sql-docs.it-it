@@ -1,11 +1,11 @@
 ---
 title: "SQL Server Always On modelli distribuzione gruppo di disponibilità | Documenti Microsoft"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità
 
@@ -51,9 +51,9 @@ Scegliere una struttura di gruppo di disponibilità per soddisfare specifici req
 
 Le configurazioni seguenti vengono descritti i modelli di progettazione di gruppo di disponibilità e le funzionalità di ogni modello. Questi modelli di progettazione si applicano ai gruppi di disponibilità con `CLUSTER_TYPE = EXTERNAL` per soluzioni a disponibilità elevata. 
 
-- **Tre repliche sincrone**
-- **Due repliche sincrone**
-- **Una replica di sola configurazione e di due repliche sincrone**
+- Tre repliche sincrone
+- Due repliche sincrone
+- Una replica di sola configurazione e di due repliche sincrone
 
 <a name="threeSynch"></a>
 
@@ -70,7 +70,7 @@ Scala di lettura, la disponibilità elevata e la protezione dei dati, può forni
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. Nuovo database primario è R / w. |Failover automatico. Nuovo database primario è R / w. |Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando non primario precedente consente di recuperare e join di gruppo di disponibilità secondaria. 
 |Interruzione di una replica secondaria  | Primario è R / w. Nessun failover automatico se primario ha esito negativo. |Primario è R / w. Nessun failover automatico se primario non riesce. | Database primario non è disponibile per le transazioni utente. 
-<sup>*</sup>Impostazione predefinita
+<sup>*</sup> Impostazione predefinita
 
 <a name="twoSynch"></a>
 
@@ -87,7 +87,7 @@ Un gruppo di disponibilità con due repliche sincrone offre una protezione a liv
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. Nuovo database primario è R / w.| Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando non primario precedente consente di recuperare e join di gruppo di disponibilità secondaria.
 |Interruzione di una replica secondaria  |Primario è di lettura/scrittura, esecuzione senza perdita di dati. |Database primario non è disponibile per le transazioni utente finché non viene ripristinato secondario.
-<sup>*</sup>Impostazione predefinita
+<sup>*</sup> Impostazione predefinita
 
 >[!NOTE]
 >Lo scenario precedente è il comportamento prima di SQL Server 2017 aggiornamento Cumulativo 1. 
@@ -117,7 +117,7 @@ Il valore predefinito per `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` è 0. Ne
 |Interruzione di replica secondaria | Filegroup primario è L/S, in esecuzione esposto alla perdita di dati (se primario ha esito negativo e non può essere ripristinato). Nessun failover automatico se primario non riesce. | Database primario non è disponibile per le transazioni utente. Nessuna replica per eseguire il failover se primario non riesce. 
 |Interruzione di replica sola configurazione | Primario è R / w. Nessun failover automatico se primario non riesce. | Primario è R / w. Nessun failover automatico se primario non riesce. 
 |Database secondario sincrono + configurazione solo un'interruzione di replica| Database primario non è disponibile per le transazioni utente. Nessun failover automatico. | Database primario non è disponibile per le transazioni utente. Per eseguire il failover se non vi sono repliche primarie non riuscirà. 
-<sup>*</sup>Impostazione predefinita
+<sup>*</sup> Impostazione predefinita
 
 >[!NOTE]
 >L'istanza di SQL Server che ospita la replica solo configurazione può ospitare anche altri database. Può anche fare parte di un database di configurazione solo per più di un gruppo di disponibilità. 
@@ -142,7 +142,7 @@ Il valore predefinito per `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` è 0. Ne
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>Comprendere l'agente di risorse di SQL Server per pacemaker
 
-SQL Server 2017 CTP 1.4 aggiunto `sequence_number` a `sys.availability_groups` per consentire il Pacemaker identificare secondario di aggiornamento delle repliche sono con la replica primaria. `sequence_number`è un valore BIGINT a incremento progressivo costante che rappresenta di aggiornamento di replica del gruppo di disponibilità locale. Gli aggiornamenti pacemaker il `sequence_number` con ogni modifica della configurazione gruppo di disponibilità. Esempi di modifiche di configurazione includono il failover, aggiunta di replica o la rimozione. Il numero viene aggiornato nel server primario, quindi replicato a repliche secondarie. In questo modo una replica secondaria con configurazione aggiornata ha lo stesso numero di sequenza del database primario. 
+SQL Server 2017 CTP 1.4 aggiunto `sequence_number` a `sys.availability_groups` per consentire il Pacemaker identificare secondario di aggiornamento delle repliche sono con la replica primaria. `sequence_number` è un valore BIGINT a incremento progressivo costante che rappresenta di aggiornamento di replica del gruppo di disponibilità locale. Gli aggiornamenti pacemaker il `sequence_number` con ogni modifica della configurazione gruppo di disponibilità. Esempi di modifiche di configurazione includono il failover, aggiunta di replica o la rimozione. Il numero viene aggiornato nel server primario, quindi replicato a repliche secondarie. In questo modo una replica secondaria con configurazione aggiornata ha lo stesso numero di sequenza del database primario. 
 
 Quando il Pacemaker decide di alzare di livello una replica primaria, prima invia un *pre-alzare di livello* notifica a tutte le repliche. Le repliche di restituiscono il numero di sequenza. Successivamente, quando Pacemaker esegue effettivamente un tentativo di promuovere una replica primaria, la replica solo promuove se stesso se il numero di sequenza è il più elevato di tutti i numeri di sequenza. Se il proprio numero di sequenza non corrisponde il numero di sequenza più alto, la replica rifiuta l'operazione Alza di livello. In questo modo, solo la replica con il numero di sequenza più alto può essere alzata di livello e impostata come primaria e non si verifica alcuna perdita dei dati. 
 

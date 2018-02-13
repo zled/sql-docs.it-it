@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Distribuire un cluster Pacemaker per SQL Server in Linux
 
@@ -153,7 +153,7 @@ Configurazione Ubuntu è simile a RHEL. Tuttavia, è la principale differenza: i
 
 **SLES**
 
-Il processo per la creazione di un cluster Pacemaker è completamente diverso in SLES si trova in RHEL e Ubuntu. La procedura seguente documento come creare un cluster con SLES.
+Il processo per la creazione di un cluster Pacemaker è completamente diverso in SLES si trova in RHEL e Ubuntu. I passaggi seguenti come creare un cluster con SLES del documento.
 1. Avviare il processo di configurazione del cluster eseguendo 
    ```bash
    sudo ha-cluster-init

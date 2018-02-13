@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: 860d3571aa1edf7c467125de1cc2920a968eb704
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurare RHEL Cluster per il gruppo di disponibilità di SQL Server
 
@@ -30,7 +30,7 @@ Questo documento illustra come creare un cluster di gruppo di disponibilità di 
 > [!NOTE] 
 > Accesso alla documentazione completa di Red Hat richiede una sottoscrizione valida. 
 
-Per ulteriori informazioni su configurazione cluster, le opzioni di agenti di risorsa e la gestione, visitare [la documentazione di riferimento RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Per ulteriori informazioni sulla configurazione del cluster, le opzioni di agenti di risorse e gestione, visitare [la documentazione di riferimento RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server non è come strettamente integrato con Pacemaker su Linux e Windows Server failover clustering. Un'istanza di SQL Server non è a conoscenza del cluster. Pacemaker fornisce l'orchestrazione della risorsa cluster. Inoltre, il nome di rete virtuale è specifico per il clustering di failover di Windows Server - Pacemaker è disponibile un equivalente. Disponibilità gruppo viste a gestione dinamica (DMV) informazioni del cluster per le query restituiscono righe vuote nei cluster Pacemaker. Per creare un listener per la riconnessione dopo il failover trasparente, registrare manualmente il nome del listener in DNS con l'indirizzo IP utilizzato per creare la risorsa IP virtuale. 
@@ -129,7 +129,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Impostare la proprietà cluster start-errore-è-errore irreversibile per false
 
-`start-failure-is-fatal`indica se un errore di avvio di una risorsa in un nodo impedisce ulteriori tentativi di avvio in tale nodo. Se impostato su `false`, il cluster decide di provare ad avviare nello stesso nodo in base alle corrente conteggio e la migrazione soglia di errore della risorsa. Dopo che si verifica il failover, tentativi Pacemaker avvio la disponibilità gruppo risorsa per il primo primario quando l'istanza SQL è disponibile. Pacemaker Abbassa di livello la replica secondaria e viene automaticamente aggiunto nuovamente il gruppo di disponibilità. 
+`start-failure-is-fatal` indica se un errore di avvio di una risorsa in un nodo impedisce ulteriori tentativi di avvio in tale nodo. Se impostato su `false`, il cluster decide di provare ad avviare nello stesso nodo in base alle corrente conteggio e la migrazione soglia di errore della risorsa. Dopo che si verifica il failover, tentativi Pacemaker avvio la disponibilità gruppo risorsa per il primo primario quando l'istanza SQL è disponibile. Pacemaker Abbassa di livello la replica secondaria e viene automaticamente aggiunto nuovamente il gruppo di disponibilità. 
 
 Per aggiornare il valore della proprietà da `false` eseguire:
 

@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c1bf7265cc15b9dd9401958317d4f14ea400d1
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurazione di cluster di failover - SMB - SQL Server in Linux
 
@@ -81,7 +81,7 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
     mkdir <TempDir>
     ```
 
-    <TempDir>è il nome della cartella. Nell'esempio seguente crea una cartella denominata /var/opt/mssql/tmp.
+    <TempDir> è il nome della cartella. Nell'esempio seguente viene creata una cartella denominata /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -209,7 +209,7 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
     mkdir <FolderName>
     ```
 
-    \<Nome cartella > è il nome della cartella. Percorso completo della cartella dovrà essere specificato ma non nella posizione corretta. Nell'esempio seguente crea una cartella denominata /var/opt/mssql/userdata.
+    \<Nome cartella > è il nome della cartella. Percorso completo della cartella deve essere specificato ma non nella posizione corretta. Nell'esempio seguente viene creata una cartella denominata /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -239,7 +239,7 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
  
    * Digitare exit per non essere più l'utente avanzato.
 
-   * Per eseguire il test, creare un database in tale cartella. Nell'esempio illustrato di seguito utilizza sqlcmd per creare un database, passare il contesto, verificare i file presenti nel livello del sistema operativo e quindi Elimina il percorso temporaneo. È possibile utilizzare SQL Server Management Studio.
+   * Per eseguire il test, creare un database in tale cartella. L'esempio seguente usa sqlcmd per creare un database, passare il contesto, verificare i file presenti nel livello del sistema operativo e quindi Elimina il percorso temporaneo. È possibile utilizzare SQL Server Management Studio.
  
    * Disinstallare la condivisione 
 
