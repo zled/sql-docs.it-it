@@ -14,12 +14,12 @@ description: "**dwloader** è uno strumento da riga di comando Parallel Data War
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: "90"
+caps.latest.revision: 
 ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader caricatore della riga di comando
 **dwloader** è uno strumento da riga di comando Parallel Data Warehouse (PDW) che esegue il caricamento bulk di righe di tabella in una tabella esistente. Durante il caricamento di righe, è possibile aggiungere tutte le righe alla fine della tabella (*modalità append* o *modalità fastappend*), aggiungere nuove righe e aggiornare le righe esistenti (*modalità upsert*), o eliminarli tutti righe prima del caricamento esistente e quindi inserire tutte le righe in una tabella vuota (*ricaricare modalità*).  
@@ -161,7 +161,7 @@ Se omesso, viene impostata sul valore specificato durante l'installazione di dwl
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.* [*schema*]. *table_name*  
+**-T** *target_database_name.*[*schema*].*table_name*  
 Il nome in tre parti per la tabella di destinazione.  
   
 **-I***source_data_location*  
@@ -201,7 +201,7 @@ Esempi:
   
 -   -i \\\loadserver\loads\daily\\*.gz  
   
--   -i \\\loadserver\loads\daily\\*. txt  
+-   -i \\\loadserver\loads\daily\\*.txt  
   
 -   -i \\\loadserver\loads\daily\monday.*  
   
@@ -215,7 +215,7 @@ Se sono presenti errori di caricamento, **dwloader** archivia la riga che non è
 **-fh** *number_header_rows*  
 Il numero di righe da ignorare all'inizio di *source_data_file_name*. Il valore predefinito è 0.  
   
-< variable_length_column_options >  
+<variable_length_column_options>  
 Le opzioni per un *source_data_file_name* che è delimitata da caratteri di colonne a lunghezza variabile. Per impostazione predefinita, *source_data_file_name* contiene caratteri ASCII nelle colonne a lunghezza variabile.  
   
 Per i file ASCII, i valori null sono rappresentato posizionando consecutivamente delimitatori. Ad esempio, in un file delimitati da pipe ("|"), un valore NULL è indicato da "| |". In un file delimitato da virgole, un valore NULL è indicato da ",". Inoltre, il **-E** (-emptyStringAsNull) deve essere specificata l'opzione. Per ulteriori informazioni su -E, vedere di seguito.  
@@ -226,11 +226,11 @@ Specifica un tipo di codifica dei caratteri per i dati da caricare dal file di d
 **-t** *field_delimiter*  
 Il delimitatore per ogni campo (colonna) della riga. Il delimitatore di campo è di uno o più di questi caratteri di escape ASCII o valori esadecimali ASCII...  
   
-|nome|Carattere escape|Caratteri esadecimali|  
+|Nome|Carattere escape|Caratteri esadecimali|  
 |--------|--------------------|-----------------|  
 |Scheda|\t|0x09|  
-|Ritorno a capo (CR)|\r|0x0D|  
-|Avanzamento riga (LF)|\n|0x0A|  
+|Ritorno a capo (CR)|\r|0x0d|  
+|Avanzamento riga (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
 |Virgola|','|0x2c|  
 |Virgoletta doppia|\\"|0x22|  
@@ -248,7 +248,7 @@ Esempi:
   
 -t \t  
   
--t ' ~ | ~'  
+-t '~|~'  
   
 **-r** *row_delimiter*  
 Il delimitatore per ogni riga del file di dati di origine. Il delimitatore di riga è uno o più valori ASCII.  
@@ -263,13 +263,13 @@ Esempi di CR LF +:
   
 Esempi di CR:  
   
-\r - r  
+-r \r  
   
 -r 0x0d  
   
 Esempi di nuova riga:  
   
-\n - r  
+-r \n  
   
 -r 0x0a  
   
@@ -300,9 +300,9 @@ Il file deve trovarsi nel server durante il caricamento. Il percorso può essere
   
 File di configurazione a larghezza fissato di esempio:  
   
-SalesCode = 3  
+SalesCode=3  
   
-SalesID = 10  
+SalesID=10  
   
 Righe di esempio *source_data_file_name*:  
   
@@ -332,13 +332,13 @@ Esempi di CR LF +:
   
 Esempi di CR:  
   
-\r - r  
+-r \r  
   
 -r 0x0d  
   
 Esempi di nuova riga:  
   
-\n - r  
+-r \n  
   
 -r 0x0a  
   
@@ -347,10 +347,10 @@ Un avanzamento riga è necessaria per Unix. Un CR è necessario per Windows.
 **-D** { **AMG** | agm | mdy | myd |  DMY | dym | *custom_date_format* }  
 Specifica l'ordine di mese (m), (d) giorno e anno (y) per tutti i campi datetime nel file di input. L'ordine predefinito è AMG. Per specificare più formati di ordine per lo stesso file di origine, utilizzare l'opzione-dt.  
   
-AMG | DMY  
+ymd | dmy  
 agm e dmy consentono gli stessi formati di input. Entrambi consentono l'anno essere all'inizio o alla fine della data. Ad esempio, per entrambi **agm** e **dmy** , formati di data potrebbe aver 2013-02-03 o 02-03-2013 nel file di input.  
   
-agm  
+ydm  
 È possibile caricare solo input formattate come agm in colonne di tipo di dati datetime e smalldatetime. Non è possibile caricare agm valori in una colonna di tipo di dati datetimeoffset, datetime2 o Data.  
   
 mdy  
@@ -427,7 +427,7 @@ Ad esempio, se la modalità di caricamento è FASTAPPEND e la tabella include un
   
 Se il tipo di caricamento FASTAPPEND, il *batchsize* si applica al caricamento di dati nella tabella, in caso contrario *batchsize* si applica al caricamento di dati nella tabella di gestione temporanea.  
   
-< reject_options >  
+<reject_options>  
 Specifica le opzioni per determinare il numero di errori di caricamento che consentirà il caricatore. Se gli errori di caricamento superano la soglia, il caricatore verrà interrotta e non eseguire il commit di tutte le righe.  
   
 **-rt** { **valore** | percentuale}  
@@ -491,7 +491,7 @@ Ignora il caricamento di file vuoti. Anche questo ignora la decompressione di fi
 ## <a name="return-code-values"></a>Valori restituiti  
 0 (esito positivo) o un altro valore intero (errore)  
   
-In un file di comando finestra o un batch, utilizzare `errorlevel` per visualizzare il codice restituito. Ad esempio  
+In un file di comando finestra o un batch, utilizzare `errorlevel` per visualizzare il codice restituito. Esempio:  
   
 ```  
 dwloader  
@@ -556,13 +556,13 @@ La modalità append carica i dati in due fasi. La fase uno carica i dati dal fil
 |Tipo di tabella|Più transazioni<br />Modalità (-m)|La tabella è vuota|Concorrenza supportata|Registrazione|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Heap|Sì|Sì|Sì|minimo|  
-|Heap|Sì|no|Sì|minimo|  
+|Heap|Sì|No|Sì|minimo|  
 |Heap|no|Sì|no|minimo|  
-|Heap|no|no|no|minimo|  
-|CL|Sì|Sì|no|minimo|  
-|CL|Sì|no|Sì|Full|  
-|CL|no|Sì|no|minimo|  
-|CL|no|no|Sì|Full|  
+|Heap|no|No|no|minimo|  
+|Cl|Sì|Sì|no|minimo|  
+|Cl|Sì|No|Sì|Completo|  
+|Cl|no|Sì|no|minimo|  
+|Cl|no|No|Sì|Completo|  
   
 Illustrato nella tabella precedente **dwloader** usando la modalità append, il caricamento in un heap o di una tabella di un indice cluster (CI), con o senza il flag di multi-transazionale e il caricamento in una tabella vuota o una tabella non vuota. Il blocco e la registrazione di comportamento di ogni tale combinazione di carico viene visualizzato nella tabella. Ad esempio, il caricamento di fase (2) con la modalità append in un indice cluster senza la modalità multi-transazionale e in un oggetto vuoto tabella sarà PDW creare un blocco esclusivo sulla tabella e la registrazione è minima. Ciò significa che un cliente non sarà in grado di caricare simultaneamente (2) fase e query in una tabella vuota. Tuttavia, quando si caricano con la stessa configurazione in una tabella non vuota, PDW non emetterà un blocco esclusivo sulla tabella e la concorrenza è possibile. Sfortunatamente, si verifica la registrazione completa, rallentare il processo.  
   

@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: "11"
+caps.latest.revision: 
 ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="workload-management"></a>Gestione del carico di lavoro
 Funzionalità di gestione del SQL Server PDW carico di lavoro consentono agli utenti e agli amministratori di assegnare le richieste di pre-impostare le configurazioni di memoria e concorrenza. Gestione del carico di lavoro per migliorare le prestazioni del carico di lavoro, coerenza o mista, consentendo le richieste senza un'insufficienza delle risorse per tutte le richieste per le risorse appropriate.  
@@ -136,7 +136,7 @@ Istruzioni SQL e operazioni di classi di risorse:
   
 -   UPDATE  
   
--   Elimina  
+-   DELETE  
   
 -   RESTORE DATABASE durante il ripristino in un dispositivo con più nodi di calcolo.  
   
@@ -145,7 +145,7 @@ Istruzioni SQL e operazioni di classi di risorse:
 ## <a name="Limits"></a>Limitazioni e restrizioni  
 Le classi di risorse determinano le allocazioni di memoria e concorrenza.  Non controllano le operazioni di input/output.  
   
-## <a name="Metadata"></a>Metadati  
+## <a name="Metadata"></a>Metadata  
 Viste a gestione dinamica che contengono informazioni sulle classi di risorse e i membri di classe di risorse.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -160,27 +160,27 @@ Viste a gestione dinamica che contengono informazioni sullo stato delle richiest
   
 Viste di sistema correlate esposte dalle DMV SQL Server nei nodi di calcolo. Vedere [viste a gestione dinamica SQL Server](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) per collegamenti a queste DMV su MSDN.  
   
--   Sys.dm_pdw_nodes_resource_governor_resource_pools  
+-   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
--   Sys.dm_pdw_nodes_resource_governor_workload_groups  
+-   sys.dm_pdw_nodes_resource_governor_workload_groups  
   
--   Sys.dm_pdw_nodes_resource_governor_resource_pools  
+-   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
--   Sys.dm_pdw_nodws_resource_governor_workload_groups  
+-   sys.dm_pdw_nodws_resource_governor_workload_groups  
   
--   Sys.dm_pdw_nodes_exec_sessions  
+-   sys.dm_pdw_nodes_exec_sessions  
   
--   Sys.dm_pdw_nodes_exec_requests  
+-   sys.dm_pdw_nodes_exec_requests  
   
--   Sys.dm_pdw_nodes_exec_query_memory_grants  
+-   sys.dm_pdw_nodes_exec_query_memory_grants  
   
--   Sys.dm_pdw_nodes_exec_query_resource_semaphores  
+-   sys.dm_pdw_nodes_exec_query_resource_semaphores  
   
--   Sys.dm_pdw_nodes_os_memory_brokers  
+-   sys.dm_pdw_nodes_os_memory_brokers  
   
--   Sys.dm_pdw_nodes_os_memory_cache_entries  
+-   sys.dm_pdw_nodes_os_memory_cache_entries  
   
--   Sys.dm_pdw_nodes_exec_cached_plans  
+-   sys.dm_pdw_nodes_exec_cached_plans  
   
 ## <a name="RelatedTasks"></a>Attività correlate  
 [Attività di gestione del carico di lavoro](workload-management-tasks.md)  

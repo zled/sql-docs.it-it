@@ -29,19 +29,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Time Series
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series include due algoritmi distinti per l'analisi delle serie temporali:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series sono inclusi due algoritmi distinti per l'analisi delle serie temporali:  
   
 -   L'algoritmo ARTXP, introdotto in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], è ottimizzato per stimare il successivo valore probabile in una serie.  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
 >  L'algoritmo Microsoft Time Series è disponibile in tutte le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia alcune funzionalità avanzate, tra cui i parametri per la personalizzazione dell'analisi della serie temporale sono supportate solo in versioni specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
 ### <a name="detection-of-seasonality"></a>Rilevamento della stagionalità  
- Sia l'algoritmo ARIMA sia quello ARTXP supportano il rilevamento della stagionalità o della periodicità. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Viene usata la trasformazione Fast Fourier per rilevare la stagionalità prima del training. Tuttavia, è possibile influire sul rilevamento della stagionalità e sui risultati dell'analisi della serie temporale, impostando parametri dell'algoritmo.  
+ Sia l'algoritmo ARIMA sia quello ARTXP supportano il rilevamento della stagionalità o della periodicità. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene utilizzata la trasformazione Fast Fourier per rilevare la stagionalità prima del training. Tuttavia, è possibile influire sul rilevamento della stagionalità e sui risultati dell'analisi della serie temporale, impostando parametri dell'algoritmo.  
   
 -   Modificando il valore di *AUTODETECT_SEASONALITY*, è possibile influenzare il possibile numero di segmenti temporali generati.  
   
@@ -164,7 +165,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series supporta i tipi di contenuto specifici delle colonne di input, i tipi di contenuto specifici delle colonne stimabili e i flag di modellazione elencati nella tabella seguente.  
   
-|colonna|Tipi di contenuto|  
+|Colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Continuous, Key, Key Time e Table|  
 |Attributo stimabile|Continuous e Table|  
@@ -175,6 +176,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Tempo Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli Time Series &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   
