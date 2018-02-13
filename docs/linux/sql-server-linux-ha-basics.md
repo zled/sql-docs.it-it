@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni di Linux
 
@@ -32,7 +32,7 @@ Oltre a backup e ripristino, le stesse funzionalità di disponibilità di tre so
 -   Istanze del Cluster di Failover (FCI) Always On
 -   [Log shipping](sql-server-linux-use-log-shipping.md)
 
-In Windows, le istanze FCI è sempre necessario un cluster di failover di Windows Server (WSFC) sottostante. A seconda dello scenario di distribuzione, un gruppo di disponibilità in genere non richiede che un cluster WSFC sottostante, con l'eccezione nuovo variant in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Non esiste un cluster WSFC in Linux. Clustering di implementazione in Linux è illustrato di seguito [istanze Pacemaker per cluster di failover e gruppi di disponibilità AlwaysOn in Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
+In Windows, le istanze FCI è sempre necessario un cluster di failover di Windows Server (WSFC) sottostante. A seconda dello scenario di distribuzione, un gruppo di disponibilità in genere non richiede che un cluster WSFC sottostante, con l'eccezione nuovo variant in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Non esiste un cluster WSFC in Linux. Clustering di implementazione in Linux è descritto nella sezione [istanze Pacemaker per cluster di failover e gruppi di disponibilità AlwaysOn in Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
 
 ## <a name="a-quick-linux-primer"></a>Verrà riportata una breve spiegazione di Linux
 Mentre alcune installazioni Linux possono essere installate con un'interfaccia, la maggior parte non sono, vale a dire che quasi tutte le funzioni a livello del sistema operativo viene eseguita tramite riga di comando. Il termine comune per questa riga di comando nel mondo Linux è un *shell bash*.
@@ -59,9 +59,9 @@ Alcuni comandi comuni, ognuno dei quali dispone di vari commutatori e le opzioni
 In questa sezione vengono descritte attività comuni a tutti i basati su Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] le distribuzioni.
 
 ### <a name="ensure-that-files-can-be-copied"></a>Verificare che possono essere copiati i file
-Una cosa che chiunque utilizzando [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux deve essere in grado di eseguire file di copia da un server a un altro. Questa attività è molto importante per le configurazioni del gruppo di disponibilità.
+Copia i file da un server a un altro è un'attività che chiunque utilizzando [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux deve essere in grado di eseguire. Questa attività è molto importante per le configurazioni del gruppo di disponibilità.
 
-Ad esempio problemi di autorizzazione può essere presente in Linux, nonché le installazioni basate su Windows. Tuttavia, chi ha familiarità con la procedura per copiare da un server a un server in Windows potrebbero non avere familiarità con la modalità con cui viene eseguito in Linux. Un metodo comune consiste nell'utilizzare l'utilità della riga di comando `scp`, che è l'acronimo di copia sicuro. Dietro le quinte, `scp` utilizza OpenSSH. SSH è l'acronimo di shell protetta. A seconda della distribuzione di Linux, OpenSSH stesso potrebbe non essere installato. In caso contrario, OpenSSH dovrà essere installato per primo. Per ulteriori informazioni sulla configurazione OpenSSH, vedere le informazioni su uno dei collegamenti seguente per ogni distribuzione:
+Ad esempio problemi di autorizzazione può essere presente in Linux, nonché le installazioni basate su Windows. Tuttavia, chi ha familiarità con la procedura per copiare da un server a un server in Windows potrebbero non avere familiarità con la modalità con cui viene eseguito in Linux. Un metodo comune consiste nell'utilizzare l'utilità della riga di comando `scp`, che è l'acronimo di copia sicuro. Dietro le quinte, `scp` utilizza OpenSSH. SSH è l'acronimo di shell protetta. A seconda della distribuzione di Linux, OpenSSH stesso potrebbe non essere installato. In caso contrario, OpenSSH deve essere installato per primo. Per ulteriori informazioni sulla configurazione OpenSSH, vedere le informazioni su uno dei collegamenti seguente per ogni distribuzione:
 -   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
@@ -112,7 +112,7 @@ Simile a Windows, le distribuzioni Linux dispone di un firewall incorporato. Se 
 | Variabile    | TCP/UDP  | Porta per NFS: `MOUNTD_PORT` (trovato nel `/etc/sysconfig/nfs` su RHEL)                                                |
 | Variabile    | TCP/UDP  | Porta per NFS: `STATD_PORT` (trovato nel `/etc/sysconfig/nfs` su RHEL)                                                 |
 
-Per altre porte che possono essere utilizzate da Samba, fare riferimento a [utilizzo della porta Samba](https://wiki.samba.org/index.php/Samba_Port_Usage).
+Per altre porte che possono essere utilizzate da Samba, vedere [utilizzo della porta Samba](https://wiki.samba.org/index.php/Samba_Port_Usage).
 
 Al contrario, il nome del servizio in Linux può essere inoltre aggiunto come un'eccezione anziché la porta; ad esempio, `high-availability` per Pacemaker. Se questa è la direzione in cui che si desidera proseguire, fare riferimento alla distribuzione per i nomi. Ad esempio, su RHEL è il comando per aggiungere in Pacemaker
 
@@ -135,7 +135,7 @@ Quando estensivi o FCI sono configurate in una configurazione basata su Windows,
 Gli altri pacchetti facoltativi per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] su Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ricerca Full-Text (*mssql-server-fts*) e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql server è*), non sono obbligatorio per la disponibilità elevata per un'istanza FCI o un gruppo di disponibilità.
 
 ## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Pacemaker per gruppi di disponibilità AlwaysOn e le istanze cluster di failover su Linux
-Come indicato in precedenza, l'unico meccanismo clustering attualmente supportato da Microsoft per estensivi e FCI è Pacemaker con Corosync. In questa sezione vengono illustrate le informazioni di base per comprendere la soluzione, nonché come pianificare e distribuire per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] configurazioni.
+Precedente come indicato, l'unico meccanismo clustering attualmente supportato da Microsoft per estensivi e FCI è Pacemaker con Corosync. In questa sezione vengono illustrate le informazioni di base per comprendere la soluzione, nonché come pianificare e distribuire per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] configurazioni.
 
 ### <a name="ha-add-onextension-basics"></a>Nozioni fondamentali di componente aggiuntivo on/estensione a disponibilità elevata
 Tutte le distribuzioni supportate attualmente fornito un'elevata disponibilità componente aggiuntivo-on/estensione, basato sul Pacemaker clustering dello stack. In questo stack include due componenti principali: Pacemaker e Corosync. Tutti i componenti dello stack sono:
