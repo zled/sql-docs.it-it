@@ -9,28 +9,29 @@ ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, tsql reference
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffc2bcd906e0d975d763d12aaa899cb414ef6b5e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a8cdff2f5407ae25f096ff65c0110e22a28bfb09
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Creare un diagramma database ed eseguire alcuni criteri di ricerca di query utilizzando T-SQL
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Questo esempio viene fornita una [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script per creare un database di grafico con i nodi e bordi e quindi usare la nuova clausola di corrispondenza di alcuni modelli di corrispondenza e scorrere il grafico. In entrambi Database SQL di Azure è possibile utilizzare questo script di esempio e[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Questo esempio viene fornita una [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script per creare un database di grafico con i nodi e bordi e quindi usare la nuova clausola di corrispondenza di alcuni modelli di corrispondenza e scorrere il grafico. In entrambi Database SQL di Azure è possibile utilizzare questo script di esempio e [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>Schema di esempio  
 Questo esempio viene creato uno schema di grafico, come illustrato nella figura 1, per un ipotetica social network che dispone di nodi di persone, ristorante e City. Questi nodi sono connessi tra loro usando i tuoi amici, mi piace, bordi LivesIn e LocatedIn. 
