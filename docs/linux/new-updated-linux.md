@@ -5,16 +5,16 @@ manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
-ms.custom: UpdArt.exe
+ms.custom: sql-linux,UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: linux
+ms.component: 
 ms.date: 02/03/2018
-ms.openlocfilehash: fc740b59397f0438a059b38df57ffc40999cc81e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 827399587a8147c59caf6bf31bf8b10f10c83211
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>Nuovi e recentemente aggiornato: SQL Server in Linux documenti
 
@@ -84,7 +84,7 @@ Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati el
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-always-on-availability-groups-on-linuxsql-server-linux-availability-group-overviewmd"></a>1. &nbsp;[Sempre nei gruppi di disponibilità su Linux](sql-server-linux-availability-group-overview.md)
+### <a name="1-nbsp-always-on-availability-groups-on-linuxsql-server-linux-availability-group-overviewmd"></a>1. &nbsp;[Gruppi di disponibilità in Linux Always On](sql-server-linux-availability-group-overview.md)
 
 *Ultimo aggiornamento: 2018-01-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Avanti](#TitleNum_2))
 
@@ -123,7 +123,7 @@ Senza altri elementi, un terzo nodo e almeno una replica sincronizzata sarebbe n
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-extract-transform-and-load-data-on-linux-with-ssissql-server-linux-migrate-ssismd"></a>2. &nbsp;[Di estrazione, trasformazione e caricamento dati in Linux con SSIS](sql-server-linux-migrate-ssis.md)
+### <a name="2-nbsp-extract-transform-and-load-data-on-linux-with-ssissql-server-linux-migrate-ssismd"></a>2. &nbsp;[Estrarre, trasformare e caricare i dati in Linux con SSIS](sql-server-linux-migrate-ssis.md)
 
 *Ultimo aggiornamento: 2018-01-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([precedente](#TitleNum_1))
 

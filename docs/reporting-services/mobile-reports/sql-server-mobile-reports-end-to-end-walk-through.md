@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata completa
 Procedura dettagliata per creare report per dispositivi mobili per schermi di qualsiasi dimensione con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e visualizzarli nell'app Power BI per dispositivi mobili.
@@ -31,7 +31,7 @@ Consente di creare report per dispositivi mobili in un'area di progettazione con
 Questo argomento illustra le operazioni seguenti:   
   
 - La creazione di un'origine dati condivisa e di un set di dati nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , usando il database AdventureWorks come origine dati di esempio.  
-- La creazione di un report per dispositivi mobili di Reporting Services in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+- Creazione di un report per dispositivi mobili di Reporting Services in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - La pubblicazione di un report per dispositivi mobili nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .  
 - La visualizzazione di report per dispositivi mobili nell'app Power BI per dispositivi mobili.  
   
