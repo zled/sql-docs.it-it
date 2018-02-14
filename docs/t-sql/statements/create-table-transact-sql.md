@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - TABLE_TSQL
 - FILESTREAM_ON
 - FILESTREAM_ON_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CHECK constraints
 - global temporary tables [SQL Server]
@@ -47,14 +49,14 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: "256"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/02/2018
 ---
@@ -512,7 +514,7 @@ Specifica per creare un indice nella tabella. Può trattarsi di un indice cluste
   
  Specifica per archiviare l'intera tabella nel formato a colonne con un indice columnstore cluster. Questo include sempre tutte le colonne nella tabella. I dati non è ordinati in ordine alfabetico o numerico poiché le righe sono organizzate per ottenere i vantaggi di compressione di columnstore.  
   
- INDICE *index_name* COLUMNSTORE [NONCLUSTERED] (*column_name* [,... *n* ] )  
+ INDICE *index_name* COLUMNSTORE [NONCLUSTERED] \(*column_name* [,... *n* ] )  
    
   
 **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
