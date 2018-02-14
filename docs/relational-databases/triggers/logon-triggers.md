@@ -8,27 +8,30 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - logon triggers
 - login triggers
-helpviewer_keywords: triggers [SQL Server], logon
+helpviewer_keywords:
+- triggers [SQL Server], logon
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66125703d69fd5e3bb5bba0572f47274c3bff824
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 123a1456150d99f47b6f524d76f0afa0d79ba86b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="logon-triggers"></a>Trigger LOGON
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] I trigger LOGON consentono di attivare stored procedure in risposta a un evento LOGON generato quando viene stabilita una sessione utente a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I trigger LOGON vengono attivati dopo il completamento della fase di autenticazione della procedura di accesso, ma prima che la sessione utente venga effettivamente stabilita. Per questo motivo, tutti i messaggi generati all'interno del trigger che verrebbero normalmente visualizzati all'utente, come i messaggi di errore e i messaggi dall'istruzione PRINT, vengono invece indirizzati al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I trigger LOGON non vengono attivati in caso di esito negativo dell'autenticazione.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+I trigger LOGON consentono di attivare stored procedure in risposta a un evento LOGON generato quando viene stabilita una sessione utente a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I trigger LOGON vengono attivati dopo il completamento della fase di autenticazione della procedura di accesso, ma prima che la sessione utente venga effettivamente stabilita. Per questo motivo, tutti i messaggi generati all'interno del trigger che verrebbero normalmente visualizzati all'utente, come i messaggi di errore e i messaggi dall'istruzione PRINT, vengono invece indirizzati al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I trigger LOGON non vengono attivati in caso di esito negativo dell'autenticazione.  
   
  È possibile utilizzare i trigger LOGON per controllare e gestire le sessioni server, ad esempio tenendo traccia delle attività di accesso, limitando gli accessi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o limitando il numero di sessioni per uno specifico account di accesso. Nel codice seguente, ad esempio, il trigger LOGON nega i tentativi di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguiti dall'account di accesso *login_test* se esistono già tre sessioni utente in esecuzione create da tale account di accesso.  
   
@@ -76,7 +79,7 @@ END;
 ## <a name="disabling-a-logon-trigger"></a>Disabilitazione di un trigger di accesso  
  Un trigger di accesso può impedire le connessioni al [!INCLUDE[ssDE](../../includes/ssde-md.md)] per tutti gli utenti, inclusi i membri del ruolo predefinito del server **sysadmin** . Quando un trigger di accesso impedisce le connessioni, i membri del ruolo predefinito del server **sysadmin** possono connettersi tramite la connessione amministrativa dedicata o avviando il [!INCLUDE[ssDE](../../includes/ssde-md.md)] nella modalità di configurazione minima (- f). Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Attività|Argomento|  
 |----------|-----------|  

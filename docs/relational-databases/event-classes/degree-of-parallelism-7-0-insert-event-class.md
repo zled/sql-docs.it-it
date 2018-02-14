@@ -8,39 +8,42 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Degree of Parallelism event class
+helpviewer_keywords:
+- Degree of Parallelism event class
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d3e4fa041793a60425121fa9abd2a920d9eab35
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 93020108e319109f6ef6016620a3d5173d207a52
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Classe di evento Degree of Parallelism (7.0 Insert)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento **Degree of Parallelism (7.0 Insert)** viene generata ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue un'istruzione SELECT, INSERT, UPDATE o DELETE.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La classe di evento **Degree of Parallelism (7.0 Insert)** viene generata ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue un'istruzione SELECT, INSERT, UPDATE o DELETE.  
   
  Quando questa classe di evento viene inclusa in una traccia, la quantità di overhead conseguente potrebbe causare un peggioramento significativo delle prestazioni, se questi eventi si verificano di frequente. Per ridurre l'overhead, è consigliabile limitare l'utilizzo della classe di evento alle tracce che eseguono brevemente il monitoraggio di problemi specifici.  
   
 ## <a name="degree-of-parallelism-70-insert-event-class-data-columns"></a>Colonne di dati della classe di evento Degree of Parallelism (7.0 Insert)  
   
-|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
-|**BinaryData**|**image**|Numero di CPU utilizzate per eseguire il processo in base ai valori seguenti:<br /><br /> 0x00000000, indica un piano seriale eseguito in serie.<br /><br /> 0x01000000, indica un piano parallelo eseguito in serie.<br /><br /> >= 0x02000000, indica un piano parallelo eseguito in parallelo.|2|No|  
+|**BinaryData**|**image**|Numero di CPU utilizzate per eseguire il processo in base ai valori seguenti:<br /><br /> 0x00000000, indica un piano seriale eseguito in serie.<br /><br /> 0x01000000, indica un piano parallelo eseguito in serie.<br /><br /> >= 0x02000000, indica un piano parallelo eseguito in parallelo.|2|no|  
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione USE database oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE database. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|**Event Class**|**int**|Tipo di evento = 28.|27|No|  
-|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
-|**EventSubClass**|**int**|Indica l'istruzione eseguita, in base ai valori seguenti:<br /><br /> 1=Seleziona<br /><br /> 2=Inserisci<br /><br /> 3=Aggiorna<br /><br /> 4=Elimina|21|No|  
+|**Event Class**|**int**|Tipo di evento = 28.|27|no|  
+|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|**EventSubClass**|**int**|Indica l'istruzione eseguita, in base ai valori seguenti:<br /><br /> 1=Seleziona<br /><br /> 2=Inserisci<br /><br /> 3=Aggiorna<br /><br /> 4=Elimina|21|no|  
 |**GroupID**|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |**Integer Data**|**int**|Quantità di "memoria dell'area di lavoro", espressa in KB, assegnata alla query per eseguire operazioni che implicano l'hashing, l'ordinamento o la creazione di indici. La memoria verrà acquisita durante l'esecuzione in base alle necessità.|25|Sì|  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |**RequestID**|**int**|Identificazione della richiesta che ha avviato la query full-text.|49|Sì|  
-|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  

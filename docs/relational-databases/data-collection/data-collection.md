@@ -8,25 +8,29 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: Raccolta dati
-helpviewer_keywords: data collection [SQL Server]
+keywords:
+- Raccolta dati
+helpviewer_keywords:
+- data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2ba0a8ac11577590da78a5975a9447f3478709b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 28d83f656e80e1e50b9176a3b705e6b5e62fe0f3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="data-collection"></a>Raccolta dati
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'agente di raccolta dati è un componente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che consente di raccogliere set diversi di dati. La raccolta dati viene eseguita costantemente o in base a una pianificazione definita dall'utente. L'agente di raccolta dati archivia quindi i dati raccolti in un database relazionale noto come data warehouse di gestione.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+L'agente di raccolta dati è un componente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che consente di raccogliere set diversi di dati. La raccolta dati viene eseguita costantemente o in base a una pianificazione definita dall'utente. L'agente di raccolta dati archivia quindi i dati raccolti in un database relazionale noto come data warehouse di gestione.  
   
 ## <a name="what-is-data-collector"></a>Che cos'è l'agente di raccolta dati 
  L'agente di raccolta dati è un componente chiave della piattaforma di raccolta dati per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e gli strumenti forniti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'agente di raccolta dati fornisce un punto centrale per la raccolta dati attraverso le applicazioni e i server di database. In questo punto di raccolta si possono ottenere dati da diverse origini e non esclusivamente relativi alle prestazioni, a differenza di Traccia SQL.  
@@ -58,9 +62,9 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) viene usato per eseguire pacchetti che raccolgono dati da singoli provider di dati. È necessario conoscere i seguenti strumenti e concetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
--   Pacchetto di [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetto  
   
--   Configurazione pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] configurazione di pacchetto  
   
  Per altre informazioni, vedere [Pacchetti di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
@@ -115,7 +119,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="things-you-can-do"></a>Operazioni possibili  
   
-|Descrizione|Argomento|  
+|Description|Argomento|  
 |----------------------|-----------|  
 |Gestire aspetti diversi della raccolta dati, ad esempio l'abilitazione o la disabilitazione della raccolta dati, la modifica della configurazione di un set di raccolta o la visualizzazione di dati nel data warehouse di gestione.|[Gestire la raccolta dati](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Usare questi report per ottenere informazioni per il monitoraggio della capacità del sistema e la risoluzione dei problemi relativi alle prestazioni.|[Report per i set di raccolta dati di sistema](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  

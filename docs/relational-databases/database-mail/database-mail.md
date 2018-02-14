@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - Database Mail [SQL Server], architecture
 - Database Mail [SQL Server], components
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 71bd2fdde74342683016e6c99431ff8a244e04a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 530adcf1fdc0148283f8362c790cabff82314aa0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mail"></a>Posta elettronica database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Posta elettronica database è una soluzione aziendale per l'invio di messaggi di posta elettronica dal [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Posta elettronica database consente alle applicazioni di database di inviare messaggi di posta elettronica agli utenti. I messaggi possono includere risultati di query e file provenienti da qualunque risorsa disponibile in rete.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Posta elettronica database è una soluzione aziendale per l'invio di messaggi di posta elettronica dal [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Posta elettronica database consente alle applicazioni di database di inviare messaggi di posta elettronica agli utenti. I messaggi possono includere risultati di query e file provenienti da qualunque risorsa disponibile in rete.  
   
   
 ##  <a name="Benefits"></a> Vantaggi dell'uso di Posta elettronica database  
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Compatibilità con installazione a 64 bit: Posta elettronica database è pienamente supportato nelle installazioni a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="security"></a>Sicurezza  
+### <a name="security"></a>Security  
   
 -   Disabilitazione per impostazione predefinita: per ridurre la superficie di attacco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le stored procedure di Posta elettronica database sono disabilitate per impostazione predefinita.  
   

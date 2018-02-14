@@ -8,27 +8,32 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname: OpenSqlFilestream
-apilocation: sqlncli11.dll
+apiname:
+- OpenSqlFilestream
+apilocation:
+- sqlncli11.dll
 apitype: DLLExport
-helpviewer_keywords: OpenSqlFilestream
+helpviewer_keywords:
+- OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9433d94683396ab9fbeb057c4af1b681a628cd4
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 3959deb132236ba93119e42f320970733fb0e01c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accesso ai dati FILESTREAM con OpenSqlFilestream
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'API OpenSqlFilestream ottiene un handle di file compatibile con Win32 per un oggetto binario di grandi dimensioni (BLOB) FILESTREAM archiviato nel file system. L'handle può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Se si passa questo handle a qualsiasi altra API Win32, viene restituito l'errore ERROR_ACCESS_DENIED. L'handle deve essere chiuso passandolo all'API [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) Win32 prima che venga eseguito il commit o il rollback della transazione. La mancata chiusura dell'handle provoca perdite di risorse sul lato server.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+L'API OpenSqlFilestream ottiene un handle di file compatibile con Win32 per un oggetto binario di grandi dimensioni (BLOB) FILESTREAM archiviato nel file system. L'handle può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Se si passa questo handle a qualsiasi altra API Win32, viene restituito l'errore ERROR_ACCESS_DENIED. L'handle deve essere chiuso passandolo all'API [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) Win32 prima che venga eseguito il commit o il rollback della transazione. La mancata chiusura dell'handle provoca perdite di risorse sul lato server.  
   
  È necessario eseguire l'accesso al contenitore di tutti i dati FILESTREAM in una transazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] Anche le istruzioni possono essere eseguite nella stessa transazione. In questo modo viene mantenuta la coerenza tra i dati SQL e dati BLOB FILESTREAM.  
   

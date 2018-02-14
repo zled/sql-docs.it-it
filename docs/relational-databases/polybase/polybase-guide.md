@@ -8,7 +8,8 @@ ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5c47b393a4c91aa9e02b934834a00d3e2ec5a88d
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 13f4dc7e877341917ebf4f41694cb886c81c53f2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-guide"></a>Guida a PolyBase
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase è una tecnologia che accede ai dati all'esterno del database tramite il linguaggio T-SQL.  In SQL Server 2016 questa tecnologia consente di eseguire query sui dati esterni in Hadoop o di importare/esportare dati da Archiviazione BLOB di Azure. Le query vengono ottimizzate per eseguire il push del calcolo in Hadoop. In Azure SQL Data Warehouse è possibile importare/esportare dati da Archiviazione BLOB di Azure e Azure Data Lake Store.
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+PolyBase è una tecnologia che accede ai dati all'esterno del database tramite il linguaggio T-SQL.  In SQL Server 2016 questa tecnologia consente di eseguire query sui dati esterni in Hadoop o di importare/esportare dati da Archiviazione BLOB di Azure. Le query vengono ottimizzate per eseguire il push del calcolo in Hadoop. In Azure SQL Data Warehouse è possibile importare/esportare dati da Archiviazione BLOB di Azure e Azure Data Lake Store.
   
   
  Per usare PolyBase, vedere [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)(Introduzione a PolyBase).  
@@ -57,7 +59,7 @@ In sostanza, PolyBase non richiede di installare software aggiuntivo nell'ambien
   
 -   **Integrarsi con strumenti BI.** Usare PolyBase con la business intelligence e lo stack di analisi di Microsoft o usare strumenti di terze parti compatibili con SQL Server.  
   
-## <a name="performance"></a>Prestazioni  
+## <a name="performance"></a>restazioni  
   
 -   **Eseguire il push del calcolo in Hadoop.**Query Optimizer prende una decisione basata sui costi di eseguire il push del calcolo in Hadoop se in questo modo migliorano le prestazioni della query.  Per prendere la decisione basata sui costi, usa le statistiche sulle tabelle esterne. Il push del calcolo crea processi MapReduce e sfrutta le risorse di calcolo distribuite di Hadoop.  
   

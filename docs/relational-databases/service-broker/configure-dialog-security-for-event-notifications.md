@@ -8,24 +8,27 @@ ms.service:
 ms.component: service-broker
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: event notifications [SQL Server], security
+helpviewer_keywords:
+- event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1245278976e4befc38913410d1769bcfeadd1f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7f03652828e07ca4f89d8c6259e4a682735e947
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurazione della sicurezza del dialogo per le notifiche degli eventi
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È consigliabile configurare la sicurezza del dialogo di [!INCLUDE[ssSB](../../includes/sssb-md.md)] per le notifiche degli eventi che prevedono l'invio di messaggi a Service Broker su un server remoto. È necessario configurare manualmente la sicurezza del dialogo in base al modello di sicurezza avanzata del dialogo di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Il modello di sicurezza avanzata attiva la crittografia e la decrittografia di messaggi inviati da e a server remoti. Sebbene le notifiche degli eventi vengano inviate in una sola direzione, gli altri messaggi, ad esempio gli errori, vengono anche restituiti nella direzione opposta.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssSB](../../includes/sssb-md.md)] per le notifiche degli eventi che prevedono l'invio di messaggi a Service Broker su un server remoto. È necessario configurare manualmente la sicurezza del dialogo in base al modello di sicurezza avanzata del dialogo di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Il modello di sicurezza avanzata attiva la crittografia e la decrittografia di messaggi inviati da e a server remoti. Sebbene le notifiche degli eventi vengano inviate in una sola direzione, gli altri messaggi, ad esempio gli errori, vengono anche restituiti nella direzione opposta.  
   
 ## <a name="configuring-dialog-security-for-event-notifications"></a>Configurazione della sicurezza del dialogo per le notifiche degli eventi  
  Nella procedura seguente viene descritto il processo necessario per l'implementazione della sicurezza del dialogo per la notifica degli eventi. La procedura include azioni da eseguire sia sul server di origine sia sul server di destinazione. Nel server di origine viene creata la notifica degli eventi. Il server di destinazione riceve il messaggio di notifica degli eventi. È necessario completare le azioni di ogni passaggio sia per il server di origine sia per il server di destinazione prima di andare al passaggio successivo.  

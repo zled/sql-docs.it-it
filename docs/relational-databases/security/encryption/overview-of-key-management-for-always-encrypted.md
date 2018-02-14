@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 00fbddda37b58442e37618a25347576bc88caf07
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fbe87e904a8e46ae19d6dcb06600352a29949dc2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted (Panoramica della gestione delle chiavi per Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,12 +101,12 @@ Per garantire che Always Encrypted sia efficace nella prevenzione di questi tipi
 - Non generare mai le chiavi master della colonna o le chiavi di crittografia della colonna nel computer che ospita il database. Generare le chiavi in un computer separato dedicato alla gestione delle chiavi o nel computer che ospita le applicazioni che dovrebbero comunque avere accesso alle chiavi. Ciò significa che **non si devono mai eseguire strumenti usati per generare le chiavi nel computer che ospita il database** perché se riuscisse ad accedere a un computer usato per il provisioning o la gestione delle chiavi Always Encrypted, un utente malintenzionato potrebbe ottenere le chiavi, anche se queste compaiono nella memoria dello strumento solo per un breve periodo di tempo.
 - Per assicurarsi che il processo di gestione delle chiavi non riveli inavvertitamente le chiavi master della colonna o le chiavi di crittografia della colonna, è fondamentale identificare potenziali antagonisti e possibili minacce alla sicurezza prima di definire e implementare un processo di gestione delle chiavi. Se ad esempio l'obiettivo è di verificare che gli amministratori del database non abbiano accesso ai dati sensibili, un amministratore del database non può essere incaricato della generazione delle chiavi. Un amministratore del database, tuttavia, *può* gestire i metadati delle chiavi nel database, poiché i metadati non contengono le chiavi sotto forma di testo non crittografato.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Next Steps
 
 - [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [Configure Always Encrypted Keys using PowerShell (Configurare le chiavi Always Encrypted tramite PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
 - [Rotate Always Encrypted Keys using PowerShell (Ruotare le chiavi di Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configure Always Encrypted using SQL Server Management Studio (Configurare Always Encrypted usando SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+- [Configurare Always Encrypted usando SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

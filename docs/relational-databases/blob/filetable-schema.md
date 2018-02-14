@@ -8,26 +8,29 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], table schema
+helpviewer_keywords:
+- FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04e37414b0614809ce631c1541a863810e2b62b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e19f00c854bdbc79acc2d83f3d3c8095166ce5a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetable-schema"></a>Schema delle tabelle FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Descrive lo schema predefinito e fisso di una tabella FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Viene descritto lo schema predefinito e fisso di una tabella FileTable.  
   
-|Nome dell'attributo di file|tipo|Dimensione|Valore predefinito|Descrizione|Accessibilità al file system|  
+|Nome dell'attributo di file|Tipo|Dimensione|Default|Description|Accessibilità al file system|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|variabile|Oggetto **hierarchyid** che identifica la posizione dell'elemento.|Posizione del nodo corrente nel FileNamespace gerarchico.<br /><br /> Chiave primaria per la tabella.|Può essere creato e modificato impostando i valori del percorso di Windows.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||Valore restituito dalla funzione **NEWID()** .|ID univoco per i dati FILESTREAM.|Non applicabile.|  
@@ -48,6 +51,6 @@ ms.lasthandoff: 11/17/2017
 |**is_temporary**|**bit**<br /><br /> **not null**|1 byte|FALSE|Attributo di file temporaneo.|Calcolato automaticamente. Può essere impostato anche tramite API di Windows.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare, modificare e rilasciare FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
+ [Creare, modificare ed eliminare FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
   
   

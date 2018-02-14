@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,19 +28,20 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a3aaf70933f08d804c3a186c91177a63982aa0e5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: b40976e2a8efdaf0b41ede4f79786060b7e1163c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Confronto dati XML tipizzati con dati XML non tipizzati
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] È possibile creare variabili, parametri e colonne di tipo **xml**. È inoltre possibile associare una raccolta XML Schema a una variabile, un parametro o una colonna di tipo **xml** . In questo caso, l'istanza del tipo di dati **xml** viene definita *tipizzata*. In caso contrario, l'istanza XML è definita *non tipizzata*.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+È possibile creare variabili, parametri e colonne di tipo **xml** . È inoltre possibile associare una raccolta XML Schema a una variabile, un parametro o una colonna di tipo **xml** . In questo caso, l'istanza del tipo di dati **xml** viene definita *tipizzata*. In caso contrario, l'istanza XML è definita *non tipizzata*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>Tipi di dati XML corretti e xml  
  Il tipo di dati **xml** usa il tipo di dati standard ISO **xml** . Ciò consente pertanto l'archiviazione in una colonna XML non tipizzata di documenti di formato XML 1.0 corretto e frammenti di contenuto XML, con nodi di testo e un numero arbitrario di elementi di livello principale. Il sistema verifica che il formato dei dati sia corretto, non richiede che la colonna sia associata a XML Schema e rifiuta i dati con formato non corretto in senso esteso. Questo vale anche per le variabili e i parametri XML non tipizzati.  

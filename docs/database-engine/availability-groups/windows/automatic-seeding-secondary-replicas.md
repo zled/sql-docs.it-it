@@ -10,20 +10,22 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86282a01e4c9027d9dc340d348a814f61c0f4b3b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Seeding automatico per le repliche secondarie
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +37,7 @@ In SQL Server 2012 e 2014, l'unico modo per inizializzare una replica secondaria
 Le considerazioni sull'uso del seeding automatico includono:
 
 * [Impatto del log delle prestazioni e delle transazioni sulla replica primaria](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Layout dei dischi](#disk-layout)
+* [Layout dei dischi](#disklayout)
 * [Security](#security)
 
 
@@ -154,9 +156,6 @@ Se l'operazione ha esito positivo, i database vengono creati automaticamente nel
 <a name="sql-server-log"></a> Oltre alle [DMV (viste a gestione dinamica)](#dynamic-management-views) descritte di seguito, l'inizio e il completamento del seeding automatico possono essere visualizzati nel log di SQL Server:
 
 ![Log di SQL Server][2]
-
-
-
 
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>Combinare operazioni di backup e ripristino con il seeding automatico
 

@@ -58,11 +58,11 @@ author: MikeRayMSFT
 ms.author: MikeRayMSFT
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 85893d6f71a6caf270a56910418fe8217906ed76
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 32412d70d3dcf52fb467c5c4854526feb2fafe9d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,8 +140,8 @@ Nella tabella sono vengono elencati gli account di servizio predefiniti usati da
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc)*|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc)*|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc)*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc)*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc)*|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controller di Riesecuzione distribuita|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc)*|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Riesecuzione distribuita|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc)*|  
 |Utilità di avvio FD (ricerca full-text)|[LOCAL SERVICE](#Local_Service)|[Account virtuale](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[LOCAL SYSTEM](#Local_System)|[LOCAL SYSTEM](#Local_System)|  
@@ -195,7 +195,7 @@ Gli account dei servizi gestiti, gli account dei servizi gestiti di gruppo e gli
   
 -   <a name="VA_Desc"></a>**Virtual Accounts**  
   
-    Gli account virtuali a partire da Windows Server 2008 R2 e Windows 7 sono *account locali gestiti* che forniscono le funzionalità seguenti per semplificare l'amministrazione dei servizi. L'account virtuale è gestito automaticamente e consente di accedere alla rete in un ambiente di dominio. Se durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato il valore predefinito per gli account di servizio, sarà usato un account virtuale con il nome dell'istanza come nome del servizio, nel formato **NT SERVICE\\***\<SERVICENAME>*. I servizi eseguiti come account virtuali consentono di accedere alle risorse di rete usando le credenziali dell'account del computer nel formato *<nome_dominio>***\\***<nome_computer>***$**.  Quando si specifica un account virtuale per avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lasciare vuoto il campo della password. Se tramite l'account virtuale non è possibile registrare il nome dell'entità servizio (SPN), registrarlo manualmente. Per altre informazioni sulla registrazione manuale di un SPN, vedere [Registrazione manuale del nome SPN](https://msdn.microsoft.com/library/ms191153.aspx).  
+    Gli account virtuali a partire da Windows Server 2008 R2 e Windows 7 sono *account locali gestiti* che forniscono le funzionalità seguenti per semplificare l'amministrazione dei servizi. L'account virtuale è gestito automaticamente e consente di accedere alla rete in un ambiente di dominio. Se durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato il valore predefinito per gli account di servizio, sarà usato un account virtuale con il nome dell'istanza come nome del servizio, nel formato **NT SERVICE\\***\<SERVICENAME>*. I servizi eseguiti come account virtuali consentono di accedere alle risorse di rete usando le credenziali dell'account del computer nel formato *<nome_dominio>*__\\__*<nome_computer>*__$__.  Quando si specifica un account virtuale per avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lasciare vuoto il campo della password. Se tramite l'account virtuale non è possibile registrare il nome dell'entità servizio (SPN), registrarlo manualmente. Per altre informazioni sulla registrazione manuale di un SPN, vedere [Registrazione manuale del nome SPN](https://msdn.microsoft.com/library/ms191153.aspx).  
   
     > [!NOTE]  
     >  Non è possibile usare gli account virtuali per l'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , poiché non dispongono dello stesso SID in ogni nodo del cluster.  
@@ -236,8 +236,8 @@ Nella tabella seguente vengono indicati i servizi [!INCLUDE[ssNoVersion](../../i
 |MSSQLServerOLAPService|ASSVCACCOUNT, ASSVCPASSWORD, ASSVCSTARTUPTYPE|  
 |ReportServer|RSSVCACCOUNT, RSSVCPASSWORD, RSSVCSTARTUPTYPE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT, CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controller di Riesecuzione distribuita|DRU_CTLR, CTLRSVCACCOUNT, CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Riesecuzione distribuita|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
 |[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS***|
 |Motore PolyBase| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
@@ -293,7 +293,7 @@ In questa sezione vengono descritte le autorizzazioni configurate dal programma 
   
  Nella tabella seguente vengono mostrate le autorizzazioni richieste dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i SID per servizio o per i gruppi locali di Windows usati dai componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
-|Servizio[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Autorizzazioni concesse dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servizio|Autorizzazioni concesse dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> Tutti i diritti vengono concessi al SID per servizio. Istanza predefinita: **NT SERVICE\MSSQLSERVER**. Istanza denominata: **NT SERVICE\MSSQL$**NomeIstanza.|**Accesso come servizio** (SeServiceLogonRight)<br /><br /> **Sostituzione di token a livello di processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorare controllo incrociato** (SeChangeNotifyPrivilege)<br /><br /> **Regolazione quote di memoria per un processo** (SeIncreaseQuotaPrivilege)<br /><br /> Autorizzazione all'avvio del writer SQL<br /><br /> Autorizzazione di lettura del servizio Registro eventi<br /><br /> Autorizzazione di lettura del servizio RPC (Remote Procedure Call)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:** \*<br /><br /> Tutti i diritti vengono concessi al SID per servizio. Istanza predefinita: **NT Service\SQLSERVERAGENT**. Istanza denominata: **NT Service\SQLAGENT$***NomeIstanza*.|**Accesso come servizio** (SeServiceLogonRight)<br /><br /> **Sostituzione di token a livello di processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorare controllo incrociato** (SeChangeNotifyPrivilege)<br /><br /> **Regolazione quote di memoria per un processo** (SeIncreaseQuotaPrivilege)|  
@@ -312,7 +312,7 @@ In questa sezione vengono descritte le autorizzazioni configurate dal programma 
  *Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è disabilitato nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
 ###  <a name="Reviewing_ACLs"></a> Autorizzazioni del file system concesse ai SID per servizio SQL Server o a gruppi locali di Windows  
- Gli account del servizio di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono disporre dell'accesso alle risorse. Gli elenchi di controllo di accesso sono impostati per il SID per servizio o per il gruppo locale di Windows.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono disporre dell'accesso alle risorse. Gli elenchi di controllo di accesso sono impostati per il SID per servizio o per il gruppo locale di Windows.  
   
 > [!IMPORTANT]  
 >  Per le installazioni di cluster di failover, le risorse presenti in dischi condivisi devono essere impostate su un elenco di controllo di accesso per un account locale.  
@@ -379,14 +379,14 @@ In questa sezione vengono descritte le autorizzazioni configurate dal programma 
 ||80\tools|Lettura, Esecuzione|  
 ||130\sdk|lettura|  
 ||Microsoft SQL Server\130\Setup Bootstrap|Lettura, Esecuzione|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|\<ToolsDir>\DReplayController\Log\ (directory vuota)|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controller di Riesecuzione distribuita|\<ToolsDir>\DReplayController\Log\ (directory vuota)|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayController\resources\|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayController\\{all dlls}|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayController\DReplayController.config|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayController\IRTemplate.tdf|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|\<ToolsDir>\DReplayClient\Log\|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Riesecuzione distribuita|\<ToolsDir>\DReplayClient\Log\|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.exe|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayClient\resources\|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayClient\ (all dlls)|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
@@ -452,7 +452,7 @@ Nella tabella seguente sono indicate le autorizzazioni necessarie per disporre d
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|Scrittura in uno slot di posta elettronica utilizzando xp_sendmail.|Autorizzazioni di scrittura in rete.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|Eseguire xp_cmdshell per un utente diverso dall'amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Funzionamento come parte del sistema operativo e sostituzione di un token a livello di processo.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (MSSQLSERVER)|Uso della funzionalità di riavvio automatico.|È necessario essere membri del gruppo locale Administrators.|  
-|Ottimizzazione guidata[!INCLUDE[ssDE](../../includes/ssde-md.md)] |Ottimizza i database per ottenere prestazioni ottimali delle query.|Un utente che dispone di credenziali amministrative deve inizializzare l'applicazione al primo utilizzo. In seguito all'inizializzazione, gli utenti dbo possono utilizzare Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] per ottimizzare solo le tabelle di loro proprietà. Per altre informazioni, vedere l'argomento relativo all'inizializzazione dell'Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] al primo utilizzo nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata|Ottimizza i database per ottenere prestazioni ottimali delle query.|Un utente che dispone di credenziali amministrative deve inizializzare l'applicazione al primo utilizzo. In seguito all'inizializzazione, gli utenti dbo possono utilizzare Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] per ottimizzare solo le tabelle di loro proprietà. Per altre informazioni, vedere l'argomento relativo all'inizializzazione dell'Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] al primo utilizzo nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 > [!IMPORTANT]  
 >  Prima di aggiornare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], abilitare l'autenticazione di Windows per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e verificare la configurazione predefinita richiesta, ovvero che l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia un membro del gruppo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin.  
@@ -488,7 +488,7 @@ Tramite Strumentazione gestione Windows (WMI) deve essere possibile eseguire la 
   
 -   Autorizzazione**VIEW ANY DATABASE** a livello di server.  
   
-     L'installazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea uno spazio dei nomi WMI di SQL e concede l'autorizzazione di lettura al SID del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il programma di installazione crea uno spazio dei nomi WMI di SQL e concede l'autorizzazione di lettura al SID del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ###  <a name="Pipes"></a> Named Pipe  
 
@@ -539,13 +539,13 @@ In tutte le installazioni, il programma di installazione di [!INCLUDE[ssNoVersio
  Il provisioning del SID per servizio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer viene effettuato come account di accesso del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . L'account di accesso del SID per servizio è un membro del ruolo predefinito del server **sysadmin** .  
   
 ####  <a name="SQLWMI"></a> WMI di SQL e privilegi  
- L'installazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue il provisioning dell'account **NT SERVICE\Winmgmt** come account di accesso del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e aggiunge l'account al ruolo predefinito del server **sysadmin** .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione esegue il provisioning dell'account **NT SERVICE\Winmgmt** come account di accesso del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e aggiunge l'account al ruolo predefinito del server **sysadmin** .  
   
 #### <a name="ssrs-provisioning"></a>Provisioning di SSRS  
  Il provisioning dell'account specificato durante l'installazione viene effettuato come membro del ruolo del database **RSExecRole** . Per altre informazioni, vedere [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 ###  <a name="SSAS"></a> Provisioning di SSAS  
- I requisiti dell'account del servizio[!INCLUDE[ssAS](../../includes/ssas-md.md)] variano a seconda della modalità di distribuzione del server. Se si installa [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà richiesto di configurare il servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da eseguire con un account di dominio. Gli account di dominio sono necessari per supportare la funzionalità dell'account gestito compilato in SharePoint. Per questo motivo, il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non fornisce un account del servizio predefinito, ad esempio un account virtuale, per un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Per altre informazioni sul provisioning di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, vedere [Configurare gli account del servizio PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
+ [!INCLUDE[ssAS](../../includes/ssas-md.md)] variano a seconda della modalità di distribuzione del server. Se si installa [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà richiesto di configurare il servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da eseguire con un account di dominio. Gli account di dominio sono necessari per supportare la funzionalità dell'account gestito compilato in SharePoint. Per questo motivo, il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non fornisce un account del servizio predefinito, ad esempio un account virtuale, per un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Per altre informazioni sul provisioning di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, vedere [Configurare gli account del servizio PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
   
  Per tutte le altre installazioni autonome di [!INCLUDE[ssAS](../../includes/ssas-md.md)] , è possibile effettuare il provisioning del servizio da eseguire con un account di dominio, un account di sistema predefinito, un account gestito o un account virtuale. Per altre informazioni sul provisioning degli account, vedere [Configurare gli account del servizio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  
   

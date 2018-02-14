@@ -8,23 +8,25 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d50be48fe1f6c1b57da6171e0bfaee8c8b23a1fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b32325de1691fae92ff7bcecfeeda305df98d31
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Confrontare opzioni per l'archiviazione di BLOB (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Descrive e confronta le opzioni disponibili per l'archiviazione di file e documenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Vengono descritte e confrontate le opzioni disponibili per l'archiviazione di file e documenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="Expectations"></a> Archiviazione di file nel database: vantaggi e comportamenti previsti  
  Nella realtà un'ampia percentuale di dati aziendali non è strutturata e generalmente viene archiviata come file e documenti in file system. La maggior parte di questi dati viene prodotta, gestita e utilizzata da applicazioni che accedono ai file tramite API Windows. Solitamente le aziende mantengono questi dati nel file system, archiviando i metadati correlati per i file in un database relazionale.  
@@ -53,13 +55,13 @@ ms.lasthandoff: 11/17/2017
   
 |Funzionalità|Soluzione file server e database|Soluzione FILESTREAM|Soluzione FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Singola soluzione per le attività di gestione**|No|Sì|**Sì**|  
-|**Singolo set di servizi**: ricerca, creazione di report, esecuzione di query e così via|No|Sì|**Sì**|  
-|**Modello di sicurezza integrata**|No|Sì|**Sì**|  
-|**Aggiornamenti sul posto di dati FILESTREAM**|Sì|No|**Sì**|  
-|**Gerarchia di file e directory gestita nel database**|No|No|**Sì**|  
-|**Compatibilità delle applicazioni di Windows**|Sì|No|**Sì**|  
-|**Accesso relazionale agli attributi dei file**|No|No|**Sì**|  
+|**Singola soluzione per le attività di gestione**|no|Sì|**Sì**|  
+|**Singolo set di servizi**: ricerca, creazione di report, esecuzione di query e così via|no|Sì|**Sì**|  
+|**Modello di sicurezza integrata**|no|Sì|**Sì**|  
+|**Aggiornamenti sul posto di dati FILESTREAM**|Sì|no|**Sì**|  
+|**Gerarchia di file e directory gestita nel database**|no|no|**Sì**|  
+|**Compatibilità delle applicazioni di Windows**|Sì|no|**Sì**|  
+|**Accesso relazionale agli attributi dei file**|no|no|**Sì**|  
   
 ##  <a name="CompareRBS"></a> Confronto tra FILESTREAM e Archivio BLOB remoti (Remote BLOB Store, RBS)  
  Per un confronto tra queste due caratteristiche, vedere il post di blog del team RBS: [Confronto tra le funzionalità Archivio BLOB remoti e FILESTREAM di SQL Server](http://go.microsoft.com/fwlink/?LinkId=210317).  

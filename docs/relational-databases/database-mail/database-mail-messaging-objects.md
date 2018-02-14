@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - mail host databases [SQL Server]
 - host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bf2a7485e9769fe478c3f10e85d4b61b958d45b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8de888cea76c64cf8c5356b68ac8d852bd46bd1f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mail-messaging-objects"></a>Oggetti di messaggistica di Posta elettronica database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Il database **msdb** funge da host della posta elettronica. Questo database include le stored procedure e gli oggetti di messaggistica per Posta elettronica database. In Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è disponibile la Configurazione guidata posta elettronica database che consente di abilitare questo componente, creare e gestire profili e account e configurare le opzioni di Posta elettronica database.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Il database **msdb** funge da host della posta elettronica. Questo database include le stored procedure e gli oggetti di messaggistica per Posta elettronica database. In Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è disponibile la Configurazione guidata posta elettronica database che consente di abilitare questo componente, creare e gestire profili e account e configurare le opzioni di Posta elettronica database.  
   
 ##  <a name="ComponentsAndConcepts"></a> Oggetti in un database **msdb**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve essere abilitato nel database **msdb** . Posta elettronica database, tuttavia, non utilizza le funzionalità di rete di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Non è quindi necessario che gli utenti creino un endpoint di [!INCLUDE[ssSB](../../includes/sssb-md.md)] per l'utilizzo di Posta elettronica database. Il processo esterno di Posta elettronica database utilizza una connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] standard per comunicare con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -38,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  Tali oggetti rappresentano l'interfaccia per Posta elettronica database all'interno del database host della posta elettronica. Per implementare le funzionalità fornite dagli oggetti elencati sopra, vengono installati altri oggetti che sono tuttavia riservati per utilizzo interno.  
   
-|Nome|Tipo|Descrizione|  
+|nome|Tipo|Description|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**Visualizza**|Elenca tutti i messaggi inviati a Posta elettronica database.|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**Visualizza**|Elenca i messaggi relativi al comportamento di [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md).|  

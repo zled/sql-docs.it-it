@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 531989070a8e3f416fee19af797555284294e7da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff8a5cd7317b34e5f5cb09c5fc1b85b3580e7fa1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Sviluppare con Always Encrypted e il provider di dati .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ Questo articolo fornisce informazioni su come sviluppare applicazioni .NET usand
 Always Encrypted consente alle applicazioni client di eseguire la crittografia dei dati sensibili senza mai rivelare i dati o le chiavi di crittografia a SQL Server o al database SQL di Azure. Un driver abilitato per Always Encrypted, come il provider di dati .NET Framework per SQL Server, fa tutto questo eseguendo in modo trasparente la crittografia e la decrittografia dei dati sensibili nell'applicazione client. Il driver determina automaticamente i parametri di query corrispondenti alle colonne di database con dati sensibili (protette mediante Always Encrypted) e crittografa i valori di tali parametri prima di passare i dati a SQL Server o al database SQL di Azure. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, recuperati dalle colonne di database crittografate nei risultati delle query. Per altre informazioni, vedere [Always Encrypted (motore di database)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Configurare Always Encrypted nel database. Ciò implica il provisioning di chiavi Always Encrypted e l'impostazione della crittografia per le colonne di database selezionate. Se non è presente un database in cui Always Encrypted è configurato, seguire le istruzioni fornite nel blog di [introduzione a Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5).
 - Verificare che .NET Framework versione 4.6 o successiva sia installato nel computer di sviluppo. Per informazioni dettagliate, vedere [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). È necessario anche assicurarsi che .NET Framework versione 4.6 o successiva sia configurato come versione di .NET Framework di destinazione nell'ambiente di sviluppo. Se si usa Visual Studio, vedere [Procedura: Destinare una versione di .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
@@ -283,7 +284,7 @@ Il processo per ottenere la chiave di crittografia di una colonna consiste nelle
 Il provider di dati .NET Framework per SQL Server viene fornito con i seguenti provider predefiniti di archivio delle chiavi master delle colonne, che sono pre-registrati con i nomi di provider specifici (usati per cercare il provider).
 
 
-| Classe | Descrizione | Nome del provider (ricerca) |
+| Classe | Description | Nome del provider (ricerca) |
 |:---|:---|:---|
 |Classe SqlColumnEncryptionCertificateStoreProvider| Un provider per l'archivio certificati di Windows. | MSSQL_CERTIFICATE_STORE |
 |[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Nota:** questo provider è disponibile in .NET Framework 4.6.1 e versioni successive. |Un provider di archivio delle chiavi che supporta [Microsoft Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). In genere, un archivio di questo tipo è un modulo di protezione hardware, ovvero un dispositivo fisico che protegge e gestisce le chiavi digitali e fornisce l'elaborazione della crittografia.  | MSSQL_CNG_STORE|
@@ -553,7 +554,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Nome|Descrizione|Introdotta nella versione di .NET
+|nome|Description|Introdotta nella versione di .NET
 |:---|:---|:---
 |[Classe SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Un provider di archivi di chiavi per l'archivio certificati di Windows.|  4.6
 |[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Un provider di archivi di chiavi per l'API di crittografia di Microsoft: Next Generation (CNG).|  4.6.1

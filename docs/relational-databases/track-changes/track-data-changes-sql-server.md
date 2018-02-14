@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: acb1b3a650c43652dd6a2b46e52ce84690173f6d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="track-data-changes-sql-server"></a>Rilevare le modifiche ai dati (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre due funzionalità che consentono di tener traccia delle modifiche ai dati in un database: [Change Data Capture](#Capture) e [Rilevamento modifiche](#Tracking). Tali funzionalità consentono alle applicazioni di determinare le modifiche DML (operazioni di inserimento, aggiornamento ed eliminazione) apportate alle tabelle utente in un database. Change Data Capture e Rilevamento modifiche possono essere abilitati sullo stesso database, non sono richieste considerazioni speciali. Per le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano Change Data Capture e Rilevamento modifiche, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Il rilevamento delle modifiche è supportato dal [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre due funzionalità che consentono di tener traccia delle modifiche ai dati in un database: [Change Data Capture](#Capture) e [Rilevamento modifiche](#Tracking). Tali funzionalità consentono alle applicazioni di determinare le modifiche DML (operazioni di inserimento, aggiornamento ed eliminazione) apportate alle tabelle utente in un database. Change Data Capture e Rilevamento modifiche possono essere abilitati sullo stesso database, non sono richieste considerazioni speciali. Per le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano Change Data Capture e Rilevamento modifiche, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Il rilevamento delle modifiche è supportato dal [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Vantaggi dall'utilizzo di Change Data Capture o Rilevamento modifiche  
  Un importante requisito per l'efficienza di alcune applicazioni è costituito dalla possibilità di eseguire query relative a dati che sono stati modificati in un database. In genere, per determinare le modifiche apportate ai dati, gli sviluppatori di applicazioni devono implementare un metodo di rilevamento personalizzato utilizzando una combinazione di trigger, colonne di tipo timestamp e tabelle aggiuntive. La creazione di queste applicazioni comporta in genere molte operazioni di implementazione e rende necessari aggiornamenti di schemi, provocando spesso un elevato overhead delle prestazioni.  
@@ -62,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 |**Modifiche rilevate**|||  
 |Modifiche DML|Sì|Sì|  
 |**Informazioni rilevate**|||  
-|Dati cronologici|Sì|No|  
+|Dati cronologici|Sì|no|  
 |Modifiche apportate a una colonna|Sì|Sì|  
 |Tipo DML|Sì|Sì|  
   
@@ -93,7 +95,7 @@ ms.lasthandoff: 11/17/2017
 |Tipo di colonna|Modifiche acquisite nelle tabelle delle modifiche|Limitazioni|  
 |--------------------|---------------------------------------|-----------------|  
 |Colonne di tipo sparse|Sì|Non supporta l'acquisizione delle modifiche quando si utilizza un set di colonne.|  
-|Colonne calcolate|No|Le modifiche alle colonne calcolate non vengono rilevate. La colonna verrà visualizzata nella tabella delle modifiche con il tipo appropriato, ma avrà valore NULL.|  
+|Colonne calcolate|no|Le modifiche alle colonne calcolate non vengono rilevate. La colonna verrà visualizzata nella tabella delle modifiche con il tipo appropriato, ma avrà valore NULL.|  
 |XML|Sì|Le modifiche a singoli elementi XML non vengono rilevate.|  
 |timestamp|Sì|Il tipo di dati nella tabella delle modifiche viene convertito in binario.|  
 |Tipi di dati BLOB|Sì|L'immagine precedente della colonna BLOB viene archiviata solo se viene modificata la colonna stessa.|  

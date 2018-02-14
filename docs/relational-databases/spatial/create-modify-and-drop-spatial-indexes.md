@@ -23,16 +23,17 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11d8454a5862b02e162e22ead3ca46e68b4f1354
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un indice spaziale consente di eseguire in modo più efficiente determinate operazioni in una colonna con tipo di dati **geometry** o **geography** (*colonna spaziale*). In una colonna spaziale è possibile specificare più di un indice spaziale. Ciò è utile, ad esempio, per indicizzare diversi parametri della suddivisione a mosaico in una sola colonna.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Un indice spaziale consente di eseguire in modo più efficiente determinate operazioni in una colonna con tipo di dati **geometry** o **geography** ( *colonna spaziale*). In una colonna spaziale è possibile specificare più di un indice spaziale. Ciò è utile, ad esempio, per indicizzare diversi parametri della suddivisione a mosaico in una sola colonna.  
   
  La creazione di indici spaziali è soggetta a un certo numero di limitazioni. Per altre informazioni, vedere [Restrizioni relative agli indici spaziali](#restrictions) .  
   
