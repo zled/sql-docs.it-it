@@ -47,6 +47,7 @@
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [Motore di database di SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
 ### [Sicurezza di SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)
+### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
 
 ## Commenti e Guida
 ### [Suggerimenti per SQL Server](https://feedback.azure.com/forums/908035-sql-server)
