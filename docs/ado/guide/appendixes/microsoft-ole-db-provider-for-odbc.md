@@ -22,10 +22,10 @@ ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provider Microsoft OLE DB per ODBC Panoramica
 Per un programmatore di ADO o RDS, un mondo ideale sarebbe uno in cui ogni tipo di dati origine espone un'interfaccia OLE DB, in modo che ADO è possibile chiamare direttamente nell'origine dati. Anche se un numero sempre maggiore di fornitori di database siano implementando le interfacce OLE DB, alcune origini dati non sono ancora esposte in questo modo. Tuttavia, è possano accedere la maggior parte dei sistemi DBMS attualmente in uso tramite ODBC.

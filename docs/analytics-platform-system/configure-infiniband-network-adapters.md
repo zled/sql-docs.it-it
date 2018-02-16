@@ -14,12 +14,12 @@ description: Viene descritto come configurare le schede di rete InfiniBand in un
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: "15"
+caps.latest.revision: 
 ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurare le schede di rete InfiniBand per Analitica Platform System
 Viene descritto come configurare le schede di rete InfiniBand in un server non strumento client per connettersi al nodo di controllo in SQL Server Parallel Data Warehouse (PDW). Utilizzare queste istruzioni per la connettività di base e per la disponibilità elevata, in modo che il caricamento, i processi di backup e di altri verranno automaticamente connesso alla rete InfiniBand attiva.  
@@ -58,7 +58,7 @@ Ad esempio, se il nome dell'area PDW è MyPDW e il nome del dispositivo è MyAPS
   
 È necessario un account di Windows nel server che dispone dell'autorizzazione per configurare le schede di rete client.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
 Queste istruzioni presuppongono il server di client è già stato centralizzato in remoto e connesso alla rete InfiniBand accessorio. Per su rack e i cavi di istruzioni, vedere [acquisire e configurare un Server durante il caricamento](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Osservazioni generali  
@@ -77,9 +77,9 @@ Per soddisfare i requisiti aziendali specifici, è possibile aggiungere anche il
   
     ![Connessioni InfiniBand nel nodo di gestione](media/network-teamib.png "connessioni InfiniBand nel nodo di gestione")  
   
-4.  Dalla finestra Proprietà protocollo Internet versione 4 (TCP/IPv4), annotare i valori per il **indirizzo IP** e **Subnet mask**.  L'indirizzo IP del  ***appliance_domain*-AD01** nodo è l'indirizzo IP del server DNS di sistema di piattaforma Analitica.  
+4.  Dalla finestra Proprietà protocollo Internet versione 4 (TCP/IPv4), annotare i valori per il **indirizzo IP** e **Subnet mask**.  L'indirizzo IP del ***appliance_domain *-AD01** nodo è l'indirizzo IP del server DNS di sistema di piattaforma Analitica.  
   
-5.  Ripetere i passaggi da 1 a 5 per l'adapter TeamIB1 su  ***appliance_domain*-AD02** server.  
+5.  Ripetere i passaggi da 1 a 5 per l'adapter TeamIB1 su ***appliance_domain *-AD02** server.  
   
     ![Proprietà InfiniBand 1 nodo Gestione PDW](media/network-ip1-properties.png "proprietà InfiniBand 1 nodo Gestione PDW")  
   
@@ -168,7 +168,7 @@ Per soddisfare i requisiti aziendali specifici, è possibile aggiungere anche il
   
 2.  Fare clic su Avanzate... .  
   
-3.  Nella finestra Impostazioni TCP/IP avanzate, se l'operazione di Accodamento opzione questi suffissi DNS (in ordine) non è disattivata, chiamata la casella di controllo Aggiungi questi suffissi DNS (in ordine): selezionare il suffisso del dominio applicazione e fare clic su Aggiungi... Sarà il suffisso del dominio applicazione`appliance_domain.local`  
+3.  Nella finestra Impostazioni TCP/IP avanzate, se l'operazione di Accodamento opzione questi suffissi DNS (in ordine) non è disattivata, chiamata la casella di controllo Aggiungi questi suffissi DNS (in ordine): selezionare il suffisso del dominio applicazione e fare clic su Aggiungi... Sarà il suffisso del dominio applicazione `appliance_domain.local`  
   
 4.  Se l'operazione di Accodamento questi DNS suffissi (in ordine): opzione è disattivata, è possibile aggiungere il dominio dei punti di accesso a questo server modificando la chiave del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient.  
   
@@ -182,10 +182,10 @@ Per soddisfare i requisiti aziendali specifici, è possibile aggiungere anche il
   
     Esempi per un'applicazione denominata denominati MyAPS con un'area PDW MyPDW:  
   
-    -   MyPDW SQLCTL01.MyAPS.local  
+    -   MyPDW-SQLCTL01.MyAPS.local  
   
-    -   MyPDW SQLCTL01  
+    -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>Vedere anche  
-[Acquisire e configurare un Server di caricamento](acquire-and-configure-loading-server.md)  
+[Acquisire e configurare un Server di caricamento ](acquire-and-configure-loading-server.md)  
   

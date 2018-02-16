@@ -8,23 +8,24 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetScrollOptions
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 57d4bb7747803f1fe65276ddb86c574763627906
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>Mapping di SQLSetScrollOptions
 Quando un'applicazione chiama **SQLSetScrollOptions** tramite un'applicazione ODBC 3*x* e il driver non supporta **SQLSetScrollOptions**, la chiamata a  
@@ -70,7 +71,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     con  *\*ValuePtr* impostato su uno dei valori nella tabella seguente, in base al valore del *KeysetSize* argomento **SQLSetScrollOptions**.  
+     con *\*ValuePtr* impostato su uno dei valori nella tabella seguente, in base al valore del *KeysetSize* argomento **SQLSetScrollOptions**.  
   
     |*KeysetSize* argomento|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -94,7 +95,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     con  *\*ValuePtr* impostato sul *KeysetSize* argomento **SQLSetScrollOptions**.  
+     con *\*ValuePtr* impostato sul *KeysetSize* argomento **SQLSetScrollOptions**.  
   
 -   Una chiamata a  
   
@@ -102,7 +103,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     con  *\*ValuePtr* impostato sul *RowsetSize* argomento **SQLSetScrollOptions**.  
+     con *\*ValuePtr* impostato sul *RowsetSize* argomento **SQLSetScrollOptions**.  
   
     > [!NOTE]  
     >  Quando esegue il mapping di gestione Driver **SQLSetScrollOptions** per un'applicazione che utilizza un'applicazione ODBC 3*x* driver che non supporta **SQLSetScrollOptions**, il Driver Manager imposta l'opzione dell'istruzione SQL_ROWSET_SIZE, non l'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE sul *RowsetSize* argomento **SQLSetScrollOption**. Di conseguenza, **SQLSetScrollOptions** non può essere utilizzato da un'applicazione durante il recupero di più righe da una chiamata a **SQLFetch** o **SQLFetchScroll**. E può essere utilizzato solo quando più recupero righe da una chiamata a **SQLExtendedFetch**.
