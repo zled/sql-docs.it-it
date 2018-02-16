@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d254e42d-9918-47ce-b6df-47f1f0b432dd
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9bf3896348044d084144fd2276ff31f617b202c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovermemorygrant-rowset"></a>Set di righe DISCOVER_MEMORYGRANT
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce un elenco di memoria interna concessioni di quote vengono recuperate da processi attualmente in esecuzione nel server. Per verificare se un processo è in esecuzione nel server, utilizzare `Select * from $System.Discover_Jobs`.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Restituisce un elenco di concessioni di quote di memoria interna recuperate da processi attualmente in esecuzione nel server. Per verificare se un processo è in esecuzione nel server, utilizzare `Select * from $System.Discover_Jobs`.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
   
@@ -35,12 +37,12 @@ ms.lasthandoff: 01/08/2018
 |Nome colonna|Indicatore del tipo|Restrizione|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**MEMORY_ID**|**DBTYPE_I8**||Numero che identifica la concessione della quota di memoria. Univoco all'interno del contesto di una singola richiesta DISCOVER_MEMORYGRANT.|  
-|**SPID**|**DBTYPE_I4**|Obbligatorio|SPID che è possibile ottenere eseguendo `Select * from $System.Discover_Sessions`.|  
+|**SPID**|**DBTYPE_I4**|Required|SPID che è possibile ottenere eseguendo `Select * from $System.Discover_Sessions`.|  
 |**CreationTime**|**DBTYPE_I8 DBTYPE_DBTIMESTAMP**||Ora di concessione della quota.|  
 |**LastRequestTime**|**DBTYPE_DBTIMESTAMP**||Ora dell'ultima modifica della richiesta di quota.|  
 |**MemoryUsed**|**DBTYPE_I4**||Quantità di memoria utilizzata insieme alla quota.|  
 |**MemoryGranted**|**DBTYPE_I4**||Quantità di memoria concessa per l'utilizzo da parte del processo che ottiene la quota di memoria.|  
-|**Bloccato**|**DBTYPE_BOOL**||Valore booleano che indica lo stato di blocco del processo. True indica che il processo è bloccato in attesa che un altro processo rilasci quota sufficiente per concedere la relativa richiesta di quota. False indica che il processo ha ricevuto la relativa quota e può procedere all'esecuzione.|  
+|Bloccato|**DBTYPE_BOOL**||Valore booleano che indica lo stato di blocco del processo. True indica che il processo è bloccato in attesa che un altro processo rilasci quota sufficiente per concedere la relativa richiesta di quota. False indica che il processo ha ricevuto la relativa quota e può procedere all'esecuzione.|  
   
  Questo set di righe dello schema non è ordinato.  
   
@@ -49,12 +51,12 @@ ms.lasthandoff: 01/08/2018
   
  Nella tabella seguente vengono forniti i GUID e i valori stringa che identificano questo set di righe.  
   
-|Argomento|valore|  
+|Argomento|Valore|  
 |--------------|-----------|  
 |GUID|a07ccd23-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|MemoryGrant|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML per set di righe dello schema di analisi](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis i rowset dello Schema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

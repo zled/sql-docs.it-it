@@ -1,7 +1,7 @@
 ---
 title: L'elaborazione di oggetti (XMLA) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - errors [XML for Analysis]
 - objects [XML for Analysis]
@@ -24,19 +25,19 @@ helpviewer_keywords:
 - processing objects [XML for Analysis]
 - XMLA, objects
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d72d5bdfcfc7c3d461dc3bc986c7ff6106e3da51
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dffffec4424ed00921d2c9150330c6293c6f77da
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-objects-xmla"></a>Elaborazione di oggetti (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l'elaborazione è il passaggio o serie di passaggi necessari per trasformare dati in informazioni per l'analisi aziendale. L'elaborazione varia a seconda del tipo di oggetto, ma rappresenta sempre una fase della trasformazione dei dati in informazioni.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l'elaborazione è il passaggio o serie di passaggi necessari per trasformare dati in informazioni per l'analisi aziendale. L'elaborazione varia a seconda del tipo di oggetto, ma rappresenta sempre una fase della trasformazione dei dati in informazioni.  
   
  Al processo un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dell'oggetto, è possibile utilizzare il [processo](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) comando. Il **processo** comando è possibile elaborare gli oggetti seguenti in un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza:  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 |--------------------|------------------------|  
 |*ProcessFull*|Cubo, database, dimensione, gruppo di misure, modello di data mining, struttura di data mining, partizione|  
 |*ProcessAdd*|Dimensione, partizione|  
-|*ProcessUpdate*|Dimension|  
+|*ProcessUpdate*|Dimensione|  
 |*ProcessIndexes*|Dimensione, cubo, gruppo di misure, partizione|  
 |*ProcessData*|Dimensione, cubo, gruppo di misure, partizione|  
 |*ProcessDefault*|Cubo, database, dimensione, gruppo di misure, modello di data mining, struttura di data mining, partizione|  
@@ -122,7 +123,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="description"></a>Description  
  Nell'esempio seguente viene elaborato completamente il database di esempio [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 <Process xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -137,7 +138,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="description"></a>Description  
  Nell'esempio seguente viene elaborata in modo incrementale la **Internet_Sales_2004** partizione il **Internet Sales** gruppo di misure del **Adventure Works DW** cubo il [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] esempio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Il **processo** comando aggiunge le aggregazioni per ordine di date entro il 31 dicembre 2006 alla partizione utilizzando un'associazione di query out-of-line nel **associazioni** proprietà del **processo**  comando per recuperare le righe della tabella dei fatti da cui generare le aggregazioni da aggiungere alla partizione.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 <Process ProcessAffectedObjects="true" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

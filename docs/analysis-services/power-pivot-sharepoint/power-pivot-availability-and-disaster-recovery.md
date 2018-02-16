@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5a7e94aeb9f547220a3b3bc836e59ef81ce3bfe9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Ripristino di emergenza e disponibilità elevata di Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Piani di ripristino di emergenza e disponibilità per [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dipendono principalmente dalla struttura della farm di SharePoint, il tempo di inattività accettabile per i diversi componenti e gli strumenti e procedure consigliate implementano per la disponibilità di SharePoint. In questo argomento vengono riepilogate le tecnologie e inclusi i diagrammi di topologia di esempio da considerare quando si pianifica la disponibilità e il ripristino di emergenza per una distribuzione di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+I piani di ripristino di emergenza e disponibilità per [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dipendono principalmente dalla struttura della farm di SharePoint, dalla quantità di inattività accettabile per i diversi componenti e dagli strumenti e dalle procedure consigliate che si implementano per la disponibilità di SharePoint. In questo argomento vengono riepilogate le tecnologie e inclusi i diagrammi di topologia di esempio da considerare quando si pianifica la disponibilità e il ripristino di emergenza per una distribuzione di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
 ||  
 |-|  
@@ -88,7 +89,7 @@ ms.lasthandoff: 01/08/2018
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in una farm per la disponibilità.|Supportato ma non consigliato. Si consiglia di usare Always On in modalità di commit sincrono.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in modalità di commit sincrono|Supportato e consigliato.|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] mirroring asincrono o log shipping a un'altra farm per il ripristino di emergenza.|Supportato.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] con commit asincrono per il ripristino di emergenza|Supportato|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] con commit asincrono per il ripristino di emergenza|Supported|  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   

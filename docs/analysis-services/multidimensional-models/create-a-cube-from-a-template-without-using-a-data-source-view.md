@@ -12,22 +12,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ed5bd7197fa455d5ea93f39e529961a16828ba77
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Creare un cubo da un modello senza utilizzare una vista origine dati
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Selezionare **compila il cubo senza utilizzare un'origine dati** nella prima pagina della creazione guidata cubo per creare un cubo senza utilizzare una vista origine dati. Successivamente è possibile usare Generazione guidata schema per generare lo schema relazionale per la vista origine dati in base alla struttura del cubo e possibilmente ad altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per altre informazioni sulla generazione di uno schema, vedere [Generazione guidata schema &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Selezionare **Build the cube without using a data source** (Crea il cubo senza usare un'origine dati) nella prima pagina di Creazione guidata cubo per creare un cubo senza usare una vista origine dati. Successivamente è possibile usare Generazione guidata schema per generare lo schema relazionale per la vista origine dati in base alla struttura del cubo e possibilmente ad altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulla generazione di uno schema, vedere [Generazione guidata schema &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Selezione del metodo di compilazione  
- Nella pagina **Selezione metodo di creazione** della procedura guidata fare clic su **Build the cube without using a data source**(Crea il cubo senza usare un'origine dati). Per creare il cubo usando un modello di cubo esistente, selezionare la casella di controllo **Use a cube template** (Usa un modello di cubo). , Se non si seleziona l'utilizzo di un modello, è necessario impostare le opzioni manualmente.  
+ Nella pagina **Selezione metodo di creazione** della procedura guidata fare clic su **Build the cube without using a data source**(Crea il cubo senza usare un'origine dati). Per creare il cubo usando un modello di cubo esistente, selezionare la casella di controllo **Use a cube template** (Usa un modello di cubo). . Se non si seleziona l'utilizzo di un modello, è necessario impostare le opzioni manualmente.  
   
  Nei modelli di cubo sono inclusi misure, gruppi di misure, dimensioni, gerarchie e attributi predefiniti. Se si seleziona un modello, nella procedura guidata vengono utilizzate le definizioni di oggetti nei modelli come base per l'impostazione delle opzioni nelle pagine seguenti. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene installato con diversi modelli di cubi standard. L'amministratore del server può aggiungere inoltre modelli di cubo o di dimensioni progettati espressamente per i dati dell'organizzazione.  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  Sia nella griglia **Selezionare le misure dal modello** sia nella griglia **Aggiungi nuove misure** vengono visualizzati i valori delle colonne descritte nella tabella seguente. È possibile fare clic su un valore in entrambi gli elenchi per modificarlo.  
   
-|colonna|Description|  
+|Colonna|Description|  
 |------------|-----------------|  
 |**Nome misura**|Un valore in questa colonna consente di definire il nome di una misura nel cubo. Fare clic su un valore in questa colonna per digitare un nome. Fare clic su **Aggiungi nuova misura** in questa colonna per creare una nuova misura. Questa colonna consente di impostare la proprietà **Name** nell'oggetto misura.|  
 |**Gruppo di misure**|Nome del gruppo di misure contenente la misura. Fare clic su questo valore per scegliere o digitare un nome. Se si eliminano tutte le misure che appartengono a un particolare gruppo, viene rimosso anche quest'ultimo. Questa colonna consente di impostare la proprietà **Name** per l'oggetto gruppo di misure.|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
  Sia nella griglia **Selezionare le dimensioni dal modello** sia nella griglia **Aggiungi nuove dimensioni** vengono visualizzati i valori delle colonne descritte nella tabella seguente. È possibile fare clic su un valore in entrambi gli elenchi per modificarlo.  
   
-|colonna|Description|  
+|Colonna|Description|  
 |------------|-----------------|  
 |**Tipo**|Viene visualizzato il tipo di dimensione per una dimensione del modello. Fare clic su questa cella per modificare il tipo di dimensione per una dimensione. Questa colonna consente di impostare la proprietà **Tipo** per l'oggetto dimensione.|  
 |**Nome**|Viene visualizzato il nome della dimensione. Fare clic su questa cella per digitare un nome diverso. Questo valore consente di impostare la proprietà **Nome** per l'oggetto dimensione.|  

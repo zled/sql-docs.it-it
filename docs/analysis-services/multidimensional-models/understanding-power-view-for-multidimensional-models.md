@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Informazioni su Power View per modelli multidimensionali
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo articolo descrive la funzionalità Power View per modelli multidimensionali in SQL Server e fornisce informazioni importanti per i professionisti di Business Intelligence e gli amministratori che intendono implementare Power View per modelli multidimensionali nelle loro organizzazioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Questo articolo descrive la funzionalità Power View per modelli multidimensionali in SQL Server e fornisce informazioni importanti per gli amministratori e i professionisti di Business Intelligence che si occupano dell'implementazione di Power View per modelli multidimensionali nelle organizzazioni.  
   
  I modelli multidimensionali offrono soluzioni di analisi, archiviazione e modellazione di dati OLAP all'avanguardia nel settore. I modelli multidimensionali in SQL Server supportano le attività di visualizzazione, esplorazione e analisi dei dati ad-hoc con Microsoft Power View.  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Power View per modelli multidimensionali architettura](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View per modelli multidimensionali architettura")  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  **Requisiti del server**  
   
 -   Microsoft SQL Server 2016 Analysis Services in esecuzione in modalità multidimensionale.  
@@ -63,12 +64,12 @@ ms.lasthandoff: 01/08/2018
 |-----------------------------|--------------------|  
 |Cube|Modello|  
 |Dimensione cubo|Tabella|  
-|Attributi dimensione (Chiave/i, Nome)|colonna|  
+|Attributi dimensione (Chiave/i, Nome)|Colonna|  
 |Gruppo di misure|Tabella|  
 |Misura|Misura|  
 |Misura senza gruppo di misure|In una tabella denominata Misure|  
 |Relazione gruppo di misure dimensione del cubo|Relazione|  
-|Perspective|Perspective|  
+|Prospettiva|Prospettiva|  
 |Indicatore KPI|Indicatore KPI|  
 |Gerarchie utente/padre-figlio|Gerarchia|  
 |Cartella di visualizzazione|Cartella di visualizzazione|  
@@ -223,7 +224,7 @@ ms.lasthandoff: 01/08/2018
   
  La richiesta DISCOVER_CSDL_METADATA presenta le restrizioni seguenti:  
   
-|nome|Obbligatorio|Description|  
+|Nome|Required|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Sì|Nome del catalogo\database.|  
 |PERSPECTIVE_NAME|Sì, se il cubo contiene più di una prospettiva. Facoltativo se è presente un solo cubo o una prospettiva predefinita.|Nome del cubo o della prospettiva nel database multidimensionale.|  

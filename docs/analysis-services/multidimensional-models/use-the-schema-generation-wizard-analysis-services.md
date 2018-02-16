@@ -15,19 +15,20 @@ helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d8cae9fd297d0ae2946cccab69a9a273a2cf85b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Utilizzare la Generazione guidata schema (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La generazione guidata Schema richiede una quantità limitata di informazioni durante la fase di generazione. La maggior parte delle informazioni richieste dalla Generazione guidata schema per la generazione di schemi relazionali vengono estratte dai cubi e dalle dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] già creati nel progetto. Inoltre, è possibile personalizzare come viene generato lo schema del database dell'area di interesse, nonché come vengono denominati gli oggetti nello schema.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Durante la fase di generazione con Generazione guidata schema è necessario disporre di una quantità ridotta di informazioni. La maggior parte delle informazioni richieste dalla Generazione guidata schema per la generazione di schemi relazionali vengono estratte dai cubi e dalle dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] già creati nel progetto. Inoltre, è possibile personalizzare come viene generato lo schema del database dell'area di interesse, nonché come vengono denominati gli oggetti nello schema.  
   
 ## <a name="start-the-wizard"></a>Avviare la procedura guidata  
  È possibile aprire la Generazione guidata schema da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] in diversi modi:  

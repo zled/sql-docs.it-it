@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7fcf359a6f760ffffa4e1a0682e4c4b45f4fe272
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-types-in-analysis-services"></a>Tipi di dati in Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Per tutti i <xref:Microsoft.AnalysisServices.DataItem> oggetti, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta il subset seguente di **System.Data.OleDb.OleDbType**. Per impostare o leggere il tipo di dati, utilizzare [il tipo di dati DataItem &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Per tutti i <xref:Microsoft.AnalysisServices.DataItem> oggetti, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta il subset seguente di **System.Data.OleDb.OleDbType**. Per impostare o leggere il tipo di dati, utilizzare [il tipo di dati DataItem &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
   
 ## <a name="supported-data-types"></a>Tipi di dati supportati  
   
@@ -35,9 +37,9 @@ ms.lasthandoff: 01/08/2018
 |Binario|Un flusso di dati binari di **Byte** tipo. **Byte** è un tipo di valore che rappresenta interi senza segno con valori compresi tra 0 e 255.|  
 |Boolean|Istanze di questo tipo dispongono di valori **true** o **false**.|  
 |Currency|Oggetto *valuta* valore compreso tra -922.337.203.685.477,5808 e 922.337.203.685.477,5807 con un'accuratezza di un decimillesimo di unità di valuta (quattro cifre decimali).|  
-|date|Dati relativi alla data e all'ora, archiviati come valore Double. La parte intera indica il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno o dell'ora del giorno.|  
+|Data|Dati relativi alla data e all'ora, archiviati come valore Double. La parte intera indica il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno o dell'ora del giorno.|  
 |Double|Numero a virgola mobile compreso tra -1,79769313486232E +308 e 1,79769313486232E +308. Un valore Double consente di archiviare informazioni sui numeri fino a 15 cifre decimali di precisione.|  
-|Valore intero|Intero con segno a 32 bit che rappresenta interi con segno con valori compresi tra 2.147.483.648 (negativo) e 2.147.483.647 (positivo).|  
+|Integer|Intero con segno a 32 bit che rappresenta interi con segno con valori compresi tra 2.147.483.648 (negativo) e 2.147.483.647 (positivo).|  
 |Single|Numero a virgola mobile compreso tra - 3,4028235E +38 e 3,4028235E +38. Un valore Single consente di archiviare informazioni sui numeri fino a 7 cifre decimali di precisione.|  
 |Smallint|Intero con segno a 16 bit. Il *Smallint* tipo di valore rappresenta interi con segno con valori compresi tra 32768 negativo e 32767 positivo.|  
 |Tinyint|Numero intero con segno a 8 bit. Il tipo di valore Tinyint rappresenta interi con valori compresi tra 128 (negativo) e 127 (positivo).|  
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="amo-validations-on-data-types"></a>Convalide AMO nei tipi di dati  
  Nella tabella seguente vengono elencate le convalide aggiuntive eseguite nella libreria AMO (Analysis Management Objects) per determinate associazioni.  
   
-|Object|Associazione|Tipi di dati consentiti|  
+|Oggetto|Associazione|Tipi di dati consentiti|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|Tutti tranne i dati binari|  
 ||NameColumn|Solo WChar|  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 ||CustomRollupColumn|Solo WChar|  
 ||CustomRollupPropertiesColumn|Solo WChar|  
 ||UnaryOperatorColumn|Solo WChar|  
-||ValueColumn|All|  
+||ValueColumn|Tutto|  
 |AttributeTranslation|CaptionColumn|Solo WChar|  
 |ScalarMiningStructureColumn|KeyColumns|Tutti tranne i dati binari|  
 ||NameColumn|Solo WChar|  

@@ -1,7 +1,7 @@
 ---
 title: Oggetti avanzati OLAP in AMO programmazione | Documenti Microsoft
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,26 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09f1785d313f0598121ad06e42b26ca4f4367730
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programmazione di oggetti avanzati OLAP in AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In questo argomento viene illustrato come oggetti avanzati di oggetti AMO (Analysis Management) di programmazione i dettagli di OLAP. In questo argomento sono incluse le sezioni seguenti:  
+  In questo argomento vengono descritti i dettagli relativi alla programmazione di oggetti avanzati OLAP nella libreria AMO (Analysis Management Objects). In questo argomento sono incluse le sezioni seguenti:  
   
 -   [Oggetti Action](#Action)  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Oggetti Translation](#Transl)  
   
-##  <a name="Action"></a>Oggetti Action  
+##  <a name="Action">Oggetti Action</a>  
  Le classi Action vengono utilizzate per creare una risposta attiva quando si visualizzano aree determinate del cubo. Gli oggetti di questo tipo possono essere definiti tramite AMO, ma vengono utilizzati dall'applicazione client che visualizza i dati. Sono disponibili azioni di tipo diverso, in base al quale è pertanto necessario crearle. Di seguito vengono indicati i diversi tipi di azione.  
   
 -   Azioni drill-through, che restituiscono il set di righe che rappresenta i dati sottostanti delle celle selezionate del cubo in cui si verifica l'azione.  
@@ -190,7 +191,7 @@ static public void CreateActions(Cube cube)
 }  
 ```  
   
-##  <a name="KPI"></a>Oggetti KPI  
+##  <a name="KPI">Oggetti KPI</a>  
  Un indicatore di prestazioni chiave (KPI) è costituito da una raccolta di calcoli associati a un gruppo di misure in un cubo e utilizzati per valutare il successo aziendale. Gli oggetti <xref:Microsoft.AnalysisServices.Kpi> possono essere definiti in AMO, ma vengono utilizzati dall'applicazione client che visualizza i dati.  
   
  Per creare un oggetto <xref:Microsoft.AnalysisServices.Kpi>, sono necessari i passaggi seguenti:  
@@ -349,7 +350,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp"></a>Oggetti della prospettiva  
+##  <a name="Persp">Oggetti della prospettiva</a>  
  Gli oggetti <xref:Microsoft.AnalysisServices.Perspective> possono essere definiti in AMO, ma vengono utilizzati dall'applicazione client che visualizza i dati.  
   
  Per creare un oggetto <xref:Microsoft.AnalysisServices.Perspective>, sono necessari i passaggi seguenti:  
@@ -412,7 +413,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC"></a>Oggetti ProactiveCaching  
+##  <a name="PC">Oggetti ProactiveCaching</a>  
  Gli oggetti <xref:Microsoft.AnalysisServices.ProactiveCaching> possono essere definiti in AMO.  
   
  Per creare un oggetto <xref:Microsoft.AnalysisServices.ProactiveCaching>, sono necessari i passaggi seguenti:  
@@ -469,7 +470,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl"></a>Oggetti Translation  
+##  <a name="Transl">Oggetti Translation</a>  
  Gli oggetti Translation possono essere definiti in AMO, ma vengono utilizzati dall'applicazione client che visualizza i dati. La codifica di oggetti di questo tipo è un'operazione semplice. Le traduzioni per le didascalie degli oggetti vengono fornite da coppie costituite da un identificatore delle impostazioni locali e da una didascalia tradotta. Per ogni didascalia è possibile abilitare più traduzioni. Le traduzioni possono essere fornite per la maggior parte degli oggetti di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], ad esempio dimensioni, attributi gerarchie, cubi, gruppi di misure, misure e altri oggetti.  
   
  Nell'esempio di codice seguente viene fornita la traduzione in spagnolo per il nome dell'attributo Product Name.  

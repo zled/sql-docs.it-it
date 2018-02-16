@@ -18,19 +18,20 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Proprietà di cella MDX - contenuto di FORMAT_STRING
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Il **FORMAT_STRING** formati di proprietà delle celle di **valore** proprietà della cella, creando il valore per il **FORMATTED_VALUE** proprietà di cella. La proprietà **FORMAT_STRING** della cella è in grado di gestire valori non elaborati di tipo stringa e numerici, applicando un'espressione di formato a un valore per restituire un valore formattato per la proprietà **FORMATTED_VALUE** . Nelle tabelle seguenti vengono indicati in dettaglio la sintassi e i caratteri di formattazione utilizzati per gestire valori di tipo stringa e numerici.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+La proprietà **FORMAT_STRING** di una cella determina la formattazione della proprietà **VALUE** della cella, creando il valore della proprietà **FORMATTED_VALUE** della cella. La proprietà **FORMAT_STRING** della cella è in grado di gestire valori non elaborati di tipo stringa e numerici, applicando un'espressione di formato a un valore per restituire un valore formattato per la proprietà **FORMATTED_VALUE** . Nelle tabelle seguenti vengono indicati in dettaglio la sintassi e i caratteri di formattazione utilizzati per gestire valori di tipo stringa e numerici.  
   
 ## <a name="string-values"></a>Valori stringa  
  Un'espressione di formato per le stringhe può includere una sezione oppure due sezioni separate da un punto e virgola (;).  
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
 |Carattere|Description|  
 |---------------|-----------------|  
-|None|Visualizza il numero senza formattazione.|  
+|Nessuno|Visualizza il numero senza formattazione.|  
 |**0**|Rappresenta un segnaposto di cifra al posto del quale viene visualizzata una cifra o uno zero (0).<br /><br /> Se nel numero è presente una cifra nella posizione in cui nella stringa di formato è presente lo zero, nel valore formattato verrà visualizzata la cifra. In caso contrario, in tale posizione del valore formattato verrà visualizzato uno zero.<br /><br /> Se il numero include meno cifre di quanti sono gli zeri nella stringa di formato, su entrambi i lati del separatore decimale, nel valore formattato verranno visualizzati zeri iniziali o finali.<br /><br /> Se, a destra del separatore decimale, il numero include più cifre di quanti sono gli zeri a destra del separatore decimale nell'espressione di formato, il valore formattato verrà arrotondato specificando tante cifre decimali quanti sono gli zeri.<br /><br /> Se, a sinistra del separatore decimale, il numero include più cifre di quanti sono gli zeri a sinistra del separatore decimale nell'espressione di formato, nel valore formattato le cifre aggiuntive verranno visualizzate senza modifiche.|  
 |**#**|Rappresenta un segnaposto di cifra al posto del quale viene visualizzata una cifra oppure nulla.<br /><br /> Se nell'espressione è presente una cifra nella posizione in cui nella stringa di formato è presente il simbolo cancelletto (**#**), nel valore formattato verrà visualizzata la cifra. In caso contrario, in tale posizione del valore formattato non verrà visualizzato nulla.<br /><br /> Come segnaposto il simbolo cancelletto (**#**) funziona come lo zero (**0**), con la differenza che, se il valore include un numero di cifre minore o uguale a quello dei caratteri **#** su entrambi i lati del separatore decimale nell'espressione di formato, non verranno visualizzati gli zeri iniziali e finali.|  
 |**.**|Rappresenta un segnaposto di decimali che determina il numero di cifre visualizzate a sinistra e a destra del separatore decimale.<br /><br /> Se l'espressione di formato include solo simboli cancelletto (**#**) a sinistra del separatore decimale (**.**), i numeri inferiori a 1 inizieranno con il separatore decimale. Per visualizzare uno zero iniziale con i numeri frazionari, utilizzare zero (0) come primo segnaposto di cifra a sinistra del separatore decimale.<br /><br /> Il carattere effettivo utilizzato come segnaposto di decimali nell'output formattato dipende dal formato numerico riconosciuto dal computer in uso.<br /><br /> Nota: in alcune impostazioni locali viene usata la virgola come separatore decimale.|  
@@ -158,6 +159,6 @@ ms.lasthandoff: 01/08/2018
  [LANGUAGE e FORMAT_STRING in FORMATTED_VALUE](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
  [Utilizzando le proprietà della cella &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [Creazione e utilizzo di valori di proprietà &#40; MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Nozioni fondamentali sulle Query MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

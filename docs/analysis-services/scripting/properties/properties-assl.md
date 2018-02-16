@@ -11,25 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - properties [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, properties
 - ASSL, properties
 ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1f616fb67d0e22bba33d22d0d59eb2ed19a4d88e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="properties-assl"></a>Proprietà (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Questa sezione contiene informazioni di utilizzo e la sintassi per ogni elemento che funge da proprietà di un oggetto nello schema di Analysis Services Scripting Language (ASSL).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Questa sezione di riferimento contiene informazioni sulla sintassi e sull'utilizzo per ogni elemento che si comporta come una proprietà dell'oggetto nello schema ASSL (Analysis Services Scripting Language).  
   
  Anche se lo schema ASSL contiene solo elementi XML, dal punto di vista di uno sviluppatore, gli elementi descritti in questa sezione corrispondono a proprietà che descrivono oggetti.  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
  In alcuni casi, un elemento a livello foglia nello schema che può sembrare una proprietà viene classificato come oggetto perché il tipo dell'elemento è un tipo oggetto. Ad esempio, il **origine** di un **dimensione** oggetto è di tipo **DimensionBinding**.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Elemento|Description|  
 |-------------|-----------------|  
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 |[Elemento AttributeHierarchyOrdered &#40; ASSL &#41;](../../../analysis-services/scripting/properties/attributehierarchyordered-element-assl.md)|Determina se la gerarchia dell'attributo associata viene ordinata.|  
 |[Elemento AttributeHierarchyVisible &#40; ASSL &#41;](../../../analysis-services/scripting/properties/attributehierarchyvisible-element-assl.md)|Determina se la gerarchia dell'attributo è visibile alle applicazioni client.|  
 |[Elemento AttributeID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/attributeid-element-assl.md)|Contiene l’ID dell'attributo associato all'elemento padre.|  
-|[Elemento audit &#40; ASSL &#41;](../../../analysis-services/scripting/properties/audit-element-assl.md)|Specifica che un [traccia](../../../analysis-services/scripting/objects/trace-element-assl.md) elemento non è possibile eliminare tutti gli eventi, anche se questo calo delle prestazioni nel server.|  
+|[Elemento audit &#40; ASSL &#41;](../../../analysis-services/scripting/properties/audit-element-assl.md)|Specifica che un elemento [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) non possa eliminare eventi, anche se questo può influire negativamente sulle prestazioni del server.|  
 |[Elemento AutoRestart &#40; ASSL &#41;](../../../analysis-services/scripting/properties/autorestart-element-assl.md)|Determina se un **traccia** elemento deve riavviare automaticamente il [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servizio verrà arrestato e riavviato.|  
 |[Elemento BackColor &#40; ASSL &#41;](../../../analysis-services/scripting/properties/backcolor-element-assl.md)|Descrive le caratteristiche di visualizzazione dell'elemento padre correlate al colore.|  
 |[Elemento CacheMode &#40; ASSL &#41;](../../../analysis-services/scripting/properties/cachemode-element-assl.md)|Determina il meccanismo di memorizzazione nella cache usato per i dati di training recuperato durante l'elaborazione di una struttura di data mining.|  
@@ -134,7 +136,7 @@ ms.lasthandoff: 01/08/2018
 |[Elemento filtro &#40; Traccia &#41; &#40; ASSL &#41;](../../../analysis-services/scripting/properties/filter-element-trace-assl.md)|Contiene un frammento di documento XML che descrive il **traccia** filtro.|  
 |[Elemento FirstDayOfWeek &#40; ASSL &#41;](../../../analysis-services/scripting/properties/firstdayofweek-element-assl.md)|Definisce il primo giorno della settimana per un **TimeBinding** elemento.|  
 |[Elemento FiscalFirstDayOfMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/fiscalfirstdayofmonth-element-assl.md)|Definisce il primo giorno del mese fiscale per un **TimeBinding** elemento.|  
-|[Elemento FiscalFirstMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/fiscalfirstmonth-element-assl.md)|Definisce il primo mese del periodo fiscale per un **TimeBinding** elemento.|  
+|[Elemento FiscalFirstMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/fiscalfirstmonth-element-assl.md)|Definisce il primo mese del periodo fiscale per un elemento **TimeBinding** .|  
 |[Elemento FiscalYearName &#40; ASSL &#41;](../../../analysis-services/scripting/properties/fiscalyearname-element-assl.md)|Definisce la convenzione di denominazione per il nome dell'anno fiscale per un **TimeBinding** elemento.|  
 |[Elemento FontFlags &#40; ASSL &#41;](../../../analysis-services/scripting/properties/fontflags-element-assl.md)|Descrive le caratteristiche di visualizzazione correlate al carattere di **CalculationProperty** o **misura** elemento padre.|  
 |[Elemento FontName &#40; ASSL &#41;](../../../analysis-services/scripting/properties/fontname-element-assl.md)|Descrive le caratteristiche di visualizzazione correlate al carattere di **CalculationProperty** o **misura** elemento padre.|  
@@ -180,7 +182,7 @@ ms.lasthandoff: 01/08/2018
 |[Elemento LogFileSize &#40; ASSL &#41;](../../../analysis-services/scripting/properties/logfilesize-element-assl.md)|Specifica le dimensioni massime del file di log, in megabyte.|  
 |[Elemento ManagedProvider &#40; ASSL &#41;](../../../analysis-services/scripting/properties/managedprovider-element-assl.md)|Contiene il nome del provider gestito utilizzato da un elemento derivato dal **DataSource** tipo di dati.|  
 |[Elemento ManufacturingExtraMonthQuarter &#40; ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingextramonthquarter-element-assl.md)|Definisce il mese del periodo di produzione a cui è assegnato un mese aggiuntivo per un **TimeBinding** elemento.|  
-|[Elemento ManufacturingFirstMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingfirstmonth-element-assl.md)|Definisce il primo mese di produzione per un **TimeBinding** elemento.|  
+|[Elemento ManufacturingFirstMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingfirstmonth-element-assl.md)|Definisce il primo mese di produzione per un elemento **TimeBinding** .|  
 |[Elemento ManufacturingFirstWeekOfMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingfirstweekofmonth-element-assl.md)|Definisce la prima settimana del mese di produzione per un **TimeBinding** elemento.|  
 |[Elemento MasterDatasourceID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/masterdatasourceid-element-assl.md)|Contiene l'ID origine dati master per un **Database** elemento.|  
 |[Elemento Materialization &#40; ASSL &#41;](../../../analysis-services/scripting/properties/materialization-element-assl.md)|Indica il tipo di relazione tra il gruppo di misure e la dimensione di riferimento.|  
@@ -223,7 +225,7 @@ ms.lasthandoff: 01/08/2018
 |[Elemento ProductName &#40; ASSL &#41;](../../../analysis-services/scripting/properties/productname-element-assl.md)|Contiene il nome del prodotto di sola lettura dell'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] che è associato un **Server** elemento.|  
 |[Elemento query &#40; ASSL &#41;](../../../analysis-services/scripting/properties/query-element-assl.md)|Contiene il testo della query che esegue la notifica.|  
 |[Elemento QueryDefinition &#40; ASSL &#41;](../../../analysis-services/scripting/properties/querydefinition-element-assl.md)|Contiene un'espressione opaca per una query associata a un **DataSource** elemento in un [QueryBinding](../../../analysis-services/scripting/data-type/querybinding-data-type-assl.md) elemento.|  
-|[Elemento Read &#40; ASSL &#41;](../../../analysis-services/scripting/properties/read-element-assl.md)|Determina se è possono leggere i dati o metadati per un determinato [CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md) o [autorizzazione](../../../analysis-services/scripting/data-type/permission-data-type-assl.md) elemento.|  
+|[Elemento Read &#40; ASSL &#41;](../../../analysis-services/scripting/properties/read-element-assl.md)|Determina se i data o i metadati possono essere letti per un elemento [CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md) o [Permission](../../../analysis-services/scripting/data-type/permission-data-type-assl.md) .|  
 |[Elemento ReadDefinition &#40; ASSL &#41;](../../../analysis-services/scripting/properties/readdefinition-element-assl.md)|Determina se i membri possono leggere la definizione del database o la definizione di oggetti nel database.|  
 |[Elemento ReadSourceData &#40; ASSL &#41;](../../../analysis-services/scripting/properties/readsourcedata-element-assl.md)|Determina i nomi univoci generati per le gerarchie contenute all'interno di **CubePermission**.|  
 |[Elemento RefreshInterval &#40; ASSL &#41;](../../../analysis-services/scripting/properties/refreshinterval-element-assl.md)|Specifica che l'intervallo durante il quale i dati del limite sono associati all'elemento padre è aggiornato.|  
@@ -251,7 +253,7 @@ ms.lasthandoff: 01/08/2018
 |[Elemento SourceColumnID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/sourcecolumnid-element-assl.md)|Contiene l'ID della colonna della struttura di data mining origine in predecessore **MiningStructure** elemento.|  
 |[Elemento state &#40; ASSL &#41;](../../../analysis-services/scripting/properties/state-element-assl.md)|Contiene un valore di sola lettura che descrive lo stato dell'elaborazione corrente dell'elemento padre.|  
 |[Elemento Status &#40; ASSL &#41;](../../../analysis-services/scripting/properties/status-element-assl.md)|Contiene un'espressione MDX che restituisce un indicatore di stato per un **Kpi** elemento.|  
-|[Elemento StatusGraphic &#40; ASSL &#41;](../../../analysis-services/scripting/properties/statusgraphic-element-assl.md)|Contiene la rappresentazione grafica consigliata dello stato del **Kpi** elemento.|  
+|[Elemento StatusGraphic &#40; ASSL &#41;](../../../analysis-services/scripting/properties/statusgraphic-element-assl.md)|Contiene la rappresentazione grafica consigliata dello stato dell'elemento **Kpi** .|  
 |[Elemento StopTime &#40; ASSL &#41;](../../../analysis-services/scripting/properties/stoptime-element-assl.md)|Specifica la data e ora in cui un **traccia** elemento deve essere arrestata.|  
 |[Elemento StorageLocation &#40; ASSL &#41;](../../../analysis-services/scripting/properties/storagelocation-element-assl.md)|Contiene il percorso di archiviazione del file system per il contenuto dell'elemento padre.|  
 |[Elemento StorageMode &#40; ASSL &#41;](../../../analysis-services/scripting/properties/storagemode-element-assl.md)|Determina la modalità di archiviazione per l’elemento padre.|  

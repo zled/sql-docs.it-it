@@ -12,25 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-usage-data-collection"></a>Raccolta dati di utilizzo di PowerPivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Raccolta dati di utilizzo è una funzionalità a livello di farm di SharePoint. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] per SharePoint questo sistema viene usato ed esteso per fornire i report nel dashboard di gestione [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] in cui viene mostrato l'uso dei servizi e dei dati [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La raccolta dati di utilizzo è una funzionalità di SharePoint a livello di farm. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] per SharePoint questo sistema viene usato ed esteso per fornire i report nel dashboard di gestione [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] in cui viene mostrato l'uso dei servizi e dei dati [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
   
  Per informazioni sui dati di utilizzo nel dashboard di gestione [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , vedere [Dati di utilizzo e dashboard di gestione PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
   
 ##  <a name="usagearch"></a> Raccolta dati di utilizzo e architettura dei report  
- [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]dati di utilizzo vengono raccolti, archiviati e gestiti attraverso una combinazione di funzionalità dell'infrastruttura di SharePoint e i componenti server PowerPivot. L'infrastruttura di SharePoint fornisce un servizio sull'utilizzo centralizzato e processi timer predefiniti. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] per SharePoint offre un'archiviazione a lungo termine dei dati di utilizzo di [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] e report visualizzabili in Amministrazione centrale SharePoint.  
+ [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] dati di utilizzo vengono raccolti, archiviati e gestiti attraverso una combinazione di funzionalità dell'infrastruttura di SharePoint e i componenti server PowerPivot. L'infrastruttura di SharePoint fornisce un servizio sull'utilizzo centralizzato e processi timer predefiniti. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] per SharePoint offre un'archiviazione a lungo termine dei dati di utilizzo di [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] e report visualizzabili in Amministrazione centrale SharePoint.  
   
  Nel sistema di raccolta dati sull'utilizzo, le informazioni sugli eventi accedono al sistema di raccolta dati sull'utilizzo nel server applicazioni o nel computer front-end Web. I dati sull'utilizzo vengono spostati nel sistema in risposta a processi timer che causano lo spostamento dei dati da file di dati temporanei nel server fisico all'archiviazione persistente in un server di database. Nel diagramma seguente vengono illustrati i componenti e i processi che causano lo spostamento dei dati sull'utilizzo attraverso il sistema di raccolta dati e di creazione report.  
   

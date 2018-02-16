@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9dadc46f53cff296a0332069165a9faa876e6180
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Pianificazione dell'aggiornamento di dati e origini dati - Nessuna autenticazione di Windows
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questo argomento viene descritto un flusso di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint pianificazione aggiornamento dati che è possono utilizzare dati di origini che **non** supportano l'autenticazione di Windows. ad esempio origini dati Oracle o IDM DB2. Le illustrazioni e i passaggi presenti in questo argomento fanno riferimento alle origini dati Oracle ma lo stesso flusso di lavoro è valido anche per altre origini dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Questo argomento descrive un flusso di lavoro della pianificazione di un aggiornamento dati di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint in cui si possono usare origini dati che **NON** supportano l'autenticazione di Windows, ad esempio origini dati Oracle o IDM DB2. Le illustrazioni e i passaggi presenti in questo argomento fanno riferimento alle origini dati Oracle ma lo stesso flusso di lavoro è valido anche per altre origini dati.  
   
 ||  
 |-|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **(4)** Cartella di lavoro PowerePivot con dati Oracle. Le impostazioni di aggiornamento della cartella di lavoro specificano la connessione all'origine dati in modo da usare l'applicazione di destinazione **(2)** per le credenziali.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
   
 -   Applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] esistente.  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  Nella pagina **Impostazioni di appartenenza** aggiungere almeno un **Amministratore dell'applicazione di destinazione** e quindi aggiungere i membri che richiedono l'accesso all'applicazione di destinazione.  
   
-9. Fare clic su **OK**.  
+9. Scegliere **OK**.  
   
 10. Il nuovo ID applicazione di destinazione verrà aggiunto all'elenco. Selezionare l'ID applicazione di destinazione e fare clic su **Imposta credenziali**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  Nella pagina **Impostazioni di appartenenza** aggiungere almeno un **Amministratore dell'applicazione di destinazione** e quindi aggiungere i membri che richiedono l'accesso all'applicazione di destinazione.  
   
-9. Fare clic su **OK**.  
+9. Scegliere **OK**.  
   
 10. Il nuovo ID applicazione di destinazione verrà aggiunto all'elenco. Selezionare l'ID applicazione di destinazione e fare clic su **Imposta credenziali**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 01/08/2018
   
 10. Nella casella **ID:** digitare **OracleAuthentication**.  
   
-11. Fare clic su **OK**.  
+11. Scegliere **OK**.  
   
      Se viene visualizzato un messaggio di errore simile al seguente: `The provided Secure Store target application is either incorrectly configured or does not exist`.  
   

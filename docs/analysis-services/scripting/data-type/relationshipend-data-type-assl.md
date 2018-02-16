@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 3a974dd4-e1d6-45b2-b8c8-1a914bc13a02
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5b71adcc0740631e70228859e7282445139e120f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="relationshipend-data-type-assl"></a>Tipo di dati RelationshipEnd (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definisce un tipo di dati primitivo che rappresenta un elemento end di una relazione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Definisce un tipo di dati primitivo che rappresenta un elemento End di una relazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,10 +45,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Caratteristiche tipo di dati  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Tipi di dati di base|None|  
-|Tipi di dati derivati|None|  
+|Tipi di dati di base|Nessuno|  
+|Tipi di dati derivati|Nessuno|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
   

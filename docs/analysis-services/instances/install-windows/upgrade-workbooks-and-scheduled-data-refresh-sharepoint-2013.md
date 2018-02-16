@@ -19,13 +19,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato (SharePoint 2013)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In questo argomento illustra l'esperienza utente di cartelle di lavoro creati nelle precedenti [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ambienti e come eseguire l'aggiornamento [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] le cartelle di lavoro in modo che è possibile usufruire delle nuove funzionalità introdotte in questa versione. Per altre informazioni sulle nuove funzionalità, vedere [Novità in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Questo argomento illustra l'esperienza utente relativa alle cartelle di lavoro create in ambienti di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] precedenti e la modalità di aggiornamento delle cartelle di lavoro di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in modo che sia possibile avvalersi delle nuove funzionalità introdotte in questa versione. Per altre informazioni sulle nuove funzionalità, vedere [Novità in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
 >  Non è possibile eseguire il rollback dell'aggiornamento per cartelle di lavoro aggiornate automaticamente nel server. Una volta aggiornata, una cartella di lavoro rimane in questo stato. Per utilizzare una versione precedente, è possibile ripubblicare la cartella di lavoro precedente in SharePoint, ripristinare una versione precedente oppure riciclare la cartella di lavoro. Per ulteriori informazioni sul ripristino o riciclo di un documento in SharePoint, vedere [Pianificare di proteggere il contenuto tramite i Cestini e il controllo delle versioni](http://go.microsoft.com/fwlink/?LinkId=238669).  

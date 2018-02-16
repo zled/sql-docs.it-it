@@ -15,19 +15,20 @@ helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9f536c0956cec0be863b099b2c0540ccf7ac3da2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Creare o personalizzare una libreria di feed di dati (Power Pivot per SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto *libreria feed di dati* è una raccolta di SharePoint con scopi speciali che consente di registrare e condividere documenti di servizio dati Atom (atomsvc). Questi documenti forniscono feed di dati XML alle cartelle di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o ad altre applicazioni client che supportano il formato di feed di dati Atom. Una libreria di feed di dati è diversa dalle altre raccolte di SharePoint poiché consente di:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una *libreria feed di dati* è una raccolta di SharePoint speciale che consente di registrare e condividere documenti di servizio dati Atom (atomsvc). Questi documenti forniscono feed di dati XML alle cartelle di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o ad altre applicazioni client che supportano il formato di feed di dati Atom. Una libreria di feed di dati è diversa dalle altre raccolte di SharePoint poiché consente di:  
   
 -   Creare o modificare un *documento di servizio dati*usato per specificare una connessione HTTP a un feed specifico.  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
   
 6.  In Tipi di contenuto nella sezione "Consenti la gestione di più tipi di contenuto:" scegliere **Sì**.  
   
-7.  Fare clic su **OK**.  
+7.  Scegliere **OK**.  
   
 #### <a name="step-2-add-the-data-service-document-content-type"></a>Passaggio 2: Aggiunta del tipo di contenuto del documento di servizio dati  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  In Tipi di contenuto del sito disponibili scegliere **Documento di servizio dati**, quindi fare clic su **Aggiungi** per spostare il tipo di contenuto selezionato nell'elenco Tipi di contenuto da aggiungere.  
   
-5.  Fare clic su **OK**.  
+5.  Scegliere **OK**.  
   
 #### <a name="step-3-verify-data-service-document-configuration"></a>Passaggio 3: Verifica della configurazione del documento di servizio dati  
   

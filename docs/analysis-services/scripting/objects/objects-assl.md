@@ -11,25 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, objects
 - objects [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, objects
 ms.assetid: 0f672b93-c317-47e5-b44d-ecea9b587c98
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ea027aba8d0d49c752bd31569f84d0f0cec022bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="objects-assl"></a>Oggetti (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Questa sezione di riferimento contiene informazioni di utilizzo e la sintassi di ogni elemento che funge da oggetto nello schema di Analysis Services Scripting Language (ASSL).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Questa sezione di riferimento contiene informazioni sulla sintassi e l'utilizzo di ogni elemento che funge da oggetto nello schema ASSL (Analysis Services Scripting Language).  
   
  Benché lo schema ASSL includa solo elementi XML, dal punto di vista dello sviluppatore, gli elementi descritti in questa sezione corrispondono a oggetti, ad esempio **Database**, **cubo**, e  **Dimensione** oggetti nella gerarchia di oggetti contenuti in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
@@ -37,12 +39,12 @@ ms.lasthandoff: 01/08/2018
   
  In alcuni casi, un elemento a livello foglia nello schema che può sembrare una proprietà viene classificato come oggetto perché il tipo dell'elemento è un tipo oggetto. Ad esempio, il **origine** di un **dimensione** oggetto è di tipo **DimensionBinding**.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Elemento|Description|  
 |-------------|-----------------|  
 |[Elemento account &#40; ASSL &#41;](../../../analysis-services/scripting/objects/account-element-assl.md)|Contiene informazioni dettagliate su un tipo di account all'interno di un [Database](../../../analysis-services/scripting/objects/database-element-assl.md) elemento.|  
-|[Elemento Action &#40; ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|Contiene informazioni su un'azione disponibile in un [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento o un [prospettiva](../../../analysis-services/scripting/objects/perspective-element-assl.md) elemento.|  
+|[Elemento Action &#40; ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|Contiene informazioni su un'azione disponibile in un elemento [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) o [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .|  
 |[Elemento Aggregation &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)|Definisce una singola aggregazione per un [partizione](../../../analysis-services/scripting/objects/partition-element-assl.md) elemento.|  
 |[Elemento AggregationDesign &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)|Definisce un set di definizioni di aggregazione che possono essere condivise tra più partizioni in un database.|  
 |[Elemento AggregationInstance &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregationinstance-element-assl.md)|Definisce un'istanza di aggregazione per una partizione.|  

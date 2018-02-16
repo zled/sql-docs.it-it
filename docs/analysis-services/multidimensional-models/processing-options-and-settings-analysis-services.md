@@ -23,19 +23,20 @@ helpviewer_keywords:
 - process clear structure option [Analysis Services]
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: e05c1a60cc016b9f72d486a5b0f03037b0faa9ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Opzioni e impostazioni di elaborazione (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si elaborano oggetti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile selezionare un'opzione di elaborazione per controllare il tipo di elaborazione che si verifica per ogni oggetto. I tipi di elaborazione si differenziano l'uno dall'altro e in base alle modifiche apportate all'oggetto dall'ultima elaborazione. Se si imposta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la selezione automatica di un metodo di elaborazione, verrà usato il metodo che restituisce l'oggetto in uno stato di elaborazione completa nel minor tempo possibile.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Quando si elaborano oggetti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile selezionare un'opzione di elaborazione che consente di controllare il tipo di elaborazione eseguita per ogni oggetto. I tipi di elaborazione si differenziano l'uno dall'altro e in base alle modifiche apportate all'oggetto dall'ultima elaborazione. Se si imposta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la selezione automatica di un metodo di elaborazione, verrà usato il metodo che restituisce l'oggetto in uno stato di elaborazione completa nel minor tempo possibile.  
   
  Le impostazioni di elaborazione consentono di controllare gli oggetti elaborati e i metodi di elaborazione utilizzati. Alcune impostazioni di elaborazione vengono utilizzate principalmente per processi di elaborazione batch. Per altre informazioni sull'elaborazione batch, vedere [Elaborazione batch &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="processing-options"></a>Opzioni di elaborazione  
  Nella tabella seguente vengono descritti i metodi di elaborazione disponibili in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e vengono identificati gli oggetti per i quali è supportato ciascun metodo.  
   
-|Mode|Applicabile a|Description|  
+|Elabora partizione/i|Applicabile a|Description|  
 |----------|----------------|-----------------|  
 |**Elaborazione predefinita**|Cubi, database, dimensioni, gruppi di misure, modelli di data mining, strutture di data mining e partizioni.|Rileva lo stato di elaborazione degli oggetti di database e di eseguire l'elaborazione necessaria per restituire oggetti non elaborati o elaborati parzialmente in uno stato di elaborazione completa. Se si modifica un'associazione dati, in base all'opzione Elaborazione predefinita verrà eseguita l'elaborazione completa dell'oggetto interessato.|  
 |**Elaborazione completa**|Cubi, database, dimensioni, gruppi di misure, modelli di data mining, strutture di data mining e partizioni.|Consente di elaborare un oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e tutti gli oggetti in esso contenuti. Quando viene eseguita l'elaborazione completa di un oggetto che è stato già elaborato, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elimina tutti i dati dell'oggetto e quindi lo elabora. Questo tipo di elaborazione è necessario nel caso in cui sia stata apportata una modifica strutturale a un oggetto, ad esempio se è stata eliminata, aggiunta o rinominata una gerarchia dell'attributo.|  

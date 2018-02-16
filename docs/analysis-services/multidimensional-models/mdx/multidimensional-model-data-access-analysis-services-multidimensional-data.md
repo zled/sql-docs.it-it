@@ -22,19 +22,20 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Accesso ai dati di modelli multidimensionali (Analysis Services - Dati multidimensionali)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Utilizzare le informazioni in questo argomento per informazioni su come accedere [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dati multidimensionali utilizzando metodi a livello di codice, script o le applicazioni client che includono il supporto incorporato per la connessione a un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server sulla rete.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Utilizzare le informazioni in questo argomento per accedere ai dati multidimensionali di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilizzando metodi a livello di codice, script o applicazioni client che includono il supporto integrato per la connessione a un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sulla rete locale.  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -75,11 +76,11 @@ ms.lasthandoff: 01/08/2018
   
  [Query su dati multidimensionali con MDX](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [Concetti chiave di MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Concetti chiave di MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Nozioni fondamentali sullo Scripting MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> Interfacce programmatiche  
  Se si compila un'applicazione personalizzata che utilizza dati multidimensionali, l'approccio per l'accesso ai dati rientrerà molto probabilmente in una delle categorie seguenti:  

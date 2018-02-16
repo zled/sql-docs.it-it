@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 21e4a28e2be7492302e1b68506b4e74f695d30fd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---calculated-column-representation"></a>Tabelle - rappresentazione della colonna calcolata
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Una colonna calcolata è espressione DAX che crea una nuova colonna in una tabella e i valori ottenuti vengono archiviati nella tabella. L'espressione della colonna calcolata viene valutata ogni volta che la tabella viene elaborata.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Una colonna calcolata è un'espressione DAX che crea una nuova colonna in una tabella e i valori ottenuti vengono archiviati nella tabella. L'espressione della colonna calcolata viene valutata ogni volta che la tabella viene elaborata.  
   
 ## <a name="calculated-column-representation"></a>Rappresentazione della colonna calcolata  
   

@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7ca0b129013f5bdced79d8fb8245893a3db7ff06
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertransactions-rowset"></a>Set di righe DISCOVER_TRANSACTIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce il set corrente di transazioni in sospeso nel sistema.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Restituisce il set corrente di transazioni in sospeso nel sistema.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
   
@@ -47,20 +49,20 @@ ms.lasthandoff: 01/08/2018
   
 |**Nome colonna**|**Indicatore del tipo**|**Stato della restrizione**|  
 |---------------------|------------------------|---------------------------|  
-|**ID**|**DBTYPE_WSTR**|Facoltativo.|  
-|**SESSION_ID**|**DBTYPE_WSTR**|Facoltativo.|  
+|**ID**|**DBTYPE_WSTR**|Facoltativa.|  
+|**SESSION_ID**|**DBTYPE_WSTR**|Facoltativa.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>Utilizzo di ADOMD.NET per restituire il set di righe  
  Quando si utilizzano ADOMD.NET e il set di righe dello schema per recuperare metadati, è possibile utilizzare il GUID o la stringa per fare riferimento a un oggetto set di righe dello schema nel metodo GetSchemaDataSet. Per altre informazioni, vedere [Working with Schema Rowsets in ADOMD.NET](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md).  
   
  Nella tabella seguente vengono forniti i GUID e i valori stringa che identificano questo set di righe.  
   
-|Argomento|valore|  
+|Argomento|Valore|  
 |--------------|-----------|  
 |GUID|a07ccd28-8148-11d0-87bb-00c04fc33942|  
 |String|DISCOVER_TRANSACTIONS|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML per set di righe dello schema di analisi](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis i rowset dello Schema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

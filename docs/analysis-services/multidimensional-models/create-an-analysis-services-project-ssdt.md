@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, defining projects [Analysis Services]
 - items [Analysis Services]
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 366c0e4f2a3238ac9e2552553f1492b9a41b46e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Creare un progetto di Analysis Services (SSDT)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile definire un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nel progetto [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tramite l'utilizzo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modello di progetto o l'importazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] guidata Database per leggere il contenuto di un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Se in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non è attualmente caricata alcuna soluzione, creando un nuovo progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene automaticamente creata una nuova soluzione. In caso contrario, il nuovo progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sarà aggiunto alla soluzione esistente. Le procedure consigliate per lo sviluppo di soluzioni prevedono la creazione di progetti separati per tipi diversi di dati dell'applicazione, utilizzando una sola soluzione se i progetti sono correlati. Ad esempio, potrebbe essere disponibile una sola soluzione contenente progetti separati per i pacchetti di Integration Services, i database di Analysis Services e i report di Reporting Services utilizzati dalla stessa applicazione aziendale.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+È possibile definire un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando il modello di progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o l'Importazione guidata database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per leggere il contenuto di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non è attualmente caricata alcuna soluzione, creando un nuovo progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene automaticamente creata una nuova soluzione. In caso contrario, il nuovo progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sarà aggiunto alla soluzione esistente. Le procedure consigliate per lo sviluppo di soluzioni prevedono la creazione di progetti separati per tipi diversi di dati dell'applicazione, utilizzando una sola soluzione se i progetti sono correlati. Ad esempio, potrebbe essere disponibile una sola soluzione contenente progetti separati per i pacchetti di Integration Services, i database di Analysis Services e i report di Reporting Services utilizzati dalla stessa applicazione aziendale.  
   
  In un progetto di Analysis Services sono contenuti gli oggetti utilizzati in un solo database di Analysis Services. Le proprietà di distribuzione del progetto consentono di specificare il nome del server e del database con cui i metadati del progetto verranno distribuiti come oggetti di cui è stata creata un'istanza.  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
      Per creare una nuova soluzione, nell'elenco a discesa **Soluzione** selezionare **Crea nuova soluzione**. Per creare una nuova cartella per la nuova soluzione, selezionare **Crea directory per soluzione**. In **Nome soluzione**digitare il nome della nuova soluzione.  
   
-6.  Fare clic su **OK**.  
+6.  Scegliere **OK**.  
   
 ##  <a name="bkmk_NewUsingWizard"></a> Creare un nuovo progetto utilizzando un database esistente di Analysis Services  
  Usare l'Importazione guidata database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per creare un progetto basato sugli oggetti del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente. In caso di definizione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] basato su un database esistente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , i metadati di tale database verranno aperti in un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Questi oggetti possono essere quindi modificati all'interno del progetto, senza impatto sugli oggetti originali, e successivamente essere distribuiti nello stesso database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , se le proprietà di distribuzione specificano il database, oppure in un nuovo database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creato per test di confronto. Finché le modifiche non vengono distribuite, nessuna ha impatto sul database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  Nella categoria **Modelli Visual Studio installati** nella finestra di dialogo **Nuovo progetto** selezionare **Importa database di Analysis Services**.  
   
-3.  Immettere le informazioni sulle proprietà per il progetto e la soluzione, inclusi il nome e il percorso dei file. Fare clic su **OK**.  
+3.  Immettere le informazioni sulle proprietà per il progetto e la soluzione, inclusi il nome e il percorso dei file. Scegliere **OK**.  
   
 4.  Nella pagina **Importazione guidata database di Analysis Services** fare clic su **Avanti**.  
   
@@ -119,9 +120,9 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_ProjectFolders"></a> Cartelle del progetto di Analysis Services  
  Un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiene le cartelle seguenti, usate per organizzare gli elementi inclusi nel progetto.  
   
-|Cartella|Description|  
+|Cartella|Descrizione|  
 |------------|-----------------|  
-|Origini dati|Contiene le origini dati di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi oggetti vengono creati tramite la Creazione guidata origine dati e modificati in Progettazione origine dati.|  
+|Origini dei dati|Contiene le origini dati di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi oggetti vengono creati tramite la Creazione guidata origine dati e modificati in Progettazione origine dati.|  
 |Viste origine dati|Contiene le viste origine dati di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi oggetti vengono creati tramite la Creazione guidata vista origine dati e modificati in Progettazione vista origine dati.|  
 |Cubi|Contiene i cubi di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi oggetti vengono creati tramite la Creazione guidata cubo e modificati in Progettazione cubi.|  
 |Dimensioni|Contiene le dimensioni di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi oggetti vengono creati tramite la Creazione guidata dimensione o la Creazione guidata cubo e modificati in Progettazione dimensioni.|  
@@ -159,15 +160,15 @@ ms.lasthandoff: 01/08/2018
 |Category|Modello di elementi|Description|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Elementi del progetto|Cube|Avvia la Creazione guidata cubo per l'aggiunta di un nuovo cubo al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-||origine dati|Avvia la Creazione guidata origine dati per l'aggiunta di una nuova origine dati al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+||Origine dati|Avvia la Creazione guidata origine dati per l'aggiunta di una nuova origine dati al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Vista origine dati|Avvia la Creazione guidata vista origine dati per l'aggiunta di una nuova vista origine dati al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Ruolo del database|Aggiunge un nuovo ruolo di database al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e determina quindi la visualizzazione di Progettazione ruoli per il nuovo ruolo.|  
-||Dimension|Avvia la Creazione guidata dimensione per l'aggiunta di una nuova dimensione del database al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+||Dimensione|Avvia la Creazione guidata dimensione per l'aggiunta di una nuova dimensione del database al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Struttura di data mining|Avvia la Creazione guidata modello di data mining per l'aggiunta di una nuova struttura di data mining e del modello di data mining associato al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [Compilare progetti di Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Configurare le proprietà di progetto di Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [Compilare i progetti di Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Distribuire progetti di Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

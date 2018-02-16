@@ -19,19 +19,20 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 - Type property
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>Attributo di proprietà: configurare i tipi di attributo
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], tipi di attributo consentono di classificare un attributo in termini di funzionalità di business. Sono disponibili numerosi tipi di attributi, la maggior parte dei quali viene utilizzata dalle applicazioni client per visualizzare o supportare un attributo. Alcuni tipi di attributi, tuttavia, hanno un significato specifico in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Alcuni tipi identificano ad esempio attributi che rappresentano periodi di tempo in calendari diversi per le dimensioni temporali.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i tipi di attributi consentono di classificare un attributo in termini di funzionalità aziendali. Sono disponibili numerosi tipi di attributi, la maggior parte dei quali viene utilizzata dalle applicazioni client per visualizzare o supportare un attributo. Alcuni tipi di attributi, tuttavia, hanno un significato specifico in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Alcuni tipi identificano ad esempio attributi che rappresentano periodi di tempo in calendari diversi per le dimensioni temporali.  
   
 ##  <a name="setting_attibute_types"></a> Impostazione dei tipi di attributi  
  Il valore della proprietà **Type** per un attributo determina il tipo dell'attributo stesso. Diverse procedure guidate di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consentono di impostare i tipi di attributi durante la definizione di dimensioni o attributi. Tali procedure guidate di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consentono inoltre di impostare i tipi di attributi durante l'aggiunta di funzionalità alle dimensioni. Tramite la Configurazione guidata funzionalità di Business Intelligence, ad esempio, vengono applicati numerosi tipi di attributi agli attributi in una dimensione durante l'aggiunta di funzionalità di Business Intelligence per la contabilità, per identificare attributi contenenti nomi, codici, numeri e struttura dei conti nella dimensione. Nella Configurazione guidata funzionalità di Business Intelligence vengono inoltre utilizzati i tipi di attributi, ad esempio per la conversione di valuta. Per altre informazioni, vedere [Creare una dimensione di tipo Valuta](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
@@ -152,7 +153,7 @@ ms.lasthandoff: 01/08/2018
 |**ShortCaption**|Rappresenta una didascalia breve.|  
 |**StateOrProvince**|Rappresenta uno stato o una provincia.|  
 |**Utilità**|Rappresenta un'utilità.|  
-|**Versione**|Rappresenta una versione.|  
+|**Version**|Rappresenta una versione.|  
 |**WebHtml**|Rappresenta contenuto HTML.|  
 |**WebMailAlias**|Rappresenta un alias di posta elettronica.|  
 |**WebUrl**|Rappresenta un indirizzo URL.|  
@@ -312,7 +313,7 @@ ms.lasthandoff: 01/08/2018
 |**Years**|Rappresenta gli anni.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Riferimento alle proprietà degli attributi delle dimensioni](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Gli attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6d2896a01a8efeacb42bde203ad93e0efdb52be4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="level-element-csdlbi"></a>Elemento Level (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento di livello è un tipo complesso che definisce un solo livello in una gerarchia  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+L'elemento Level è un tipo complesso che definisce un solo livello in una gerarchia.  
   
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente vengono elencati gli attributi e gli elementi che definiscono l'elemento Level.  
   
-|nome|Obbligatorio|Description|  
+|Nome|Obbligatorio|Description|  
 |----------|-----------------|-----------------|  
 |Origine|Sì|Contenitore per il riferimento alla proprietà.|  
 |PropertyRef|Sì|Riferimento a una proprietà dell'istanza. Altri attributi del livello, ad esempio didascalie, nome e nome del riferimento, possono essere prese dalla proprietà dell'istanza a cui si fa riferimento. In tal caso, non è necessario specificarli nell'elemento Level.|  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/08/2018
  Per altre informazioni sulle gerarchie nei modelli tabulari, vedere [Elemento Hierarchy &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).  
   
 ## <a name="example"></a>Esempio  
- **Tabella**  
+ **Tabulare**  
   
  Nell'esempio seguente, in CSDLBI versione 1.1, viene mostrata la definizione di più livelli in una gerarchia del modello tabulare di esempio di AdventureWorks.  
   

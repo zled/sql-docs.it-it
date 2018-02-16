@@ -11,37 +11,39 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1fee5461b3b779227839c3f722c9c75626ed44fe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="property-element-csdlbi"></a>Elemento Property (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento Property in CSDLBI è un tipo complesso che fornisce le aggiunte all'elemento Property di CSDL, per supportare modelli di dati di business intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+L'elemento Property in CSDLBI è un tipo complesso che fornisce le aggiunte all'elemento Property di CSDL, a supporto dei modelli di dati di Business Intelligence.  
   
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente vengono elencati gli attributi e gli elementi che definiscono l'elemento Property di CSDLBI.  
   
-|nome|Obbligatorio|Description|  
+|Nome|Obbligatorio|Description|  
 |----------|-----------------|-----------------|  
-|Sommario|no|Stringa che contiene l'identificatore delle impostazioni locali (LCID) della richiesta.|  
+|Sommario|No|Stringa che contiene l'identificatore delle impostazioni locali (LCID) della richiesta.|  
 |DefaultAggregationFunction|Sì|Stringa che specifica la funzione di aggregazione che deve essere utilizzata se i calcoli vengono eseguiti sull'attributo e nessun'altra funzione è stata specificata.<br /><br /> Se omessa, viene utilizzata l'aggregazione predefinita per il modello, di solito SUM.|  
-|GroupingBehavior|no|Valore che specifica come vengono raggruppati i risultati della query. Il contenuto dell'attributo è definito dal tipo semplice TGroupingBehavior (vedere la tabella di seguito).|  
-|OrderBy|no|Riferimento a un'altra proprietà all'interno del modello che definisce l'ordinamento per i valori di questa proprietà.<br /><br /> I valori per le due proprietà DOVONO avere un mapping da 1 a 1. In caso contrario, il comportamento dell'ordinamento è indefinito.<br /><br /> Se questo elemento viene omesso, le proprietà vengono ordinate in base ai relativi valori.|  
-|Stability|no|Attributo che specifica la stabilità dei valori di proprietà tra le operazioni di aggiornamento.<br /><br /> Questo attributo non viene impostato dagli utenti, ma viene generato dall'ambiente di progettazione solo per valori instabili. Viene sempre applicato alle colonne contenenti un numero di righe e alle colonne contenenti formule che generano risultati indeterminati, ad esempio NOW() o RAND().<br /><br /> I valori per questo attributo sono elencati nella tabella seguente in cui viene descritto il tipo Stabilitysimple.|  
+|GroupingBehavior|No|Valore che specifica come vengono raggruppati i risultati della query. Il contenuto dell'attributo è definito dal tipo semplice TGroupingBehavior (vedere la tabella di seguito).|  
+|OrderBy|No|Riferimento a un'altra proprietà all'interno del modello che definisce l'ordinamento per i valori di questa proprietà.<br /><br /> I valori per le due proprietà DOVONO avere un mapping da 1 a 1. In caso contrario, il comportamento dell'ordinamento è indefinito.<br /><br /> Se questo elemento viene omesso, le proprietà vengono ordinate in base ai relativi valori.|  
+|Stability|No|Attributo che specifica la stabilità dei valori di proprietà tra le operazioni di aggiornamento.<br /><br /> Questo attributo non viene impostato dagli utenti, ma viene generato dall'ambiente di progettazione solo per valori instabili. Viene sempre applicato alle colonne contenenti un numero di righe e alle colonne contenenti formule che generano risultati indeterminati, ad esempio NOW() o RAND().<br /><br /> I valori per questo attributo sono elencati nella tabella seguente in cui viene descritto il tipo Stabilitysimple.|  
   
 ## <a name="groupingbehavior"></a>GroupingBehavior  
  Nella tabella seguente vengono elencati i valori del tipo semplice GroupingBehavior.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
 |GroupOnValue|Raggruppare in base al valore dell'attributo.|  
 |GroupOnEntityKey|Raggruppare in base alla chiave di entità.|  
@@ -55,14 +57,14 @@ ms.lasthandoff: 01/08/2018
 ## <a name="stability"></a>Stability  
  Nella tabella seguente sono elencati i valori del **stabilità** tipo semplice.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Stable|La proprietà rimane costante tra le operazioni di aggiornamento.|  
 |RowNumber|La proprietà contiene un numero di riga.|  
 |Volatile|La proprietà potrebbe non rimanere costante tra le operazioni di aggiornamento.|  
   
 ## <a name="example"></a>Esempio  
- **Tabella**  
+ **Tabulare**  
   
  Nell'XML seguente vengono rappresentate, in CSDLBI versione 1.1, alcune proprietà nel modello tabulare di esempio di AdventureWorks.  
   

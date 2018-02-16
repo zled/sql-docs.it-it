@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Distribuire soluzioni PowerPivot in SharePoint
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilizzare le istruzioni seguenti per distribuire manualmente due pacchetti della soluzione che aggiungono [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] funzionalità in un ambiente SharePoint Server 2010. La distribuzione delle soluzioni è un passaggio obbligatorio per la configurazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint in un server SharePoint 2010. Per visualizzare l'elenco completo di procedure necessarie, vedere [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Usare le istruzioni seguenti per distribuire manualmente due pacchetti di soluzioni che consentono di aggiungere funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a un ambiente SharePoint Server 2010. La distribuzione delle soluzioni è un passaggio obbligatorio per la configurazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint in un server SharePoint 2010. Per visualizzare l'elenco completo di procedure necessarie, vedere [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  In alternativa, per distribuire le soluzioni è possibile usare lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'utilizzo dello strumento di configurazione è più facile e più efficiente per installazione di un unico server, ma è possibile utilizzare Amministrazione centrale e PowerShell se si preferisce utilizzare uno strumento familiare o se si configurano più funzionalità contemporaneamente. Per altre informazioni sull'uso dello strumento di configurazione, vedere [Strumenti di configurazione di PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
@@ -112,7 +113,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 4.  In **Destinazione distribuzione**selezionare l'applicazione Web di SharePoint per cui si desidera aggiungere supporto alle funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-5.  Fare clic su **OK**.  
+5.  Scegliere **OK**.  
   
 6.  Ripetere l'operazione per le altre applicazioni Web SharePoint che supporteranno l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   

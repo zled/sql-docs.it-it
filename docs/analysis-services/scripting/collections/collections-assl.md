@@ -11,25 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - collections [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, collections
 - ASSL, collections
 ms.assetid: 072b8c6b-1550-4cab-ae64-ba0e3e60b059
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7f121fbcd03bf3dace4c09c20925b7ce3d52baf5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="collections-assl"></a>Raccolte (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Questa sezione di riferimento contiene informazioni di utilizzo e la sintassi di ogni elemento che funge da raccolta nello schema di Analysis Services Scripting Language (ASSL).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Questa sezione di riferimento contiene informazioni sulla sintassi e l'utilizzo di ogni elemento che funge da raccolta nello schema ASSL (Analysis Services Scripting Language).  
   
  Benché lo schema ASSL includa solo elementi XML, dal punto di vista dello sviluppatore, gli elementi descritti in questa sezione corrispondono a raccolte di oggetti, ad esempio il **dimensioni** e **cubi** raccolte.  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 01/08/2018
 |[Elemento file &#40; ASSL &#41;](../../../analysis-services/scripting/collections/files-element-assl.md)|Contiene la raccolta di [File](../../../analysis-services/scripting/objects/file-element-assl.md) elementi che costituiscono un [ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md) elemento.|  
 |[Elemento ForeignKeyColumns &#40; ASSL &#41;](../../../analysis-services/scripting/collections/foreignkeycolumns-element-assl.md)|Contiene la raccolta di colonne che identificano il join alla tabella padre per un'origine dati relazionale.|  
 |[Elemento Groups &#40; ASSL &#41;](../../../analysis-services/scripting/collections/groups-element-assl.md)|Contiene la raccolta di gruppi di membri associati a un attributo.|  
-|[Elemento hierarchies &#40; ASSL &#41;](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)|Contiene la raccolta di [gerarchia](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) elementi associati all'elemento padre.|  
+|[Elemento hierarchies &#40; ASSL &#41;](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)|Contiene la raccolta di elementi [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) associati all'elemento padre.|  
 |[Elemento IncrementalProcessingNotifications &#40; ASSL &#41;](../../../analysis-services/scripting/collections/incrementalprocessingnotifications-element-assl.md)|Contiene la raccolta di [IncrementalProcessingNotification](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md) gli elementi che forniscono informazioni per il [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) elemento sulle query da eseguire per determinare lo stato di avanzamento di elaborazione incrementale.|  
 |[Elemento KeyColumns &#40; ASSL &#41;](../../../analysis-services/scripting/collections/keycolumns-element-assl.md)|Contiene la raccolta di [KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md) delle definizioni degli elementi per un oggetto padre.|  
 |[Elemento KPI &#40; ASSL &#41;](../../../analysis-services/scripting/collections/kpis-element-assl.md)|Contiene la raccolta di [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) elementi associati all'elemento padre.|  
@@ -99,7 +101,7 @@ ms.lasthandoff: 01/08/2018
 |[Elemento ServerProperties &#40; ASSL &#41;](../../../analysis-services/scripting/collections/serverproperties-element-assl.md)|Contiene la raccolta di [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md) gli elementi associati a un [Server](../../../analysis-services/scripting/objects/server-element-assl.md) elemento.|  
 |[Elemento TableNotifications &#40; ASSL &#41;](../../../analysis-services/scripting/collections/tablenotifications-element-assl.md)|Contiene la raccolta di [TableNotification](../../../analysis-services/scripting/objects/tablenotification-element-assl.md) gli elementi che forniscono informazioni per il [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) elemento sulle tabelle o viste in un'origine dati che sono state modificate.|  
 |[Elemento TRACES &#40; ASSL &#41;](../../../analysis-services/scripting/collections/traces-element-assl.md)|Contiene la raccolta di elementi [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) associati a un elemento [Server](../../../analysis-services/scripting/objects/server-element-assl.md).|  
-|[Elemento Translations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/translations-element-assl.md)|Contiene la raccolta di [traduzione](../../../analysis-services/scripting/objects/translation-element-assl.md) elementi associati all'elemento padre.|  
+|[Elemento Translations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/translations-element-assl.md)|Contiene la raccolta di elementi [Translation](../../../analysis-services/scripting/objects/translation-element-assl.md) associati all'elemento padre.|  
 |[Elemento UnknownMemberTranslations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/unknownmembertranslations-element-assl.md)|Contiene la raccolta di traduzioni per la didascalia del [UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md) elemento di una dimensione.|  
   
 ## <a name="see-also"></a>Vedere anche  

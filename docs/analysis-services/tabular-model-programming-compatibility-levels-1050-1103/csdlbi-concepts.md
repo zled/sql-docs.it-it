@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 79e7bf085f6bd1faab6fe367a2c8319192c7f2f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdlbi-concepts"></a>Concetti di CSDLBI
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Conceptual Schema Definition Language con annotazioni Business Intelligence (CSDLBI) è basato su Entity Data Framework, ovvero un'astrazione per la rappresentazione di dati in modo che consente a un set di dati diversi da a livello di codice accessibile, eseguire una query o esportare. CSDLBI viene utilizzato per rappresentare i modelli di dati creati utilizzando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché supporta le applicazioni e la creazione di rapporti guidata dai dati e avanzata.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Il linguaggio CSDL (Conceptual Schema Definition Language) con annotazioni Business Intelligence (CSDLBI) è basato su Entity Data Framework, ovvero un'astrazione per la rappresentazione di dati in modo da rendere possibile l'accesso, l'esecuzione di query o l'esportazione di set di dati diversi a livello di programmazione. CSDLBI viene utilizzato per rappresentare i modelli di dati creati utilizzando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché supporta le applicazioni e la creazione di rapporti guidata dai dati e avanzata.  
   
  In questa sezione viene illustrato come la rappresentazione CSDLBI esegue il mapping ai modelli di dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (tabulari e multidimensionali), insieme a esempi per ogni tipo di modello.  
   
@@ -119,7 +121,7 @@ ms.lasthandoff: 01/08/2018
   
  Quando si genera un modello per gli strumenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], i nomi creati per gli oggetti seguono le convenzioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la denominazione degli oggetti e l'univocità dei nomi. Poiché tuttavia CSDLBI si basa su Entity Data Framework (EDF), in cui è necessario che i nomi rispettino le convenzioni per gli identificatori C#, quando il server crea l'output CSDLBI per un modello, ottiene i nomi utilizzati all'interno dello schema di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e crea automaticamente nuovi nomi di oggetti conformi ai requisiti di EDF. Nella tabella seguente vengono descritte le operazioni tramite le quali vengono generati i nuovi nomi.  
   
-|Regola|Azione|  
+|Rule|Azione|  
 |----------|------------|  
 |Nessun carattere non consentito|I caratteri non consentiti vengono sostituiti da caratteri di sottolineatura.|  
 |I nomi devono essere univoci|Se due stringhe sono uguali, una viene resa univoca aggiungendovi un carattere di sottolineatura più un numero|  
@@ -153,6 +155,6 @@ ms.lasthandoff: 01/08/2018
  **Limitazioni:** sicurezza della cella non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Annotazioni CSDL per Business Intelligence &#40;CSDLBI&#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Annotazioni CSDL per Business Intelligence &#40; CSDLBI &#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   

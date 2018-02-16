@@ -20,19 +20,20 @@ helpviewer_keywords:
 - pass orders [MDX]
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>La modifica dei dati MDX - informazioni sulla sessione ordinamento e l'ordine di valutazione
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Quando un cubo viene calcolato come risultato di uno script MDX, può essere suddivisa in numerose fasi di calcolo a seconda dell'utilizzo di varie funzionalità correlate ai calcoli. Ognuna di queste fasi viene indicata come sessione di calcolo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+L'operazione di calcolo di un cubo, risultante da uno script MDX, può essere suddivisa in numerose fasi di calcolo a seconda dell'utilizzo delle varie funzionalità correlate ai calcoli. Ognuna di queste fasi viene indicata come sessione di calcolo.  
   
  Per fare riferimento a una sessione di calcolo è possibile specificare una posizione ordinale, denominata numero della sessione di calcolo. Il numero di sessioni di calcolo necessario per elaborare completamente tutte le celle di un cubo è noto come livello di nidificazione della sessione di calcolo del cubo.  
   
@@ -155,7 +156,7 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- In questo esempio di query MDX combinata, a `Profit Margin` è associato l'ordine di valutazione più alto, pertanto ha la precedenza quando le due espressioni interagiscono. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] valuta la cella in questione tramite la formula `Profit Margin` . Nella tabella seguente sono riportati i risultati di questo calcolo nidificato.  
+ In questo esempio di query MDX combinata, a `Profit Margin` è associato l'ordine di valutazione più alto, pertanto ha la precedenza quando le due espressioni interagiscono. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] valuta la cella in questione tramite la formula `Profit Margin`. Nella tabella seguente sono riportati i risultati di questo calcolo nidificato.  
   
 ||Importo vendite Internet|Internet Total Product Cost|Profit Margin|  
 |-|---------------------------|---------------------------------|-------------------|  
@@ -169,7 +170,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- o Gestione configurazione  
+ Oppure  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -209,7 +210,7 @@ FROM [Adventure Works]
 (($9,770,899.74 - 5,721,205.24) / $9,770,899.74) - ((9,791,060.30 - 5,718,327.17) / 9,791,060.30) = -0.15   
 ```  
   
- e  
+ Oppure  
   
 ```  
 0.4145 - 0.4160= -0.15  
@@ -219,9 +220,9 @@ FROM [Adventure Works]
  L'ordine di valutazione può essere un aspetto estremamente complesso da affrontare, soprattutto in cubi con un numero elevato di dimensioni che includono membri calcolati, formule di rollup personalizzato o celle calcolate. Quando in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] viene valutata una query MDX, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prende in considerazione i valori dell'ordine di valutazione per tutti gli elementi coinvolti in una determinata sessione, incluse le dimensioni del cubo specificate nella query MDX.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CalculationCurrentPass &#40;MDX&#41;](../../../mdx/calculationcurrentpass-mdx.md)   
- [CalculationPassValue &#40; MDX &#41;](../../../mdx/calculationpassvalue-mdx.md)   
- [Istruzione CREATE MEMBER &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Manipolazione dei dati &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [CalculationCurrentPass & #40; MDX & #41;](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationPassValue & #40; MDX & #41;](../../../mdx/calculationpassvalue-mdx.md)   
+ [CREARE l'istruzione MEMBER & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [La modifica di dati & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

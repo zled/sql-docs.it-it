@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 59b91b7bfc168b0722d5b8d37f74e521557c4416
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>Cmdlet New-PowerPivotServiceApplication
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Crea un nuovo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] applicazione del servizio.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Crea una nuova applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
 
 >[!NOTE] 
 >In questo articolo può contenere esempi e informazioni non aggiornate. Usare il cmdlet Get-Help per la versione più recente.
@@ -44,7 +45,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
   
 ## <a name="parameters"></a>Parametri  
   
-### <a name="-serviceapplicationname-string"></a>-Nomeapplicazioneservizio \<stringa >  
+### <a name="-serviceapplicationname-string"></a>-ServiceApplicationName \<string>  
  Imposta il nome visualizzato dell'applicazione di servizio.  
   
 |||  
@@ -55,7 +56,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-databaseservername-string"></a>DatabaseServerName - \<stringa >  
+### <a name="-databaseservername-string"></a>-DatabaseServerName \<string>  
  Specifica un'istanza del motore di database relazionale di SQL Server che ospita il database dell'applicazione. Per impostazione predefinita, è possibile utilizzare il server di database della farm oppure è possibile scegliere un server di database diverso per il quale si dispone dei diritti di creazione del database.  
   
 |||  
@@ -77,7 +78,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<passare >  
+### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<switch>  
  Crea una connessione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nel gruppo di connessioni del servizio predefinito. Le associazioni tra applicazioni Web e applicazioni di servizio sono determinate dall'appartenenza a questo gruppo. In tutte le applicazioni Web che sottoscrivono il gruppo di connessioni del servizio predefinito è possibile usare l'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aggiunta al gruppo. Nonostante possano essere presenti più applicazioni del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una farm, solo un'applicazione di servizio può essere membro del gruppo di connessioni del servizio predefinito.  
   
  Se è già presente un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] che è membro del gruppo di proxy predefinito, è necessario impostare AddToDefautlProxyGroup:$false per la nuova applicazione creata. Sarà necessario aggiungere la nuova applicazione di servizio a un gruppo di connessioni del servizio personalizzato.  A questo scopo, è possibile utilizzare cmdlet predefiniti di SharePoint.  Con Get-SPServiceApplicationProxyGroup viene restituito l'elenco dei gruppi di connessioni del servizio definiti nella farm.  
@@ -98,8 +99,8 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
   
 |||  
 |-|-|  
-|Input|nessuna.|  
-|Output|nessuna.|  
+|Input|Nessuno|  
+|Output|Nessuno|  
   
 ## <a name="example-1"></a>Esempio 1  
   

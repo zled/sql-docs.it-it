@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Configurare l'uso di spazio su disco (PowerPivot per SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint distribuzione Usa lo spazio su disco del computer host per cache [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] database per ricaricamenti più veloci. Ogni database [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] caricato in memoria viene prima memorizzato nella cache su disco in modo che possa essere ricaricato rapidamente in un secondo momento per soddisfare nuove richieste. Per impostazione predefinita, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint usa tutto lo spazio su disco disponibile per memorizzare i database nella cache, ma è possibile modificare questo comportamento impostando le proprietà che limitano la quantità di spazio su disco usata.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint consente di usare lo spazio su disco del computer host per memorizzare nella cache i database [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per ricaricarli in modo più veloce. Ogni database [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] caricato in memoria viene prima memorizzato nella cache su disco in modo che possa essere ricaricato rapidamente in un secondo momento per soddisfare nuove richieste. Per impostazione predefinita, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint usa tutto lo spazio su disco disponibile per memorizzare i database nella cache, ma è possibile modificare questo comportamento impostando le proprietà che limitano la quantità di spazio su disco usata.  
   
  In questo argomento viene illustrato come impostare i limiti all'utilizzo dello spazio su disco.  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  Scegliere **OK** per salvare le modifiche.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
  Un'installazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint specifica regole di analisi dell'integrità in modo che sia possibile eseguire azioni correttive in caso di problemi di integrità, configurazione o disponibilità del server. Alcune di queste regole consentono di utilizzare le impostazioni di configurazione per stabilire le condizioni in base alle quali vengono attivate le regole di integrità. Se si ottimizzano le prestazioni del server, è necessario rivedere queste impostazioni anche per assicurarsi che le impostazioni predefinite rappresentino la scelta migliore per il sistema. Per altre informazioni, vedere [Configurare le regole di integrità di Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md).  
   
 ## <a name="see-also"></a>Vedere anche  

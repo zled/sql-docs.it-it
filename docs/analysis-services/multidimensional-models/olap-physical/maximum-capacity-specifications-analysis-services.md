@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Services], maximum number
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Specifiche di capacità massima (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Le tabelle seguenti indicano le dimensioni e numeri massimi dei diversi oggetti definiti [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] componenti in modalità di distribuzione di server diverso.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Nelle tabelle seguenti vengono indicate le dimensioni e le quantità massime dei diversi oggetti definiti nei componenti di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] con diverse modalità di distribuzione del server.  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -38,10 +40,10 @@ ms.lasthandoff: 01/08/2018
   
  [Tabulare (DeploymentMode = 2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP"></a>Multidimensionale e Data Mining (DeploymentMode = 0)  
+##  <a name="bkmk_OLAP">Multidimensionale e Data Mining (DeploymentMode = 0)</a>  
  La modalità di archiviazione MOLAP, che prevede l'archiviazione sia di dati che di metadati, prevede limiti fisici aggiuntivi relativi alle dimensioni dei file. Per impostazione predefinita, la dimensione massima dei file di archivio delle stringhe è di 4 GB. Se sono necessari file più grandi per gli archivi di stringhe, è possibile specificare un'architettura di archiviazione di stringhe diversa. Per ulteriori informazioni, vedere [configurare l'archivio di stringhe per partizioni e dimensioni](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
-|Object|Quantità/dimensioni massime|  
+|Oggetto|Quantità/dimensioni massime|  
 |------------|----------------------------|  
 |Database in un'istanza|2^31-1 = 2,147,483,647|  
 |Dimensioni in un database|2^31-1 = 2,147,483,647|  
@@ -68,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  Per ulteriori informazioni sulle limitazioni di origine dati per l'elaborazione analitica online (OLAP) e il data mining, vedere [supportate origini di dati &#40; SSAS - multidimensionale &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), [Supportate origini dati &#40; SSAS - multidimensionale &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), e [oggetti ASSL e relative caratteristiche](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
-##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
+##  <a name="bkmk_sharepoint">SharePoint (DeploymentMode = 1)</a>  
   
-|Object|Quantità/dimensioni massime|  
+|Oggetto|Quantità/dimensioni massime|  
 |------------|----------------------------|  
 |Database in un'istanza|2^31-1 = 2,147,483,647|  
 |Tabelle in un database|2^31-1 = 2,147,483,647|  
@@ -86,10 +88,10 @@ ms.lasthandoff: 01/08/2018
 |Dimensioni dei record della query di origine|64 KB|  
 |Lunghezza dei nomi degli oggetti|100 caratteri|  
   
-##  <a name="bkmk_vertipaq"></a>Tabulare (DeploymentMode = 2)  
+##  <a name="bkmk_vertipaq">Tabulare (DeploymentMode = 2)</a>  
 Di seguito sono limiti teorici. Prestazioni risulta diminuita in numeri più bassi.   
 
-|Object|Quantità/dimensioni massime|  
+|Oggetto|Quantità/dimensioni massime|  
 |------------|----------------------------|  
 |Database in un'istanza|16,000|  
 |Numero combinato di tabelle e colonne in un database|16,000|  

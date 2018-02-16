@@ -15,19 +15,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], merging
 - merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 519136d681c257d27f93894db6a7c2652d273f87
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Unire partizioni in Analysis Services (SSAS - Multidimensionale)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile unire partizioni in un oggetto esistente [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database di consolidare i dati delle tabelle dei fatti da più partizioni dello stesso gruppo di misure.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+È possibile unire partizioni in un database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente per consolidare i dati delle tabelle dei fatti da più partizioni dello stesso gruppo di misure.  
   
  [Scenari comuni](#bkmk_Scenario)  
   
@@ -125,7 +126,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  Fare clic su **Unisci partizioni** per aprire la **Unisci partizione \<nome partizione >** la finestra di dialogo.  
   
-3.  In **Partizioni di origine**selezionare la casella di controllo accanto a ogni partizione di origine che si desidera unire alla partizione di destinazione, quindi fare clic su **OK**.  
+3.  In **Partizioni di origine** selezionare la casella di controllo accanto a ogni partizione di origine che si desidera unire alla partizione di destinazione, quindi fare clic su **OK**.  
   
     > [!NOTE]  
     >  Le partizioni di origine verranno immediatamente eliminate in seguito all'unione con le partizioni di destinazione. Aggiornare la cartella Partizioni per aggiornarne i contenuto in seguito all'unione.  
@@ -138,12 +139,12 @@ ms.lasthandoff: 01/08/2018
  Per informazioni, vedere l'argomento [Unione di partizioni &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elaborazione di oggetti di Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Creare e gestire una partizione locale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [Oggetti di elaborazione di Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
+ [Le partizioni &#40; Analysis Services - dati multidimensionali &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Creare e gestire una partizione locale &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
  [Creare e gestire una partizione remota &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Impostare tabelle writeback delle partizioni](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
- [Partizioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Configurare l'archivio di stringhe per dimensioni e partizioni](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [Partizioni abilitate per scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Configurare l'archiviazione delle stringhe per partizioni e dimensioni](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

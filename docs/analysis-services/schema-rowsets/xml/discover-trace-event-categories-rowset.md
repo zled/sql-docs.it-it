@@ -11,28 +11,30 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 1ad74fd2-4740-469d-85b5-abf0171737fd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b95fb2824757a4b45001dd5a1eed4871995b86cb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertraceeventcategories-rowset"></a>Set di righe DISCOVER_TRACE_EVENT_CATEGORIES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Mostra l'elenco delle categorie di eventi supportati dal provider di traccia.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Visualizza l'elenco di categorie di eventi supportate dal provider di traccia.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DISCOVER_TRACE_EVENT_CATEGORIES** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Length|Description|  
+|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**Dati**|**DBTYPE_WSTR**||Contiene una stringa XML codificata con informazioni descrittive sulla categoria di eventi relative al provider di traccia, inclusi il nome della categoria, il tipo e descrizione. Tipo è una stringa che indica il tipo di categoria di eventi. I valori di enumerazione sono i seguenti:<br /><br /> 0=Normale<br /><br /> 1=Significativo<br /><br /> 2=Errore|  
   
@@ -43,12 +45,12 @@ ms.lasthandoff: 01/08/2018
   
  Nella tabella seguente vengono forniti i GUID e i valori stringa che identificano questo set di righe.  
   
-|Argomento|valore|  
+|Argomento|Valore|  
 |--------------|-----------|  
 |GUID|a07ccd19-8148-11d0-87bb-00c04fc33942|  
 |String|DISCOVER_TRACE_EVENT_CATEGORIES|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML per set di righe dello schema di analisi](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis i rowset dello Schema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

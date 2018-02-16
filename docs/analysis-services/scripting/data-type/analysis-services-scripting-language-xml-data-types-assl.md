@@ -11,28 +11,32 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Analysis Services Scripting Language XML Data Types
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Analysis Services Scripting Language XML Data Types
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, data types
 - Analysis Services Scripting Language, data types
 - data types [Analysis Services Scripting Language]
 ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9baa60a57d8ef59bb7bb24afc82c0a3e5435a56d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Tipi di dati XML di Analysis Services Scripting Language (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Questa sezione di riferimento contiene informazioni di utilizzo e la sintassi di ogni elemento che funge da tipo nello schema di Analysis Services Scripting Language (ASSL).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Questa sezione di riferimento contiene informazioni sulla sintassi e l'utilizzo di ogni elemento che funge da tipo nello schema ASSL (Analysis Services Scripting Language).  
   
  Benché lo schema ASSL includa solo elementi XML, dal punto di vista dello sviluppatore, gli elementi descritti in questa sezione corrispondono a tipi, ad esempio **associazione** e **autorizzazione**, che vengono utilizzati per definire gli elementi figlio e una proprietà di altri oggetti.  
   
@@ -42,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  In alcuni casi, un tipo deriva da un altro tipo. Ad esempio, il **CubeBinding** tipo deriva dall'oggetto padre **associazione** tipo.  
   
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[Tipo di dati Action &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/action-data-type-assl.md)|Definisce un tipo di dati primitivo astratto che rappresenta un'azione in un [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento o un [prospettiva](../../../analysis-services/scripting/objects/perspective-element-assl.md) elemento.|  
 |[Tipo di dati AggregationAttribute &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/aggregationattribute-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta l'associazione tra un [aggregazione](../../../analysis-services/scripting/objects/aggregation-element-assl.md) elemento e un attributo.|  
@@ -59,15 +63,15 @@ ms.lasthandoff: 01/08/2018
 |[Tipo di dati ClrAssembly &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)|Definisce un tipo di dati derivato che rappresenta un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly associato a un [Database](../../../analysis-services/scripting/objects/database-element-assl.md) o [Server](../../../analysis-services/scripting/objects/server-element-assl.md) elemento|  
 |[Tipo di dati ClrAssemblyFile &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta uno dei file che compongono un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly ([ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md) elemento).|  
 |[Tipo di dati ColumnBinding &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/columnbinding-data-type-assl.md)|Definisce un tipo di dati derivato che rappresenta l'associazione di una colonna in una vista origine dati per un [DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md) elemento.|  
-|[Tipo di dati ComAssembly &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/comassembly-data-type-assl.md)|Definisce un tipo di dati derivato che rappresenta una libreria COM associata a un [Server](../../../analysis-services/scripting/objects/server-element-assl.md) o [Database](../../../analysis-services/scripting/objects/database-element-assl.md) elemento.|  
+|[Tipo di dati ComAssembly &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/comassembly-data-type-assl.md)|Definisce un tipo di dati derivato che rappresenta una libreria COM associata a un elemento [Server](../../../analysis-services/scripting/objects/server-element-assl.md) o [Database](../../../analysis-services/scripting/objects/database-element-assl.md) .|  
 |[Tipo di dati CubeAttribute &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/cubeattribute-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta un attributo associato a un [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento.|  
 |[Tipo di dati CubeAttributeBinding &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/cubeattributebinding-data-type-assl.md)|Definisce un tipo di dati derivato che rappresenta l'associazione di un attributo in una dimensione del cubo a un'azione o una colonna della struttura di data mining.|  
-|[Cubebinding-tipo di dati &#40; out-of-line &#41; &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|Definisce un tipo di dati primitivo che rappresenta la relazione tra un [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento e un [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) elemento.|  
+|[Cubebinding-tipo di dati &#40; out-of-line &#41; &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|Definisce un tipo di dati primitivo che rappresenta la relazione tra un elemento [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) e un elemento [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) .|  
 |[Tipo di dati CubeDimension &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta la relazione tra una dimensione e un cubo.|  
 |[Tipo di dati CubeDimensionBinding &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/cubedimensionbinding-data-type-assl.md)|Definisce un tipo di dati derivato che rappresenta l'associazione di un [dimensione](../../../analysis-services/scripting/objects/dimension-element-assl.md), [misura](../../../analysis-services/scripting/objects/measure-element-assl.md), o [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) elemento da una dimensione del cubo.|  
 |[Tipo di dati CubeDimensionPermission &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta le autorizzazioni per un singolo ruolo in una dimensione specifica di un cubo.|  
 |[Tipo di dati CubeHierarchy &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/cubehierarchy-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta le informazioni su un [gerarchia](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) elemento in un [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento.|  
-|[Tipo di dati DataBlock &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/datablock-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta una raccolta di blocchi di dati utilizzato per archiviare il contenuto binario di un [ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md) elemento.|  
+|[Tipo di dati DataBlock &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/datablock-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta una raccolta di blocchi di dati utilizzata per archiviare il contenuto binario di un elemento [ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md) .|  
 |[Tipo di dati DataItem &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta le caratteristiche relative ai dati di un elemento di dati, ad esempio una colonna o un attributo.|  
 |[Tipo di dati DataMiningMeasureGroupDimension &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/dataminingmeasuregroupdimension-data-type-assl.md)|Definisce un tipo di dati derivato che rappresenta la relazione tra un gruppo di misure e una dimensione di data mining.|  
 |[Tipo di dati di origine dati &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md)|Definisce un tipo di dati primitivo astratto che rappresenta un'origine dati in un [Database](../../../analysis-services/scripting/objects/database-element-assl.md) elemento.|  
@@ -79,7 +83,7 @@ ms.lasthandoff: 01/08/2018
 |[Tipo di dati DimensionPermission &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/dimensionpermission-data-type-assl.md)|Definisce un tipo di dati derivato che rappresenta le autorizzazioni assegnate a una dimensione del database.|  
 |[Tipo di dati DrillThroughAction &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md)|Definisce un tipo di dati derivato che rappresenta un'azione drill-through.|  
 |[Tipo di dati DSVTableBinding &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/dsvtablebinding-data-type-assl.md)|Definisce un tipo di dati derivato che rappresenta l'associazione tra una tabella e un [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) elemento.|  
-|[Tipo di dati EventColumn &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/eventcolumn-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta una colonna di informazioni da acquisire per un [evento](../../../analysis-services/scripting/objects/event-element-assl.md) come parte dell'elemento un [traccia](../../../analysis-services/scripting/objects/trace-element-assl.md) elemento.|  
+|[Tipo di dati EventColumn &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/eventcolumn-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta una colonna di informazioni da acquisire per un elemento [Event](../../../analysis-services/scripting/objects/event-element-assl.md) come parte di un elemento [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) .|  
 |[Tipo di dati Hierarchy &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/hierarchy-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta una gerarchia in una dimensione.|  
 |[Tipo di dati ImpersonationInfo &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md)|Definisce un tipo di dati primitivo che rappresenta le informazioni utilizzate per rappresentare un utente.|  
 |[Tipo di dati IncrementalProcessingNotification &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/incrementalprocessingnotification-data-type-assl.md)|Definisce un tipo di dati derivato che rappresenta le informazioni per il [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) elemento su una query da eseguire per determinare lo stato di avanzamento dell'elaborazione incrementale.|  

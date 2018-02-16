@@ -23,19 +23,20 @@ helpviewer_keywords:
 - system requirements [Analysis Services]
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: cb9d445b33f7a9ab1dc81f32ea7db419c512f680
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisiti e considerazioni per la distribuzione di Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le prestazioni e la disponibilità di una soluzione dipende da molti fattori, tra le funzionalità dell'hardware sottostante, la topologia della distribuzione di server, le caratteristiche della soluzione (ad esempio, con partizioni distribuite in più server o tramite archiviazione ROLAP che richiede l'accesso diretto al motore relazionale), i contratti di servizio e la complessità del modello di dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Le prestazioni e la disponibilità di una soluzione dipendono da molti fattori, tra cui le funzionalità dell'hardware sottostante, la topologia della distribuzione server, le caratteristiche della soluzione (ad esempio, con partizioni distribuite in più server o usando l'archiviazione ROLAP per la quale è richiesto l'accesso diretto al motore relazionale), i contratti di servizio e la complessità del modello di dati.  
   
 ## <a name="memory-and-processor-requirements"></a>Requisiti relativi a memoria e processore  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è necessaria una quantità maggiore di risorse di memoria e processore nei casi seguenti:  

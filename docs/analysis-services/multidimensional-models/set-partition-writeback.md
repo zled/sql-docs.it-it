@@ -17,19 +17,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], write-enabled
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-writeback"></a>Impostare tabelle writeback delle partizioni
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Se si abilita la scrittura un gruppo di misure, gli utenti finali possono modificare i dati del cubo durante l'esplorazione, le modifiche vengono salvate in una tabella separata denominata tabella writeback, non nel cubo dati o dati di origine. Gli utenti finali che esplorano una partizione abilitata per la scrittura visualizzano il risultato finale di tutte le modifiche nella tabella writeback per la partizione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Se si abilita un gruppo di misure per la scrittura, gli utenti finali possono modificare i dati del cubo durante la relativa esplorazione; tuttavia, le modifiche vengono salvate in una tabella separata denominata tabella writeback, non nei dati del cubo o nei dati di origine. Gli utenti finali che esplorano una partizione abilitata per la scrittura visualizzano il risultato finale di tutte le modifiche nella tabella writeback per la partizione.  
   
  È possibile esplorare o eliminare i dati writeback, nonché convertirli in una partizione. In una partizione abilitata per la scrittura, è possibile utilizzare i ruoli dei cubi per concedere l'accesso in lettura/scrittura a singoli utenti e gruppi di utenti, nonché per limitare l'accesso a celle o gruppi di celle specifici nella partizione.  
   
@@ -66,8 +67,8 @@ ms.lasthandoff: 01/08/2018
  Per convertire i dati writeback in una partizione, usare la finestra di dialogo **Converti in partizione**, a cui è possibile accedere facendo clic con il pulsante destro del mouse sulla tabella writeback di una partizione abilitata per la scrittura in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile specificare il nome della partizione e quindi progettare la relativa aggregazione durante la creazione della partizione stessa o in un secondo momento. Per creare l'aggregazione quando si seleziona la partizione, è necessario scegliere di copiare la progettazione dell'aggregazione da una partizione esistente, che in genere, ma non necessariamente, corrisponde alla partizione writeback corrente. È inoltre possibile scegliere di elaborare la partizione durante la creazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Partizioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Abilitazione del writeback in un cubo OLAP a livello di cella in Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Abilitazione e protezione dell'immissione di dati con il Writeback di Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Partizioni abilitate per scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Abilitazione del writeback su un cubo OLAP a livello di cella in Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Abilitazione e protezione dell'immissione di dati con il writeback di Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

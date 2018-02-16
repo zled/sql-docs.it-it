@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizzare database di Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include una funzionalità di sincronizzazione di database che consente di rendere due [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database equivalenti, copiando i dati e i metadati di un database in un server di origine a un database in un server di destinazione. Utilizzare la funzionalità Sincronizzazione database per completare le attività seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include una funzionalità di sincronizzazione database che consente di rendere due database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] equivalenti, copiando i dati e i metadati di un database situato su un server di origine in‌ un altro database situato su un server di destinazione. Utilizzare la funzionalità Sincronizzazione database per completare le attività seguenti:  
   
 -   Distribuire un database da un server temporaneo in un server di produzione.  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  I seguenti white paper, scritti per le versioni precedenti di Analysis Services, rimangano validi per le soluzioni multidimensionali scalabili compilate con SQL Server 2012. Per altre informazioni, vedere [Scale-Out Querying with Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) (Scalabilità orizzontale delle query con Analysis Services) e [Scale-Out Querying for Analysis Services with Read-Only Databases](http://go.microsoft.com/fwlink/?LinkId=253137.)(Scalabilità orizzontale delle query per Analysis Services con i database di sola lettura)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Nel server di destinazione da cui viene avviata la sincronizzazione del database, è necessario essere un membro del ruolo di amministratore del server Analysis Services. Nel server di origine, l'account utente di Windows deve disporre di autorizzazioni Controllo completo sul database di origine. Se si esegue la sincronizzazione del database in modo interattivo, tenere presente che la sincronizzazione viene eseguita nel contesto di sicurezza dell'identità utente di Windows. Se all'account viene negato l'accesso a oggetti specifici, tali oggetti verranno esclusi dall'operazione. Per altre informazioni sui ruoli di amministratore del server e sulle autorizzazioni del database, vedere [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [Concedere le autorizzazioni per il database &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
  La porta TCP 2383 deve essere aperta in entrambi i server per consentire le connessioni remote tra le istanze predefinite. Per altre informazioni sulla creazione di un'eccezione in Windows Firewall, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -189,12 +190,12 @@ ms.lasthandoff: 01/08/2018
   
 8.  Fare clic su **Fine** per eseguire la sincronizzazione. Dopo aver verificato le opzioni nella pagina **Completamento procedura guidata** fare di nuovo clic su **Fine** .  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
  Se non viene eseguita la sincronizzazione di ruoli o appartenenze, ricordarsi di specificare ora le autorizzazioni di accesso utente nel database di destinazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Distribuire soluzioni di modelli utilizzando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [Distribuire soluzioni di modelli tramite la Distribuzione guidata](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Distribuire soluzioni di modelli tramite la distribuzione guidata](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

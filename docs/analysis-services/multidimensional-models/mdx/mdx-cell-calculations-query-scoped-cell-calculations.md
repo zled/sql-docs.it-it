@@ -15,19 +15,20 @@ helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 34ef680e855c0a6b29363923ba6984189a4e9119
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Calcoli MDX di cella - calcoli di celle con ambito Query
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Utilizzare il **WITH** parola chiave in MDX (Multidimensional Expressions) per descrivere celle calcolate all'interno del contesto di una query. La parola chiave **WITH** ha la sintassi seguente:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Nel linguaggio MDX (Multidimensional Expressions) è possibile usare la parola chiave **WITH** per descrivere celle calcolate nel contesto di una query. La parola chiave **WITH** ha la sintassi seguente:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -60,6 +61,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  La formula di calcolo, invece, viene elaborata ogni volta che sul cubo viene eseguita una query MDX che coinvolge celle incluse nella definizione delle celle calcolate, indipendentemente dall'ambito di creazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzione CREATE CELL CALCULATION &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [CREARE l'istruzione di calcolo di celle &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

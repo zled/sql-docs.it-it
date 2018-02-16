@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: "97"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Novità &#39; s New in Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -89,7 +89,7 @@ Una *tabella calcolata* è una costruzione solo modello basata su una query o un
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Elaborazione parallela per più partizioni di tabella nei modelli tabulari    
  Questa versione include una nuova funzionalità di elaborazione parallela per le tabelle con due o più partizioni e garantisce così un miglioramento delle prestazioni di elaborazione. Per questa funzionalità non sono previste impostazioni di configurazione. Per altre informazioni sulla configurazione di partizioni e l'elaborazione di tabelle, vedere [Partizioni di modelli tabulari &#40;SSAS tabulare&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Aggiunta di account computer come amministratori in SSMS    
- Gli amministratori di[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono ora usare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per configurare gli account di computer come membri del gruppo Administrators di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Nella finestra di dialogo **Seleziona utenti o gruppi** impostare i **Percorsi** dei domini dei computer e quindi aggiungere il tipo di oggetto **Computers** . Per altre informazioni, vedere [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ora possono usare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per configurare gli account computer come membri del gruppo Administrators di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Nella finestra di dialogo **Seleziona utenti o gruppi** impostare i **Percorsi** dei domini dei computer e quindi aggiungere il tipo di oggetto **Computers** . Per altre informazioni, vedere [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC per Analysis Services    
  La verifica di coerenza del database (DBCC) viene eseguita internamente per rilevare possibili problemi di danneggiamento dei dati in fase di caricamento del database, ma può anche essere eseguita su richiesta, se si sospetta la presenza di problemi nei dati o nel modello. DBCC esegue controlli diversi a seconda che il modello sia tabulare o multidimensionale. Per informazioni dettagliate, vedere [Database Consistency Checker &#40;DBCC&#41; per i database tabulari e multidimensionali di Analysis Services](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md).    
  ### <a name="extended-events-updates"></a>Aggiornamenti a Eventi estesi    

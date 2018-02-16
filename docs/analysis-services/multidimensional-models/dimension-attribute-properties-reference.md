@@ -15,19 +15,20 @@ helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>Riferimento alle proprietà degli attributo delle dimensioni
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], esistono diverse proprietà che determinano come dimensioni e dimensione gli attributi di funzione. Nella tabella seguente vengono elencate e descritte queste proprietà degli attributi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]esistono molte proprietà che determinano le modalità di funzionamento delle dimensioni e degli attributi delle dimensioni. Nella tabella seguente vengono elencate e descritte queste proprietà degli attributi.  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/08/2018
 |**CustomRollupColumn**|Specifica la colonna che definisce una formula personalizzata di rollup.|  
 |**CustomRollupPropertiesColumn**|Specifica la colonna che contiene le proprietà di una formula personalizzata di rollup.|  
 |**DefaultMember**|Specifica un'espressione MDX (Multidimensional Expressions) che definisce la misura predefinita per l'attributo.|  
-|**Descrizione**|Contiene la descrizione dell'attributo.|  
+|**Description**|Contiene la descrizione dell'attributo.|  
 |**DiscretizationBucketCount**|Contiene il numero di bucket per la discretizzazione.|  
 |**DiscretizationMethod**|Definisce il metodo da utilizzare per la discretizzazione.|  
 |**EstimatedCount**|Specifica il numero stimato di membri nell'attributo. Il valore predefinito è zero fino all'esecuzione di Progettazione guidata aggregazioni. È possibile contare il numero di record attraverso la procedura guidata oppure immettere un valore stimato. Immettere un valore manualmente se si conosce il numero di membri e si desidera risparmiare il tempo necessario per eseguire la query sul database per recuperare il conteggio. Se si sta utilizzando un subset di test dei dati di produzione, è possibile utilizzare i conteggi relativi ai dati di produzione affinché la progettazione delle aggregazioni venga ottimizzata per i dati di produzione piuttosto che per i dati di test.|  
@@ -69,6 +70,6 @@ ms.lasthandoff: 01/08/2018
 >  Il membro predefinito di un attributo viene utilizzato per valutare le espressioni quando un membro della gerarchia non viene esplicitamente incluso in una query. Il membro predefinito per un attributo viene specificato tramite la proprietà **DefaultMember** nell'attributo. Se in una query è inclusa una gerarchia di una dimensione, verranno ignorati tutti i membri predefiniti degli attributi corrispondenti ai livelli della gerarchia. Se in una query non viene inclusa alcuna gerarchia di una dimensione, i membri predefiniti vengono utilizzati per tutti gli attributi della dimensione. Per altre informazioni sui membri predefiniti, vedere [Definire un membro predefinito](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
+ [Gli attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   
