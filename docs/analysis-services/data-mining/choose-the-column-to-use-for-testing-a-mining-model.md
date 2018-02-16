@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], columns
 - predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ea1fbd3d7522c08b025d6c8fb6c4595e6fe4e63e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Scegliere la colonna da utilizzare per il test di un modello di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Prima di poter misurare l'accuratezza di un modello di data mining, è necessario decidere quale risultato che si desidera valutare. La maggior parte dei modelli di data mining richiede che si scelga almeno una colonna da utilizzare come attributo stimabile quando si crea il modello. Pertanto, quando si testa l'accuratezza del modello, è in genere necessario selezionare quell'attributo da testare.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Prima di poter misurare l'accuratezza di un modello di data mining, è necessario decidere quale risultato si desidera valutare. La maggior parte dei modelli di data mining richiede che si scelga almeno una colonna da utilizzare come attributo stimabile quando si crea il modello. Pertanto, quando si testa l'accuratezza del modello, è in genere necessario selezionare quell'attributo da testare.  
   
  Nell'elenco seguente vengono descritte alcune considerazioni aggiuntive relative alla scelta dell'attributo stimabile da utilizzare nel test:  
   

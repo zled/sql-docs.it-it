@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], data source views
 - data source views [Analysis Services], modifying
 ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c90855b6276a99ac474234c4473cf934c909d644
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>Modificare la vista origine dati utilizzata per una struttura di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile aprire una vista origine dati all'interno di progettazione modelli di Data Mining in modo da poterlo modificare.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+È possibile aprire una vista origine dati in Progettazione modelli di data mining per modificarla.  
   
 ### <a name="to-access-data-source-view-designer-from-the-mining-structure-tab-in-data-mining-designer"></a>Per accedere a Progettazione vista origine dati dalla scheda Struttura di data mining in Progettazione modelli di data mining  
   
@@ -37,6 +38,6 @@ ms.lasthandoff: 01/08/2018
      Progettazione vista origine dati verrà visualizzato in una nuova scheda in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Data mining struttura attività e procedure](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

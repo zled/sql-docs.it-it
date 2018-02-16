@@ -19,19 +19,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], how-to topics
 - mining structures [Analysis Services], processing
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e4726de9acf90a805ff15791d6ab8d76fa20adc6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-data-mining-objects"></a>Elaborazione di oggetti di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto di data mining è soltanto un contenitore vuoto finché non è stata elaborata. L'*elaborazione* di un modello di data mining viene anche definita *training*.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un oggetto di data mining è soltanto un contenitore vuoto finché non viene elaborato. L'*elaborazione* di un modello di data mining viene anche definita *training*.  
   
  **Elaborazione di strutture di data mining:** una struttura di data mining ottiene i dati da un'origine dati esterna, secondo quanto definito dalle associazioni delle colonne e dai metadati di utilizzo, dopodiché li legge. Questi dati vengono letti completamente e successivamente analizzati per estrarre diverse statistiche. In Analysis Services una rappresentazione compressa dei dati, ideale per l'analisi basata sugli algoritmi di data mining, viene archiviata in una cache locale. È possibile conservare questa cache oppure eliminarla dopo l'elaborazione dei modelli. Per impostazione predefinita, la cache viene archiviata. Per altre informazioni, vedere [Elaborare una struttura di data mining](../../analysis-services/data-mining/process-a-mining-structure.md).  
   
@@ -62,9 +63,9 @@ ms.lasthandoff: 01/08/2018
  Per altre informazioni, vedere [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query drill-through &#40;Data mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Data Mining query drill-through &#40; &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Strutture di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Modelli di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
- [Architettura logica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Architettura logica &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

@@ -18,19 +18,20 @@ helpviewer_keywords:
 - solutions [Analysis Services], deploying
 - models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bfbfd44f7acd1b029d0b841ef2e291e5b26b6c07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Distribuzione di soluzioni di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L'ultimo passaggio nel processo di data mining consiste nel distribuire i modelli in un ambiente di produzione. La distribuzione è importante perché rende disponibili i modelli agli utenti in modo da poter eseguire le attività seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'ultimo passaggio del processo di data mining consiste nel distribuire i modelli in un ambiente di produzione. La distribuzione è importante perché rende disponibili i modelli agli utenti in modo da poter eseguire le attività seguenti:  
   
 -   Utilizzare i modelli per creare stime e prendere decisioni aziendali. Per informazioni sugli strumenti che è possibile usare per creare query, vedere [Strumenti query di data mining](../../analysis-services/data-mining/data-mining-query-tools.md).  
   
@@ -48,10 +49,10 @@ ms.lasthandoff: 01/08/2018
   
  [Risorse correlate](#bkmk_Resources)  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
- [Distribuire una soluzione di data mining in versioni precedenti di SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Distribuire una soluzione di Data Mining in versioni precedenti di SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
- [Esportare e importare gli oggetti di data mining](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [Esportare e importare oggetti di Data Mining](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
 ##  <a name="bkmk_Reqs"></a> Requisiti per la distribuzione delle soluzioni di data mining  
  L'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a cui si distribuisce la soluzione deve essere in esecuzione in una modalità che supporta oggetti multidimensionali e oggetti di data mining; non è infatti possibile distribuire oggetti di data mining a un'istanza che ospita modelli tabulari o dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -75,21 +76,21 @@ ms.lasthandoff: 01/08/2018
  In genere, gli oggetti di data mining utilizzano anche le stesse origini dati e le stesse viste origine dati utilizzate per il cubo. Tuttavia, è possibile aggiungere origini dati e viste origine dati destinate in modo specifico al data mining. Ad esempio, un cubo in genere non contiene dati su clienti potenziali o dati esterni non utilizzati negli oggetti multidimensionali.  
   
 ##  <a name="bkmk_Resources"></a> Risorse correlate  
- [Spostamento di oggetti di data mining](../../analysis-services/data-mining/moving-data-mining-objects.md)  
+ [Lo spostamento di oggetti di Data Mining](../../analysis-services/data-mining/moving-data-mining-objects.md)  
   
  Se il modello è basato unicamente su dati relazionali, l'esportazione e l'importazione di oggetti tramite DMX è il modo più semplice per spostare i modelli.  
   
- [Spostare un database di Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
+ [Spostare un Database di Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
   
  Quando i modelli utilizzano un cubo come origine dati, fare riferimento a questo argomento per ottenere ulteriori informazioni sullo spostamento dei modelli e dei dati del cubo di supporto.  
   
- [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Distribuire progetti di Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  Vengono fornite informazioni generali sulla distribuzione di progetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e vengono descritte le proprietà che è possibile impostare come parte della configurazione del progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Strumenti query di data mining](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [L'elaborazione di Data Mining requisiti e considerazioni &#40; &#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

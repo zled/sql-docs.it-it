@@ -15,19 +15,20 @@ helpviewer_keywords:
 - algorithms [data mining]
 - mining models [Analysis Services], algorithms
 ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c5053ade39f966f2fbd18b94076d363848027bfe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-or-change-algorithm-parameters"></a>Visualizzare o modificare i parametri dell'algoritmo
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile modificare i parametri forniti con gli algoritmi utilizzati per compilare modelli di data mining per personalizzare i risultati del modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+È possibile modificare i parametri forniti con gli algoritmi utilizzati per compilare modelli di data mining per personalizzare i risultati del modello.  
   
  I parametri dell'algoritmo forniti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non modificano solo le proprietà del modello: possono essere usati per modificare in modo fondamentale la modalità di elaborazione, raggruppamento e visualizzazione dei dati. Ad esempio, è possibile utilizzare i parametri dell'algoritmo per effettuare le operazioni seguenti:  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
      Se non si immette un valore nella colonna **Valore** , in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene usato il valore predefinito del parametro. La colonna **Intervallo** descrive i valori che è possibile immettere.  
   
-3.  Fare clic su **OK**.  
+3.  Scegliere **OK**.  
   
      Il parametro dell'algoritmo viene impostato con il nuovo valore. Le modifiche al parametro non verranno applicate al modello di data mining fino a quando non si rielabora il modello.  
   
@@ -71,6 +72,6 @@ ms.lasthandoff: 01/08/2018
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative al modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Procedure dettagliate e attività di modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

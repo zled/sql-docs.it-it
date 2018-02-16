@@ -22,25 +22,26 @@ helpviewer_keywords:
 - sequence [Analysis Services]
 - transitions [Analysis Services]
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6553c3d5077b485d0736f2ffd8589d17a81edc33
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Visualizzare un modello usando il Visualizzatore Microsoft Sequence Clustering
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizzatore Sequence Clustering in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Sequence Clustering. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering è un algoritmo di analisi delle sequenze da usare per l'esplorazione di dati contenenti eventi che possono essere collegati dai percorsi o *sequenze*seguenti. Per altre informazioni su questo algoritmo, vedere [Algoritmo Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
+# <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Sequence Clustering
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering è un algoritmo di analisi delle sequenze da usare per l'esplorazione di dati contenenti eventi che possono essere collegati dai percorsi o *sequenze*seguenti. Per altre informazioni su questo algoritmo, vedere [Algoritmo Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   
 > [!NOTE]  
 >  Per visualizzare informazioni dettagliate sulle equazioni utilizzate nel modello e sui modelli individuati, utilizzare il visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer. Per altre informazioni, vedere [Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 > [!NOTE]  
->  Nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering sono disponibili funzionalità e opzioni analoghe a quelle del Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering. Per altre informazioni, vedere [Visualizzare un modello utilizzando il Visualizzatore Microsoft Clustering](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
+>  Nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering sono disponibili funzionalità e opzioni analoghe a quelle del Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering. Per altre informazioni, vedere [Visualizzare un modello usando il Visualizzatore Microsoft Clustering](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Schede del visualizzatore  
  Per la visualizzazione di un modello di data mining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]viene utilizzato il visualizzatore appropriato nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining. Per l'esplorazione di modelli di data mining per il clustering delle sequenze, nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering sono disponibili le schede seguenti:  
@@ -97,11 +98,11 @@ ms.lasthandoff: 01/08/2018
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Strumenti di data mining](../../analysis-services/data-mining/data-mining-tools.md)   
- [Visualizzatori modello di data mining](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Visualizzare un modello usando il Visualizzatore Microsoft Clustering](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Algoritmo Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Strumenti di Data Mining](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Visualizzatori modello di Data Mining](../../analysis-services/data-mining/data-mining-model-viewers.md)   
+ [Visualizzare un modello utilizzando il visualizzatore Microsoft Clustering](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
   

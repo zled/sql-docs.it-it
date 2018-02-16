@@ -11,25 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - properties [Analysis Services], multilevel hierarchy
 - hierarchies [Analysis Services], multilevel
 - multilevel hierarchies [Analysis Services]
 ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 156d25ca9a17f2c79de133a32a74c8765b77a77d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-hierarchies---properties"></a>Gerarchie utente - proprietà
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Nella tabella seguente vengono descritte le proprietà di una gerarchia definita dall'utente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Nella tabella seguente vengono descritte le proprietà di una gerarchia definita dall'utente.  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 |DisplayFolder|Specifica la cartella nella quale la gerarchia viene visualizzata per gli utenti.|  
 |ID|Contiene l'identificatore univoco (ID) della gerarchia.|  
 |MemberNamesUnique|Determina se i nomi dei membri nella gerarchia devono essere univoci. I valori sono True e False. Il valore predefinito è False.|  
-|nome|Contiene il nome della gerarchia.|  
+|Nome|Contiene il nome della gerarchia.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gerarchie definite dall'utente](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   

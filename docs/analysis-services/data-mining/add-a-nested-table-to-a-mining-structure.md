@@ -17,19 +17,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], nested tables
 - adding nested tables
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d5495f39dfd44c27326592f2efe34e66f4392440
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>Aggiungere una tabella nidificata a una struttura di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilizzare Progettazione modelli di Data Mining per aggiungere una tabella nidificata a una struttura di data mining dopo che è stato creato per la creazione guidata di Data Mining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+È possibile utilizzare Progettazione modelli di data mining per aggiungere una tabella nidificata a una struttura di data mining dopo averla creata tramite la Creazione guidata modello di data mining.  
   
 ### <a name="to-add-a-nested-table-to-a-mining-structure"></a>Per aggiungere una tabella nidificata a una struttura di data mining  
   
@@ -45,11 +46,11 @@ ms.lasthandoff: 01/08/2018
   
 5.  In **Colonna di origine**selezionare la colonna chiave per la tabella annidata.  
   
-6.  Fare clic su **OK**.  
+6.  Scegliere **OK**.  
   
      Alla struttura di data mining verrà aggiunta una nuova colonna della tabella contenente la colonna chiave. Per informazioni su come aggiungere altre colonne, vedere [Aggiungere colonne a una struttura di data mining](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Data mining struttura attività e procedure](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

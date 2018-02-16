@@ -28,19 +28,20 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-types-data-mining"></a>Tipi di contenuto (Data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile definire il sia il tipo di dati fisico per una colonna in una struttura di data mining e un tipo di contenuto logico per la colonna quando viene utilizzata in un modello,  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile definire sia il tipo di dati fisico per una colonna in una struttura di data mining che un tipo di contenuto logico per la colonna quando viene usata in un modello.  
   
  Il *tipo di dati* determina il modo in cui gli algoritmi elaborano i dati in tali colonne quando si creano modelli di data mining. La definizione del tipo di dati di una colonna indica all'algoritmo le informazioni sul tipo di dati delle colonne e le modalità di elaborazione dei dati. Ogni tipo di dati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta uno o più tipi di contenuto per il data mining.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
  Nell'elenco seguente vengono descritti i tipi di contenuto utilizzati nel data mining e vengono identificati i tipi di dati che supportano ogni tipo di contenuto.  
   
-## <a name="discrete"></a>Discrete  
+## <a name="discrete"></a>Discreto  
  Il tipo di contenuto*Discrete* indica che la colonna contiene un numero finito di valori senza continuità. Ad esempio, una colonna relativa al sesso è una tipica colonna attributo discreta, in quanto i dati rappresentano un numero specifico di categorie.  
   
  I valori di una colonna attributo discreta non possono implicare l'ordinamento, anche se si tratta di valori numerici. Anche se i valori utilizzati per la colonna discreta sono numerici, non è inoltre possibile calcolare valori frazionari. Gli indicativi di località telefonici sono un valido esempio di dati numerici discreti.  
@@ -118,7 +119,7 @@ ms.lasthandoff: 01/08/2018
  Oltre ai tipi di contenuto precedenti che sono di uso comune con tutti i modelli, per alcuni tipi di dati è possibile utilizzare le colonne classificate per definire i tipi di contenuto. Per altre informazioni sulle colonne classificate, vedere [Colonne classificate &#40;Data mining&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi di contenuto &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Contenuto DMX tipi &#40; &#41;](../../dmx/content-types-dmx.md)   
  [Tipi di dati &#40; Data Mining &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [Tipi di dati &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
  [Modificare le proprietà di una struttura di Data Mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   

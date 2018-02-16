@@ -15,19 +15,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 84259428c78b013577d50b6f48818bb2cd0dc554
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Modificare le proprietà di un modello di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Alcune proprietà del modello di data mining si applicano al modello nel suo complesso, e altre proprietà dei modelli si applicano alle singole colonne. Esempi di proprietà che si applicano all'intero modello sono la proprietà **Drillthrough** , che specifica se i dati del case devono essere disponibili per le query, e la proprietà **Description** . Le proprietà che si applicano alle singole colonne sono **Usage** e **ModelingFlags**, che controllano il modo in cui i dati della colonna vengono usati all'interno del modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Alcune proprietà dei modelli di data mining si applicano all'intero modello, altre solo a singole colonne. Esempi di proprietà che si applicano all'intero modello sono la proprietà **Drillthrough** , che specifica se i dati del case devono essere disponibili per le query, e la proprietà **Description** . Le proprietà che si applicano alle singole colonne sono **Usage** e **ModelingFlags**, che controllano il modo in cui i dati della colonna vengono usati all'interno del modello.  
   
  Le proprietà del modello seguenti sono associate a editor avanzati che è possibile utilizzare per creare espressioni o configurare proprietà più complesse. Di seguito sono elencate queste proprietà.  
   
@@ -57,6 +58,6 @@ ms.lasthandoff: 01/08/2018
      Il nuovo valore diventerà effettivo quando si seleziona un elemento diverso nella finestra di progettazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative al modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Procedure dettagliate e attività di modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

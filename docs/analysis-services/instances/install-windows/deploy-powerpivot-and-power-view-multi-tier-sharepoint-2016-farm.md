@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e36a632-0750-4247-92b6-1fe38c7a4ce2
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: da59f6eddb113c8af70e3ddcf3bcb3f35d6a6123
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-powerpivot-and-power-view---multi-tier-sharepoint-2016-farm"></a>Distribuire PowerPivot e Power View - Farm di SharePoint 2016 a più livelli
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**Riepilogo:** riepilogo: questo white paper offre agli amministratori di SharePoint e agli architetti istruzioni dettagliate per la distribuzione e configurazione di un ambiente demo di Microsoft BI in una farm di SharePoint con più server, in base delle versioni di anteprima di SharePoint Server 2016, Office Online Server e lo stack di Business Intelligence di SQL Server 2016 per SharePoint 2016. Dopo una breve introduzione che illustra le modifiche importanti apportate all'architettura e alle dipendenze di sistema corrispondenti, descrive i requisiti software e di configurazione e fornisce un percorso di distribuzione consigliato per abilitare e verificare le funzionalità di Business Intelligence in tre fasi principali. Questo white paper presenta anche i problemi noti esistenti nelle versioni SharePoint Server 2016 Beta 2, Office Online Server Preview e SQL Server 2016 CTP 3.1 e suggerisce le soluzioni alternative appropriate. Queste soluzioni alternative non saranno necessarie nelle versioni finali dei prodotti. In fase di distribuzione delle versioni RTM verrà pubblicata una versione aggiornata di questo white paper.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  **Riepilogo:** Riepilogo: questo white paper offre agli architetti e agli amministratori di SharePoint istruzioni dettagliate per la distribuzione e la configurazione di un ambiente demo di Microsoft Business Intelligence in una farm di SharePoint con più server, sulla base delle versioni di anteprima di SharePoint Server 2016, di Office Online Server e dello stack di Business Intelligence di SQL Server 2016 per SharePoint 2016. Dopo una breve introduzione che illustra le modifiche importanti apportate all'architettura e alle dipendenze di sistema corrispondenti, descrive i requisiti software e di configurazione e fornisce un percorso di distribuzione consigliato per abilitare e verificare le funzionalità di Business Intelligence in tre fasi principali. Questo white paper presenta anche i problemi noti esistenti nelle versioni SharePoint Server 2016 Beta 2, Office Online Server Preview e SQL Server 2016 CTP 3.1 e suggerisce le soluzioni alternative appropriate. Queste soluzioni alternative non saranno necessarie nelle versioni finali dei prodotti. In fase di distribuzione delle versioni RTM verrà pubblicata una versione aggiornata di questo white paper.  
   
  **Autore:**Kay Unkroth, Jason Haak  
   

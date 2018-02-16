@@ -15,19 +15,20 @@ helpviewer_keywords:
 - tables [Analysis Services], prediction queries
 - Mining Model Prediction [Analysis Services], input tables
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6694a4e59637f96240afd1f2b04575ede20c2dfe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Scegliere ed eseguire il mapping di dati di input per una query di stima
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si creano stime da un modello di data mining, generalmente si procede inserendo nuovi dati nel modello. (L'eccezione è rappresentata dai modelli Time Series che eseguono stime unicamente in base ai dati cronologici.) Per fornire al modello nuovi dati, è necessario assicurarsi che i dati siano disponibili in una vista origine dati. Se si sa in anticipo quali dati si utilizzeranno per la stima, è possibile includerli nella vista origine dati utilizzata per la creazione del modello. In caso contrario, potrebbe essere necessario creare una nuova vista origine dati. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Quando si creano stime da un modello di data mining, generalmente si procede inserendo nuovi dati nel modello. (L'eccezione è rappresentata dai modelli Time Series che eseguono stime unicamente in base ai dati cronologici.) Per fornire al modello nuovi dati, è necessario assicurarsi che i dati siano disponibili in una vista origine dati. Se si sa in anticipo quali dati si utilizzeranno per la stima, è possibile includerli nella vista origine dati utilizzata per la creazione del modello. In caso contrario, potrebbe essere necessario creare una nuova vista origine dati. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  È talvolta possibile che i dati necessari siano contenuti in più di una tabella in un join uno-a-molti. È il caso dei dati utilizzati per i modelli di associazione o Sequence Clustering che utilizzano una tabella del case collegata a una tabella nidificata che contiene i dettagli sul prodotto o la transazione. Se il modello utilizza una struttura di tabelle del case nidificate, i dati utilizzati per la stima devono anch'essi presentare una struttura di tabelle del case nidificate.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  In **Nome tabella/vista**selezionare la tabella contenente i dati che si vogliono usare per testare i modelli.  
   
-4.  Fare clic su **OK**.  
+4.  Scegliere **OK**.  
   
      Verrà automaticamente eseguito il mapping tra le colonne della struttura di data mining e le colonne con lo stesso nome contenute nella tabella di input.  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  Selezionare una nuova colonna dall'elenco di colonne disponibili nell'origine dati esterna. Selezionare la voce vuota dell'elenco per eliminare il mapping delle colonne.  
   
-5.  Fare clic su **OK**.  
+5.  Scegliere **OK**.  
   
      I nuovi mapping delle colonne verranno visualizzati nella finestra di progettazione.  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  Fare clic su **Rimuovi relazione**.  
   
-4.  Fare clic su **OK**.  
+4.  Scegliere **OK**.  
   
      Verrà rimossa la relazione tra la tabella del case e la tabella nidificata.  
   
@@ -124,6 +125,6 @@ ms.lasthandoff: 01/08/2018
      Se esiste già una relazione, viene eseguito il mapping automatico tra le colonne del modello di data mining e le colonne con lo stesso nome della tabella di input. È possibile modificare la relazione tra la tabella nidificata e la tabella del case facendo clic su **Modifica join**, che consente di aprire la finestra di dialogo **Crea relazione** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di stima &#40;Data Mining&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Query di stima &#40; Data Mining &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

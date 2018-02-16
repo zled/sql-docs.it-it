@@ -15,19 +15,20 @@ helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
 - Analysis Services Processing task
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 308c7910d408fcb29689484eb71726a669ed6d98
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatizzare le attività amministrative di Analysis Services con SSIS
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consente di automatizzare l'esecuzione di script DDL, cubo e il modello di data mining di elaborazione, attività e attività query di data mining. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] può essere considerato come una raccolta di attività di flusso di controllo e manutenzione che possono essere collegate per formare processi di elaborazione dati sequenziali e paralleli.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consente di automatizzare l'esecuzione di script DDL, cubo e il modello di data mining di elaborazione, attività e attività query di data mining. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] può essere considerato come una raccolta di attività di flusso di controllo e manutenzione che possono essere collegate per formare processi di elaborazione dati sequenziali e paralleli.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è progettato per l'esecuzione di operazioni di pulitura dei dati durante le attività di elaborazione dei dati e per il raggruppamento di dati da diverse origini dei dati. Quando si usano cubi e modelli di data mining, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consente di trasformare i dati non numerici in dati numerici e di garantire che i valori dei dati rientrino nei limiti previsti, creando pertanto dati puliti con cui popolare dimensioni e tabelle dei fatti.  
   

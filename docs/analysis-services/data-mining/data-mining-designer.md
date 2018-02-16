@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - data mining [Analysis Services], modifying
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8ba0683192d2e0aabfce9e8c340692e48053a7f8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="data-mining-designer"></a>Data Mining Designer
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Progettazione di Data Mining è l'ambiente principale in cui si lavora con modelli di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È possibile accedere alla finestra di progettazione selezionando una struttura di data mining esistente o utilizzando la Creazione guidata modello di data mining per creare una nuova struttura e un nuovo modello di data mining. Progettazione modelli di data mining consente di eseguire le attività seguenti:  
+# <a name="data-mining-designer"></a>Progettazione modelli di data mining
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Progettazione modelli di data mining rappresenta l'ambiente principale per l'utilizzo di modelli di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È possibile accedere alla finestra di progettazione selezionando una struttura di data mining esistente o utilizzando la Creazione guidata modello di data mining per creare una nuova struttura e un nuovo modello di data mining. Progettazione modelli di data mining consente di eseguire le attività seguenti:  
   
 -   Modificare la struttura e il modello di data mining creati inizialmente dalla Creazione guidata modello di data mining.  
   
@@ -45,9 +46,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="mining-structure-tab"></a>Scheda Struttura di data mining  
  Usare la scheda **Struttura di data mining** per aggiungere colonne e modificare le proprietà di una struttura di data mining esistente. Negli argomenti e nelle attività seguenti sono disponibili ulteriori informazioni sull'utilizzo delle strutture di data mining:  
   
- [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Strutture di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
- [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Data mining struttura attività e procedure](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
 ## <a name="mining-models-tab"></a>Scheda Modelli di data mining  
  La scheda **Modelli di data mining** consente di gestire i modelli di data mining esistenti e di creare nuovi modelli. I modelli di data mining sono sempre basati su una struttura di data mining esistente.  
@@ -56,27 +57,27 @@ ms.lasthandoff: 01/08/2018
   
  Per ulteriori informazioni su come utilizzare i modelli di data mining, vedere gli argomenti seguenti:  
   
- [Modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelli di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
- [Attività e procedure relative al modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Procedure dettagliate e attività di modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
 ## <a name="mining-model-viewer-tab"></a>Scheda Visualizzatore modello di data mining  
  La scheda **Visualizzatore modello di data mining** consente l'esplorazione visiva dei modelli di data mining. Ogni modello di data mining è associato a un visualizzatore personalizzato che mostra il contenuto specifico di tale modello. È inoltre possibile visualizzare il contenuto del modello di data mining tramite il visualizzatore del contenuto.  
   
  Per ulteriori informazioni su come esplorare i modelli di data mining con i visualizzatori di data mining, vedere gli argomenti seguenti:  
   
- [Visualizzatori modello di data mining](../../analysis-services/data-mining/data-mining-model-viewers.md)  
+ [Visualizzatori modello di Data Mining](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
- [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
 ## <a name="mining-accuracy-chart-tab"></a>Scheda Grafico accuratezza modello di data mining  
  La scheda **Grafico accuratezza modello di data mining** consente di eseguire il test di accuratezza predittiva di un singolo modello di data mining o di confrontare la validità di più modelli di data mining contenuti in una struttura di data mining. La scheda contiene strumenti per il filtraggio dei dati, la selezione dei modelli di data mining e la visualizzazione dei risultati in un grafico di accuratezza, in un grafico dei profitti o in una matrice di classificazione.  
   
  Per ulteriori informazioni sull'esecuzione di test e la convalida di modelli di data mining, vedere gli argomenti seguenti:  
   
- [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
- [Attività e procedure di test e convalida &#40;data mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Test e convalida le attività e procedure relative alla &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>Scheda Stima modello di data mining  
  La scheda **Stima modello di data mining** include il generatore delle query di stima, che consente di creare query di stima DMX (Data Mining Extensions). La scheda contiene strumenti per l'impostazione dei modelli di data mining e delle tabelle di input, il mapping tra le colonne del modello di data mining e le colonne della tabella di input, l'aggiunta di funzioni a una query e l'impostazione di criteri per ogni colonna.  
@@ -85,11 +86,11 @@ ms.lasthandoff: 01/08/2018
   
  Per ulteriori informazioni sulla creazione di query di data mining, vedere gli argomenti seguenti:  
   
- [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)  
   
- [Attività e procedure relative alle query di data mining](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)  
+ [Procedure dettagliate e attività Query di data Mining](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md)  
+ [Soluzioni di Data Mining](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

@@ -20,19 +20,20 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: edb3f0ab17369a4a1df4a69d80e07bfa1ff84012
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Creare una query DMX in SQL Server Management Studio
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un set di funzionalità che consentono di creare query di stima, query sul contenuto e query di definizione dei dati da modelli di data mining e strutture di data mining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre un set di funzionalità che consentono di creare query di stima, query sul contenuto e query di definizione dei dati su modelli e strutture di data mining.  
   
 -   Un generatore di query di stima grafico è disponibile sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] che in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]per semplificare il processo di scrittura delle query di stima e il mapping dei set di dati a un modello.  
   
@@ -86,12 +87,12 @@ ms.lasthandoff: 01/08/2018
   
  Per esempi relativi alla creazione di tipi specifici di query dai modelli, vedere gli argomenti seguenti:  
   
- [Creare una query di stima singleton da un modello](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
+ [Creare una Query di stima Singleton da un modello](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
   
- [Creare una query sul contenuto di un modello di data mining](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
+ [Creare una Query sul contenuto su un modello di Data Mining](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti query di data mining](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Data Mining Extensions &#40; DMX &#41; Riferimento](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

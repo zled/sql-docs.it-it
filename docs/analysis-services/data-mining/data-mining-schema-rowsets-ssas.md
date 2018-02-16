@@ -19,19 +19,20 @@ helpviewer_keywords:
 - schema rowsets [Analysis Services], retrieving
 - data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a7b91dca4cc8b5ca8968a864f75a7c91668a980d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>Set di righe dello schema di data mining (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], molti dello schema di data mining dei dati OLE DB esistente set di righe vengono esposti come set di tabelle di sistema che è possibile eseguire query tramite istruzioni Data Mining Extensions (DMX). Mediante la creazione di query sul set di righe dello schema di data mining, è possibile identificare i servizi disponibili, ottenere aggiornamenti sullo stato dei modelli e delle strutture e trovare dettagli sul contenuto del modello o sui parametri. Per una descrizione dei set di righe dello schema di data mining, vedere [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]molti dei set di righe esistenti dello schema di data mining OLE DB sono esposti come set di tabelle di sistema su cui è possibile eseguire query tramite istruzioni DMX (Data Mining Extensions). Mediante la creazione di query sul set di righe dello schema di data mining, è possibile identificare i servizi disponibili, ottenere aggiornamenti sullo stato dei modelli e delle strutture e trovare dettagli sul contenuto del modello o sui parametri. Per una descrizione dei set di righe dello schema di data mining, vedere [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
   
 > [!NOTE]  
 >  È anche possibile eseguire una query sul set di righe dello schema di data mining utilizzando l'analisi XMLA. Per altre informazioni sull'esecuzione di questa operazione in SQL Server Management Studio, vedere [Creare una query di data mining utilizzando XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md).  

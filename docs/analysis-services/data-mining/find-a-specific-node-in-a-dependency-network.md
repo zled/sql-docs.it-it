@@ -16,19 +16,20 @@ helpviewer_keywords:
 - dependency network nodes [Analysis Services]
 - Mining Model Viewer [Analysis Services], dependency network nodes
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e67cca59b2383c525fdd0fbd80546d2c123a8a96
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Trovare un nodo specifico in una rete di dipendenze
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una rete di dipendenze in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modello di data mining può contenere molti nodi, rendendo difficile individuare i dati si è interessati. Per risolvere il problema, è possibile usare la finestra di dialogo **Trova nodo** nella scheda **Rete di dipendenze** di Progettazione modelli di data mining per cercare un nodo specifico.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una rete di dipendenze in un modello di data mining di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può contenere molti nodi, rendendo difficile l'individuazione dei dati desiderati. Per risolvere il problema, è possibile usare la finestra di dialogo **Trova nodo** nella scheda **Rete di dipendenze** di Progettazione modelli di data mining per cercare un nodo specifico.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>Per trovare un nodo specifico in una rete di dipendenze  
   
@@ -43,6 +44,6 @@ ms.lasthandoff: 01/08/2018
 3.  Selezionare il nodo corretto nell'elenco e quindi fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

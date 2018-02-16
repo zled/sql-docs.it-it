@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], creating
 - relational mining models [Analysis Services]
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7bfa98f5842e77a352ef1e2b56e14be827cef872
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-new-relational-mining-structure"></a>Creare una nuova struttura di data mining relazionale
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilizzare la procedura guidata di Data Mining per creare una nuova struttura di data mining utilizzando i dati da un database relazionale o altre origini e quindi salvare la struttura e i modelli correlati a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Usare la Creazione guidata modello di data mining per creare una nuova struttura di data mining che usa dati da un database relazionale o da un'altra origine, quindi salvare la struttura ed eventuali modelli correlati in un database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="to-create-a-relational-mining-structure"></a>Per creare una struttura di data mining relazionale  
   
@@ -66,6 +67,6 @@ ms.lasthandoff: 01/08/2018
 11. Nella pagina **Completamento procedura guidata** specificare un nome per la struttura di data mining e per il modello di data mining iniziale correlato di cui verrà eseguita la creazione, quindi fare clic su **Fine**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Data mining struttura attività e procedure](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

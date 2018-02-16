@@ -17,19 +17,20 @@ helpviewer_keywords:
 - deleting columns
 - columns [data mining], mining structure columns
 ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e9ef642c3d82331b3bbf9443a0f65181566dfe8c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>Rimuovere colonne da una struttura di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile utilizzare Progettazione modelli di Data Mining per rimuovere le colonne da una struttura di data mining dopo la struttura è già stata creata. I motivi per cui rimuovere una colonna della struttura di data mining possono includere i seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+È possibile utilizzare Progettazione modelli di data mining per rimuovere le colonne da una struttura di data mining dopo averla creata. I motivi per cui rimuovere una colonna della struttura di data mining possono includere i seguenti:  
   
 -   La struttura di data mining contiene più copie di una colonna e si desidera evitare l'utilizzo di dati duplicati in un modello.  
   
@@ -50,6 +51,6 @@ ms.lasthandoff: 01/08/2018
 4.  Nella finestra di dialogo **Elimina oggetti** fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Data mining struttura attività e procedure](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

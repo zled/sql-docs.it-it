@@ -20,19 +20,20 @@ helpviewer_keywords:
 - synchronization [Analysis Services]
 - deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f082d488439f1331c009352bc7d691b7703f0e32
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Distribuire una soluzione di data mining in versioni precedenti di SQL Server
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questa sezione vengono descritti i problemi di compatibilità noti che possono verificarsi quando si tenta di distribuire un modello di data mining o una struttura di data mining che è stato creato in un'istanza di [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] a un database che utilizza SQL Server 2005 Analysis Services, oppure quando si distribuiscono i modelli creati in SQL Server 2005 a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In questa sezione vengono descritti i problemi di compatibilità noti che possono verificarsi quando si tenta di distribuire in un database che utilizza SQL Server 2005 Analysis Services una struttura o un modello di data mining creato in un'istanza di [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] oppure quando si distribuiscono in un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]modelli creati in SQL Server 2005.  
   
  La distribuzione in un'istanza di SQL Server 2000 Analysis Services non è supportata.  
   
@@ -84,6 +85,6 @@ ms.lasthandoff: 01/08/2018
  Se si tenta di sincronizzare un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , il server restituisce un errore e la sincronizzazione del database non riesce.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
+ [Compatibilità con le versioni precedenti di Analysis Services](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

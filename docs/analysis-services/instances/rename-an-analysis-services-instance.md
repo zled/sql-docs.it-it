@@ -17,19 +17,20 @@ helpviewer_keywords:
 - names [Analysis Services], renaming instances
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bc7c79c56282f662a6392f966364ae7f38bc4395
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="rename-an-analysis-services-instance"></a>Rinominare un'istanza di Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile rinominare un'istanza esistente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando il **Rinomina istanza** strumento, installato con Management Studio (installazione Web).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+È possibile rinominare un'istanza esistente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite lo strumento **Rinomina istanza** installato con Management Studio (installazione Web).  
   
 > [!IMPORTANT]  
 >  Mentre si rinomina l'istanza, lo strumento Rinomina istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito con privilegi elevati, aggiornando il nome del servizio Windows, gli account di sicurezza e le voci del Registro di sistema associati a quell'istanza. Per accertarsi che queste azioni vengono effettuate, eseguire questo strumento come amministratore di sistema locale.  

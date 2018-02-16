@@ -19,19 +19,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], predictive modeling
 - predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 31dcf6975fb2ed24e2957f1d9171473b01da891a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Attività e procedure di test e convalida (data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile utilizzare il **grafico di accuratezza** scheda della finestra di progettazione Data Mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per confrontare l'accuratezza predittiva dei modelli di data mining nella struttura di data mining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Per mettere a confronto l'accuratezza predittiva dei modelli di data mining in una struttura di data mining, è possibile usare la scheda **Grafico accuratezza modello di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  È possibile creare quattro tipi di grafici:  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  I primi tre grafici usano la scheda **Selezione input** per definire i dati usati per la generazione del grafico.  
   
- Il grafico di convalida incrociata viene creato usando input aggiuntivi, disponibili nella scheda **Convalida incrociata** . Per altre informazioni, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+ Il grafico di convalida incrociata viene creato usando input aggiuntivi, disponibili nella scheda **Convalida incrociata**. Per altre informazioni, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Per altre informazioni su come usare il grafico di accuratezza del modello di data mining, vedere [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
@@ -53,14 +54,14 @@ ms.lasthandoff: 01/08/2018
   
 -   [Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione](../../analysis-services/data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   
--   [Creare un report di convalida incrociata](../../analysis-services/data-mining/create-a-cross-validation-report.md)  
+-   [Creare un Report di convalida incrociata](../../analysis-services/data-mining/create-a-cross-validation-report.md)  
   
 -   [Scegliere ed eseguire il mapping dei dati di test del modello](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)  
   
--   [Applicare filtri ai dati di test del modello](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
+-   [Applicare filtri ai dati di Testing del modello](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   
--   [Scegliere la colonna da utilizzare per il test di un modello di data mining](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)  
+-   [Scegliere la colonna da utilizzare per testare un modello di Data Mining](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)  
   
--   [Utilizzo di dati di tabelle nidificate come input per un grafico di accuratezza](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
+-   [Utilizzo di dati di tabelle nidificate come Input per un grafico di accuratezza](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
   
   

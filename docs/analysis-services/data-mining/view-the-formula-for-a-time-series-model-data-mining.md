@@ -19,19 +19,20 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7dc0ec5be4d6a0189e844ddfa24595b0cadade24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Visualizzare la formula per un modello Time Series (Data Mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Se è stato creato un modello serie di tempo utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, il modo più semplice per visualizzare l'equazione di regressione per il modello è possibile utilizzare il **legenda Data Mining** del [visualizzatore Microsoft Time Series](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), che Visualizza tutte le costanti in un formato leggibile.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Se è stato creato un modello Time Series con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, il modo più semplice per visualizzare l'equazione di regressione per il modello è usare la **Legenda data mining** del [Visualizzatore Microsoft Time Series](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), che presenta tutte le costanti in un formato leggibile.  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>Per visualizzare la formula di regressione ARTXP per un modello Time Series  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
     >  Se si esplora il contenuto di un modello misto che usa modelli sia ARIMA che ARTXP, i due modelli si troveranno in alberi separati, uniti nel nodo radice che rappresenta il modello. Anche se i modelli ARIMA e ARTXP vengono presentati in un unico visualizzatore per comodità, le strutture sono molto diverse, così come le equazioni, le quali non possono essere combinate o confrontate. L'albero ARTXP è più simile a un albero delle decisioni, mentre l'albero ARIMA rappresenta una serie di medie mobili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Visualizzare un modello usando il Visualizzatore Microsoft Times Series](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Visualizzare un modello utilizzando il visualizzatore Microsoft Time Series](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
   

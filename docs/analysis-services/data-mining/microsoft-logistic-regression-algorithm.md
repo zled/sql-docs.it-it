@@ -17,19 +17,20 @@ helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Microsoft Logistic Regression
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La regressione logistica è una nota tecnica statistica utilizzata per modellare i risultati binari.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La regressione logistica è una nota tecnica statistica utilizzata per modellare i risultati binari.  
   
  Sono disponibili varie implementazioni della regressione logistica nella ricerca statistica, utilizzando tecniche di apprendimento diverse. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression è stato implementato utilizzando una variazione dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network. Questo algoritmo consente di condividere molte delle qualità delle reti neurale ma è più facile per eseguire il training.  
   

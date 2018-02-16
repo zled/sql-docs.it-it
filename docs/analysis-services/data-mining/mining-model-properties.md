@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-properties"></a>Proprietà dei modelli di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Modelli di data mining sono i seguenti tipi di proprietà:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+I modelli di data mining dispongono dei tipi seguenti di proprietà:  
   
 -   Proprietà ereditate dalla struttura di data mining tramite cui vengono definiti il tipo di dati e il tipo di contenuto dei dati utilizzati dal modello  
   
@@ -58,19 +59,19 @@ ms.lasthandoff: 01/08/2018
   
 |Proprietà|Description|  
 |--------------|-----------------|  
-|**Descrizione**|Viene descritto lo scopo della colonna di data mining.|  
+|**Description**|Viene descritto lo scopo della colonna di data mining.|  
 |**Nome**|Imposta il nome della colonna del modello di data mining. È possibile digitare un nuovo nome per fornire un alias per la colonna del modello di data mining.|  
 |**ModelingFlags**|Imposta i flag specifici dell'algoritmo per la colonna.|  
 |**SourceColumnID**|Indica il nome della colonna della struttura di data mining su cui si basa la colonna del modello.<br /><br /> Questa proprietà è di sola lettura.|  
-|**Usage**|Imposta la modalità di utilizzo della colonna nel modello di data mining.|  
+|**Utilizzo**|Imposta la modalità di utilizzo della colonna nel modello di data mining.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)   
- [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Attività e procedure relative al modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Strutture di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Procedure dettagliate e attività di modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Modificare le proprietà di un modello di Data Mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
- [Strumenti di data mining](../../analysis-services/data-mining/data-mining-tools.md)   
- [Creare una struttura di data mining relazionale](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
- [Creare un alias per una colonna di un modello](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
+ [Strumenti di Data Mining](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Creare una struttura di Data Mining relazionale](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
+ [Creare un Alias per una colonna del modello](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
   

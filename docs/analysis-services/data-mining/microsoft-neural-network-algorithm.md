@@ -25,19 +25,20 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8af39f31c569beb4df25d8da1dd933c902d3b4f6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Microsoft Neural Network è un'implementazione dell'architettura di rete neurale comune e flessibile per machine learning.  Il funzionamento dell'algoritmo si basa sulla verifica di ogni possibile stato dell'attributo di input rispetto a ogni possibile stato dell'attributo di stima e sul calcolo delle probabilità per ogni combinazione in base ai dati di training. Queste probabilità possono quindi essere usate a scopo di classificazione o regressione o per stimare un risultato, sulla base di alcuni attributi di input. Una rete neurale può essere usata anche per l'analisi di associazione.  
+# <a name="microsoft-neural-network-algorithm"></a>Algoritmo Microsoft Neural Network
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network è un'implementazione dell'architettura di rete neurale diffusa e flessibile per l'apprendimento automatico.  Il funzionamento dell'algoritmo si basa sulla verifica di ogni possibile stato dell'attributo di input rispetto a ogni possibile stato dell'attributo di stima e sul calcolo delle probabilità per ogni combinazione in base ai dati di training. Queste probabilità possono quindi essere usate a scopo di classificazione o regressione o per stimare un risultato, sulla base di alcuni attributi di input. Una rete neurale può essere usata anche per l'analisi di associazione.  
   
  Quando si crea un modello di data mining con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, è possibile includere più output e l'algoritmo creerà più reti. Il numero di reti incluse in un singolo modello di data mining dipende dal numero di stati (o valori di attributi) contenuti nelle colonne di input, nonché dal numero di colonne stimabili usate dal modello e dal numero di stati in tale colonne.  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
 -   Non supporta la creazione di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento tecnico per l'algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Riferimento tecnico l'algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Contenuto del modello di data mining per i modelli di rete neurale &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Esempi di Query del modello di rete neurale](../../analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
