@@ -17,10 +17,10 @@ ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
 caps.latest.revision: 
 ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="workload-management"></a>Gestione del carico di lavoro
 Funzionalità di gestione del SQL Server PDW carico di lavoro consentono agli utenti e agli amministratori di assegnare le richieste di pre-impostare le configurazioni di memoria e concorrenza. Gestione del carico di lavoro per migliorare le prestazioni del carico di lavoro, coerenza o mista, consentendo le richieste senza un'insufficienza delle risorse per tutte le richieste per le risorse appropriate.  

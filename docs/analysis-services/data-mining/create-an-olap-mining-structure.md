@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="create-an-olap-mining-structure"></a>Create an OLAP Mining Structure
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esistono numerosi vantaggi per la creazione di un modello di data mining in base a un cubo OLAP o un altro archivio dati multidimensionale. Una soluzione OLAP contiene già enormi quantità di dati ben organizzati, puliti e formattati correttamente; tuttavia, la complessità dei dati è tale che difficilmente gli utenti possono trovare modelli significativi tramite l'esplorazione ad hoc. Il data mining consente di individuare nuove correlazioni e fornire informazioni su cui è possibile eseguire azioni.  
+# <a name="create-an-olap-mining-structure"></a>Creare una struttura di data mining OLAP
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La creazione di un modello di data mining basato su un cubo OLAP o un altro archivio dati multidimensionale presenta numerosi vantaggi. Una soluzione OLAP contiene già enormi quantità di dati ben organizzati, puliti e formattati correttamente; tuttavia, la complessità dei dati è tale che difficilmente gli utenti possono trovare modelli significativi tramite l'esplorazione ad hoc. Il data mining consente di individuare nuove correlazioni e fornire informazioni su cui è possibile eseguire azioni.  
   
  In questo argomento viene descritto come creare una struttura di data mining OLAP, basata su una dimensione e misure correlate in una soluzione multidimensionale esistente.  
   
@@ -165,10 +166,10 @@ ms.lasthandoff: 01/08/2018
 >  Solo questi tipi di modelli supportano la creazione di dimensioni di data mining: modelli basati sull'algoritmo Microsoft Clustering, Microsoft Decision Trees o Microsoft Association.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di Data Mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Colonne della struttura di data mining](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)   
  [Proprietà modello di data mining](../../analysis-services/data-mining/mining-model-properties.md)   
- [Proprietà delle strutture di data mining e delle colonne delle strutture di data mining](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
+ [Proprietà per la struttura di Data Mining e le colonne della struttura](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   

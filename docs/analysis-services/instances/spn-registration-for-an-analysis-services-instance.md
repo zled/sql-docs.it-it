@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Registrazione del nome SPN per un'istanza di Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un provider di servizi Internet (SPN, Service Principle Name) identifica in modo univoco un'istanza del servizio in un dominio di Active Directory quando Kerberos viene utilizzato per l'autenticazione reciproca delle identità del client e servizio. Il nome SPN è associato all'account di accesso con cui viene eseguita l'istanza del servizio.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un nome SPN (Service Principle Name) identifica in modo univoco un'istanza del servizio in un dominio Active Directory quando Kerberos viene usato per l'autenticazione reciproca delle identità del servizio e del client. Il nome SPN è associato all'account di accesso con cui viene eseguita l'istanza del servizio.  
   
  Per le applicazioni client che si connettono ad Analysis Services tramite l'autenticazione Kerberos, le librerie client di Analysis Services creano un nome SPN usando il nome host dalla stringa di connessione e altre variabili note, ad esempio la classe del servizio, che vengono risolte in qualsiasi versione specificata di Analysis Services.  
   
@@ -171,14 +172,14 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
 ## <a name="see-also"></a>Vedere anche  
  [Delega dell'identità e autenticazione di Microsoft Business Intelligence](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Autenticazione reciproca tramite Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Come configurare SQL Server 2008 Analysis Services e SQL Server 2005 Analysis Services per utilizzare l'autenticazione Kerberos](http://support.microsoft.com/kb/917409)   
- [Sintassi SetSPN (SPN) (Setspn.exe) di nomi dell'entità servizio](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [Quale nome SPN usare e come si crea?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Come configurare SQL Server 2008 Analysis Services e SQL Server 2005 Analysis Services per usare l'autenticazione Kerberos](http://support.microsoft.com/kb/917409)   
+ [Sintassi SetSPN dei nomi dell'entità servizio (SPN, Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Quale nome SPN usare e come si crea](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [Guida dettagliata agli account di servizio](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
- [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [Configurare account di servizio Windows e le autorizzazioni](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Come usare i nomi SPN quando si configurano le applicazioni Web ospitate in Internet Information Services](http://support.microsoft.com/kb/929650)   
- [Novità di account di servizio](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
+ [Novità relative agli account del servizio](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
  [Configurare l'autenticazione Kerberos per prodotti SharePoint 2010 (white paper)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

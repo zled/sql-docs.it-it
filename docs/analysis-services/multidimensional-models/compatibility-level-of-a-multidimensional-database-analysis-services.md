@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f0b002ac618a9e55da3a433c11817eca716345ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>Livello di compatibilità di un database multidimensionale (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], proprietà livello di compatibilità del database determina il livello funzionale di un database. I livelli di compatibilità sono univoci per ogni tipo di modello. Ad esempio, il livello di compatibilità **1100** ha un significato diverso per un database multidimensionale o tabulare.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]la proprietà del livello di compatibilità del database determina il livello funzionale di un database. I livelli di compatibilità sono univoci per ogni tipo di modello. Ad esempio, il livello di compatibilità **1100** ha un significato diverso per un database multidimensionale o tabulare.  
   
  In questo argomento viene descritto il livello di compatibilità solo per i database multidimensionali. Per altre informazioni sulle soluzioni tabulari, vedere [Livello di compatibilità per i modelli tabulari in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 > [!WARNING]  
 >  L'impostazione della compatibilità del database su un livello superiore è irreversibile. Dopo aver aumentato il livello di compatibilità a **1100**, è necessario continuare a eseguire il database in server più recenti. Non è possibile eseguire il rollback al valore **1050**. Non è possibile collegare o ripristinare un database il cui livello di compatibilità è impostato su **1100** a una versione server precedente a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  I livelli di compatibilità del database vengono introdotti in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Per visualizzare o impostare il livello di compatibilità del database, è necessario [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o versione successiva.  
   
  Il database non può essere un cubo locale. I cubi locali non supportano la proprietà **CompatibilityLevel** .  
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  La sincronizzazione di server è supportata solo per server in cui viene condivisa la stessa versione e lo stesso livello di compatibilità del database.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
  Dopo aver aumentato il livello di compatibilità del database, è possibile impostare la proprietà **StringStoresCompatibilityLevel** su [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. In questo modo viene aumentato l'archivio di stringhe per misure e dimensioni. Per altre informazioni su questa funzionalità, vedere [Configurare l'archivio di stringhe per dimensioni e partizioni](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
 ## <a name="see-also"></a>Vedere anche  

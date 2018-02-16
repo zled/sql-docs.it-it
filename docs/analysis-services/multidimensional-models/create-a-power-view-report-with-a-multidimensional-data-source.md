@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 77b32b08e1ffc1765d731e9bc9112f093ef854bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>Creare un report Power View con un'origine dati multidimensionale
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Creazione di una visualizzazione Power report basato su un modello multidimensionale non è diversa rispetto alla creazione di un report basato su un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartella di lavoro o un modello tabulare di Analysis Services. I report Power View vengono creati da un file di connessione all'origine dati del report (con estensione rsds) in una raccolta di SharePoint. Per ulteriori informazioni sulla creazione di un file con estensione rsds, vedere [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La creazione di un report Power View basato su un modello multidimensionale non è diversa dalla creazione di un report basato su una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o un modello tabulare di Analysis Services. I report Power View vengono creati da un file di connessione all'origine dati del report (con estensione rsds) in una raccolta di SharePoint. Per ulteriori informazioni sulla creazione di un file con estensione rsds, vedere [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
   
  Prima di iniziare, è necessario conoscere:  
   

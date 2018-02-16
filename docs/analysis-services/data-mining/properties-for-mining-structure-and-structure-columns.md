@@ -17,19 +17,20 @@ helpviewer_keywords:
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Proprietà delle strutture di data mining e delle colonne delle strutture di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile impostare o modificare le proprietà per una struttura di data mining e delle colonne associate e tabelle nidificate tramite il **struttura di Data Mining** scheda Progettazione modelli di Data Mining. Le impostazioni delle proprietà eseguite in questa scheda vengono propagate in ogni modello di data mining associato alla struttura.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Nella scheda **Struttura di data mining** della finestra di progettazione di data mining è possibile impostare o modificare le proprietà di una struttura di data mining e delle colonne e tabelle annidate associate. Le impostazioni delle proprietà eseguite in questa scheda vengono propagate in ogni modello di data mining associato alla struttura.  
   
 > [!NOTE]  
 >  Se si modifica il valore di una proprietà nella struttura di data mining, anche di metadati come, ad esempio, un nome o descrizione, la struttura di data mining e i relativi modelli devono essere rielaborati prima che sia possibile visualizzare o eseguire una query sul modello.  
@@ -46,8 +47,8 @@ ms.lasthandoff: 01/08/2018
 |Proprietà|Description|  
 |--------------|-----------------|  
 |**CacheMode**|Specifica se i case utilizzati nel training devono essere memorizzati nella cache o eliminati una volta completato il training. **Nota:**  questa proprietà deve essere impostata su **KeepTrainingCases** per attivare il drill-through e i dati di controllo.|  
-|**Regole di confronto**|Specifica le regole di confronto predefinite per la colonna. Se non specificato, vengono utilizzate le regole di confronto del server.|  
-|**Descrizione**|Descrive la struttura di data mining. È consigliabile che nella descrizione vengano specificati lo scopo e la composizione dei dati nella struttura.|  
+|**Confronto**|Specifica le regole di confronto predefinite per la colonna. Se non specificato, vengono utilizzate le regole di confronto del server.|  
+|**Description**|Descrive la struttura di data mining. È consigliabile che nella descrizione vengano specificati lo scopo e la composizione dei dati nella struttura.|  
 |**ErrorConfiguration (predefinita)**|Specifica le opzioni per la gestione speciale di errori, se presenti.|  
 |**HoldoutMaxCases**|Specifica il numero massimo di case della struttura che possono essere riservati come set di dati di test.  Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate. **Nota:**  per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su **KeepTrainingCases**.|  
 |**HoldoutPercent**|Specifica la percentuale dei case della struttura da riservare come set di dati di test. Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate. **Nota:**  per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su **KeepTrainingCases**.|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifica la colonna descritta da una colonna classificata.|  
 |**Contenuto**|Tipo di contenuto della colonna.|  
-|**Descrizione**|Descrive la colonna. È consigliabile che la descrizione della colonna fornisca informazioni sulla derivazione o l'alterazione dei dati della colonna per il data mining.|  
+|**Description**|Descrive la colonna. È consigliabile che la descrizione della colonna fornisca informazioni sulla derivazione o l'alterazione dei dati della colonna per il data mining.|  
 |**DiscretizationBucketCount**|Visualizza il numero di bucket della colonna discretizzata.<br /><br /> Attivato solo se il tipo di contenuto è impostato su **Discretized**.<br /><br /> Questa proprietà è di sola lettura.|  
 |**DiscretizationMethod**|Visualizza il metodo utilizzato per discretizzare la colonna.<br /><br /> Attivato solo se il tipo di contenuto è impostato su **Discretized**.<br /><br /> Questa proprietà è di sola lettura.|  
 |**Distribuzione**|Specifica la distribuzione del contenuto della colonna.|  

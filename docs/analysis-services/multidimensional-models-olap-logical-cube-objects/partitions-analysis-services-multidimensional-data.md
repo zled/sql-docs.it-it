@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - incremental updates [Analysis Services]
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - remote partitions [Analysis Services]
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partizioni (Analysis Services - Dati multidimensionali)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una partizione è un contenitore per una parte di dati del gruppo di misure. Le partizioni non vengono individuate dalle query MDX. Tutte le query riflettono l'intero contenuto del gruppo di misure, indipendentemente dal numero di partizioni definite per esso. Il contenuto dei dati di una partizione è definito dalle associazioni di query della partizione e dall'espressione di sezionamento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una partizione è un contenitore di una parte di dati dei gruppi di misure. Le partizioni non vengono individuate dalle query MDX. Tutte le query riflettono l'intero contenuto del gruppo di misure, indipendentemente dal numero di partizioni definite per esso. Il contenuto dei dati di una partizione è definito dalle associazioni di query della partizione e dall'espressione di sezionamento.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.Partition> semplice è composto da informazioni di base, dalla definizione di sezionamento, dalla progettazione delle aggregazioni e altro. Le informazioni di base includono il nome della partizione, la modalità di archiviazione, la modalità di elaborazione e altro. La definizione di sezionamento è un'espressione MDX che specifica una tupla o un set. La definizione di sezionamento ha le stesse restrizioni della funzione MDX StrToSet. Se utilizzata con il parametro CONSTRAINED, la definizione di sezionamento può utilizzare nomi, chiavi e nomi univoci di membri, livelli, gerarchie e dimensioni e altri oggetti denominati nel cubo, ma non le funzioni MDX. La progettazione delle aggregazioni è una raccolta di definizioni di aggregazione che possono essere condivise tra più partizioni. L'impostazione predefinita deriva dalla progettazione delle aggregazioni del cubo padre.  
   

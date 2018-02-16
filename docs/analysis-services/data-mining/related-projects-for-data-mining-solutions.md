@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Progetti correlati per soluzioni di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il valore minimo richiesto per una soluzione di data mining è il progetto di data mining, che definisce le origini dati, viste origine dati, strutture di data mining e modelli di data mining. Tuttavia, quando i modelli di data mining vengono utilizzati nei processi decisionali quotidiani, è importante che il data mining sia integrato con altre parti di una soluzione analitica predittiva, che può includere i seguenti processi e componenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Come minimo, per una soluzione di data mining è richiesto il progetto di data mining, in cui si definiscono origini dati, viste origine dati, strutture di data mining e modelli di data mining. Tuttavia, quando i modelli di data mining vengono utilizzati nei processi decisionali quotidiani, è importante che il data mining sia integrato con altre parti di una soluzione analitica predittiva, che può includere i seguenti processi e componenti:  
   
 -   Preparazione e selezione di dati e variabili. Include pulizia dei dati, gestione di metadati e integrazione di più origini dati, nonché la conversione, l'unione e il caricamento di dati in un data warehouse.  
   
@@ -71,27 +72,27 @@ ms.lasthandoff: 01/08/2018
   
 -   [Pulizia dei dati](../../data-quality-services/data-cleansing.md)  
   
--   [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Attività Query di Data Mining](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [Attività Profiling dati](../../integration-services/control-flow/data-profiling-task.md)  
   
  **Componenti del flusso di dati**  
   
--   [Componenti di flusso CDC](../../integration-services/data-flow/cdc-flow-components.md)  
+-   [Componenti del flusso di CDC](../../integration-services/data-flow/cdc-flow-components.md)  
   
 -   [Trasformazione Suddivisione condizionale](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [Trasformazione Conversione dati](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
+-   [Trasformazione conversione dati](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
--   [Destinazione Training modello di data mining](../../integration-services/data-flow/data-mining-model-training-destination.md)  
+-   [Destinazione Training modello di Data Mining](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Trasformazione Query di data mining](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
+-   [Trasformazione Query di Data Mining](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
 -   [Trasformazione Colonna derivata](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
 -   [Trasformazione Campionamento percentuale](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
--   [Trasformazione Estrazione termini](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+-   [Trasformazione estrazione termini](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
 -   [Trasformazione Ricerca termini](../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
   
@@ -108,11 +109,11 @@ ms.lasthandoff: 01/08/2018
   
  Per ulteriori informazioni sull'utilizzo di Reporting Services con query DMX come origine dati, vedere i collegamenti seguenti:  
   
- [Recuperare i dati da un modello di data mining &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Recuperare dati da un modello di Data Mining &#40; DMX &#41; &#40; SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Interfaccia utente di Progettazione query DMX in Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
+ [Interfaccia utente di progettazione di Query DMX di Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Tipo di connessione di Analysis Services per DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo di connessione di Analysis Services per DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Tuttavia, non è necessario utilizzare DMX come origine dati. I componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per il data mining supportano inoltre il salvataggio dei risultati di una query di stima in un database relazionale. Se si dispone di un flusso di lavoro stabilito per l'aggiornamento di modelli tramite [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'impostazione della persistenza di stime e altri risultati di query di data mining in SQL Server consente di utilizzare [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] per la creazione di report, nonché altri strumenti non interfacciati con DMX.  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 01/08/2018
 -   Non tutte le lingue full-text supportano l'indicizzazione semantica. Per un elenco delle lingue supportate, vedere [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Soluzioni di modelli multidimensionali &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Soluzioni di modelli tabulari &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Soluzioni di modelli multidimensionali &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Soluzioni di modelli tabulari &#40; SSAS tabulare &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   

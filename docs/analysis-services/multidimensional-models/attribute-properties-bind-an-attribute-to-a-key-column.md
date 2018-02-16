@@ -16,19 +16,20 @@ helpviewer_keywords:
 - renaming attributes
 - attributes [Analysis Services], renaming
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 059527f4f36552b2247cb156458d3e839cc67e39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>Attributo di proprietà: associare un attributo a una colonna chiave
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questa procedura viene descritto come modificare l'impostazione per il **nome** proprietà di un attributo in una dimensione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Questo argomento descrive la procedura per modificare l'impostazione della proprietà **Name** di un attributo in una dimensione.  
   
 ### <a name="to-bind-an-attribute-to-a-key-column"></a>Per associare un attributo a una colonna chiave  
   

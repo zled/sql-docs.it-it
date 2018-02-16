@@ -15,19 +15,20 @@ helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2d9b665cc3aa5dd70ea481cd6b3328ffb6d7aa82
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-linked-dimensions"></a>Definizione delle dimensioni collegate
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una dimensione collegata è basata su una dimensione creata e archiviata in un altro database di Analysis Services della stessa versione e il livello di compatibilità. Utilizzando una dimensione collegata è possibile creare, archiviare e mantenere una dimensione in un database facendo in modo che tale dimensione sia disponibile per gli utenti di più database. Per gli utenti una dimensione collegata ha lo stesso aspetto di qualsiasi altra dimensione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una dimensione collegata è basata su una dimensione creata e archiviata in un altro database di Analysis Services con la stessa versione e lo stesso livello di compatibilità. Utilizzando una dimensione collegata è possibile creare, archiviare e mantenere una dimensione in un database facendo in modo che tale dimensione sia disponibile per gli utenti di più database. Per gli utenti una dimensione collegata ha lo stesso aspetto di qualsiasi altra dimensione.  
   
  Le dimensioni collegate sono di sola lettura. Se si desidera modificare la dimensione o creare nuove relazioni, è necessario modificare la dimensione di origine, quindi eliminare e ricreare la dimensione collegata e le sue relazioni. Non è possibile aggiornare una dimensione collegata per visualizzare le modifiche dell'oggetto di origine.  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Poiché l'aggiornamento non è disponibile, molti sviluppatori di Analysis Services copiano le dimensioni anziché collegarle. È possibile copiare dimensioni tra i diversi progetti della stessa soluzione. Per altre informazioni, vedere la pagina [Refresh of a linked dimension in SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)(Aggiornamento di una dimensione collegata in SSAS).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Il database di origine che fornisce la dimensione e il database corrente che la utilizza devono essere della stessa versione e dello stesso livello di compatibilità. Per altre informazioni, vedere la pagina [Livello di compatibilità di un database multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)(Aggiornamento di una dimensione collegata in SSAS).  
   
  Il database di origine deve essere distribuito e online. È necessario configurare i server che pubblicano o utilizzano oggetti collegati per consentire l'operazione (vedere sotto).  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
 7.  Nella pagina Impostazioni di rappresentazione, fare clic su **Usa account del servizio**. Fare clic su **Avanti**e terminare la procedura guidata. La connessione appena definita verrà selezionata nel Collegamento guidato oggetti.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
  Non è possibile modificare la struttura di una dimensione collegata e per questo motivo non è possibile visualizzarla nella scheda **Struttura dimensione** di Progettazione dimensioni. Dopo aver elaborato la dimensione collegata, è possibile visualizzarla nella scheda **Esplorazione** . È inoltre possibile modificare il relativo nome, nonché creare una traduzione per tale nome.  
   
 ## <a name="see-also"></a>Vedere anche  

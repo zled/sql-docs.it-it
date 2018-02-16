@@ -25,19 +25,20 @@ helpviewer_keywords:
 - time hierarchies [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f2767b84432f137bd8f43c4352f99277abb845df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definire calcoli delle funzionalità di Business Intelligence per le gerarchie temporali mediante la Configurazione guidata funzionalità di Business Intelligence
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La funzionalità di business intelligence di tempo è un miglioramento del cubo che aggiunge i calcoli temporali (o viste temporali) a una gerarchia selezionata. Questa funzionalità avanzata supporta le categorie di calcolo seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La funzionalità avanzata di Business Intelligence per le gerarchie temporali corrisponde alla funzionalità avanzata a livello di cubo basata sull'aggiunta di calcoli temporali o viste temporali a una gerarchia selezionata. Questa funzionalità avanzata supporta le categorie di calcolo seguenti:  
   
 -   Da inizio periodo fino alla data specificata.  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="viewing-the-time-intelligence-enhancement"></a>Visualizzazione dei miglioramenti della funzionalità di Business Intelligence per le gerarchie temporali  
  Nell'ultima pagina di Configurazione guidata funzionalità di Business Intelligence è possibile visualizzare le modifiche che verranno apportate al database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Nel caso di funzionalità avanzate di Business Intelligence per le gerarchie temporali, la procedura guidata modificherà la dimensione temporale selezionata, la vista origine dati associata e il cubo associato come illustrato nella tabella seguente.  
   
-|Object|Cambia|  
+|Oggetto|Cambia|  
 |------------|------------|  
 |Dimensione temporale|Aggiunta di un attributo per ogni calcolo o vista.|  
 |Vista origine dati|Aggiunta di una colonna calcolata nella tabella dei tempi per ogni nuovo attributo nella dimensione temporale.|  

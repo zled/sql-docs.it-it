@@ -19,19 +19,20 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valori mancanti (Analysis Services - Data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gestione *valori mancanti* correttamente è una parte importante di modellazione efficace. In questa sezione vengono illustrati i valori mancanti e descritte le caratteristiche fornite in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire i valori mancanti durante la compilazione di strutture e modelli di data mining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una gestione corretta dei  *valori mancanti* è fondamentale per ottenere una modellazione efficace. In questa sezione vengono illustrati i valori mancanti e descritte le caratteristiche fornite in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire i valori mancanti durante la compilazione di strutture e modelli di data mining.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Definizione dei valori mancanti nel data mining  
  Un valore mancante può avere diversi significati. È possibile che il campo non fosse applicabile, che l'evento non si sia verificato o che i dati non fossero disponibili. Potrebbe essere accaduto che la persona che ha immesso i dati non conoscesse il valore corretto o non abbia verificato l'effettiva compilazione di un campo.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
  Ad esempio, nella tabella seguente è illustrata la distribuzione di valori per il nodo (Tutto) nel modello di albero delle decisioni creato per l'esercitazione Bike Buyer. Nello scenario di esempio la colonna [Bike Buyer] rappresenta l'attributo stimabile, dove 1 indica "Sì" e 0 indica "No".  
   
-|valore|Case|  
+|Valore|Case|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="adjusting-probability-for-missing-states"></a>Adattamento della probabilità per gli stati mancanti  
  Oltre al conteggio dei valori, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito il calcolo della probabilità di qualsiasi valore nel set di dati. Lo stesso vale per il valore **Missing** . Nella tabella seguente sono, ad esempio, illustrate le probabilità per i case dell'esempio precedente:  
   
-|valore|Case|Probabilità|  
+|Valore|Case|Probabilità|  
 |-----------|-----------|-----------------|  
 |0|9296|50,55%|  
 |1|9098|49,42%|  
@@ -109,18 +110,18 @@ L'algoritmo Decision Trees fornisce un'ulteriore regolazione che consente di com
   
  L'effetto finale di questo adattamento è di mantenere la stabilità dell'albero.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Negli argomenti seguenti vengono fornite ulteriori informazioni sulla gestione dei valori mancanti.  
   
 |Attività|Collegamenti|  
 |-----------|-----------|  
-|Aggiungere flag alle singole colonne del modello per controllare la gestione dei valori mancanti|[Visualizzare o modificare flag di modellazione &#40;Data mining&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|Impostare le proprietà su un modello di data mining per controllare la gestione dei valori mancanti|[Modificare le proprietà di un modello di data mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|Informazioni sulla specificazione di flag di modellazione in DMX|[Flag di modellazione &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|Modificare la modalità di gestione dei valori mancanti da parte della struttura di data mining|[Modificare le proprietà di una struttura di data mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
+|Aggiungere flag alle singole colonne del modello per controllare la gestione dei valori mancanti|[Visualizzare o modificare modello di Data Mining flag &#40; &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Impostare le proprietà su un modello di data mining per controllare la gestione dei valori mancanti|[Modificare le proprietà di un modello di Data Mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
+|Informazioni sulla specificazione di flag di modellazione in DMX|[Flag di modellazione &#40; DMX &#41;](../../dmx/modeling-flags-dmx.md)|  
+|Modificare la modalità di gestione dei valori mancanti da parte della struttura di data mining|[Modificare le proprietà di una struttura di Data Mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Flag di modellazione &#40;data mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [Contenuto del modello di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Modello di Data Mining flag &#40; &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

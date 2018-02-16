@@ -1,7 +1,7 @@
 ---
 title: Classi di Data Mining AMO | Documenti Microsoft
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: de2b66f2dea7dfa29301ddd14f831d7318c6f4f9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1a5ca970ee22d91b06a945e8a3b600b74892790
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-data-mining-classes"></a>Classi di data mining AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Classi di data mining consentono di creare, modificare, eliminare ed elaborare oggetti di data mining. L'utilizzo di oggetti di data mining include la creazione di strutture e di modelli di data mining e l'elaborazione di tali modelli.  
+  Le classi di data mining consentono di creare, modificare, eliminare ed elaborare oggetti di dati mining. L'utilizzo di oggetti di data mining include la creazione di strutture e di modelli di data mining e l'elaborazione di tali modelli.  
   
  Per ulteriori informazioni su come configurare l'ambiente e sugli <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, e <xref:Microsoft.AnalysisServices.DataSourceView> degli oggetti, vedere [le classi fondamentali AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md).  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Classi di data mining AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-dataminingclasses.gif "classi di data mining AMO")  
   
-##  <a name="MiningStructure"></a>Oggetti MiningStructure  
+##  <a name="MiningStructure">Oggetti MiningStructure</a>  
  Una struttura di data mining rappresenta il contenitore per i modelli di data mining. La struttura definisce tutte le possibili colonne che i modelli di data mining possono utilizzare. Ogni modello di data mining definisce le proprie colonne dal set di colonne definite nella struttura.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.MiningStructure> semplice è costituito da informazioni di base, una vista origine dati, uno o più oggetti <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, zero o più oggetti <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> e un oggetto <xref:Microsoft.AnalysisServices.MiningModelCollection>.  
@@ -97,7 +98,7 @@ ms.lasthandoff: 01/08/2018
   
  Per rimuovere un oggetto <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, è necessario eliminarlo dalla raccolta dell'oggetto <xref:Microsoft.AnalysisServices.MiningStructure> padre e aggiornare l'oggetto <xref:Microsoft.AnalysisServices.MiningStructure> padre nel server tramite il metodo Update.  
   
-##  <a name="MiningModel"></a>Oggetti MiningModel  
+##  <a name="MiningModel">Oggetti MiningModel</a>  
  Un oggetto <xref:Microsoft.AnalysisServices.MiningModel> consente di scegliere le colonne della struttura e un algoritmo da utilizzare, nonché eventuali parametri specifici per ottimizzare il modello. Potrebbe essere necessario ad esempio definire nella stessa struttura di data mining diversi modelli di data mining che utilizzano gli stessi algoritmi, ma ignorare alcune colonne della struttura di data mining in un modello e utilizzarle come colonne di input in un altro modello e come colonne di input e di stima in un terzo modello. Queste operazioni possono risultare utili se si desidera considerare continua una colonna in un modello di data mining, ma discretizzata in un altro modello.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.MiningModel> semplice è costituito da informazioni di base, dalla definizione di algoritmo e da colonne.  

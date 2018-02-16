@@ -23,19 +23,20 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: "77"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6b7467be225e2468be21603f3e40de04050dc6b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Strutture di data mining (Analysis Services – Data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La struttura di data mining definisce i dati da cui vengono compilati i modelli di data mining: specifica la vista dell'origine dati, il numero e tipo di colonne e una partizione facoltativa in set di training e testing. Una singola struttura di data mining può supportare più modelli di data mining che condividono lo stesso dominio. Nel diagramma seguente viene illustrata la relazione della struttura di data mining con l'origine dati e con i modelli di data mining che la compongono.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La struttura di data mining definisce i dati in base ai quali vengono compilati i modelli di data mining: specifica la vista dell'origine dati, il numero e il tipo di colonne e una partizione facoltativa in set di training e di testing. Una singola struttura di data mining può supportare più modelli di data mining che condividono lo stesso dominio. Nel diagramma seguente viene illustrata la relazione della struttura di data mining con l'origine dati e con i modelli di data mining che la compongono.  
   
  ![Elaborazione dei dati: origine-struttura modello](../../analysis-services/data-mining/media/dmcon-modelarch.gif "l'elaborazione dei dati: origine-struttura al modello")  
   
@@ -115,19 +116,19 @@ ms.lasthandoff: 01/08/2018
   
  Per altre informazioni sull'architettura dei modelli di data mining, vedere [Modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Utilizzare i collegamenti forniti di seguito per ottenere ulteriori informazioni sulla definizione, sulla gestione e sull'utilizzo delle strutture di data mining.  
   
 |Attività|Collegamenti|  
 |-----------|-----------|  
-|Utilizzare le strutture di data mining relazionali|[Creare una nuova struttura di data mining relazionale](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [Aggiungere una tabella nidificata a una struttura di data mining](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
+|Utilizzare le strutture di data mining relazionali|[Creare una nuova struttura di data mining relazionale](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [Aggiungere una tabella nidificata a una struttura di Data Mining](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
 |Utilizzare le strutture di data mining basate su cubi OLAP|[Creare una nuova struttura di data mining OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
-|Utilizzare le colonne in una struttura di data mining|[Aggiungere colonne a una struttura di data mining](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [Rimuovere colonne da una struttura di data mining](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
+|Utilizzare le colonne in una struttura di data mining|[Aggiungere colonne a una struttura di Data Mining](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [Rimuovere colonne da una struttura di data mining](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |Eseguire una query sulle proprietà e sui dati della struttura di data mining o modificarli|[Modificare le proprietà di una struttura di data mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
-|Utilizzare le origini dati sottostanti e aggiornare i dati di origine|[Modificare la vista origine dati usata per una struttura di data mining](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Elaborare una struttura di data mining](../../analysis-services/data-mining/process-a-mining-structure.md)|  
+|Utilizzare le origini dati sottostanti e aggiornare i dati di origine|[Modificare la vista origine dati utilizzata per una struttura di Data Mining](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Elaborare una struttura di data mining](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetti di database &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelli di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   
