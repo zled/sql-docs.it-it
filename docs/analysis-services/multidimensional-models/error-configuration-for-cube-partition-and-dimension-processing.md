@@ -16,19 +16,20 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9dcbefced6fd34dd5fa69537733d7820b0130f4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configurazione errori per cubi, partizioni e l'elaborazione della dimensione
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Proprietà di configurazione degli errori in oggetti dimensione, cubi o partizioni determinano la modalità di risposta del server quando si verificano errori di integrità dei dati durante l'elaborazione. L'attivazione di errori di questo tipo è in genere dovuta a chiavi duplicate, chiavi mancanti e valori Null in una colonna chiave e, anche se il record che causa l'errore non viene aggiunto al database, è possibile impostare le proprietà con cui vengono determinate le operazioni successive. Per impostazione predefinita, l'elaborazione viene arrestata. Tuttavia, durante lo sviluppo di un cubo, è possibile che l'elaborazione continui quando si verificano degli errori, in modo da poter testare i comportamenti del cubo con i dati importati, anche se incompleti.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Con le proprietà di configurazione degli errori in oggetti dimensione, cubi o partizioni viene determinata la modalità di risposta del server in caso di errori di integrità dei dati durante l'elaborazione. L'attivazione di errori di questo tipo è in genere dovuta a chiavi duplicate, chiavi mancanti e valori Null in una colonna chiave e, anche se il record che causa l'errore non viene aggiunto al database, è possibile impostare le proprietà con cui vengono determinate le operazioni successive. Per impostazione predefinita, l'elaborazione viene arrestata. Tuttavia, durante lo sviluppo di un cubo, è possibile che l'elaborazione continui quando si verificano degli errori, in modo da poter testare i comportamenti del cubo con i dati importati, anche se incompleti.  
   
  In questo argomento sono contenute le sezioni seguenti:  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 01/08/2018
   
  **Risposta del server a errori specifici**  
   
-|Proprietà|Default|Altri valori|  
+|Proprietà|Valore predefinito|Altri valori|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> Si verifica durante l'inizializzazione della configurazione degli errori.|**IgnoreError** non registra né conteggia l'errore; l'elaborazione continua finché il conteggio errori è al di sotto del limite massimo.|**ReportAndContinue** registra e conteggia l'errore.<br /><br /> **ReportAndStop** segnala l'errore e arresta immediatamente l'elaborazione, indipendentemente dal limite errori.|  
 |**KeyNotFound**<br /><br /> Si verifica quando una chiave esterna in una tabella dei fatti non dispone di una chiave primaria corrispondente in una tabella delle dimensioni correlata, ad esempio una tabella dei fatti relativa alle vendite con un record con un ID prodotto che non esiste nella tabella delle dimensioni del prodotto. Questo errore può verificarsi durante l'elaborazione di partizioni o di dimensioni con schema snowflake.|**ReportAndContinue** registra e conteggia l'errore.|**ReportAndStop** segnala l'errore e arresta immediatamente l'elaborazione, indipendentemente dal limite errori.<br /><br /> **IgnoreError** non registra né conteggia l'errore; l'elaborazione continua finché il conteggio errori è al di sotto del limite massimo. I record che attivano questo errore vengono convertiti in membri sconosciuti per impostazione predefinita, tuttavia, in alternativa, è possibile modificare la proprietà **KeyErrorAction** per rimuoverli.|  
@@ -184,7 +185,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_next"></a> Passaggio successivo  
  Stabilire se gli errori determineranno l'arresto dell'elaborazione o verranno ignorati. Si tenga presente che solo l'errore viene ignorato. Il record che ha causato l'errore non viene ignorato; viene rimosso o convertito in membro sconosciuto. I record che violano le regole di integrità dei dati non vengono mai aggiunti al database. Per impostazione predefinita, l'elaborazione viene arrestata al primo errore, ma è possibile modificare questo comportamento aumentando il limite errori. Nello sviluppo del cubo, può essere utile ridurre le regole di configurazione degli errori, consentendo la continuazione dell'elaborazione, in modo che vi siano dati con cui eseguire il test.  
   
- Decidere se modificare i comportamenti di elaborazione dei valori Null predefiniti. Per impostazione predefinita, i valori Null in una colonna stringa vengono elaborati come valori vuoti, mentre i valori Null in una colonna numerica vengono elaborati come valori pari a zero. Per istruzioni sull'impostazione dell'elaborazione di valori Null in un attributo, vedere [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  
+ Decidere se modificare i comportamenti di elaborazione dei valori Null predefiniti. Per impostazione predefinita, i valori Null in una colonna stringa vengono elaborati come valori vuoti, mentre i valori Null in una colonna numerica vengono elaborati come valori pari a zero. Per istruzioni sull'impostazione dell'elaborazione di valori Null in un attributo, vedere [Definizione delle proprietà UnknownMember e NullProcessing](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà dei log](../../analysis-services/server-properties/log-properties.md)   

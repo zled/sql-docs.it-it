@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Confronto tra soluzioni tabulari e multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -151,9 +151,9 @@ ms.lasthandoff: 01/22/2018
   
 -   Database modello multidimensionale possono utilizzare dimensioni e la sicurezza a livello di cella, usando autorizzazioni basate sui ruoli.  
 
--   Le cartelle di lavoro di[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] sono protette a livello di file, mediante le autorizzazioni di SharePoint.  
+-   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] sono protette a livello di file, mediante le autorizzazioni di SharePoint.  
   
- Le cartelle di lavoro di[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] possono essere ripristinate in un server in modalità tabulare. Una volta ripristinato, il file viene separato da SharePoint consentendo di utilizzare tutte le funzionalità di modellazione tabulare, inclusa la sicurezza a livello di riga.  
+ [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] in un server in modalità tabulare. Una volta ripristinato, il file viene separato da SharePoint consentendo di utilizzare tutte le funzionalità di modellazione tabulare, inclusa la sicurezza a livello di riga.  
   
 ##  <a name="bkmk_designer"></a> Strumenti di progettazione  
  Le competenze di modellazione dei dati e l'esperienza tecnica possono variare molto tra gli utenti che si occupano della compilazione di modelli analitici. Se in una soluzione la familiarità di uno strumento o l'esperienza degli utenti è una considerazione importante, confrontare le esperienze seguenti per la creazione del modello.  

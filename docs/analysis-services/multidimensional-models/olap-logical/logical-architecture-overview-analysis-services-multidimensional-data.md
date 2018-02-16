@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Panoramica dell'architettura logica (Analysis Services - Dati multidimensionali)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services viene eseguito in una modalità di distribuzione di server che determina l'ambiente di runtime e architettura di memoria utilizzato dai diversi tipi di modelli di Analysis Services. La modalità server viene determinata durante l'installazione. **Modalità multidimensionale e Data Mining** supporta OLAP tradizionali e il data mining. **Modalità tabulare** supporta modelli tabulari. **La modalità integrata SharePoint** fa riferimento a un'istanza di Analysis Services in cui è stato installato come [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint, utilizzato per il caricamento e l'esecuzione di query Excel o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] i modelli di dati all'interno di una cartella di lavoro.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services viene eseguito in una modalità di distribuzione server che determina l'architettura di memoria e l'ambiente di runtime utilizzati dai diversi tipi di modelli di Analysis Services. La modalità server viene determinata durante l'installazione. **Modalità multidimensionale e Data Mining** supporta OLAP tradizionali e il data mining. **Modalità tabulare** supporta modelli tabulari. **La modalità integrata SharePoint** fa riferimento a un'istanza di Analysis Services in cui è stato installato come [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint, utilizzato per il caricamento e l'esecuzione di query Excel o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] i modelli di dati all'interno di una cartella di lavoro.  
   
  In questo argomento viene illustrata l'architettura di base di Analysis Services quando viene utilizzato nella modalità multidimensionale e di data mining. Per ulteriori informazioni sulle altre modalità, vedere [modellazione tabulare &#40; SSAS &#41; ](../../../analysis-services/tabular-models/tabular-models-ssas.md) e [confronto tra soluzioni tabulari e multidimensionali &#40; SSAS &#41; ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -88,13 +90,13 @@ ms.lasthandoff: 01/08/2018
 ||||Pacchetti|||Ultimo|||  
 |-|-|-|--------------|-|-|----------|-|-|  
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
-|All Time|||25110|6547|18563|DEC-29-99|DEC-22-99|DEC-29-99|  
+|All Time|||25110|6547|18563|Dec-29-99|Dec-22-99|Dec-29-99|  
 ||1st half||11173|2977|8196|Jun-28-99|Jun-20-99|Jun-28-99|  
 |||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99|Mar-30-99|  
 |||2nd quarter|6065|1525|4540|Jun-28-99|Jun-20-99|Jun-28-99|  
-||2nd half||13937|3570|10367|DEC-29-99|DEC-22-99|DEC-29-99|  
+||2nd half||13937|3570|10367|Dec-29-99|Dec-22-99|Dec-29-99|  
 |||3rd quarter|6119|1444|4675|Sep-30-99|Set-18-99|Sep-30-99|  
-|||4th quarter|7818|2126|5692|DEC-29-99|DEC-22-99|DEC-29-99|  
+|||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
  Dopo avere definito un cubo, è possibile creare nuove aggregazioni o modificare quelle esistenti in modo da impostare le opzioni per determinare, ad esempio, se le aggregazioni devono essere precalcolate durante la fase di elaborazione o calcolate durante l'esecuzione della query. **Argomento correlato:**[aggregazioni e progettazione di aggregazioni](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
@@ -117,7 +119,7 @@ ms.lasthandoff: 01/08/2018
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|Pacchetti|Ultimo|  
-|3516987|1|6|1|15|Gennaio-10-99|  
+|3516987|1|6|1|15|Jan-10-99|  
 |3554790|1|6|1|40|Gennaio-19-99|  
 |3572673|1|6|1|34|Jan-27-99|  
 |3600974|1|6|1|45|Feb-02-99|  

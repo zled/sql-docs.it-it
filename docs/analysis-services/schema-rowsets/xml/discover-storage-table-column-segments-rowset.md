@@ -11,33 +11,35 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>Set di righe DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Vengono fornite informazioni a livello di colonna e segmento sulle tabelle di archiviazione utilizzate da un database di Analysis Services in esecuzione in tabulare o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modalità. Questo set di righe viene utilizzato principalmente per la risoluzione dei problemi e l'analisi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Vengono fornite informazioni a livello di colonna e segmento sulle tabelle di archiviazione utilizzate da un database di Analysis Services in esecuzione in tabulare o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modalità. Questo set di righe viene utilizzato principalmente per la risoluzione dei problemi e l'analisi.  
   
  **Si applica a:** i modelli tabulari  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** set di righe contiene le colonne seguenti.  
   
-|**Nome colonna**|**Indicatore del tipo**|**Restrizione**|**Descrizione**|  
+|**Nome colonna**|**Indicatore del tipo**|**Restrizione**|**Description**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**|Sì|Specifica il database tabulare.<br /><br /> Il **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** righe può essere limitato tramite questa colonna. Se omesso, viene utilizzato il database corrente.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Sì|Il nome del modello.<br /><br /> Il **DISCOVER_STORAGE_TABLES** righe può essere limitato tramite questa colonna.|  
-|**NOME_GRUPPO_MISURE**|**DBTYPE_WSTR**|Sì|Nome del gruppo di misure.|  
-|**NOME_PARTIZIONE**|**DBTYPE_WSTR**|Sì|Nome della partizione.|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Sì|Nome del gruppo di misure.|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|Sì|Nome della partizione.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||Nome della dimensione.|  
 |**TABLE_ID**|**DBTYPE_WSTR**||ID interno del segmento di tabella.|  
 |**COLUMN_ID**|**DBTYPE_WSTR**||ID interno della colonna.|  
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
  Nella tabella seguente vengono forniti i GUID e i valori stringa che identificano questo set di righe.  
   
-|Argomento|valore|  
+|Argomento|Valore|  
 |--------------|-----------|  
 |GUID|a07ccd45-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|StorageSegments|  
@@ -73,6 +75,6 @@ ORDER BY TABLE_ID
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di righe dello schema di Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Set di righe dello Schema di Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

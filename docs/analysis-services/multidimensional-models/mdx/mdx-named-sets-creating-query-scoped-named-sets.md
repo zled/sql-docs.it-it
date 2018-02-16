@@ -15,19 +15,20 @@ helpviewer_keywords:
 - query-scoped named sets [MDX]
 - WITH keyword
 ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ee0964b6db7b8443d22ba850b84d451e14972937
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Denominata set - creazione con ambito Query MDX di set denominati
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Se un set denominato è solo necessario per una singola query MDX (Multidimensional Expressions), è possibile definire che set denominato tramite la parola chiave WITH. Un set denominato creato specificando questa parola chiave non esiste più dopo l'esecuzione della query.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Se un set denominato è richiesto esclusivamente per una sola query MDX (Multidimensional Expressions), è possibile definirlo specificando la parola chiave WITH. Un set denominato creato specificando questa parola chiave non esiste più dopo l'esecuzione della query.  
   
  Come descritto in questo argomento, la sintassi della parola chiave WITH è piuttosto flessibile e consente addirittura di definire un set denominato tramite l'utilizzo di funzioni.  
   
@@ -99,7 +100,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzione SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [Istruzione SELECT &#40; MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)   
  [Creazione con ambito sessione denominati set &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

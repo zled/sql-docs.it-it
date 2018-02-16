@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e2df021da6f2cf8c32e0b0581c5d5d61a422d5ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Configurare, ripristinare o rimuovere un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con il [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] strumenti di configurazione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Configurare, ripristinare o rimuovere [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con gli strumenti di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  L'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non installa gli strumenti di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Gli strumenti di configurazione saranno disponibili per il download nelle versioni future di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -32,7 +33,7 @@ ms.lasthandoff: 01/08/2018
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Requisiti per l'utilizzo degli strumenti di configurazione](#bkmk_requirements)  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
  Gli strumenti possono essere utilizzati solo con un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Non utilizzarli con installazioni di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
-|nome|Versione supportata di SharePoint|Configurazione dettagliata|  
+|Nome|Versione supportata di SharePoint|Configurazione dettagliata|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013|SharePoint 2013|[Configurare o ripristinare Power Pivot per SharePoint 2013 &#40;strumento di configurazione Power Pivot&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Strumento di configurazione|SharePoint 2010 con SharePoint 2010 Service Pack 1 (SP1)|[Configurare o ripristinare Power Pivot per SharePoint 2010 (strumento di configurazione Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
