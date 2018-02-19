@@ -30,7 +30,7 @@ Disporre delle autorizzazioni sufficienti per configurare tutti i nodi di punti 
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>Per aggiungere un utente al gruppo Domain Admins  
   
-1.  Accedere al nodo attivo AD **(*appliance_domain*-AD01** o ***appliance_domain *-AD02**) utilizzando un account amministratore di dominio esistente dello strumento.  
+1.  Accedere al nodo attivo AD **(*appliance_domain*-AD01** o ***appliance_domain*-AD02**) utilizzando un account amministratore di dominio esistente dello strumento.  
   
 2.  Nel menu Start fare clic su **Esegui**. Nel **aprire** digitare **dsa.msc**. Scegliere **OK**.  
   
