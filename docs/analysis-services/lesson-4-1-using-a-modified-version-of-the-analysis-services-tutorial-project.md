@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lezione 4-1-utilizzo di una versione modificata del progetto Analysis Services Tutorial
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,15 +34,15 @@ Per continuare l'esercitazione è necessario scaricare, estrarre, caricare ed el
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Download ed estrazione del file di progetto  
   
-1.  [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per accedere alla pagina di download in cui si trovano i progetti di esempio usati in questa esercitazione. I progetti dell'esercitazione sono inclusi nel download **Analysis Services Tutorial SQL Server 2012** .  
+1.  [Fare clic qui](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) per accedere alla pagina di download in cui si trovano i progetti di esempio usati in questa esercitazione. I progetti dell'esercitazione sono inclusi nel **adventure-works-multidimensionale-esercitazione-projects.zip** scaricare.  
   
-2.  Fare clic su **Analysis Services Tutorial SQL Server 2012** per scaricare il pacchetto in cui sono contenuti i progetti per questa esercitazione.  
+2.  Fare clic su **adventure-works-multidimensionale-esercitazione-projects.zip** per scaricare il pacchetto che contiene i progetti per questa esercitazione.  
   
     Per impostazione predefinita, nella cartella Downloads viene salvato un file con estensione ZIP. È necessario spostare il file ZIP in un percorso più breve, ad esempio creare una cartella C:\Tutorials per archiviare i file.  È quindi possibile estrarre i file contenuti nel file ZIP. Se si tenta di decomprimere i file dalla cartella Downloads il cui percorso è più lungo, si otterrà solo la Lezione 1.  
   
 3.  Creare una sottocartella al livello dell'unità radice, ad esempio C:\Tutorial, o a un livello immediatamente inferiore.  
   
-4.  Spostare il file **Analysis Services Tutorial SQL Server 2012.zip** nella sottocartella.  
+4.  Spostare il **adventure-works-multidimensionale-esercitazione-projects.zip** file nella sottocartella.  
   
 5.  Fare clic con il pulsante destro del mouse sul file e scegliere **Estrai tutto**.  
   

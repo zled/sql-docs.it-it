@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Installazione automatica di Machine Learning Services (In-Database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,9 +49,9 @@ Per l'installazione automatica, si intende non utilizzare le funzionalità inter
 
 > [!IMPORTANT]
 > 
-> Al termine dell'installazione per abilitare la funzionalità, sono necessari passaggi aggiuntivi. Queste includono una riconfigurazione e riavvio dell'istanza. Assicurarsi di esaminare tutti gli elementi nella sezione [passaggi di post-installazione] (#bkmk_PostInstall) per determinare le azioni necessario al termine dell'installazione.
+> Al termine dell'installazione per abilitare la funzionalità, sono necessari passaggi aggiuntivi. Queste includono una riconfigurazione e riavvio dell'istanza. Assicurarsi di esaminare tutti gli elementi nella sezione in [passaggi di post-installazione](#bkmk_PostInstall) per determinare le azioni necessarie al termine dell'installazione.
 
-## <a name="bkmk_NewInstall"></a>Installazione della riga di comando per SQL Server 2017
+## <a name="bkmk_NewInstall"></a>  Installazione della riga di comando per SQL Server 2017
 
 Di seguito sono riportati esempi di **minimo** funzionalità necessarie.
 
@@ -97,7 +97,7 @@ Nell'esempio seguente visualizza gli argomenti necessari per eseguire un invisib
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>Installazione della riga di comando per SQL Server 2016
+## <a name="OldInstall"></a> Installazione della riga di comando per SQL Server 2016
  
 L'esempio seguente mostra gli argomenti necessari per eseguire un invisibile all'utente, automatica di installazione di SQL Server 2016 con il linguaggio R aggiunto.
 

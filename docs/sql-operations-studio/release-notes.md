@@ -2,7 +2,7 @@
 title: Note sulla versione di Microsoft SQL operazioni Studio (anteprima) | Documenti Microsoft
 description: Note sulla versione di Microsoft SQL operazioni Studio (anteprima)
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,15 +14,39 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eded99dffd8029431a127e6cbf4b125ab5e0ac97
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Note sulla versione Studio operazioni SQL (anteprima)
 
-**[Scaricare l'anteprima pubblica di gennaio](download.md)**
+**[Scaricare l'anteprima pubblica di febbraio](download.md)**
+
+## <a name="february-2018-february-public-preview"></a>2018 febbraio (febbraio in anteprima pubblica)
+
+Data di rilascio: 15 febbraio 2018  
+version: 0.26.7
+
+Il *anteprima pubblica di febbraio* include alcuni suggerimenti sulle funzionalità e correzioni di bug con priorità alta. Questa versione include i miglioramenti seguenti:
+
+- Che l'introduzione di installazione di aggiornamento automatico, fornisce una notifica quando una nuova versione è disponibile per il download 
+- Il campo di finestra di dialogo di connessione 'Database' è un elenco di riepilogo a discesa popolato in modo dinamico contenenti un elenco di database popolato dal server specificato.
+- Correggere [emettere 6](https://github.com/Microsoft/sqlopsstudio/issues/6): Mantieni connessione e il database selezionato quando si apre nuove schede di query.
+- Correggere [emettere 22](https://github.com/Microsoft/sqlopsstudio/issues/22): "Nome Server" e 'Nome di Database -' possono questi essere elenchi a discesa anziché le caselle di testo?
+- Correggere [emettere 549](https://github.com/Microsoft/sqlopsstudio/issues/549): installazione invisibile all'utente invisibile all'utente/molto comporterà l'applicazione che apre dopo l'installazione.
+- Correggere [emettere 481](https://github.com/Microsoft/sqlopsstudio/issues/481): aggiungere l'opzione "Controlla aggiornamenti".
+- Editor SQL colorazione e correzioni di completamento automatico:
+   - Correggere [emettere 584](https://github.com/Microsoft/sqlopsstudio/issues/584): parola chiave "Completa" non è evidenziata da IntelliSense.
+   - Correggere [emettere 345](https://github.com/Microsoft/sqlopsstudio/issues/345): funzioni colorare SQL all'interno dell'editor.
+   - Correggere [emettere 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] più recente "]" verrà visualizzato di colore verde.
+   - Correggere [emettere 225](https://github.com/Microsoft/sqlopsstudio/issues/225): mancata corrispondenza di colore (parola chiave).
+   - Correggere [emettere 60](https://github.com/Microsoft/sqlopsstudio/issues/60): sql non valido Colore evidenziazione della sintassi quando si utilizza la tabella temporanea nella clausola from.
+- Introdurre API di estensibilità di connessione.
+- Integrazione di Visual Studio 1.19 Editor di codice.
+- Aggiornare il componente JustinPealing/html-piano di query al ritiro diversi miglioramenti di Visualizzatore di piano di Query.
+
 
 ## <a name="january-2018-january-public-preview"></a>2018 gennaio (anteprima pubblica di gennaio)
 

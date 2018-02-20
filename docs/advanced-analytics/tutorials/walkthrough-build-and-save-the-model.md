@@ -20,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: aec87866d4bf22b5e1f685ba5fdf41fd259fc6e3
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Compilare un modello R e salvare in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,9 +51,7 @@ Il modello che compilazione è un classificatore binario che consente di stimare
 
      *Risultati*
 
-     *Risultati di regressione logistica per: inclinato ~ passenger_count trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
-     <br/>*Dati: featureDataSource (origine dati RxSqlServerData)*
+     *Risultati di regressione logistica per: inclinato ~ passenger_count trip_distance + trip_time_in_secs +* direct_distance *   <br/>*Dati: featureDataSource (origine dati RxSqlServerData)*
      <br/>*Dependent variable(s): inclinato*
      <br/>*Totale delle variabili indipendenti: 5*
      <br/>*Numero di osservazioni valide: 17068*
@@ -62,7 +60,7 @@ Il modello che compilazione è un classificatore binario che consente di stimare
      <br/>*Coefficienti:*
      <br/>*Estimate Std. Il valore di errore z Pr (> | z |)*
      <br/>*(Intercettare) - 2.509e-03 3.223e-02-0.078 0.93793*
-     <br/>*passenger_count-5.753e-02 1.088e-02-5.289 1.23 e-07\*\*\**
+     <br/>*passenger_count-5.753e-02 1.088e-02-5.289 1.23 e-07 \*\*\**
      <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
      <br/>*trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
      <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
@@ -210,7 +208,7 @@ In questa sezione è illustrato come mantenere il modello e come chiamare questo
     Il salvataggio di un modello in una tabella richiede solo un'istruzione INSERT. Tuttavia, risulta più semplice quando è stato eseguito il wrapping in una stored procedure, ad esempio _PersistModel_.
 
     > [!NOTE]
-    > Se si verifica un errore, ad esempio "l'autorizzazione EXECUTE è stata negata per l'oggetto PersistModel", verificare che l'account di accesso disponga dell'autorizzazione. È possibile concedere le autorizzazioni esplicite nella stored procedure eseguendo l'istruzione T-SQL seguente:`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > Se si verifica un errore, ad esempio "l'autorizzazione EXECUTE è stata negata per l'oggetto PersistModel", verificare che l'account di accesso disponga dell'autorizzazione. È possibile concedere le autorizzazioni esplicite nella stored procedure eseguendo l'istruzione T-SQL seguente: `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. Dopo aver creato un modello e salvato in un database, è possibile chiamare direttamente dal [!INCLUDE[tsql](../../includes/tsql-md.md)] codice, che usa la stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
