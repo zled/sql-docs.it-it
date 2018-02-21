@@ -8,21 +8,23 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], domain independent
+helpviewer_keywords:
+- Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61014dfd6113a16e37b4be9a1a06e6901abba37f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 950e7cb62718b2c1fedfc5415544f21f85205cf6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="domain-independent-availability-groups"></a>Gruppi di disponibilità indipendenti dal dominio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,63 +87,81 @@ Attualmente non è possibile creare un gruppo di disponibilità indipendente dal
 1. Seguendo la procedura illustrata in [questo post di blog](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), distribuire un cluster di gruppi di lavoro composto da tutti i server che faranno parte del gruppo di disponibilità. Prima di configurare il cluster di gruppi di lavoro, assicurarsi che il suffisso DNS comune sia già configurato.
 2. [Abilitare la funzionalità Gruppi di disponibilità AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) in ogni istanza che farà parte del gruppo di disponibilità. Sarà necessario riavviare ogni istanza di SQL Server.
 3. Per ogni istanza che ospiterà la replica primaria è necessaria una chiave master del database. Se non esiste già una chiave master, eseguire questo comando:
-```
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
+   GO
+   ```
+
 4. Nell'istanza che fungerà da replica primaria creare il certificato che verrà usto per le connessioni in ingresso nelle repliche secondarie e per proteggere l'endpoint nella replica primaria.
-```
-CREATE CERTIFICATE InstanceA_Cert 
-WITH SUBJECT = 'InstanceA Certificate';
-GO
-``` 
+
+   ```sql
+   CREATE CERTIFICATE InstanceA_Cert 
+   WITH SUBJECT = 'InstanceA Certificate';
+   GO
+   ``` 
+
 5. Eseguire il backup del certificato. È anche possibile migliorare ulteriormente la protezione con una chiave privata. Questo esempio non fa uso di una chiave privata.
-```
-BACKUP CERTIFICATE InstanceA_Cert 
-TO FILE = 'Backup_path\InstanceA_Cert.cer';
-GO
-```
+
+   ```sql
+   BACKUP CERTIFICATE InstanceA_Cert 
+   TO FILE = 'Backup_path\InstanceA_Cert.cer';
+   GO
+   ```
+
 6. Ripetere i passaggi 4 e 5 per creare ed eseguire il backup dei certificati per ogni replica secondaria, usando nomi appropriati per i certificati, ad esempio InstanceB_Cert.
 7. Nella replica primaria è necessario creare un account di accesso per ogni replica secondaria del gruppo di disponibilità. A questo account di accesso verrà concessa l'autorizzazione a connettersi all'endpoint usato dal gruppo di disponibilità indipendente dal dominio. Ad esempio, per una replica denominata InstanceB:
-```
-CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 8. In ogni replica secondaria creare un account di accesso per la replica primaria. A questo account di accesso verrà concessa l'autorizzazione a connettersi all'endpoint. Ad esempio, per una replica denominata InstanceA:
-```
-CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 9. In tutte le istanze occorre creare un utente per ogni account di accesso creato. Questo verrà usato durante il ripristino dei certificati. Ad esempio, per creare un utente per la replica primaria:
-```
-CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
-GO
-```
+
+   ```sql
+   CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
+   GO
+   ```
+
 10. Per qualsiasi replica che potrebbe essere primaria, creare un account di accesso e un utente in tutte le relative repliche secondarie.
 11. Ripristinare in ogni istanza i certificati per le altre istanze per cui sono stati creati un account di accesso e un utente. Nella replica primaria ripristinare tutti i certificati delle repliche secondarie. Ripristinare il certificato della replica primaria in ogni replica secondaria e anche in qualsiasi altra replica che potrebbe essere primaria. Ad esempio
-```
-CREATE CERTIFICATE [InstanceB_Cert]
-AUTHORIZATION InstanceB_User
-FROM FILE = 'Restore_path\InstanceB_Cert.cer'
-```
+
+   ```sql
+   CREATE CERTIFICATE [InstanceB_Cert]
+   AUTHORIZATION InstanceB_User
+   FROM FILE = 'Restore_path\InstanceB_Cert.cer'
+   ```
+
 12. Creare l'endpoint che verrà usato dal gruppo di disponibilità in ogni istanza che sarà una replica. Per i gruppi di disponibilità, l'endpoint deve essere di tipo DATABASE_MIRRORING. L'endpoint usa il certificato creato nel passaggio 4 per l'istanza di autenticazione. Di seguito è riportata la sintassi di esempio per creare un endpoint che usa un certificato. Usare il metodo di crittografia appropriato e altre opzioni specifiche dell'ambiente. Per altre informazioni sulle opzioni disponibili, vedere [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
-```
-CREATE ENDPOINT DIAG_EP
-STATE = STARTED
-AS TCP (
+
+   ```sql
+   CREATE ENDPOINT DIAG_EP
+   STATE = STARTED
+   AS TCP (   
     LISTENER_PORT = 5022,
     LISTENER_IP = ALL
-)
-FOR DATABASE_MIRRORING (
+         )
+   FOR DATABASE_MIRRORING (
     AUTHENTICATION = CERTIFICATE InstanceX_Cert,
     ROLE = ALL
-)
-```
+         )
+   ```
+
 13. Per connettersi all'endpoint è necessario assegnare diritti a tutti gli utenti creati nell'istanza nel passaggio 9. 
-```
-GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
-GO
-```
+
+   ```sql
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GO
+   ```
+
 14. Dopo aver configurato i certificati sottostanti e la sicurezza dell'endpoint, creare il gruppo di disponibilità usando il metodo preferito. È consigliabile eseguire manualmente il backup, copiare e ripristinare il backup usato per inizializzare la replica secondaria oppure usare il [seeding automatico](automatically-initialize-always-on-availability-group.md). L'uso della procedura guidata per inizializzare le repliche secondarie comporta l'uso di file Server Message Block (SMB), che potrebbero non funzionare con un cluster di gruppi di lavoro non aggiunto a un dominio.
 15. Se si crea un listener, assicurarsi che il nome e il relativo indirizzo IP siano registrati nel DNS.
 
