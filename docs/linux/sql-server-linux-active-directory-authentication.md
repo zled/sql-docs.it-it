@@ -9,18 +9,18 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Autenticazione di Active Directory con SQL Server in Linux
 
@@ -157,7 +157,7 @@ Utilizzare la procedura seguente per aggiungere un [!INCLUDE[ssNoVersion](../inc
   
 5. Verificare che ora è possibile raccogliere informazioni relative a un utente del dominio e che è possibile acquisire un ticket Kerberos come tale utente.
 
-   We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+   L'esempio seguente usa **id**,  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, e  **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)**  comandi per questo oggetto.
 
    ```bash
    id user@contoso.com
@@ -182,7 +182,7 @@ Per ulteriori informazioni, vedere la documentazione di Red Hat per [alla scoper
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Creare l'utente di Active Directory per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e impostare SPN
 
   > [!NOTE]
-  > Nei passaggi successivi si utilizzerà il [nome di dominio completo](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se si utilizza **Azure**, è necessario  **[crearlo](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  prima di procedere.
+  > I passaggi successivi utilizzare il [nome di dominio completo](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se si utilizza **Azure**, è necessario  **[crearlo](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  prima di procedere.
 
 1. Nel controller di dominio, eseguire il [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) comando di PowerShell per creare un nuovo utente di Active Directory con una password che non scade mai. Questo esempio attribuisce un nome account "mssql", ma il nome dell'account può essere liberamente. Verrà richiesto di immettere una nuova password per l'account:
 
@@ -195,7 +195,7 @@ Per ulteriori informazioni, vedere la documentazione di Red Hat per [alla scoper
    > [!NOTE]
    > È una procedura consigliata di disporre di un account di Active Directory dedicato per SQL Server, in modo che le credenziali di SQL Server non sono condivise con altri servizi che utilizzano lo stesso account. Tuttavia, è possibile riutilizzare un account di Active Directory esistente se si preferisce, se si conosce la password dell'account (obbligatorio per generare un file keytab nel passaggio successivo).
 
-2. Impostare il ServicePrincipalName (SPN) per questo account utilizzando il `setspn.exe` dello strumento. Il nome SPN deve essere formattato esattamente come specificato nell'esempio seguente: È possibile trovare il nome di dominio completo il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] macchina host eseguendo `hostname --all-fqdns` sul [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host e la porta TCP deve essere 1433 a meno che non è stato configurato [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di utilizzare un numero di porta diverso.
+2. Impostare il ServicePrincipalName (SPN) per questo account utilizzando il `setspn.exe` dello strumento. Il nome SPN deve essere formattato esattamente come specificato nell'esempio seguente. È possibile trovare il nome di dominio completo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] macchina host eseguendo `hostname --all-fqdns` sul [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host e la porta TCP deve essere 1433 a meno che non è stato configurato [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di utilizzare un numero di porta diverso.
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
@@ -218,7 +218,7 @@ Per ulteriori informazioni, vedere la documentazione di Red Hat per [alla scoper
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. Creare un file keytab per l'utente di Active Directory che è stato creato nel passaggio precedente. A tale scopo si utilizzerà  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. Quando richiesto, immettere la password per l'account di Active Directory.
+2. Creare un file keytab con  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**  per l'utente di Active Directory è stato creato nel passaggio precedente. Quando richiesto, immettere la password per l'account di Active Directory.
 
    ```bash
    sudo ktutil
@@ -267,9 +267,9 @@ Per ulteriori informazioni, vedere la documentazione di Red Hat per [alla scoper
 
 Accedere a un computer client utilizzando le credenziali di dominio. Ora è possibile connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] senza immettere di nuovo la password, tramite l'autenticazione di Active Directory. Se si crea un account di accesso per un gruppo di Active Directory, qualsiasi utente di Active Directory che è un membro del gruppo può connettersi allo stesso modo.
 
-Il parametro della stringa di connessione specifiche per i client di utilizzare l'autenticazione di Active Directory dipende dal driver che in uso. Alcuni esempi sono inferiori.
+Il parametro della stringa di connessione specifiche per i client di utilizzare l'autenticazione di Active Directory dipende dal driver che in uso. Si considerino gli esempi seguenti:
 
-* `sqlcmd`in un dominio client Linux
+* `sqlcmd` in un dominio client Linux
 
    Accedere a un client Linux dominio utilizzando `ssh` e le credenziali di dominio:
 

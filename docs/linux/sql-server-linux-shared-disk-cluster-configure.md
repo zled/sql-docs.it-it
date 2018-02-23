@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
-ms.openlocfilehash: ccb754ce5b37e3364ebe68b7b2065ce7b68d050f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 26ccd4389bd02f659110c0fe3ac2cd8b23b240db
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurare l'istanza del cluster di failover, SQL Server in Linux (RHEL)
 
@@ -51,7 +51,7 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
 
 ## <a name="install-and-configure-sql-server"></a>Installare e configurare SQL Server
 
-1. Installare e configurare SQL Server in entrambi i nodi.  Per informazioni dettagliate vedere [installazione di SQL Server in Linux](sql-server-linux-setup.md).
+1. Installare e configurare SQL Server in entrambi i nodi.  Per istruzioni dettagliate, vedere [installazione di SQL Server in Linux](sql-server-linux-setup.md).
 1. Specificare un nodo primario e l'altro come secondario, ai fini di configurazione. Utilizzare questi termini per le operazioni seguenti in questa Guida.  
 1. Nel nodo secondario, arrestare e disabilitare il Server SQL.
     Nell'esempio seguente arresta e disattiva SQL Server: 
@@ -63,7 +63,7 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
     > [!NOTE] 
     > Intervalli di tempo, viene generato per l'istanza di SQL Server e inserito in una chiave Master del Server `var/opt/mssql/secrets/machine-key`. In Linux, SQL Server viene sempre eseguito come un account locale denominato mssql. Poiché si tratta di un account locale, l'identità non è condivise tra i nodi. Pertanto, è necessario copiare la chiave di crittografia dal nodo primario a ogni nodo secondario in modo che ogni account locale mssql possono accedervi per decrittografare la chiave Master del Server. 
 
-1.  Nel nodo primario, creare un account di accesso SQL server per Pacemaker e concedere l'autorizzazione di accesso per l'esecuzione `sp_server_diagnostics`. Pacemaker utilizzerà questo account per verificare quale sia il nodo è in esecuzione SQL Server. 
+1.  Nel nodo primario, creare un account di accesso SQL server per Pacemaker e concedere l'autorizzazione di accesso per l'esecuzione `sp_server_diagnostics`. Pacemaker utilizza questo account per verificare quale sia il nodo è in esecuzione SQL Server. 
 
     ```bash
     sudo systemctl start mssql-server
@@ -207,7 +207,7 @@ In questo esempio creerà un'istanza cluster di failover del gruppo NewLinFCIGrp
 
     \<FolderToMountNFSShare > è la cartella per montare il disco (per i database di sistema e il percorso predefinito, sarebbe /var/opt/mssql/data)
 
-     Un esempio è illustrato di seguito:
+    Di seguito è riportato un esempio:
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr

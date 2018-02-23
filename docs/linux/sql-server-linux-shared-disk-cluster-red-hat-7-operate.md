@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: d3abecd450bbb734304c8c04909c38ae216595ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Funzioni di Red Hat Enterprise Linux cluster dei dischi condivisi per SQL Server
 
@@ -41,7 +41,7 @@ Il diagramma seguente illustra i componenti in un cluster Linux con SQL Server.
 
 ![Red Hat Enterprise Linux 7 condiviso del Cluster SQL disco](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Per ulteriori informazioni su configurazione cluster, le opzioni di agenti di risorsa e la gestione, visitare [la documentazione di riferimento RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Per ulteriori informazioni sulla configurazione del cluster, le opzioni di agenti di risorse e gestione, visitare [la documentazione di riferimento RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 ## <a name = "failManual"></a>Cluster di failover manuale
 
@@ -73,7 +73,7 @@ Consente di visualizzare lo stato attivo del cluster e risorse:
 sudo crm_mon 
 ```
 
-Visualizzare i registri dell'agente di risorsa in`/var/log/cluster/corosync.log`
+Visualizzare i registri dell'agente di risorsa in `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>Aggiungere un nodo a un cluster
 
@@ -105,7 +105,7 @@ Visualizzare i registri dell'agente di risorsa in`/var/log/cluster/corosync.log`
 
 1. Seguire le istruzioni per montare la directory di file di database per la posizione condivisa:
 
-   Dal server NFS, installare`nfs-utils`
+   Dal server NFS, installare `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -224,7 +224,7 @@ PCSD deve essere in esecuzione per poter utilizzare `pcs` strumenti.
 
 ### <a name="current-cluster-status"></a>Stato corrente del cluster 
 
-`sudo pcs status`Restituisce le informazioni di base sullo stato per ogni nodo del cluster, quorum, i nodi, risorse e daemon. 
+`sudo pcs status` Restituisce le informazioni di base sullo stato per ogni nodo del cluster, quorum, i nodi, risorse e daemon. 
 
 Un esempio di un output di quorum pacemaker integro sarà:
 
@@ -253,9 +253,9 @@ pacemaker: active/enabled
 
 Nell'esempio `partition with quorum` significa che un quorum maggioranza dei nodi è online. Se il cluster perde il quorum maggioranza dei nodi, `pcs status` restituirà `partition WITHOUT quorum` e tutte le risorse verranno arrestate. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`Restituisce il nome di tutti i nodi attualmente partecipano al cluster. Se non fanno parte di tutti i nodi, `pcs status` restituisce `OFFLINE: [<nodename>]`.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` Restituisce il nome di tutti i nodi attualmente partecipano al cluster. Se non fanno parte di tutti i nodi, `pcs status` restituisce `OFFLINE: [<nodename>]`.
 
-`PCSD Status`Mostra lo stato del cluster per ogni nodo.
+`PCSD Status` Mostra lo stato del cluster per ogni nodo.
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>Motivi per cui un nodo può essere offline
 
