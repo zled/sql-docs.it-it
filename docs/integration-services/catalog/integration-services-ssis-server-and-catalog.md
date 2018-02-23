@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1ba94eb985130eb7e3f8ad020756c7387df297c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b6451f3d322ff92ee928e6a9ed98759df0bcc2e6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Server e catalogo di Integration Services (SSIS)
   Dopo aver progettato e testato i pacchetti in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], è possibile distribuire i progetti contenenti i pacchetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="high-availability"></a>Disponibilità elevata  
  Analogamente ad altri database utente, il database **SSISDB** supporta il mirroring del database e la replica. Per altre informazioni sul mirroring e la replica, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- È anche possibile fornire la disponibilità elevata di SSISDB e i relativi contenuti usando i gruppi di disponibilità SSIS e AlwaysOn. Per altre informazioni, vedere il post sul blog di Matt Masson relativo a [SSIS con AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873) nel sito Web blogs.msdn.com.  
+ È anche possibile fornire la disponibilità elevata di SSISDB e i relativi contenuti usando i gruppi di disponibilità SSIS e AlwaysOn. Per altre informazioni, vedere [Always On per il catalogo SSIS (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Vedere anche il post di blog di Matt Masson relativo a [SSIS with AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873) (SSIS con AlwaysOn) nel sito Web blogs.msdn.com.  
   
 ##  <a name="ssms"></a> Server Integration Services in SQL Server Management Studio  
  Quando si stabilisce la connessione a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in cui viene ospitato il database di **SSISDB** , gli oggetti seguenti sono visibili in Esplora oggetti:  

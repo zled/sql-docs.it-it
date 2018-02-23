@@ -8,23 +8,24 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: "2"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ccdd2397b21b5a1e5e04b567cec25c0723122a7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b81580d88fc57a88aadd7212c229faf2aa7bcda7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +95,7 @@ Le strutture di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] c
 
 ### <a name="managing-extent-allocations"></a>Gestione delle allocazioni di extent
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono usati due tipi di mappe per la registrazione delle allocazioni di extent: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa due tipi di mappe di allocazione per registrare l'allocazione degli extent: 
 
 - **Mappa di allocazione globale (GAM, Global Allocation Map)**   
   Nelle pagine GAM vengono registrati gli extent allocati. In ogni pagina GAM possono essere registrati riferimenti a 64.000 extent, ovvero a circa 4 GB di dati. La pagina GAM include un bit per ogni extent dell'intervallo che la riguarda. Se il bit è 1, l'extent è disponibile, mentre se è 0, l'extent è allocato. 
@@ -162,7 +163,7 @@ In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] viene allocato un 
 
 ## <a name="tracking-modified-extents"></a>Rilevamento degli extent modificati 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa due strutture di dati interne per rilevare gli extent modificati mediante operazioni di copia bulk e quelli modificati dopo il backup completo più recente. Queste strutture di dati consentono di accelerare in misura significativa le operazioni di backup differenziale. Esse accelerano inoltre la registrazione delle operazioni di copia bulk con database per i quali viene utilizzato il modello di recupero con registrazione minima delle operazioni bulk. Come le pagine mappa di allocazione globale (GAM, Global Allocation Map) e mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map), queste strutture sono mappe di bit in cui ogni bit rappresenta un singolo extent. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa due strutture di dati interne per rilevare gli extent modificati da operazioni di copia bulk e quelli modificati dopo l'ultimo backup completo. Queste strutture di dati consentono di accelerare in misura significativa le operazioni di backup differenziale. Esse accelerano inoltre la registrazione delle operazioni di copia bulk con database per i quali viene utilizzato il modello di recupero con registrazione minima delle operazioni bulk. Come le pagine mappa di allocazione globale (GAM, Global Allocation Map) e mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map), queste strutture sono mappe di bit in cui ogni bit rappresenta un singolo extent. 
 
 - **Mappa differenziale delle modifiche (DCM, Differential Changed Map)**   
    Rileva gli extent modificati dopo l'esecuzione dell'ultima istruzione `BACKUP DATABASE`. Se il bit di un extent è 1, l'extent è stato modificato dopo l'esecuzione dell'ultima istruzione `BACKUP DATABASE`. Se invece è 0, l'extent non è stato modificato. Durante il backup differenziale vengono lette solo le pagine DCM per identificare gli extent modificati. In questo modo, il numero di pagine di cui è necessario eseguire l'analisi durante il backup differenziale risulta notevolmente ridotto. La durata dell'esecuzione di un backup differenziale è proporzionale al numero di extent modificati dopo l'esecuzione dell'ultima istruzione BACKUP DATABASE e non alle dimensioni complessive del database. 

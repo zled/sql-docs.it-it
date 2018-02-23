@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f21ea2afcf50beb80ec3cdfdc39c0d1f79d5adbe
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a7e5ed2cc2df42469baf3b28e36e6c1444d892a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Listener, connettività client e failover dell'applicazione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento contiene informazioni sulla funzionalità di failover delle applicazioni e sulla connettività client di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In questo argomento sono contenute informazioni sulla funzionalità di failover delle applicazioni e sulla connettività client di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
 > [!NOTE]  
 >  Per la maggior parte delle configurazioni comuni del listener, è possibile creare il listener del primo gruppo di disponibilità tramite cmdlet di PowerShell o istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Per ulteriori informazioni, vedere [Attività correlate](#RelatedTasks)più avanti in questo argomento.  
@@ -121,7 +123,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  Con*routing di sola lettura* si intende la capacità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di instradare le connessioni in ingresso dirette a un listener del gruppo di disponibilità a una replica secondaria configurata per consentire carichi di lavoro di sola lettura. Una connessione in ingresso che fa riferimento a un nome del listener del gruppo di disponibilità può essere automaticamente indirizzata a una replica in sola lettura qualora sussistano le condizioni seguenti:  
   
 -   Almeno una replica secondaria viene impostata sull'accesso di sola lettura e ogni replica secondaria di sola lettura e la replica primaria vengono configurate per supportare il routing di sola lettura. Per altre informazioni, vedere [Per configurare repliche di disponibilità per il routing di sola lettura](#ConfigureARsForROR)più avanti in questa sezione.  
-  
+
+-   La stringa di connessione fa riferimento a un database coinvolto nel gruppo di disponibilità. In alternativa, è possibile configurare il database come database predefinito nell'account di accesso usato nella connessione. Per altre informazioni, vedere [questo articolo sul funzionamento dell'algoritmo con il routing di sola lettura](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/).
+
 -   La stringa di connessione fa riferimento a un listener del gruppo di disponibilità e la finalità dell'applicazione della connessione in ingresso è impostata su sola lettura, ad esempio con la parola chiave **Application Intent=ReadOnly** nelle proprietà o negli attributi di connessione oppure nelle stringhe di connessione ODBC o OLEDB. Per altre informazioni, vedere [Finalità dell'applicazione di sola lettura e routing di sola lettura](#ReadOnlyAppIntent)più avanti in questa sezione.  
   
 ###  <a name="ConfigureARsForROR"></a> Per configurare repliche di disponibilità per il routing di sola lettura  
@@ -152,7 +156,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- In questo esempio, il client tenta di connettersi al listener del gruppo di disponibilità denominato `AGListener` sulla porta 1433. (È possibile omettere la porta se il listener del gruppo di disponibilità è in attesa sulla porta 1433).  La stringa di connessione contiene la proprietà **ApplicationIntent** impostata su **ReadOnly**ed è quindi una *stringa di connessione con finalità di lettura*.  Senza questa impostazione, il server non avrebbe tentato di eseguire il routing in sola lettura della connessione.  
+ In questo esempio il client tenta di connettersi al database AdventureWorks tramite un listener del gruppo di disponibilità denominato `AGListener` sulla porta 1433. È possibile omettere la porta se il listener del gruppo di disponibilità è in ascolto sulla porta 1433.  La stringa di connessione contiene la proprietà **ApplicationIntent** impostata su **ReadOnly**ed è quindi una *stringa di connessione con finalità di lettura*.  Senza questa impostazione, il server non avrebbe tentato di eseguire il routing in sola lettura della connessione.  
   
  Il database primario del gruppo di disponibilità elabora la richiesta di routing in sola lettura in ingresso e tenta di trovare una replica online in sola lettura che sia stata aggiunta alla replica primaria e configurata per il routing in sola lettura.  Il client riceve nuovamente le informazioni di connessione dal server della replica primaria e si connette alla replica in sola lettura identificata.  
   

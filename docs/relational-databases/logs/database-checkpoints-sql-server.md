@@ -8,7 +8,8 @@ ms.component: logs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - flushing pages
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3505f3976f56af67a939650d474b85b4adb63c20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b46508013b66ab14175b0edc2710c9c98ed901a9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-checkpoints-sql-server"></a>Checkpoint di database (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un *checkpoint* crea un punto valido noto da cui [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] può iniziare ad applicare le modifiche contenute nel log durante il recupero successivo a un arresto anomalo del sistema.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Un *checkpoint* crea un punto valido noto da cui [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] può iniziare ad applicare le modifiche contenute nel log durante il recupero successivo a un arresto anomalo del sistema.  
  
   
 ##  <a name="Overview"></a> Panoramica   
@@ -48,10 +50,10 @@ Per motivi legati alle prestazioni, tramite il [!INCLUDE[ssDE](../../includes/ss
   
  Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta molti tipi di checkpoint: automatici, indiretti, manuali e interni. Nella tabella seguente vengono riepilogati i tipi di **checkpoint**
   
-|Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaccia|Descrizione|  
+|nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaccia|Description|  
 |----------|----------------------------------|-----------------|  
-|Automatic|EXEC sp_configure **'**intervallo di recupero**','***secondi***'**|Emesso automaticamente in background per rispettare il limite di tempo superiore suggerito dall'opzione di configurazione del server **intervallo di recupero** . I checkpoint automatici vengono eseguiti fino al completamento.  I checkpoint automatici sono limitati in base al numero di scritture in sospeso e al fatto che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] rilevi o meno un aumento della latenza di scrittura superiore ai 50 millisecondi.<br /><br /> Per altre informazioni, vedere [Configurare l'opzione di configurazione del server intervallo di recupero](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indiretto|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDI &#124; MINUTI }|Emesso in background per rispettare un tempo di recupero di destinazione specificato dall'utente per un determinato database. A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], il valore predefinito è 1 minuto. Il valore predefinito è 0 per le versioni precedenti, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server.<br /><br /> Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Automatico|EXEC sp_configure **'**recovery interval**','***seconds***'**|Emesso automaticamente in background per rispettare il limite di tempo superiore suggerito dall'opzione di configurazione del server **intervallo di recupero** . I checkpoint automatici vengono eseguiti fino al completamento.  I checkpoint automatici sono limitati in base al numero di scritture in sospeso e al fatto che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] rilevi o meno un aumento della latenza di scrittura superiore ai 50 millisecondi.<br /><br /> Per altre informazioni, vedere [Configurare l'opzione di configurazione del server intervallo di recupero](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
+|Indiretto|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Emesso in background per rispettare un tempo di recupero di destinazione specificato dall'utente per un determinato database. A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], il valore predefinito è 1 minuto. Il valore predefinito è 0 per le versioni precedenti, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server.<br /><br /> Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|Emesso quando si esegue un comando CHECKPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il checkpoint manuale si verifica nel database corrente per la connessione. Per impostazione predefinita, i checkpoint manuali vengono eseguiti fino al completamento. La limitazione funziona come per i checkpoint automatici.  Facoltativamente, il parametro *checkpoint_duration* specifica una quantità di tempo richiesta, in secondi, per il completamento del checkpoint.<br /><br /> Per altre informazioni, vedere [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
 |Interno|nessuna.|Emesso da varie operazioni del server quali backup e creazione dello snapshot del database per garantire che le immagini del disco corrispondano allo stato corrente del log.|  
   
@@ -70,7 +72,7 @@ Per motivi legati alle prestazioni, tramite il [!INCLUDE[ssDE](../../includes/ss
 |target_recovery_time|'intervallo di recupero'|Tipo di checkpoint utilizzato|  
 |----------------------------|-------------------------|-----------------------------|  
 |0|0|checkpoint automatici il cui intervallo di recupero di destinazione è pari a 1 minuto.|  
-|0|>0|Checkpoint automatici il cui intervallo di recupero di destinazione è specificato dall'impostazione definita dall'utente dell'opzione **sp_configure intervallo di recupero** .|  
+|0|>0|Checkpoint automatici il cui intervallo di recupero di destinazione è specificato dall'impostazione definita dall'utente dell'opzione **sp_configure intervallo di recupero**.|  
 |>0|Non applicabile.|Checkpoint indiretti il cui tempo di recupero di destinazione è determinato dall'impostazione TARGET_RECOVERY_TIME, espresso in secondi.|  
   
 ##  <a name="AutomaticChkpt"></a> Checkpoint automatici  

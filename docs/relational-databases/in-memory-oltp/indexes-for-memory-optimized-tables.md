@@ -8,25 +8,26 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a7c3e4fb4a7082a1874c9fc320ff67a1ce6031b0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 52c415b0c4c7f4913e8d675ce9fe86ad6051e233
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indici in tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Tutte le tabelle ottimizzate per la memoria devono contenere almeno un indice poiché sono gli indici che consentono l'interconnessione delle righe. In una tabella con ottimizzazione per la memoria, ogni indice è anche ottimizzato per la memoria. Le differenze tra un indice in un indice ottimizzato per la memoria e un indice tradizionale in una tabella basata su disco sono molte:  
+Tutte le tabelle ottimizzate per la memoria devono contenere almeno un indice in quanto gli indici consentono l'interconnessione delle righe. In una tabella con ottimizzazione per la memoria, ogni indice è anche ottimizzato per la memoria. Le differenze tra un indice in un indice ottimizzato per la memoria e un indice tradizionale in una tabella basata su disco sono molte:  
 
 - Le righe di dati non vengono archiviate in pagine. Non è pertanto possibile fare riferimento a una raccolta di pagine o extent, né a partizioni o unità di allocazione per ottenere tutte le pagine di una tabella. Il concetto di pagine di indice per uno dei tipi di indici disponibili è presente, ma sono archiviati in modo diverso rispetto agli indici per le tabelle basate su disco. Non presentano il tipo tradizionale di frammentazione all'interno di una pagina e non usano quindi il fattore di riempimento.
 - Le modifiche apportate agli indici nelle tabelle ottimizzate per la memoria durante la manipolazione dei dati non vengono mai scritte su disco. Solo le righe di dati e le modifiche apportate ai dati vengono scritte nel log delle transazioni. 
@@ -64,7 +65,7 @@ Per essere dichiarata con la clausola DURABILITY = SCHEMA\_AND_DATA predefinita,
             DURABILITY = SCHEMA\_AND_DATA);  
     ```
 > [!NOTE]  
-> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hanno un limite di 8 indici per ogni tipo di tabella o tabella ottimizzata per la memoria. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non è più previsto un limite al numero di indici specifici di tabelle ottimizzate per la memoria e tipi di tabella.
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hanno un limite di 8 indici per tabella o tipo di tabella ottimizzata per la memoria. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non è più previsto un limite al numero di indici specifici di tabelle ottimizzate per la memoria e tipi di tabella.
   
 ### <a name="code-sample-for-syntax"></a>Esempio di codice per la sintassi  
   

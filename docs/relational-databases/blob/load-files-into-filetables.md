@@ -8,7 +8,8 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,49 +17,50 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7731c50b99ae5602f29de94bfd098cd9906d48d8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b9eef4bd725efda114727b5d6e7902daa2eaae93
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="load-files-into-filetables"></a>Caricamento di file in FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Descrive come caricare o eseguire la migrazione dei file in tabelle FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Viene descritto come caricare o eseguire la migrazione dei file in tabelle FileTable.  
   
 ##  <a name="BasicsLoadNew"></a> Caricamento o migrazione di file in tabelle FileTable  
  Il metodo scelto per il caricamento o la migrazione di file in una tabella FileTable dipende dalla posizione in cui sono attualmente archiviati i file.  
   
 |Attuale posizione dei file|Opzioni per migrazione|  
 |-------------------------------|---------------------------|  
-|I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di conoscenza dei file.|Poiché una tabella FileTable viene visualizzata come cartella nel file system di Windows, è possibile caricare facilmente file in un nuova tabella FileTable tramite alcuni dei metodi disponibili per lo spostamento o la copia di file. Questi metodi includono Esplora risorse, opzioni della riga di comando come xcopy e robocopy e applicazioni o script personalizzati.<br /><br /> Non è possibile convertire una cartella esistente in tabella FileTable.|  
-|I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include una tabella di metadati contenente puntatori ai file.|Il primo passaggio consiste nello spostare o copiare i file tramite uno dei metodi indicati in precedenza.<br /><br /> Il secondo passaggio consiste nell'aggiornare la tabella esistente di metadati in modo che punti alla nuova posizione dei file.<br /><br /> Per ulteriori informazioni, vedere [Esempio: Migrazione di file dal file system in una tabella FileTable](#HowToMigrateFiles) in questo argomento.|  
+|I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di conoscenza dei file.|Poiché una tabella FileTable viene visualizzata come cartella nel file system di Windows, è possibile caricare facilmente file in un nuova tabella FileTable tramite alcuni dei metodi disponibili per lo spostamento o la copia di file. Questi metodi includono Esplora risorse, opzioni della riga di comando, ad esempio xcopy e robocopy, nonché applicazioni o script personalizzati.<br /><br /> Non è possibile convertire una cartella esistente in tabella FileTable.|  
+|I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include una tabella di metadati contenente puntatori ai file.|Il primo passaggio consiste nello spostare o copiare i file tramite uno dei metodi indicati in precedenza.<br /><br /> Il secondo passaggio consiste nell'aggiornare la tabella esistente di metadati in modo che punti alla nuova posizione dei file.<br /><br /> Per altre informazioni, vedere [Esempio: Migrazione di file dal file system in una tabella FileTable](#HowToMigrateFiles) in questo articolo.|  
   
 ###  <a name="HowToLoadNew"></a> Caricare file in una tabella FileTable  
- Tra i metodi che è possibile utilizzare per caricare file in una tabella FileTable sono inclusi i seguenti:  
+Per caricare i file in una tabella FileTable è possibile usare i metodi seguenti:  
   
 -   Trascinare e rilasciare file dalle cartelle di origine alla nuova cartella FileTable in Esplora risorse.  
   
--   Utilizzare opzioni della riga di comando quali MOVE, COPY, XCOPY o ROBOCOPY dal prompt dei comandi o in un file batch o uno script.  
+-   Usare opzioni della riga di comando quali MOVE, COPY, XCOPY o ROBOCOPY dal prompt dei comandi o in un file o script batch.  
   
--   Scrivere un'applicazione personalizzata in C# o Visual Basic.NET che utilizzi metodi dello spazio dei nomi **System.IO** per spostare o copiare i file.  
+-   Scrivere un'applicazione personalizzata per spostare o copiare i file in C# o Visual Basic.NET. Chiamare metodi dallo spazio dei nomi **System.IO**.  
   
 ###  <a name="HowToMigrateFiles"></a> Esempio: Migrazione di file dal file system in una tabella FileTable  
  In questo scenario i file vengono archiviati nel file system ed è disponibile una tabella di metadati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente puntatori ai file. Si desidera spostare i file in una tabella FileTable, quindi sostituire il percorso UNC originale per ogni file nei metadati con il percorso UNC della tabella FileTable. La funzione [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) consente di raggiungere tale obiettivo.  
   
  Per questo esempio, si supponga la disponibilità di una tabella di database esistente, denominata **PhotoMetadata**, che contiene dati su fotografie. Questa tabella include una colonna **UNCPath** di tipo **varchar**(512) contenente il percorso UNC effettivo di un file con estensione jpg.  
   
- Per eseguire la migrazione dei file di immagine dal file system in una tabella FileTable, è necessario effettuare le operazioni seguenti:  
+ Per eseguire la migrazione dei file di immagine dal file system in una tabella FileTable, seguire questa procedura:  
   
 1.  Creare una nuova tabella FileTable che contenga i file. In questo esempio si usa il nome di tabella **dbo.PhotoTable**ma non viene illustrato il codice per creare la tabella.  
   
 2.  Utilizzare xcopy o uno strumento simile per copiare i file JPG, con la relativa struttura di directory, nella directory radice della tabella FileTable.  
   
-3.  Correggere i metadati nella tabella **PhotoMetadata** tramite codice simile al seguente:  
+3.  Correggere i metadati nella tabella **PhotoMetadata** usando codice simile all'esempio seguente:  
   
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  
@@ -83,9 +85,9 @@ UPDATE PhotoMetadata
 ```  
   
 ##  <a name="BasicsBulkLoad"></a> Caricamento bulk di file in una tabella FileTable  
- Una tabella FileTable si comporta come una normale tabella per operazioni bulk, con le caratteristiche seguenti.  
+ Una tabella FileTable si comporta come una normale tabella per operazioni bulk, con le caratteristiche seguenti:  
   
- Una tabella FileTable include vincoli definiti dal sistema che garantiscono l'integrità dello spazio dei nomi di file/directory. È necessario verificare questi vincoli per i dati caricati in bulk nella tabella FileTable. Poiché alcune operazioni di inserimento bulk consentono di ignorare i vincoli di tabella, si applicano i requisiti seguenti.  
+ Una tabella FileTable include vincoli definiti dal sistema che garantiscono l'integrità dello spazio dei nomi di file e directory. È necessario verificare questi vincoli per i dati caricati in bulk nella tabella FileTable. Poiché alcune operazioni di inserimento bulk consentono di ignorare i vincoli di tabella, si applicano i requisiti seguenti.  
   
 -   Le operazioni di caricamento bulk che impongono vincoli possono essere eseguite su una tabella FileTable esattamente come su qualsiasi altra tabella. Questa categoria include le operazioni seguenti:  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,18 +19,21 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d0e323482ac2d762a24a2ef39f2922764a24d35b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 372c5003b349984098a8d02e6655659e6af3ef58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-replicated-databases"></a>Aggiornare database replicati
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] supporta l'aggiornamento di database replicati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza che sia necessario, durante l'aggiornamento di un nodo, arrestare le attività negli altri nodi. Verificare che vengano osservate le regole relative alle versioni supportate in una topologia:  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] supporta l'aggiornamento di database replicati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza che sia necessario, durante l'aggiornamento di un nodo, arrestare le attività negli altri nodi. Verificare che vengano osservate le regole relative alle versioni supportate in una topologia:  
   
 -   La versione del server di distribuzione è indifferente, purché superiore o uguale alla versione del server di pubblicazione (in molti casi l'istanza del server di distribuzione è la stessa del server di pubblicazione).  
   
@@ -42,7 +46,7 @@ ms.lasthandoff: 01/18/2018
     -   Un Sottoscrittore a una pubblicazione di tipo merge può essere qualsiasi versione inferiore o uguale alla versione del server di pubblicazione.  
   
 > [!NOTE]  
->  Questo argomento è disponibile nella Guida del programma di installazione e nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I collegamenti visualizzati in grassetto nella Guida del programma di installazione si riferiscono ad argomenti disponibili solo nella documentazione online. **È possibile pianificare una strategia di aggiornamento per il server di pubblicazione, sottoscrizione e distribuzione usando le opzioni descritte in questo [post](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+>  Questo articolo è disponibile nella Guida all'installazione e nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I collegamenti visualizzati in grassetto nella Guida all'installazione si riferiscono ad articoli disponibili solo nella documentazione online. **È possibile pianificare una strategia di aggiornamento per il server di pubblicazione, sottoscrizione e distribuzione usando le opzioni descritte in questo [post](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>Esecuzione dell'agente di lettura log per la replica transazionale prima dell'aggiornamento  
  Prima di eseguire l'aggiornamento di [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)], è necessario assicurarsi che tutte le transazioni completate dalle tabelle pubblicate siano state elaborate dall'agente di lettura log. Per assicurarsi che tutte le transazioni siano state elaborate, eseguire i passaggi seguenti per ogni database che contiene pubblicazioni transazionali:  
@@ -66,7 +70,7 @@ ms.lasthandoff: 01/18/2018
   
  La replica di tipo merge archivia i metadati delle pubblicazioni e delle sottoscrizioni in alcune tabelle di sistema nei database di pubblicazione e sottoscrizione. L'esecuzione dell'agente snapshot aggiorna i metadati delle pubblicazioni e l'esecuzione dell'agente di merge aggiorna i metadati delle sottoscrizioni. È semplicemente richiesta la generazione di uno snapshot di pubblicazione. Se una pubblicazione di tipo merge utilizza filtri con parametri, ogni partizione includerà uno snapshot. Non è necessario aggiornare gli snapshot partizionati.  
   
- Eseguire gli agenti da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], da Monitoraggio replica o dalla riga di comando. Per ulteriori informazioni sull'esecuzione dell'agente snapshot, vedere gli argomenti seguenti:  
+ Eseguire gli agenti da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], da Monitoraggio replica o dalla riga di comando. Per altre informazioni sull'esecuzione dell'agente di snapshot, vedere gli articoli seguenti:  
   
 -   [Creazione e applicazione dello snapshot iniziale](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
@@ -76,7 +80,7 @@ ms.lasthandoff: 01/18/2018
   
 -   [Concetti di base relativi ai file eseguibili dell'agente di replica](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
- Per ulteriori informazioni sull'esecuzione dell'agente di merge, vedere gli argomenti seguenti:  
+ Per altre informazioni sull'esecuzione dell'agente di merge, vedere gli articoli seguenti:  
   
 -   [Sincronizzazione di una sottoscrizione pull](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
   

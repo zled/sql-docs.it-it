@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: full-text indexes [SQL Server], about
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 25599964a3e210e59fcbb2a1eade782e2109502b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Creazione e gestione di indici full-text
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Questo argomento descrive come creare, compilare e gestire gli indici full-text in SQL Server.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Questo argomento descrive come creare, compilare e gestire gli indici full-text in SQL Server.
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>Prerequisito - Creare un catalogo full-text
 Prima di poter creare un indice full-text è necessario che sia disponibile un catalogo full-text. Il catalogo è un contenitore virtuale per uno o più indici full-text. Per altre informazioni, vedere [Creare e gestire cataloghi full-text](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
@@ -80,7 +83,7 @@ Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-
     |**Colonne**|Consente di visualizzare le colonne della tabella disponibili per l'indicizzazione full-text. La colonna o le colonne selezionate contengono indici full-text. È possibile selezionare il numero desiderato di colonne disponibili da includere nell'indice full-text. Per altre informazioni, vedere [Proprietà indice full-text &#40;pagina Colonne&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
     |**Pianificazioni**|Utilizzare questa pagina per creare o gestire le pianificazioni per un processo di SQL Server Agent che consente di avviare un popolamento incrementale della tabella per i popolamenti dell'indice full-text. Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Nota: dopo avere chiuso la finestra di dialogo **Proprietà indice full-text** , eventuali nuove pianificazioni vengono associate a un processo di SQL Server Agent (avviare Popolamento incrementale tabella in *database_name*.*table_name*).|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] per salvare le modifiche e uscire dalla finestra di dialogo **Proprietà indice full-text**.  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] per salvare le modifiche e uscire dalla finestra di dialogo **Proprietà indice full-text** .  
   
 ##  <a name="props"></a> Visualizzare le proprietà di tabelle e colonne indicizzate  
  Per ottenere il valore di diverse proprietà di indicizzazione full-text, è possibile utilizzare varie funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] come OBJECTPROPERTYEX. Queste informazioni sono utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text.  
@@ -131,7 +134,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>Trovare l'identificatore della colonna chiave full-text  
   
-Ogni tabella full-text dispone di una colonna usata per applicare righe univoche per la tabella (*colonna chiave* *univoca*). La proprietà **TableFulltextKeyColumn**, ottenuta dalla funzione OBJECTPROPERTYEX contiene l'ID della colonna chiave univoca.  
+Ogni tabella abilitata per la funzionalità full-text include una colonna che viene usata per applicare righe univoche per la tabella (la *colonna chiave**univoca*). La proprietà **TableFulltextKeyColumn**, ottenuta dalla funzione OBJECTPROPERTYEX contiene l'ID della colonna chiave univoca.  
  
 Per ottenere questo identificatore, è possibile utilizzare un'istruzione SELECT per chiamare la funzione OBJECTPROPERTYEX. Usare la funzione OBJECT_ID per convertire il nome della tabella (*table_name*) nell'ID tabella e specificare la proprietà **TableFulltextKeyColumn** come illustrato di seguito:  
   

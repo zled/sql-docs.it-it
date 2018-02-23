@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ade7dbffabb11419e8eeb43f50fa2ecf6d27dc9
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c1ffc5cc5f68271343a078cd02296b9d6b42c3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] In passato non era possibile distinguere il contenuto delle proprietà del documento dal contenuto del corpo del documento. Ciò limitava le query full-text a ricerche generiche in documenti interi. Attualmente, invece, è possibile configurare un indice full-text per supportare la ricerca con ambito proprietà di particolari proprietà, ad esempio Author e Title, per tipi di documenti supportati in una colonna di dati binari **varbinary**, **varbinary(max)** (incluso **FILESTREAM**) o **image** . Questa modalità di ricerca è nota come *ricerca basata su proprietà*.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In passato non era possibile distinguere il contenuto delle proprietà del documento dal contenuto del corpo del documento. Ciò limitava le query full-text a ricerche generiche in documenti interi. Attualmente, invece, è possibile configurare un indice full-text per supportare la ricerca con ambito proprietà di particolari proprietà, ad esempio Author e Title, per tipi di documenti supportati in una colonna di dati binari **varbinary**, **varbinary(max)** (incluso **FILESTREAM**) o **image** . Questa modalità di ricerca è nota come *ricerca basata su proprietà*.  
   
  La possibilità di usare la ricerca basata su proprietà in un tipo specifico di documento è determinata dal [filtro](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) associato. Per alcuni tipi di documento, il filtro IFilter associato estrae alcune o tutte le proprietà definite per quel tipo di documento, nonché il contenuto del corpo del documento. È possibile configurare un indice full-text per supportare la ricerca basata su proprietà solo in proprietà estratte da un filtro IFilter durante l'indicizzazione full-text. I filtri IFilter in grado di estrarre alcune proprietà del documento comprendono i filtri IFilter per tipi di documento di Microsoft Office, ad esempio docx, xlsx e pptx. D'altra parte, il filtro IFilter XML non genera proprietà.  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/02/2018
   
  ![Indice full-text che usa un elenco di proprietà di ricerca](../../relational-databases/search/media/ifts-spl-and-fti.gif "Indice full-text che usa un elenco di proprietà di ricerca")  
   
- I termini di ricerca nella proprietà Title, ovvero "Favorite," "Biking" e "Trails", sono associati all'ID di proprietà interno 1 assegnato a Title per questo indice. I termini di ricerca nella proprietà Keywords, ovvero "biking" e "mountain", sono associati all'ID di proprietà interno 2 assegnato a Tags per questo indice. Per i termini di ricerca nella proprietà Author, ovvero "Jane" e "Doe", e per i termini di ricerca nel corpo del documento, l'ID di proprietà interno è pari a 0. Si noti che il termine "biking" è presente nella proprietà Title, nella proprietà Keywords (Tags) e nel corpo del documento. Nei risultati di una ricerca basata su proprietà per "biking" nella proprietà Title o Keywords (Tags) verrà restituito questo documento. Anche una query full-text generica per "biking" restituirebbe questo documento, come se l'indice non fosse configurato per la ricerca basata su proprietà. Questo documento non verrà restituito da una ricerca basata su proprietà per "biking" nella proprietà Author.  
+ I termini di ricerca nella proprietà Title, ovvero "Favorite," "Biking" e "Trails", sono associati all'ID di proprietà interno 1 assegnato a Title per questo indice. I termini di ricerca nella proprietà Keywords, ovvero "biking" e "mountain", sono associati all'ID di proprietà interno 2 assegnato a Tags per questo indice. Per i termini di ricerca nella proprietà Author, ovvero "Jane" e "Doe", e per i termini di ricerca nel corpo del documento, l'ID di proprietà interno è pari a 0. Il termine "biking" è presente nella proprietà Title, nella proprietà Keywords (Tags) e nel corpo del documento. Nei risultati di una ricerca basata su proprietà per "biking" nella proprietà Title o Keywords (Tags) verrà restituito questo documento. Anche una query full-text generica per "biking" restituirebbe questo documento, come se l'indice non fosse configurato per la ricerca basata su proprietà. Questo documento non verrà restituito da una ricerca basata su proprietà per "biking" nella proprietà Author.  
   
  In una query full-text con ambito proprietà vengono utilizzati gli ID di proprietà interni registrati per l'elenco di proprietà di ricerca corrente dell'indice full-text.  
   
@@ -105,7 +107,7 @@ ms.lasthandoff: 01/02/2018
   
 -   Identificatore di tipo integer della proprietà  
   
-     In ogni proprietà di ricerca è disponibile un identificatore univoco all'interno del set di proprietà. Si noti che per una determinata proprietà l'identificatore potrebbe essere un tipo integer o una stringa, tuttavia la ricerca full-text supporta solo identificatori di tipo integer.  
+     In ogni proprietà di ricerca è disponibile un identificatore univoco all'interno del set di proprietà. Per una determinata proprietà, l'identificatore può essere un tipo integer o una stringa, tuttavia la ricerca full-text supporta solo identificatori di tipo integer.  
   
 -   Nome proprietà  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 01/02/2018
   
  **Per aggiungere una proprietà a un elenco di proprietà di ricerca con Transact-SQL**  
   
- Usare l'istruzione [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) con i valori ottenuti mediante uno dei metodi descritti nell'argomento [Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
+ Usare l'istruzione [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) con i valori ottenuti mediante uno dei metodi descritti nell'articolo [Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
   
  Nell'esempio seguente viene illustrato l'utilizzo di questi valori in caso di aggiunta di una proprietà a un elenco di proprietà di ricerca:  
   
@@ -201,7 +203,7 @@ GO
   
 6.  Nella finestra di dialogo dell' **editor dell'elenco delle proprietà di ricerca** usare la griglia Proprietà per aggiungere o rimuovere proprietà di ricerca:  
   
-    1.  Per rimuovere una proprietà del documento, fare clic sull'intestazione di riga a sinistra della proprietà e premere CANC.  
+    1.  Per rimuovere una proprietà del documento, fare clic sull'intestazione di riga a sinistra della proprietà e preme CANC.  
   
     2.  Per aggiungere una proprietà del documento, fare clic nella riga vuota nella parte inferiore dell'elenco, a destra di **\***, quindi immette i valori per la nuova proprietà.  
   

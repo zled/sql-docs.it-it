@@ -8,25 +8,29 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07ad726c7ba7c4c51bc98881aafbb2dd15228f78
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c5f13e2dff76b3dc2b3033d4f68fe62602b245a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Aggiornare SQL Server usando l'Installazione guidata (programma di installazione)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un singolo albero delle funzionalità per l'aggiornamento sul posto dei componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+L'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un singolo albero delle funzionalità per l'aggiornamento sul posto dei componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 >[!WARNING]  
 >Quando si aggiorna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene sovrascritta e non sarà più disponibile nel computer. 
@@ -109,7 +113,7 @@ ms.lasthandoff: 01/18/2018
   
      **Istanze installate**  : la griglia visualizzerà le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguita l'installazione. Se nel computer è già installata un'istanza predefinita, è necessario installare un'istanza denominata di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
-13. Il flusso di lavoro relativo alla parte rimanente di questo argomento dipende dalle funzionalità specificate per l'installazione. Le pagine visualizzate dipendono dalle selezioni effettuate.  
+13. Il flusso di lavoro relativo alla parte rimanente di questo articolo dipende dalle funzionalità specificate per l'installazione. Le pagine visualizzate dipendono dalle selezioni effettuate.  
   
 14. Nella pagina Configurazione server - Account di servizio gli account del servizio predefiniti vengono visualizzati per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità sottoposte ad aggiornamento.  
   

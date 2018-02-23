@@ -20,22 +20,23 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c00d5d9eea412be35b5cb5d53008237d51c95898
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f5c422a4d1a25ed210f857b9de31aaadec481847
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Disinstallare un'istanza esistente di SQL Server (Programma di installazione)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
  > Per contenuti relativi a versioni precedenti di SQL Server, vedere [Disinstallare un'istanza esistente di SQL Server (Programma di installazione)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx).
 
-  In questo articolo viene descritto come disinstallare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I passaggi inclusi in questo argomento consentono inoltre di preparare il sistema per poter reinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  In questo articolo viene descritto come disinstallare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I passaggi inclusi in questo articolo consentono anche di preparare il sistema per la reinstallazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 >**IMPORTANTE** Per disinstallare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario essere un amministratore locale che dispone dell'autorizzazione necessaria per accedere come servizio.  
   

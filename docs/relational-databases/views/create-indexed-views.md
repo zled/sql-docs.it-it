@@ -24,11 +24,11 @@ caps.latest.revision:
 author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d291e4ab071aeafd6db43f48749e4e9ff9bcfd25
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: dc562d47b04c20a3878bc0e1b8c63bf5d1151e09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,73 +37,73 @@ Questo argomento descrive come creare indici in una vista. Il primo indice creat
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Per la creazione e la corretta implementazione di una vista indicizzata, è fondamentale effettuare le operazioni seguenti:  
   
-1.  Verificare che le opzioni SET siano corrette per tutte le tabelle esistenti a cui verrà fatto riferimento nella vista.   
-2.  Verificare che le opzioni SET della sessione siano impostate in modo corretto prima di creare qualsiasi tabella e la vista.  
-3.  Verificare che la definizione della vista sia deterministica.  
-4.  Creare la vista usando l'opzione `WITH SCHEMABINDING`.  
-5.  Creare l'indice cluster univoco per la vista.  
+1.  Verificare che le opzioni SET siano corrette per tutte le tabelle esistenti a cui verrà fatto riferimento nella vista.    
+2.  Verificare che le opzioni SET della sessione siano impostate in modo corretto prima di creare qualsiasi tabella e la vista.   
+3.  Verificare che la definizione della vista sia deterministica.   
+4.  Creare la vista usando l'opzione `WITH SCHEMABINDING`.   
+5.  Creare l'indice cluster univoco per la vista.   
 
 > [!IMPORTANT]
-> Durante l'esecuzione di DML<sup>1</sup> in una tabella cui viene fatto riferimento da un numero elevato di viste indicizzate o da un numero minore di viste indicizzate molto complesse, è necessario aggiornare anche le viste indicizzate cui viene fatto riferimento. Di conseguenza, è possibile che le prestazioni delle query DML si riducano notevolmente o, in alcuni casi, non venga prodotto un piano di query.
-> In questi scenari, testare le query DML prima dell'uso in produzione, analizzare il piano di query e ottimizzare/semplificare l'istruzione DML.
->
-> <sup>1</sup> Ad esempio, operazioni UPDATE, DELETE o INSERT.
+> Durante l'esecuzione di DML<sup>1</sup> in una tabella cui viene fatto riferimento da un numero elevato di viste indicizzate o da un numero minore di viste indicizzate molto complesse, è necessario aggiornare anche le viste indicizzate cui viene fatto riferimento. Di conseguenza, è possibile che le prestazioni delle query DML si riducano notevolmente o, in alcuni casi, non venga prodotto un piano di query.   
+> In questi scenari, testare le query DML prima dell'uso in produzione, analizzare il piano di query e ottimizzare/semplificare l'istruzione DML.   
+>   
+> <sup>1</sup> Ad esempio, operazioni UPDATE, DELETE o INSERT.   
   
 ###  <a name="Restrictions"></a> Opzioni SET necessarie per le viste indicizzate  
- La valutazione di una stessa espressione può produrre risultati diversi nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] se sono attive diverse opzioni SET quando la query viene eseguita. Ad esempio, dopo aver impostato l'opzione SET `CONCAT_NULL_YIELDS_NULL` su ON, l'espressione **'**abc**'** + NULL restituisce il valore NULL. Tuttavia, dopo aver impostato `CONCAT_NULL_YIEDS_NULL` su OFF, la stessa espressione produce **'**abc**'**.  
+La valutazione di una stessa espressione può produrre risultati diversi nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] se sono attive diverse opzioni SET quando la query viene eseguita. Ad esempio, dopo aver impostato l'opzione SET `CONCAT_NULL_YIELDS_NULL` su ON, l'espressione `'abc' + NULL` restituisce il valore `NULL`. Tuttavia, dopo aver impostato `CONCAT_NULL_YIEDS_NULL` su OFF, la stessa espressione produce `'abc'`.  
   
- Per essere certi che le viste possano essere gestite in modo corretto e restituiscano risultati coerenti, è necessario usare valori fissi per varie opzioni SET delle viste indicizzate. Le opzioni SET specificate nella tabella seguente devono essere impostate sui valori indicati nella colonna **Valore obbligatorio** quando si verificano le seguenti condizioni:  
+Per essere certi che le viste possano essere gestite in modo corretto e restituiscano risultati coerenti, è necessario usare valori fissi per varie opzioni SET delle viste indicizzate. Le opzioni SET specificate nella tabella seguente devono essere impostate sui valori indicati nella colonna **Valore obbligatorio** quando si verificano le seguenti condizioni:  
   
--   Vengono creati la vista e gli indici successivi nella vista.  
+-   Vengono creati la vista e gli indici successivi nella vista.    
   
--   Le tabelle di base a cui viene fatto riferimento nella vista quando viene creata la tabella.  
+-   Le tabelle di base a cui viene fatto riferimento nella vista quando viene creata la tabella.    
   
--   Quando viene eseguita un'operazione di inserimento, aggiornamento o eliminazione su una qualsiasi tabella usata nella vista indicizzata, incluse operazioni quali la copia bulk, la replica e le query distribuite.  
+-   Quando viene eseguita un'operazione di inserimento, aggiornamento o eliminazione su una qualsiasi tabella usata nella vista indicizzata, incluse operazioni quali la copia bulk, la replica e le query distribuite.    
   
--   Quando la vista indicizzata viene usata in Query Optimizer per generare il piano di query.  
+-   Quando la vista indicizzata viene usata in Query Optimizer per generare il piano di query.   
   
-    |Opzioni SET|Valore obbligatorio|Valore server predefinito|Default<br /><br /> OLE DB e ODBC predefinito|Default<br /><br /> DB-Library predefinito|  
-    |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
-    |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|Opzioni SET|Valore obbligatorio|Valore server predefinito|Default<br /><br /> OLE DB e ODBC predefinito|Default<br /><br /> DB-Library predefinito|  
+|-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
+|ANSI_NULLS|ON|ON|ON|OFF|  
+|ANSI_PADDING|ON|ON|ON|OFF|  
+|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
+|ARITHABORT|ON|ON|OFF|OFF|  
+|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+|NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
   
-     <sup>1</sup> L'impostazione di `ANSI_WARNINGS` su ON imposta in modo implicito `ARITHABORT` su ON.  
+<sup>1</sup> L'impostazione di `ANSI_WARNINGS` su ON imposta in modo implicito `ARITHABORT` su ON.  
   
- Se si usa una connessione server OLE DB o ODBC, l'unico valore da modificare è l'impostazione `ARITHABORT`. Tutti i valori DB-Library devono essere impostati in modo corretto a livello di server tramite **sp_configure** oppure dall'applicazione tramite il comando SET.  
+Se si usa una connessione server OLE DB o ODBC, l'unico valore da modificare è l'impostazione `ARITHABORT`. Tutti i valori DB-Library devono essere impostati in modo corretto a livello di server tramite **sp_configure** oppure dall'applicazione tramite il comando SET.  
   
 > [!IMPORTANT]  
 > È consigliabile impostare l'opzione utente `ARITHABORT` su ON per l'intero server immediatamente dopo la creazione della prima vista indicizzata o del primo indice in una colonna calcolata in qualsiasi database del server.  
   
 ### <a name="deterministic-views"></a>Viste deterministiche  
- La definizione di una vista indicizzata deve essere deterministica. Una vista è deterministica se tutte le espressioni nell'elenco di selezione, nonché nelle clausole `WHERE` e `GROUP BY`, sono deterministiche. Le espressioni deterministiche restituiscono sempre lo stesso risultato ogni volta che vengono valutate con un set specifico di valori di input. Nelle espressioni deterministiche è possibile usare solo funzioni deterministiche. La funzione `DATEADD`, ad esempio, è deterministica perché restituisce sempre lo stesso risultato per un dato set di valori dei relativi tre parametri. `GETDATE` non è deterministica perché viene sempre richiamata con lo stesso argomento, ma il valore restituito cambia ogni volta che viene eseguita.  
+La definizione di una vista indicizzata deve essere deterministica. Una vista è deterministica se tutte le espressioni nell'elenco di selezione, nonché nelle clausole `WHERE` e `GROUP BY`, sono deterministiche. Le espressioni deterministiche restituiscono sempre lo stesso risultato ogni volta che vengono valutate con un set specifico di valori di input. Nelle espressioni deterministiche è possibile usare solo funzioni deterministiche. La funzione `DATEADD`, ad esempio, è deterministica perché restituisce sempre lo stesso risultato per un dato set di valori dei relativi tre parametri. `GETDATE` non è deterministica perché viene sempre richiamata con lo stesso argomento, ma il valore restituito cambia ogni volta che viene eseguita.  
   
- Per determinare se una colonna della vista è deterministica, usare la proprietà **IsDeterministic** della funzione [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) . Usare la proprietà **IsPrecise** della funzione COLUMNPROPERTY per determinare se una colonna deterministica di una vista con associazione a schema è precisa. Tramite la funzione COLUMNPROPERTY viene restituito 1 se la proprietà è TRUE, 0 se la proprietà è FALSE e NULL se il valore di input non è valido. Questo significa che la colonna non è deterministica o non è precisa.  
+Per determinare se una colonna della vista è deterministica, usare la proprietà **IsDeterministic** della funzione [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) . Usare la proprietà **IsPrecise** della funzione `COLUMNPROPERTY` per determinare se una colonna deterministica in una vista con associazione di schema è precisa. `COLUMNPROPERTY` restituisce 1 se TRUE, 0 se FALSE e NULL se il valore di input non è valido. Questo significa che la colonna non è deterministica o non è precisa.  
   
- Se in un'espressione deterministica sono contenute espressioni float, il risultato esatto può dipendere dall'architettura del processore o dalla versione del microcodice. Per garantire l'integrità dei dati, le espressioni di questo tipo possono essere usate solo come colonne non chiave delle viste indicizzate. Le espressioni deterministiche che non contengono espressioni float sono definite precise. Solo le espressioni deterministiche precise possono essere usate in colonne chiave e clausole WHERE o GROUP BY di viste indicizzate.  
+Se in un'espressione deterministica sono contenute espressioni float, il risultato esatto può dipendere dall'architettura del processore o dalla versione del microcodice. Per garantire l'integrità dei dati, le espressioni di questo tipo possono essere usate solo come colonne non chiave delle viste indicizzate. Le espressioni deterministiche che non contengono espressioni float sono definite precise. Nelle colonne chiave e nelle clausole `WHERE` o `GROUP BY` delle viste indicizzate è possibile usare solo espressioni deterministiche precise.  
 
 ### <a name="additional-requirements"></a>Requisiti aggiuntivi  
- Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni deterministiche, è necessario che vengano soddisfatti i requisiti seguenti:  
+Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni deterministiche, è necessario che vengano soddisfatti i requisiti seguenti:  
   
--   L'utente che esegue `CREATE INDEX` deve essere il proprietario della vista.  
+-   L'utente che esegue `CREATE INDEX` deve essere il proprietario della vista.    
   
--   Quando si crea l'indice, l'opzione `IGNORE_DUP_KEY` deve essere impostata su OFF (impostazione predefinita).  
+-   Quando si crea l'indice, l'opzione `IGNORE_DUP_KEY` deve essere impostata su OFF (impostazione predefinita).    
   
--   I riferimenti alle tabelle devono essere specificati come nomi composti da due parti, ovvero *schema***.***nometabella* nella definizione della vista.  
+-   I riferimenti alle tabelle devono essere specificati come nomi composti da due parti, ovvero *schema***.***nometabella* nella definizione della vista.    
   
--   Le funzioni definite dall'utente a cui viene fatto riferimento nella vista devono essere create usando l'opzione `WITH SCHEMABINDING`.  
+-   Le funzioni definite dall'utente a cui viene fatto riferimento nella vista devono essere create usando l'opzione `WITH SCHEMABINDING`.    
   
--   I riferimenti alle funzioni definite dall'utente nella vista devono essere specificati come nomi composti da due parti, ovvero *schema***.***funzione*.  
+-   I riferimenti alle funzioni definite dall'utente nella vista devono essere specificati come nomi composti da due parti, ovvero *\<schema>***.***\<funzione>*.   
   
--   La proprietà di accesso ai dati di una funzione definita dall'utente deve essere `NO SQL` e la proprietà di accesso esterno deve essere `NO`.  
+-   La proprietà di accesso ai dati di una funzione definita dall'utente deve essere `NO SQL` e la proprietà di accesso esterno deve essere `NO`.   
   
--   Le funzioni CLR (Common Language Runtime) possono essere incluse solo nell'elenco SELECT della vista ma non possono fare parte della definizione della chiave di indice cluster. Le funzioni CLR non possono essere incluse nella clausola WHERE della vista o nella clausola ON di un'operazione JOIN nella vista.  
+-   Le funzioni CLR (Common Language Runtime) possono essere incluse solo nell'elenco SELECT della vista ma non possono fare parte della definizione della chiave di indice cluster. Le funzioni CLR non possono essere incluse nella clausola WHERE della vista o nella clausola ON di un'operazione JOIN nella vista.   
   
--   Le proprietà delle funzioni CLR e dei metodi di tipi CLR definiti dall'utente usati nella definizione della vista devono essere impostate come illustrato nella tabella seguente.  
+-   Le proprietà delle funzioni CLR e dei metodi di tipi CLR definiti dall'utente usati nella definizione della vista devono essere impostate come illustrato nella tabella seguente.   
   
     |Proprietà|Nota|  
     |--------------|----------|  
@@ -138,12 +138,12 @@ Questo argomento descrive come creare indici in una vista. Il primo indice creat
 -   Se la definizione della vista include una clausola `GROUP BY`, la chiave dell'indice cluster univoco può contenere riferimenti solo alle colonne specificate nella clausola `GROUP BY`.  
   
 > [!IMPORTANT]  
-> Le viste indicizzate non sono supportate su query temporali (query che usano una clausola `FOR SYSTEM_TIME`)  
+> Le viste indicizzate non sono supportate sulle query temporali, ovvero quelle che usano la clausola `FOR SYSTEM_TIME`.  
 
 ###  <a name="Recommendations"></a> Indicazioni  
  Quando si fa riferimento a valori letterali stringa **datetime** e **smalldatetime** nelle viste indicizzate, è consigliabile convertire in modo esplicito il valore letterale nel tipo di dati desiderato usando uno stile del formato di data deterministico. Per un elenco degli stili del formato di data deterministici, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Per altre informazioni sulle espressioni deterministiche e non deterministiche, vedere la sezione [Considerazioni](#nondeterministic) in questa pagina.
 
-Durante l'esecuzione di DML, ad esempio di UPDATE, DELETE o INSERT, in una tabella cui viene fatto riferimento da un numero elevato di viste indicizzate o da un numero minore di viste indicizzate molto complesse, è necessario aggiornare anche le viste indicizzate. Di conseguenza, è possibile che le prestazioni delle query DML si riducano notevolmente o, in alcuni casi, non venga prodotto un piano di query. In questi scenari, testare le query DML prima dell'uso in produzione, analizzare il piano di query e ottimizzare/semplificare l'istruzione DML.
+Durante l'esecuzione di DML, ad esempio di `UPDATE`, `DELETE` o `INSERT`, in una tabella cui viene fatto riferimento da un numero elevato di viste indicizzate o da un numero minore di viste indicizzate molto complesse, è necessario aggiornare anche le viste indicizzate. Di conseguenza, è possibile che le prestazioni delle query DML si riducano notevolmente o, in alcuni casi, non venga prodotto un piano di query. In questi scenari, testare le query DML prima dell'uso in produzione, analizzare il piano di query e ottimizzare/semplificare l'istruzione DML.
   
 ###  <a name="Considerations"></a> Considerazioni  
  L'impostazione dell'opzione **large_value_types_out_of_row** delle colonne di una vista indicizzata è ereditata dall'impostazione della colonna corrispondente nella tabella di base. Questo valore viene impostato mediante [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). L'impostazione predefinita per le colonne generate da espressioni è 0. Ciò significa che i tipi per valori di grandi dimensioni vengono archiviati all'interno delle righe.  
@@ -161,7 +161,7 @@ Durante l'esecuzione di DML, ad esempio di UPDATE, DELETE o INSERT, in una tabel
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Permissions  
- Sono richieste l'autorizzazione CREATE VIEW per il database e l'autorizzazione ALTER per lo schema in cui viene creata la vista.  
+ Richiede l'autorizzazione **CREATE VIEW** per il database e l'autorizzazione **ALTER** per lo schema in cui viene creata la vista.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
@@ -220,7 +220,7 @@ Durante l'esecuzione di DML, ad esempio di UPDATE, DELETE o INSERT, in una tabel
     GO  
     ```  
   
- Per altre informazioni, vedere [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+Per altre informazioni, vedere [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   

@@ -20,16 +20,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gestire le dimensioni del file di log delle transazioni
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come monitorare le dimensioni di un log delle transazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compattare il log delle transazioni, aumentare le dimensioni di un file di log delle transazioni, ottimizzare la velocità di aumento del log delle transazioni **tempdb** e controllare l'aumento delle dimensioni di un file di log delle transazioni.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Questo argomento descrive come monitorare le dimensioni di un log delle transazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compattare il log delle transazioni, aumentare le dimensioni di un file di log delle transazioni, ottimizzare la velocità di aumento del log delle transazioni **tempdb** e controllare l'aumento delle dimensioni di un file di log delle transazioni.  
 
 ##  <a name="MonitorSpaceUse"></a>Monitorare l'uso dello spazio del log  
 Monitorare l'uso dello spazio del log tramite [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md). Questo DMV restituisce informazioni sulla quantità di spazio del log attualmente usata e indica quando il log delle transazioni deve essere troncato. 
@@ -104,11 +105,11 @@ Di seguito sono elencate alcune indicazioni di carattere generale relative all'u
       |-------------|--------------------|  
       |A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Dati 64 MB. File di log 64 MB.|  
       |A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 1 MB. File di log 10%.|  
-      |Prima di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 10%. File di log 10%.|  
+      |Precedente a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 10%. File di log 10%.|  
 
--   Un incremento della crescita ridotto può generare molti file [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) piccoli e ridurre le prestazioni. Per determinare la distribuzione VLF ottimale per le dimensioni correnti del log delle transazioni di tutti i database in un'istanza specifica e gli incrementi della crescita necessari per ottenere le dimensioni richieste, vedere questo [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+-   Un incremento della crescita ridotto può generare molti file [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) piccoli e ridurre le prestazioni. Per determinare la distribuzione dei file di log virtuali ottimale per le dimensioni correnti del log delle transazioni di tutti i database in un'istanza specifica e gli incrementi della crescita necessari per ottenere le dimensioni richieste, vedere questo [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   Un incremento della crescita elevato può generare pochi file [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) di grandi dimensioni e ridurre a sua volta le prestazioni. Per determinare la distribuzione VLF ottimale per le dimensioni correnti del log delle transazioni di tutti i database in un'istanza specifica e gli incrementi della crescita necessari per ottenere le dimensioni richieste, vedere questo [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
+-   Un incremento della crescita elevato può generare pochi file [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) di grandi dimensioni e ridurre a sua volta le prestazioni. Per determinare la distribuzione dei file di log virtuali ottimale per le dimensioni correnti del log delle transazioni di tutti i database in un'istanza specifica e gli incrementi della crescita necessari per ottenere le dimensioni richieste, vedere questo [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
 
 -   Anche con l'aumento automatico attivato è possibile che si riceva un messaggio indicante che il log delle transazioni è pieno, se questo non può crescere a sufficienza per soddisfare le esigenze della query. Per altre informazioni su come modificare l'incremento della crescita, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
 

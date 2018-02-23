@@ -20,21 +20,22 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 528ccfba2c8060cc73edfbaff29b714b3bdb7e30
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fc308b9b961ab98c5c44e8f6708e40cb9cf61ef0
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>Dati BLOB (Binary Large Object) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce soluzioni per l'archiviazione di file e documenti nel database o su dispositivi di archiviazione remoti.  
   
-##  <a name="section"></a> Contenuto della sezione  
-### <a name="compare-options-for-storing-blobs-40sql-server41relational-databasesblobcompare-options-for-storing-blobs-sql-servermd"></a>[Confrontare opzioni per l'archiviazione di BLOB &#40;SQL Server&#41;](../../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md)  
+## <a name="compare-options-for-storing-blobs-in-sql-server"></a>Confrontare opzioni per l'archiviazione di BLOB in SQL Server
 
-Confrontare i vantaggi di FILESTREAM, FileTable e Archivio BLOB remoti.  
+Confrontare i vantaggi di FILESTREAM, FileTable e Archivio BLOB remoti. Vedere [Confrontare opzioni per l'archiviazione di BLOB &#40;SQL Server&#41;](../../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md).
   
+##  <a name="options-for-storing-blobs"></a>Opzioni per l'archiviazione di BLOB  
+
 ### <a name="filestream-40sql-server41relational-databasesblobfilestream-sql-servermd"></a>[FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
 
 FILESTREAM consente l'archiviazione nel file system di dati non strutturati, ad esempio documenti e immagini, da parte delle applicazioni basate su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le applicazioni possono sfruttare le numerose API di flusso e le prestazioni del file system e contemporaneamente mantenere la coerenza transazionale tra i dati non strutturati e i corrispondenti dati strutturati.  

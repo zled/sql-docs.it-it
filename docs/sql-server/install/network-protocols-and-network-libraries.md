@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +24,21 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f1f07cf2c53676a37f2c26dfebfd3ed623ec7a8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a89bec1046eab92432ffa53a8de3618903f7ab6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolli e librerie di rete
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un server può restare in attesa o monitorare più protocolli di rete contemporaneamente. È tuttavia necessario configurare ogni protocollo. Se un particolare protocollo non è configurato, il server non può restare in attesa su tale protocollo. Le configurazioni dei protocolli possono essere modificate dopo l'installazione utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Un server può consentire di restare in attesa su più protocolli di rete contemporaneamente o di monitorarli. È tuttavia necessario configurare ogni protocollo. Se un particolare protocollo non è configurato, il server non può restare in attesa su tale protocollo. Le configurazioni dei protocolli possono essere modificate dopo l'installazione utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="default-sql-server-network-configuration"></a>Configurazione di rete predefinita di SQL Server  
  Un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene configurata per la porta TCP/IP 1433 e la named pipe \\\\\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurate per le porte dinamiche TCP, con un numero di porta assegnato dal sistema operativo.  
@@ -87,7 +90,7 @@ ms.lasthandoff: 12/05/2017
   
  Per altre informazioni sugli endpoint, vedere [Configurazione del Motore di database per l'attesa su più porte TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) e [Viste del catalogo degli endpoint &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
   
- Per ulteriori informazioni sulle configurazioni di rete di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere gli argomenti seguenti nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ Per altre informazioni sulle configurazioni di rete di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere gli articoli seguenti nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Configurazione di rete del server](../../database-engine/configure-windows/server-network-configuration.md)  
   

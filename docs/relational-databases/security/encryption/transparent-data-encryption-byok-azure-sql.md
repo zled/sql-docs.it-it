@@ -19,11 +19,11 @@ ms.devlang: na
 ms.topic: article
 ms.date: 01/31/2018
 ms.author: aliceku
-ms.openlocfilehash: 8c192f5d1114ddab7d75761b385e91c0f22e481b
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption con supporto Bring Your Own Key (ANTEPRIMA) per database SQL di Azure e SQL Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -59,9 +59,8 @@ Quando TDE viene configurato per la prima volta per l'uso di una protezione TDE 
 
 ### <a name="general-guidelines"></a>Linee guida generali
 - Assicurarsi che Azure Key Vault e il database SQL di Azure si trovino nello stesso tenant.  Le interazioni dell'insieme di credenziali delle chiavi e del server tra tenant **non sono supportate**.
-
 - Definire le sottoscrizioni da usare per le risorse necessarie poiché se il server viene spostato successivamente in un'altra sottoscrizione sarà necessario eseguire una nuova impostazione di TDE con BYOK.
-- Configurare Azure Key Vault in una sottoscrizione singola esclusivamente per le protezioni TDE del database SQL.  Poiché tutti i database associati a un server logico usano la stessa protezione TDE, può essere utile raggruppare i database di un server logico. 
+- Quando si configura TDE con BYOK è importante valutare il carico che le ripetute operazioni di wrapping e annullamento del wrapping determinano sull'insieme di credenziali delle chiavi. Ad esempio, poiché tutti i database associati a un server logico usano la stessa protezione TDE, un failover del server attiverà un numero di operazioni sull'insieme di credenziali delle chiavi equivalente al numero di database presenti nel server. In base all'esperienza e ai [limiti del servizio Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) documentati, è consigliabile associare al massimo 500 database Standard o 200 database Premium a un'istanza di Azure Key Vault in una sottoscrizione singola al fine di garantire una disponibilità costantemente elevata durante l'accesso alla protezione TDE nell'insieme di credenziali. 
 - Consigliato: conservare una copia della protezione TDE in locale.  A tale scopo, è necessario che un modulo di protezione hardware crei una protezione TDE locale e che un sistema di deposito delle chiavi memorizzi una copia locale della protezione TDE.
 
 
@@ -86,7 +85,8 @@ Quando TDE viene configurato per la prima volta per l'uso di una protezione TDE 
 - Depositare la chiave in un sistema di deposito delle chiavi.  
 - Importare il file della chiave di crittografia (PFX, BYOK o BACKUP) in Azure Key Vault. 
     
-    >[!NOTE] 
+
+>[!NOTE] 
     >A scopo di test, è possibile creare una chiave con Azure Key Vault, ma la chiave non potrà essere depositata poiché la chiave privata deve rimanere nell'insieme di credenziali delle chiavi.  Eseguire sempre il backup e il deposito delle chiavi usate per crittografare i dati di produzione poiché la perdita della chiave (eliminazione accidentale nell'insieme di credenziali delle chiavi, scadenza, ecc.) causa la perdita permanente dei dati.
     >
     
@@ -148,3 +148,5 @@ Per evitare questo problema, eseguire il cmdlet [Get-AzureRmSqlServerKeyVaultKey
    -ResourceGroup <SQLDatabaseResourceGroupName>
    ```
 Per altre informazioni sul ripristino dei backup per il database SQL, vedere [Ripristinare un database SQL di Azure mediante i backup automatici del database](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups). Per altre informazioni sul ripristino dei backup per il data warehouse SQL, vedere [Ripristino di SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview).
+
+Altra considerazione per i file di log sottoposti a backup: i file di log sottoposti a backup rimangono crittografati con il componente di crittografia TDE originale, anche se è stata eseguita la rotazione della protezione TDE e il database ora usa una nuova protezione TDE.  Al momento del ripristino, saranno necessarie entrambe le chiavi per ripristinare il database.  Se il file di log usa una protezione TDE archiviata in Azure Key Vault, al momento del ripristino sarà necessaria questa chiave, anche se nel frattempo il database è stato modificato in modo che usi la crittografia TDE gestita dal servizio.   

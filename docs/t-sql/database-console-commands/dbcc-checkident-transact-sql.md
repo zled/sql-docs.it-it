@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKIDENT (Transact-SQL) | Documenti Microsoft
+title: DBCC CHECKIDENT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC CHECKIDENT
 - CHECKIDENT_TSQL
 - DBCC_CHECKIDENT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - checking identity values
 - reseeding identity values
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - identity values [SQL Server], reseeding
 - reporting current identity values
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a370a89e175a00f33d26992cfc5c6aaecbd7436
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: ffe0d85efb5f67e75a84c0012ba351bd01568bb8
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +64,7 @@ DBCC CHECKIDENT
   
 ## <a name="arguments"></a>Argomenti  
  *table_name*  
- Nome della tabella di cui verificare il valore Identity corrente. La tabella specificata deve includere una colonna Identity. I nomi di tabella devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md). Nomi in due o tre parti devono essere delimitati, ad esempio 'Person.AddressType' o [Person.AddressType].   
+ Nome della tabella di cui verificare il valore Identity corrente. La tabella specificata deve includere una colonna Identity. I nomi di tabella devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). I nomi in due o tre parti devono essere delimitati, ad esempio 'Person.AddressType' o [Person.AddressType].   
   
  NORESEED  
  Specifica che non è necessario modificare il valore Identity corrente.  
@@ -76,22 +78,22 @@ DBCC CHECKIDENT
  WITH NO_INFOMSGS  
  Disattiva tutti i messaggi informativi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Le correzioni specifiche apportate al valore Identity corrente dipendono dalle specifiche di parametro.  
   
 |Comando DBCC CHECKIDENT|Correzione o correzioni Identity apportate|  
 |-----------------------------|---------------------------------------------|  
-|DBCC CHECKIDENT ( *table_name*, NORESEED)|Il valore Identity corrente non viene reimpostato. DBCC CHECKIDENT restituisce il valore Identity corrente e il valore massimo corrente della colonna Identity. Se i due valori non corrispondono, è consigliabile reimpostare il valore Identity per evitare potenziali errori o gap nella sequenza dei valori.|  
-|DBCC CHECKIDENT ( *table_name* )<br /><br /> o<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED)|Se il valore Identity corrente di una tabella è inferiore al valore Identity massimo archiviato nella colonna Identity, questo viene reimpostato in base al valore massimo della colonna Identity. Vedere la sezione "Eccezioni" riportata di seguito.|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Valore identity corrente è impostato il *new_reseed_value*. Se nessuna riga è stata inserita nella tabella poiché è stata creata la tabella o se tutte le righe sono state rimosse tramite l'istruzione TRUNCATE TABLE, utilizza la prima riga inserita dopo l'esecuzione di DBCC CHECKIDENT *new_reseed_value* come identità.<br /><br /> Se le righe siano presenti nella tabella, la riga successiva viene inserita con il *new_reseed_value* valore. Nella versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e versioni precedenti, viene utilizzata la successiva riga inserita *new_reseed_value* + il [incremento corrente](../../t-sql/functions/ident-incr-transact-sql.md) valore.<br /><br /> Se la tabella non è vuota, l'impostazione del valore Identity su un numero inferiore al valore massimo della colonna Identity può determinare una delle condizioni seguenti:<br /><br /> -Se è presente un vincolo PRIMARY KEY o UNIQUE nella colonna identity, il messaggio di errore 2627 verrà generato nelle successive operazioni di inserimento nella tabella poiché il valore identity generato è in conflitto con i valori esistenti.<br /><br /> -Se non esiste un vincolo PRIMARY KEY o UNIQUE, si verificherà successive operazioni di inserimento valori identity duplicati.|  
+|DBCC CHECKIDENT ( *table_name*, NORESEED )|Il valore Identity corrente non viene reimpostato. DBCC CHECKIDENT restituisce il valore Identity corrente e il valore massimo corrente della colonna Identity. Se i due valori non corrispondono, è consigliabile reimpostare il valore Identity per evitare potenziali errori o gap nella sequenza dei valori.|  
+|DBCC CHECKIDENT ( *table_name* )<br /><br /> o Gestione configurazione<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|Se il valore Identity corrente di una tabella è inferiore al valore Identity massimo archiviato nella colonna Identity, questo viene reimpostato in base al valore massimo della colonna Identity. Vedere la sezione "Eccezioni" riportata di seguito.|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Il valore Identity corrente è impostato su *new_reseed_value*. Se dopo la creazione della tabella non è stata inserita alcuna riga o se tutte le righe sono state rimosse mediante l'istruzione TRUNCATE TABLE, la prima riga inserita dopo l'esecuzione di DBCC CHECKIDENT usa *new_reseed_value* come valore Identity.<br /><br /> Se sono presenti righe nella tabella, la riga successiva viene inserita con il valore *new_reseed_value*. Nella versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e nelle versioni precedenti, la riga successiva inserita usa *new_reseed_value* e il valore di [incremento corrente](../../t-sql/functions/ident-incr-transact-sql.md).<br /><br /> Se la tabella non è vuota, l'impostazione del valore Identity su un numero inferiore al valore massimo della colonna Identity può determinare una delle condizioni seguenti:<br /><br /> - Se esiste un vincolo PRIMARY KEY o UNIQUE nella colonna Identity, verrà generato il messaggio di errore 2627 per le successive operazioni di inserimento nella tabella poiché il valore Identity generato è in conflitto con i valori esistenti.<br /><br /> - Se non esiste un vincolo PRIMARY KEY o UNIQUE, le successive operazioni di inserimento causeranno valori Identity duplicati.|  
   
 ## <a name="exceptions"></a>Eccezioni  
  Nella tabella seguente vengono elencate le condizioni in cui DBCC CHECKIDENT non reimposta automaticamente il valore Identity corrente e vengono specificati i metodi per la reimpostazione del valore.  
   
 |Condizione|Metodi di reimpostazione|  
 |---------------|-------------------|  
-|Il valore Identity corrente è maggiore del valore massimo della tabella.|Eseguire DBCC CHECKIDENT (*table_name*, NORESEED) per determinare il valore massimo corrente della colonna e quindi specificare tale valore come il *new_reseed_value* in un DBCC CHECKIDENT (*tabella _ nome*, RESEED,*new_reseed_value*) comando.<br /><br /> OPPURE<br /><br /> Eseguire DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) con *new_reseed_value* impostata su un valore molto basso e quindi eseguire DBCC CHECKIDENT ( *TABLE_NAME*, RESEED) per correggere il valore.|  
-|Tutte le righe sono state eliminate dalla tabella.|Eseguire DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) con *new_reseed_value* impostata sul valore iniziale desiderato.|  
+|Il valore Identity corrente è maggiore del valore massimo della tabella.|Eseguire DBCC CHECKIDENT (*table_name*, NORESEED) per determinare il valore massimo corrente nella colonna, quindi specificare il valore come *new_reseed_value* in un comando DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*).<br /><br /> oppure<br /><br /> Eseguire DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) con *new_reseed_value* impostato su un valore molto basso, quindi eseguire DBCC CHECKIDENT (*table_name*, RESEED) per correggere il valore.|  
+|Tutte le righe sono state eliminate dalla tabella.|Eseguire DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) con *new_reseed_value* impostato sul valore iniziale desiderato.|  
   
 ## <a name="changing-the-seed-value"></a>Modifica del valore di inizializzazione  
  Il valore di inizializzazione è il valore inserito in una colonna Identity per la prima riga caricata nella tabella. Tutte le righe successive contengono il valore Identity corrente più il valore dell'incremento dove il valore Identity corrente è l'ultimo valore Identity generato per la tabella o vista.  
@@ -109,12 +111,12 @@ DBCC CHECKIDENT
   
 `Checking identity information: current identity value '\<current identity value>', current column value '\<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
- Quando DBCC CHECKIDENT viene utilizzato per specificare un nuovo valore di inizializzazione tramite *new_reseed_value*, viene restituito il messaggio seguente.  
+ Quando DBCC CHECKIDENT viene usato per specificare un nuovo valore di inizializzazione usando RESEED *new_reseed_value*, viene restituito il messaggio seguente.  
   
 `Checking identity information: current identity value '\<current identity value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
 ## <a name="permissions"></a>Autorizzazioni  
- Chiamante deve proprietario dello schema che contiene la tabella o un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database, o **db_ddladmin** fissa ruolo del database.  
+ Il chiamante deve essere proprietario dello schema contenente la tabella o membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_owner** e **db_ddladmin**.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -146,6 +148,18 @@ GO
 USE AdventureWorks2012;  
 GO  
 DBCC CHECKIDENT ('Person.AddressType', RESEED, 10);  
+GO  
+  
+```  
+### <a name="d-resetting-the-identity-value-on-an-empty-table"></a>D. Reimpostazione del valore Identity in una tabella vuota
+ L'esempio seguente il valore Identity corrente della colonna `ErrorLogID` nella tabella `ErrorLog` viene impostato su 1, dopo l'eliminazione di tutti i record dalla tabella. Poiché nella tabella non sono presenti righe, la successiva riga inserita userà il valore 1, ovvero il nuovo valore Identity corrente senza aggiungere il valore di incremento definito per la colonna.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+TRUNCATE TABLE dbo.ErrorLog
+GO
+DBCC CHECKIDENT ('dbo.ErrorLog', RESEED, 1);  
 GO  
   
 ```  

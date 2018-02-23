@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e273a9963b26f5c6361cf459bba54010ad58d56
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ddb9ea039218fa967132572df461103957300161
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Risoluzione dei problemi nell'indicizzazione full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Quando l'indicizzatore non è in grado di trovare o caricare un componente filtro o word breaker. Questo errore può verificarsi se la riga della tabella include contenuto o un formato di documento in una lingua non registrata con l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure se il componente filtro o word breaker registrato non è stato firmato o non ha superato il controllo della firma durante il caricamento.  
   
--   Quando un componente, ad esempio un word breaker o un filtro, restituisce un errore all'indicizzatore. Questa situazione può verificarsi se il documento indicizzato è danneggiato e il filtro non è in grado di estrarre il testo del documento oppure quando un componente non è in grado di gestire il contenuto di una singola riga oltre una determinata dimensione, a causa di limiti di memoria nell'host del daemon di filtri (fdhost.exe).  
+-   Quando un componente, ad esempio un word breaker o un filtro, restituisce un errore all'indicizzatore. Questo errore può verificarsi se il documento di cui si sta eseguendo l'indicizzazione è danneggiato e il filtro non è in grado di estrarre il testo dal documento oppure quando un componente non è in grado di gestire il contenuto di una singola riga oltre una determinata dimensione, a causa di limiti di memoria nell'host del daemon dei filtri full-text (fdhost.exe).  
   
  Per ogni errore a livello di riga, nel log di tipo ricerca per indicizzazione vengono inserite informazioni sul motivo dell'errore. Il numero di errori è riepilogato al termine di un popolamento completo o incrementale.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Un gruppo di file contenente la tabella indicizzata full-text passa alla modalità offline o viene impostato in sola lettura.  
   
- È consigliabile visualizzare il log di tipo ricerca per indicizzazione al termine di tutte le operazioni di popolamento dell'indice full-text significative o quando il popolamento non risulta completato.  
+ Esaminare il log di ricerca per indicizzazione al termine di tutte le operazioni di popolamento dell'indice full-text significative o quando il popolamento non risulta completato.  
   
 ### <a name="unsigned-components"></a>Componenti non firmati  
  Per impostazione predefinita, l'indicizzatore full-text richiede la firma dei filtri e dei word breaker caricati. Se tali componenti non sono firmati, ad esempio in alcuni casi di installazione di componenti personalizzati, è necessario configurare l'indicizzatore full-text in modo che ignori il controllo della firma.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73dc17666d055ffbd4646befb43ff2a40ab77053
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="system-data-collection-set-reports"></a>Report per i set di raccolta dati di sistema
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'agente di raccolta dati fornisce un report cronologico per ognuno dei set di raccolta dati di sistema. Ognuno dei report seguenti utilizza i dati archiviati nel data warehouse di gestione:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+L'agente di raccolta dati fornisce un report cronologico per ognuno dei set di raccolta dati di sistema. Ognuno dei report seguenti utilizza i dati archiviati nel data warehouse di gestione:  
   
 -   [Riepilogo utilizzo disco](#Disk)  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 11/17/2017
  Nella tabella al di sotto del grafico sono indicati gli orari di raccolta dati e i corrispondenti dati di utilizzo.  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Sottoreport Utilizzo disco per database: <database_name>  
- Il sottoreport **Utilizzo disco per database:***<nome_database>* viene visualizzato quando si fa clic sul nome di un database nella tabella di riepilogo del report del set di raccolta Utilizzo disco. In questo report viene fornita una suddivisione grafica e numerica dello spazio utilizzato dai file di dati e dai file di log delle transazioni del database. Lo spazio utilizzato per i file di dati è suddiviso in categorie relative a percentuale di spazio allocato alle pagine di indice, spazio non allocato, spazio allocato alle pagine di dati e spazio inutilizzato. Queste categorie sono definite come segue:  
+ Il sottoreport **Utilizzo disco per database:***<nome_database>* viene visualizzato quando si fa clic sul nome di un database nella tabella di riepilogo del report Set di raccolta utilizzo disco. In questo report viene fornita una suddivisione grafica e numerica dello spazio utilizzato dai file di dati e dai file di log delle transazioni del database. Lo spazio utilizzato per i file di dati è suddiviso in categorie relative a percentuale di spazio allocato alle pagine di indice, spazio non allocato, spazio allocato alle pagine di dati e spazio inutilizzato. Queste categorie sono definite come segue:  
   
 |Categoria|Definizione|  
 |--------------|----------------|  
 |Indice|Quantità di spazio su disco utilizzato per contenere le pagine di indice.|  
 |Non allocato|Quantità di spazio su disco disponibile per il database ma non ancora allocato a un oggetto.|  
-|Dati|Quantità di spazio su disco utilizzato dalle pagine di dati.|  
+|data|Quantità di spazio su disco utilizzato dalle pagine di dati.|  
 |Non utilizzato|Quantità di spazio su disco allocato a uno o più oggetti ma non ancora utilizzato.|  
   
  Lo spazio utilizzato per il file di log delle transazioni è suddiviso in categorie relative a spazio utilizzato e spazio inutilizzato.  

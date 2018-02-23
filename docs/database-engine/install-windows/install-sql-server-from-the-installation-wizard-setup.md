@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,25 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-caps.latest.revision: "91"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41a4945a1d3a709e9fa105e3ebed4c7e010ee957
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0425515d7ffe6f912de76d12c8c64d9fbd938366
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installare SQL Server dall'Installazione guidata (programma di installazione)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > In questo articolo viene descritto come installare SQL Server con l'Installazione guidata. Si applica a [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] e a [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Per contenuti relativi alle versioni precedenti di SQL Server, vedere [Installare SQL Server 2014 dall'Installazione guidata (programma di installazione)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
 
-In questo argomento vengono fornite istruzioni dettagliate per installare una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Poiché nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un unico albero delle funzionalità per l'installazione di tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , non è necessario installarli singolarmente. Per altre informazioni su come installare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] singolarmente, vedere [Installare SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+In questo articolo viene descritto come installare SQL Server con l'Installazione guidata. Si applica a [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] e a [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Per contenuti relativi alle versioni precedenti di SQL Server, vedere [Installare SQL Server 2014 dall'Installazione guidata (programma di installazione)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
 
- In questi argomenti aggiuntivi vengono illustrati altri modi per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+Questo articolo fornisce istruzioni dettagliate per installare una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un unico albero delle funzionalità per l'installazione di tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , non è necessario installarli singolarmente. Per altre informazioni su come installare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] singolarmente, vedere [Installare SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
+
+ Questi articoli aggiuntivi illustrano altri modi per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
 
 -   [Installare SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
@@ -49,7 +52,7 @@ In questo argomento vengono fornite istruzioni dettagliate per installare una nu
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
 ## <a name="prerequisites"></a>Prerequisites  
- Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rivedere gli argomenti in [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
+ Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rivedere gli articoli in [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
 > Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura ed esecuzione relative a tale condivisione.  

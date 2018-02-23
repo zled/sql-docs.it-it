@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: "3"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d48c41769f674278a1597dd52e40758a928a9b6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-index-design-guide"></a>Guida per la progettazione di indici di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -338,7 +339,7 @@ Usare queste viste dei metadati per visualizzare gli attributi degli indici. In 
 ### <a name="query-considerations"></a>Considerazioni sulle query  
  Prima di creare indici non cluster, è consigliabile analizzare la modalità di accesso ai dati. Utilizzare un indice non cluster per le query con gli attributi seguenti:  
   
--   usano clausole `JOIN` o `GROUP BY`.  
+-   Usano clausole `JOIN` o `GROUP BY`.  
   
      Creare più indici non cluster in colonne interessate da operazioni di join e raggruppamento e un indice cluster in ogni colonna chiave esterna.  
   
@@ -742,7 +743,7 @@ Il numero di bucket deve essere specificato in fase di definizione dell'indice:
 La funzione hash si applica alle colonne chiave dell'indice e il risultato della funzione determina il bucket in cui rientra la chiave. Ogni bucket ha un puntatore per righe con valori di chiave hash. Per questi valori è eseguito il mapping al bucket.
 
 La funzione di hashing utilizzata per gli indici hash presenta le caratteristiche seguenti:
-- In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile una funzione hash utilizzata per tutti gli indici hash.
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] include una funzione hash che viene usata per tutti gli indici hash.
 - La funzione hash è deterministica. Nell'indice hash viene sempre eseguito il mapping del valore di chiave di input allo stesso bucket.
 - È possibile che venga eseguito il mapping di più chiavi di indice allo stesso bucket di hash.
 - La funzione hash viene bilanciata, pertanto la distribuzione dei valori di chiave di indice in bucket di hash segue in genere una distribuzione di probabilità di Poisson o a campana e non una distribuzione lineare piana.

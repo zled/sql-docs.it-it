@@ -8,23 +8,24 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: "5"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d3588fd2410fdacb3c4e332c3485b40640b5587
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c55426d6723749d9edda2b6244ae7e75f47047b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -278,19 +279,19 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
    Retrieve row from linked table Server3.CustomerData.dbo.Customer_99
 ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila a volte questi tipi di piani di esecuzione dinamici anche per query senza parametri. Query Optimizer può parametrizzare una query in modo che il piano di esecuzione possa essere riutilizzato. Se Query Optimizer esegue la parametrizzazione di una query che fa riferimento a una vista partizionata, non potrà più basarsi sul presupposto che le righe necessarie verranno recuperate da una tabella di base specificata e dovrà utilizzare filtri dinamici nel piano di esecuzione.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila a volte questi tipi di piani di esecuzione dinamici anche per le query senza parametri. Query Optimizer può parametrizzare una query in modo che il piano di esecuzione possa essere riutilizzato. Se Query Optimizer esegue la parametrizzazione di una query che fa riferimento a una vista partizionata, non potrà più basarsi sul presupposto che le righe necessarie verranno recuperate da una tabella di base specificata e dovrà utilizzare filtri dinamici nel piano di esecuzione.
 
 ## <a name="stored-procedure-and-trigger-execution"></a>Esecuzione di stored procedure e trigger
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene archiviata solo l'origine di stored procedure e trigger. Se una stored procedure o un trigger viene eseguito per la prima volta, l'origine viene compilata in un piano di esecuzione. Se la stored procedure o il trigger viene eseguito nuovamente prima che il piano di esecuzione venga rimosso dalla memoria, il motore relazionale rileva e riutilizza il piano esistente. Se il piano è stato rimosso dalla memoria, viene creato un nuovo piano. Questo processo è simile al processo seguito da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per tutte le istruzioni SQL. Il vantaggio principale delle prestazioni di stored procedure e trigger in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rispetto ai batch di istruzioni SQL dinamiche è che le istruzioni SQL sono sempre uguali. pertanto, il motore relazionale mette agevolmente in corrispondenza con tutti i piani di esecuzione esistenti. I piani di stored procedure e trigger sono quindi facilmente riutilizzabili.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] archivia solo l'origine di stored procedure e trigger. Se una stored procedure o un trigger viene eseguito per la prima volta, l'origine viene compilata in un piano di esecuzione. Se la stored procedure o il trigger viene eseguito nuovamente prima che il piano di esecuzione venga rimosso dalla memoria, il motore relazionale rileva e riutilizza il piano esistente. Se il piano è stato rimosso dalla memoria, viene creato un nuovo piano. Questo processo è simile al processo seguito da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per tutte le istruzioni SQL. Il vantaggio principale delle prestazioni di stored procedure e trigger in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rispetto ai batch di istruzioni SQL dinamiche è che le istruzioni SQL sono sempre uguali. pertanto, il motore relazionale mette agevolmente in corrispondenza con tutti i piani di esecuzione esistenti. I piani di stored procedure e trigger sono quindi facilmente riutilizzabili.
 
 Il piano di esecuzione delle stored procedure e dei trigger viene eseguito indipendentemente dal piano di esecuzione del batch che chiama la stored procedure o che attiva il trigger. In tal modo viene garantito un maggiore riutilizzo dei piani di esecuzione delle stored procedure e dei trigger.
 
 ## <a name="execution-plan-caching-and-reuse"></a>Memorizzazione nella cache e riutilizzo del piano di esecuzione
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è presente un pool di memoria utilizzato per archiviare sia i piani di esecuzione che i buffer dei dati. La percentuale del pool allocata ai piani di esecuzione o ai buffer dei dati varia dinamicamente in base allo stato del sistema. La parte del pool di memoria usata per archiviare i piani di esecuzione è denominata cache dei piani.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] include un pool di memoria usato per archiviare piani di esecuzione e buffer dei dati. La percentuale del pool allocata ai piani di esecuzione o ai buffer dei dati varia dinamicamente in base allo stato del sistema. La parte del pool di memoria usata per archiviare i piani di esecuzione è denominata cache dei piani.
 
-I piani di esecuzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includono i componenti principali seguenti: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] include piani di esecuzione con i componenti principali seguenti: 
 
 * Piano di esecuzione della query: la parte centrale del piano di esecuzione è una struttura di dati rientrante di sola lettura che può essere usata da un numero qualsiasi di utenti. Questo elemento è detto piano della query. Nel piano della query non viene archiviato alcun contesto utente. In memoria non vi sono mai più di una o due copie del piano della query: una copia per tutte le esecuzioni seriali e una per tutte le esecuzioni parallele. La copia parallela copre tutte le esecuzioni parallele, indipendentemente dal loro grado di parallelismo. 
 * Contesto di esecuzione: ogni utente che esegue la query dispone di una struttura di dati contenente i dati specifici per l'esecuzione, ad esempio i valori dei parametri. Questa struttura di dati è denominata contesto di esecuzione. Le strutture di dati del contesto di esecuzione vengono riutilizzate. Se un utente esegue una query e una delle strutture non è in uso, questa viene reinizializzata con il contesto del nuovo utente. 
@@ -299,7 +300,7 @@ I piani di esecuzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 
 Quando in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene eseguita un'istruzione SQL, il motore relazionale esegue prima di tutto una ricerca nella cache dei piani per verificare se è presente un piano di esecuzione esistente per la stessa istruzione SQL. L'eventuale piano esistente trovato viene riutilizzato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], evitando così l'overhead associato alla ricompilazione dell'istruzione SQL. Se non esiste già un piano di esecuzione, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene generato un nuovo piano per la query.
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile un algoritmo efficiente per l'individuazione di piani di esecuzione esistenti per una specifica istruzione SQL. Nella maggior parte dei sistemi, le risorse minime utilizzate da questa analisi sono inferiori a quelle risparmiate riutilizzando i piani esistenti anziché compilando ogni istruzione SQL.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre un efficiente algoritmo per l'individuazione di piani di esecuzione esistenti per una specifica istruzione SQL. Nella maggior parte dei sistemi, le risorse minime utilizzate da questa analisi sono inferiori a quelle risparmiate riutilizzando i piani esistenti anziché compilando ogni istruzione SQL.
 
 Per gli algoritmi che consentono di trovare la corrispondenza tra le nuove istruzioni SQL e i piani di esecuzione esistenti inutilizzati nella cache è necessario che i riferimenti agli oggetti siano completi. Per la prima delle istruzioni `SELECT` seguenti, ad esempio, non viene trovata la corrispondenza con un piano esistente, come avviene invece per la seconda:
 
@@ -599,7 +600,7 @@ I valori dei parametri vengono individuati durante la compilazione o ricompilazi
 
 ## <a name="parallel-query-processing"></a>Elaborazione parallela di query
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è possibile eseguire query parallele, che consentono di ottimizzare l'esecuzione delle query e le operazioni sugli indici nei computer che dispongono di più microprocessori (CPU). La possibilità di eseguire una query o un'operazione sugli indici in parallelo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando diversi thread di lavoro del sistema operativo assicura maggiore velocità ed efficienza.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consente di eseguire query parallele per ottimizzare l'esecuzione delle query e le operazioni sugli indici nei computer in cui sono presenti più microprocessori (CPU). La possibilità di eseguire una query o un'operazione sugli indici in parallelo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando diversi thread di lavoro del sistema operativo assicura maggiore velocità ed efficienza.
 
 Durante l'ottimizzazione delle query, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ricerca le query o le operazioni sugli indici che potrebbero trarre vantaggio dall'esecuzione parallela. Nel piano di esecuzione di tali query [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inserisce operatori di scambio per preparare la query all'esecuzione parallela. Un operatore di scambio è un operatore del piano di esecuzione della query responsabile della gestione dei processi, della ridistribuzione dei dati e del controllo di flusso. L'operatore di scambio include gli operatori logici `Distribute Streams`, `Repartition Streams`e `Gather Streams` come sottotipi, ognuno dei quali può essere incluso nell'output Showplan del piano di esecuzione parallela di una query. 
 
@@ -740,7 +741,7 @@ I piani di query compilati ai fini della creazione o della ricompilazione di un 
 > [!NOTE]
 > Le operazioni parallele sugli indici sono disponibili solo nell'edizione Enterprise, a partire da [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].
  
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa gli stessi algoritmi utilizzati per altre query per determinare il grado di parallelismo, ovvero il numero totale di singoli thread lavoro da eseguire, per le operazioni sugli indici. Il grado massimo di parallelismo per un'operazione sugli indici dipende dal valore impostato per l'opzione di configurazione del server [Massimo grado di parallelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) . È possibile ignorare il valore dell'opzione Massimo grado di parallelismo per singole operazioni sull'indice impostando l'opzione per gli indici MAXDOP nelle istruzioni CREATE INDEX, ALTER INDEX, DROP INDEX e ALTER TABLE.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa gli stessi algoritmi usati per altre query per determinare il grado di parallelismo, ovvero il numero totale di singoli thread di lavoro da eseguire, per le operazioni sugli indici. Il grado massimo di parallelismo per un'operazione sugli indici dipende dal valore impostato per l'opzione di configurazione del server [Massimo grado di parallelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) . È possibile ignorare il valore dell'opzione Massimo grado di parallelismo per singole operazioni sull'indice impostando l'opzione per gli indici MAXDOP nelle istruzioni CREATE INDEX, ALTER INDEX, DROP INDEX e ALTER TABLE.
 
 Quando [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compila un piano di esecuzione dell'indice, il numero di operazioni parallele viene impostato sul valore più basso tra i seguenti: 
 
@@ -782,7 +783,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta due me
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza OLE DB per la comunicazione tra il motore relazionale e il motore di archiviazione. Il motore relazionale suddivide ogni istruzione Transact-SQL in una serie di operazioni su set di righe OLE DB semplici, aperti dal motore di archiviazione nelle tabelle di base. Pertanto, il motore relazionale può aprire inoltre set di righe OLE DB semplici in qualsiasi origine dei dati OLE DB.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa OLE DB per la comunicazione tra il motore relazionale e il motore di archiviazione. Il motore relazionale suddivide ogni istruzione Transact-SQL in una serie di operazioni su set di righe OLE DB semplici, aperti dal motore di archiviazione nelle tabelle di base. Pertanto, il motore relazionale può aprire inoltre set di righe OLE DB semplici in qualsiasi origine dei dati OLE DB.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 Il motore relazionale utilizza l'API OLE DB per aprire i set di righe nei server collegati, recuperare le righe e gestire le transazioni.
 
@@ -794,11 +795,11 @@ Le query distribuite consentono agli utenti di accedere a un'altra origine dati 
 
 Quando possibile, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esegue il push delle operazioni relazionali quali join, restrizioni, proiezioni, ordinamenti e operazioni su gruppi all'origine dati OLE DB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non analizza per impostazione predefinita la tabella di base in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e non esegue operazioni relazionali in autonomia. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esegue query sul provider OLE DB per determinare il livello di grammatica SQL supportata e, in base a tali informazioni, esegue il push al provider del maggior numero possibile di operazioni relazionali. 
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile un meccanismo in base al quale il provider OLE DB restituisce statistiche che indicano la modalità di distribuzione dei valori di chiave all'interno dell'origine dati OLE DB. In questo modo, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può analizzare in modo più approfondito lo schema dri dati nell'origine dati in base ai requisiti di ogni istruzione SQL, generando con maggiore efficienza piani di esecuzione ottimali. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specifica un meccanismo in base al quale il provider OLE DB restituisce statistiche che indicano la modalità di distribuzione dei valori di chiave all'interno dell'origine dati OLE DB. In questo modo, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può analizzare in modo più approfondito lo schema dri dati nell'origine dati in base ai requisiti di ogni istruzione SQL, generando con maggiore efficienza piani di esecuzione ottimali. 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>Miglioramenti apportati all'elaborazione di query su tabelle e indici partizionati
 
-In [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] sono state migliorate le prestazioni di elaborazione delle query su tabelle partizionate per molti piani paralleli, modificate le modalità di rappresentazione dei piani seriali e paralleli, nonché ottimizzate le informazioni relative al partizionamento fornite nei piani di esecuzione sia nella fase di compilazione che di esecuzione. In questo argomento vengono descritti i miglioramenti apportati, viene spiegato come interpretare i piani di esecuzione delle query relativi a tabelle e indici partizionati e vengono fornite le procedure consigliate per migliorare le prestazioni delle query su oggetti partizionati. 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] ha introdotto miglioramenti delle prestazioni di elaborazione delle query sulle tabelle partizionate per molti piani paralleli, modifiche alle modalità di rappresentazione dei piani seriali e paralleli, nonché l'ottimizzazione delle informazioni relative al partizionamento fornite nei piani di esecuzione sia nella fase di compilazione che di esecuzione. In questo argomento vengono descritti i miglioramenti apportati, viene spiegato come interpretare i piani di esecuzione delle query relativi a tabelle e indici partizionati e vengono fornite le procedure consigliate per migliorare le prestazioni delle query su oggetti partizionati. 
 
 > [!NOTE]
 > Il partizionamento di indici e tabelle è supportato solo nelle edizioni Enterprise, Developer ed Evaluation di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -839,7 +840,7 @@ Questi strumenti consentono di verificare le informazioni seguenti:
 
 #### <a name="partition-information-enhancements"></a>Miglioramenti apportati alle informazioni sulle partizioni
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce informazioni migliorate sul partizionamento per i piani di esecuzione sia della fase di compilazione che della fase di esecuzione. I piani di esecuzione includono ora le informazioni seguenti:
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre informazioni di partizionamento migliorate per i piani di esecuzione sia della fase di compilazione che della fase di esecuzione. I piani di esecuzione includono ora le informazioni seguenti:
 
 * Un attributo `Partitioned` facoltativo per indicare che su una tabella partizionata viene eseguito un operatore, ad esempio `seek`, `scan`, `insert`, `update`, `merge`o `delete`.  
 * Un elemento `SeekPredicateNew` nuovo con un sottoelemento `SeekKeys` che include `PartitionID` come colonna chiave di indice iniziale e condizioni di filtro che specificano ricerche di intervallo su `PartitionID`. La presenza di due sottoelementi `SeekKeys` indica che su `PartitionID` viene usata un'operazione di skip scan.   

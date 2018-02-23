@@ -17,14 +17,17 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 164c24f5cfd3c4120c75776764221560392ebd4d
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 1cb3ad0fe1c3678799c557cf9c3b66286505276c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Scegliere un metodo di aggiornamento del motore di database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sono disponibili diversi approcci da considerare quando si intende eseguire l'aggiornamento di [!INCLUDE[ssDE](../../includes/ssde-md.md)] da una versione precedente di SQL Server per ridurre al minimo i tempi di inattività e il rischio. È possibile eseguire un aggiornamento sul posto, la migrazione a una nuova installazione o un aggiornamento in sequenza. Il diagramma seguente consentirà di scegliere tra questi approcci. Ogni approccio del diagramma viene anche illustrato in basso. Per assistenza nei punti decisionali all'interno del diagramma, consultare anche [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Sono disponibili diversi approcci da considerare quando si intende eseguire l'aggiornamento di [!INCLUDE[ssDE](../../includes/ssde-md.md)] da una versione precedente di SQL Server per ridurre al minimo i tempi di inattività e il rischio. È possibile eseguire un aggiornamento sul posto, la migrazione a una nuova installazione o un aggiornamento in sequenza. Il diagramma seguente consentirà di scegliere tra questi approcci. Ogni approccio del diagramma viene anche illustrato in basso. Per assistenza nei punti decisionali all'interno del diagramma, consultare anche [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Albero delle decisioni per il metodo di aggiornamento del motore di database](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Albero delle decisioni per il metodo di aggiornamento del motore di database")  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 01/29/2018
 -   Se si ha un account di Azure,  fare clic **[qui](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition.  
   
 > [!NOTE]  
->  Nell'ambito del piano di aggiornamento, è anche possibile considerare l'aggiornamento del database SQL di Azure o la virtualizzazione dell'ambiente SQL Server. Questi argomenti sono esterni all'ambito ma di seguito sono riportati alcuni collegamenti:
+>  Nell'ambito del piano di aggiornamento, è anche possibile considerare l'aggiornamento del database SQL di Azure o la virtualizzazione dell'ambiente SQL Server. Questi articoli non rientrano nell'ambito di questo articolo, ma di seguito sono riportati alcuni collegamenti:
 >   - [Panoramica di SQL Server in macchine virtuali di Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Database SQL di Azure](https://azure.microsoft.com/en-us/services/sql-database/) 
 >   - [Selezione di un'opzione di SQL Server in Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
@@ -105,7 +108,7 @@ ms.lasthandoff: 01/29/2018
      ![Nuovo metodo di aggiornamento e installazione tramite collegamento e scollegamento per l'archiviazione SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Nuovo metodo di aggiornamento e installazione tramite collegamento e scollegamento per l'archiviazione SAN")  
   
 ##  <a name="RollingUpgrade"></a> Aggiornamenti in sequenza  
- È necessario un aggiornamento in sequenza in ambienti di soluzioni SQL Server che includono più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da aggiornare in un determinato ordine al fine di ottimizzare i tempi di attività, ridurre i rischi e mantenere la funzionalità. Un aggiornamento in sequenza è essenzialmente l'aggiornamento di più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ordine specifico, ovvero l'aggiornamento sul posto in ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]esistente o l'esecuzione di un nuovo aggiornamento dell'installazione per facilitare l'aggiornamento di hardware e/o sistema operativo come parte del progetto di aggiornamento. Esistono diversi scenari in cui è necessario usare il metodo di aggiornamento in sequenza. Questi scenari sono documentati negli argomenti seguenti:  
+ È necessario un aggiornamento in sequenza in ambienti di soluzioni SQL Server che includono più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da aggiornare in un determinato ordine al fine di ottimizzare i tempi di attività, ridurre i rischi e mantenere la funzionalità. Un aggiornamento in sequenza è essenzialmente l'aggiornamento di più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ordine specifico, ovvero l'aggiornamento sul posto in ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]esistente o l'esecuzione di un nuovo aggiornamento dell'installazione per facilitare l'aggiornamento di hardware e/o sistema operativo come parte del progetto di aggiornamento. Esistono diversi scenari in cui è necessario usare il metodo di aggiornamento in sequenza. Questi scenari sono documentati negli articoli seguenti:  
   
 -   Gruppi di disponibilità Always On: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Aggiornamento delle istanze di replica dei gruppi di disponibilità Always On](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
   

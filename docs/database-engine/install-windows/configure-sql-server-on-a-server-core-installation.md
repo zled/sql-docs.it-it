@@ -8,32 +8,36 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a23b32644a51bf4e46cab280c7d382d2cb1c786
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a453e4c8a5ec3bc3e93d5c7f7e6ce6f1e354d21c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurare SQL Server in un'installazione Server Core
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive i dettagli sulla configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'installazione Server Core.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Questo articolo descrive i dettagli sulla configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'installazione Server Core.  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Configurare e gestire Server Core in Windows Server  
-Nella sezione vengono forniti i riferimenti agli argomenti in cui sono illustrate la configurazione e la gestione di un'installazione Server Core.  
+Nella sezione vengono forniti i riferimenti agli articoli in cui sono illustrate la configurazione e la gestione di un'installazione Server Core.  
   
 Non tutte le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] sono supportate nella modalità Server Core.  Alcune di queste possono essere installate in un computer client o in un altro server in cui non viene eseguito Server Core e possono essere connesse ai servizi del motore di database installati in Server Core.  
   
-Per altre informazioni sulla configurazione e sulla gestione di un'installazione Server Core in remoto, vedere gli argomenti seguenti:  
+Per altre informazioni sulla configurazione e sulla gestione di un'installazione Server Core in remoto, vedere gli articoli seguenti:  
   
 - [Installazione Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
@@ -57,7 +61,7 @@ Di seguito sono disponibili due scenari per l'installazione di aggiornamenti del
 ###  <a name="bkmk_NewInstall"></a> Installazione di aggiornamenti per [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] durante una nuova installazione  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione supporta solo installazioni dal prompt dei comandi in un sistema operativo Server Core. Per altre informazioni, vedere [Installazione di SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione integra gli aggiornamenti più recenti del pacchetto con l'installazione del prodotto principale in modo che quest'ultimo e i relativi aggiornamenti applicabili vengano installati contemporaneamente.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il programma di installazione integra gli aggiornamenti più recenti del pacchetto con l'installazione del prodotto principale in modo che quest'ultimo e i relativi aggiornamenti applicabili vengano installati contemporaneamente.  
   
 Dopo avere individuato le versioni più recenti degli aggiornamenti applicabili, questi vengono scaricati e integrati dal programma di installazione con il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Tramite l'aggiornamento del prodotto è possibile includere un aggiornamento cumulativo, un Service Pack o un Service Pack con aggiornamento cumulativo.  
   
@@ -227,7 +231,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Utilizzare gli strumenti di risoluzione dei problemi  
  È possibile usare [SQLdiag Utility](../../tools/sqldiag-utility.md) per raccogliere i log e i file di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e altri tipi di server, nonché per monitorare i server in un intervallo di tempo oppure risolvere problemi specifici dei server. SQLdiag è stata creata per velocizzare e semplificare la raccolta delle informazioni di diagnostica necessarie per il Servizio Supporto Tecnico Clienti Microsoft.  
   
- È possibile avviare l'utilità nel prompt dei comandi dell'amministratore in Server Core, usando la sintassi specificata nell'argomento: [Utilità SQLdiag](../../tools/sqldiag-utility.md).  
+ È possibile avviare l'utilità nel prompt dei comandi dell'amministratore in Server Core, usando la sintassi specificata nell'articolo [Utilità SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server in Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9fcfd0dfb1171371a8b1ead7543ec14d67035d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lezione 2: Connessione da un altro computer
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per una maggiore sicurezza non è possibile accedere al [!INCLUDE[ssDE](../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition ed Evaluation Edition da un altro computer al momento dell'installazione iniziale. In questa lezione vengono descritte le procedure per abilitare i protocolli, configurare le porte e configurare Windows Firewall per la connessione da altri computer.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Per una maggiore sicurezza non è possibile accedere al [!INCLUDE[ssDE](../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition ed Evaluation Edition da un altro computer al momento dell'installazione iniziale. In questa lezione vengono descritte le procedure per abilitare i protocolli, configurare le porte e configurare Windows Firewall per la connessione da altri computer.  
   
 In questa lezione sono incluse le attività seguenti:  
   
@@ -132,7 +135,7 @@ Se il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser è
 3.  Nella casella **Nome server** digitare **tcp:** per specificare il protocollo, quindi immettere il nome del computer, una virgola e il numero di porta. Per la connessione all'istanza predefinita viene automaticamente usata la porta 1433, la quale può quindi essere omessa. Digitare pertanto **tcp:***<nome_computer>*. In questo esempio di istanza denominata digitare **tcp:***<nome_computer>***,49172**.  
   
     > [!NOTE]  
-    > Se si omette **tcp:** nella casella **Nome server**, il client eseguirà un tentativo con tutti i protocolli abilitati, nell'ordine specificato nella configurazione client.  
+    > Se si omette **tcp:** nella casella **Nome server** , il client eseguirà un tentativo con tutti i protocolli abilitati, nell'ordine specificato nella configurazione client.  
   
 4.  Nella casella **Autenticazione** confermare l'opzione **Autenticazione di Windows**e quindi fare clic su **Connetti**.  
   
