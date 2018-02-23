@@ -1,5 +1,5 @@
 ---
-title: Partizioni di modelli tabulari (SSAS tabulare) | Documenti Microsoft
+title: Partizioni di modelli tabulari | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: analysis-services
@@ -11,27 +11,29 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
+f1_keywords:
+- sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
 ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2ac102f21aeadab1d5ca7b916a2081405c654cd5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: daaca1355790577310419ad5a48395cd9cb8ff34
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="tabular-model-partitions-ssas-tabular"></a>Partizioni di modelli tabulari (SSAS tabulare)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Le partizioni definite per un modello durante la relativa creazione vengono duplicate in un modello distribuito. Una volta distribuite, è possibile gestire tali partizioni e crearne di nuove tramite la finestra di dialogo **Partizioni** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o tramite uno script. In questo argomento vengono descritte le partizioni in un database modello tabulare distribuito. Per altre informazioni sulla creazione e sulla gestione di partizioni durante la creazione di un modello, vedere [Partizioni &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+# <a name="tabular-model-partitions"></a>Partizioni di modelli tabulari 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Le partizioni definite per un modello durante la relativa creazione vengono duplicate in un modello distribuito. Una volta distribuite, è possibile gestire tali partizioni e crearne di nuove tramite la finestra di dialogo **Partizioni** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o tramite uno script. In questo argomento vengono descritte le partizioni in un database modello tabulare distribuito. Per ulteriori informazioni sulla creazione e la gestione delle partizioni durante la creazione di modelli, vedere [partizioni](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
  Sezioni dell'argomento:  
   
 -   [Vantaggi](#bkmk_benefits)  
   
--   [Autorizzazioni](#bkmk_permissions)  
+-   [Permissions](#bkmk_permissions)  
   
 -   [Elaborare le partizioni](#bkmk_process_partitions)  
   
@@ -65,9 +67,9 @@ ms.lasthandoff: 01/08/2018
 |----------------|-------------|  
 |Amministratore|Lettura, elaborazione, creazione, copia, unione, eliminazione|  
 |Process|Lettura, elaborazione|  
-|Read Only|lettura|  
+|Read Only|Lettura|  
   
- Per altre informazioni sulla creazione di ruoli durante la generazione di modelli tramite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vedere [Ruoli &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md). Per altre informazioni sulla gestione dei membri dei ruoli del modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Ruoli nei modelli tabulari &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Per ulteriori informazioni sulla creazione di ruoli durante la creazione di modelli utilizzando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vedere [ruoli](../../analysis-services/tabular-models/roles-ssas-tabular.md). Per ulteriori informazioni sulla gestione dei membri del ruolo per distribuzione ruoli nei modelli tabulari utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [ruoli nei modelli tabulari](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_parallelProc"></a> Elaborazione parallela  
 Analysis Services include l'elaborazione parallela per le tabelle con due o più partizioni, aumentando le prestazioni di elaborazione. Per l'elaborazione parallela non sono previste impostazioni di configurazione (vedere le note). Per impostazione predefinita, l'elaborazione parallela viene eseguita quando si elabora la tabella o si selezionano più partizioni per la stessa tabella e processo. È comunque possibile scegliere di elaborare le partizioni della tabella in modo indipendente.  
@@ -93,7 +95,7 @@ Analysis Services include l'elaborazione parallela per le tabelle con due o più
   
 |Attività|Description|  
 |----------|-----------------|  
-|[Creare e gestire partizioni di modelli tabulari &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|Viene descritto come creare e gestire partizioni in un modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
-|[Elaborare partizioni di modelli tabulari &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|Viene descritto come elaborare le partizioni in un modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Creare e gestire partizioni di modelli tabulari](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|Viene descritto come creare e gestire partizioni in un modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Elaborare partizioni di modelli tabulari](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|Viene descritto come elaborare le partizioni in un modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
   

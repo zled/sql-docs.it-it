@@ -1,7 +1,7 @@
 ---
 title: Archivio di stringhe e regole di confronto nei modelli tabulari | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3b6a2cd9235163e6586edb21e71f24bc8d1d1c4b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f84b7fb415372066b820119280dd3728d340322d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Archivio di stringhe e regole di confronto nei modelli tabulari
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Stringhe (valori di testo) vengono archiviate in un formato altamente compresso nei modelli tabulari; a causa di questa compressione, è possibile ottenere risultati imprevisti quando si recuperano stringhe intere o parziali. Inoltre, poiché le regole di confronto e le impostazioni locali delle stringhe vengono ereditate in modo gerarchico dall'oggetto padre più prossimo, se la lingua della stringa non viene definita in modo esplicito, le impostazioni locali e le regole di confronto dell'oggetto padre possono influire sulla modalità di archiviazione di ogni stringa e determinare se la stringa è univoca o unita a stringhe simili secondo quanto definito nelle regole di confronto padre.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Le stringhe (valori di testo) vengono archiviate in un formato altamente compresso nei modelli tabulari. A causa di questa compressione, è possibile ottenere risultati imprevisti quando si recuperano stringhe intere o parziali. Inoltre, poiché le regole di confronto e le impostazioni locali delle stringhe vengono ereditate in modo gerarchico dall'oggetto padre più prossimo, se la lingua della stringa non viene definita in modo esplicito, le impostazioni locali e le regole di confronto dell'oggetto padre possono influire sulla modalità di archiviazione di ogni stringa e determinare se la stringa è univoca o unita a stringhe simili secondo quanto definito nelle regole di confronto padre.  
   
- In questo argomento viene illustrato il meccanismo in base al quale le stringhe vengono compresse e archiviate. Inoltre vengono forniti esempi su come le regole di confronto e la lingua influiscono sui risultati delle formule di testo nei modelli tabulari.  
+ In questo articolo viene descritto il meccanismo mediante il quale le stringhe vengono compressi e archiviate e vengono forniti esempi di come le regole di confronto e la lingua influiscono sui risultati delle formule di testo nei modelli tabulari.  
   
 ## <a name="storage"></a>Archiviazione  
  Nei modelli tabulari tutti i dati sono altamente compressi affinché si adattino alla memoria. Di conseguenza, tutte le stringhe che possono essere considerate equivalenti dal punto di vista lessicale vengono archiviate una sola volta. La prima istanza della stringa viene utilizzata come rappresentazione canonica, dopodiché ogni stringa equivalente viene indicizzata allo stesso valore compresso della prima occorrenza.  

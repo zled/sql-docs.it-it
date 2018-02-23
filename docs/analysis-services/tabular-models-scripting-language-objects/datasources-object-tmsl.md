@@ -12,32 +12,33 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 07c2eb15addda49071fa962518eae322c014d8ad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="datasources-object-tmsl"></a>Oggetto di origini dati (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definisce una connessione a un'origine dati utilizzata dal modello durante l'importazione per aggiungere dati al modello o in pass-through query tramite la modalità DirectQuery.  I modelli in modalità DirectQuery possono avere solo uno **DataSource** oggetto.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Definisce una connessione a un'origine dati utilizzata dal modello durante l'importazione per aggiungere dati al modello o in pass-through query tramite la modalità DirectQuery.  I modelli in modalità DirectQuery possono avere solo uno **DataSource** oggetto.  
   
  A meno che non si sta creando, sostituendo, o modificare l'oggetto di origine dati stessa, qualsiasi origine dati a cui fa riferimento nello script (ad esempio script partizione) deve essere un oggetto esistente **DataSource** oggetto nel modello.  
   
 ## <a name="object-definition"></a>Definizione dell'oggetto  
  Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Origine dati** gli oggetti dispongono anche le proprietà seguenti.  
   
- Tipo  
+ tipo  
  Tipo di origine dati. Attualmente, l'unico valore valido è Provider (1) - stringa di connessione normale.  
   
  connectionString  
  La stringa di connessione che specifica il server e database minima, ma può includere anche altre proprietà supportate dal sistema RDBMS esterno, ad esempio un account utente o i provider di dati. Questo valore è obbligatorio. Vedere [classe SqlConnectionStringBuilder](https://msdn.microsoft.com/en-us/library/ms254500\(v=vs.110\).aspx) proprietà della stringa di connessione del database per informazioni dettagliate su SQL Server.  
   
- valore di impersonationMode  
+ impersonationMode  
  Specifica se Analysis Services deve rappresentare l'identità dell'utente che richiede la query. Questa proprietà è un valore numerico che specifica le credenziali da utilizzare per la rappresentazione. I valori di enumerazione sono i seguenti:  
   
 -   Predefinito (1) - il server utilizza il metodo di rappresentazione che ritiene appropriata per il contesto in cui viene utilizzata la rappresentazione.  
@@ -187,7 +188,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Riferimento a Tabular Model Scripting Language &#40;TMSL&#41;)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Modalità DirectQuery &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [Modalità DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

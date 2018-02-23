@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_version_store_space_usage (Transact-SQL) | Documenti Microsoft
+title: sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/30/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - sys.dm_tran_version_store_space_usage
 - dm_tran_version_store_space_usage
 - dm_tran_version_store_space_usage_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_version_store_space_usage dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_version_store_space_usage dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: cfdd2caa03fdd12501580c2584d68f374ee54222
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 3108394b7848047bac97ece004bf9c168b0e045c
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>Sys.dm_tran_version_store_space_usage (Transact-SQL)
+# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Restituisce una tabella che visualizza lo spazio totale in tempdb utilizzati dai record di archivio versione per ogni database. **Sys.dm_tran_version_store_space_usage** è efficiente e ad alte prestazioni per l'esecuzione non passa tramite l'archivio versione singoli record e restituisce lo spazio di archivio versione aggregati utilizzato in tempdb per ogni database.
+Restituisce una tabella che visualizza lo spazio totale in tempdb utilizzati dai record di archivio versione per ogni database. **Sys.dm_tran_version_store_space_usage** è efficiente e non costose da eseguire, come non spostarsi record archivio versione singoli e restituisce aggregati spazio di archiviazione versione utilizzato in tempdb per ogni database.
   
-Ogni record con versione viene archiviato come dato binario con alcune informazioni di rilevamento o stato. Analogamente ai record nelle tabelle di database, i record inclusi nell'archivio delle versioni vengono archiviati in pagine da 8192 byte. In caso di dimensioni superiori a 8192 byte, il record verrà suddiviso in due record distinti.  
+Ogni record con versione viene archiviato come dato binario, con alcune informazioni di rilevamento o stato. Analogamente ai record nelle tabelle di database, i record inclusi nell'archivio delle versioni vengono archiviati in pagine da 8192 byte. In caso di dimensioni superiori a 8192 byte, il record verrà suddiviso in due record distinti.  
   
 Poiché il record con versione viene archiviato come dato binario, non si verificheranno problemi in presenza di diverse regole di confronto di database diversi. Utilizzare **sys.dm_tran_version_store_space_usage** per monitorare e pianificare le dimensioni di tempdb in base all'utilizzo di spazio di archivio versione del database in un'istanza di SQL Server.
   
@@ -49,7 +52,7 @@ Poiché il record con versione viene archiviato come dato binario, non si verifi
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 
 ## <a name="examples"></a>Esempi  
- La query seguente consente di determinare lo spazio utilizzato in tempdb dall'archivio delle versioni di ogni database in un'istanza di SQL Server. 
+ La query seguente consente di determinare lo spazio utilizzato in tempdb, dall'archivio delle versioni di ogni database in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza. 
   
 ```sql  
 SELECT 

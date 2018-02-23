@@ -11,22 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: multidimensional data [Analysis Services], about multidimensional data
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- multidimensional data [Analysis Services], about multidimensional data
 ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c671dde35093f9a5931d4387ee2debd65200412f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 29fa27487fde84c7838f834dc0dfe397bc3d356e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Informazioni sull'architettura Microsoft OLAP
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Utilizzare questi argomenti consentono di comprendere meglio [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database multidimensionali e piano come implementare i database multidimensionali nella soluzione di business intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Questi argomenti consentono di comprendere meglio i database multidimensionali di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e pianificare l'implementazione di tali database nella soluzione di Business Intelligence.  
   
  ![Icona della cartella File di piccole dimensioni](../../../analysis-services/media/filefolder-small.png "icona della cartella File di piccole dimensioni") **architettura logica**  
  [Oggetti server &#40; Analysis Services - dati multidimensionali &#41;](../../../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md)  
@@ -35,14 +38,14 @@ ms.lasthandoff: 01/08/2018
   
  [Oggetti cubo &#40; Analysis Services - dati multidimensionali &#41;](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
- [Altro...](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [Altro…](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  ![Icona della cartella File di piccole dimensioni](../../../analysis-services/media/filefolder-small.png "icona della cartella File di piccole dimensioni") **architettura fisica**  
- [Componenti del server del motore OLAP](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
+ [Componenti Server del motore OLAP](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
   
  [Cubi locali &#40; Analysis Services - dati multidimensionali &#41;](../../../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)  
   
- [Altro...](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)  
+ [Altro…](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)  
   
  ![Icona della cartella File di piccole dimensioni](../../../analysis-services/media/filefolder-small.png "icona della cartella File di piccole dimensioni") **architettura di programmazione**  
  [Lo sviluppo con Analysis Management Objects &#40; AMO &#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
@@ -55,6 +58,6 @@ ms.lasthandoff: 01/08/2018
  [Scenari di globalizzazione per Analysis Services](../../../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento tecnico &#40; SSAS &#41;](../../../analysis-services/powershell/technical-reference-ssas.md)  
+ [Riferimento tecnico ](../../../analysis-services/powershell/technical-reference-ssas.md)  
   
   

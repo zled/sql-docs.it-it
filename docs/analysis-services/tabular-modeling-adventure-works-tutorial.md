@@ -24,18 +24,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d85d437ce17c04107d85cf444268eb26f1a460e8
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Modellazione tabulare (livello di compatibilità 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Questa esercitazione sono incluse lezioni sulla creazione di un modello tabulare di Analysis Services con il [livello di compatibilità 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) utilizzando [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)e distribuire il modello di Analysis Services server locale o in Azure.  
  
-Se si utilizza SQL Server 2017 o Azure Analysis Services e si desidera creare il modello di compatibilità 1400 livello, utilizzare il [Azure Analysis Services - esercitazione Adventure Works](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master). Questa versione aggiornata utilizza la funzionalità di nuovo e moderna recupera dati per connettersi e importare i dati di origine e viene utilizzato il linguaggio di M per configurare le partizioni.
+Se si utilizza SQL Server 2017 o Azure Analysis Services e si desidera creare il modello di compatibilità 1400 livello, utilizzare il [(livello di compatibilità 1400) di modellazione tabulare](tutorial-tabular-1400/as-adventure-works-tutorial.md). Questa versione aggiornata utilizza la funzionalità di ottenere dati più recenti per connettersi e importare i dati di origine, viene utilizzato il linguaggio di M per configurare le partizioni e include ulteriori lezioni supplementari.
+
+> [!IMPORTANT]
+> È necessario creare i modelli tabulari a livello di compatibilità più recente supportato dal server. Modelli del livello di compatibilità successivi forniscono prestazioni migliori, sulle funzionalità aggiuntive e verranno aggiornate in modo più efficiente ai livelli di compatibilità futura.
  
   
 ## <a name="what-you-learn"></a>Informazioni   
@@ -50,14 +53,14 @@ Se si utilizza SQL Server 2017 o Azure Analysis Services e si desidera creare il
   
 -   Come creare e gestire prospettive e gerarchie che semplificano l'esplorazione dei dati del modello fornendo punti di vista specifici dell'applicazione e di business.  
   
--   Modalità di creazione di partizioni che consentono di dividere i dati della tabella in parti logiche più piccole che possono essere elaborate indipendentemente dalle altre partizioni.  
+-   Come creare partizioni dividere i dati di tabella in parti logiche più piccole, che possono essere elaborate indipendentemente da altre partizioni.  
   
 -   Modalità di protezione degli oggetti e dei dati del modello tramite la creazione di ruoli con membri utente.  
   
 -   Come distribuire un modello tabulare a un server di Analysis Services in locale o in Azure.  
   
 ## <a name="scenario"></a>Scenario  
-Questa esercitazione è basata su Adventure Works Cycles, una società fittizia. Adventure Works è una società multinazionale che produce e commercializza biciclette in metallo e sui mercati dell'America del Nord, Europa e Asia. Con la sede di Bothell, Washington, lavorano 500 dipendenti. Inoltre, Adventure Works utilizza diversi team delle vendite regionali di mercato.  
+Questa esercitazione è basata su Adventure Works Cycles, una società fittizia. Adventure Works è un'azienda manifatturiera multinazionale che produce biciclette, parti e accessori sui mercati dell'America del Nord, Europa e Asia. Con la sede di Bothell, Washington, lavorano 500 dipendenti. Inoltre, Adventure Works utilizza diversi team delle vendite regionali di mercato.  
   
 Per offrire un supporto migliore per le esigenze di analisi dei dati di team di vendita e marketing e dei responsabili, si desidera creare un modello tabulare che consenta agli utenti di analizzare i dati relativi alle vendite Internet nel database di esempio AdventureWorksDW.  
   

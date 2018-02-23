@@ -1,5 +1,5 @@
 ---
-title: Relazioni (SSAS tabulare) | Documenti Microsoft
+title: Relazioni | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c7f262045697398e2de2dabf01d59f9422191b55
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ff8d2460b53eed9189b230fea270b97e323ac0b9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="relationships-ssas-tabular"></a>Relazioni (SSAS tabulare)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nei modelli tabulari, una relazione è una connessione tra due tabelle di dati. e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle. È ad esempio possibile mettere in correlazione una tabella Clienti e una tabella Ordini per mostrare il nome del cliente associato a ciascun ordine.  
+# <a name="relationships"></a>Relazioni 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Nei modelli tabulari, una relazione è una connessione tra due tabelle di dati e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle. È ad esempio possibile mettere in correlazione una tabella Clienti e una tabella Ordini per mostrare il nome del cliente associato a ciascun ordine.  
   
  Se si utilizza l'Importazione guidata tabella per importare dalla stessa origine dati, le relazioni già presenti nelle tabelle (a livello di origine dati) che si sceglie di importare saranno ricreate nel modello. È possibile visualizzare le relazioni rilevate e ricreate automaticamente tramite Progettazione modelli nella Vista diagramma o la finestra di dialogo Gestisci relazioni. È inoltre possibile creare manualmente nuove relazioni tra tabelle tramite Progettazione modelli nella Vista diagramma o la finestra di dialogo Crea relazione o Gestisci relazioni.  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="what"></a> Vantaggi  
  Una relazione è una connessione tra due tabelle di dati, in base a una o più colonne in ogni tabella. Per capire perché le relazioni sono utili, provare a immaginare di tenere traccia degli ordini di un cliente della propria azienda. È possibile tenere traccia di tutti i dati in un'unica tabella che dispone di una struttura simile alla seguente:  
   
-|CustomerID|nome|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|07/01/2010|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 ### <a name="customers"></a>Customers  
   
-|[CustomerID]|nome|EMail|  
+|[CustomerID]|Nome|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -103,7 +104,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="single-active-relationship-between-tables"></a>Singola relazione attiva tra tabelle  
  Più relazioni possono comportare dipendenze ambigue tra le tabelle. Per creare calcoli accurati, è necessario un unico percorso da una tabella a quella successiva. Di conseguenza, può essere presente una sola relazione attiva tra ogni coppia di tabelle. In AdventureWorks DW 2012, ad esempio, la tabella DimDate contiene una colonna, DateKey, correlata a tre colonne diverse della tabella FactInternetSales: OrderDate, DueDate e ShipDate. Se si tenta di importare queste tabelle, la prima relazione viene creata correttamente, ma per le relazioni successive che riguardano la stessa colonna verrà visualizzato il messaggio di errore seguente:  
   
- \*Relazione: tabella [colonna 1] -> tabella [colonna 2] - stato: errore - motivo: Impossibile creare una relazione tra tabelle \<tabella 1 > e \<tabella 2 >. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
+ \* Relazione: tabella [colonna 1] -> tabella [colonna 2] - stato: errore - motivo: Impossibile creare una relazione tra tabelle \<tabella 1 > e \<tabella 2 >. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
   
  Se sono presenti due tabelle unite da più relazioni, sarà necessario importare più copie della tabella contenente la colonna di ricerca e creare una relazione tra ogni coppia di tabelle.  
   

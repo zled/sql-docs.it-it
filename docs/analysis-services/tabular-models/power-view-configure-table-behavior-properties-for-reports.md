@@ -1,5 +1,5 @@
 ---
-title: "Configurare le proprietà comportamento tabella per i report di Power View (SSAS tabulare) | Documenti Microsoft"
+title: "Configurare le proprietà comportamento tabella per i report Power View | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f202d090127d93ec0786e0b7cca90f54f7fac0b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View: configurare le proprietà comportamento tabella per i report
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Se si utilizza un modello tabulare come modello di dati per [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], è possibile impostare le proprietà comportamento tabella che espongono righe di dettaglio a un livello più granulare. L'impostazione delle proprietà del comportamento delle tabelle comporta la modifica del comportamento di raggruppamento delle righe di dettaglio e offre una posizione predefinita migliore per le informazioni di identificazione quali nomi, ID foto o immagini del logo nei layout di sezioni, schede e grafici.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Se si usa un modello tabulare come modello di dati per [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], è possibile impostare le proprietà del comportamento delle tabelle che espongono righe di dettaglio a un livello più granulare. L'impostazione delle proprietà del comportamento delle tabelle comporta la modifica del comportamento di raggruppamento delle righe di dettaglio e offre una posizione predefinita migliore per le informazioni di identificazione quali nomi, ID foto o immagini del logo nei layout di sezioni, schede e grafici.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] differisce dalle altre applicazioni di creazione report in quanto raggruppa automaticamente gli elementi durante la progettazione del report, tenendo conto di quali colonne sono state inserite nell'elenco dei campi del report rispetto al formato di presentazione usato. Nella maggior parte dei casi, il raggruppamento predefinito produce un risultato ottimale. Per alcune tabelle, tuttavia, principalmente quelle che contengono dati di dettaglio, il comportamento di raggruppamento predefinito prevede talvolta il raggruppamento di righe che non dovrebbero essere raggruppate. Per queste tabelle, è possibile impostare proprietà per modificare la modalità di valutazione dei gruppi.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Rimozione dei subtotali non desiderati da un report matrice. Il raggruppamento predefinito a livello di campo comporta la creazione di un subtotale per ciascun campo. Se si desidera disporre di un solo subtotale calcolato a livello di riga, l'impostazione dell'identificatore di riga produce questo risultato.  
   
- Non è possibile impostare un identificatore di riga per le tabelle contrassegnate come tabelle data. Per le tabelle data, l'identificatore di riga viene specificato quando si contrassegna la tabella. Per altre informazioni, vedere [Finestra di dialogo Contrassegna come tabella data &#40;SSAS&#41;](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
+ Non è possibile impostare un identificatore di riga per le tabelle contrassegnate come tabelle data. Per le tabelle data, l'identificatore di riga viene specificato quando si contrassegna la tabella. Per ulteriori informazioni, vedere [contrassegna come tabella data finestra di dialogo ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>Impostazione della proprietà Mantieni righe univoche  
  Questa proprietà consente di specificare quali colonne contengono informazioni di identificazione, ad esempio un nome di dipendente o un codice prodotto, in modo da fare distinzione tra le righe. Nei casi in cui le righe sembrano identiche, ad esempio due clienti con lo stesso nome, le colonne specificate per questa proprietà vengono ripetute nella tabella del report.  
@@ -138,7 +140,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Grafico basato su raggruppamento per ID di riga](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "grafico basato su raggruppamento per ID di riga")  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
  Dopo avere valutato le tabelle nel modello e avere impostato le proprietà del comportamento per le tabelle che contengono righe di dettaglio che devono sempre essere visualizzate come singoli elementi, è possibile ottimizzare ulteriormente il modello tramite proprietà o impostazioni aggiuntive.  
   
   

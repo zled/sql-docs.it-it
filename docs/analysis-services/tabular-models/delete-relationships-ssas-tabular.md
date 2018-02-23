@@ -1,7 +1,7 @@
 ---
-title: Eliminare relazioni (SSAS tabulare) | Documenti Microsoft
+title: Eliminare relazioni | Documenti Microsoft
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54f2d9205ec7e8815572e9107e6319262c343edd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 690224c1798494e75f6b26add07d51c3afa7134f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="delete-relationships-ssas-tabular"></a>Eliminare relazioni (SSAS tabulare)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]È possibile eliminare le relazioni esistenti utilizzando Progettazione modelli in vista diagramma o nella finestra di dialogo Gestisci relazioni. Per informazioni sulla modalità d'uso delle relazioni nei modelli tabulari, vedere [Relazioni &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
+# <a name="delete-relationships"></a>Eliminare relazioni 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+È possibile eliminare relazioni esistenti utilizzando Progettazione modelli nella Vista diagramma o la finestra di dialogo Gestisci relazioni. Per informazioni sull'utilizzo delle relazioni nei modelli tabulari, vedere [relazioni](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
 ## <a name="considerations-for-deleting-relationships"></a>Considerazioni sull'eliminazione di relazioni  
  Quando si decide se eliminare una relazione, tenere presente i fattori seguenti:  
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 4.  Fare clic su **Chiudi** nella finestra di dialogo **Gestisci relazioni**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Relazioni &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)   
- [Creare una relazione tra due tabelle &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [Relazioni](../../analysis-services/tabular-models/relationships-ssas-tabular.md)   
+ [Creare una relazione](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

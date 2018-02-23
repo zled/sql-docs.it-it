@@ -1,5 +1,5 @@
 ---
-title: Impostare il tipo di dati di una colonna (SSAS tabulare) | Documenti Microsoft
+title: Impostare il tipo di dati di una colonna | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 441bb1316c22d0a701ded998def0b1f94c84e4de
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Impostare il tipo di dati di una colonna (SSAS tabulare)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Quando si importano o incollano dati in un modello, Progettazione modelli verrà automaticamente rilevare e applicare tipi di dati. Dopo aver aggiunto i dati al modello, è possibile modificare manualmente il tipo di dati di una colonna per cambiarne la modalità di archiviazione oppure limitarsi a modificare il formato della modalità di visualizzazione dei dati.  
+# <a name="set-the-data-type-of-a-column"></a>Impostare il tipo di dati di una colonna 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Quando si importano o incollano dati in un modello, Progettazione modelli consentirà di rilevare e applicare automaticamente i tipi di dati. Dopo aver aggiunto i dati al modello, è possibile modificare manualmente il tipo di dati di una colonna per cambiarne la modalità di archiviazione oppure limitarsi a modificare il formato della modalità di visualizzazione dei dati.  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>Per modificare il tipo di dati o il formato di visualizzazione per una colonna  
   
@@ -79,9 +80,9 @@ ms.lasthandoff: 01/08/2018
   
  Se il tipo di dati è supportato, ma tramite Progettazione modelli vengono individuati valori non supportati all'interno del nuovo tipo di dati, verrà visualizzato un altro errore e sarà necessario correggere i valori dei dati prima di procedere.  
   
- Per informazioni dettagliate sui tipi di dati usati nei modelli BI Semantic Model, sulla relativa modalità di conversione implicita e sull'impiego di tipi di dati diversi nelle formule, vedere [Tipi di dati supportati &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ Per informazioni dettagliate sui tipi di dati utilizzati in modelli business intelligence semantic Model, il modo in cui convertire in modo implicito e come i diversi tipi di dati vengono utilizzati nelle formule, vedere [tipi di dati supportati](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi di dati supportati &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
+ [Tipi di dati supportati](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   

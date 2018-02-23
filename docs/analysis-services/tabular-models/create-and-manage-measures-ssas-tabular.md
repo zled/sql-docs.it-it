@@ -1,7 +1,7 @@
 ---
-title: Creare e gestire misure (SSAS tabulare) | Documenti Microsoft
+title: Creare e gestire misure | Documenti Microsoft
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,31 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 799ada43cebe2f6358c88c0b4aa8719186f67823
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e61c65d65723b1500140a2c2493a479b0e2a640
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-measures-ssas-tabular"></a>Creare e gestire misure (SSAS tabulare)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Una misura è una formula creata per l'utilizzo in un report tabella pivot di Excel (o un grafico pivot). Le misure possono essere basate sulle funzioni di aggregazione standard, ad esempio COUNT o SUM. In alternativa, è possibile definire formule personalizzate tramite DAX. Nelle attività contenute in questo argomento viene descritto come creare e gestire misure utilizzando la griglia delle misure di una tabella.  
-  
- In questo argomento sono incluse le attività seguenti:  
-  
--   [Per creare una misura tramite una formula di aggregazione standard](#bkmk_create_stand)  
-  
--   [Per creare una misura tramite una formula personalizzata](#bkmk_create_custom)  
-  
--   [Per modificare le proprietà di una misura](#bkmk_edit)  
-  
--   [Per rinominare una misura](#bkmk_rename)  
-  
--   [Per eliminare una misura](#bkmk_delete)  
+# <a name="create-and-manage-measures"></a>Creare e gestire misure 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Una misura è una formula creata per l'utilizzo in un report o in una tabella pivot o grafico pivot. Le misure possono essere basate sulle funzioni di aggregazione standard, ad esempio COUNT o SUM. In alternativa, è possibile definire formule personalizzate tramite DAX. Nelle attività contenute in questo argomento viene descritto come creare e gestire misure utilizzando la griglia delle misure di una tabella.  
   
 ## <a name="tasks"></a>Attività  
  Per creare e gestire misure, sarà necessario utilizzare la griglia delle misure di una tabella. La griglia delle misure per una tabella può essere visualizzata solo in Vista dati di Progettazione modelli. Non è possibile creare misure o visualizzare la griglia delle misure in Vista diagramma; tuttavia, in tale vista è possibile visualizzare misure esistenti. Per visualizzare la griglia delle misure per una tabella, fare clic sul menu **Tabella** , quindi su **Mostra griglia delle misure**.  
@@ -66,8 +55,8 @@ ms.lasthandoff: 01/08/2018
 -   Nella griglia delle misure fare clic con il pulsante destro del mouse su una misura, quindi scegliere **Elimina**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Misure &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [Indicatori KPI &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Colonne calcolate &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
+ [Misure](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [Indicatori KPI](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Colonne calcolate](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   
