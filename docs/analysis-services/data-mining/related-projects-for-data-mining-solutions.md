@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7eebc2ae561e47481734c80dbc8f77ad381f4193
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Progetti correlati per soluzioni di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -208,7 +208,7 @@ Come minimo, per una soluzione di data mining è richiesto il progetto di data m
 -   Non tutte le lingue full-text supportano l'indicizzazione semantica. Per un elenco delle lingue supportate, vedere [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Soluzioni di modelli multidimensionali &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Soluzioni di modelli tabulari &#40; SSAS tabulare &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Soluzioni di modelli multidimensionali ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Soluzioni di modelli tabulari](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   

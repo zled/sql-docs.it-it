@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-mining-projects"></a>Progetti di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -220,11 +220,11 @@ Un progetto di data mining è parte di una soluzione [!INCLUDE[ssASnoversion](..
 |Vengono forniti collegamenti alle informazioni su ciascuno dei visualizzatori dei modelli di data mining|[Visualizzatori modello di Data Mining](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Vengono fornite informazioni sulla creazione di un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione o sul test di una struttura di data mining|[Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Vengono fornite informazioni sulle opzioni di elaborazione e sulle autorizzazioni|[L'elaborazione di oggetti di Data Mining](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Vengono fornite ulteriori informazioni su Analysis Services|[Database modello multidimensionale &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Vengono fornite ulteriori informazioni su Analysis Services|[Database modello multidimensionale ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione di Data Mining](../../analysis-services/data-mining/data-mining-designer.md)   
  [Creazione di modelli multidimensionali tramite SQL Server Data Tools &#40; SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Database dell'area di lavoro &#40; SSAS tabulare &#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [Database dell'area di lavoro](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

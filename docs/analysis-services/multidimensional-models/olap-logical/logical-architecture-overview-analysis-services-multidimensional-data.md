@@ -22,17 +22,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: dacdeff9764aaa11277118cb494900bf6f42e6aa
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Panoramica dell'architettura logica (Analysis Services - Dati multidimensionali)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
 Analysis Services viene eseguito in una modalità di distribuzione server che determina l'architettura di memoria e l'ambiente di runtime utilizzati dai diversi tipi di modelli di Analysis Services. La modalità server viene determinata durante l'installazione. **Modalità multidimensionale e Data Mining** supporta OLAP tradizionali e il data mining. **Modalità tabulare** supporta modelli tabulari. **La modalità integrata SharePoint** fa riferimento a un'istanza di Analysis Services in cui è stato installato come [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint, utilizzato per il caricamento e l'esecuzione di query Excel o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] i modelli di dati all'interno di una cartella di lavoro.  
   
- In questo argomento viene illustrata l'architettura di base di Analysis Services quando viene utilizzato nella modalità multidimensionale e di data mining. Per ulteriori informazioni sulle altre modalità, vedere [modellazione tabulare &#40; SSAS &#41; ](../../../analysis-services/tabular-models/tabular-models-ssas.md) e [confronto tra soluzioni tabulari e multidimensionali &#40; SSAS &#41; ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ In questo argomento viene illustrata l'architettura di base di Analysis Services quando viene utilizzato nella modalità multidimensionale e di data mining. Per ulteriori informazioni sulle altre modalità, vedere [modellazione tabulare ](../../../analysis-services/tabular-models/tabular-models-ssas.md) e [confronto tabulari e multidimensionali ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## <a name="basic-architecture"></a>Architettura di base  
  Un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] può contenere più database e un database può includere contemporaneamente oggetti OLAP e oggetti di data mining. Le applicazioni si connettono a un'istanza specifica di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a un database specifico. Un computer server può ospitare più istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Le istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] vengono denominati "\<nomeserver >\\< NomeIstanza\>". La figura seguente mostra tutte le relazioni indicate tra [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oggetti.  
@@ -133,6 +133,6 @@ Analysis Services viene eseguito in una modalità di distribuzione server che de
  Nell'esempio illustrato di seguito viene utilizzata una sola tabella dei fatti. Quando un cubo utilizza più tabelle dei fatti, le misure di ogni tabella dei fatti vengono organizzate in gruppi di misure, ognuno dei quali è correlato a un set di dimensioni specifico mediante le relazioni tra dimensioni definite. Queste relazioni vengono definite specificando le tabelle della vista origine dati coinvolte e il livello di granularità della relazione. **Argomento correlato:**[relazioni tra dimensioni](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Database modello multidimensionale &#40; SSAS &#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Database modello multidimensionale ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   
