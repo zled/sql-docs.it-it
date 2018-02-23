@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura di elaborazione delle query | Microsoft Docs
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c55426d6723749d9edda2b6244ae7e75f47047b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,40 @@ Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] consente di elabor
 ## <a name="sql-statement-processing"></a>Elaborazione di istruzioni SQL
 
 L'elaborazione di una singola istruzione SQL rappresenta la modalità più semplice di esecuzione delle istruzioni SQL in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per illustrare il processo di base, viene usata la procedura di elaborazione di una singola istruzione `SELECT` che fa riferimento esclusivamente a tabelle di base locali, non a viste o tabelle remote.
+
+#### <a name="logical-operator-precedence"></a>Ordine di precedenza degli operatori logici
+
+Se in un'istruzione vengono usati più operatori logici, viene valutato prima `NOT`, quindi `AND` e infine `OR`. Gli operatori aritmetici (e bit per bit) vengono valutati prima degli operatori logici. Per altre informazioni, vedere [Precedenza degli operatori](../t-sql/language-elements/operator-precedence-transact-sql.md).
+
+Nell'esempio seguente la condizione per il colore riguarda il modello di prodotto 21 e non il modello di prodotto 20, perché `AND` ha la priorità rispetto a `OR`.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+È possibile modificare il significato della query aggiungendo le parentesi in modo da imporre la priorità dell'operatore `OR` nell'ordine di valutazione. La query seguente trova solo i prodotti di colore rosso dei modelli 20 e 21.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+L'uso delle parentesi, anche quando non è obbligatorio, può contribuire a rendere le query più leggibili e a ridurre il rischio di errori dovuti all'ordine di precedenza degli operatori. Non ha inoltre alcun effetto negativo rilevante sulle prestazioni. L'esempio seguente risulta più leggibile rispetto a quello precedente, anche se sintatticamente i due esempi sono identici.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
 
 #### <a name="optimizing-select-statements"></a>Ottimizzazione delle istruzioni SELECT
 
@@ -49,7 +83,6 @@ Un'istruzione `SELECT` definisce soltanto gli elementi seguenti:
 * Le tabelle che contengono i dati di origine. La modalità è specificata nella clausola `FROM` .
 * La relazione logica tra le tabelle ai fini dell'istruzione `SELECT` . Questo elemento viene definito nelle specifiche di join, incluse nella clausola `WHERE` oppure in una clausola `ON` che segue una clausola `FROM`.
 * Condizioni che le righe delle tabelle di origine devono soddisfare per essere incluse nel risultato dell'istruzione `SELECT` . Queste condizioni vengono specificate nelle clausole `WHERE` ed `HAVING` .
-
 
 Il piano di esecuzione di una query è costituito dalla definizione degli elementi seguenti: 
 
@@ -1045,4 +1078,5 @@ GO
  [Eventi estesi](../relational-databases/extended-events/extended-events.md)  
  [Procedure consigliate per l'archivio query](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Stima della cardinalità](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [Elaborazione di query adattive](../relational-databases/performance/adaptive-query-processing.md)
+ [Elaborazione di query adattive](../relational-databases/performance/adaptive-query-processing.md)   
+ [Ordine di precedenza degli operatori](../t-sql/language-elements/operator-precedence-transact-sql.md)

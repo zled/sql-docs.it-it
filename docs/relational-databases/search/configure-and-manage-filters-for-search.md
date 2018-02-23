@@ -21,34 +21,37 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4c3a5a90c6dffb76f4569d86615cbb0034f3db5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 452745e1557a388ca2abf1fcab6b7995bcc46c44
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurazione e gestione di filtri per la ricerca
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 L'indicizzazione di un documento in una colonna con tipo di dati **varbinary**, **varbinary(max)**, **image** o **xml** richiede operazioni di elaborazione aggiuntive. che devono essere eseguite mediante un filtro. Il filtro estrae le informazioni testuali dal documento rimuovendo la formattazione, quindi invia il testo al word breaker per la lingua associata alla colonna della tabella.  
+ 
+## <a name="filters-and-document-types"></a>Filtri e tipi di documento
+Un determinato filtro è specifico di un determinato tipo di documento (file con estensione doc, pdf, xls, xml e così via). Questi filtri implementano l'interfaccia IFilter. Per altre informazioni su questi tipi di documento, eseguire una query nella vista del catalogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
   
- Un determinato filtro è specifico di un determinato tipo di documento (file con estensione doc, pdf, xls, xml e così via). Questi filtri implementano l'interfaccia IFilter. Per altre informazioni su questi tipi di documento, eseguire una query nella vista del catalogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
+I documenti binari possono essere archiviati in una singola colonna **varbinary(max)** o **image** . Per ogni documento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglie il filtro corretto da utilizzare in base all'estensione file. Considerato che l'estensione non è visibile quando il file viene archiviato in una colonna **varbinary(max)** o **image** , l'estensione file (DOC, XLS, PDF e così via) deve essere archiviata in una colonna distinta della tabella, denominata colonna del tipo. Questa colonna può includere qualsiasi tipo di dati basato su caratteri e contiene l'estensione file del documento, ad esempio l'estensione doc per un documento di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Nella tabella **Document** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]la colonna **Document** è di tipo **varbinary(max)**mentre la colonna del tipo, **FileExtension**, è di tipo **nvarchar(8)**.  
+
+**Per visualizzare la colonna del tipo in un indice full-text esistente**  
   
- I documenti binari possono essere archiviati in una singola colonna **varbinary(max)** o **image** . Per ogni documento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglie il filtro corretto da utilizzare in base all'estensione file. Considerato che l'estensione non è visibile quando il file viene archiviato in una colonna **varbinary(max)** o **image** , l'estensione file (DOC, XLS, PDF e così via) deve essere archiviata in una colonna distinta della tabella, denominata colonna del tipo. Questa colonna può includere qualsiasi tipo di dati basato su caratteri e contiene l'estensione file del documento, ad esempio l'estensione doc per un documento di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Nella tabella **Document** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]la colonna **Document** è di tipo **varbinary(max)**mentre la colonna del tipo, **FileExtension**, è di tipo **nvarchar(8)**.  
+-   [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)  
   
 > [!NOTE]  
 >  Un filtro potrebbe essere in grado di gestire gli oggetti incorporati nell'oggetto padre, a seconda della relativa implementazione. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tuttavia, i filtri non vengono configurati per seguire collegamenti ad altri oggetti.  
+
+## <a name="installed-filters"></a>Filtri installati 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa i propri filtri XML e HTML. Anche gli eventuali filtri per i formati proprietari [!INCLUDE[msCoName](../../includes/msconame-md.md)] (con estensione doc, xdoc, ppt e così via) già installati nel sistema operativo vengono caricati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per identificare i filtri attualmente caricati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare la stored procedure [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) nel modo seguente:  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa i propri filtri XML e HTML. Anche gli eventuali filtri per i formati proprietari [!INCLUDE[msCoName](../../includes/msconame-md.md)] (con estensione doc, xdoc, ppt e così via) già installati nel sistema operativo vengono caricati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per identificare i filtri attualmente caricati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare la stored procedure [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) nel modo seguente:  
-  
-```  
+```sql
 EXEC sp_help_fulltext_system_components 'filter';   
 ```  
+## <a name="non-microsoft-filters"></a>Filtri non Microsoft
+Per poter usare i filtri per formati non [!INCLUDE[msCoName](../../includes/msconame-md.md)], è tuttavia necessario caricarli manualmente nell'istanza del server. Per informazioni sull'installazione di filtri aggiuntivi, vedere [Visualizzare o modificare word breaker e filtri registrati](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
- Per poter usare i filtri per formati non [!INCLUDE[msCoName](../../includes/msconame-md.md)] , è tuttavia necessario caricarli manualmente nell'istanza del server. Per informazioni sull'installazione di filtri aggiuntivi, vedere [Visualizzare o modificare word breaker e filtri registrati](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
-  
- **Per visualizzare la colonna del tipo in un indice full-text esistente**  
-  
--   [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   

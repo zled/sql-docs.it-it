@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0bfa4f23ea87d7429075d1039df56286b7d4785e
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Distribuire, eseguire e monitorare un pacchetto SSIS in Azure
 Questa esercitazione illustra come distribuire un progetto di SQL Server Integration Services per il database del catalogo SSISDB nel database SQL di Azure, eseguire un pacchetto nel runtime di integrazione SSIS di Azure e monitorare il pacchetto in esecuzione.
@@ -89,7 +89,9 @@ Usare SQL Server Management Studio per connettersi al catalogo SSIS nel server d
 
 ## <a name="deploy-a-project-with-powershell"></a>Distribuire un progetto con PowerShell
 
-Per distribuire un progetto con PowerShell in SSISDB nel database SQL di Azure, adattare lo script seguente secondo i propri requisiti:
+Per distribuire un progetto con PowerShell in SSISDB nel database SQL di Azure, adattare lo script seguente secondo i propri requisiti. Lo script enumera le cartelle figlio in `$ProjectFilePath` e i progetti in ogni cartella figlio, quindi crea le stesse cartelle in SSISDB e distribuisce i progetti in tali cartelle.
+
+Questo script richiede SQL Server Data Tools versione 17.x o SQL Server Management Studio installato nel computer in cui viene eseguito lo script.
 
 ```powershell
 # Variables
