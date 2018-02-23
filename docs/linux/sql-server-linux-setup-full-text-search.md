@@ -1,6 +1,6 @@
 ---
 title: Installazione di ricerca Full-Text SQL Server in Linux | Documenti Microsoft
-description: In questo argomento viene descritto come installare ricerca Full-Text di SQL Server in Linux.
+description: In questo articolo viene descritto come installare ricerca Full-Text di SQL Server in Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 8b1f14ca454582ee85506cd68b07a38f17ada1b4
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1ffb4caadffb8f292f6bd8e495a457fe86e9d641
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installazione di ricerca Full-Text SQL Server in Linux
 
@@ -51,7 +51,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Se occorre un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi utilizzare gli stessi passaggi di installazione offline descritti nell'argomento [installazione di SQL Server](sql-server-linux-setup.md#offline).
+Se occorre un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi utilizzare gli stessi passaggi di installazione offline descritti nell'articolo [installazione di SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="ubuntu">Installare in Ubuntu</a>
 
@@ -69,7 +69,7 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Se occorre un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi utilizzare gli stessi passaggi di installazione offline descritti nell'argomento [installazione di SQL Server](sql-server-linux-setup.md#offline).
+Se occorre un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi utilizzare gli stessi passaggi di installazione offline descritti nell'articolo [installazione di SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="SLES">Installare in SLES</a>
 
@@ -86,7 +86,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Se occorre un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi utilizzare gli stessi passaggi di installazione offline descritti nell'argomento [installazione di SQL Server](sql-server-linux-setup.md#offline).
+Se occorre un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi utilizzare gli stessi passaggi di installazione offline descritti nell'articolo [installazione di SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="supported-languages"></a>Lingue supportate
 
@@ -148,7 +148,7 @@ Ricerca full-Text utilizza [word breaker](../relational-databases/search/configu
 | Urdu | 1056 |
 | Vietnamita | 1066 |
 
-## <a id="filters"></a>Filtri
+## <a id="filters"></a> Filtri
 
 Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in questo caso, un filtro installato è necessario elaborare il file. Per ulteriori informazioni sui filtri, vedere [configurare e gestire i filtri per la ricerca](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
