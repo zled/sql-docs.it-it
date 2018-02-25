@@ -17,7 +17,7 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
 ms.openlocfilehash: 1f018dd2b60365d89e912e7ef38499f8a4d14d9b
 ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/19/2018
 ---
@@ -75,7 +75,7 @@ Questa immagine è costituita da SQL Server in esecuzione su Linux basato su Ubu
 
    La tabella seguente offre una descrizione dei parametri dell'esempio `docker run` precedente:
 
-   | Parametro | Descrizione |
+   | Parametro | Description |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza ](http://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Specificare la password complessa composta da almeno 8 caratteri e conforme ai [requisiti per le password di SQL Server](../relational-databases/security/password-policy.md). Impostazione obbligatoria per l'immagine di SQL Server. |
