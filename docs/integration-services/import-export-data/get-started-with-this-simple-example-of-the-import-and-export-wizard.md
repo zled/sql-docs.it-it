@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6455a2881d11ccd10c7be65a437357b1d1431dda
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Introduzione a un esempio semplice di importazione/esportazione guidata
 Informazioni sull'importazione/esportazione guidata SQL Server attraverso uno scenario comune da un foglio di calcolo di Excel a un database SQL Server. Anche se si prevede di usare un'origine diversa e una destinazione diversa, in questo argomento è illustrata la maggior parte delle operazioni da conoscere per l'esecuzione della procedura guidata.
@@ -118,7 +118,7 @@ Mentre è aperta la finestra di dialogo **Mapping delle colonne**, fare clic sul
 Per altre informazioni relative a questa pagina della procedura guidata, vedere [Istruzione SQL CREATE TABLE](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md).
 
 ## <a name="optional-step-9---preview-the-data-to-copy"></a>Passaggio 9, facoltativo: Anteprima dei dati da copiare
-Dopo aver fatto clic su**OK** per chiudere la finestra di dialogo **Istruzione SQL CREATE TABLE**, fare clic su **OK** per chiudere la finestra di dialogo **Mapping colonne**. Si tornerà nella pagina **Selezione tabelle e viste di origine**. Fare clic sul pulsante **Anteprima** per vedere un esempio dei dati che la procedura guidata copierà (facoltativo). In questo esempio, è corretto.
+Dopo aver fatto clic su**OK** per chiudere la finestra di dialogo **Istruzione SQL CREATE TABLE**, fare clic su **OK** per chiudere la finestra di dialogo **Mapping colonne**. Si tornerà nella pagina **Selezione tabelle e viste di origine**. È possibile fare clic sul pulsante **Anteprima** per visualizzare un esempio dei dati che verranno copiati dalla procedura guidata. In questo esempio, è corretto.
 
 ![Anteprima dei dati da copiare](../../integration-services/import-export-data/media/preview-data-to-copy.jpg)
 

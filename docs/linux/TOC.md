@@ -2,9 +2,10 @@
 
 # Panoramica
 ## [Note sulla versione](sql-server-linux-release-notes.md)
-## [Novità in questa versione](sql-server-linux-whats-new.md)
+## [Novità](sql-server-linux-whats-new.md)
 ## [Articoli nuovi e aggiornati](new-updated-linux.md)
 ## [Edizioni e funzionalità supportate ](sql-server-linux-editions-and-components-2017.md)
+## [FAQ](sql-server-linux-faq.md)
 
 # Guide introduttive
 ## [Installazione e connessione - Red Hat](quickstart-install-connect-red-hat.md)
@@ -89,6 +90,7 @@
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [Introduzione alle funzionalità di sicurezza](sql-server-linux-security-get-started.md)
+### [Autenticazione di Azure Active Directory](sql-server-linux-active-directory-auth-overview.md)
 ### [Crittografia delle connessioni](sql-server-linux-encrypted-connections.md)
 
 ## restazioni
@@ -102,7 +104,6 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Risorse
-## [FAQ](sql-server-linux-faq.md)
 ## [Risoluzione dei problemi](sql-server-linux-troubleshooting-guide.md)
 ## [Documentazione di SQL Server](../sql-server/sql-server-technical-documentation.md)
 ## Partner
