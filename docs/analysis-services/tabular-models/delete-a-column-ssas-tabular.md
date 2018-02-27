@@ -1,7 +1,7 @@
 ---
-title: Eliminare una colonna (SSAS tabulare) | Documenti Microsoft
+title: Eliminare una colonna | Documenti Microsoft
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,24 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d413e4bdfffcdf0210f960c34bfafa8dc82946ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c18504b3e6430807f124938b60d7f022a8050379
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="delete-a-column-ssas-tabular"></a>Eliminare una colonna (SSAS tabulare)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In questo argomento viene descritto come eliminare una colonna da una tabella del modello tabulare.  
+# <a name="delete-a-column"></a>Eliminare una colonna 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+In questo articolo viene descritto come eliminare una colonna da una tabella del modello tabulare.  
   
 ## <a name="delete-a-model-table-column"></a>Eliminare una colonna dalla tabella del modello  
   
 > [!NOTE]  
->  L'eliminazione di una colonna da una tabella del modello non elimina la colonna da una definizione della query della partizione. Se la colonna che si desidera eliminare fa parte di una partizione, è necessario eliminare manualmente la colonna dalla definizione della query della partizione. Se non si elimina la colonna dalla definizione della query della partizione, durante le operazioni di elaborazione verranno eseguite query sulla colonna e restituiti dati che tuttavia non saranno popolati nella tabella del modello. Per altre informazioni, vedere [Partizioni &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+>  L'eliminazione di una colonna da una tabella del modello non elimina la colonna da una definizione della query della partizione. Se la colonna che si desidera eliminare fa parte di una partizione, è necessario eliminare manualmente la colonna dalla definizione della query della partizione. Se non si elimina la colonna dalla definizione della query della partizione, durante le operazioni di elaborazione verranno eseguite query sulla colonna e restituiti dati che tuttavia non saranno popolati nella tabella del modello. Per ulteriori informazioni, vedere [partizioni](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 #### <a name="to-delete-a-model-table-column"></a>Per eliminare una colonna dalla tabella del modello  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 3.  Nella finestra di anteprima della tabella nella finestra di dialogo **Modifica proprietà tabella** deselezionare la colonna che si desidera eliminare, quindi scegliere **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere colonne a una tabella &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)   
- [Partizioni &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
+ [Aggiungere colonne a una tabella](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)   
+ [Partizioni](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: Informazioni su SQL Server Analysis Services | Documenti Microsoft
-ms.date: 01/26/2018
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 66bbbad6d55b8abb5e902e6d44355fc9c6c8cb29
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: fd94610fce0fb4c9329cc0725b3f8c54f9c6b9fe
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="about-sql-server-analysis-services"></a>Informazioni su SQL Server Analysis Services
 
@@ -44,9 +44,7 @@ Analysis Services è disponibile in due piattaforme diverse:
 **SQL Server Analysis Services** -supporta i modelli tabulari a tutti i livelli di compatibilità, i modelli multidimensionali, il data mining e Power Pivot per SharePoint.
  
  ## <a name="documentation-by-area"></a>Documentazione per area  
-In generale, [documentazione di Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/) è incluso con la documentazione di Azure. Se si desidera che i modelli tabulari del server nel cloud, è consigliabile partire da qui. 
-
-Questo articolo e la documentazione in questa sezione è principalmente per SQL Server Analysis Services. Tuttavia, almeno per i modelli tabulari, come creare e distribuire i progetti è molto simile, indipendentemente dalla piattaforma in uso. Queste sezioni per ulteriori informazioni, consultare:
+In generale, [documentazione di Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/) è incluso con la documentazione di Azure. Se si desidera che i modelli tabulari del server nel cloud, è consigliabile partire da qui. Questo articolo e la documentazione in questa sezione è principalmente per SQL Server Analysis Services. Tuttavia, almeno per i modelli tabulari, come creare e distribuire i progetti di modello tabulare è molto simile, indipendentemente dalla piattaforma in uso. Queste sezioni per ulteriori informazioni, consultare:
 
    
 *  [Confronto tra soluzioni tabulari e multidimensionali](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
@@ -54,9 +52,9 @@ Questo articolo e la documentazione in questa sezione è principalmente per SQL 
 *  [Modelli tabulari](../analysis-services/tabular-models/tabular-models-ssas.md)  
 *  [Modelli multidimensionali](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
 *  [Data Mining](../analysis-services/data-mining/data-mining-ssas.md)  
-*  [PowerPivot per SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
-*  [Gestione di un'istanza](../analysis-services/instances/analysis-services-instance-management.md)    
+*  [Power Pivot per SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
 *  [Esercitazioni](../analysis-services/analysis-services-tutorials-ssas.md)   
+*  [Gestione di server](../analysis-services/instances/analysis-services-instance-management.md)    
 *  [Documentazione per sviluppatori](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
 *  [Riferimento tecnico](../analysis-services/powershell/technical-reference-ssas.md)
 

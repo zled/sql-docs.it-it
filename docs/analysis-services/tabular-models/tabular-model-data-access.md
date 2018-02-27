@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4c1fa9b4e4f9003b193628d114ad6832436a7c8f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-data-access"></a>Accesso ai dati di modello tabulare
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Database modello tabulare in Analysis Services è possibile accedere dalla maggior parte dei client, interfacce e le lingue che utilizzano per recuperare dati o metadati da un modello multidimensionale. Per altre informazioni, vedere [Accesso ai dati di modelli multidimensionali &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+L'accesso a database modello tabulare in Analysis Services può essere eseguito dalla maggior parte dei client, delle interfacce e dei linguaggi che si utilizzano per recuperare dati o metadati da un modello multidimensionale. Per altre informazioni, vedere [Accesso ai dati di modelli multidimensionali &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- In questo argomento vengono descritti i client, i linguaggi di query e le interfacce di programmazione che è possibile utilizzare con i modelli tabulari.  
+ In questo articolo viene descritto il client, linguaggi di query e le interfacce programmatiche che funzionano con i modelli tabulari.  
   
 ## <a name="clients"></a>Client  
  Nelle applicazioni client Microsoft seguenti sono supportate connessioni native ai database modello tabulare di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="excel"></a>Excel  
  È possibile connettersi ai database modello tabulare da Excel, utilizzando la visualizzazione dati e le funzionalità dell'analisi di Excel per l'elaborazione dei dati. Per accedere ai dati, è necessario definire una connessione dati di Analysis Services, specificare un server eseguito in modalità server tabulare, quindi scegliere il database che si desidera utilizzare. Per ulteriori informazioni, vedere [Creare una connessione o importare dati da SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
   
- Excel è inoltre l'applicazione consigliata per l'esplorazione di modelli tabulari in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Nello strumento è disponibile un'opzione **Analizza in Excel** che consente di avviare una nuova istanza di Excel, creare una cartella di lavoro di Excel e aprire una connessione dati dalla cartella di lavoro al database dell'area di lavoro modello. In caso di esplorazione di dati del modello tabulare in Excel, tenere presente che in Excel vengono generate query sul modello utilizzando il client Tabella pivot di Excel. Di conseguenza, le operazioni all'interno della cartella di lavoro di Excel comportano l'invio al database dell'area di lavoro di query MDX, non di query DAX. Se si utilizza SQL Profiler o un altro strumento di monitoraggio per il monitoraggio di query, è possibile che nella traccia del profiler venga visualizzato MDX e non DAX. Per altre informazioni sulla funzionalità Analizza in Excel, vedere [Analizzare in Excel &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+ Excel è inoltre l'applicazione consigliata per l'esplorazione di modelli tabulari in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Nello strumento è disponibile un'opzione **Analizza in Excel** che consente di avviare una nuova istanza di Excel, creare una cartella di lavoro di Excel e aprire una connessione dati dalla cartella di lavoro al database dell'area di lavoro modello. In caso di esplorazione di dati del modello tabulare in Excel, tenere presente che in Excel vengono generate query sul modello utilizzando il client Tabella pivot di Excel. Di conseguenza, le operazioni all'interno della cartella di lavoro di Excel comportano l'invio al database dell'area di lavoro di query MDX, non di query DAX. Se si utilizza SQL Profiler o un altro strumento di monitoraggio per il monitoraggio di query, è possibile che nella traccia del profiler venga visualizzato MDX e non DAX. Per ulteriori informazioni sulla funzionalità analizza in Excel, vedere [analizza in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ### <a name="power-view"></a>Power View  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] è un'applicazione client di creazione di report di Reporting Services eseguita in un ambiente di SharePoint 2010, che combina esplorazione dei dati, progettazione di query e layout delle presentazioni in un'esperienza di reporting ad hoc integrata. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] è possibile utilizzare modelli tabulari come origini dati, indipendentemente dal fatto che il modello sia ospitato in un'istanza di Analysis Services in esecuzione in modalità tabulare o recuperato da un archivio dati relazionale mediante la modalità DirectQuery. Per connettersi a un modello tabulare in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], è necessario creare un file di connessione contenente il percorso del server e il nome del database. È possibile creare un'origine dati condivisa di Reporting Services o un file di connessione BI Semantic Model in SharePoint. Per altre informazioni sulle connessioni BI Semantic Model, vedere [Connessione BI Semantic Model &#40;con estensione bism&#41; di PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="data-and-metadata"></a>Dati e metadati  
  È possibile recuperare dati e metadati dai modelli tabulari in applicazioni gestite utilizzando ADOMD.NET. 
   
--   [Utilizzare DMV per monitorare Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [Usare dinamica viste a Gestione &#40; viste a gestione dinamica &#41; per monitorare Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  Per supportare l'accesso OLE DB ai modelli tabulari, è possibile utilizzare il provider OLE DB per Analysis Services 9.0 in applicazioni client non gestite. Per abilitare l'accesso ai modelli tabulari, è necessaria una versione aggiornata del provider OLE DB di Analysis Services. Per altre informazioni sui provider usati con i modelli tabulari, vedere [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) .  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Set di righe MDSCHEMA_HIERARCHIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     La nuova enumerazione **STRUCTURE_TYPE** supporta l'identificazione di gerarchie definite dall'utente create in modelli tabulari. Per altre informazioni, vedere [Gerarchie &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
+     La nuova enumerazione **STRUCTURE_TYPE** supporta l'identificazione di gerarchie definite dall'utente create in modelli tabulari. Per ulteriori informazioni, vedere [gerarchie](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
  I set di righe dello schema OLE DB per data mining non sono stati aggiornati in questa versione.  
   
@@ -131,8 +132,8 @@ ms.lasthandoff: 01/08/2018
 >  Non è possibile utilizzare query MDX o DMX in un database distribuito in modalità DirectQuery; pertanto per eseguire una query su un modello DirectQuery utilizzando i set di righe dello schema, è necessario utilizzare XMLA, non il DMV associato. Per i DMV che restituiscono risultati per il server nel suo complesso, ad esempio SELECT * da $system.DBSCHEMA_CATALOGS o DISCOVER_TRACES, è possibile eseguire la query nel contenuto di un database distribuito in una modalità memorizzata nella cache.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Connettersi a un database modello tabulare &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
+ [Connettersi a un database modello tabulare ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
  [Accesso ai dati PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)   
- [Connetti ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
+ [Connettersi ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   

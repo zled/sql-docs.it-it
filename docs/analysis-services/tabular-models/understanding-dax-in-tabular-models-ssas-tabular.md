@@ -1,5 +1,5 @@
 ---
-title: DAX nei modelli tabulari (SSAS tabulare) | Documenti Microsoft
+title: DAX nei modelli tabulari | Documenti Microsoft
 ms.custom: 
 ms.date: 10/21/2017
 ms.prod: analysis-services
@@ -12,23 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a95f7acdcf05c003521a4471f07036b5f458b65e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-in-tabular-models-ssas-tabular"></a>DAX nei modelli tabulari (SSAS tabulare)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Data Analysis Expressions (DAX) è un linguaggio delle formule utilizzato per creare calcoli personalizzati in Analysis Services, Power BI Desktop e Power Pivot in Excel. Le formule DAX includono funzioni, operatori e valori che consentono di eseguire calcoli avanzati sui dati in tabelle e colonne.  
+# <a name="dax-in-tabular-models"></a>DAX nei modelli tabulari 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Data Analysis Expressions (DAX) è un linguaggio delle formule utilizzato per creare calcoli personalizzati in Analysis Services, Power BI Desktop e Power Pivot in Excel. Le formule DAX includono funzioni, operatori e valori che consentono di eseguire calcoli avanzati sui dati in tabelle e colonne.  
   
  Mentre DAX viene utilizzato in Analysis Services, Power BI Desktop e Power Pivot in Excel, in questo argomento si applica più ai progetti di modello tabulare di Analysis Services creati in SQL Server Data Tools (SSDT).  
   
-##  <a name="bkmk_DAX"></a>Formule DAX in colonne calcolate, misure e filtri di riga  
+##  <a name="bkmk_DAX"></a> Formule DAX in colonne calcolate, misure e filtri di riga  
  Per i modelli tabulari creati in SSDT, le formule DAX vengono utilizzate in colonne calcolate, misure e filtri di riga.  
   
 ### <a name="calculated-columns"></a>Colonne calcolate  
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 |Numero decimale|Numero reale a 64 bit (otto byte) <sup>1, 2</sup>|I numeri reali sono numeri che possono avere cifre decimali e coprono un ampio intervallo di valori:<br /><br /> Valori negativi compresi tra -1,79E +308 e -2,23E -308<br /><br /> Zero<br /><br /> Valori positivi compresi tra 2,23E -308 e 1,79E + 308<br /><br /> Tuttavia, il numero di cifre significative è limitato a 17 cifre decimali.|  
 |Boolean|Boolean|Valore True o False.|  
 |Text|String|Stringa di dati di tipo carattere Unicode. Può trattarsi di stringhe, numeri o date rappresentati in un formato di testo.|  
-|date|Date/time|Date e ore in una rappresentazione di data e ora valida.<br /><br /> Le date valide sono tutte le date successive al 1 marzo del 1900.|  
+|Data|Date/time|Date e ore in una rappresentazione di data e ora valida.<br /><br /> Le date valide sono tutte le date successive al 1 marzo del 1900.|  
 |Currency|Currency|Il tipo di dati currency consente valori compresi tra -922.337.203.685.477,5808 e 922.337.203.685.477,5807 con quattro cifre decimali di precisione fissa.|  
 |N/D|Vuoto|Un tipo di dati blank in DAX rappresenta e sostituisce i valori Null di SQL. È possibile creare un tipo di dati blank utilizzando la funzione BLANK, nonché verificare la presenza di tipi di dati blank utilizzando la funzione logica ISBLANK.|  
   
@@ -366,7 +367,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  L'elaborazione e il ricalcolo non hanno effetto sulle formule del filtro di riga, a meno che il risultato di un ricalcolo restituisca un valore diverso, rendendo in tal modo possibile o impedendo l'esecuzione di query sulla riga da parte di membri del ruolo.  
   
- Per altre informazioni, vedere [Elaborare dati &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+ Per ulteriori informazioni, vedere [elaborare dati](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_troubleshoot"></a> Risoluzione degli errori nelle formule  
  Se si ottiene un errore quando si definisce una formula, è possibile che la formula contenga un *errore sintattico*, un *errore semantico*o un *errore di calcolo*.  

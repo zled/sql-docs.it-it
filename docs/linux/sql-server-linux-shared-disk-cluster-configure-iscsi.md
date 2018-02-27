@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurare l'istanza del cluster di failover SQL Server in Linux - iSCSI:
 
@@ -210,7 +210,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > è il nome del gruppo di volumi e \<LogicalVolumeName > è il nome del volume logico che è stato creato. La sintassi di esempio riportato di seguito corrisponde al gruppo di volumi e di un volume logico creato in precedenza.
+    \<VolumeGroupName > è il nome del gruppo di volumi e \<LogicalVolumeName > è il nome del volume logico che è stato creato. La sintassi di esempio seguente consente di ricercare il gruppo di volumi e il volume logico dal comando precedente.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -278,7 +278,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
     mkdir <FolderName>
     ```
 
-    \<Nome cartella > è il nome della cartella. Percorso completo della cartella dovrà essere specificato ma non nella posizione corretta. Nell'esempio seguente crea una cartella denominata /var/opt/mssql/userdata.
+    \<Nome cartella > è il nome della cartella. Percorso completo della cartella deve essere specificato ma non nella posizione corretta. Nell'esempio seguente crea una cartella denominata /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata

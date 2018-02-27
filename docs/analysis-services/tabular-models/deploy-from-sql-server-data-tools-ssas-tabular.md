@@ -1,7 +1,7 @@
 ---
-title: Distribuire da SQL Server Data Tools (SSAS tabulare) | Documenti Microsoft
+title: Distribuire da SQL Server Data Tools | Documenti Microsoft
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.deploystatus.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.deploystatus.f1
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e6dcb9b823ba550dfc8fcf2175df3e17696060be
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c009ba69247d754c95f98732f41e4023db0fcaa4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>Distribuire da SQL Server Data Tools
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Utilizzare le attività in questo argomento per distribuire una soluzione di modello tabulare utilizzando il comando Distribuisci in SSDT.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Utilizzare le attività in questo argomento per distribuire una soluzione di modello tabulare utilizzando il comando Distribuisci in SSDT.  
   
 ##  <a name="bkmk_deploy"></a> Configurare le proprietà Opzioni di distribuzione e Server di distribuzione  
  Prima di distribuire tale soluzione, è necessario innanzitutto specificare le proprietà Opzioni di distribuzione e Server di distribuzione. Per ulteriori informazioni sulle impostazioni e le proprietà di distribuzione, vedere [distribuzione della soluzione di modello tabulare](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
@@ -45,9 +47,9 @@ ms.lasthandoff: 01/08/2018
 3.  In **Server di distribuzione**specificare le impostazioni delle proprietà **Server** (nome), **Edizione**, **Database** (nome) e **Nome cubo** , se diverse dalle impostazioni predefinite, quindi fare clic su **OK**.  
   
 > [!NOTE]  
->  È inoltre possibile specificare l'impostazione della proprietà Server di distribuzione predefinito in modo che tutti i nuovi progetti creati vengano distribuiti automaticamente nel server specificato. Per ulteriori informazioni, vedere [configurare modellazione di dati predefinito e le proprietà di distribuzione](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  È inoltre possibile specificare l'impostazione della proprietà Server di distribuzione predefinito in modo che tutti i nuovi progetti creati vengano distribuiti automaticamente nel server specificato. Per ulteriori informazioni, vedere [configurare le proprietà di modellazione e distribuzione dei dati predefinite](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
-##  <a name="bkmk_deploy_proc"></a>Distribuire un modello tabulare  
+##  <a name="bkmk_deploy_proc"></a> Distribuire un modello tabulare  
   
 #### <a name="to-deploy-a-tabular-model"></a>Per distribuire un modello tabulare
   

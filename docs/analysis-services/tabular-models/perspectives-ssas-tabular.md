@@ -1,5 +1,5 @@
 ---
-title: Prospettive (SSAS tabulare) | Documenti Microsoft
+title: Prospettive | Documenti Microsoft
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a10f9bc23e8c08cb36dac71ad473a67008424e67
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e78bf1c9300fcd9a6c0d198d0239ecee12a5ea22
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="perspectives"></a>prospettive
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Prospettive nei modelli tabulari, definiscono subset visualizzabili di un modello che forniscono punti di vista mirati, specifiche o specifici dell'applicazione del modello.  
+# <a name="perspectives"></a>Prospettive
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Nei modelli tabulari, le prospettive consentono di definire subset visualizzabili di un modello in grado di offrire punti di vista mirati, specifici di un'attività aziendale o di un'applicazione del modello.  
   
 ##  <a name="bkmk_understanding"></a> Vantaggi  
  L'esplorazione dei modelli tabulari può risultare molto complessa per gli utenti. Un singolo modello può rappresentare il contenuto di un data warehouse completo con molte tabelle, misure e dimensioni. Tale complessità può costituire un ostacolo per gli utenti che necessitano solo di interagire con una piccola parte del modello per soddisfare determinati requisiti di Business Intelligence e creazione di report.  

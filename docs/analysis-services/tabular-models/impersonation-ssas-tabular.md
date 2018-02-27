@@ -12,24 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e0acafbad6d869b31b7560f059adb0a7a3e8da03
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="impersonation"></a>Rappresentazione 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In questo argomento fornisce agli autori di modelli tabulari una conoscenza di come credenziali di accesso vengono utilizzate da Analysis Services quando ci si connette a un'origine dati per importare ed elaborare (aggiornare) i dati.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Questo articolo fornisce agli autori di modelli tabulari una conoscenza di come credenziali di accesso vengono utilizzate da Analysis Services quando ci si connette a un'origine dati per importare ed elaborare (aggiornare) i dati.  
 
-##  <a name="bkmk_conf_imp_info"></a>Configurazione della rappresentazione  
+##  <a name="bkmk_conf_imp_info"></a> Configurazione della rappresentazione  
  La posizione e il contesto di un modello esistente determina la configurazione di rappresentazione. Quando si crea un nuovo progetto di modello, la rappresentazione è configurata in SQL Server Data Tools (SSDT) quando ci si connette a un'origine dati per importare i dati. Dopo aver distribuito un modello, la rappresentazione può configurata nella proprietà di stringa di connessione di database modello tramite SQL Server Management Studio (SSMS). Per i modelli tabulari in Azure Analysis Services, è possibile utilizzare SQL Server Management Studio o **visualizzare come: Script** modalità nella finestra di progettazione basata su browser per modificare il file Model.bim in JSON.
   
-##  <a name="bkmk_how_imper"></a>Utilizzo della rappresentazione  
+##  <a name="bkmk_how_imper"></a> Utilizzo della rappresentazione  
  La*rappresentazione* è la capacità di un'applicazione server, ad esempio Analysis Services, di assumere l'identità di un'applicazione client. Analysis Services viene eseguito utilizzando un account del servizio, tuttavia, quando il server viene stabilita una connessione a un'origine dati, viene utilizzata la rappresentazione in modo che i controlli di accesso per l'elaborazione e l'importazione dei dati può essere eseguita.  
   
  Credenziali utilizzate per la rappresentazione sono diverse da quelle che attualmente è connessi con. Credenziali vengono utilizzate per particolari operazioni lato client durante la creazione di un modello utente connesso.  
@@ -78,7 +79,7 @@ Quando i dati vengono importati o elaborati, le credenziali di rappresentazione 
 |**Specifica nome utente di Windows e password**|Questa opzione specifica il modello viene utilizzato un account utente di Windows per importare o elaborare dati dall'origine dati. Il dominio e il nome dell'account utente nel formato seguente:**\<nome di dominio >\\< nome dell'account utente\>**. Si tratta dell'opzione predefinita per la creazione di un nuovo modello tramite l'Importazione guidata tabella.|  
 |**Account servizio**|Questa opzione consente di specificare che nel modello vengono utilizzate le credenziali di sicurezza associate all'istanza del servizio Analysis Services tramite cui viene gestito il modello.|  
   
-##  <a name="bkmk_impers_sec"></a> Security  
+##  <a name="bkmk_impers_sec"></a> Sicurezza  
  Le credenziali utilizzate con la rappresentazione sono persistenti in memoria dal motore di VertiPaq™. Credenziali non vengono mai scritti su disco. Se il database dell'area di lavoro non è in memoria quando il modello viene distribuito, l'utente viene richiesto di immettere le credenziali utilizzate per connettersi ai dati di origine dati e di recupero.  
   
 > [!NOTE]  
@@ -89,6 +90,6 @@ Quando i dati vengono importati o elaborati, le credenziali di rappresentazione 
 ## <a name="see-also"></a>Vedere anche  
  [Modalità DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Origini dati](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Distribuzione della soluzione di modello tabulare](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Distribuzione di una soluzione del modello tabulare](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

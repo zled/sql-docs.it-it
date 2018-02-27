@@ -8,19 +8,21 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8ba4237f9a43a525571a2d25f95acb0a31d4a5cb
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
@@ -41,7 +43,7 @@ VERSION ( )
 ## <a name="arguments"></a>Argomenti  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
-Un nome di tabella deve essere specificato un [FROM](../../t-sql/queries/from-transact-sql.md) clausola per questa funzione restituire i risultati. Verrà restituita una riga di risultati per ogni riga nel set di risultati per la query. Utilizzare [superiore (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) per limitare il numero di righe restituite.  
+Un nome di tabella deve essere specificato un [FROM](../../t-sql/queries/from-transact-sql.md) clausola per questa funzione restituire i risultati. Verrà restituita una riga di risultati per ogni riga nel set di risultati per la query. Utilizzare [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) per limitare il numero di righe restituite.  
   
 ## <a name="examples"></a>Esempi  
 L'esempio seguente restituisce il numero di versione.  
