@@ -25,13 +25,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d193665f6d46a1e21ed397e3fe33c22afa95cc8b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="handle-multiple-job-steps"></a>Gestione di più passaggi di processo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se il processo è costituito da più passaggi, è necessario specificare l'ordine di esecuzione dei passaggi. Questa caratteristica è detta *controllo di flusso**.* È possibile aggiungere nuovi passaggi di processo e modificare il flusso dei passaggi esistenti in qualsiasi momento. Le modifiche verranno applicate alla successiva esecuzione del processo. Nella figura riportata di seguito è illustrato il controllo di flusso relativo a un processo di backup del database.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Se il processo è costituito da più passaggi, è necessario specificare l'ordine di esecuzione dei passaggi. Questa caratteristica è detta *controllo di flusso**.* È possibile aggiungere nuovi passaggi di processo e modificare il flusso dei passaggi esistenti in qualsiasi momento. Le modifiche verranno applicate alla successiva esecuzione del processo. Nella figura riportata di seguito è illustrato il controllo di flusso relativo a un processo di backup del database.  
   
 ![Controllo di flusso dei passaggi di processi di SQL Server Agent](../../ssms/agent/media/dbflow01.gif "Controllo di flusso dei passaggi di processi di SQL Server Agent")  
   

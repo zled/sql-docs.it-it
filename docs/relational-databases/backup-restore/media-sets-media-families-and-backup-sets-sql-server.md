@@ -32,13 +32,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 13405de028f7392c9ef384743a44db9fb49c627c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Set di supporti, gruppi di supporti e set di backup (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  **Questo argomento presenta la terminologia di base relativa ai supporti per le procedure di backup e ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è rivolto ai nuovi utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **In questo argomento viene presentata la terminologia di base relativa ai supporti per le procedure di backup e ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è rivolto ai nuovi utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
   
   Vengono descritti il formato usato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i supporti di backup, la corrispondenza tra supporti e dispositivi di backup, l'organizzazione dei backup nei relativi supporti e vengono elencate alcune considerazioni relative ai set e ai gruppi di supporti. In questo argomento vengono inoltre illustrati i passaggi per inizializzare e formattare i supporti di backup in occasione del primo utilizzo o della sostituzione di un set di supporti precedente con uno nuovo e vengono elencate le operazioni necessarie per sovrascrivere set di backup precedenti in un set di supporti e per aggiungere nuovi set di backup a set di supporti esistenti.  
   

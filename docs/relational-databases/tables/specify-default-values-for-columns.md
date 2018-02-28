@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: cf1826aba450948a08d695dc248ab7b35e215d41
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-default-values-for-columns"></a>Specificare valori predefiniti per le colonne
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/18/2018
     > [!NOTE]  
     >  Per specificare un valore predefinito numerico, immettere il numero desiderato. Per specificare un oggetto o una funzione, immetterne il nome. Per specificare un valore predefinito alfanumerico, immettere il valore racchiudendolo tra virgolette singole.  
   
-4.  Nel menu **File** scegliere **Salva***nome_tabella*.  
+4.  Scegliere **Salva***nome tabella* dal menu **File**.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

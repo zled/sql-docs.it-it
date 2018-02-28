@@ -24,13 +24,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 33ae2be4dae083d5b404bdcb4cd1b91d5b85feea
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Specificare un indirizzo di rete del server (Mirroring del database)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per impostare una sessione di mirroring del database, è necessario un indirizzo di rete del server per ogni istanza del server. Tale indirizzo deve identificare in maniera univoca l'istanza includendo un indirizzo di sistema e il numero di porta su cui l'istanza è in attesa.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Per impostare una sessione di mirroring del database, è necessario un indirizzo di rete del server per ogni istanza del server. Tale indirizzo deve identificare in maniera univoca l'istanza includendo un indirizzo di sistema e il numero di porta su cui l'istanza è in attesa.  
   
  Per poter specificare una porta in un indirizzo di rete del server, è necessario che l'endpoint del mirroring del database sia disponibile sull'istanza del server. Per altre informazioni, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   

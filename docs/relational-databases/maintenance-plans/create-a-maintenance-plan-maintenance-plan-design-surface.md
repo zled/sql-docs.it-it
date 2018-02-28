@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come creare un piano di manutenzione multiserver o di un singolo server usando l'area di progettazione del piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mentre la **Creazione guidata piano di manutenzione** è ideale per la creazione di piani di manutenzione di base, la creazione di un piano tramite l'area di progettazione consente di utilizzare un flusso di lavoro avanzato.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In questo argomento viene descritto come creare un piano di manutenzione multiserver o di un singolo server utilizzando l'area di progettazione del piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mentre la **Creazione guidata piano di manutenzione** è ideale per la creazione di piani di manutenzione di base, la creazione di un piano tramite l'area di progettazione consente di utilizzare un flusso di lavoro avanzato.  
   
  **Contenuto dell'argomento**  
   

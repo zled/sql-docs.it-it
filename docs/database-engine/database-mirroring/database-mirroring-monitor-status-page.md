@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7b0ad2d6c9773860640bbf25ecac671dfae2dbe1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitoraggio mirroring del database (pagina Stato)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa pagina di sola lettura mostra lo stato di mirroring più recente per le istanze del server principale e mirror del database attualmente selezionato nell'albero di navigazione. Se le informazioni relative a un'istanza non sono attualmente disponibili, alcune delle celle nella griglia **Stato** corrispondenti all'istanza sono disattivate e visualizzano la dicitura **Sconosciuto**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Questa pagina di sola lettura mostra lo stato di mirroring più recente per le istanze del server principale e mirror del database attualmente selezionato nell'albero di navigazione. Se le informazioni relative a un'istanza non sono attualmente disponibili, alcune delle celle nella griglia **Stato** corrispondenti all'istanza sono disattivate e visualizzano la dicitura **Sconosciuto**.  
   
  **Per utilizzare SQL Server Management Studio per il monitoraggio del mirroring del database**  
   

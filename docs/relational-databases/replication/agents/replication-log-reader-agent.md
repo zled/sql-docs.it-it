@@ -24,13 +24,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: bf4fda73309e49d009d156fa8c18063e495bac92
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-log-reader-agent"></a>Agente lettura log repliche
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Agente lettura log repliche è un eseguibile che consente di monitorare il log delle transazioni di tutti i database configurati per la replica transazionale e di copiare le transazioni contrassegnate per la replica dal log delle transazioni al database di distribuzione.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Agente lettura log repliche è un eseguibile che consente di monitorare il log delle transazioni di tutti i database configurati per la replica transazionale e di copiare le transazioni contrassegnate per la replica dal log delle transazioni al database di distribuzione.  
   
 > [!NOTE]  
 >  I parametri possono essere specificati in qualsiasi ordine. Quando i parametri facoltativi non vengono specificati, vengono utilizzati i valori predefiniti basati sul profilo agente predefinito.  

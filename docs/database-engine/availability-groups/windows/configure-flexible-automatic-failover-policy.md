@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Configurare i criteri di failover automatico flessibili
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 01/18/2018
   
          La relazione di questi valori interi con i livelli di condizione di errore è la seguente:  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valore|Level|Il failover automatico viene avviato...|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] valore|Level|Il failover automatico viene avviato...|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|Uno|In caso di server inaccessibile. Il servizio SQL Server viene arrestato a causa di un failover o un riavvio.|  
         |2|Due|In caso di mancata risposta del server. Viene soddisfatta qualsiasi condizione di valore inferiore, il servizio SQL Server è connesso al cluster e viene superata la soglia di Timeout controllo integrità o la replica primaria corrente si trova in uno stato di errore.|  

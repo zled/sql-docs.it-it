@@ -50,13 +50,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 21e6296382acf84d5ca1aa6a7ec84cd1e171c321
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="publish-data-and-database-objects"></a>Pubblicazione di dati e oggetti di database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si crea una pubblicazione è possibile scegliere le tabelle e gli altri oggetti di database che si vuole pubblicare. Tramite la replica è possibile pubblicare gli oggetti di database elencati di seguito.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Quando si crea una pubblicazione, è possibile scegliere le tabelle e gli altri oggetti di database che si desidera pubblicare. Tramite la replica è possibile pubblicare gli oggetti di database elencati di seguito.  
   
 |Oggetto di database|Replica snapshot e replica transazionale|Replica di tipo merge|  
 |---------------------|--------------------------------------------------------|-----------------------|  

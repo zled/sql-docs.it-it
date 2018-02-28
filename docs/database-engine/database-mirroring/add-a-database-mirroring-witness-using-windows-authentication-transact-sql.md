@@ -23,13 +23,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5909ba97271614b39e0b899a257f62c1658cfe09
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per installare un server di controllo per un database, il proprietario del database assegna un'istanza di Motore di database al ruolo di server di controllo. L'istanza del server di controllo può essere eseguita sullo stesso computer dell'istanza del server principale o mirror, ma questo riduce in modo significativo l'affidabilità del failover automatico.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Per installare un server di controllo per un database, il proprietario del database assegna un'istanza di Motore di database al ruolo di server di controllo. L'istanza del server di controllo può essere eseguita sullo stesso computer dell'istanza del server principale o mirror, ma questo riduce in modo significativo l'affidabilità del failover automatico.  
   
  È fortemente consigliabile che il server di controllo risieda su un computer separato. Un determinato server può prendere parte a più sessioni di mirroring del database simultanee con lo stesso o diversi partner. Un determinato server può essere partner in alcune sessioni e server di controllo in altre.  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 01/18/2018
   
      La sintassi per un indirizzo di rete del server presenta la seguente struttura:  
   
-     TCP**://**\<*indirizzo-sistema>***:**\<*porta>*  
+     TCP**://**\<*system-address>***:**\<*port>*  
   
      dove \<*indirizzo-sistema>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*porta>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   

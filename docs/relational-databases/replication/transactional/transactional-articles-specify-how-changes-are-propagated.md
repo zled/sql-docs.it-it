@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d7b807d914d84a818e9ce9cccadde597a163955c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Specificare la modalità di propagazione delle modifiche per gli articoli transazionali
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replica transazionale consente di specificare la modalità di propagazione delle modifiche dei dati dal server di pubblicazione ai Sottoscrittori. Per ogni tabella pubblicata è possibile specificare una delle quattro modalità con cui ogni operazione (INSERT, UPDATE o DELETE) dovrebbe propagarsi al Sottoscrittore:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La replica transazionale consente di specificare la modalità di propagazione delle modifiche dei dati dal server di pubblicazione ai Sottoscrittori. Per ogni tabella pubblicata è possibile specificare una delle quattro modalità con cui ogni operazione (INSERT, UPDATE o DELETE) dovrebbe propagarsi al Sottoscrittore:  
   
 -   Specificare che la replica transazionale deve inserire in uno script e in un secondo momento chiamare una stored procedure per propagare le modifiche ai Sottoscrittori (impostazione predefinita).  
   

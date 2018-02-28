@@ -25,10 +25,10 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b667598024f6df19d7543cf9e59f4c646706c776
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifica di relazioni di chiave esterna
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ ms.lasthandoff: 01/18/2018
   
     -   **Imposta predefinito** Viene impostato il valore predefinito stabilito per la colonna se per tutte le colonne chiave esterna della tabella sono stati impostati valori predefiniti.  
   
-4.  Nel menu **File** scegliere **Salva***nome_tabella*.  
+4.  Scegliere **Salva***nome tabella* dal menu **File**.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per modificare una chiave esterna**  

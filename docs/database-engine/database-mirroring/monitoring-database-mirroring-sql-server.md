@@ -22,13 +22,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitoraggio del mirroring del database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa sezione presenta il monitoraggio del mirroring del database e le stored procedure di sistema **sp_dbmmonitor**, descrive il funzionamento del monitoraggio del mirroring del database, incluso il funzionamento del processo **Monitoraggio mirroring del database**, e fornisce un riepilogo delle informazioni che è possibile monitorare sulle sessioni di mirroring del database. Vengono inoltre fornite informazioni generali sulla definizione di valori soglia degli avvisi per un set di eventi di mirroring del database predefiniti e sull'impostazione di avvisi per qualsiasi evento di mirroring del database.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Questa sezione presenta il monitoraggio del mirroring del database e le stored procedure di sistema **sp_dbmmonitor** , descrive il funzionamento del monitoraggio del mirroring del database, incluso il funzionamento del processo **Monitoraggio mirroring del database**, e fornisce un riepilogo delle informazioni che è possibile monitorare sulle sessioni di mirroring del database. Vengono inoltre fornite informazioni generali sulla definizione di valori soglia degli avvisi per un set di eventi di mirroring del database predefiniti e sull'impostazione di avvisi per qualsiasi evento di mirroring del database.  
   
  È possibile monitorare un database con mirroring durante una sessione di mirroring per verificare se i dati fluiscono correttamente. Per impostare e gestire il monitoraggio per uno o più database con mirroring in un'istanza del server, è possibile usare Monitoraggio mirroring del database oppure le stored procedure di sistema **sp_dbmmonitor** .  
   

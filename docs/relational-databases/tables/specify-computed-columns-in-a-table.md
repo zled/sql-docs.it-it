@@ -21,10 +21,10 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 95980febab6a2801ca2f751a0cadd22f14991c59
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Specificare le colonne calcolate in una tabella
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/18/2018
   
 5.  Indicare se i dati sono persistenti selezionando **Sì** oppure **No** nell'elenco a discesa della proprietà figlio **Persistente** .  
   
-6.  Nel menu **File** scegliere **Salva***nome_tabella*.  
+6.  Scegliere **Salva***nome tabella* dal menu **File**.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Per aggiungere una definizione di colonna calcolata a una colonna esistente  
   
