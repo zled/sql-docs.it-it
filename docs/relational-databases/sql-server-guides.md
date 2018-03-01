@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cb5508fd58b6f5078d5c202e716109d58fbc8938
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4fba22c6d7a563f9645c1cf63f74b1becfc2869b
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="sql-server-guides"></a>Guide di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,6 +38,6 @@ Sono disponibili le guide seguenti. Vengono trattati i concetti generali che rig
 [Guida sull'architettura di pagina ed extent](../relational-databases/pages-and-extents-architecture-guide.md)  
 [Guida di ottimizzazione e convalida post-migrazione](../relational-databases/post-migration-validation-and-optimization-guide.md)  
 [Guida sull'architettura di elaborazione delle query](../relational-databases/query-processing-architecture-guide.md)  
-[Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server](https://msdn.microsoft.com/library/jj856598)  
+[Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server](../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md)  
 [Architettura e gestione del log delle transazioni di SQL Server](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
 [Guida sull'architettura dei thread e delle attività](../relational-databases/thread-and-task-architecture-guide.md)
