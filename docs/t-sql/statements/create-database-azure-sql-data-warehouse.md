@@ -74,7 +74,7 @@ Dimensioni massime consentite per il database. Le dimensioni del database non po
 Dimensioni massime consentite per i dati rowstore nel database. Le dimensioni dei dati archiviati nelle tabelle rowstore, nel deltastore di un indice columnstore o in un indice non cluster in un indice columnstore cluster non possono superare MAXSIZE.  I dati compressi in formato columnstore non hanno un limite di dimensioni e non sono limitati dal valore MAXSIZE.
   
 SERVICE_OBJECTIVE  
-Specifica il livello di prestazioni. Per altre informazioni sugli obiettivi di servizio per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [Performance Tiers](https://azure.microsoft.com/documentation/articles/performance-tiers/) (Livelli di prestazioni).  
+Specifica il livello di prestazioni. Per altre informazioni sugli obiettivi di servizio per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [Livelli di prestazioni](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
 Usare [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) per visualizzare le proprietà del database.  
