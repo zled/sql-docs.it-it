@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
 
@@ -29,6 +29,8 @@ In questo articolo viene illustrato come installare, aggiornare e disinstallare 
 
 > [!TIP]
 > Per iniziare rapidamente, passare a una delle Guide rapide per [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), o [Docker](quickstart-install-connect-docker.md).
+
+Per le risposte alle domande più frequenti, vedere il [SQL Server in domande frequenti su Linux](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Piattaforme supportate
 
@@ -40,6 +42,9 @@ In questo articolo viene illustrato come installare, aggiornare e disinstallare 
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Ottenere SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Motore docker** | 1.8+ | [Ottenere Docker](http://www.docker.com/products/overview)
+
+> [!NOTE]
+> In alcuni casi è possibile installare ed eseguire SQL Server su altre piattaforme Linux strettamente correlati, ma SQL Server viene solo testato e supportato sulle piattaforme elencate nella tabella precedente.
 
 Microsoft supporta la distribuzione e la gestione dei contenitori di SQL Server utilizzando OpenShift e Kubernetes.
 

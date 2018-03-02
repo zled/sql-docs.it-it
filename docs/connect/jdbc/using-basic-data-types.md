@@ -1,27 +1,28 @@
 ---
 title: Utilizzo di tipi di dati di base | Documenti Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
-caps.latest.revision: "73"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0fe716f57850c4daf3e3f319376626bee3195b6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 66da5301a12427ed50a212abf74a0700d89e8668
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-basic-data-types"></a>Utilizzo di tipi di dati di base
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,25 +35,25 @@ ms.lasthandoff: 11/18/2017
 |Tipi di SQL Server|Tipi JDBC (java.sql.Types)|Tipi del linguaggio Java|  
 |----------------------|-----------------------------------|-------------------------|  
 |bigint|bigint|long|  
-|binary|BINARY|byte[]|  
+|BINARY|BINARY|byte[]|  
 |bit|BIT|boolean|  
 |char|CHAR|String|  
 |data|DATE|java.sql.Date|  
-|datetime|timestamp|java.sql.Timestamp|  
-|datetime2|timestamp|java.sql.Timestamp|  
+|datetime|TIMESTAMP|java.sql.Timestamp|  
+|datetime2|TIMESTAMP|java.sql.Timestamp|  
 |datetimeoffset (2)|microsoft.sql.Types.DATETIMEOFFSET|microsoft.sql.DateTimeOffset|  
-|decimal|DECIMAL|java.math.BigDecimal|  
+|Decimal|DECIMAL|java.math.BigDecimal|  
 |float|DOUBLE|double|  
 |image|LONGVARBINARY|byte[]|  
 |int|INTEGER|int|  
 |money|DECIMAL|java.math.BigDecimal|  
-|nchar|CHAR<br /><br /> NCHAR (Java SE 6.0)|String|  
+|NCHAR|CHAR<br /><br /> NCHAR (Java SE 6.0)|String|  
 |ntext|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String|  
 |numeric|NUMERIC|java.math.BigDecimal|  
 |nvarchar|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|String|  
 |nvarchar(max)|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|String|  
 |real|REAL|float|  
-|smalldatetime|timestamp|java.sql.Timestamp|  
+|smalldatetime|TIMESTAMP|java.sql.Timestamp|  
 |smallint|SMALLINT|short|  
 |smallmoney|DECIMAL|java.math.BigDecimal|  
 |text|LONGVARCHAR|String|  
@@ -64,14 +65,13 @@ ms.lasthandoff: 11/18/2017
 |varbinary|VARBINARY|byte[]|  
 |varbinary(max)|VARBINARY|byte[]|  
 |varchar|VARCHAR|String|  
-|varchar(max)|VARCHAR|String|  
+|ntext|VARCHAR|String|  
 |xml|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String<br /><br /> SQLXML|  
+|sqlvariant|SQLVARIANT|Oggetto|  
   
  (1) per utilizzare Java.SQL. Time con il tempo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo, è necessario impostare il **sendTimeAsDatetime** proprietà di connessione su false.  
   
  (2) è possibile accedere a livello di codice i valori di **datetimeoffset** con [classe DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
-  
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati sqlvariant non è attualmente supportato dal driver JDBC. Se si utilizza una query per recuperare dati da un tabella contenente una colonna con il tipo di dati sqlvariant, verrà generata un'eccezione.  
   
  Nelle sezioni seguenti vengono forniti esempi di come sia possibile utilizzare il driver JDBC e i tipi di dati di base. Per un esempio più dettagliato di come utilizzare i tipi di dati di base in un'applicazione Java, vedere [esempio tipi di dati Basic](../../connect/jdbc/basic-data-types-sample.md).  
   

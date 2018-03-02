@@ -1,27 +1,28 @@
 ---
 title: Utilizzo del Driver JDBC | Documenti Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 018679acc5c3e0119755e5ab5e0378c6f3fec7f0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9118a82f333b14f9ba468c039255ff3e6a1280d7
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-the-jdbc-driver"></a>Utilizzo del driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,19 +30,38 @@ ms.lasthandoff: 11/18/2017
   In questa sezione vengono fornite istruzioni introduttive per creare una semplice connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database utilizzando il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Prima di connettersi a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] deve prima essere installato nel computer locale o un server, e il driver JDBC deve essere installato nel computer locale.  
   
 ## <a name="choosing-the-right-jar-file"></a>Scelta del file JAR corretto  
+ Il Driver JDBC di Microsoft 6.4 per SQL Server fornisce **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, e **mssql-jdbc-6.4.0.jre9.jar** libreria di classi file da utilizzare a seconda delle impostazioni preferite di Java Runtime Environment (JRE).  
+ 
  Il Driver JDBC di Microsoft 6.2 per SQL Server fornisce **mssql-jdbc-6.2.1.jre7.jar**, e **mssql-jdbc-6.2.1.jre8.jar** classe i file di libreria da utilizzare a seconda del preferito di Java Runtime Impostazioni Environment (JRE).  
   
   Microsoft JDBC driver 6.0 e 4.2 per SQL Server forniscono **sqljdbc41.jar**, e **sqljdbc42.jar** classe i file di libreria da utilizzare a seconda delle impostazioni preferite di Java Runtime Environment (JRE).  
   
  Microsoft JDBC Driver 4.1 per SQL Server fornisce il **sqljdbc41.jar** file di libreria di classi da utilizzare a seconda delle impostazioni preferite di Java Runtime Environment (JRE).  
-  
- Il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 fornisce **sqljdbc.jar** e **sqljdbc4.jar** classe i file di libreria da utilizzare a seconda delle impostazioni preferite di Java Runtime Environment (JRE).  
-  
+    
  La scelta determinerà anche le funzionalità disponibili. Per ulteriori informazioni sui file JAR da scegliere, vedere [requisiti di sistema per il Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="setting-the-classpath"></a>Impostazione del classpath  
- Il driver JDBC non fa parte di Java SDK. Se si desidera utilizzarlo, è necessario impostare il classpath per includere il **sqljdbc.jar** file **sqljdbc4.jar** file, il **sqljdbc41.jar** file, o  **sqljdbc42.jar** file. Se tramite 6.2 Driver JDBC, impostare il classpath per includere il **mssql-jdbc-6.2.1.jre7.jar** o **mssql-jdbc-6.2.1.jre8.jar**. Se nel classpath manca una voce, l'applicazione genererà l'eccezione comune "Classe non trovata".  
+ Il driver JDBC non fa parte di Java SDK. Se si desidera utilizzarlo, è necessario impostare il classpath per includere il **sqljdbc.jar** file **sqljdbc4.jar** file, il **sqljdbc41.jar** file, o  **sqljdbc42.jar** file. Se tramite 6.2 Driver JDBC, impostare il classpath per includere il **mssql-jdbc-6.2.1.jre7.jar** o **mssql-jdbc-6.2.1.jre8.jar**. Se tramite 6.4 Driver JDBC, impostare il classpath per includere il **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** o **mssql-jdbc-6.4.0.jre9.jar**. Se nel classpath manca una voce, l'applicazione genererà l'eccezione comune "Classe non trovata".  
   
+### <a name="for-microsoft-jdbc-driver-64"></a>Per Microsoft JDBC Driver 6.4
+ Il **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** o **mssql-jdbc-6.4.0.jre9.jar** file vengono installati nel percorso seguente:  
+  
+ \<*directory di installazione*> \sqljdbc_\<*versione*>\\<*language*> \mssql-jdbc-6.4.0.jre7.jar 
+  
+ \<*directory di installazione*> \sqljdbc_\<*versione*>\\<*language*> \mssql-jdbc-6.4.0.jre8.jar
+ 
+ \<*directory di installazione*> \sqljdbc_\<*versione*>\\<*language*> \mssql-jdbc-6.4.0.jre9.jar
+  
+ Nell'esempio seguente viene riportata l'istruzione CLASSPATH utilizzata per un'applicazione di Windows:  
+  
+ `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_6.4\enu\mssql-jdbc-6.4.0.jre9.jar`  
+  
+ Nell'esempio seguente viene riportata l'istruzione CLASSPATH utilizzata per un'applicazione di Unix e Linux:  
+  
+ `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
+  
+ È necessario assicurarsi che l'istruzione CLASSPATH contenga un solo [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ad esempio mssql-jdbc-6.4.0.jre7.jar, mssql-jdbc-6.4.0.jre8.jar o mssql-jdbc-6.4.0.jre9.jar.   
+
 ### <a name="for-microsoft-jdbc-driver-62"></a>Per Microsoft JDBC Driver 6.2
  Il **mssql-jdbc-6.2.1.jre7.jar** o **mssql-jdbc-6.2.1.jre8.jar** file vengono installati nel percorso seguente:  
   
@@ -59,7 +79,7 @@ ms.lasthandoff: 11/18/2017
   
  È necessario assicurarsi che l'istruzione CLASSPATH contenga un solo [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ad esempio mssql-jdbc-6.2.1.jre7.jar o mssql-jdbc-6.2.1.jre8.jar.  
 
-### <a name="for-microsoft-jdbc-driver-40-41-42-and-60"></a>Per Microsoft JDBC Driver 4.0, 4.1, 4.2 e 6.0
+### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Per Microsoft JDBC Driver 6.0, 4.2 e 4.1
  I file sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar e sqljdbc42.jar vengono installati nei percorsi seguenti:  
   
  \<*directory di installazione*> \sqljdbc_\<*versione*>\\<*language*> \sqljdbc.jar  

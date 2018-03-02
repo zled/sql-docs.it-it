@@ -4,7 +4,7 @@ description: Vengono forniti suggerimenti sulla risoluzione dei problemi per l'u
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 01/18/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,20 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: f56806313075865c53cbd3fc1f80c0d132804c04
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Risolvere i problemi relativi a SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Questo documento viene descritto come risolvere i problemi relativi a Microsoft SQL Server in esecuzione in Linux o in un contenitore Docker. Quando la risoluzione dei problemi di SQL Server in Linux, è necessario esaminare le funzionalità supportate e le limitazioni note nel [SQL su note sulla versione di Linux](sql-server-linux-release-notes.md).
+
+> [!TIP]
+> Per le risposte alle domande più frequenti, vedere il [SQL Server in domande frequenti su Linux](sql-server-linux-faq.md).
 
 ## <a id="connection"></a> Risoluzione dei problemi di connessione
 Se si verificano problemi di connessione a SQL Server Linux, esistono alcuni elementi da controllare. 
@@ -200,12 +203,4 @@ Se si è iniziato a accidentalmente SQL Server con un altro utente, è necessari
    Risorse: [caratteri speciali](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>Supporto
-
-Il supporto è disponibile tramite la community e monitorato dal team di progettazione. Per domande specifiche, utilizzare le risorse seguenti:
-
-- [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): porre domande di amministrazione di database
-- [Overflow dello stack](http://stackoverflow.com/questions/tagged/sql-server): porre domande di sviluppo
-- [Forum MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): porre domande tecniche
-- [Inviare commenti e suggerimenti](https://feedback.azure.com/forums/908035-sql-server): i bug e funzionalità di richiesta Report
-- [Reddit](https://www.reddit.com/r/SQLServer/): discutere di SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

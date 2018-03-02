@@ -15,11 +15,11 @@ ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 00c222c601cdf314f04db3cb9e3b818d9ea3a65f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 8000ee26dd5118d4380f4e2ab33d39aa96967466
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procedura dettagliata per le funzionalità di sicurezza di SQL Server in Linux
 
@@ -66,7 +66,7 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-A questo punto l'account di accesso erano può creare più account di accesso e l'utente erano possono creare altri utenti.
+L'account di accesso Larry può creare più account di accesso e l'utente erano possono creare altri utenti.
 
 
 ## <a name="granting-access-with-least-privileges"></a>La concessione dell'accesso con privilegi minimi

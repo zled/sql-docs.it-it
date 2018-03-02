@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlcmd
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,22 +29,23 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: "155"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 78bad0a1dfd518bb29c8bbdc5f04d0c173756e9f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 66a5e1f8b450fcc6d7cb13ba8e3d6bff36c46f4a
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sqlcmd-utility"></a>Utilità sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Per SQL Server 2014 e inferiore, vedere [utilità sqlcmd](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
 
+ > Per l'utilizzo di sqlcmd in Linux, vedere [installare sqlcmd e bcp in Linux](../linux/sql-server-linux-setup-tools.md).
 
   Il **sqlcmd** utilità consente di immettere istruzioni Transact-SQL, procedure di sistema e file script al prompt dei comandi, in **Editor di Query** in modalità SQLCMD, in un file di script di Windows o in un passaggio di processo del sistema operativo (Cmd.exe) di un processo di SQL Server Agent. Questa utilità utilizza ODBC per eseguire batch Transact-SQL. 
   
@@ -55,14 +57,14 @@ L'utilità sqlcmd dalla Shell di Cloud di Azure è possibile pre-installata per 
   Per eseguire istruzioni sqlcmd in SSMS, selezionare la modalità SQLCMD dal menu a discesa Query nella parte superiore della struttura di navigazione.  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) usa Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient per l'esecuzione di regolari e la modalità SQLCMD **Editor di Query**. Se **sqlcmd** viene eseguita dalla riga di comando, **sqlcmd** usa il driver ODBC. Poiché possono essere applicate opzioni predefinite diverse, l'esecuzione della stessa query nella modalità SQLCMD di [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] e nell'utilità **sqlcmd** potrebbe generare risultati diversi.  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) usa Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient per l'esecuzione di regolari e la modalità SQLCMD **Editor di Query**. Se **sqlcmd** viene eseguita dalla riga di comando, **sqlcmd** usa il driver ODBC. Poiché possono essere applicate opzioni predefinite diverse, l'esecuzione della stessa query nella modalità SQLCMD di [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] e nell'utilità **sqlcmd** potrebbe generare risultati diversi.  
 >   
   
  L'utilità **sqlcmd** non richiede attualmente uno spazio tra l'opzione della riga di comando e il valore. In una versione futura, tuttavia, è possibile che tra l'opzione della riga di comando e il valore sia necessario inserire uno spazio.  
  
  Altri argomenti:
 - [Avvio dell'utilità sqlcmd](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [Utilizzo dell'utilità sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Utilizzo dell'utilità sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -400,15 +402,15 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  **-Y** *fixed_length_type_display_width*  
  Imposta la variabile di scripting **di** sqlcmd `SQLCMDMAXFIXEDTYPEWIDTH`. Il valore predefinito è 0 (illimitato). Limita il numero di caratteri restituiti per i tipi di dati seguenti:  
   
--   **char(** *n* **)**, where 1<=n<=8000  
+-   **Char (**  *n*  **)**, dove 1 < = n < = 8000  
   
--   **nchar(n** *n* **)**, where 1<=n<=4000  
+-   **nchar (n**  *n*  **)**, dove 1 < = n < = 4000  
   
--   **varchar(n** *n* **)**, where 1<=n<=8000  
+-   **varchar (n**  *n*  **)**, dove 1 < = n < = 8000  
   
--   **nvarchar(n** *n* **)**, where 1<=n<=4000  
+-   **nvarchar (n**  *n*  **)**, dove 1 < = n < = 4000  
   
--   **varbinary(n** *n* **)**, where 1<=n\<=4000  
+-   **varbinary (n**  *n*  **)**, dove 1 < = n\<= 4000  
   
 -   **variant**  
   
@@ -452,7 +454,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  Dove:  
   
- `x`= Numero di transazioni che vengono elaborati da SQL Server.  
+ `x` = Numero di transazioni che vengono elaborati da SQL Server.  
   
  `t1` = tempo totale per tutte le transazioni.  
   
@@ -688,7 +690,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  GO indica sia la fine di un batch e l'esecuzione di eventuali memorizzati nella cache delle istruzioni Transact-SQL. Il batch viene eseguito più volte come batch separato; è possibile dichiarare una variabile più di una volta in un unico batch.
   
  **Comandi vari**  
-  **:r \<** *filename***>**  
+  **: r \<**  *filename* **>**  
  Analizza le istruzioni Transact-SQL aggiuntive e **sqlcmd** comandi dal file specificato da  **\< ***filename***>**nell'istruzione cache.  
   
  Se il file contiene istruzioni Transact-SQL che non sono seguite da **passare**, è necessario immettere **passare** nella riga che segue **: r**.  
@@ -704,7 +706,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  **:Serverlist**  
  Elenca i server configurati localmente e i nomi dei server che trasmettono in rete tramite broadcast.  
   
- **: Connessione***nome_server*[**\\* * * instance_name*] [-l *timeout*] [-U *nome_utente* [-P *password*]]  
+ **: Connessione***nome_server*[**\\* * * instance_name*] [-l *timeout*] [-U *nome_utente* [-P *password*]]    
  Si connette a un'istanza di SQL Server. e inoltre chiude la connessione corrente.  
   
  Opzioni di timeout:  

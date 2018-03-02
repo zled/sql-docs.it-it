@@ -1,27 +1,28 @@
 ---
 title: Microsoft JDBC Driver per SQL Server Support Matrix | Documenti Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9867704e5fe3b5522d22c70cc1b79b495de1bfa5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 30e750a2f69b52c04907c91aa0d47f2a3a60be91
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matrice di supporto di Microsoft JDBC Driver per SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/18/2017
   Questa pagina contiene i criteri relativi al ciclo di vita e alla matrice del supporto di Microsoft JDBC Driver per SQL Server.  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Criteri relativi alla matrice e al ciclo di vita del supporto di Microsoft JDBC Driver  
- I criteri relativi al ciclo di vita del supporto Microsoft (MSL) forniscono informazioni trasparenti e prevedibili riguardanti il ciclo di vita del supporto dei prodotti Microsoft. Le versioni del driver JDBC 3.0 e 4.x offrono fino a cinque anni di supporto "Mainstream" della data di rilascio del driver. Il supporto "Mainstream" viene definito nel sito Web del ciclo di vita del supporto Microsoft.  
+ I criteri relativi al ciclo di vita del supporto Microsoft (MSL) forniscono informazioni trasparenti e prevedibili riguardanti il ciclo di vita del supporto dei prodotti Microsoft. Versioni del driver JDBC 3.0, 4 e 6. x avere fino a cinque anni il supporto Mainstream del driver della data di rilascio. Il supporto "Mainstream" viene definito nel sito Web del ciclo di vita del supporto Microsoft.  
   
  Le opzioni di supporto esteso e personalizzato non sono disponibili per Microsoft JDBC Driver.  
     
@@ -37,7 +38,8 @@ ms.lasthandoff: 11/18/2017
   
 |Nome del driver|Versione del pacchetto driver|JAR(s) applicabile|Fine del supporto Mainstream|
 |-|-|-|-|  
-|Microsoft JDBC Driver 6.2 per SQL Server|6.2|MSSQL-jdbc-6.2.2.jre8.jar<br> MSSQL-jdbc-6.2.2.jre7.jar|30 giugno 2022|    
+|Microsoft JDBC Driver 6.4 per SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|22 gennaio 2023|    
+|Microsoft JDBC Driver 6.2 per SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 giugno 2022|    
 |Microsoft JDBC Driver 6.0 per SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 luglio 2021|    
 |Microsoft JDBC Driver 4.2 per SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 agosto 2020|  
 |Microsoft JDBC Driver 4.1 per SQL Server|4.1|sqljdbc41.jar|12 dicembre 2019|  
@@ -56,20 +58,21 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="sql-version-compatibility"></a>Compatibilità tra versioni SQL  
   
-|Versione driver|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Database SQL di Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|  
-|-|-|-|-|-|-|-|-|-| 
-|6.2|S|S|S|S|S|S|S|S|  
-|6.1|S|S|S|S|S|S|S|N|  
-|6.0|S|S|S|S|S|S|S|N|  
-|4.2|S|S|S|S|S|S|S|N|  
-|4.1|S|S|S|S|S|S|S|N|  
-|4.0|S|S|S|S|S|S|S|N|  
-|3.0|S|S|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|  
-|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|  
-|1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|  
-|1.1|N|N|N|N|N|N|N|N|  
-|1,0|N|N|N|N|N|N|N|N|  
-|2000|N|N|N|N|N|N|N|N|  
+|Versione driver|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Azure gestito istanza (Extended anteprima privata)|  
+|-|-|-|-|-|-|-|-|-|-|
+|6.4|N|S|S|S|S|S|S|S|S|  
+|6.2|S|S|S|S|S|S|S|S|N|
+|6.1|S|S|S|S|S|S|S|N|N|
+|6.0|S|S|S|S|S|S|S|N|N|
+|4.2|S|S|S|S|S|S|S|N|N|
+|4.1|S|S|S|S|S|S|S|N|N|
+|4.0|S|S|S|S|S|S|S|N|N|
+|3.0|S|S|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|N|
+|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|N|
+|1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|N|
+|1.1|N|N|N|N|N|N|N|N|N|  
+|1,0|N|N|N|N|N|N|N|N|N|  
+|2000|N|N|N|N|N|N|N|N|N|  
   
  <sup>1</sup>Microsoft SQL Server JDBC Driver versione 3.0 può connettersi a SQL Server 2012 come un client di livello inferiore.  
   
@@ -85,6 +88,7 @@ ms.lasthandoff: 11/18/2017
   
 |Versione driver JDBC|Versioni JRE|Versioni API JDBC| 
 |-|-|-|  
+|6.4|1.7, 1.8, 1.9|4.1, 4.2, 4.3 (parzialmente)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  

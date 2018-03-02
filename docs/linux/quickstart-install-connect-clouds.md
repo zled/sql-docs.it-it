@@ -1,6 +1,6 @@
 ---
 title: Introduzione a SQL Server 2017 nel Cloud | Documenti Microsoft
-description: Questa esercitazione rapida viene illustrato come eseguire il 2017 di SQL Server in Linux nel cloud di propria scelta.
+description: Questa Guida introduttiva viene illustrato come eseguire il 2017 di SQL Server in Linux nel cloud di propria scelta.
 author: annashres
 ms.author: annashres
 manager: craigg
@@ -12,17 +12,17 @@ ms.component:
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 613f6e1b0182d5003c68380bb5a5698397db2207
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="run-the-sql-server-2017-in-the-cloud"></a>Eseguire il 2017 di SQL Server nel cloud
+# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>Guida introduttiva: Eseguire il 2017 di SQL Server nel cloud
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In questa esercitazione di avvio rapido, verrà installato 2017 di SQL Server su Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) o Ubuntu nel cloud di propria scelta. Passare a [il provisioning di una macchina virtuale Linux SQL Server nel portale di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) per l'esecuzione di SQL Server in Linux in Azure.
+In questa Guida rapida, verrà installato 2017 di SQL Server su Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) o Ubuntu nel cloud di propria scelta. Passare a [il provisioning di una macchina virtuale Linux SQL Server nel portale di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) per l'esecuzione di SQL Server in Linux in Azure.
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)

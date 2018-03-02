@@ -1,7 +1,8 @@
 ---
 title: Evitare gli errori di pacchetti R installati nelle librerie utente | Documenti Microsoft
+titleSuffix: SQL Server
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 02/20/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,22 +17,22 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f58cb0fbc6ca62bbd4fe02e0c29d71569140fde2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: b7f640cc33cb61ab8dffc57edb3b522808129880
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>Evitare gli errori di pacchetti R installati nelle librerie utente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Gli utenti esperti di R sono abituati a installare pacchetti R in una raccolta di utente, ogni volta che la libreria predefinita è bloccato o non disponibile. Tuttavia, questo approccio non è supportato in SQL Server e installazione di una libreria utente termina in genere un errore "Impossibile trovare il pacchetto".
 
-In questo argomento vengono illustrate soluzioni alternative per evitare questo errore. Viene illustrato come è possibile modificare il codice R e suggerisce il processo di installazione di pacchetti R corretto per l'utilizzo di pacchetti R da un'istanza di SQL Server.
+Questo articolo descrive soluzioni alternative per evitare questo errore. Viene illustrato come è possibile modificare il codice R e suggerisce il processo di installazione di pacchetti R corretto per l'utilizzo di pacchetti R da un'istanza di SQL Server.
 
 ## <a name="why-r-user-libraries-cannot-be-accessed-from-sql-server"></a>Perché le librerie utente R non sono accessibili da SQL Server
 
-Gli sviluppatori R che devono installare i nuovi pacchetti R sono abituati per l'installazione dei pacchetti quando è necessario e utilizza una libreria utente privato, ogni volta che la libreria predefinita non è disponibile, o quando lo sviluppatore non è un amministratore nel computer.
+Gli sviluppatori R che devono installare i nuovi pacchetti R sono abituati per l'installazione dei pacchetti quando è necessario, mediante una privata e una libreria utente ogni volta che la libreria predefinita non è disponibile, oppure quando lo sviluppatore non è un amministratore nel computer.
 
 Ad esempio, in un tipico ambiente di sviluppo di R, l'utente sarebbe il percorso del pacchetto la variabile di ambiente R `libPath`, o riferimento al percorso completo del pacchetto, simile al seguente:
 
@@ -39,36 +40,24 @@ Ad esempio, in un tipico ambiente di sviluppo di R, l'utente sarebbe il percorso
 library("c:/Users/<username>/R/win-library/packagename")
 ```
 
-Tuttavia, ciò non possa mai funzionare durante l'esecuzione di soluzioni R in SQL Server, perché i pacchetti R devono essere installati in una raccolta predefinito specifico che viene associata all'istanza.
-
-Se il pacchetto non è installato nella libreria predefinita, potrebbe essere visualizzato un errore analogo al seguente quando si tenta di chiamare il pacchetto:
+Non funziona durante l'esecuzione di soluzioni R in SQL Server, perché i pacchetti R devono essere installati in una raccolta predefinito specifico che viene associata all'istanza. Quando un pacchetto non è disponibile nella libreria predefinita, viene visualizzato questo errore quando si tenta di chiamare il pacchetto:
 
 *Errore in library(xxx): nessun pacchetto denominato 'package-name'*
 
-È inoltre una procedura di sviluppo non valido per installare i pacchetti R richiesti in una raccolta di utente personalizzato, come può causare errori se una soluzione viene eseguita da un altro utente che non ha accesso al percorso di libreria.
+## <a name="how-to-avoid-package-not-found-errors"></a>Come evitare errori di "non trovato nel pacchetto"
 
-## <a name="how-to-install-r-packages-to-an-accessible-library"></a>Come installare i pacchetti R in una libreria accessibile
++ Eliminare le dipendenze sulle librerie utente 
 
-**Per SQL Server 2016**
+    È una procedura di sviluppo non valido per installare i pacchetti R richiesti in una raccolta di utente personalizzato, come può causare errori se una soluzione viene eseguita da un altro utente che non ha accesso al percorso di libreria.
 
-Utilizzare la libreria di pacchetto associata all'istanza. Per informazioni dettagliate, vedere [pacchetti R installati con SQL Server](installing-and-managing-r-packages.md)
+    Inoltre, se è installato un pacchetto della libreria predefinita, il runtime di R carica il pacchetto dalla libreria predefinita, anche se è specificata una versione diversa nel codice R.
 
-**Per SQL Server 2017**
++ Modificare il codice per l'esecuzione in un ambiente condiviso.
 
-SQL Server fornisce funzionalità che consentono di gestire più versioni del pacchetto e concedere agli utenti le autorizzazioni per singoli pacchetti, senza richiedere che gli utenti hanno accesso al file system.
++ Evitare di installare i pacchetti come parte di una soluzione. Se non si dispone delle autorizzazioni necessarie per installare i pacchetti, il codice avrà esito negativo. Anche se si dispone delle autorizzazioni per installare i pacchetti, è consigliabile pertanto separatamente da altro codice che si desidera eseguire.
 
-Per informazioni dettagliate su come impostare una libreria condivisa pacchetto e assegnare utenti a ruoli, vedere [gestione dei pacchetti R per SQL Server](r-package-management-for-sql-server-r-services.md).
++ Controllare il codice per assicurarsi che non ci siano chiamate a pacchetti non installati.
 
-Se si adotta l'approccio di gestione di pacchetto in base ai ruoli di database, non è necessario installare più copie dello stesso pacchetto nella directory dell'utente diverso. Installare una singola copia del pacchetto è necessario e condividerlo con gli utenti autenticati. Poiché i pacchetti sono gestiti a livello di database, è inoltre possibile copiare i gruppi di pacchetti e le autorizzazioni correlate tra database.
++ Aggiornare il codice per rimuovere i riferimenti diretti ai percorsi di pacchetti R o librerie R. 
 
-## <a name="tips-for-avoiding-package-not-found-errors"></a>Suggerimenti per evitare errori di "non trovato nel pacchetto"
-
-+ Modificare il codice per eliminare le dipendenze sulle librerie utente. Quando si esegue la migrazione di soluzioni R per l'esecuzione in [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)], è importante eseguire le operazioni seguenti:
-
-    + Installare tutti i pacchetti che è necessario per la libreria predefinita associata all'istanza.
-
-    + Modificare il codice per verificare che i pacchetti siano caricati dalla libreria predefinita, non dalla directory ad hoc o librerie utente.
-
-+ Evitare l'installazione del pacchetto ad hoc come parte di una soluzione. Controllare il codice per assicurarsi che non sono presenti chiamate a pacchetti non installati o codice che consente di installare i pacchetti in modo dinamico. Se non si dispone delle autorizzazioni necessarie per installare i pacchetti, il codice avrà esito negativo. Anche se si dispone delle autorizzazioni per installare i pacchetti, è consigliabile pertanto separatamente da altro codice che si desidera eseguire.
-
-+ Aggiornare il codice per rimuovere i riferimenti diretti ai percorsi di pacchetti R o librerie R. Se un pacchetto è installato nella libreria predefinita, il runtime R lo caricherà dalla libreria predefinita, anche se viene specificata un'altra libreria nel codice R.
++ Conoscere la libreria di package è associata all'istanza. Per ulteriori informazioni, vedere [pacchetti R installati con SQL Server](installing-and-managing-r-packages.md)

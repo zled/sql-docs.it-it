@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitazioni e problemi noti per SSIS in Linux
 
@@ -132,3 +132,8 @@ I provider di log SSIS per file di testo, per i file XML e per SQL Server Profil
 -   Se non si fornisce un percorso, il provider di log scritto nella directory corrente dell'host. Se l'utente corrente non dispone dell'autorizzazione di scrittura nella directory corrente dell'host, il provider di log genera un errore.
 -   È possibile utilizzare una variabile di ambiente in un percorso di file. Se si specifica una variabile di ambiente, viene visualizzato il testo specificato nel percorso del file. Ad esempio, se si specifica `%TMP%/log.txt`, il provider di log aggiunge il testo letterale `/%TMP%/log.txt` nella directory host corrente.
 
+## <a name="related-content-about-ssis-on-linux"></a>Contenuto correlato su SSIS in Linux
+-   [Estrarre, trasformare e caricare i dati in Linux con SSIS](sql-server-linux-migrate-ssis.md)
+-   [Installare SQL Server Integration Services (SSIS) in Linux](sql-server-linux-setup-ssis.md)
+-   [Configurare SQL Server Integration Services in Linux con ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Esecuzione in Linux con cron del pacchetto di pianificazione di SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)

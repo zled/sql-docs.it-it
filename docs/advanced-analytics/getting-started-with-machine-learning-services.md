@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e33a91587f393c6c510bdb16fe9c71dc2f422eac
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>Guida introduttiva con machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ In questo articolo fornisce collegamenti a risorse per ogni prodotto nella piatt
 
   A partire da SQL Server 2017, è possibile utilizzare codice Python in SQL Server. In modo da riflettere il più ampio supporto per le soluzioni in più lingue (con altri in futuro!) e il nome è stato modificato in [!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]. Ora è possibile automatizzare attività di machine learning usando gli strumenti SQL per eseguire codice R o Python. In alternativa, usare il computer SQL Server come il _contesto di calcolo_ per i processi avviati da un ambiente di sviluppo remoto.
 
-    + [Panoramica dell'architettura per Python in SQL Server](/python/architecture-overview-sql-server-python.md)
+    + [Panoramica dell'architettura per Python in SQL Server](../advanced-analytics/python/architecture-overview-sql-server-python.md)
     + [Configurare SQL Server R Services o i servizi di Machine Learning](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016
