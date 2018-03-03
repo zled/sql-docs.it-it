@@ -1,8 +1,8 @@
 ---
-title: L'autenticazione di Active Directory con SQL Server in Linux | Documenti Microsoft
+title: Esercitazione di autenticazione Active Directory per SQL Server in Linux | Documenti Microsoft
 description: In questa esercitazione include i passaggi di configurazione per l'autenticazione di Azure ad per SQL Server in Linux.
 author: meet-bhagdev
-ms.date: 01/30/2018
+ms.date: 02/23/2018
 ms.author: meetb
 manager: craigg
 ms.topic: article
@@ -16,24 +16,17 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a0939dfa0f8304dc47a6925cf4c6f0375eb6a8df
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="active-directory-authentication-with-sql-server-on-linux"></a>Autenticazione di Active Directory con SQL Server in Linux
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Esercitazione: L'autenticazione utilizzo di Active Directory con SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In questa esercitazione viene illustrato come configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux per supportare l'autenticazione di Active Directory (AD), noto anche come l'autenticazione. L'autenticazione di Active Directory consente ai client di dominio su Windows o Linux per l'autenticazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzando le credenziali di dominio e il protocollo Kerberos.
-
-L'autenticazione di Active Directory offre i vantaggi seguenti su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticazione:
-
-* Gli utenti autenticati tramite l'accesso single sign-on, senza che venga richiesta una password.   
-* Tramite la creazione di account di accesso per gruppi di Active Directory, è possibile gestire l'accesso e le autorizzazioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite l'appartenenza al gruppo Active Directory.  
-* Ogni utente dispone di una singola identità dell'organizzazione, quindi non è necessario tenere traccia di cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gli account di accesso corrispondenti per gli utenti che.   
-* Active Directory consente di applicare i criteri password centralizzata all'interno dell'organizzazione.   
+In questa esercitazione viene illustrato come configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux per supportare l'autenticazione di Active Directory (AD), noto anche come l'autenticazione. Per una panoramica, vedere [l'autenticazione di Active Directory per SQL Server in Linux](sql-server-linux-active-directory-auth-overview.md).
 
 In questa esercitazione include le attività seguenti:
 
@@ -54,12 +47,7 @@ Prima di configurare l'autenticazione di Active Directory, è necessario:
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-> [!IMPORTANT]
-> Limitazioni:
-> - A questo punto, l'unico metodo di autenticazione supportato per l'endpoint del mirroring del database è certificato. Il metodo di autenticazione di WINDOWS verrà abilitato in una versione futura.
-> - Strumenti di terze parti AD come Centrify, Powerbroker, e Vintela non sono supportati. 
-
-## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>Creare un join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host al dominio Active Directory
+## <a id="join"></a> Creare un join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host al dominio Active Directory
 
 Utilizzare la procedura seguente per aggiungere un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host a un dominio di Active Directory:
 
@@ -179,7 +167,7 @@ Utilizzare la procedura seguente per aggiungere un [!INCLUDE[ssNoVersion](../inc
 
 Per ulteriori informazioni, vedere la documentazione di Red Hat per [alla scoperta e aggiunta di domini di identità](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
-## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Creare l'utente di Active Directory per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e impostare SPN
+## <a id="createuser"></a> Creare l'utente di Active Directory per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e impostare SPN
 
   > [!NOTE]
   > I passaggi successivi utilizzare il [nome di dominio completo](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se si utilizza **Azure**, è necessario  **[crearlo](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  prima di procedere.
@@ -208,7 +196,7 @@ Per ulteriori informazioni, vedere la documentazione di Red Hat per [alla scoper
 
 3. Per altre informazioni, vedere [Registrazione di un nome dell'entità servizio per le connessioni Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
-## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>Configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab servizio
+## <a id="configurekeytab"></a> Configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab servizio
 
 1. Controllare il numero di versione della chiave (kvno) per l'account di Active Directory creato nel passaggio precedente. In genere è 2, ma può trattarsi di un altro numero intero se è stata modificata la password dell'account più volte. Nel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] macchina host, eseguire il comando seguente:
 
@@ -249,7 +237,7 @@ Per ulteriori informazioni, vedere la documentazione di Red Hat per [alla scoper
    sudo systemctl restart mssql-server
    ```
 
-## <a name="create-ad-based-logins-in-transact-sql"></a>Creare account di accesso basato su Active Directory in Transact-SQL
+## <a id="createsqllogins"></a> Creare account di accesso basato su Active Directory in Transact-SQL
 
 1. Connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e creare un account di accesso di nuovo, basato su Active Directory:
 
@@ -263,7 +251,7 @@ Per ulteriori informazioni, vedere la documentazione di Red Hat per [alla scoper
    SELECT name FROM sys.server_principals;
    ```
 
-## <a name="connect-to-includessnoversionincludesssnoversion-mdmd-using-ad-authentication"></a>Connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Active Directory
+## <a id="connect"></a> Connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Active Directory
 
 Accedere a un computer client utilizzando le credenziali di dominio. Ora è possibile connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] senza immettere di nuovo la password, tramite l'autenticazione di Active Directory. Se si crea un account di accesso per un gruppo di Active Directory, qualsiasi utente di Active Directory che è un membro del gruppo può connettersi allo stesso modo.
 
