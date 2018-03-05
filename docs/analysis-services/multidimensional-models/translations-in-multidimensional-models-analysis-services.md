@@ -11,9 +11,10 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
+f1_keywords:
+- sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -115,7 +116,7 @@ ms.lasthandoff: 01/08/2018
   
     |Identificatore di lingua specificato|Identificatore di lingua alternativo|  
     |-----------------------------------|-----------------------------------|  
-    |3076 - Cinese (Hong Kong SAR, RPC)|1028 - Cinese (Taiwan)|  
+    |3076 - Cinese (RAS di Hong Kong, RPC)|1028 - Cinese (Taiwan)|  
     |5124 - Cinese (Macao)|1028 - Cinese (Taiwan)|  
     |1028 - Cinese (Taiwan)|Lingua predefinita|  
     |4100 - Cinese (Singapore)|2052 - Cinese (RPC)|  

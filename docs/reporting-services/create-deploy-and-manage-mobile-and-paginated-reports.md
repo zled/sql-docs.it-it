@@ -19,7 +19,7 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -94,7 +94,7 @@ Per gli utenti finali di Reporting Services in modalità nativa, la porta d'ingr
 
 Nel portale Web è possibile applicare una grafica personalizzata e anche creare indicatori KPI, in modo da visualizzare le principali metriche aziendali immediatamente nel browser, senza dover aprire un report. 
 
-Il nuovo portale Web è una riscrittura completa di Report Manager. È ora diventato un'app HTML5 a pagina singola, basata su standard, per cui sono ottimizzati i browser moderni: Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e tutti i browser più diffusi.
+Il nuovo portale Web è una riscrittura completa di Report Manager. È ora diventato un'app HTML5 a pagina singola, basata su standard, per cui sono ottimizzati i browser moderni: Microsoft Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e tutti i browser più diffusi.
 
 Il contenuto del portale Web è organizzato in base al tipo: report impaginati e per dispositivi mobili e indicatori KPI di Reporting Services, report di Power BI Desktop, cartelle di lavoro di Excel, set di dati condivisi e origini dati condivise da usare come blocchi predefiniti per i report. È possibile archiviare e gestire questi elementi in modo sicuro nel portale con la gerarchia di cartelle classica. È possibile contrassegnare i preferiti e gestire il contenuto, se si dispone del ruolo appropriato.
 

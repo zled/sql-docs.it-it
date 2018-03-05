@@ -102,7 +102,7 @@ Ricerca full-Text utilizza [word breaker](../relational-databases/search/configu
 | Inglese (Regno Unito) | 2057 |
 | Bulgaro | 1026 |
 | Catalano | 1027 |
-| Cinese (Hong Kong - R.A.S., Repubblica popolare cinese) | 3076 |
+| Cinese (RAS di Hong Kong, Repubblica popolare cinese) | 3076 |
 | Cinese (Macao - R.A.S.) | 5124 |
 | Cinese (Singapore) | 4100 |
 | Croato | 1050 |
