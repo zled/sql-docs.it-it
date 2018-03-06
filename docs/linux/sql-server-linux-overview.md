@@ -27,7 +27,7 @@ SQL Server 2017 viene ora eseguito in Linux. È lo stesso motore di database di 
 
 ## <a name="install"></a>Install
 
-Per iniziare, installare SQL Server in Linux con una delle esercitazioni di avvio rapido seguenti:
+Per iniziare, installare SQL Server in Linux con una delle esercitazioni seguenti di avvio rapido:
 
 - [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
