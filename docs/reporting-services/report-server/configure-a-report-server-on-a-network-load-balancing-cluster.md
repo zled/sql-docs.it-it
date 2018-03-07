@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: report servers [Reporting Services], network load balancing
+helpviewer_keywords:
+- report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3576aec75cab9961b6d7423b65c66e885834ff88
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
   Se si intende configurare la scalabilità orizzontale di un server di report per l'esecuzione in un cluster per il bilanciamento del carico di rete (NLB, Network Load Balancing), è necessario effettuare le operazioni seguenti:  
@@ -49,27 +50,24 @@ ms.lasthandoff: 01/09/2018
 |7|Verificare che sia possibile accedere ai server tramite il nome host specificato.|[Verificare l'accesso al server di report](#Verify) in questo argomento.|  
   
 ##  <a name="ViewState"></a> Come configurare la convalida dello stato di visualizzazione  
- Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il bilanciamento del carico di rete, è necessario configurare la convalida dello stato di visualizzazione in modo che gli utenti possano visualizzare report HTML interattivi. Questa operazione deve essere eseguita sia per il server di report che per Gestione report.  
+ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il bilanciamento del carico di rete, è necessario configurare la convalida dello stato di visualizzazione in modo che gli utenti possano visualizzare report HTML interattivi.
   
  La convalida dello stato di visualizzazione è controllata da ASP.NET, è abilitata per impostazione predefinita e utilizza l'identità del servizio Web per eseguire la convalida. In uno scenario di cluster per il bilanciamento del carico di rete, tuttavia, sono presenti più istanze del servizio e identità del servizio Web eseguite in computer diversi. Poiché l'identità del servizio varia per ciascun nodo, non è possibile basarsi su una singola identità del processo per eseguire la convalida.  
   
  Per risolvere questo problema, è possibile generare una chiave di convalida arbitraria per supportare la convalida dello stato di visualizzazione e quindi configurare manualmente ciascun nodo del server di report per l'utilizzo della stessa chiave. È possibile utilizzare qualsiasi sequenza esadecimale generata casualmente. L'algoritmo di convalida, ad esempio SHA1, determina la lunghezza della sequenza esadecimale.  
+
+1.  Generare una chiave di convalida e una chiave di decrittografia mediante la funzionalità di generazione automatica disponibile in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Alla fine è necessario avere un'unica voce \<**MachineKey**> da incollare nel file RSReportServer.config per ogni istanza del server di report presente nella distribuzione con scalabilità orizzontale.
   
-1.  Generare una chiave di convalida e una chiave di decrittografia mediante la funzionalità di generazione automatica disponibile in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Alla fine è necessario avere un'unica voce \<**machineKey**> da incollare nel file Web.config per ogni istanza di Gestione report presente nella distribuzione con scalabilità orizzontale.  
-  
-     Nell'esempio seguente viene illustrato il valore che è necessario ottenere: Non copiare l'esempio nei file di configurazione in uso, in quanto i valori di chiave non sono validi.  
+     Nell'esempio seguente viene illustrato il valore che è necessario ottenere: Non copiare l'esempio nei file di configurazione in uso, in quanto i valori di chiave non sono validi. Il server di report richiede le maiuscole e minuscole corrette.
   
     ```  
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
-    ```  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    ```   
+2.  Salvare il file.  
   
-2.  Aprire il file Web.config di Gestione report, quindi nella sezione \<**system.web**> incollare l'elemento \<**machineKey**> generato. Per impostazione predefinita, il file Web.config di Gestione report si trova in \Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config.  
+3.  Ripetere il passaggio precedente per ogni server di report presente nella distribuzione con scalabilità orizzontale.  
   
-3.  Salvare il file.  
-  
-4.  Ripetere il passaggio precedente per ogni server di report presente nella distribuzione con scalabilità orizzontale.  
-  
-5.  Verificare che tutti i file Web.Config nelle cartelle \Reporting Services\Report Manager contengano elementi \<**machineKey**> identici nella sezione \<**system.web**>.  
+4.  Verificare che tutti i file RSReportServer.config nelle cartelle \Reporting Services\Report Server contengano elementi \<**MachineKey**> identici.  
   
 ##  <a name="SpecifyingVirtualServerName"></a> Come configurare Hostname e UrlRoot  
  Per configurare una distribuzione con scalabilità orizzontale del server di report in un cluster per il bilanciamento del carico di rete, è necessario definire un unico nome del server virtuale che fornisce un singolo punto di accesso al cluster di server. Successivamente, registrare il nome del server virtuale con Domain Name Server (DNS) nel proprio ambiente.  
