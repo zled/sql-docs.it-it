@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86a17fe1e0bab836ed004d10e1f4691b04c127c6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7d084ce76ed1dd535575caa2d43ccb43e64fd3a2
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Panoramica: Esportazione dei dati in Excel (componente aggiuntivo MDS per Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]è necessario esportare i dati dal repository MDS in un foglio di lavoro di Excel attivo prima di poterli usare. Dopo aver lavorato con i dati, importarli nel repository MDS per consentire ad altri utenti di condividerli.  
@@ -37,12 +38,12 @@ ms.lasthandoff: 11/20/2017
  È possibile filtrare i dati prima dell'esportazione per limitare la quantità di dati da scaricare. Ciò presuppone la scelta degli attributi (colonne) da caricare, l'ordine con cui si desidera visualizzare gli attributi e i membri (righe di dati) che si desidera utilizzare. Per altre informazioni, vedere [Filtrare i dati prima dell'esportazione &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md).  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>Connettersi automaticamente e caricare i dati utilizzati frequentemente  
- Se si vuole connettersi sempre allo stesso server e caricare lo stesso set di dati, è possibile creare file di query di collegamento contenenti le informazioni di connessione e filtro. Per altre informazioni sui file di query, vedere [File di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md).  
+ Se si vuole connettersi sempre allo stesso server e caricare lo stesso set di dati, è possibile creare file di query di collegamento contenenti le informazioni di connessione e filtro. Per altre informazioni sui file di query, vedere [Shortcut Query Files &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md).  
   
 ## <a name="refreshing-data"></a>Aggiornamento dei dati  
  I dati nel repository MDS possono essere aggiornati da altri utenti dopo l'esportazione. È possibile recuperare questi dati senza perdere le modifiche apportate a dati diversi da MDS. Per altre informazioni, vedere [Aggiornamento dei dati &#40;Componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

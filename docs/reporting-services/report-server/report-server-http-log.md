@@ -1,7 +1,7 @@
 ---
 title: Log HTTP del server di report | Microsoft Docs
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: 
@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: HTTP [Reporting Services]
+helpviewer_keywords:
+- HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c05dfdbb99322caa42412c9d2bc2636625cf0b7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 705ec73a7198793754a70edfdc854a5c9c15e47c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="report-server-http-log"></a>Log HTTP del server di report
   Nel file di log HTTP del server di report viene mantenuto un record per ogni richiesta HTTP e relativa risposta gestite dal server di report. Poiché gli errori di overflow e di timeout relativi alle richiesta ed errori non raggiungono il server di report, non vengono registrati nel file di log.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="configuration-settings-for-report-server-http-log"></a>Impostazioni di configurazione per il log HTTP del server di report  
  Per configurare il log HTTP del server di report, utilizzare Blocco note per modificare il file ReportingServicesService.exe.config. Il percorso del file di configurazione è \Programmi\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
   
- Per abilitare il server HTTP, è necessario aggiungere **http:4** alla sezione RStrace del file ReportingServicesService.exe.config. Tutte le altre voci del file di log HTTP sono facoltative. Nell'esempio seguente sono incluse tutte le impostazioni in modo che sia possibile incollare la sezione intera sulla sezione Rstrace e successivamente eliminare le impostazioni non necessarie.  
+ Per abilitare il server HTTP, è necessario aggiungere **http:4** alla sezione RStrace del file ReportingServicesService.exe.config. Tutte le altre voci del file di log HTTP sono facoltative. Nell'esempio seguente sono incluse tutte le impostazioni in modo che sia possibile incollare la sezione intera sulla sezione Rstrace e successivamente eliminare le impostazioni non necessarie.
   
 ```  
    <RStrace>  
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/09/2018
          <add name="TraceListeners" value="debugwindow, file" />  
          <add name="TraceFileMode" value="unique" />  
          <add name="HttpTraceFileName" value="ReportServerService_HTTP_" />  
-         <add name="HttpTraceSwitches" value="date,time, clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
+         <add name="HttpTraceSwitches" value="date,time,clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
          <add name="Components" value="all:3,http:4" />  
    </RStrace>  
 ```  
