@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ca81b54546e3ff69c42ea60484e462513443c5e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8a0fec3423b126a425206441543fd50679712c2f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>Set di righe DISCOVER_STORAGE_TABLE_COLUMNS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Vengono fornite informazioni a livello di colonna sulle tabelle di archiviazione utilizzate da un database di Analysis Services in esecuzione in modalità SharePoint o tabulare.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Vengono fornite informazioni a livello di colonna sulle tabelle di archiviazione utilizzate da un database di Analysis Services in esecuzione in modalità SharePoint o tabulare.  
   
  **Si applica a:** i modelli tabulari  
   
@@ -38,11 +38,11 @@ ms.lasthandoff: 12/08/2017
 |---------------------|------------------------|---------------------|---------------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**|Sì|Viene specificato il nome del database contenente le tabelle. Se omesso, viene utilizzato il database corrente.<br /><br /> Il **DISCOVER_STORAGE_TABLE_COLUMNS** righe può essere limitato tramite questa colonna.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Sì|Viene specificato il cubo o il modello contenente le tabelle.<br /><br /> Il **DISCOVER_STORAGE_TABLES** righe può essere limitato tramite questa colonna.|  
-|**NOME_GRUPPO_MISURE**|**DBTYPE_WSTR**|Sì|Nome del gruppo di misure.|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Sì|Nome del gruppo di misure.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||Nome della dimensione.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Nome dell'attributo.|  
 |**TABLE_ID**|**DBTYPE_WSTR**||ID della tabella.|  
-|**COLUMN_ID**|**DBTYPE WSTR**||ID della colonna. L'ID della colonna è interno al motore di analisi in memoria xVelocity (VertiPaq) ed è solo informativo.|  
+|**COLUMN_ID**|**DBTYPE_ WSTR**||ID della colonna. L'ID della colonna è interno al motore di analisi in memoria xVelocity (VertiPaq) ed è solo informativo.|  
 |**COLUMN_TYPE**|**DBTYPE_WSTR**||Tipo di colonna. Il tipo di colonna è interno al motore di analisi in memoria xVelocity (VertiPaq) ed è solo informativo.<br /><br /> BASIC_DATA<br /><br /> HIERARCHY_DATAID_TO_POSITION<br /><br /> HIERARCHY_POSITION_TO_DATAID<br /><br /> RELATIONSHIP|  
 |**COLUMN_ENCODING**|**DBTYPE_UI8**||Integer che rappresenta il tipo di codifica utilizzato per i dati della colonna.<br /><br /> **0**, utilizzato con **COLUMN_TYPE**: HIERARCHY_DATAID_TO_POSITION, HIERARCHY_POSITION_TO_DATAID, RELATIONSHIP<br /><br /> **1**, utilizzato con **COLUMN_TYPE**: BASIC_DATA<br /><br /> **2**, utilizzato con **COLUMN_TYPE**: BASIC_DATA|  
 |**TIPO DI DATI**|**DBTYPE_WSTR**||Tipo di dati della colonna. Dispone dei seguenti valori possibili:<br /><br /> DBTYPE_BOOL<br /><br /> DBTYPE_CY<br /><br /> DBTYPE_DATE<br /><br /> DBTYPE_I4<br /><br /> DBTYPE_I8<br /><br /> DBTYPE_R8<br /><br /> DBTYPE_WSTR<br /><br /> N/D|  
@@ -72,6 +72,6 @@ ORDER BY TABLE_ID DESC
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di righe dello schema di Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Set di righe dello Schema di Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

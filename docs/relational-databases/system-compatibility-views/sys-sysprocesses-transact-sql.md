@@ -1,5 +1,5 @@
 ---
-title: Sys. sysprocesses (Transact-SQL) | Documenti Microsoft
+title: sys.sysprocesses (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.sysprocesses_TSQL
 - sys.sysprocesses
 - sysprocesses
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.sysprocesses compatibility view
 - sysprocesses system table
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8589b865843b0ec7a8d4a087dee5bbc0a646b289
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 551d266374d6fd367eb4bba9e1d76a6322461c31
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +44,10 @@ ms.lasthandoff: 11/27/2017
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|spid|**smallint**|ID di sessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID di sessione.|  
 |kpid|**smallint**|ID del thread di Windows.|  
 |blocked|**smallint**|ID della sessione che sta bloccando la richiesta. Se questa colonna è NULL, la richiesta non è bloccata oppure non sono disponibili o identificabili informazioni di sessione per la sessione da cui è bloccata.<br /><br /> -2 = La risorsa di blocco appartiene a una transazione distribuita orfana.<br /><br /> -3 = La risorsa di blocco appartiene a una transazione di recupero posticipata.<br /><br /> -4 = Non è possibile determinare l'ID di sessione del proprietario del latch di blocco a causa di transizioni nello stato del latch interno.|  
-|waittype|**Binary(2)**|Riservato.|  
+|waittype|**binary(2)**|Riservato.|  
 |waittime|**bigint**|Tempo di attesa corrente espresso in millisecondi.<br /><br /> 0 = Il processo non è in attesa.|  
 |lastwaittype|**nchar(32)**|Stringa che indica il nome del tipo di attesa più recente o corrente.|  
 |waitresource|**nchar(256)**|Rappresentazione testuale di una risorsa di blocco.|  
@@ -59,18 +61,18 @@ ms.lasthandoff: 11/27/2017
 |ecid|**smallint**|ID del contesto di esecuzione utilizzato per identificare in modo univoco i thread secondari utilizzati per conto di un unico processo.|  
 |open_tran|**smallint**|Numero di transazioni aperte per il processo.|  
 |status|**nchar(30)**|Stato dell'ID del processo. I valori possibili sono:<br /><br /> **inattivo**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione.<br /><br /> **esecuzione** = la sessione è in esecuzione uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per ulteriori informazioni, vedere [utilizzando Multiple Active Result Set &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **sfondo** = nella sessione viene eseguita un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> **Rollback** = la sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso** = la sessione è in attesa di un thread di lavoro diventi disponibile.<br /><br /> **eseguibile** = l'attività della sessione è in coda eseguibile di un'utilità di pianificazione in attesa di un quantum temporale.<br /><br /> **spinloop** = l'attività della sessione è in attesa di uno spinlock vengono resi disponibili.<br /><br /> **sospeso** = la sessione è in attesa di un evento, ad esempio i/o, per completare.|  
-|sid|**Binary(86)**|Identificatore univoco globale (GUID, Globally Unique Identifier) per l'utente.|  
+|sid|**binary(86)**|Identificatore univoco globale (GUID, Globally Unique Identifier) per l'utente.|  
 |hostname|**nchar(128)**|Nome della workstation.|  
 |program_name|**nchar(128)**|Nome dell'applicazione.|  
-|hostprocess|**nchar (10)**|Numero di ID del processo della workstation.|  
+|hostprocess|**nchar(10)**|Numero di ID del processo della workstation.|  
 |cmd|**nchar(16)**|Comando in fase di esecuzione.|  
 |nt_domain|**nchar(128)**|Dominio di Windows per il client, se si utilizza l'autenticazione di Windows, o connessione trusted.|  
 |nt_username|**nchar(128)**|Nome utente di Windows per il processo, se si utilizza l'autenticazione di Windows, o connessione trusted.|  
 |net_address|**nchar(12)**|Identificatore univoco assegnato alla scheda di rete della workstation di ogni utente. Quando un utente esegue l'accesso, questo identificatore viene inserito nella colonna net_address.|  
 |net_library|**nchar(12)**|Colonna in cui viene archiviata la libreria di rete del client. Ogni processo client utilizza una connessione di rete. Le connessioni di rete sono associate a una libreria di rete che consente di stabilire la connessione.|  
 |loginame|**nchar(128)**|Nome dell'account di accesso.|  
-|context_info|**Binary(128)**|Dati archiviati in un batch tramite l'istruzione SET CONTEXT_INFO.|  
-|sql_handle|**Binary(20)**|Rappresenta il batch o l'oggetto attualmente in esecuzione.<br /><br /> **Nota** questo valore è derivato dall'indirizzo batch o della memoria dell'oggetto. e non viene calcolato tramite l'algoritmo basato su hash di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|context_info|**binary(128)**|Dati archiviati in un batch tramite l'istruzione SET CONTEXT_INFO.|  
+|sql_handle|**binary(20)**|Rappresenta il batch o l'oggetto attualmente in esecuzione.<br /><br /> **Nota** questo valore è derivato dall'indirizzo batch o della memoria dell'oggetto. e non viene calcolato tramite l'algoritmo basato su hash di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |stmt_start|**int**|Offset iniziale dell'istruzione SQL corrente per il valore di sql_handle specificato.|  
 |stmt_end|**int**|Offset finale dell'istruzione SQL corrente per il valore di sql_handle specificato.<br /><br /> -1 = L'istruzione corrente viene eseguita fino alla fine dei risultati restituiti dalla funzione fn_get_sql per il valore di sql_handle specificato.|  
 |request_id|**int**|ID della richiesta. Utilizzato per identificare le richieste in esecuzione in una sessione specifica.|  

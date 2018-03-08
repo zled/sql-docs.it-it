@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
@@ -32,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dopo aver abilitato l'accesso in lettura a un cubo, è possibile impostare autorizzazioni aggiuntive che consentiranno o negare l'accesso a membri di dimensione, inclusi misure contenute nella dimensione Measures che contiene tutte le misure usate in un cubo, in modo esplicito. Se ad esempio sono presenti più categorie di rivenditori, si potrebbe voler impostare le autorizzazioni per escludere i dati per un tipo di attività specifico. La seguente figura mostra l'effetto che si ottiene prima e dopo avere negato l'accesso al tipo di attività Warehouse nella dimensione Reseller.  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Le istruzioni seguenti presuppongono una connessione client che esegue query in MDX. Se il client usa DAX, ad esempio Power View in Power BI, la sicurezza delle dimensioni non è evidente nei risultati della query. Per altre informazioni, vedere [Informazioni su Power View per modelli multidimensionali](understanding-power-view-for-multidimensional-models.md) .
       
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Negli scenari di accesso personalizzati non è possibile usare tutte le misure e i membri della dimensione. La connessione non riesce se un ruolo limita l'accesso a una misura o un membro predefinito oppure limita l'accesso a misure che fanno parte di espressioni di misura.  
   
  **Verificare la presenza di limitazioni alla sicurezza delle dimensioni: misure predefinite, membri predefiniti e misure usate in espressioni di misura**  

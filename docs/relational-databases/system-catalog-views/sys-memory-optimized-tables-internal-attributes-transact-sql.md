@@ -1,5 +1,5 @@
 ---
-title: memory_optimized_tables_internal_attributes (Transact-SQL) | Documenti Microsoft
+title: sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.memory_optimized_tables_internal_attributes_TSQL
 - memory_optimized_tables_internal_attributes
 - memory_optimized_tables_internal_attributes_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.memory_optimized_tables_internal_attributes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.memory_optimized_tables_internal_attributes catalog view
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jodebrui
 ms.author: jodebrui
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ab05ef27e9687be506db960e628868cb08184d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97bc9da007e21fd6f686795776b9d96ab53b3c77
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,8 +46,8 @@ Contiene una riga per ogni tabella interna ottimizzata per la memoria usata per 
 |type_desc| **nvarchar(60)**|   Descrizione del tipo<br/><br/>DELETED_ROWS_TABLE -> Tabella interna che tiene traccia delle righe eliminate per un indice columnstore.<br/>USER_TABLE -> Tabella contenente i dati utente all'interno di righe.<br/>DICTIONARIES_TABLE -> Dizionari per un indice columnstore.<br/>SEGMENTS_TABLE -> Segmenti compressi per un indice columnstore.<br/>ROW_GROUPS_INFO_TABLE -> Metadati relativi ai gruppi di righe compressi di un indice columnstore.<br/>INTERNAL OFF-ROW DATA TABLE -> Tabella interna usata per l'archiviazione di una colonna all'esterno di righe. In questo caso, minor_id riflette column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Parte finale, ad accesso frequente, della tabella di cronologia basata su disco. Le righe inserite nella cronologia vengono inserite prima in questa tabella ottimizzata per la memoria interna. Viene eseguita un'attività in background che sposta in modo asincrono le righe da questa tabella interna alla tabella di cronologia basata su disco. |
 |minor_id|  **int**|    0 indica un utente o una tabella interna<br/><br/>Un valore diverso da 0 indica l'ID di una colonna archiviata all'esterno di righe. Si unisce a column_id in sys.columns.<br/><br/>Ogni colonna archiviata all'esterno di righe ha una riga corrispondente in questa vista di sistema.|
 
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+## <a name="permissions"></a>Autorizzazioni  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
   

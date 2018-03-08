@@ -1,5 +1,5 @@
 ---
-title: CREARE il tipo di messaggio (Transact-SQL) | Documenti Microsoft
+title: CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - MESSAGE TYPE
 - MESSAGE_TYPE_TSQL
 - CREATE MESSAGE TYPE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - XML [Service Broker]
 - validation [Service Broker]
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - binary [SQL Server], message types
 - CREATE MESSAGE TYPE statement
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78606c8f9f058acec660a7fe20a392f93c8dee49
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: ab3cf42da615c6ec303abb80b3a5d3f961edf888
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +91,7 @@ CREATE MESSAGE TYPE message_type_name
   
  Un tipo di messaggio non può essere un oggetto temporaneo. A partire da nomi di tipo di messaggio  **#**  sono consentiti, ma sono oggetti permanenti.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Autorizzazione per la creazione di impostazioni predefinite per i membri di un tipo di messaggio di **db_ddladmin** o **db_owner** ruoli predefiniti del database e **sysadmin** ruolo predefinito del server.  
   
  Autorizzazione REFERENCES per un tipo di messaggio per impostazione predefinita al proprietario del tipo di messaggio, i membri del **db_owner** predefinito del database e i membri del **sysadmin** ruolo predefinito del server.  
@@ -165,8 +167,8 @@ CREATE MESSAGE TYPE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [MODIFICARE il tipo di messaggio &#40; Transact-SQL &#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [TIPO di messaggio di rilascio &#40; Transact-SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
+ [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

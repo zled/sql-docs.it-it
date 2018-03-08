@@ -3,7 +3,7 @@ title: "Utilità tablediff | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: tabledif
 ms.reviewer: 
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e239a3d36e5e4eed3304d953e887d737b5edd8d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Il **tablediff** utilità viene utilizzato per confrontare i dati in due tabelle per la convergenza e risulta particolarmente utile per la risoluzione dei problemi non convergenza in una topologia di replica. Questa utilità può essere utilizzata dal prompt dei comandi oppure in un file batch per eseguire le attività seguenti:  
@@ -172,7 +172,7 @@ tablediff
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Operazione completata|  
+|**0**|Esito positivo|  
 |**1**|Errore critico|  
 |**2**|Differenze tra tabelle|  
   
@@ -189,10 +189,10 @@ tablediff
 |**smallint**|**int** o **bigint**|  
 |**int**|**bigint**|  
 |**timestamp**|**varbinary**|  
-|**varchar(max)**|**text**|  
+|**ntext**|**text**|  
 |**nvarchar(max)**|**ntext**|  
 |**varbinary(max)**|**image**|  
-|**text**|**varchar(max)**|  
+|**text**|**ntext**|  
 |**ntext**|**nvarchar(max)**|  
 |**image**|**varbinary(max)**|  
   
@@ -202,7 +202,7 @@ tablediff
   
  Lo script [!INCLUDE[tsql](../includes/tsql-md.md)] generato per rendere convergente la tabella di destinazione non include i tipi di dati seguenti:  
   
--   **varchar(max)**  
+-   **ntext**  
   
 -   **nvarchar(max)**  
   

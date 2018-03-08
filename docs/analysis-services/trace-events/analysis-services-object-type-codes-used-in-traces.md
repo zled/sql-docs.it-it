@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09c8d0a538d539c54e304d220566345a96a5e2f1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Codici del tipo di oggetto di Analysis Services usati nelle tracce
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questa pagina elenca il tipo di oggetto (un numero di sei cifre) di ogni oggetto in un modello di dati di Analysis Services. Questi codici vengono visualizzati nei log di traccia e vengono usati per identificare il tipo di oggetto associato a un blocco specifico. Ad esempio, un timeout di blocco su un database indicherà il tipo di oggetto 100002, ovvero il tipo di oggetto Database.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Questa pagina elenca il tipo di oggetto (un numero di sei cifre) di ogni oggetto disponibile in un modello di dati di Analysis Services. Questi codici vengono visualizzati nei log di traccia e vengono usati per identificare il tipo di oggetto associato a un blocco specifico. Ad esempio, un timeout di blocco su un database indicherà il tipo di oggetto 100002, ovvero il tipo di oggetto Database.  
   
 > [!NOTE]  
 >  I codici elencati di seguito sono più numerosi rispetto a quelli effettivamente visualizzati in un log di traccia. L'elenco seguente è un elenco completo di tipi di codice per ogni oggetto, ma solo gli oggetti che accettano un blocco presenteranno un codice del tipo di oggetto in un log di traccia.  

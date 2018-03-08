@@ -21,20 +21,20 @@ ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 caps.latest.revision: "20"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e28994db70376a393276ed3bae630fb3dca93f3a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 85f6f5c81e154bd4fcc6da3f28790ba6dedd6673
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="log-shipping-tables-and-stored-procedures"></a>Tabelle e stored procedure relative al log shipping
+# <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive tutte le tabelle e le stored procedure associate a una configurazione di log shipping. Tutte le tabelle relative al log shipping sono archiviate in **msdb** in ogni server. Nelle tabelle seguenti viene illustrato su quali server sono utilizzate le diverse tabelle e le stored procedure in una configurazione di log shipping.  
   
 ## <a name="primary-server-tables"></a>Tabelle del server primario  
   
-|Tabella|Descrizione|  
+|Tabella|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Memorizza l'ID del processo per la gestione degli avvisi. Questa tabella viene utilizzata nel server primario solo se non è stato configurato alcun server di monitoraggio remoto.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Archivia i dettagli relativi agli errori per processi di log shipping associati a questo server primario.|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="primary-server-stored-procedures"></a>Stored procedure del server primario  
   
-|Stored procedure|Descrizione|  
+|Stored procedure|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|Imposta il database primario per una configurazione di log shipping, inclusi il processo di backup, il record di monitoraggio locale e il record di monitoraggio remoto.|  
 |[sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|Aggiunge un nome di database secondario a un database primario esistente.|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="secondary-server-tables"></a>Tabelle del server secondario  
   
-|Tabella|Descrizione|  
+|Tabella|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Memorizza l'ID del processo per la gestione degli avvisi. Questa tabella viene utilizzata nel server secondario solo se non è stato configurato alcun server di monitoraggio remoto.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Archivia i dettagli relativi agli errori per processi di log shipping associati a questo server secondario.|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="secondary-server-stored-procedures"></a>Stored procedure del server secondario  
   
-|Stored procedure|Descrizione|  
+|Stored procedure|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|Imposta un database secondario per il log shipping.|  
 |[sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|Imposta le informazioni primarie, aggiunge collegamenti di monitoraggio locale e remoto e crea processi di copia e di ripristino nel server secondario per il database primario specificato.|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="monitor-server-tables"></a>Tabelle del server di monitoraggio  
   
-|Tabella|Descrizione|  
+|Tabella|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Memorizza l'ID del processo per la gestione degli avvisi.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Archivia i dettagli relativi agli errori per processi di log shipping.|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="monitor-server-stored-procedures"></a>Stored procedure del server di monitoraggio  
   
-|Stored procedure|Descrizione|  
+|Stored procedure|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|Crea un processo di avviso di log shipping, se non ne è ancora stato creato uno.|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|Rimuove un processo di avviso di log shipping se non è disponibile alcun database primario associato.|  

@@ -1,30 +1,29 @@
 ---
 title: Log HTTP del server di report | Microsoft Docs
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: 
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: HTTP [Reporting Services]
+helpviewer_keywords:
+- HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7e004056a630e55ef90112c909b77ca7e801c4d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 705ec73a7198793754a70edfdc854a5c9c15e47c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="report-server-http-log"></a>Log HTTP del server di report
   Nel file di log HTTP del server di report viene mantenuto un record per ogni richiesta HTTP e relativa risposta gestite dal server di report. Poiché gli errori di overflow e di timeout relativi alle richiesta ed errori non raggiungono il server di report, non vengono registrati nel file di log.  
@@ -44,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="configuration-settings-for-report-server-http-log"></a>Impostazioni di configurazione per il log HTTP del server di report  
  Per configurare il log HTTP del server di report, utilizzare Blocco note per modificare il file ReportingServicesService.exe.config. Il percorso del file di configurazione è \Programmi\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
   
- Per abilitare il server HTTP, è necessario aggiungere **http:4** alla sezione RStrace del file ReportingServicesService.exe.config. Tutte le altre voci del file di log HTTP sono facoltative. Nell'esempio seguente sono incluse tutte le impostazioni in modo che sia possibile incollare la sezione intera sulla sezione Rstrace e successivamente eliminare le impostazioni non necessarie.  
+ Per abilitare il server HTTP, è necessario aggiungere **http:4** alla sezione RStrace del file ReportingServicesService.exe.config. Tutte le altre voci del file di log HTTP sono facoltative. Nell'esempio seguente sono incluse tutte le impostazioni in modo che sia possibile incollare la sezione intera sulla sezione Rstrace e successivamente eliminare le impostazioni non necessarie.
   
 ```  
    <RStrace>  
@@ -55,7 +54,7 @@ ms.lasthandoff: 12/05/2017
          <add name="TraceListeners" value="debugwindow, file" />  
          <add name="TraceFileMode" value="unique" />  
          <add name="HttpTraceFileName" value="ReportServerService_HTTP_" />  
-         <add name="HttpTraceSwitches" value="date,time, clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
+         <add name="HttpTraceSwitches" value="date,time,clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
          <add name="Components" value="all:3,http:4" />  
    </RStrace>  
 ```  
@@ -66,24 +65,24 @@ ms.lasthandoff: 12/05/2017
 |Campo|Description|Default|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Questo valore è facoltativo. Il valore predefinito è ReportServerServiceHTTP_. È possibile specificare un valore diverso se desidera utilizzare una convenzione di denominazione del file diversa (ad esempio per includere il nome del server se i file di log vengono salvati in una posizione centrale).|Sì|  
-|HTTPTraceSwitches|Questo valore è facoltativo. Se lo si specifica, è possibile configurare i campi utilizzati nel file di log in formato delimitato da virgole.|No|  
-|Data|Data di esecuzione dell'attività.|No|  
-|Time|Ora di esecuzione dell'attività.|No|  
+|HTTPTraceSwitches|Questo valore è facoltativo. Se lo si specifica, è possibile configurare i campi utilizzati nel file di log in formato delimitato da virgole.|no|  
+|date|Data di esecuzione dell'attività.|no|  
+|Time|Ora di esecuzione dell'attività.|no|  
 |ClientIp|Indirizzo IP del client che ha eseguito l'accesso al server di report.|Sì|  
-|UserName|Nome dell'utente che ha eseguito l'accesso al server di report.|No|  
-|ServerPort|Numero della porta utilizzata per la connessione.|No|  
-|Host|Contenuto dell'intestazione host.|No|  
+|UserName|Nome dell'utente che ha eseguito l'accesso al server di report.|no|  
+|ServerPort|Numero della porta utilizzata per la connessione.|no|  
+|Host|Contenuto dell'intestazione host.|no|  
 |Metodo|Azione o metodo SOAP chiamato dal client.|Sì|  
 |UriStem|Risorsa cui è stato eseguito l'accesso.|Sì|  
-|UriQuery|Query utilizzata per accedere alla risorsa.|No|  
+|UriQuery|Query utilizzata per accedere alla risorsa.|no|  
 |ProtocolStatus|Codice di stato HTTP.|Sì|  
-|BytesReceived|Numero di byte ricevuti dal server.|No|  
-|TimeTaken|Tempo (in millisecondi) dall'istante in cui HTTP.SYS restituisce i dati della richiesta fino al momento in cui il server completa l'ultimo invio, ad eccezione del tempo di trasmissione della rete.|No|  
-|ProtocolVersion|Versione del protocollo utilizzata dal client.|No|  
-|UserAgent|Tipo di browser utilizzato dal client.|No|  
-|CookieReceived|Contenuto del cookie ricevuto dal server.|No|  
-|CookieSent|Contenuto del cookie inviato dal server.|No|  
-|Referrer|Sito precedente visitato dal client.|No|  
+|BytesReceived|Numero di byte ricevuti dal server.|no|  
+|TimeTaken|Tempo (in millisecondi) dall'istante in cui HTTP.SYS restituisce i dati della richiesta fino al momento in cui il server completa l'ultimo invio, ad eccezione del tempo di trasmissione della rete.|no|  
+|ProtocolVersion|Versione del protocollo utilizzata dal client.|no|  
+|UserAgent|Tipo di browser utilizzato dal client.|no|  
+|CookieReceived|Contenuto del cookie ricevuto dal server.|no|  
+|CookieSent|Contenuto del cookie inviato dal server.|no|  
+|Referrer|Sito precedente visitato dal client.|no|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   

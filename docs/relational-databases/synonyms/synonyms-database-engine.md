@@ -8,25 +8,29 @@ ms.service:
 ms.component: synonyms
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
-helpviewer_keywords: synonyms [SQL Server], about synonyms
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b18b02b6ec56d52c9589207b7dc8b7b3ca99209
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15c8ca0028ae722823198087b06d4f435aba40e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synonyms-database-engine"></a>Sinonimi (Motore di database)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un sinonimo è un oggetto di database che viene usato per gli scopi seguenti:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Un sinonimo è un oggetto di database che viene utilizzato per gli scopi seguenti:  
   
 -   Fornisce un nome alternativo per un altro oggetto di database, definito oggetto di base, presente su un server locale o remoto.  
   
@@ -45,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 |Procedura di filtro della replica|Stored procedure estesa|  
 |Funzione scalare SQL|Funzione con valori di tabella SQL|  
 |Funzione con valori di tabella inline SQL|Stored procedure SQL|  
-|Visualizza|Tabella* (definita dall'utente)|  
+|Vista|Tabella* (definita dall'utente)|  
   
  *Include tabelle temporanee globali e locali  
   
@@ -68,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|CONTROL|DELETE|  
+|CONTROL|Elimina|  
 |EXECUTE|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -79,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|DELETE|  
+|UPDATE|Elimina|  
 |EXECUTE|Sub-SELECT|  
   
  Quando si utilizzano i sinonimi nei contesti citati, l'istruzione viene eseguita sull'oggetto di base. Ad esempio, se un sinonimo fa riferimento a un oggetto di base che è una tabella e si inserisce una riga nel sinonimo, la riga verrà inserita nella tabella referenziata.  

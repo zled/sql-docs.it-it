@@ -8,25 +8,28 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_wait_for_database_copy_sync_TSQL
 - sp_wait_for_database_copy_sync
-dev_langs: TSQL
-helpviewer_keywords: sp_wait_for_database_copy_sync
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_wait_for_database_copy_sync
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7b2d41c9c87b483ab500ad351361a511ca66004
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ca693b57fe2178a1b817ca76579ad3e7194f7c0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Replica geografica attiva - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -48,7 +51,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
  [ @target_server =] 'nome_server'  
  Nome del server di database SQL che ospita il database secondario attivo. server_name è di tipo sysname e non prevede alcun valore predefinito.  
   
- [ @target_database =] 'database_name'  
+ [ @target_database = ] 'database_name'  
  Nome del database secondario attivo. database_name è di tipo sysname e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -62,7 +65,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   La connettività dell'interlink viene persa. **sp_wait_for_database_copy_sync** verrà restituito dopo il timeout della connessione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente nel database primario può chiamare questa stored procedure di sistema. L'account di accesso deve essere un utente in entrambi i database primario e secondario attivo.  
   
 ## <a name="remarks"></a>Osservazioni  

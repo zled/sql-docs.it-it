@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +19,20 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 79178d1319e296d1dead562440d57c25d379dbd4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Grafico di accuratezza (Analysis Services - Data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto *grafico di accuratezza* graficamente rappresenta il miglioramento che un modello di data mining fornisce se confrontata con un'ipotesi casuale e misurare la modifica in termini di un *accuratezza* punteggio. Confrontando i punteggi di accuratezza per modelli differenti, è possibile determinare qual è il modello migliore. È possibile anche determinare il punto in cui le stime del modello diventano meno utili. Ad esempio, esaminando il grafico di accuratezza, si potrebbe accorgersi che una campagna promozionale ha probabilità di essere efficace solo sul 30% dei clienti e usare questa cifra per limitare l'ambito della campagna.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un *grafico di accuratezza* rappresenta graficamente i miglioramenti forniti da un modello di data mining rispetto a un'ipotesi casuale. Inoltre, consente di misurare la modifica in termini di punteggio di *accuratezza* . Confrontando i punteggi di accuratezza per modelli differenti, è possibile determinare qual è il modello migliore. È possibile anche determinare il punto in cui le stime del modello diventano meno utili. Ad esempio, esaminando il grafico di accuratezza, si potrebbe accorgersi che una campagna promozionale ha probabilità di essere efficace solo sul 30% dei clienti e usare questa cifra per limitare l'ambito della campagna.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining un grafico di accuratezza può confrontare l'accuratezza di più modelli aventi lo stesso attributo stimabile. Inoltre, è possibile valutare l'accuratezza della stima per un singolo risultato (un solo valore dell'attributo stimabile) o per tutti i risultati (tutti i valori dell'attributo specificato).  
   
@@ -130,6 +129,6 @@ ms.lasthandoff: 12/08/2017
  [Torna all'inizio](#bkmk_Top)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

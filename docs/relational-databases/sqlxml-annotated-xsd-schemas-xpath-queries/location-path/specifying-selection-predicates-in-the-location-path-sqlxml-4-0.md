@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2b476304fddd169a253a3777bb1a0fb4d53087f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08a27de5e9c528d3e49156df804f19376ae5a6bd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Definizione di predicati di selezione nel percorso (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Un predicato filtra un set di nodi rispetto a un asse (simile a una clausola WHERE in un'istruzione SELECT). Il predicato viene specificato tra parentesi. Per filtrare ogni nodo nel set di nodi, l'espressione del predicato viene valutata con il nodo come nodo di contesto e con il numero di nodi nel set di nodi come dimensioni del contesto. Se l'espressione del predicato restituisce TRUE per il nodo, il nodo viene incluso nel set di nodi risultante.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Un predicato filtra un set di nodi rispetto a un asse (simile a una clausola WHERE in un'istruzione SELECT). Il predicato viene specificato tra parentesi. Per filtrare ogni nodo nel set di nodi, l'espressione del predicato viene valutata con il nodo come nodo di contesto e con il numero di nodi nel set di nodi come dimensioni del contesto. Se l'espressione del predicato restituisce TRUE per il nodo, il nodo viene incluso nel set di nodi risultante.  
   
  XPath consente inoltre l'applicazione di filtri basata sulla posizione. Un'espressione del predicato valutata in numero seleziona il nodo dell'ordinale. Il percorso `Customer[3]`, ad esempio, restituisce il terzo cliente. Predicati numerici di questo tipo non sono supportati. Sono supportate solo le espressioni del predicato che restituiscono un risultato booleano.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- In questa query XPath `child` e `attribute` sono nomi di asse. `Customer`è il test di nodo (TRUE se `Customer` è un  **\<nodo elemento >**perché  **\<elemento >** è il tipo di nodo principale per il `child` asse). `attribute::CustomerID="ALFKI"` è il predicato. Nel predicato, `attribute` è l'asse e `CustomerID` è il test di nodo (TRUE se **CustomerID** è un attributo del nodo di contesto, perché  **\<attributo >** è l'entità tipo di nodo di **attributo** asse).  
+ In questa query XPath `child` e `attribute` sono nomi di asse. `Customer` è il test di nodo (TRUE se `Customer` è un  **\<nodo elemento >**perché  **\<elemento >** è il tipo di nodo principale per il `child` asse). `attribute::CustomerID="ALFKI"` è il predicato. Nel predicato, `attribute` è l'asse e `CustomerID` è il test di nodo (TRUE se **CustomerID** è un attributo del nodo di contesto, perché  **\<attributo >** è l'entità tipo di nodo di **attributo** asse).  
   
  Utilizzando la sintassi abbreviata, la query XPath può essere specificata anche nel modo seguente:  
   
@@ -77,7 +79,7 @@ child::Customer[child::ContactName]
   
  In questo esempio si presuppone che il  **\<ContactName >** è un elemento figlio del  **\<cliente >** elemento nel documento XML, che è considerato  *mapping incentrato* in uno schema XSD con annotazioni.  
   
- In questa espressione XPath `child` è il nome dell'asse. `Customer`è il test di nodo (TRUE se `Customer` è un  **\<elemento >** nodo perché  **\<elemento >** è il tipo di nodo principale per `child` asse). `child::ContactName` è il predicato. Nel predicato, `child` è l'asse e `ContactName` è il test di nodo (TRUE se `ContactName` è un  **\<elemento >** nodo).  
+ In questa espressione XPath `child` è il nome dell'asse. `Customer` è il test di nodo (TRUE se `Customer` è un  **\<elemento >** nodo perché  **\<elemento >** è il tipo di nodo principale per `child` asse). `child::ContactName` è il predicato. Nel predicato, `child` è l'asse e `ContactName` è il test di nodo (TRUE se `ContactName` è un  **\<elemento >** nodo).  
   
  Questa espressione restituisce solo il  **\<cliente >** gli elementi figlio del nodo di contesto che hanno  **\<ContactName >** gli elementi figlio.  
   
@@ -96,7 +98,7 @@ child::Customer[not(child::ContactName)]
   
  In questo esempio si presuppone che  **\<ContactName >** è un elemento figlio del  **\<cliente >** nell'elemento del documento XML e il campo ContactName non è necessaria la database.  
   
- In questo esempio, `child` è l'asse. `Customer`è il test di nodo (TRUE se `Customer` è un \<elemento > nodo). `not(child::ContactName)` è il predicato. Nel predicato, `child` è l'asse e `ContactName` è il test di nodo (TRUE se `ContactName` è un \<elemento > nodo).  
+ In questo esempio, `child` è l'asse. `Customer` è il test di nodo (TRUE se `Customer` è un \<elemento > nodo). `not(child::ContactName)` è il predicato. Nel predicato, `child` è l'asse e `ContactName` è il test di nodo (TRUE se `ContactName` è un \<elemento > nodo).  
   
  Utilizzando la sintassi abbreviata, la query XPath può essere specificata anche nel modo seguente:  
   
@@ -120,7 +122,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>Predicato di selezione: esempio 6  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 include il supporto per query XPath che contengono un prodotto incrociato nel predicato, come illustrato nell'esempio seguente:  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 include il supporto per le query XPath che contengono un prodotto incrociato nel predicato, come illustrato nell'esempio seguente:  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  

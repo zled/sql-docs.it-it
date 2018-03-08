@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d254e42d-9918-47ce-b6df-47f1f0b432dd
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38eb6dae47c01758b3ca3b5c04794014b247b495
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9bf3896348044d084144fd2276ff31f617b202c3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovermemorygrant-rowset"></a>Set di righe DISCOVER_MEMORYGRANT
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce un elenco di memoria interna concessioni di quote vengono recuperate da processi attualmente in esecuzione nel server. Per verificare se un processo è in esecuzione nel server, utilizzare `Select * from $System.Discover_Jobs`.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Restituisce un elenco di concessioni di quote di memoria interna recuperate da processi attualmente in esecuzione nel server. Per verificare se un processo è in esecuzione nel server, utilizzare `Select * from $System.Discover_Jobs`.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/08/2017
 |**LastRequestTime**|**DBTYPE_DBTIMESTAMP**||Ora dell'ultima modifica della richiesta di quota.|  
 |**MemoryUsed**|**DBTYPE_I4**||Quantità di memoria utilizzata insieme alla quota.|  
 |**MemoryGranted**|**DBTYPE_I4**||Quantità di memoria concessa per l'utilizzo da parte del processo che ottiene la quota di memoria.|  
-|**Bloccato**|**DBTYPE_BOOL**||Valore booleano che indica lo stato di blocco del processo. True indica che il processo è bloccato in attesa che un altro processo rilasci quota sufficiente per concedere la relativa richiesta di quota. False indica che il processo ha ricevuto la relativa quota e può procedere all'esecuzione.|  
+|Bloccato|**DBTYPE_BOOL**||Valore booleano che indica lo stato di blocco del processo. True indica che il processo è bloccato in attesa che un altro processo rilasci quota sufficiente per concedere la relativa richiesta di quota. False indica che il processo ha ricevuto la relativa quota e può procedere all'esecuzione.|  
   
  Questo set di righe dello schema non è ordinato.  
   
@@ -57,6 +57,6 @@ ms.lasthandoff: 12/08/2017
 |ADOMDNAME|MemoryGrant|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML per set di righe dello schema di analisi](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis i rowset dello Schema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

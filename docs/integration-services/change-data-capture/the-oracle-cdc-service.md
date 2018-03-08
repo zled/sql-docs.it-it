@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b3e886c83c59eb4f30a1e06a60338dd757d6d9d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7371c120f4ff874a878a77cd3db0df8755aebd75
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-service"></a>Servizio Oracle CDC
   Il servizio Oracle CDC è un servizio di Windows in cui viene eseguito il programma xdbcdcsvc.exe. È possibile configurare il servizio Oracle CDC per eseguire più servizi di Windows nello stesso computer, ciascuno con un nome del servizio Windows diverso. La creazione di più servizi Windows Oracle CDC in un solo computer viene spesso effettuata per migliorare la separazione tra gli stessi o quando ciascun servizio richiede l'utilizzo di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diversa.  
@@ -88,7 +89,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
 ### <a name="oracle-cdc-service-windows-service-account"></a>Account del servizio di Windows del servizio Oracle CDC  
  L'account del servizio utilizzato con il servizio di Windows Oracle CDC non richiede privilegi aggiuntivi. Questo account deve essere in grado di utilizzare sia l'API di Oracle Native Client sia l'API ODBC di SQL Server Native Client. Deve essere inoltre in grado di accedere alla chiave di configurazione del servizio nel Registro di sistema; la console di configurazione del servizio CDC configura a tale scopo l'elenco di controllo di accesso (ACL).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Supporto a disponibilità elevata](../../integration-services/change-data-capture/high-availability-support.md)  
   

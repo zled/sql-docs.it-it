@@ -5,12 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_STRUCTURES
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c7b170ca376598dba93d1f586ebea2c60f4f101
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e75e8c17baba84bd690ec51605ffac9f577de35c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingstructures-rowset"></a>Set di righe DMSCHEMA_MINING_STRUCTURES
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enumera informazioni sulle strutture di data mining nel catalogo corrente.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DMSCHEMA_MINING_STRUCTURES** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
+|Nome colonna|Indicatore del tipo|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**STRUCTURE_CATALOG**|**DBTYPE_WSTR**||Nome del catalogo.|  
 |**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||Nome dello schema non qualificato. **NULL** se gli schemi non sono supportati dal provider.|  
@@ -60,9 +58,9 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|Facoltativa.|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Facoltativa.|  
-|**NOME_STRUTTURA**|**DBTYPE_WSTR**|Facoltativa.|  
+|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|Facoltativo.|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Facoltativo.|  
+|**NOME_STRUTTURA**|**DBTYPE_WSTR**|Facoltativo.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe dello schema di data mining](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

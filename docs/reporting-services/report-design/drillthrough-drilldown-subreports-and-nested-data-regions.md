@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d4e87d6484f1a04e61907939bd2fa69d93dff426
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 79bb5cfbe014006c6400ec54d56b69ce435910fb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Drill-through, drill-down, sottoreport e aree dati nidificate
   È possibile organizzare i dati in vari modi per mostrare la relazione da generale a dettagliata.  È possibile inserire tutti i dati nel report, ma impostarli in modo che rimangano nascosti finché un utente non farà clic per rivelare i dettagli. Questa è un'azione di tipo *drill-down* . È possibile visualizzare i dati in un'area dati, ad esempio una tabella o un grafico, *annidata* in un'altra area dati, ad esempio una tabella o una matrice. È possibile visualizzare i dati in un *sottoreport* completamente contenuto in un report principale. In alternativa, è possibile inserire i dati di dettaglio in report *drill-through* , ovvero report separati che vengono visualizzati quando un utente fa clic su un collegamento.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/05/2017
   
  A. Report drill-through  
   
- B. Sottoreport  
+ B. sottoreport  
   
  C. Aree dati nidificate  
   
@@ -46,13 +44,13 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="SummaryCharacteristics"></a> Riepilogo delle caratteristiche  
  Nella tabella seguente sono riepilogate le diverse caratteristiche. I dettagli sono descritti in apposite sezioni più avanti in questo argomento. Il drill-down non è incluso in questi confronti poiché la relativa azione per mostrare e nascondere può essere applicata a qualsiasi report.  
   
-|Caratteristica|sottoreport|drill-through|annidata|  
+|Caratteristica|Sottoreport|drill-through|annidata|  
 |-----------|---------------|------------------|------------|  
 |Utilizzo del set di dati del report principale|Uguale o diverso|Uguale o diverso|Uguale|  
 |Recupero di dati|I dati vengono recuperati contemporaneamente al report principale|I dati vengono recuperati un report drill-through alla volta|I dati vengono tutti recuperati contemporaneamente al report principale|  
 |Elaborazione ed esecuzione del rendering|Con il report principale|Quando si fa clic sul collegamento|Con il report principale|  
 |Modalità di esecuzione|Più lenta (ma recupera tutti i dati con il report principale)|Più veloce (ma non recupera tutti i dati con il report principale)|Più veloce (e recupera tutti i dati con il report principale)|  
-|Utilizzo di parametri|Sì|Sì|No|  
+|Utilizzo di parametri|Sì|Sì|no|  
 |Possibilità di riutilizzo|Come report o come sottoreport o report drill-through in altri report|Come report o come sottoreport o report drill-through in altri report|No|  
 |Posizione|Esterna al report principale, uguale o diversa dal server di report|Esterna al report principale, uguale al server di report|Interna al report principale|  
 |Visualizzazione|Nel report principale|In un report diverso|Nel report principale|  

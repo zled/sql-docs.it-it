@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_proxy_from_subsystem (Transact-SQL) | Documenti Microsoft
+title: sp_revoke_proxy_from_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_revoke_login_from_subsystem
 - sp_revoke_login_from_subsystem_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_revoke_proxy_from_subsystem
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_revoke_proxy_from_subsystem
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 475b036aae17e29f2ebac4333198671cdd42e675
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3408c3ddee13886edaaa410341379ee50d4f9cb3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +50,13 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@proxy_id**  =] *id*  
+ [ **@proxy_id** = ] *id*  
  Numero di identificazione del proxy da cui revocare l'accesso. Il *proxy_id* è **int**, con un valore predefinito è NULL. Entrambi *proxy_id* o *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@proxy_name**  =] **'***proxy_name***'**  
+ [ **@proxy_name** = ] **'***proxy_name***'**  
  Nome del proxy da cui revocare l'accesso. Il *proxy_name* è **sysname**, con un valore predefinito è NULL. Entrambi *proxy_id* o *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@subsystem_id**  =] *id*  
+ [ **@subsystem_id** = ] *id*  
  Numero di identificazione del sottosistema al quale revocare l'accesso. Il *subsystem_id* è **int**, con un valore predefinito è NULL. Entrambi *subsystem_id* o *subsystem_name* devono essere specificati, ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
 |Valore|Descrizione|  
@@ -93,7 +96,7 @@ sp_revoke_proxy_from_subsystem
 > [!NOTE]  
 >  Per determinare quali passaggi del processo fanno riferimento a un proxy, fare doppio clic sul **proxy** nodo **SQL Server Agent** in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], quindi fare clic su **proprietà**. Nel **proprietà Account Proxy** la finestra di dialogo, seleziona il **riferimenti** pagina per visualizzare tutti i passaggi di processo che fanno riferimento a questo proxy.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_revoke_proxy_from_subsystem**.  
   
 ## <a name="examples"></a>Esempi  
@@ -111,6 +114,6 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Agent Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Implementazione della sicurezza SQL Server Agent](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
- [sp_grant_proxy_to_subsystem &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

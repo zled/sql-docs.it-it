@@ -1,24 +1,26 @@
 ---
 title: "Indice delle proprietà dinamiche ADO | Documenti Microsoft"
 ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: dynamic properties [ADO], index
+helpviewer_keywords:
+- dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: f126cc040174725ded02bd320e54a76536c0d516
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: 5c56ef6d6a146d1613bdd11618fadb3b11296fe7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-dynamic-property-index"></a>Indice delle proprietà dinamiche ADO
 Provider di dati, i provider di servizi e componenti del servizio possono aggiungere proprietà dinamiche per la **proprietà** raccolte di oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md) e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti. Un determinato provider può inoltre inserire le proprietà aggiuntive quando questi oggetti sono aperti. Alcune di queste proprietà sono elencate nella [proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) sezione. Un elenco dei singoli provider in più di [appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md) sezione.  
@@ -41,7 +43,7 @@ Provider di dati, i provider di servizi e componenti del servizio possono aggiun
 |Timeout di connessione|DBPROP_INIT_TIMEOUT|  
 |Catalogo corrente|DBPROP_CURRENTCATALOG|  
 |Data Source|DBPROP_INIT_DATASOURCE|  
-|Nome origine dati|VALORE DBPROP_DATASOURCENAME|  
+|Nome origine dati|DBPROP_DATASOURCENAME|  
 |Modello di Threading oggetto origine dei dati|DBPROP_DSOTHREADMODEL|  
 |Nome DBMS|DBPROP_DBMSNAME|  
 |Versione DBMS|DBPROP_DBMSVER|  
@@ -58,7 +60,7 @@ Provider di dati, i provider di servizi e componenti del servizio possono aggiun
 |Dimensioni massime delle righe|DBPROP_MAXROWSIZE|  
 |Dimensioni massime riga con BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |Numero massimo di tabelle in SELECT|DBPROP_MAXTABLESINSELECT|  
-|Mode|DBPROP_INIT_MODE|  
+|Elabora partizione/i|DBPROP_INIT_MODE|  
 |Più set di parametri|DBPROP_MULTIPLEPARAMSETS|  
 |Più risultati|DBPROP_MULTIPLERESULTS|  
 |Più oggetti di archiviazione|DBPROP_MULTIPLESTORAGEOBJECTS|  

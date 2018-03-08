@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Internet [SQL Server replication], security
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c2ef09b09e2505d8771d5e16d7b9bea9b97308b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85ab9523752bc1f72c1535cc00e51e50dbac946e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-security-best-practices"></a>Procedure consigliate per la sicurezza della replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replica implica lo spostamento di dati in ambienti distribuiti che includono reti Intranet in un singolo dominio, applicazioni che accedono a dati tra domini non attendibili e Internet. È importante individuare l'approccio migliore per la protezione delle connessioni di replica in queste diverse circostanze.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Concetti di base relativi ai file eseguibili dell'agente di replica](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   Eseguire ogni agente di replica con un diverso account di Windows e utilizzare l'autenticazione di Windows per tutte le connessioni agli agenti di replica. Per altre informazioni su come specificare gli account, vedere [Gestire gli account di accesso e le password nella replica](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
   
@@ -79,6 +79,6 @@ ms.lasthandoff: 11/17/2017
  [Proteggere il sottoscrittore](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Proteggere il database di distribuzione](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [Proteggere il server di pubblicazione](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [Sicurezza e protezione &#40;replica&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Sicurezza e protezione #40;replica&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

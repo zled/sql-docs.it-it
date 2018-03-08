@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ed6e04bacbe8ee1fcf911d0e2e4b73da12fc585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5eb8f74023e90966200aca7603b82f685e0eb9db
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>Sys.geo_replication_links (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID del database corrente nella vista sys. Databases.|  
 |start_date|**datetimeoffset**|Ora UTC in un Database di SQL Data Center regionale di quando è stata avviata la replica di database|  
-|modify_date|**datetimeoffset**|Ora UTC in Database SQL Data Center regionale di quando è stata completata la replica geografica del database. Il nuovo database è sincronizzato con il database primario al momento. .|  
+|modify_date|**datetimeoffset**|Ora UTC in Database SQL Data Center regionale di quando è stata completata la replica geografica del database. Il nuovo database è sincronizzato con il database primario al momento. tramite tabelle annidate.|  
 |link_guid|**uniqueidentifier**|ID univoco del collegamento di replica geografica.|  
 |partner_server|**sysname**|Nome del server logico contenente il database di replica geografica.|  
 |partner_database|**sysname**|Nome del database di replica geografica nel server logico collegato.|  
@@ -49,9 +50,9 @@ ms.lasthandoff: 11/17/2017
 |ruolo|**tinyint**|Ruolo di replica geografica, uno di:<br /><br /> 0 = database primario. Il database_id fa riferimento al database primario della relazione di replica geografica.<br /><br /> 1 = secondario.  Il database_id fa riferimento al database primario della relazione di replica geografica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Il tipo secondario, uno di:<br /><br /> 0 = No. Il database secondario non è accessibile finché il failover.<br /><br /> 1 = sola lettura. Il database secondario è accessibile solo per le connessioni client con ApplicationIntent = ReadOnly.<br /><br /> 2 = Tutte. Il database secondario è accessibile a tutte le connessioni client.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|No<br /><br /> Tutto<br /><br /> Sola lettura|  
+|secondary_allow_connections _desc|**nvarchar(256)**|no<br /><br /> Tutto<br /><br /> Sola lettura|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa vista è disponibile solo nel **master** database all'account di accesso dell'entità a livello di server.  
   
 ## <a name="example"></a>Esempio  

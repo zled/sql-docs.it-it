@@ -1,19 +1,18 @@
 ---
 title: Il backup, ripristino e la sincronizzazione dei database (XMLA) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
 - backing up databases [XML for Analysis]
@@ -21,19 +20,19 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7155763db87be5c44ae9e5718d3d72939380038b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Backup, ripristino e sincronizzazione di database (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In XML for Analysis, sono disponibili tre comandi che il backup, ripristinano e sincronizzare i database:  
+  In XML for Analysis sono disponibili i tre comandi seguenti per l'esecuzione del backup, del ripristino e della sincronizzazione dei database:  
   
 -   Il [Backup](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) comando esegue il backup un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database utilizzando un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il file di backup (con estensione ABF), come descritto nella sezione [backup dei database](#backing_up_databases).  
   
@@ -41,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Il [Sincronizza](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando Sincronizza uno [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database con i dati e metadati di un altro database, come descritto nella sezione [sincronizzazione di database](#synchronizing_databases).  
   
-##  <a name="backing_up_databases"></a>Il backup dei database  
+##  <a name="backing_up_databases"></a> Il backup dei database  
  Come accennato in precedenza, il **Backup** comando esegue il backup specificato [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database in un file di backup. Il **Backup** comando sono associate varie proprietà che consentono di specificare il database di backup, il file di backup da usare, come eseguire il backup le definizioni di sicurezza e le partizioni remote per il backup.  
   
 > [!IMPORTANT]  
@@ -79,7 +78,7 @@ ms.lasthandoff: 12/08/2017
   
  Per ogni origine dati remota eseguire il backup, è possibile specificare il file di backup corrispondente includendo un [percorso](../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) elemento il [percorsi](../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md) proprietà del **Backup** comando. Il **percorso** elemento deve essere relativo **File** proprietà impostata sul nome di file e percorso UNC del file di backup remoto e il relativo [DataSourceID](../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md) impostata sull'identificatore di proprietà l'origine dati remota definita nel database.  
   
-##  <a name="restoring_databases"></a>Ripristino di database  
+##  <a name="restoring_databases"></a> Ripristino di database  
  Il **ripristinare** comando Ripristina specificato [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database da un file di backup. Il **ripristinare** comando sono associate varie proprietà che consentono di specificare il database da ripristinare, il file di backup da usare, il ripristino delle definizioni di sicurezza, le partizioni remote da archiviare e la rilocazione OLAP relazionale (ROLAP) oggetti.  
   
 > [!IMPORTANT]  
@@ -118,7 +117,7 @@ ms.lasthandoff: 12/08/2017
   
  È possibile utilizzare il **percorso** elemento in un **ripristinare** comando per rilocare oggetti ROLAP. Per ogni **percorso** elemento utilizzato per rilocare un'origine dati, il **DataSourceType** proprietà deve essere impostata in modo esplicito su *locale*. Inoltre necessario impostare il **ConnectionString** proprietà del **percorso** elemento alla stringa di connessione della nuova posizione. Durante il ripristino, il **ripristinare** comando sostituirà la stringa di connessione per l'origine dati identificata dal **DataSourceID** proprietà del **percorso** elemento con il valore della **ConnectionString** proprietà del **percorso** elemento.  
   
-##  <a name="synchronizing_databases"></a>La sincronizzazione dei database  
+##  <a name="synchronizing_databases"></a> La sincronizzazione dei database  
  Il **Sincronizza** comando Sincronizza i dati e metadati di un oggetto specificato [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database con un altro database. Il **Sincronizza** comando dispone di varie proprietà che consentono di specificare il database di origine come sincronizzare definizioni di sicurezza, le partizioni remote da sincronizzare e la sincronizzazione degli oggetti ROLAP.  
   
 > [!NOTE]  
@@ -152,12 +151,12 @@ ms.lasthandoff: 12/08/2017
 ### <a name="synchronizing-rolap-objects"></a>Sincronizzazione di oggetti ROLAP  
  Il **Sincronizza** comando non è possibile sincronizzare aggregazioni o dati per gli oggetti che utilizzano l'archiviazione ROLAP poiché tali informazioni vengono archiviate nelle tabelle in un'origine dati relazionale sottostante. È possibile tuttavia sincronizzare i metadati per gli oggetti ROLAP. Per sincronizzare i metadati, il **Sincronizza** comando ricrea la struttura della tabella in un'origine dati relazionale.  
   
- È possibile utilizzare il **percorso** elemento in un comando di sincronizzazione per sincronizzare oggetti ROLAP. Per ogni **percorso** elemento utilizzato per rilocare un'origine dati, il **DataSourceType** proprietà deve essere impostata in modo esplicito su *locale*. . Inoltre necessario impostare il **ConnectionString** proprietà del **percorso** elemento alla stringa di connessione della nuova posizione. Durante la sincronizzazione, il **Sincronizza** comando sostituirà la stringa di connessione per l'origine dati identificata dal **DataSourceID** proprietà del **percorso** elemento con il valore della **ConnectionString** proprietà del **percorso** elemento.  
+ È possibile utilizzare il **percorso** elemento in un comando di sincronizzazione per sincronizzare oggetti ROLAP. Per ogni **percorso** elemento utilizzato per rilocare un'origine dati, il **DataSourceType** proprietà deve essere impostata in modo esplicito su *locale*. tramite tabelle annidate. Inoltre necessario impostare il **ConnectionString** proprietà del **percorso** elemento alla stringa di connessione della nuova posizione. Durante la sincronizzazione, il **Sincronizza** comando sostituirà la stringa di connessione per l'origine dati identificata dal **DataSourceID** proprietà del **percorso** elemento con il valore della **ConnectionString** proprietà del **percorso** elemento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento backup &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [Ripristinare l'elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Elemento Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Sincronizzare elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Backup e ripristino di database di Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RPC:Completed event class
+helpviewer_keywords:
+- RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c14de50af756d8b58b4af5368f13b788b7c65e3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f3dd125555180acb996579ff07f184a8092722c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento RPC:Completed indica il completamento di una chiamata di procedura remota.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La classe di evento RPC:Completed indica il completamento di una chiamata di procedura remota.  
   
 ## <a name="rpccompleted-event-class-data-columns"></a>Colonne di dati della classe di evento RPC:Completed  
   
-|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |BinaryData|**image**|Valore binario che dipende dalla classe di evento acquisita nella traccia.|2|Sì|  
@@ -37,11 +40,11 @@ ms.lasthandoff: 11/17/2017
 |CPU|**int**|Quantità di tempo della CPU usata dall'evento. In microsecondi a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. In millisecondi nelle versioni precedenti.|18|Sì|  
 |DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|Durata|**bigint**|Quantità di tempo richiesta dall'evento. In microsecondi a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. In millisecondi nelle versioni precedenti.|13|Sì|  
+|Duration|**bigint**|Quantità di tempo richiesta dall'evento. In microsecondi a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. In millisecondi nelle versioni precedenti.|13|Sì|  
 |EndTime|**datetime**|Ora di fine della chiamata di procedura remota.|15|Sì|  
 |Errore|**int**|Numero di errore di un evento specifico.<br /><br /> 0=OK<br /><br /> 1=Errore<br /><br /> 2=Interrompi<br /><br /> 3 = Ignorato|31|Sì|  
-|EventClass|**int**|Tipo di evento = 10.|27|No|  
-|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|EventClass|**int**|Tipo di evento = 10.|27|no|  
+|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |GroupID|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aec9bea3dabdf53867f6346ac10ee42d7b2e297a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f9d4cf346f769133ffecdf20d7a5541876652ea1
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="limit-search-results-with-rank"></a>Limitazione dei risultati della ricerca mediante RANK
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Le funzioni [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) restituiscono una colonna denominata RANK che contiene valori ordinali compresi tra 0 e 1000 (valori di classificazione). Questi valori vengono utilizzati per classificare le righe restituite in base al grado di corrispondenza con i criteri di selezione. I valori di pertinenza indicano solo un ordine relativo di pertinenza delle righe nel set di risultati, dove un valore inferiore indica una pertinenza inferiore. I valori effettivi sono senza importanza e in genere variano ogni volta che viene eseguita la query.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Le funzioni [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) restituiscono una colonna denominata RANK che contiene valori ordinali compresi tra 0 e 1000 (valori di classificazione). Questi valori vengono utilizzati per classificare le righe restituite in base al grado di corrispondenza con i criteri di selezione. I valori di pertinenza indicano solo un ordine relativo di pertinenza delle righe nel set di risultati, dove un valore inferiore indica una pertinenza inferiore. I valori effettivi sono senza importanza e in genere variano ogni volta che viene eseguita la query.  
   
 > [!NOTE]  
 >  I predicati CONTAINS e FREETEXT non restituiscono alcun valore di pertinenza.  

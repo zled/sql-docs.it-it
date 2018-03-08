@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22552b3b4f9574f04b5fec8a382ee792b1267ebf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9689d8c41a899c9446f3f21ede83ea88c68b77a3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="address-book-data-binding-object"></a>Oggetto di associazione di dati della Rubrica
 L'applicazione Address Book utilizza il [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto per associare i dati dal database di SQL Server a un oggetto visivo (in questo caso, una tabella DHTML) la pagina dell'applicazione client HTML. Usa la logica di programma VBScript basati sugli eventi di [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) per:  
@@ -67,7 +68,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |Parametro|Description|  
 |---------------|-----------------|  
 |[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|Se si sta utilizzando HTTP, il valore è il nome del computer server preceduto da `http://`.|  
-|[LA CONNESSIONE](../../../ado/reference/rds-api/connect-property-rds.md)|Fornisce le informazioni di connessione necessarie per il **RDS. DataControl** per connettersi a SQL Server.|  
+|[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Fornisce le informazioni di connessione necessarie per il **RDS. DataControl** per connettersi a SQL Server.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|Imposta o restituisce la stringa di query utilizzata per recuperare il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   
 ## <a name="see-also"></a>Vedere anche  

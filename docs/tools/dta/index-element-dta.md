@@ -3,7 +3,7 @@ title: Indice di elemento (DTA) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13ff4535227d924b5da7bc27a36f5ecf082ba60f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ca17a222eb07926c89283ce1cc2f47f9412af59d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="index-element-dta"></a>Index - elemento (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contiene informazioni su un indice che si desidera creare o eliminare per una configurazione specificata dall'utente.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|Attributo Index|Tipo di dati|Descrizione|  
+|Attributo Index|Tipo di dati|Description|  
 |---------------------|---------------|-----------------|  
 |**Cluster**|**boolean**|Facoltativa. Specifica un indice cluster. Impostare su "true" o "false", ad esempio:<br /><br /> `<Index Clustered="true">`<br /><br /> Per impostazione predefinita, questo attributo è impostato su "false".|  
 |**Univoco**|**boolean**|Facoltativa. Specifica un indice univoco. Impostare su "true" o "false", ad esempio:<br /><br /> `<Index Unique="true">`<br /><br /> Per impostazione predefinita, questo attributo è impostato su "false".|  
@@ -69,13 +69,13 @@ ms.lasthandoff: 12/05/2017
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento Create &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Elemento**Drop** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
-|**Elementi figlio**|[Elemento Name per Index &#40;DTA&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Elemento Column per Index &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Elemento**PartitionScheme** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento**PartitionColumn** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> [Elemento Filegroup per Index &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Elemento**NumberOfReferences** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento**PercentUsage** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
+|**Elemento padre**|[Creare l'elemento &#40; DTA &#41;](../../tools/dta/create-element-dta.md)<br /><br /> Elemento **Drop**. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
+|**Elementi figlio**|[Elemento Name per Index &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Elemento Column per Index &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Elemento**PartitionScheme** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento**PartitionColumn** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> [Elemento Filegroup per Index &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Elemento**NumberOfReferences** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento**PercentUsage** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

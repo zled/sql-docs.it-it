@@ -11,22 +11,23 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, glossary
+helpviewer_keywords:
+- ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
 In questo argomento definisce termini rilevanti per ADO.  
   
-## <a name="a"></a>Un  
+## <a name="a"></a>A  
  URL assoluto  
  Un URL completo che specifica il percorso di una risorsa che si trova su Internet o intranet. Vedere anche *URL* e *URL relativo*.  
   
@@ -52,7 +53,7 @@ In questo argomento definisce termini rilevanti per ADO.
  voce di binding  
  Un mapping tra un campo in una tabella e una variabile. Nelle estensioni di Visual C++ ADO, **Recordset** campi vengono mappati a variabili di C/C++.  
   
- maschera di bit  
+ bitmask  
  Un valore numerico è progettato per un confronto bit per bit con gli altri valori numerici, in genere per contrassegnare le opzioni di parametro o valori restituiti. In genere questo confronto viene eseguito con gli operatori logici OR bit per bit, ad esempio **e** e **o** in Visual Basic  **&**  e **&#124;** in C++.  
   
  Ad esempio, ADO **FieldAttributeEnum** valori possono essere utilizzati come maschere di bit per determinare gli attributi di un campo. Si supponga di che voler determinare se un campo non è aggiornabile. È possibile effettuare questa verifica con l'espressione seguente in Visual Basic:`Field.Attributes AND adFldUpdatable`  
@@ -68,7 +69,7 @@ In questo argomento definisce termini rilevanti per ADO.
  regola di Business  
  La combinazione di modifiche di convalida, verifiche di accesso, ricerche nel database, i criteri e trasformazioni algoritmiche che costituiscono un'azienda di attività di business. Noto anche come *logica di business*.  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  Espressione calcolata  
  Un'espressione non costante, ma il cui valore dipende da altri valori. Per poter essere valutata un'espressione calcolata è necessario ottenere e calcolare i valori da altre origini, in genere in altri campi o righe.  
   
@@ -86,7 +87,7 @@ In questo argomento definisce termini rilevanti per ADO.
  child  
  Il lato dipendente di una relazione gerarchica. Un elemento figlio è un nodo in una struttura gerarchica con un altro nodo precedente (più vicino alla radice). Vedere anche *figlio alias*, *relazione padre-figlio*, *padre*.  
   
- alias di figlio  
+ child-alias  
  Un alias che fa riferimento all'elemento figlio. Vedere anche *alias*, *figlio*.  
   
  CLSID (identificatore di classe)  
@@ -233,7 +234,7 @@ In questo argomento definisce termini rilevanti per ADO.
  padre  
  Il controllo lato di una relazione gerarchica. In una struttura gerarchica, un elemento padre dispone di uno o più nodi figlio direttamente di sotto della gerarchia. Vedere anche alias padre, figlio e relazione padre-figlio.  
   
- alias padre  
+ parent-alias  
  Un alias che fa riferimento all'elemento padre. Vedere anche alias, l'elemento padre.  
   
  relazione padre-figlio  
@@ -250,10 +251,10 @@ In questo argomento definisce termini rilevanti per ADO.
  Identificatore programmatico (ProgID)  
  Nome univoco mappato al Registro di sistema di Windows da un'applicazione COM. Il ProgID per una connessione ADO è "ADODB. Connessione". Vedere anche CLSID, COM.  
   
- Proxy  
+ proxy  
  Un oggetto specifico dell'interfaccia che fornisce il marshalling dei parametri e la comunicazione richiesti da un client chiamare un oggetto di applicazione che è in esecuzione in un ambiente di esecuzione diverso, ad esempio in un thread diverso o in un altro processo. Il proxy con il client si trova e comunica con uno stub corrispondente si trova all'oggetto applicazione che viene chiamato. Vedere anche stub.  
   
-## <a name="r"></a>R  
+## <a name="r"></a>L  
  URL relativo  
  URL parziale che specifica una risorsa in Internet o intranet il cui percorso è relativo a un punto di partenza specificato da un URL assoluto o un oggetto ADO Connection equivalente. In effetti, la concatenazione assoluto e relativo URL rappresentare un URL completo. Vedere anche URL e l'URL assoluto.  
   
@@ -292,7 +293,7 @@ In questo argomento definisce termini rilevanti per ADO.
  Operazione avviata dal codice che viene completato prima che venga avviato l'operazione successiva. Vedere anche l'operazione asincrona.  
   
 ## <a name="t-z"></a>T-Z  
- Tree  
+ trEE  
  Struttura che rappresenta una relazione gerarchica tra gli elementi (nodi). È presente un nodo al livello superiore di una struttura ad albero (radice). Sotto la radice, possono essere presenti più figli. Ogni elemento figlio a sua volta potrebbe essere l'elemento padre di altri elementi figlio, pertanto la diramazione come una struttura ad albero. Una cartella contenente i documenti e altre cartelle è un esempio tipico di una struttura ad albero. Vedere anche gerarchia, nodo, radice, figlio, padre.  
   
  Server Web  

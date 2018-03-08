@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_semantic_register_language_statistics_db (Transact-SQL) | Documenti Microsoft
+title: sp_fulltext_semantic_register_language_statistics_db (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
 - sp_fulltext_semantic_register_language_statistics_db_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_fulltext_semantic_register_language_statistics_db
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fulltext_semantic_register_language_statistics_db
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d1a0820d6cafd6930eb4446267840b52aa24fd3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6702d9bb9773d5c4e41d84c6e57a923e9cf5ffdf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextsemanticregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db  
     [ @dbname = ] ‘database_name’;  
 GO  
@@ -53,7 +56,7 @@ GO
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-set"></a>Set di risultati  
- nessuna.  
+ Nessuno  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Il database di statistiche lingua semantica contiene statistiche correlate alla lingua necessarie per l'elaborazione semantica di contenuto testuale.  
@@ -79,20 +82,20 @@ GO
 ## <a name="metadata"></a>Metadati  
  Per informazioni sul database di statistiche lingua semantica installato in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eseguire una query sulla vista del catalogo [fulltext_semantic_language_statistics_database &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie autorizzazioni CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato come registrare il database di statistiche lingua semantica chiamando **sp_fulltext_semantic_register_language_statistics_db**.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = 'semanticsDb';  
 GO  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installare e configurare la ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md)  
+ [Installazione e configurazione della ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

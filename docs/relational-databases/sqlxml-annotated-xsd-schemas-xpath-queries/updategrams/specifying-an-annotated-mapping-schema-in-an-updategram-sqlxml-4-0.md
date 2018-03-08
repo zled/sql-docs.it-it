@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - mapping schema [SQLXML], updategrams
 - sql:inverse
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9830c6ccf00d8e311aa33a8fee4e68502094f41
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b7114229a879e05222d67cbb0147ced02628bfe9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Specifica di uno schema di mapping con annotazioni in un updategram (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]In questo argomento viene illustrato come utilizzare lo schema di mapping (XSD o XDR) specificato in un updategram per elaborare gli aggiornamenti. In un updategram, è possibile specificare il nome di uno schema di mapping con annotazioni da utilizzare per eseguire il mapping di elementi e attributi nell'updategram alle tabelle e colonne in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando si specifica uno schema di mapping in un updategram, è necessario eseguire il mapping dei nomi di elemento e di attributo specificati nell'updategram agli elementi e agli attributi dello schema di mapping.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In questo argomento viene illustrata la modalità di utilizzo dello schema di mapping (XSD o XDR) specificato in un updategram per l'elaborazione degli aggiornamenti. In un updategram, è possibile specificare il nome di uno schema di mapping con annotazioni da utilizzare per eseguire il mapping di elementi e attributi nell'updategram alle tabelle e colonne in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando si specifica uno schema di mapping in un updategram, è necessario eseguire il mapping dei nomi di elemento e di attributo specificati nell'updategram agli elementi e agli attributi dello schema di mapping.  
   
  Per specificare uno schema di mapping, utilizzare il **dello schema di mapping** attributo del  **\<sincronizzazione >** elemento. Negli esempi seguenti sono illustrati due updategram, uno che utilizza uno schema di mapping semplice e uno che utilizza uno schema più complesso.  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 >  In questa documentazione si presuppone che l'utente disponga di una certa familiarità con i modelli e il supporto dello schema di mapping in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Introduzione a schemi XSD con annotazioni &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Per le applicazioni legacy che utilizzano XDR, vedere [schemi XDR &#40; deprecate in SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Gestione dei tipi di dati  
- Se lo schema specifica di **immagine**, **binario**, o **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati (tramite **SQL: DataType**) e non specificare un tipo di dati XML, l'updategram presuppone che il tipo di dati XML è **binari base 64**. Se i dati sono **bin.base** tipo, è necessario specificare esplicitamente il tipo (**dt:type=bin.base** o **tipo = "xsd: hexBinary"**).  
+ Se lo schema specifica di **immagine**, **binario**, o **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati (tramite **SQL: DataType**) e non specificare un tipo di dati XML, l'updategram presuppone che il tipo di dati XML è **binari base 64**. Se i dati vengono **bin.base** tipo, è necessario specificare esplicitamente il tipo (**dt:type=bin.base** o **tipo="xsd:hexBinary"**).  
   
  Se lo schema specifica di **dateTime**, **data**, o **ora** il tipo di dati XSD, è necessario specificare anche il corrispondente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il tipo di dati tramite  **SQL: DataType = "dateTime"**.  
   

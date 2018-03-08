@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobstep (Transact-SQL) | Documenti Microsoft
+title: sp_add_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobstep_TSQL
 - sp_add_jobstep
-dev_langs: TSQL
-helpviewer_keywords: sp_add_jobstep
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-caps.latest.revision: "80"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0063371a17bc3386ee9c4867cb6480e47cddd7d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c757a3d30bae1e95a8bf7d862daf0e1f0cf6138b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,19 +66,19 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_id =** ] *job_id*  
+ [ **@job_id =** ] *job_id*  
  Numero di identificazione del processo a cui aggiungere il passaggio. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  Nome del processo a cui aggiungere il passaggio. *job_name* è **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@step_id =** ] *step_id*  
+ [ **@step_id =** ] *step_id*  
  Numero di identificazione sequenziale per il passaggio del processo. Passaggio iniziale di numeri di identificazione in **1** e aumentano in modo sequenziale. Se viene inserito un passaggio nella sequenza esistente, i numeri di sequenza vengono automaticamente adeguati. Viene fornito un valore se *step_id* non è specificato. *step_id*è **int**, con un valore predefinito è NULL.  
   
- [  **@step_name =** ] **'***step_name***'**  
+ [ **@step_name =** ] **'***step_name***'**  
  Nome del passaggio. *step_name*è **sysname**, non prevede alcun valore predefinito.  
   
  [  **@subsystem =** ] **'***sottosistema***'**  
@@ -83,7 +86,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |Valore|Description|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|Script ActiveX<br /><br /> **\*\*Importante \* \*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|Script ActiveX<br /><br /> **\*\*Importante\*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|Comando del sistema operativo o programma eseguibile|  
 |'**DISTRIBUZIONE**'|Processo di Agente distribuzione repliche|  
 |'**SNAPSHOT**'|Processo di Agente snapshot repliche|  
@@ -94,7 +97,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**ANALYSISCOMMAND**'|Comando di Analysis Services (XMLA).|  
 |'**Dts**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esecuzione del pacchetto|  
 |'**PowerShell**'|Script di PowerShell|  
-|'**TSQL**' (impostazione predefinita)|[!INCLUDE[tsql](../../includes/tsql-md.md)] - istruzione|  
+|'**TSQL**' (impostazione predefinita)|[!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione|  
   
  [  **@command=** ] **'***comando***'**  
  I comandi da eseguire tramite **SQLServerAgent** servizio tramite *sottosistema*. *comando* è **nvarchar (max)**, con un valore predefinito è NULL. SQL Server Agent consente di eseguire la sostituzione dei token, che garantisce la stessa flessibilità assicurata dalle variabili durante la scrittura dei programmi software.  
@@ -107,12 +110,12 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Per ulteriori informazioni su questi token e l'aggiornamento di passaggi di processo per usare la nuova sintassi di token, vedere [utilizzare token nei passaggi del processo](http://msdn.microsoft.com/library/105bbb66-0ade-4b46-b8e4-f849e5fc4d43).  
   
 > [!IMPORTANT]  
->  Qualsiasi utente di Windows con autorizzazioni di scrittura per il registro eventi di Windows è in grado di accedere ai passaggi di processo attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o di WMI. Per evitare rischi per la sicurezza, i token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che possono essere utilizzati in processi attivati dagli avvisi sono disabilitati per impostazione predefinita. I token interessati sono: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**, e **WMI(***property***)**. Si noti che in questa versione l'utilizzo dei token è esteso a tutti gli avvisi.  
+>  Qualsiasi utente di Windows con autorizzazioni di scrittura per il registro eventi di Windows è in grado di accedere ai passaggi di processo attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o di WMI. Per evitare rischi per la sicurezza, i token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che possono essere utilizzati in processi attivati dagli avvisi sono disabilitati per impostazione predefinita. I token interessati sono: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** e **WMI(***property***)**. Si noti che in questa versione l'utilizzo dei token è esteso a tutti gli avvisi.  
 >   
 >  Se si desidera utilizzare questi token, verificare innanzitutto che solo i membri di gruppi di sicurezza di Windows trusted, ad esempio il gruppo Administrators, dispongano delle autorizzazioni di scrittura per il registro eventi del computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A questo punto, fare clic con il pulsante destro del mouse su **SQL Server Agent** in Esplora oggetti, scegliere **Proprietà**e nella pagina **Sistema avvisi** selezionare **Sostituisci token per tutte le risposte del processo ad avvisi** per abilitare questi token.  
   
  [  **@additional_parameters=** ] **'***parametri***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*parametri* è **ntext**, con un valore predefinito è NULL.  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *i parametri* è **ntext**, con un valore predefinito è NULL.  
   
  [  **@cmdexec_success_code =** ] *codice*  
  Il valore restituito da un **CmdExec** comando del sottosistema per indicare che *comando* è stata eseguita correttamente. *codice*è **int**, il valore predefinito è **0**.  
@@ -127,7 +130,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Esecuzione del passaggio successivo|  
 |**4**|Andare al passaggio *on_success_step_id*|  
   
- [  **@on_success_step_id =** ] *success_step_id*  
+ [ **@on_success_step_id =** ] *success_step_id*  
  L'ID del passaggio del processo da eseguire se il passaggio ha esito positivo e *success_action*è **4**. *success_step_id*è **int**, il valore predefinito è **0**.  
   
  [  **@on_fail_action=** ] *fail_action*  
@@ -140,28 +143,28 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Esecuzione del passaggio successivo|  
 |**4**|Andare al passaggio *on_fail_step_id*|  
   
- [  **@on_fail_step_id=** ] *fail_step_id*  
+ [ **@on_fail_step_id=** ] *fail_step_id*  
  L'ID del passaggio del processo da eseguire se il passaggio ha esito negativo e *fail_action*è **4**. *fail_step_id*è **int**, il valore predefinito è **0**.  
   
- [  **@server =**] **'***server***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*server*è **nvarchar (30)**, con un valore predefinito è NULL.  
+ [ **@server =**] **'***server***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server*è **nvarchar (30)**, con un valore predefinito è NULL.  
   
- [  **@database_name=** ] **'***database***'**  
+ [ **@database_name=** ] **'***database***'**  
  Nome del database in cui eseguire un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)]. *database* è **sysname**, il valore predefinito è NULL, nel qual caso il **master** database viene utilizzato. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Per un passaggio di processo ActiveX, il *database* è il nome del linguaggio di scripting utilizzato dal passaggio.  
   
- [  **@database_user_name=** ] **'***utente***'**  
+ [ **@database_user_name=** ] **'***user***'**  
  Nome dell'account utente da utilizzare quando viene eseguito un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)]. *utente* è **sysname**, con un valore predefinito è NULL. Quando *utente* è NULL, il passaggio viene eseguito nel contesto utente del proprietario del processo su *database*.  SQL Server Agent includerà questo parametro solo se il proprietario del processo è un sysadmin di SQL Server. In tal caso il passaggio del processo Transact-SQL specificato sarà eseguito nel contesto del nome utente di SQL Server specificato. Se il proprietario del processo non è un sysadmin di SQL Server, quindi il passaggio di Transact-SQL sarà eseguito sempre nel contesto dell'account di accesso proprietario del processo, e @database_user_name parametro verrà ignorato.  
   
  [  **@retry_attempts=** ] *retry_attempts*  
  Numero di tentativi da eseguire in caso di esecuzione errata del passaggio. *retry_attempts*è **int**, il valore predefinito è **0**, che indica nessun tentativo.  
   
- [  **@retry_interval=** ] *retry_interval*  
+ [ **@retry_interval=** ] *retry_interval*  
  Numero di minuti che devono trascorrere tra i tentativi. *retry_interval*è **int**, il valore predefinito è **0**, che indica un **0**-intervallo di minuti.  
   
- [  **@os_run_priority =** ] *run_priority*  
+ [ **@os_run_priority =** ] *run_priority*  
  Riservato.  
   
- [  **@output_file_name=** ] **'***file_name***'**  
+ [ **@output_file_name=** ] **'***file_name***'**  
  Nome del file in cui salvare l'output del passaggio. *file_name*è **nvarchar (200)**, con un valore predefinito è NULL. *file_name*può includere uno o più token elencati per *comando*. Questo parametro è valido solo con i comandi eseguiti nel [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sottosistemi.  
   
  [  **@flags=** ] *flag*  
@@ -177,10 +180,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**32**|Tutto l'output viene scritto nella cronologia processo|  
 |**64**|Creare un evento Windows da utilizzare come segnale per l'interruzione dell'oggetto JobStep Cmd|  
   
- [  **@proxy_id**  =] *proxy_id*  
+ [ **@proxy_id** = ] *proxy_id*  
  ID del proxy in base al quale viene eseguito il passaggio del processo. *proxy_id* è di tipo **int**, con un valore predefinito è NULL. Se non *proxy_id* è specificato, non *proxy_name* è specificato e nessun *nome_utente* viene specificata, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
- [  **@proxy_name**  =] **'***proxy_name***'**  
+ [ **@proxy_name** = ] **'***proxy_name***'**  
  Nome del proxy in base al quale viene eseguito il passaggio del processo. *proxy_name* è di tipo **sysname**, con un valore predefinito è NULL. Se non *proxy_id* è specificato, non *proxy_name* è specificato e nessun *nome_utente* viene specificata, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -198,7 +201,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  Un proxy può essere identificato da *proxy_name* o *proxy_id*.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -233,11 +236,11 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Consente di visualizzare o modificare i processi](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_update_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

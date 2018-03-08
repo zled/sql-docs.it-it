@@ -8,7 +8,8 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17c60845cbb26234bc6c52e7fe0e192973689e86
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un indice spaziale consente di eseguire in modo più efficiente determinate operazioni in una colonna con tipo di dati **geometry** o **geography** (*colonna spaziale*). In una colonna spaziale è possibile specificare più di un indice spaziale. Ciò è utile, ad esempio, per indicizzare diversi parametri della suddivisione a mosaico in una sola colonna.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Un indice spaziale consente di eseguire in modo più efficiente determinate operazioni in una colonna con tipo di dati **geometry** o **geography** ( *colonna spaziale*). In una colonna spaziale è possibile specificare più di un indice spaziale. Ciò è utile, ad esempio, per indicizzare diversi parametri della suddivisione a mosaico in una sola colonna.  
   
  La creazione di indici spaziali è soggetta a un certo numero di limitazioni. Per altre informazioni, vedere [Restrizioni relative agli indici spaziali](#restrictions) .  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/17/2017
   
 11. Nella pagina **Spaziale** specificare i valori che si vogliono usare per le proprietà spaziali dell'indice.  
   
-     Quando si crea un indice in una colonna di tipo **geometry** è necessario specificare le coordinate **(***X-min***,***Y-min***)** e **(***X-max***,***Y-max***)** del rettangolo di selezione. Per un indice in una colonna del tipo **geography** i campi del riquadro diventano di sola lettura dopo avere specificato lo schema a mosaico **Griglia geografica** , perché lo schema a mosaico della griglia geografica non usa un rettangolo di selezione.  
+     Quando si crea un indice in una colonna di tipo **geometry**, è necessario specificare le coordinate **(***X-min***,***Y-min***)** e **(***X-max***,***Y-max***)** del rettangolo di selezione. Per un indice in una colonna del tipo **geography** i campi del riquadro diventano di sola lettura dopo avere specificato lo schema a mosaico **Griglia geografica** , perché lo schema a mosaico della griglia geografica non usa un rettangolo di selezione.  
   
      È eventualmente possibile specificare valori non predefiniti per il campo **Celle per oggetto** e per la densità griglia a qualsiasi livello dello schema a mosaico. Il numero predefinito di celle per oggetto è 16 per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o 8 per [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o versione successiva, mentre la densità della griglia predefinita è **Media** per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
      Per altre informazioni su queste proprietà, vedere [Guida sensibile al contesto di Proprietà indice](../../relational-databases/indexes/index-properties-f1-help.md).  
   
-12. Scegliere **OK**.  
+12. Fare clic su **OK**.  
   
 > [!NOTE]  
 >  Per creare un altro indice spaziale nella stessa colonna spaziale o in una colonna diversa, ripetere i passaggi precedenti.  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 936d4f9346b4f8e3e58f88bbadf60127b7dc122f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cb3d2a6db5f17bb8c180e590426cec34b6dbc359
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogenvironmentvariables-ssisdb-database"></a>catalog.environment_variables (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +33,16 @@ ms.lasthandoff: 11/20/2017
 |-----------------|---------------|-----------------|  
 |variable_id|**bigint**|Identificatore (ID) univoco della variabile di ambiente.|  
 |environment_id|**bigint**|ID univoco dell'ambiente a cui è associata la variabile.|  
-|name|**sysname**|Nome della variabile di ambiente.|  
+|NAME|**sysname**|Nome della variabile di ambiente.|  
 |description|**nvarchar(1024)**|Descrizione della variabile di ambiente.|  
-|tipo|**nvarchar(128)**|Tipo di dati della variabile di ambiente.|  
+|Tipo|**nvarchar(128)**|Tipo di dati della variabile di ambiente.|  
 |sensitive|**bit**|Quando il valore è `1`, la variabile è importante e viene crittografata quando viene archiviata. Quando il valore è `0`, la variabile non è importante e il valore viene archiviato non crittografato.|  
 |Valore|**sql_variant**|Valore della variabile di ambiente. Quando sensitive è `0`, viene visualizzato il valore non crittografato. Quando sensitive è `1`, viene visualizzato il valore **NULL**.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  In questa vista viene visualizzata una riga per ogni variabile di ambiente nel catalogo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa vista è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazione READ sull'ambiente corrispondente  

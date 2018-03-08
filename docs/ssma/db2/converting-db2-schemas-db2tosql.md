@@ -1,7 +1,7 @@
 ---
 title: Conversione di schemi di DB2 (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b5519b19a5ae8098016e7d9bf0daa25c8678cdd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e3684380a10f371952b2461907bb36a7b13f1107
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversione di schemi di DB2 (DB2ToSQL)
 Dopo aver connesso a DB2, connesso alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], e imposta il progetto e le opzioni di mapping di dati, è possibile convertire oggetti di database DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti di database.  

@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 445c28ab59dd3f66f46a0ad43aff40da5696ee0a
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d23b15bd823c9054d9ddc7f1077bda80614686bd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>Panoramica dell'architettura di R in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questa sezione viene fornita una panoramica dell'architettura di SQL Server 2016 R Services e di servizi di SQL Server 2017 Machine Learning.
 
@@ -48,7 +49,7 @@ Il ruolo di questi componenti aggiuntivi consiste nel migliorare la velocità di
 
 Per una descrizione dettagliata dei componenti che supportano R, ad esempio il [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] e RLauncher, vedere [nuovi componenti](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md).
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 Quando si esegue codice R con Machine Learning Services o SQL Server R Services, tutti gli script R vengono eseguiti all'esterno del processo di SQL Server, per fornire sicurezza e maggiore facilità di gestione. L'isolamento dei processi vale indipendentemente dal fatto se è eseguire lo script R come parte di una stored procedure, o connettersi al processo di computer SQL Server da un computer remoto e avviare un processo che utilizza il server come contesto di calcolo.
 

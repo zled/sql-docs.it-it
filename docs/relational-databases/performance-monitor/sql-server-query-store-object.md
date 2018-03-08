@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3bfa37e7f645148daa38f8e79b8c51aaf1613c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 854714fbe12db7e32dc0989a442abbdd23695ef9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, oggetto archivio query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
  Questa tabella illustra i contatori **SQLServer:Query Store**.  
   
-|Contatori di archivio query di SQL Server|Descrizione|  
+|Contatori di archivio query di SQL Server|Description|  
 |-------------------------------------|-----------------|  
 |**Utilizzo della CPU dell'archivio query**|Indica l'utilizzo della CPU dell'archivio query.|  
 |**Letture logiche dell'archivio query**|Indica il numero di letture logiche eseguite dall'archivio query.|  
@@ -42,14 +42,14 @@ ms.lasthandoff: 11/17/2017
   
  Per ogni contatore nell'oggetto sono disponibili le istanze seguenti:  
   
-|Istanza dell'archivio query|Descrizione|  
+|Istanza dell'archivio query|Description|  
 |--------------------------|-----------------|  
 |**_Total**|Informazioni per l'archivio query per questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |\<nome database>|Informazioni dell'archivio query per questo database.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio delle prestazioni con Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41; (Stored procedure di Archivio query - Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Stored procedure di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Viste del catalogo di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

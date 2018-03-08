@@ -1,27 +1,28 @@
 ---
 title: I membri di SQLServerDataSource | Documenti Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6feb87ad1bb5054b800a001a30af6b94679e977a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d046db6ae560e0384d3966286952069e940a189b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sqlserverdatasource-members"></a>Membri di SQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,13 +33,13 @@ ms.lasthandoff: 11/18/2017
   
 |Nome|Description|  
 |----------|-----------------|  
-|[() Di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-constructor.md)|Inizializza una nuova istanza di [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) classe.|  
+|[SQLServerDataSource ()](../../../connect/jdbc/reference/sqlserverdatasource-constructor.md)|Inizializza una nuova istanza di [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) classe.|  
   
 ## <a name="fields"></a>Campi  
- nessuna.  
+ Nessuno  
   
 ## <a name="inherited-fields"></a>Campi ereditati  
- nessuna.  
+ Nessuno  
   
 ## <a name="methods"></a>Metodi  
   
@@ -48,6 +49,8 @@ ms.lasthandoff: 11/18/2017
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|Restituisce il nome dell'applicazione.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)|Tenta di stabilire una connessione con i dati di origine da questo [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) oggetto rappresenta.|  
 |[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|Restituisce il nome del database.|  
+|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|Restituisce il valore di **disableStatementPooling** proprietà di connessione. Questa impostazione controlla se il pool di istruzione è attivato o meno per la connessione.|  
+|[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|Restituisce il valore di **enablePrepareOnFirstPreparedStatementCall** proprietà di connessione.|  
 |[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|Restituisce un **booleano** valore che indica se la proprietà di crittografia è abilitata.|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|Restituisce una descrizione dell'origine dati.|  
 |[getFailoverPartner](../../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md)|Restituisce il nome del server di failover utilizzato nella configurazione del mirroring del database.|  
@@ -66,6 +69,10 @@ ms.lasthandoff: 11/18/2017
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|Restituisce un **booleano** valore che indica se l'invio di parametri di stringa al server in formato UNICODE è abilitato.|  
 |[getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md)|Restituisce l'impostazione del **SendTimeAsDatetime** proprietà di connessione.|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|Restituisce il nome del computer che esegue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
+|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|Restituisce il valore di **serverPreparedStatementDiscardThreshold** proprietà di connessione.|  
+|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverdatasource.md)|Restituisce le dimensioni della cache dell'istruzione preparata per la connessione.|  
+|[getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)|Restituisce il valore di stringa della proprietà di connessione TrustManagerClass.|  
+|[getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md)|Restituisce il valore di stringa della proprietà di connessione TrustManagerConstructorArg.|  
 |[getTrustServerCertificate](../../../connect/jdbc/reference/gettrustservercertificate-method-sqlserverdatasource.md)|Restituisce un **booleano** valore che indica se la proprietà trustServerCertificate è abilitata.|  
 |[getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md)|Restituisce il percorso (incluso il nome file) del file trustStore del certificato.|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatasource.md)|Restituisce l'URL utilizzato per la connessione all'origine dati.|  
@@ -79,6 +86,8 @@ ms.lasthandoff: 11/18/2017
 |[setAuthenticationScheme](../../../connect/jdbc/reference/setauthenticationscheme-sqlserverdatasource.md)|Indica il tipo di sicurezza integrata che si desidera venga utilizzata dall'applicazione.|  
 |[setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md)|Imposta il nome del database a cui connettersi.|  
 |[setDescription](../../../connect/jdbc/reference/setdescription-method-sqlserverdatasource.md)|Imposta la descrizione dell'origine dati.|  
+|[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverdatasource.md)|Imposta il pool di istruzione su true o false.|  
+|[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|Specifica il nuovo valore del **enablePrepareOnFirstPreparedStatementCall** proprietà di connessione.|  
 |[setEncrypt](../../../connect/jdbc/reference/setencrypt-method-sqlserverdatasource.md)|Imposta un **booleano** valore che indica se la proprietà di crittografia è abilitata.|  
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|Imposta il nome del server di failover utilizzato nella configurazione del mirroring del database.|  
 |[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|Imposta il nome host da utilizzare per la convalida del certificato SSL (Secure Sockets Layer) di SQL Server.|  
@@ -97,6 +106,10 @@ ms.lasthandoff: 11/18/2017
 |[setSendStringParametersAsUnicode](../../../connect/jdbc/reference/setsendstringparametersasunicode-method-sqlserverdatasource.md)|Imposta un **booleano** valore che indica se l'invio di parametri di stringa al server in formato UNICODE è abilitato.|  
 |[setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)|Specifica la modalità di invio dei valori java.sql.Time al server.|  
 |[setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md)|Imposta il nome del computer che esegue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
+|[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|Imposta il valore di nuovo il **serverPreparedStatementDiscardThreshold** proprietà di connessione.|  
+|[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverdatasource.md)|Imposta le dimensioni della cache dell'istruzione preparata per la connessione.|  
+|[setTrustManagerClass](../../../connect/jdbc/reference/settrustmanagerclass-method-sqlserverdatasource.md)|Imposta il valore di stringa della proprietà di connessione TrustManagerClass.|  
+|[setTrustManagerConstructorArg](../../../connect/jdbc/reference/settrustmanagerconstructorarg-method-sqlserverdatasource.md)|Imposta il valore di stringa della proprietà di connessione TrustManagerConstructorArg.|  
 |[setTrustServerCertificate](../../../connect/jdbc/reference/settrustservercertificate-method-sqlserverdatasource.md)|Imposta un **booleano** valore che indica se la proprietà trustServerCertificate è abilitata.|  
 |[setTrustStore](../../../connect/jdbc/reference/settruststore-method-sqlserverdatasource.md)|Imposta il percorso (incluso il nome file) del file trustStore del certificato.|  
 |[setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md)|Imposta la password utilizzata per verificare l'integrità dei dati del file trustStore.|  
@@ -104,7 +117,7 @@ ms.lasthandoff: 11/18/2017
 |[setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md)|Imposta il nome utente utilizzato per la connessione all'origine dati.|  
 |[setWorkstationID](../../../connect/jdbc/reference/setworkstationid-method-sqlserverdatasource.md)|Imposta il nome del computer client utilizzato per la connessione all'origine dati.|  
 |[setXopenStates](../../../connect/jdbc/reference/setxopenstates-method-sqlserverdatasource.md)|Imposta un **booleano** valore che indica se la conversione di stati SQL in stati conformi a XOpen è abilitata.|  
-|[Unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)|Restituisce un oggetto che implementa l'interfaccia specificata per consentire l'accesso per il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-metodi specifici.|  
+|[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)|Restituisce un oggetto che implementa l'interfaccia specificata per consentire l'accesso per il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-metodi specifici.|  
   
 ## <a name="inherited-methods"></a>Metodi ereditati  
   

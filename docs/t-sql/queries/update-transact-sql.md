@@ -1,5 +1,5 @@
 ---
-title: AGGIORNAMENTO (Transact-SQL) | Documenti Microsoft
+title: UPDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
 - UPDATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DML [SQL Server], UPDATE statement
 - data updates [SQL Server], UPDATE statement
@@ -38,16 +40,16 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: "91"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 671eb95a5c1772ec790886d923112d491bbd2a35
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -119,12 +121,12 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- CON \<common_table_expression >  
+ WITH \<common_table_expression>  
  Specifica una vista o un set di risultati denominato temporaneo, anche noto come espressione di tabella comune (CTE), definito nell'ambito di un'istruzione SELECT, INSERT, UPDATE o DELETE. Il set di risultati di espressione di tabella comune è derivato da una query semplice e vi viene fatto riferimento dall'istruzione UPDATE.  
   
  Le espressioni di tabella comune possono essere utilizzate anche con le istruzioni SELECT, INSERT, DELETE e CREATE VIEW. Per ulteriori informazioni, vedere [con common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- INIZIO **(** *espressione***)** [percentuale]  
+ INIZIO **(** *espressione * * *)** [percentuale]  
  Specifica il numero o la percentuale di righe che vengono aggiornate. Il valore di*expression* può essere specificato come numero o come percentuale di righe.  
   
  Le righe a cui viene fatto riferimento nell'espressione TOP utilizzata con INSERT, UPDATE o DELETE non sono disposte in alcun ordine.  
@@ -134,7 +136,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *table_alias*  
  Alias specificato nella clausola FROM che rappresenta la tabella o la vista da cui vengono aggiornate le righe.  
   
- *nome_server*  
+ *server_name*  
  È il nome del server (nome di un server collegato o [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) funzione come nome del server) in cui è contenuta la tabella o vista. Se *nome_server* è specificato, *database_name* e *schema_name* sono necessari.  
   
  *database_name*  
@@ -172,9 +174,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
  Operatore di assegnazione composto:  
- + = Aggiunta e assegnazione  
+ += Aggiunta e assegnazione  
  -= Sottrazione e assegnazione  
- * = Moltiplicazione e assegnazione  
+ *= Moltiplicazione e assegnazione  
  / = Divisione e assegnazione  
  % = Applicazione del coefficiente e assegnazione  
  & = AND bit per bit e assegnazione  
@@ -184,13 +186,13 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *udt_column_name*  
  Colonna definita dall'utente.  
   
- *property_name* | *nome_campo*  
+ *property_name* | *field_name*  
  Proprietà pubblica o membro pubblico di dati di un tipo definito dall'utente.  
   
  *nome_metodo* **(** *argomento* [ **,**... *n*] **)**  
  È un metodo mutatore pubblico non static di *udt_column_name* che accetta uno o più argomenti.  
   
- **.** Scrivere **(***espressione***,***@Offset***,** *@Length***)**  
+ **.** Scrivere **(***espressione***,***@Offset***,***@Length***)**  
  Specifica che una sezione del valore di *column_name* deve essere modificato. *espressione* sostituisce  *@Length*  unità a partire da  *@Offset*  di *column_name*. Solo le colonne di **varchar (max)**, **nvarchar (max)**, o **varbinary (max)** possono essere specificate con questa clausola. *column_name* non può essere NULL e non può essere qualificato con un nome di tabella o un alias di tabella.  
   
  *espressione* è il valore copiato in *column_name*. *espressione* deve restituire o essere in grado di eseguire il cast implicito per il *column_name* tipo. Se *espressione* è impostato su NULL,  *@Length*  viene ignorato e il valore in *column_name* viene troncato in corrispondenza  *@Offset* .  
@@ -204,9 +206,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  **@***variabile*  
  È una variabile dichiarata impostata sul valore restituito da *espressione*.  
   
- IMPOSTARE  **@**  *variabile* = *colonna* = *espressione* imposta la variabile alla stessa valore della colonna. Questo comportamento è diverso dal SET  **@**  *variabile* = *colonna*, *colonna*  =  *espressione*, che imposta la variabile sul valore precedente all'aggiornamento della colonna.  
+ IMPOSTARE **@ * variabile* = *colonna* = *espressione* imposta la variabile sullo stesso valore della colonna. Questo comportamento è diverso dal SET **@ * variabile* = *colonna*, *colonna* = *espressione*, che imposta il variabile in cui il valore precedente all'aggiornamento della colonna.  
   
- \<OUTPUT_Clause >  
+ \<OUTPUT_Clause>  
  Restituisce dati aggiornati o espressioni basate su di essi come parte dell'operazione UPDATE. La clausola OUTPUT non è supportata in alcuna istruzione DML applicata a tabelle o viste remote. Per ulteriori informazioni, vedere [clausola OUTPUT &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
   
  DA \<table_source >  
@@ -226,7 +228,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
 -   Gli aggiornamenti posizionati utilizzano la clausola CURRENT OF per specificare un cursore. L'operazione di aggiornamento viene in questo caso eseguita nella posizione corrente del cursore.  
   
-\<search_condition >  
+\<search_condition>  
  Specifica la condizione che le righe da aggiornare devono soddisfare. La condizione di ricerca può inoltre essere rappresentata dalla condizione per un join. Non sono previsti limiti per il numero di predicati che è possibile includere in una condizione di ricerca. Per ulteriori informazioni sui predicati e condizioni di ricerca, vedere [condizione di ricerca &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
   
 CURRENT OF  
@@ -334,7 +336,7 @@ GO
 >  Il **ntext**, **testo**, e **immagine** tipi di dati verranno rimossa in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Aggiornamento dei tipi di dati per valori di grandi dimensioni  
- Utilizzare il **.** SCRIVERE (*espressione***,**  *@Offset*  **,***@Length*) clausola per eseguire un aggiornamento parziale o completo di **varchar (max)**, **nvarchar (max)**, e **varbinary (max)** tipi di dati. Ad esempio, un aggiornamento parziale di un **varchar (max)** colonna potrebbe eliminare o modificare solo i primi 200 caratteri della colonna, mentre un aggiornamento completo Elimina o modifica di tutti i dati nella colonna. **.** Scrivere gli aggiornamenti che inseriscono o accodano nuovi dati vengono registrati tramite registrazione se il modello di recupero del database è impostato su bulk oppure su registrazione minima. La registrazione minima non viene utilizzata in caso di aggiornamento di valori esistenti. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Utilizzare il **.** SCRIVERE (*espressione * * *,** *@Offset***,***@Length*) clausola per eseguire un aggiornamento parziale o completo di  **varchar (max)**, **nvarchar (max)**, e **varbinary (max)** tipi di dati. Ad esempio, un aggiornamento parziale di un **varchar (max)** colonna potrebbe eliminare o modificare solo i primi 200 caratteri della colonna, mentre un aggiornamento completo Elimina o modifica di tutti i dati nella colonna. **.** Scrivere gli aggiornamenti che inseriscono o accodano nuovi dati vengono registrati tramite registrazione se il modello di recupero del database è impostato su bulk oppure su registrazione minima. La registrazione minima non viene utilizzata in caso di aggiornamento di valori esistenti. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  In [!INCLUDE[ssDE](../../includes/ssde-md.md)] un aggiornamento parziale viene convertito in aggiornamento completo quando l'istruzione UPDATE provoca una di queste azioni:  
 -   modifica una colonna chiave della vista o tabella partizionata  
@@ -346,7 +348,7 @@ Non è possibile utilizzare il **.** Clausola di scrittura per aggiornare una co
   
 Per prestazioni ottimali, è consigliabile inserire o aggiornare i dati in dimensioni di blocco multiple di 8040 byte.  
   
-Se la colonna modificata dal **.** SCRIVERE clausola fa riferimento in una clausola OUTPUT, il valore completo della colonna, ovvero la prima immagine nel **eliminato.** *column_name* o l'immagine successiva in **inserito.** *column_name*, viene restituito nella colonna specificata nella variabile di tabella. Vedere l'esempio che segue R.  
+Se la colonna modificata dal **.** SCRIVERE clausola fa riferimento in una clausola OUTPUT, il valore completo della colonna, ovvero l'immagine precedente in **eliminato. * * * column_name* o l'immagine successiva in **inserito. * * * column_name*, viene restituito Nella colonna specificata nella variabile di tabella. Vedere l'esempio che segue R.  
   
 Per ottenere la stessa funzionalità di **.** WRITE con altri caratteri o i tipi di dati binari, utilizzare il [STUFF &#40; Transact-SQL &#41; ](../../t-sql/functions/stuff-transact-sql.md).  
   
@@ -464,9 +466,9 @@ ID     Value
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
  L'istruzione UPDATE viene registrata. Tuttavia, per gli aggiornamenti parziali a tipi di dati di valori di grandi dimensioni tramite la **.** SCRIVERE la clausola con registrazione minima. Per altre informazioni, vedere "Aggiornamento dei tipi di dati per valori di grandi dimensioni" nella sezione precedente "Tipi di dati".  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni UPDATE sono necessarie nella tabella di destinazione. Le autorizzazioni SELECT sono necessari anche per la tabella da aggiornare se l'istruzione UPDATE include una clausola WHERE, oppure se *espressione* nel SET di clausola utilizza una colonna nella tabella.  
   
  AGGIORNAMENTO delle autorizzazioni per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server, il **db_owner** e **db_datawriter** fissa ruoli del database e il proprietario della tabella. I membri del **sysadmin**, **db_owner**, e **db_securityadmin** ruoli e il proprietario della tabella possono trasferire autorizzazioni ad altri utenti.  
@@ -1036,7 +1038,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### <a name="ac-using-update-in-a-trycatch-block"></a>CA. Utilizzo di UPDATE in un blocco TRY...CATCH  
+#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. Utilizzo di UPDATE in un blocco TRY...CATCH  
  Nell'esempio seguente viene utilizzata un'istruzione UPDATE in un blocco TRY... CATCH per gestire gli errori di esecuzione che potrebbero verificarsi durante l'operazione di aggiornamento.  
   
 ```sql  
@@ -1070,7 +1072,7 @@ GO
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="ad-using-a-simple-update-statement"></a>ACTIVE DIRECTORY. Esecuzione di un'istruzione UPDATE semplice  
+### <a name="ad-using-a-simple-update-statement"></a>AD. Esecuzione di un'istruzione UPDATE semplice  
  I seguenti esempi viene illustrato come possono essere interessate tutte le righe quando una clausola WHERE non utilizzata per specificare la riga (o le righe) per l'aggiornamento.  
   
  In questo esempio aggiorna i valori nel `EndDate` e `CurrentFlag` colonne per tutte le righe di `DimEmployee` tabella.  
@@ -1114,7 +1116,7 @@ WHERE ProductKey = 313
 OPTION (LABEL = N'label1');  
 ```  
   
-### <a name="ag-using-the-update-statement-with-information-from-another-table"></a>GRUPPO DI DISPONIBILITÀ. Utilizzo dell'istruzione UPDATE con informazioni di un'altra tabella  
+### <a name="ag-using-the-update-statement-with-information-from-another-table"></a>AG. Utilizzo dell'istruzione UPDATE con informazioni di un'altra tabella  
  Questo esempio viene creata una tabella per archiviare le vendite totali per anno. Aggiorna le vendite totali per l'anno 2004 eseguendo un'istruzione SELECT sulla tabella FactInternetSales.  
   
 ```sql  
@@ -1221,9 +1223,9 @@ DROP TABLE CTAS_acs
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Cursori &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Testo e immagine funzioni &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
- [CON common_table_expression &#40; Transact-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
+ [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   
   

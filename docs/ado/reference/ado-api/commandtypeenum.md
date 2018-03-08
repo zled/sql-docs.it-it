@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: CommandTypeEnum
-helpviewer_keywords: CommandTypeEnum enumeration [ADO]
+f1_keywords:
+- CommandTypeEnum
+helpviewer_keywords:
+- CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb7c01971633727f1e7e5769060b256eab13914b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 11150cb69914cf5438d46cc15238b38465ddfa30
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Specifica la modalità di interpretazione di un argomento del comando.  
   
  È importante convalidare fornito dall'utente *CommandString* valori per evitare che gli utenti dell'applicazione la possibilità di inserire comandi potenzialmente pericolosi per ADO eseguire.  
   
-|Costante|valore|Description|  
+|Costante|Valore|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Non specificare l'argomento di tipo di comando.|  
 |**adCmdText**|1|Valuta [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) come una definizione testuale di un comando o stored procedure chiamata.|  
@@ -42,7 +45,7 @@ Specifica la modalità di interpretazione di un argomento del comando.
 |**adCmdTableDirect**|512|Valuta **CommandText** come un nome di tabella le cui colonne vengono tutte restituite. Utilizzato con **Open** o **Requery** solo. Utilizzare il [Seek](../../../ado/reference/ado-api/seek-method.md) (metodo), il **Recordset** deve essere aperto con **adCmdTableDirect**.<br /><br /> Questo valore non può essere combinato con il [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valore **adAsyncExecute**.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacchetto: **com.ms. wfc.**  
+ Package: **com.ms.wfc.data**  
   
 |Costante|  
 |--------------|  

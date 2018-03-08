@@ -9,32 +9,34 @@ ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
-- analysis-services
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Local Audit
+helpviewer_keywords:
+- Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48de69218e71bb9688e6d7a3d0669b43baefe150
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d579ced53344bc871e640de8ab81246ed652325
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Controllo locale per la raccolta di dati relativi all'utilizzo di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 ## <a name="introduction"></a>Introduzione
 
 In Microsoft SQL Server sono disponibili funzionalità abilitate per Internet che sono in grado di raccogliere e inviare a Microsoft dati relativi al computer o al dispositivo ("dati standard sul computer"). Il componente per il controllo locale della [raccolta di dati relativi all'utilizzo di SQL Server](http://support.microsoft.com/kb/3153756) scrive i dati raccolti dal servizio in una specifica cartella, che rappresenta i dati (log) da inviare a Microsoft. Lo scopo del controllo locale è quello di consentire ai clienti di visualizzare tutti i dati che Microsoft raccoglie con questa funzionalità, per motivi di conformità alle normative o rispetto della privacy.  
 
 In SQL Server 2016 CU2 il controllo locale è configurabile a livello di istanza per il motore di database di SQL Server ed SQL Server Analysis Services (SSAS). In SQL Server 2016 CU4 e SQL Server 2016 SP1 il controllo locale è abilitato anche per SQL Server Integration Services (SSIS). Per altri componenti di SQL Server installati durante la fase di installazione del programma e per strumenti di SQL Server scaricati o installati successivamente, la funzionalità di controllo locale per la raccolta dei dati relativi all'utilizzo non è disponibile. 
 
-## <a name="prerequisites"></a>Prerequisiti 
+## <a name="prerequisites"></a>Prerequisites 
 
 Per abilitare il controllo locale in ogni istanza di SQL Server sono previsti i prerequisiti seguenti: 
 
@@ -190,7 +192,7 @@ La funzionalità di controllo locale genererà un file di log al giorno. Ai file
 
 Le colonne elencate di seguito rappresentano l'ordinamento dell'output dei file del controllo locale. Per rendere anonimi i valori per alcune delle colonne seguenti viene usato un hash unidirezionale con SHA 256.  
 
-| Nome | Descrizione | Valori di esempio
+| nome | Description | Valori di esempio
 |-------|--------| ----------|
 |hostname | Nome (reso anonimo) del computer in cui è installato SQL Server| de3b3769a63970b63981ab7a956401388962c986bfd39d371f5870d800627d11 
 |domainHash| Hash di dominio (reso anonimo) del computer che ospita l'istanza di SQL Server | de3b3769a63970b63981ab7a956401388962c986bfd39d371f5870d800627d11 

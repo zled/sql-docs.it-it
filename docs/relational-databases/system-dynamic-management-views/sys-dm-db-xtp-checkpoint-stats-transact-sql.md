@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Documenti Microsoft
+title: sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_checkpoint_stats_TSQL
 - sys.dm_db_xtp_checkpoint_stats
 - sys.dm_db_xtp_checkpoint_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_checkpoint_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a9dff499f4e0fd7182ee7d018532a386233f42c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a3bce2f4337894c86e251e53c9fc0546f2e69253
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -104,9 +107,9 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |checkpoint_lsn|**numerico (38)**|Numero di sequenza del file di log (LSN) di recupero associato all'ultimo checkpoint completato OLTP in memoria.|  
 |current_lsn|**numerico (38)**|LSN del record del log attualmente in elaborazione.|  
 |end_of_log_lsn|**numerico (38)**|LSN di fine del log.|  
-|task_address|**varbinary (8)**|Indirizzo di SOS_Task. Join a sys.dm_os_tasks per ottenere ulteriori informazioni.|  
+|task_address|**varbinary(8)**|Indirizzo di SOS_Task. Join a sys.dm_os_tasks per ottenere ulteriori informazioni.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW DATABASE STATE` per il server.  
   
 ## <a name="see-also"></a>Vedere anche  

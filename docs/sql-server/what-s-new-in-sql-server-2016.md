@@ -8,29 +8,32 @@ ms.service:
 ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: "novità di sql server"
+keywords:
+- "novità di sql server"
 helpviewer_keywords:
 - new features [SQL Server]
 - SQL Server, what's new
 - SQL Server 2008 what's new
 - what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: "224"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ffdc6534621597002d4b3f54a5b3c1960c9ccad8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novità di SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Con SQL Server 2016 è possibile creare applicazioni intelligenti di importanza critica con una piattaforma di database ibrida e scalabile che dispone di tutti gli strumenti necessari, da prestazioni in memoria e sicurezza avanzata a funzionalità di analisi nel database. SQL Server 2016 aggiunge nuove funzionalità di sicurezza e di query, l'integrazione di Hadoop e cloud, analisi R e altro ancora, oltre a numerosi miglioramenti e ottimizzazioni. 
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+ Con SQL Server 2016 è possibile creare applicazioni intelligenti di importanza critica con una piattaforma di database ibrida e scalabile che dispone di tutti gli strumenti necessari, da prestazioni in memoria e sicurezza avanzata a funzionalità di analisi nel database. SQL Server 2016 aggiunge nuove funzionalità di sicurezza e di query, l'integrazione di Hadoop e cloud, analisi R e altro ancora, oltre a numerosi miglioramenti e ottimizzazioni. 
 
 Questa pagina include informazioni di riepilogo e collegamenti a informazioni più dettagliate sulle novità dei singoli componenti di SQL Server 2016. 
 

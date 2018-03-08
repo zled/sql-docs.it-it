@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31dd44920c1bc814985cd0391f52e035621de89f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ Per aggiornare un trigger DDL a livello di server, eseguire questa stored proced
 >  [!NOTE]   
 >  Le eventuali firme associate all'oggetto vengono eliminate quando si esegue `sp_refresh_parameter_encryption`.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 Richiede `ALTER` l'autorizzazione per il modulo e `REFERENCES` l'autorizzazione per qualsiasi tipi CLR definiti dall'utente e raccolte di XML schema che fa riferimento l'oggetto.   
 
@@ -92,7 +92,7 @@ Per i moduli che sono definiti con la `EXECUTE AS` clausola `IMPERSONATE` è ric
 Nell'esempio seguente crea una tabella e una stored procedure che fanno riferimento a tabella, consente di configurare Always Encrypted e quindi viene illustrata la tabella di modifica e l'esecuzione di `sp_refresh_parameter_encryption` procedura.  
 
 Innanzitutto, creare la tabella iniziale e una stored procedure che fanno riferimento a tabella.
-```tsql
+```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
     [FirstName] [nvarchar](50) NULL,
@@ -121,7 +121,7 @@ GO
 ```
 
 Impostare quindi le chiavi di crittografia sempre attiva.
-```tsql
+```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
 (
@@ -143,7 +143,7 @@ GO
 
 
 Infine è necessario sostituire la colonna SSN con la colonna crittografata e quindi viene eseguito il `sp_refresh_parameter_encryption` procedura per aggiornare i componenti di crittografia sempre attiva.
-```tsql
+```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
 

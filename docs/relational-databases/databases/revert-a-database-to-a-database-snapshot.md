@@ -8,26 +8,28 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: "58"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ebcff5d0d885fe580af9ac0b14d81e7b4ad2746
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Ripristinare un database a uno snapshot del database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se i dati in un database online sono danneggiati, in alcuni casi il ripristino del database a un snapshot del database precedente alla data del danno può essere un'alternativa appropriata per ripristinare il database da un backup. Il ripristino di un database può, ad esempio, risultare utile per annullare un errore grave dell'utente verificatosi di recente, come l'eliminazione di una tabella. Tutte le modifiche apportate dopo la creazione dello snapshot verranno tuttavia perse.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Se i dati in un database online sono danneggiati, in alcuni casi il ripristino del database a un snapshot del database precedente alla data del danno può essere un'alternativa appropriata per ripristinare il database da un backup. Il ripristino di un database può, ad esempio, risultare utile per annullare un errore grave dell'utente verificatosi di recente, come l'eliminazione di una tabella. Tutte le modifiche apportate dopo la creazione dello snapshot verranno tuttavia perse.  
   
 -   **Prima di iniziare:**  
   
@@ -35,9 +37,9 @@ ms.lasthandoff: 11/17/2017
   
      [Prerequisiti](#Prerequisites)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
--   **Per ripristinare un database a uno snapshot del database tramite:**  [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  Prima di ripristinare un database, considerare le limitazioni seguenti:  
   
--   Non è previsto il ripristino per il recupero di supporti. . Un snapshot del database è una copia incompleta dei file di database, pertanto se il database o lo snapshot del database è danneggiato, è probabile che il ripristino da uno snapshot risulti impossibile. Anche quando possibile, è inoltre improbabile che il ripristino in caso di danneggiamento consenta di risolvere il problema. Per proteggere un database è pertanto essenziale eseguire backup regolari e testare il piano di ripristino. Per altre informazioni, vedere [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Non è previsto il ripristino per il recupero di supporti. , Un snapshot del database è una copia incompleta dei file di database, pertanto se il database o lo snapshot del database è danneggiato, è probabile che il ripristino da uno snapshot risulti impossibile. Anche quando possibile, è inoltre improbabile che il ripristino in caso di danneggiamento consenta di risolvere il problema. Per proteggere un database è pertanto essenziale eseguire backup regolari e testare il piano di ripristino. Per altre informazioni, vedere [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  Se è necessario essere in grado di ripristinare il database di origine al punto nel tempo in cui è stato creato uno snapshot del database, utilizzare il modello di recupero completo e implementare criteri di backup che consentano di eseguire tale operazione.  
@@ -86,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Qualsiasi utente con autorizzazioni RESTORE DATABASE sul database di origine può ripristinarne lo stato corrispondente al momento in cui è stato creato lo snapshot.  
   
 ##  <a name="TsqlProcedure"></a> Come ripristinare un database a uno snapshot del database (tramite Transact-SQL)  

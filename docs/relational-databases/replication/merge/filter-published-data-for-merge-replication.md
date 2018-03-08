@@ -16,22 +16,22 @@ helpviewer_keywords:
 - replication [SQL Server], filtering published data
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8b02dc4f90db95034df79a341aacf4b346dc3ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ed6d8575d2dfbcc6f6ad29c8910346eb5ef27b41
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Filtro dei dati pubblicati per la replica di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Oltre ai filtri di riga e di colonna statici che è possibile definire con altri tipi di replica, la replica di tipo merge offre filtri di riga con parametri e filtri join. Per altre informazioni sui filtri di riga e di colonna statici, vedere [Filtrare i dati pubblicati](../../../relational-databases/replication/publish/filter-published-data.md).  
   
  La replica di tipo merge viene utilizzata in molte applicazioni che supportano gli utenti mobili. Tali applicazioni hanno in genere un gran numero di sottoscrizioni ognuna delle quali riceve un set di dati univoco. I filtri con parametri combinati con i filtri join consentono a un amministratore di impostare una pubblicazione (o un numero limitato di pubblicazioni) e di fornire set di dati diversi agli utenti, riducendo l'overhead di gestione introdotto con la creazione di più pubblicazioni.  
   
--   I filtri con parametri consentono l'invio di partizioni diverse di dati a Sottoscrittori diversi senza richiedere la creazione di più pubblicazioni. Ad esempio, è possibile filtrare una tabella in modo che i dati di uno specifico rappresentante vengano replicati solo a tale rappresentante. I filtri con parametri hanno una varietà di opzioni che consentono di personalizzare il filtraggio per ottimizzare le prestazioni e adattarsi ai dati e ai requisiti dell'applicazione. Per altre informazioni, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   I filtri con parametri consentono l'invio di partizioni diverse di dati a Sottoscrittori diversi senza richiedere la creazione di più pubblicazioni. Ad esempio, è possibile filtrare una tabella in modo che i dati di uno specifico rappresentante vengano replicati solo a tale rappresentante. I filtri con parametri hanno una varietà di opzioni che consentono di personalizzare il filtraggio per ottimizzare le prestazioni e adattarsi ai dati e ai requisiti dell'applicazione. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   I filtri join sono utilizzati insieme ai filtri con parametri per estendere il filtraggio alle tabelle correlate e possono essere utilizzati anche insieme ai filtri statici. Ad esempio, il rappresentante in genere dispone di dati in altre tabelle, ad esempio le tabelle relative a clienti e ordini. Questi dati possono essere filtrati in modo che il rappresentante riceva solo i dati relativi ai clienti e ai rispettivi ordini. Per altre informazioni, vedere [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   

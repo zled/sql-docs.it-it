@@ -8,27 +8,29 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.maintenancecleanuptask.f1
+f1_keywords:
+- sql13.dts.designer.maintenancecleanuptask.f1
 helpviewer_keywords:
 - deleting files
 - removing files
 - Maintenance Cleanup task
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 33ccccdfbbeb2af306f049c5d525a7d28d711dbe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 366b343450b0ceff298c7376fb1cec6bf2feb9d0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="maintenance-cleanup-task"></a>Attività Pulizia file manutenzione
+# <a name="maintenance-cleanup-task"></a>Pulizia file manutenzione - attività
   L'attività Pulizia file manutenzione consente di rimuovere i file correlati ai piani di manutenzione, inclusi i file di backup dei database e i report creati dai piani di manutenzione. Per altre informazioni, vedere [Piani di manutenzione](../../relational-databases/maintenance-plans/maintenance-plans.md) e [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  Tramite l'attività Pulizia file manutenzione un pacchetto può rimuovere dal server specificato i file di backup o i report creati dai piani di manutenzione. L'attività Pulizia file manutenzione include un'opzione che consente di rimuovere un file specifico oppure un gruppo di file in una cartella. Facoltativamente è possibile specificare l'estensione dei file da eliminare.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Attività Pulizia file manutenzione &#40;Piano di manutenzione&#41;](../../relational-databases/maintenance-plans/maintenance-cleanup-task-maintenance-plan.md)  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  Per informazioni dettagliate su come impostare queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="see-also"></a>Vedere anche  

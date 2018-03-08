@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
 - Table Hint
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SERIALIZABLE table hint
 - UPDLOCK table hint
@@ -37,16 +39,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: "174"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54104cda5736255ae1cea4205e24f7aadcc0c124
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - tabella
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +155,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Specifica che qualsiasi vista indicizzata non verrà espansa per accedere alle tabelle sottostanti quando Query Optimizer elabora la query. In Query Optimizer la vista viene gestita come una tabella con indici cluster. L'hint NOEXPAND è applicabile solo alle viste indicizzate. Per altre informazioni, vedere la sezione Osservazioni.  
   
- INDICE **(***index_value* [**,**... *n* ] ) | INDICE = ( *index_value***)**  
+ INDICE  **(* * * index_value* [**,**... *n* ] ) | INDICE = ( *index_value * * *)**  
  La sintassi INDEX() consente di specificare i nomi o gli ID di uno o più indici che devono essere usati in Query Optimizer quando viene elaborata l'istruzione. La sintassi alternativa INDEX = specifica un singolo valore di indice. È possibile specificare solo un hint per l'indice per ogni tabella.  
   
  Se esiste un indice cluster, INDEX(0) attiva un'analisi degli indici cluster, mentre INDEX(1) esegue un'analisi o una ricerca degli indici cluster. Se non esiste alcun indice cluster, INDEX(0) attiva un'analisi di tabella, mentre INDEX(1) viene interpretato come errore.  
@@ -184,11 +186,11 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Per un esempio di utilizzo di questo hint in un'istruzione INSERT ... Selezionare * FROM OPENROWSET, vedere [mantenere i valori null o utilizzo predefinito valori durante l'importazione Bulk &#40; SQL Server &#41; ](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+ FORCESEEK [**(***index_value***(* * * index_column_name* [ **,**... *n* ] **))** ]  
  Specifica che Query Optimizer deve usare solo un'operazione di ricerca nell'indice come percorso di accesso ai dati della tabella o della vista. A partire da SQL Server 2008 R2 SP1, è anche possibile specificare i parametri di indice. In questo caso, in Query Optimizer vengono considerate solo le operazioni di ricerca nell'indice specificato, utilizzando almeno le colonne dell'indice specificate.  
   
  *index_value*  
- Nome o valore ID dell'indice. Non è possibile specificare un ID di indice pari a 0 (heap). Per restituire il nome dell'indice o l'ID, eseguire una query di **Sys. Indexes** vista del catalogo.  
+ Nome o valore ID dell'indice. Non è possibile specificare un ID di indice pari a 0 (heap). Per restituire il nome dell'indice o l'ID, eseguire una query di **Sys.Indexes** vista del catalogo.  
   
  *index_column_name*  
  Nome della colonna dell'indice da includere nell'operazione di ricerca. L'utilizzo di FORCESEEK con i parametri di indice è analogo all'utilizzo di FORCESEEK con un hint INDEX. È tuttavia possibile ottenere un maggior controllo sul percorso di accesso usato da Query Optimizer specificando sia l'indice su cui eseguire la ricerca, sia le colonne dell'indice da prendere in considerazione durante l'operazione di ricerca. Se necessario, possono essere considerate ulteriori colonne. A esempio, se si specifica un indice non cluster, è possibile che in Query Optimizer vengano usate le colonne chiave dell'indice cluster oltre alle colonne specificate.  
@@ -442,7 +444,7 @@ GO
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Utilizzo di un hint di tabella come hint per la query  
  *Hint di tabella* può anche essere specificato come hint per la query utilizzando la clausola OPTION (TABLE HINT). È consigliabile utilizzare un hint di tabella come hint per la query solo nel contesto di un [Guida di piano](../../relational-databases/performance/plan-guides.md). Per le query ad hoc, specificare questi hint solo come hint di tabella. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Gli hint KEEPIDENTITY, IGNORE_CONSTRAINTS e IGNORE_TRIGGERS richiedono l'autorizzazione ALTER sulla tabella.  
   
 ## <a name="examples"></a>Esempi  
@@ -450,7 +452,7 @@ GO
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. Utilizzo dell'hint TABLOCK per specificare un metodo di blocco  
  Nell'esempio seguente viene specificata l'acquisizione di un blocco condiviso sulla tabella `Production.Product` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che viene mantenuto fino alla fine dell'istruzione UPDATE.  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -474,7 +476,7 @@ GO
   
  Nell'esempio seguente l'hint FORCESEEK viene usato con un indice affinché in Query Optimizer venga eseguita un'operazione di ricerca nell'indice e nella colonna di indice specificati.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -489,7 +491,7 @@ GO
 ### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>C. Utilizzo dell'hint FORCESCAN per specificare un'operazione di analisi dell'indice  
  Nell'esempio seguente viene utilizzato l'hint FORCESCAN per forzare l'esecuzione di un'operazione di analisi da parte di Query Optimizer nella tabella `Sales.SalesOrderDetail` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -501,7 +503,7 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
   
 ## <a name="see-also"></a>Vedere anche  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Hint per la &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Hint di query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
   
   

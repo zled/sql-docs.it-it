@@ -3,7 +3,7 @@ title: L'installazione di SSMA per Sybase Client (SybaseToSQL) | Documenti Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7fe5ff03fd5f16700480bdb11b3fd8f45a51ccc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6448e7788759a78ec41dfaeccede1d768857fda8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>L'installazione di SSMA per Sybase Client (SybaseToSQL)
 Il client SSMA è costituito da file di programma vengono utilizzati per connettersi a un server di database di Sybase Adaptive Server Enterprise (ASE) e un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure, convertire gli oggetti di database ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o sintassi di database SQL di Azure, caricare gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure, e quindi la migrazione dei dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o Azure SQLDB.  
   
 In questo argomento fornisce le istruzioni per l'installazione di SSMA prerequisiti di installazione.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 SSMA è progettato per funzionare con ASE 11.9.2 o versioni successive e tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 Prima di installare SSMA, assicurarsi che il computer soddisfi i requisiti seguenti:  

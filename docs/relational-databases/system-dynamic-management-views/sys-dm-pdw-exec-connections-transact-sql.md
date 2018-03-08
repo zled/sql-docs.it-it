@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_exec_connections (Transact-SQL) | Documenti Microsoft
+title: sys.dm_pdw_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2020dc2ccf50b9e6ed11c609f908e346c469c8d7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 201c0fe2d8396d5669f2a05ef43343522827c465
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwexecconnections-transact-sql"></a>Sys.dm_pdw_exec_connections (Transact-SQL)
+# <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Restituisce informazioni sulle connessioni stabilite per questa istanza di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e i dettagli di ogni connessione.  
@@ -33,12 +35,12 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |session_id|**int**|Identifica la sessione associata alla connessione Utilizzare `SESSION_ID()` per restituire il `session_id` della connessione corrente.|  
 |connect_time|**datetime**|Timestamp relativo al momento in cui è stata stabilita la connessione. Non ammette i valori Null.|  
-|encrypt_option|**nvarchar (40)**|Indica TRUE (connessione è crittografata) o FALSE (connessione non è enctypred).|  
-|auth_scheme|**nvarchar (40)**|Specifica lo schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticazione di Windows utilizzato con questa connessione. Non ammette i valori Null.|  
+|encrypt_option|**nvarchar(40)**|Indica TRUE (connessione è crittografata) o FALSE (connessione non è enctypred).|  
+|auth_scheme|**nvarchar(40)**|Specifica lo schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticazione di Windows utilizzato con questa connessione. Non ammette i valori Null.|  
 |client_id|**varchar(48)**|Indirizzo IP del client che si connette al server. Ammette i valori Null.|  
 |sql_spid|**int**|ID del processo server della connessione. Utilizzare `@@SPID` per restituire il `sql_spid` della connessione corrente. Per più illustrativi, utilizzare il `session_id` invece.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede **VIEW SERVER STATE** autorizzazione nel server.  
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  

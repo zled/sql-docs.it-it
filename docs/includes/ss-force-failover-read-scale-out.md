@@ -1,6 +1,22 @@
-Ogni gruppo di disponibilità include solo una replica primaria, che consente operazioni di lettura e scrittura. Per modificare la replica primaria, è possibile eseguire il failover. In un gruppo di disponibilità per disponibilità elevata, il processo di failover è automatizzato da Gestione cluster. In un gruppo di disponibilità con scalabilità in lettura, il processo di failover è invece manuale. 
+---
+title: "SQL Server forzare il failover per il gruppo di disponibilità"
+description: "Forzare il failover per il gruppo di disponibilità con cluster di tipo NONE"
+services: 
+author: MikeRayMSFT
+ms.service: 
+ms.topic: include
+ms.date: 02/05/2018
+ms.author: mikeray
+ms.custom: include file
+ms.openlocfilehash: 10a2af2cb5bc9e98605a3ee988439e3c3be60c1e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/09/2018
+---
+Ogni gruppo di disponibilità è solo una replica primaria. consente operazioni di lettura e scrittura. Per modificare la replica primaria, è possibile eseguire il failover. In un gruppo di disponibilità per la disponibilità elevata, la gestione di cluster consente di automatizzare il processo di failover. In un gruppo di disponibilità con il tipo di cluster NONE, il processo di failover è manuale. 
 
-Esistono due modi per eseguire il failover la replica primaria in un gruppo di disponibilità a livello di lettura:
+Esistono due modi per eseguire il failover la replica primaria in un gruppo di disponibilità con il tipo di cluster NONE:
 
 - Failover manuale forzato con perdita di dati
 - Failover manuale senza perdita di dati
@@ -25,7 +41,7 @@ Per eseguire manualmente il failover senza perdita di dati:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        MODIFY REPLICA ON N'**<node2>*' 
+        MODIFY REPLICA ON N'<node2>' 
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
@@ -69,4 +85,4 @@ Per eseguire manualmente il failover senza perdita di dati:
    ```  
 
    > [!NOTE] 
-   > Per eliminare un gruppo di disponibilità, utilizzare [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Per un gruppo di disponibilità creato con CLUSTER_TYPE NONE o esterno, il comando deve essere eseguito in tutte le repliche che fanno parte del gruppo di disponibilità.
+   > Per eliminare un gruppo di disponibilità, utilizzare [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Per un gruppo di disponibilità creato con cluster digitare nessuno o esterno, il comando deve essere eseguito su tutte le repliche che fanno parte del gruppo di disponibilità.

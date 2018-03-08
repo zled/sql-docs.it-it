@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b92f8a42033da33b867393b67b26efaaaf9899af
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c2b77e6760178fd0c1073a9a6cd9ef9e7b0d1034
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Raccolte predefinite nelle espressioni (Generatore report e SSRS)
   Nell'espressione di un report è possibile includere riferimenti alle raccolte predefinite seguenti: ReportItems, Parameters, Fields, DataSets, DataSources, Variables e a campi predefiniti per informazioni generali quali il nome del report. Nella finestra di dialogo **Espressione** non vengono visualizzate tutte le raccolte. Le raccolte DataSets e DataSources sono disponibili solo in fase di progettazione per i report pubblicati in un server di report. ReportItems è una raccolta di caselle di testo in un'area del report, ad esempio le caselle di testo visualizzate in una pagina o in un'intestazione.  

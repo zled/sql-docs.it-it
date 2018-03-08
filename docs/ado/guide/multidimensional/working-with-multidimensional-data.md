@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: multidimensional data [ADO]
+helpviewer_keywords:
+- multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94d94d4f0b7b466f51228a5d072077f0a1564f3e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c96d7fda2e02aeefa6225f1cea602f6ed6c7dc2e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-multidimensional-data"></a>Utilizzo di dati multidimensionali
 Oggetto *set di celle* è il risultato di una query sui dati multidimensionali. È costituito da una raccolta di assi, in genere non più di quattro assi e in genere solo due o tre. Un *asse* è una raccolta di membri di uno o più dimensioni, che viene utilizzata per individuare o filtrare valori specifici in un cubo.  
@@ -35,7 +37,7 @@ Oggetto *set di celle* è il risultato di una query sui dati multidimensionali. 
   
  Ad esempio, un cubo include le seguenti sei dimensioni (si noti che questo schema cubo differisce leggermente dall'esempio riportato [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
   
--   Venditore  
+-   Salesperson  
   
 -   Geography (gerarchia naturale): continenti, paesi, stati e così via  
   

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - dimension intelligence [Analysis Services]
 - Type property
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4109707f30b6569c9d67bf6259e61958ff1a6251
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 86c5f345dc963667ea5b05177e84517609f7e5a7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>Creazione guidata BI - aggiungere funzionalità di Business Intelligence a una dimensione
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Aggiungere la funzionalità di business intelligence di dimensione a un cubo o una dimensione consente di specificare un tipo aziendale standard per una dimensione. Queste funzionalità avanzate specificano inoltre i tipi corrispondenti per gli attributi dimensione. Queste specifiche del tipo possono essere utilizzate dalle applicazioni client per l'analisi dei dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'aggiunta delle funzionalità avanzate di Business Intelligence per le dimensioni a un cubo o una dimensione consente di specificare un tipo di attività standard per una dimensione. Queste funzionalità avanzate specificano inoltre i tipi corrispondenti per gli attributi dimensione. Queste specifiche del tipo possono essere utilizzate dalle applicazioni client per l'analisi dei dati.  
   
  Per aggiungere funzionalità di Business Intelligence per le dimensioni, usare Configurazione guidata funzionalità di Business Intelligence e quindi selezionare l'opzione **Definizione funzionalità di Business Intelligence per le dimensioni** nella pagina **Scelta funzionalità avanzata** . Questa procedura guidata consente di eseguire in modo semplificato i passaggi relativi alla selezione di una dimensione alla quale si desidera applicare la funzionalità di Business Intelligence per le dimensioni e all'identificazione degli attributi per la dimensione selezionata.  
   
@@ -50,6 +48,6 @@ ms.lasthandoff: 12/08/2017
  Si supponga, ad esempio, di voler aggiungere la funzionalità di Business Intelligence per le dimensioni a una dimensione di tipo Conti. In **Tipo dimensione**selezionare **Conti**. Se la dimensione dispone degli attributi **Account Type** e **Account Description** , nella colonna **Includi** selezionare la casella di controllo per i tipi di conto **Account Name** e **Account Type** . Nella colonna **Attributo dimensione** associare questi tipi di conto rispettivamente agli attributi **Account Description** e **Account Type** nella dimensione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definire calcoli delle funzionalità di Business Intelligence per le gerarchie temporali mediante la Configurazione guidata funzionalità di Business Intelligence](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
+ [Definire i calcoli di Intelligence temporali mediante la procedura guidata di Business Intelligence](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   

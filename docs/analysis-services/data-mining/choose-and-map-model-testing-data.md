@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - input column mapping [Analysis Services]
 - mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 591da6613982e9c7539b26257c6f78265343220e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 82d6368aa699b537c2fee81c3d054e6c3546797b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choose-and-map-model-testing-data"></a>Scegliere ed eseguire il mapping dei dati di test del modello
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Per creare un grafico di accuratezza in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario scegliere i dati che verranno utilizzati per testare il modello ed eseguire il mapping dei dati del modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Per creare un grafico di accuratezza in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario scegliere i dati che verranno utilizzati per il test del modello ed eseguire il mapping dei dati al modello.  
   
  Per impostazione predefinita, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verranno utilizzati i dati di test del modello di data mining, a condizione che sia stato creato un set di dati di controllo al momento della compilazione della struttura di data mining. La creazione di un set di test di controllo rappresenta il modo più semplice per testare i modelli basati sulla stessa struttura di data mining perché i nomi delle colonne e i tipi di dati corrisponderanno sempre al modello e si può essere ragionevolmente certi che la distribuzione dei dati sia simile. Nella finestra di progettazione verranno inoltre create automaticamente le relazioni tra le colonne di input e le colonne del modello.  
   
@@ -128,6 +127,6 @@ ms.lasthandoff: 12/08/2017
      I nuovi mapping delle colonna verranno visualizzati nella finestra di dialogo **Specifica mapping colonne** . È possibile rimuovere un mapping selezionando la linea tra le colonne e premendo CANC. È possibile creare una nuova connessione selezionando una colonna nella tabella **Struttura di data mining** , quindi trascinandola nella colonna corrispondente della tabella **Seleziona tabelle di input** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure di test e convalida &#40;data mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Test e convalida le attività e procedure relative alla &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

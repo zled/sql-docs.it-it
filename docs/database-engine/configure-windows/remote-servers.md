@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4c4d0ac2fa7d02ed8b0e75a1f0ab6347b1e5506a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c3d9efd513db58e6c0e28060be339ee71ed1e2bd
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="remote-servers"></a>Server remoti
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] I server remoti sono supportati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esclusivamente per compatibilità con le versioni precedenti. È opportuno impostare le nuove applicazioni in modo che utilizzino i server collegati. Per altre informazioni, vedere [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+I server remoti sono supportati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esclusivamente per compatibilità con le versioni precedenti. È opportuno impostare le nuove applicazioni in modo che utilizzino i server collegati. Per altre informazioni, vedere [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Tramite la configurazione con server remoto, un client connesso a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può eseguire una stored procedure su un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza stabilire un'ulteriore connessione. Il server al quale il client è connesso accetta la richiesta e la inoltra al server remoto per conto del client. Il server remoto elabora la richiesta e restituisce i risultati al server di origine, che a sua volta li passa al client. Quando si imposta la configurazione con server remoto è bene prestare attenzione alla modalità di impostazione della sicurezza.  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 11/20/2017
 >  Se possibile, usare l'autenticazione di Windows.  
   
 ### <a name="remote-server-security-example"></a>Esempio di sicurezza del server remoto  
- Considerare queste installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** viene configurata per eseguire il mapping di un account di accesso in ingresso da **serverSend**, denominato **Sales_Mary**, a un account di accesso autenticato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **serverReceive**, denominato **Alice**. Viene eseguito il mapping di un altro account di accesso in ingresso da **serverSend**, denominato **Joe**, a un account di accesso autenticato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **serverReceive***,* denominato **Joe**.  
+ Considerare queste installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** viene configurata per eseguire il mapping di un account di accesso in ingresso da **serverSend**, denominato **Sales_Mary**, a un account di accesso autenticato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **serverReceive**, denominato **Alice**. Viene eseguito il mapping di un altro account di accesso in ingresso da **serverSend**, denominato **Joe**, a un account di accesso autenticato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **serverReceive***,* denominato **Joe**.  
   
  Il codice di esempio di Transact-SQL seguente configura `serverSend` per l'esecuzione di RPC su `serverReceive`.  
   
@@ -101,7 +103,7 @@ GO
 ## <a name="viewing-local-or-remote-server-properties"></a>Visualizzazione delle proprietà dei server locali o remoti  
  Per esaminare gli attributi per i server locali o remoti, è possibile usare la stored procedure estesa **xp_msver** . Tali attributi includono il numero di versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il tipo e il numero di processori nel computer e la versione del sistema operativo. Dal server locale è possibile visualizzare database, file, account di accesso e strumenti di un server remoto. Per altre informazioni, vedere [xp_msver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  

@@ -1,5 +1,5 @@
 ---
-title: Sys. DATABASE_MIRRORING (Transact-SQL) | Documenti Microsoft
+title: sys.database_mirroring (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - database_mirroring
 - sys.database_mirroring_TSQL
 - database_mirroring_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.database_mirroring catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.database_mirroring catalog view
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
-caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 11de321255637eb43aa0c074ba940b4c2e019ae7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c17cf0f7b1ad2a5fd45dcd356546f5e91c4b610b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +55,9 @@ ms.lasthandoff: 11/17/2017
 |**mirroring_safety_level**|**tinyint**|Impostazione di protezione per gli aggiornamenti nel database mirror:<br /><br /> 0 = Stato sconosciuto<br /><br /> 1 = Disattivata [asincrona]<br /><br /> 2 = Completa [sincrona]<br /><br /> NULL = Database inaccessibile o non sottoposto a mirroring.|  
 |**mirroring_safety_level_desc**|**nvarchar(60)**|Impostazione di sicurezza delle transazioni per gli aggiornamenti nel database mirror. I possibili valori sono i seguenti:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL|  
 |**mirroring_safety_sequence**|**int**|Aggiorna il numero di sequenza per le modifiche apportate al livello di sicurezza delle transazioni.<br /><br /> NULL = Database inaccessibile o non sottoposto a mirroring.|  
-|**MIRRORING_PARTNER_NAME**|**nvarchar (128)**|Nome server del partner di mirroring di database.<br /><br /> NULL = Database inaccessibile o non sottoposto a mirroring.|  
-|**mirroring_partner_instance**|**nvarchar (128)**|Nome dell'istanza e nome del computer per l'altro partner. I client utilizzano queste informazioni per connettersi al partner se questo diventa il server principale.<br /><br /> NULL = Database inaccessibile o non sottoposto a mirroring.|  
-|**mirroring_witness_name**|**nvarchar (128)**|Nome del server di controllo del mirroring.<br /><br /> NULL = Non esiste alcun server di controllo.|  
+|**mirroring_partner_name**|**nvarchar(128)**|Nome server del partner di mirroring di database.<br /><br /> NULL = Database inaccessibile o non sottoposto a mirroring.|  
+|**mirroring_partner_instance**|**nvarchar(128)**|Nome dell'istanza e nome del computer per l'altro partner. I client utilizzano queste informazioni per connettersi al partner se questo diventa il server principale.<br /><br /> NULL = Database inaccessibile o non sottoposto a mirroring.|  
+|**mirroring_witness_name**|**nvarchar(128)**|Nome del server di controllo del mirroring.<br /><br /> NULL = Non esiste alcun server di controllo.|  
 |mirroring_witness_state|**tinyint**|Stato del server di controllo del mirroring nella sessione di mirroring del database. I possibili valori sono i seguenti:<br /><br /> 0 = Sconosciuto<br /><br /> 1 = Connesso<br /><br /> 2 = Disconnesso<br /><br /> NULL = Non esiste alcun server di controllo del mirroring, il database non è online oppure il database non è sottoposto a mirroring.|  
 |**mirroring_witness_state_desc**|**nvarchar(60)**|Descrizione dello stato. I possibili valori sono i seguenti:<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL|  
 |**mirroring_failover_lsn**|**Numeric(25,0)**|Numero di sequenza del file di log (LSN) del record del log delle transazioni più recente di cui è certo il salvataggio sul disco per entrambi i partner. Dopo un failover, il **mirroring_failover_lsn** utilizzato dai partner come punto di riconciliazione in corrispondenza del quale il nuovo server mirror inizia la sincronizzazione del nuovo database mirror con il nuovo database principale.|  
@@ -64,13 +67,13 @@ ms.lasthandoff: 11/17/2017
 |**mirroring_end_of_log_lsn**|**Numeric(25,0)**|La fine del log locale è stata scaricata sul disco. Ciò è paragonabile al valore LSN dal server mirror (vedere il **mirroring_failover_lsn** colonna).|  
 |**mirroring_replication_lsn**|**Numeric(25,0)**|Il valore LSN massimo che la replica può inviare.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [database_mirroring_witnesses &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+ [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [Viste del catalogo di database e file &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query nel catalogo di sistema di SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

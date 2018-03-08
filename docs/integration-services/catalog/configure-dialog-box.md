@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 - sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dc0130006a3e8d588776fbe48e5e05572704449
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: 77e862cd82fb7eb8afc294871bfcff50e9b49dd1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configure-dialog-box"></a>Finestra di dialogo Configura
   Utilizzare la finestra di dialogo **Configura** per configurare i parametri, le gestioni connessioni e i riferimenti agli ambienti per pacchetti e progetti.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 12/12/2017
  **Nome proprietà**  
  Viene elencato il nome della proprietà della gestione connessione.  
   
- **Valore**  
+ **Value**  
  Viene elencato il valore assegnato alla proprietà della gestione connessione. Fare clic sul pulsante con i puntini di sospensione per modificare il valore nella finestra di dialogo **Imposta valore parametro** . È possibile immettere un valore letterale, eseguire il mapping di una variabile di ambiente contenente il valore da utilizzare oppure utilizzare il valore predefinito dal pacchetto.  
   
 ##  <a name="references"></a> Impostare le opzioni nella pagina Riferimenti  
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/12/2017
  **Cartella ambiente**  
  Elenca la cartella in cui è contenuto l'ambiente.  
   
- **Apertura**  
+ **Aprire**  
  Fare clic per aprire la finestra di dialogo **Proprietà ambiente** .  
   
  **Aggiungi**  

@@ -5,28 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba4efe6772c6fcc668d6ce808a6c928a3af63101
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-mining-projects"></a>Progetti di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un progetto di data mining fa parte di un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] soluzione. Durante il processo di progettazione, gli oggetti creati nel progetto sono disponibili per l'esecuzione di test e query come parte di un database dell'area di lavoro. Per consentire agli utenti di eseguire query o esplorare gli oggetti nel progetto, è necessario distribuire il progetto in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità multidimensionale.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un progetto di data mining è parte di una soluzione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante il processo di progettazione, gli oggetti creati nel progetto sono disponibili per l'esecuzione di test e query come parte di un database dell'area di lavoro. Per consentire agli utenti di eseguire query o esplorare gli oggetti nel progetto, è necessario distribuire il progetto in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità multidimensionale.  
   
  In questo argomento vengono fornite informazioni di base necessarie per comprendere e creare i progetti di data mining.  
   
@@ -215,17 +214,17 @@ ms.lasthandoff: 12/08/2017
   
 |Attività|Argomento|  
 |-----------|------------|  
-|Viene descritto come utilizzare colonne della struttura di data mining|[Creare una struttura di data mining relazionale](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
-|Vengono fornite ulteriori informazioni sull'aggiunta di nuovi modelli di data mining e sull'elaborazione di una struttura e dei relativi modelli|[Aggiungere modelli di data mining a una struttura &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
-|Vengono forniti collegamenti a risorse utili per personalizzare gli algoritmi per la compilazione di modelli di data mining|[Personalizzare struttura e modelli di data mining](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
-|Vengono forniti collegamenti alle informazioni su ciascuno dei visualizzatori dei modelli di data mining|[Visualizzatori modello di data mining](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
-|Vengono fornite informazioni sulla creazione di un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione o sul test di una struttura di data mining|[Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
-|Vengono fornite informazioni sulle opzioni di elaborazione e sulle autorizzazioni|[Elaborazione di oggetti di data mining](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Vengono fornite ulteriori informazioni su Analysis Services|[Database di modelli multidimensionali &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Viene descritto come utilizzare colonne della struttura di data mining|[Creare una struttura di Data Mining relazionale](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
+|Vengono fornite ulteriori informazioni sull'aggiunta di nuovi modelli di data mining e sull'elaborazione di una struttura e dei relativi modelli|[Aggiungere modelli di Data Mining a una struttura &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Vengono forniti collegamenti a risorse utili per personalizzare gli algoritmi per la compilazione di modelli di data mining|[Personalizzare struttura e modelli di Data Mining](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
+|Vengono forniti collegamenti alle informazioni su ciascuno dei visualizzatori dei modelli di data mining|[Visualizzatori modello di Data Mining](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
+|Vengono fornite informazioni sulla creazione di un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione o sul test di una struttura di data mining|[Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|Vengono fornite informazioni sulle opzioni di elaborazione e sulle autorizzazioni|[L'elaborazione di oggetti di Data Mining](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
+|Vengono fornite ulteriori informazioni su Analysis Services|[Database modello multidimensionale ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   
- [Creazione di modelli multidimensionali tramite SQL Server Data Tools &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Database dell'area di lavoro &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [Progettazione di Data Mining](../../analysis-services/data-mining/data-mining-designer.md)   
+ [Creazione di modelli multidimensionali tramite SQL Server Data Tools &#40; SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Database dell'area di lavoro](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

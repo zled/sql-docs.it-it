@@ -1,32 +1,35 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 01/19/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_WORKLOAD_GROUP_TSQL
 - ALTER WORKLOAD GROUP
-dev_langs: TSQL
-helpviewer_keywords: ALTER WORKLOAD GROUP statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bfb6ca0200095860acec2b275020012e4b96284
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +41,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -57,32 +59,30 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Nome di un gruppo di carico di lavoro esistente definito dall'utente o del gruppo di carico di lavoro predefinito di Resource Governor.  
   
 > [!NOTE]  
->  Resource Governor crea i gruppi "predefiniti" e interni all'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Resource Governor crea i gruppi "predefiniti" e interni all'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Se utilizzata con ALTER WORKLOAD GROUP, l'opzione "default" deve essere delimitata da virgolette ("") o parentesi quadrate ([]) per evitare conflitti con DEFAULT, una parola riservata di sistema. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  Per i gruppi del carico di lavoro e pool di risorse predefiniti vengono utilizzati sempre nomi scritti in lettere minuscole, ad esempio "default". Questo aspetto deve essere preso in considerazione per i server in cui vengono utilizzate regole di confronto con distinzione tra maiuscole e minuscole. In server con regole di confronto senza distinzione tra maiuscole e minuscole, ad esempio SQL_Latin1_General_CP1_CI_AS, le parole "default" e "Default" vengono considerate uguali.  
+> Per i gruppi del carico di lavoro e pool di risorse predefiniti vengono utilizzati sempre nomi scritti in lettere minuscole, ad esempio "default". Questo aspetto deve essere preso in considerazione per i server in cui vengono utilizzate regole di confronto con distinzione tra maiuscole e minuscole. In server con regole di confronto senza distinzione tra maiuscole e minuscole, ad esempio SQL_Latin1_General_CP1_CI_AS, le parole "default" e "Default" vengono considerate uguali.  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  Specifica l'importanza relativa di una richiesta nel gruppo del carico di lavoro. I possibili valori di importanza sono i seguenti:  
   
 -   LOW  
-  
 -   MEDIUM (valore predefinito)  
-  
 -   HIGH  
   
 > [!NOTE]  
->  Internamente, ogni impostazione dell'importanza viene memorizzata come un numero utilizzato per i calcoli.  
+> Internamente, ogni impostazione dell'importanza viene memorizzata come un numero utilizzato per i calcoli.  
   
  IMPORTANCE è locale al pool di risorse. I gruppi di carico di lavoro con diversa importanza e interni allo stesso pool di risorse influiscono l'uno sull'altro, ma non sui gruppi di carico di lavoro in un altro pool di risorse.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*valore*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  Specifica la quantità massima di memoria che una singola richiesta può accettare dal pool. La percentuale è relativa alla dimensioni del pool di risorse specificata da MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
->  La quantità specificata si riferisce solo alla memoria di concessione per l'esecuzione della query.  
+> La quantità specificata si riferisce solo alla memoria di concessione per l'esecuzione della query.  
   
  *valore* deve essere 0 o un numero intero positivo. L'intervallo consentito per *valore* è compreso tra 0 e 100. L'impostazione predefinita per *valore* è 25.  
   
@@ -101,13 +101,16 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  In entrambi i casi, è possibile che si verifichi l'errore di timeout 8645 se il server non dispone di memoria fisica sufficiente.  
   
- REQUEST_MAX_CPU_TIME_SEC =*valore*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Viene specificato il tempo massimo della CPU, in secondi, utilizzabile da una richiesta. *valore* deve essere 0 o un numero intero positivo. L'impostazione predefinita per *valore* è 0, ovvero un tempo illimitato.  
   
 > [!NOTE]  
->  Resource Governor non impedirà la continuazione di una richiesta se viene superato il tempo massimo, ma verrà generato un evento. Per ulteriori informazioni, vedere [CPU soglia di questa classe di evento](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> Per impostazione predefinita, Resource Governor non impedirà una richiesta di continuare se viene superato il tempo massimo. ma verrà generato un evento. Per ulteriori informazioni, vedere [CPU soglia di questa classe di evento](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+
+> [!IMPORTANT]
+> A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e l'utilizzo di [2422 flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor verrà interrotta una richiesta quando viene superato il tempo massimo.
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*valore*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Specifica il tempo massimo, in secondi, che una query può attendere prima che una concessione di memoria (memoria buffer di lavoro) diventi disponibile.  
   
 > [!NOTE]  
@@ -115,7 +118,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *valore* deve essere un numero intero positivo. L'impostazione predefinita per *valore*, 0, utilizza un calcolo interno basato sul costo della query per determinare il tempo massimo.  
   
- MAX_DOP =*valore*  
+ MAX_DOP =*value*  
  Viene specificato il grado massimo di parallelismo (DOP) per le richieste parallele. *valore* deve essere 0 o un intero positivo, da 1 a 255. Quando *valore* è 0, il server sceglie il grado massimo di parallelismo. Si tratta dell'impostazione predefinita e consigliata.  
   
 > [!NOTE]  
@@ -136,7 +139,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Dopo la configurazione di DOP, è possibile diminuire solo la richiesta di memoria concessa. La riconfigurazione del gruppo di carico di lavoro non è visibile durante l'attesa nella coda della memoria concessa.  
   
- GROUP_MAX_REQUESTS =*valore*  
+ GROUP_MAX_REQUESTS =*value*  
  Viene specificato il numero massimo di richieste simultanee eseguibili nel gruppo del carico di lavoro. *valore* deve essere 0 o un numero intero positivo. L'impostazione predefinita per *valore*, 0 consente richieste illimitate. Quando viene raggiunto il numero massimo di richieste simultanee, un utente in quel gruppo può effettuare l'accesso, ma viene posizionato in uno stato di attesa fino a quando le richieste simultanee non sono inferiori al valore specificato.  
   
  Utilizzare { *pool_name* | "**predefinito**"}  
@@ -167,7 +170,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  La quantità di memoria utilizzata per la creazione dell'indice in una tabella partizionata non allineata è proporzionale al numero di partizioni coinvolte.  Se la memoria totale necessaria supera il limite per query (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposto dal gruppo di carico di lavoro di Resource Governor, la creazione dell'indice potrebbe non riuscire. Poiché il gruppo di carico di lavoro "default" consente a una query di superare il limite per query con la memoria minima necessaria per la compatibilità con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l'utente potrebbe essere in grado di eseguire la stessa creazione dell'indice in un gruppo di carico di lavoro "default", se nel pool di risorse "default" è configurata una quantità di memoria totale sufficiente per eseguire la query.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  

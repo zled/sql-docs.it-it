@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 772e17a6f5b444b6d75719896bed74e3cd13ab67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 206337e355352ce6b1f1a13cd36f90f18937de91
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilità per tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/17/2017
  Non tutte le coppie di file di checkpoint con spazio disponibile sono qualificate per l'unione. Ad esempio, se due coppie di file di checkpoint adiacenti sono piene al 60%, non si qualificano per l'unione e ciascuna coppia di file di checkpoint rimane con il 40% dello spazio di archiviazione inutilizzato. Nel peggiore dei casi, tutte le coppie di file di checkpoint saranno piene al 50%, con un utilizzo dello spazio di archiviazione solo del 50%. Mentre le righe eliminate possono essere presenti nello spazio di archiviazione perché le coppie di file di checkpoint non si qualificano per l'unione, le righe eliminate possono essere già state rimosse dalla memoria dal processo di Garbage Collection in memoria. La gestione dello spazio di archiviazione e della memoria è indipendente da Garbage Collection. Lo spazio di archiviazione utilizzato da coppie di file di checkpoint attive (non tutte le coppie di file di checkpoint vengono aggiornate) può essere fino a due volte maggiore delle dimensioni delle tabelle durevoli in memoria.  
   
 ### <a name="life-cycle-of-a-cfp"></a>Ciclo di vita di una coppia di file di checkpoint  
- Le coppie di file di checkpoint attraversano sette stati prima di poter essere deallocate. I checkpoint del database e i backup del log devono essere eseguiti per la transizione dei file attraverso le fasi e infine per pulire i file che non sono più necessari. Per una descrizione di queste fasi, vedere [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  
+ Le coppie di file di checkpoint attraversano diversi stati prima di poter essere deallocate. I checkpoint del database e i backup del log devono essere eseguiti per la transizione dei file attraverso le fasi e infine per pulire i file che non sono più necessari. Per una descrizione di queste fasi, vedere [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  
   
  È possibile forzare manualmente il checkpoint seguito dal backup del log per velocizzare l'operazione di garbage collection. Negli scenari di produzione, i checkpoint e i backup del log automatici eseguiti come parte della strategia di backup effettuano la transazione delle coppie di file di checkpoint attraverso queste fasi senza richiedere alcun intervento manuale. La conseguenza del processo di Garbage Collection è il fatto che i database con tabelle ottimizzate per la memoria possono avere dimensioni di archiviazione maggiori rispetto alle dimensioni in memoria. Se i checkpoint e i backup del log non vengono eseguiti, il footprint su disco dei file del checkpoint continua a crescere.  
   

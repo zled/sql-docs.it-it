@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb3d3f706bba3e6c0c6cbf88b5c2145e73fdaaeb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 593931ad7aa343229cfac934cd2ce2648bdddb99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,17 +31,17 @@ ms.lasthandoff: 11/20/2017
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|Context_id|bigint|ID univoco per il contesto dell'errore.|  
-|Event_message_id|bigint|ID univoco per il messaggio a cui è correlato il contesto.|  
-|Context_depth|int|Con l'aumentare della profondità, il contesto è più lontano dall'errore. Quando si verifica un errore, la profondità del contesto parte da 1. Il valore 0 indica lo stato del pacchetto prima dell'avvio dell'esecuzione.|  
+|Context_id|BIGINT|ID univoco per il contesto dell'errore.|  
+|Event_message_id|BIGINT|ID univoco per il messaggio a cui è correlato il contesto.|  
+|Context_depth|INT|Con l'aumentare della profondità, il contesto è più lontano dall'errore. Quando si verifica un errore, la profondità del contesto parte da 1. Il valore 0 indica lo stato del pacchetto prima dell'avvio dell'esecuzione.|  
 |Package_path|Nvarchar(max)|Percorso del pacchetto per l'origine del contesto.|  
-|Context_type|smallint|Tipo dell'oggetto che rappresenta l'origine del contesto. Per un elenco di tipi di contesto, vedere la sezione **Osservazioni**.|  
+|Context_type|SMALLINT|Tipo dell'oggetto che rappresenta l'origine del contesto. Per un elenco di tipi di contesto, vedere la sezione **Osservazioni**.|  
 |Context_source_name|Nvarchar(4000)|Nome dell'oggetto che rappresenta l'origine del contesto.|  
 |Context_source_id|Nvarchar(38)|ID univoco dell'oggetto che rappresenta l'origine del contesto.|  
 |Property_name|Nvarchar(4000)|Nome della proprietà associata all'origine del contesto.|  
 |Property_value|Sql_variant|Valore della proprietà associata all'origine del contesto.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Nella tabella seguente sono elencati i tipi di contesto.  
   
 ||||  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 |70|Variabile|Valore di variabile|  
 |80|Gestione connessione|Proprietà di una gestione connessione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa vista è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazione READ per l'operazione  

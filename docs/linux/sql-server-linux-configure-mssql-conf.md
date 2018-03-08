@@ -1,40 +1,44 @@
 ---
 title: Configurare le impostazioni di SQL Server in Linux | Documenti Microsoft
-description: In questo argomento viene descritto come utilizzare lo strumento mssql conf per configurare le impostazioni di SQL Server 2017 in Linux.
+description: In questo articolo viene descritto come utilizzare lo strumento mssql conf per configurare le impostazioni di SQL Server 2017 in Linux.
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 09/20/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 9aca5fe7905f06269bd07b7946c3bb6ef4e37492
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql conf
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 **MSSQL-conf** è uno script di configurazione installato con SQL Server 2017 per Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Ubuntu. È possibile utilizzare questa utilità per impostare i parametri seguenti:
 
 |||
 |---|---|
+| [Agente](#agent) | Abilitare SQL Server Agent |
 | [Confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
 | [Suggerimenti dei clienti](#customerfeedback) | Scegliere se SQL Server Invia commenti e suggerimenti a Microsoft. |
 | [Profilo di Posta elettronica database](#dbmail) | Impostare il profilo di posta elettronica database predefinito per SQL Server in Linux |
 | [Directory predefinita dei dati](#datadir) | Modificare la directory predefinita per i nuovi file di dati SQL Server database (con estensione mdf). |
 | [Directory predefinita log](#datadir) | Modifica la directory predefinita per i nuovi file di log (ldf) di database di SQL Server. |
+| [Directory predefinita dei file del database master](#masterdatabasedir) | Modifica la directory predefinita dei file di database master nell'installazione esistente di SQL.|
+| [Nome di file predefinito del database master](#masterdatabasename) | Modifica il nome del file di database master. |
 | [Directory dump predefinita](#dumpdir) | Modificare la directory predefinita per nuovi dump della memoria e altri file di risoluzione dei problemi. |
+| [Directory log di errore predefinita](#errorlogdir) | Modifica la directory predefinita per i nuovi file di log degli errori di SQL Server, la traccia predefinita Profiler, XE sessione di integrità di sistema e XE sessione Hekaton. |
 | [Directory di backup predefinita](#backupdir) | Modificare la directory predefinita per i nuovi file di backup. |
 | [Tipo di immagine](#coredump) | Scegliere il tipo di file per raccogliere dump della memoria dump. |
 | [Disponibilità elevata](#hadr) | Abilitare gruppi di disponibilità. |
@@ -56,7 +60,25 @@ ms.lasthandoff: 12/01/2017
 
 * Questi esempi Esegui mssql-conf per specificare il percorso completo: **/opt/mssql/bin/mssql-conf**. Se si sceglie di passare a tale percorso, invece, è possibile eseguire mssql conf nel contesto della directory corrente: **. / mssql conf**.
 
-## <a id="collation"></a>Modificare le regole di confronto di SQL Server
+## <a id="agent"></a> Abilitare SQL Server Agent
+
+Il **sqlagent.enabled** l'impostazione consente [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). Per impostazione predefinita, SQL Server Agent è disabilitato.
+
+Per modificare questa impostazione, utilizzare la procedura seguente:
+
+1. Abilitare l'agente SQL Server:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+   ```
+
+1. Riavviare il servizio SQL Server:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+## <a id="collation"></a> Modificare le regole di confronto di SQL Server
 
 Il **set di regole di confronto** opzione consente di modificare il valore delle regole di confronto per le regole di confronto supportate.
 
@@ -76,7 +98,7 @@ Il **set di regole di confronto** opzione consente di modificare il valore delle
 
 Per un elenco di regole di confronto supportate, eseguire il [fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) funzione: `SELECT Name from sys.fn_helpcollations()`.
 
-## <a id="customerfeedback"></a>Configurare i suggerimenti dei clienti
+## <a id="customerfeedback"></a> Configurare i suggerimenti dei clienti
 
 Il **telemetry.customerfeedback** modifiche alle impostazioni, se SQL Server Invia commenti e suggerimenti a Microsoft o non. Per impostazione predefinita, questo valore è impostato su **true**. Per modificare il valore, eseguire i comandi seguenti:
 
@@ -94,7 +116,7 @@ Il **telemetry.customerfeedback** modifiche alle impostazioni, se SQL Server Inv
 
 Per ulteriori informazioni, vedere [i suggerimenti dei clienti per SQL Server in Linux](sql-server-linux-customer-feedback.md).
 
-## <a id="datadir"></a>Modificare il percorso della directory predefinita dati o di log
+## <a id="datadir"></a> Modificare il percorso della directory predefinita dati o di log
 
 Il **filelocation.defaultdatadir** e **filelocation.defaultlogdir** le impostazioni di modificare il percorso in cui vengono creati i nuovi file di database e di log. Per impostazione predefinita, questo percorso è /var/opt/mssql/data. Per modificare queste impostazioni, utilizzare la procedura seguente:
 
@@ -131,7 +153,89 @@ Il **filelocation.defaultdatadir** e **filelocation.defaultlogdir** le impostazi
 
 1. Questo comando si presuppone inoltre che esista una directory di log/tmp e che sia in cui l'utente e gruppo **mssql**.
 
-## <a id="dumpdir"></a>Modificare il percorso di directory dump predefinito
+
+## <a id="masterdatabasedir"></a> Modificare il percorso di directory file di database master predefinito
+
+Il **filelocation.masterdatafile** e **filelocation.masterlogfile** impostazione modifiche della posizione in cui il motore di SQL Server cerca i file di database master. Per impostazione predefinita, questo percorso è /var/opt/mssql/data. 
+
+Per modificare queste impostazioni, utilizzare la procedura seguente:
+
+1. Creare la directory di destinazione per i nuovi file di log di errore. L'esempio seguente crea un nuovo **/tmp/masterdatabasedir** directory:
+
+   ```bash
+   sudo mkdir /tmp/masterdatabasedir
+   ```
+
+1. Modificare il proprietario e il gruppo della directory in cui il **mssql** utente:
+
+   ```bash
+   sudo chown mssql /tmp/masterdatabasedir
+   sudo chgrp mssql /tmp/masterdatabasedir
+   ```
+
+1. Consente di modificare la directory del database master predefinita per i file di log e dati master con mssql conf il **impostare** comando:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
+   ```
+
+1. Arrestare il servizio SQL Server:
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Spostare i file master.mdf e masterlog.ldf: 
+
+   ```bash
+   sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
+   sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
+   ```
+
+1. Avviare il servizio SQL Server:
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+   
+> [!NOTE]
+> Se SQL Server non è possibile trovare i file master.mdf e mastlog.ldf nella directory specificata, verrà creata automaticamente una copia dei database di sistema basato su modelli nella directory specificata e SQL Server verrà avviato correttamente. Tuttavia, i metadati, ad esempio i database utente, account di accesso server, i certificati del server, le chiavi di crittografia, processi di SQL agent o vecchia password di account di accesso SA non essere aggiornati nel nuovo database master. È necessario arrestare SQL Server e spostare il vecchio file master.mdf e mastlog.ldf nel nuovo percorso specificato e l'avvio di SQL Server per continuare a utilizzare i metadati esistenti. 
+
+
+## <a id="masterdatabasename"></a> Modificare il nome del file di database master.
+
+Il **filelocation.masterdatafile** e **filelocation.masterlogfile** impostazione modifiche della posizione in cui il motore di SQL Server cerca i file di database master. Per impostazione predefinita, questo percorso è /var/opt/mssql/data. Per modificare queste impostazioni, utilizzare la procedura seguente:
+
+1. Arrestare il servizio SQL Server:
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Consente di modificare i nomi di database master previsto per i file di log e dati master con mssql conf il **impostare** comando:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   ```
+
+1. Modificare il nome del file di dati e di log database master 
+
+   ```bash
+   sudo mv /var/opt/mssql/data/master.mdf /var/opt/mssql/data/masternew.mdf
+   sudo mv /var/opt/mssql/data/mastlog.ldf /var/opt/mssql/data/mastlognew.ldf
+   ```
+
+1. Avviare il servizio SQL Server:
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
+
+
+## <a id="dumpdir"></a> Modificare il percorso di directory dump predefinito
 
 Il **filelocation.defaultdumpdir** il percorso predefinito in cui la memoria e dump SQL vengono generati ogni volta che si verifica un arresto anomalo di modifiche alle impostazioni. Per impostazione predefinita, questi file vengono generati in /var/opt/mssql/log.
 
@@ -162,7 +266,39 @@ Per impostare la nuova posizione, utilizzare i comandi seguenti:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="backupdir"></a>Modificare il percorso di directory di backup predefinito
+## <a id="errorlogdir"></a> Modificare il percorso di directory predefinito file di log degli errori
+
+Il **filelocation.errorlogfile** il percorso in cui vengono creati il nuovo log degli errori, la traccia predefinita profiler, XE sessione di integrità del sistema e file di sessione XE Hekaton modifiche alle impostazioni. Per impostazione predefinita, questo percorso è /var/opt/mssql/log. La directory in cui è impostato il file di log degli errori SQL diventa la directory di log predefinito per gli altri log.
+
+Per modificare queste impostazioni:
+
+1. Creare la directory di destinazione per i nuovi file di log di errore. L'esempio seguente crea un nuovo **/tmp/logs** directory:
+
+   ```bash
+   sudo mkdir /tmp/logs
+   ```
+
+1. Modificare il proprietario e il gruppo della directory in cui il **mssql** utente:
+
+   ```bash
+   sudo chown mssql /tmp/logs
+   sudo chgrp mssql /tmp/logs
+   ```
+
+1. Utilizzare mssql conf per modificare il nome del file di log degli errori predefinito con il **impostare** comando:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.errorlogfile /tmp/logs/errorlog
+   ```
+
+1. Riavviare il servizio SQL Server:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+
+## <a id="backupdir"></a> Modificare il percorso di directory di backup predefinito
 
 Il **filelocation.defaultbackupdir** modifiche alle impostazioni il percorso predefinito in cui vengono generati i file di backup. Per impostazione predefinita, questi file vengono generati in /var/opt/mssql/data.
 
@@ -193,7 +329,7 @@ Per impostare la nuova posizione, utilizzare i comandi seguenti:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="coredump"></a>Specificare le impostazioni dell'immagine di base
+## <a id="coredump"></a> Specificare le impostazioni dell'immagine di base
 
 Se si verifica un'eccezione in uno dei processi di SQL Server, SQL Server crea un dump di memoria.
 
@@ -223,17 +359,17 @@ La prima acquisizione fase viene controllata dal **coredump.coredumptype** impos
     |-----|-----|
     | **mini** | Mini è il più piccolo tipo di file di dump. Usa le informazioni di sistema di Linux per determinare il thread e i moduli del processo. Il dump contiene solo i moduli e gli stack di thread di ambiente host. Non contiene riferimenti di memoria indiretto o globali. |
     | **miniplus** | MiniPlus è simile a mini, ma include memoria aggiuntiva. Riconosce le caratteristiche interne di SQLPAL e l'ambiente host, aggiungere le seguenti aree di memoria per il dump:</br></br> -Varie funzioni globali</br> -Tutta la memoria oltre 64TB</br> -All denominata area trovata nella **/proc/$ pid e mappe**</br> -Memoria indiretto dal thread e stack</br> -Informazioni sul thread</br> -Del Teb e associati di Peb</br> -Informazioni sul modulo</br> -Struttura ad albero VMM e VAD |
-    | **filtrati** | Progettazione filtrato viene utilizzata una sottrazione basate su tutta la memoria del processo in cui è inclusa specificamente esclusi. La struttura in grado di comprendere le caratteristiche interne di SQLPAL e l'ambiente host, escludendo il dump di determinate aree geografiche.
-    | **completo** | Completa un dump del processo completo che include tutte le aree si trova **/proc/$ pid e mappe**. Non è controllato dalla **coredump.captureminiandfull** impostazione. |
+    | **filtered** | Progettazione filtrato viene utilizzata una sottrazione basate su tutta la memoria del processo in cui è inclusa specificamente esclusi. La struttura in grado di comprendere le caratteristiche interne di SQLPAL e l'ambiente host, escludendo il dump di determinate aree geografiche.
+    | **full** | Completa un dump del processo completo che include tutte le aree si trova **/proc/$ pid e mappe**. Non è controllato dalla **coredump.captureminiandfull** impostazione. |
 
-## <a id="dbmail"></a>Impostare il profilo di posta elettronica database predefinito per SQL Server in Linux
+## <a id="dbmail"></a> Impostare il profilo di posta elettronica database predefinito per SQL Server in Linux
 
 Il **sqlpagent.databasemailprofile** consente di impostare il profilo di posta elettronica database predefinito per gli avvisi di posta elettronica.
 
 ```bash
 sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
-## <a id="hadr"></a>Disponibilità elevata
+## <a id="hadr"></a> Disponibilità elevata
 
 Il **hadr.hadrenabled** opzione Abilita gruppi di disponibilità nell'istanza di SQL Server. Il seguente comando abilita gruppi di disponibilità impostando **hadr.hadrenabled** su 1. È necessario riavviare SQL Server per l'impostazione per rendere effettive.
 
@@ -247,7 +383,7 @@ Per informazioni di utilizzo con gruppi di disponibilità, vedere i seguenti due
 - [Configurare il gruppo di disponibilità AlwaysOn per SQL Server in Linux](sql-server-linux-availability-group-configure-ha.md)
 - [Configurare il gruppo di disponibilità a livello di lettura per SQL Server in Linux](sql-server-linux-availability-group-configure-rs.md)
 
-## <a id="localaudit"></a>Directory del set di controllo locale
+## <a id="localaudit"></a> Directory del set di controllo locale
 
 Il **telemetry.userrequestedlocalauditdirectory** impostazione Abilita controllo locale e consente di impostare la directory in cui i locale registri di controllo vengono creati.
 
@@ -278,7 +414,7 @@ Il **telemetry.userrequestedlocalauditdirectory** impostazione Abilita controllo
 
 Per ulteriori informazioni, vedere [i suggerimenti dei clienti per SQL Server in Linux](sql-server-linux-customer-feedback.md).
 
-## <a id="lcid"></a>Modificare le impostazioni locali di SQL Server
+## <a id="lcid"></a> Modificare le impostazioni locali di SQL Server
 
 Il **language.lcid** modifiche alle impostazioni locali di SQL Server a qualsiasi identificatore di lingua supportata (LCID). 
 
@@ -294,7 +430,7 @@ Il **language.lcid** modifiche alle impostazioni locali di SQL Server a qualsias
    sudo systemctl restart mssql-server
    ```
 
-## <a id="memorylimit"></a>Impostare il limite di memoria
+## <a id="memorylimit"></a> Impostare il limite di memoria
 
 Il **memory.memorylimitmb** impostazione quantità memoria fisica (in MB) disponibile per SQL Server. Il valore predefinito è 80% della memoria fisica.
 
@@ -310,7 +446,7 @@ Il **memory.memorylimitmb** impostazione quantità memoria fisica (in MB) dispon
    sudo systemctl restart mssql-server
    ```
 
-## <a id="tcpport"></a>Modificare la porta TCP
+## <a id="tcpport"></a> Modificare la porta TCP
 
 Il **network.tcpport** quando si imposta la porta TCP in cui SQL Server è in ascolto per le connessioni. Per impostazione predefinita, questa porta è 1433. Per modificare la porta, eseguire i comandi seguenti:
 
@@ -332,22 +468,22 @@ Il **network.tcpport** quando si imposta la porta TCP in cui SQL Server è in as
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
    ```
 
-## <a id="tls"></a>Specificare le impostazioni di TLS
+## <a id="tls"></a> Specificare le impostazioni di TLS
 
 Le opzioni seguenti configurare TLS per un'istanza di SQL Server in esecuzione in Linux.
 
 |Opzione |Description |
 |--- |--- |
-|**Network.forceencryption** |Se è 1, quindi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] forza tutte le connessioni da crittografare. Per impostazione predefinita, questa opzione è 0. |
-|**Network.tlscert** |Il percorso assoluto per il certificato di file che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza per TLS. Esempio: `/etc/ssl/certs/mssql.pem` il file del certificato deve essere accessibile dall'account mssql. Si consiglia di limitare l'accesso al file usando `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**Network.tlskey** |Il percorso assoluto per la chiave privata del file che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza per TLS. Esempio: `/etc/ssl/private/mssql.key` il file del certificato deve essere accessibile dall'account mssql. Si consiglia di limitare l'accesso al file usando `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**Network.tlsprotocols** |Elenco delimitato da virgole di quali TLS sono consentiti i protocolli da SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]tenta sempre di negoziazione del protocollo consentito più attendibili. Se un client non supporta alcun protocollo consentito, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rifiuta il tentativo di connessione.  Per garantire la compatibilità, sono consentiti tutti i protocolli supportati per impostazione predefinita (1.2, 1.1, 1.0).  Se i client supportano TLS 1.2, si consiglia di consentire solo TLS 1.2. |
-|**Network.tlsciphers** |Specifica le crittografie consentite dal [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per TLS. Questa stringa deve essere formattata [formato di elenco di pacchetti di crittografia di OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). In generale, non è necessario modificare questa opzione. <br /> Per impostazione predefinita, sono consentite le crittografie seguenti: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
-| **Network.kerberoskeytabfile** |Percorso del file keytab Kerberos |
+|**network.forceencryption** |Se è 1, quindi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] forza tutte le connessioni da crittografare. Per impostazione predefinita, questa opzione è 0. |
+|**network.tlscert** |Il percorso assoluto per il certificato di file che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza per TLS. Esempio: `/etc/ssl/certs/mssql.pem` il file del certificato deve essere accessibile dall'account mssql. Si consiglia di limitare l'accesso al file usando `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**network.tlskey** |Il percorso assoluto per la chiave privata del file che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza per TLS. Esempio: `/etc/ssl/private/mssql.key` il file del certificato deve essere accessibile dall'account mssql. Si consiglia di limitare l'accesso al file usando `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**network.tlsprotocols** |Elenco delimitato da virgole di quali TLS sono consentiti i protocolli da SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tenta sempre di negoziazione del protocollo consentito più attendibili. Se un client non supporta alcun protocollo consentito, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rifiuta il tentativo di connessione.  Per garantire la compatibilità, sono consentiti tutti i protocolli supportati per impostazione predefinita (1.2, 1.1, 1.0).  Se i client supportano TLS 1.2, si consiglia di consentire solo TLS 1.2. |
+|**network.tlsciphers** |Specifica le crittografie consentite dal [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per TLS. Questa stringa deve essere formattata [formato di elenco di pacchetti di crittografia di OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). In generale, non è necessario modificare questa opzione. <br /> Per impostazione predefinita, sono consentite le crittografie seguenti: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+| **network.kerberoskeytabfile** |Percorso del file keytab Kerberos |
 
 Per un esempio di usando le impostazioni di TLS, vedere [crittografia delle connessioni a SQL Server in Linux](sql-server-linux-encrypted-connections.md).
 
-## <a id="traceflags"></a>Abilitare o disabilitare i flag di traccia
+## <a id="traceflags"></a> Abilitare o disabilitare i flag di traccia
 
 Questo **traceflag** opzione Abilita o disabilita i flag di traccia per l'avvio del servizio SQL Server. Per abilitare o disabilitare un flag di traccia, utilizzare i comandi seguenti:
 

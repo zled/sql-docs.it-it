@@ -16,15 +16,15 @@ helpviewer_keywords:
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a92b8a183c2975e219ef5774cd110e5f53e483a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3500b144cc3afb10c5ac12ee76e49dc11953623
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="online-restore-sql-server"></a>Ripristino in linea (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Il ripristino in linea è supportato solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition. In questa edizione un ripristino di file, pagina o a fasi viene eseguito online per impostazione predefinita. Le informazioni contenute in questo argomento sono importanti per i database che includono più file o filegroup e, in base al modello di recupero con registrazione minima, solo per i filegroup di sola lettura.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
  In alcuni casi non è possibile eseguire il rollback di una transazione di cui non è stato eseguito il commit perché i dati necessari per il rollback sono offline durante l'avvio. In tali casi, la transazione viene posticipata. Per altre informazioni, vedere [Transazioni posticipate &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).  
   
 > [!NOTE]  
->  Se il database attualmente utilizza il modello di recupero con registrazione minima delle operazioni bulk, prima di avviare un'operazione di ripristino online è consigliabile passare al modello di recupero con registrazione completa. Per altre informazioni, vedere [Visualizzare o modificare il modello di recupero di un database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
+>  Se il database attualmente utilizza il modello di recupero con registrazione minima delle operazioni bulk, prima di avviare un'operazione di ripristino online è consigliabile passare al modello di recupero con registrazione completa. Per altre informazioni, vedere [Visualizzazione o modifica del modello di recupero di un database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
 > [!IMPORTANT]  
 >  Se i backup sono stati eseguiti con più dispositivi collegati al server, è necessario che sia disponibile lo stesso numero di dispositivi durante un'operazione di ripristino online.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  La sintassi di una sequenza di ripristino online è la stessa di una sequenza di ripristino offline.  
   
--   [Esempio: Ripristino a fasi di un database &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Esempio: Ripristino a fasi di un database &#40;Modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Esempio: Ripristino a fasi di alcuni filegroup &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Ripristinare file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
+-   [Ripristino di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
 -   [Ripristinare pagine &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)  
   

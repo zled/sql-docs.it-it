@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Hierarchy
-helpviewer_keywords: Hierarchy object [ADO MD]
+f1_keywords:
+- Hierarchy
+helpviewer_keywords:
+- Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0802ae503911ec8b84ee2f01b15de9ed7f57c4af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 355560aecba3e18317aa91ed1a09dcc9ed344f5f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hierarchy-object-ado-md"></a>Oggetto Hierarchy (ADO MD)
 Rappresenta uno dei modi in cui i membri di un [dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) possono essere aggregati o "rollback". Una dimensione può essere aggregata in una o più gerarchie.  
@@ -42,7 +45,7 @@ Rappresenta uno dei modi in cui i membri di un [dimensione](../../../ado/referen
   
  Il **proprietà** insieme contiene le proprietà specifiche del provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione del provider per un elenco completo delle proprietà disponibili.  
   
-|nome|Description|  
+|Nome|Description|  
 |----------|-----------------|  
 |AllMember|Il membro al livello massimo di rollup della gerarchia.|  
 |CatalogName|Il nome del catalogo a cui appartiene il cubo.|  

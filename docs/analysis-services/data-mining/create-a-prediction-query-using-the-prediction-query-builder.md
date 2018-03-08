@@ -5,31 +5,30 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7d6511a36b9a59e20908feffdb0f61a907377ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Creare una query di stima utilizzando Generatore query di stima
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile creare query di stima sia mentre si compila una soluzione di data mining in BI Development Studio o destro del mouse su un modello di data mining esistente in SQL Server Management Studio e scegliendo l'opzione **compila Query di stima**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+È possibile creare query di stima mentre si compila una soluzione di data mining in BI Development Studio, o facendo clic con il pulsante destro del mouse su un modello di data mining esistente in SQL Server Management Studio e scegliendo quindi l'opzione **Compila query di stima**.  
   
  Nel **generatore delle query di stima** sono disponibili tre modalità di progettazione che è possibile alternare facendo clic sulle icone nell'angolo in alto a sinistra.  
   
@@ -99,7 +98,7 @@ ms.lasthandoff: 12/08/2017
 8.  Eseguire la query facendo clic sul primo pulsante della barra degli strumenti della scheda **Stima modello di data mining** e quindi selezionando **Risultato**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una query singleton in Progettazione modelli di data mining](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
- [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Creare una Query Singleton in Progettazione modelli di Data Mining](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
+ [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

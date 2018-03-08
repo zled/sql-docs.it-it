@@ -1,36 +1,34 @@
 ---
 title: Tipi di dati supportati nei modelli tabulari di Analysis Services | Documenti Microsoft
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5dcf73586ff73b24e121d517e8bc56c71c2156c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 79cb9eb46d0561ab6dd94ba6e001b97fe3ae801f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Tipi di dati supportati nei modelli tabulari
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Questo articolo vengono descritti i tipi di dati che possono essere usati nei modelli tabulari e viene illustrata la conversione implicita dei tipi di dati quando i dati vengono calcolati o utilizzati in una formula Data Analysis Expressions (DAX).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+In questo articolo vengono descritti i tipi di dati che possono essere utilizzati nei modelli tabulari e viene illustrata la conversione implicita dei tipi di dati quando i dati vengono calcolati o utilizzati in una formula DAX (Data Analysis Expressions).  
 
   
-##  <a name="bkmk_data_types"></a>Tipi di dati utilizzati nei modelli tabulari  
+##  <a name="bkmk_data_types"></a> Tipi di dati utilizzati nei modelli tabulari  
 Quando si importano i dati o si utilizza un valore in una formula, anche se nell'origine dati originale è contenuto un tipo di dati diverso, viene eseguita la conversione dei dati in uno dei tipi seguenti. Anche per i valori risultanti dalle formule vengono utilizzati questi tipi di dati.  
   
  In generale, questi tipi di dati vengono implementati per consentire l'esecuzione di calcoli accurati nelle colonne calcolate e le stesse restrizioni si applicano al resto dei dati nei modelli per garantire coerenza.  
@@ -48,7 +46,7 @@ Quando si importano i dati o si utilizza un valore in una formula, anche se nell
 |Currency|Currency|Il tipo di dati currency consente valori compresi tra -922.337.203.685.477,5808 e 922.337.203.685.477,5807 con quattro cifre decimali di precisione fissa.|  
 |N/D|Vuoto|Un tipo di dati blank in DAX rappresenta e sostituisce i valori Null di SQL. È possibile creare un tipo di dati blank utilizzando la funzione BLANK, nonché verificare la presenza di tipi di dati blank utilizzando la funzione logica ISBLANK.|  
   
- \*Se si tenta di importare i dati che dispone di valori numerici di grandi dimensioni, importazione potrebbe non riuscire con l'errore seguente:  
+ \* Se si tenta di importare i dati che dispone di valori numerici di grandi dimensioni, importazione potrebbe non riuscire con l'errore seguente:  
   
  Errore di database in memoria: il '\<nome colonna >' colonna del '\<nome tabella >' tabella contiene un valore, ' 1.7976931348623157 e + 308' che non è supportata. L'operazione è stata annullata.  
   
@@ -70,7 +68,7 @@ Quando si importano i dati o si utilizza un valore in una formula, anche se nell
 ### <a name="table-data-type"></a>Tipo di dati tabella  
  In DAX viene inoltre usato un tipo di dati *table* . Questo tipo di dati viene utilizzato da DAX in numerose funzioni, ad esempio aggregazioni e calcoli della funzionalità di Business Intelligence per le gerarchie temporali. Alcune funzioni richiedono un riferimento a una tabella e altre restituiscono una tabella che può quindi essere utilizzata come input per altre funzioni. In alcune funzioni che richiedono una tabella come input è possibile specificare un'espressione che restituisce una tabella. Per alcune funzioni è necessario un riferimento a una tabella di base. Per informazioni sui requisiti di funzioni specifiche, vedere [Riferimento alle funzioni DAX](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   
-##  <a name="bkmk_implicit"></a>Conversione di tipi di dati implicite ed esplicite nelle formule DAX
+##  <a name="bkmk_implicit"></a> Conversione di tipi di dati implicite ed esplicite nelle formule DAX
   
  Ogni funzione DAX prevede requisiti specifici relativi ai tipi di dati utilizzati come input e output. Alcune funzioni, ad esempio, richiedono numeri interi per determinati argomenti e date per altri. Altre funzioni richiedono testo o tabelle.  
   
@@ -96,11 +94,11 @@ Quando si importano i dati o si utilizza un valore in una formula, anche se nell
   
 ||||||  
 |-|-|-|-|-|  
-|Operatore (+)|INTEGER|Currency|REAL|Date/time|  
-|INTEGER|INTEGER|Currency|REAL|Date/time|  
-|Currency|Currency|Currency|REAL|Date/time|  
-|REAL|REAL|REAL|REAL|Date/time|  
-|Date/time|Date/time|Date/time|Date/time|Date/time|  
+|Operatore (+)|INTEGER|Currency|REAL|Data/ora|  
+|INTEGER|INTEGER|Currency|REAL|Data/ora|  
+|CURRENCY|CURRENCY|CURRENCY|REAL|Data/ora|  
+|REAL|REAL|REAL|REAL|Data/ora|  
+|Date/time|Date/time|Date/time|Date/time|Data/ora|  
   
  Se, ad esempio, in un'operazione di addizione viene utilizzato un numero reale in combinazione con dati di valuta, entrambi i valori vengono convertiti nel tipo REAL e il risultato viene restituito come tipo REAL.  
   
@@ -109,11 +107,11 @@ Quando si importano i dati o si utilizza un valore in una formula, anche se nell
   
 ||||||  
 |-|-|-|-|-|  
-|Operatore (-)|INTEGER|Currency|REAL|Date/time|  
+|Operatore (-)|INTEGER|Currency|REAL|Data/ora|  
 |INTEGER|INTEGER|Currency|REAL|REAL|  
-|Currency|Currency|Currency|REAL|REAL|  
+|CURRENCY|CURRENCY|CURRENCY|REAL|REAL|  
 |REAL|REAL|REAL|REAL|REAL|  
-|Date/time|Date/time|Date/time|Date/time|Date/time|  
+|Data/ora|Date/time|Date/time|Date/time|Data/ora|  
   
  Se, ad esempio, in un'operazione di sottrazione viene utilizzata una data con qualsiasi altro tipo di dati, entrambi i valori vengono convertiti in date e anche il valore restituito è una data.  
   
@@ -124,10 +122,10 @@ Quando si importano i dati o si utilizza un valore in una formula, anche se nell
   
 ||||||  
 |-|-|-|-|-|  
-|Operatore (*)|INTEGER|Currency|REAL|Date/time|  
+|Operatore (*)|INTEGER|Currency|REAL|Data/ora|  
 |INTEGER|INTEGER|Currency|REAL|INTEGER|  
-|Currency|Currency|REAL|Currency|Currency|  
-|REAL|REAL|Currency|REAL|REAL|  
+|CURRENCY|CURRENCY|REAL|CURRENCY|CURRENCY|  
+|REAL|REAL|CURRENCY|REAL|REAL|  
   
  Se, ad esempio, un intero viene combinato con un numero reale in un'operazione di moltiplicazione, entrambi i numeri vengono convertiti in numeri reali e anche il valore restituito è di tipo REAL.  
   
@@ -136,26 +134,26 @@ Quando si importano i dati o si utilizza un valore in una formula, anche se nell
   
 ||||||  
 |-|-|-|-|-|  
-|Operatore (/)<br /><br /> (Riga/Colonna)|INTEGER|Currency|REAL|Date/time|  
-|INTEGER|REAL|Currency|REAL|REAL|  
-|Currency|Currency|REAL|Currency|REAL|  
+|Operatore (/)<br /><br /> (Riga/Colonna)|INTEGER|Currency|REAL|Data/ora|  
+|INTEGER|REAL|CURRENCY|REAL|REAL|  
+|CURRENCY|CURRENCY|REAL|CURRENCY|REAL|  
 |REAL|REAL|REAL|REAL|REAL|  
-|Date/time|REAL|REAL|REAL|REAL|  
+|Data/ora|REAL|REAL|REAL|REAL|  
   
  Se, ad esempio, un intero viene combinato con un valore di valuta in un'operazione di divisione, entrambi i valori vengono convertiti in numeri reali e anche il risultato è un numero reale.  
   
 #### <a name="comparison-operators"></a>Operatori di confronto  
 È supportato solo un set limitato di combinazioni di tipo di dati misti per operazioni di confronto. Per altre informazioni, vedere [Guida di riferimento agli operatori DAX](https://msdn.microsoft.com/library/ee634237.aspx).  
   
-## <a name="bkmk_hand_blanks"></a>Gestione di spazi vuoti, stringhe vuote e valori zero  
+## <a name="bkmk_hand_blanks"></a> Gestione di spazi vuoti, stringhe vuote e valori zero  
  Nella tabella seguente vengono riepilogate le differenze tra DAX e in Microsoft Excel, in modo che gli spazi vuoti vengono gestiti:  
   
 ||||  
 |-|-|-|  
 |Espressione|DAX|Excel|  
-|BLANK + BLANK|Vuoto|0 (zero)|  
+|BLANK + BLANK|BLANK|0 (zero)|  
 |BLANK +5|5|5|  
-|BLANK * 5|Vuoto|0 (zero)|  
+|BLANK * 5|BLANK|0 (zero)|  
 |5/BLANK|Infinito|Errore|  
 |0/BLANK|Non un numero (NaN, Not a Number)|Errore|  
 |BLANK/BLANK|Vuoto|Errore|  
@@ -163,8 +161,8 @@ Quando si importano i dati o si utilizza un valore in una formula, anche se nell
 |FALSE AND BLANK|FALSE|FALSE|  
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
-|BLANK OR BLANK|Vuoto|Errore|  
-|BLANK AND BLANK|Vuoto|Errore|  
+|BLANK OR BLANK|BLANK|Errore|  
+|BLANK AND BLANK|BLANK|Errore|  
   
  Per informazioni dettagliate sulla gestione dei valori vuoti da parte di una funzione o un operatore specifico, vedere i singoli argomenti per ogni funzione DAX nella sezione [Riferimento alle funzioni DAX](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   

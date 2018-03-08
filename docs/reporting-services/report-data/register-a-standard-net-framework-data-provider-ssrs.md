@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 454c87f8c7ced0404681f500c00453f69433c08c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 90600a0b51f489dcb2a1bd21038bf30562b7f144
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrare un provider di dati .NET Framework standard (SSRS)
   Per usare un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] di terze parti per recuperare dati per un set di dati di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è necessario distribuire e registrare l'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in due posizioni, ovvero nel client di creazione dei report e nel server di report. Nel client per la creazione del report, è necessario registrare il provider di dati come tipo di origine dei dati e associarlo a una finestra Progettazione query. Sarà quindi possibile selezionare il provider di dati come tipo di origine dei dati per la creazione di un set di dati di report. La finestra Progettazione query associata verrà aperta per consentire la creazione di query per il tipo di origine dei dati specifico. Nel server di report il provider di dati deve essere registrato come tipo di origine dei dati. Sarà quindi possibile elaborare i report pubblicati che recuperano i dati da un'origine mediante il provider di dati.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  Aggiungere una voce per il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-    |Attribute|Descrizione|  
+    |attribute|Description|  
     |---------------|-----------------|  
     |**Nome**|Specificare un nome univoco per il provider di dati, ad esempio **ProviderDatiNET**. La lunghezza massima consentita per l'attributo **Name** è 255 caratteri. Il nome deve essere univoco tra tutte le voci dell'elemento **Extension** di un file di configurazione. Il valore indicato qui viene inserito nell'elenco a discesa dei tipi di origini dei dati per la creazione di una nuova origine.|  
     |**Tipo**|Immettere un elenco delimitato da virgole che includa lo spazio dei nomi completo della classe che implementa l'interfaccia <xref:System.Data.IDbConnection> , seguito dal nome dell'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , senza l'estensione dll.|  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/05/2017
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     Se si carica l'assembly nella Global Assembly Cache (GAC), è necessario impostare le proprietà del nome sicuro. Esempio:  
+     Se si carica l'assembly nella Global Assembly Cache (GAC), è necessario impostare le proprietà del nome sicuro. Ad esempio  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  Aggiungere una voce per il provider di dati.  
   
-    |Attribute|Descrizione|  
+    |attribute|Description|  
     |---------------|-----------------|  
     |**Nome**|Specificare un nome univoco per il provider di dati, ad esempio **ProviderDatiNET**. La lunghezza massima consentita per l'attributo **Name** è 255 caratteri. Il nome deve essere univoco tra tutte le voci dell'elemento **Extension** di un file di configurazione. Il valore indicato qui viene inserito nell'elenco a discesa dei tipi di origini dei dati per la creazione di una nuova origine.|  
     |**Tipo**|Immettere un elenco delimitato da virgole che includa lo spazio dei nomi completo della classe che implementa l'interfaccia <xref:System.Data.IDbConnection> , seguito dal nome dell'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , senza l'estensione dll.|  
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/05/2017
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     Se si carica l'assembly nella cache di assembly globale (CAG), è necessario impostare le proprietà del nome sicuro. Esempio:  
+     Se si carica l'assembly nella cache di assembly globale (CAG), è necessario impostare le proprietà del nome sicuro. Ad esempio  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  

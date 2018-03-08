@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - modifying data [SQL Server], XML DML
 - XML [SQL Server], DML
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - XQuery, XML DML
 - xml data type [SQL Server], XML DML
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: acbedcd828fcacb6b690f0380d83d7dd779f1b2e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 74f591801b50df0bacf3c873f73d6cc9ee28f4d8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>Linguaggio XML di manipolazione dei dati (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +42,9 @@ ms.lasthandoff: 11/17/2017
   
  Rispetto al linguaggio XQuery, nel linguaggio XML DML sono state aggiunte le parole chiave con distinzione tra maiuscole e minuscole seguenti:  
   
--   **inserimento**  
+-   **insert**  
   
--   **eliminare**  
+-   **delete**  
   
 -   **Sostituire il valore di**  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Utilizzare il [tipo di dati xml di metodo Modify ())](../../t-sql/xml/modify-method-xml-data-type.md) del **xml** tipo di dati.  
   
--   Specificare le istruzioni XML DML appropriate all'interno di **Modify ()** metodo.  
+-   Specificare le istruzioni XML DML appropriate all'interno di **Modify()** (metodo).  
   
  Si noti che alcuni attributi non possono essere inseriti o eliminati o non è possibile modificarne il valore. Esempio:  
   

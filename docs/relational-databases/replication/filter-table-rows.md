@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b78b311ea716abd5ca52a1f561f648a29a27199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7917c67c302800a23ed20c974115641f644b513f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-table-rows"></a>Filtro righe tabella
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La pagina **Filtro righe tabella** consente di:  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
  **Modifica**  
  Selezionare un filtro di riga o un filtro join nel riquadro dei filtri e fare clic su **Modifica** per visualizzare la finestra di dialogo **Modifica filtro** o **Modifica join** .  
   
- **Delete**  
+ **Elimina**  
  Selezionare un filtro di riga o un filtro join nel riquadro dei filtri e fare clic su **Elimina** per eliminare il filtro.  
   
  **Trova tabella**  
@@ -81,14 +81,14 @@ ms.lasthandoff: 11/17/2017
   
  Selezionare un nodo di collegamento nel riquadro e fare clic su **Trova tabella**. Il riquadro viene esteso e la tabella evidenziata. Se si fa clic su **Trova tabella** senza aver selezionato un nodo collegamento verrà visualizzata la finestra di dialogo **Trova tabella** .  
   
- **Filtra**  
+ **Filter**  
  Contiene la definizione [!INCLUDE[tsql](../../includes/tsql-md.md)] del filtro selezionato nel riquadro dei filtri.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Visualizzare e modificare le proprietà della pubblicazione](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrare i dati pubblicati](../../relational-databases/replication/publish/filter-published-data.md)   
- [Filtri di join](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

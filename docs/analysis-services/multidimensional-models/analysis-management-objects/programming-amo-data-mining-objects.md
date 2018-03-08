@@ -1,38 +1,37 @@
 ---
 title: Programmazione di oggetti di Data Mining AMO | Documenti Microsoft
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c5729dfd1411ae533c359bfdbc9867b2c453ebc1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: be27072d93bb9cee3d787732e57fc591452c2191
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programmazione di oggetti di data mining AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Programmazione di oggetti di data mining tramite AMO è semplice e lineare. Il primo passaggio consiste nella creazione del modello della struttura dei dati per supportare il progetto di data mining. Successivamente viene creato il modello di data mining che supporta l'algoritmo di data mining da utilizzare per stimare o individuare le relazioni non visibili sottostanti ai dati. Dopo avere creato il progetto di data mining, inclusi la struttura e gli algoritmi, è possibile elaborare i modelli di data mining per ottenere i modelli di cui è stato eseguito il training da utilizzare in un secondo momento durante l'esecuzione di query e di stime dall'applicazione client.  
+  La programmazione di oggetti di data mining tramite AMO è un'operazione estremamente semplice. Il primo passaggio consiste nella creazione del modello della struttura dei dati per supportare il progetto di data mining. Successivamente viene creato il modello di data mining che supporta l'algoritmo di data mining da utilizzare per stimare o individuare le relazioni non visibili sottostanti ai dati. Dopo avere creato il progetto di data mining, inclusi la struttura e gli algoritmi, è possibile elaborare i modelli di data mining per ottenere i modelli di cui è stato eseguito il training da utilizzare in un secondo momento durante l'esecuzione di query e di stime dall'applicazione client.  
   
  È importante tenere presente che AMO non è un modello per l'esecuzione di query, ma consente di gestire e amministrare le strutture e i modelli di data mining. Per eseguire query sui dati, utilizzare [allo sviluppo con ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [Oggetti MiningModel](#MiningModel)  
   
-##  <a name="MiningStructure"></a>Oggetti MiningStructure  
+##  <a name="MiningStructure">Oggetti MiningStructure</a>  
  Una struttura di data mining è la definizione della struttura dei dati utilizzati per creare tutti i modelli di data mining. Una struttura di data mining contiene un'associazione a una vista origine dati definita nel database e contiene definizioni per tutte le colonne che partecipano ai modelli di data mining. In una struttura di data mining possono essere contenuti più modelli di data mining.  
   
  Per creare un oggetto <xref:Microsoft.AnalysisServices.MiningStructure>, sono necessari i passaggi seguenti:  
@@ -95,7 +94,7 @@ public static MiningStructure CreateSalesForecastingMiningStructure(Database db)
 }  
 ```  
   
-##  <a name="MiningModel"></a>Oggetti MiningModel  
+##  <a name="MiningModel">Oggetti MiningModel</a>  
  Un modello di data mining è un repository per tutte le colonne e le definizioni di colonna che verranno utilizzate in un algoritmo di data mining.  
   
  Per creare un oggetto <xref:Microsoft.AnalysisServices.MiningModel>, sono necessari i passaggi seguenti:  

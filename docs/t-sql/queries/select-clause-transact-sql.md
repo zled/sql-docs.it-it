@@ -8,14 +8,16 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT Clause
 - SELECT_Clause_TSQL
 - DISTINCT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - parentheses [SQL Server]
 - identity columns [SQL Server], SELECT clause
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - $ROWGUID keyword
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: acc0566abe5865284a39680136f0535e8b801d90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 34a1dee420dd8e409df2043f3278a32235656ace
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-clause-transact-sql"></a>SELECT Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,10 +118,10 @@ SELECT [ ALL | DISTINCT ]
  *property_name*  
  È una proprietà pubblica di *udt_column_name*.  
   
- *nome_campo*  
+ *field_name*  
  È un membro dati pubblico di *udt_column_name*.  
   
- *nome_metodo*  
+ *method_name*  
  È un metodo pubblico di *udt_column_name* che accetta uno o più argomenti. *nome_metodo* non può essere un metodo mutatore.  
   
  Nell'esempio seguente vengono selezionati i valori per la colonna `Location`, definita come tipo `point`, dalla tabella `Cities`, richiamando un metodo del tipo `Distance`:  
@@ -163,7 +165,7 @@ FROM Cities;
   
 ## <a name="see-also"></a>Vedere anche  
  [Selezionare esempi &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

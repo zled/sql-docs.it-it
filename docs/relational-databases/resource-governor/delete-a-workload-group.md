@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1eff1229f3dd8cbc2b23558a28736cef0487c17f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8027e697f08d9e31e463015ca929e64f5fa3d182
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-workload-group"></a>Eliminare un gruppo di carico di lavoro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile eliminare un gruppo di carico di lavoro o un pool di risorse usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Riavviare il server. Una volta completato il processo di riavvio, il gruppo eliminato non verrà creato e in un gruppo spostato verrà utilizzata la nuova assegnazione del pool di risorse.  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="Permissions"></a> Permissions  
  Per eliminare un gruppo di carico di lavoro è necessaria l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="DelWGObjEx"></a> Eliminare un gruppo di carico di lavoro utilizzando Esplora oggetti  

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ce11b76c47faa36406452c707c8246a3dfd1d7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a6656e904451913580d537ac4e98e351e6195b2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-cursors"></a>XTP Cursors di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
  La tabella seguente descrive i contatori di **SQL Server XTP Cursors** .  
   
-|Contatore|Descrizione|  
+|Contatore|Description|  
 |-------------|-----------------|  
 |**Eliminazioni cursori/sec**|Numero medio di eliminazioni di cursori, al secondo.|  
 |**Inserimenti cursori/sec**|Numero medio di inserimenti di cursori, al secondo.|  

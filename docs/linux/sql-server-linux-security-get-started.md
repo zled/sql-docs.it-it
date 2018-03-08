@@ -1,27 +1,29 @@
 ---
 title: Introduzione alla protezione di SQL Server in Linux | Documenti Microsoft
-description: In questo argomento vengono descritte le azioni di protezione tipiche.
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+description: In questo articolo vengono descritte le azioni di protezione tipiche.
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: cb8f44ae871d3e1ec81d576439d81508ac2c96f5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8000ee26dd5118d4380f4e2ab33d39aa96967466
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procedura dettagliata per le funzionalità di sicurezza di SQL Server in Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Nel caso di un utente di Linux che è una novità di SQL Server, le attività seguenti illustrano alcune delle attività di protezione. Queste non sono specifiche di Linux o univoco, ma consente di farsi un'idea delle aree per approfondire la verifica. In ogni esempio viene fornito un collegamento alla documentazione approfondita per tale area.
 
@@ -38,7 +40,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 ```
 
 >  [!NOTE]
->  Utilizzare sempre una password complessa al posto di asterischi precedente.
+>  Utilizzare sempre una password complessa al posto di asterischi nel comando precedente.
 
 Gli account di accesso possono connettersi a SQL Server e dispongono di accesso (con autorizzazioni limitate) al database master. Per connettersi a un database utente, un'identità corrispondente a livello di database, denominato di un utente del database è necessario un account di accesso. Gli utenti sono specifici di ogni database e devono essere creati separatamente in ogni database per concedere l'accesso. Nell'esempio seguente consente di passare al database AdventureWorks2014 e quindi utilizza il [CREATE USER](../t-sql/statements/create-user-transact-sql.md) istruzione per creare un utente denominato Larry che è associato con l'account di accesso denominato Larry. Se l'account di accesso e l'utente sono correlati (mapping reciproco) sono oggetti diversi. L'account di accesso è un'entità a livello di server. L'utente è un'entità a livello di database.
 
@@ -64,7 +66,7 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-A questo punto l'account di accesso erano può creare più account di accesso e l'utente erano possono creare altri utenti.
+L'account di accesso Larry può creare più account di accesso e l'utente erano possono creare altri utenti.
 
 
 ## <a name="granting-access-with-least-privileges"></a>La concessione dell'accesso con privilegi minimi
@@ -101,7 +103,7 @@ Per ulteriori informazioni sul sistema di autorizzazione, vedere [Introduzione a
 
 [Sicurezza a livello di riga](../relational-databases/security/row-level-security.md) consente di limitare l'accesso alle righe in un database in base all'utente che esegue una query. Questa funzionalità è utile per scenari come garantire che i clienti possono accedere solo i propri dati o che lavoratori possano accedere solo dati inerenti al proprio reparto.   
 
-Accesso a livello di riga descritta di seguito una procedura di impostazione di due utenti diversi di `Sales.SalesOrderHeader` tabella. 
+I passaggi seguenti con la configurazione di due utenti con accesso a livello di riga diverso per il `Sales.SalesOrderHeader` tabella. 
 
 Creare due account utente per testare la sicurezza a livello di riga:    
    
@@ -247,7 +249,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-Per rimuovere Transparent Data Encryption, eseguire`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+Per rimuovere Transparent Data Encryption, eseguire `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 Le operazioni di crittografia e decrittografia sono pianificate sui thread di background da SQL Server. Per visualizzare lo stato di queste operazioni, è possibile usare le viste del catalogo e le viste a gestione dinamica nell'elenco illustrato di seguito in questo argomento.   
 

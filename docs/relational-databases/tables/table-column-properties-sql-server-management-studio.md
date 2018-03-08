@@ -17,15 +17,15 @@ f1_keywords:
 - vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66ebe137da10784f3999e9039538895afa701abe
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d2860c28663df8c5b2fc9ef995dafdefcb892e2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Proprietà delle colonne delle tabelle (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
  **Progettazione tabelle**  
  Espande la sezione **Progettazione tabelle** .  
   
- **Confronto**  
+ **Regole di confronto**  
  Visualizza la sequenza di confronto applicata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per impostazione predefinita alla colonna quando i valori di colonna vengono utilizzati per ordinare le righe del risultato di una query. Per modificare le regole di confronto, selezionare la proprietà, fare clic sui puntini di sospensione (...) a destra del valore della proprietà per visualizzare la finestra di dialogo **Regole di confronto** .  
   
  **Specifica colonna calcolata**  

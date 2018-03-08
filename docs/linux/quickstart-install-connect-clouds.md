@@ -1,27 +1,28 @@
 ---
 title: Introduzione a SQL Server 2017 nel Cloud | Documenti Microsoft
-description: Questa esercitazione rapida viene illustrato come eseguire il 2017 di SQL Server in Linux nel cloud di propria scelta.
+description: Questa Guida introduttiva viene illustrato come eseguire il 2017 di SQL Server in Linux nel cloud di propria scelta.
 author: annashres
 ms.author: annashres
-manager: jhubbard
+manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.component: sql-linux
+ms.component: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 5a7ea24d7563a7256c93dbfaa052bfb4041f9aa0
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="run-the-sql-server-2017-in-the-cloud"></a>Eseguire il 2017 di SQL Server nel cloud
+# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>Guida introduttiva: Eseguire il 2017 di SQL Server nel cloud
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In questa esercitazione di avvio rapido, verrà installato 2017 di SQL Server su Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) o Ubuntu nel cloud di propria scelta. Passare a [il provisioning di una macchina virtuale Linux SQL Server nel portale di Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) per l'esecuzione di SQL Server in Linux in Azure.
+In questa Guida rapida, verrà installato 2017 di SQL Server su Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) o Ubuntu nel cloud di propria scelta. Passare a [il provisioning di una macchina virtuale Linux SQL Server nel portale di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) per l'esecuzione di SQL Server in Linux in Azure.
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
@@ -32,7 +33,7 @@ In questa esercitazione di avvio rapido, verrà installato 2017 di SQL Server su
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Connettere il AMI con ssh
-1.  Seguire la Guida rapida per il distrbution Linux che scelto: 
+1.  Seguire la Guida rapida per la distribuzione di Linux che scelto: 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -44,7 +45,7 @@ In questa esercitazione di avvio rapido, verrà installato 2017 di SQL Server su
 
     
 ## <a name="digital-ocean"></a>Firma digitale oceano
-1. Account di accesso per il [Pannello di controllo](https://cloud.digitalocean.com/login) e fare clic su Crea un droplet
+1. Accedere al [Pannello di controllo](https://cloud.digitalocean.com/login) e fare clic su Crea un droplet
 1. Scegliere un droplet Ubuntu 16.04 con almeno 2 GB di memoria
 1. Connettere il droplet con ssh
 1. Seguire il [delle Guide rapide Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -58,10 +59,10 @@ In questa esercitazione di avvio rapido, verrà installato 2017 di SQL Server su
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Connettersi all'immagine con ssh
-1.  Seguire la Guida rapida per il distrbution Linux che scelto: 
+1.  Seguire la Guida rapida per la distribuzione di Linux che scelto: 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  Configurare per le connessioni remote: 
     * Passare al [regole del Firewall](https://console.cloud.google.com/networking/firewalls)
-    * Aggiungere una regola in entrata per consentire il traffico sulla porta in cui SQL Server è in ascolto (impostazione predefinita TCP: 1433)
+    * Aggiungere una regola in entrata per consentire il traffico sulla porta in cui SQL Server è in ascolto (default tcp: 1433)

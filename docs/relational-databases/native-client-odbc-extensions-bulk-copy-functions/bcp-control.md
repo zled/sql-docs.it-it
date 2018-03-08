@@ -1,5 +1,5 @@
 ---
-title: bcp_control | Documenti Microsoft
+title: bcp_control | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_control function
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0af6c90954aff66d17d7fafb3115138e7d71708f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41d583812419f62ab7e9822fefaaac1a8b82a1f7
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ RETCODE bcp_control (
   
  Sequenza verificherà un errore anche se si chiama `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` dopo la chiamata `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` e bcp_writefmt.  
   
- Per ulteriori informazioni, vedere [individuazione dei metadati](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Per ulteriori informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
  BCPFILECP  
  *iValue* contiene il numero della tabella codici per il file di dati. È possibile specificare il numero della tabella codici, ad esempio 1252 o 850, o uno dei valori indicati di seguito:  
@@ -116,7 +116,7 @@ RETCODE bcp_control (
  Indica il numero massimo di errori che si possono verificare prima che l'operazione di copia bulk venga annullata. Il valore predefinito è 10. un valore minore di 1 Reimposta l'opzione sul valore predefinito. La copia bulk impone un massimo di 65.535 errori. Il tentativo di impostare questa opzione su un valore maggiore di 65.535 comporta l'impostazione dell'opzione su 65.535.  
   
  BCPODBC  
- Se è TRUE, specifica che **datetime** e **smalldatetime** valori salvati in formato carattere utilizzeranno il prefisso di sequenza escape timestamp ODBC e il suffisso. L'opzione BCPODBC è applicabile solo a BCP_OUT.  
+ Se è TRUE, specifica che **datetime** e **smalldatetime** valori salvati in formato carattere utilizzeranno il prefisso di sequenza escape timestamp ODBC e il suffisso. L'opzione bcpodbc è applicabile solo a DB_OUT.  
   
  Se è FALSE, un **datetime** valore che rappresenta il 1 gennaio 1997 viene convertito in stringa di caratteri: 00.00.00.000 1997-01-01. Se è TRUE, lo stesso **datetime** valore viene rappresentato come: {ts ' 00.00.00.000 1997-01-01'}.  
   

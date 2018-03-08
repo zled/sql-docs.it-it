@@ -8,26 +8,28 @@ ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - AT TIME ZONE
 - AT_TIME_ZONE_TSQL
-helpviewer_keywords: AT TIME ZONE function
+helpviewer_keywords:
+- AT TIME ZONE function
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2265efe9fab240d25d03e3e1ef16009d294166af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 8b77aeb47515f4140f78a70288e9e25d2acc52d1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="at-time-zone-transact-sql"></a>NEL fuso orario (Transact-SQL)
+# <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Converte un *inputdate* corrispondenti *datetimeoffset* valore nel fuso orario di destinazione. Se *inputdate* viene fornito senza informazioni relative all'offset, la funzione viene applicata l'offset del fuso orario, supponendo che *inputdate* valore viene fornito nel fuso orario di destinazione. Se *inputdate* viene fornito come un *datetimeoffset* valore, più **AT TIME ZONE** clausola lo converte nel fuso orario di destinazione utilizzando regole di conversione di fuso orario.  
@@ -46,7 +48,7 @@ inputdate AT TIME ZONE timezone
  *inputdate*  
  È un'espressione che può essere risolta in un **smalldatetime**, **datetime**, **datetime2**, o **datetimeoffset** valore.  
   
- *fuso orario*  
+ *timezone*  
  Nome del fuso orario di destinazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]si basa sui fusi orari che vengono archiviati nel Registro di sistema Windows. Tutti i fusi orari installati nel computer sono archiviati nell'hive del Registro di sistema seguente: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Un elenco dei fusi orari installati viene inoltre esposta attraverso il [Sys. time_zone_info &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) visualizzazione.  
   
 ## <a name="return-types"></a>Tipi restituiti  

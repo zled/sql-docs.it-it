@@ -8,20 +8,21 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7402a7a3bd36dff30ac5dbfe9db9a0f8cdc86bf5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be1121099a2ca2bed5e145e47c8720f57e6fc5d9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generazione di file di dump per l'esecuzione del pacchetto
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Le informazioni in questi file sono utili per risolvere i problemi di esecuzione dei pacchetti.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
  Quando si distribuisce un progetto al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile creare file di dump in cui sono fornite informazioni sull'esecuzione dei pacchetti contenuti nel progetto. Al termine del processo ISServerExec.exe, vengono creati i file di dump. È possibile specificare che un file di dump venga creato quando si verificano errori durante l'esecuzione del pacchetto, selezionando l'opzione **Dump su errori** nella finestra di dialogo **Esegui pacchetto** . È inoltre possibile utilizzare le seguenti stored procedure:  
   
--   [catalog.set_execution_parameter_value &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
+-   [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
      Chiamare questa stored procedure per configurare la creazione di un file di dump quando si verifica qualsiasi errore o evento e quando si verificano eventi specifici, durante l'esecuzione di un pacchetto.  
   

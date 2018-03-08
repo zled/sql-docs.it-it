@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5388ca7a351b0e5a0f9d3c820598cb9c42c9d8e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 86894e5f3c0d438a5a97c45e3927e3996ee6a6ab
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-asdatabase-cmdlet"></a>Cmdlet Restore-ASDatabase
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Ripristina un file di backup (con estensione ABF) di database multidimensionale o tabulare in un'istanza di Analysis Services.  
@@ -153,7 +153,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |Input|System.string<br /><br /> È possibile inoltrare tramite pipe i valori stringa al cmdlet.|  
-|Output|Nessuno|  
+|Output|nessuna.|  
   
 ## <a name="example-1"></a>Esempio 1  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm sql_referencing_entities (Transact-SQL) | Documenti Microsoft
+title: sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referencing_entities_TSQL
 - sys.dm_sql_referencing_entities_TSQL
 - dm_sql_referencing_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referencing_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8e4b889d1ee7ec8480c9f41a730ffafcd5888ef4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Trigger DDL a livello di server  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,7 +66,7 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *schema_name.Referenced*_*nome_entità*  
+ *schema_name.referenced*_*entity_name*  
  Nome dell'entità a cui si fa riferimento.  
   
  *schema_name* è obbligatoria, tranne quando la classe di riferimento è PARTITION_FUNCTION.  
@@ -106,26 +109,26 @@ sys.dm_sql_referencing_entities (
 |-----------------|------------------------|-----------------------|  
 |Tabella|Sì*|Sì|  
 |Visualizza|Sì|Sì|  
-|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
-|stored procedure CLR|No|Sì|  
-|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
-|Funzione CLR definita dall'utente|No|Sì|  
-|Trigger CLR (DML e DDL)|No|No|  
-|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Sì|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Sì|No|  
-|Stored procedure estese|No|Sì|  
-|Coda|No|Sì|  
-|Sinonimo|No|Sì|  
-|Tipo (alias e tipo di CLR definito dall'utente)|No|Sì|  
-|Raccolta di XML Schema|No|Sì|  
-|Funzione di partizione|No|Sì|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure * *|Sì|Sì|  
+|stored procedure CLR|no|Sì|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] funzione definita dall'utente|Sì|Sì|  
+|Funzione CLR definita dall'utente|no|Sì|  
+|Trigger CLR (DML e DDL)|no|no|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] Trigger DML|Sì|no|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] trigger DDL a livello di database|Sì|no|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] trigger DDL a livello di server|Sì|no|  
+|Stored procedure estese|no|Sì|  
+|Coda|no|Sì|  
+|Sinonimo|no|Sì|  
+|Tipo (alias e tipo di CLR definito dall'utente)|no|Sì|  
+|Raccolta di XML Schema|no|Sì|  
+|Funzione di partizione|no|Sì|  
   
  \*Una tabella viene registrata come un'entità di riferimento solo quando fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
   
  ** Le stored procedure numerate con un valore intero maggiore di 1 non vengono registrate come entità di riferimento o a cui viene fatto riferimento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -148,7 +151,7 @@ sys.dm_sql_referencing_entities (
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. Restituzione delle entità che fanno riferimento a un'entità specificata  
  Nell'esempio seguente vengono restituite le entità nel database corrente che fanno riferimento alla tabella specificata.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -159,7 +162,7 @@ GO
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Restituzione delle entità che fanno riferimento a un tipo specificato  
  Nell'esempio seguente vengono restituite le entità che fanno riferimento al tipo alias `dbo.Flag`. Il set di risultati mostra che questo tipo è usato da due stored procedure. Il `dbo.Flag` tipo viene anche utilizzato nella definizione di diverse colonne di `HumanResources.Employee` tabella; tuttavia, poiché il tipo non è presente nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito nella tabella, viene restituita alcuna riga per il `HumanResources.Employee`tabella.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  

@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 303f09187528dd7fa2c897fea5fd86ec6d7f23d9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f8eb72bef98a90f45607c8933539a5ee322dea5c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entitytype-element-csdlbi"></a>Elemento EntityType (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Il **EntityType** elemento è un tipo complesso che rappresenta la struttura di un'entità di alto livello, ad esempio un cliente o un ordine, in un modello di dati. Il **bi: EntityType** elemento estende la definizione di [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) utilizzato nel [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Il **EntityType** elemento è un tipo complesso che rappresenta la struttura di un'entità di alto livello, ad esempio un cliente o un ordine, in un modello di dati. Il **bi: EntityType** elemento estende la definizione di [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) utilizzato nel [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
   
  Un elemento EntityType deve essere specificato per ognuna delle entità incluse nel modello di dati. I sottoelementi di EntityType descrivono le colonne e le misure nella tabella. Le relazioni tra tabelle vengono incluse nel **EntityContainer**.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
  Il contenuto dell'entità (colonna) può essere uno dei valori seguenti:  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Regular|Non altrimenti definito.|  
 |Time|Attributi che rappresentano periodi di tempo, ad esempio anni, semestri, trimestri, mesi o giorni.|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |Promotion|Attributi che rappresentano informazioni sulle promozioni marketing.|  
   
 ## <a name="example"></a>Esempio  
- **Tabella**  
+ **Tabulare**  
   
  Nel seguente esempio viene illustrata una parte della rappresentazione CSDLBI versione 1.1 della tabella Geography utilizzata nel modello tabulare AdventureWorks. La colonna RowNumber è una colonna nascosta che viene generata automaticamente come un identificatore di riga nei modelli tabulari e pertanto dispone dell'attributo Contents, **RowNumber**.  
   

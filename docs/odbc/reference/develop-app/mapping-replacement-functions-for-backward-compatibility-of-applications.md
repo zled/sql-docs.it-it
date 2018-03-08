@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fc2b4027039cf110caaf96bc2a197e2b10f1f62
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapping di funzioni di sostituzione per la compatibilità delle applicazioni
 Un'applicazione ODBC 3*x* applicazione utilizzo tramite ODBC 3*x* gestione Driver funzionerà con un ODBC 2. *x* driver, purché non nuove funzionalità vengono utilizzati. Entrambi duplicati funzionalità e modifiche del comportamento, tuttavia, influiscono sulla modalità che ODBC 3. *x* applicazione funziona su un ODBC 2. *x* driver. Quando si lavora con un ODBC 2. *x* driver, Driver Manager viene eseguito il mapping seguente ODBC 3. *x* funzioni, che sono sostituiti uno o più ODBC 2. *x* funzioni, nel corrispondente ODBC 2. *x* funzioni.  
@@ -422,7 +422,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  Quando un'applicazione ODBC 3. *x* applicazione che utilizza un ODBC 2. *x* driver chiama **SQLColAttribute** con il *ColumnNumber* argomento impostato su 0, la gestione Driver restituisce il *FieldIdentifier* valori elencati nella tabella seguente.  
   
-|*FieldIdentifier*|Valore|  
+|*FieldIdentifier*|valore|  
 |-----------------------|-----------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|  
@@ -454,7 +454,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Quando un'applicazione ODBC 3. *x* applicazione che utilizza un ODBC 2. *x* driver chiama **SQLDescribeCol** con il *ColumnNumber* argomento impostato su 0, la gestione Driver restituisce i valori elencati nella tabella seguente.  
   
-|Buffer|Valore|  
+|Buffer|valore|  
 |------------|-----------|  
 |ColumnName|"" (stringa vuota)|  
 |* NameLengthPtr|0|  

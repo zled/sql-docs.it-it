@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 233eed5038eb8a2f63e89cbadc5ea738398b8d8b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3d621273b3b45b25158d494fd9bee3d7241e1d3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,25 +73,25 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  Valore del parametro. *parameter_value* è di tipo **sql_variant**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per individuare i valori dei parametri utilizzati per una determinata esecuzione, eseguire una query sulla vista catalog.execution_parameter_values.  
   
  Per specificare l'ambito delle informazioni registrate durante un'esecuzione del pacchetto, impostare *parameter_name* su LOGGING_LEVEL e *parameter_value* su uno dei valori seguenti.  
   
  Impostare il parametro *object_type* su 50.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
-|0|Nessuno<br /><br /> La registrazione è disabilitata. Solo lo stato dell'esecuzione del pacchetto viene registrato.|  
-|1|Basic<br /><br /> Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. Si tratta del valore predefinito.|  
-|2|Prestazioni<br /><br /> Vengono registrati solo le statistiche sulle prestazioni e gli eventi OnError e OnWarning.|  
-|3|Verbose<br /><br /> Tutti gli eventi vengono registrati, inclusi gli eventi personalizzati e di diagnostica. <br />Gli eventi personalizzati includono gli eventi registrati dalle attività di Integration Services. Per altre informazioni, vedere [Messaggi personalizzati per la registrazione](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
+|0|None<br /><br /> La registrazione è disabilitata. Solo lo stato dell'esecuzione del pacchetto viene registrato.|  
+|1|Standard<br /><br /> Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. Si tratta del valore predefinito.|  
+|2|restazioni<br /><br /> Vengono registrati solo le statistiche sulle prestazioni e gli eventi OnError e OnWarning.|  
+|3|Dettagliato<br /><br /> Tutti gli eventi vengono registrati, inclusi gli eventi personalizzati e di diagnostica. <br />Gli eventi personalizzati includono gli eventi registrati dalle attività di Integration Services. Per altre informazioni, vedere [Messaggi personalizzati per la registrazione](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
 |4|Derivazione di runtime<br /><br /> Raccoglie i dati necessari a tenere traccia della derivazione nel flusso di dati.|  
 |100|Livello di registrazione personalizzato<br /><br /> Specificare le impostazioni nel parametro CUSTOMIZED_LOGGING_LEVEL. Per altre informazioni sui valori che è possibile specificare, vedere [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> Per altre informazioni sui livelli di registrazione personalizzati, vedere [Abilitare la registrazione per l'esecuzione di pacchetti nel server SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
   
  Per specificare che il server di Integration Services generi file di dump quando si verifica qualsiasi errore durante un'esecuzione del pacchetto, impostare i valori dei parametri seguenti per un'istanza di esecuzione che non è stata eseguita.  
   
-|Parametro|Valore|  
+|Parametro|valore|  
 |---------------|-----------|  
 |*execution_id*|Identificatore univoco per l'istanza di esecuzione|  
 |*object_type*|50|  
@@ -99,7 +100,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Per specificare che il server di Integration Services generi file di dump quando si verificano eventi durante un'esecuzione del pacchetto, impostare i valori dei parametri seguenti per un'istanza di esecuzione che non è stata eseguita.  
   
-|Parametro|Valore|  
+|Parametro|valore|  
 |---------------|-----------|  
 |*execution_id*|Identificatore univoco per l'istanza di esecuzione|  
 |*object_type*|50|  
@@ -108,7 +109,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Per specificare gli eventi durante l'esecuzione del pacchetto che inducono il server di Integration Services a generare file di dump, impostare i valori dei parametri seguenti per un'istanza di esecuzione che non è stata eseguita. Separare più codici evento utilizzando un punto e virgola.  
   
-|Parametro|Valore|  
+|Parametro|valore|  
 |---------------|-----------|  
 |*execution_id*|Identificatore univoco per l'istanza di esecuzione|  
 |*object_type*|50|  
@@ -139,9 +140,9 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni READ e MODIFY per l'istanza di esecuzione  

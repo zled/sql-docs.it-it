@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,15 +16,15 @@ f1_keywords:
 - "10026"
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
 caps.latest.revision: "12"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c3860b4ddd1fc4d54d06861c601f76c301797784
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5827e2d7ebe9525e0c72a0ffb4a91c61cdf61b47
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="define-query-parameters-dialog-box"></a>Finestra di dialogo Definisci parametri query
   Utilizzare la finestra di dialogo **Definisci parametri query** per specificare i valori dei parametri quando si esegue una query in Progettazione query in fase di progettazione per visualizzare dati di esempio. I parametri di query consentono di filtrare i dati nell'origine dati e di limitare la quantità di dati elaborati da un report. Questi valori non vengono salvati nella definizione del report.  

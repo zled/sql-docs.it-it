@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a285b7ece1c5f8c84c7cfc1292f4e5a4dffdc6f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utilizzo delle tabelle inserite ed eliminate
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Nelle istruzioni dei trigger DML vengono usate due tabelle speciali, ovvero la tabella inserted e la tabella deleted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea e gestisce queste tabelle automaticamente. È possibile utilizzare queste tabelle temporanee residenti in memoria per verificare gli effetti di determinate modifiche apportate ai dati e impostare le condizioni per le azioni dei trigger DML. Non è possibile modificare i dati o eseguire operazioni DDL (Data Definition Language), quale CREATE INDEX, direttamente nelle tabelle.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Nelle istruzioni dei trigger DML vengono usate due tabelle speciali, ovvero la tabella inserted e la tabella deleted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea e gestisce queste tabelle automaticamente. È possibile utilizzare queste tabelle temporanee residenti in memoria per verificare gli effetti di determinate modifiche apportate ai dati e impostare le condizioni per le azioni dei trigger DML. Non è possibile modificare i dati o eseguire operazioni DDL (Data Definition Language), quale CREATE INDEX, direttamente nelle tabelle.  
   
  Nei trigger DML le tabelle inserted e deleted vengono principalmente utilizzate per eseguire le operazioni seguenti:  
   
@@ -80,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
  Quando un'istruzione INSERT, UPDATE o DELETE fa riferimento a una vista con trigger INSTEAD OF, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] esegue una chiamata al trigger invece di eseguire azioni sulle tabelle. Il trigger deve utilizzare le informazioni visualizzate nelle tabelle inserted e deleted per compilare le istruzioni necessarie per implementare l'azione richiesta nelle tabelle di base, anche nel caso in cui il formato delle informazioni nelle tabelle inserted e deleted compilate per la vista sia diverso dal formato dei dati delle tabelle di base.  
   
- Il formato delle tabelle inserted e deleted passate a un trigger INSTEAD OF definito in una vista corrisponde all'elenco di selezione dell'istruzione SELECT definita per la vista. Esempio:  
+ Il formato delle tabelle inserted e deleted passate a un trigger INSTEAD OF definito in una vista corrisponde all'elenco di selezione dell'istruzione SELECT definita per la vista. Ad esempio  
   
 ```  
 USE AdventureWorks2012;  

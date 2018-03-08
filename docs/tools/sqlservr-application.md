@@ -3,7 +3,7 @@ title: Applicazione sqlservr | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlservr
 ms.reviewer: 
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1736e617da17f058e27a970e73e77ada7957876e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e2c3a63c23d2a7ecdb374269af72861c16638984
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlservr-application"></a>Applicazione sqlservr
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il **sqlservr** applicazione avvia, arresta, sospende e riprende un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da un prompt dei comandi.  
@@ -48,7 +48,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **-s** *_istanza*  
+ **-s** *instance_name*  
  Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alla quale connettersi. Se non si specifica un'istanza denominata, **sqlservr** avvia l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
@@ -76,7 +76,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Indica l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in modalità utente singolo. Se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene avviato in modalità utente singolo, la connessione è consentita solo a un utente. Il meccanismo di CHECKPOINT, che assicura la regolare scrittura delle transazioni completate dalla cache del disco al database, non viene avviato. In genere, questa opzione viene utilizzata quando si riscontrano problemi che richiedono interventi nei database di sistema. L'impostazione abilita l'opzione **sp_configure allow updates**. Per impostazione predefinita, l'opzione **allow updates** è disabilitata.  
   
  **-n**  
- Avvia un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se non si specifica il set di parametri **-s** , viene avviata l'istanza predefinita. Al prompt dei comandi è necessario passare alla directory BINN appropriata per l'istanza prima di avviare **sqlservr.exe**. Ad esempio, se Instance1 usa \mssql$Instance1 per i relativi file binari, l'utente deve passare alla directory \mssql$Instance1\binn per avviare **sqlservr.exe -s instance1**. Se si avvia un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con l'opzione **-n** , è consigliabile usare anche l'opzione **-e** . In caso contrario, gli eventi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non vengono registrati.  
+ Avvia un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se non si specifica il set di parametri **-s** , viene avviata l'istanza predefinita. Al prompt dei comandi è necessario passare alla directory BINN appropriata per l'istanza prima di avviare **sqlservr.exe**. Ad esempio, se Instance1 usa \mssql$Instance1 per i relativi file binari, l'utente deve passare alla directory \mssql$Instance1\binn per avviare **sqlservr.exe -s instance1**. Se si avvia un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con il  **-n**  opzione, è consigliabile utilizzare il **-e** opzione troppo, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non vengono registrati eventi.  
   
  **-T** *trace#*  
  Indica l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con uno specifico flag di traccia (*trace#*) attivo. I flag di traccia vengono utilizzati per avviare il server con un funzionamento non standard. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
@@ -101,7 +101,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
 -   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"  
   
- Questi messaggi possono indicare che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sta cercando di liberare settori del pool di memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per l'inserimento di oggetti quali file dll per stored procedure estese o oggetti di automazione. In questo caso è consigliabile aumentare la quantità di memoria riservata usando l'opzione **-g**.  
+ Questi messaggi possono indicare che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sta cercando di liberare settori del pool di memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per l'inserimento di oggetti quali file dll per stored procedure estese o oggetti di automazione. In questo caso, è consigliabile aumentare la quantità di memoria riservata usando l'opzione **-g** .  
   
  L'utilizzo di un valore inferiore a quello predefinito aumenta la quantità di memoria disponibile per il pool del buffer e gli stack di thread. Ciò può determinare vantaggi a livello delle prestazioni per carichi di lavoro che impegnano molta memoria in sistemi che non utilizzano un gran numero di stored procedure estese, query distribuite o oggetti di automazione.  
   
@@ -112,6 +112,6 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Il parametro **-h**  non è supportato in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Questo parametro è stato utilizzato in versioni precedenti di istanze a 32 bit di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per riservare spazio di indirizzi della memoria virtuale per metadati della memoria a caldo quando AWE è abilitato. Per altre informazioni, vedere [Funzionalità di SQL Server sospese in SQL Server 2016](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni di avvio del servizio del motore di database](../database-engine/configure-windows/database-engine-service-startup-options.md)  
+ [Opzioni di avvio del servizio motore di database](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   

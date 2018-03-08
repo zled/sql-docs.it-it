@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,24 +24,25 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3a39418ec2c94a0c5b0a5dd227ef33aab4b22b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac42ee657dd46f070eccf5d63ae9a454c3306e95
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificazione delle colonne chiave mediante sql:key-fields (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Quando viene specificata una query XPath su uno schema XSD, nella maggior parte dei casi sono necessarie informazioni chiave per ottenere la nidificazione appropriata nel risultato. Specifica il **SQL: Key-campi** annotazione è un modo per assicurarsi che venga generata la gerarchia appropriata.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Quando si specifica una query XPath su uno schema XSD, nella maggior parte dei casi sono necessarie informazioni chiave per ottenere la nidificazione appropriata nel risultato. Specifica il **SQL:Key-campi** annotazione è un modo per assicurarsi che venga generata la gerarchia appropriata.  
   
 > [!NOTE]  
->  Per garantire una nidificazione appropriata, è consigliabile specificare **SQL: Key-campi** per gli elementi che eseguono il mapping alle tabelle. Il codice XML prodotto riconosce l'ordinamento del set di risultati sottostante. Se **SQL: Key-campi** non viene specificato, il codice XML generato potrebbe non essere corretto.  
+>  Per garantire una nidificazione appropriata, è consigliabile specificare **SQL:Key-campi** per gli elementi che eseguono il mapping alle tabelle. Il codice XML prodotto riconosce l'ordinamento del set di risultati sottostante. Se **SQL:Key-campi** non è specificato, il codice XML generato potrebbe non avere un formato corretto.  
   
- Il valore di **SQL: Key-campi** identifica le colonne che identificano in modo univoco le righe nella relazione. Se sono necessarie più colonne per identificare in modo univoco una riga, i valori delle colonne vengono delimitati da spazi.  
+ Il valore di **SQL:Key-campi** identifica le colonne che identificano in modo univoco le righe nella relazione. Se sono necessarie più colonne per identificare in modo univoco una riga, i valori delle colonne vengono delimitati da spazi.  
   
  È necessario utilizzare il **SQL: Key-campi** annotazione quando un elemento contiene un  **\<SQL: Relationship >** che viene definito tra l'elemento e un elemento figlio ma non fornisce la chiave primaria della tabella specificata nell'elemento padre.  
   
@@ -48,11 +50,11 @@ ms.lasthandoff: 11/17/2017
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per esecuzione esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Creazione della nidificazione appropriata quando \<SQL: Relationship > non fornisce informazioni sufficienti  
- Questo esempio viene illustrato dove **SQL: Key-campi** deve essere specificato.  
+ In questo esempio viene illustrato dove **SQL:Key-campi** deve essere specificato.  
   
  Si consideri lo schema seguente: Lo schema specifica una gerarchia tra il  **\<ordine >** e  **\<cliente >** elementi nei quali il  **\<ordine >**tratta dell'elemento padre e  **\<cliente >** è un elemento figlio.  
   
- Il  **\<SQL: Relationship >** tag è utilizzato per specificare la relazione padre-figlio. che identifica CustomerID nella tabella Sales.SalesOrderHeader come chiave padre che fa riferimento alla chiave figlio CustomerID nella tabella Sales.Customer. Le informazioni fornite in  **\<SQL: Relationship >** non è sufficiente per identificare in modo univoco le righe nella tabella padre (Sales. SalesOrderHeader). Pertanto, senza il **SQL: Key-campi** annotazione, la gerarchia generata non è precisa.  
+ Il  **\<SQL: Relationship >** tag è utilizzato per specificare la relazione padre-figlio. che identifica CustomerID nella tabella Sales.SalesOrderHeader come chiave padre che fa riferimento alla chiave figlio CustomerID nella tabella Sales.Customer. Le informazioni fornite in  **\<SQL: Relationship >** non è sufficiente per identificare in modo univoco le righe nella tabella padre (Sales. SalesOrderHeader). Pertanto, senza il **SQL:Key-campi** annotazione, la gerarchia generata non è precisa.  
   
  Con **SQL: Key-campi** specificato in  **\<ordine >**, l'annotazione identifica in modo univoco le righe nel padre (tabella Sales. SalesOrderHeader) e relativi elementi figlio vengono visualizzati sotto il relativo elemento padre.  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Specifica di sql:key-fields per produrre una nidificazione appropriata nel risultato  
- Nello schema seguente, non è specificata alcuna gerarchia mediante  **\<SQL: Relationship >**. Lo schema richiede ancora la specifica di **SQL: Key-campi** annotazione per identificare in modo univoco i dipendenti nella tabella HumanResources. Employee.  
+ Nello schema seguente, non è specificata alcuna gerarchia mediante  **\<SQL: Relationship >**. Lo schema richiede ancora la specifica di **SQL:Key-campi** annotazione per identificare in modo univoco i dipendenti nella tabella HumanResources. Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

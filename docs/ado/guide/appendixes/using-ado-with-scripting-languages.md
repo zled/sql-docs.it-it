@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,29 +16,29 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7551fd26f6c0862115f0212777fb738a68e548a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 804365750839fd3b9830a9573ab2cf397b529187
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>Utilizzo di ADO con linguaggi di Scripting
 All'interno di un ambiente di scripting, ADO consente di esporre i dati tramite gli script sul lato server. In questo scenario, ADO, il provider OLE DB sottostante che viene utilizzato e vengono installati i componenti necessari per fare riferimento a un archivio dati specificato in un server che esegue Internet Information Services (IIS). Utilizzando le pagine ASP (Active Server), ADO è un componente a cui fa riferimento in uno script che può generare HTML, ad esempio. Questo contenuto HTML può essere passato tramite HTTP a un Web browser client. Usando gli script, la pagina Web per inviare le azioni allo script sul lato server, che consente di aggiornare, attraversare o visualizzare i dati specifici.  
   
  Prima di utilizzare un oggetto ActiveX in una pagina Web, è importante sapere se l'oggetto sicuro per lo script. Quando un oggetto è considerato sicuro per lo scripting, significa che il controllo non è possibile eseguire le azioni dannose nel computer dell'utente e pertanto può essere eseguito senza richiedere l'approvazione dell'utente. Nella tabella seguente sono elencati gli oggetti ADO e indica se sono sicuri per lo script.  
   
-|Object|Per lo Scripting è sicuro?|  
+|Oggetto|Per lo Scripting è sicuro?|  
 |------------|-------------------------|  
 |Connessione ADO|Sì|  
 |Comando ADO|no|  
 |Parametro ADO|no|  
-|Recordset ADO|Sì|  
-|Record ADO|Sì|  
+|ADO Recordset|Sì|  
+|ADO Record|Sì|  
 |Flusso ADO|Sì|  
 |Errore ADO|no|  
 |Catalogo ADOX|no|  

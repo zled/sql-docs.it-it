@@ -1,5 +1,5 @@
 ---
-title: Sys.dm repl_schemas (Transact-SQL) | Documenti Microsoft
+title: sys.dm_repl_schemas (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_schemas
 - sys.dm_repl_schemas_TSQL
 - sys.dm_repl_schemas
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_schemas dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fef5dd298e56cb1560562db1003e255244ca8fd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8e4ed91b38fc7175b6e3eff96f1e65415022834d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,21 +41,21 @@ ms.lasthandoff: 11/17/2017
  
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**artcache_schema_address**|**varbinary (8)**|Indirizzo in memoria della struttura dello schema nella cache per l'articolo di tabella pubblicato.|  
+|**artcache_schema_address**|**varbinary(8)**|Indirizzo in memoria della struttura dello schema nella cache per l'articolo di tabella pubblicato.|  
 |**tabid**|**bigint**|ID della tabella replicata.|  
-|**IndexID**|**smallint**|ID di un indice cluster nella tabella pubblicata.|  
+|**indexid**|**smallint**|ID di un indice cluster nella tabella pubblicata.|  
 |**idSch**|**bigint**|ID dello schema di tabella.|  
 |**tabschema**|**nvarchar(510)**|Nome dello schema di tabella.|  
 |**ccTabschema**|**smallint**|Lunghezza in caratteri dello schema di tabella.|  
-|**TabName**|**nvarchar(510)**|Nome della tabella pubblicata.|  
+|**tabname**|**nvarchar(510)**|Nome della tabella pubblicata.|  
 |**ccTabname**|**smallint**|Lunghezza in caratteri del nome della tabella pubblicata.|  
 |**rowsetid_delete**|**bigint**|ID della riga eliminata.|  
 |**rowsetid_insert**|**bigint**|ID della riga inserita.|  
 |**num_pk_cols**|**int**|Numero di colonne chiave primaria.|  
-|**pcitee**|**Binary(8000)**|Puntatore alla struttura dell'espressione di query utilizzato per valutare la colonna calcolata.|  
+|**pcitee**|**binary(8000)**|Puntatore alla struttura dell'espressione di query utilizzato per valutare la colonna calcolata.|  
 |**re_numtextcols**|**int**|Numero di colonne BLOB nella tabella replicata.|  
-|**re_schema_lsn_begin**|**Binary(8000)**|Numero di sequenza iniziale del file di log (LSN) della registrazione della versione dello schema.|  
-|**re_schema_lsn_end**|**Binary(8000)**|LSN finale della registrazione della versione dello schema.|  
+|**re_schema_lsn_begin**|**binary(8000)**|Numero di sequenza iniziale del file di log (LSN) della registrazione della versione dello schema.|  
+|**re_schema_lsn_end**|**binary(8000)**|LSN finale della registrazione della versione dello schema.|  
 |**re_numcols**|**int**|Numero di colonne pubblicate.|  
 |**re_colid**|**int**|Identificatore di colonna nel server di pubblicazione.|  
 |**re_awcName**|**nvarchar(510)**|Nome della colonna pubblicata.|  
@@ -70,8 +73,8 @@ ms.lasthandoff: 11/17/2017
 |**re_fAnsiTrim**|**tinyint**|Specifica se nella colonna pubblicata viene utilizzata la rimozione di spazi ANSI.|  
 |**re_computed**|**smallint**|Specifica se la colonna pubblicata è una colonna calcolata.|  
 |**se_rowsetid**|**bigint**|ID del set di righe.|  
-|**se_schema_lsn_begin**|**Binary(8000)**|LSN iniziale della registrazione della versione dello schema.|  
-|**se_schema_lsn_end**|**Binary(8000)**|LSN finale della registrazione della versione dello schema.|  
+|**se_schema_lsn_begin**|**binary(8000)**|LSN iniziale della registrazione della versione dello schema.|  
+|**se_schema_lsn_end**|**binary(8000)**|LSN finale della registrazione della versione dello schema.|  
 |**se_numcols**|**int**|Numero di colonne.|  
 |**se_colid**|**int**|ID della colonna nel Sottoscrittore.|  
 |**se_maxlen**|**smallint**|Lunghezza massima della colonna.|  
@@ -86,7 +89,7 @@ ms.lasthandoff: 11/17/2017
 |**se_computed**|**smallint**|Specifica se la colonna è una colonna calcolata.|  
 |**se_nullBitInLeafRows**|**int**|Specifica se il valore di colonna è NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE nel database di pubblicazione per chiamare **dm_repl_schemas**.  
   
 ## <a name="remarks"></a>Osservazioni  

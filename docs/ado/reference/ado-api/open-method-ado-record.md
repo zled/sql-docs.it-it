@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Record::raw_Open
 - _Record::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 627000fbf4b3b153895d64ba0bd7560654d63719
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1da941f0a4e16a649adc6139cd24fc4642218b84
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-record"></a>Open (metodo) (Record ADO)
 Apre un oggetto esistente [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto oppure crea un nuovo elemento rappresentato dal **Record**, ad esempio un file o directory.  
@@ -40,25 +42,25 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativo. Oggetto **Variant** che può rappresentare l'URL dell'entità per essere rappresentato da questo **Record** oggetto, un **comando**, open [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o un altro **Record** oggetto, una stringa che contiene un'istruzione SQL SELECT o un nome di tabella.  
+ Facoltativa. Oggetto **Variant** che può rappresentare l'URL dell'entità per essere rappresentato da questo **Record** oggetto, un **comando**, open [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o un altro **Record** oggetto, una stringa che contiene un'istruzione SQL SELECT o un nome di tabella.  
   
  *ActiveConnection*  
- Facoltativo. Oggetto **Variant** che rappresenta la stringa di connessione o aprire [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
+ Facoltativa. Oggetto **Variant** che rappresenta la stringa di connessione o aprire [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
   
  *Mode*  
- Facoltativo. Oggetto [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valore che specifica la modalità di accesso per i risultanti **Record** oggetto. Valore predefinito è **adModeUnknown**.  
+ Facoltativa. Oggetto [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valore che specifica la modalità di accesso per i risultanti **Record** oggetto. Valore predefinito è **adModeUnknown**.  
   
  *CreateOptions*  
- Facoltativo. Oggetto [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) valore che specifica se deve essere aperto un file o directory esistente o se deve essere creata un nuovo file o directory. Valore predefinito è **adFailIfNotExists**. Se impostata sul valore predefinito, la modalità di accesso viene ottenuta dal [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà. Questo parametro viene ignorato quando il *origine* parametro non contiene un URL.  
+ Facoltativa. Oggetto [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) valore che specifica se deve essere aperto un file o directory esistente o se deve essere creata un nuovo file o directory. Valore predefinito è **adFailIfNotExists**. Se impostata sul valore predefinito, la modalità di accesso viene ottenuta dal [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà. Questo parametro viene ignorato quando il *origine* parametro non contiene un URL.  
   
  *Opzioni*  
- Facoltativo. Oggetto [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) valore che specifica le opzioni per l'apertura di **Record**. Valore predefinito è **adOpenRecordUnspecified dell'oggetto**. Questi valori possono essere combinati.  
+ Facoltativa. Oggetto [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) valore che specifica le opzioni per l'apertura di **Record**. Valore predefinito è **adOpenRecordUnspecified dell'oggetto**. Questi valori possono essere combinati.  
   
  *UserName*  
- Facoltativo. Oggetto **stringa** valore che contiene l'ID utente, se necessario, si autorizza l'accesso a *origine*.  
+ Facoltativa. Oggetto **stringa** valore che contiene l'ID utente, se necessario, si autorizza l'accesso a *origine*.  
   
  *Password*  
- Facoltativo. Oggetto **stringa** valore contenente la password che, se necessario, verifica *UserName*.  
+ Facoltativa. Oggetto **stringa** valore contenente la password che, se necessario, verifica *UserName*.  
   
 ## <a name="remarks"></a>Osservazioni  
  *Origine* potrebbe essere:  

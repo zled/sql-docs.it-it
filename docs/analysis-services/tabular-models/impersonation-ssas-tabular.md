@@ -5,34 +5,32 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="impersonation"></a>Rappresentazione 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In questo argomento fornisce agli autori di modelli tabulari una conoscenza di come credenziali di accesso vengono utilizzate da Analysis Services quando ci si connette a un'origine dati per importare ed elaborare (aggiornare) i dati.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Questo articolo fornisce agli autori di modelli tabulari una conoscenza di come credenziali di accesso vengono utilizzate da Analysis Services quando ci si connette a un'origine dati per importare ed elaborare (aggiornare) i dati.  
 
-##  <a name="bkmk_conf_imp_info"></a>Configurazione della rappresentazione  
+##  <a name="bkmk_conf_imp_info"></a> Configurazione della rappresentazione  
  La posizione e il contesto di un modello esistente determina la configurazione di rappresentazione. Quando si crea un nuovo progetto di modello, la rappresentazione è configurata in SQL Server Data Tools (SSDT) quando ci si connette a un'origine dati per importare i dati. Dopo aver distribuito un modello, la rappresentazione può configurata nella proprietà di stringa di connessione di database modello tramite SQL Server Management Studio (SSMS). Per i modelli tabulari in Azure Analysis Services, è possibile utilizzare SQL Server Management Studio o **visualizzare come: Script** modalità nella finestra di progettazione basata su browser per modificare il file Model.bim in JSON.
   
-##  <a name="bkmk_how_imper"></a>Utilizzo della rappresentazione  
+##  <a name="bkmk_how_imper"></a> Utilizzo della rappresentazione  
  La*rappresentazione* è la capacità di un'applicazione server, ad esempio Analysis Services, di assumere l'identità di un'applicazione client. Analysis Services viene eseguito utilizzando un account del servizio, tuttavia, quando il server viene stabilita una connessione a un'origine dati, viene utilizzata la rappresentazione in modo che i controlli di accesso per l'elaborazione e l'importazione dei dati può essere eseguita.  
   
  Credenziali utilizzate per la rappresentazione sono diverse da quelle che attualmente è connessi con. Credenziali vengono utilizzate per particolari operazioni lato client durante la creazione di un modello utente connesso.  
@@ -92,6 +90,6 @@ Quando i dati vengono importati o elaborati, le credenziali di rappresentazione 
 ## <a name="see-also"></a>Vedere anche  
  [Modalità DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Origini dati](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Distribuzione della soluzione di modello tabulare](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Distribuzione di una soluzione del modello tabulare](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

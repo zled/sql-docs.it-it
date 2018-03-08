@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf96fd29ed4e215739297281d3b0edd77654c3a6
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 572486311385af37057641e6f2371791bcfe70f8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Costrutti Transact-SQL non supportati da OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/22/2017
 ## <a name="databases-that-use-in-memory-oltp"></a>Database che utilizzano OLTP in memoria  
  La tabella seguente elenca le funzionalità [!INCLUDE[tsql](../../includes/tsql-md.md)] non supportate e le parole chiave che possono essere incluse nel testo del messaggio di un errore relativo a un database OLTP in memoria. La tabella include anche una risoluzione dell'errore.  
   
-|Tipo|Nome|Soluzione|  
+|Tipo|nome|Soluzione|  
 |----------|----------|----------------|  
 |Opzione|AUTO_CLOSE|L'opzione di database AUTO_CLOSE=ON non è supportata con i database che contengono un filegroup MEMORY_OPTIMIZED_DATA.|  
 |Opzione|ATTACH_REBUILD_LOG|L'opzione di database CREATE ATTACH_REBUILD_LOG non è supportata con i database contenenti un filegroup MEMORY_OPTIMIZED_DATA.|  
@@ -54,16 +55,16 @@ ms.lasthandoff: 11/22/2017
 ## <a name="memory-optimized-tables"></a>Tabelle con ottimizzazione per la memoria  
  La tabella seguente elenca le funzionalità [!INCLUDE[tsql](../../includes/tsql-md.md)] non supportate e le parole chiave che possono essere incluse nel testo del messaggio di un errore relativo a una tabella ottimizzata per la memoria. La tabella include anche una risoluzione dell'errore.  
   
-|Tipo|Nome|Soluzione|  
+|Tipo|nome|Soluzione|  
 |----------|----------|----------------|  
 |Funzionalità|ON|Le tabelle con ottimizzazione per la memoria non possono essere posizionate in uno schema di partizione o filegroup. Rimuovere la clausola ON dall'istruzione **CREATE TABLE** .<br /><br /> Tutte le tabelle ottimizzate per la memoria vengono mappate al filegroup ottimizzato per la memoria.|  
 |Tipo di dati|*Nome del tipo di dati*|Il tipo di dati indicato non è supportato. Sostituirlo con un tipo di dati supportato. Per altre informazioni, vedere [Tipi di dati supportati](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Funzionalità|Colonne calcolate|**Si applica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e a [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Le colonne calcolate non sono supportate dalle tabelle ottimizzate per la memoria. Rimuovere le colonne calcolate dall'istruzione **CREATE TABLE** .<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] supportano le colonne calcolate nelle tabelle e negli indici ottimizzati per la memoria.|  
+|Funzionalità|Colonne calcolate|**Si applica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Le colonne calcolate non sono supportate dalle tabelle ottimizzate per la memoria. Rimuovere le colonne calcolate dall'istruzione **CREATE TABLE** .<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] supportano le colonne calcolate nelle tabelle e negli indici ottimizzati per la memoria.|  
 |Funzionalità|Replica|La replica non è supportata con le tabelle ottimizzate per la memoria.|  
 |Funzionalità|FILESTREAM|L'archiviazione FILESTREAM non è supportata dalle colonne delle tabelle ottimizzate per la memoria. Rimuovere la parola chiave **FILESTREAM** dalla definizione della colonna.|  
 |Funzionalità|SPARSE|Le colonne delle tabelle ottimizzate per la memoria non possono essere definite come SPARSE. Rimuovere la parola chiave **SPARSE** dalla definizione della colonna.|  
 |Funzionalità|ROWGUIDCOL|L'opzione ROWGUIDCOL non è supportata dalle colonne delle tabelle ottimizzate per la memoria. Rimuovere la parola chiave **ROWGUIDCOL** dalla definizione della colonna.|  
-|Funzionalità|FOREIGN KEY|**Si applica a:**  [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Per le tabelle ottimizzate per la memoria, i vincoli FOREIGN KEY sono supportati solo per chiavi esterne che fanno riferimento a chiavi primarie di altre tabelle ottimizzate per la memoria. Rimuovere il vincolo dalla definizione della tabella se la chiave esterna fa riferimento a un vincolo univoco.<br/><br/>In [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] i vincoli FOREIGN KEY non sono supportati con le tabelle ottimizzate per la memoria.|  
+|Funzionalità|FOREIGN KEY|**Si applica a:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Per le tabelle ottimizzate per la memoria, i vincoli FOREIGN KEY sono supportati solo per chiavi esterne che fanno riferimento a chiavi primarie di altre tabelle ottimizzate per la memoria. Rimuovere il vincolo dalla definizione della tabella se la chiave esterna fa riferimento a un vincolo univoco.<br/><br/>In [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] i vincoli FOREIGN KEY non sono supportati con le tabelle ottimizzate per la memoria.|  
 |Funzionalità|indice cluster|Specificare un indice non cluster. Nel caso di un indice di chiave primaria assicurarsi di specificare **PRIMARY KEY NONCLUSTERED**.|  
 |Funzionalità|DDL all'interno delle transazioni|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non possono essere create o eliminate nel contesto di una transazione utente. Non avviare una transazione e assicurarsi che l'impostazione della sessione IMPLICIT_TRANSACTIONS sia OFF prima di eseguire l'istruzione CREATE o DROP.|  
 |Funzionalità|trigger DDL|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non possono essere create o eliminate se esiste un trigger di database o di server per l'operazione DDL. Rimuovere i trigger di database e di server da CREATE/DROP TABLE e CREATE/DROP PROCEDURE.|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/22/2017
 |Operazione|CREATE INDEX|Gli indici delle tabelle ottimizzate per la memoria devono essere specificati inline con l'istruzione **CREATE TABLE** o **ALTER TABLE**.|  
 |Operazione|CREATE FULLTEXT INDEX|Gli indici full-text non sono supportati dalle tabelle ottimizzate per la memoria.|  
 |Operazione|modifica schema|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non supportano determinate modifiche dello schema:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]: sono supportate le operazioni ALTER TABLE, ALTER PROCEDURE e sp_rename. Altre modifiche dello schema, ad esempio l'aggiunta di proprietà estese, non sono supportate.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: sono supportate le operazioni ALTER TABLE e ALTER PROCEDURE. Altre modifiche dello schema, tra cui sp_rename, non sono supportate.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: le modifiche dello schema non sono supportate. Per modificare la definizione di una tabella ottimizzata per la memoria o di una stored procedure compilata in modo nativo, rilasciare prima l'oggetto e quindi ricrearlo con la definizione desiderata.| 
-|Operazione|TRUNCATE TABLE|L'operazione TRUNCATE non è supportata dalle tabelle ottimizzate per la memoria. Per rimuovere tutte le righe da una tabella, eliminare tutte le righe usando **DELETE FROM***table* oppure eliminare e ricreare la tabella.|  
+|Operazione|TRUNCATE TABLE|L'operazione TRUNCATE non è supportata dalle tabelle ottimizzate per la memoria. Per rimuovere tutte le righe da una tabella, eliminare tutte le righe usando **DELETE FROM***tabella* oppure eliminare e ricreare la tabella.|  
 |Operazione|ALTER AUTHORIZATION|La modifica del proprietario di una tabella ottimizzata per la memoria o di una stored procedure compilata in modo nativo non è supportata. Eliminare e ricreare la tabella o la stored procedure per modificare la proprietà.|  
 |Operazione|ALTER SCHEMA|Il trasferimento di una tabella o di una stored procedure compilata in modo nativo esistente in un altro schema non è supportato. Rilasciare e ricreare l'oggetto per trasferirlo da uno schema a un altro.|  
 |Operazione|DBCC CHECKTABLE|L'operazione DBCC CHECKTABLE non è supportata con le tabelle ottimizzate per la memoria. Per verificare l'integrità dei file di checkpoint su disco, eseguire un backup del filegroup MEMORY_OPTIMIZED_DATA.|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/22/2017
 ## <a name="indexes-on-memory-optimized-tables"></a>Indici in tabelle con ottimizzazione per la memoria  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere inclusi nel testo del messaggio di un errore che interessa l'indice di una tabella ottimizzata per la memoria e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|Nome|Soluzione|  
+|Tipo|nome|Soluzione|  
 |----------|----------|----------------|  
 |Funzionalità|Indice filtrato|Gli indici filtrati non sono supportati con le tabelle ottimizzate per la memoria. Omettere la clausola **WHERE** dalla specifica dell'indice.|  
 |Funzionalità|included_columns|Non è necessario specificare le colonne incluse per le tabelle ottimizzate per la memoria. Tutte le colonne della tabella ottimizzata per la memoria vengono incluse in modo implicito in ogni indice ottimizzato per la memoria.|  
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/22/2017
 ## <a name="nonclustered-hash-indexes"></a>Indici hash non cluster  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore che interessa un indice hash non cluster e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|Nome|Soluzione|  
+|Tipo|nome|Soluzione|  
 |----------|----------|----------------|  
 |Opzione|ASC/DESC|Gli indici hash non cluster non sono ordinati. Rimuovere le parole chiave **ASC** e **DESC** dalla specifica della chiave di indice.|  
   
@@ -108,16 +109,16 @@ ms.lasthandoff: 11/22/2017
 |Funzionalità|Cursori|I cursori non sono supportati nelle stored procedure compilate in modo nativo.<br /><br /> Quando si esegue la procedura dal client, usare RPC anziché l'API cursore. Con ODBC, evitare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . **EXECUTE**e specificare direttamente il nome della procedura.<br /><br /> Quando si esegue la procedura da un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o da un'altra stored procedure, evitare di usare un cursore con la stored procedure compilata in modo nativo.<br /><br /> Quando si crea una stored procedure compilata in modo nativo, usare al posto del cursore la logica basata su set o un ciclo **WHILE** .|  
 |Funzionalità|Valori predefiniti del parametro non costanti|Quando si utilizzano i valori predefiniti con i parametri nelle stored procedure compilate in modo nativo, i valori devono essere costanti. Rimuovere tutti i caratteri jolly dalle dichiarazioni di parametro.|  
 |Funzionalità|EXTERNAL|Le stored procedure CLR non possono essere compilate in modo nativo. Rimuovere la clausola AS EXTERNAL o l'opzione NATIVE_COMPILATION dall'istruzione CREATE PROCEDURE.|  
-|Funzionalità|Stored procedure numerate|Le stored procedure compilate in modo nativo non possono essere numerate. Rimuovere **;***number* dall'istruzione **CREATE PROCEDURE** .|  
+|Funzionalità|Stored procedure numerate|Le stored procedure compilate in modo nativo non possono essere numerate. Rimuovere il **;***numero* dall'istruzione **CREATE PROCEDURE**.|  
 |Funzionalità|INSERT di più righe... Istruzioni VALUES|Non è possibile inserire più righe utilizzando la stessa istruzione **INSERT** in una stored procedure compilata in modo nativo. Creare istruzioni **INSERT** per ogni riga.|  
 |Funzionalità|Espressioni di tabella comuni|Le espressioni di tabella comuni (CTE) non sono supportate nelle stored procedure compilate in modo nativo. Riformulare la query.|  
 |Funzionalità|COMPUTE|La clausola **COMPUTE** non è supportata. Rimuoverla dalla query.|  
 |Funzionalità|SELECT INTO|La clausola **INTO** non è supportata con l'istruzione **SELECT** . Riscrivere la query come **INSERT INTO** *tabella* **SELECT**.|  
 |Funzionalità|elenco delle colonne di inserimento incompleto|In genere, nelle istruzioni INSERT i valori devono essere specificati per tutte le colonne della tabella.<br /><br /> Tuttavia, nelle tabelle con ottimizzazione per la memoria Microsoft supporta i vincoli DEFAULT e le colonne IDENTITY(1,1). Tali colonne possono essere, e nel caso delle colonne IDENTITY devono essere, omesse dall'elenco di colonne INSERT.|  
 |Funzionalità|*Funzione*|Alcune funzioni predefinite non sono supportate nelle stored procedure compilate in modo nativo. Rimuovere la funzione rifiutata dalla stored procedure. Per altre informazioni sulle funzioni predefinite supportate, vedere<br />[Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)o<br />[Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
-|Funzionalità|CASE|**Si applica a:**  [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Le espressioni **CASE** non sono supportate nelle query all'interno di stored procedure compilate in modo nativo. Creare query per ogni istruzione CASE. Per altre informazioni, vedere [Implementazione di un'istruzione CASE](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supportano le espressioni CASE.|  
+|Funzionalità|CASE|**Si applica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Le espressioni **CASE** non sono supportate nelle query all'interno di stored procedure compilate in modo nativo. Creare query per ogni istruzione CASE. Per altre informazioni, vedere [Implementazione di un'istruzione CASE](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supportano le espressioni CASE.|  
 |Funzionalità|INSERT EXECUTE|Rimuovere il riferimento.|  
-|Funzionalità|Eseguire|Funzionalità supportata solo per eseguire le stored procedure compilate in modo nativo e le funzioni definite dall'utente.|  
+|Funzionalità|EXECUTE|Funzionalità supportata solo per eseguire le stored procedure compilate in modo nativo e le funzioni definite dall'utente.|  
 |Funzionalità|aggregazioni definite dall'utente|Le funzioni di aggregazione definite dall'utente non possono essere utilizzate nelle stored procedure compilate in modo nativo. Rimuovere il riferimento alla funzione dalla procedura.|  
 |Funzionalità|metadati in modalità browse|Nelle stored procedure compilate in modo nativo non è ancora previsto il supporto per i metadati in modalità browse. Accertarsi che l'opzione di sessione **NO_BROWSETABLE** sia impostata su OFF.|  
 |Funzionalità|DELETE con clausola FROM|La clausola **FROM** non è supportata dalle istruzioni **DELETE** con un'origine della tabella nelle stored procedure compilate in modo nativo.<br /><br /> **DELETE** con la clausola **FROM** è supportata quando viene utilizzata per indicare la tabella da cui eseguire l'eliminazione.|  
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/22/2017
 |Operatore|OFFSET|Questo operatore non è supportato. Rimuovere **OFFSET** dalla stored procedure compilata in modo nativo.|  
 |Operatore|INTERSECT|Questo operatore non è supportato. Rimuovere **INTERSECT** dalla stored procedure compilata in modo nativo. In alcuni casi è possibile usare INNER JOIN per ottenere lo stesso risultato.|  
 |Operatore|EXCEPT|Questo operatore non è supportato. Rimuovere **EXCEPT** dalla stored procedure compilata in modo nativo.|  
-|Operatore|APPLY|**Si applica a:**  [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Questo operatore non è supportato. Rimuovere **APPLY** dalla stored procedure compilata in modo nativo.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supportano l'operatore APPLY nei moduli compilati in modo nativo.|  
+|Operatore|APPLY|**Si applica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Questo operatore non è supportato. Rimuovere **APPLY** dalla stored procedure compilata in modo nativo.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supportano l'operatore APPLY nei moduli compilati in modo nativo.|  
 |Operatore|PIVOT|Questo operatore non è supportato. Rimuovere **PIVOT** dalla stored procedure compilata in modo nativo.|  
 |Operatore|UNPIVOT|Questo operatore non è supportato. Rimuovere **UNPIVOT** dalla stored procedure compilata in modo nativo.|  
 |Operatore|CONTAINS|Questo operatore non è supportato. Rimuovere **CONTAINS** dalla stored procedure compilata in modo nativo.|  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/22/2017
 |Hint per il join|HASH, MERGE|Nelle stored procedure compilate in modo nativo sono supportati solo i join a cicli annidati. I join merge e hash non sono supportati. Rimuovere l'hint per il join.|  
 |Hint per la query|*Hint per la query*|Questo hint per la query non è all'interno di stored procedure compilate in modo nativo. Per gli hint per la query supportati, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).|  
 |Opzione|PERCENT|Questa opzione non è supportata con le clausole **TOP** . Rimuovere **PERCENT** dalla query nella stored procedure compilata in modo nativo.|  
-|Opzione|WITH TIES|**Si applica a:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] e a [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Questa opzione non è supportata con le clausole **TOP** . Rimuovere **WITH TIES** dalla query nella stored procedure compilata in modo nativo.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supportano **TOP WITH TIES**.|  
+|Opzione|WITH TIES|**Si applica a:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Questa opzione non è supportata con le clausole **TOP** . Rimuovere **WITH TIES** dalla query nella stored procedure compilata in modo nativo.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supportano **TOP WITH TIES**.|  
 |Funzione di aggregazione|*Funzione di aggregazione*|Non tutte le funzioni di aggregazione sono supportate. Per altre informazioni sulle funzioni di aggregazione supportate nei moduli T-SQL compilati in modo nativo, vedere [Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
 |Funzione di rango|*Funzione di rango*|Le funzioni di rango non sono supportate nelle stored procedure compilate in modo nativo. Rimuoverle dalla definizione della procedura.|  
 |Funzione|*Funzione*|Questa funzione non è supportata. Per altre informazioni sulle funzioni supportate nei moduli T-SQL compilati in modo nativo, vedere [Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
@@ -176,7 +177,7 @@ ms.lasthandoff: 11/22/2017
 |Funzionalità|Dichiarazioni di variabili di tabelle inline.|Le variabili di tabella devono fare riferimento ai tipi di tabella ottimizzata per la memoria definiti in modo esplicito. È consigliabile creare un tipo di tabella ottimizzata per la memoria e usare tale tipo per la dichiarazione di variabili, anziché specificare il tipo inline.|  
 |Funzionalità|Tabelle basate su disco|Non è possibile accedere alle tabelle basate su dico dalle stored procedure compilate in modo nativo. Rimuovere i riferimenti alle tabelle basate su disco dalle stored procedure compilate in modo nativo. In alternativa, eseguire la migrazione delle tabelle basate su disco alle tabelle con ottimizzazione per la memoria.|  
 |Funzionalità|Viste|Non è possibile accedere alle viste dalle stored procedure compilate in modo nativo. Anziché alle viste, fare riferimento alle tabelle di base sottostanti.|  
-|Funzionalità|Funzioni con valori di tabella|**Si applica a:**  [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Non è possibile accedere alle funzioni con valori di tabella con istruzioni multiple dai moduli T-SQL compilati in modo nativo. Le funzioni con valori di tabella inline sono supportate, ma devono essere create con la clausola WITH NATIVE_COMPILATION.<br/><br/>**Si applica a**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>Non è possibile fare riferimento alle funzioni con valori di tabella da moduli T-SQL compilati in modo nativo.|  
+|Funzionalità|Funzioni con valori di tabella|**Si applica a**: [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Non è possibile accedere alle funzioni con valori di tabella con istruzioni multiple dai moduli T-SQL compilati in modo nativo. Le funzioni con valori di tabella inline sono supportate, ma devono essere create con la clausola WITH NATIVE_COMPILATION.<br/><br/>**Si applica a**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>Non è possibile fare riferimento alle funzioni con valori di tabella da moduli T-SQL compilati in modo nativo.|  
 |Opzione|PRINT|Rimuovere il riferimento.|  
 |Funzionalità|DDL|All'interno di moduli T-SQL compilati in modo nativo non sono supportate DLL.|  
 |Opzione|STATISTICS XML|Non supportato. Quando si esegue una query, con l'opzione STATISTICS XML abilitata, viene restituito il contenuto XML senza la parte per la stored procedure compilata in modo nativo.|  
@@ -184,7 +185,7 @@ ms.lasthandoff: 11/22/2017
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transazioni che accedono alle tabelle con ottimizzazione per la memoria  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore che interessa le transazioni che accedono alle tabelle ottimizzate per la memoria e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|Nome|Soluzione|  
+|Tipo|nome|Soluzione|  
 |----------|----------|----------------|  
 |Funzionalità|punto di salvataggio|La creazione di punti di salvataggio espliciti nelle transazioni che accedono alle tabelle ottimizzate per la memoria non è supportata.|  
 |Funzionalità|transazione associata|Le sessioni associate non possono partecipare alle transazioni che accedono alle tabelle ottimizzate per la memoria. Non associare la sessione prima di eseguire la procedura.|  

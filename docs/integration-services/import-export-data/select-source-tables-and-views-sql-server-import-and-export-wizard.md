@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.selectsourcetablesandviews.f1
+f1_keywords:
+- sql13.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
-caps.latest.revision: "96"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 407e1b75ca60bb8a36040883c472dce8e059188e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 600e734c11a597cdcbae0279e1604bd96ccfb06f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selezione tabelle e viste di origine (Importazione/Esportazione guidata SQL Server)
   Dopo aver specificato che si vuole copiare un'intera tabella o dopo aver specificato una query, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Seleziona tabelle e viste di origine**. In questa pagina è possibile selezionare le tabelle e le viste esistenti da copiare. Viene poi eseguito il mapping delle tabelle di origine in tabelle di destinazione nuove o esistenti. Facoltativamente, è anche possibile esaminare il mapping di singole colonne e visualizzare in anteprima i dati di esempio.
@@ -109,7 +111,7 @@ Quando la procedura guidata deve eseguire conversioni esplicite dei tipi di dati
 -   Se la tabella di destinazione contiene già righe di dati, le prime otto righe campionate dalla procedura guidata devono contenere almeno una riga con un valore più lungo di 255 caratteri nella colonna di tipo memo.
 -   Se la tabella di destinazione viene creata dalla procedura guidata, l'istruzione **CREATE TABLE** deve usare **LONGTEXT** (o uno dei relativi sinonimi) come tipo di dati della colonna di tipo memo. Controllare l'istruzione **CREATE TABLE** e rivederla, se necessario, facendo clic su **Modifica SQL** accanto all'opzione **Crea tabella di destinazione** nella pagina **Mapping colonne**.
 
-## <a name="whats-next"></a>Operazioni successive  
+## <a name="whats-next"></a>Quali sono le operazioni successive?  
  Dopo aver selezionato le tabelle e le viste esistenti da copiare e sottoporre a mapping nelle rispettive destinazioni, la pagina successiva è **Salvare ed eseguire il pacchetto**. In questa pagina specificare se eseguire immediatamente l'operazione di copia. A seconda della configurazione, è anche possibile salvare il pacchetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creato dalla procedura guidata per personalizzarlo e usarlo di nuovo in seguito. Per altre informazioni, vedere [Salvare ed eseguire il pacchetto](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Vedere anche

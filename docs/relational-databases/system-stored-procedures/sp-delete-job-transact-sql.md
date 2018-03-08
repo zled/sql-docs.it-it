@@ -1,5 +1,5 @@
 ---
-title: sp_delete_job (Transact-SQL) | Documenti Microsoft
+title: sp_delete_job (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_job
 - sp_delete_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 323029d08f890a7013691090f6478b65dc6e3274
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc32f2328e4153f79a7eb1c7e4115e455078791c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +49,16 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  Numero di identificazione del processo da eliminare. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  Nome del processo da eliminare. *job_name* è **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* o *job_name*deve essere specificato; non è possibile specificarli entrambi.  
   
- [  **@originating_server=** ] **'***server***'**  
+ [ **@originating_server=** ] **'***server***'**  
  Per uso interno.  
   
  [  **@delete_history=** ] *delete_history*  
@@ -63,7 +66,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Si noti che quando un processo viene eliminato e non viene eliminata la cronologia, le informazioni cronologiche per il processo non saranno inclusi il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cronologia processo dell'interfaccia utente grafica agente, ma le informazioni continueranno comunque a risiedere nel **sysjobhistory**tabella il **msdb** database.  
   
- [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
+ [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
  Specifica se eliminare le pianificazioni associate a questo processo se non sono associate a nessun altro processo. *delete_unused_schedule* è **bit**, il valore predefinito è **1**. Quando *delete_unused_schedule* è **1**, pianificazioni associate a questo processo vengono eliminate se nessun altro processo vi fanno riferimento alla pianificazione. Quando *delete_unused_schedule* è **0**, le pianificazioni non vengono eliminate.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -81,7 +84,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Questa stored procedure non può eliminare i piani di manutenzione né i processi facenti parti dei piani di manutenzione. Per eliminare i piani di manutenzione, utilizzare invece [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -108,8 +111,8 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

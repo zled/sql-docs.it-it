@@ -8,12 +8,11 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - hybrid OLAP
@@ -26,19 +25,20 @@ helpviewer_keywords:
 - MOLAP
 - ROLAP
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eab4af44192304701687c7796448407eaacdaa96
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Partizioni - l'elaborazione e modalità di archiviazione delle partizioni
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La modalità di archiviazione di una partizione influisce sulla query e l'elaborazione delle prestazioni, i requisiti di archiviazione e percorsi di archiviazione della partizione e il relativo gruppo di misure padre e il cubo. La scelta della modalità di archiviazione influisce inoltre sulle opzioni di elaborazione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La modalità di archiviazione di una partizione influisce sulle prestazioni di esecuzione delle query e di elaborazione e su requisiti e percorsi di archiviazione della partizione e del relativo cubo e gruppo di misure padre. La scelta della modalità di archiviazione influisce inoltre sulle opzioni di elaborazione.  
   
  Una partizione può utilizzare una delle tre modalità di archiviazione di base seguenti:  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
 -   OLAP ibrido (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta tutte e tre le modalità di archiviazione di base. Supporta inoltre la memorizzazione nella cache attiva, che consente di combinare le caratteristiche dell'archiviazione ROLAP e MOLAP ai fini dell'attualità dei dati e delle prestazioni di esecuzione delle query. Per altre informazioni, vedere [Memorizzazione nella cache attiva &#40;partizioni&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta tutte e tre le modalità di archiviazione di base. Supporta inoltre la memorizzazione nella cache attiva, che consente di combinare le caratteristiche dell'archiviazione ROLAP e MOLAP ai fini dell'attualità dei dati e delle prestazioni di esecuzione delle query. Per altre informazioni, vedere [Memorizzazione nella cache attiva &#40;partizioni&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## <a name="molap"></a>MOLAP  
  La modalità di archiviazione MOLAP determina l'archiviazione delle aggregazioni della partizione e di una copia dei dati di origine in una struttura multidimensionale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durante l'elaborazione della partizione. Questa struttura MOLAP è ottimizzata in modo da garantire le massime prestazioni di esecuzione delle query. L'archiviazione può essere eseguita in un percorso sul computer in cui la partizione è definita o su un altro computer che esegue [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Poiché una copia dei dati di origine risiede nella struttura multidimensionale, le query possono essere risolte senza accedere ai dati di origine della partizione. I tempi di risposta alle query possono essere ridotti significativamente utilizzando le aggregazioni. I dati nella struttura MOLAP della partizione sono aggiornati all'elaborazione più recente della partizione.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/08/2017
   
     -   QUOTED_IDENTIFIER  
   
--   Le dimensioni totali di una chiave dell'indice, in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], non possono essere maggiori di 900 byte. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Questa condizione in base alle colonne chiave a lunghezza fissa quando viene elaborata l'istruzione CREATE INDEX verrà verificata. Tuttavia, se sono presenti colonne a lunghezza variabile nella chiave di indice, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà inoltre verificata questa condizione per ogni aggiornamento di tabelle di base. Poiché aggregazioni diverse utilizzano definizioni di viste diverse, l'elaborazione ROLAP con viste indicizzate avrà esito positivo o negativo in base alla progettazione delle aggregazioni.  
+-   Le dimensioni totali di una chiave dell'indice, in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], non possono essere maggiori di 900 byte. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Questa condizione in base alle colonne chiave a lunghezza fissa quando viene elaborata l'istruzione CREATE INDEX verrà verificata. Tuttavia, se sono presenti colonne a lunghezza variabile nella chiave di indice, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà inoltre verificata questa condizione per ogni aggiornamento di tabelle di base. Poiché aggregazioni diverse utilizzano definizioni di viste diverse, l'elaborazione ROLAP con viste indicizzate avrà esito positivo o negativo in base alla progettazione delle aggregazioni.  
   
 -   Nella sessione con cui viene creata la vista indicizzata le opzioni seguenti devono essere impostate su ON: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNING. Questa impostazione può essere eseguita in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [La memorizzazione nella cache &#40; Le partizioni &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
- [Sincronizzare database di Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Sincronizzare i database di Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
+ [Le partizioni &#40; Analysis Services - dati multidimensionali &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

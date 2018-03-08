@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ValueColumn Element
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ec691d81ad90f86d854956ee7bf09ec316bce341
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a3dab1859f50e4f2806ac46ce24a07f77a21305f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="valuecolumn-element-assl"></a>Elemento ValueColumn (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifica la colonna che fornisce il valore dell'elemento padre.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)|  
 |Valore predefinito|Varies (see Remarks)|  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/08/2017
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  Se il [NameColumn](../../../analysis-services/scripting/objects/namecolumn-element-assl.md) elemento **DimensionAttribute** è specificato, lo stesso **DataItem** valori vengono utilizzati come valori predefiniti per il **ValueColumn** elemento. Se il **NameColumn** elemento di **DimensionAttribute** viene omesso e [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md) insieme di **DimensionAttribute** contiene un singolo [KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md) elemento che rappresenta una colonna con tipo di dati stringa, la stessa chiave **DataItem** valori vengono utilizzati come valori predefiniti per il **ValueColumn** elemento.  

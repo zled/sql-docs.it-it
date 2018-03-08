@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_instance_config (Transact-SQL) | Documenti Microsoft
+title: managed_backup.fn_backup_instance_config (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - smart_admin.fn_backup_instance_config_TSQL
 - fn_backup_instance_config_TSQL
 - smart_admin.fn_backup_instance_config
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - smart_admin.fn_backup_instance_config
 - fn_backup_instance_config
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5731faf0d0625a90b1e8b69672bfb4053804b99b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bad83cf900e1946612eb1065e4e413760c84d76f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```sql  
 managed_backup.fn_backup_db_config ()  
 ```  
   
@@ -58,14 +60,14 @@ managed_backup.fn_backup_db_config ()
 |is_smart_backup_enabled|INT|Visualizza 1 quando il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è abilitato e 0 quando il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è disabilitato.|  
 |credential_name|SYSNAME|Credenziali SQL predefinite utilizzate per l'autenticazione per l'archiviazione.|  
 |retention_days|INT|Periodo di memorizzazione predefinito impostato a livello di istanza.|  
-|storage_url|NVARCHAR (1024)|URL dell'account di archiviazione predefinito impostato a livello di istanza.|  
+|storage_url|NVARCHAR(1024)|URL dell'account di archiviazione predefinito impostato a livello di istanza.|  
 |encryption_algorithm|SYSNAME|Nome dell'algoritmo di crittografia. Se la crittografia non è specificata, è impostato su NULL.|  
 |encryptor_type|NVARCHAR(32)|Tipo di componente di crittografia: certificato o chiave asimmetrica. Se nessun componente di crittografia è specificato, è impostato su NULL.|  
 |encryptor_name|SYSNAME|Nome del certificato o della chiave asimmetrica. Se nessun nome è specificato, è impostato su NULL.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza di **db_backupoperator** ruolo del database con **ALTER ANY CREDENTIAL** autorizzazioni. L'utente non deve essere rifiutato **VIEW ANY DEFINITION** autorizzazioni.  
   
 ## <a name="examples"></a>Esempi  

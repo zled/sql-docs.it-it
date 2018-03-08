@@ -1,5 +1,5 @@
 ---
-title: SET IDENTITY_INSERT (Transact-SQL) | Documenti Microsoft
+title: SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - SET_IDENTITY_INSERT_TSQL
 - IDENTITY_INSERT_TSQL
 - IDENTITY_INSERT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - IDENTITY_INSERT option
 - SET IDENTITY_INSERT statement
 - identity values [SQL Server], explicit values
 - identity columns [SQL Server], explicit values
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: fb788c885cee9f082c18ebd315d05a4a961e88b3
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
@@ -58,14 +60,14 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
  *table*  
  Nome di una tabella contenente una colonna Identity.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La proprietà IDENTITY_INSERT può essere impostata su ON per una sola tabella di una sessione. Se in una tabella tale proprietà è già impostata su ON e viene eseguita un'istruzione SET IDENTITY_INSERT ON per un'altra tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza un messaggio di errore per segnalare che la proprietà SET IDENTITY_INSERT è già impostata su ON e indicata la tabella per la quale l'opzione è impostata.  
   
  Se il valore immesso è maggiore del valore Identity corrente per la tabella, il nuovo valore viene utilizzato automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come valore Identity corrente.  
   
  L'opzione SET IDENTITY_INSERT viene impostata in fase di esecuzione, non in fase di analisi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente deve essere il proprietario della tabella o deve disporre dell'autorizzazione ALTER per la tabella.  
   
 ## <a name="examples"></a>Esempi  

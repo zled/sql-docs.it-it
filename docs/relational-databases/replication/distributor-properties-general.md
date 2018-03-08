@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.configdistwizard.distproperties.general.f1
 helpviewer_keywords: Distributor Properties dialog box
 ms.assetid: ab4120ec-e524-4c0c-8b48-f2f40adb1a3b
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 873a936699c825048e6d7f21c89b561a9b621b96
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ca8eee800c47b047b27097ce84a425f1cf251d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-properties-general"></a>Proprietà server di distribuzione, Generale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La pagina **Generale** della finestra di dialogo **Proprietà server di distribuzione** consente di aggiungere ed eliminare i database di distribuzione e di impostarne le relative proprietà.  
@@ -36,17 +36,17 @@ ms.lasthandoff: 11/17/2017
   
  Fare clic sul pulsante delle proprietà**...**nella griglia delle proprietà **Database** per aprire la finestra di dialogo **Proprietà database di distribuzione** .  
   
- **Nuovi**  
+ **Nuova**  
  Fare clic su questo pulsante per creare un nuovo database di distribuzione.  
   
- **Delete**  
+ **Elimina**  
  Selezionare un database di distribuzione esistente nella griglia delle proprietà **Database** e scegliere **Elimina** per eliminarlo. Non è possibile eliminare il database di distribuzione se ne esiste uno solo, poiché ogni server di distribuzione deve disporre di almeno un database di distribuzione. Per eliminare tutti i database di distribuzione, è necessario disabilitare la distribuzione nel computer. Per altre informazioni, vedere [Disabilitare la pubblicazione e la distribuzione](../../relational-databases/replication/disable-publishing-and-distribution.md).  
   
  **Impostazioni predefinite profili**  
  Fare clic su questo pulsante per accedere ai profili dell'agente di replica nella finestra di dialogo **Profili agenti** . Per ulteriori informazioni sui profili, vedere [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare la distribuzione](../../relational-databases/replication/configure-distribution.md)   
+ [Configura distribuzione](../../relational-databases/replication/configure-distribution.md)   
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d154519f39c17d1bdee4cf2a96ddb18f96ac3444
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7a09f05b8e508205f3e2a8863627c12afdec9c64
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-9-create-hierarchies"></a>Lezione 9: Creare gerarchie
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +33,7 @@ Per creare gerarchie, si utilizzerà Progettazione modelli in *vista diagramma*.
   
 Tempo stimato per il completamento della lezione: **20 minuti**  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 8: creare prospettive](../analysis-services/lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Creare gerarchie  
@@ -80,7 +80,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
     *  WeekNumberOfYear
     *  DayNumberOfWeek
   
- ## <a name="whats-next"></a>Operazioni successive
+ ## <a name="whats-next"></a>Quali sono le operazioni successive?
 Passare alla lezione successiva: [lezione 10: creare partizioni](../analysis-services/lesson-10-create-partitions.md). 
   
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a81844609833db4953102f72d2eb6d0939cfc78
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1a6800d7cb73790c61ec94acaffdeb291fa6b475
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifier-arguments"></a>Argomenti di tipo identificatore
 Se una stringa in un argomento dell'identificatore è racchiuso tra virgolette, il driver rimuove iniziali e gli spazi vuoti finali e considera letteralmente la stringa tra virgolette. Se la stringa non è racchiuso tra virgolette, il driver rimuove riduzioni e gli spazi vuoti finali stringa in maiuscolo. L'impostazione di un argomento dell'identificatore a un puntatore null restituisce SQL_ERROR e SQLSTATE HY009 (utilizzo non valido del puntatore null), a meno che l'argomento è un nome di catalogo e i cataloghi non sono supportati.  

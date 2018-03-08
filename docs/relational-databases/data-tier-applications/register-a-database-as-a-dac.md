@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-tier-applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-data-tier-apps
+ms.technology:
+- dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f79711d831a0f92805f8a9c59b003aed3fe1c63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la procedura guidata **Registra applicazione livello dati** o uno script di Windows PowerShell per compilare una definizione di applicazione livello dati (DAC) che descrive gli oggetti contenuti in un database esistente e registrarla nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Usare la procedura guidata **Registra applicazione livello dati** o uno script di Windows PowerShell per compilare una definizione di applicazione livello dati (DAC) che descrive gli oggetti contenuti in un database esistente e registrarla nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
  Non è possibile registrare un'applicazione livello dati se il database include oggetti non supportati nell'applicazione livello dati o utenti contenuti. Per ulteriori informazioni sui tipi di oggetti supportati in un'applicazione livello dati, vedere [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="Permissions"></a> Permissions  
  La registrazione di un'applicazione livello dati in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] richiede almeno autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION per l'ambito del database, nonché autorizzazioni SELECT su **sys.sql_expression_dependencies**, oltre all'appartenenza al ruolo predefinito del server **dbcreator** . Possono registrare un'applicazione livello dati anche i membri del ruolo predefinito del server **sysadmin** o dell'account amministratore di sistema SQL Server predefinito denominato **sa** . La registrazione di un'applicazione livello dati che non contiene accessi in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli **dbmanager** o **serveradmin** . La registrazione di un'applicazione livello dati che contiene account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli **loginmanager** o **serveradmin** .  
   
 ##  <a name="UsingRegisterDACWizard"></a> Utilizzo della procedura guidata Registra applicazione livello dati  
@@ -115,7 +117,7 @@ ms.lasthandoff: 11/17/2017
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Convalida degli oggetti  
- **Controllo di**  *SchemaName* **.** *ObjectName* **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. *NomeSchema***.***NomeOggetto* identifica l'oggetto attualmente sottoposto a verifica.  
+ **Controllo di**  *SchemaName* **.** *ObjectName* **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. *SchemaName***.***ObjectName* identifica l'oggetto in fase di verifica.  
   
  **< Indietro**: consente di tornare alla pagina **Imposta proprietà** per modificare le voci selezionate.  
   
@@ -128,7 +130,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="summary"></a>Riepilogo  
  **Per la registrazione dell'applicazione livello dati verranno utilizzate le impostazioni seguenti.** - Consente di visualizzare un report delle proprietà e degli oggetti che verranno inclusi nell'applicazione livello dati.  
   
- **Salva report** consente di salvare una copia del report di convalida come file HTML. La cartella predefinita, **SQL Server Management Studio\DAC Packages**, si trova all'interno della cartella Documenti dell'account di Windows.  
+ **Salva report** consente di salvare una copia del report di convalida come file HTML. La cartella predefinita, **SQL Server Management Studio\DAC Packages** , si trova all'interno della cartella Documenti dell'account di Windows.  
   
  **< Indietro**: consente di tornare alla pagina **Imposta proprietà** per modificare le voci selezionate.  
   

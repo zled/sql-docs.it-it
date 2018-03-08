@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 772217a434d69d8849fdaefd66108365c25e46e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1082fb2dc121b3751a14b4cf1e291c8da9425ab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili provider di log che è possibile utilizzare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
@@ -238,7 +239,7 @@ ms.lasthandoff: 11/20/2017
   
     -   Per [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]usare una gestione connessione file.  
   
-    -   Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]utilizzare una gestione connessione OLE DB. Per altre informazioni, vedere [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+    -   Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]utilizzare una gestione connessione OLE DB. Per altre informazioni, vedere [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
     -   Per il Registro eventi di Windows, non eseguire alcuna operazione. [!INCLUDE[ssIS](../../includes/ssis-md.md)] crea automaticamente il registro.  
   
@@ -260,7 +261,7 @@ ms.lasthandoff: 11/20/2017
   
 9. Nella scheda **Dettagli** fare clic su **Salva**. Verrà visualizzata la finestra di dialogo **Salva con nome** . Individuare la cartella in cui salvare la configurazione di registrazione, digitare un nome di file per la nuova configurazione e quindi fare clic su **Salva**.  
   
-10. Scegliere **OK**.  
+10. Fare clic su **OK**.  
   
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
 
@@ -310,7 +311,7 @@ ms.lasthandoff: 11/20/2017
  **Nome**  
  Consente di abilitare o disabilitare log per contenitori o attività selezionati nel riquadro **Contenitori** della finestra di dialogo **Configura log SSIS** usando le caselle di controllo. Il campo del nome è modificabile. Utilizzare il nome predefinito per il provider oppure digitare un nome descrittivo univoco.  
   
- **Description**  
+ **Descrizione**  
  Il campo della descrizione è modificabile. Fare clic nel campo e quindi modificare la descrizione predefinita del log.  
   
  **Configurazione**  
@@ -318,7 +319,7 @@ ms.lasthandoff: 11/20/2017
   
  Argomenti correlati: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) e [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
- **Delete**  
+ **Elimina**  
  Selezionare un provider di log e fare clic su **Elimina**.  
   
 ###  <a name="detail"></a> Configurazione delle opzioni nella scheda Dettagli  
@@ -328,13 +329,13 @@ ms.lasthandoff: 11/20/2017
  **Eventi**  
  Consente di abilitare o disabilitare gli eventi per la registrazione.  
   
- **Description**  
+ **Descrizione**  
  Consente di visualizzare una descrizione dell'evento.  
   
  **Avanzate**  
  Consente di selezionare o deselezionare gli eventi da registrare, nonché le informazioni da registrare per ogni evento. Fare clic su **Standard** per nascondere tutti i dettagli di registrazione, ad eccezione dell'elenco di eventi. Per la registrazione sono disponibili le informazioni seguenti:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Computer**|Nome del computer in cui si è verificato l'evento registrato.|  
 |**Operatore**|Nome utente dell'utente che ha avviato il pacchetto.|  
@@ -344,7 +345,7 @@ ms.lasthandoff: 11/20/2017
 |**MessageText**|Messaggio associato alla voce di log.|  
 |**DataBytes**|Riservato per utilizzi futuri.|  
   
- **Standard**  
+ **Basic**  
  Consente di selezionare o deselezionare gli eventi da registrare. Questa opzione può essere utilizzata per nascondere i dettagli di registrazione, ad eccezione dell'elenco di eventi. Se si seleziona un evento, per impostazione predefinita verranno selezionati anche tutti i relativi dettagli di registrazione. Fare clic su **Avanzate** per visualizzarli.  
   
  **Load**  
@@ -414,10 +415,10 @@ ms.lasthandoff: 11/20/2017
   
 |Livello di registrazione|Description|  
 |-------------------|-----------------|  
-|Nessuno|La registrazione è disabilitata. Solo lo stato dell'esecuzione del pacchetto viene registrato.|  
-|Basic|Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. Si tratta del valore predefinito.|  
+|None|La registrazione è disabilitata. Solo lo stato dell'esecuzione del pacchetto viene registrato.|  
+|Standard|Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. Si tratta del valore predefinito.|  
 |RuntimeLineage|Raccoglie i dati necessari a tenere traccia delle informazioni di derivazione nel flusso di dati. È possibile analizzare queste informazioni di derivazione per mappare la relazione di derivazione tra attività. Gli ISV e sviluppatori possono creare strumenti personalizzati di mapping della derivazione con queste informazioni.|  
-|Prestazioni|Vengono registrati solo le statistiche sulle prestazioni e gli eventi OnError e OnWarning.<br /><br /> Nel report **Prestazioni di esecuzione** vengono visualizzati il tempo di attività e il tempo totale per i componenti flusso di dati del pacchetto. Queste informazioni sono disponibili se il livello di registrazione dell'ultima esecuzione del pacchetto è stato impostato su **Prestazioni** o **Dettagliato**. Per altre informazioni, vedere [Report per il server Integration Services](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> La vista [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) visualizza le ore di inizio e di fine per i componenti flusso di dati, per ogni fase di esecuzione. In questa vista vengono visualizzate le informazioni per i componenti solo quando il livello di registrazione dell'esecuzione del pacchetto è impostato su **Prestazioni** o **Dettagliato**.|  
+|restazioni|Vengono registrati solo le statistiche sulle prestazioni e gli eventi OnError e OnWarning.<br /><br /> Nel report **Prestazioni di esecuzione** vengono visualizzati il tempo di attività e il tempo totale per i componenti flusso di dati del pacchetto. Queste informazioni sono disponibili se il livello di registrazione dell'ultima esecuzione del pacchetto è stato impostato su **Prestazioni** o **Dettagliato**. Per altre informazioni, vedere [Report per il server Integration Services](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> La vista [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) visualizza le ore di inizio e di fine per i componenti flusso di dati, per ogni fase di esecuzione. In questa vista vengono visualizzate le informazioni per i componenti solo quando il livello di registrazione dell'esecuzione del pacchetto è impostato su **Prestazioni** o **Dettagliato**.|  
 |Dettagliato|Tutti gli eventi vengono registrati, inclusi gli eventi personalizzati e di diagnostica.<br /><br /> Gli eventi personalizzati includono quelli registrati dalle attività di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sugli eventi personalizzati, vedere [Messaggi personalizzati per la registrazione](#custom_messages).<br /><br /> L'evento **DiagnosticEx** rappresenta un esempio di un evento di diagnostica. Ogni volta che un'attività Esegui pacchetto esegue un pacchetto figlio, l'evento acquisisce i valori dei parametri passati ai pacchetti figlio.<br /><br /> L'evento **DiagnosticEx** consente inoltre di ottenere i nomi delle colonne in cui si verificano errori a livello di riga. Questo evento scrive una mappa di derivazione del flusso di dati nel log. È quindi possibile cercare il nome della colonna in questa mappa di derivazione usando l'identificatore della colonna acquisito da un output degli errori.  Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Il valore della colonna di messaggio per **DiagnosticEx** è testo XML. Per visualizzare il testo del messaggio per l'esecuzione del pacchetto, eseguire una query nella vista [catalog.operation_messages &#40;database SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Notare che l'evento **DiagnosticEx** non mantiene gli spazi vuoti nel relativo output XML per ridurre le dimensioni del log. Per migliorare la leggibilità, copiare il log in un editor XML come Visual Studio, che supporta la formattazione XML e l'evidenziazione della sintassi.<br /><br /> Nella vista [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) viene visualizzata una riga ogni volta che un componente flusso di dati invia dati a un componente downstream, per l'esecuzione di un pacchetto. Il livello di registrazione deve essere impostato su **Dettagliato** per acquisire queste informazioni nella vista.|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>Creare e gestire i livelli di registrazione personalizzati con la finestra di dialogo Gestione del livello di registrazione personalizzato  
@@ -678,7 +679,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 |---------------|-----------------|  
 |**XMLOperation**|Fornisce informazioni sull'operazione eseguita dall'attività.|  
 
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  Nell'elenco seguente sono contenuti collegamenti ad argomenti che illustrano come eseguire attività correlate alla funzionalità di registrazione.  
   
 -   [Eventi registrati da un pacchetto di Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

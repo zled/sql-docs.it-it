@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_principalprofile_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_help_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/02/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_principalprofile_sp_TSQL
 - sysmail_help_principalprofile_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_principalprofile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_principalprofile_sp
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 322984b88e879adb952a1168b17178b8ffe20ae2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 54763594122216c14ef8b74f17fbc83919ea44fc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +48,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@principal_id=** ] *principal_id*  
+ [ **@principal_id=** ] *principal_id*  
  È l'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione all'elenco. *principal_id* è **int**, con un valore predefinito è NULL. Entrambi *principal_id* o *principal_name* può essere specificato.  
   
  [  **@principal_name=** ] **'***principal_name***'**  
  È il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione all'elenco. *principal_name* è **sysname**, con un valore predefinito è NULL. Entrambi *principal_id* o *principal_name* può essere specificato.  
   
- [  **@profile_id=** ] *profile_id*  
+ [ **@profile_id=** ] *profile_id*  
  ID del profilo per l'associazione da includere nell'elenco. *profile_id* è **int**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* può essere specificato.  
   
  [  **@profile_name=** ] **'***profile_name***'**  
@@ -77,7 +80,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
  **sysmail_help_principalprofile_sp** è il **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

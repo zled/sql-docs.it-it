@@ -1,5 +1,5 @@
 ---
-title: L'istruzione DBCC UPDATEUSAGE (Transact-SQL) | Documenti Microsoft
+title: DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - UPDATEUSAGE_TSQL
 - DBCC_UPDATEUSAGE_TSQL
 - DBCC UPDATEUSAGE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - inaccurate page or row counts [SQL Server]
 - space [SQL Server], usage reports
@@ -34,16 +36,16 @@ helpviewer_keywords:
 - row count accuracy [SQL Server]
 - page count accuracy [SQL Server]
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ec93792384ae43aa20fcf887fd0af6d12b5a34f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 12a05d112f55fd4323b5f6e4278c6134f581f4ae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +68,7 @@ DBCC UPDATEUSAGE
 *database_name* | *database_id* | 0  
 Nome o ID del database per cui si desidera segnalare e correggere le statistiche sull'utilizzo dello spazio. Se si specifica 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
-*TABLE_NAME* | *table_id* | *view_name* | *view_id*  
+*table_name* | *table_id* | *view_name* | *view_id*  
 Nome o ID della tabella o della vista indicizzata per cui si desidera segnalare e correggere le statistiche sull'utilizzo dello spazio. I nomi delle tabelle e delle viste devono essere conformi alle regole per gli identificatori.  
   
 *index_id* | *index_name*  
@@ -96,7 +98,7 @@ DBCC UPDATEUSAGE restituisce il messaggio seguente (i valori possono variare):
   
 `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .
   
 ## <a name="examples"></a>Esempi  
@@ -135,7 +137,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+[sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)
   
   

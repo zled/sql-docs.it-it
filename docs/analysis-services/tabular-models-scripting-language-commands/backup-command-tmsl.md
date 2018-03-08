@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: fae1b267-0750-4dc5-9bf0-80ac4d8487a3
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f60d996499874ce76188529aadeebf9e1b8d677c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 50e6f8e6f5b01fce2eb0bb6a5dbcd84dd631d994
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backup-command-tmsl"></a>Comando di backup (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Esegue il backup di un database di Analysis Services in un file di backup con estensione ABF.  
@@ -58,8 +56,8 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**Proprietà**|**Default**|**Description**|  
-|database|[Obbligatorio]|Il nome dell'oggetto di database per il backup.|  
+|**Proprietà**|**Default**|**Descrizione**|  
+|Database|[Obbligatorio]|Il nome dell'oggetto di database per il backup.|  
 |file|[Obbligatorio]|Il nome o percorso file di backup.|  
 |password|Vuoto|La password da utilizzare per crittografare il file di backup.|  
 |allowOverwrite|False|Valore booleano che, se è true, indica che un file di backup esistente verrà sovrascritto; in caso contrario false.|  

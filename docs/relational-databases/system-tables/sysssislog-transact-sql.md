@@ -1,5 +1,5 @@
 ---
-title: sysssislog (Transact-SQL) | Documenti Microsoft
+title: sysssislog (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdtslog90_TSQL
 - sysdtslog90
-dev_langs: TSQL
-helpviewer_keywords: sysssislog system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysssislog system table
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: spelluru
 ms.author: spelluru
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2073eac1ce40cd735b4fde72744e5bc56f24686f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 479c6158f7c26cde133fae66164dda89b9a39888
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +37,10 @@ ms.lasthandoff: 11/17/2017
   Contiene una riga per ogni voce di log generata da pacchetti o dalle loro attività o contenitori in fase di esecuzione. Questa tabella viene creata nel database msdb al momento dell'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se si configura la registrazione nei log in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diverso, viene creata una tabella sysssislog con questo formato nel database specificato.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Scrive le voci di registrazione in questa tabella **solo** quando i pacchetti utilizzano il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di log.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scrive le voci di registrazione in questa tabella **solo** quando i pacchetti utilizzano il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di log.  
   
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Identificatore univoco della voce del log.|  
 |evento|**sysname**|Nome dell'evento che ha generato la voce del log.|  
@@ -53,6 +56,6 @@ ms.lasthandoff: 11/17/2017
 |message|**nvarchar**|Descrizione dell'evento e delle informazioni associate all'evento.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md)   
+ [Integration Services &#40; SSIS &#41; Registrazione](../../integration-services/performance/integration-services-ssis-logging.md)   
   
   

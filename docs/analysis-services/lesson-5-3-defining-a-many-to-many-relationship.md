@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c36bae9436786544f9d11ebcea289faac9de5687
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lezione 5-3-definizione di una relazione molti-a-molti
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Quando si definisce una dimensione, in genere ogni fatto viene aggiunto a un solo membro della dimensione, mentre un singolo membro della dimensione può essere associato a molti fatti. A ogni cliente possono essere ad esempio associati più ordini, ma ogni ordine appartiene a un unico cliente. Nella terminologia dei database relazionali, questa viene definita una *relazione uno-a-molti*. A volte, tuttavia, è possibile che un singolo fatto venga unito in join a più membri della dimensione. Nella terminologia dei database relazionali, questa viene definita una *relazione molti-a-molti*. Ad esempio, i motivi che determinano un acquisto da parte di un cliente possono essere diversi e un motivo per l'acquisto può essere associato a più acquisti. Una tabella di join viene utilizzata per definire i motivi di vendita correlati a ogni acquisto. Una dimensione Sales Reason creata a partire da relazioni di questo tipo può disporre quindi di più membri che corrispondono a una singola transazione di vendita. Le dimensioni molti-a-molti consentono di espandere la modellazione dimensionale oltre lo schema star classico e supportano analisi complesse quando le dimensioni non sono direttamente associate a una tabella dei fatti.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Quando si definisce una dimensione, generalmente ogni fatto viene unito in join a un solo membro della dimensione, mentre un singolo membro della dimensione può essere associato a molti fatti. A ogni cliente possono essere ad esempio associati più ordini, ma ogni ordine appartiene a un unico cliente. Nella terminologia dei database relazionali, questa viene definita una *relazione uno-a-molti*. A volte, tuttavia, è possibile che un singolo fatto venga unito in join a più membri della dimensione. Nella terminologia dei database relazionali, questa viene definita una *relazione molti-a-molti*. Ad esempio, i motivi che determinano un acquisto da parte di un cliente possono essere diversi e un motivo per l'acquisto può essere associato a più acquisti. Una tabella di join viene utilizzata per definire i motivi di vendita correlati a ogni acquisto. Una dimensione Sales Reason creata a partire da relazioni di questo tipo può disporre quindi di più membri che corrispondono a una singola transazione di vendita. Le dimensioni molti-a-molti consentono di espandere la modellazione dimensionale oltre lo schema star classico e supportano analisi complesse quando le dimensioni non sono direttamente associate a una tabella dei fatti.  
   
 In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è possibile definire una relazione molti-a-molti tra una dimensione e un gruppo di misure specificando una tabella dei fatti intermedia unita in join alla tabella delle dimensioni. Una tabella dei fatti intermedia viene a sua volta unita in join a una tabella delle dimensioni intermedia alla quale è associata la tabella dei fatti. Le relazioni molti-a-molti che intercorrono tra la tabella dei fatti intermedia, le tabelle delle dimensioni nella relazione e la dimensione intermedia determinano la creazione delle relazioni molti-a-molti tra i membri della dimensione primaria e il gruppo di misure specificato dalla relazione. Per definire relazioni molti-a-molti tra una dimensione e un gruppo di misure tramite un gruppo di misure intermedio, quest'ultimo deve condividere una o più dimensioni con il gruppo di misure originale.  
   
@@ -86,7 +89,7 @@ Nelle attività di questo argomento vengono definiti la dimensione Sales Reasons
   
 5.  Selezionare **Internet Sales Reason Count** e controllare le proprietà della misura della finestra Proprietà.  
   
-    Si noti che la proprietà **AggregateFunction** per questa misura è definita come **Conteggio** anziché come **Somma**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sceglie **Conteggio** poiché il tipo di dati sottostante è di tipo stringa. Le altre due colonne della tabella dei fatti sottostante non sono selezionate come misure poiché [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] le ha rilevate come chiavi numeriche anziché come misure effettive. Per altre informazioni, vedere [Definire una funzione semiadditiva](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
+    Si noti che la proprietà **AggregateFunction** per questa misura è definita come **Conteggio** anziché come **Somma**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]sceglie **conteggio** perché il tipo di dati sottostante è un tipo di dati stringa. Le altre due colonne della tabella dei fatti sottostante non sono selezionate come misure poiché [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] le ha rilevate come chiavi numeriche anziché come misure effettive. Per altre informazioni, vedere [Definire una funzione semiadditiva](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
   
 6.  Nella finestra Proprietà, impostare la proprietà **Visible** della misura **Internet Sales Reason Count** su **False**.  
   
@@ -177,10 +180,10 @@ Nelle attività di questo argomento vengono definiti la dimensione Sales Reasons
     ![I dati e filtrare i riquadri di Progettazione cubi](../analysis-services/media/l5-many-to-many-5.gif "i dati e filtrare i riquadri di Progettazione cubi")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Definizione della granularità della dimensione in un gruppo di misure](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[Definizione di granularità della dimensione all'interno di un gruppo di misure](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Utilizzare diagrammi in Progettazione vista origine dati &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [Relazioni tra dimensioni](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Definire una relazione molti-a-molti e le relative proprietà](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

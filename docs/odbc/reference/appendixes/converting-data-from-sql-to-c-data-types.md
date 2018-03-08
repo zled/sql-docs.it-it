@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0fef5a663ecbb3ec1f162dcf453691f04183d732
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b2133c6b155b163b971f7049cdd8238f091669dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Conversione di dati da SQL a tipi di dati C
 Quando un'applicazione chiama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**, il driver recupera i dati dall'origine dati. Se necessario, ne converte i dati dal tipo di dati in cui il driver è stato recuperato al tipo di dati specificato per il *TargetType* argomento **SQLBindCol** o **SQLGetData.** Infine, archivia i dati nella posizione a cui fa riferimento il *TargetValuePtr* argomento **SQLBindCol** o **SQLGetData** (e il campo SQL_DESC_DATA_PTR del ARD).  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +17,25 @@ helpviewer_keywords:
 - OLTP databases [SQL Server]
 - databases [SQL Server], about databases
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 013855b3dee3d610a34ec3171c98bdae03ccc1d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2dd347a2f17cd4712deb64e6dcd6c9a55e7cb15
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="databases"></a>Database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è costituito da una raccolta di tabelle in cui è archiviato un set specifico di dati strutturati. Una tabella contiene una raccolta di righe, definite anche record o tuple, e colonne, definite anche attributi. Ogni colonna nella tabella è progettata per contenere un tipo di informazioni specifico, ad esempio date, nomi, importi in valuta e numeri.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è costituito da una raccolta di tabelle in cui è archiviato un set specifico di dati strutturati. Una tabella contiene una raccolta di righe, definite anche record o tuple, e colonne, definite anche attributi. Ogni colonna nella tabella è progettata per contenere un tipo di informazioni specifico, ad esempio date, nomi, importi in valuta e numeri.  
   
 ## <a name="basic-information-about-databases"></a>Informazioni di base sui database  
  Un computer può disporre di una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può contenere uno o più database.  All'interno di un database sono presenti uno o più gruppi di proprietà di oggetti denominati schemi. All'interno di ogni schema sono presenti oggetti di database quali tabelle, viste e stored procedure. Alcuni oggetti quali certificati e chiavi asimmetriche sono contenuti all'interno del database, ma non all'interno di uno schema. Per altre informazioni sulla creazione delle tabelle, vedere [Tabelle](../../relational-databases/tables/tables.md).  
   
- I database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono archiviati in file del file system. I file possono essere raggruppati in filegroup. Per altre informazioni su file e filegroup, vedere [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] I database sono archiviati in file del file system. I file possono essere raggruppati in filegroup. Per altre informazioni su file e filegroup, vedere [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md).  
   
  Quando un utente accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene identificato come account di accesso. Quando un utente accede a un database viene identificato come utente di database. Un utente di database può essere basato su un account di accesso. Se sono abilitati i database indipendenti, è possibile creare un utente di database non basato su un account di accesso. Per altre informazioni sugli utenti, vedere [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="working-with-databases"></a>Utilizzo dei database  
  La maggior parte degli utenti che operano con i database utilizza lo strumento [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Lo strumento [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dispone di un'interfaccia utente grafica per la creazione di database e degli oggetti nei database. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] usa anche un editor di query per interagire con i database scrivendo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile installare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dal disco dell'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o scaricandolo da MSDN.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 |||  
 |-|-|  

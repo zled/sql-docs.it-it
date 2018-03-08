@@ -7,7 +7,8 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.component: search
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d70cc0b053c776f56041fbf961de711c4ad5c26
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 14f63ec1dd20561721c7713183835e5296b79470
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Scelta di una lingua durante la creazione di un indice full-text
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
   
 ##  <a name="breaking"></a> Word breaking  
- Il word breaker ha la funzione di suddividere in token il testo da indicizzare in base ai delimitatori delle parole specifici della lingua. Il comportamento del word breaker varierà pertanto a seconda della lingua scelta. Se si utilizza una lingua, x, per indicizzare più lingue, {x, y e z}, è possibile che si verifichino risultati imprevisti. È ad esempio possibile che un elemento di interruzione delle parole quale il trattino (-) o la virgola (,) venga eliminato in una lingua, ma non in un'altra. In alcuni casi, si potrebbe inoltre ottenere un comportamento imprevisto per lo stemming, in quanto è possibile che a una determinata parola venga applicato uno stemmer diverso nelle diverse lingue. Nella lingua inglese, ad esempio, i delimitatori delle parole sono dati in genere da spazi o da elementi di punteggiatura. In altre lingue come il tedesco, invece, le parole o i caratteri vengono spesso uniti insieme. La lingua a livello di colonna scelta dovrebbe pertanto rappresentare la lingua che si desidera venga archiviata nelle righe di quella colonna.  
+ Un word breaker ha la funzione di suddividere in token il testo da indicizzare in base ai delimitatori delle parole specifici della lingua. Il comportamento del word breaker varierà pertanto a seconda della lingua scelta. Se si usa una lingua, x, per indicizzare più lingue, {x, y e z}, è possibile che si verifichino risultati imprevisti. È ad esempio possibile che un elemento di interruzione delle parole quale il trattino (-) o la virgola (,) venga eliminato in una lingua, ma non in un'altra. In alcuni casi, si potrebbe inoltre ottenere un comportamento imprevisto per lo stemming, in quanto è possibile che a una determinata parola venga applicato uno stemmer diverso nelle diverse lingue. Nella lingua inglese, ad esempio, i delimitatori delle parole sono dati in genere da spazi o da elementi di punteggiatura. In altre lingue come il tedesco, invece, le parole o i caratteri vengono spesso uniti insieme. La lingua a livello di colonna scelta dovrebbe pertanto rappresentare la lingua che si desidera venga archiviata nelle righe di quella colonna.  
   
 ### <a name="western-languages"></a>Lingue occidentali  
  Nel caso delle lingue occidentali, se non si è certi delle lingue che verranno archiviate in una colonna o si prevede che verranno archiviate più lingue, provare a utilizzare il word breaker per la lingua più complessa che potrebbe essere archiviata nella colonna. È ad esempio possibile archiviare in una sola colonna contenuto nelle lingue inglese, spagnola e tedesca. Queste tre lingue occidentali sono basate su regole di suddivisione delle parole molto simili e delle tre il tedesco risulta essere la lingua più complessa. In questo caso, la soluzione ottimale potrebbe consistere nell'utilizzare il word breaker tedesco che dovrebbe essere in grado di elaborare correttamente il testo nelle lingue inglese e spagnola. Il word breaker inglese potrebbe invece non essere in grado di elaborare perfettamente il testo in tedesco per la presenza delle parole composte.  

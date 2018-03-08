@@ -1,7 +1,7 @@
 ---
 title: L'esecuzione la Console SSMA (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1346ccef45d9a8de619293da09a3d4a148bc9cf8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 55415d575aac34cdee2ed2acdb8c9ceaade6465c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>L'esecuzione la Console SSMA (DB2ToSQL)
 Microsoft fornisce un set affidabile di script di comandi di file per eseguire e controllare le attività SSMA. In dettaglio le sezioni che seguono lo stesso. L'applicazione console utilizza alcuni comandi di file di script standard come enumerata in questa sezione.  
@@ -168,7 +168,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
   metabase="<source/target>"/>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <force-load>  
@@ -281,7 +281,7 @@ generare report di valutazione
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <generate-assessment-report  
@@ -353,7 +353,7 @@ Converti schema
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <convert-schema  
@@ -419,7 +419,7 @@ eseguire la migrazione di dati: consente di migrare i dati di origine alla desti
   
 </migrate-data>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <migrate-data  
@@ -529,7 +529,7 @@ sincronizzare-destinazione
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <synchronize-target  
@@ -538,7 +538,7 @@ o
   
    object-type="<object-category>"/>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <synchronize-target>  
@@ -594,7 +594,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <refresh-from-database  
@@ -603,7 +603,7 @@ o
   
    object-type="<object-category>"/>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <refresh-from-database>  
@@ -653,7 +653,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <save-as-script  
@@ -729,7 +729,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 </convert-sql-statement>  
 ```  
-o  
+o Gestione configurazione  
   
 ```  
 <convert-sql-statement  
@@ -752,7 +752,7 @@ o
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-o  
+o Gestione configurazione  
   
 ```  
 <convert-sql-statement  

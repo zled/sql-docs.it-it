@@ -8,29 +8,30 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-caps.latest.revision: "24"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 734efcf822d2e270f8a2ae14e62ef787010acdc1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3e93dfc5f3aca9d372b166bf703e160106ce1065
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="deploying-models-master-data-services"></a>Distribuzione di modelli (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]un pacchetto è un file XML contenente una struttura di modello distribuibile e, facoltativamente, i dati del modello. Utilizzare i pacchetti del modello per spostare le copie di modelli da un ambiente MDS a un altro o per creare nuovi modelli nell'ambiente MDS esistente.  
   
 > [!IMPORTANT]  
->  Lo **strumento MDSModelDeploy** di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] è compatibile con i pacchetti creati in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] o versioni successive.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Lo**strumento MDSModelDeploy** è compatibile con i pacchetti creati in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] o versioni successive.  
   
 ## <a name="tools-for-deploying-models"></a>Strumenti per la distribuzione di modelli  
  Per utilizzare i pacchetti di modello sono disponibili tre strumenti, a seconda delle proprie esigenze.  

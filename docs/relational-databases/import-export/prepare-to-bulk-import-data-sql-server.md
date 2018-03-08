@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - hidden characters
 - OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5df9200f0101300d7e17d7e6b033882a4da5354d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47a9c86d93f4ebf32114fabbbe89011004f7d9e0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Prepararsi all'importazione bulk dei dati (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
      Questa linea guida riguarda un database che utilizza il modello di recupero con registrazione completa. Il modello di recupero con registrazione minima delle operazioni bulk risulta utile quando si eseguono operazioni bulk in una tabella non indicizzata (un *heap*). L'utilizzo del recupero con registrazione minima delle operazioni bulk consente di evitare i problemi di esaurimento dello spazio da parte del log delle transazioni in quanto questo tipo di recupero non inserisce righe nel log. Per altre informazioni sul modello di recupero con registrazione minima delle operazioni bulk, vedere [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
-     È consigliabile modificare il database in modo da utilizzare il modello di recupero con registrazione minima delle operazioni bulk immediatamente prima dell'operazione di importazione bulk. Appena terminata l'operazione, reimpostare il modello di recupero con registrazione completa. Per altre informazioni, vedere [Visualizzare o modificare il modello di recupero di un database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
+     È consigliabile modificare il database in modo da utilizzare il modello di recupero con registrazione minima delle operazioni bulk immediatamente prima dell'operazione di importazione bulk. Appena terminata l'operazione, reimpostare il modello di recupero con registrazione completa. Per altre informazioni, vedere [Visualizzazione o modifica del modello di recupero di un database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
     > [!NOTE]  
     >  Per altre informazioni sulla limitazione della registrazione durante le operazioni di importazione in blocco, vedere [Prerequisiti per la registrazione minima nell'importazione in blocco](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  

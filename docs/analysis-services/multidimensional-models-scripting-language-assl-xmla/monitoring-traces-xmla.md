@@ -1,38 +1,37 @@
 ---
 title: Monitoraggio di tracce (XMLA) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, traces
 - XMLA, traces
 - monitoring traces [XMLA]
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f913d7d7cd223d017f617430e4beae1a6c1b8c95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3895ae75a7e7e34456756ea9dfb5b2fe4198e32c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitoring-traces-xmla"></a>Monitoraggio di tracce (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile utilizzare il [Sottoscrivi](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) comando XML for Analysis (XMLA) per monitorare una traccia esistente definita in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Il **Sottoscrivi** comando restituisce i risultati di una traccia in un set di righe.  
+  È possibile utilizzare il [Sottoscrivi](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) comando XML for Analysis (XMLA) per monitorare una traccia esistente definita in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Il **Sottoscrivi** comando restituisce i risultati di una traccia in un set di righe.  
   
 ## <a name="specifying-a-trace"></a>Specifica di una traccia  
  Il [oggetto](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) proprietà del **Sottoscrivi** comando deve contenere un riferimento a uno oggetto un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza o una traccia in un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza. Se il **oggetto** proprietà non è specificata, o un identificatore di traccia non è specificato nella **oggetto** proprietà, il **Sottoscrivi** comando consente di monitorare la traccia della sessione per impostazione predefinita la sessione esplicita specificata nell'intestazione SOAP per il comando.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
  Nel set di righe sono contenute le colonne elencate nella tabella seguente.  
   
-|Colonna|Tipo di dati|Description|  
+|Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |EventClass|Valore intero|Classe di evento dell'evento ricevuto dalla traccia.|  
 |EventSubclass|Long integer|Sottoclasse di evento dell'evento ricevuto dalla traccia.|  
@@ -64,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |NestLevel|Valore intero|Livello della transazione per cui si è verificato l'evento.|  
 |NumSegments|Long integer|Numero di segmenti di dati interessati o utilizzati dal comando per cui si è verificato l'evento.|  
 |Severity|Valore intero|Livello di gravità di un'eccezione per l'evento. I possibili valori della colonna sono i seguenti:<br /><br /> <br /><br /> 0: operazione riuscita<br /><br /> <br /><br /> 1: informazioni<br /><br /> <br /><br /> 2: avviso<br /><br /> <br /><br /> 3: errore|  
-|Operazione completata|Boolean|Indica se un comando ha avuto esito positivo o negativo.|  
+|Esito positivo|Boolean|Indica se un comando ha avuto esito positivo o negativo.|  
 |Errore|Long integer|Numero di errore di un evento, se applicabile.|  
 |ConnectionID|String|Identificatore della connessione per cui si è verificato l'evento.|  
 |DatabaseName|String|Nome del database per cui si è verificato l'evento.|  
@@ -76,7 +75,7 @@ ms.lasthandoff: 12/08/2017
 |NTCanonicalUserName|String|Nome utente di Windows in forma canonica dell'utente associato all'evento.|  
 |SPID|String|ID del processo server (SPID) della sessione per cui si è verificato l'evento. Il valore di questa colonna corrisponde direttamente all'ID di sessione specificato nell'intestazione SOAP del messaggio XMLA per cui si è verificato l'evento.|  
 |TextData|String|Dati di testo associati all'evento. Il contenuto di questa colonna dipende dalla classe e dalla sottoclasse di evento.|  
-|ServerName|String|Nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per cui si è verificato l'evento.|  
+|ssSqlProfiler|String|Nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per cui si è verificato l'evento.|  
 |RequestParameters|String|Parametri della query con parametri o del comando XMLA per cui si è verificato l'evento.|  
 |RequestProperties|String|Proprietà del metodo XMLA per cui si è verificato l'evento.|  
   

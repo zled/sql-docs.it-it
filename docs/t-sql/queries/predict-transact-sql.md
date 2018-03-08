@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs: TSQL
 helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 8cc0e51a83b4c024a25caf2fe6501438a3ef8a18
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="predict-transact-sql"></a>STIMA (Transact-SQL)  
+# <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Genera un valore stimato o punteggi in base a un modello archiviato.  
@@ -61,7 +61,7 @@ Il `MODEL` parametro viene utilizzato per specificare il modello utilizzato per 
 
 L'oggetto modello può essere creato utilizzando R, Python o un altro strumento.
 
-**dati**
+**data**
 
 Il parametro di dati viene utilizzato per specificare i dati utilizzati per l'assegnazione dei punteggi o la stima. Dati vengono specificati sotto forma di un'origine della tabella nella query. Origine di tabella può essere una tabella, alias di tabella, alias CTE, vista o funzione con valori di tabella.
 
@@ -73,7 +73,7 @@ Il nome di ogni parametro è specifico per il tipo di modello. Ad esempio, la fu
 
 > [NOTA] Questa opzione non è supportata nella versione precedente di SQL Server 2017 e viene inclusa solo a fini di compatibilità di inoltro.
 
-**CON ( \<result_set_definition >)**
+**WITH ( \<result_set_definition> )**
 
 La clausola WITH viene utilizzata per specificare lo schema dell'output restituito dal `PREDICT` (funzione).
 
@@ -101,7 +101,7 @@ Non è necessario che sia installato R, Python o un altro computer, l'apprendime
 
 Il modello in uso deve essere stato creato con uno degli algoritmi supportati dal pacchetto RevoScaleR. Per un elenco di modelli attualmente supportati, vedere [punteggi in tempo reale](../../advanced-analytics/real-time-scoring.md).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 
 Non sono necessarie per autorizzazioni `PREDICT`; tuttavia, è necessario che l'utente `EXECUTE` dell'autorizzazione per il database e dell'autorizzazione per eseguire una query tutti i dati che viene utilizzati come input. L'utente deve essere in grado di leggere il modello da una tabella, anche se il modello è stato archiviato in una tabella.
 

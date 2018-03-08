@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - LAG_TSQL
 - LAG
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - LAG function
 - analytic functions, LAG
 ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8da98a7a5fe003c9567be9623cff3604e754c473
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 5a6942ecfcf189716e0829eadcb0d94c6d731650
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -68,7 +70,7 @@ LAG (scalar_expression [,offset] [,default])
 ### <a name="a-compare-values-between-years"></a>A. Confronto di valori tra anni  
  Nell'esempio seguente viene utilizzata la funzione LAG per restituire la differenza nelle quote vendite per un dipendente specifico negli anni precedenti. Si noti che poiché non è presente alcun valore di ritardo disponibile per la prima riga, viene restituita l'impostazione predefinita zero (0).  
   
-```t-sql   
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -94,7 +96,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
 ### <a name="b-compare-values-within-partitions"></a>B. Confronto di valori all'interno di partizioni  
  Nell'esempio seguente viene utilizzata la funzione LAG per confrontare le vendite dei dipendenti a partire dall'inizio dell'anno. La clausola PARTITION BY è specificata per dividere le righe nel set di risultati in base al territorio di vendita. La funzione LAG viene applicata a ogni singola partizione e il calcolo viene riavviato per ogni partizione. La clausola ORDER BY specificata nella clausola OVER ordina le righe in ogni partizione. La clausola ORDER BY nell'istruzione SELECT ordina le righe nell'intero set di risultati. Si noti che poiché non è presente alcun valore di ritardo per la prima riga di ogni partizione, viene restituita l'impostazione predefinita zero (0).  
   
-```t-sql   
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -120,7 +122,7 @@ Northwest                280              1352577.1325          1573012.9383
 ### <a name="c-specifying-arbitrary-expressions"></a>C. Specifica di espressioni arbitrarie  
  Nell'esempio seguente viene illustrata la specifica di una varietà di espressioni arbitrarie nella sintassi della funzione LAG.  
   
-```t-sql   
+```sql   
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -148,7 +150,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>Unità d: confrontare valori tra trimestri  
  L'esempio seguente illustra la funzione LAG. La query utilizza la funzione LAG per restituire la differenza nelle quote vendite per un dipendente specifico negli trimestri di calendario precedente. Si noti che poiché non è presente alcun valore di ritardo disponibile per la prima riga, viene restituita l'impostazione predefinita zero (0).  
   
-```t-sql   
+```sql   
 -- Uses AdventureWorks  
   
 SELECT CalendarYear, CalendarQuarter, SalesAmountQuota AS SalesQuota,  

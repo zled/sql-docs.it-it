@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: de2922988f9a53f6ec4eae3d563d0e29ad565ac0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Lezione 2-5-distribuisce un progetto di Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Per visualizzare i dati di cubi e dimensioni per gli oggetti nel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo esercitazione il [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto dell'esercitazione, è necessario distribuire il progetto in un'istanza specificata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , quindi elaborare il cubo e le relative dimensioni. La *distribuzione* di un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la creazione degli oggetti definiti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. L'*elaborazione* degli oggetti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la copia dei dati delle origini dati sottostanti negli oggetti cubo. Per altre informazioni, vedere [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) e [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Per visualizzare i dati del cubo e delle dimensioni relativi agli oggetti del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, è necessario distribuire il progetto in un'istanza specificata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], quindi elaborare il cubo e le relative dimensioni. La *distribuzione* di un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la creazione degli oggetti definiti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. L'*elaborazione* degli oggetti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la copia dei dati delle origini dati sottostanti negli oggetti cubo. Per altre informazioni, vedere [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) e [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 In questa fase del processo di sviluppo il cubo viene in genere distribuito in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in un server di sviluppo. Al termine dello sviluppo del progetto di Business Intelligence, si utilizza in genere la Distribuzione guidata [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per distribuire il progetto dal server di sviluppo a un server di produzione. Per altre informazioni, vedere [Distribuzione di soluzioni di modelli multidimensionali](../analysis-services/multidimensional-models/multidimensional-model-solution-deployment.md) e [Distribuire soluzioni di modelli tramite la Distribuzione guidata](../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
@@ -42,7 +45,7 @@ Nell'attività successiva verranno esaminate le proprietà di distribuzione del 
     Esaminare le proprietà di sviluppo del progetto. Per impostazione predefinita, il modello del progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] configura un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per la distribuzione incrementale di tutti i progetti nell'istanza predefinita di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nel computer locale, per creare un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con lo stesso nome del progetto ed elaborare gli oggetti dopo la distribuzione utilizzando l'opzione di elaborazione predefinita. Per altre informazioni, vedere [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
     > [!NOTE]  
-    > Se si desidera distribuire il progetto in un'istanza denominata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nel computer locale o a un'istanza in un server remoto, modificare il **Server** nome di proprietà all'istanza appropriata, ad esempio \<  *ServerName**>\\<**InstanceName**>*.  
+    > Se si desidera distribuire il progetto in un'istanza denominata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nel computer locale o a un'istanza in un server remoto, modificare il **Server** nome di proprietà all'istanza appropriata, ad esempio \<  *ServerName**>\\<**InstanceName * * >*.  
   
 3.  Scegliere **OK**.  
   
@@ -67,7 +70,7 @@ In questo modo è stato distribuito il cubo [!INCLUDE[ssASnoversion](../includes
 [Esplorazione del cubo](../analysis-services/lesson-2-6-browsing-the-cube.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Distribuire progetti di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+[Distribuire progetti di Analysis Services &#40; SSDT &#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
 [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

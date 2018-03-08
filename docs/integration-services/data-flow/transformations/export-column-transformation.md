@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36acf4ee08879bec3ac12600ea7369b1db3803ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: feb8ed42fe6e9f53db23b3be1586a163bfbad43b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="export-column-transformation"></a>Trasformazione Esporta colonna
   La trasformazione Esporta colonna legge dati in un flusso di dati e li inserisce in un file. Se ad esempio il flusso di dati contiene informazioni sui prodotti, ad esempio l'immagine di ogni prodotto, è possibile utilizzare la trasformazione Esporta colonna per salvare tali immagini in uno o più file.  
@@ -42,10 +43,10 @@ ms.lasthandoff: 11/20/2017
   
 |Accoda|Troncamento|File esistente|Risultati|  
 |------------|--------------|-----------------|-------------|  
-|False|False|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
-|True|False|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
-|False|True|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
-|True|True|No|La trasformazione non supera la convalida in fase di progettazione. Non è consentito impostare su **true**entrambe le proprietà.|  
+|False|False|no|La trasformazione crea un nuovo file e vi scrive i dati.|  
+|True|False|no|La trasformazione crea un nuovo file e vi scrive i dati.|  
+|False|True|no|La trasformazione crea un nuovo file e vi scrive i dati.|  
+|True|True|no|La trasformazione non supera la convalida in fase di progettazione. Non è consentito impostare su **true**entrambe le proprietà.|  
 |False|False|Sì|Viene generato un errore di run-time. Il file esiste ma la trasformazione non è in grado di scrivervi.|  
 |False|True|Sì|La trasformazione elimina e ricrea il file e vi scrive i dati.|  
 |True|False|Sì|La trasformazione apre il file e scrive i dati alla fine.|  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
  **Troncamento**  
  Consente di specificare l'azione da eseguire in caso di troncamenti, ovvero ignorare l'errore, reindirizzare la riga o interrompere l'esecuzione del componente.  
   
- **Description**  
+ **Descrizione**  
  Consente di visualizzare la descrizione dell'operazione.  
   
  **Imposta questo valore nelle celle selezionate**  

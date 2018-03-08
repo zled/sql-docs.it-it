@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - Connect to Server dialog box, Reporting Services
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 caps.latest.revision: "53"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1b6a12b85b69cb6bb8ae1b5bc138a47d1a58c1a0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 951f22989a1fb2bb725073cd27da6f1307c71551
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Eseguire la connessione a un server di report in Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornisce Esplora oggetti, che consente di connettersi a qualsiasi server della famiglia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di visualizzarne graficamente il contenuto. Per Reporting Services, è possibile utilizzare Esplora oggetti per effettuare le operazioni seguenti:  
@@ -113,7 +111,7 @@ ms.lasthandoff: 12/05/2017
   
  Quando si specifica [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] come tipo di server nella finestra di dialogo **Connetti al server** , è possibile specificare un nome del server di report o un endpoint al servizio Web.  
   
-|Server di report di connessione|Attività|Permissions|  
+|Server di report di connessione|Attività|Autorizzazioni|  
 |----------------|-----------|-----------------|  
 |Server di report in modalità nativa, connesso come l'istanza predefinita o denominata:<br /><br /> \<nome server>\<_istanza><br /><br /> La connessione al server di report viene eseguita mediante il provider WMI del server di report.|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.<br /><br /> Creazione e gestione di pianificazioni condivise.<br /><br /> Creazione, modifica o eliminazione di definizioni di ruolo.|Assegnato al ruolo di Amministratore sistema.|  
 |Server di report in modalità nativa, connesso come l'istanza predefinita o denominata tramite l'endpoint al servizio Web ReportServer:<br /><br /> `http://<servername>/reportserver`<br /><br /> La specifica di un URL per server di report fornisce una modalità alternativa per connettersi al server di report.|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.<br /><br /> Creazione e gestione di pianificazioni condivise.<br /><br /> Creazione, modifica o eliminazione di definizioni di ruolo.|Assegnato al ruolo di Amministratore sistema.|  

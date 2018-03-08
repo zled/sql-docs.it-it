@@ -1,32 +1,31 @@
 ---
-title: Relazioni (SSAS tabulare) | Documenti Microsoft
+title: Relazioni | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ff8d2460b53eed9189b230fea270b97e323ac0b9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="relationships-ssas-tabular"></a>Relazioni (SSAS tabulare)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nei modelli tabulari, una relazione è una connessione tra due tabelle di dati. e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle. È ad esempio possibile mettere in correlazione una tabella Clienti e una tabella Ordini per mostrare il nome del cliente associato a ciascun ordine.  
+# <a name="relationships"></a>Relazioni 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Nei modelli tabulari, una relazione è una connessione tra due tabelle di dati e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle. È ad esempio possibile mettere in correlazione una tabella Clienti e una tabella Ordini per mostrare il nome del cliente associato a ciascun ordine.  
   
  Se si utilizza l'Importazione guidata tabella per importare dalla stessa origine dati, le relazioni già presenti nelle tabelle (a livello di origine dati) che si sceglie di importare saranno ricreate nel modello. È possibile visualizzare le relazioni rilevate e ricreate automaticamente tramite Progettazione modelli nella Vista diagramma o la finestra di dialogo Gestisci relazioni. È inoltre possibile creare manualmente nuove relazioni tra tabelle tramite Progettazione modelli nella Vista diagramma o la finestra di dialogo Crea relazione o Gestisci relazioni.  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 |CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|07/01/2010|Compact Digital|11|  
-|1|Ashton|chris.ashton@contoso.com|.05|255|03/01/2010|SLR Camera|15|  
+|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|0,10|254|03/01/2010|Budget Movie-Maker|27|  
   
  Questo approccio può funzionare, tuttavia comporta l'archiviazione di molti dati ridondanti, ad esempio l'indirizzo di posta elettronica del cliente per ogni ordine. L'archiviazione è economica ma è necessario assicurarsi di aggiornare ogni riga relativa al cliente nel caso in cui l'indirizzo di posta elettronica cambi. Una soluzione a questo problema è suddividere i dati in più tabelle e definire relazioni tra tali tabelle. Si tratta dell'approccio utilizzato *database relazionali* come SQL Server. Ad esempio, un database importato in un modello potrebbe rappresentare i dati dell'ordine tramite tre tabelle correlate:  
@@ -66,7 +65,7 @@ ms.lasthandoff: 12/08/2017
 |[CustomerID]|OrderID|OrderDate|Product|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|07/01/2010|Compact Digital|11|  
-|1|255|03/01/2010|SLR Camera|15|  
+|1|255|2010-01-03|SLR Camera|15|  
 |2|254|03/01/2010|Budget Movie-Maker|27|  
   
  Se si importano tali tabelle dallo stesso database, l'Importazione guidata tabella consente di rilevare le relazioni tra le tabelle in base alle colonne tra [parentesi] e di riprodurre tali relazioni in Progettazione modelli. Per altre informazioni, vedere [Inferenza e rilevamento automatici delle relazioni](#detection) in questo argomento. Se si importano tabelle da più origini, è possibile creare manualmente relazioni come descritto in [creare una relazione tra due tabelle](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
@@ -105,7 +104,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="single-active-relationship-between-tables"></a>Singola relazione attiva tra tabelle  
  Più relazioni possono comportare dipendenze ambigue tra le tabelle. Per creare calcoli accurati, è necessario un unico percorso da una tabella a quella successiva. Di conseguenza, può essere presente una sola relazione attiva tra ogni coppia di tabelle. In AdventureWorks DW 2012, ad esempio, la tabella DimDate contiene una colonna, DateKey, correlata a tre colonne diverse della tabella FactInternetSales: OrderDate, DueDate e ShipDate. Se si tenta di importare queste tabelle, la prima relazione viene creata correttamente, ma per le relazioni successive che riguardano la stessa colonna verrà visualizzato il messaggio di errore seguente:  
   
- \*Relazione: tabella [colonna 1] -> tabella [colonna 2] - stato: errore - motivo: Impossibile creare una relazione tra tabelle \<tabella 1 > e \<tabella 2 >. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
+ \* Relazione: tabella [colonna 1] -> tabella [colonna 2] - stato: errore - motivo: Impossibile creare una relazione tra tabelle \<tabella 1 > e \<tabella 2 >. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
   
  Se sono presenti due tabelle unite da più relazioni, sarà necessario importare più copie della tabella contenente la colonna di ricerca e creare una relazione tra ogni coppia di tabelle.  
   

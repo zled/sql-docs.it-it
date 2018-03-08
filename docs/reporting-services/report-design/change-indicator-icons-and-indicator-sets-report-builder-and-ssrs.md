@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e2439245c62a0ac0fe4e0ba3490f8a14d9e0b408
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 80fe34a56f00d45d659dade8e1613cf6d559b85d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Modificare le icone degli indicatori e dei set di indicatori (Generatore report e SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono forniti set di indicatori preconfigurati per report impaginati che potrebbero non raffigurare sempre i dati in maniera efficace né funzionare bene nel report recapitato. In questo argomento vengono illustrate le procedure per modificare l'aspetto delle icone degli indicatori e i set di indicatori in modo da includere differenti icone degli indicatori o per aumentarne o ridurne il numero.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
      Se è stato selezionato **Altri colori**, viene visualizzata la finestra di dialogo **Seleziona colore** in cui è possibile scegliere da un'ampia matrice di colori. Per altre informazioni sulle opzioni, vedere [Finestra di dialogo Seleziona colore &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2). Fare clic su **OK** per chiudere la finestra di dialogo **Seleziona colore** .  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 ## <a name="to-change-the-icon"></a>Per modificare l'icona  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
      Se lo si desidera, fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che consente di impostare il valore dell'opzione **Icona** .  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 ## <a name="to-use-a-custom-image-as-an-indicator-icon"></a>Per utilizzare un'immagine personalizzata come icona dell'indicatore  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
     -   Per usare un'immagine presente in un database, nell'elenco **Utilizza questo campo** . selezionare il campo dall'elenco, quindi nell'elenco **Utilizza questo tipo MIME** selezionare il tipo MIME dell'immagine.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 ## <a name="to-add-an-icon-to-the-indicator-set"></a>Per aggiungere un'icona al set di indicatori  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/05/2017
   
      Configurare l'indicatore in modo da utilizzare l'icona e il colore desiderati. Nelle procedure riportate in precedenza in questo argomento vengono illustrati i passaggi che consentono di effettuare queste operazioni.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 ## <a name="to-delete-an-icon-to-the-indicator-set"></a>Per eliminare un'icona dal set di indicatori  
   
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  Selezionare l'icona da eliminare e scegliere **Elimina**.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

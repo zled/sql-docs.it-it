@@ -1,5 +1,5 @@
 ---
-title: sp_add_schedule (Transact-SQL) | Documenti Microsoft
+title: sp_add_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_schedule_TSQL
 - sp_add_schedule
-dev_langs: TSQL
-helpviewer_keywords: sp_add_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_schedule
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
-caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d526b94fd95bc3523e3633c8be0617e23357811c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: df04306671a8e2a0f0ded0fc7482e56955102a83
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +67,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [  **@enabled =** ] *abilitato*  
  Indica lo stato corrente della pianificazione. *abilitato*è **tinyint**, il valore predefinito è **1** (abilitato). Se **0**, la pianificazione non è abilitata. Quando la pianificazione non è abilitata, non viene eseguito alcun processo su questa pianificazione.  
   
- [  **@freq_type =** ] *freq_type*  
+ [ **@freq_type =** ] *freq_type*  
  Valore che indica la frequenza di esecuzione di un processo *freq_type*è **int**, il valore predefinito è **0**, i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
@@ -77,7 +80,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64**|All'avvio del servizio SQLServerAgent|  
 |**128**|Quando il computer è inattivo|  
   
- [  **@freq_interval =** ] *freq_interval*  
+ [ **@freq_interval =** ] *freq_interval*  
  Giorni in cui un processo viene eseguito. *freq_interval* è **int**, il valore predefinito è **1**e dipende dal valore di *freq_type*.  
   
 |Valore di *freq_type*|Effetto su *freq_interval*|  
@@ -86,11 +89,11 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**4** (giornaliera)|Ogni *freq_interval* giorni.|  
 |**8** (settimanale)|*freq_interval* uno o più dei valori seguenti (in combinazione con un operatore logico OR):<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **4** = martedì<br /><br /> **8** = mercoledì<br /><br /> **16** = giovedì<br /><br /> **32** = venerdì<br /><br /> **64** = sabato|  
 |**16** (mensile)|Nel *freq_interval* giorno del mese.|  
-|**32** (frequenza mensile relativa)|*freq_interval* è uno dei seguenti:<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = giorno<br /><br /> **9** = giorno feriale<br /><br /> **10** = giorno festivo|  
+|**32** (frequenza mensile relativa)|*freq_interval* è uno dei seguenti:<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = Day<br /><br /> **9** = giorno feriale<br /><br /> **10** = giorno festivo|  
 |**64** (all'avvio del servizio SQLServerAgent)|*freq_interval* è inutilizzato.|  
 |**128**|*freq_interval* è inutilizzato.|  
   
- [  **@freq_subday_type =** ] *freq_subday_type*  
+ [ **@freq_subday_type =** ] *freq_subday_type*  
  Specifica le unità per *freq_subday_interval*. *freq_subday_type*è **int**, il valore predefinito è **0**, i possibili valori sono i seguenti.  
   
 |Valore|Descrizione (unità)|  
@@ -100,10 +103,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|Minutes|  
 |**0x8**|Ore|  
   
- [  **@freq_subday_interval =** ] *freq_subday_interval*  
+ [ **@freq_subday_interval =** ] *freq_subday_interval*  
  Il numero di *freq_subday_type* periodi devono intercorrere tra ogni esecuzione di un processo. *freq_subday_interval*è **int**, il valore predefinito è **0**. Nota: l'intervallo dovrebbe superare i 10 secondi. *freq_subday_interval* viene ignorato nei casi in cui *freq_subday_type* è uguale a **1**.  
   
- [  **@freq_relative_interval =** ] *freq_relative_interval*  
+ [ **@freq_relative_interval =** ] *freq_relative_interval*  
  Occorrenza di un processo di *freq_interval* ogni mese, se *freq_interval* è 32 (mensile relativa). *freq_relative_interval*è **int**, il valore predefinito è **0**, i possibili valori sono i seguenti. *freq_relative_interval* viene ignorato nei casi in cui *freq_type* non è uguale a 32.  
   
 |Valore|Descrizione (unità)|  
@@ -117,32 +120,32 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [  **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
  Numero di settimane o mesi tra le esecuzioni pianificate di un processo. *freq_recurrence_factor* viene utilizzata solo se *freq_type* è **8**, **16**, o **32**. *freq_recurrence_factor*è **int**, il valore predefinito è **0**.  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  Data dalla quale è possibile avviare l'esecuzione del processo. *active_start_date*è **int**, il valore predefinito è NULL, che indica la data odierna. La data è nel formato AAAAMMGG. Se *active_start_date* non è NULL, la data deve essere maggiore o uguale a 19900101.  
   
  Al termine della creazione della pianificazione, esaminare la data di inizio per verificare che corrisponda alla data corretta. Per ulteriori informazioni, vedere la sezione "Pianificazione data di inizio" in [creare e collegare le pianificazioni ai processi](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
   
  Per le pianificazioni settimanali o mensili, tramite Agent viene ignorato se la data di active_start_date è già passata e viene invece utilizzata la data corrente. Quando una pianificazione di SQL Agent viene creata utilizzando sp_add_schedule è possibile specificare il parametro active_start_date che rappresenta la data di avvio dell'esecuzione del processo. Se il tipo di pianificazione è settimanale o mensile e il parametro active_start_date è impostato su una data già trascorsa, il parametro active_start_date viene ignorato e la data corrente verrà utilizzata per active_start_date.  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  Data dalla quale è possibile arrestare l'esecuzione del processo. *active_end_date*è **int**, il valore predefinito è **99991231**, che indica il 31 dicembre 9999. La data è nel formato AAAAMMGG.  
   
- [  **@active_start_time =** ] *active_start_time*  
+ [ **@active_start_time =** ] *active_start_time*  
  L'ora compresa tra *active_start_date* e *active_end_date* per avviare l'esecuzione di un processo. *active_start_time*è **int**, il valore predefinito è **000000**, che indica le 12:00:00 AM. nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
- [  **@active_end_time =** ] *active_end_time*  
+ [ **@active_end_time =** ] *active_end_time*  
  L'ora compresa tra *active_start_date* e *active_end_date* per terminare l'esecuzione di un processo. *active_end_time*è **int**, il valore predefinito è **235959**, che indica l'11: 59:59 P.M. nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
- [  **@owner_login_name** =] **'***owner_login_name***'**  
+ [ **@owner_login_name**= ] **'***owner_login_name***'**  
  Nome dell'entità server proprietaria della pianificazione. *owner_login_name* è **sysname**, il valore predefinito è NULL, che indica che la pianificazione è di proprietà dell'autore.  
   
- [  **@schedule_uid** =] *valore schedule_uid***OUTPUT**  
+ [  **@schedule_uid** =] *valore schedule_uid * * * OUTPUT**  
  Identificatore univoco della pianificazione. *valore schedule_uid* è una variabile di tipo **uniqueidentifier**.  
   
- [  **@schedule_id** =] *schedule_id***OUTPUT**  
+ [  **@schedule_id** =] *schedule_id * * * OUTPUT**  
  Identificatore della pianificazione. *schedule_id* è una variabile di tipo **int**.  
   
- [  **@originating_server** =] *nome_server*  
+ [ **@originating_server**= ] *server_name*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -154,7 +157,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ## <a name="remarks"></a>Osservazioni  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -215,10 +218,10 @@ GO
  [Pianificare un processo](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [Creare una pianificazione](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
  [SQL Server Agent Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_jobschedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
- [sp_update_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_help_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [sp_add_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

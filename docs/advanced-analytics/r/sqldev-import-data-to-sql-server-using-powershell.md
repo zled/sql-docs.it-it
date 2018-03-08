@@ -7,26 +7,28 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 3c5b5145-fa57-455a-b153-0400fc062dc0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2f88b31305c9c648192d48d071972a787903136d
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 4aaaf0ec50d5bd3764a78c8a202ccac399255956
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>Lezione 2: Importare dati in SQL Server tramite PowerShell
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo fa parte di un'esercitazione per gli sviluppatori SQL su come usare il linguaggio R in SQL Server.
 
@@ -56,7 +58,7 @@ Tra i file scaricati, verrà visualizzato uno script di PowerShell che è possib
   
     - Il nome utente e la password di un account nell'istanza. L'account deve disporre delle autorizzazioni necessarie per creare database, creare tabelle e stored procedure e caricare i dati di tabelle. Se non si specifica il nome utente e password, l'identità di Windows viene utilizzata per accedere a SQL Server.
   
-    - Il percorso e il nome del file con i dati di esempio appena scaricato. Ad esempio
+    - Il percorso e il nome del file con i dati di esempio appena scaricato. Esempio:
   
         `C:\tempRSQL\nyctaxi1pct.csv`
   

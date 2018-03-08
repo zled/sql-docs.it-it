@@ -1,5 +1,5 @@
 ---
-title: syslockinfo (Transact-SQL) | Documenti Microsoft
+title: sys.syslockinfo (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syslockinfo_TSQL
 - sys.syslockinfo
 - syslockinfo
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 410d07a73d4a5b96c3fa5805208735055bc36174
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4b58420c47d73e1eff9bb895ccab1fab0be82844
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +48,8 @@ ms.lasthandoff: 11/27/2017
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|Descrizione in formato testo di una risorsa di blocco. Include una parte del nome della risorsa.|  
-|**rsc_bin**|**Binary (16)**|Risorsa di blocco binaria. Include l'effettiva risorsa di blocco presente in Gestione blocchi. Questa colonna viene inclusa per strumenti di conoscono il formato della risorsa di blocco per la generazione di propri formattato risorsa di blocco e per l'esecuzione di self join su **syslockinfo**.|  
-|**rsc_valblk**|**Binary (16)**|Gruppo di valori del blocco. Alcuni tipi di risorsa possono includere dati aggiuntivi nella risorsa di blocco per cui non viene eseguito l'hashing da parte di Gestione blocchi al fine di determinare la proprietà di una determinata risorsa di blocco. Ad esempio, i blocchi a livello di pagina non appartengono a un ID di oggetto particolare. Per fini di escalation dei blocchi o altri fini. tuttavia, è possibile inserire nel gruppo di valori del blocco l'ID di oggetto di un blocco a livello di pagina.|  
+|**rsc_bin**|**binary(16)**|Risorsa di blocco binaria. Include l'effettiva risorsa di blocco presente in Gestione blocchi. Questa colonna viene inclusa per strumenti di conoscono il formato della risorsa di blocco per la generazione di propri formattato risorsa di blocco e per l'esecuzione di self join su **syslockinfo**.|  
+|**rsc_valblk**|**binary(16)**|Gruppo di valori del blocco. Alcuni tipi di risorsa possono includere dati aggiuntivi nella risorsa di blocco per cui non viene eseguito l'hashing da parte di Gestione blocchi al fine di determinare la proprietà di una determinata risorsa di blocco. Ad esempio, i blocchi a livello di pagina non appartengono a un ID di oggetto particolare. Per fini di escalation dei blocchi o altri fini. tuttavia, è possibile inserire nel gruppo di valori del blocco l'ID di oggetto di un blocco a livello di pagina.|  
 |**rsc_dbid**|**smallint**|ID di database associato alla risorsa.|  
 |**rsc_indid**|**smallint**|ID di indice associato alla risorsa, se appropriato.|  
 |**rsc_objid**|**int**|ID di oggetto associato alla risorsa, se appropriato.|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 11/27/2017
 |**req_transactionID**|**bigint**|Transazione univoco utilizzato nell'ID **syslockinfo** e nell'evento di profiler|  
 |**req_transactionUOW**|**uniqueidentifier**|Identifica l'ID di unità di lavoro (UOW, Unit Of Work) della transazione DTC. Per transazioni non MS DTC, l'unità UOW è impostata su 0.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  

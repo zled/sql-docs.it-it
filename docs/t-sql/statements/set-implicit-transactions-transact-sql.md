@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET IMPLICIT_TRANSACTIONS
 - IMPLICIT_TRANSACTIONS_TSQL
 - SET_IMPLICIT_TRANSACTIONS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - implicit transactions
 - transactions [SQL Server], implicit
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - SET IMPLICIT_TRANSACTIONS statement
 - IMPLICIT_TRANSACTIONS option
 ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d46d60c67556fe5c779fdd4e68e7f4993074198
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: c86a7a8108e94d07341f5b6ced498b56ab934405
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,8 +58,8 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |ALTER TABLE|FETCH|REVOKE|  
 |BEGIN TRANSACTION|GRANT|SELECT (vedere l'eccezione riportata di seguito)|  
 |CREATE|INSERT|TRUNCATE TABLE|  
-|DELETE|OPEN|UPDATE|  
-|DROP|.|.|  
+|Elimina|OPEN|UPDATE|  
+|DROP|,|,|  
   
  Quando impostata su OFF, ognuna delle istruzioni T-SQL precedente è limitato da un non visibili BEGIN TRANSACTION e un'istruzione COMMIT TRANSACTION non visibili. Quando, ci si riferisce la modalità di transazione è *autocommit*. Se il codice T-SQL visibili genera un'istruzione BEGIN TRANSACTION, ci si riferisce la modalità di transazione è *esplicita*.  
   
@@ -86,7 +88,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ## <a name="examples"></a>Esempi  
  Lo script Transact-SQL seguente esegue alcuni test case diversi. Viene inoltre fornita l'output di testo, che mostra le informazioni dettagliate sul comportamento e risultati di ogni test case.  
   
-```tsql  
+```sql  
 -- Transact-SQL.  
 go  
 -- Preparations.  
@@ -169,7 +171,7 @@ go
   
  Di seguito è riportato l'output di testo dello script Transact-SQL precedente.  
   
-```tsql  
+```sql  
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  

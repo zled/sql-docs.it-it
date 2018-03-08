@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df185344ea5af92a66c019c29b7a385ff309522b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverlocks-rowset"></a>Set di righe DISCOVER_LOCKS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornisce informazioni sui blocchi correnti presenti nel server.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DISCOVER_LOCKS** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
+|Nome colonna|Indicatore del tipo|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**LOCK_CREATION_TIME**|**DBTYPE_DBTIMESTAMP**||L'ora UTC del server al momento della richiesta del blocco.|  
 |**LOCK_GRANT_TIME**|**DBTYPE_DBTIMESTAMP**||L'ora UTC del server nel momento in cui è stato concesso il blocco sulla risorsa.|  
@@ -51,18 +49,18 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|SPID|DBTYPE_I4|Facoltativa.|  
-|LOCK_TRANSACTION_ID|DBTYPE_GUID|Facoltativa.|  
-|LOCK_OBJECT_ID|DBTYPE_WSTR|Facoltativa.|  
-|LOCK_STATUS|DBTYPE_I4|Facoltativa.|  
-|LOCK_TYPE|DBTYPE_I4|Facoltativa.|  
-|LOCK_MIN_TOTAL_MS|DBTYPE_I8|Facoltativa.|  
+|SPID|DBTYPE_I4|Facoltativo.|  
+|LOCK_TRANSACTION_ID|DBTYPE_GUID|Facoltativo.|  
+|LOCK_OBJECT_ID|DBTYPE_WSTR|Facoltativo.|  
+|LOCK_STATUS|DBTYPE_I4|Facoltativo.|  
+|LOCK_TYPE|DBTYPE_I4|Facoltativo.|  
+|LOCK_MIN_TOTAL_MS|DBTYPE_I8|Facoltativo.|  
   
 ## <a name="remarks"></a>Osservazioni  
   
 ## <a name="lock-types"></a>Tipi di blocco  
   
-|Nome del blocco|Valore|Description|  
+|Nome del blocco|valore|Description|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|Nessun blocco.|  
 |LOCK_SESSION_LOCK|0x0000001|Sessione inattiva; nessuna interferenza con altri blocchi.|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 735811c38ce6073e9dee4dd5b35cf18645a74a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a0acf3ce891459589445e28b73ef762e3a82da8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   Report Definition Language (RDL) è una rappresentazione XML di una definizione di un report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definizione del report contiene informazioni sul layout e sul recupero dei dati per un report. RDL è costituito da elementi XML che corrispondono a una grammatica XML creata per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È possibile aggiungere funzioni personalizzate per il controllo dei valori degli elementi del report, degli stili e della formattazione mediante l'accesso agli assembly di codice all'interno dei file di definizione dei report.  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_RDL_Types"></a> Tipi RDL  
  Nella tabella seguente vengono elencati i tipi utilizzati negli elementi e negli attributi RDL.  
   
-|Type|Description|  
+|Tipo|Description|  
 |----------|-----------------|  
 |**Binario**|Proprietà con valore binario codificato in base 64.|  
 |**Boolean**|Proprietà con **true** o **false** come valore dell'oggetto. Se non diversamente specificato, il valore di un oggetto booleano facoltativo omesso è **False**.|  
@@ -90,8 +88,8 @@ ms.lasthandoff: 12/05/2017
 |-----------------------|---------------------------------|  
 |Boolean|Boolean|  
 |DateTime, DateTimeOffset|DateTime|  
-|Int16, Int32, UInt16, Byte, SByte|Integer|  
-|Single, Double|Float|  
+|Int16, Int32, UInt16, Byte, SByte|Valore intero|  
+|Single, Double|float|  
 |String, Char, GUID, Timespan|String|  
   
 ## <a name="see-also"></a>Vedere anche  

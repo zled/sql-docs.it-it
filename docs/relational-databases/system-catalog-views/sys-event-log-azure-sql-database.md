@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4df7543112666b498a2896d62d16186a83d6e4af
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 77682d906a1fe24f371e6ec31c11e586398cdba6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.lasthandoff: 11/21/2017
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome del database. Se la connessione ha esito negativo e l'utente non ha specificato un nome di database, questa colonna è vuota.|  
-|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. In caso di eventi aggregati, l'ora è sempre un multiplo di 5 minuti. Esempio:<br /><br /> 28/09/2011 16:00:00<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. In caso di eventi aggregati, l'ora è sempre un multiplo di 5 minuti. Ad esempio<br /><br /> 28/09/2011 16:00:00<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Data e ora UTC della fine dell'intervallo di aggregazione. Eventi aggregati, **End_time** è sempre esattamente 5 minuti dopo rispetto al relativo **start_time** nella stessa riga. Per gli eventi che non sono aggregati, **start_time** e **end_time** uguale l'effettiva data e ora UTC dell'evento.|  
 |**event_category**|**nvarchar (64)**|Componente di alto livello tramite cui è stato generato l'evento.<br /><br /> Vedere [tipi di evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) per un elenco di valori possibili.|  
 |**event_type**|**nvarchar (64)**|Tipo di evento.<br /><br /> Vedere [tipi di evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) per un elenco di valori possibili.|  
 |**event_subtype**|**int**|Sottotipo dell'evento in corso.<br /><br /> Vedere [tipi di evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) per un elenco di valori possibili.|  
 |**event_subtype_desc**|**nvarchar (64)**|Descrizione del sottotipo di evento.<br /><br /> Vedere [tipi di evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) per un elenco di valori possibili.|  
-|**livello di gravità**|**int**|Gravità dell'errore. I valori possibili sono:<br /><br /> 0 = Informazioni<br />1 = Avviso<br />2 = errore|  
+|**severity**|**int**|Gravità dell'errore. I valori possibili sono:<br /><br /> 0 = Informazioni<br />1 = Avviso<br />2 = errore|  
 |**event_count**|**int**|Il numero di volte in cui si è verificato questo evento per il database specificato nell'intervallo di tempo specificato (**start_time** e **end_time**).|  
 |**Descrizione**|**nvarchar(max)**|Descrizione dettagliata dell'evento.<br /><br /> Vedere [tipi di evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) per un elenco di valori possibili.|  
 |**additional_data**|**XML**|*Nota: Questo valore è sempre NULL per il Database SQL di Azure V12. Vedere [esempi](#Deadlock) sezione per informazioni su come recuperare gli eventi deadlock per V12.*<br /><br /> Per **Deadlock** eventi, questa colonna contiene l'evento deadlock graph. La colonna è NULL per altri tipi di evento. |  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  La vista non include tutti gli eventi possibili del database [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ma solo quelli elencati. Nelle versioni future del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] potranno venire aggiunte categorie, tipi di evento e sottotipi.  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**livello di gravità**|**Descrizione**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**Descrizione**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**connettività**|**connection_successful**|0|**connection_successful**|0|Connessione al database effettuata.|  
 |**connettività**|**connection_failed**|0|**invalid_login_name**|2|Il nome dell'account di accesso non è valido in questa versione di SQL Server.|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/21/2017
 |**connettività**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Nota: Si applica solo a SQL Azure Database V11.*<br /><br /> Sessione terminata a causa di un utilizzo eccessivo della memoria. Provare a modificare la query per elaborare meno righe. Per ulteriori informazioni, vedere [i limiti delle risorse](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**motore di**|**deadlock**|0|**deadlock**|2|Si è verificato un deadlock.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Gli utenti con autorizzazioni di accesso di **master** database hanno accesso in sola lettura a questa vista.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  Ad esempio, se un utente non è riuscito a connettersi al database Database1 per sette volte tra le 11:00 e le 11:05 del 2/5/2012 (UTC) a causa di un nome account di accesso non valido, queste informazioni sono disponibili in una singola riga di questa vista:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**livello di gravità**|**event_count**|**Descrizione**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**Descrizione**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -174,7 +174,7 @@ WHERE event_type = 'throttling'
 ### <a name="db-scoped-extended-event"></a>Eventi estesi con ambito database  
  Utilizzare il seguente codice di esempio per impostare la sessione di eventi estesi (XEvent) con ambito database:  
   
-```tsql  
+```sql  
 IF EXISTS  
     (SELECT * from sys.database_event_sessions  
         WHERE name = 'azure_monitor_deadlock_session')  
@@ -206,7 +206,7 @@ ALTER EVENT SESSION azure_monitor_deadlock_session
 
 Utilizzare la query seguente per controllare se è presente un deadlock.  
   
-```tsql  
+```sql  
 WITH CTE AS (  
     SELECT CAST(xet.target_data AS XML)  AS [target_data_XML]  
         FROM            sys.dm_xe_database_session_targets AS xet  

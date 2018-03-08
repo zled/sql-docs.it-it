@@ -1,19 +1,18 @@
 ---
 title: Annullamento di comandi (XMLA) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [XML for Analysis]
 - associated connections [XML for Analysis]
@@ -27,19 +26,19 @@ helpviewer_keywords:
 - server process IDs [XML for Analysis]
 - sessions [XML for Analysis]
 ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5b6e43a5c79ccce179f960053ec7adde4e407509
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0751c7216716f46e12e8b864386adc3e4806b0cb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="canceling-commands-xmla"></a>Annullamento di comandi (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A seconda delle autorizzazioni amministrative dell'utente che invia il comando, il [Annulla](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) comando nel codice XML per Analysis (XMLA) può annullare un comando in una sessione, una sessione, una connessione, un processo del server o una sessione associata o connessione.  
+  A seconda delle autorizzazioni amministrative dell'utente che invia il comando, il [Annulla](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) comando nel codice XML per Analysis (XMLA) può annullare un comando in una sessione, una sessione, una connessione, un processo del server o una sessione associata o connessione.  
   
 ## <a name="canceling-commands"></a>Annullamento di comandi  
  Un utente può annullare il comando attualmente in esecuzione all'interno del contesto della sessione corrente esplicita inviando un **Annulla** comando senza proprietà specificate.  

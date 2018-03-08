@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10c9ee41428ab7a43beae2269060618f7d6e296b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05bd95fc39fe21b5df9edfaa876a69d5935de9b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-scenario"></a>Scenario di servizi desktop remoto
 > [!IMPORTANT]
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  Questo scenario si presuppone che si sapere come utilizzare il tag di layout HTML basic, le tecniche di associazione di dati di utilizzo DHTML e programma con i controlli ActiveX.  
   
- Se è stato installato il SDK, il codice sorgente completo per l'applicazione di esempio Address Book è reperibile nella directory SDK in samples\dataaccess\rds\AddressBook\AddressBook.asp. Per visualizzare lo scenario di Address Book, in Internet Explorer 4.0 o versione successiva, digitare  **http://*webserver*/RDS/AddressBook/AddressBook.asp** in *webserver* è il nome assegnato al computer server Windows NT 4.0 o Windows 2000 Web che esegue Internet Information Services (IIS) e ASP.  
+ Se è stato installato il SDK, il codice sorgente completo per l'applicazione di esempio Address Book è reperibile nella directory SDK in samples\dataaccess\rds\AddressBook\AddressBook.asp. Per visualizzare lo scenario di Address Book, in Internet Explorer 4.0 o versione successiva, digitare **http://*webserver*/RDS/AddressBook/AddressBook.asp** in *webserver* è il nome specificato nel computer server di Windows NT 4.0 o Windows 2000 Web che esegue Internet Information Services (IIS) e ASP.  
   
 ## <a name="introduction-to-address-book"></a>Introduzione alla Rubrica  
  L'applicazione di esempio Address Book fornisce una rubrica online semplice che è possibile utilizzare per la pubblicazione di una directory di ricerca su una rete intranet. La Rubrica è progettata in modo che un utente può immettere una stringa di ricerca in uno o più campi per richiedere informazioni sui dipendenti. Per visualizzare le funzionalità di base del servizio dati remota, l'applicazione di esempio viene mantenuta intenzionalmente piccolo, con un numero minimo di oggetti e i campi di ricerca.  

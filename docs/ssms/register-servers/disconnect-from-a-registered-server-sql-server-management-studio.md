@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-registration
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], disconnecting
 - disconnecting registered servers [SQL Server]
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bf0da9d7c848a48c5626469e4ec3ef95d70fd9f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a41c28806be100d553a77362db504b0807647575
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>Disconnessione da un server registrato (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questo argomento descrive come disconnettere Esplora oggetti da un server in qualsiasi momento in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La disconnessione di Esplora oggetti non comporta quella di altri componenti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , ad esempio Editor SQL.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In questo argomento viene descritto come disconnettere Esplora oggetti da un server in qualsiasi momento in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La disconnessione di Esplora oggetti non comporta quella di altri componenti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , ad esempio Editor SQL.  
   
 ##  <a name="SSMSProcedure"></a>  
   

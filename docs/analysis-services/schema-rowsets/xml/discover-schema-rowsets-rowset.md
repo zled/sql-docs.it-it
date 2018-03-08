@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DISCOVER_SCHEMA_ROWSETS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4e5a3923ff0137e81064224fb6a2dfd9ca98f435
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 73fe1580fb43a090a7df04a43432e5b213e86369
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverschemarowsets-rowset"></a>Set di righe DISCOVER_SCHEMA_ROWSETS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce i nomi, restrizioni, descrizione e altre informazioni per tutti i valori di enumerazione e di eventuali valori di enumerazione specifici del provider supportati dal [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML per il provider Analysis (XMLA).  
@@ -37,12 +35,12 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il set di righe DISCOVER_SCHEMA_ROWSETS contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
+|Nome colonna|Indicatore del tipo|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**NomeSchema**|**DBTYPE_WSTR**||Nome dello schema o della richiesta. Questa richiesta restituisce i valori nell'enumerazione *RequestTypes* .|  
 |**SchemaGuid**|**DBTYPE_GUID**||GUID dello schema.|  
 |**Restrizioni**|**DBTYPE_HCHAPTER**||Matrice di restrizioni supportate dal provider.|  
-|**Description**|**DBTYPE_WSTR**||Descrizione localizzabile dello schema.|  
+|**Descrizione**|**DBTYPE_WSTR**||Descrizione localizzabile dello schema.|  
 |**RestrictionsMask**|**DBTYPE_UI8**|||  
   
  Questo set di righe dello schema non è ordinato.  

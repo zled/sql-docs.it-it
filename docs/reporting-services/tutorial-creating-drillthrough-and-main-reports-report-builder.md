@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85b1c63c9b6ab18018b9d31143ab53503ad64ae1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32ff76d9fd8d90b780d66ed1e12c5a4d33deca7f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
 In questa esercitazione verrà illustrato come creare due tipi di report impaginati in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. 
@@ -268,7 +268,7 @@ Nella parte superiore del report viene visualizzato il titolo del report. È pos
   
 1.  Fare clic su **Progettazione**per passare alla visualizzazione della struttura.  
   
-2.  Nell'area di progettazione scegliere **Fare clic per aggiungere il titolo**.  
+2.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
 3.  Digitare **Vendite e margini per categoria:**.  
   
@@ -390,7 +390,7 @@ Verrà aggiunta un'origine dati incorporata al report principale.
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-12. Per verificare che la connessione all'origine dati possa essere eseguita, fare clic su **Test connessione**.  
+12. Per verificare che la connessione all'origine dati avvenga correttamente, fare clic su **Test connessione**.  
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -518,7 +518,7 @@ Nei report è possibile mostrare subtotali e totali complessivi. I dati nei repo
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Per aggiungere subtotali e totali complessivi  
   
-1.  Nella pagina **Scegliere il layout** in **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
+1.  Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
     Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga sarà visualizzata nella modalità seguente: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria di prodotto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`e la quarta riga contiene i totali.  
   
@@ -634,7 +634,7 @@ Aggiungere un titolo a un report principale
   
 #### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
-1.  Nell'area di progettazione scegliere **Fare clic per aggiungere il titolo**.  
+1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
 2.  Digitare **2009 Product Category Sales: Categoria Online e Rivenditore**.  
   

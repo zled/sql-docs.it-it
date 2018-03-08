@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 162991baf2c6e5a1a83f5db69a354b0b7d085e33
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c43da2044b4f3231d947c88626cb43081fb29f6a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="moving-data-mining-objects"></a>Spostamento di oggetti di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gli scenari più comuni per lo spostamento di oggetti di data mining sono per distribuire un modello da un ambiente di test o analisi di un ambiente di produzione o per condividere modelli con altri utenti.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Gli scenari più comuni per lo spostamento di oggetti di data mining sono la distribuzione di un modello da un ambiente di test o analisi a un ambiente di produzione o la condivisione di modelli con altri utenti.  
   
  Questo argomento descrive come usare gli strumenti e i linguaggi di scripting forniti da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], per lo spostamento di oggetti di data mining.  
   
@@ -74,16 +73,16 @@ ms.lasthandoff: 12/08/2017
  Per altre informazioni, vedere [Sviluppo con Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
 ### <a name="backup-and-restore"></a>Backup e ripristino  
- Le operazioni di backup e ripristino di un intero database di Analysis Services sono il metodo ottimale se la soluzione di data mining si basa su oggetti OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre nuove funzionalità di backup e ripristino che rendono più veloci e facili le operazioni di backup del database.  
+ Le operazioni di backup e ripristino di un intero database di Analysis Services sono il metodo ottimale se la soluzione di data mining si basa su oggetti OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]fornisce funzionalità di backup e ripristino che rendono più veloce e semplice di backup del database.  
   
  Per altre informazioni, vedere [Backup e ripristino di database di Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
 ### <a name="exporting-and-importing"></a>Esportazione e importazione  
  Le operazioni di esportazione e reimportazione di modelli e strutture di data mining mediante le istruzioni DMX costituiscono il modo più semplice per spostare o eseguire il backup di singoli oggetti di data mining relazionali. Per ulteriori informazioni sulla sintassi DMX per queste operazioni, vedere i seguenti argomenti:  
   
--   [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)  
+-   [ESPORTAZIONE &#40; DMX &#41;](../../dmx/export-dmx.md)  
   
--   [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)  
+-   [DMX IMPORTAZIONE &#40; &#41;](../../dmx/import-dmx.md)  
   
  Se si specifica l'opzione INCLUDE DEPENDENCIES, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esporterà anche la definizione di eventuali viste origine dati obbligatorie e, durante l'importazione del modello o della struttura, verrà ricreata la vista origine dati nel server di destinazione. Al termine dell'importazione del modello, assicurarsi di impostare le autorizzazioni di data mining necessarie per l'oggetto.  
   
@@ -91,6 +90,6 @@ ms.lasthandoff: 12/08/2017
 >  Non è possibile esportare né importare modelli OLAP tramite DMX. Se il modello di data mining è basato su un cubo OLAP, è necessario usare le funzionalità di backup e ripristino di un intero database o di ridistribuzione del cubo e dei relativi modelli di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione degli oggetti e delle soluzioni di data mining](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Gestione di soluzioni di Data Mining e gli oggetti](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6f5a67559ea2137110dc72d77a56bacc8da39a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8f4c9bf19fd1df07bb4271a8db94311548a4e092
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-append-clause"></a>Clausola APPEND forma
 La clausola APPEND del comando forma aggiunge una o più colonne per un **Recordset**. Spesso, queste colonne sono colonne a capitoli, che fanno riferimento a un elemento figlio **Recordset**.  
@@ -39,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 ## <a name="description"></a>Description  
  Le parti di questa clausola sono come segue:  
   
- *comando padre*  
+ *parent-command*  
  Zero o uno dei seguenti (è possibile omettere il *comando padre* completamente):  
   
 -   Un comando del provider racchiuso tra parentesi graffe ("{") che restituisce un **Recordset** oggetto. Il comando viene immesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Ciò corrisponderà in genere il linguaggio SQL, anche se ADO non richieda qualsiasi linguaggio di query specifico.  
@@ -48,10 +49,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   La parola chiave nella tabella, seguita dal nome di una tabella nel provider di dati.  
   
- *alias padre*  
+ *parent-alias*  
  Alias facoltativo che fa riferimento all'elemento padre **Recordset**.  
   
- *elenco di colonne*  
+ *column-list*  
  Uno o più delle operazioni seguenti:  
   
 -   Una colonna aggregata.  
@@ -71,7 +72,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- *recordset figlio*  
+ *child-recordset*  
  -   Un comando del provider racchiuso tra parentesi graffe ("{") che restituisce un **Recordset** oggetto. Il comando viene immesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Ciò corrisponderà in genere il linguaggio SQL, anche se ADO non richieda qualsiasi linguaggio di query specifico.  
   
 -   Un altro comando shape incorporati tra parentesi.  
@@ -80,19 +81,19 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   La parola chiave nella tabella, seguita dal nome di una tabella nel provider di dati.  
   
- *alias di figlio*  
+ *child-alias*  
  Un alias che fa riferimento al figlio **Recordset**.  
   
- *colonna padre*  
+ *parent-column*  
  Una colonna di **Recordset** restituito dal *comando padre.*  
   
- *colonna figlio*  
+ *child-column*  
  Una colonna di **Recordset** restituito dal *comando figlio*.  
   
- *numero di parametri*  
+ *param-number*  
  Vedere [funzionamento dei comandi con parametri](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *alias di capitolo*  
+ *chapter-alias*  
  Un alias che fa riferimento alla colonna del capitolo aggiunta all'elemento padre.  
   
 > [!NOTE]

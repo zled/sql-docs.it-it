@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1598f40bb947a98b8fccc8ae47ba1dd7b9447b0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 508d0f2774033dee83ba600036ab09efd39eaa58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
   In questo argomento sono inclusi alcuni suggerimenti sulla progettazione di pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per evitare problemi di prestazioni comuni. Sono inoltre fornite informazioni sugli strumenti e sulle funzionalità che è possibile usare per risolvere i problemi relativi alle prestazioni dei pacchetti.  
@@ -148,7 +149,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="merge-join-transformation"></a>Merge Join Transformation  
  Non è più necessario configurare il valore della proprietà **MaxBuffersPerInput** , in quanto Microsoft ha apportato modifiche che riducono il rischio di utilizzo di una quantità eccessiva di memoria da parte della trasformazione Merge join. Questo problema si verificava in genere quando tramite i diversi input della trasformazione Merge Join venivano prodotti dati con frequenze irregolari.  
   
-#### <a name="slowly-changing-dimension-transformation"></a>Trasformazione Dimensione a modifica lenta  
+#### <a name="slowly-changing-dimension-transformation"></a>Dimensione a modifica lenta - trasformazione  
  La Configurazione guidata dimensioni a modifica lenta e la trasformazione Dimensione a modifica lenta sono strumenti di uso generale in grado di rispondere alle esigenze della maggior parte degli utenti. Il flusso di dati generato dalla procedura guidata, tuttavia, non è ottimizzato per le prestazioni.  
   
  I componenti più lenti nella trasformazione Dimensione a modifica lenta sono in genere le trasformazioni Comando OLE DB che eseguono istruzioni UPDATE su una singola riga per volta. Il modo più efficace per migliorare le prestazioni della trasformazione Dimensione a modifica lenta consiste pertanto nel sostituire le trasformazioni Comando OLE DB. È possibile sostituire tali trasformazioni con componenti di destinazione che salvano tutte le righe da aggiornare in una tabella di staging. È quindi possibile aggiungere un'attività Esegui SQL per l'esecuzione di un singola istruzione UPDATE di Transact-SQL basata su set su tutte le righe contemporaneamente.  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="destinations"></a>Destinazioni  
  Per ottenere prestazioni migliori con le destinazioni, valutare l'opportunità di usare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di testarne le prestazioni.  
   
-#### <a name="sql-server-destination"></a>Destinazione SQL Server  
+#### <a name="sql-server-destination"></a>SQL Server - destinazione  
  Quando un pacchetto carica dati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer, usare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tale destinazione è ottimizzata per caricamenti bulk ad alta velocità.  
   
 #### <a name="testing-the-performance-of-destinations"></a>Test delle prestazioni delle destinazioni  
@@ -169,9 +170,9 @@ ms.lasthandoff: 11/20/2017
   
  Per abilitare o disabilitare la visualizzazione di messaggi nella scheda **Stato** , attivare o disattivare l'opzione **Debug report di stato** del menu **SSIS** . La disabilitazione del report di stato consente di migliorare le prestazioni durante l'esecuzione di un pacchetto complesso in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
--   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinare i dati per le trasformazioni Unione e Merge Join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  **Articoli e post di Blog**  

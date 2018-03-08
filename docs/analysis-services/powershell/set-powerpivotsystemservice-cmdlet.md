@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 755c54c15e1004d3abc4caf18f89001bf6b53af4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fc15f310355b3ecaab626600c14ee27905d250a5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-powerpivotsystemservice-cmdlet"></a>Cmdlet Set-PowerPivotSystemService
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Imposta le proprietà globali dell'oggetto PowerPivotSystemService a livello di farm.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Imposta le proprietà globali dell'oggetto PowerPivotSystemService a livello di farm.  
 
 >[!NOTE] 
 >In questo articolo può contenere esempi e informazioni non aggiornate. Usare il cmdlet Get-Help per la versione più recente.
@@ -53,7 +54,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Accettare input da pipeline?|true|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-updateassemblyinformation-switch"></a>-UpdateAssemblyInformation \<passare >  
+### <a name="-updateassemblyinformation-switch"></a>-UpdateAssemblyInformation \<switch>  
  Utilizzato solo a scopo di aggiornamento. Se la versione dell'assembly distribuita nella farm è diversa dalla versione archiviata nel database di configurazione di SharePoint, è possibile eseguire questo cmdlet per aggiornare le informazioni sull'assembly nel database di configurazione. Le informazioni sulla versione dell'assembly sono disponibili nelle proprietà del file Microsoft.AnalysisServices.SharePoint.Integration.dll, archiviato nell'assembly globale.  
   
 |||  
@@ -64,7 +65,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-workbookupgradeondatarefresh-boolean"></a>WorkbookUpgradeOnDataRefresh - \<booleano >  
+### <a name="-workbookupgradeondatarefresh-boolean"></a>-WorkbookUpgradeOnDataRefresh \<boolean>  
  Consente di aggiornare automaticamente una cartella di lavoro di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] all'inizio di un aggiornamento dati pianificato nel server. L'aggiornamento dati è supportato solo per le cartelle di lavoro che corrispondono alla versione corrente del server. Se si abilita questa proprietà, una cartella di lavoro verrà aggiornata automaticamente in modo che l'aggiornamento dati possa continuare. Questa proprietà viene impostata a livello di istanza del server. Non è possibile modificarla per cartelle di lavoro, librerie, siti o utenti specifici.  
   
 |||  
@@ -90,7 +91,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-confirm-switch"></a>-Confirm \<passare >  
+### <a name="-confirm-switch"></a>-Confirm \<switch>  
  Richiede la conferma dell'utente prima dell'esecuzione del comando. Questo valore è abilitato per impostazione predefinita. Per ignorare la risposta di conferma in un comando, specificare Confirm:$false nel comando.  
   
 |||  

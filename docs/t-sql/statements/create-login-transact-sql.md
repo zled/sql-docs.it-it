@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE LOGIN
 - LOGIN_TSQL
 - LOGIN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - passwords [SQL Server], logins
 - mapping logins [SQL Server]
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: "101"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c0b06e7119f051d5854ae7f5435e8edd7fecf1a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -196,6 +198,8 @@ CHIAVE asimmetrica *asym_key_name*
  Per uno script per trasferire account di accesso, vedere [come trasferire gli account di accesso e le password tra istanze di SQL Server 2005 e SQL Server 2008](http://support.microsoft.com/kb/918992).  
   
  La creazione automatica di un account di accesso Abilita il nuovo account e concede l'accesso a livello del server **CONNECT SQL** autorizzazione.  
+ 
+ Il server [modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md) deve corrispondere al tipo di account di accesso per consentire l'accesso.
   
  Per informazioni sulla progettazione di un sistema di autorizzazioni, vedere [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -212,14 +216,14 @@ CHIAVE asimmetrica *asym_key_name*
   
  Per ulteriori informazioni su [!INCLUDE[ssSDS](../../includes/sssds-md.md)] gli account di accesso, vedere [gestione di database e account di accesso nel Database SQL di Azure](http://msdn.microsoft.com/library/ee336235.aspx).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], richiede **ALTER ANY LOGIN** l'autorizzazione per il server o l'appartenenza di **securityadmin** ruolo predefinito del server.  
   
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] solo l'account di accesso dell'entità di livello server (creato dal processo di provisioning) o i membri del ruolo del database `loginmanager` nel database master possono creare nuovi account di accesso.  
   
  Se il **CREDENZIALI** opzione viene utilizzata, è richiesta anche **ALTER ANY CREDENTIAL** autorizzazione nel server.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
  Dopo aver creato un account di accesso, l'account di accesso può connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)] o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ma include solo le autorizzazioni concesse al **pubblica** ruolo. Provare a effettuare alcune delle attività seguenti:  
   
 -   Per connettersi a un database, creare un utente del database per l'account di accesso. Per altre informazioni, vedere [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
@@ -314,7 +318,7 @@ GO
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. Creazione di un account di accesso di autenticazione di SQL Server con una password  
  Nell'esempio seguente viene creato l'account di accesso `Mary7` con password `A2c3456`.  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   

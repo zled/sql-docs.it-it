@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: faafa85cf85fd538fbc8efa92ba18a520d7562d7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea30d30d66761e245a89fadd4bea37d6503c458b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="procedure-parameters"></a>Parametri di routine
 I parametri nelle chiamate di procedura possono essere di input, input/output o i parametri di output. Ciò è diverso dai parametri di tutte le altre istruzioni SQL sono sempre i parametri di input.  
   
- Parametri di input vengono utilizzati per inviare i valori per la procedura. Si supponga, ad esempio, che la tabella di parti contiene colonne PartID, la descrizione e prezzo. La procedura InsertPart potrebbe essere un parametro di input per ogni colonna nella tabella. Esempio:  
+ Parametri di input vengono utilizzati per inviare i valori per la procedura. Si supponga, ad esempio, che la tabella di parti contiene colonne PartID, la descrizione e prezzo. La procedura InsertPart potrebbe essere un parametro di input per ogni colonna nella tabella. Ad esempio  
   
 ```  
 {call InsertPart(?, ?, ?)}  

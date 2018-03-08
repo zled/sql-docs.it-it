@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f6d98e612a8f2033cb72ab59caa6eaab94ed5754
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
   Questa utilità consente di estrarre, ripristinare, creare ed eliminare la chiave simmetrica utilizzata per proteggere i dati riservati del server di report dall'accesso non autorizzato. Questa utilità viene inoltre utilizzata per unire in join istanze del server di report in un'implementazione basata sulla scalabilità orizzontale. La *distribuzione con scalabilità orizzontale di un server di report* fa riferimento a più istanze del server di report che condividono lo stesso database del server di report.  
@@ -114,7 +112,7 @@ rskeymgmt {-?}
  **-t**  *trace*  
  Crea l'output dei messaggi di errore nel log di traccia. Questo argomento non accetta un valore. Per altre informazioni, vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire lo strumento è necessario essere un amministratore locale ed eseguirlo a livello locale nel computer in cui risiede il server di report. L'utilità rskeymgmt interagisce con l'istanza locale del servizio Windows ReportServer. L'utilità non è infatti in grado di connettersi alle istanze remote del servizio Windows ReportServer e pertanto non può essere utilizzata per gestire le chiavi di crittografia di un'istanza remota del server di report.  
   
 > [!NOTE]  
@@ -175,7 +173,7 @@ rskeymgmt -r <installationID>
 ## <a name="file-location"></a>Percorso del file  
  Rskeymgmt.exe è disponibile in **\<*unità*>:\Programmi\Microsoft SQL Server\110\Tools\Binn** o **\<*unità*>:\Programmi (x86)\Microsoft SQL Server\110\Tools\Binn**. È possibile eseguire l'utilità da qualsiasi cartella del file system.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il server di report crittografa le informazioni di connessione e le credenziali archiviate. Per la crittografia dei dati vengono utilizzate una chiave pubblica e una chiave simmetrica. Il server di report viene eseguito solo se un database del server di report dispone di chiavi valide. È possibile usare **rskeymgmt** per eseguire il backup, eliminare o ripristinare le chiavi. Se non è possibile ripristinare le chiavi, questo strumento consente di eliminare il contenuto crittografato non più utilizzabile.  
   
  L'utilità **rskeymgmt** consente di gestire il set di chiavi definito durante l'installazione o l'inizializzazione. L'utilità si connette al servizio Windows ReportServer locale tramite un endpoint RPC (Remote Procedure Call, chiamata di procedura remota). Per garantire il corretto funzionamento di questa utilità, è necessario che il servizio Windows ReportServer sia in esecuzione.  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_server_registry (Transact-SQL) | Documenti Microsoft
+title: sys.dm_server_registry (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_server_registry
 - dm_server_registry
 - sys.dm_server_registry_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_server_registry dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_server_registry dynamic management view
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fac36de2ee2e99a5d98882cb7f6474ece5f9c99c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c43ad7f5f073523e50a03cae43644e4fd5cd90a1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +44,9 @@ ms.lasthandoff: 11/17/2017
 |value_name|**nvarchar(256)**|Nome del valore della chiave. Si tratta dell'elemento mostrato nella **nome** colonna dell'Editor del Registro di sistema. Ammette i valori Null.|  
 |value_data|**sql_variant**|Valore dei dati della chiave. Questo è il valore mostrato nel **dati** dell'Editor del Registro di sistema per una voce specifica di colonna. Ammette i valori Null.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="examples"></a>Esempi  
@@ -94,6 +97,6 @@ WHERE registry_key LIKE N'%SuperSocketNetLib%';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys.dm server_services &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+ [sys.dm_server_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

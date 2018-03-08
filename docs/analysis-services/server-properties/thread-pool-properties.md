@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - MaxThreads property
 - Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25a741e35b7efa0b3bb13047853f6f39d8300c3c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b7cf85d5e9c8be15a74d99c1e4181b0e206d869
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="thread-pool-properties"></a>Proprietà dei pool di thread
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il multithreading viene usato per molte operazioni, il miglioramento delle prestazioni complessive del server tramite l'esecuzione di più processi in parallelo. Per gestire i thread in modo più efficiente, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono usati i pool di thread per preallocare i thread e semplificarne la disponibilità per il processo successivo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il multithreading viene usato per molte operazioni, con il conseguente miglioramento delle prestazioni complessive del server dovuto all'esecuzione di più processi in parallelo. Per gestire i thread in modo più efficiente, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono usati i pool di thread per preallocare i thread e semplificarne la disponibilità per il processo successivo.  
   
  Ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene il proprio set di pool di thread. Esistono differenze significative nel modo in cui i pool di thread vengono usati dalle istanze tabulari e da quelle multidimensionali. Ad esempio, solo le istanze multidimensionali usano il pool di thread **IOProcess** . Di conseguenza, la proprietà **PerNumaNode** , descritta in questo argomento, non è significativa per le istanze tabulari. Nella sezione [Guida di riferimento alle proprietà](#bkmk_propref) seguente, i requisiti di modalità sono indicati per ogni proprietà.
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 12/08/2017
 |**Parsing**  \ **Short** \ **StackSizeKB**|int|Intero con segno a 32 bit che può essere usato per modificare l'allocazione di memoria durante l'esecuzione dei thread.|64 * numero di processori logici|Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
 |**Process** \ **Concurrency**|double|Valore a virgola mobile a precisione doppia con cui si determina l'algoritmo usato per impostare una destinazione nel numero di thread che possono essere inseriti in una coda contemporaneamente.|2.0|Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .<br /><br /> La proprietà Concurrency viene usata per inizializzare i pool di thread che vengono implementati usando le porte di completamento I/O di Windows. Per altre informazioni, vedere [Porte di completamento I/O](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) .|  
 |**Process** \ **GroupAffinity**|string|Matrice di valori esadecimali corrispondenti ai gruppi di processori nel sistema, usata per impostare l'affinità dei thread di elaborazione sui processori logici in ogni gruppo di processori.|none|È possibile usare questa proprietà per creare affinità personalizzate. La proprietà è vuota per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare GroupAffinity per creare affinità fra thread e processori in un gruppo di processori](#bkmk_groupaffinity) .|  
-|**Process** \ **MaxThreads**|int|Intero con segno a 32 bit che definisce il numero massimo di thread da includere nel pool di thread.|0|0 indica che le impostazioni predefinite vengono determinate dal server. Per impostazione predefinita, tramite il server questo valore viene impostato sul valore più elevato tra un valore assoluto pari a 64 e il numero di processori logici. Ad esempio, in un sistema con 64 core con Hyper-Threading abilitato (che determina 128 processori logici), il numero massimo di thread per il pool di thread è 128.<br /><br /> Se si imposta su un valore negativo, il valore in questione viene moltiplicato dal server per il numero di processori logici. Ad esempio, se è impostato su -10 in un server con 32 processori logici, il massimo è 320 thread.<br /><br /> Il valore massimo è soggetto ai processori disponibili per tutte le maschere di affinità personalizzate definite in precedenza. Ad esempio, se è già stata impostata l'affinità del pool di thread in modo da usare 8 dei 32 processori e ora si imposta MaxThreads su -10, il limite superiore per il pool di thread sarà 10 volte 8 o 80 thread.<br /><br /> I valori effettivi usati per questa proprietà dei pool di thread vengono scritti nel file di log msmdsrv al momento dell'avvio del servizio.<br /><br /> Ulteriori informazioni sull'ottimizzazione delle impostazioni del pool di thread sono disponibili nella pagina relativa alla [Guida operativa di Analysis Services](http://msdn.microsoft.com/library/hh226085.aspx).|  
+|**Process** \ **MaxThreads**|int|Intero con segno a 32 bit che definisce il numero massimo di thread da includere nel pool di thread.|0|0 indica che è il server a determinare le impostazioni predefinite. Per impostazione predefinita, tramite il server questo valore viene impostato sul valore più elevato tra un valore assoluto pari a 64 e il numero di processori logici. Ad esempio, in un sistema con 64 core con Hyper-Threading abilitato (che determina 128 processori logici), il numero massimo di thread per il pool di thread è 128.<br /><br /> Se si imposta su un valore negativo, il valore in questione viene moltiplicato dal server per il numero di processori logici. Ad esempio, se è impostato su -10 in un server con 32 processori logici, il massimo è 320 thread.<br /><br /> Il valore massimo è soggetto ai processori disponibili per tutte le maschere di affinità personalizzate definite in precedenza. Ad esempio, se è già stata impostata l'affinità del pool di thread in modo da usare 8 dei 32 processori e ora si imposta MaxThreads su -10, il limite superiore per il pool di thread sarà 10 volte 8 o 80 thread.<br /><br /> I valori effettivi usati per questa proprietà dei pool di thread vengono scritti nel file di log msmdsrv al momento dell'avvio del servizio.<br /><br /> Ulteriori informazioni sull'ottimizzazione delle impostazioni del pool di thread sono disponibili nella pagina relativa alla [Guida operativa di Analysis Services](http://msdn.microsoft.com/library/hh226085.aspx).|  
 |**Process** \ **MinThreads**|int|Intero con segno a 32 bit che definisce il numero minimo di thread da preallocare per il pool di thread.|0|0 indica che le impostazioni predefinite vengono determinate dal server. Per impostazione predefinita, il valore minimo è 1.<br /><br /> Se si imposta su un valore negativo, il valore in questione viene moltiplicato dal server per il numero di processori logici.<br /><br /> I valori effettivi usati per questa proprietà dei pool di thread vengono scritti nel file di log msmdsrv al momento dell'avvio del servizio.<br /><br /> Ulteriori informazioni sull'ottimizzazione delle impostazioni del pool di thread sono disponibili nella pagina relativa alla [Guida operativa di Analysis Services](http://msdn.microsoft.com/library/hh226085.aspx).|  
 |**Process** \ **PriorityRatio**|int|Intero con segno a 32 bit che può essere usato per assicurarsi che i thread con priorità più bassa vengano talvolta eseguiti anche quando una coda con priorità più alta non è vuota.|2|Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
 |**Process** \ **StackSizeKB**|int|Intero con segno a 32 bit che può essere usato per modificare l'allocazione di memoria durante l'esecuzione dei thread.|0|Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  

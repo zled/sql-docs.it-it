@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 76748c3a02ca158e3519197b043ce8e4c978f915
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 92f7c462be75d4557ab44216af1beb14d101029e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Visualizzare intestazioni e piè di pagina con un gruppo (Generatore report e SSRS)
   È possibile stabilire se di una riga statica, ad esempio l'intestazione o il piè di pagina di un gruppo, viene eseguito il rendering con righe dinamiche associate a un gruppo in un'area dati Tablix.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso, quindi fare clic su **Modalità avanzata**. Nel riquadro Gruppi di righe verranno visualizzati i membri statici e dinamici gerarchici della gerarchia dei gruppi di righe.  
   
-3.  Fare clic sul membro statico che corrisponde all'intestazione o al piè di pagina della riga che si desidera mantenere con le righe di gruppo. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix**.  
+3.  Fare clic sul membro statico che corrisponde all'intestazione o al piè di pagina della riga che si desidera mantenere con le righe di gruppo. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix** .  
   
 4.  Nel riquadro Proprietà fare clic su **KeepWithGroup**e quindi scegliere uno dei valori seguenti nell'elenco a discesa:  
   

@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e016e0f7d6250f25f1c92d3f2527f68dc91c69e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a6bdb5767937e4fbfdf7dd92cc683fe7830e066a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/17/2017
 |DBTYPE_BSTR|Supportati (2), (5)|N/D|Supportato (3), (5)|N/D|  
 |DBTYPE_STR|Supportati (2), (5)|N/D|Supportato (3), (5)|N/D|  
 |DBTYPE_IUNKNOWN|Supportato (6)|N/D|Supportato (6)|N/D|  
-|DBTYPE_VARIANT (VT_UI1 SINGOLO &#124; VT_ARRAY)|Supportato (5)|N/D|Supportato (3), (5)|N/D|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Supportato (5)|N/D|Supportato (3), (5)|N/D|  
 |DBTYPE_VARIANT (VT_BSTR)|Supportati (2), (5)|N/D|N/D|N/D|  
   
 ### <a name="key-to-symbols"></a>Descrizione dei simboli  

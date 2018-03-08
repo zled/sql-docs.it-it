@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_account_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_help_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_account_sp_TSQL
 - sysmail_help_account_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_account_sp
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfc032a279abad7949e67f4c232cbe30219baa30
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b811fef9f1c2a89590e1e03f4fbe1b214ddc902d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +46,10 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  ID dell'account per cui visualizzare un elenco di informazioni. *account_id* è **int**, con un valore predefinito è NULL.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  Nome dell'account per cui visualizzare un elenco di informazioni. *account_name* è **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -60,14 +63,14 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |Nome colonna|Tipo di dati|Description|  
 |**account_id**|**int**|ID dell'account.|  
 |**name**|**sysname**|Nome dell'account.|  
-|**Descrizione**|**nvarchar(256)**|Descrizione dell'account.|  
-|**email_address**|**nvarchar (128)**|Indirizzo di posta elettronica da cui inviare i messaggi.|  
-|**nome_visualizzato**|**nvarchar (128)**|Nome visualizzato dell'account.|  
-|**replyto_address**|**nvarchar (128)**|Indirizzo a cui vengono inviate le risposte ai messaggi da questo account.|  
-|**ServerType**|**sysname**|Tipo di server di posta elettronica per l'account.|  
-|**ServerName**|**sysname**|Nome del server di posta elettronica per l'account.|  
+|**description**|**nvarchar(256)**|Descrizione dell'account.|  
+|**email_address**|**nvarchar(128)**|Indirizzo di posta elettronica da cui inviare i messaggi.|  
+|**display_name**|**nvarchar(128)**|Nome visualizzato dell'account.|  
+|**replyto_address**|**nvarchar(128)**|Indirizzo a cui vengono inviate le risposte ai messaggi da questo account.|  
+|**servertype**|**sysname**|Tipo di server di posta elettronica per l'account.|  
+|**servername**|**sysname**|Nome del server di posta elettronica per l'account.|  
 |**port**|**int**|Numero della porta del server di posta elettronica.|  
-|**nome utente**|**nvarchar (128)**|Nome utente da utilizzare per accedere al server di posta elettronica se il server di posta elettronica utilizza l'autenticazione. Quando **username** è NULL, posta elettronica Database non utilizza l'autenticazione per questo account.|  
+|**username**|**nvarchar(128)**|Nome utente da utilizzare per accedere al server di posta elettronica se il server di posta elettronica utilizza l'autenticazione. Quando **username** è NULL, posta elettronica Database non utilizza l'autenticazione per questo account.|  
 |**use_default_credentials**|**bit**|Specifica se inviare la posta elettronica al server SMTP utilizzando le credenziali di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** è di tipo bit e non prevede alcun valore predefinito. Se questo parametro è 1, Posta elettronica database utilizza le credenziali del servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando questo parametro è 0, posta elettronica Database utilizza il  **@username**  e  **@password**  per l'autenticazione sul server SMTP. Se  **@username**  e  **@password**  sono NULL, quindi posta elettronica Database utilizza l'autenticazione anonima. Prima di specificare questo parametro consultare l'amministratore del server SMTP.|  
 |**enable_ssl**|**bit**|Specifica l'utilizzo della crittografia mediante SSL (Secure Sockets Layer) da parte di Posta elettronica database. Utilizzare questa opzione se SSL è obbligatorio per il server SMTP. **enable_ssl** è di tipo bit e non prevede alcun valore predefinito. 1 indica che le comunicazioni vengono crittografate mediante SSL. 0 indica che i messaggi vengono inviati senza utilizzare la crittografia SSL.|  
   
@@ -76,7 +79,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
   
  La stored procedure **sysmail_help_account_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  

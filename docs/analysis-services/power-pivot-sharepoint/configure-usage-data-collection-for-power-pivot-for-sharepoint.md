@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f939c078a2b21cfa16a4f36228b46822f2bc8457
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Raccolta dati di utilizzo è una funzionalità a livello di farm di SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint questo sistema viene usato ed esteso per fornire i report nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in cui viene mostrato l'uso dei servizi e dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La raccolta dati di utilizzo è una funzionalità di SharePoint a livello di farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint questo sistema viene usato ed esteso per fornire i report nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in cui viene mostrato l'uso dei servizi e dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Per informazioni sui dati di utilizzo nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vedere [Dati di utilizzo e dashboard di gestione PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
@@ -192,11 +190,11 @@ ms.lasthandoff: 12/08/2017
 |-------------|-------------------|----------|-----------------|  
 |**Eventi di uso di Analysis Services** (Connessione, Caricamento, Scaricamento, Richieste)|\<abilitato >|Boolean|Questi valori sono abilitati o disabilitati.|  
 |**Query Reporting interval**|300 (in secondi)|Valore intero|Tra 1 e qualsiasi numero intero positivo. Il valore predefinito è 5 minuti.|  
-|**Usage data history**|365 (in giorni)|Valore intero|0 specifica nessun limite, ma è anche possibile impostare un limite massimo per imporre una scadenza sui dati cronologici e l'eliminazione automatica. I valori validi per un periodo di memorizzazione limitato sono compresi tra 1 e 5000 (in giorni).|  
-|Limite massimo risposta semplice|500 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta semplice. Qualsiasi richiesta completata entro un intervallo di tempo compreso tra 0 e 500 millisecondi viene considerata una richiesta semplice e ignorata ai fini del report.|  
-|Limite massimo risposta rapida|1000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta rapido.|  
-|Limite massimo risposta prevista|3000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta previsto.|  
-|Limite massimo risposta con esecuzione prolungata|10000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta con esecuzione prolungata. Tutte le richieste che superano questo limite massimo rientrano nella categoria Superato, che non prevede una soglia massima.|  
+|**Usage data history**|365 (in giorni)|Integer|0 specifica nessun limite, ma è anche possibile impostare un limite massimo per imporre una scadenza sui dati cronologici e l'eliminazione automatica. I valori validi per un periodo di memorizzazione limitato sono compresi tra 1 e 5000 (in giorni).|  
+|Limite massimo risposta semplice|500 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta semplice. Qualsiasi richiesta completata entro un intervallo di tempo compreso tra 0 e 500 millisecondi viene considerata una richiesta semplice e ignorata ai fini del report.|  
+|Limite massimo risposta rapida|1000 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta rapido.|  
+|Limite massimo risposta prevista|3000 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta previsto.|  
+|Limite massimo risposta con esecuzione prolungata|10000 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta con esecuzione prolungata. Tutte le richieste che superano questo limite massimo rientrano nella categoria Superato, che non prevede una soglia massima.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Documentazione di riferimento per le impostazioni di configurazione &#40;Power Pivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   

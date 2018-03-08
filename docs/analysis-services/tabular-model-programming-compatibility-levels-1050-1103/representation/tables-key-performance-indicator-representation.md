@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42c48fb77362c07e31bf73517bb72ad82954d8cc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5b159965ba0428c267b62fd712cd34bc26cca833
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Tabelle - rappresentazione dell'indicatore di prestazioni chiave
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un indicatore KPI viene utilizzato per misurare le prestazioni di un valore, definito mediante una misura di Base, rispetto a un valore di destinazione  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Un indicatore KPI viene utilizzato per misurare le prestazioni di un valore, definito mediante una misura di base, rispetto a un valore di destinazione.  
   
 ## <a name="key-performance-indicator-representation"></a>Rappresentazione dell'indicatore di prestazioni chiave  
  Nei modelli a oggetti tabulari, un indicatore di prestazioni chiave (KPI) è una misura con informazioni aggiuntive per la visualizzazione grafica da parte dell'applicazione client. Un indicatore KPI dispone in genere di informazioni su un obiettivo da raggiungere e sullo stato della misura confrontato con l'obiettivo nonché di informazioni per lo strumento client sulla visualizzazione grafica dello stato.  

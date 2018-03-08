@@ -7,21 +7,22 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 4887d79f60a8fd418fd4a5543bbac9dec0af3ebc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Eseguire il provisioning di una macchina virtuale per machine learning in Azure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Macchine virtuali in Azure sono una soluzione comoda per configurare rapidamente un ambiente completo del server per soluzioni di apprendimento automatico.
 
@@ -85,9 +86,7 @@ Per ulteriori informazioni, vedere [l'installazione di SQL Server R Services in 
 
 ### <a name="using-machine-learning-in-azure-sql-database"></a>Utilizzo di apprendimento in database SQL di Azure
 
-A partire da rientrano 2017, Database SQL di Azure supporta l'uso di R per eseguire il training di modelli e utilizzarli per la stima. 
-
-R Services nel database è disponibile come funzionalità di anteprima e presenta alcune limitazioni rispetto alla versione locale di SQL Server. Per ulteriori informazioni, vedere [database SQL di Azure](../r/using-r-in-azure-sql-database.md).
+Attualmente, l'anteprima del supporto di R in SQL Azure viene sospeso per i progetti di sviluppo in corso. Per ulteriori informazioni, vedere [database SQL di Azure](../r/using-r-in-azure-sql-database.md).
 
 ### <a name="can-i-upgrade-the-sql-server-version-on-a-virtual-machine"></a>È possibile aggiornare la versione di SQL Server in una macchina virtuale?
 
@@ -135,7 +134,7 @@ Configurazione aggiuntiva non è necessario se si desidera utilizzare i pacchett
 
 Le macchine virtuali seguenti sono attualmente disponibili per machine learning con SQL Server:
 
-|nome| Commenti|
+|Nome| Commenti|
 |----|----|----|
 | **SQL Server 2016**| ***  |
 |SQL Server 2016 Enterprise Edition SP1 in Windows|R Services per integrata analitica avanzate.|

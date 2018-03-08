@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -29,19 +29,20 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62e51e155dbd230d3db7d6e84d71f5b1635a22be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3aaf081b264cd74614af93fd58d130b19dfa4d5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architettura dell'integrazione CLR - ambiente di hosting CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione con common language runtime (CLR) di .NET Framework consente ai programmatori di database di utilizzare linguaggi come Visual c#, Visual Basic .NET e Visual C++. Tra i tipi di logica di business che i programmatori possono scrivere con tali linguaggi figurano le funzioni, le stored procedure, i trigger, i tipi di dati e le aggregazioni.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di .NET Framework consente ai programmatori di database di utilizzare linguaggi come Visual C#, Visual Basic .NET e Visual C++. Tra i tipi di logica di business che i programmatori possono scrivere con tali linguaggi figurano le funzioni, le stored procedure, i trigger, i tipi di dati e le aggregazioni.  
   
   CLR include memoria sottoposta a Garbage Collection, threading preemptive, Servizio metadati (riflessione dei tipi), verificabilità del codice e sicurezza dall'accesso di codice. CLR utilizza metadati per individuare e caricare classi, disporre istanze in memoria, risolvere chiamate a metodi, generare codice nativo, implementare la sicurezza e impostare limiti di contesto per la fase di esecuzione.  
   
@@ -66,14 +67,14 @@ ms.lasthandoff: 11/17/2017
  Il codice utente non deve essere in grado di eseguire operazioni che danneggiano l'integrità dell'elaborazione del Motore di database, quali la visualizzazione di una finestra di messaggio popup in cui viene richiesta una risposta dell'utente o l'uscita dal processo. Il codice utente non deve essere in grado di sovrascrivere i buffer di memoria del Motore di database o le strutture di dati interne.  
   
 ###### <a name="scalability"></a>Scalabilità  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e CLR dispongono di modelli interni diversi per la pianificazione e la gestione della memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un modello di threading cooperativo in modalità non preemptive in cui i thread producono volontariamente l'esecuzione con frequenza periodica o quando sono in attesa di blocchi o I/O. CLR supporta un modello di threading preemptive. Se il codice utente in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può chiamare direttamente le primitive di threading del sistema operativo, non si integra in modo soddisfacente nell'Utilità di pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può influire negativamente sulla scalabilità del sistema. CLR non distingue tra memoria virtuale e fisica, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestisce direttamente la memoria fisica e deve utilizzarla entro un limite configurabile.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e CLR includono modelli interni diversi per la pianificazione e gestione della memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un modello di threading cooperativo in modalità non preemptive in cui i thread producono volontariamente l'esecuzione con frequenza periodica o quando sono in attesa di blocchi o I/O. CLR supporta un modello di threading preemptive. Se il codice utente in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può chiamare direttamente le primitive di threading del sistema operativo, non si integra in modo soddisfacente nell'Utilità di pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può influire negativamente sulla scalabilità del sistema. CLR non distingue tra memoria virtuale e fisica, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestisce direttamente la memoria fisica e deve utilizzarla entro un limite configurabile.  
   
  I modelli diversi per threading, pianificazione e gestione della memoria presentano una sfida di integrazione per un sistema di gestione di database relazionali (RDBMS) con scalabilità in grado di supportare migliaia di sessioni utente simultanee. L'architettura deve garantire che la scalabilità del sistema non venga danneggiata dal codice utente che chiama direttamente le API per le primitive di threading, memoria e sincronizzazione.  
   
-###### <a name="security"></a>Security  
+###### <a name="security"></a>Sicurezza  
  Il codice utente in esecuzione nel database deve essere conforme alle regole di autenticazione e autorizzazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in caso di accesso a oggetti di database, quali tabelle e colonne. Gli amministratori del database, inoltre, devono essere in grado di controllare l'accesso alle risorse del sistema operativo, ad esempio file e accesso di rete, dal codice utente in esecuzione nel database. Questo aspetto è importante in quanto i linguaggi di programmazione gestita, diversamente dai linguaggi non gestiti come Transact-SQL, forniscono API per accedere a tali risorse. Il sistema deve fornire un metodo protetto che consenta al codice utente di accedere alle risorse del computer al di fuori dell'elaborazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per altre informazioni, vedere [Sicurezza per l'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
-###### <a name="performance"></a>Prestazioni  
+###### <a name="performance"></a>restazioni  
  Il codice utente gestito in esecuzione nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve offrire prestazioni computazionali analoghe allo stesso codice eseguito al di fuori del server. L'accesso ai database dal codice utente gestito non è rapido quanto [!INCLUDE[tsql](../../includes/tsql-md.md)] nativo. Per ulteriori informazioni, vedere [le prestazioni dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="clr-services"></a>CLR Services  
@@ -132,8 +133,8 @@ ms.lasthandoff: 11/17/2017
 |Set di autorizzazioni|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Sicurezza dall'accesso di codice|Sola esecuzione|Esecuzione più accesso a risorse esterne|Senza restrizioni|  
 |Restrizioni del modello di programmazione|Sì|Sì|Nessuna restrizione|  
-|Requisito di verificabilità|Sì|Sì|No|  
-|Possibilità di chiamare il codice nativo|No|No|Sì|  
+|Requisito di verificabilità|Sì|Sì|no|  
+|Possibilità di chiamare il codice nativo|no|No|Sì|  
   
  Grazie alle restrizioni associate in termini di modello di programmazione consentito, SAFE rappresenta la modalità più affidabile e protetta. Gli assembly SAFE dispongono di autorizzazioni sufficienti per l'esecuzione, l'elaborazione di calcoli e l'accesso al database locale. Gli assembly SAFE devono essere effettivamente indipendenti dai tipi e non possono chiamare codice non gestito.  
   
@@ -141,14 +142,14 @@ ms.lasthandoff: 11/17/2017
   
  EXTERNAL_ACCESS fornisce un'opzione di sicurezza intermedia e consente al codice di accedere alle risorse esterne al database, offrendo lo stesso livello di affidabilità di SAFE.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza il livello dei criteri di protezione dall'accesso di codice a livello di host per configurare un criterio host che concede uno dei tre set di autorizzazioni in base all'autorizzazione archiviata nei cataloghi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il codice gestito in esecuzione all'interno del database ottiene sempre uno di questi set di autorizzazioni di accesso per il codice.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Usa il livello di criteri di CA a livello di host per impostare un criterio host che concede uno dei tre set di autorizzazioni in base all'autorizzazione archiviata nei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cataloghi. Il codice gestito in esecuzione all'interno del database ottiene sempre uno di questi set di autorizzazioni di accesso per il codice.  
   
 ### <a name="programming-model-restrictions"></a>Restrizioni del modello di programmazione  
  Il modello di programmazione per il codice gestito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comporta la scrittura di funzioni, procedure e tipi che in genere non richiedono l'utilizzo dello stato gestito tra più chiamate né la condivisione dello stato tra più sessioni utente. Come descritto in precedenza, la presenza dello stato condiviso può inoltre determinare eccezioni critiche che influiscono sulla scalabilità e l'affidabilità dell'applicazione.  
   
  Considerati questi aspetti, non è consigliabile utilizzare variabili statiche e membri di dati statici di classi utilizzate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per gli assembly SAFE ed EXTERNAL_ACCESS, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esamina i metadati dell'assembly durante la fase CREATE ASSEMBLY e, se rileva l'utilizzo di variabili e membri di dati statici, impedisce la creazione di tali assembly.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]impedisce inoltre le chiamate alle API di .NET Framework annotate con il **SharedState**, **sincronizzazione** e **ExternalProcessMgmt** attributi di protezione host. In questo modo, viene impedito agli assembly SAFE ed EXTERNAL_ACCESS di chiamare qualsiasi API che consente la condivisione dello stato, di eseguire la sincronizzazione e di influire sull'integrità del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [restrizioni del modello di programmazione integrazione CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impedisce inoltre le chiamate alle API di .NET Framework annotate con il **SharedState**, **sincronizzazione** e **ExternalProcessMgmt** attributi di protezione host. In questo modo, viene impedito agli assembly SAFE ed EXTERNAL_ACCESS di chiamare qualsiasi API che consente la condivisione dello stato, di eseguire la sincronizzazione e di influire sull'integrità del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [restrizioni del modello di programmazione integrazione CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza dell'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   

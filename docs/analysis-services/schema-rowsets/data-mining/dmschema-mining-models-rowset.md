@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_MODELS
@@ -23,16 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 275be85ca3a85147767166ac49cd1d1ee288cf5e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Set di righe DMSCHEMA_MINING_MODELS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enumera i modelli di data mining nel catalogo corrente. Il **DMSCHEMA_MINING_MODELS** set di righe include informazioni quali i nomi di modello, data di elaborazione e l'algoritmo di data mining associato a ogni modello di data mining.  
   
- . Il **DMSCHEMA_MINING_MODELS** è molto simile a set di righe dello schema di [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) set di righe dello schema e può essere usato nello stesso modo.  
+ , Il **DMSCHEMA_MINING_MODELS** è molto simile a set di righe dello schema di [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) set di righe dello schema e può essere usato nello stesso modo.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DMSCHEMA_MINING_MODELS** set di righe contiene le colonne seguenti.  
@@ -65,13 +63,13 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MODEL_TYPE**|**DBTYPE_WSTR**|Facoltativa.|  
-|**SERVICE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Facoltativa.|  
-|**MINING_STRUCTURE**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MODEL_TYPE**|**DBTYPE_WSTR**|Facoltativo.|  
+|**SERVICE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Facoltativo.|  
+|**MINING_STRUCTURE**|**DBTYPE_WSTR**|Facoltativo.|  
   
  Per esempi di come eseguire una query di questo set di righe, vedere [parametri utilizzati per creare un modello di Data Mining di Query](../../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   

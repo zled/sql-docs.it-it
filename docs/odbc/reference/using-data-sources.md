@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a3dd93903909fd4dccd0ef2c800846597b68614d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9ef21a59be0b292912a6ca4b4fc75a67dc952fb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-data-sources"></a>Utilizzo di origini dati
 Origini dati vengono in genere create dall'utente finale o un tecnico con un programma chiamato il *Amministratore ODBC*. L'amministratore ODBC richiede all'utente per il driver da utilizzare e quindi chiama tale driver. Il driver consente di visualizzare una finestra di dialogo che richiede le informazioni che necessarie per la connessione all'origine dati. Dopo che l'utente immette le informazioni, il driver viene archiviato nel sistema.  

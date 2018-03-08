@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5f9c6d6327b2f658ce2e71ecf7107d3c8636bcbf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e6f141ea682108f3cb3e7f169692bb2752091de
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +63,20 @@ catalog.create_execution [@folder_name = folder_name
  [@runinscaleout =] *runinscaleout*  
  Indica se l'esecuzione è in Scale Out. Usare il valore 1 per eseguire il pacchetto in Scale Out. Usare il valore 0 per eseguire il pacchetto senza Scale Out. Questo parametro è facoltativo. Se non specificato, il valore di questo è impostato su DEFAULT_EXECUTION_MODE in [SSISDB].[catalog].[catalog_properties]. *runinscaleout* è di tipo **bit**. 
  
- [@useanyworker =] *useanyworker*  
-  Indica se a un qualsiasi ruolo di lavoro Scale Out è consentita l'esecuzione. Usare il valore 1 per eseguire il pacchetto con un ruolo di lavoro Scale Out. Usare il valore 0 per indicare che non tutti i ruoli di lavoro Scale Out sono autorizzati a eseguire il pacchetto. Questo parametro è facoltativo. Se non specificato, il valore viene impostato su 1. *useanyworker* è di tipo **bit**. 
+[@useanyworker =] *useanyworker*  
+Indica se a un qualsiasi ruolo di lavoro Scale Out è consentita l'esecuzione.
+
+-   Usare il valore 1 per eseguire il pacchetto con un ruolo di lavoro Scale Out. Quando si imposta `@useanyworker` su true, qualsiasi ruolo di lavoro il cui numero massimo di attività (specificato nel file di configurazione di del ruolo di lavoro) non è stato ancora raggiunto è disponibile per l'esecuzione del pacchetto. Per informazioni sul file di configurazione del ruolo di lavoro, vedere [Ruolo di lavoro di scalabilità orizzontale di Integration Services (SSIS)](../scale-out/integration-services-ssis-scale-out-worker.md).
+
+-   Usare il valore 0 per indicare che non tutti i ruoli di lavoro Scale Out sono autorizzati a eseguire il pacchetto. Quando si imposta `@useanyworker` su false è necessario specificare i ruoli di lavoro autorizzati a eseguire il pacchetto mediante Scale Out Manager oppure chiamando l'istruzione `[catalog].[add_execution_worker]` della stored procedure. Se si specifica un ruolo di lavoro che esegue già un altro pacchetto, il ruolo di lavoro completa l'esecuzione del pacchetto corrente prima di richiedere un'altra esecuzione.
+
+Questo parametro è facoltativo. Se non specificato, il valore viene impostato su 1. *useanyworker* è di tipo **bit**. 
   
  [@execution_id =] *execution_id*  
  Viene restituito l'identificatore univoco per un'istanza di esecuzione. *execution_id* è di tipo **bigint**.  
 
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Un'esecuzione viene utilizzata per specificare i valori del parametro utilizzati da un pacchetto durante una singola istanza di esecuzione del pacchetto.  
   
  Se viene specificato un riferimento all'ambiente con il parametro *reference_id*, i parametri di progetto e di pacchetto vengono popolati dalla stored procedure con valori letterali o valori di riferimento dalle variabili di ambiente corrispondenti. Se viene specificato il riferimento all'ambiente, durante l'esecuzione del pacchetto vengono utilizzati i valori di parametro predefiniti. Per determinare esattamente quali valori vengono usati per un'istanza di esecuzione specifica, usare il valore del parametro di output *execution_id* di questa stored procedure ed eseguire una query sulla vista [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md).  
@@ -97,9 +104,9 @@ GO
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni READ e EXECUTE sul progetto e, se applicabile, autorizzazioni READ sull'ambiente a cui si fa riferimento  
@@ -135,6 +142,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [catalog.start_execution &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
- [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
+ [catalog.set_execution_parameter_value &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  [catalog.add_execution_worker &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  
   

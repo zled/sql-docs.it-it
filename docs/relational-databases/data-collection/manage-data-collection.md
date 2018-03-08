@@ -8,28 +8,31 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: Raccolta dati
+keywords:
+- Raccolta dati
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82d9d1e74c0419f9ea685dc9ae9c243c9bba2840
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f48b2043f77c301cebdc6750d6445063ff121946
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-data-collection"></a>Gestire raccolta dati
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare le stored procedure e le funzioni di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per gestire aspetti diversi della raccolta dati, ad esempio l'abilitazione o la disabilitazione della raccolta dati, la modifica della configurazione di un set di raccolta o la visualizzazione di dati nel data warehouse di gestione.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Usare le stored procedure e le funzioni di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per gestire aspetti diversi della raccolta dati, ad esempio l'abilitazione o la disabilitazione della raccolta dati, la modifica della configurazione di un set di raccolta o la visualizzazione di dati nel data warehouse di gestione.  
   
 ## <a name="manage-data-collection-using-ssms"></a>Gestire la raccolta di dati mediante SSMS  
  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eseguire le seguenti attività legate all'agente di raccolta dati usando Esplora oggetti:  
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare l'agente di raccolta dati.  
   
-|Nome della stored procedure|Descrizione|  
+|Nome della stored procedure|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|Abilitare l'agente di raccolta dati|  
 |[sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)|Disabilitare l'agente di raccolta dati.|  
@@ -85,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare i set di raccolta.  
   
-|Nome della stored procedure|Descrizione|  
+|Nome della stored procedure|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)|Eseguire un set di raccolta su richiesta.|  
 |[sp_syscollector_start_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)|Avviare un set di raccolta.|  
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare gli elementi della raccolta.  
   
-|Nome della stored procedure|Descrizione|  
+|Nome della stored procedure|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)|Creare un elemento della raccolta.|  
 |[sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)|Eliminare un elemento della raccolta.|  
@@ -109,7 +112,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare i tipi di agente di raccolta.  
   
-|Nome della stored procedure|Descrizione|  
+|Nome della stored procedure|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql.md)|Creare un tipo di agente di raccolta.|  
 |[sp_syscollector_update_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|Aggiornare un tipo di agente di raccolta.|  
@@ -119,7 +122,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente vengono descritte le viste che è possibile utilizzare per ottenere informazioni di configurazione e dati del log di esecuzione.  
   
-|Nome della vista|Descrizione|  
+|Nome della vista|Description|  
 |---------------|-----------------|  
 |[syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|Ottenere la configurazione dell'agente di raccolta dati.|  
 |[syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|Ottenere informazioni su un elemento della raccolta.|  
@@ -133,7 +136,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per configurare l'accesso al data warehouse di gestione.  
   
-|Nome della stored procedure|Descrizione|  
+|Nome della stored procedure|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)|Specificare il nome del database definito nella stringa di connessione per il data warehouse di gestione.|  
 |[sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)|Specificare l'istanza definita nella stringa di connessione per il data warehouse di gestione.|  
@@ -142,7 +145,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare la configurazione del data warehouse di gestione.  
   
-|Nome della stored procedure|Descrizione|  
+|Nome della stored procedure|Description|  
 |--------------------|-----------------|  
 |[core.sp_create_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|Creare uno snapshot di raccolta nel data warehouse di gestione.|  
 |[core.sp_update_data_source &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|Aggiornare l'origine dati per la raccolta dati.|  
@@ -154,7 +157,7 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare i pacchetti di caricamento.  
   
-|Nome della stored procedure|Descrizione|  
+|Nome della stored procedure|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)|Configurare il numero di tentativi di caricamento dei dati.|  
 |[sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|Specificare l'archiviazione temporanea dei dati tra i tentativi di caricamento.|  
@@ -163,14 +166,14 @@ ms.lasthandoff: 11/17/2017
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare il log di esecuzione della raccolta dati.  
   
-|Nome della stored procedure|Descrizione|  
+|Nome della stored procedure|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|Eliminare voci relative al set di raccolta dal log di esecuzione.|  
   
 ### <a name="functions"></a>Funzioni  
  Nella tabella seguente vengono descritte le funzioni che è possibile utilizzare per ottenere informazioni di esecuzione e di traccia.  
   
-|Nome funzione|Descrizione|  
+|Nome funzione|Description|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|Ottenere dati del log di esecuzione [!INCLUDE[ssIS](../../includes/ssis-md.md)] relativi a un pacchetto specifico.|  
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Ottenere statistiche di esecuzione relative a un set di raccolta o un pacchetto. Tali informazioni comprendono gli errori registrati.|  

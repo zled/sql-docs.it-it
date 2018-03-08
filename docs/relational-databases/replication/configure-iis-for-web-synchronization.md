@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: "88"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5c661e39ca7e011e185b68867be5955e2cfc280
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c524b1ad61453b835402816102a8f428adfe42d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le procedure descritte in questo argomento rappresentano il secondo passaggio nella configurazione della sincronizzazione Web per la replica di tipo merge. Questo passaggio è successivo all'abilitazione di una pubblicazione per la sincronizzazione Web. Per una panoramica del processo di configurazione, vedere [Configura sincronizzazione Web](../../relational-databases/replication/configure-web-synchronization.md). Al termine delle procedure indicate in questo argomento, procedere al terzo passaggio, che consiste nella configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web. Questo terzo passaggio è descritto negli argomenti seguenti:  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
     4.  Completare la Gestione guidata certificati server Web.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
  Se non è possibile ottenere un certificato server da un'autorità di certificazione, è possibile specificare un certificato per l'esecuzione di test. Per configurare IIS 6.0 per l'esecuzione di test, installare un certificato mediante l'utilità SelfSSL disponibile nel Resource Kit di IIS 6.0. È possibile scaricare gli strumenti dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=30958). Per IIS 5.0, visitare il sito [Supporto Tecnico Microsoft](http://go.microsoft.com/fwlink/?LinkId=46229).  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/17/2017
   
     2.  Nella casella **Percorso** immettere un percorso per la directory virtuale. Ad esempio, se è stato immesso **websync1** nella casella **Alias** , immettere **C:\Inetpub\wwwroot\websync1** nella casella **Percorso** . Fare clic su **Avanti**.  
   
-    3.  In entrambe le finestre di dialogo fare clic su **Sì**. In questo modo viene specificato che si intende creare una nuova cartella e copiare la DLL ISAPI (Internet Server API) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . .  
+    3.  In entrambe le finestre di dialogo fare clic su **Sì**. In questo modo viene specificato che si intende creare una nuova cartella e copiare la DLL ISAPI (Internet Server API) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . ,  
   
 7.  Nella pagina **Accesso autenticato** :  
   
@@ -276,7 +276,7 @@ ms.lasthandoff: 11/17/2017
   
     6.  Selezionare gli utenti o i gruppi che non necessitano dell'accesso alla directory e quindi fare clic su **Rimuovi**.  
   
-    7.  Scegliere **OK**.  
+    7.  Fare clic su **OK**.  
   
 4.  Creare un pool di applicazioni in **Gestione Internet Information Services (IIS)**:  
   
@@ -300,7 +300,7 @@ ms.lasthandoff: 11/17/2017
   
     4.  Nei campi **Nome utente** e **Password** immettere l'account e la password creati nel passaggio 1.  
   
-    5.  Scegliere **OK**.  
+    5.  Fare clic su **OK**.  
   
 6.  Associare il pool di applicazioni alla directory virtuale utilizzata per la sincronizzazione Web:  
   
@@ -310,7 +310,7 @@ ms.lasthandoff: 11/17/2017
   
     3.  Nella scheda **Directory virtuale** della finestra di dialogo **Proprietà - \<NomeDirectoryVirtuale>** selezionare il pool di applicazioni creato nel passaggio 5 nell'elenco a discesa **Pool di applicazioni**.  
   
-    4.  Scegliere **OK**.  
+    4.  Fare clic su **OK**.  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>Test della connessione a replisapi.dll  
  Eseguire la sincronizzazione Web in modalità diagnostica per testare la connessione al computer che esegue IIS e verificare la corretta installazione del certificato SSL (Secure Sockets Layer). Per eseguire la sincronizzazione Web in modalità diagnostica, è necessario disporre dei privilegi di amministratore sul computer che esegue IIS.  
@@ -327,9 +327,9 @@ ms.lasthandoff: 11/17/2017
   
     4.  Se viene utilizzato un server proxy, selezionare **Utilizza un server proxy server per le connessioni LAN** e **Ignora server proxy per indirizzi locali**.  
   
-    5.  Scegliere **OK**.  
+    5.  Fare clic su **OK**.  
   
-2.  Nel Sottoscrittore, in Internet Explorer, connettersi al server in modalità diagnostica aggiungendo `?diag` alla fine dell'indirizzo di replisapi.dll. Esempio: `https://server.domain.com/directory/replisapi.dll?diag`.  
+2.  Nel Sottoscrittore, in Internet Explorer, connettersi al server in modalità diagnostica aggiungendo `?diag` alla fine dell'indirizzo di replisapi.dll. Ad esempio: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
 3.  Se il certificato specificato per IIS non viene riconosciuto dal sistema operativo Windows, viene visualizzata la finestra di dialogo **Avviso di sicurezza** . Questo avviso può essere visualizzato perché il certificato è un certificato di prova o è stato emesso da un'autorità di certificazione non riconosciuta da Windows.  
   

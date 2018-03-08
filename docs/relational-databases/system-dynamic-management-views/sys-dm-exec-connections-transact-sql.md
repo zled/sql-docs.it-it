@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_connections (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_connections_TSQL
 - sys.dm_exec_connections
 - dm_exec_connections
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_connections dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 02fcbfb195c913396d6013f62a76853045ac3b9b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ef46c3c9ffdf534b2ef76154498a4da8b11fa197
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,12 +46,12 @@ ms.lasthandoff: 11/17/2017
 |session_id|**int**|Identifica la sessione associata alla connessione Ammette i valori Null.|  
 |most_recent_session_id|**int**|Rappresenta l'ID di sessione della richiesta più recente associata alla connessione. Le connessioni SOAP possono essere riutilizzate da un'altra sessione. Ammette i valori Null.|  
 |connect_time|**datetime**|Timestamp relativo al momento in cui è stata stabilita la connessione. Non ammette i valori Null.|  
-|net_transport|**nvarchar (40)**|Restituisce sempre **sessione** quando una connessione dispone di più set di risultati attivi (MARS) abilitato.<br /><br /> **Nota:** descrive il protocollo di trasporto fisico utilizzato dalla connessione. Non ammette i valori Null.|  
-|protocol_type|**nvarchar (40)**|Specifica il tipo di protocollo del payload. Attualmente distingue tra TDS (TSQL) e SOAP. Ammette i valori Null.|  
+|net_transport|**nvarchar(40)**|Restituisce sempre **sessione** quando una connessione dispone di più set di risultati attivi (MARS) abilitato.<br /><br /> **Nota:** descrive il protocollo di trasporto fisico utilizzato dalla connessione. Non ammette i valori Null.|  
+|protocol_type|**nvarchar(40)**|Specifica il tipo di protocollo del payload. Attualmente distingue tra TDS (TSQL) e SOAP. Ammette i valori Null.|  
 |protocol_version|**int**|Versione del protocollo di accesso ai dati associato a questa connessione. Ammette i valori Null.|  
 |endpoint_id|**int**|Identificatore che descrive il tipo di connessione. Il valore di endpoint_id può essere utilizzato per eseguire query nella vista sys.endpoints. Ammette i valori Null.|  
-|encrypt_option|**nvarchar (40)**|Valore booleano che specifica se per la connessione è abilitata la crittografia. Non ammette i valori Null.|  
-|auth_scheme|**nvarchar (40)**|Specifica lo schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticazione di Windows utilizzato con questa connessione. Non ammette i valori Null.|  
+|encrypt_option|**nvarchar(40)**|Valore booleano che specifica se per la connessione è abilitata la crittografia. Non ammette i valori Null.|  
+|auth_scheme|**nvarchar(40)**|Specifica lo schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticazione di Windows utilizzato con questa connessione. Non ammette i valori Null.|  
 |node_affinity|**smallint**|Identifica il nodo di memoria con cui la connessione dispone di affinità. Non ammette i valori Null.|  
 |num_reads|**int**|Numero di letture di byte che si sono verificati durante la connessione. Ammette i valori Null.|  
 |num_writes|**int**|Numero di scritture di byte che si sono verificati durante la connessione. Ammette i valori Null.|  
@@ -62,9 +65,9 @@ ms.lasthandoff: 11/17/2017
 |connection_id|**uniqueidentifier**|Identifica in modo univoco ogni connessione. Non ammette i valori Null.|  
 |parent_connection_id|**uniqueidentifier**|Identifica la connessione primaria utilizzata dalla sessione MARS. Ammette i valori Null.|  
 |most_recent_sql_handle|**varbinary(64)**|Handle SQL dell'ultima richiesta eseguita sulla connessione. La colonna most_recent_sql_handle è sempre sincronizzata con la colonna most_recent_session_id. Ammette i valori Null.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.
   
@@ -82,7 +85,7 @@ In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessar
 ## <a name="examples"></a>Esempi  
  Query tipica per raccogliere informazioni su una connessione query personalizzata.  
   
-```t-sql  
+```sql  
 SELECT   
     c.session_id, c.net_transport, c.encrypt_option,   
     c.auth_scheme, s.host_name, s.program_name,   

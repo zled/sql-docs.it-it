@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="package-management-ssis-service"></a>Gestione dei pacchetti (servizio SSIS)
   La gestione dei pacchetti include monitoraggio, gestione, importazione ed esportazione di pacchetti.  
@@ -172,7 +173,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
 3.  Se il riquadro Esplora oggetti non è visualizzato, scegliere **Esplora oggetti** dal menu **Visualizza**.  
   
-4.  In Esplora oggetti espandere la cartella **Pacchetti archiviati** .  
+4.  In Esplora oggetti espandere la cartella **Pacchetti archiviati**.  
   
 5.  Espandere le sottocartelle per individuare il pacchetto da esportare.  
   
@@ -190,7 +191,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
          Fare clic sul pulsante Sfoglia **(…)**, espandere la cartella **Pacchetti SSIS** e selezionare la cartella in cui salvare il pacchetto. Facoltativamente, immettere un nuovo nome per il pacchetto nella casella di testo **Nome pacchetto** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Per aggiornare il livello di protezione del pacchetto, fare clic sul pulsante Sfoglia **(…)** e specificare un livello di protezione diverso usando la finestra di dialogo **Livello di protezione pacchetto** . Se l'opzione **Crittografa tutti i dati sensibili con una password** o **Crittografa tutti i dati con una password** è selezionata, digitare e confermare una password.  
+7.  Per aggiornare il livello di protezione del pacchetto, fare clic sul pulsante Sfoglia **(…)** e specificare un livello di protezione diverso usando la finestra di dialogo **Livello di protezione pacchetto**. Se l'opzione **Crittografa tutti i dati sensibili con una password** o **Crittografa tutti i dati con una password** è selezionata, digitare e confermare una password.  
   
 8.  Scegliere **OK** per completare l'esportazione.  
 
@@ -219,7 +220,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
  **Tipo di autenticazione**  
  Consente di selezionare un tipo di autenticazione.  
   
- **Nome utente**  
+ **User name**  
  Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente.  
   
  **Password**  
@@ -243,7 +244,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
  **SQL Server**  
   
- **File system**  
+ **File System**  
   
  **Archivio pacchetti SSIS**  
   
@@ -259,7 +260,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
  **Tipo di autenticazione**  
  Consente di selezionare un tipo di autenticazione.  
   
- **Nome utente**  
+ **User name**  
  Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente.  
   
  **Password**  

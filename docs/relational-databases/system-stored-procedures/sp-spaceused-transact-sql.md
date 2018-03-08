@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2ed6f3bfcb2e034dd782ed477ebcd75e9a43a483
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 670fc2eaf7d6e5c4e499ff57c3a5564bec903ac1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>Argomenti  
 
-Per [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)], `sp_spacedused` deve specificare i parametri denominati (ad esempio `sp_spacedused (@objname= N'Table1');` anziché basarsi sulla posizione ordinale dei parametri. 
+Per [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spacedused` deve specificare i parametri denominati (ad esempio `sp_spacedused (@objname= N'Table1');` anziché basarsi sulla posizione ordinale dei parametri. 
 
  [  **@objname=**] **'***objname***'** 
    
@@ -83,7 +83,7 @@ Se *objname* viene omesso, vengono restituiti risultati per l'intero database.
   
  *oneresultset* è **bit**, il valore predefinito è **0**.  
 
-[  **@include_total_xtp_storage** ] **'***include_total_xtp_storage***'**  
+[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
 **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
  Quando @oneresultset= 1, il parametro @include_total_xtp_storage determina se il singolo set di risultati include le colonne per l'archiviazione MEMORY_OPTIMIZED_DATA. Il valore predefinito è 0, vale a dire, per impostazione predefinita (se il parametro viene omesso) le colonne XTP non sono incluse nel set di risultati.  
@@ -96,45 +96,45 @@ Se *objname* viene omesso, vengono restituiti risultati per l'intero database.
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|Nome del database corrente.|  
+|**database_name**|**nvarchar(128)**|Nome del database corrente.|  
 |**database_size**|**varchar(18)**|Dimensioni del database corrente, espresse in megabyte. **database_size** include file di dati e di log.|  
 |**spazio non allocato**|**varchar(18)**|Spazio nel database non riservato per i relativi oggetti.|  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**riservato**|**varchar(18)**|Quantità totale di spazio allocato per gli oggetti del database.|  
-|**dati**|**varchar(18)**|Quantità totale di spazio utilizzato per i dati.|  
+|**reserved**|**varchar(18)**|Quantità totale di spazio allocato per gli oggetti del database.|  
+|**data**|**varchar(18)**|Quantità totale di spazio utilizzato per i dati.|  
 |**index_size**|**varchar(18)**|Quantità totale di spazio utilizzato per gli indici.|  
-|**non usato**|**varchar(18)**|Quantità totale di spazio riservato per gli oggetti del database ma non ancora utilizzato.|  
+|**unused**|**varchar(18)**|Quantità totale di spazio riservato per gli oggetti del database ma non ancora utilizzato.|  
   
  Se *objname* viene omesso e il valore di *oneresultset* è 1, viene restituito il seguente set di risultati solo per fornire informazioni sulle dimensioni di database corrente.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|Nome del database corrente.|  
+|**database_name**|**nvarchar(128)**|Nome del database corrente.|  
 |**database_size**|**varchar(18)**|Dimensioni del database corrente, espresse in megabyte. **database_size** include file di dati e di log.|  
 |**spazio non allocato**|**varchar(18)**|Spazio nel database non riservato per i relativi oggetti.|  
-|**riservato**|**varchar(18)**|Quantità totale di spazio allocato per gli oggetti del database.|  
-|**dati**|**varchar(18)**|Quantità totale di spazio utilizzato per i dati.|  
+|**reserved**|**varchar(18)**|Quantità totale di spazio allocato per gli oggetti del database.|  
+|**data**|**varchar(18)**|Quantità totale di spazio utilizzato per i dati.|  
 |**index_size**|**varchar(18)**|Quantità totale di spazio utilizzato per gli indici.|  
-|**non usato**|**varchar(18)**|Quantità totale di spazio riservato per gli oggetti del database ma non ancora utilizzato.|  
+|**unused**|**varchar(18)**|Quantità totale di spazio riservato per gli oggetti del database ma non ancora utilizzato.|  
   
  Se *objname* viene specificato, viene restituito il seguente set di risultati per l'oggetto specificato.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (128)**|Nome dell'oggetto per cui sono state richieste informazioni sull'utilizzo dello spazio.<br /><br /> Il nome dello schema dell'oggetto non viene restituito. Se il nome dello schema è necessario, utilizzare il [Sys.dm db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) o [Sys.dm db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) viste a gestione dinamica per ottenere informazioni sulle dimensioni equivalenti.|  
-|**righe**|**Char (20)**|Numero di righe esistenti nella tabella. Se l'oggetto specificato è una coda di [!INCLUDE[ssSB](../../includes/sssb-md.md)], in questa colonna viene indicato il numero di messaggi presenti nella coda.|  
-|**riservato**|**varchar(18)**|Quantità totale di spazio riservato per *objname*.|  
-|**dati**|**varchar(18)**|Quantità totale di spazio utilizzato dai dati *objname*.|  
+|**name**|**nvarchar(128)**|Nome dell'oggetto per cui sono state richieste informazioni sull'utilizzo dello spazio.<br /><br /> Il nome dello schema dell'oggetto non viene restituito. Se il nome dello schema è necessario, utilizzare il [Sys.dm db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) o [Sys.dm db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) viste a gestione dinamica per ottenere informazioni sulle dimensioni equivalenti.|  
+|**rows**|**char(20)**|Numero di righe esistenti nella tabella. Se l'oggetto specificato è una coda di [!INCLUDE[ssSB](../../includes/sssb-md.md)], in questa colonna viene indicato il numero di messaggi presenti nella coda.|  
+|**reserved**|**varchar(18)**|Quantità totale di spazio riservato per *objname*.|  
+|**data**|**varchar(18)**|Quantità totale di spazio utilizzato dai dati *objname*.|  
 |**index_size**|**varchar(18)**|Quantità totale di spazio utilizzato dagli indici nel *objname*.|  
-|**non usato**|**varchar(18)**|Quantità totale di spazio riservato per *objname* ma non ancora utilizzato.|  
+|**unused**|**varchar(18)**|Quantità totale di spazio riservato per *objname* ma non ancora utilizzato.|  
  
 Questa è la modalità predefinita, quando viene specificato alcun parametro. I set di risultati seguente vengono restituiti che riporta informazioni sulle dimensioni di database su disco. 
 
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|Nome del database corrente.|  
+|**database_name**|**nvarchar(128)**|Nome del database corrente.|  
 |**database_size**|**varchar(18)**|Dimensioni del database corrente, espresse in megabyte. **database_size** include file di dati e di log. Se il database presenta un filegroup MEMORY_OPTIMIZED_DATA, ciò include la dimensione totale su disco di tutti i file di checkpoint nel filegroup.|  
 |**spazio non allocato**|**varchar(18)**|Spazio nel database non riservato per i relativi oggetti. Se il database presenta un filegroup MEMORY_OPTIMIZED_DATA, la dimensione totale su disco dei file del checkpoint con stato PRECREATED è incluso nel filegroup.|  
 
@@ -142,10 +142,10 @@ Spazio utilizzato dalle tabelle nel database: (questo set di risultati non rifle
 
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**riservato**|**varchar(18)**|Quantità totale di spazio allocato per gli oggetti del database.|  
-|**dati**|**varchar(18)**|Quantità totale di spazio utilizzato per i dati.|  
+|**reserved**|**varchar(18)**|Quantità totale di spazio allocato per gli oggetti del database.|  
+|**data**|**varchar(18)**|Quantità totale di spazio utilizzato per i dati.|  
 |**index_size**|**varchar(18)**|Quantità totale di spazio utilizzato per gli indici.|  
-|**non usato**|**varchar(18)**|Quantità totale di spazio riservato per gli oggetti del database ma non ancora utilizzato.|
+|**unused**|**varchar(18)**|Quantità totale di spazio riservato per gli oggetti del database ma non ancora utilizzato.|
 
 Viene restituito il set di risultati seguente **solo se** il database presenta un filegroup MEMORY_OPTIMIZED_DATA con almeno un contenitore: 
 
@@ -159,13 +159,13 @@ Se *objname* viene omesso, il valore di oneresultset è 1, e *include_total_xtp_
 
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|Nome del database corrente.|  
+|**database_name**|**nvarchar(128)**|Nome del database corrente.|  
 |**database_size**|**varchar(18)**|Dimensioni del database corrente, espresse in megabyte. **database_size** include file di dati e di log. Se il database presenta un filegroup MEMORY_OPTIMIZED_DATA, ciò include la dimensione totale su disco di tutti i file di checkpoint nel filegroup.|
 |**spazio non allocato**|**varchar(18)**|Spazio nel database non riservato per i relativi oggetti. Se il database presenta un filegroup MEMORY_OPTIMIZED_DATA, la dimensione totale su disco dei file del checkpoint con stato PRECREATED è incluso nel filegroup.|  
-|**riservato**|**varchar(18)**|Quantità totale di spazio allocato per gli oggetti del database.|  
-|**dati**|**varchar(18)**|Quantità totale di spazio utilizzato per i dati.|  
+|**reserved**|**varchar(18)**|Quantità totale di spazio allocato per gli oggetti del database.|  
+|**data**|**varchar(18)**|Quantità totale di spazio utilizzato per i dati.|  
 |**index_size**|**varchar(18)**|Quantità totale di spazio utilizzato per gli indici.|  
-|**non usato**|**varchar(18)**|Quantità totale di spazio riservato per gli oggetti del database ma non ancora utilizzato.|
+|**unused**|**varchar(18)**|Quantità totale di spazio riservato per gli oggetti del database ma non ancora utilizzato.|
 |**xtp_precreated**|**varchar(18)**|Dimensioni totali dei file di checkpoint con stato PRECREATED, in KB. Questo viene conteggiato lo spazio non allocato del database nel suo complesso. Restituisce NULL se il database non dispone di un filegroup memory_optimized_data con almeno un contenitore. *Questa colonna è solo se incluse @include_total_xtp_storage= 1*.| 
 |**xtp_used**|**varchar(18)**|Dimensioni totali dei file di checkpoint con gli stati UNDER CONSTRUCTION, ACTIVE e destinazione di tipo MERGE, in KB. Questo è lo spazio su disco usato attivamente per i dati nelle tabelle con ottimizzazione per la memoria. Restituisce NULL se il database non dispone di un filegroup memory_optimized_data con almeno un contenitore. *Questa colonna è solo se incluse @include_total_xtp_storage= 1*.| 
 |**xtp_pending_truncation**|**varchar(18)**|Dimensioni totali dei file di checkpoint con stato WAITING_FOR_LOG_TRUNCATION, in KB. Questo è lo spazio su disco utilizzato per i file di checkpoint in attesa di pulizia, una volta che si verifica il troncamento del log. Restituisce NULL se il database non dispone di un filegroup memory_optimized_data con almeno un contenitore. Questa colonna è solo se incluse `@include_total_xtp_storage=1`.|
@@ -182,7 +182,7 @@ Se *objname* viene omesso, il valore di oneresultset è 1, e *include_total_xtp_
 > [!NOTE]  
 >  In caso di eliminazione o ricompilazione di indici di grandi dimensioni oppure di eliminazione o troncamento di tabelle di grandi dimensioni, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] le deallocazioni di pagine effettive e i relativi blocchi associati vengono posticipati fino all'esecuzione del commit della transazione. Le operazioni di eliminazione posticipate non rendono immediatamente disponibile lo spazio allocato. Di conseguenza, i valori restituiti da **sp_spaceused** immediatamente dopo l'eliminazione o troncamento di un oggetto di grandi dimensioni potrebbe non corrispondere di spazio su disco effettivamente disponibile.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione per eseguire **sp_spaceused** è concessa al ruolo **public** . Solo i membri del ruolo predefinito del database **db_owner** possono specificare il parametro **@updateusage** .  
   
 ## <a name="examples"></a>Esempi  
@@ -253,13 +253,13 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [L'istruzione DBCC UPDATEUSAGE &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
+ [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [Sys. allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [Sys. Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Sys. Partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: CHANGETABLE (Transact-SQL) | Documenti Microsoft
+title: CHANGETABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/08/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
 - CHANGETABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5cd1687ea44749eea8a777d80026d375fbd841a2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6fa552ec5c819773153118be3b45374570b5d6e2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -103,7 +105,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valore della versione associato all'ultima modifica alla riga|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valori della versione associati all'ultima operazione di inserimento.|  
-|SYS_CHANGE_OPERATION|**nchar (1)**|Specifica il tipo di modifica:<br /><br /> **U** = aggiornamento<br /><br /> **Si** = inserimento<br /><br /> **D** = eliminazione|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|Specifica il tipo di modifica:<br /><br /> **U** = aggiornamento<br /><br /> **Si** = inserimento<br /><br /> **D** = eliminazione|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Vengono elencate le colonne modificate a partire da last_sync_version (versione di riferimento). Si noti che le colonne calcolate non vengono mai elencate come modificata.<br /><br /> Il valore è NULL quando viene soddisfatta una o più delle condizioni seguenti:<br /><br /> Il rilevamento delle modifiche per le colonne non è abilitato.<br /><br /> L'operazione è di inserimento o di eliminazione.<br /><br /> Tutte le colonne chiave non primaria sono state aggiornate in un'unica operazione. Questo valore binario non deve essere interpretato direttamente. Per interpretarlo, utilizzare invece [change_tracking_is_column_in_mask ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Modificare le informazioni di contesto che è possibile specificare facoltativamente utilizzando il [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) clausola come parte di un'istruzione INSERT, UPDATE o DELETE.|  
 |\<valore della colonna chiave primaria >|Come per le colonne della tabella utente|Valori della chiave primaria per la tabella rilevata. Questi valori identificano in modo univoco ogni riga nella tabella utente.|  
@@ -146,7 +148,7 @@ CHANGETABLE (
   
  Il valore di SYS_CHANGE_VERSION potrebbe essere NULL se non sono state apportate modifiche per un periodo superiore a quello di memorizzazione, ad esempio se la pulizia ha eliminato le informazioni sulle modifiche, o se la riga non è mai stata modificata dal momento dell'abilitazione del rilevamento delle modifiche per la tabella.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede le autorizzazioni seguenti per la tabella specificata per il *tabella* valore per ottenere informazioni sul rilevamento delle modifiche:  
   
 -   Autorizzazione SELECT per le colonne chiave primaria  
@@ -158,7 +160,7 @@ CHANGETABLE (
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. Restituzione delle righe per una sincronizzazione iniziale dei dati  
  Nell'esempio seguente viene illustrato come ottenere i dati per una sincronizzazione iniziale dei dati della tabella. La query restituisce tutti i dati delle righe e le relative versioni associate. Sarà quindi possibile inserire o aggiungere tali dati al sistema che conterrà i dati sincronizzati.  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -170,7 +172,7 @@ CROSS APPLY CHANGETABLE
 ### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>B. Elenco di tutte le modifiche effettuate a partire da una versione specifica  
  Nell'esempio seguente viene illustrato come elencare tutte le modifiche effettuate in una tabella a partire dalla versione specificata (`@last_sync_version)`. [Emp ID] e SSN sono colonne in una chiave primaria composta.  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -182,7 +184,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>C. Acquisizione di tutti i dati modificati per una sincronizzazione  
  Nell'esempio seguente viene illustrato come ottenere tutti i dati modificati. La query unisce le informazioni sul rilevamento delle modifiche alla tabella utente, in modo da restituire le informazioni sulla tabella utente. Utilizzando un `LEFT OUTER JOIN` viene restituita una riga per le righe eliminate.  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -197,7 +199,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### <a name="d-detecting-conflicts-by-using-changetableversion"></a>D. Rilevamento di conflitti utilizzando CHANGETABLE(VERSION...)  
  Nell'esempio seguente viene illustrato come aggiornare una riga che non ha subito modifiche dall'ultima sincronizzazione. Il numero di versione della riga specifica si ottiene utilizzando `CHANGETABLE`. Se la riga è stata aggiornata, le modifiche non vengono effettuate e la query restituisce informazioni sulla sua modifica più recente.  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  
@@ -217,8 +219,8 @@ WHERE
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di rilevamento delle modifiche &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40; Transact-SQL &#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
+ [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40; Transact-SQL &#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2aa7a79610433c11270d146473f233747fda3d39
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Componenti di SQL Server per il supporto di R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In SQL Server 2016 e 2017, il motore di database include i componenti facoltativi che supportano l'estensibilità per i linguaggi di script esterni, tra R e Python. È stato aggiunto il supporto per il linguaggio R in SQL Server 2016; il supporto per Python è stato aggiunto in servizi di SQL Server 2017 Machine Learning.
 
@@ -111,7 +112,7 @@ Il codice R eseguito dall'interno di [!INCLUDE[ssNoVersion_md](../../includes/ss
 4. BxlServer si coordina con il runtime R per gestire gli scambi di dati con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e l'archiviazione dei risultati.
 5. SQL Satellite gestisce le comunicazioni sulle attività correlate e i processi con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer usa SQL Satellite per comunicare lo stato e i risultati a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ottiene i risultati e chiude le attività e i processi correlati.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Ottiene i risultati e chiude i processi e attività correlate.
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>Script R eseguiti da un client remoto
 

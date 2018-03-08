@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 797d3439b378cb5caef62af019352ff6797fdb43
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 10766d85c5e06323f534d131abfde582906fe340
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Gestione driver &#39; s ruolo nel processo di connessione
 Tenere presente che le applicazioni non chiamare direttamente le funzioni di driver. Invece che chiamano le funzioni di gestione Driver con lo stesso nome e di gestione Driver chiama le funzioni di driver. In genere, ciò si verifica quasi immediatamente. Ad esempio, l'applicazione chiama **SQLExecute** dopo alcuni controlli degli errori e gestione Driver, Driver Manager chiama **SQLExecute** nel driver.  

@@ -1,7 +1,7 @@
 ---
 title: Utilizzo di SSMA per la Console di MySQL (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1722db6c7325c10099cd293e6b8c102c38874692
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3bd319d0cff1a3f7d7681591a59b640a2afd9d24
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Utilizzo di SSMA per la Console di MySQL (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) per MySQL ora è accessibile tramite un'applicazione console dalla riga di comando. I file di script formano l'input per l'applicazione per l'esecuzione dei comandi. Come applicazione console, SSMA consente l'interazione a livello di script, riduce il ciclo di migrazione e scala sforzo di migrazione.  
@@ -35,7 +35,7 @@ Gli argomenti trattati in questa sezione includono:
   
 |||  
 |-|-|  
-|**Argomenti**|**Description**|  
+|**Argomenti**|**Descrizione**|  
 |[Introduzione a SSMA per MySQL Console &#40; MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|Viene illustrata la procedura per eseguire l'applicazione console.|  
 |[Opzioni della riga di comando nella Console SSMA &#40; MySQLToSQL &#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|Descrive le opzioni della riga di comando e i parametri per il funzionamento dell'applicazione console SSMA.|  
 |[Creazione di file di Script &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|Viene illustrato come creare un file di script.|  

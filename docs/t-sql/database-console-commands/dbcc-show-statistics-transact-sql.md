@@ -1,14 +1,15 @@
 ---
 title: DBCC SHOW_STATISTICS (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC SHOW_STATISTICS
 - SHOW_STATISTICS
 - DBCC_SHOW_STATISTICS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], densities
 - histograms [SQL Server]
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: "75"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 777deb8a6e479b388d0dc980b58f7b757eed1b73
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 66f00526254a3592c3bb980ecf22c390b88cb687
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +92,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
   
- STAT_HEADER | DENSITY_VECTOR | ISTOGRAMMA | STATS_STREAM [ **,**  *n*  ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,***n* ]  
  Specificando una o più opzioni tra quelle disponibili è possibile limitare i set di risultati restituiti dall'istruzione all'opzione o alle opzioni specificate. Se non si specifica alcuna opzione, vengono restituite tutte le informazioni statistiche.  
   
  STATS_STREAM è [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -101,7 +103,7 @@ Nella tabella seguente vengono descritte le colonne restituite nel set di risult
 |Nome colonna|Description|  
 |-----------------|-----------------|  
 |Nome|Nome dell'oggetto statistiche.|  
-|Updated|Data e ora dell'ultimo aggiornamento delle statistiche. Il [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) funzione è un modo alternativo per recuperare queste informazioni.|  
+|Updated|Data e ora dell'ultimo aggiornamento delle statistiche. Il [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) funzione è un modo alternativo per recuperare queste informazioni. Per ulteriori informazioni, vedere il [osservazioni](#Remarks) sezione in questa pagina.|  
 |Righe|Numero totale di righe della tabella o della vista indicizzata al momento dell'ultimo aggiornamento delle statistiche. Se le statistiche vengono filtrate o corrispondono a un indice filtrato, il numero di righe potrebbe essere inferiore al numero di righe della tabella. Per ulteriori informazioni, vedere[statistiche](../../relational-databases/statistics/statistics.md).|  
 |Rows Sampled|Numero totale di righe campionate per i calcoli statistici. Se Rows Sampled < Rows, l'istogramma e i risultati relativi alla densità visualizzati vengono stimati in base alle righe campionate.|  
 |Passaggi|Numero di intervalli nell'istogramma. Ogni intervallo comprende un insieme di valori di colonna seguiti da un valore di colonna pari al limite superiore. Gli intervalli dell'istogramma vengono definiti nella prima colonna chiave delle statistiche. Il numero massimo di intervalli è 200.|  
@@ -130,16 +132,18 @@ Nella tabella seguente vengono descritte le colonne restituite nel set di risult
 |DISTINCT_RANGE_ROWS|Numero stimato di righe con un valore distinct di colonna compreso in un intervallo dell'istogramma, escluso il limite superiore.|  
 |AVG_RANGE_ROWS|Numero medio di righe con valori di colonna duplicati compresi in un intervallo dell'istogramma, escluso il limite superiore (RANGE_ROWS / DISTINCT_RANGE_ROWS per DISTINCT_RANGE_ROWS > 0).| 
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="Remarks"></a> Osservazioni 
+
+Data di aggiornamento delle statistiche viene archiviato nel [oggetto blob statistiche](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) insieme il [istogramma](#histogram) e [vettore di densità](#density), non nei metadati. Quando viene letto alcun dato per generare i dati delle statistiche, non viene creato il blob di statistiche, la data non è disponibile e *aggiornato* colonna è NULL. Questo vale per le statistiche filtrate per cui il predicato non restituisce alcuna riga, o per le nuove tabelle vuote.
   
-## <a name="histogram"></a>Istogramma  
+## <a name="histogram"></a> Istogramma  
 Un istogramma misura la frequenza di occorrenza per ogni valore distinct in un set di dati. Query Optimizer calcola un istogramma nei valori di colonna nella prima colonna chiave dell'oggetto statistiche, selezionando i valori di colonna tramite il campionamento statistico delle righe o un'analisi completa di tutte le righe della tabella o della vista. Se l'istogramma viene creato da un set campionato di righe, i totali archiviati per numero di righe e numero di valori distinct sono stime e non è necessario che siano numeri interi.
   
 Per creare l'istogramma, Query Optimizer ordina i valori di colonna, calcola il numero di valori che corrispondono a ogni valore distinct di colonna, quindi aggrega i valori di colonna in un massimo di 200 intervalli contigui dell'istogramma. Ogni intervallo comprende un insieme di valori di colonna seguiti da un valore di colonna pari al limite superiore. Nell'insieme sono inclusi tutti i possibili valori di colonna compresi tra i valori limite, esclusi questi ultimi. Il minore tra i valori di colonna ordinati costituisce il limite superiore per il primo intervallo dell'istogramma.
   
 Nel diagramma seguente viene illustrato un istogramma con sei intervalli. L'area a sinistra del primo valore limite superiore è il primo intervallo.
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-A083-8cbd2d6f617a")
+![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
   
 Per ogni intervallo dell'istogramma:
 -   La riga in grassetto rappresenta il valore limite superiore (RANGE_HI_KEY) e il relativo numero di occorrenze (EQ_ROWS).  
@@ -148,8 +152,8 @@ Per ogni intervallo dell'istogramma:
   
 Query Optimizer definisce gli intervalli dell'istogramma in base al relativo significato statistico e utilizza un algoritmo per il calcolo della differenza massima per ridurre al minimo il numero di intervalli nell'istogramma, aumentando contemporaneamente la differenza tra i valori limite. Il numero massimo di intervalli è 200. Il numero di intervalli dell'istogramma può essere minore del numero di valori distinct, anche per le colonne con un numero di punti limite inferiore a 200. A una colonna con 100 valori distinct, ad esempio, può essere associato un istogramma con un numero di punti limite inferiore a 100.
   
-## <a name="density-vector"></a>Vettore di densità  
-Per ottimizzare le stime relative alla cardinalità per query che restituiscono più colonne della stessa tabella o vista indicizzata, Query Optimizer utilizza le densità. Il vettore di densità contiene una densità per ogni prefisso di colonna nell'oggetto statistiche. Ad esempio, se un oggetto statistiche contiene le colonne chiave `CustomerId`, `ItemId` e `Price`, densità viene calcolata su ciascuno dei prefissi di colonna seguenti.
+## <a name="density"></a> Vettore di densità  
+Per ottimizzare le stime relative alla cardinalità per query che restituiscono più colonne della stessa tabella o vista indicizzata, Query Optimizer utilizza le densità. Il vettore di densità contiene una densità per ogni prefisso di colonna nell'oggetto statistiche. Se in un oggetto statistiche, ad esempio, sono presenti le colonne chiave `CustomerId`, `ItemId` e `Price`, la densità viene calcolata per ognuno dei prefissi di colonna seguenti.
   
 |Prefisso di colonna|Densità calcolata su|  
 |---|---|
@@ -185,7 +189,7 @@ DBCC SHOW_STATISTICS non è supportata nelle tabelle esterne.
 ### <a name="a-returning-all-statistics-information"></a>A. Restituzione di tutte le informazioni statistiche  
 L'esempio seguente visualizza tutte le informazioni statistiche per il `AK_Address_rowguid` indice del `Person.Address` tabella il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
 GO  
 ```  
@@ -193,7 +197,7 @@ GO
 ### <a name="b-specifying-the-histogram-option"></a>B. Specifica dell'opzione HISTOGRAM  
 Consente di limitare le informazioni statistiche visualizzate per Customer_LastName ai dati dell'istogramma.
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
@@ -202,7 +206,7 @@ GO
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Visualizzare il contenuto dell'oggetto uno statistiche  
  Nell'esempio seguente visualizza il contenuto delle statistiche Customer_LastName per la tabella DimCustomer.  
   
-```t-sql
+```sql
 -- Uses AdventureWorks  
 --First, create a statistics object  
 CREATE STATISTICS Customer_LastName   
@@ -220,10 +224,10 @@ I risultati mostrano l'intestazione, il vettore di densità e parte dell'istogra
 [Statistiche](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
-[DROP STATISTICS &#40; Transact-SQL &#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  
-[sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
-[sp_createstats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
-[STATS_DATE &#40; Transact-SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
+[DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  
+[sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
+[sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
+[STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
-[Sys.dm db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
-[Sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

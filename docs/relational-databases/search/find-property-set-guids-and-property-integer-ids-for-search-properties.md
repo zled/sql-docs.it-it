@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 881c663038225af57b33aeb655306f6ef1d1f1f4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a36b99483ece6d73dd94e9f5d218fdcf8ce4c743
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Questo argomento illustra come ottenere i valori necessari per poter aggiungere una proprietà a un elenco delle proprietà di ricerca e abilitarlo per la ricerca full-text. In questi valori sono inclusi il GUID del set di proprietà e l'identificatore di tipo integer di una proprietà del documento.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In questo argomento viene illustrato come ottenere i valori richiesti prima di poter aggiungere una proprietà a un elenco delle proprietà di ricerca e abilitarlo per la ricerca full-text. In questi valori sono inclusi il GUID del set di proprietà e l'identificatore di tipo integer di una proprietà del documento.  
   
  Le proprietà del documento estratte usando filtri IFilter dai dati binari, vale a dire i dati archiviati in una colonna di tipi di dati **varbinary**, **varbinary(max)** (incluso **FILESTREAM**) o **image** , possono essere rese disponibili per la ricerca full-text. Per consentire la ricerca in una proprietà estratta, è necessario aggiungere la proprietà manualmente a un elenco delle proprietà di ricerca. È inoltre necessario che l'elenco delle proprietà di ricerca sia associato a uno o più indici full-text. Per altre informazioni, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="wellknown"></a> Ricerca di informazioni sulle proprietà Microsoft note e ampiamente utilizzate  
  Microsoft definisce centinaia di proprietà del documento da utilizzare in molti contesti, ma solo un piccolo subset delle proprietà disponibili viene utilizzato da ogni formato di file. Tra le proprietà di Windows utilizzate di frequente è presente un piccolo set di proprietà generiche. Nella tabella seguente sono illustrati alcuni esempi di proprietà generiche note. Nella tabella sono indicati il nome noto, il nome canonico di Windows (in base alla descrizione della proprietà pubblicata da Microsoft), il GUID del set di proprietà, l'identificatore di tipo integer della proprietà e una breve descrizione.  
   
-|Nome noto|Nome canonico di Windows.|GUID set di proprietà|ID di tipo integer|Descrizione|  
+|Nome noto|Nome canonico di Windows.|GUID set di proprietà|ID di tipo integer|Description|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Autori|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autore o autori di un elemento specificato.|  
 |Tag|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Set di parole chiave (note anche come tag) assegnate all'elemento.|  
@@ -109,6 +111,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
+ [Configurare e gestire filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,19 +26,20 @@ helpviewer_keywords:
 - SSAS, data mining
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 905a45d6852a7e5e1ed469e65f6082f0282de985
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 03ac65aa1ad896022d12735e4e8f64c132b03734
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-concepts"></a>Concetti di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Data mining è il processo di individuazione informazioni utilizzabili da grandi set di dati. Nel data mining viene usata l'analisi matematica per dedurre modelli e tendenze esistenti nei dati. In genere, questi modelli non possono essere individuati tramite l'esplorazione tradizionale dei dati perché le relazioni sono troppo complesse o perché sono presenti troppi dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Il data mining è il processo di individuazione di informazioni utilizzabili da grandi set di dati. Nel data mining viene usata l'analisi matematica per dedurre modelli e tendenze esistenti nei dati. In genere, questi modelli non possono essere individuati tramite l'esplorazione tradizionale dei dati perché le relazioni sono troppo complesse o perché sono presenti troppi dati.  
   
  I modelli e le tendenze possono essere raccolti e definiti in un *modello di data mining*. È possibile applicare i modelli di data mining a scenari specifici, ad esempio:  
   
@@ -76,7 +75,7 @@ ms.lasthandoff: 12/08/2017
   
  Data Mining di Microsoft SQL Server offre un ambiente integrato per la creazione e l'utilizzo dei modelli di data mining. In questo ambiente è incluso SQL Server Development Studio, in cui sono contenuti algoritmi di data mining e strumenti query che facilitano la compilazione di una soluzione completa per un'ampia varietà di progetti, e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in cui sono disponibili strumenti per l'esplorazione di modelli e la gestione di oggetti di data mining. Per altre informazioni, vedere [Creazione di modelli multidimensionali tramite SQL Server Data Tools &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
   
- Per un esempio di applicazione degli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a uno scenario aziendale, vedere [Esercitazione di base sul data mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Per un esempio di applicazione degli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a uno scenario aziendale, vedere [Esercitazione di base sul data mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ##  <a name="DefiningTheProblem"></a> Definizione del problema  
  Il primo passaggio del processo di data mining, illustrato nel diagramma seguente, consiste nel definire chiaramente il problema e nel considerare le modalità con cui i dati possono essere usati per risolvere il problema.  
@@ -142,7 +141,7 @@ ms.lasthandoff: 12/08/2017
   
  Le colonne di dati che si desidera usare vengono definite creando una struttura di data mining. La struttura di data mining è collegata all'origine dei dati, ma di fatto non contiene alcun dato finché non viene elaborata. Quando si elabora la struttura di data mining, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono generate aggregazioni e altre informazioni statistiche utilizzabili per l'analisi. Queste informazioni possono essere usate da qualsiasi modello di data mining basato sulla struttura. Per altre informazioni sulle modalità di correlazione delle strutture di data mining per modelli di data mining, vedere [Architettura logica &#40;Analysis Services – Data mining&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md).  
   
- Prima dell'elaborazione della struttura e del modello, anche un modello di data mining è semplicemente un contenitore in cui sono specificate le colonne usate per l'input, l'attributo stimato e i parametri tramite cui viene indicato all'algoritmo come elaborare i dati. L'elaborazione di un modello viene spesso definita *training*. Il termine training si riferisce al processo di applicazione di un algoritmo matematico specifico ai dati nella struttura allo scopo di estrarre dei modelli. I modelli che si trovano nel processo di training dipendono dalla selezione dei dati di training, dall'algoritmo che si sceglie e dalla modalità di configurazione di quest'ultimo. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono disponibili molti algoritmi diversi, ognuno per un tipo diverso di attività nonché per la creazione di un tipo differente di modello. Per un elenco degli algoritmi disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Prima dell'elaborazione della struttura e del modello, anche un modello di data mining è semplicemente un contenitore in cui sono specificate le colonne usate per l'input, l'attributo stimato e i parametri tramite cui viene indicato all'algoritmo come elaborare i dati. L'elaborazione di un modello viene spesso definita *training*. Il termine training si riferisce al processo di applicazione di un algoritmo matematico specifico ai dati nella struttura allo scopo di estrarre dei modelli. I modelli che si trovano nel processo di training dipendono dalla selezione dei dati di training, dall'algoritmo che si sceglie e dalla modalità di configurazione di quest'ultimo. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]contiene molti algoritmi diversi, ognuno in un tipo diverso di attività, nonché la creazione di un tipo diverso di modello. Per un elenco degli algoritmi disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
  Per regolare ciascun algoritmo, è anche possibile usare parametri e applicare filtri ai dati di training per usare solo un subset di dati, generando risultati diversi. Dopo avere passato i dati nel modello, l'oggetto modello di data mining contiene riepiloghi e schemi su cui è possibile eseguire query o che possono essere usati per la stima.  
   
@@ -170,7 +169,7 @@ ms.lasthandoff: 12/08/2017
   
  Dopo la distribuzione dei modelli di data mining in un ambiente di produzione, è possibile eseguire numerose attività, a seconda delle esigenze. Tra le attività che è possibile eseguire sono incluse le seguenti:  
   
--   Usare i modelli per creare stime che è possibile usare per prendere decisioni aziendali. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile il linguaggio DMX, che può essere usato per creare query di stima, e il generatore delle query di stima, per facilitare la compilazione delle query. Per altre informazioni, vedere [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
+-   Usare i modelli per creare stime che è possibile usare per prendere decisioni aziendali. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornisce il linguaggio DMX, che è possibile utilizzare per creare query di stima e il generatore di Query di stima per facilitare la compilazione delle query. Per altre informazioni, vedere [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
   
 -   Creare query sul contenuto per recuperare statistiche, regole o formule dal modello. Per altre informazioni, vedere [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md).  
   
@@ -185,7 +184,7 @@ ms.lasthandoff: 12/08/2017
 -   La pratica di aggiornare dinamicamente i modelli, parallelamente all'ingresso di ulteriori dati nell'organizzazione, e di apportare modifiche costanti per migliorare l'efficacia della soluzione deve essere parte integrante della strategia di distribuzione. Per altre informazioni, vedere [Gestione degli oggetti e delle soluzioni di data mining](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Strumenti di data mining](../../analysis-services/data-mining/data-mining-tools.md)  
+ [Soluzioni di Data Mining](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Strumenti di Data Mining](../../analysis-services/data-mining/data-mining-tools.md)  
   
   

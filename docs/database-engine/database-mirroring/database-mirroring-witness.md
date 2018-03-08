@@ -19,13 +19,13 @@ ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: "72"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8fecac050a6b6be1ff2605d1926d975647e84a3a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 81c8212ce3e85c15e6015e64474b50be394f7869
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-witness"></a>Server di controllo del mirroring del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per supportare il failover automatico, è necessario configurare una sessione di mirroring del database in modalità a protezione elevata e usare l'istanza di un terzo server, noto come *server di controllo*. Il server di controllo del mirroring è un'istanza facoltativa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente al server mirror in una sessione in modalità a protezione elevata di stabilire se avviare un failover automatico. A differenza dei due partner, il server di controllo del mirroring non serve il database, Il supporto del failover automatico è l'unico ruolo del server di controllo del mirroring.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
  ![Sessione di mirroring con un server di controllo del mirroring](../../database-engine/database-mirroring/media/dbm-3-way-session-intro.gif "Sessione di mirroring con un server di controllo del mirroring")  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Utilizzo di un server di controllo del mirroring in più sessioni](#InMultipleSessions)  
   

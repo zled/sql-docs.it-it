@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a05b62e5c2ffb8c5a268ac8030e703d3a192742
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
   Il catalogo **SSISDB** è il punto centrale dell'utilizzo di progetti [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) che sono stati distribuiti nel server [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ad esempio, è possibile impostare parametri di progetti e pacchetti, configurare ambienti per specificare valori di runtime per i pacchetti, eseguire e risolvere i problemi dei pacchetti e gestire le operazioni del server [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -178,7 +179,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
 |Numero massimo di versioni per progetto|MAX_PROJECT_VERSIONS|  
 |Livello di registrazione predefinito per l'intero server|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="Permissions"></a> Permissions  
  I progetti, gli ambienti e i pacchetti sono contenuti in cartelle che sono oggetti a protezione diretta. È possibile concedere le autorizzazioni a una cartella, inclusa l'autorizzazione MANAGE_OBJECT_PERMISSIONS. L'autorizzazione MANAGE_OBJECT_PERMISSIONS consente di delegare l'amministrazione del contenuto di una cartella a un utente senza dover concedere all'utente l'appartenenza al ruolo ssis_admin. È inoltre possibile concedere autorizzazioni per progetti, ambienti e operazioni. Le operazioni includono l'inizializzazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la distribuzione di progetti, la creazione e l'avvio di esecuzioni, la convalida di progetti e pacchetti e la configurazione del catalogo **SSISDB** .  
   
  Per altre informazioni sui ruoli di database, vedere [Ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md).  
@@ -528,7 +529,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
      Assicurarsi che gli oggetti pertinenti a Integration Services (SSIS) vengano creati nella nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui non è ancora stato creato il catalogo SSISDB.  
 
 ## <a name="upgrade-the-ssis-catalog-ssisdb"></a>Aggiornare il catalogo SSIS (SSISDB)
-  Eseguire l'aggiornamento guidato SSISDB per aggiornare il database di catalogo SSIS, SSISDB, quando il database è antecedente alla versione corrente dell'istanza di SQL Server. Il database può essere antecedente quando viene soddisfatta una delle condizioni seguenti.  
+  Eseguire Aggiornamento guidato del database SSISDB per aggiornare il database di catalogo SSIS, SSISDB, quando il database è antecedente alla versione corrente dell'istanza di SQL Server. Il database può essere antecedente quando viene soddisfatta una delle condizioni seguenti.  
   
 -   Il database è stato ripristinato da una versione precedente di SQL Server.  
   

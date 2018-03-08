@@ -1,139 +1,184 @@
 ---
 title: Come utilizzare le funzioni RevoScaleR per trovare o installare R pacchetti in SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 02/20/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 6d85c95a1aa0cba21c52142fa1a7599b208415ca
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: b600d7d118ad5bcc24c201683246f3e037da3fba
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Come utilizzare le funzioni RevoScaleR per trovare o installare pacchetti R in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Versione di Microsoft R Server 9.0.1 introdotte nuove funzioni RevoScaleR che supportano l'utilizzo dei pacchetti installati in un contesto di calcolo di SQL Server. Queste nuove funzioni semplificano un esperto di dati eseguire il codice R in SQL Server senza accesso diretto al server.
+Versione di Microsoft R Server 9.0.1 introdotte nuove funzioni RevoScaleR che supportano l'utilizzo dei pacchetti installati in un contesto di calcolo di SQL Server. Queste nuove funzioni semplificano un esperto di dati eseguire il codice R e installare i pacchetti in SQL Server senza accesso diretto al server.
 
-Ogni esperto di dati è possibile installare pacchetti privati che non sono visibili ad altri utenti. Poiché i pacchetti possono essere limitati a un database e ogni utente disponga di una sandbox pacchetto isolato in ogni database, è più facile da installare versioni diverse dello stesso pacchetto R.
+## <a name="how-does-it-work"></a>Come funziona
 
-Se si esegue la migrazione di database di lavoro in un nuovo server, è inoltre possibile utilizzare la funzione di sincronizzazione del pacchetto per leggere un elenco di tutti i pacchetti e installarli in un database nel nuovo server.
+Se si dispone di R Server 9.0.1 o versioni successive, è possibile utilizzare il [rxInstallPackages](https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/rxinstallpackages) funzione da un client remoto R per installare i pacchetti in un contesto di calcolo di SQL Server. Per utilizzare questa opzione, è necessario aver attivato la gestione di pacchetti nel server e database. Questa funzionalità richiede anche una versione equivalente di R Services o i servizi di Machine Learning necessario installare nel server.
 
-In questo articolo vengono descritte queste funzioni e vengono forniti esempi dell'utilizzo della funzione.
+La nuova versione di RevoScaleR include anche queste funzioni: 
+
++ Il [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) funzione Ottiene il percorso di uno o più pacchetti nel contesto di calcolo specificato.
+
+    È possibile utilizzare una combinazione di utenti e ambito per trovare i pacchetti o aggiungere pacchetti a un database specifico:
+
++ Il [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) funzione Ottiene un elenco di pacchetti installati nel contesto di calcolo specificato.
+
++ Il [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) funzione Installa i pacchetti in un contesto di calcolo, da un repository specifico o leggendo salvato localmente compresso pacchetti.
+
+    Questa funzione controlla le dipendenze e assicura che tutti i pacchetti correlati è possibile installare SQL Server, esattamente come l'installazione del pacchetto R nel contesto di calcolo locale.
+
++ Il [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) funzione rimuove i pacchetti da un contesto di calcolo specificato.
+
+    Inoltre, consente di calcolare le dipendenze e assicura che vengano rimossi i pacchetti che non vengono più utilizzati da altri pacchetti in SQL Server, per liberare risorse.
+
++ Utilizzare il [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) funzione per copiare le informazioni su una raccolta di pacchetti tra il file system e un database, per il contesto di calcolo specificato.
+
++ Utilizzare il [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) contesto di calcolo di funzione per determinare il percorso della libreria di istanza in un Server SQL.
+
+**Si applica a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)].   Supportato anche nelle [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] con un aggiornamento a R Server 9.0 o versioni successive.   Altre limitazioni.
 
 ## <a name="requirements"></a>Requisiti
 
-+ Per eseguire queste funzioni, è necessario disporre dell'autorizzazione per eseguire i comandi di R nell'istanza.
++ Per eseguire queste funzioni, è necessario disporre dell'autorizzazione per connettersi al server e un database e per eseguire i comandi di R.
+
++ Quando si utilizzano queste funzioni da un client remoto di R, è necessario creare un oggetto di contesto di calcolo in primo luogo, utilizzando il [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) (funzione). Successivamente, per ogni funzione di gestione di pacchetto in uso, passare il contesto di calcolo come argomento.
 
 + Se non si specifica un nome utente e una password quando si crea il contesto di calcolo, viene utilizzata l'identità dell'utente che esegue il codice R.
 
-+ Quando si utilizzano queste funzioni da un client remoto di R, è necessario creare un oggetto di contesto di calcolo in primo luogo, utilizzando la funzione RxInSQLServer. Successivamente, per ogni funzione di gestione di pacchetto in uso, passare il contesto di calcolo come argomento.
++ È anche possibile eseguire le funzioni di gestione di pacchetto all'interno di `sp_execute_external_script`. Quando si esegue questa operazione, la funzione viene eseguita utilizzando il contesto di sicurezza del chiamante stored procedure.
 
-+ È possibile eseguire le funzioni di gestione di pacchetti tramite `sp_execute_external_script`. Quando si esegue questa operazione, la funzione viene eseguita utilizzando il contesto di sicurezza del chiamante stored procedure.
++ Pacchetti in **ambito condiviso** possono essere installate dagli utenti che appartengono al `rpkgs-shared` ruolo in un database specificato. Tutti gli utenti in questo ruolo è possono disinstallare pacchetti condivisi.
 
-## <a name="list-of-package-management-functions"></a>Elenco di funzioni di gestione pacchetti
++ Pacchetti in **ambito privato** possono essere installate da qualsiasi utente appartenente al `rpkgs-private` ruolo in un database. Tuttavia, gli utenti possono vedere e disinstallare solo i propri pacchetti.
 
-Le funzioni di gestione pacchetti seguenti sono disponibili in RevoScaleR, per l'installazione e la rimozione dei pacchetti in un contesto di calcolo specificata:
++ I proprietari del database possono utilizzare i pacchetti condivisi o privati.
 
-+ [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): trovare informazioni sui pacchetti installati nel contesto di calcolo specificato.
+## <a name="package-installation-from-machine-learning-server-or-remote-r-client"></a>Installazione del pacchetto da Machine Learning Server o client remoti di R
 
-+ [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): installare i pacchetti in un contesto di calcolo, da un repository specifico o leggendo salvato localmente compressi pacchetti.
+Prima di iniziare, verificare che siano soddisfatte queste condizioni:
 
-+ [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): rimuovere i pacchetti installati da un contesto di calcolo.
++ Il client ha RevoScale 9.0.1 o versione successiva.
++ Una versione equivalente di RevoScaleR installata nell'istanza di SQL Server.
++ Il [funzionalità di gestione pacchetti](..\r\r-package-how-to-enable-or-disable.md) è stata abilitata nell'istanza.
++ Si è un membro di un ruolo del database che consente di installare i pacchetti nel database e istanza specificata. In futuro, i ruoli supporterà l'installazione di pacchetti a uno un percorso condiviso o privato. Per il momento, è possibile installare pacchetti, se dispone di un database.
 
-+ [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): ottenere il percorso di uno o più pacchetti nel contesto di calcolo specificato.
+1. Dalla riga di comando R, definire una stringa di connessione per l'istanza e database.
+2. Utilizzare il [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) costruttore per definire un contesto di calcolo di SQL Server, usando la stringa di connessione.
 
-+ [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): copia di una libreria di pacchetti tra il file system e i database nei contesti di calcolo specificato.
+    ```R
+    sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
+    ```
+3. Creare un elenco dei pacchetti che si desidera installare e salvare l'elenco in una variabile di stringa.
 
-+ [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): ottenere il percorso di ricerca per gli alberi di libreria per i pacchetti durante l'esecuzione all'interno del Server SQL.
+    ```R
+    packageList <- c("e1071", "mice")
+    ```
 
-Questi pacchetti sono inclusi per impostazione predefinita in SQL Server 2017. Per informazioni su queste funzioni, vedere le pagine di riferimento di funzione RevoScaleR: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
+4. Chiamare [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) e passare il contesto di calcolo e la variabile di stringa che contiene i nomi dei pacchetti.
 
-> [!NOTE]
-> Funzioni di R per la gestione dei pacchetti sono disponibili a partire da Microsoft R Server 9.0.1. Se è possibile trovare le funzioni in RevoScaleR, è probabilmente necessario eseguire l'aggiornamento alla versione più recente. 
+    ```R
+    rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)
+    ```
+
+    Se sono necessari i pacchetti dipendenti, essi vengono installati anche, presupponendo che una connessione internet sia disponibile nel client.
+    
+    I pacchetti vengono installati utilizzando le credenziali dell'utente che effettua la connessione, nell'ambito predefinito per tale utente.
+
 ## <a name="examples"></a>Esempi
 
-In questa sezione contiene esempi di come utilizzare le funzioni di gestione di pacchetto con un database o istanza di SQL Server. 
+In questa sezione vengono forniti esempi di come utilizzare queste funzioni da un client remoto durante la connessione a un database come contesto di calcolo o un'istanza di SQL Server.
 
-+ Le funzioni per l'installazione dei pacchetti verificano se sono presenti dipendenze e se eventuali pacchetti correlati possono essere installati in SQL Server, in modo analogo all'installazione di pacchetti R nel contesto di calcolo locale.
-
-+ La funzione che _Disinstalla_ pacchetti anche calcola le dipendenze e assicura che vengano rimossi i pacchetti che non vengono più utilizzati da altri pacchetti in SQL Server, per liberare risorse.
-
-+ È possibile utilizzare una combinazione di utenti e ambito per trovare i pacchetti o aggiungere pacchetti a un database specifico:
-
-    + Pacchetti in **ambito condiviso** possono essere installate dagli utenti che appartengono al `rpkgs-shared` ruolo in un database specificato. Tutti gli utenti in questo ruolo è possono disinstallare pacchetti condivisi.
-    + Pacchetti in **ambito privato** possono essere installate da qualsiasi utente appartenente al `rpkgs-private` ruolo in un database. Tuttavia, gli utenti possono vedere e disinstallare solo i propri pacchetti.
-    + I proprietari del database possono utilizzare i pacchetti condivisi o privati.
-
-**Dal codice R**
-
-Se si dispone dell'autorizzazione per installare i pacchetti, eseguire un pacchetto di funzioni di gestione dal client di R e specificare il contesto di calcolo in pacchetti devono essere aggiunti o rimossi.  Il contesto di calcolo può essere il computer locale o un database nell'istanza di SQL Server. Le credenziali di determinano se è possibile completare l'operazione nel server.
-
-**Da Transact-SQL**
-
-Per eseguire funzioni di gestione dei pacchetti da una stored procedure, eseguirne il wrapping in una chiamata a `sp_execute_external_script`.
-
-### <a name="get-list-of-packages-in-a-sql-server-compute-context"></a>Ottenere l'elenco dei pacchetti in un contesto di calcolo di SQL Server
-
-Questo esempio viene verificata per i pacchetti che sono stati installati nell'istanza `myServer`, nel database `TestDB`. Gestione dei pacchetti di ambito è un database specifico e un utente. Se l'utente non è specificato, viene utilizzato l'utente che esegue la chiamata di contesto di calcolo. Per ulteriori informazioni, vedere [Scoping dei pacchetti dal ruolo](#bkmk_scope).
+Per tutti gli esempi, è necessario fornire una stringa di connessione o un contesto di calcolo, che richiede una stringa di connessione. In questo esempio viene illustrato un modo per creare un contesto di calcolo per SQL Server:
 
 ```R
-sqlServerCompute <- RxInSqlServer(connectionString = "Driver=SQL Server;Server=myServer;Database=TestDB;Uid=myID;Pwd=myPwd;");
-sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlServerCompute);
+instance_name <- "Machine name/Instance name";
+database_name <- "TestDB";
+sqlWait= TRUE;
+sqlConsoleOutput <- TRUE;
+connString <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", database_name, ";Trusted_Connection=true;", sep="");
+sqlcc <- RxInSqlServer(connectionString = connString, wait = sqlWait, consoleOutput = sqlConsoleOutput, numTasks = 4);
 ```
 
-### <a name="get-package-path-on-a-remote-sql-server-compute-context"></a>Ottenere il percorso di pacchetto in un contesto di calcolo di SQL Server remoto
+A seconda di dove si trova il server e il modello di sicurezza, potrebbe essere necessario fornire una specifica del dominio e la subnet nella stringa di connessione oppure utilizzare un account di accesso SQL. Esempio:
 
-Questo esempio ottiene il percorso del pacchetto **RevoScaleR** nel contesto di calcolo, *sqlServer*.
+```R
+connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"
 
-  ```R
-  sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlServerL)
-  ```
+
+### Get package path on a remote SQL Server compute context
+
+This example gets the path for the **RevoScaleR** package on the compute context, `sqlcc`.
+
+```R
+sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlcc)
+print(sqlPackagePaths)
+```
+
+**Risultati**
+
+"C: o programma file/Microsoft SQL Server/MSSQL14. MSSQLSERVER/R_SERVICES/libreria/RevoScaleR"
+
+> [!TIP]
+> Se è stata abilitata l'opzione visualizzare l'output di console SQL, è possibile ottenere i messaggi di stato dalla funzione che precede il `print` istruzione. Dopo aver completato il test del codice, impostare `consoleOutput` su FALSE nel costruttore di contesto di calcolo per eliminare i messaggi.
 
 ### <a name="get-locations-for-multiple-packages"></a>Ottenere i percorsi per più pacchetti
 
-Questo esempio ottiene i percorsi per i pacchetti **RevoScaleR** e **lattice** nel contesto di calcolo, *sqlServer*. Per ottenere informazioni più pacchetti, è possibile passare un vettore di stringhe contenente i nomi dei pacchetti.
+Nell'esempio seguente ottiene i percorsi per il **RevoScaleR** e **reticolato** pacchetti, nel contesto di calcolo, `sqlcc`. Per ottenere informazioni più pacchetti, è possibile passare un vettore di stringhe contenente i nomi dei pacchetti.
 
-  ```R
-  packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlServer)
-  ```
-
+```R
+packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlcc)
+print(packagePaths)
+```
 
 ### <a name="get-package-versions-on-a-remote-compute-context"></a>Ottenere versioni del pacchetto in un contesto di calcolo remoto
 
 Eseguire questo comando in una console di R per ottenere il numero di build e i numeri di versione per i pacchetti installati nel contesto di calcolo, *sqlServer*.
 
-  ```R
-  sqlPackages <- rxInstalledPackages(fields = c("Package", "Version", "Built"), computeContext = sqlServer)
+```R
+sqlPackages <- rxInstalledPackages(fields = c("Package", "Version", "Built"), computeContext = sqlServer)
+```
+
+**Risultati**
+
+```text
+[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/RevoScaleR"
+
+[2] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/lattice"
 ```
 
 ### <a name="install-a-package-on-sql-server"></a>Installare un pacchetto in SQL Server
 
-Questo esempio viene installato il **previsione** pacchetto e le relative dipendenze nel contesto di calcolo *sqlServer*.
+Questo esempio viene installato il **previsione** pacchetto e le relative dipendenze nel contesto di calcolo.
 
   ```R
-  pkgs <- c("ggplot2")
-  rxInstallPackages(pkgs = pkgs, verbose = TRUE, scope = "private", computeContext = sqlServer)
+  pkgs <- c("forecast")
+  rxInstallPackages(pkgs = pkgs, verbose = TRUE, scope = "private", computeContext = sqlcc)
   ```
 
 ### <a name="remove-a-package-from-sql-server"></a>Rimuovere un pacchetto da SQL Server
 
-Questo esempio rimuove il pacchetto **ggplot2** e le relative dipendenze dal contesto di calcolo, *sqlServer*.
+Questo esempio viene rimossa la **previsione** pacchetto e le relative dipendenze nel contesto di calcolo.
 
   ```R
-  pkgs <- c("ggplot2")
-  rxRemovePackages(pkgs = pkgs, verbose = TRUE, scope = "private", computeContext = sqlServer)
+  pkgs <- c("forecast")
+  rxRemovePackages(pkgs = pkgs, verbose = TRUE, scope = "private", computeContext = sqlcc)
   ```
 
 ### <a name="synchronize-packages-between-database-and-file-system"></a>Sincronizzare i pacchetti tra database e file system

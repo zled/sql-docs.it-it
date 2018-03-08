@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 1d53dda1-f2c8-4a9b-8ec7-78f43ca1d7db
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 58ee908dc3dbf745a15c8dfa5f44d711f91c392b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 411491544f01c1aad7655a692b7542269f5c0844
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---hierarchy-representation"></a>Tabelle - rappresentazione della gerarchia
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Nei modelli tabulari una gerarchia è il percorso di navigazione da un attributo a un altro in base ai valori selezionati dall'utente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Nei modelli tabulari una gerarchia è il percorso di navigazione da un attributo a un altro, in base a valori selezionati dall'utente.  
   
 ## <a name="hierarchy-representation"></a>Rappresentazione della gerarchia  
   

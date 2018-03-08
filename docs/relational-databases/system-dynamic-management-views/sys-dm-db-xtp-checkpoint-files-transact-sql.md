@@ -1,5 +1,5 @@
 ---
-title: Sys.dm db_xtp_checkpoint_files (Transact-SQL) | Documenti Microsoft
+title: sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -8,7 +8,8 @@ ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_xtp_checkpoint_files_TSQL
 - dm_db_xtp_checkpoint_files_TSQL
 - sys.dm_db_xtp_checkpoint_files
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_checkpoint_files dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_checkpoint_files dynamic management view
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cad5ae59687c3658ef60e0a984fdc2ce94e24ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fff8a7cff566b555c0cc28ff6e60c67815956738
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  Un filegroup con ottimizzazione per la memoria utilizza internamente solo aggiungere i file per archiviare le righe inserite ed eliminate per le tabelle in memoria. Sono disponibili due tipi di file. Un file di dati contiene le righe inserite mentre un file differenziale contiene riferimenti alle righe eliminate. 
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]è notevolmente diverso rispetto alle versioni più recenti e viene illustrato più basso nell'argomento in [SQL Server 2014](#bkmk_2014).  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è notevolmente diverso rispetto alle versioni più recenti e viene illustrato più basso nell'argomento in [SQL Server 2014](#bkmk_2014).  
   
  Per ulteriori informazioni, vedere [creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 |deleted_row_count|**bigint**|Numero di righe eliminate del file differenziale.|  
 |drop_table_deleted_row_count|**bigint**|Numero di righe nei file di dati interessati dall'eliminazione di una tabella. Si applica ai file di dati quando la colonna contenente gli stati è uguale a 1.<br /><br /> Mostra i conteggi delle righe eliminate dalle tabelle eliminate. Le statistiche drop_table_deleted_row_count vengono compilate dopo il completamento del Garbage Collection in memoria delle righe delle tabelle eliminate e l'esecuzione di un checkpoint. Se si riavvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prima che le statistiche delle tabelle eliminate vengono riflesse nella colonna, le statistiche verranno aggiornate durante il recupero. Il processo di recupero non carica le righe delle tabelle eliminate. Le statistiche delle tabelle eliminate vengono compilate durante la fase di caricamento e riportate nella colonna al termine del recupero.|  
 |state|**int**|0 – PRECREATED<br /><br /> 1 – UNDER CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 4 – MERGED SOURCE<br /><br /> 5 – REQUIRED FOR BACKUP/HA<br /><br /> 6 – IN TRANSITION TO TOMBSTONE<br /><br /> 7 – TOMBSTONE|  
-|state_desc|**nvarchar(60)**|PRECREATED: un set ridotto di coppie di file di dati e file differenziali, noto anche come coppie di file di checkpoint (CFP) viene mantenuto preallocato per ridurre o eliminare le attese di allocazione di nuovi file durante l'esecuzione delle transazioni. Hanno dimensioni intere, con file di dati di 128 MB e file differenziali di 8 MB, ma non contengono dati. Il numero di coppie di file di checkpoint è calcolato in base al numero di processori logici o utilità di pianificazione (uno per core, senza limiti) con un minimo di 8. Si tratta di un overhead di archiviazione fisso nei database con tabelle ottimizzate per la memoria.<br /><br /> UNDER CONSTRUCTION: set di coppie di file di checkpoint in cui vengono archiviate le righe di dati appena inserite ed eventualmente eliminate dall'ultimo checkpoint.<br /><br /> ACTIVE: contengono le righe inserite ed eliminate dai precedenti checkpoint chiusi. Queste coppie di file di checkpoint contengono tutte le righe inserite ed eliminate richieste prima dell'applicazione della parte attiva del log delle transazioni al riavvio del database. Le dimensioni di queste coppie di file di checkpoint saranno all'incirca il doppio delle dimensioni in memoria delle tabelle ottimizzate per la memoria, supponendo che l'operazione di unione sia corrente con il carico di lavoro transazionale.<br /><br /> MERGE TARGET: nella coppia di file di checkpoint vengono archiviate le righe di dati consolidate dalle coppie di file di checkpoint identificate dai criteri di unione. Una volta installata l'operazione di unione, lo stato di MERGE TARGET diventa ACTIVE.<br /><br /> MERGED SOURCE: una volta installata l'operazione di unione, le coppie di file di checkpoint di origine vengono contrassegnate come MERGED SOURCE. Si noti che l'analizzatore dei criteri di unione può identificare più operazioni di unione ma una coppia di file di checkpoint può partecipare solo a un'operazione di unione.<br /><br /> REQUIRED FOR BACKUP/HA: una volta installata l'operazione di unione e dopo che la coppia di file di checkpoint di MERGE TARGET è diventata parte del checkpoint durevole, le coppie di file di checkpoint di origine dell'unione passano a questo stato. Le coppie di file di checkpoint in questo stato sono necessarie per la correttezza operativa del database in cui sia inclusa una tabella ottimizzata per la memoria.  Ad esempio, per recuperare da un checkpoint durevole tornando indietro nel tempo. Una coppia di file di checkpoint può essere contrassegnata per il processo di Garbage Collection quando il punto di troncamento del log va oltre l'intervallo di transazioni.<br /><br /> IN TRANSITION TO TOMBSTONE: queste coppie di file di checkpoint non sono necessarie per il motore di OLTP in memoria e possono essere sottoposte al processo di Garbage Collection. Questo stato indica che le coppie di file di checkpoint sono in attesa del thread in background per passare allo stato successivo, ovvero allo stato TOMBSTONE.<br /><br /> TOMBSTONE: queste coppie di file di checkpoint sono in attesa di essere sottoposte al processo di Garbage Collection dal Garbage Collector di FILESTREAM. ([sp_filestream_force_garbage_collection &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
+|state_desc|**nvarchar(60)**|PRECREATED: un set ridotto di coppie di file di dati e file differenziali, noto anche come coppie di file di checkpoint (CFP) viene mantenuto preallocato per ridurre o eliminare le attese di allocazione di nuovi file durante l'esecuzione delle transazioni. Hanno dimensioni intere, con file di dati di 128 MB e file differenziali di 8 MB, ma non contengono dati. Il numero di coppie di file di checkpoint è calcolato in base al numero di processori logici o utilità di pianificazione (uno per core, senza limiti) con un minimo di 8. Si tratta di un overhead di archiviazione fisso nei database con tabelle ottimizzate per la memoria.<br /><br /> UNDER CONSTRUCTION: set di coppie di file di checkpoint in cui vengono archiviate le righe di dati appena inserite ed eventualmente eliminate dall'ultimo checkpoint.<br /><br /> ACTIVE: contengono le righe inserite ed eliminate dai precedenti checkpoint chiusi. Queste coppie di file di checkpoint contengono tutte le righe inserite ed eliminate richieste prima dell'applicazione della parte attiva del log delle transazioni al riavvio del database. Le dimensioni di queste coppie di file di checkpoint saranno all'incirca il doppio delle dimensioni in memoria delle tabelle ottimizzate per la memoria, supponendo che l'operazione di unione sia corrente con il carico di lavoro transazionale.<br /><br /> MERGE TARGET: nella coppia di file di checkpoint vengono archiviate le righe di dati consolidate dalle coppie di file di checkpoint identificate dai criteri di unione. Una volta installata l'operazione di unione, lo stato di MERGE TARGET diventa ACTIVE.<br /><br /> MERGED SOURCE: una volta installata l'operazione di unione, le coppie di file di checkpoint di origine vengono contrassegnate come MERGED SOURCE. Si noti che l'analizzatore dei criteri di unione può identificare più operazioni di unione ma una coppia di file di checkpoint può partecipare solo a un'operazione di unione.<br /><br /> REQUIRED FOR BACKUP/HA: una volta installata l'operazione di unione e dopo che la coppia di file di checkpoint di MERGE TARGET è diventata parte del checkpoint durevole, le coppie di file di checkpoint di origine dell'unione passano a questo stato. Le coppie di file di checkpoint in questo stato sono necessarie per la correttezza operativa del database in cui sia inclusa una tabella ottimizzata per la memoria.  Ad esempio, per recuperare da un checkpoint durevole tornando indietro nel tempo. Una coppia di file di checkpoint può essere contrassegnata per il processo di Garbage Collection quando il punto di troncamento del log va oltre l'intervallo di transazioni.<br /><br /> IN TRANSITION TO TOMBSTONE: queste coppie di file di checkpoint non sono necessarie per il motore di OLTP in memoria e possono essere sottoposte al processo di Garbage Collection. Questo stato indica che le coppie di file di checkpoint sono in attesa del thread in background per passare allo stato successivo, ovvero allo stato TOMBSTONE.<br /><br /> TOMBSTONE: queste coppie di file di checkpoint sono in attesa di essere sottoposte al processo di Garbage Collection dal Garbage Collector di FILESTREAM. ([sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
 |lower_bound_tsn|**bigint**|Limite inferiore delle transazioni incluse nel file. Null se la colonna contenente gli stati è diversa da 2, 3 o 4.|  
 |upper_bound_tsn|**bigint**|Limite superiore delle transazioni incluse nel file. Null se la colonna contenente gli stati è diversa da 2, 3 o 4.|  
 |last_backup_page_count|**int**|Conteggio delle pagine logiche determinato nell'ultimo backup. Si applica quando la colonna contenente gli stati è impostata su 2, 3, 4 o 5. NULL se il conteggio delle pagine non è noto.|  
@@ -97,7 +100,7 @@ ms.lasthandoff: 11/17/2017
 |tombstone_operation_lsn|**nvarchar(23)**|Il file verrà eliminato una volta che tombstone_operation_lsn non è più sincronizzato con l'LSN di troncamento del log.|  
 |logical_deletion_log_block_id|**bigint**|Si applica solo alla stato 5.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW DATABASE STATE` per il server.  
   
 ## <a name="use-cases"></a>Modalità di utilizzo comuni  

@@ -8,24 +8,27 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: XMLTEXT directive
+helpviewer_keywords:
+- XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ed147121ef70cf969d5d961665e21a948df7195
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e71a67f991291f1426fbf3a583169b339f69c110
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Esempio: specifica della direttiva XMLTEXT
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] L'esempio seguente illustra la gestione dei dati nella colonna di overflow usando la direttiva **XMLTEXT** in un'istruzione `SELECT` in modalità EXPLICIT.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Nell'esempio seguente viene illustrata la gestione dei dati nella colonna di overflow utilizzando la direttiva **XMLTEXT** in un'istruzione `SELECT` in modalità EXPLICIT.  
   
  Si consideri la tabella `Person` . La tabella contiene una colonna `Overflow` in cui viene archiviata la parte non utilizzata del documento XML.  
   
@@ -156,7 +159,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- Se i dati della colonna `XMLTEXT` includono attributi per l'elemento radice, tali attributi non compaiono nello schema dei dati XML e il parser MSXML non convalida il frammento di documento XML risultante. Esempio:  
+ Se i dati della colonna `XMLTEXT` includono attributi per l'elemento radice, tali attributi non compaiono nello schema dei dati XML e il parser MSXML non convalida il frammento di documento XML risultante. Ad esempio  
   
 ```  
 SELECT 1 AS Tag,  

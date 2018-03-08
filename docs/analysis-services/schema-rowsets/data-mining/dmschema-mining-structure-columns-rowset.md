@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_STRUCTURE_COLUMNS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 187bba4f2a785eab9c1de4e076c323bcc4d561fc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 25a6ba694cad584a0c1d6e229ab1f029d288d11e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>Set di righe DMSCHEMA_MINING_STRUCTURE_COLUMNS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Vengono descritte le singole colonne di tutte le strutture di data mining distribuite in un server che esegue [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DMSCHEMA_MINING_STRUCTURE_COLUMNS** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
+|Nome colonna|Indicatore del tipo|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**STRUCTURE_CATALOG**|**DBTYPE_WSTR**||Nome del catalogo.|  
 |**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||Nome dello schema non qualificato. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]non supporta schemi, pertanto questa colonna è sempre **NULL**.|  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**||Valore predefinito della colonna. Un provider può esporre **DBCOLUMN_DEFAULTVALUE** ma non **DBCOLUMN_HASDEFAULT** (per le tabelle ISO) nel set di righe restituito da **IColumnsRowset::**.<br /><br /> Se il valore predefinito è **NULL**, **COLUMN_HASDEFAULT** è **TRUE** e **COLUMN_DEFAULT** colonna è un **NULL** valore.|  
 |**COLUMN_FLAGS**|**DBTYPE_UI4**||Maschera di bit che descrive le caratteristiche della colonna. Il **DBCOLUMNFLAGS** tipo enumerato specifica i bit nella maschera di bit. Questa colonna non può contenere un **NULL** valore. I valori validi includono:<br /><br /> **DBCOLUMNFLAGS_ISNULLABLE** (**0x20**)<br /><br /> **DBCOLUMNFLAGS_MAYBENULL** (**0x40**)<br /><br /> **DBCOLUMNFLAGS_ISLONG** (**0x80**)|  
 |**IS_NULLABLE**|**DBTYPE_BOOL**||Valore booleano che indica se questa colonna dispone di un valore predefinito.<br /><br /> **TRUE** se la colonna può contenere **NULL**; **FALSE**, in caso contrario.|  
-|**DATA_TYPE**|**DBTYPE_UI2**||Indicatore del tipo di dati della colonna. Esempio:<br /><br /> "**TABELLA**" = **DBTYPE_HCHAPTER**<br /><br /> "**TESTO**" = **DBTYPE_WCHAR**<br /><br /> "**LUNGO**" = **DBTYPE_I8**<br /><br /> "**DOPPIE**" = **DBTYPE_R8**<br /><br /> "**DATA**" = **DBTYPE_DATE**|  
+|**DATA_TYPE**|**DBTYPE_UI2**||Indicatore del tipo di dati della colonna. Ad esempio<br /><br /> "**TABELLA**" = **DBTYPE_HCHAPTER**<br /><br /> "**TESTO**" = **DBTYPE_WCHAR**<br /><br /> "**LUNGO**" = **DBTYPE_I8**<br /><br /> "**DOPPIE**" = **DBTYPE_R8**<br /><br /> "**DATA**" = **DBTYPE_DATE**|  
 |**TYPE_GUID**|**DBTYPE_GUID**||GUID del tipo di dati della colonna. I provider che non utilizzano GUID per identificare i tipi di dati restituiscono **NULL** in questa colonna.|  
 |**CHARACTER_MAXIMUM_LENGTH**|**DBTYPE_UI4**||Lunghezza massima possibile di un valore nella colonna. Per le colonne di tipo carattere, binario o bit, i valori possibili sono i seguenti:<br /><br /> Lunghezza massima della colonna in caratteri, byte o bit, rispettivamente, se la lunghezza è definita. Ad esempio, una colonna `CHAR(5)` in una tabella SQL dispone di una lunghezza massima di 5.<br /><br /> Lunghezza massima del tipo di dati in caratteri, byte o bit, rispettivamente, se la colonna non dispone di una lunghezza definita.<br /><br /> È zero (0) se né la colonna né il tipo di dati dispongono di una lunghezza massima definita.<br /><br /> **NULL** per tutti gli altri tipi di colonne.|  
 |**CHARACTER_OCTET_LENGTH**|**DBTYPE_UI4**||Lunghezza massima in ottetti (byte) della colonna, se la colonna è di tipo carattere o binario. Un valore pari a zero (0) indica che la colonna non dispone di una lunghezza massima. **NULL** per tutti gli altri tipi di colonne.|  
@@ -78,10 +76,10 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|Facoltativa.|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Facoltativa.|  
-|**NOME_STRUTTURA**|**DBTYPE_WSTR**|Facoltativa.|  
-|**COLUMN_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|Facoltativo.|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Facoltativo.|  
+|**NOME_STRUTTURA**|**DBTYPE_WSTR**|Facoltativo.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe dello schema di data mining](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

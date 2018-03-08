@@ -6,26 +6,28 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 10def0b3-9b09-4df9-b8aa-69516f7d7659
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 77321589a87230535502cc37a75bf09722abb66d
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 13bf00b9b1a196e0a83c7cca62a0504a5b3bcbcd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-and-r-deep-dive"></a>Visualizzare i dati di SQL Server usando R (SQL e R approfondimento)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo fa parte dell'esercitazione approfondimento di analisi scientifica dei dati, su come usare [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
@@ -69,7 +71,7 @@ Questa procedura dettagliata, utilizza il **rxHistogram** funzione per visualizz
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    Il **rxCube** funzione include un argomento facoltativo, *returnDataFrame* = **TRUE**, che è possibile utilizzare per convertire i risultati in un frame di dati direttamente. Ad esempio
+    Il **rxCube** funzione include un argomento facoltativo, *returnDataFrame* = **TRUE**, che è possibile utilizzare per convertire i risultati in un frame di dati direttamente. Esempio:
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        

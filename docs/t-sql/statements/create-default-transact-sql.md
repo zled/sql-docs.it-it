@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE_DEFAULT_TSQL
 - CREATE DEFAULT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - objects [SQL Server], default
 - default objects
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - objects [SQL Server], creating
 - DEFAULT definition
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc9282956afda2a41751dd57c2447da6314fb528
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: a51a1045532b9194586d197c6b1b537d795d1996
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,7 +91,7 @@ AS constant_expression [ ; ]
   
  Per rinominare un valore predefinito, utilizzare **sp_rename**. Per un report a un valore predefinito, utilizzare **sp_help**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire CREATE DEFAULT, un utente deve disporre come minimo dell'autorizzazione CREATE DEFAULT nel database corrente e dell'autorizzazione ALTER per lo schema in cui viene creato il valore predefinito.  
   
 ## <a name="examples"></a>Esempi  
@@ -97,7 +99,7 @@ AS constant_expression [ ; ]
 ### <a name="a-creating-a-simple-character-default"></a>A. Creazione di un semplice valore predefinito costituito da una stringa di caratteri  
  Nell'esempio seguente viene creato un valore predefinito costituito dalla stringa di caratteri `unknown`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DEFAULT phonedflt AS 'unknown';  
@@ -108,7 +110,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
   
  Dato che il valore predefinito `phonedflt` non esiste, l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente ha esito negativo. Questo esempio viene utilizzato solo a scopo illustrativo.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  

@@ -16,19 +16,19 @@ helpviewer_keywords:
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: 2c5e3f669cd2789676e334beedb4e8ee410c5cd6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Linee guida per operazioni di indice online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations
   
  Sebbene le operazioni online siano consigliabili, è opportuno valutare l'ambiente e i requisiti specifici, in base ai quali l'esecuzione delle operazioni sugli indici offline potrebbe essere la soluzione ottimale. In quest'ultimo caso gli utenti avrebbero un accesso limitato ai dati durante l'operazione, la quale però terminerebbe più rapidamente e utilizzerebbe meno risorse.  
   
- Nei computer multiprocessore che eseguono SQL Server 2016 le istruzioni per gli indici, analogamente ad altre query, possono usare più processori per eseguire le operazioni di analisi e ordinamento associate all'istruzione. È possibile utilizzare l'opzione dell'indice MAXDOP per controllare il numero di processori dedicati all'operazione di indice online. In questo modo è possibile bilanciare le risorse utilizzate dall'operazione sugli indici con quelle occupate dagli utenti simultanei. Per altre informazioni, vedere [Configurare operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md). Per altre informazioni sulle edizioni di SQL Server che supportano le operazioni indicizzate parallele, vedere [Funzionalità supportate dalle edizioni](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Nei computer multiprocessore che eseguono SQL Server 2016 le istruzioni per gli indici, analogamente ad altre query, possono usare più processori per eseguire le operazioni di analisi e ordinamento associate all'istruzione. È possibile utilizzare l'opzione dell'indice MAXDOP per controllare il numero di processori dedicati all'operazione di indice online. In questo modo è possibile bilanciare le risorse utilizzate dall'operazione sugli indici con quelle occupate dagli utenti simultanei. Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md). Per altre informazioni sulle edizioni di SQL Server che supportano le operazioni indicizzate parallele, vedere [Funzionalità supportate dalle edizioni](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Poiché al termine dell'esecuzione dell'operazione sugli indici viene mantenuto un blocco S o Sch-M, è necessario prestare particolare attenzione quando si esegue un'operazione sugli indici online all'interno di una transazione utente esplicita, ad esempio un blocco BEGIN TRANSACTION...COMMIT. Una tale operazione causa il mantenimento del blocco fino alla fine della transazione, impedendo quindi la concorrenza degli utenti.  
   
@@ -95,8 +95,7 @@ Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations
 ## <a name="resumable-index-rebuild-considerations"></a>Considerazioni sulla ricompilazione degli indici ripristinabili
 
 > [!NOTE]
-> Vedere [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
->
+> L'opzione dell'indice ripristinabile è valida per SQL Server (a partire da SQL Server 2017) e per il database SQL. Vedere [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 Per eseguire la ricompilazione di un indice online ripristinabile, attenersi alle seguenti linee guida:
 -   Gestione, pianificazione ed estensione delle finestre di manutenzione degli indici. È possibile sospendere e riavviare un'operazione di ricompilazione dell'indice più volte in base alle finestre di manutenzione.
@@ -108,7 +107,6 @@ Per eseguire la ricompilazione di un indice online ripristinabile, attenersi all
 
 > [!IMPORTANT]
 > Per la ricompilazione ripristinabile non è necessario tenere aperta una transazione con esecuzione prolungata ed è possibile eseguire il troncamento del log durante l'operazione ottimizzando la gestione dello spazio del log. Con la nuova progettazione è possibile mantenere i dati necessari in un database insieme a tutti i riferimenti richiesti per riavviare l'operazione ripristinabile.
->
 
 In generale non vi sono differenze di prestazioni tra la ricompilazione degli indici online ripristinabili e quella degli indici non ripristinabili. Quando si aggiorna un indice ripristinabile mentre un'operazione di ricompilazione di indice è in pausa:
 - Per i carichi di lavoro prevalentemente di lettura, l'impatto sulle prestazioni è trascurabile. 

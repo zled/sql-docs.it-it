@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,26 +23,27 @@ helpviewer_keywords:
 - indirect recursion [SQL Server]
 - nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c00fc71fb0d0bd5dadd986b14d140e1293bcafba
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: db111a07ce666d9b2cde477febe8680b45327c6b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-nested-triggers"></a>Creazione di trigger annidati
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Entrambi i trigger DML e DDL vengono annidati quando un trigger esegue un'operazione che ne avvia un altro. Tali operazioni possono quindi avviare altri trigger e così via. I trigger DML e DDL possono essere nidificati fino a un massimo di 32 livelli. Per gestire la nidificazione dei trigger AFTER, utilizzare l'opzione di configurazione del server **nested triggers** . I trigger INSTEAD OF (solo DML) possono essere nidificati indipendentemente da questa impostazione.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Entrambi i trigger DML e DDL vengono nidificati quando un trigger esegue un'operazione che ne avvia un altro. Tali operazioni possono quindi avviare altri trigger e così via. I trigger DML e DDL possono essere nidificati fino a un massimo di 32 livelli. Per gestire la nidificazione dei trigger AFTER, utilizzare l'opzione di configurazione del server **nested triggers** . I trigger INSTEAD OF (solo DML) possono essere nidificati indipendentemente da questa impostazione.  
   
 > [!NOTE]  
 >  Qualsiasi riferimento a codice gestito da un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] viene conteggiato come un unico livello rispetto al limite dei 32 livelli di nidificazione. I metodi richiamati da codice gestito non vengono inclusi nel conteggio per questo limite.  
   
  Se è consentito l'utilizzo di trigger nidificati e un trigger della catena avvia un ciclo infinito, il livello di nidificazione viene superato e il trigger viene interrotto.  
   
- È possibile utilizzare i trigger nidificati per eseguire funzioni di manutenzione, utili quali l'archiviazione di una copia di backup delle righe interessate da un trigger precedente. È ad esempio possibile creare un trigger su `PurchaseOrderDetail` per salvare una copia di backup delle righe di `PurchaseOrderDetail` eliminate dal trigger `delcascadetrig` . Se il trigger `delcascadetrig` è attivo, l'eliminazione di `PurchaseOrderID` 1965 dalla tabella `PurchaseOrderHeader` implica l'eliminazione della riga o delle righe corrispondenti da `PurchaseOrderDetail`. Per salvare i dati eliminati in un'altra tabella creata separatamente denominata `PurchaseOrderDetail` , creare un trigger DELETE su `del_save`. Esempio:  
+ È possibile utilizzare i trigger nidificati per eseguire funzioni di manutenzione, utili quali l'archiviazione di una copia di backup delle righe interessate da un trigger precedente. È ad esempio possibile creare un trigger su `PurchaseOrderDetail` per salvare una copia di backup delle righe di `PurchaseOrderDetail` eliminate dal trigger `delcascadetrig` . Se il trigger `delcascadetrig` è attivo, l'eliminazione di `PurchaseOrderID` 1965 dalla tabella `PurchaseOrderHeader` implica l'eliminazione della riga o delle righe corrispondenti da `PurchaseOrderDetail`. Per salvare i dati eliminati in un'altra tabella creata separatamente denominata `PurchaseOrderDetail` , creare un trigger DELETE su `del_save`. Ad esempio  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  

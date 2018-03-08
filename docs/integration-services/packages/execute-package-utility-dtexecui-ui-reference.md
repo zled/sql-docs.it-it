@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,18 +23,19 @@ f1_keywords:
 - sql13.dts.dtexecui.executionoptions.f1
 - sql13.dts.dtexecui.commandline.f1
 - sql13.dts.dtexecui.configuration.f1
-helpviewer_keywords: DTExecUI utility
+helpviewer_keywords:
+- DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b9491e2857cabef1c8aa15bdac1b6fd3628790c2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: de1484e04318c45057213226016379326e670304
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilità di esecuzione pacchetti (dtexecui.exe)
   Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tramite l'utilità è possibile eseguire i pacchetti archiviati in una delle tre posizioni seguenti: database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system. Questa interfaccia utente, che può essere avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure digitando **dtexecui** al prompt dei comandi, può essere usata in alternativa all'esecuzione di pacchetti usando lo strumento del prompt dei comandi **DTExec** .  
@@ -71,14 +73,14 @@ ms.lasthandoff: 11/20/2017
   
 |||  
 |-|-|  
-|Valore|Description|  
+|valore|Description|  
 |**SQL Server**|Selezionare questa opzione se il pacchetto si trova in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e immettere il nome utente e la password per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni nome utente e password aggiunge le opzioni **/USER** *nomeutente* e **/PASSWORD** *password* options to the comme prompt.|  
 |**File system**|Selezionare questa opzione se il pacchetto si trova nel file system.|  
 |**Archivio pacchetti SSIS**|Selezionare questa opzione se il pacchetto si trova nell'Archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
  Ad ognuna di queste impostazioni è associato il set di opzioni seguente.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -144,7 +146,7 @@ ms.lasthandoff: 11/20/2017
  **Rimuovi**  
  Selezionare un file di configurazione nell'elenco e quindi fare clic su **Rimuovi**.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -166,7 +168,7 @@ ms.lasthandoff: 11/20/2017
  **Rimuovi**  
  Selezionare un file di comando nella casella di testo e quindi rimuoverlo con il pulsante **Rimuovi** .  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -179,13 +181,13 @@ ms.lasthandoff: 11/20/2017
  **Gestione connessione**  
  Selezionare la casella di controllo corrispondente per rendere modificabile la colonna **Stringa di connessione** .  
   
- **Description**  
+ **Descrizione**  
  Consente di visualizzare una descrizione di ogni gestione connessione. Non è possibile modificare le descrizioni.  
   
  **Stringa di connessione**  
  Consente di modificare la stringa di connessione per una gestione connessione. Questo campo è modificabile solo quando è selezionata la casella di controllo **Gestione connessione** .  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -280,14 +282,14 @@ ms.lasthandoff: 11/20/2017
  **Ora di inizio e fine**  
  Selezionare questa opzione per segnalare l'ora di inizio e fine dell'esecuzione del pacchetto.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="logging-page"></a>Pagina Registrazione  
- Utilizzare la pagina **Registrazione** della finestra di dialogo **Utilità di esecuzione pacchetti** per rendere disponibili i provider di log per il pacchetto in fase di esecuzione. Specificare il tipo di provider di log del pacchetto e la stringa di connessione al log. Per ogni voce di provider di log, viene aggiunta un'opzione **/LOGGER***idclasse* al prompt dei comandi.  
+ Utilizzare la pagina **Registrazione** della finestra di dialogo **Utilità di esecuzione pacchetti** per rendere disponibili i provider di log per il pacchetto in fase di esecuzione. Specificare il tipo di provider di log del pacchetto e la stringa di connessione al log. Per ogni voce del provider di log, viene aggiunta un'opzione **/LOGGER***classid* al prompt dei comandi.  
   
 ### <a name="options"></a>Opzioni  
  **Provider di log**  
@@ -299,26 +301,26 @@ ms.lasthandoff: 11/20/2017
  **Rimuovi**  
  Selezionare un provider di log e fare clic su questo pulsante per rimuoverlo.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="set-values-page"></a>Pagina Imposta valori  
- Utilizzare la pagina **Imposta valori** della finestra di dialogo **Utilità di esecuzione pacchetti** per impostare i valori delle proprietà di pacchetti, file eseguibili, connessioni, variabili e provider di log specificando i percorsi delle proprietà e i valori di queste ultime. Ogni percorso aggiunge un'opzione **/SET***percorsoproprietà;valore* al prompt dei comandi.  
+ Utilizzare la pagina **Imposta valori** della finestra di dialogo **Utilità di esecuzione pacchetti** per impostare i valori delle proprietà di pacchetti, file eseguibili, connessioni, variabili e provider di log specificando i percorsi delle proprietà e i valori di queste ultime. Per ogni voce del percorso, viene aggiunta un'opzione **/SET***propertypath;value* al prompt dei comandi.  
   
 ### <a name="options"></a>Opzioni  
  **Percorso proprietà**  
  Consente di immettere il percorso della proprietà. La sintassi del percorso usa una barra rovesciata (\\) per indicare che l'elemento seguente è un contenitore, il punto (.) per indicare che l'elemento seguente è una proprietà e le parentesi per indicare un membro di una raccolta. Il membro può essere identificato tramite il relativo indice o nome. Ad esempio, il percorso della proprietà di una variabile di pacchetto è \Pacchetto.Variabili[Variabile].Valore.  
   
- **Valore**  
+ **Value**  
  Consente di immettere il valore della proprietà.  
   
  **Rimuovi**  
  Selezionare un percorso di proprietà e fare clic su questo pulsante per rimuoverla.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -349,7 +351,7 @@ ms.lasthandoff: 11/20/2017
  ID versione  
  Consente di specificare il numero di identificazione della versione.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -368,7 +370,7 @@ ms.lasthandoff: 11/20/2017
  **Command line**  
  Consente di visualizzare la riga di comando corrente, che risulta modificabile se si seleziona l'opzione per la modifica manuale della riga di comando.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  

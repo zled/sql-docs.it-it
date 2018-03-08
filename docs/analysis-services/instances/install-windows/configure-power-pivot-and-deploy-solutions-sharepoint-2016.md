@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6675b8338a54dca9dac4b842ec2d0f563058e1b8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Configurare PowerPivot e distribuire soluzioni (SharePoint 2016)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Questo argomento vengono descritte la distribuzione e la configurazione di miglioramenti di livello intermedio per la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] le caratteristiche in [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] inclusi [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] raccolta pianificazione aggiornamento dati, Dashboard di gestione e i provider di dati. Eseguire lo strumento di **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2016** per eseguire le operazioni seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Questo argomento descrive la distribuzione e la configurazione di miglioramenti di livello intermedio delle funzionalità di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] , tra cui la raccolta [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , la pianificazione dell'aggiornamento dei dati, il dashboard di gestione e i provider di dati. Eseguire lo strumento di **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2016** per eseguire le operazioni seguenti:  
   
 -   Distribuire i file di soluzione SharePoint.  
   
@@ -33,18 +34,6 @@ ms.lasthandoff: 12/08/2017
 -   Per informazioni sui servizi back-end e sull'installazione di un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , vedere [Installazione di Analisi Services in modalità Power Pivot](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
  Per informazioni sull'installazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per lo strumento di configurazione di SharePoint 2016, vedere [installare o disinstallare Power Pivot per Add-in SharePoint (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
-  
- In questo argomento sono incluse le sezioni seguenti:  
-  
- [Eseguire la configurazione di PowerPivot per SharePoint 2016](#bkmk_run_configuration_tool)  
-  
- [Verificare la configurazione di Power Pivot](#bkmk_verify_powerpivot)  
-  
- [Risolvere eventuali problemi](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Eseguire la configurazione di PowerPivot per SharePoint 2016  
  **Nota:** per completare i passaggi seguenti, è necessario essere un amministratore di farm. Se viene visualizzato un messaggio di errore simile al seguente,  
@@ -127,9 +116,9 @@ ms.lasthandoff: 12/08/2017
   
     -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Utilizzo dati di caricamento  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Utilizzo query  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] - Utilizzo query  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Utilizzo dati di scaricamento  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] - Utilizzo dati di scaricamento  
   
 4.  Verificare che l'opzione **Abilita raccolta dati integrità** sia selezionata.  
   

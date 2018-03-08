@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 863d9eb4f059fa46b0f8584af09718cb46dec859
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b0a27ce8b50f37c828c95ca9655b3d142d73d327
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Inclusione di indicatori e misuratori in un pannello del misuratore (Generatore report e SSRS)
   Il pannello del misuratore è il contenitore di livello superiore in cui sono presenti uno o più misuratori e indicatori. Gli indicatori possono essere incorporati nei misuratori o posizionati accanto a essi nel pannello del misuratore.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-11. Fare clic sull'indicatore. Viene visualizzato il riquadro **Dati misuratore** .  
+11. Fare clic sull'indicatore. Viene visualizzato il riquadro **Dati del misuratore** .  
   
 12. Nell'elenco a discesa **(Non specificato)** dell'area **Valori** fare clic sul campo di cui si vogliono visualizzare i valori come indicatore. In alternativa, trascinare il campo da utilizzare dal set di dati del report.  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 12/05/2017
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-11. Fare clic sull'indicatore. Viene visualizzato il riquadro **Dati misuratore** .  
+11. Fare clic sull'indicatore. Viene visualizzato il riquadro **Dati del misuratore** .  
   
 12. Nell'elenco a discesa **(Non specificato)** dell'area **Valori** fare clic sul campo di cui si vogliono visualizzare i valori come indicatore. In alternativa, trascinare il campo da utilizzare dal set di dati del report.  
   

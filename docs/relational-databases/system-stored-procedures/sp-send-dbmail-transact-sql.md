@@ -1,5 +1,5 @@
 ---
-title: sp_send_dbmail (Transact-SQL) | Documenti Microsoft
+title: sp_send_dbmail (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2016
 ms.prod: sql-non-specified
@@ -8,26 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sendmail_sp_TSQL
 - sendmail_sp
 - SP_SEND_DBMAIL_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_send_dbmail
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_send_dbmail
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
-caps.latest.revision: "72"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4001c0260cdd6f9f2f0b43db07445dcb77fb6c5d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7293e16e45c465fa2cfeda2d11888b4dc450d380
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +94,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  [  **@body=** ] **'***corpo***'**  
  Corpo del messaggio di posta elettronica. Il corpo del messaggio è di tipo **nvarchar (max)**, con un valore predefinito è NULL.  
   
- [  **@body_format=** ] **'***body_format***'**  
+ [ **@body_format=** ] **'***body_format***'**  
  Formato del corpo del messaggio. Il parametro è di tipo **varchar (20)**, con un valore predefinito è NULL. Se specificato, le intestazioni del messaggio in uscita vengono impostate in modo da indicare che per il corpo del messaggio è impostato il formato specificato. Il parametro può includere uno dei valori seguenti:  
   
 -   TEXT  
@@ -130,10 +133,10 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  [  **@query=** ] **'***query***'**  
  Query da eseguire. I risultati della query possono essere allegati come file o inclusi nel corpo del messaggio di posta elettronica. La query è di tipo **nvarchar (max)**e può contenere qualsiasi [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. Si noti che la query viene eseguita in una sessione separata, pertanto le variabili locali nello script che chiama **sp_send_dbmail** non sono disponibili per la query.  
   
- [  **@execute_query_database=** ] **'***execute_query_database***'**  
+ [ **@execute_query_database=** ] **'***execute_query_database***'**  
  Contesto del database in cui la stored procedure esegue la query. Il parametro è di tipo **sysname**, con un valore predefinito del database corrente. Questo parametro è applicabile solo se  **@query**  specificato.  
   
- [  **@attach_query_result_as_file=** ] *attach_query_result_as_file*  
+ [ **@attach_query_result_as_file=** ] *attach_query_result_as_file*  
  Specifica se il set di risultati della query viene restituito come file allegato. *attach_query_result_as_file* è di tipo **bit**, con un valore predefinito è 0.  
   
  Quando il valore è 0, i risultati della query vengono inclusi nel corpo del messaggio di posta elettronica, dopo il contenuto di  **@body**  parametro. Con il valore 1, i risultati vengono restituiti come allegato. Questo parametro è applicabile solo se  **@query**  specificato.  
@@ -141,7 +144,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  [  **@query_attachment_filename=** ] *query_attachment_filename*  
  Specifica il nome di file da utilizzare per il set di risultati dell'allegato query. *query_attachment_filename* è di tipo **nvarchar (255)**, con un valore predefinito è NULL. Questo parametro viene ignorato quando *attach_query_result* è 0. Quando *attach_query_result* è 1 e questo parametro è NULL, posta elettronica Database crea un nome file arbitrario.  
   
- [  **@query_result_header=** ] *query_result_header*  
+ [ **@query_result_header=** ] *query_result_header*  
  Specifica se includere le intestazioni di colonna nei risultati della query. Il valore di query_result_header è di tipo **bit**. Quando il valore è 1, i risultati della query contengono le intestazioni di colonna. Quando il valore è 0, i risultati della query non includono le intestazioni di colonna. Per impostazione predefinita questo parametro per **1**. Questo parametro è applicabile solo se  **@query**  specificato.  
   
  [  **@query_result_width**  =] *query_result_width*  
@@ -150,13 +153,13 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  [  **@query_result_separator=** ] **'***query_result_separator***'**  
  Carattere utilizzato per separare le colonne nell'output della query. Il separatore è di tipo **char (1)**. Il valore predefinito è ' ' (spazio).  
   
- [  **@exclude_query_output=** ] *exclude_query_output*  
+ [ **@exclude_query_output=** ] *exclude_query_output*  
  Specifica se restituire l'output dell'esecuzione della query nel messaggio di posta elettronica. **exclude_query_output** è di tipo bit e il valore predefinito è 0. Quando questo parametro è 0, l'esecuzione del **sp_send_dbmail** stored procedure stampa il messaggio restituito come risultato dell'esecuzione della query nella console. Quando questo parametro è 1, l'esecuzione del **sp_send_dbmail** stored procedure non viene stampato alcun dei messaggi di esecuzione di query nella console.  
   
  [  **@append_query_error=** ] *append_query_error*  
  Specifica se inviare il messaggio di posta elettronica quando la query specificata in restituisce un errore di  **@query**  argomento. **append_query_error** è **bit**, con un valore predefinito è 0. Quando questo parametro è 1, Posta elettronica database invia il messaggio di posta elettronica e include il messaggio di errore della query nel corpo del messaggio di posta elettronica. Quando questo parametro è 0, posta elettronica Database non invia il messaggio di posta elettronica e **sp_send_dbmail** termina con codice restituito 1, che indica un errore.  
   
- [  **@query_no_truncate=** ] *query_no_truncate*  
+ [ **@query_no_truncate=** ] *query_no_truncate*  
  Specifica se eseguire la query con l'opzione che consente di evitare il troncamento dei tipi di dati di grandi dimensioni di lunghezza variabile (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** **xml**, **testo**, **ntext**, **immagine**e tipi di dati definito dall'utente). Quando il parametro è impostato, i risultati della query non includono le intestazioni di colonna. Il *query_no_truncate* valore è di tipo **bit**. Quando il valore è 0 o viene omesso, la lunghezza delle colonne della query viene troncata a 256 caratteri. Quando il valore è 1, le colonne della query non vengono troncate. Il valore predefinito del parametro è 0.  
   
 > [!NOTE]  
@@ -197,7 +200,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  Quando si esegue **sp_send_dbmail** senza un contesto di transazione, posta elettronica Database viene avviato e viene eseguito il commit di una transazione implicita. Quando si esegue **sp_send_dbmail** all'interno di una transazione esistente, posta elettronica Database si basa su all'utente di eseguire il commit o il rollback delle modifiche. Posta elettronica database non avvia una transazione interna.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione **sp_send_dbmail** per impostazione predefinita a tutti i membri del **DatabaseMailUser** nel ruolo del database il **msdb** database. Tuttavia, quando l'utente che invia il messaggio non dispone dell'autorizzazione per utilizzare il profilo per la richiesta, **sp_send_dbmail** restituisce un errore e non invia il messaggio.  
   
 ## <a name="examples"></a>Esempi  

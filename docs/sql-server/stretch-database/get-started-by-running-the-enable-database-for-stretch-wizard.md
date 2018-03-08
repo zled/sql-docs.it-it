@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -25,21 +26,22 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9097c3213bf64185c24814156e38d10584a7c20c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 976561b457dc1eac740df5075bf0a02fd5a95a23
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Avviare la procedura guidata Abilitare il database per l'estensione
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
- Per configurare un database per la funzionalità Estensione database, eseguire la procedura guidata Abilitare il database per l'estensione.  Questo argomento illustra le informazioni da inserire e le opzioni disponibili nella procedura guidata.  
+
+ Per configurare un database per la funzionalità Estensione database, eseguire la procedura guidata Abilitare il database per l'estensione.  Questo articolo illustra le informazioni da inserire e le opzioni disponibili nella procedura guidata.  
   
  Per altre informazioni su Estensione database, vedere [Estensione database](../../sql-server/stretch-database/stretch-database.md). 
  
@@ -69,7 +71,7 @@ Le tabelle con un numero elevato di righe vengono visualizzate nella parte super
   
  ![Pagina Selezionare le tabelle della procedura guidata Estensione database](../../sql-server/stretch-database/media/stretch-wizard-2.png "Pagina Selezionare le tabelle della procedura guidata Estensione database")  
   
-|Colonna|Descrizione|  
+|colonna|Description|  
 |------------|-----------------|  
 |(nessun titolo)|Selezionare la casella di controllo in questa colonna per abilitare la tabella selezionata per l'estensione.|  
 |**Nome**|Specifica il nome della tabella nel database.|  
@@ -103,7 +105,7 @@ La funzione di filtro viene creata in SQL Server solo al termine della procedura
 
 ![Pagina Selezionare le tabelle dopo aver definito un predicato di filtro](../../sql-server/stretch-database/media/stretch-wizard-2b.png "Pagina Selezionare le tabelle dopo aver definito un predicato di filtro")
 
-Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe di cui eseguire la migrazione, effettuare una delle seguenti operazioni.  
+Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe di cui eseguire la migrazione, eseguire una di queste operazioni.  
   
 -   Uscire dalla procedura guidata ed eseguire l'istruzione ALTER TABLE per abilitare l'estensione per la tabella e specificare una funzione di filtro. Per altre informazioni, vedere [Enable Stretch Database for a table (Abilitare Estensione database per una tabella)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
   
@@ -161,7 +163,7 @@ Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe
   
  ![Pagina Credenziali protette della procedura guidata Estensione database](../../relational-databases/tables/media/stretch-wizard-6.png "Pagina Credenziali protette della procedura guidata Estensione database")  
   
- Per altre informazioni sulla chiave master del database, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) e [Creare una chiave master del database](../../relational-databases/security/encryption/create-a-database-master-key.md). Per altre informazioni sulle credenziali create dalla procedura guidata, vedere [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
+ Per altre informazioni sulla chiave master del database, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) e [Creazione della chiave master di un database](../../relational-databases/security/encryption/create-a-database-master-key.md). Per altre informazioni sulle credenziali create dalla procedura guidata, vedere [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
 ##  <a name="Network"></a> Selezionare l'indirizzo IP  
  Usare l'intervallo di indirizzi IP pubblici della subnet (consigliato) oppure l'indirizzo IP pubblico di SQL Server per creare una regola del firewall in Azure che consenta a SQL Server di comunicare con il server Azure remoto.  
@@ -184,7 +186,7 @@ Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe
   
 ##  <a name="KnownIssues"></a> Risoluzione dei problemi relativi alla procedura guidata  
  **La procedura guidata Abilitare il database per l'estensione non ha esito positivo.**  
- Se Estensione database non è ancora abilitata a livello di server e se si esegue la procedura guidata senza le autorizzazioni di amministratore di sistema per abilitarlo, la procedura guidata avrà esito negativo. Chiedere all'amministratore di sistema di abilitare Estensione database nell'istanza del server locale e quindi eseguire nuovamente la procedura guidata. Per ulteriori informazioni, vedere [Prerequisito: autorizzazioni per abilitare Stretch Database nel server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
+ Se Estensione database non è ancora abilitata a livello di server e se si esegue la procedura guidata senza le autorizzazioni di amministratore di sistema per abilitarlo, la procedura guidata avrà esito negativo. Chiedere all'amministratore di sistema di abilitare Estensione database nell'istanza del server locale e quindi eseguire nuovamente la procedura guidata. Per ulteriori informazioni, vedere [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Abilitare tabelle aggiuntive per Estensione database. Monitorare la migrazione dei dati e gestire tabelle e database abilitati per l'estensione.  

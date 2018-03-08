@@ -8,7 +8,8 @@ ms.service:
 ms.component: statistics
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-statistics
+ms.technology:
+- dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f069aa174a9ee4c8e5f7a52fcad09fa709b14496
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-statistics"></a>Creare statistiche
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile creare statistiche di ottimizzazione query per una o più colonne di una tabella o di una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per la maggior parte delle query, tramite Query Optimizer vengono già generate le statistiche necessarie per un piano di query di alta qualità, ma in alcuni casi è necessario creare statistiche aggiuntive.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+È possibile creare statistiche di ottimizzazione delle query per una o più colonne di una tabella o una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per la maggior parte delle query, tramite Query Optimizer vengono già generate le statistiche necessarie per un piano di query di alta qualità, ma in alcuni casi è necessario creare statistiche aggiuntive.  
   
  **Contenuto dell'argomento**  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Creare statistiche tramite:**  
   
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  L'utente deve essere il proprietario della tabella o della vista indicizzata o un membro di uno dei seguenti ruoli: ruolo predefinito del server **sysadmin** , ruolo predefinito del database **db_owner** o ruolo predefinito del database **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -75,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Fare clic con il pulsante destro del mouse sulla cartella **Statistiche** e scegliere **Nuove statistiche**.  
   
-     Nella pagina **Generale** della finestra di dialogo **Nuove statistiche per Tabella***table_name* vengono visualizzate le proprietà seguenti.  
+     Nella pagina **Generale** della finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* vengono visualizzate le proprietà seguenti.  
   
      **Nome tabella**  
      Consente di visualizzare il nome della tabella descritta dalle statistiche.  
@@ -119,12 +121,12 @@ ms.lasthandoff: 11/17/2017
      **Aggiorna statistiche per le colonne selezionate**  
      Selezionare questa opzione per aggiornare le statistiche alla chiusura della finestra di dialogo.  
   
-     Nella pagina **Filtro** della finestra di dialogo **Nuove statistiche per Tabella***table_name* viene visualizzata la proprietà seguente.  
+     Nella pagina **Filtro** della finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* viene visualizzata la proprietà seguente.  
   
      **Espressione filtro**  
-     Specifica le righe di dati da includere nelle statistiche filtrate. Ad esempio, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Specifica le righe di dati da includere nelle statistiche filtrate. Ad esempio, usare `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Nella pagina **Generale***della finestra di dialogo* Nuove statistiche per Tabella **table_name** fare clic su **Aggiungi**.  
+5.  Nella finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* nella pagina **Generale** fare clic su **Aggiungi**.  
   
      Nella finestra di dialogo **Seleziona colonne** vengono visualizzate le proprietà seguenti. Queste informazioni sono di sola lettura.  
   
@@ -145,9 +147,9 @@ ms.lasthandoff: 11/17/2017
   
 6.  Nella finestra di dialogo **Seleziona colonne** selezionare le caselle di controllo per tutte le colonne per cui si desidera creare una statistica e quindi fare clic su **OK**.  
   
-7.  Nella finestra di dialogo **Nuove statistiche per Tabella***table_name* fare clic su **OK**.  
+7.  Nella finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Per creare statistiche  
   
@@ -155,7 +157,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;   

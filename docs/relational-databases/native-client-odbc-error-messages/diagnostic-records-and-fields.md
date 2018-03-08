@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-error-messages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - status information [ODBC]
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4f1f7c5f8eb78ce45d380cc337ca0ab3c6796d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b2c800550b992735c0af6854a83d5ea28a2c597
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="diagnostic-records-and-fields"></a>Campi e record di diagnostica
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  I campi dei record di stato contengono informazioni su errori o avvisi specifici restituiti da Gestione driver ODBC, dal driver o dall'origine dati, quali SQLSTATE, il numero dell'errore nativo, il messaggio di diagnostica, il numero di colonna e il numero di riga. I record di stato vengono creati solo se la funzione restituisce SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA o SQL_STILL_EXECUTING. Per un elenco completo dei campi di record di stato, vedere **SQLGetDiagField**.  
   
- **SQLGetDiagRec** recupera un singolo record di diagnostica insieme ai relativi SQLSTATE ODBC, numero di errore nativo e i campi dei messaggi di diagnostica. Questa funzionalità è simile a ODBC 2. *x***SQLError** (funzione). La funzione di gestione degli errori più semplice in ODBC 3. *x* consiste nel chiamare ripetutamente **SQLGetDiagRec** a partire dal *RecNumber* parametro impostato su 1 e l'incremento di *RecNumber* di 1 fino a **SQLGetDiagRec** restituisce SQL_NO_DATA. Ciò equivale a una ODBC 2. *x* applicazione che chiama **SQLError** fino a quando restituisce SQL_NO_DATA_FOUND.  
+ **SQLGetDiagRec** recupera un singolo record di diagnostica insieme ai relativi SQLSTATE ODBC, numero di errore nativo e i campi dei messaggi di diagnostica. Questa funzionalità è simile a ODBC 2. *x * * * SQLError** (funzione). La funzione di gestione degli errori più semplice in ODBC 3. *x* consiste nel chiamare ripetutamente **SQLGetDiagRec** a partire dal *RecNumber* parametro impostato su 1 e l'incremento di *RecNumber* di 1 fino a **SQLGetDiagRec** restituisce SQL_NO_DATA. Ciò equivale a una ODBC 2. *x* applicazione che chiama **SQLError** fino a quando restituisce SQL_NO_DATA_FOUND.  
   
  ODBC 3. *x* supporta molte più informazioni di diagnostica di ODBC 2. *x*. Queste informazioni vengono archiviate in altri campi di record di diagnostica recuperati tramite **SQLGetDiagField**.  
   

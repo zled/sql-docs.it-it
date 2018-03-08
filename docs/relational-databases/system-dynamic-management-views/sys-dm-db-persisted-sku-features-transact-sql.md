@@ -1,5 +1,5 @@
 ---
-title: db_persisted_sku_features (Transact-SQL) | Documenti Microsoft
+title: sys.dm_db_persisted_sku_features (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_persisted_sku_features
 - dm_db_persisted_sku_features_TSQL
 - dm_db_persisted_sku_features
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - editions [SQL Server], feature restrictions
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6108de273aedd3808a1941da5c152c6c774e5804
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c0af6dc4a6c8031be8a33a44d2c00265d5c58ed0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |feature_name|**sysname**|Nome esterno della funzionalità abilitata nel database ma non supportata in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa funzionalità deve essere rimossa prima di poter eseguire la migrazione del database in tutte le edizioni disponibili di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |feature_id|**int**|ID funzionalità associato alla funzionalità. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il database.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -68,14 +70,14 @@ ms.lasthandoff: 11/17/2017
   
 -   **Il partizionamento.** Indica che il database contiene tabelle partizionate, indici partizionati, schemi di partizione o funzioni di partizione. Per consentire di spostare un database in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diversa da Enterprise o Developer, non è sufficiente modificare la tabella affinché sia inclusa in una singola partizione, ma è necessario rimuovere la tabella partizionata. Se la tabella contiene dati, utilizzare SWITCH PARTITION per convertire ogni partizione in una tabella non partizionata. Eliminare quindi la tabella partizionata, lo schema di partizione e la funzione di partizione.  
   
--   **TransparentDataEncryption.** Indica che un database viene crittografato utilizzando Transparent Data Encryption. Per rimuovere Transparent Data Encryption, utilizzare l'istruzione ALTER DATABASE. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+-   **TransparentDataEncryption.** Indica che un database viene crittografato utilizzando Transparent Data Encryption. Per rimuovere Transparent Data Encryption, utilizzare l'istruzione ALTER DATABASE. Per altre informazioni, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
 > A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1, queste funzionalità sono disponibili in più [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizioni e non limitati solo a Enterprise o Developer Edition.
 
  Per determinare se in un database sono in uso funzionalità disponibili solo in edizioni specifiche, eseguire l'istruzione seguente nel database:  
   
-```t-sql  
+```sql  
 SELECT feature_name FROM sys.dm_db_persisted_sku_features;  
 GO  
 ```  

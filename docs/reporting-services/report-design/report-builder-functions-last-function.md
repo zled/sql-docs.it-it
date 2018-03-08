@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c78b4bd43eb810354cdcff6bcfd243315e46b947
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 87a8b6d568b6c752e3cdd4b166479e08715bd297
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---last-function"></a>Funzioni di Generatore report - Funzione Last
   Restituisce l'ultimo valore nell'ambito specificato dell'espressione specificata.  
@@ -39,7 +37,7 @@ Last(expression, scope)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *espressione*  
+ *expression*  
  (**Variant** o **Binary**) Espressione su cui eseguire l'aggregazione, ad esempio `=Fields!Fieldname.Value`.  
   
  *ambito*  
@@ -48,7 +46,7 @@ Last(expression, scope)
 ## <a name="return-type"></a>Tipo restituito  
  Determinato dal tipo di espressione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La funzione **Last** restituisce il valore finale di un set di dati dopo l'applicazione di tutti i criteri di ordinamento e di filtro all'ambito specificato.  
   
  La funzione **Last** non può essere usata nelle espressioni di filtro di gruppo con altri ambiti, ad eccezione dell'ambito corrente (predefinito).  

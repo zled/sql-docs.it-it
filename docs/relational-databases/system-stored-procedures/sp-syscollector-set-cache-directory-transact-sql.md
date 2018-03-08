@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_set_cache_directory (Transact-SQL) | Documenti Microsoft
+title: sp_syscollector_set_cache_directory (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_cache_directory_TSQL
 - sp_syscollector_set_cache_directory
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c21066f81db2e229ac66ea350a9c369174eaa4fb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 504a7b7c769910fafa8b598c5a3f20714a50dcd6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +47,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@cache_directory =** ] **'***cache_directory***'**  
+ [ **@cache_directory =** ] **'***cache_directory***'**  
  Directory nel file system in cui i dati raccolti vengono archiviati temporaneamente. *cache_directory* è **nvarchar (255)**, con un valore predefinito null. Se non viene specificato alcun valore, viene utilizzata la directory temporanea predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -56,13 +58,13 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
   
  Nel momento in cui sp_syscollector_set_cache_directory viene eseguita la directory specificata non deve essere esistere. I dati tuttavia non possono essere memorizzati nella cache né caricati in modo corretto fino a quando la directory non viene creata. È consigliabile pertanto creare la directory prima di eseguire questa stored procedure.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene disabilitato l'agente di raccolta dati, imposta la directory della cache per l'agente di raccolta dati per `D:\tempdata`e quindi Abilita l'agente di raccolta dati.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXECUTE dbo.sp_syscollector_disable_collector;  

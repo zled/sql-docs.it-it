@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: "41"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8458127daae58d63376f80dc1b67302928f9f943
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1177b4cf7db3d55e839608f45fb036ae95e7baf5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Vista ExecutionLog ed ExecutionLog3 del server di report
   Il log di esecuzione del server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]include informazioni sui report eseguiti in uno o più server in una distribuzione con scalabilità orizzontale in modalità nativa o in una farm di SharePoint. Il log consente di conoscere la frequenza con cui un report viene richiesto, i formati di output più usati e i millisecondi dedicati a ogni fase dell'elaborazione. Nel log, inoltre, sono contenute informazioni sul tempo impiegato per l'esecuzione di una query del set di dati di un report e su quello speso per l'elaborazione dei dati. Se si è un amministratore del server di report, è possibile esaminare le informazioni sul log, identificare le attività con esecuzione prolungata e inviare suggerimenti agli autori del report sulle aree del report, set di dati o elaborazione, che potrebbero essere migliorate.  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  Selezionare **Abilita registrazione di esecuzione** nella sezione **Registrazione** .  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
  **Per abilitare la registrazione dettagliata:**  
   
@@ -116,7 +114,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  Nella tabella seguente vengono descritti i dati acquisiti nel log di esecuzione del report:  
   
-|Colonna|Description|  
+|colonna|Description|  
 |------------|-----------------|  
 |InstanceName|Nome dell'istanza del server di report tramite cui è stata gestita la richiesta. Se nell'ambiente è disponibile più di un server di report, è possibile analizzare la distribuzione di InstanceName per monitorare e determinare se tramite il servizio di bilanciamento del carico di rete vengono distribuite richieste attraverso i server di report come previsto.|  
 |ItemPath|Percorso in cui viene archiviato un report o un elemento del report.|  
@@ -125,7 +123,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RequestType|I valori possibili sono:<br /><br /> Interattiva<br /><br /> Sottoscrizione<br /><br /> <br /><br /> L'analisi dei dati del log filtrati in base RequestType=Subscription e ordinati per TimeStart può rivelare periodi di utilizzo eccessivo della sottoscrizione ed è pertanto necessario modificare alcune delle sottoscrizioni del report a un'ora diversa.|  
 |Formato|Formato di rendering.|  
 |Parametri|Valori dei parametri usati per l'esecuzione del report.|  
-|ItemAction|I valori possibili sono:<br /><br /> Render<br /><br /> Sort<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
+|ItemAction|I valori possibili sono:<br /><br /> Render<br /><br /> Ordina<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
 |TimeStart|Ora di inizio e ora dell'arresto, che indicano la durata dell'elaborazione del report.|  
 |TimeEnd||  
 |TimeDataRetrieval|Numero di millisecondi impiegati per il recupero dei dati.|  
@@ -331,7 +329,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  Nella tabella seguente vengono descritti i dati acquisiti nel log di esecuzione del report:  
   
-|Colonna|Description|  
+|colonna|Description|  
 |------------|-----------------|  
 |InstanceName|Nome dell'istanza del server di report tramite cui è stata gestita la richiesta.|  
 |ReportPath|Struttura del percorso del report.  Per un report denominato "test", ad esempio, che si trova nella cartella radice in Gestione report, ReportPath sarà "/test".<br /><br /> Per un report denominato "test" salvato nella cartella radice "samples" in Gestione report, ReportPath sarà "/Samples".|  
@@ -363,7 +361,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  Nella tabella seguente vengono descritti i dati acquisiti nel log di esecuzione del report:  
   
-|Colonna|Description|  
+|colonna|Description|  
 |------------|-----------------|  
 |InstanceName|Nome dell'istanza del server di report tramite cui è stata gestita la richiesta.|  
 |ReportID|Identificatore del report.|  

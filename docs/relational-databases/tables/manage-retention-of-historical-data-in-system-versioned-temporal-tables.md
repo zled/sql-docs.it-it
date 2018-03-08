@@ -15,13 +15,13 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: "23"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42d859148c12bcc83c3f6961b69385a390431f20
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41c64af6ffe805d6b0b92ffde0c7057a7cd2abca
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  Dopo avere determinato il periodo di conservazione dei dati, è necessario sviluppare un piano per la gestione dei dati cronologici, per la modalità e la posizione di archiviazione dei dati cronologici e per l'eliminazione dei dati cronologici precedenti ai requisiti di conservazione. Per la gestione dei dati cronologici nella tabella di cronologia temporale sono disponibili i quattro approcci seguenti:  
   
--   [Estensione database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
+-   [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
   
 -   [Partizionamento delle tabelle](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
      ![Selezione della tabella di cronologia nella pagina Selezione tabelle](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selezione della tabella di cronologia nella pagina Selezione tabelle")  
   
-3.  Nella finestra **Configura Azure** specificare le proprie credenziali di accesso. Accedere a Microsoft Azure o iscriversi per ottenere un account. Selezionare la sottoscrizione da usare e l'area di Azure. Creare quindi un nuovo server o selezionare un server esistente. Fare clic su **Avanti**.  
+3.  Nella finestra **Configura Azure** specificare le proprie credenziali di accesso. Accedere a Microsoft Azure o iscriversi per ottenere un account. Selezionare la sottoscrizione da usare e l'area di Azure. Creare quindi un nuovo server o selezionare un server esistente. Scegliere **Avanti**.  
   
      ![Creare un nuovo server di Azure - Procedura guidata Estensione database](../../relational-databases/tables/media/stretch-wizard-4.png "Creare un nuovo server di Azure - Procedura guidata Estensione database")  
   

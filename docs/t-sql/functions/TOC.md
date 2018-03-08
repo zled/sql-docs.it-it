@@ -219,7 +219,7 @@
 ## [OPENROWSET](openrowset-transact-sql.md)  
 ## [OPENXML](openxml-transact-sql.md)  
 
-# [Sicurezza](security-functions-transact-sql.md)  
+# [Security](security-functions-transact-sql.md)  
 ## [CERTENCODED](certencoded-transact-sql.md)  
 ## [CERTPRIVATEKEY](certprivatekey-transact-sql.md)  
 ## [CURRENT_USER](current-user-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: DBCC DROPCLEANBUFFERS (Transact-SQL) | Documenti Microsoft
+title: DBCC DROPCLEANBUFFERS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_DROPCLEANBUFFERS_TSQL
 - DROPCLEANBUFFERS_TSQL
 - DBCC DROPCLEANBUFFERS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - clean buffers
 - cold buffer cache
@@ -25,21 +27,21 @@ helpviewer_keywords:
 - removing buffers
 - DBCC DROPCLEANBUFFERS statement
 ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b10e1d76e20fdb8859cb83cbb65d984b49b21c52
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 94830ffc100d0be451d34055a645e124a58325b7
+ms.sourcegitcommit: 03021482208259e6c67599b47df23fbbe8f3a393
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-Rimuove tutti i buffer vuoti dal pool di buffer e oggetti columnstore dal pool di oggetti dell'archivio colonne.
+Rimuove tutti i buffer vuoti dal pool di buffer e gli oggetti columnstore dal pool di oggetti columnstore.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,7 +51,7 @@ Sintassi per SQL Server:
 ```sql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
-Sintassi per il Warehouse SQL Azure e Parallel Data Warehouse:
+Sintassi per Azure SQL Warehouse e Parallel Data Warehouse:
 
 ```sql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
@@ -57,26 +59,26 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
   
 ## <a name="arguments"></a>Argomenti  
  WITH NO_INFOMSGS  
- Disattiva tutti i messaggi informativi. Messaggi informativi vengono soppressi sempre su [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Disattiva tutti i messaggi informativi. I messaggi informativi vengono soppressi sempre in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
  COMPUTE  
- Cancellare la cache dei piani di query da ogni nodo di calcolo.  
+ Cancellare la cache dei dati in memoria da ogni nodo di calcolo.  
   
  ALL  
- Cancellare la cache dei piani di query da ogni nodo di calcolo e dal nodo di controllo. Questo è il valore predefinito se non si specifica un valore.  
+ Cancellare la cache dei dati in memoria da ogni nodo di calcolo e dal nodo di controllo. Si tratta dell'impostazione predefinita se non viene specificato alcun valore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 Utilizzare DBCC DROPCLEANBUFFERS per testare le query con una cache dei buffer "a freddo" senza arrestare e riavviare il server.
-Per eliminare i buffer vuoti tra gli oggetti di pool e columnstore buffer dal pool di oggetti di columnstore, utilizzare innanzitutto CHECKPOINT per produrre una cache buffer a freddo. In questo modo tutte le pagine dirty del database corrente verranno scritte su disco e i buffer verranno svuotati. A questo punto sarà possibile eseguire il comando DBCC DROPCLEANBUFFERS per rimuovere tutti i buffer dal pool dei buffer.
+Per eliminare i buffer vuoti dal pool dei buffer e gli oggetti columnstore dal pool di oggetti columnstore, usare innanzitutto CHECKPOINT per creare una cache dei buffer a freddo. In questo modo tutte le pagine dirty del database corrente verranno scritte su disco e i buffer verranno svuotati. A questo punto sarà possibile eseguire il comando DBCC DROPCLEANBUFFERS per rimuovere tutti i buffer dal pool dei buffer.
   
 ## <a name="result-sets"></a>Set di risultati  
-DBCC DROPCLEANBUFFERS su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce:
+DBCC DROPCLEANBUFFERS in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce:
   
 ```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 
 Si applica a: SQL Server, Parallel Data Warehouse 
 
@@ -84,7 +86,7 @@ Si applica a: SQL Server, Parallel Data Warehouse
 
 Si applica a: Azure SQL Data Warehouse
 
-- Richiede l'appartenenza al ruolo predefinito del server del database DB_OWNER.  
+- Richiede l'appartenenza al ruolo predefinito del server DB_OWNER.  
   
 ## <a name="see-also"></a>Vedere anche  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

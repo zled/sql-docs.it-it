@@ -8,22 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c3d31b0da5f07000eb8f0f441e51a15aadad011
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35472bddf5b145c89a8d94a32cbb030773aed3a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Guida procedurale del servizio Change Data Capture Service per Oracle di Attunity
+# <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Guida procedurale del servizio Change Data Capture per Oracle di Attunity
   In questa sezione viene illustrato come eseguire le attività nella console di configurazione del servizio CDC.  
   
 ## <a name="learn-how-to-use-the-cdc-service-for-oracle-service-configuration-ui"></a>Informazioni sull'utilizzo del servizio CDC per l'interfaccia utente di configurazione del servizio Oracle  

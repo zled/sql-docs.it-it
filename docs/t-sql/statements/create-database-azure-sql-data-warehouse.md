@@ -1,27 +1,29 @@
 ---
-title: CREARE DATABASE (SQL Azure Data Warehouse) | Documenti Microsoft
+title: CREATE DATABASE (Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 02/14/20178
 ms.prod: 
 ms.prod_service: sql-data-warehouse
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: 3a802dc74793ef79ca35b177b4416d9464a8c34f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="create-database-azure-sql-data-warehouse"></a>CREARE DATABASE (SQL Azure Data Warehouse)
+# <a name="create-database-azure-sql-data-warehouse"></a>CREATE DATABASE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Crea un nuovo database.  
@@ -50,58 +52,58 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## <a name="arguments"></a>Argomenti  
 *database_name*  
-Nome del nuovo database. Questo nome deve essere univoco in SQL server, che possono ospitare entrambi [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database e rispettare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regole per gli identificatori. Per ulteriori informazioni, vedere [identificatori](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+Nome del nuovo database. Questo nome deve essere univoco in SQL Server, che può ospitare sia database [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sia database [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Deve anche rispettare le regole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
-*collation_name*  
-Specifica le regole di confronto predefinite per il database. È possibile usare nomi di regole di confronto di Windows o SQL. Se non specificato, il database vengono assegnate le regole di confronto predefinito, ovvero SQL_Latin1_General_CP1_CI_AS.  
+*nome_regole_di_confronto*  
+Specifica le regole di confronto predefinite per il database. È possibile usare nomi di regole di confronto di Windows o SQL. Se non vengono specificate, al database vengono assegnate le regole di confronto predefinite, ovvero SQL_Latin1_General_CP1_CI_AS.  
   
-Per ulteriori informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
   
-*EDIZIONE*  
-Specifica il livello del servizio del database. Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] utilizzare 'datawarehouse'.  
+*EDITION*  
+Specifica il livello del servizio del database. Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usare 'datawarehouse'.  
   
 *MAXSIZE*  
-Il valore predefinito è 10.240 GB (10 TB).  
+Il valore predefinito è 245.760 GB (240 TB).  
 
-**Si applica a:** ottimizzato per il livello di prestazioni di elasticità
+**Si applica a:** livello di prestazioni Ottimizzato per l'elasticità
 
-La dimensione massima consentita per il database. Il database non può aumentare oltre MAXSIZE. 
+Dimensioni massime consentite per il database. Le dimensioni del database non possono superare il valore di MAXSIZE. 
 
-**Si applica a:** ottimizzato per il livello di prestazioni di calcolo
+**Si applica a:** livello di prestazioni Ottimizzato per il calcolo
 
-La dimensione massima consentita per i dati del rowstore nel database. Dati archiviati in tabelle rowstore, deltastore di un indice columnstore o un indice non cluster in un indice columnstore cluster non possono superare MAXSIZE.  I dati compattati nel formato columnstore non dispone di un limite di dimensione e non è influenzati dal valore MAXSIZE.
+Dimensioni massime consentite per i dati rowstore nel database. Le dimensioni dei dati archiviati nelle tabelle rowstore, nel deltastore di un indice columnstore o in un indice non cluster in un indice columnstore cluster non possono superare MAXSIZE.  I dati compressi in formato columnstore non hanno un limite di dimensioni e non sono limitati dal valore MAXSIZE.
   
 SERVICE_OBJECTIVE  
-Specifica il livello di prestazioni. Per ulteriori informazioni su obiettivi di servizio per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [livelli di prestazioni](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
+Specifica il livello di prestazioni. Per altre informazioni sugli obiettivi di servizio per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [Livelli di prestazioni](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
-Utilizzare [DATABASEPROPERTYEX &#40; Transact-SQL &#41; ](../../t-sql/functions/databasepropertyex-transact-sql.md) per visualizzare le proprietà del database.  
+Usare [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) per visualizzare le proprietà del database.  
   
-Utilizzare [ALTER DATABASE &#40; Azure SQL Data Warehouse &#41; ](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) per modificare le dimensioni massime, o valori obiettivo di servizio in un secondo momento.   
+Usare [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) per modificare le dimensioni massime o i valori degli obiettivi di servizio in un secondo momento.   
 
-SQL Data Warehouse è impostato su 130 COMPATIBILITY_LEVEL e non può essere modificato. Per ulteriori informazioni, vedere [migliorate le prestazioni delle Query con 130 livello di compatibilità in Database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
+SQL Data Warehouse è impostato su COMPATIBILITY_LEVEL 130 e non può essere modificato. Per altri dettagli, vedere [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Prestazioni di query migliorate con Compatibility Level 130 nel database SQL di Azure).
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Autorizzazioni necessarie:  
   
--   Server livello principale account di accesso, creato dal processo di provisioning, o  
+-   Accesso principale di livello server (creato dal processo di provisioning) oppure  
   
--   Membro del `dbmanager` ruolo del database.  
+-   Membro del ruolo del database `dbmanager`.  
   
 ## <a name="error-handling"></a>Gestione degli errori  
-Se le dimensioni del database raggiungono il valore MAXSIZE verrà visualizzato il codice di errore 40544. In questo caso, è possibile inserire e aggiornare i dati o creare nuovi oggetti (ad esempio tabelle, stored procedure, viste e funzioni). È possibile comunque leggere ed eliminare i dati, troncare tabelle, eliminare tabelle e indici e ricompilare gli indici. È quindi possibile aggiornare MAXSIZE a un valore maggiore delle dimensioni correnti del database o eliminare alcuni dati per liberare spazio di archiviazione. Potrebbe verificarsi un ritardo di quindici minuti prima di poter inserire nuovi dati.  
+Se le dimensioni del database raggiungono il valore MAXSIZE, viene visualizzato il codice di errore 40544. In questo caso non è possibile inserire e aggiornare dati, né creare nuovi oggetti quali tabelle, stored procedure, viste e funzioni. È ancora possibile leggere ed eliminare dati, troncare tabelle, eliminare tabelle e indici e ricompilare indici. È quindi possibile aggiornare MAXSIZE a un valore maggiore delle dimensioni correnti del database o eliminare alcuni dati per liberare spazio di archiviazione. Potrebbe verificarsi un ritardo di quindici minuti prima di poter inserire nuovi dati.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
 È necessario essere connessi al database master per creare un nuovo database.  
   
 L'istruzione `CREATE DATABASE` deve essere l'unica istruzione in un batch [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-È possibile modificare le regole di confronto del database dopo la creazione del database.   
+Non è possibile modificare le regole di confronto del database dopo la creazione del database stesso.   
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>Esempi:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
   
 ### <a name="a-simple-example"></a>A. Esempio semplice  
-Un esempio semplice per la creazione di un database del data warehouse. Verrà creato il database con dimensioni massime più piccolo che è la potenza di calcolo più piccolo che è DW100 GB 10240 e regole di confronto predefinite, ovvero SQL_Latin1_General_CP1_CI_AS.  
+Esempio semplice per la creazione di un database del data warehouse. Crea il database con le dimensioni massime più ridotte, ovvero 10240 GB, le regole di confronto predefinite, ovvero SQL_Latin1_General_CP1_CI_AS e la potenza di elaborazione più ridotta, pari a DW100.  
   
 ```  
 CREATE DATABASE TestDW  
@@ -109,7 +111,7 @@ CREATE DATABASE TestDW
 ```  
   
 ### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>B. Creare un database del data warehouse con tutte le opzioni  
-Un esempio di creazione di un un data warehouse di 10 TB utilizzando tutte le opzioni.  
+Esempio di creazione di un data warehouse di 10 TB usando tutte le opzioni.  
   
 ```  
 CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS  
@@ -117,8 +119,8 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[ALTER DATABASE &#40; Azure SQL Data Warehouse &#40; ](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) 
- [Crea una tabella &#40; Azure SQL Data Warehouse &#41; ](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)  
- [DROP DATABASE &#40; Transact-SQL &#40;](../../t-sql/statements/drop-database-transact-sql.md) 
+[ALTER DATABASE &#40;Azure SQL Data Warehouse&#40;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
+[CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) 
+[DROP DATABASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
   
 

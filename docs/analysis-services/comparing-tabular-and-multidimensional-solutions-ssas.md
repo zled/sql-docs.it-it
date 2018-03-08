@@ -5,29 +5,28 @@ ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Confronto tra soluzioni tabulari e multidimensionali
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services fornisce diversi approcci per la creazione di business intelligence semantic model: tabulare, multidimensionale e PowerPivot per SharePoint.
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  SQL Server Analysis Services fornisce diversi approcci per la creazione di business intelligence semantic model: tabulare, multidimensionale e PowerPivot per SharePoint.
   
  La disponibilità di più approcci consente esperienze di modellazione commisurate ai diversi requisiti di aziende e utenti. L'approccio multidimensionale è una tecnologia avanzata basata su standard aperti, adottato da numerosi fornitori di software di Business Intelligence, ma può essere difficile da gestire. L'approccio tabulare offre una modellazione relazionale che molti sviluppatori trovano più intuitiva. PowerPivot è ancora più semplice, poiché offre una modellazione dei dati visiva in Excel, con supporto server tramite SharePoint.  
   
@@ -60,23 +59,23 @@ ms.lasthandoff: 12/08/2017
 |||| 
 |-|-|-|
 ||Multidimensionale|Tabella|
-|Azioni|Sì|No|
-|Aggregations|Sì|No|
-|Colonna calcolata|No|Sì|  
+|Azioni|Sì|no|
+|Aggregations|Sì|no|
+|Colonna calcolata|no|Sì|  
 |Misure calcolate|Sì|Sì| 
-|Tabelle calcolate|No|Sì<sup>1</sup>|  
-|Assembly personalizzati|Sì|No|
-|Rollup personalizzati|Sì|No| 
-|Membro predefinito|Sì|No|  
+|Tabelle calcolate|no|Sì<sup>1</sup>|  
+|Assembly personalizzati|Sì|no|
+|Rollup personalizzati|Sì|no| 
+|Membro predefinito|Sì|no|  
 |Cartelle di visualizzazione|Sì|Sì<sup>1</sup>|  
 |Distinct Count|Sì|Sì (tramite DAX)|
 |Drill-through|Sì|Sì (dipende dall'applicazione client)|
 |Gerarchie|Sì|Sì|
 |KPI|Sì|Sì| 
 |Oggetti collegati|Sì|Sì (tabelle collegate)|
-|Espressioni di M|No|Sì<sup>1</sup>|
+|Espressioni di M|no|Sì<sup>1</sup>|
 |Relazioni molti-a-molti|Sì|No (ma non esiste [filtri incrociati bidirezionali](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) a livelli di compatibilità 1200 e versioni successive)| 
-|Set denominati|Sì|No| 
+|Set denominati|Sì|no| 
 |Gerarchie incomplete|Sì|Sì<sup>1</sup>|  
 |Gerarchie padre-figlio|Sì|Sì (tramite DAX)|
 |Partizioni|Sì|Sì| 
@@ -86,7 +85,7 @@ ms.lasthandoff: 12/08/2017
 |Misure semiadditive|Sì|Sì| 
 |Traduzioni|[Sì](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Sì| 
 |Gerarchie definite dall'utente|Sì|Sì|
-|Writeback|Sì|No| 
+|Writeback|Sì|no| 
   
  <sup>1</sup> vedere [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) per informazioni sulle differenze funzionali tra i livelli di compatibilità.  
   
@@ -123,7 +122,7 @@ ms.lasthandoff: 12/08/2017
   
  Per visualizzare l'elenco delle origini dati esterne che è possibile importare in ogni modello, vedere gli argomenti riportati di seguito.  
   
--   [Origini dati supportate &#40;SSAS tabulare&#41;](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
+-   [Origini dati supportate](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
 
 -   [Origini dati supportate &#40;SSAS - multidimensionale&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
@@ -152,9 +151,9 @@ ms.lasthandoff: 12/08/2017
   
 -   Database modello multidimensionale possono utilizzare dimensioni e la sicurezza a livello di cella, usando autorizzazioni basate sui ruoli.  
 
--   Le cartelle di lavoro di[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] sono protette a livello di file, mediante le autorizzazioni di SharePoint.  
+-   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] sono protette a livello di file, mediante le autorizzazioni di SharePoint.  
   
- Le cartelle di lavoro di[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] possono essere ripristinate in un server in modalità tabulare. Una volta ripristinato, il file viene separato da SharePoint consentendo di utilizzare tutte le funzionalità di modellazione tabulare, inclusa la sicurezza a livello di riga.  
+ [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] in un server in modalità tabulare. Una volta ripristinato, il file viene separato da SharePoint consentendo di utilizzare tutte le funzionalità di modellazione tabulare, inclusa la sicurezza a livello di riga.  
   
 ##  <a name="bkmk_designer"></a> Strumenti di progettazione  
  Le competenze di modellazione dei dati e l'esperienza tecnica possono variare molto tra gli utenti che si occupano della compilazione di modelli analitici. Se in una soluzione la familiarità di uno strumento o l'esperienza degli utenti è una considerazione importante, confrontare le esperienze seguenti per la creazione del modello.  

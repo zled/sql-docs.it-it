@@ -1,29 +1,29 @@
 ---
 title: Installare gli strumenti da riga di comando di SQL Server in Linux | Documenti Microsoft
-description: In questo argomento viene descritto come installare gli strumenti di SQL Server in Linux.
+description: In questo articolo viene descritto come installare gli strumenti di SQL Server in Linux.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 410d3c7c51e1b5fc0824da8c5d3f788ccb77f104
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 92b04366f3dbcba517c5c82b0e7d65e862890cc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installare sqlcmd e bcp strumenti da riga di comando di SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 I passaggi seguenti installare gli strumenti da riga di comando, i driver ODBC di Microsoft e le relative dipendenze. Il **mssql strumenti** pacchetto contiene:
 
@@ -38,7 +38,7 @@ Installare gli strumenti per la piattaforma:
 - [macOS](#macos)
 - [Docker](#docker)
 
-In questo argomento viene descritto come installare gli strumenti da riga di comando. Se si sta cercando esempi dell'utilizzo di **sqlcmd** o **bcp**, vedere il [collegamenti](#next-steps) alla fine di questo argomento.
+In questo articolo viene descritto come installare gli strumenti da riga di comando. Se si sta cercando esempi dell'utilizzo di **sqlcmd** o **bcp**, vedere il [collegamenti](#next-steps) alla fine di questo argomento.
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Installare gli strumenti in RHEL 7
 
@@ -180,15 +180,18 @@ Utilizzare la procedura seguente per installare il **mssql strumenti** in SUSE L
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>Installare gli strumenti in macOS
+## <a id="macos"></a> Installare gli strumenti in macOS
 
 Anteprima di **sqlcmd** e **bcp** è ora disponibile in macOS. Per ulteriori informazioni, vedere il [annuncio](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
+
+*Installare [Homebrew](https://brew.sh) se non è già:*
+
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 Per installare gli strumenti per montagna di El Capitan Mac e Sierra, utilizzare i comandi seguenti:
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#brew untap microsoft/mssql-preview if you installed the preview version 
+# brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install --no-sandbox mssql-tools
@@ -196,7 +199,7 @@ brew install --no-sandbox mssql-tools
 #ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
-## <a id="docker"></a>Docker
+## <a id="docker"></a> Docker
 
 A partire da SQL Server 2017 CTP 2.0, gli strumenti da riga di comando di SQL Server sono inclusi nell'immagine di Docker. Se si collega all'immagine con un prompt dei comandi interattivi, è possibile eseguire gli strumenti in locale.
 
@@ -206,7 +209,7 @@ A partire da SQL Server 2017 CTP 2.0, gli strumenti da riga di comando di SQL Se
 
 Nella tabella seguente fornisce il percorso per i pacchetti di strumenti più recenti:
 
-| Pacchetto di strumenti | Versione | Scarica |
+| Pacchetto di strumenti | Version | Scarica |
 |-----|-----|-----|
 | Pacchetto di strumenti di Red Hat RPM | 14.0.5.0-1 | [pacchetto RPM MSSQL strumenti](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | Pacchetto di strumenti SLES RPM | 14.0.5.0-1 | [pacchetto RPM MSSQL strumenti](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -215,7 +218,7 @@ Nella tabella seguente fornisce il percorso per i pacchetti di strumenti più re
 
 Questi pacchetti dipendono da **ha**, che deve essere installato per primo. Il **ha** quest'ultimo ha anche una dipendenza su **esposti all'interno di unixODBC** (RPM) o **unixodbc-dev** (Debian). Il percorso del **ha** nella tabella seguente vengono elencati i pacchetti:
 
-| pacchetto ha | Versione | Scarica |
+| pacchetto ha | Version | Scarica |
 |-----|-----|-----|
 | Pacchetto ha Red Hat RPM | 13.1.6.0-1 | [pacchetto RPM ha](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | Pacchetto ha SLES RPM | 13.1.6.0-1 | [pacchetto RPM ha](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
@@ -261,7 +264,7 @@ Per installare manualmente questi pacchetti, attenersi alla procedura seguente:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per un esempio di come utilizzare **sqlcmd** per connettersi a SQL Server e creare un database, vedere uno dei seguente rapido avviare esercitazioni:
+Per un esempio di come utilizzare **sqlcmd** per connettersi a SQL Server e creare un database, vedere una delle Guide rapide seguenti:
 
 - [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

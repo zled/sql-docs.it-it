@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ffb70205cbf2c2679cea827ffa0b7445586c795
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b7564f349c25fda5d39f977320937b2515bb9dfd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-streams"></a>Comando flussi
 ADO ha sempre supportato l'input del comando nel formato di stringa specificato da di **CommandText** proprietà. In alternativa, con ADO 2.7 o versioni successiva, è possibile anche utilizzare un flusso di informazioni per l'input comando assegnando il flusso di **CommandStream** proprietà. È possibile assegnare un oggetto ADO **flusso** oppure qualsiasi oggetto che supporta COM **IStream** interfaccia.  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_MEASUREGROUP_DIMENSIONS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 421ed99b405deadd404d6e68138a6a29a9d757fc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 62ee9e17d9f53d981e5e44918ec690c9abceddbb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemameasuregroupdimensions-rowset"></a>Set di righe MDSCHEMA_MEASUREGROUP_DIMENSIONS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enumera le dimensioni dei gruppi di misure.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **MDSCHEMA_MEASUREGROUP_DIMENSIONS** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
+|Nome colonna|Indicatore del tipo|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Nome del catalogo a cui appartiene questo gruppo di misure. **NULL** se il provider non supporta i cataloghi.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Non supportato.|  
@@ -56,11 +54,11 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
 |**DIMENSION_VISIBILITY**|**DBTYPE_UI2**|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> 1 Visibile<br /><br /> 2 Non visibile<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
   
 ## <a name="see-also"></a>Vedere anche  

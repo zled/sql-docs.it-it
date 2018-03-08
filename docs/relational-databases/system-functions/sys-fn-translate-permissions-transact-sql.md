@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_translate_permissions (Transact-SQL) | Documenti Microsoft
+title: sys.fn_translate_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.fn_translate_permissions_TSQL
 - fn_translate_permissions
 - fn_translate_permissions_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - permissions bitmask [SQL Server]
 - sys.fn_translate_permissions function
 - fn_translate_permissions function
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed217e60301c2ee877381a3aebc7b9f3d6fcf7bc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 08ddfe3ce812a5f01e290f8936b68160bcd0cc0c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +50,10 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *livello*  
+ *level*  
  Tipo di entità a protezione diretta a cui viene applicata l'autorizzazione. *livello* è **nvarchar(60)**.  
   
- *Perms*  
+ *perms*  
  Maschera di bit restituita nella colonna delle autorizzazioni. *Perms* è **varbinary (16)**.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
@@ -60,7 +62,7 @@ sys.fn_translate_permissions ( level , perms )
 ## <a name="remarks"></a>Osservazioni  
  Il valore restituito nel **autorizzazioni** colonna di traccia SQL è una rappresentazione di integer di una maschera di bit utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per calcolare le autorizzazioni valide. Tutti i 25 tipi di entità a protezione diretta dispongono di un proprio set di autorizzazioni con valori numerici corrispondenti. **Sys. fn_translate_permissions** Converte questa maschera di bit in una tabella di nomi di autorizzazioni.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="example"></a>Esempio  

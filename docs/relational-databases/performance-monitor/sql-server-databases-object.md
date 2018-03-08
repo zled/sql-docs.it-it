@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03d12d8216ce6b92251355c41b1f0bdc90303003
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c92dc55eedaf801ad283ecb18bb55a25ba49f4b1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, oggetto di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'oggetto **SQLServer:Database** in SQL Server include contatori per il monitoraggio delle operazioni di copia bulk, della velocità effettiva dei backup e del ripristino e delle attività del log delle transazioni. Eseguire il monitoraggio delle transazioni e del log delle transazioni per determinare la quantità di attività degli utenti eseguita nel database e lo spazio disponibile nel log delle transazioni. La quantità di attività degli utenti ha effetto sulle prestazioni del database e sulle dimensioni del log, sul blocco e sulla replica. Il monitoraggio dell'attività del log di basso livello per misurare l'attività degli utenti e l'utilizzo delle risorse può essere utile per identificare eventuali colli di bottiglia.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  Questa tabella descrive i contatori **Databases** di SQL Server.  
   
-|Contatori di database di SQL Server|Descrizione|  
+|Contatori di database di SQL Server|Description|  
 |-----------------------------------|-----------------|  
 |**Transazioni attive**|Numero di transazioni attive per il database.|  
 |**Distanza media da fine log per richiesta pool di log**|Distanza media in byte dalla fine del log per ogni richiesta del pool di log, per le richieste effettuate nell'ultimo VLF.| 
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
 |**Memoria XTP utilizzata (KB)**|Quantità di memoria usata da XTP nel database.| 
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, replica di database](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
   

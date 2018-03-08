@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - SQL Server event classes, Errors and Warnings event category
 - event classes [SQL Server], Errors and Warnings event category
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdac2740a2db73a3cf548b37c288b8dd203ed46d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6eaa88dfe9f1d01b72d63e44f30c9850e846f20
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Categoria di eventi Errori e avvisi (Motore di database)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La categoria di eventi **Errori e avvisi** include eventi generali relativi a errori e avvisi.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La categoria di eventi **Errori e avvisi** include eventi generali relativi a errori e avvisi.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Classe di evento Attention](../../relational-databases/event-classes/attention-event-class.md)|Indica che è si è verificato un evento **Attention** .|  
 |[Classe di evento Background Job Error](../../relational-databases/event-classes/background-job-error-event-class.md)|Indica l'interruzione anomala di un processo in background.|  

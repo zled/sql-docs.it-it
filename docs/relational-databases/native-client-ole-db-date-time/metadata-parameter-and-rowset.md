@@ -8,21 +8,22 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: metadata [OLE DB]
+helpviewer_keywords:
+- metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d45c0eafa873e0697c791d478eeffada7cfd91a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0de69450f5aecceb87e56a76b9edb0e46a146d35
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadati - parametro e i set di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +33,13 @@ ms.lasthandoff: 11/17/2017
   
 -   Struttura DBBINDING  
   
--   **ICommandWithParameters:: GetParameterInfo**  
+-   **ICommandWithParameters::GetParameterInfo**  
   
--   **ICommandWithParameters:: SetParameterInfo**  
+-   **ICommandWithParameters::SetParameterInfo**  
   
--   **IColumnsRowset::**  
+-   **IColumnsRowset::GetColumnsRowset**  
   
--   **IColumnsInfo:: GetColumnInfo**  
+-   **IColumnsInfo::GetColumnInfo**  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  Le seguenti informazioni vengono restituite nella struttura DBPARAMINFO tramite *prgParamInfo*:  

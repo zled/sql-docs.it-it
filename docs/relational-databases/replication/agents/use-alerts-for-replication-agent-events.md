@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e6eb5aeb5cf36a9c93259f6ee216a76c5ef4634
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 000b57b9e462be4babcf15d94017fec5b5422855
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Utilizzare gli avvisi per gli eventi degli agenti di replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent consentono di monitorare gli eventi, ad esempio quelli dell'agente di replica, mediante gli avvisi. Utilizzando[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è possibile monitorare il registro applicazioni di Windows per rilevare gli eventi associati ad avvisi. Se si verifica un evento di questo tipo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent risponde automaticamente eseguendo un'attività definita dall'utente e/o inviando un messaggio di posta elettronica o tramite cercapersone a un operatore specificato. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include un set di avvisi predefiniti per gli agenti di replica che è possibile configurare per l'esecuzione di un'attività e/o la notifica di un operatore. Per ulteriori informazioni sulla definizione di un'attività da eseguire, vedere la sezione "Risposte automatiche a un avviso" in questo argomento.  
@@ -44,8 +44,8 @@ ms.lasthandoff: 11/17/2017
 |14150|**Replica: operazione dell'agente riuscita**|La chiusura dell'agente è stata completata correttamente.|Sì|  
 |14151|**Replica: errore dell'agente**|Si è verificato un errore durante la chiusura dell'agente.|Sì|  
 |14152|**Replica: nuovo tentativo dell'agente**|La chiusura dell'agente avviene in seguito al tentativo non riuscito di ripetere un'operazione. In questo caso, l'agente rileva un errore quale la non disponibilità del server, un deadlock, un errore di connessione o un errore di timeout.|Sì|  
-|14157|**Replica: eliminata sottoscrizione scaduta**|La sottoscrizione scaduta è stata eliminata.|No|  
-|20572|**Replica: la sottoscrizione è stata reinizializzata dopo l'errore di convalida**|Il processo di risposta "Reinizializzazione delle sottoscrizioni con errori di convalida dei dati" reinizializza una sottoscrizione correttamente.|No|  
+|14157|**Replica: eliminata sottoscrizione scaduta**|La sottoscrizione scaduta è stata eliminata.|no|  
+|20572|**Replica: la sottoscrizione è stata reinizializzata dopo l'errore di convalida**|Il processo di risposta "Reinizializzazione delle sottoscrizioni con errori di convalida dei dati" reinizializza una sottoscrizione correttamente.|no|  
 |20574|**Replica: la convalida dei dati nel Sottoscrittore non è riuscita**|La convalida dei dati dell'agente di distribuzione o di merge non è riuscita.|Sì|  
 |20575|**Replica: la convalida dei dati nel Sottoscrittore è riuscita**|La convalida dei dati dell'agente di distribuzione o di merge ha avuto esito positivo.|Sì|  
 |20578|**Replica: arresto dell'agente personalizzato**|||  

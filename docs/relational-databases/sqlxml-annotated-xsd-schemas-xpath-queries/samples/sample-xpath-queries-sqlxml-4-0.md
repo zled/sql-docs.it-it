@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,24 +19,25 @@ helpviewer_keywords:
 - mapping schema [SQLXML], queries
 - XPath queries [SQLXML], samples
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56b2782416b3d980fa6e821272f2bf78976fbaf2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f74a4c80ca1536d0a2d326ef7a89ab791ec0ad7f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Query XPath di esempio (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]In questa sezione vengono forniti esempi di query XPath per SQLXML 4.0. A scopo illustrativo, queste query XPath di esempio vengono specificate in un modello eseguito utilizzando ADO. È pertanto necessario utilizzare un file dello schema di mapping, SampleSchema1.xml, anch'esso fornito in questa sezione. Salvare questo file nella directory in cui vengono archiviati i modelli.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In questa sezione vengono forniti esempi di query XPath per SQLXML 4.0. A scopo illustrativo, queste query XPath di esempio vengono specificate in un modello eseguito utilizzando ADO. È pertanto necessario utilizzare un file dello schema di mapping, SampleSchema1.xml, anch'esso fornito in questa sezione. Salvare questo file nella directory in cui vengono archiviati i modelli.  
   
 > [!NOTE]  
 >  Le query di esempio presentate in questa sezione vengono raggruppate in base al tipo di operazione XPath eseguita dalla query.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Schema XSD con annotazioni di esempio per gli esempi XPath &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
  Utilizzare questo file con gli esempi di query XPath fornito in questa sezione.  
   

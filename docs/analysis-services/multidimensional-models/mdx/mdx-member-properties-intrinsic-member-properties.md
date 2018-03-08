@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: intrinsic member properties [MDX]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cf5daff8843fab7cdf1aed4acd0fec0dec84e5ea
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 823c8c1c387d2fb234fcf042cd416ce6e1ebb550
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>Proprietà di membro MDX - proprietà intrinseche dei membri
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] espone proprietà intrinseche sui membri della dimensione che è possibile includere in una query per restituire dati aggiuntivi o i metadati per l'utilizzo in un'applicazione personalizzata o per supportare la costruzione o l'analisi del modello. Se si utilizzano gli strumenti client di SQL Server, è possibile visualizzare le proprietà intrinseche in SQL Server Management Studio (SSMS).  
@@ -72,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |**ID**|ID gestito internamente per il membro.|  
 |**Key**|Valore della chiave del membro nel tipo di dati originale. MEMBER_KEY è disponibile per compatibilità con le versioni precedenti.  MEMBER_KEY ha lo stesso valore di KEY0 per le chiavi non composte e la proprietà MEMBER_KEY è Null per le chiavi composte.|  
 |**KEYx**|Chiave del membro, in cui x è il numero ordinale in base zero della chiave. KEY0 è disponibile per le chiavi composte e non composte, ma è utilizzato principalmente per le chiavi composte.<br /><br /> Le chiavi KEY0, KEY1, KEY2 e via di seguito formano collettivamente una chiave composta. È possibile utilizzare ciascuna chiave in modo indipendente in una query per restituire la parte corrispondente della chiave composta. Se ad esempio si specifica KEY0, viene restituita la prima parte della chiave composta, se si specifica KEY1 viene restituita la parte successiva e così via.<br /><br /> Se la chiave non è composta, KEY0 equivale a **Key**.<br /><br /> Notare che **KEYx** può essere usata sia in contesto che fuori contesto. Per questo motivo appare in entrambi gli elenchi.<br /><br /> Per un esempio di come usare la proprietà dei membri, vedere [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)(Tidbit MDX semplice: Key0, Key1, Key2).|  
-|**Name**|Nome del membro.|  
+|**Nome**|Nome del membro.|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>Sintassi della parola chiave PROPERTIES per le proprietà sensibili al contesto  
  Queste proprietà dei membri possono essere utilizzate nel contesto di una dimensione o di un livello specifico e definiscono valori per ogni membro della dimensione o del livello specificato.  

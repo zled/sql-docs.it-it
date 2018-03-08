@@ -8,22 +8,22 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dd0c562ba03e3a5b5d92530a40ad58b89e75756c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 028a5103175b31e4928c474617f9c8199df0facc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="maps-in-reporting-services-mobile-reports"></a>Eseguire il mapping nei report di Reporting Services per dispositivi mobili
+# <a name="maps-in-reporting-services-mobile-reports"></a>Esegue il mapping nei report di Reporting Services per dispositivi mobili
 Le mappe sono un ottimo modo per visualizzare dati geografici. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] include tre diversi tipi di viste mappa e mappe predefinite per i continenti e per alcuni paesi singoli. È anche possibile [caricare e usare mappe personalizzate](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
   
 ## <a name="types-of-maps"></a>Tipi di mappe  
@@ -32,11 +32,11 @@ Per i report per dispositivi mobili di SQL Server sono disponibili tre diversi t
   
 ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   
-**Mappa termica con sfumature** Il campo nella proprietà Valori viene visualizzato con sfumature di un singolo colore a riempire ogni area geografica in una mappa. È possibile specificare se i valori maggiori o minori sono più scuri nella casella **Direzione valori**.  
+**Mappa termica con sfumature** Il campo nella proprietà Valori viene visualizzato con sfumature di un singolo colore a riempire ogni area geografica in una mappa. È possibile specificare se i valori maggiori o minori sono più scuri nella casella **Direzione valori** .  
   
 **Mappa a bolle** La proprietà Valori determina il raggio di una visualizzazione a bolle visualizzata sopra l'area geografica associata. È possibile specificare se tutte le bolle hanno colori identici o diversi.   
   
-**Mappa termica con interruzioni intervallo** Mostra un valore in relazione a una destinazione. La proprietà **Destinazioni** determina il delta tra un campo di confronto e il campo dei valori. Il delta risultante determina il colore usato per riempire l'area geografica associata della mappa, da verde a giallo a rosso. È possibile specificare se sono verdi i valori maggiori o quelli minori nella casella **Direzione valori**.  
+**Mappa termica con interruzioni intervallo** Mostra un valore in relazione a una destinazione. La proprietà **Destinazioni** determina il delta tra un campo di confronto e il campo dei valori. Il delta risultante determina il colore usato per riempire l'area geografica associata della mappa, da verde a giallo a rosso. È possibile specificare se sono verdi i valori maggiori o quelli minori nella casella **Direzione valori** .  
   
 ## <a name="select-the-map-type-and-region"></a>Selezionare il tipo di mappa e l'area geografica  
   
@@ -58,7 +58,7 @@ Quando si aggiunge la mappa al report per la prima volta, [!INCLUDE[SS_MobileRep
 Per visualizzare i dati reali nella mappa, è necessario impostare i valori per almeno due delle proprietà dei dati della mappa:   
 * La proprietà **Chiavi** connette i dati ad aree geografiche specifiche della mappa, ad esempio gli stati negli USA o i paesi in Africa.  
 * La proprietà **Valori** è un campo numerico nella stessa tabella del campo delle chiavi selezionate. Questi valori sono rappresentati in modo diverso in mappe diverse. La **mappa con sfumature** usa questi valori per applicare un colore a ogni area geografica con sfumature diverse in base all'intervallo di valori. La **mappa a bolle** basa le dimensioni della visualizzazione di una bolla su ogni area geografica sulla proprietà Valori.   
-* Per le mappe termiche con interruzioni di valore è necessario impostare anche la proprietà **Destinazioni**.  
+* Per le mappe termiche con interruzioni di valore è necessario impostare anche la proprietà **Destinazioni** .  
   
 ### <a name="set-map-data-properties"></a>Impostare le proprietà dei dati della mappa  
   
@@ -75,7 +75,7 @@ Per visualizzare i dati reali nella mappa, è necessario impostare i valori per 
   
 5. In **Valori** la stessa tabella è già indicata nella casella di sinistra. Selezionare il campo numerico di cui visualizzare i valori sulla mappa.   
   
-6. Nel caso di una mappa termica con interruzioni di intervallo, la stessa tabella è indicata nella casella a sinistra in **Destinazioni**. Nella casella a destra selezionare il campo numerico i cui valori devono essere usati come destinazione.   
+6. Nel caso di una mappa termica con interruzioni di intervallo, la stessa tabella è indicata nella casella a sinistra in **Destinazioni** . Nella casella a destra selezionare il campo numerico i cui valori devono essere usati come destinazione.   
   
    ![SSMRP_MapRangeHeatData](../../reporting-services/mobile-reports/media/ssmrp-maprangeheatdata.png)  
   

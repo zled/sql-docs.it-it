@@ -3,25 +3,27 @@ title: Le istanze del Cluster di failover, SQL Server in Linux | Documenti Micro
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: c99b850b9733eba6baadb1d5bb893e6479fe4dea
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a9e8964b16eff5da35ef3abac6f493afc7615903
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Istanze del Cluster di failover, SQL Server in Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Questo articolo illustra i concetti relativi a SQL Server istanze cluster di failover (FCI) in Linux. 
 
@@ -36,17 +38,17 @@ Per creare una FCI di SQL Server in Linux, vedere [configurazione di FCI di SQL 
 
 * In SLES, il livello di clustering si basa su SUSE Linux Enterprise [estensione a disponibilità elevata (Georgiano)](https://www.suse.com/products/highavailability).
 
-    Per ulteriori informazioni su configurazione cluster, le opzioni di agente di risorse, gestione, procedure consigliate e indicazioni, vedere [SUSE Linux Enterprise ad alta disponibilità estensione 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+    Per informazioni sulla configurazione del cluster, le opzioni di agente di risorse, gestione, procedure consigliate e indicazioni, vedere [SUSE Linux Enterprise ad alta disponibilità estensione 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 Sia il componente RHEL a disponibilità elevata e il HAE SUSE vengono compilati su [Pacemaker](http://clusterlabs.org/).
 
-Come illustrato nella figura seguente viene illustrata l'archiviazione è presentata a due server. I componenti di clustering - Corosync e Pacemaker - coordinano le comunicazioni e gestione delle risorse. Uno dei server con la connessione attiva per le risorse di archiviazione e SQL Server. Quando il Pacemaker rileva un errore i componenti di clustering gestiscono lo spostamento di risorse a altro nodo.  
+Come illustrato nella figura seguente, l'archiviazione è presentata a due server. I componenti di clustering - Corosync e Pacemaker - coordinano le comunicazioni e gestione delle risorse. Uno dei server con la connessione attiva per le risorse di archiviazione e SQL Server. Quando il Pacemaker rileva un errore i componenti di clustering gestiscono lo spostamento di risorse a altro nodo.  
 
 ![Red Hat Enterprise Linux 7 condiviso del Cluster SQL disco](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> A questo punto, integrazione di SQL Server con Pacemaker in Linux non è accoppiata come con WSFC in Windows. All'interno di SQL, non è possibile sapere sulla presenza del cluster, tutte le orchestrazioni non rientra e il servizio viene controllato come istanza autonoma da Pacemaker. Inoltre, il nome di rete virtuale è specifico di WSFC, è disponibile un equivalente dello stesso in Pacemaker. È previsto che @@servername e Sys. Servers per restituire il nome del nodo, mentre lo Sys.dm os_cluster_nodes DMV di cluster e Sys.dm os_cluster_properties non sarà alcun record. Per utilizzare una stringa di connessione che punta al nome di un server di stringa e non usa l'indirizzo IP, sarà necessario registrare in un server DNS l'indirizzo IP utilizzato per creare la risorsa IP virtuale (come illustrato di seguito) con il nome del server selezionato.
+> A questo punto, integrazione di SQL Server con Pacemaker in Linux non è accoppiata come con WSFC in Windows. All'interno di SQL, non è possibile sapere sulla presenza del cluster, tutte le orchestrazioni non rientra e il servizio viene controllato come istanza autonoma da Pacemaker. Inoltre, il nome di rete virtuale è specifico di WSFC, è disponibile un equivalente dello stesso in Pacemaker. È previsto che @@servername e Sys. Servers per restituire il nome del nodo, mentre lo Sys.dm os_cluster_nodes DMV di cluster e Sys.dm os_cluster_properties non sarà alcun record. Per utilizzare una stringa di connessione che punta al nome di un server di stringa e non usa l'indirizzo IP, sarà necessario registrare i server DNS l'indirizzo IP utilizzato per creare la risorsa IP virtuale (come descritto nelle sezioni seguenti) con il nome di server selezionato.
 
 ## <a name="number-of-instances-and-nodes"></a>Numero di istanze e nodi
 
@@ -57,7 +59,7 @@ Un cluster Pacemaker può avere solo un massimo di 16 nodi quando è coinvolto C
 In SQL Server FCI, è attiva su un nodo o l'altra istanza di SQL Server.
 
 ## <a name="ip-address-and-name"></a>Nome e indirizzo IP
-In un cluster Linux Pacemaker, ogni FCI di SQL Server sarà necessario il proprio indirizzo IP univoco e nome. Se la configurazione di FCI si estende su più subnet, un indirizzo IP sarà obbligatorio per ogni subnet. Il nome univoco e gli indirizzi IP vengono utilizzati per accedere l'istanza FCI, in modo che le applicazioni e gli utenti finali non è necessario sapere in quale server del cluster Pacemaker sottostante.
+In un cluster Linux Pacemaker, ogni FCI di SQL Server è necessario il proprio indirizzo IP univoco e nome. Se la configurazione di FCI si estende su più subnet, un indirizzo IP sarà obbligatorio per ogni subnet. Il nome univoco e gli indirizzi IP vengono utilizzati per accedere l'istanza FCI, in modo che le applicazioni e gli utenti finali non è necessario sapere in quale server del cluster Pacemaker sottostante.
 
 Il nome dell'istanza FCI in DNS deve essere identico al nome della risorsa istanza cluster di failover che viene creato nel cluster Pacemaker.
 Il nome e l'indirizzo IP deve essere registrati in DNS.

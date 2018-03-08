@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52083d3b3d82f46f3248450b6242d5c66a213138
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a075d6c4c4cc5ccd0477bb33159cf319fb0754b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---requirements"></a>Creazione di tipi definiti dall'utente, requisiti
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]È necessario apportare più importanti decisioni di progettazione durante la creazione di un tipo definito dall'utente (UDT) da installare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Benché nella maggior parte dei casi sia consigliabile creare il tipo definito dall'utente come struttura, la creazione come classe rappresenta un'altra opzione valida. Perché il tipo venga registrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la definizione del tipo definito dall'utente deve essere conforme alle specifiche relative alla creazione di tali tipi.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+È necessario apportare più importanti decisioni di progettazione durante la creazione di un tipo definito dall'utente (UDT) da installare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Benché nella maggior parte dei casi sia consigliabile creare il tipo definito dall'utente come struttura, la creazione come classe rappresenta un'altra opzione valida. Perché il tipo venga registrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la definizione del tipo definito dall'utente deve essere conforme alle specifiche relative alla creazione di tali tipi.  
   
 ## <a name="requirements-for-implementing-udts"></a>Requisiti per l'implementazione di tipi definiti dall'utente  
  Ai fini dell'esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il tipo definito dall'utente deve implementare i requisiti seguenti nella relativa definizione:  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="native-serialization"></a>Serializzazione nativa  
  La scelta degli attributi di serializzazione corretti per il tipo definito dall'utente dipende dal tipo definito dall'utente che si desidera creare. Il **nativo** formato di serializzazione utilizza una struttura molto semplice che consente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare una rappresentazione nativa efficace dell'UDT su disco. Il **nativo** formato consigliato se il tipo definito dall'utente è semplice e contiene solo campi dei tipi seguenti:  
   
- **bool**, **byte**, **sbyte**, **breve**, **ushort**, **int**,  **uint**, **lungo**, **ulong**, **float**, **doppie**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  Tipi di valore che sono costituite da campi dei tipi precedenti sono buoni candidati per **nativo** formato, ad esempio **struct** in Visual c# (o **strutture** in cui sono noti Visual Basic). Ad esempio, un tipo definito dall'utente specificato con il **nativo** formato di serializzazione può contenere un campo di un altro tipo definito dall'utente che è stato specificato anche con il **nativo** formato. Se la definizione UDT è più complessa e contiene i tipi di dati non inclusi nell'elenco precedente, è necessario specificare il **UserDefined** invece formato di serializzazione.  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/17/2017
  **IsFixedLength**  
  Indica se tutte le istanze del tipo definito dall'utente sono della stessa lunghezza.  
   
- **Proprietà MaxByteSize**  
+ **MaxByteSize**  
  Dimensioni massime, in byte, dell'istanza. È necessario specificare **MaxByteSize** con il **UserDefined** formato di serializzazione. Per un tipo definito dall'utente con serializzazione definita dall'utente specificata, **MaxByteSize** si riferisce alla dimensione totale dell'UDT in formato serializzato come definito dall'utente. Il valore di **MaxByteSize** deve essere compreso nell'intervallo tra 1 e 8000 o impostato su -1 per indicare che il tipo definito dall'utente è maggiore di 8000 byte (le dimensioni totali non possono superare le dimensioni LOB massime). Si consideri un tipo definito dall'utente con una proprietà di una stringa di 10 caratteri (**char**). Quando il tipo definito dall'utente viene serializzato utilizzando un oggetto BinaryWriter, le dimensioni totali della stringa serializzata sono pari a 22 byte per ciascun carattere Unicode UTF-16, moltiplicati per il numero massimo di caratteri, più 2 byte di controllo per l'overhead generato dalla serializzazione di un flusso binario. Pertanto, per determinare il valore di **MaxByteSize**, deve essere considerata la dimensione totale dell'UDT serializzato: la dimensione dei dati serializzati in formato binario più l'overhead generato dalla serializzazione.  
   
  **Metodo ValidationMethodName**  

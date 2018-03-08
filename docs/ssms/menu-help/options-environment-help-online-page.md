@@ -16,13 +16,13 @@ ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 864a8798e9778b16eb49592c8f4e2b801ed1749d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a985f6e2796708bcea47178380974d18895218d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---help---online-page"></a>Opzioni (Ambiente - Guida - pagina Online)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La finestra di dialogo **Opzioni** consente di specificare le origini della Guida da usare per le ricerche di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], tra cui la Guida sensibile al contesto. Scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Ambiente** , selezionare **Guida**e quindi fare clic su **Online**. Se la pagina **Online** non viene visualizzata nell'elenco, selezionare la casella di controllo **Mostra tutte le impostazioni** nella finestra di dialogo **Opzioni** .  

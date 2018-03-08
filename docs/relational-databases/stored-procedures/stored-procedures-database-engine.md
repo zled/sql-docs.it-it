@@ -8,26 +8,28 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - storing programs as stored procedures
 - stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd0517fa69865cd3a4d3180071be0551606a5090
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c3792d9ef087c2e8dce4dfbceed1a1a4d500440c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="stored-procedures-database-engine"></a>Stored procedure (Motore di database)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Una stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un gruppo di una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] oppure un riferimento a un metodo CLR (Common Runtime Language) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Le stored procedure assomigliano ai costrutti di altri linguaggi di programmazione perché possono essere utilizzate per:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Una stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un gruppo di una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] oppure un riferimento a un metodo CLR (Common Runtime Language) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Le stored procedure assomigliano ai costrutti di altri linguaggi di programmazione perché possono essere utilizzate per:  
   
 -   Accettare parametri di input e restituire più valori sotto forma di parametri di output al programma che esegue la chiamata.  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Le stored procedure estese verranno eliminate nelle future versioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non usare questa funzionalità in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui è attualmente implementata. In alternativa, creare stored procedure CLR. Questo metodo offre un'alternativa più efficiente rispetto alla scrittura di stored procedure estese.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  

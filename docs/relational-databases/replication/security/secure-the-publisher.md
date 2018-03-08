@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Publishers [SQL Server replication], security
 - publications [SQL Server replication], security
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
-caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce5030a78ce010298ee4444990899e20307734ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 03651a97745cb661fc4eed487e261d88fd8d8c6a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="secure-the-publisher"></a>Sicurezza del server di pubblicazione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gli agenti di replica seguenti si connettono al server di pubblicazione:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Gli agenti di replica seguenti si connettono al server di pubblicazione:  
   
 -   Agente di lettura log  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/17/2017
  L'elenco di accesso alla pubblicazione costituisce il principale sistema di protezione delle pubblicazioni nel server di pubblicazione. che funziona in maniera analoga a un elenco di controllo di accesso [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Quando si crea una pubblicazione, la replica crea un elenco di accesso alla pubblicazione per la pubblicazione creata. Tale elenco può essere configurato per contenere l'elenco degli account di accesso e dei gruppi autorizzati ad accedere alla pubblicazione. Quando un agente si connette al server di pubblicazione o al server di distribuzione e richiede l'accesso a una pubblicazione, i dati di autenticazione dell'elenco di accesso alla pubblicazione vengono confrontati con l'account di accesso al server di pubblicazione specificato dall'agente. Ciò garantisce un maggior livello di sicurezza del server di pubblicazione, impedendo che gli account di accesso del server di pubblicazione e del server di distribuzione vengano utilizzati da uno strumento client per apportare modifiche direttamente nel server di pubblicazione.  
   
 > [!NOTE]  
->  La replica crea un ruolo sul server di pubblicazione per ogni pubblicazione, in modo da applicare l'appartenenza all'elenco di accesso alla pubblicazione. Il nome del ruolo ha il formato **Msmerge_***\<IDPubblicazione>* per la replica di tipo merge e **MSReplPAL_***\<IDDatabasePubblicazione>***_***\<IDPubblicazione>* per la replica transazionale e snapshot.  
+>  La replica crea un ruolo sul server di pubblicazione per ogni pubblicazione, in modo da applicare l'appartenenza all'elenco di accesso alla pubblicazione. Il nome del ruolo ha il formato**Msmerge_***\<IDPubblicazione>* per la replica di tipo merge e **MSReplPAL_***\<IDDatabasePubblicazione>***_***\<IDPubblicazione>* per la replica transazionale e snapshot.  
   
  Per impostazione predefinita, nell'elenco di accesso alla pubblicazione sono inclusi gli account di accesso seguenti: i membri del ruolo predefinito del server **sysadmin** al momento della creazione della pubblicazione e l'account di accesso utilizzato per creare la pubblicazione. Per impostazione predefinita, tutti gli account di accesso membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** nel database di pubblicazione possono sottoscrivere una pubblicazione, senza necessità di essere aggiunti esplicitamente all'elenco di accesso alla pubblicazione.  
   
@@ -80,6 +82,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Vedere anche  
  [Abilitare connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Sicurezza e protezione &#40;replica&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Sicurezza e protezione #40;replica&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

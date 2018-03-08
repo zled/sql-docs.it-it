@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +19,20 @@ helpviewer_keywords:
 - data source views [Analysis Services], tables
 - tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b8d8d731552fe099d161d6b87bca87ceecd709a9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f17e0880839470e128266ae62993bceeb4457c3e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modificare le proprietà in una vista origine dati (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dopo aver definito una vista origine dati utilizzando la creazione guidata vista origine dati e l'aggiunta di tabelle, viste, calcoli denominati e query denominate all'origine dati consente di visualizzare, si desidera modificare le proprietà relative a:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dopo aver definito una vista origine dati mediante la Creazione guidata vista origine dati e aver aggiunto tabelle, viste, calcoli denominati e query denominate alla vista origine dati, può rivelarsi utile modificare le proprietà relative a:  
   
 -   Criteri di corrispondenza della vista origine dati  
   
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/08/2017
 |Nome|Specifica il nome della colonna sottostante oppure il nome del calcolo denominato. La proprietà **Name** viene usata dagli oggetti di data mining e OLAP durante la definizione degli attributi in base a calcoli denominati. Questa proprietà è modificabile soltanto per calcoli denominati.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Usare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Utilizzare diagrammi in Progettazione vista origine dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

@@ -1,27 +1,28 @@
 ---
 title: Guida introduttiva con machine learning in SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 11/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.date: 12/20/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 98f6498eb042cc79728f8c1fb55e142655842481
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>Guida introduttiva con machine learning in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft fornisce un set integrato, scalabile di soluzioni di machine learning per sia in locale e nel cloud:
 
@@ -36,7 +37,7 @@ In questo articolo fornisce collegamenti a risorse per ogni prodotto nella piatt
 
   A partire da SQL Server 2017, è possibile utilizzare codice Python in SQL Server. In modo da riflettere il più ampio supporto per le soluzioni in più lingue (con altri in futuro!) e il nome è stato modificato in [!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]. Ora è possibile automatizzare attività di machine learning usando gli strumenti SQL per eseguire codice R o Python. In alternativa, usare il computer SQL Server come il _contesto di calcolo_ per i processi avviati da un ambiente di sviluppo remoto.
 
-    + [Panoramica dell'architettura per Python in SQL Server](/python/architecture-overview-sql-server-python.md)
+    + [Panoramica dell'architettura per Python in SQL Server](../advanced-analytics/python/architecture-overview-sql-server-python.md)
     + [Configurare SQL Server R Services o i servizi di Machine Learning](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016
@@ -83,7 +84,7 @@ In SQL Server 2016, utilizzare l'opzione per installare [!INCLUDE[rsql-platform-
 
 + [Esercitazioni di Machine learning](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  Per trovare un elenco di tutte le risorse informative su soluzioni di machine learning tramite iniziare da qui [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] o [!INCLUDE[sssql15-md](../includes/sssql15-md.md)].
+  Iniziare da qui trovare un elenco di tutte le risorse per apprendere i concetti relativi a soluzioni di machine learning utilizzando SQL Server 2016 e SQL Server 2017.
 
 ### <a name="r-tutorials"></a>Esercitazioni di R
 
@@ -95,7 +96,7 @@ In SQL Server 2016, utilizzare l'opzione per installare [!INCLUDE[rsql-platform-
 
 + [Esplorare R e ridimensionamento in 25 funzioni brevi](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   Non si ha familiarità con R? Sapere come Microsoft R (o RevoScaleR) Confronta a R standard? Per R Server, vedere questi rapida-avvio.
+   Non si ha familiarità con R? Sapere come Microsoft R (o RevoScaleR) Confronta a R standard? Per Server R e Machine Learning, vedere questi rapida-avvio.
 
 ### <a name="python-tutorials"></a>Esercitazioni di Python
 

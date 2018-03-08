@@ -5,29 +5,27 @@ ms.date: 08/31/2015
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3443f25a3a929f9bad6cbe394a4fe60b38785b65
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="create-and-customize-power-pivot-gallery"></a>Creare e personalizzare la Raccolta Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] La raccolta è un tipo speciale di raccolta documenti di SharePoint che fornisce dettagliata anteprima e gestione documenti per cartelle di lavoro di Excel pubblicate e i report di Reporting Services che contengono [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dati.  
+# <a name="create-and-customize-power-pivot-gallery"></a>Creare e personalizzare la Raccolta PowerPivot
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] La Raccolta è un tipo particolare di raccolta documenti di SharePoint che fornisce un'anteprima dettagliata e la gestione dei documenti per le cartelle di lavoro pubblicate di Excel e per i report di Reporting Services contenenti dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="bkmk_top"></a> Contenuto dell'argomento  
   
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
     >  Con la raccolta di Power Pivot è richiesto Microsoft Silverlight.  Il browser Microsoft Edge non supporta Silverlight.   
     > Per visualizzare il contenuto della raccolta in Edge, fare clic sulla scheda **Raccolta** nella raccolta di Power Pivot e quindi impostare la visualizzazione della raccolta documenti su **Tutti i documenti**.    
     > Per cambiare la visualizzazione predefinita, fare clic sulla scheda **Raccolta** e quindi scegliere Modifica visualizzazione. Fare clic su "Imposta come visualizzazione predefinita" e quindi su OK per salvare la visualizzazione predefinita.  
-    >  Per altre informazioni sulle funzionalità supportate in Edge, vedere il post di blog di Windows sulle [differenze tra Edge e i browser precedenti e sul supporto di ActiveX, VBScript e altri componenti](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/).  
+    >  Per altre informazioni sulle funzionalità supportate in Microsoft Edge, vedere il post di blog di Windows sulle [differenze tra Edge e i browser precedenti e sul supporto di ActiveX, VBScript e altri componenti](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/).  
   
 -   Per creare una raccolta, è necessario essere proprietari del sito.  
   

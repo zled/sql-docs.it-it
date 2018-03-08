@@ -1,5 +1,5 @@
 ---
-title: Sys.dm broker_connections (Transact-SQL) | Documenti Microsoft
+title: sys.dm_broker_connections (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/08/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_broker_connections
 - sys.dm_broker_connections_TSQL
 - dm_broker_connections_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_broker_connections dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a01c8eae3b8bfdd2543fdcc1b162debceda54a3c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: abe087369c6584f1548930cf25f8930a2e78bc8c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmbrokerconnections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,20 +42,20 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Identificatore della connessione. Ammette valori Null.|  
 |**transport_stream_id**|**uniqueidentifier**|Identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connessione di interfaccia di rete (SNI) utilizzato dalla connessione per le comunicazioni TCP/IP. Ammette valori Null.|  
-|**stato**|**smallint**|Stato corrente della connessione. Ammette valori Null. I valori possibili sono:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = CHIUSO|  
+|**state**|**smallint**|Stato corrente della connessione. Ammette valori Null. I valori possibili sono:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = CHIUSO|  
 |**state_desc**|**nvarchar(60)**|Stato corrente della connessione. Ammette valori Null. I valori possibili sono:<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|Data e ora di apertura della connessione. Ammette valori Null.|  
 |**login_time**|**datetime**|Data e ora in cui è stato eseguito l'accesso per la connessione. Ammette valori Null.|  
-|**authentication_method**|**nvarchar (128)**|Nome del metodo di autenticazione di Windows, ad esempio NTLM o KERBEROS. Questo valore proviene da Windows. Ammette valori Null.|  
-|**principal_name**|**nvarchar (128)**|Nome dell'account di accesso convalidato per le autorizzazioni di connessione. Per l'autenticazione di Windows, corrisponde al nome dell'utente remoto. Per l'autenticazione basata su certificati, corrisponde al proprietario del certificato. Ammette valori Null.|  
-|**remote_user_name**|**nvarchar (128)**|Nome dell'utente peer dell'altro database utilizzato dall'autenticazione di Windows. Ammette valori Null.|  
+|**authentication_method**|**nvarchar(128)**|Nome del metodo di autenticazione di Windows, ad esempio NTLM o KERBEROS. Questo valore proviene da Windows. Ammette valori Null.|  
+|**principal_name**|**nvarchar(128)**|Nome dell'account di accesso convalidato per le autorizzazioni di connessione. Per l'autenticazione di Windows, corrisponde al nome dell'utente remoto. Per l'autenticazione basata su certificati, corrisponde al proprietario del certificato. Ammette valori Null.|  
+|**remote_user_name**|**nvarchar(128)**|Nome dell'utente peer dell'altro database utilizzato dall'autenticazione di Windows. Ammette valori Null.|  
 |**last_activity_time**|**datetime**|Data e ora dell'ultimo utilizzo della connessione per l'invio o la ricezione di informazioni. Ammette valori Null.|  
 |**is_accept**|**bit**|Specifica se la connessione ha avuto origine sul lato remoto. Ammette valori Null.<br /><br /> 1 = La connessione è una richiesta accettata dall'istanza remota.<br /><br /> 0 = La connessione è stata avviata dall'istanza locale.|  
 |**login_state**|**smallint**|Stato del processo di accesso per la connessione. I valori possibili sono:<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = ONLINE<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|Descrizione dello stato corrente dell'accesso dal computer remoto. I valori possibili sono:<br /><br /> È in corso l'inizializzazione dell'handshake della connessione.<br /><br /> L'handshake della connessione è in attesa del messaggio relativo alla negoziazione dell'accesso.<br /><br /> L'handshake della connessione ha inizializzato e inviato il contesto di sicurezza per l'autenticazione.<br /><br /> L'handshake della connessione ha ricevuto e accettato il contesto di sicurezza per l'autenticazione.<br /><br /> L'handshake della connessione ha inizializzato e inviato il contesto di sicurezza per l'autenticazione. È disponibile un meccanismo facoltativo per l'autenticazione dei peer.<br /><br /> L'handshake della connessione ha ricevuto e inviato il contesto di sicurezza accettato per l'autenticazione. È disponibile un meccanismo facoltativo per l'autenticazione dei peer.<br /><br /> L'handshake della connessione è in attesa del messaggio di conferma dell'inizializzazione del contesto di sicurezza.<br /><br /> L'handshake della connessione è in attesa del messaggio di conferma dell'accettazione del contesto di sicurezza.<br /><br /> L'handshake della connessione è in attesa del messaggio di rifiuto SSPI per l'autenticazione non riuscita.<br /><br /> L'handshake della connessione è in attesa del messaggio relativo al segreto pre-master.<br /><br /> L'handshake della connessione è in attesa del messaggio di convalida.<br /><br /> L'handshake della connessione è in attesa del messaggio relativo all'arbitraggio.<br /><br /> L'handshake della connessione è completo ed è online (pronto) per lo scambio di messaggi.<br /><br /> Errore di connessione.|  
 |**peer_certificate_id**|**int**|ID di oggetto locale del certificato utilizzato dall'istanza remota per l'autenticazione. Il proprietario di questo certificato deve disporre delle autorizzazioni CONNECT per l'endpoint di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Ammette valori Null.|  
 |**encryption_algorithm**|**smallint**|Algoritmo di crittografia utilizzato per la connessione. Ammette valori Null. I valori possibili sono:<br /><br /> **Valore &#124; Descrizione &#124; Opzione DDL corrispondente**<br /><br /> 0 &#124; Nessuna &#124; Disabilitato<br /><br /> 1 &#124; SOLO LA FIRMA<br /><br /> 2 &#124; AES, RC4 &#124; Necessario &#124; Richiesto algoritmo RC4}<br /><br /> 3 &#124; AES &#124; Richiesto algoritmo AES<br /><br /> **Nota:** l'algoritmo RC4 è supportato solo per compatibilità con le versioni precedenti. È possibile crittografare il nuovo materiale usando RC4 o RC4_128 solo quando il livello di compatibilità del database è 90 o 100. (Non consigliato.) Usare un algoritmo più recente, ad esempio uno degli algoritmi AES. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive il materiale crittografato utilizzando RC4 o RC4_128 può essere decrittografato in qualsiasi livello di compatibilità.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Rappresentazione testuale dell'algoritmo di crittografia. Ammette valori Null. I valori possibili sono:<br /><br /> **Descrizione &#124; Opzione DDL corrispondente**<br /><br /> Nessuna &#124; Disabilitato<br /><br /> RC4 &#124; {Necessario &#124; Richiesto algoritmo RC4}<br /><br /> AES &#124; Richiesto algoritmo AES<br /><br /> NONE, RC4 &#124; {Supportato &#124; Algoritmo supportato RC4}<br /><br /> Nessuno, AES &#124; Algoritmo supportato RC4<br /><br /> RC4, AES &#124; Richiesto algoritmo RC4 AES<br /><br /> AES, RC4 &#124; Richiesto algoritmo AES RC4<br /><br /> NONE, RC4, AES &#124; L'algoritmo RC4 è supportato AES<br /><br /> Nessuno, AES, RC4 &#124;  Algoritmo supportato AES RC4|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Rappresentazione testuale dell'algoritmo di crittografia. Ammette valori Null. I valori possibili sono:<br /><br /> **Descrizione &#124; Opzione DDL corrispondente**<br /><br /> NONE &#124; Disabled<br /><br /> RC4 &#124; {Necessario &#124; Richiesto algoritmo RC4}<br /><br /> AES &#124; Richiesto algoritmo AES<br /><br /> NONE, RC4 &#124; {Supportato &#124; Algoritmo supportato RC4}<br /><br /> Nessuno, AES &#124; Algoritmo supportato RC4<br /><br /> RC4, AES &#124; Richiesto algoritmo RC4 AES<br /><br /> AES, RC4 &#124; Richiesto algoritmo AES RC4<br /><br /> NONE, RC4, AES &#124; L'algoritmo RC4 è supportato AES<br /><br /> Nessuno, AES, RC4 &#124;  Algoritmo supportato AES RC4|  
 |**receives_posted**|**smallint**|Numero di ricezioni di rete asincrone non ancora completate per la connessione. Ammette valori Null.|  
 |**is_receive_flow_controlled**|**bit**|Specifica se le ricezioni di rete sono state posticipate a causa del controllo di flusso, poiché la rete è occupata. Ammette valori Null.<br /><br /> 1 = True|  
 |**sends_posted**|**smallint**|Numero di invii di rete asincroni non ancora completati per la connessione. Ammette valori Null.|  
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |**total_receives**|**bigint**|Numero totale di richieste di ricezione in rete generate dalla connessione. Ammette valori Null.|  
 |**peer_arbitration_id**|**uniqueidentifier**|Identificatore interno dell'endpoint. Ammette valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="physical-joins"></a>Join fisici  
@@ -73,13 +76,13 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|Per|Relazione|  
+|From|Per|Relazione|  
 |----------|--------|------------------|  
 |**dm_broker_connections.connection_id**|**dm_exec_connections.connection_id**|Uno-a-uno|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica relative a Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica &#40; relative a Service Broker Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

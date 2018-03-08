@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SystemGetClusterAccuracyResults
 - cross-validation [data mining]
 ms.assetid: e1701738-50d5-46b4-b406-f1e800545abb
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ad7e0e0cbb1cf265a9944b81989b59b110602e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47272107eea7905a1e0414f42ff450e7a1ebbdb9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services - Data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Restituisce le metriche di accuratezza di convalida incrociata di una struttura di data mining e modelli di clustering correlati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Restituisce la metrica di accuratezza per la convalida incrociata di una struttura di data mining e dei modelli di clustering correlati.  
   
  Questa stored procedure restituisce la metrica per l'intero set di dati come un'unica partizione. Per partizionare il set di dati in sezioni trasversali e restituire la metrica per ogni partizione, usare [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
   
@@ -75,7 +76,7 @@ SystemGetClusterAccuracyResults(
  *elenco di test*  
  Stringa che specifica le opzioni di testing. Questo parametro è riservato per usi futuri.  
   
- (Facoltativo)  
+ (facoltativo).  
   
 ## <a name="return-type"></a>Tipo restituito  
  Tabella che contiene i punteggi per ogni singola partizione e le aggregazioni per tutti i modelli.  

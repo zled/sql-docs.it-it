@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 8d8013c5673a63c80f037ffab76064193db21a36
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 604952211abf63d6dacb111c8170d678acd2d80a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Esportazione in Microsoft Excel (Generatore report e SSRS)
   L'estensione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per il rendering di Excel consente di eseguire il rendering di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impaginato nel formato [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (con estensione xlsx). Con l'estensione per il rendering di Excel, la larghezza delle colonne in Excel si riflette con più accuratezza nella larghezza delle colonne nei report.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/05/2017
  Per informazioni dettagliate su come esportare in Excel, vedere [Esportazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
->  Quando si definisce un parametro di tipo **String**, viene visualizzata una casella di testo che può accettare qualsiasi valore. Se un parametro di report non è correlato a un parametro di query e i valori del parametro sono inclusi nel report, un utente potrebbe digitare nel valore del parametro un URL, uno script o la sintassi di un'espressione ed eseguire il rendering del report in formato Excel. Se il report viene in seguito visualizzato da un altro utente che fa clic sul contenuto dei parametri di cui è stato eseguito il rendering, è possibile che venga inavvertitamente eseguito il collegamento o lo script dannoso.  
+>  Quando si definisce un parametro di tipo **String**, viene visualizzata una casella di testo che può accettare qualsiasi valore. Se un parametro di report non è correlato a un parametro di query e i valori del parametro sono inclusi nel report, un utente potrebbe digitare nel valore del parametro un URL, uno script o la sintassi di un'espressione ed eseguire il rendering del report in formato Excel. Se il report viene in seguito visualizzato da un altro utente che fa clic sul contenuto dei parametri di cui è stato eseguito il rendering, è possibile che venga inavvertitamente eseguito il collegamento o lo script dannoso.  
 >   
 >  Per ridurre il rischio di eseguire inavvertitamente script dannosi, aprire i report visualizzabili solo da origini attendibili. Per altre informazioni sulla sicurezza dei report, vedere [Garantire la sicurezza di report e risorse](../../reporting-services/security/secure-reports-and-resources.md).  
   
@@ -181,7 +179,7 @@ ms.lasthandoff: 12/05/2017
 |Numero massimo di colonne per foglio di lavoro|256|16,384|  
 |Numero massimo di righe per foglio di lavoro|65,536|1.048.576|  
 |Numero di colori consentito in un foglio di lavoro|56 (tavolozza)<br /><br /> Se nel report vengono usati più di 56 colori, l'estensione per il rendering abbina il colore desiderato a uno dei 56 colori già disponibili nella tavolozza personalizzata.|Circa 16 milioni (colore a 24 bit)|  
-|File compressi ZIP|Nessuno|Compressione ZIP|  
+|File compressi ZIP|None|Compressione ZIP|  
 |Famiglia di caratteri predefinita|Arial|Calibri|  
 |Dimensioni del carattere predefinite|10pt|11pt|  
 |Altezza della riga predefinita|12,75 pt|15 pt|  

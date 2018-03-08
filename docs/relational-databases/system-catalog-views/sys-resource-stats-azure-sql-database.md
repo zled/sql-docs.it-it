@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.resource_stats
 - sys.resource_stats_TSQL
 - resource_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.resource_stats
 - resource_stats
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dad039b91c30e4c8d89168dd90d549ec6507c750
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72b0dc0c526198dc49047f44be0cce47ea7f3455
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,8 +53,8 @@ ms.lasthandoff: 11/17/2017
 |avg_cpu_percent|**numeric**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  
 |avg_data_io_percent|**numeric**|Percentuale dell'utilizzo medio di I/O in base al limite del livello del servizio.|  
 |avg_log_write_percent|**numeric**|Percentuale dell'utilizzo medio delle risorse di scrittura del limite del livello del servizio.|  
-|max_worker_percent|**Decimal(5,2)**|Massimi simultanee processi di lavoro (richieste) come percentuale del limite del livello di servizio del database.<br /><br /> Massimo viene attualmente calcolato per l'intervallo di 5 minuti sulla base dei campioni secondo 15 dei conteggi di lavoro simultanei.|  
-|max_session_percent|**Decimal(5,2)**|Numero massimo di sessioni simultaneo espresso come percentuale del limite del livello di servizio del database.<br /><br /> Massimo viene attualmente calcolato per l'intervallo di 5 minuti sulla base dei campioni secondo 15 del numero di sessioni simultanee.|  
+|max_worker_percent|**decimal(5,2)**|Massimi simultanee processi di lavoro (richieste) come percentuale del limite del livello di servizio del database.<br /><br /> Massimo viene attualmente calcolato per l'intervallo di 5 minuti sulla base dei campioni secondo 15 dei conteggi di lavoro simultanei.|  
+|max_session_percent|**decimal(5,2)**|Numero massimo di sessioni simultaneo espresso come percentuale del limite del livello di servizio del database.<br /><br /> Massimo viene attualmente calcolato per l'intervallo di 5 minuti sulla base dei campioni secondo 15 del numero di sessioni simultanee.|  
 |dtu_limit|**int**|Max database DTU impostazione corrente per il database durante questo intervallo.|  
   
 > [!TIP]  
@@ -78,7 +80,7 @@ ms.lasthandoff: 11/17/2017
 |avg_physical_data_read_percent|**decimal**|Percentuale dell'utilizzo medio di I/O in base al limite del livello del servizio.|  
 |avg_log_write_percent|**decimal**|Percentuale dell'utilizzo medio delle risorse di scrittura del limite del livello del servizio.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa vista è disponibile per tutti i ruoli utente con autorizzazioni per connettersi al virtuale **master** database.  
   
 ## <a name="remarks"></a>Osservazioni  

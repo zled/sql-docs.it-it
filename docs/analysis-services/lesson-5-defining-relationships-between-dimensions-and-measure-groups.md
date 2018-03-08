@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55d2ea123600615d64d737cbf9de5a895f1000ea
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5b3637cc09617b51663ac2bc65dea13c764981c2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lezione 5: Definizione delle relazioni tra dimensioni e gruppi di misure
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nelle lezioni precedenti in questa esercitazione, è stato aggiunte a un cubo le dimensioni del database possono essere utilizzate come base per uno o più dimensioni del cubo. In questa lezione verranno illustrate le procedure per definire tipi diversi di relazioni tra dimensioni e gruppi di misure del cubo, nonché per specificare le proprietà di tali relazioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Nelle lezioni precedenti di questa esercitazione è stato spiegato che le dimensioni del database aggiunte a un cubo possono essere utilizzate come base per una o più dimensioni del cubo. In questa lezione verranno illustrate le procedure per definire tipi diversi di relazioni tra dimensioni e gruppi di misure del cubo, nonché per specificare le proprietà di tali relazioni.  
   
 Per altre informazioni, vedere [Relazioni tra dimensioni](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
@@ -34,16 +37,16 @@ Per altre informazioni, vedere [Relazioni tra dimensioni](../analysis-services/m
   
 In questa lezione sono incluse le attività seguenti:  
   
-[Definizione di una relazione di tipo Riferimento](../analysis-services/lesson-5-1-defining-a-referenced-relationship.md)  
+[Definizione di una relazione di riferimento](../analysis-services/lesson-5-1-defining-a-referenced-relationship.md)  
 In questa attività verranno illustrate le procedure per collegare indirettamente una dimensione a una tabella dei fatti tramite una dimensione collegata mediante una relazione chiave primaria-chiave esterna.  
   
-[Definizione di una relazione di tipo Fatti](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
+[Definizione di una relazione di tipo fatti](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
 In questa attività verranno illustrate le procedure per definire una dimensione basata sui dati di una tabella dei fatti nonché per definire la relazione della dimensione come una relazione di tipo Fatti.  
   
 [Definizione di una relazione molti-a-molti](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
 In questa attività verranno illustrate le procedure per mettere in relazione un fatto a più membri delle dimensioni tramite una relazione molti-a-molti tra le tabelle delle dimensioni e dei fatti.  
   
-[Definizione della granularità della dimensione in un gruppo di misure](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[Definizione di granularità della dimensione all'interno di un gruppo di misure](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
 In questa attività verranno illustrate le procedure per modificare la granularità di una dimensione per un gruppo di misure specifico.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
@@ -51,7 +54,7 @@ In questa attività verranno illustrate le procedure per modificare la granulari
   
 ## <a name="see-also"></a>Vedere anche  
 [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modellazione multidimensionale &#40; Esercitazione di AdventureWorks &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Relazioni tra dimensioni](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

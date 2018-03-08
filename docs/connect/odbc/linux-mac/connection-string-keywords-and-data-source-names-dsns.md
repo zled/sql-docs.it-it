@@ -1,5 +1,5 @@
 ---
-title: Parole chiave delle stringhe di connessione e origine dati (DSN) nomi | Documenti Microsoft
+title: Connessione a SQL Server | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,36 +17,28 @@ helpviewer_keywords:
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2020ce16f722354b49a7e35e4a3f1e1706b6a2d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b6ad6278da1a3e325356058df51238dc34018bf0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="connection-string-keywords-and-data-source-names-dsns"></a>Parole chiave delle stringhe di connessione e nomi delle origini dati (DSN)
+# <a name="connecting-to-sql-server"></a>Connessione a SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Questo argomento viene illustrato come creare una connessione a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database.  
   
 ## <a name="connection-properties"></a>Proprietà delle connessioni  
-Per questa versione di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Linux o Mac OS, è possibile utilizzare le parole chiave di connessione seguenti:  
-  
-||||||  
-|-|-|-|-|-|  
-|`Addr`|`Address`|`ApplicationIntent`|`AutoTranslate`|`Database`|
-|`Driver`|`DSN`|`Encrypt`|`FileDSN`|`MARS_Connection`|  
-|`MultiSubnetFailover`|`PWD`|`Server`|`Trusted_Connection`|`TrustServerCertificate`|  
-|`UID`|`WSID`|`ColumnEncryption`|`TransparentNetworkIPResolution`||  
+
+Vedere [DSN e parole chiave delle stringhe di connessione e gli attributi](../../../connect/odbc/dsn-connection-string-attribute.md) per tutte le parole chiave delle stringhe di connessione e gli attributi supportati nel Mac e Linux
 
 > [!IMPORTANT]  
 > Se si stabilisce una connessione a un database che usa il mirroring, ovvero dispone di un partner di failover, non specificare il nome del database nella stringa di connessione. Inviare invece un **utilizzare** *database_name* comando per la connessione al database prima di eseguire la query.  
-  
-Per altre informazioni sulle parole chiave, vedere la sezione ODBC di [Utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](http://go.microsoft.com/fwlink/?LinkID=126696).  
   
 Il valore passato al **Driver** parola chiave può essere uno dei seguenti:  
   
@@ -85,9 +78,9 @@ Per ulteriori informazioni, vedere [crittografia delle connessioni a SQL Server]
 
 Indipendentemente dalle impostazioni di **Encrypt** e **TrustServerCertificate**, le credenziali di accesso al server (nome utente e password) vengono sempre crittografate. La tabella seguente mostra l'effetto delle impostazioni di **Encrypt** e **TrustServerCertificate** .  
 
-||**TrustServerCertificate = no**|**TrustServerCertificate = yes**|  
+||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
-|**Crittografare = no**|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa non vengono crittografati.|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa non vengono crittografati.|  
+|**Encrypt=no**|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa non vengono crittografati.|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa non vengono crittografati.|  
 |**Crittografare = Sì**|Il certificato del server viene verificato.<br /><br />I dati inviati dal client al server e viceversa vengono crittografati.<br /><br />Il nome (o l'indirizzo IP) in un nome comune soggetto (CN) o nome alternativo soggetto (SAN) in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] certificato SSL deve corrispondere esattamente il server name (o indirizzo IP) specificato nella stringa di connessione.|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa vengono crittografati.|  
 
 Per impostazione predefinita, le connessioni crittografate verificano sempre il certificato del server. Tuttavia, se ci si connette a un server che dispone di un certificato autofirmato, aggiungere il `TrustServerCertificate` opzione per ignorare il controllo il certificato nell'elenco delle autorità di certificazione attendibili:  
@@ -100,15 +93,18 @@ SSL usa la libreria OpenSSL. La tabella seguente mostra le versioni minime suppo
 
 |Piattaforma|Versione minima OpenSSL|Percorso del file di archivio di scopi consentiti ai certificati|  
 |------------|---------------------------|--------------------------------------------|
-|Debian 8.71 |1.0.1T|/etc/ssl/certs|
-|macOS 10.12|1.0.2K|/usr/local/etc/OpenSSL/certs|
-|OS X 10.11|1.0.2j|/usr/local/etc/OpenSSL/certs|
-|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|  
-|Red Hat Enterprise Linux 7|1.0.1E|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1I|/etc/ssl/certs|
-|Ubuntu 15.10 |1.0.2D|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2G|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2G|/etc/ssl/certs|
+|Debian 9|1.1.0|/etc/ssl/certs|
+|Debian 8.71 |1.0.1|/etc/ssl/certs|
+|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
+|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
+|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
+|SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
+|SuSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
+|Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
   
 È inoltre possibile specificare la crittografia nella stringa di connessione utilizzando il `Encrypt` opzione quando si utilizza **SQLDriverConnect** per la connessione.
 

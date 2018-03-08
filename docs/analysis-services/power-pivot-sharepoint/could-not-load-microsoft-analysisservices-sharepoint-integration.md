@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c48acc5178a8e17f47e14205cab10f14bf1a2d1d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0854f5c3cdf740c68b8f83dcb3d847cefc256edd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="could-not-load-microsoftanalysisservicessharepointintegration"></a>Non è stato possibile caricare Microsoft.AnalysisServices.SharePoint.Integration
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In ambienti SharePoint 2010 con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, questo errore si verifica se la soluzione a livello di applicazione per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] distribuzione non è riuscita correttamente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Negli ambienti di SharePoint 2010 in cui è disponibile [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, questo errore si verifica se la distribuzione della soluzione a livello di applicazione per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non è avvenuta correttamente.  
   
 ## <a name="details"></a>Dettagli  
   

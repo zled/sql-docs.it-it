@@ -1,5 +1,5 @@
 ---
-title: fulltext_document_types (Transact-SQL) | Documenti Microsoft
+title: sys.fulltext_document_types (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - fulltext_document_types
 - fulltext_document_types_TSQL
 - sys.fulltext_document_types
-dev_langs: TSQL
-helpviewer_keywords: sys.fulltext_document_types catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fulltext_document_types catalog view
 ms.assetid: 156fcfa4-7304-4a5c-b96f-1c3e061e5df0
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cda70f0c9ada37d6c805eefc7209a1ac7e0ca11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 26a1729aac9094d0b0f150d64772229d7f89c20a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,11 +43,11 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**document_type**|**sysname**|Estensione di file del tipo di documento supportato.<br /><br /> Questo valore può essere utilizzato per identificare il filtro che verrà utilizzato durante l'indicizzazione full-text delle colonne di tipo **varbinary (max)** o **immagine**.|  
 |**class_id**|**uniqueidentifier**|GUID della classe IFilter che supporta l'estensione di file.|  
-|**percorso**|**nvarchar (260)**|Percorso della DLL dell'interfaccia IFilter. Il percorso è visibile solo per i membri del **serveradmin** ruolo predefinito del server.|  
+|**path**|**nvarchar(260)**|Percorso della DLL dell'interfaccia IFilter. Il percorso è visibile solo per i membri del **serveradmin** ruolo predefinito del server.|  
 |**version**|**sysname**|Versione della DLL dell'interfaccia IFilter.|  
-|**produttore**|**sysname**|Nome del produttore dell'interfaccia IFilter.<br /><br /> Nota: Solo documenti con il produttore come [!INCLUDE[msCoName](../../includes/msconame-md.md)] sono supportate in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|**manufacturer**|**sysname**|Nome del produttore dell'interfaccia IFilter.<br /><br /> Nota: Solo documenti con il produttore come [!INCLUDE[msCoName](../../includes/msconame-md.md)] sono supportate in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  

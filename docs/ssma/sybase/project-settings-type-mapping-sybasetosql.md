@@ -3,7 +3,7 @@ title: Impostazioni (Mapping dei tipi) del progetto (SybaseToSQL) | Documenti Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea1b35e6943e89236aee72e7b0c31c545e100f88
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 594ef6405a41b199d527eaae56a77c7f1d91c4e6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Impostazioni (Mapping dei tipi) del progetto (SybaseToSQL)
 La pagina Mapping dei tipi del **impostazioni progetto** la finestra di dialogo contiene le impostazioni che consentono di personalizzare la modalità di conversione di tipi di dati Sybase Adaptive Server Enterprise (ASE) in SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di dati.  
@@ -69,15 +69,15 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti tra ASE e [!INCL
 |**char**|**char**|  
 |**Char (variabile)**|**varchar**|  
 |**variabile Char [\*... 8000]**|**varchar [\*]**|  
-|**variabile Char [8001...\*]**|**varchar(max)**|  
+|**variabile Char [8001...\*]**|**ntext**|  
 |**char[\*.. 8000]**|**char[\*]**|  
-|**Char [8001...\*;]**|**varchar(max)**|  
+|**Char [8001...\*;]**|**ntext**|  
 |**carattere**|**char**|  
 |**variabile di tipo carattere**|**varchar**|  
 |**variabile di tipo carattere [\*... 8000]**|**varchar [\*]**|  
-|**variabile di tipo carattere [8001...\*]**|**varchar(max)**|  
+|**variabile di tipo carattere [8001...\*]**|**ntext**|  
 |**caratteri [\*... 8000]**|**char[\*]**|  
-|**caratteri [8001...\*]**|**varchar(max)**|  
+|**caratteri [8001...\*]**|**ntext**|  
 |**data**|**data**|  
 |**datetime**|**datetime2 [3]**|  
 |**DEC**|**decimal**|  
@@ -151,5 +151,5 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti tra ASE e [!INCL
 |**varbinary [8001...\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
 |**varchar [\*... 8000]**|**varchar [\*]**|  
-|**varchar [8001...\*]**|**varchar(max)**|  
+|**varchar [8001...\*]**|**ntext**|  
   

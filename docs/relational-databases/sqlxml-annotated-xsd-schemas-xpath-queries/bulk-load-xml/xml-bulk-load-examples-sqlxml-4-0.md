@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -33,19 +34,20 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3e872d63c71817e8f79e261598875840ccb65f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cabf000a6a14a041a0d5e5dbedbafb07365dc63f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Esempi di caricamento bulk XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Gli esempi seguenti illustrano le funzionalità di caricamento Bulk XML in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In ogni esempio vengono forniti uno schema XSD e lo schema XDR equivalente.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Negli esempi seguenti viene illustrata la funzionalità di caricamento bulk XML in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In ogni esempio vengono forniti uno schema XSD e lo schema XDR equivalente.  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>Script per il caricamento bulk (ValidateAndBulkload.vbs)  
  Lo script seguente, scritto nel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript), carica un documento XML nel DOM XML, la convalida rispetto a uno schema; e, se il documento è valido, viene eseguito un blocco XML carico per caricare il codice XML in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella. Lo script può essere utilizzato con ognuno dei singoli esempi che vi fanno riferimento più avanti in questo argomento.  
@@ -123,7 +125,7 @@ End Function
   
 1.  Creare la tabella seguente:  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE Cust(CustomerID  int PRIMARY KEY,  
                       CompanyName varchar(20),  
                       City        varchar(20));  
@@ -234,7 +236,7 @@ End Function
   
 -   Cust (CustomerID, CompanyName, città)  
   
--   CustOrder (OrderID, CustomerID)  
+-   CustOrder(OrderID, CustomerID)  
   
  Nello schema XSD seguente viene definita la vista XML delle tabelle. Lo schema specifica la relazione padre-figlio tra il  **\<cliente >** e  **\<ordine >** elementi.  
   
@@ -281,7 +283,7 @@ End Function
   
 1.  Creare due tabelle in **tempdb** database:  
   
-    ```tsql  
+    ```sql  
     USE tempdb;  
     CREATE TABLE Cust(  
            CustomerID  int PRIMARY KEY,  
@@ -396,7 +398,7 @@ End Function
   
 1.  Creare tre tabelle:  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE Ord (  
              OrderID     int  PRIMARY KEY,  
              CustomerID  varchar(5));  
@@ -563,7 +565,7 @@ OrderDetail (OrderID, ProductID)
 5.  Eseguire il codice VBScript. Il caricamento bulk XML caricherà i dati nelle tabelle appropriate.  
   
 ## <a name="e-generating-table-schemas-before-bulk-loading"></a>E. Generazione di schemi di tabella prima del caricamento bulk  
- Il caricamento bulk XML può eventualmente generare le tabelle se queste non sono già presenti. Impostazione della proprietà SchemaGen di sqlxmlbulkload-oggetto non TRUE questo. È anche possibile richiedere il caricamento Bulk XML per eliminare le tabelle esistenti e ricrearle impostando sgdroptables-proprietà su TRUE. Nell'esempio di codice VBScript seguente viene illustrato l'utilizzo di tali proprietà.  
+ Il caricamento bulk XML può eventualmente generare le tabelle se queste non sono già presenti. Impostazione della proprietà SchemaGen di SQLXMLBulkLoad-oggetto non TRUE questo. È anche possibile richiedere il caricamento Bulk XML per eliminare le tabelle esistenti e creare nuovamente impostando SGDropTables-proprietà su TRUE. Nell'esempio di codice VBScript seguente viene illustrato l'utilizzo di tali proprietà.  
   
  Nell'esempio vengono inoltre impostate altre due proprietà su TRUE:  
   
@@ -813,7 +815,7 @@ End Sub
 ```  
   
 ## <a name="g-bulk-loading-in-overflow-columns"></a>G. Caricamento bulk in colonne di overflow  
- Se lo schema di mapping specifica una colonna di overflow tramite il **SQL: overflow-campo** annotazioni, caricamento Bulk XML copia tutti i dati non utilizzati dal documento di origine in questa colonna.  
+ Se lo schema di mapping specifica una colonna di overflow tramite il **SQL:overflow-campo** annotazione, il caricamento Bulk XML copia tutti i dati non utilizzati dal documento di origine in questa colonna.  
   
  Si consideri lo schema XSD seguente:  
   
@@ -853,7 +855,7 @@ End Sub
  Lo schema identifica una colonna di overflow (OverflowColumn) per la tabella Cust. Di conseguenza, tutti non utilizzati dati XML per ogni  **\<cliente >** elemento viene aggiunto a questa colonna.  
   
 > [!NOTE]  
->  Tutti gli elementi astratti (elementi per cui **astratta = "true"** è specificato) e tutti gli attributi non consentiti (attributi per cui **vietato = "true"** è specificato) vengono considerati come overflow dal blocco XML Caricamento e vengono aggiunti alla colonna di overflow, se specificato. In caso contrario, vengono ignorati.  
+>  Tutti gli elementi astratti (elementi per i quali **astratta="true"** è specificato) e tutti gli attributi non consentiti (attributi per cui **vietato="true"** è specificato) vengono considerati come overflow dal caricamento Bulk XML e vengono aggiunte alla colonna di overflow, se specificato. In caso contrario, vengono ignorati.  
   
 #### <a name="to-test-a-working-sample"></a>Per testare un esempio reale  
   
@@ -1036,7 +1038,7 @@ set objBL=Nothing
   
 5.  Eseguire il codice VBScript.  
   
-     Lo schema deve specificare corrispondente **SQL: DataType** per il **CustomerID** attributo quando il valore per **CustomerID** viene specificato come un GUID che include parentesi graffe ({ e}), ad esempio:  
+     Lo schema deve specificare corrispondente **SQL:DataType** per il **CustomerID** attributo quando il valore per **CustomerID** viene specificato come un GUID che include parentesi graffe ({e}), ad esempio:  
   
     ```  
     <ROOT>  
@@ -1068,7 +1070,7 @@ set objBL=Nothing
     </xsd:schema>  
     ```  
   
-     Quando **SQL: DataType** viene specificato che identifica il tipo di colonna come **uniqueidentifier**, l'operazione di caricamento bulk rimuove le parentesi graffe ({e}) dal **CustomerID** valore prima di inserirlo nella colonna.  
+     Quando **SQL:DataType** viene specificato che identifica il tipo di colonna come **uniqueidentifier**, l'operazione di caricamento bulk rimuove le parentesi graffe ({e}) dal **CustomerID** valore prima di inserirlo nella colonna.  
   
  Di seguito viene indicato lo schema XDR equivalente:  
   

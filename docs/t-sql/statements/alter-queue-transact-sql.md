@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_QUEUE_TSQL
 - ALTER QUEUE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - number of queue readers
 - modifying queues
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - unavailable queues [SQL Server]
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2774da9a0a75c4645a4bd64237ec99a7cf92d771
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7f97bd0a341ecc5e960c94c4c8bdabe30b572fd9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +98,7 @@ WITH
  *schema_name* (oggetto)  
  Nome dello schema cui appartiene la nuova coda. Se non si *schema_name* viene fornito, l'impostazione predefinita lo schema predefinito per l'utente corrente.  
   
- *nome_coda*  
+ *queue_name*  
  Nome della coda da modificare.  
   
  STATUS (coda)  
@@ -142,7 +144,7 @@ A differenza di RIORGANIZZAZIONE nelle tabelle utente, REORGANIZE in una coda vi
  *schema_name* (routine)  
  Nome dello schema a cui appartiene la stored procedure.  
   
- *nome_stored_procedure*  
+ *stored_procedure_name*  
  Nome della stored procedure.  
   
  MAX_QUEUE_READERS =*max_reader*  
@@ -179,7 +181,7 @@ A differenza di RIORGANIZZAZIONE nelle tabelle utente, REORGANIZE in una coda vi
   
  Se in un'istruzione RECEIVE o GET CONVERSATION GROUP viene specificata una coda non disponibile, l'istruzione ha esito negativo e viene generato un errore [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per la modifica di una coda vengono assegnate per impostazione predefinita al proprietario della coda, ai membri del ruolo predefinito del database db_ddladmin o db_owner e ai membri del ruolo predefinito del server sysadmin.  
   
 ## <a name="examples"></a>Esempi  
@@ -262,7 +264,7 @@ ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [DROP QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   

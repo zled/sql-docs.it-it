@@ -1,26 +1,28 @@
 ---
 title: Usare Python con revoscalepy per creare un modello | Documenti Microsoft
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 09/19/2017
 mms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: b5d6daa6c1e4db5f3f78b325f8821402a6b65b14
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: 1ced0d05a74f43c6b80be6717826ab288ee25374
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Usare Python con revoscalepy per creare un modello
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo esempio viene illustrato come creare un modello di regressione lineare in SQL Server, usando un algoritmo dal **revoscalepy** pacchetto.
 
@@ -28,7 +30,7 @@ Il **revoscalepy** dal pacchetto per Python contiene oggetti, le trasformazioni,
 
 Per ulteriori informazioni, vedere [novità revoscalepy?](../python/what-is-revoscalepy.md) e [riferimento alla funzione di Python](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 > [!IMPORTANT]
 > Per eseguire codice Python in SQL Server, è necessario avere installato SQL Server 2017 CTP 2.0 o versione successiva e, è necessario installare e abilitare la funzionalità, **Machine Learning Services** con Python. Altre versioni di SQL Server non supportano l'integrazione di Python.

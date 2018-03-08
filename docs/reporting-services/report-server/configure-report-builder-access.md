@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2018c910537ea73bc36d1a41f074d9aeae0e9a37
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9e4181a11fafb1629ce10e8ac21a462a1d95f5b2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-report-builder-access"></a>Configurare l'accesso a Generatore report
   Generatore report è uno strumento per il reporting ad hoc installato con un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurato per la modalità nativa o la modalità integrata SharePoint.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  Per utilizzare Generatore report, è necessario disporre di un modello di report pubblicato da utilizzare.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Generatore report non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Nel computer client deve essere installato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce l'infrastruttura per l'esecuzione di applicazioni [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/05/2017
 |Con negoziazione (impostazione predefinita)<br /><br /> NTLM (impostazione predefinita)|Se si utilizza la sicurezza integrata di Windows, le richieste autenticate provenienti da ClickOnce e Generatore report vengono in genere soddisfatte se il client e il server sono distribuiti nello stesso dominio, se l'utente ha eseguito l'accesso al computer client utilizzando un account di dominio con l'autorizzazione per accedere a Generatore report e se il server di report è configurato per l'autenticazione di Windows.<br /><br /> Le richieste vengono soddisfatte perché l'identità utente di ClickOnce e della connessione tramite browser al server di report è la stessa.<br /><br /> Le richieste non verranno soddisfatte se l'utente ha aperto Internet Explorer con Esegui come e ha specificato credenziali non predefinite. Se la sessione utente nel server di report è stata stabilita con un account specifico e ClickOnce viene eseguita con un account diverso, il server di report negherà l'accesso ai file.|  
 |Kerberos|Internet Explorer, necessario per utilizzare Generatore report, non supporta direttamente l'autenticazione Kerberos.|  
 |Autenticazione di base|In ClickOnce l'autenticazione di base non è supportata e non verranno pertanto formulate richieste che specificano questo tipo di autenticazione nell'intestazione di autenticazione. Non verranno passate credenziali né verrà richiesto all'utente di specificarle. Per risolvere questi problemi, abilitare l'accesso anonimo ai file dell'applicazione di Generatore report.<br /><br /> Se si abilita l'accesso anonimo ai file dell'applicazione di Generatore report, le richieste verranno soddisfatte perché il server di report ignora l'intestazione di autenticazione. Per altre informazioni su come abilitare l'accesso anonimo a Generatore report, vedere [Configurare l'autenticazione di base nel server di report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md).<br /><br /> Dopo che i file dell'applicazione sono stati recuperati da ClickOnce, Generatore report apre una connessione separata a un server di report. Affinché la connessione venga stabilita, gli utenti devono specificare nuovamente le proprie credenziali poiché Generatore report non raccoglie credenziali da Internet Explorer o ClickOnce.<br /><br /> Se il server di report è configurato per l'autenticazione di base e se per i file di programma di Generatore report non è stato abilitato l'accesso anonimo, le richieste non verranno soddisfatte poiché ClickOnce specifica la sicurezza integrata di Windows nelle proprie richieste. Se si configura il server di report per l'autenticazione di base, il server rifiuterà la richiesta poiché in quest'ultima viene specificato un pacchetto di sicurezza non valido e non sono contenute le credenziali previste per il server di report.<br /><br /> Se inoltre il server di report viene configurato per l'utilizzo della modalità integrata SharePoint e il sito di SharePoint utilizza l'autenticazione di base, verrà generato l'errore 401 quando gli utenti tenteranno di utilizzare ClickOnce per installare Generatore report nei computer client. Questo problema si verifica perché SharePoint utilizza un cookie per rendere valida l'autenticazione di un utente per tutta la durata della sessione, ma tale cookie non è supportato da ClickOnce. Quando un utente avvia un'applicazione ClickOnce, ad esempio Generatore report, l'applicazione non passa il cookie a SharePoint e, pertanto, SharePoint nega l'accesso e restituisce l'errore 401.<br /><br /> È possibile risolvere questo problema provando a eseguire una delle operazioni seguenti:<br /><br /> - Selezionare l'opzione **Memorizza password** quando si forniscono le credenziali utente.<br /><br /> - Abilitare l'accesso anonimo alla raccolta siti di SharePoint.<br /><br /> - Configurare l'ambiente in modo che l'utente non debba fornire credenziali. In un ambiente Intranet, ad esempio, è possibile configurare il server SharePoint in modo che appartenga a un gruppo di lavoro e quindi creare gli account utente nel computer locale.|  
-|Custom|Quando si configura un server di report per utilizzare l'autenticazione personalizzata, su tale server è abilitato l'accesso anonimo e le richieste vengono accettate senza alcun controllo di autenticazione.<br /><br /> Dopo che i file dell'applicazione sono stati recuperati da ClickOnce, Generatore report apre una connessione separata a un server di report. Affinché la connessione venga stabilita, gli utenti devono specificare nuovamente le proprie credenziali poiché Generatore report non raccoglie credenziali da Internet Explorer o ClickOnce.|  
+|Personalizzato|Quando si configura un server di report per utilizzare l'autenticazione personalizzata, su tale server è abilitato l'accesso anonimo e le richieste vengono accettate senza alcun controllo di autenticazione.<br /><br /> Dopo che i file dell'applicazione sono stati recuperati da ClickOnce, Generatore report apre una connessione separata a un server di report. Affinché la connessione venga stabilita, gli utenti devono specificare nuovamente le proprie credenziali poiché Generatore report non raccoglie credenziali da Internet Explorer o ClickOnce.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)   

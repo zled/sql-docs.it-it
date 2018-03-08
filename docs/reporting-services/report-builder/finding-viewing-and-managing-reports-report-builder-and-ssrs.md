@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fc5a838e47221f6686cb417ae4c20e9ac95d09f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ca04c9558b827539bdb6dac8431a768e8d68f414
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Ricerca, visualizzazione e gestione dei report (Generatore report SSRS)
   In Generatore report è possibile esplorare le cartelle di un server di report o di un sito di SharePoint per trovare report, origini dati condivise, modelli e altri elementi del report correlati, nonché esplorare il computer per individuare i report locali. Per semplificare la ricerca dei report, in Generatore report viene mantenuto un elenco dei server e dei siti utilizzati recentemente e fornito un accesso diretto alle cartelle Desktop, Documenti e Risorse del computer nel file system del computer.  
@@ -144,7 +142,7 @@ Barra degli strumenti dei report
  Le informazioni sulle sessioni vengono archiviate nel database temporaneo del server di report. Per il server di report non viene usata la gestione delle sessioni di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Se si riavvia il server oppure si esegue un'operazione di recupero del database, lo stato delle sessioni non verrà ripristinato. Per altre informazioni sulla gestione delle sessioni, vedere [Identificazione dello stato di esecuzione](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).  
   
  
-##  <a name="InThisSection"></a> Argomenti della sezione  
+##  <a name="InThisSection"></a> Contenuto della sezione  
  Negli argomenti seguenti vengono fornite ulteriori informazioni sulla visualizzazione e sulla gestione dei report.  
   
   [Trovare, visualizzare e gestire report](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

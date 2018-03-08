@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Discover Events event category
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4eeba0ee1a65901b9a767eaa4acae25af56fd23e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eee3ed0e00d25e255d1cf8de5cc08f0645cdd0dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discover-events-data-columns"></a>Colonne di dati degli eventi di individuazione
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria di eventi di individuazione include le classi di evento seguenti:  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Contiene l'ora corrente dell'evento di individuazione, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene l'ora, se disponibile, in cui è iniziato l'evento di fine individuazione. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene l'ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Durata|5|2|Contiene la durata dell'evento di individuazione in millisecondi.|  
+|Duration|5|2|Contiene la durata dell'evento di individuazione in millisecondi.|  
 |CPUTime|6|2|Contiene il tempo della CPU in millisecondi utilizzato dall'evento.|  
 |Severity|22|1|Contiene il livello di gravità di un'eccezione.|  
 |Esito positivo|23|1|Contiene informazioni sull'esito positivo o negativo dell'evento di individuazione. I valori possibili sono:<br /><br /> 0 = esito negativo<br /><br /> 1 = esito positivo|  

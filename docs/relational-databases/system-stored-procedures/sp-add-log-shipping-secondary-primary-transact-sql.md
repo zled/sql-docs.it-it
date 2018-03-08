@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Documenti Microsoft
+title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
 - sp_add_log_shipping_secondary_primary
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_shipping_secondary_primary
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5e5058e0403c06d722b29f0ff68d20240724a42
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c83d0a0062f7f7affc19e91b929bb16831a8946d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,31 +60,31 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@primary_server**  =] '*primary_server*'  
+ [ **@primary_server** = ] '*primary_server*'  
  Il nome dell'istanza primaria del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione di log shipping. *primary_server* è **sysname** e non può essere NULL.  
   
  [  **@primary_database**  =] '*primary_database*'  
  Nome del database sul server primario. *primary_database* è **sysname**, non prevede alcun valore predefinito.  
   
- [  **@backup_source_directory**  =] '*backup_source_directory*'  
+ [ **@backup_source_directory** = ] '*backup_source_directory*'  
  Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario. *backup_source_directory* è **nvarchar (500)** e non può essere NULL.  
   
  [  **@backup_destination_directory**  =] '*backup_destination_directory*'  
  Directory nel server secondario in cui vengono copiati i file di backup. *backup_destination_directory* è **nvarchar (500)** e non può essere NULL.  
   
- [  **@copy_job_name**  =] '*copy_job_name*'  
+ [ **@copy_job_name** = ] '*copy_job_name*'  
  Nome da utilizzare per il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent creato per copiare i backup del log delle transazioni nel server secondario. *copy_job_name* è **sysname** e non può essere NULL.  
   
- [  **@restore_job_name**  =] '*restore_job_name*'  
+ [ **@restore_job_name** = ] '*restore_job_name*'  
  È il nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo dell'agente nel server secondario che ripristina i backup del database secondario. *restore_job_name* è **sysname** e non può essere NULL.  
   
  [  **@file_retention_period**  =] '*file_retention_period*'  
  Il periodo di tempo, espresso in minuti, che viene mantenuto un file di backup nel server secondario nel percorso specificato per il @backup_destination_directory parametro prima di essere eliminati. *history_retention_period* è **int**, con un valore predefinito è NULL. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
- [  **@monitor_server**  =] '*monitor_server*'  
+ [ **@monitor_server** = ] '*monitor_server*'  
  Nome del server di monitoraggio. *Monitor_server* è **sysname**, senza impostazione predefinita e non può essere NULL.  
   
- [  **@monitor_server_security_mode**  =] '*monitor_server_security_mode*'  
+ [ **@monitor_server_security_mode** = ] '*monitor_server_security_mode*'  
  Modalità di sicurezza utilizzata per connettersi al server di monitoraggio.  
   
  1 = Autenticazione di Windows.  
@@ -90,16 +93,16 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode* è **bit** e non può essere NULL.  
   
- [  **@monitor_server_login**  =] '*monitor_server_login*'  
+ [ **@monitor_server_login** = ] '*monitor_server_login*'  
  Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
   
- [  **@monitor_server_password**  =] '*monitor_server_password*'  
+ [ **@monitor_server_password** = ] '*monitor_server_password*'  
  Password dell'account utilizzato per accedere al server di monitoraggio.  
   
- [  **@copy_job_id**  =] '*copy_job_id*' OUTPUT  
+ [ **@copy_job_id** = ] '*copy_job_id*' OUTPUT  
  ID associato al processo di copia nel server secondario. *copy_job_id* è **uniqueidentifier** e non può essere NULL.  
   
- [  **@restore_job_id**  =] '*restore_job_id*' OUTPUT  
+ [ **@restore_job_id** = ] '*restore_job_id*' OUTPUT  
  ID associato al processo di ripristino nel server secondario. *restore_job_id* è **uniqueidentifier** e non può essere NULL.  
   
  [  **@secondary_id**  =] '*secondary_id*' OUTPUT  
@@ -128,7 +131,7 @@ sp_add_log_shipping_secondary_primary
   
     5.  Impostare l'ID di processo di ripristino nel **log_shipping_secondary** voce per l'ID di processo del processo di ripristino.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  
@@ -152,7 +155,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul Log Shipping &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

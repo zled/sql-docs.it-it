@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], rules
 - Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a7f0a74cc5f14d268b5854781786608ee9e4fc4d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8627d46cc0d919ecf41c7ad5c202d13921cd77df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrare una regola in un modello Association Rules
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile usare filtri con i modelli di associazione per limitare i risultati alle sole associazioni desiderate. È ad esempio possibile filtrare le regole in modo da visualizzare solo quelle che includono un prodotto specifico.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+È possibile utilizzare i filtri con i modelli di associazione per limitare i risultati alle sole associazioni desiderate. È ad esempio possibile filtrare le regole in modo da visualizzare solo quelle che includono un prodotto specifico.  
   
  In Progettazione modelli di data mining è possibile filtrare le regole visualizzate usando i controlli nella scheda **Regole** del Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules.  Si può anche creare una query sul modello per vedere solo il set di elementi che contiene un determinato valore.  
   
@@ -64,10 +63,10 @@ ms.lasthandoff: 12/08/2017
   
 ### <a name="create-a-query-on-the-itemsets-in-an-association-model"></a>Creare una query sui set di elementi di un modello di associazione  
   
--   [Esempi di query sul modello di associazione](../../analysis-services/data-mining/association-model-query-examples.md)  
+-   [Esempi di Query sul modello Association](../../analysis-services/data-mining/association-model-query-examples.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Visualizzare un modello utilizzando il visualizzatore Microsoft Association Rules](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
  [Lezione 3: Compilazione di uno Scenario Market Basket &#40; esercitazione intermedia di Data Mining &#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   

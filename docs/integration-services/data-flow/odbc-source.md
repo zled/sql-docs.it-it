@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9c8def299d18a8c7d64cd581fdf7934f366ce5dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-source"></a>Origine ODBC
   Tramite l'origine ODBC vengono estratti dati da un database supportato da ODBC mediante una tabella di database, una vista o un'istruzione SQL.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/20/2017
  A seconda dell'impostazione del comportamento in seguito all'errore, l'origine ODBC supporta la restituzione degli errori (conversione dei dati, troncamento) che si verificano durante il processo di estrazione nell'output degli errori. Per altre informazioni, vedere [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
   
 ## <a name="data-type-support"></a>Supporto dei tipi di dati  
- Per informazioni sui tipi di dati supportati dall'origine ODBC, vedere Connettore per ODBC (Open Database Connectivity) di Attunity.  
+ Per informazioni sui tipi di dati supportati dall'origine ODBC, vedere Connettore per ODBC (Open Database Connectivity).  
   
 ## <a name="extract-options"></a>Opzioni di estrazione  
  L'origine ODBC usa la modalità **Batch** o **Row-by-Row** . La modalità utilizzata è determinata dalla proprietà **FetchMethod** . Nell'elenco seguente vengono descritte le diverse modalità.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/20/2017
   
  Per altre informazioni sulla proprietà **FetchMethod** , vedere [Proprietà personalizzate dell'origine ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## <a name="parallelism"></a>Parallelismo  
+## <a name="parallelism"></a>Parallelism  
  Non sussiste alcuna limitazione al numero di componenti dell'origine ODBC che possono essere eseguiti in parallelo rispetto alla stessa tabella o a tabelle diverse, nello stesso computer o in computer diversi, ad eccezione dei normali limiti di sessione globali.  
   
  Alcune limitazioni del provider ODBC utilizzato possono tuttavia ridurre il numero di connessioni simultanee tramite il provider. Queste limitazioni riducono il numero di possibili istanze parallele supportate per l'origine ODBC. Lo sviluppatore di SSIS deve essere a conoscenza delle limitazioni di qualsiasi provider ODBC utilizzato e tenerne conto in caso di compilazione di pacchetti SSIS.  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="connection-manager"></a>Gestione connessione  
  Consente di selezionare una gestione connessione ODBC esistente nell'elenco o di creare una nuova connessione facendo clic su **Nuova** . La connessione può essere a qualsiasi database supportato da ODBC.  
   
-#### <a name="new"></a>Nuova  
+#### <a name="new"></a>Nuovo  
  Fare clic su **Nuovo**. Viene visualizzata la finestra di dialogo **Configura gestione connessione ODBC** in cui è possibile creare una nuova gestione connessione ODBC.  
   
 #### <a name="data-access-mode"></a>Modalità di accesso ai dati  
@@ -167,7 +168,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="inputoutput"></a>Input/Output  
  Consente di visualizzare il nome dell'origine dei dati.  
   
-#### <a name="column"></a>Colonna  
+#### <a name="column"></a>colonna  
  Non usato.  
   
 #### <a name="error"></a>Errore  

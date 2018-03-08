@@ -17,20 +17,20 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9688b2bac34a38ea667557b997adfed3e7cf37d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 422f5bc66dc5b31889d4f790d61b5b95abf2fa7e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lezione 1: Creazione di account di Windows per la replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In questa lezione verranno creati account di Windows per l'esecuzione degli agenti di replica. Verrà creato un account di Windows separato nel server locale per gli agenti seguenti:  
   
-|Agente|Percorso|Nome account|  
+|Agent|Percorso|Nome account|  
 |---------|------------|----------------|  
 |agente snapshot|Server di pubblicazione|\<*nome_computer*>\repl_snapshot|  
 |Agente di lettura log|Server di pubblicazione|\<*nome_computer*>\repl_logreader|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Scegliere **Chiudi**.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 In questo modo sono stati creati gli account di Windows per gli agenti di replica. Il passaggio successivo consiste nella configurazione della cartella snapshot. Vedere [Lezione 2: Preparazione della cartella snapshot](../../relational-databases/replication/lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>Vedere anche  

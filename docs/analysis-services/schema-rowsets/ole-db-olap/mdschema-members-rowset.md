@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_MEMBERS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bff8fc8c121f88dbc8bf7cbdc0b2ce1705934702
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8ee6e7231d4a3a3696de68e3c22b8cad7eb05a92
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemamembers-rowset"></a>Set di righe MDSCHEMA_MEMBERS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Vengono descritti i membri all'interno di un database.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **MDSCHEMA_MEMBERS** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
+|Nome colonna|Indicatore del tipo|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Nome del database a cui appartiene il membro.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Nome dello schema a cui appartiene il membro.|  
@@ -69,17 +67,17 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**LEVEL_NUMBER**|**DBTYPE_UI4**|Facoltativa.|  
-|**MEMBER_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MEMBER_CAPTION**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MEMBER_TYPE**|**DBTYPE_I4**|Facoltativa.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**LEVEL_NUMBER**|**DBTYPE_UI4**|Facoltativo.|  
+|**MEMBER_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MEMBER_CAPTION**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MEMBER_TYPE**|**DBTYPE_I4**|Facoltativo.|  
 |**TREE_OP**|**DBTYPE_I4**|(Facoltativo) Si applica solo a un singolo membro:<br /><br /> **MDTREEOP_ANCESTORS** (**0x20**) restituisce tutti i relativi predecessori.<br /><br /> **MDTREEOP_CHILDREN** (**0x01**) restituisce solo gli elementi figlio immediati.<br /><br /> **MDTREEOP_SIBLINGS** (**0x02**) restituisce i membri allo stesso livello.<br /><br /> **MDTREEOP_PARENT** (**0x04**) restituisce solo l'oggetto padre.<br /><br /> **MDTREEOP_SELF** (**0x08**) restituisce se stesso nell'elenco di righe restituite.<br /><br /> **MDTREEOP_DESCENDANTS** (**0x10**) restituisce tutti i discendenti.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Facoltativo) Restrizione predefinita è un valore pari a 1. Una bitmap con uno dei valori validi seguenti:<br /><br /> 1 CUBO<br /><br /> 2 DIMENSIONE|  
   

@@ -1,36 +1,35 @@
 ---
 title: Utilizzo di connessioni e sessioni in ADOMD.NET | Documenti Microsoft
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - sessions [ADOMD.NET]
 - connections [ADOMD.NET]
 ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a384fc1f08cd6a60132d7d99cf3072973e3add8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a4f51a9e0939612e490ed96c93c06a6931fa3f21
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---working-with-connections-and-sessions"></a>Connessioni in ADOMD.NET - utilizzo di connessioni e sessioni
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In XML for Analysis (XMLA), le sessioni forniscono supporto per le operazioni durante l'accesso ai dati analitici. Le sessioni costituiscono l'ambito e il contesto di comandi e transazioni per un'origine dati analitici. Gli elementi XMLA utilizzati per gestire le sessioni sono [BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md), [sessione](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md), e [EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md).  
+  In XML for Analysis (XMLA) le sessioni forniscono supporto per le operazioni con stato durante l'accesso ai dati analitici. Le sessioni costituiscono l'ambito e il contesto di comandi e transazioni per un'origine dati analitici. Gli elementi XMLA utilizzati per gestire le sessioni sono [BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md), [sessione](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md), e [EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md).  
   
  ADOMD.NET utilizza questi tre elementi della sessione XMLA quando si avvia una sessione, si esegue una query o si recuperano dati durante una sessione e quando si chiude una sessione.  
   

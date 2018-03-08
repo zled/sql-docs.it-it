@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SET @local_variable
 - variables [SQL Server], assigning
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b7d855f491a4f9482308df6f3ed2dcca8b067398
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-localvariable-transact-sql"></a>IMPOSTARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,13 +76,13 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **@***local_variable*  
+ **@** *local_variable*  
  È il nome di una variabile di qualsiasi tipo tranne **cursore**, **testo**, **ntext**, **immagine**, o **tabella**. I nomi delle variabili devono iniziare con un simbolo di chiocciola (**@**). I nomi delle variabili devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  *property_name*  
  Proprietà di un tipo definito dall'utente.  
   
- *nome_campo*  
+ *field_name*  
  Campo pubblico di un tipo definito dall'utente.  
   
  *udt_name*  
@@ -92,7 +94,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *nome_metodo* **(** *argomento* [ **,**... *n* ] **)**  
  Metodo di un tipo definito dall'utente che accetta uno o più argomenti per modificare lo stato di un'istanza di un tipo. I metodi statici devono essere pubblici.  
   
- **@***SQLCLR_local_variable*  
+ **@** *SQLCLR_local_variable*  
  È una variabile il cui tipo è situato in un assembly. Per altre informazioni, vedere [Concetti relativi alla programmazione dell'integrazione con CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -181,7 +183,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Le variabili possono essere utilizzate solo nelle espressioni e non in sostituzione di parole chiave o nomi di oggetto. Per creare istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] dinamiche, utilizzare EXECUTE.  
   
- Le regole di sintassi per SET  **@**  *cursor_variable* non includono le parole chiave LOCAL e GLOBAL. Quando il SET di  **@**  *cursor_variable* = CURSOR... viene utilizzata la sintassi, viene creato un cursore GLOBAL o LOCAL a seconda dell'impostazione del valore predefinito per l'opzione di database locale di cursore.  
+ Le regole di sintassi per SET **@ * * * cursor_variable* non includono le parole chiave LOCAL e GLOBAL. Quando il SET **@ * * * cursor_variable* = CURSOR... viene utilizzata la sintassi, viene creato un cursore GLOBAL o LOCAL a seconda dell'impostazione del valore predefinito per l'opzione di database locale di cursore.  
   
  Le variabili di cursore sono sempre locali, anche quando fanno riferimento a un cursore globale. Quando una variabile di cursore fa riferimento a un cursore globale, esistono sia un riferimento al cursore locale che un riferimento al cursore globale. Per ulteriori informazioni, vedere l'esempio C.  
   
@@ -191,8 +193,8 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Non utilizzare una variabile in un'istruzione SELECT per concatenare valori, ovvero per elaborare valori aggregati. Si potrebbero verificare risultati di query imprevisti. Ciò è dovuto al fatto che non è garantito che tutte le espressioni nell'elenco SELECT, incluse le assegnazioni, siano eseguite esattamente una volta per ciascuna riga di output. Per ulteriori informazioni, vedere [questo articolo della Knowledge Base](http://support.microsoft.com/kb/287515).  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'appartenenza al ruolo public. Tutti gli utenti possono utilizzare SET  **@**  *local_variable*.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo public. Tutti gli utenti possono utilizzare SET **@ * * * local_variable*.  
   
 ## <a name="examples"></a>Esempi  
   

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fa736e170b58b38369547e27de5915a1a90352b2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: de41276f6cdb4e82eb6d30fd653166376bf375fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Esportazione di un dominio in un file DQS
   In questo argomento viene descritto come esportare un dominio in un file DQS [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). È possibile esportare un dominio o una Knowledge Base intera in un file di dati. Per informazioni sull'esportazione di una Knowledge Base, vedere [Esportare una Knowledge Base in un file DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per esportare un dominio in un file DQS è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Export"></a> Export a domain to a .dqs file  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  Nella finestra di dialogo **Esporta in file di dati** spostarsi nella cartella in cui si vuole salvare il file, denominare il file o mantenere il nome predefinito, mantenere **File di dati DQS (\*.dqs)** in **Salva come** e fare clic su **Salva**.  
   
-6.  Nella finestra di dialogo **Esporta dominio** verificare che la riga dello stato indichi che l'esportazione è stata completata. Scegliere **OK**.  
+6.  Nella finestra di dialogo **Esporta dominio** verificare che la riga dello stato indichi che l'esportazione è stata completata. Fare clic su **OK**.  
   
 ##  <a name="FollowUp"></a> Completamento: Dopo avere esportato un dominio in un file DQS  
  Dopo avere esportato un dominio in un file DQS, è possibile importare il dominio in un'altra Knowledge Base.  

@@ -1,5 +1,5 @@
 ---
-title: sp_apply_job_to_targets (Transact-SQL) | Documenti Microsoft
+title: sp_apply_job_to_targets (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_apply_job_to_targets
 - sp_apply_job_to_targets_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_apply_job_to_targets
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0b538c726a324709c35807c8e0f6bdc8bc3b607
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 341a14b2ae6aa3d551ab90d4ff2f931d617aa3f2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +49,10 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  Numero di identificazione del processo da applicare ai server o ai gruppi di server di destinazione specificati. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  Nome del processo da applicare ai server o ai gruppi di server di destinazione specificati. *job_name* è **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
@@ -58,7 +61,7 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [  **@target_server_groups =**] **'***target_server_groups***'**  
  Elenco delimitato da virgole dei gruppi di server di destinazione ai quali si desidera applicare il processo specificato. *target_server_groups* è **nvarchar (2048)**, con un valore predefinito è NULL.  
   
- [  **@target_servers=** ] **'***target_servers***'**  
+ [ **@target_servers=** ] **'***target_servers***'**  
  Elenco delimitato da virgole dei server di destinazione ai quali si desidera applicare il processo specificato. *target_servers*è **nvarchar (2048)**, con un valore predefinito è NULL.  
   
  [  **@operation=** ] **'***operazione***'**  
@@ -70,7 +73,7 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Osservazioni  
  **sp_apply_job_to_targets** fornisce un modo semplice per applicare (o rimuovere) un processo da più server di destinazione e costituisce un'alternativa alla chiamata al metodo **sp_add_jobserver** (o **sp_delete_jobserver** ) una volta per ogni server di destinazione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  
@@ -88,9 +91,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_delete_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_remove_job_from_targets &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

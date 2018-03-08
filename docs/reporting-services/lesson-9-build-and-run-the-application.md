@@ -8,23 +8,23 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 001edf4225fe2e84091ca3959efe70564e68d140
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 28fe6303c84e14cf6349b82eea626b15953705d0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Lezione 9: Compilare ed eseguire l'applicazione
+# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
 Dopo aver creato un filtro di dati per la tabella di dati, il passaggio successivo consiste nel compilare ed eseguire l'applicazione del sito Web.  
   
 ### <a name="to-build-and-run-the-application"></a>Per compilare ed eseguire l'applicazione  

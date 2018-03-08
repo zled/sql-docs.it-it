@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobserver (Transact-SQL) | Documenti Microsoft
+title: sp_delete_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobserver
 - sp_delete_jobserver_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_jobserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa359901007167afdffa5394ceb9393c60e5cb46
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 04575019d38c28dc541752ecf7c3b2408fb3c180
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  Numero di identificazione del processo da cui si desidera rimuovere il server di destinazione specificato. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  Nome del processo da cui si desidera rimuovere il server di destinazione specificato. *job_name* è **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* o *job_name* deve essere specificato; non è possibile specificarli entrambi.  
   
- [  **@server_name=** ] **'***server***'**  
+ [ **@server_name=** ] **'***server***'**  
  Nome del server di destinazione da cui rimuovere il processo specificato. *server* è **nvarchar (30)**, non prevede alcun valore predefinito. *server* può essere **(LOCAL)**o il nome di un server di destinazione remoto.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -62,7 +65,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, gli utenti devono essere membri del **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
@@ -82,8 +85,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_help_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
+ [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_help_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

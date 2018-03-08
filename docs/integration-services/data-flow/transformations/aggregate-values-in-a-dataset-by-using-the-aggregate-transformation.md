@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 - aggregate values [Integration Services]
 - datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f07d092a7b0a583281070fb79063d1432ff81421
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 985f5cd2a2ed1d93df3d164a34bbeb4428b97df9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Aggregare valori in un set di dati tramite la trasformazione Aggregazione
+# <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione
   È possibile aggiungere e configurare una trasformazione Aggregazione solo se il pacchetto include almeno un'attività Flusso di dati e un'origine.  
   
 ### <a name="to-aggregate-values-in-a-dataset"></a>Per aggregare valori in un set di dati  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
 13. Facoltativamente, fare clic sulla scheda **Avanzate** e impostare gli attributi relativi all'ottimizzazione di tutte le operazioni eseguite dalla trasformazione Aggregazione.  
   
-14. Scegliere **OK**.  
+14. Fare clic su **OK**.  
   
 15. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   

@@ -8,25 +8,27 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.wmiconnection.f1
+f1_keywords:
+- sql13.dts.designer.wmiconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], WMI
 - connection managers [Integration Services], WMI
 - WMI connection manager [Integration Services]
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3043e761402ae70369990d281bedede9c7bc39b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d432432905afd9a1ef2355e16540cc5caa64e0a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="wmi-connection-manager"></a>Gestione connessione WMI
   Una gestione connessione WMI consente a un pacchetto di utilizzare WMI (Windows Management Instrumentation, Strumentazione gestione Windows) per la gestione delle informazioni in un ambiente aziendale. Questa gestione connessione WMI è usata dall'attività Servizio Web inclusa in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -57,19 +59,19 @@ ms.lasthandoff: 11/20/2017
  **Nome**  
  Consente di specificare un nome univoco per la gestione connessione.  
   
- **Description**  
+ **Descrizione**  
  Consente di aggiungere una descrizione per la gestione connessione. È consigliabile includere nella descrizione informazioni sugli scopi della gestione connessione, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
  **Nome server**  
  Consente di specificare il nome del server al quale si desidera connettersi tramite WMI.  
   
- **Spazio dei nomi**  
+ **Namespace**  
  Consente di specificare lo spazio dei nomi WMI.  
   
  **Usa autenticazione di Windows**  
  Selezionare questa opzione per utilizzare l'autenticazione di Windows. Se si utilizza l'autenticazione di Windows non è necessario specificare un nome utente o una password per la connessione.  
   
- **Nome utente**  
+ **User name**  
  Se non si utilizza l'autenticazione di Windows è necessario specificare un nome utente per la connessione.  
   
  **Password**  

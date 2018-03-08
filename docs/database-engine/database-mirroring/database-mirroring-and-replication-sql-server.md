@@ -8,28 +8,30 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - replication [SQL Server], database mirroring and
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3c54a32f33bb5c74218f597c04451bd4d194a980
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 31e0e930a3ebc1d81d3182de30e8cb3ae5b4d701
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mirroring e replica del database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per migliorare la disponibilità del database di pubblicazione è possibile usare il mirroring del database in combinazione con la replica. Il mirroring del database coinvolge due copie di un unico database che in genere risiedono in computer diversi. In un momento dato solo una copia del database risulta disponibile per i client. Questa copia viene definita database principale. Gli aggiornamenti apportati dai client al database principale vengono applicati all'altra copia del database, definita database mirror. Il processo di mirroring prevede l'applicazione nel database mirror del log delle transazioni relativo a ogni operazione di inserimento, aggiornamento o eliminazione eseguita sul database principale.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Per migliorare la disponibilità del database di pubblicazione è possibile utilizzare il mirroring del database in combinazione con la replica. Il mirroring del database coinvolge due copie di un unico database che in genere risiedono in computer diversi. In un momento dato solo una copia del database risulta disponibile per i client. Questa copia viene definita database principale. Gli aggiornamenti apportati dai client al database principale vengono applicati all'altra copia del database, definita database mirror. Il processo di mirroring prevede l'applicazione nel database mirror del log delle transazioni relativo a ogni operazione di inserimento, aggiornamento o eliminazione eseguita sul database principale.  
   
- Il failover della replica su un server mirror è supportato completamente per i database di pubblicazione e parzialmente per i database di sottoscrizione. Non è supportato l'utilizzo del database di distribuzione con il mirroring del database. Per informazioni sul recupero di un database di distribuzione o di un database di sottoscrizione senza che sia necessario riconfigurare la replica, vedere [Backup e ripristino di database replicati](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md). Per informazioni sul mirroring del database sottoscrittore, vedere  
+ Il failover della replica su un server mirror è supportato completamente per i database di pubblicazione e parzialmente per i database di sottoscrizione. Non è supportato l'utilizzo del database di distribuzione con il mirroring del database. Per informazioni sul recupero di un database di distribuzione o di un database di sottoscrizione senza che sia necessario riconfigurare la replica, vedere [Backup e ripristino di database replicati](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).   
   
 > [!NOTE]  
 >  Dopo un failover, il server mirror diventa il server principale. In questo argomento "principale" e "mirror" si riferiscono sempre al server principale originale e al server mirror.  

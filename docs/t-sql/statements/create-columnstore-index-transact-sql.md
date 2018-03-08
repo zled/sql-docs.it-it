@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,23 +23,24 @@ f1_keywords:
 - CREATE COLUMNSTORE INDEX
 - CREATE_CLUSTERED_COLUMNSTORE_INDEX_TSQL
 - COLUMNSTORE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - index creation [SQL Server], columnstore indexes
 - columnstore index, creating
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,8 +48,11 @@ ms.lasthandoff: 11/17/2017
 Convertire una tabella rowstore in un indice columnstore cluster o creare un indice columnstore non cluster. Utilizzare un indice columnstore per un'esecuzione efficiente analitica operativa in tempo reale in un carico di lavoro OLTP o per migliorare le prestazioni di query e la compressione dei dati per i carichi di lavoro di data warehousing.  
   
 > [!NOTE]  
->  A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile creare la tabella come indice columnstore cluster.   Non è più necessario creare prima una tabella rowstore e quindi convertirla in un indice columnstore cluster.  
-  
+> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile creare la tabella come indice columnstore cluster.   Non è più necessario creare prima una tabella rowstore e quindi convertirla in un indice columnstore cluster.  
+
+> [!TIP]
+> Per informazioni sulle linee guida di progettazione di indice, vedere il [Guida alla progettazione di SQL Server indice](../../relational-databases/sql-server-index-design-guide.md).
+
 Ignora agli esempi:  
 -   [Esempi per la conversione di una tabella rowstore a columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [Esempi per gli indici columnstore non cluster](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
@@ -297,14 +302,14 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 ##  <a name="LimitRest"></a> Limitazioni e restrizioni  
 
 **Ogni colonna in un indice columnstore deve essere uno dei seguenti tipi di dati di business comuni:** 
--   DateTimeOffset [(  *n*  )]  
+-   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [(  *n*  )]  
 -   datetime  
 -   smalldatetime  
 -   data  
--   tempo [(  *n*  )]  
--   float [(  *n*  )]  
--   reale [(  *n*  )]  
+-   time [ ( *n* ) ]  
+-   float [ ( *n* ) ]  
+-   real [ ( *n* ) ]  
 -   decimale [( *precisione* [ *, scala* ] **)** ]
 -   numerico [( *precisione* [ *, scala* ] **)** ]    
 -   money  
@@ -314,15 +319,15 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 -   smallint  
 -   tinyint  
 -   bit  
--   nvarchar [(  *n*  )] 
+-   nvarchar [ ( *n* ) ] 
 -   nvarchar (max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e Database SQL di Azure a premium tariffario, solo gli indici columnstore cluster)   
--   nchar [(  *n*  )]  
--   varchar [(  *n*  )]  
+-   nchar [ ( *n* ) ]  
+-   varchar [ ( *n* ) ]  
 -   varchar (max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e Database SQL di Azure a premium tariffario, solo gli indici columnstore cluster)
--   Char [(  *n*  )]  
--   varbinary [(  *n*  )] 
+-   char [ ( *n* ) ]  
+-   varbinary [ ( *n* ) ] 
 -   varbinary (max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e Database SQL di Azure a premium tariffario, solo gli indici columnstore cluster)
--   binario [(  *n*  )]  
+-   binary [ ( *n* ) ]  
 -   uniqueidentifier (si applica a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive)
   
 Se la tabella sottostante contiene una colonna di un tipo di dati che non è supportata per gli indici columnstore, è necessario omettere la colonna dall'indice columnstore non cluster.  

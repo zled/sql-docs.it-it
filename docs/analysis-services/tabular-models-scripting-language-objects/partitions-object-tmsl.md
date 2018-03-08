@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: df1da0d2-d824-42ba-b9dc-47fbd8edc10f
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6725ed37b909b80393a2760df26ba25b6f5148f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 756101dba74f227c295b61a7f8a640f78055b037
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions-object-tmsl"></a>Oggetto di partizioni (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definisce una partizione o logica, nella segmentazione del set di righe di tabella. Una partizione è costituito da una query SQL utilizzata per l'importazione di dati, dati di esempio nell'ambiente di modellazione, o come una query di dati completo per pass-through l'esecuzione di query tramite DirectQuery.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="object-definition"></a>Definizione dell'oggetto  
  Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Partizione** gli oggetti dispongono anche le proprietà seguenti.  
   
- tipo  
+ Tipo  
  Il tipo di partizione. I valori validi sono di tipo numerici e includono quanto segue:  
   
 -   Query (1): dati nella partizione vengono recuperate eseguendo una query su un **DataSource**. Il **DataSource** deve essere un'origine dati definita nel file model.bim.  

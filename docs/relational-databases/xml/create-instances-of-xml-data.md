@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ec51663f65f5673888ef20ee462078e545848334
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 1fd7895dae9dd1e1008c848b471cf02b0b53953a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-instances-of-xml-data"></a>Creare istanze di dati XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come generare istanze XML.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In questo argomento viene descritto come generare istanze XML.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è possibile generare istanze XML tramite i metodi seguenti:  
   
@@ -77,7 +79,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
 -   Viene assegnato il valore predefinito all'attributo `xml:space` attivo per un elemento o i relativi predecessori.  
   
- Esempio:  
+ Ad esempio  
   
 ```  
 declare @x xml  
@@ -91,7 +93,7 @@ select @x
 <root><child/></root>  
 ```  
   
- È tuttavia possibile modificare tale impostazione. Per mantenere gli spazi vuoti in un'istanza XML DT, è possibile utilizzare l'operatore CONVERT e il parametro facoltativo *style* corrispondente impostato sul valore 1. Esempio:  
+ È tuttavia possibile modificare tale impostazione. Per mantenere gli spazi vuoti in un'istanza XML DT, è possibile utilizzare l'operatore CONVERT e il parametro facoltativo *style* corrispondente impostato sul valore 1. Ad esempio  
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -139,7 +141,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>Utilizzo dell'istruzione SELECT con la clausola FOR XML  
- È possibile utilizzare la clausola FOR XML in un'istruzione SELECT per restituire i risultati in formato XML. Esempio:  
+ È possibile utilizzare la clausola FOR XML in un'istruzione SELECT per restituire i risultati in formato XML. Ad esempio  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -189,7 +191,7 @@ go
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce al client istanze con tipo di dati **xml** come risultato di diversi costrutti server, quali query FOR XML che utilizzano la direttiva TYPE, o nel caso in cui il tipo di dati **xml** venga utilizzato per restituire il codice XML da colonne SQL, variabili o parametri di output. Nel codice dell'applicazione client il provider ADO.NET richiede che queste informazioni con tipo di dati **xml** siano inviate dal server utilizzando una codifica binaria. Se tuttavia si utilizza FOR XML senza la direttiva TYPE, i dati XML vengono restituiti come tipo string. In tutti i casi, il provider client sarà sempre in grado di gestire entrambe i formati di XML.  
   
 ## <a name="using-constant-assignments"></a>Utilizzo di assegnazioni di costanti  
- È possibile utilizzare una costante stringa nei casi in cui è prevista un'istanza con tipo di dati **xml** . Tale operazione è equivalente a un CAST implicito della stringa al formato XML. Esempio:  
+ È possibile utilizzare una costante stringa nei casi in cui è prevista un'istanza con tipo di dati **xml** . Tale operazione è equivalente a un CAST implicito della stringa al formato XML. Ad esempio  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -215,7 +217,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Recuperare ed eseguire query su dati XML](../../relational-databases/xml/retrieve-and-query-xml-data.md)|Descrizione delle parti di istanze XML che non sono mantenute quando vengono archiviate nei database.|  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +17,26 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 64c02e1d3e2c0304acebd9d8c8c9a60982841c10
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 084fc871f35c8902fab894ad170db57b44f2b824
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurare un computer multihomed per l'accesso a SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In uno scenario tipico in cui un server deve fornire una connessione a due o più reti o subnet di rete viene usato un computer multihomed, che si trova in genere in una rete perimetrale. In questo argomento viene descritto come configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows Firewall con sicurezza avanzata per fornire le connessioni di rete a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ambiente multihomed.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  In uno scenario tipico in cui un server deve fornire una connessione a due o più reti o subnet di rete viene utilizzato un computer multihomed, che si trova in genere in una rete perimetrale. Questo articolo descrive come configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows Firewall con sicurezza avanzata per fornire le connessioni di rete a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ambiente multihomed.  
   
 > [!NOTE]  
 >  Un computer multihomed dispone di più schede di rete oppure è stato configurato per utilizzare più indirizzi IP per una singola scheda di rete, mentre un computer dualhomed dispone di due schede di rete oppure è stato configurato per utilizzare due indirizzi IP per una singola scheda di rete.  
   
- Prima di continuare con questo argomento, è necessario conoscere le informazioni disponibili nell'argomento [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). In tale argomento sono contenute informazioni di base sulle modalità di funzionamento dei componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il firewall.  
+ Prima di continuare con questo articolo, è necessario conoscere le informazioni disponibili nell'articolo [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Questo articolo contiene informazioni di base sul funzionamento dei componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il firewall.  
   
  **Presupposti per l'esecuzione di questo esempio:**  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     >  Gli indirizzi IPv4 sono costituiti da una serie di quattro numeri nota come ottetto. Ogni numero è minore di 255 ed è separato da un punto, ad esempio 127.0.0.1. Gli indirizzi IPv6 sono costituiti da una serie di otto numeri esadecimali separati da due punti, ad esempio fe80:4898:23:3:49a6:f5c1:2452:b994.  
   
--   Le regole del firewall possono consentire l'accesso tramite una porta specifica, ad esempio la porta 1433, oppure tramite il programma [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (sqlservr.exe). Nessuno dei due metodi è migliore dell'altro. Poiché un server in una rete perimetrale è più vulnerabile agli attacchi rispetto ai server presenti in una rete Intranet, in questo argomento si presuppone che l'utente desideri esercitare un controllo più accurato e che selezioni personalmente le porte da aprire. Per questo motivo, si presuppone che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà configurato in modo da restare in attesa su una porta fissa. Per altre informazioni sulle porte usate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+-   Le regole del firewall possono consentire l'accesso tramite una porta specifica, ad esempio la porta 1433, oppure tramite il programma [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (sqlservr.exe). Nessuno dei due metodi è migliore dell'altro. Poiché un server in una rete perimetrale è più vulnerabile agli attacchi rispetto ai server presenti in una rete Intranet, in questo articolo si presuppone che l'utente voglia esercitare un controllo più accurato e che selezioni personalmente le porte da aprire. Per questo motivo, si presuppone che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà configurato in modo da essere in ascolto su una porta fissa. Per altre informazioni sulle porte usate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 -   In questo esempio l'accesso al [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene configurato tramite la porta TCP 1433. È possibile configurare le altre porte utilizzate dai componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diversi tramite gli stessi passaggi generali.  
   

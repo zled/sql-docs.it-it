@@ -1,7 +1,7 @@
 ---
-title: Utilizzo di Always Encrypted with the ODBC Driver 13.1 for SQL Server | Documenti Microsoft
+title: Utilizzo di Always Encrypted con il Driver ODBC per SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,18 +17,25 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 4e56c987938aa3cb8645dc9bef94f2f97b8c0649
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/22/2018
 ---
-# <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>Utilizzo di Always Encrypted with the ODBC Driver 13.1 for SQL Server
+# <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilizzo di Always Encrypted con il Driver ODBC per SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-Questo articolo fornisce informazioni su come sviluppare applicazioni ODBC che utilizzano [Always Encrypted (motore di Database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+### <a name="applicable-to"></a>Applicabile a
 
-Always Encrypted consente alle applicazioni client di eseguire la crittografia dei dati sensibili senza mai rivelare i dati o le chiavi di crittografia a SQL Server o al database SQL di Azure. Un Always Encrypted abilitato driver, ad esempio ODBC Driver 13.1 for SQL Server, a tale scopo in modo trasparente la crittografia e decrittografia dei dati sensibili nell'applicazione client. Il driver determina automaticamente i parametri di query corrispondenti alle colonne di database con dati sensibili (protette mediante Always Encrypted) e crittografa i valori di tali parametri prima di passare i dati a SQL Server o al database SQL di Azure. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, recuperati dalle colonne di database crittografate nei risultati delle query. Per altre informazioni, vedere [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+- ODBC Driver 13.1 for SQL Server
+- Driver ODBC 17 per SQL Server
+
+### <a name="introduction"></a>Introduzione
+
+Questo articolo fornisce informazioni su come sviluppare applicazioni ODBC che utilizzano [Always Encrypted (motore di Database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+
+Always Encrypted consente alle applicazioni client di eseguire la crittografia dei dati sensibili senza mai rivelare i dati o le chiavi di crittografia a SQL Server o al database SQL di Azure. Un Always Encrypted abilitato driver, ad esempio il Driver ODBC per SQL Server, a tale scopo in modo trasparente la crittografia e decrittografia dei dati sensibili nell'applicazione client. Il driver determina automaticamente i parametri di query corrispondenti alle colonne di database con dati sensibili (protette mediante Always Encrypted) e crittografa i valori di tali parametri prima di passare i dati a SQL Server o al database SQL di Azure. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, recuperati dalle colonne di database crittografate nei risultati delle query. Per altre informazioni, vedere [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 ### <a name="prerequisites"></a>Prerequisiti
 
@@ -282,11 +289,11 @@ Poiché Always Encrypted è una tecnologia di crittografia lato client, si osser
 
 - Chiamate a un archivio delle chiavi master delle colonne per accedere alla chiave master di una colonna.
 
-Questa sezione descrive le ottimizzazioni delle prestazioni predefinite in ODBC Driver 13.1 per SQL Server e come sia possibile controllare l'impatto dei fattori sopra due sulle prestazioni.
+Questa sezione descrive le ottimizzazioni delle prestazioni predefinite nel Driver ODBC per SQL Server e come sia possibile controllare l'impatto dei fattori sopra due sulle prestazioni.
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Il controllo di round trip per recuperare i metadati per i parametri di Query
 
-Se Always Encrypted è abilitato per una connessione, ODBC Driver 13.1 per SQL Server, per impostazione predefinita, chiamare [sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) per ogni query con parametri, passando l'istruzione di query (senza alcun parametro i valori) a SQL Server. Questa stored procedure consente di analizzare l'istruzione di query per scoprire se i parametri devono essere crittografati e in tal caso, restituisce le informazioni relative alla crittografia per ogni parametro per consentire al driver di crittografarli. Il comportamento descritto garantisce un elevato livello di trasparenza per l'applicazione client: l'applicazione (e lo sviluppatore dell'applicazione) non è necessario essere a conoscenza di quali query accedono alle colonne crittografate, purché i valori destinati alle colonne crittografate vengano passati per il driver nei parametri.
+Se Always Encrypted è abilitato per una connessione, il driver, per impostazione predefinita, chiama [sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) per ogni query con parametri, passando l'istruzione di query (senza i valori dei parametri) a SQL Server. Questa stored procedure consente di analizzare l'istruzione di query per scoprire se i parametri devono essere crittografati e in tal caso, restituisce le informazioni relative alla crittografia per ogni parametro per consentire al driver di crittografarli. Il comportamento descritto garantisce un elevato livello di trasparenza per l'applicazione client: l'applicazione (e lo sviluppatore dell'applicazione) non è necessario essere a conoscenza di quali query accedono alle colonne crittografate, purché i valori destinati alle colonne crittografate vengano passati per il driver nei parametri.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Per ogni istruzione Always Encrypted comportamento
 
@@ -329,7 +336,7 @@ Se SQL Server indica al driver che il parametro non deve essere crittografato, l
 Per ridurre il numero di chiamate a un archivio chiavi master della colonna per decrittografare le chiavi di crittografia di colonna, il driver memorizza nella cache il testo non crittografato delle chiavi Cek in memoria. Dopo aver ricevuto la chiave ECEK dai metadati del database, il driver tenta innanzitutto di trovare CEK crittografato corrispondente al valore della chiave crittografato nella cache. Il driver chiama l'archivio chiavi contenente la chiave CMK solo se non si trova il testo non crittografato corrispondente CEK nella cache.
 
 > [!NOTE]
-> In ODBC Driver 13.1 for SQL Server, le voci nella cache vengono rimossi dopo un timeout di due ore. Ciò significa che per una determinata chiave ECEK, il driver contatta l'archivio chiavi una sola volta durante il ciclo di vita dell'applicazione o ogni due ore, a seconda del valore è minore.
+> Nel Driver ODBC per SQL Server, le voci nella cache vengono rimossi dopo un timeout di due ore. Ciò significa che per una determinata chiave ECEK, il driver contatta l'archivio chiavi una sola volta durante il ciclo di vita dell'applicazione o ogni due ore, a seconda del valore è minore.
 
 ## <a name="working-with-column-master-key-stores"></a>Uso degli archivi delle chiavi master delle colonne
 
@@ -339,11 +346,11 @@ Per ottenere il valore di testo normale di una chiave ECEK, il driver ottiene in
 
 ### <a name="built-in-keystore-providers"></a>Provider di archivio chiavi predefinite
 
-ODBC Driver 13.1 for SQL Server viene fornito con i provider di archivio chiavi predefinite seguenti:
+Il Driver ODBC per SQL Server viene fornito con i provider di archivio chiavi predefinite seguenti:
 
 | Nome | Description | Nome del provider (metadati) |Disponibilità|
 |:---|:---|:---|:---|
-|Insieme di credenziali chiave di Azure |CMK archivi in un insieme di credenziali chiave di Azure | `AZURE_KEY_VAULT` |Windows, Mac OS, Linux|
+|Insieme di credenziali chiave di Azure |CMK archivi in un insieme di credenziali chiave di Azure | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Archivio certificati di Windows|Archivia CMK localmente nell'archivio di Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
 
 - È necessario assicurarsi che il nome del provider, configurato nei metadati della chiave master della colonna, sia corretto e che il percorso della chiave master di colonna conformi al formato del percorso della chiave per il provider è (o l'amministratore del database). È consigliabile configurare le chiavi usando strumenti come SQL Server Management Studio, che genera automaticamente i nomi di provider e i percorsi di chiave validi quando viene eseguita l'istruzione [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) .
@@ -352,7 +359,7 @@ ODBC Driver 13.1 for SQL Server viene fornito con i provider di archivio chiavi 
 
 ### <a name="using-the-azure-key-vault-provider"></a>Utilizzo del Provider di Azure dell'insieme di credenziali chiave
 
-L'insieme di credenziali delle chiavi di Azure rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. ODBC Driver 13.1 for SQL Server in Linux, macOS e Windows include un provider di archivio chiavi master di colonna predefinito per insieme credenziali chiavi Azure. Vedere [insieme credenziali chiavi Azure – Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Guida introduttiva a insieme di credenziali chiave](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), e [la creazione di chiavi Master della colonna nell'insieme di credenziali chiave di Azure](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) per ulteriori informazioni sulla configurazione di una chiave di Azure Insieme di credenziali per crittografia sempre attiva.
+L'insieme di credenziali delle chiavi di Azure rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. Il Driver ODBC per SQL Server in Linux, macOS e Windows include un provider di archivio chiavi master di colonna predefinito per insieme credenziali chiavi Azure. Vedere [insieme credenziali chiavi Azure - Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Guida introduttiva a insieme di credenziali chiave](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), e [la creazione di chiavi Master della colonna nell'insieme di credenziali chiave di Azure](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) per ulteriori informazioni sulla configurazione di una chiave di Azure Insieme di credenziali per crittografia sempre attiva.
 
 Il driver supporta l'autenticazione a insieme di credenziali chiave di Azure usando i seguenti tipi di credenziali:
 
@@ -364,20 +371,20 @@ Per consentire al driver di utilizzare una CMK archiviati nell'insieme per la cr
 
 |Tipo di credenziali| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|Nome utente/password| `KeyVaultPassword`|Nome dell'entità utente|Password|
+|Username/password| `KeyVaultPassword`|Nome dell'entità utente|Password|
 |ID/chiave privata client| `KeyVaultClientSecret`|ID client|Segreto|
 
 #### <a name="example-connection-strings"></a>Stringhe di connessione di esempio
 
 Le stringhe di connessione seguente viene illustrato come l'autenticazione a insieme di credenziali chiave di Azure con i due tipi di credenziali:
 
-**ClientID/segreto**:
+**ClientID/Secret**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Nome utente/Password**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -387,11 +394,11 @@ Nessun altre modifiche all'applicazione ODBC devono utilizzare insieme per la me
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Utilizzo del Provider dell'archivio certificati di Windows
 
-ODBC Driver 13.1 for SQL Server in Windows include un provider di archivio chiavi master di colonna predefinito per l'archivio certificati di Windows, denominato `MSSQL_CERTIFICATE_STORE`. (Questo provider è disponibile in macOS o Linux). Con questo provider, la chiave CMK archiviata localmente nel computer client e alcuna configurazione aggiuntiva per l'applicazione non è necessario utilizzarlo con il driver. Tuttavia, l'applicazione deve poter accedere al certificato e la relativa chiave privata nell'archivio. Vedere [creare e archiviare chiavi Master della colonna (Always Encrypted)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) per ulteriori informazioni.
+Il Driver ODBC per SQL Server in Windows include un provider di archivio chiavi master di colonna predefinito per l'archivio certificati di Windows, denominato `MSSQL_CERTIFICATE_STORE`. (Questo provider è disponibile in macOS o Linux). Con questo provider, la chiave CMK archiviata localmente nel computer client e alcuna configurazione aggiuntiva per l'applicazione non è necessario utilizzarlo con il driver. Tuttavia, l'applicazione deve poter accedere al certificato e la relativa chiave privata nell'archivio. Vedere [creare e archiviare chiavi Master della colonna (Always Encrypted)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) per ulteriori informazioni.
 
 ### <a name="using-custom-keystore-providers"></a>Utilizzo di provider di archivio chiavi personalizzato
 
-ODBC Driver 13.1 for SQL Server supporta anche i provider di archivio chiavi personalizzati di terze parti tramite l'interfaccia CEKeystoreProvider. In questo modo un'applicazione caricare, query e configurare i provider di archivio chiavi in modo che possono essere utilizzati dal driver per accedere alle colonne crittografate. Applicazioni possono interagire direttamente con un provider dell'archivio chiavi per crittografia delle chiavi Cek per l'archiviazione in SQL Server ed eseguire attività oltre che accedono a colonne crittografate con ODBC. Per ulteriori informazioni, vedere [provider archivio chiavi personalizzati](../../connect/odbc/custom-keystore-providers.md).
+Il Driver ODBC per SQL Server supporta anche i provider di archivio chiavi personalizzati di terze parti tramite l'interfaccia CEKeystoreProvider. In questo modo un'applicazione caricare, query e configurare i provider di archivio chiavi in modo che possono essere utilizzati dal driver per accedere alle colonne crittografate. Applicazioni possono interagire direttamente con un provider dell'archivio chiavi per crittografia delle chiavi Cek per l'archiviazione in SQL Server ed eseguire attività oltre che accedono a colonne crittografate con ODBC. Per ulteriori informazioni, vedere [provider archivio chiavi personalizzati](../../connect/odbc/custom-keystore-providers.md).
 
 Due attributi di connessione vengono utilizzati per interagire con i provider di archivio chiavi personalizzato. ovvero:
 
@@ -515,11 +522,44 @@ Per un esempio di implementazione di un provider di archivio chiavi, vedere [pro
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Limitazioni del driver ODBC quando si Usa crittografia sempre attiva
 
-### <a name="bulk-copy-function-usage"></a>Utilizzo della funzione di copia bulk
-Utilizzare il [funzioni di copia Bulk SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) non è supportato quando si utilizza il driver ODBC con crittografia sempre attiva. Si verificherà alcuna crittografia/decrittografia trasparente nelle colonne crittografate utilizzate con le funzioni di copia Bulk di SQL.
-
 ### <a name="asynchronous-operations"></a>Operazioni asincrone
 Mentre il driver ODBC consentirà l'utilizzo di [operazioni asincrone](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) con crittografia sempre attiva, è un impatto sulle prestazioni delle operazioni quando Always Encrypted è abilitato. La chiamata a `sys.sp_describe_parameter_encryption` per determinare i metadati di crittografia per l'istruzione blocca e causerà il driver di attesa per il server restituire i metadati prima della restituzione `SQL_STILL_EXECUTING`.
+
+### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>Recuperare i dati in parti con SQLGetData
+Prima crittografato 17 Driver ODBC per SQL Server, caratteri e colonne binarie non possono essere recuperate in parti con SQLGetData. Solo una chiamata di SQLGetData può essere effettuata, con un buffer di lunghezza sufficiente per contenere dati dell'intera colonna.
+
+### <a name="send-data-in-parts-with-sqlputdata"></a>Inviare i dati in parti con SQLPutData
+Impossibile inviare i dati per l'inserimento o di confronto nelle parti con SQLPutData. Solo una chiamata a SQLPutData può essere effettuata, con un buffer che contiene tutti i dati. Per l'inserimento di dati long in colonne crittografate, utilizzare l'API della copia Bulk, descritto nella sezione successiva, con un file di dati di input.
+
+### <a name="encrypted-money-and-smallmoney"></a>Smallmoney e money crittografati
+Crittografati **money** o **smallmoney** colonne non possono essere assegnate dai parametri, poiché non è specifico del tipo di dati ODBC che esegue il mapping di questi tipi, gli errori di conflitto di tipo di operando.
+
+## <a name="bulk-copy-of-encrypted-columns"></a>Copia bulk di colonne crittografate
+
+Utilizzare il [funzioni di copia Bulk SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) e **bcp** utilità è supportata con crittografia sempre attiva perché 17 Driver ODBC per SQL Server. Testo normale (crittografato in inserimento e recupero decrittografato nel) sia testo crittografato (trasferiti verbatim) possono essere inseriti e recuperati utilizzando la copia di massa (bcp_ *) le API e **bcp** utilità.
+
+- Per recuperare testo crittografato in formato varbinary (max) (ad esempio per il caricamento bulk in un database diverso), connettersi senza il `ColumnEncryption` opzione (o impostarlo su `Disabled`) ed eseguire un'operazione BCP OUT.
+
+- Per inserire e recuperare in testo normale e consente di eseguire in modo trasparente la crittografia e decrittografia come impostazione obbligatoria, il driver `ColumnEncryption` a `Enabled` è sufficiente. In caso contrario, la funzionalità dell'API BCP è invariata.
+
+- Per inserire testo crittografato in formato varbinary (max) (ad esempio come recuperato sopra), impostare il `BCPMODIFYENCRYPTED` opzione su TRUE e di eseguire un'operazione BCP IN. Affinché i dati risultanti da decryptable, verificare che la destinazione CEK della colonna è uguale a quello da cui il testo crittografato è stato ottenuto in origine.
+
+Quando si utilizza il **bcp** utilità: controllo di `ColumnEncryption` impostazione, utilizzare l'opzione -D e specificare un DSN che contiene il valore desiderato. Per inserire testo crittografato, verificare che il `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` è abilitata l'impostazione dell'utente.
+
+Nella tabella seguente fornisce un riepilogo delle azioni quando si opera su una colonna crittografata:
+
+|`ColumnEncryption`|Direzione BCP|Description|
+|----------------|-------------|-----------|
+|`Disabled`|OUT (client)|Recupera testo crittografato. Il tipo di dati osservati **varbinary (max)**.|
+|`Enabled`|OUT (client)|Recupera in testo normale. Il driver per decrittografare i dati della colonna.|
+|`Disabled`|IN (per server)|Inserisce testo crittografato. Questo deve essere opaca lo spostamento dei dati crittografati senza siano decrittografati. L'operazione avrà esito negativo se il `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` per l'utente non è impostata l'opzione o BCPMODIFYENCRYPTED non impostato per l'handle di connessione. Per ulteriori informazioni, vedere di seguito.|
+|`Enabled`|IN (per server)|Inserisce testo normale. Il driver crittograferà i dati della colonna.|
+
+### <a name="the-bcpmodifyencrypted-option"></a>L'opzione BCPMODIFYENCRYPTED
+
+Per evitare il danneggiamento dei dati, il server in genere non consente l'inserimento di testo crittografato direttamente in una colonna crittografata e quindi tenta di eseguire questa operazione avrà esito negativo; Tuttavia, per il caricamento bulk dei dati crittografati mediante l'API BCP, l'impostazione la `BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) opzione su TRUE consente testo crittografato da inserire direttamente e riduce il rischio di danneggiamento dei dati crittografati sull'impostazione di `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` opzione sull'account utente. Ciononostante, le chiavi devono corrispondere i dati ed è consigliabile eseguire alcuni controlli di sola lettura dei dati inseriti dopo l'inserimento bulk e prima dell'uso di altre.
+
+Vedere [migrare dati sensibili protetti da crittografia sempre attiva](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md) per ulteriori informazioni.
 
 ## <a name="always-encrypted-api-summary"></a>Riepilogo delle API crittografia sempre attiva
 
@@ -551,6 +591,12 @@ Mentre il driver ODBC consentirà l'utilizzo di [operazioni asincrone](../../rel
 |Campo IPD|Tipo di dimensione /|Valore predefinito|Description|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 byte)|0|Quando 0 (impostazione predefinita): decisione per crittografare il parametro è determinato dalla disponibilità dei metadati di crittografia.<br><br>Quando è diverso da zero: se i metadati di crittografia sono disponibili per questo parametro, viene crittografato. In caso contrario, la richiesta ha esito negativo con errore [CE300] la crittografia obbligatoria [Microsoft] [ODBC Driver 13 for SQL Server] è stata specificata per un parametro, ma i metadati di crittografia non è stato fornito dal server.|
+
+### <a name="bcpcontrol-options"></a>Opzioni bcp_control
+
+|Nome opzione|Valore predefinito|Description|
+|-|-|-|
+|`BCPMODIFYENCRYPTED` (21)|FALSE|Se è TRUE, consente i valori da inserire nella colonna crittografata varbinary (max). Se è FALSE, impedisce l'inserimento, a meno che i metadati corretti di tipo e la crittografia viene fornito.|
 
 ## <a name="see-also"></a>Vedere anche
 

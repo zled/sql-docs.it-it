@@ -7,25 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 66a72f22e91cf1a1e4f4ec27279f7a7249e7571b
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: a2f0ffafb466030802b87dc96f905e9c875dd548
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>Passaggio 5: Eseguire il training e salvare un modello di Python con T-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo fa parte di un'esercitazione, [analitica Python nel database per gli sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -124,14 +126,14 @@ Per rendere più semplice ripetere il training del modello su nuovi dati, esegui
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere un paio di minuti. I messaggi che potrebbero essere reindirizzati di Python **stdout** flusso vengono visualizzati di **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Ad esempio
+    L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere un paio di minuti. I messaggi che potrebbero essere reindirizzati di Python **stdout** flusso vengono visualizzati di **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Esempio:
 
     *Messaggi STDOUT dallo script esterno:*
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. Aprire la tabella *nyc\_taxi_models*. È possibile notare che è stata aggiunta una riga nuova contenente il modello serializzato nella colonna _model_.
 
-    *linear_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *linear_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -189,14 +191,14 @@ Utilizzando **revoscalepy**, è possibile creare contesti di calcolo remoto, spo
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere qualche istante. I messaggi che potrebbero essere reindirizzati di Python **stdout** flusso vengono visualizzati di **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Ad esempio
+    L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere qualche istante. I messaggi che potrebbero essere reindirizzati di Python **stdout** flusso vengono visualizzati di **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Esempio:
 
     *Messaggi STDOUT dallo script esterno:*
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. Aprire la tabella *nyc_taxi_models*. È possibile notare che è stata aggiunta una riga nuova contenente il modello serializzato nella colonna _model_.
 
-    *rx_model* *0x8003637265766F7363616c...*
+    *rx_model* *0x8003637265766F7363616c....*
 
 Nel passaggio successivo, utilizzare i modelli con training per creare stime.
 

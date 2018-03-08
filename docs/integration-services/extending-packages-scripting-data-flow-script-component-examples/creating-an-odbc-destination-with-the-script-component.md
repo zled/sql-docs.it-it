@@ -8,26 +8,27 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Script component [Integration Services], destination components
 - ODBC destination [Integration Services]
 - destinations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b962ff84ab21c0222c26a6057a1abad3dc493aa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a40d282b79d5319aa5a7dcbbe5f63a72f42f9af6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Creazione di una destinazione ODBC con il componente script
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] i dati vengono in genere salvati in una destinazione ODBC tramite una destinazione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per ODBC. È possibile, tuttavia, creare anche una destinazione ODBC ad hoc da utilizzare in un solo pacchetto. Per creare questa destinazione ODBC ad hoc, si utilizza il componente script come illustrato nell'esempio seguente.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Per l'elemento **OdbcCommand** sono previsti parametri posizionali. Le posizioni dei parametri sono indicate dai punti interrogativi (?) nel testo del comando. Al contrario, per un elemento **SqlCommand** sono previsti parametri denominati.  
   
- In questo esempio viene usata la tabella **Person.Address** del database di esempio **AdventureWorks**. Nell'esempio vengono passate la prima e la quarta colonna, ovvero le colonne **int*AddressID*** e **nvarchar(30)City** di questa tabella attraverso il flusso di dati. Questi stessi dati vengono usati negli esempi di origine, trasformazione e destinazione dell'argomento [Sviluppo di tipi specifici di componenti script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ In questo esempio viene usata la tabella **Person.Address** del database di esempio **AdventureWorks**. Nell'esempio vengono passate la prima e la quarta colonna, ovvero le colonne**int*AddressID*** e **nvarchar(30)City** di questa tabella attraverso il flusso di dati. Questi stessi dati vengono usati negli esempi di origine, trasformazione e destinazione dell'argomento [Sviluppo di tipi specifici di componenti script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Per configurare l'esempio di componente script  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. È possibile connettere direttamente un'origine a una destinazione senza alcuna trasformazione. Per assicurarsi che questo esempio funzioni, l'output del componente a monte deve includere almeno le colonne **AddressID** e **City** della tabella **Person.Address** del database di esempio **AdventureWorks**.  
   
-5.  Aprire **Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne **AddressID** e **City**.  
+5.  Aprire l'**Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne **AddressID** e **City**.  
   
 6.  Nella pagina **Input e output** rinominare l'input con un nome più descrittivo, ad esempio **MyAddressInput**.  
   

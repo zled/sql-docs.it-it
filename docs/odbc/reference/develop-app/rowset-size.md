@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e693a799c737baf8a11064c5bd50c2618cd1e29a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0eb3e03c3fd2cad60b8f4a0e6c65aaaebbda03bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rowset-size"></a>Dimensioni del set di righe
 La dimensione del set di righe da utilizzare dipende dall'applicazione. Applicazioni basate su schermo comunemente seguono una delle due strategie. Il primo consiste nell'impostare le dimensioni del set di righe per il numero di righe visualizzate sullo schermo. Se l'utente ridimensiona la schermata, l'applicazione cambierà di conseguenza le dimensioni del set di righe. Il secondo consiste nell'impostare le dimensioni del set di righe su un numero maggiore, ad esempio 100, che consente di ridurre il numero di chiamate all'origine dati. L'applicazione lo scorrimento in locale all'interno del set di righe quando possibile e recupera le nuove righe solo quando scorre all'esterno del set di righe.  

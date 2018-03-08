@@ -7,20 +7,21 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 40554878da331bd975164a6ece13cd92ca251182
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Componenti di SQL Server per supportare l'integrazione di Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 A partire da SQL Server 2017, servizi di Machine Learning supporta Python come un linguaggio esterno che può essere eseguito da T-SQL o eseguita in modalità remota tramite SQL Server come contesto di calcolo.
 
@@ -116,7 +117,7 @@ Quando si esegue Python "interni" [!INCLUDE[ssNoVersion_md](../../includes/ssnov
 
 Dopo lo script è stato incorporato in stored procedure, qualsiasi applicazione che è possibile effettuare una stored procedure chiamata può avviare l'esecuzione del codice Python.  Successivamente [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] gestisce l'esecuzione del codice, come riepilogato nel diagramma seguente.
 
-![script in db python.](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. Una richiesta per il runtime di Python è indicata dal parametro `@language='Python'` passato alla stored procedure. SQL Server invia la richiesta per il servizio Launchpad.
 2. Il servizio Launchpad avvia l'utilità di avvio appropriata; In questo caso, PythonLauncher.
@@ -124,7 +125,7 @@ Dopo lo script è stato incorporato in stored procedure, qualsiasi applicazione 
 4. BxlServer interagisce con il runtime di Python per gestire gli scambi di dati e archiviazione dei risultati di lavoro.
 5. SQL Satellite gestisce le comunicazioni sulle attività correlate e i processi con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer usa SQL Satellite per comunicare lo stato e i risultati a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ottiene i risultati e chiude le attività e i processi correlati.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Ottiene i risultati e chiude i processi e attività correlate.
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>Script Python eseguiti da un client remoto
 
@@ -135,7 +136,7 @@ Dopo lo script è stato incorporato in stored procedure, qualsiasi applicazione 
 
 Nel diagramma seguente viene riepilogato il flusso di lavoro globale quando gli script vengono inviati da un computer remoto.
 
-![remoto sqlcc da python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
+![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. Per le funzioni che sono supportate in **revoscalepy**, il runtime di Python chiama una funzione di collegamento, che a sua volta chiama BxlServer.
 2. BxlServer è incluso in servizi di Machine Learning (In-Database) e viene eseguito in un processo separato dal runtime di Python.

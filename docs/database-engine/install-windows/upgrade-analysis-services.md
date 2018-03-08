@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,18 +22,21 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: ec21983a07b5f61359912f90a4e32731de7ce8b4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>Aggiornare Analysis Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le istanze di Analysis Services possono essere aggiornate a una versione di SQL Server con la stessa modalità server per sfruttare i vantaggi delle funzionalità introdotte nella versione corrente, come descritto in [Novità di Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Le istanze di Analysis Services possono essere aggiornate a una versione di SQL Server con la stessa modalità server per sfruttare i vantaggi delle funzionalità introdotte nella versione corrente, come descritto in [Novità di Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  È possibile aggiornare ogni istanza sul posto, indipendentemente dalle altre istanze in esecuzione sullo stesso hardware. Tuttavia, la maggior parte degli amministratori sceglie di installare una nuova istanza della nuova versione per il testing dell'applicazione prima di trasferire i carichi di lavoro sul nuovo server. Per i server di sviluppo o test, potrebbe essere più opportuno un aggiornamento sul posto.  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
  I database tabulari e multidimensionali seguono percorsi di versione diversi. È un caso che i modelli multidimensionali e i modelli tabulari abbiano livelli di compatibilità molto simili.  Le modalità avanzeranno a velocità diverse se le modifiche alle funzionalità influiscono solo uno di questi database.  
   
- Per motivi di background, nella tabella seguente sono riepilogati i livelli di compatibilità, ma è necessario esaminare gli argomenti specifici per conoscere le caratteristiche di ogni livello.  
+ Per motivi di background, nella tabella seguente sono riepilogati i livelli di compatibilità, ma è necessario esaminare gli articoli specifici per conoscere le caratteristiche di ogni livello.  
   
 ||||  
 |-|-|-|  

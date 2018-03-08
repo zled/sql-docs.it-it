@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a898c757120d29a8c64de5623cec02c35c5b5ac1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: efb55816db5f692231b66ca53780ab26318da90c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Se i dati usati meno di frequente vengono archiviati in una tabella separata, è possibile configurare Estensione database per eseguire la migrazione dell'intera tabella. Se invece la tabella contiene dati usati più di frequente e dati usati meno di frequente, è possibile specificare un predicato del filtro per selezionare le righe di cui eseguire la migrazione. Il predicato del filtro è una funzione inline con valori di tabella. Questo argomento illustra come scrivere una funzione inline con valori di tabella per selezionare le righe di cui eseguire la migrazione.  
+
+  Se i dati usati meno di frequente vengono archiviati in una tabella separata, è possibile configurare Estensione database per eseguire la migrazione dell'intera tabella. Se invece la tabella contiene dati usati più di frequente e dati usati meno di frequente, è possibile specificare un predicato del filtro per selezionare le righe di cui eseguire la migrazione. Il predicato del filtro è una funzione inline con valori di tabella. Questo articolo illustra come scrivere una funzione inline con valori di tabella per selezionare le righe di cui eseguire la migrazione.  
   
 > [!IMPORTANT]
 > Se si specifica una funzione di filtro dalle prestazioni scarse, anche la migrazione dei dati avrà prestazioni scarse. Estensione database applica la funzione di filtro alla tabella usando l'operatore CROSS APPLY.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Eseguire l'istruzione ALTER TABLE per specificare una funzione di filtro dopo l'uscita dalla procedura guidata.  
   
- La sintassi di ALTER TABLE per l'aggiunta di una funzione è descritta più avanti in questo argomento.  
+ La sintassi di ALTER TABLE per l'aggiunta di una funzione è descritta più avanti in questo articolo.  
   
 ## <a name="basic-requirements-for-the-filter-function"></a>Requisiti di base per la funzione di filtro  
  La funzione inline con valori di tabella necessaria per un predicato del filtro di Estensione database è simile alla seguente.  
@@ -159,7 +161,7 @@ RETURN  SELECT 1 AS is_eligible
  Non è possibile usare sottoquery o funzioni non deterministiche, ad esempio RAND() o GETDATE().  
   
 ## <a name="add-a-filter-function-to-a-table"></a>Aggiungere una funzione di filtro a una tabella  
- Per aggiungere una funzione di filtro a una tabella, eseguire l'istruzione **ALTER TABLE** e specificare una funzione inline con valori di tabella esistente come valore del parametro **FILTER_PREDICATE** . Esempio:  
+ Per aggiungere una funzione di filtro a una tabella, eseguire l'istruzione **ALTER TABLE** e specificare una funzione inline con valori di tabella esistente come valore del parametro **FILTER_PREDICATE** . Ad esempio  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -491,7 +493,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Come viene applicata la funzione di filtro da Estensione database  
- Estensione database applica la funzione di filtro alla tabella e individua le righe idonee usando l'operatore CROSS APPLY. Esempio:  
+ Estensione database applica la funzione di filtro alla tabella e individua le righe idonee usando l'operatore CROSS APPLY. Ad esempio  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -500,7 +502,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  Se la funzione restituisce un risultato non vuoto per la riga, la riga è idonea per la migrazione.  
   
 ## <a name="replacePredicate"></a>Sostituire una funzione di filtro esistente  
- Per sostituire una funzione di filtro specificata in precedenza, eseguire di nuovo l'istruzione **ALTER TABLE** e specificare un valore nuovo per il parametro **FILTER_PREDICATE** . Esempio:  
+ Per sostituire una funzione di filtro specificata in precedenza, eseguire di nuovo l'istruzione **ALTER TABLE** e specificare un valore nuovo per il parametro **FILTER_PREDICATE** . Ad esempio  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -595,7 +597,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>Rimuovere una funzione di filtro da una tabella  
- Per eseguire la migrazione dell'intera tabella anziché delle righe selezionate, rimuovere la funzione esistente impostando **FILTER_PREDICATE**  su null. Esempio:  
+ Per eseguire la migrazione dell'intera tabella anziché delle righe selezionate, rimuovere la funzione esistente impostando **FILTER_PREDICATE**  su null. Ad esempio  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  

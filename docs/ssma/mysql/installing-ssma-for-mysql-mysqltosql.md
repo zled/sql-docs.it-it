@@ -1,7 +1,7 @@
 ---
 title: L'installazione di SSMA per MySQL (MySqlToSql) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2bbfc5f19ca051eacaaa32e55717c469eee88a4a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b8984aaeb9240c8c3b309925e151e79688bc7be3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>L'installazione di SSMA per MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) per MySQL è costituito da un'applicazione client che consentono di eseguire una migrazione da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Include anche un pacchetto di estensione che supporta la migrazione dei dati e l'utilizzo delle funzioni di sistema di MySQL nei database migrati.  
@@ -39,7 +39,7 @@ Se si desidera eseguire l'aggiornamento a una versione successiva di SSMA per My
   
 |||  
 |-|-|  
-|**Argomento**|**Description**|  
+|**Argomento**|**Descrizione**|  
 |[Installazione di SSMA per MySQL Client &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Fornisce informazioni e istruzioni per l'installazione del client SSMA.|  
 |[Installazione dei componenti SSMA in SQL Server (MySQL to SQL)](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Fornisce informazioni e istruzioni per installare il pacchetto di estensione in istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Rimozione di SSMA per i componenti di MySQL &#40; MySQLToSql &#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Vengono fornite istruzioni per la disinstallazione del programma client.|  

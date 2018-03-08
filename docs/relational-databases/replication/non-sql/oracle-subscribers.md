@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf0e6a1e37e76dcb968d92a39c62e12d3e1c1938
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eeef79d24cf2409dd44544a9668cfd926adedfb0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="oracle-subscribers"></a>Sottoscrittori Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta le sottoscrizioni push a Oracle tramite il provider Oracle OLE DB fornito da Oracle.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Installare e configurare il software client Oracle di rete e il provider OLE DB appropriato sul server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in modo che questo possa connettersi al Sottoscrittore Oracle. Il software client Oracle di rete deve essere dell'ultima versione disponibile. È consigliabile installare l'ultima versione del software client. Per tale motivo, la versione del software client è spesso successiva a quella del software del database. Il modo più diretto per installare e configurare il software consiste nell'utilizzare Oracle Universal Installer presente nel disco di Oracle Client. In Oracle Universal Installer, è necessario inserire le informazioni seguenti:  
   
-    |Informazioni|Descrizione|  
+    |Informazioni|Description|  
     |-----------------|-----------------|  
     |Oracle Home|Percorso della directory di installazione del software Oracle. Accettare il percorso predefinito (C:\oracle\ora90 o simile) o inserirne un altro. Per ulteriori informazioni su Oracle Home, vedere la sezione relativa alle considerazioni su Oracle Home più avanti in questo argomento.|  
     |Oracle home name|Alias del percorso di Oracle Home.|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
      Dopo aver completato la procedura di Oracle Universal Installer, utilizzare Net Configuration Assistant per configurare la connettività di rete. È necessario indicare quattro informazioni per configurare la connettività di rete. L'amministratore del database Oracle definisce la configurazione di rete quando imposta il database e il listener e deve essere in grado di offrire queste informazioni se l'utente non le possiede. Eseguire le operazioni seguenti:  
   
-    |Azione|Descrizione|  
+    |Azione|Description|  
     |------------|-----------------|  
     |Identificazione del database|Per l'identificazione del database sono disponibili due modalità. La prima modalità utilizza il SID (Oracle System Identifier) ed è disponibile in ogni release di Oracle. La seconda utilizza il Service Name, disponibile a partire da Oracle 8.0. Entrambe le modalità utilizzano un valore configurato alla creazione del database ed è importante che la configurazione di rete del client utilizzi la stessa modalità di denominazione utilizzata dall'amministratore nella configurazione del listener per il database.|  
     |Identificazione di un alias di rete per il database|È necessario specificare un alias di rete che verrà utilizzato per accedere al database Oracle. Si tratta in sostanza di un puntatore al Service Name o al SID remoto che è stato configurato quando è stato creato il database. Per l'alias di rete sono stati utilizzati diversi nomi nelle diverse release e nei diversi prodotti Oracle, tra cui Net Service Name e TNS Alias. SQL*Plus richiede questo alias come parametro "Host String" al momento dell'accesso.|  
@@ -129,7 +129,7 @@ ms.lasthandoff: 11/17/2017
 |**nvarchar(1-1000)**|VARCHAR2(1-2000)|  
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
-|**real**|REAL|  
+|**real**|real|  
 |**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
@@ -145,11 +145,11 @@ ms.lasthandoff: 11/17/2017
 |**varchar(1-4000)**|VARCHAR2(1-4000)|  
 |**varchar(4001-8000)**|CLOB|  
 |**varbinary(max)**|BLOB|  
-|**varchar(max)**|CLOB|  
+|**ntext**|CLOB|  
 |**xml**|NCLOB|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
- [Sottoscrivere le pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Sottoscrizione delle pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

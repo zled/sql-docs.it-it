@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_rename_condition (Transact-SQL) | Documenti Microsoft
+title: sp_syspolicy_rename_condition (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_rename_condition
 - sp_syspolicy_rename_condition_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_rename_condition
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_rename_condition
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8fe50a92fa2a149f7540aa1baba1b59ec3055dc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 01c2068335e439d5c669447d766a3a5c2a07349c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +50,10 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
  [  **@name=** ] **'***nome***'**  
  Nome della condizione che si desidera rinominare. *nome* è **sysname**e deve essere specificato se *condition_id* è NULL.  
   
- [  **@condition_id=** ] *condition_id*  
+ [ **@condition_id=** ] *condition_id*  
  È l'identificatore per la condizione che si desidera rinominare. *condition_id* è **int**e deve essere specificato se *nome* è NULL.  
   
- [  **@new_name=** ] **'***nuovo_nome***'**  
+ [ **@new_name=** ] **'***new_name***'**  
  È il nuovo nome della condizione. *nuovo_nome* è **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -61,7 +64,7 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
   
  È necessario specificare un valore per *nome* o *condition_id*. Non possono essere entrambi NULL. Per ottenere questi valori, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_conditions.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

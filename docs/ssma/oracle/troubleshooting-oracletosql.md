@@ -1,7 +1,7 @@
 ---
 title: Risoluzione dei problemi (OracleToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 35b0e0445c92a77952293ccb544a0e7a2210f8b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1de94f5935d6e117484d6e911631577116b01fab
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-oracletosql"></a>Risoluzione dei problemi (OracleToSQL)
 Non è insolito per eseguire nella console script o comandi in esecuzione a metà problemi di migrazione.  
@@ -32,7 +32,7 @@ Gli errori risolvibili possono essere correlati a:
   
 2.  Procedura  
   
-3.  Visualizza  
+3.  Vista  
   
 4.  Trigger  
   

@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_resource_stats_TSQL
 - dm_db_resource_stats
 - dm_db_resource_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41ae9665de08068d1bfa3ed919bbf43f55151a7c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,19 +42,19 @@ ms.lasthandoff: 11/17/2017
 |Colonne|Tipo di dati|Description|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Ora UTC che indica la fine dell'intervallo di reporting corrente.|  
-|avg_cpu_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  
-|avg_data_io_percent|**Decimal (5,2)**|Media di dati utilizzo i/o in percentuale del limite del livello del servizio.|  
-|avg_log_write_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio delle risorse di scrittura del limite del livello del servizio.|  
-|avg_memory_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio della memoria del limite del livello del servizio.<br /><br /> Ciò include la memoria utilizzata per l'archiviazione di oggetti di OLTP In memoria.|  
-|xtp_storage_percent|**Decimal (5,2)**|Utilizzo di archiviazione per OLTP In memoria in percentuale del limite del livello del servizio (alla fine dell'intervallo di reporting). Ciò include la memoria utilizzata per l'archiviazione degli oggetti OLTP In memoria: le tabelle con ottimizzazione per la memoria, indici e le variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione di operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP In memoria non viene utilizzato nel database.|  
-|max_worker_percent|**Decimal (5,2)**|Massimi simultanee processi di lavoro (richieste) in percentuale del limite del livello di servizio del database.|  
-|max_session_percent|**Decimal (5,2)**|Numero massimo di sessioni simultaneo espresso come percentuale del limite del livello di servizio del database.|  
+|avg_cpu_percent|**decimal (5,2)**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  
+|avg_data_io_percent|**decimal (5,2)**|Media di dati utilizzo i/o in percentuale del limite del livello del servizio.|  
+|avg_log_write_percent|**decimal (5,2)**|Percentuale dell'utilizzo medio delle risorse di scrittura del limite del livello del servizio.|  
+|avg_memory_usage_percent|**decimal (5,2)**|Percentuale dell'utilizzo medio della memoria del limite del livello del servizio.<br /><br /> Ciò include la memoria utilizzata per l'archiviazione di oggetti di OLTP In memoria.|  
+|xtp_storage_percent|**decimal (5,2)**|Utilizzo di archiviazione per OLTP In memoria in percentuale del limite del livello del servizio (alla fine dell'intervallo di reporting). Ciò include la memoria utilizzata per l'archiviazione degli oggetti OLTP In memoria: le tabelle con ottimizzazione per la memoria, indici e le variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione di operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP In memoria non viene utilizzato nel database.|  
+|max_worker_percent|**decimal (5,2)**|Massimi simultanee processi di lavoro (richieste) in percentuale del limite del livello di servizio del database.|  
+|max_session_percent|**decimal (5,2)**|Numero massimo di sessioni simultaneo espresso come percentuale del limite del livello di servizio del database.|  
 |dtu_limit|**int**|Max database DTU impostazione corrente per il database durante questo intervallo.|  
   
 > [!TIP]  
 >  Per ulteriori informazioni di contesto su questi limiti e i livelli di servizio, vedere gli argomenti [livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) e [funzionalità di livello e i limiti del servizio](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa vista richiede l'autorizzazione VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Osservazioni  

@@ -22,13 +22,13 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b605fdc999d3b0bb8937428e7b158322d182d839
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dd664120017d7e498fd2930281380c718e98aaa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering di failover e gruppi di disponibilità Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Per informazioni sui concetti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vedere [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Windows Server Failover Clustering](#WSFC)  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/20/2017
 |-|-------------------------|-------------------------------------------|  
 |**Utilizzo di cluster WSFC**|Sì|Sì|  
 |**Livello di protezione**|Istanza|Database|  
-|**Tipo di archiviazione**|Origine dati|Non condivisi<br /><br /> Mentre le repliche di un gruppo di disponibilità non condividono le risorse di archiviazione, una replica ospitata da un'istanza del cluster di failover usa una soluzione di archiviazione condivisa come richiesto da tale istanza. La soluzione di archiviazione è condivisa solo dai nodi all'interno dell'istanza FCI e non tra le repliche del gruppo di disponibilità.|  
+|**Tipo di archiviazione**|Condivisa|Non condivisi<br /><br /> Mentre le repliche di un gruppo di disponibilità non condividono le risorse di archiviazione, una replica ospitata da un'istanza del cluster di failover usa una soluzione di archiviazione condivisa come richiesto da tale istanza. La soluzione di archiviazione è condivisa solo dai nodi all'interno dell'istanza FCI e non tra le repliche del gruppo di disponibilità.|  
 |**Soluzioni di archiviazione**|Collegamento diretto, rete SAN, punti di montaggio, SMB|Dipende dal tipo di nodo|  
 |**Secondarie leggibili**|No*|Sì|  
 |**Impostazioni dei criteri di failover applicabili**|Quorum WSFC<br /><br /> Specifiche per FCI<br /><br /> Impostazioni dei gruppi di disponibilità*|Quorum WSFC<br /><br /> Impostazioni dei gruppi di disponibilità|  
@@ -136,14 +136,14 @@ ms.lasthandoff: 11/20/2017
   
      [Always On Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups (Guida all'architettura di Always On: compilazione di una soluzione a disponibilità elevata e di ripristino di emergenza usando istanze del cluster di failover e gruppi di disponibilità)](http://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni Always On di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Pagina relativa ai white paper Microsoft per SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Abilitare e disabilitare gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  

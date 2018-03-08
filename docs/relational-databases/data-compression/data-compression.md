@@ -25,15 +25,15 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 996f547876031c29f975d85949d2ff300afdee5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d999c313752ccbb23f31b9763463fc69e10ac20b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-compression"></a>Compressione dei dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### <a name="performance"></a>Prestazioni  
+### <a name="performance"></a>restazioni  
  La compressione degli indici columnstore con la compressione dell'archivio comporta un calo delle prestazioni dell'indice rispetto agli indici columnstore compressi con un altro tipo di compressione. Utilizzare la compressione dell'archivio solo quando è possibile concedere altro tempo e altre risorse della CPU per comprimere e recuperare i dati.  
   
  Il vantaggio della compressione dell'archivio è uno spazio di archiviazione ridotto, utile per i dati a cui non si accede di frequente. Se ad esempio si dispone di una partizione per ogni mese di dati e la maggior parte dell'attività è relativa ai mesi più recenti, è possibile archiviare i mesi precedenti per ridurre i requisiti di archiviazione.  
@@ -191,7 +191,7 @@ Nella tabella seguente vengono illustrate le impostazioni di replica che control
 |Comprimere la tabella nel Sottoscrittore se tutte le partizioni sono compresse nel server di pubblicazione, senza replicare lo schema di partizione.|False|True|Controlla se tutte le partizioni sono abilitate per la compressione.<br /><br /> Inserisce nello script la compressione a livello di tabella.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Impatto della compressione su altri componenti di SQL Server 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
  La compressione viene eseguita nel motore di archiviazione e i dati vengono presentati alla maggior parte degli altri componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uno stato non compresso, limitando gli effetti della compressione negli altri componenti in relazione agli aspetti seguenti:  
 -   Operazioni di importazione ed esportazione bulk  

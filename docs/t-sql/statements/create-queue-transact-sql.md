@@ -1,5 +1,5 @@
 ---
-title: CREARE una coda (Transact-SQL) | Documenti Microsoft
+title: CREATE QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE QUEUE
 - QUEUE
 - CREATE_QUEUE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE QUEUE statement
 - internal activation [Service Broker]
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 168ba93fdfbf999cb325d985c3c29601cc21b4ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +86,7 @@ CREATE QUEUE <object>
  *schema_name* (oggetto)  
  Nome dello schema cui appartiene la nuova coda. Per impostazione predefinita, viene utilizzato lo schema predefinito dell'utente che esegue l'istruzione. Se l'istruzione CREATE QUEUE viene eseguita da un membro del ruolo predefinito del server sysadmin o un membro del db_dbowner o db_ddladmin ruoli predefiniti del database nel database specificato da *database_name*, *schema_name* può specificare uno schema diverso da quello associato all'account di accesso della connessione corrente. In caso contrario, *schema_name* deve essere lo schema predefinito per l'utente che esegue l'istruzione.  
   
- *nome_coda*  
+ *queue_name*  
  Nome della coda da creare. Il nome deve essere conforme alle linee guida per gli identificatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  STATUS (coda)  
@@ -172,7 +174,7 @@ CREATE QUEUE <object>
 |message_body|**varbinary(max)**|Contenuto del messaggio.|  
 |message_id|**uniqueidentifier**|Identificatore univoco del messaggio.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione per la creazione di una coda viene assegnata ai membri del ruolo predefinito del database db_ddladmin o db_owner  e ai membri del ruolo predefinito del server sysadmin.  
   
  L'autorizzazione REFERENCES per una coda viene assegnata per impostazione predefinita al proprietario della coda, ai membri del ruolo predefinito del database db_ddladmin o db_owner e ai membri del ruolo predefinito del server sysadmin.  
@@ -230,10 +232,10 @@ CREATE QUEUE ExpenseQueue
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
- [RICEZIONE &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a5ff7baa53924206192db30e8ae9f50cef02cff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Risolvere i problemi di connessione al motore di database di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ Se si verifica un errore in questa fase, è necessario risolverlo prima di proce
 >    [!NOTE] 
 >    Alcuni messaggi di errore passati al client non forniscano intenzionalmente informazioni sufficienti per risolvere il problema. Si tratta di una misura di sicurezza per evitare di fornire informazioni su SQL Server a un utente malintenzionato. Per visualizzare informazioni complete sull'errore, esaminare il log degli errori di SQL Server. Il log contiene informazioni dettagliate. Se si verifica l'errore **18456 L'accesso non è riuscito per l'utente**, vedere l'argomento [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) della documentazione online che include informazioni aggiuntive sui codici di errore. Un blog di Aaron Bertrand include un elenco completo dei codici di errore in [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)(Risoluzione dell'errore 18456). Se si è in grado di stabilire la connessione, è possibile visualizzare il log degli errori con SSMS nella sezione Gestione di Esplora oggetti. In caso contrario, è possibile visualizzare il log degli errori con il Blocco note di Windows. Il percorso predefinito varia in base alla versione e può essere modificato durante l'installazione. Il percorso predefinito per [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] è `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
-4.   Se è possibile connettersi tramite Shared Memory, testare la connessione usando TCP. È possibile forzare una connessione TCP specificando **tcp:** prima del nome. Esempio:
+4.   Se è possibile connettersi tramite Shared Memory, testare la connessione usando TCP. È possibile forzare una connessione TCP specificando **tcp:** prima del nome. Ad esempio
 
 |Connessione a:|Tipo:|Esempio:|
 |-----------------|---------------|-----------------|

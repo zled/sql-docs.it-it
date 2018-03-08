@@ -7,23 +7,25 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 475665c87f672868eaa6efeb2b5b6e927ed945af
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: ad0cf99c59bcd3295acf0e1c29b14c8523f6f925
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Creare una Stored Procedure utilizzando sqlrutils
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo argomento descrive i passaggi per la conversione del codice R per l'esecuzione come stored procedure T-SQL. Per ottenere i migliori risultati possibili, può essere necessario modificare il codice per garantire che tutti gli input possano essere parametrizzati.
 
@@ -41,7 +43,7 @@ Tra i parametri di input può esistere al massimo un frame di dati.
 
 Gli oggetti nel frame di dati e altri parametri di input della funzione devono essere dei tipi di dati R seguenti:
 - POSIXct
-- NUMERIC
+- numeric
 - character
 - integer
 - logical
@@ -89,7 +91,7 @@ Quando si esegue ogni funzione chiamata, viene creato un oggetto di R in un seco
 
 Quando tutti i parametri di input e outpui sono pronti, effettuare una chiamata al `StoredProcedure` costruttore.
 
-**Usage**
+**Utilizzo**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

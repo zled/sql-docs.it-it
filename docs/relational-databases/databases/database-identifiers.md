@@ -22,15 +22,15 @@ helpviewer_keywords:
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e65cd74dd93228a722395eac56a120a4c64e0bd2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 35570e23edbec76e06c58a0756c6850024d371ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-identifiers"></a>Identificatori del database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Il nome di un oggetto di database rappresenta l'identificatore dell'oggetto stesso. È possibile associare un identificatore a qualunque elemento di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio server, database e oggetti di database quali tabelle, viste, colonne, indici, trigger, procedure, vincoli, regole e così via. Gli identificatori sono richiesti con la maggior parte degli oggetti. Per alcuni oggetti, quali i vincoli, sono facoltativi.  
@@ -62,7 +62,7 @@ WHERE KeyCol = 124
 ```  
   
  Identificatori delimitati  
- Sono racchiusi tra virgolette doppie (") o tra parentesi quadre ([ ]). Gli identificatori conformi alle regole relative al formato degli identificatori possono non essere delimitati. Esempio:  
+ Sono racchiusi tra virgolette doppie (") o tra parentesi quadre ([ ]). Gli identificatori conformi alle regole relative al formato degli identificatori possono non essere delimitati. Ad esempio  
   
 ```  
 SELECT *  
@@ -70,7 +70,7 @@ FROM [TableX]         --Delimiter is optional.
 WHERE [KeyCol] = 124  --Delimiter is optional.  
 ```  
   
- All'interno di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] è necessario che gli identificatori non conformi alle regole relative agli identificatori siano delimitati. Esempio:  
+ All'interno di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] è necessario che gli identificatori non conformi alle regole relative agli identificatori siano delimitati. Ad esempio  
   
 ```  
 SELECT *  

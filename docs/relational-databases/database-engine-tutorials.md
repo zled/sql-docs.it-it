@@ -8,23 +8,25 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-query-tuning
+ms.technology:
+- dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 613bff65995857827043bca80e968dfafe42a3b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3765d87fd95fdc07513319d1c4f175ec66e9f813
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="database-engine-tutorials"></a>Esercitazioni del motore di database
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] In questa sezione sono disponibili le esercitazioni per il [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In questa sezione sono disponibili le esercitazioni per il [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
 [Esercitazione: Introduzione al motore di database](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 In questa esercitazione viene illustrato come connettersi a un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -50,7 +52,7 @@ In questa esercitazione viene utilizzato uno scenario per illustrare i concetti 
 [Esercitazione: Amministrazione di server tramite la gestione basata su criteri](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 In questa esercitazione viene illustrato come creare criteri applicabili agli standard di amministrazione di un sito.  
   
-[Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 In questa esercitazione viene illustrato come effettuare un backup di SQL Server e il ripristino nel servizio di archiviazione BLOB di Windows Azure.  
   
 [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016 ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_primary_database (Transact-SQL) | Documenti Microsoft
+title: sp_change_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_primary_database
 - sp_change_log_shipping_primary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_change_log_shipping_primary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_change_log_shipping_primary_database
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8ceffb4fc8cc9c58b9bc455685d2f9dc383e041
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9ea80f811016ec3502bea583c20edf4894753e83
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +69,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  [  **@backup_retention_period =** ] '*backup_retention_period*'  
  Periodo di tempo, in minuti, per cui il file di backup del log deve essere mantenuto nella directory di backup nel server primario. *backup_retention_period* è **int**, senza impostazione predefinita e non può essere NULL.  
   
- [  **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
+ [ **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
  Modalità di sicurezza utilizzata per connettersi al server di monitoraggio.  
   
  1 = Autenticazione di Windows.  
@@ -75,10 +78,10 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *monitor_server_security_mode* è **bit** e non può essere NULL.  
   
- [  **@monitor_server_login =** ] '*monitor_server_login*'  
+ [ **@monitor_server_login =** ] '*monitor_server_login*'  
  Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
   
- [  **@monitor_server_password =** ] '*monitor_server_password*'  
+ [ **@monitor_server_password =** ] '*monitor_server_password*'  
  Password dell'account utilizzato per accedere al server di monitoraggio.  
   
  [  **@backup_threshold =** ] '*backup_threshold*'  
@@ -123,7 +126,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
 3.  Se il server di monitoraggio è diverso dal server primario, modifica il record in **log_shipping_monitor_primary** sul monitor di server utilizzando gli argomenti specificati, se necessario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  
@@ -144,8 +147,8 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul Log Shipping &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [log_shipping_primary_databases &#40; Transact-SQL &#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
+ [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

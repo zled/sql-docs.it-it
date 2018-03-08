@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - indexes [SQL Server], disk space requirements
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddf19430350de7403cc3c9d46416cbc6cfa409c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c71784eb7a7a8e9ed2456cb7ae7718fafc9e1e6a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Requisiti di spazio su disco per operazioni DLL sugli indici
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,12 +86,12 @@ ms.lasthandoff: 11/17/2017
   
  Nelle operazioni sugli indici online viene utilizzato il controllo delle versioni delle righe per isolare le operazioni dagli effetti delle modifiche apportate da altre transazioni. In questo modo, non è necessario richiedere blocchi di condivisione sulle righe lette. Le operazioni utente simultanee di aggiornamento ed eliminazione durante le operazioni sugli indici online richiedono spazio per i record di versione in **tempdb**. Per altre informazioni, vedere [Eseguire operazioni online sugli indici](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [Esempio di spazio su disco per gli indici](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [Spazio su disco per il log delle transazioni per operazioni sugli indici](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   
- [Stima delle dimensioni di una tabella](../../relational-databases/databases/estimate-the-size-of-a-table.md)  
+ [Stimare le dimensioni di una tabella](../../relational-databases/databases/estimate-the-size-of-a-table.md)  
   
  [Stima delle dimensioni di un indice cluster](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)  
   

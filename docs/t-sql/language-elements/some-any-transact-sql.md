@@ -1,5 +1,5 @@
 ---
-title: ALCUNI | QUALSIASI (Transact-SQL) | Documenti Microsoft
+title: SOME | ANY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -17,7 +18,8 @@ applies_to:
 f1_keywords:
 - SOME
 - SOME_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - scalar values
 - comparing scalar with single-column set
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f962702faec170262f50c3c2ca5c328af3bc266d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,14 +63,14 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME | ANY  
  Specifica che deve essere eseguito un confronto.  
   
- *sottoquery*  
+ *subquery*  
  Sottoquery che include un set di risultati di una colonna. Il tipo di dati della colonna restituita deve essere il tipo di dati stesso come *scalar_expression*.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  **Boolean**  
   
 ## <a name="result-value"></a>Valore restituito  
- SOME o ANY restituisce **TRUE** quando il confronto specificato è TRUE per qualsiasi coppia (*scalar_expression***,***x*) in cui *x* è un valore nel set di colonna singola; in caso contrario, restituisce **FALSE**.  
+ SOME o ANY restituisce **TRUE** quando il confronto specificato è TRUE per qualsiasi coppia (*scalar_expression***,***x*) in cui *x* è un valore di set di colonna singola. in caso contrario, restituisce **FALSE**.  
   
 ## <a name="remarks"></a>Osservazioni  
  ALCUNI richiede il *scalar_expression* deve essere confrontato per almeno un valore restituito dalla sottoquery. Per le istruzioni che richiedono il *scalar_expression* per deve essere confrontato con ogni valore viene restituito dalla sottoquery, vedere [tutti &#40; Transact-SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md). Ad esempio, se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = SOME (sottoquery) restituisce TRUE per un *scalar_express* di 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (sottoquery) restituisce false, perché alcuni dei valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  
@@ -148,12 +150,12 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tutti i &#40; Transact-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
- [CASE &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [IN &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [IN &#40; Transact-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   

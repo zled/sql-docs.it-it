@@ -1,5 +1,5 @@
 ---
-title: Sys.dm xe_objects (Transact-SQL) | Documenti Microsoft
+title: sys.dm_xe_objects (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_xe_objects
 - sys.dm_xe_objects_TSQL
 - dm_xe_objects_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ac492b7189a3f6508874c5fbd32d50827463ff6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e9f1146f74618195b28fd19f2464bc45a2498c61
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Tipi. Nei tipi vengono incapsulati la lunghezza e le caratteristiche della raccolta di byte, necessarie per interpretare i dati.  
 
- |Nome colonna|Tipo di dati|Descrizione|  
+ |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|Nome dell'oggetto . nome è univoco all'interno di un pacchetto per un tipo di oggetto specifico. Non ammette i valori Null.|  
 |object_type|**nvarchar(60)**|Tipo dell'oggetto. object_type è uno dei valori seguenti:<br /><br /> evento<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> tipo<br /><br /> Non ammette i valori Null.|  
@@ -59,12 +61,12 @@ ms.lasthandoff: 11/17/2017
 |type_package_guid|**uniqueidentifier**|GUID per il pacchetto che espone il tipo sul quale questo oggetto opera. Ammette i valori Null.|  
 |type_size|**int**|Dimensione del tipo di dati espressa in byte. Solo per tipi di oggetti validi. Ammette i valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|Per|Relazione|  
+|From|Per|Relazione|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|Molti-a-uno|  
   

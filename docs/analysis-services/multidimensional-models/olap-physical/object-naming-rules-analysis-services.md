@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8a1c08102482ecfd1282416fda65d930526b8de3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In questo argomento vengono descritte le convenzioni di denominazione di oggetti, nonché le parole riservate e caratteri che non possono essere usati in qualsiasi oggetto, nome in codice o script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -74,13 +72,13 @@ ms.lasthandoff: 12/08/2017
   
  Nella tabella seguente sono elencati i caratteri non validi per oggetti specifici.  
   
-|Oggetto|Caratteri non validi|  
+|Object|Caratteri non validi|  
 |------------|------------------------|  
 |**Server**|Seguire le convenzioni di denominazione del server Windows quando si denomina un oggetto server. Vedere [convenzioni di denominazione (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) per informazioni dettagliate.|  
 |**DataSource**|: / \ * &#124; ? " () [] {} <>|  
-|**Livello** o **attributo**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**Dimensione** o **gerarchia**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
-|Tutti gli altri oggetti|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} < >|  
+|**Livello** o **attributo**|, , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
+|**Dimensione** o **gerarchia**|, , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
+|Tutti gli altri oggetti|, , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} < >|  
   
  **Eccezioni: Quando i caratteri riservati consentiti**  
   
@@ -88,9 +86,9 @@ ms.lasthandoff: 12/08/2017
   
 |Livello di compatibilità del database e modalità del server|Caratteri riservati consentiti?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (tutte le versioni)|No|  
-|Tabulare - 1050|No|  
-|Tabulare - 1100|No|  
+|MOLAP (tutte le versioni)|no|  
+|Tabulare - 1050|no|  
+|Tabulare - 1100|no|  
 |Tabulare - 1130 e superiore|Sì|  
   
  I database possono avere un oggetto ModelType predefinito. L'impostazione predefinita è equivalente a multidimensionale e pertanto non supporta l'utilizzo dei caratteri riservati nei nomi delle colonne.  

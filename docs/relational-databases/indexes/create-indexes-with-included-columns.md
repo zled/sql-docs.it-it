@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 064df7a689cbb3da0323448eb5efc8d0fdace5be
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2cea0215d55b75807b735a7028a79aa52bbbe7e4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>Creare indici con colonne incluse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,13 +95,13 @@ ms.lasthandoff: 01/02/2018
   
 6.  Nella scheda **Colonne chiave indice** scegliere **Aggiungi**.  
   
-7.  Nella finestra di dialogo **Seleziona colonne da***table_name* selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice.  
+7.  Nella finestra di dialogo **Seleziona colonne da***nome_tabella* selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice.  
   
 8.  Fare clic su **OK**.  
   
 9. Nella scheda **Colonne incluse** scegliere **Aggiungi**.  
   
-10. Nella finestra di dialogo **Seleziona colonne da***table_name* selezionare le caselle di controllo delle colonne di tabella da aggiungere all'indice come colonne non chiave.  
+10. Nella finestra di dialogo **Seleziona colonne da***nome_tabella* selezionare le caselle di controllo delle colonne di tabella da aggiungere all'indice come colonne non chiave.  
   
 11. Fare clic su **OK**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys. conversation_endpoints (Transact-SQL) | Documenti Microsoft
+title: sys.conversation_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - conversation_endpoints
 - sys.conversation_endpoints
 - sys.conversation_endpoints_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.conversation_endpoints catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c748d55f2de1ddfdda1edbf1465e4874faec5a73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5cbfc13a807b2ec7c61ab2f12ec6f6cfe9f4ae82
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +47,10 @@ ms.lasthandoff: 11/17/2017
 |conversation_group_id|**uniqueidentifier**|Identificatore del gruppo di conversazioni a cui appartiene la conversazione. Non ammette i valori Null.|  
 |service_id|**int**|Identificatore del servizio per il lato specificato della conversazione. Non ammette i valori Null.|  
 |lifetime|**datetime**|Data/ora di scadenza della conversazione. Non ammette i valori Null.|  
-|state|**Char(2)**|Stato corrente della conversazione. Non ammette i valori Null. I possibili valori sono i seguenti:<br /><br /> PERTANTO avviata in uscita. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stata elaborata un'istruzione BEGIN CONVERSATION per la conversazione, ma non sono ancora stati inviati messaggi.<br /><br /> SI avviata in ingresso. Un'altra istanza ha avviato una nuova conversazione con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma il primo messaggio non è ancora stato ricevuto completamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può creare una conversazione con questo stato se il primo messaggio è frammentato oppure se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riceve messaggi non in ordine. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe tuttavia venire creata la conversazione con lo stato CO se la prima trasmissione ricevuta per la conversazione contiene il primo messaggio per intero.<br /><br /> CO conversazione (conversing). La conversazione è stabilita ed entrambi i lati della conversazione possono inviare messaggi. La maggior parte delle comunicazioni di un comune servizio avviene quando la conversazione è in questo stato.<br /><br /> DI disconnessa in ingresso. Il lato remoto della conversazione ha eseguito un'istruzione END CONVERSATION. La conversazione rimane in questo stato finché il lato locale della conversazione non esegue un'istruzione END CONVERSATION. Un'applicazione può ancora ricevere messaggi per la conversazione. Poiché sul lato remoto la conversazione è terminata, non può invece inviare messaggi nella conversazione. Quando un'applicazione esegue un'istruzione END CONVERSATION, la conversazione passa allo stato CD.<br /><br /> ESEGUIRE disconnessa in uscita. Il lato locale della conversazione ha eseguito un'istruzione END CONVERSATION. La conversazione rimane in questo stato finché il lato remoto della conversazione invia un acknowledgement dell'istruzione END CONVERSATION. Un'applicazione non può inviare o ricevere messaggi per la conversazione. Quando il lato remoto della conversazione invia un acknowledgement per END CONVERSATION, la conversazione passa allo stato CD.<br /><br /> ER errore. In questo endpoint si è verificato un errore. Il messaggio di errore viene posizionato nella coda dell'applicazione. Se la coda dell'applicazione è vuota, l'applicazione ha già utilizzato il messaggio di errore.<br /><br /> CD chiusa. L'endpoint di conversazione non è più in uso.|  
+|state|**char(2)**|Stato corrente della conversazione. Non ammette i valori Null. I possibili valori sono i seguenti:<br /><br /> PERTANTO avviata in uscita. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stata elaborata un'istruzione BEGIN CONVERSATION per la conversazione, ma non sono ancora stati inviati messaggi.<br /><br /> SI avviata in ingresso. Un'altra istanza ha avviato una nuova conversazione con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma il primo messaggio non è ancora stato ricevuto completamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può creare una conversazione con questo stato se il primo messaggio è frammentato oppure se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riceve messaggi non in ordine. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe tuttavia venire creata la conversazione con lo stato CO se la prima trasmissione ricevuta per la conversazione contiene il primo messaggio per intero.<br /><br /> CO conversazione (conversing). La conversazione è stabilita ed entrambi i lati della conversazione possono inviare messaggi. La maggior parte delle comunicazioni di un comune servizio avviene quando la conversazione è in questo stato.<br /><br /> DI disconnessa in ingresso. Il lato remoto della conversazione ha eseguito un'istruzione END CONVERSATION. La conversazione rimane in questo stato finché il lato locale della conversazione non esegue un'istruzione END CONVERSATION. Un'applicazione può ancora ricevere messaggi per la conversazione. Poiché sul lato remoto la conversazione è terminata, non può invece inviare messaggi nella conversazione. Quando un'applicazione esegue un'istruzione END CONVERSATION, la conversazione passa allo stato CD.<br /><br /> ESEGUIRE disconnessa in uscita. Il lato locale della conversazione ha eseguito un'istruzione END CONVERSATION. La conversazione rimane in questo stato finché il lato remoto della conversazione invia un acknowledgement dell'istruzione END CONVERSATION. Un'applicazione non può inviare o ricevere messaggi per la conversazione. Quando il lato remoto della conversazione invia un acknowledgement per END CONVERSATION, la conversazione passa allo stato CD.<br /><br /> ER errore. In questo endpoint si è verificato un errore. Il messaggio di errore viene posizionato nella coda dell'applicazione. Se la coda dell'applicazione è vuota, l'applicazione ha già utilizzato il messaggio di errore.<br /><br /> CD chiusa. L'endpoint di conversazione non è più in uso.|  
 |state_desc|**nvarchar(60)**|Descrizione dello stato di endpoint conversazione. Questa colonna ammette valori Null. I possibili valori sono i seguenti:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **UNA CONVERSAZIONE**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **CHIUSO**<br /><br /> **ERROR**|  
 |far_service|**nvarchar(256)**|Nome del servizio nel lato remoto della conversazione. Non ammette i valori Null.|  
-|far_broker_instance|**nvarchar (128)**|Istanza di Service Broker per il lato remoto della conversazione. Ammette valori Null.|  
+|far_broker_instance|**nvarchar(128)**|Istanza di Service Broker per il lato remoto della conversazione. Ammette valori Null.|  
 |principal_id|**int**|Identificatore dell'entità il cui certificato viene utilizzato dal lato locale del dialogo. Non ammette i valori Null.|  
 |far_principal_id|**int**|Identificatore dell'utente il cui certificato viene utilizzato dal lato remoto del dialogo. Non ammette i valori Null.|  
 |outbound_session_key_identifier|**uniqueidentifier**|Identificatore della chiave di crittografia in uscita per il dialogo. Non ammette i valori Null.|  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |security_timestamp|**datetime**|Ora di creazione della chiave della sessione locale. Non ammette i valori Null.|  
 |dialog_timer|**datetime**|Ora in cui il timer di conversazione per il dialogo corrente invia un messaggio DialogTimer. Non ammette i valori Null.|  
 |send_sequence|**bigint**|Numero di messaggio successivo nella sequenza di invio. Non ammette i valori Null.|  
-|last_send_tran_id|**Binary(6)**|ID di transazione interna dell'ultima transazione che ha inviato un messaggio. Non ammette i valori Null.|  
+|last_send_tran_id|**binary(6)**|ID di transazione interna dell'ultima transazione che ha inviato un messaggio. Non ammette i valori Null.|  
 |end_dialog_sequence|**bigint**|Numero di sequenza del messaggio di fine dialogo. Non ammette i valori Null.|  
 |receive_sequence|**bigint**|Numero di messaggio successivo previsto nella sequenza di ricezione dei messaggi. Non ammette i valori Null.|  
 |receive_sequence_frag|**int**|Numero di frammento di messaggio successivo previsto nella sequenza di ricezione dei messaggi. Non ammette i valori Null.|  
@@ -66,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |is_system|**bit**|1 se si tratta di un dialogo di sistema. Non ammette i valori Null.|  
 |priority|**tinyint**|Priorità di conversazione assegnata a questo endpoint di conversazione. Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
   

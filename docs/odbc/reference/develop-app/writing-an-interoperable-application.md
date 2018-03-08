@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec3f9821b729c593fac8cb280f8596eaf0dbed1d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 151963c23abce0f737671dd73dec1d971998228e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-interoperable-application"></a>Scrittura di un'applicazione di interoperabilità
 Ogni volta che un'applicazione utilizza lo stesso codice con più di un driver, il codice deve essere interoperabile tra i driver. Nella maggior parte dei casi, si tratta di un'attività semplice. Ad esempio, il codice per recuperare le righe con un cursore forward-only è uguale per tutti i driver. In alcuni casi, può essere più difficile. Ad esempio, il codice per costruire gli identificatori per l'utilizzo nelle istruzioni SQL deve considerare il caso di identificatore, racchiudere tra virgolette e convenzioni di denominazione in tre parti, due parti e una parte.  

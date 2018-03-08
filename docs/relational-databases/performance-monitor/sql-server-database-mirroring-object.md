@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49461bb2ff928355259b66e4c468eed5ce4e8879
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 751d65e88be75199a2f6f6a892e5cc221b0a8006
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-database-mirroring-object"></a>Oggetto Database Mirroring di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'oggetto prestazione **SQLServer:Database Mirroring** include contatori delle prestazioni con informazioni sul mirroring del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
   
-|Nome|Descrizione|  
+|nome|Description|  
 |----------|-----------------|  
 |**Byte ricevuti/sec**|Numero di byte ricevuti al secondo.|  
 |**Byte inviati/sec**|Numero di byte inviati al secondo.|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Su ogni partner, alcuni dei contatori mostrano un valore zero in base al ruolo attualmente svolto dal partner.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I contatori delle prestazioni consentono di monitorare le prestazioni del mirroring del database. Ad esempio, è possibile esaminare il contatore **Ritardo transazioni** per verificare se il mirroring del database sta influenzando le prestazioni sul server principale. È possibile esaminare i contatori **Coda rollforward** e **Coda invii log** per verificare se il database mirror è in grado di mantenersi aggiornato rispetto al database principale. Il contatore **Byte log inviati/sec** consente di monitorare il numero di eventi di log inviati al secondo.  
   
 ## <a name="see-also"></a>Vedere anche  

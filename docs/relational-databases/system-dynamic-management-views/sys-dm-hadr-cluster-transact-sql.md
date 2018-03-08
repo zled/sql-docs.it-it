@@ -1,5 +1,5 @@
 ---
-title: Sys.dm hadr_cluster (Transact-SQL) | Documenti Microsoft
+title: sys.dm_hadr_cluster (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_hadr_cluster_HADR
 - sys.dm_hadr_cluster_TSQL
 - dm_hadr_cluster
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea7fef3018ef9e7c88100c1a0c3a7b444bfaeac7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 545712f1469d46c2d82dc2f36bd0084ceaf94daf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadrcluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +44,19 @@ ms.lasthandoff: 11/17/2017
 
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**cluster_name**|**nvarchar (128)**|Nome del cluster WSFC che ospita le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abilitate per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].|  
+|**cluster_name**|**nvarchar(128)**|Nome del cluster WSFC che ospita le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abilitate per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].|  
 |**quorum_type**|**tinyint**|Tipo di quorum utilizzato da questo cluster WSFC, uno di:<br /><br /> 0 = Maggioranza dei nodi. Questa configurazione del quorum può sostenere errori della metà dei nodi (arrotondata) meno uno. Su un cluster a sette nodi, ad esempio, questa configurazione del quorum può sostenere tre errori di nodo.<br /><br /> 1 = Maggioranza dei nodi e dei dischi. Se il disco di controllo rimane online, questa configurazione del quorum può sostenere errori della metà dei nodi (arrotondamento per eccesso). Ad esempio, un cluster a sei nodi in cui il disco di controllo è online potrebbe sostenere tre errori di nodo. Se il disco di controllo viene portato offline o su di esso si verifica un errore, questa configurazione del quorum può sostenere errori della metà dei nodi (arrotondamento per eccesso) meno uno. Ad esempio, un cluster a sei nodi con un disco di controllo su cui si è verificato un errore potrebbe sostenere due (3-1=2) errori di nodo.<br /><br /> 2 = Maggioranza dei nodi e delle condivisioni file. Questa configurazione del quorum funziona in modo simile alla Maggioranza dei nodi e del disco, ma utilizza un server di controllo della condivisione file anziché un disco di controllo.<br /><br /> 3 = Nessuna maggioranza: solo disco. Se il disco del quorum è online, questa configurazione del quorum può sostenere errori di tutti i nodi tranne uno.|  
 |**quorum_type_desc**|**varchar(50)**|Descrizione di **quorum_type**, uno di:<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY|  
 |**quorum_state**|**tinyint**|Stato del quorum WSFC, uno di:<br /><br /> 0 = Stato del quorum sconosciuto<br /><br /> 1 = Quorum normale<br /><br /> 2 = Quorum forzato|  
 |**quorum_state_desc**|**varchar(50)**|Descrizione di **quorum_state**, uno di:<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e DMV di Gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Viste del catalogo dei gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Monitorare gruppi di disponibilità &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
   
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2145a720c1fd9cfedeafe123ac24e7e5ac77173
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f51c5b639649a3d21ce515a1d4082e84be4f7329
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structured-query-language-sql"></a>Structured Query Language (SQL)
 Un tipico DBMS consente agli utenti di archiviare, accedere e modificare i dati in modo efficiente, organizzato. Gli utenti del DBMS erano originariamente, i programmatori. Accesso ai dati archiviati, è necessario scrivere un programma in un linguaggio di programmazione, ad esempio COBOL. Mentre questi programmi sono stati scritti spesso per presentare un'interfaccia a un utente tecniche, i servizi di esperti programmatori necessario l'accesso ai dati. Accesso casuale ai dati non è pratico.  

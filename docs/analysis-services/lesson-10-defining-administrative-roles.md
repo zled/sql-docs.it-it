@@ -8,36 +8,39 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3210ee42c73a2804b8ee4fba8e1bc7aa26e6f0e4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ed03cf00101a8e36760571a89c9bfe25dff98bca
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Lezione 10: Definizione dei ruoli amministrativi
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In questa lezione vengono definiti i ruoli di sicurezza per le attività amministrative.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+In questa lezione viene illustrato come definire i ruoli di sicurezza per le attività amministrative.  
   
 > [!NOTE]  
 > I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
   
 In questa lezione è contenuta l'attività seguente:  
   
-[Concessione di autorizzazioni per l'elaborazione di database](../analysis-services/lesson-10-granting-process-database-permissions.md)  
+[Concessione di autorizzazioni di Database di processo](../analysis-services/lesson-10-granting-process-database-permissions.md)  
 In questa attività viene definito un ruolo di sicurezza che dispone delle autorizzazioni per elaborare il database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e viene successivamente eseguito un test del ruolo di sicurezza definito.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modellazione multidimensionale &#40; Esercitazione di AdventureWorks &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

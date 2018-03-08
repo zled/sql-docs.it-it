@@ -20,13 +20,13 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f83e241a5360b7edcdf6739d4d7bdbc96517cea7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dc0896ba691bac565cd116a2f5da6cc70951063d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come usare il riquadro **Dettagli Esplora oggetti** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per monitorare e gestire i database di disponibilità Always On, le repliche di disponibilità e i gruppi di disponibilità esistenti.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  In Esplora oggetti connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui si desidera monitorare un gruppo di disponibilità, quindi fare clic sul nome del server per espandere il relativo albero.  
   
-3.  Espandere il nodo **Disponibilità elevata Always On** e il nodo **Gruppi di disponibilità** .  
+3.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità**.  
   
 4.  Nel riquadro **Dettagli Esplora oggetti** viene visualizzato ogni gruppo di disponibilità per il quale l'istanza del server connesso ospita una replica. Per ogni gruppo di disponibilità, la colonna **Istanza primaria del server** contiene il nome dell'istanza del server che attualmente ospita la replica primaria.  Per visualizzare ulteriori informazioni su un determinato gruppo di disponibilità, selezionarlo in Esplora oggetti.  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/20/2017
   
  I valori possibili sono i seguenti:  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Non consentire connessioni**|Le connessioni dirette ai database di disponibilità non sono consentite quando questa replica di disponibilità agisce come una replica secondaria. I database secondari non sono disponibili per l'accesso in lettura.|  
 |**Consenti solo connessioni con finalità di lettura**|Sono consentite solo connessioni dirette in sola lettura quando questa replica agisce come una replica secondaria. Tutti i database nella replica sono disponibili per l'accesso in lettura.|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
  **Stato connessione**  
  Indica se una replica secondaria è attualmente connessa alla replica primaria. I valori possibili sono i seguenti:  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Disconnesso**|Per una replica di disponibilità remota, indica che è disconnessa dalla replica di disponibilità locale. La risposta della replica locale allo stato Disconnesso dipende dal relativo ruolo:<br /><br /> Sulla replica primaria, se una replica secondaria è disconnessa, i database secondari sono contrassegnati come **Non sincronizzato** sulla replica primaria e la replica primaria attende che la replica secondaria venga riconnessa.<br /><br /> Sulla replica secondaria, dopo avere rilevato che è disconnessa, tenta di riconnettersi alla replica primaria.|  
 |**Connesso**|Una replica di disponibilità remota attualmente connessa alla replica locale.|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/20/2017
  **Stato di sincronizzazione**  
  Indica se una replica secondaria è attualmente sincronizzata con la replica primaria. I valori possibili sono i seguenti:  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Non sincronizzato**|Il database non è sincronizzato o non è stato ancora aggiunto al gruppo di disponibilità.|  
 |**Sincronizzato**|Il database è sincronizzato con il database primario sulla replica primaria corrente o sull'ultima replica primaria.<br /><br /> Nota: nella modalità prestazioni, il database non si trova mai nello stato sincronizzato.|  
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/20/2017
   
  Gli stati di sincronizzazione possibili sono:  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Sincronizzazione in corso|Il database secondario ha ricevuto i record del log delle transazioni per il database primario che non sono ancora scritti su disco (finali).<br /><br /> Nota: nella modalità con commit asincrono, lo stato di sincronizzazione è sempre **Sincronizzazione**.|  
 |||  
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **Sospeso**  
  Indica se il database di disponibilità è attualmente online. I valori possibili sono i seguenti:  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Sospeso**|Questo stato indica che il database è stato sospeso in locale e che deve essere ripreso manualmente.<br /><br /> Sulla replica primaria, il valore non è attendibile per un database secondario. Per determinare in modo affidabile se un database secondario è sospeso, eseguire una query sulla replica secondaria che ospita il database.|  
 |**Non unito in join**|Indica che il database secondario non è stato aggiunto al gruppo di disponibilità o stato rimosso dal gruppo.|  

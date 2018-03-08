@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - e-mail [Master Data Services]
 - e-mail [Master Data Services], about e-mail notifications
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
-caps.latest.revision: "15"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0056a26ead4148ad0c163000611791e799d91df5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aa5fd134e53be86c371427f396443f89e6c0e68e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="notifications-master-data-services"></a>Notifiche (Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] può essere configurato in modo da inviare una notifica tramite posta elettronica quando la convalida delle regole di business non riesce oppure quando lo stato di una versione di modello o di un insieme di modifiche cambia.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] può essere configurato in modo da inviare una notifica tramite posta elettronica quando la convalida delle regole di business non riesce oppure quando lo stato di una versione di modello o di un insieme di modifiche cambia.  
   
 ## <a name="how-notifications-are-sent"></a>Modalità di invio delle notifiche  
  È possibile configurare notifiche in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. La configurazione delle notifiche attiva l'invio di messaggi di posta elettronica tramite il componente Posta elettronica database nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] che ospita il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Per altre informazioni su Posta elettronica database, vedere la sezione [Oggetti di configurazione di Posta elettronica database](../relational-databases/database-mail/database-mail-configuration-objects.md) nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

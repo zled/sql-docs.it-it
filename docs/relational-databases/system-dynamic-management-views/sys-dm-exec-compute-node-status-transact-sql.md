@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_compute_node_status (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,33 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_COMPUTE_NODE_STATUS_TSQL
 - DM_EXEC_COMPUTE_NODE_STATUS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 - dm_exec_compute_node_status
 - sys.dm_exec_compute_node_status management view
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8186b170118b57c4998769aae9443b5df436cf85
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f898f754f0b39b0f5746d8ed076c75d26354bccd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexeccomputenodestatus-transact-sql"></a>Sys.dm exec_compute_node_status (Transact-SQL)
+# <a name="sysdmexeccomputenodestatus-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contiene informazioni aggiuntive sulle prestazioni e stato di tutti i nodi di PolyBase. Elenca una riga per ogni nodo.  
@@ -41,12 +43,12 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Id numerico univoco associato al nodo.|Univoco nel cluster di scalabilità orizzontale indipendentemente dal tipo.|  
 |process_id|**int**|||  
-|nome_processo|**nvarchar(255)**|Nome logico del nodo.|Qualsiasi stringa di lunghezza appropriata.|  
+|process_name|**nvarchar(255)**|Nome logico del nodo.|Qualsiasi stringa di lunghezza appropriata.|  
 |allocated_memory|**bigint**|Totale di memoria su questo nodo.||  
 |available_memory|**bigint**|Memoria totale disponibile su questo nodo.||  
 |process_cpu_usage|**bigint**|Utilizzo CPU totale del processo, in tick.||  
 |total_cpu_usage|**bigint**|Utilizzo totale della CPU, in tick.||  
-|Se ha valore|**bigint**|Numero totale di thread in uso su questo nodo.||  
+|thread_count|**bigint**|Numero totale di thread in uso su questo nodo.||  
 |handle_count|**bigint**|Numero totale di handle in uso su questo nodo.||  
 |total_elapsed_time|**bigint**|Tempo totale trascorso dal sistema avviare o riavviare.|Tempo totale trascorso dal sistema avviare o riavviare. Se total_elapsed_time supera il valore massimo per un numero intero (24.8 giorni, in millisecondi), errore di materializzazione scadenza comporterà un overflow. Il valore massimo in millisecondi è equivalente a 24.8 giorni.|  
 |is_available|**bit**|Flag che indica se questo nodo è disponibile.||  

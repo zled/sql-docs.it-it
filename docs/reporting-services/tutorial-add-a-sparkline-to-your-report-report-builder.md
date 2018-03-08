@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2821641b938291ac67fefb08e4e174f8113db033
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2a9f819427b4abb5e9ee4032a990842a4137611f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
 
@@ -184,7 +184,7 @@ Per impostazione predefinita, i dati di riepilogo per il campo **Sales** riporta
   
     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![report-generatore-segnaposto-valore-pulsante](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="FormatDates"></a>2b. (Facoltativo) Formattare i dati come date  
 Per impostazione predefinita, nel campo **SalesDate** vengono visualizzate sia la data che l'ora. È possibile formattare tale campo in modo da visualizzare solo la data.  
@@ -244,7 +244,7 @@ I grafici sparkline risultano di difficile lettura quando in essi non vengono us
   
      e consente di impostare l'altezza delle barre in ogni grafico sparkline rispetto alle altre. 
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 5.  Fare clic con il pulsante destro del mouse sul grafico sparkline e scegliere **Proprietà asse orizzontatale**.  
   
@@ -252,7 +252,7 @@ I grafici sparkline risultano di difficile lettura quando in essi non vengono us
   
     e consente di impostare la larghezza delle barre in ogni grafico sparkline rispetto alle altre. Se sono presenti grafici sparkline con un numero inferiore di barre, in tali grafici saranno contenuti spazi vuoti per i dati mancanti.  
   
-7.  Scegliere **OK**.  
+7.  Fare clic su **OK**.  
   
 8.  Fare clic su **Esegui** per visualizzare l'anteprima del nuovo report.  
   
@@ -323,7 +323,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
   
 4.  Fare clic su **Salva**.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 
 L'esercitazione sulla creazione di un report tabella con grafici sparkline è terminata. Per altre informazioni, vedere [Grafici sparkline e barre dei dati](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   

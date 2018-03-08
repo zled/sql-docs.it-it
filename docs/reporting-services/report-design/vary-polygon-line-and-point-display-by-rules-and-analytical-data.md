@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,13 +25,13 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 464731c279d55f20b725193cde9db1e5f2974bf2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 428f89c51b60f1e9f33170ab03cb43a87caf6a78
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
   Le opzioni di visualizzazione per poligoni, linee e punti su un livello mappa vengono controllate impostando le opzioni del livello, le regole per gli elementi della mappa sul livello o sostituendo le opzioni per specifici elementi incorporati della mappa su un livello.  
@@ -116,7 +114,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **Ottimale.** Crea intervalli che regolano automaticamente la distribuzione in modo da creare intervalli secondari equilibrati. Il numero di intervalli secondari è determinato dall'algoritmo.  
   
--   **Personalizzato.** Specifica il numero di intervalli per controllare la distribuzione dei valori. Per i dati dell'esempio, è possibile specificare 3 intervalli: 1-2, 3-8, 9.  
+-   **Personalizzato.** Specifica il numero di intervalli per controllare la distribuzione di valori. Per i dati dell'esempio, è possibile specificare 3 intervalli: 1-2, 3-8, 9.  
   
  I valori di distribuzione vengono utilizzati dalle regole per variare i valori di visualizzazione degli elementi della mappa.  
   

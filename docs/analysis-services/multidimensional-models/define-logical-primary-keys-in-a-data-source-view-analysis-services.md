@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - deleting logical primary keys
 - data source views [Analysis Services], logical primary keys
 ms.assetid: 172bc267-c637-4caa-bf55-0ba198d30b1e
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d38773feb45ada119da338ccf022630b4a781b8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ab3e26fdddc257e2ddf8edd450c412bbabb7c557
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>Definire chiavi primarie logiche in una vista origine dati (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La creazione guidata vista origine di dati e progettazione vista origine dati definiscono automaticamente una chiave primaria per una tabella che viene aggiunto a una vista origine dati basata sulla tabella di database sottostante.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La Creazione guidata vista origine dati e Progettazione vista origine dati consentono di definire automaticamente una chiave primaria per una tabella che viene aggiunta a una vista origine dati in base alla tabella di database sottostante.  
   
  Talvolta, può essere necessario definire manualmente una chiave primaria nella vista origine dati. Ad esempio, per motivi correlati alle prestazioni o alla progettazione, nelle tabelle di un'origine dati potrebbero non essere incluse colonne chiave primarie definite in modo esplicito. La colonna chiave primaria per una tabella può inoltre essere omessa in viste e query denominate. Se in una tabella, in una vista o in una query denominata non è inclusa una chiave primaria fisica definita, è possibile definire manualmente una chiave primaria logica tramite Progettazione vista origine dati.  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/08/2017
      Una volta impostata la chiave, le colonne chiave primaria saranno identificate da un'icona a forma di chiave.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Definire calcoli denominati in una vista origine dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

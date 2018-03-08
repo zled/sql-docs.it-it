@@ -7,23 +7,25 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffbdb114-e7a5-4145-bb8f-2eb97720ea96
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 212084dc9a8d4bea618f4f172d8db3f2ee25ea4a
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: ffbeefeea8fd1c90a9ea09c0094cd81877a797ea
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="monitoring-r-services"></a>Monitoraggio di R Services
-  Questa sezione fornisce informazioni su queste attività di monitoraggio comuni quando si usa [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Questa sezione fornisce informazioni su queste attività di monitoraggio comuni quando si usa [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  
   
 -   Identificazione delle risorse del server usate da R  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/20/2017
   
  L'argomento descrive anche gli strumenti installati nel computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte dell'installazione di R ed elenca le DMV e gli eventi estesi correlati a [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Viste a gestione dinamica (DMV) per SQL Server R Services](../../advanced-analytics/r-services/dmvs-for-sql-server-r-services.md)
 

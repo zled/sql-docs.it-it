@@ -1,11 +1,11 @@
 ---
-title: Origini dati | Documenti Microsoft
+title: Origini dati | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -19,13 +19,13 @@ caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: f7d67e1e67a872c33865a95619ccb1c54ef7f8f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84c415fd10a757cebfc365759d7fb038f9630ec4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="data-sources"></a>Origini dei dati
+# <a name="data-sources"></a>Origini dati
 Oggetto *origine dati* è semplicemente l'origine dei dati. Può trattarsi di un file, un database specifico in un DBMS o anche un feed di dati in tempo reale. I dati potrebbero trovarsi nello stesso computer del programma, o in un altro computer in un punto qualsiasi in una rete. Ad esempio, un'origine dati potrebbe essere un DBMS Oracle in esecuzione in un sistema operativo OS/2®, accede Novell® Netware. un DBMS di IBM DB2 tramite un gateway. una raccolta di file Xbase in una directory di server. o un file di database locale di Microsoft® Access.  
   
  Lo scopo di un'origine dati è quello di raccogliere tutte le informazioni tecniche necessarie per accedere ai dati, ovvero il nome del driver, indirizzo di rete, il software di rete e così via, in un unico inserire e fare in modo da parte dell'utente. L'utente deve essere in grado di esaminare un elenco che include retribuzioni, inventario e personale, scegliere retribuzioni dall'elenco e avere l'applicazione di connettersi ai dati degli stipendi, tutto senza dover sapere dove risiedono i dati del libro paga o come l'applicazione è giunto a esso.  

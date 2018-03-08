@@ -21,15 +21,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 88db862493213badd36cfcaf4301cc1be6da5881
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4dbf50b3d48d83d3df69ec285a22379164f883e0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-network-configuration"></a>Configurazione di rete del server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le attività di configurazione di rete del server includono l'abilitazione dei protocolli, la modifica della porta o della pipe utilizzata da un protocollo, la configurazione della crittografia, la configurazione del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, le procedure per esporre o nascondere il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in rete e la registrazione del nome SPN. Nella maggior parte dei casi non è necessario modificare la configurazione di rete del server. Riconfigurare i protocolli di rete del server solo in presenza di requisiti speciali di rete.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
  È possibile utilizzare i nomi SPN anche per rendere più sicura l'autenticazione client quando si esegue la connessione con NTLM. Per altre informazioni, vedere [Connettersi al motore di database mediante la protezione estesa](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   
-## <a name="sql-server-browser-service"></a>Servizio SQL Server Browser  
+## <a name="sql-server-browser-service"></a>SQL Server Browser Service  
  Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser viene eseguito sul server e consente ai computer client di individuare le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser non deve essere configurato ma solo eseguito in alcuni scenari di connessione. Per altre informazioni su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, vedere [Servizio SQL Server Browser &#40;motore di database e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)  
   
 ## <a name="hiding-sql-server"></a>Istanze nascoste di SQL Server  

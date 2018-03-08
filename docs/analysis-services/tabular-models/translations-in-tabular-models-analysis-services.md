@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2b5e88e9a77c1d192709bde2fe6dcc9be3887aa3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Traduzioni in modelli tabulari (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aggiunge il supporto di stringa di traduzione per i modelli tabulari. Un singolo oggetto nel modello può avere più traduzioni di un nome o di una descrizione, rendendo possibile supportare versioni multilingue all'interno della definizione di modello.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Aggiunge il supporto di stringa di traduzione per i modelli tabulari. Un singolo oggetto nel modello può avere più traduzioni di un nome o di una descrizione, rendendo possibile supportare versioni multilingue all'interno della definizione di modello.  
   
  Le stringhe tradotte valgono esclusivamente per i metadati dell'oggetto (nomi e descrizioni di tabelle e colonne) che vengono visualizzati in uno strumento client come un elenco di tabella pivot di Excel.  Per usare le stringhe tradotte, la connessione client specifica le impostazioni cultura. Nella funzionalità **Analisi in Excel** è possibile scegliere la lingua da un elenco a discesa. Per altri strumenti, potrebbe essere necessario specificare le impostazioni cultura nella stringa di connessione.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  Fare clic su **Esporta file lingua**.  Specificare un nome e un percorso file.  
   
- ![SSAS-tabulare-tradurre-esportazione](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabulare-tradurre-esportazione")  
+ ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
   
 ## <a name="add-translations"></a>Aggiunta di traduzioni  
  Un file di traduzione JSON vuoto include metadati per le traduzioni in una lingua specifica. I segnaposti di traduzione per i nomi e le descrizioni degli oggetti vengono specificati nella sezione **Culture** alla fine della definizione del modello. È possibile aggiungere traduzioni per quanto segue:  
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/08/2017
   
  Nell'esempio seguente vengono visualizzate le didascalie tradotte e la descrizione per le tabelle **DimProduct** e **DimCustomer** .  
   
- ![SSAS-tabulare-tradurre-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabulare-tradurre-json")  
+ ![ssas-tabular-translate-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabular-translate-json")  
   
 > [!TIP]  
 >  È possibile usare qualsiasi editor di JSON per aprire il file, ma è consigliabile l'editor JSON in Visual Studio in modo da poter usare il comando Visualizza codice in Esplora soluzioni per visualizzare la definizione di modello tabulare in SSDT. Per disporre dell'editor JSON, è necessaria un' [installazione della versione completa di Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx). L'edizione gratuita Community include l'editor JSON.  
@@ -111,13 +112,13 @@ ms.lasthandoff: 12/08/2017
   
 2.  Nella finestra di dialogo di connessione di Excel, scegliere le impostazioni cultura per cui le traduzioni delle stringhe esistono nel modello. Excel rileva le impostazioni cultura definite nel modello e popola di conseguenza l'elenco a discesa.  
   
-     ![SSAS-tabulare-traduzioni-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabulare-traduzioni-excel")  
+     ![ssas-tabular-translations-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabular-translations-excel")  
   
      Dopo aver creato una tabella pivot, dovrebbero essere visualizzati i nomi della colonna e della tabella tradotti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Livello di compatibilità per i modelli tabulari in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Scenari di globalizzazione per Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Analizzare in Excel &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analizza in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

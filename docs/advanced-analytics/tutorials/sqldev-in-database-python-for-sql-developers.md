@@ -7,25 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: c6e59f8e3e1b59b9225a95dbe787698dd5bf4f9e
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Analitica Python nel Database per gli sviluppatori SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 L'obiettivo di questa procedura dettagliata è fornire ai programmatori SQL con la creazione di un di machine learning soluzione usando Python che viene eseguito in SQL Server. In questa procedura dettagliata si apprenderà come aggiungere codice Python alle stored procedure ed eseguire le stored procedure per compilare e stimare dai modelli.
 
@@ -45,7 +47,7 @@ Il processo di creazione di una soluzione di apprendimento è complesso che può
 
 I dati provengono dal set di dati NYC Taxi noto. Per rendere questa procedura dettagliata semplice e rapido, i dati verranno campionati. Si creerà un modello di classificazione binaria che consente di stimare se un particolare trip è probabile che ottenere un suggerimento o non, in base alle colonne, ad esempio l'ora del giorno, distanza e posizione ritiro.
 
-Tutte le attività eseguibili tramite [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure nell'ambiente familiare di[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+Tutte le attività eseguibili tramite [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure nell'ambiente familiare di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [Passaggio 1: Scaricare i dati di esempio](sqldev-py1-download-the-sample-data.md)
 
@@ -76,7 +78,7 @@ Tutte le attività eseguibili tramite [!INCLUDE[tsql](../../includes/tsql-md.md)
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
 + Installare un'istanza di SQL Server 2017 con servizi di Machine Learning e Python abilitato. Per ulteriori informazioni, vedere [configurare servizi di SQL Server Machine Learning con Python](../python/setup-python-machine-learning-services.md).
 + L'account di accesso usato per questa procedura deve avere le autorizzazioni necessarie per creare database e altri oggetti, per caricare i dati, selezionare i dati ed eseguire le stored procedure.

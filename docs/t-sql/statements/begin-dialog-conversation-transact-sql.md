@@ -1,5 +1,5 @@
 ---
-title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Documenti Microsoft
+title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - DIALOG_TSQL
 - BEGIN DIALOG
 - BEGIN DIALOG CONVERSATION
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - conversations [Service Broker]
 - beginning dialogs
@@ -31,16 +33,16 @@ helpviewer_keywords:
 - encryption [SQL Server], conversations
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4ca1959c247aedd2e49c38a870621d440a089f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: a2ece31010207b6044504f099c11443a2fec0fa2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,13 +98,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  Specifica il contratto rispettato dalla conversazione. Il contratto deve esistere nel database corrente. Se il servizio di destinazione non accetta nuove conversazioni in base al contratto specificato, [!INCLUDE[ssSB](../../includes/sssb-md.md)] restituisce un messaggio di errore nella conversazione. Se questa clausola viene omessa, la conversazione rispetta il contratto denominato **predefinito**.  
   
- RELATED_CONVERSATION  **=**  *related_conversation_handle*  
+ RELATED_CONVERSATION **=***related_conversation_handle*  
  Specifica il gruppo di conversazioni esistente a cui viene aggiunto il nuovo dialogo. Se questa clausola è presente, il nuovo dialogo appartiene allo stesso gruppo di conversazione del dialogo specificato da *related_conversation_handle*. Il *related_conversation_handle*deve essere di un tipo convertibile in modo implicito nel tipo **uniqueidentifier**. L'istruzione ha esito negativo se il *related_conversation_handle* non fa riferimento a una finestra di dialogo esistente.  
   
- RELATED_CONVERSATION_GROUP  **=**  *related_conversation_group_id*  
+ RELATED_CONVERSATION_GROUP **=***related_conversation_group_id*  
  Specifica il gruppo di conversazioni esistente a cui viene aggiunto il nuovo dialogo. Se si specifica questa clausola, la finestra di dialogo Nuovo verrà aggiunto al gruppo di conversazioni specificato da *related_conversation_group_id*. Il *related_conversation_group_id*deve essere di un tipo convertibile in modo implicito nel tipo **uniqueidentifier**. Se *related_conversation_group_id*non riferimento di un gruppo di conversazioni esistente, service broker crea un nuovo gruppo di conversazioni con il parametro specificato *related_conversation_group_id* e Associa il nuovo dialogo a tale gruppo di conversazioni.  
   
- DURATA  **=**  *dialog_lifetime*  
+ LIFETIME **=***dialog_lifetime*  
  Specifica la quantità massima di tempo per cui il dialogo rimarrà aperto. Per il corretto completamento del dialogo, è necessario che entrambi gli endpoint terminino il dialogo in modo esplicito prima della scadenza della durata. Il *dialog_lifetime* valore deve essere espresso in secondi. Ed è di tipo **int**. Quando viene specificata alcuna clausola di durata, la durata del dialogo è il valore massimo di **int** tipo di dati.  
   
  ENCRYPTION  
@@ -126,7 +128,7 @@ WHERE database_id = DB_ID() ;
   
  BEGIN DIALOG CONVERSATION non è un'istruzione valida in una funzione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per iniziare un dialogo, l'utente corrente deve disporre dell'autorizzazione RECEIVE per la coda del servizio specificato nella clausola FROM del comando e dell'autorizzazione REFERENCES per il contratto specificato.  
   
 ## <a name="examples"></a>Esempi  
@@ -216,9 +218,9 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [Istruzione END CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [MOVE CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
- [Sys. conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

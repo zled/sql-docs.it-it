@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobstepslogs (Transact-SQL) | Documenti Microsoft
+title: dbo.sysjobstepslogs (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sysjobstepslogs_TSQL
 - sysjobstepslogs
 - dbo.sysjobstepslogs
-dev_langs: TSQL
-helpviewer_keywords: sysjobstepslogs system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobstepslogs system table
 ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 050feecde1f82ca8962552744e2fc2d43d28bd4c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a10ea6203dcf7ee8d76dc82dac512cc6a02f3f8d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +42,13 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**log_id**|**int**|ID del log dei passaggi del processo.|  
 |**log**|**nvarchar(max)**|Contenuto del log dei passaggi del processo.|  
-|**Date_Created**|**datetime**|Data e ora di creazione del log dei passaggi del processo.|  
+|**date_created**|**datetime**|Data e ora di creazione del log dei passaggi del processo.|  
 |**date_modified**|**datetime**|Data e ora dell'ultima modifica del log dei passaggi del processo.|  
 |**log_size**|**int**|Dimensioni in byte del log dei passaggi del processo.|  
 |**step_uid**|**uniqueidentifier**|ID univoco del passaggio del processo.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_help_jobsteplog &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [sp_delete_jobsteplog &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)  
+ [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
+ [sp_delete_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)  
   
   

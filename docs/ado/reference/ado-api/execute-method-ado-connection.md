@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Connection15::Execute
 - Connection15::raw_Execute
-helpviewer_keywords: Execute method [ADO]
+helpviewer_keywords:
+- Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 071e752063020ace305371f814f1b78224dbb9a4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef36e770a2321357ed0d58153ad8e0b7493a232a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-ado-connection"></a>Execute (metodo) (connessione ADO)
 Esegue query specificata, istruzione SQL, stored procedure o il testo del provider.  
@@ -47,10 +49,10 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Oggetto **stringa** valore contenente l'istruzione SQL, stored procedure, un URL o il testo del provider per l'esecuzione. **Facoltativamente**, nomi di tabella possono essere utilizzati ma solo se il provider è compatibile con SQL. Per ad esempio se un nome di tabella "Customers" viene usato, ADO automaticamente anteporre la sintassi SQL Select standard per creare e passare a "SELECT * FROM Customers" come un [!INCLUDE[tsql](../../../includes/tsql_md.md)] istruzione per il provider.  
   
  *RecordsAffected*  
- Facoltativo. Oggetto **lungo** variabile in cui il provider restituisce il numero di record interessati dall'operazione.  
+ Facoltativa. Oggetto **lungo** variabile in cui il provider restituisce il numero di record interessati dall'operazione.  
   
  *Opzioni*  
- Facoltativo. Oggetto **lungo** valore che indica la modalità con cui il provider deve valutare l'argomento CommandText. Può essere una maschera di bit di uno o più [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valori.  
+ Facoltativa. Oggetto **lungo** valore che indica la modalità con cui il provider deve valutare l'argomento CommandText. Può essere una maschera di bit di uno o più [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valori.  
   
  **Nota** utilizzare il **ExecuteOptionEnum** valore **adExecuteStream** per migliorare le prestazioni riducendo al minimo l'elaborazione interna e per le applicazioni che si esegue il porting da Visual Basic 6.0.  
   

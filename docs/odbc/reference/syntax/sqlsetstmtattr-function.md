@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6fb9cd848463d0315d42b49f42e690f1bd7e47b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetstmtattr-function"></a>Funzione SQLSetStmtAttr
 **Conformità**  
@@ -161,7 +161,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>Attributi di istruzione  
  Gli attributi attualmente definiti e la versione di ODBC in cui sono state introdotte vengono visualizzati nella tabella seguente. è previsto che verranno definiti più attributi dai driver per sfruttare i vantaggi di origini dati diverse. Un intervallo di attributi è riservato da ODBC. gli sviluppatori di driver è necessario riservare i valori per l'uso di specifici del driver da Open Group. Per ulteriori informazioni, vedere [tipi di dati specifici del Driver, descrittore di tipi, tipi di informazioni, tipi di diagnostica e gli attributi](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
-|Attribute|*ValuePtr* contenuto|  
+|attribute|*ValuePtr* contenuto|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|L'handle per le chiamate successive a APD **SQLExecute** e **SQLExecDirect** nell'handle di istruzione. Il valore iniziale di questo attributo è il descrittore allocato in modo implicito quando l'istruzione è stata allocata inizialmente. Se il valore di questo attributo è impostato su SQL_NULL_DESC o l'handle allocata inizialmente per il descrittore, un handle APD allocato in modo esplicito che era precedentemente associato l'handle di istruzione dissociato e l'handle di istruzione viene ripristinata la in modo implicito allocato handle APD.<br /><br /> Questo attributo non può essere impostato su un handle di descrittore allocato in modo implicito per un'altra istruzione o a un altro handle di descrittore che è stato impostato in modo implicito nella stessa istruzione. gli handle di descrittore allocato in modo implicito non possono essere associati più di un'istruzione o un handle descrittore.|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|Handle di ARD per recuperi successivi nell'handle di istruzione. Il valore iniziale di questo attributo è il descrittore allocato in modo implicito quando l'istruzione è stata allocata inizialmente. Se il valore di questo attributo è impostato su SQL_NULL_DESC o l'handle allocata inizialmente per il descrittore, un handle ARD allocato in modo esplicito che era precedentemente associato l'handle di istruzione dissociato e l'handle di istruzione viene ripristinata la in modo implicito allocato handle ARD.<br /><br /> Questo attributo non può essere impostato su un handle di descrittore allocato in modo implicito per un'altra istruzione o a un altro handle di descrittore che è stato impostato in modo implicito nella stessa istruzione. gli handle di descrittore allocato in modo implicito non possono essere associati più di un'istruzione o un handle descrittore.|  

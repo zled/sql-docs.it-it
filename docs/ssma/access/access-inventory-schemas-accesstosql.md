@@ -1,7 +1,7 @@
 ---
 title: Accedere a schemi di inventario (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -47,11 +47,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d22835bef06693ecf2fef51240f4bd9d9607a8e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3c34d87adbe5e854b9de2f49bda5492583298d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Schemi di inventario di accesso (AccessToSQL)
 Nelle sezioni seguenti vengono descritte le tabelle che vengono create SSMA durante l'esportazione degli schemi di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -76,7 +76,7 @@ I metadati del database viene esportato nel **SSMA_Access_InventoryDatabases** t
 |**ReportsCount**|**int**|Il numero di report nel database di Access.|  
 |**MacrosCount**|**int**|Il numero di macro nel database di Access.|  
 |**AccessVersion**|**nvarchar(4000)**|La versione di accesso del database.|  
-|**Confronto**|**nvarchar(4000)**|Le regole di confronto del database di Access. Regole di confronto determinano le modalità di Ordina e confronta le stringhe in un database.|  
+|**Regole di confronto**|**nvarchar(4000)**|Le regole di confronto del database di Access. Regole di confronto determinano le modalità di Ordina e confronta le stringhe in un database.|  
 |**JetVersion**|**nvarchar(4000)**|La versione del motore di database Jet. I database di Access utilizzano il motore di database Jet sottostante.|  
 |**IsUpdatable**|**bit**|Indica se il database può essere aggiornato. Se il valore è 1, il database è aggiornabile. Se il valore è 0, il database è di sola lettura.|  
 |**QueryTimeout**|**int**|Configurato ODBC query valore di timeout per il database, in secondi. Il valore predefinito è 60 secondi.|  

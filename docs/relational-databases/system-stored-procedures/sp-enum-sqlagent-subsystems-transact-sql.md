@@ -1,5 +1,5 @@
 ---
-title: sp_enum_sqlagent_subsystems (Transact-SQL) | Documenti Microsoft
+title: sp_enum_sqlagent_subsystems (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_sqlagent_subsystems
 - sp_enum_sqlagent_subsystems_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_enum_sqlagent_subsystems
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_enum_sqlagent_subsystems
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a088866b645cacad3813ce7c2ae15e9e9831f299
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 946c623004db5efaeb470b26b74daaba9f5271bb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spenumsqlagentsubsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,20 +55,20 @@ sp_enum_sqlagent_subsystems
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**sottosistema**|**nvarchar (40)**|Nome del sottosistema.|  
-|**Descrizione**|**nvarchar(512)**|Descrizione del sottosistema.|  
+|**subsystem**|**nvarchar(40)**|Nome del sottosistema.|  
+|**description**|**nvarchar(512)**|Descrizione del sottosistema.|  
 |**subsystem_dll**|**nvarchar(510)**|Modulo DLL contenente il sottosistema.|  
 |**agent_exe**|**nvarchar(510)**|Modulo eseguibile utilizzato dal sottosistema.|  
-|**start_entry_point**|**nvarchar (30)**|Procedura richiamata da SQL Server Agent durante l'esecuzione del passaggio del processo.|  
-|**event_entry_point**|**nvarchar (30)**|Procedura richiamata da SQL Server Agent durante l'esecuzione del passaggio del processo.|  
-|**stop_entry_point**|**nvarchar (30)**|Procedura richiamata da SQL Server Agent durante l'esecuzione del passaggio del processo.|  
+|**start_entry_point**|**nvarchar(30)**|Procedura richiamata da SQL Server Agent durante l'esecuzione del passaggio del processo.|  
+|**event_entry_point**|**nvarchar(30)**|Procedura richiamata da SQL Server Agent durante l'esecuzione del passaggio del processo.|  
+|**stop_entry_point**|**nvarchar(30)**|Procedura richiamata da SQL Server Agent durante l'esecuzione del passaggio del processo.|  
 |**max_worker_threads**|**int**|Numero massimo di thread avviati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per questo sottosistema.|  
 |**subsystem_id**|**int**|Identificatore del sottosistema.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Questa procedura elenca i sottosistemi disponibili nell'istanza.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono appartenere al ruolo predefinito del database **SQLAgentOperatorRole** nel database **msdb** .  
   
  Per informazioni dettagliate su **SQLAgentOperatorRole**, vedere [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  

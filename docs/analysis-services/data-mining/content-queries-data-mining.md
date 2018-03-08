@@ -5,28 +5,27 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c32111e19274ecd744f968c7ce128a924487f22c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cae138336afe7590bf23f42532096dc910010848
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-queries-data-mining"></a>Query sul contenuto (Data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una query sul contenuto è un modo di estrarre informazioni sulle statistiche interne e sulla struttura del modello di data mining. Talvolta una query sul contenuto può fornire dettagli che non sono immediatamente disponibili nel visualizzatore. I risultati di una query sul contenuto possono essere utilizzati anche per estrarre a livello di codice informazioni per altri utilizzi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una query sul contenuto consente di estrarre informazioni sulle statistiche interne e sulla struttura del modello di data mining. Talvolta una query sul contenuto può fornire dettagli che non sono immediatamente disponibili nel visualizzatore. I risultati di una query sul contenuto possono essere utilizzati anche per estrarre a livello di codice informazioni per altri utilizzi.  
   
  In questa sezione vengono fornite informazioni generali sui tipi di informazioni che è possibile recuperare tramite una query sul contenuto, nonché la sintassi DMX generale per le query sul contenuto.  
   
@@ -204,7 +203,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  Per ulteriori informazioni sull'utilizzo di set di righe gerarchici, vedere la specifica OLE DB su MSDN.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sull'istruzione DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
- [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Informazioni sull'istruzione Select di DMX](../../dmx/understanding-the-dmx-select-statement.md)   
+ [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 68cdce96ae6c8e6f98b3c6d922101c6f830ff208
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 429c2dc727d844c35943fa599e6fbcb911df04ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -111,15 +113,15 @@ Per informazioni dettagliate, vedere il [tabella Opzioni partizioni](https://msd
 ### <a name="select-options"></a>Selezionare le opzioni
 L'istruzione select è la differenza fondamentale tra un'istruzione CTAS e CREATE TABLE.  
 
- `WITH`*common_table_expression*  
+ `WITH` *common_table_expression*  
  Indica un set di risultati denominato temporaneo, noto come espressione di tabella comune (CTE). Per ulteriori informazioni, vedere [con common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- `SELECT`*select_criteria*  
+ `SELECT` *select_criteria*  
  Consente di popolare la nuova tabella con i risultati da un'istruzione SELECT. *select_criteria* è il corpo dell'istruzione SELECT che determina i dati da copiare nella nuova tabella. Per informazioni sulle istruzioni SELECT, vedere [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
 <a name="permissions-bk"></a>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Richiede un'istruzione CTAS `SELECT` tutti gli oggetti a cui fa riferimento l'autorizzazione per la *select_criteria*.
 
 Le autorizzazioni creare una tabella, vedere [autorizzazioni](https://msdn.microsoft.com/library/mt203953/#Permissions) in CREATE TABLE. 
@@ -145,7 +147,7 @@ Per informazioni dettagliate, vedere [limitazioni e restrizioni](https://msdn.mi
  
 <a name="performance-bk"></a>
  
- ## <a name="performance"></a>Prestazioni 
+ ## <a name="performance"></a>restazioni 
 
 Per una tabella hash distribuita, è possibile utilizzare un'istruzione CTAS per scegliere una colonna di distribuzione diverso per ottenere prestazioni migliori di join e aggregazioni. Se si sceglie che una colonna di distribuzione diverso non è l'obiettivo, si avrà le migliori prestazioni di un'istruzione CTAS se si specifica la stessa colonna di distribuzione perché questo modo si evita nuovamente la distribuzione delle righe. 
 
@@ -831,11 +833,11 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
- [CREATE EXTERNAL TABLE AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+ [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
  [CREARE una tabella &#40; Azure SQL Data Warehouse &#41; ](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [DROP EXTERNAL TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
+ [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
   
   
 

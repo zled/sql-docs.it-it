@@ -1,27 +1,28 @@
 ---
 title: Risolvere i problemi di memoria insufficiente | Microsoft Docs
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 838f604df21a87912db8d48f815a73c6af27c8f2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 190a55e0feb08aa4e7e0601e6a7fec92b249ea05
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="resolve-out-of-memory-issues"></a>Risolvere i problemi di memoria insufficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +39,9 @@ ms.lasthandoff: 11/27/2017
 |[Procedure consigliate sull'uso di OLTP in memoria in un ambiente di VM](#bkmk_VMs)|Aspetti da tenere presenti quando si usa OLTP in memoria in un ambiente virtualizzato.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente  
- Quando si prova a ripristinare un database, è possibile che venga visualizzato il messaggio di errore "L'operazione di ripristino non è riuscita per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse *\<NomePoolRisorse>*'." Questo errore indica che la memoria disponibile del server non è sufficiente per il ripristino del database.
+ Quando si prova a ripristinare un database, è possibile che venga visualizzato il messaggio di errore "L'operazione di ripristino non è riuscita per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse *\<NomePoolRisorse>*'." Questo errore indica che la memoria disponibile del server non è sufficiente per il ripristino del database. 
    
-La memoria disponibile del server in cui viene ripristinato un database deve essere sufficiente per le tabelle ottimizzate per la memoria nel backup del database, in caso contrario il database non verrà portato online.  
+La memoria disponibile del server in cui viene ripristinato un database deve essere sufficiente per le tabelle ottimizzate per la memoria nel backup del database. In caso contrario, il database non verrà portato online e verrà contrassegnato come sospetto.  
   
 Se la memoria fisica del server è sufficiente, ma viene comunque visualizzato questo errore, altri processi potrebbero star usando troppa memoria oppure un problema di configurazione rende la memoria disponibile insufficiente per il ripristino. Per questo tipo di problemi usare le seguenti misure per aumentare la memoria disponibile per l'operazione di ripristino: 
   
@@ -54,7 +55,7 @@ Se la memoria fisica del server è sufficiente, ma viene comunque visualizzato q
     > Se il server è in esecuzione in una VM e non è dedicato, impostare il valore di MIN_MEMORY_PERCENT sullo stesso valore di MAX_MEMORY_PERCENT.   
     > Per altre informazioni, vedere l'argomento [Procedure consigliate sull'uso di OLTP in memoria in un ambiente di VM](#bkmk_VMs).  
   
-    ```tsql  
+    ```sql  
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -117,7 +118,7 @@ Nel frammento di codice seguente il valore di MAX_MEMORY_PERCENT per il pool di 
 >  Se il server è in esecuzione in una VM e non è dedicato, impostare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT sullo stesso valore.   
 > Per altre informazioni, vedere l'argomento [Procedure consigliate sull'uso di OLTP in memoria in un ambiente di VM](#bkmk_VMs).  
   
-```tsql  
+```sql  
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  
   

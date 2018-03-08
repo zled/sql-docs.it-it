@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: RestrictionList Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96bbf8798521a6661e630115e5a5669ee24d15df
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eeabf1889208ab4cf31b0d0b65d336ccf62ba84e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restrictionlist-element-xmla"></a>Elemento RestrictionList (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene una raccolta di colonne di restrizione e valori utilizzati per il [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo.  
@@ -50,10 +48,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |Elementi padre|[Restrizioni](../../../analysis-services/xmla/xml-elements-properties/restrictions-element-xmla.md)|  
 |Elementi figlio|Colonne e valori di restrizione (vedere la sezione Commenti).|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'elemento **RestrictionList** contiene una raccolta di colonne di restrizione in base alla quale è possibile filtrare i dati restituiti dal metodo **Discover** . Ogni colonna di restrizione nell'elemento **RestrictionList** è definita da un elemento XML distinto. Il valore della colonna di restrizione corrisponde ai dati contenuti nell'elemento XML, mentre il nome della colonna di restrizione corrisponde al nome dell'elemento XML.  
   
 ## <a name="see-also"></a>Vedere anche  

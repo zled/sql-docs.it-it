@@ -8,31 +8,31 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d1f0c2dd179e54760eeff4254c19265105e08f3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>Set di righe DISCOVER_MEMORYUSAGE
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce le statistiche DISCOVER_MEMORYUSAGE per vari oggetti allocati dal server.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Restituisce le statistiche di DISCOVER_MEMORYUSAGE per vari oggetti allocati dal server.  
   
 > [!WARNING]  
 >  Questo set di righe può produrre set di risultati molto grandi. Se non è possibile visualizzare i risultati perché richiedono una quantità di memoria di visualizzazione maggiore di quella consentita da SQL Server Management Studio, i risultati vengono scritti in un file temporaneo, nel percorso predefinito seguente:  
 >   
->  '\<unità >: \Users\\< nome utente\>\AppData\Local\Temp\\< fileID\>XML '.  
+>  '\<drive>:\Users\\<username\>\AppData\Local\Temp\\<fileID\>.xml'.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
   
@@ -68,6 +68,6 @@ ms.lasthandoff: 12/08/2017
 |ADOMDNAME|MemoryUsage|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML per set di righe dello schema di analisi](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis i rowset dello Schema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

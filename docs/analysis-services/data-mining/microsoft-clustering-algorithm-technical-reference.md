@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,25 +25,26 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffca0c4aa4879d5732831113308c26a9032a7dff
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 187eea9af56b4da074f374923c29d7ebcea0aca2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Clustering
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questa sezione viene illustrata l'implementazione del [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo di Clustering, inclusi i parametri che è possibile utilizzare per controllare il comportamento dei modelli di clustering. Vengono inoltre fornite istruzioni su come migliorare le prestazioni durante la creazione e l'elaborazione di modelli di clustering.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In questa sezione viene illustrata l'implementazione dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering, inclusi i parametri che è possibile utilizzare per controllare il comportamento dei modelli di clustering. Vengono inoltre fornite istruzioni su come migliorare le prestazioni durante la creazione e l'elaborazione di modelli di clustering.  
   
  Per ulteriori informazioni sull'utilizzo dei modelli di clustering, vedere gli argomenti seguenti:  
   
--   [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenuto del modello di data mining per il Clustering modelli &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
--   [Esempi di query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)  
+-   [Esempi di Query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Implementazione dell'algoritmo Microsoft Clustering  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering rende disponibili due metodi per la creazione di cluster e l'assegnazione di punti dati ai cluster. Il primo, l'algoritmo *K-means* , è un metodo di tipo hard clustering, ovvero un punto dati può appartenere a un unico cluster e viene calcolata una singola probabilità per l'appartenenza di ogni punto dati a tale cluster. Il secondo, *Expectation Maximization* (EM), è un metodo di tipo *soft clustering* , ovvero un punto dati appartiene sempre a più cluster e viene calcolata una probabilità per ogni combinazione di punto dati e cluster.  
@@ -189,6 +188,6 @@ ms.lasthandoff: 12/08/2017
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [Esempi di Query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per il Clustering modelli &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

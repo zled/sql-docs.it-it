@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: "115"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae247a65d28b039210dcf8d3243ae19ffde504cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82f72b4696d1169055c5726d9095eff70715b523
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
   L'attività Esegui SQL consente di eseguire istruzioni SQL o stored procedure da un pacchetto. L'attività può includere una o più istruzioni SQL che vengono eseguite in ordine sequenziale. È possibile utilizzare l'attività Esegui SQL per gli scopi seguenti:  
@@ -123,7 +124,7 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
  **Nome**  
  Consente di specificare un nome univoco per l'attività Esegui SQL nel flusso di lavoro. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrizione**  
  Consente di immettere una descrizione per l'attività Esegui SQL. È consigliabile includere nella descrizione informazioni sugli scopi dell'attività, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
  **TimeOut**  
@@ -159,7 +160,7 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un'istruzione Transact-SQL. Selezionando questo valore, verrà visualizzata l'opzione dinamica **SQLStatement**.|  
 |**Connessione file**|Consente di selezionare un file contenente un'istruzione Transact-SQL. Impostando questa opzione, verrà visualizzata l'opzione dinamica **FileConnection**.|  
@@ -192,7 +193,7 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connessione file  
  **FileConnection**  
- Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -333,7 +334,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
 -   Un parametro di output con il tipo di dati appropriato, come elencato nella tabella seguente.  
   
-    |Tipo di parametro di**Output** |Tipo di dati date|  
+    |Tipo di parametro di **Output**|Tipo di dati date|  
     |-------------------------------|--------------------|  
     |DBDATE|**data**|  
     |DBTIME2|**time**|  
@@ -464,7 +465,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
     > [!IMPORTANT]  
     >  I mapping dei parametri devono essere specificati nello stesso ordine con cui compaiono i parametri nell'istruzione SQL.  
   
-14. Scegliere **OK**.  
+14. Fare clic su **OK**.  
 
 ##  <a name="Return_codes"></a> Recuperare i valori dei codici restituiti  
  Una stored procedure può restituire un valore intero, denominato codice restituito, per indicare lo stato di esecuzione di una procedura. Per implementare codici restituiti nell'attività Esegui SQL, è necessario usare parametri di tipo **ReturnValue** .  
@@ -565,7 +566,7 @@ Questa sezione descrive la procedura per il mapping di un set di risultati a una
   
      È in genere possibile utilizzare il nome della colonna come nome del set di risultati oppure utilizzare la posizione ordinale della colonna nell'elenco di colonne come set di risultati. La possibilità di utilizzare un nome di colonna come nome del set di risultati dipende dal provider per il quale l'attività è configurata. Non tutti i provider permettono l'uso di nomi di colonna.  
   
-11. Scegliere **OK**.  
+11. Fare clic su **OK**.  
 
 ## <a name="troubleshoot-the-execute-sql-task"></a>Risolvere i problemi relativi all'attività Esegui SQL  
  È possibile registrare le chiamate eseguite dall'attività Esegui SQL a provider di dati esterni. Questa funzionalità di registrazione può essere utilizzata per risolvere i problemi relativi ai comandi SQL eseguiti dall'attività Esegui SQL. Per registrare le chiamate eseguite dall'attività Esegui SQL a provider di dati esterni, abilitare la registrazione dei pacchetti e selezionare l'evento **Diagnostic** a livello del pacchetto. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  

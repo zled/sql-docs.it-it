@@ -1,5 +1,5 @@
 ---
-title: os_workers (Transact-SQL) | Documenti Microsoft
+title: sys.dm_os_workers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_workers_TSQL
 - dm_os_workers
 - sys.dm_os_workers
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_workers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_workers dynamic management view
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2de361a20f4369cb79b856c265f732dc4dc8018c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb27268dbfb21cf2fed3b1b7b728cd9eeb4ee495
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|worker_address|**varbinary (8)**|Indirizzo di memoria del thread di lavoro.|  
+|worker_address|**varbinary(8)**|Indirizzo di memoria del thread di lavoro.|  
 |status|**int**|Solo per uso interno.|  
 |is_preemptive|**bit**|1 = Il thread di lavoro è in esecuzione nell'ambito di una pianificazione preemptive. Qualsiasi thread di lavoro che esegue codice esterno viene eseguito nell'ambito di una pianificazione preemptive.|  
 |is_fiber|**bit**|1 = Il thread di lavoro è in esecuzione nell'ambito del lightweight pooling. Per altre informazioni, vedere [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |worker_created_ms_ticks|**bigint**|Punto nel tempo, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), quando viene creato un processo di lavoro.|  
 |exception_num|**int**|Numero di errore dell'ultima eccezione rilevata dal thread di lavoro.|  
 |exception_severity|**int**|Gravità dell'ultima eccezione rilevata dal thread di lavoro.|  
-|exception_address|**varbinary (8)**|Indirizzo del codice che ha generato l'eccezione|  
+|exception_address|**varbinary(8)**|Indirizzo del codice che ha generato l'eccezione|  
 |affinity|**bigint**|L'affinità del thread di lavoro. Corrisponde all'affinità del thread in [os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
 |state|**nvarchar(60)**|Stato del thread di lavoro. I possibili valori sono i seguenti:<br /><br /> INIT = Il thread di lavoro è in fase di inizializzazione.<br /><br /> RUNNING = Il thread di lavoro è in esecuzione in modalità non preemptive o preemptive.<br /><br /> RUNNABLE = Il thread di lavoro è pronto per essere eseguito nell'utilità di pianificazione.<br /><br /> SUSPENDED = Il thread di lavoro è sospeso ed è in attesa di un evento per inviare un segnale.|  
 |start_quantum|**bigint**|Tempo, espresso in millisecondi, all'inizio dell'esecuzione del thread di lavoro.|  
@@ -70,28 +73,28 @@ ms.lasthandoff: 11/17/2017
 |max_quantum|**bigint**|Solo per uso interno.|  
 |boost_count|**int**|Solo per uso interno.|  
 |tasks_processed_count|**int**|Numero di attività elaborate dal thread di lavoro.|  
-|fiber_address|**varbinary (8)**|Indirizzo di memoria del fiber a cui il thread di lavoro è associato.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è configurato per il lightweight pooling.|  
-|task_address|**varbinary (8)**|Indirizzo di memoria dell'attività corrente. Per ulteriori informazioni, vedere [os_tasks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
-|memory_object_address|**varbinary (8)**|Indirizzo di memoria dell'oggetto memoria del thread di lavoro. Per ulteriori informazioni, vedere [Sys.dm os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
-|thread_address|**varbinary (8)**|Indirizzo di memoria del thread associato al thread di lavoro corrente. Per ulteriori informazioni, vedere [os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|signal_worker_address|**varbinary (8)**|Indirizzo di memoria del thread di lavoro che ha segnalato per ultimo l'oggetto. Per ulteriori informazioni, vedere [os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|scheduler_address|**varbinary (8)**|Indirizzo di memoria dell'utilità di pianificazione. Per ulteriori informazioni, vedere [Sys.dm os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|fiber_address|**varbinary(8)**|Indirizzo di memoria del fiber a cui il thread di lavoro è associato.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è configurato per il lightweight pooling.|  
+|task_address|**varbinary(8)**|Indirizzo di memoria dell'attività corrente. Per ulteriori informazioni, vedere [os_tasks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
+|memory_object_address|**varbinary(8)**|Indirizzo di memoria dell'oggetto memoria del thread di lavoro. Per ulteriori informazioni, vedere [Sys.dm os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|thread_address|**varbinary(8)**|Indirizzo di memoria del thread associato al thread di lavoro corrente. Per ulteriori informazioni, vedere [os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|signal_worker_address|**varbinary(8)**|Indirizzo di memoria del thread di lavoro che ha segnalato per ultimo l'oggetto. Per ulteriori informazioni, vedere [os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|scheduler_address|**varbinary(8)**|Indirizzo di memoria dell'utilità di pianificazione. Per ulteriori informazioni, vedere [Sys.dm os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Archivia l'ID del gruppo di processori assegnato a questo thread.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Se lo stato del thread di lavoro è RUNNING e il thread di lavoro è in esecuzione in modalità non preemptive, l'indirizzo del thread di lavoro corrisponde alla colonna active_worker_address in sys.dm_os_schedulers.  
   
  Quando viene segnalato un thread di lavoro in attesa di un evento, tale thread viene inserito all'inizio della coda eseguibile. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente l'esecuzione di questa operazione mille volte in una riga. Superato questo valore, il thread di lavoro viene inserito alla fine della coda. Lo spostamento di un thread di lavoro alla fine della coda è caratterizzato da alcune implicazioni a livello di prestazioni.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.  
   
 ## <a name="examples"></a>Esempi  
  La query seguente consente di determinare per quanto tempo un thread di lavoro è rimasto in esecuzione in stato SUSPENDED o RUNNABLE.  
   
-```tsql
+```sql
 SELECT   
     t1.session_id,  
     CONVERT(varchar(10), t1.status) AS status,  

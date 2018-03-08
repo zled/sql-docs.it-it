@@ -17,15 +17,15 @@ f1_keywords:
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 98b520919aeb80434d33d9a1b66ae3f4c3d4f986
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9d4e8bb9372d6e9e19e674160f9039422cd87ebc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importare i valori da un file di Excel in un dominio
   In questo argomento viene descritto come importare i valori da un file di Excel in un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). L'utilizzo di un file di Excel per importare valori di dominio nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] semplifica il processo della generazione delle informazioni, risparmiando tempo e fatica. In questo modo è possibile di importare un elenco di valori di dati validi da un file di Excel o un file di testo in un dominio. Da un file di Excel è possibile importare i valori di dominio in uno o più domini in una Knowledge Base. Per altre informazioni sull'importazione di domini in una Knowledge Base, vedere [Importare i domini da un file di Excel in Individuazione informazioni](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md). L'esportazione in un file di Excel non è supportata.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per importare i valori di dominio da un file di Excel.  
   
 ##  <a name="Import"></a> Import values from an Excel file into a domain  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
 9. Selezionare **Utilizza la prima riga come intestazione** se la prima riga del foglio di calcolo rappresenta il nome di dominio e tutte le altre righe rappresentano valori di dominio validi.  
   
-10. Scegliere **OK**. Verrà visualizzato un indicatore di stato in cui è riportato il numero di valori importati e non importati e il numero totale di valori. Fare clic sul pulsante **Annulla** per annullare il processo.  
+10. Fare clic su **OK**. Verrà visualizzato un indicatore di stato in cui è riportato il numero di valori importati e non importati e il numero totale di valori. Fare clic sul pulsante **Annulla** per annullare il processo.  
   
 11. Verificare che nella finestra di dialogo **Importa valori di dominio** venga visualizzato "Importazione completata". Controllare in questa finestra di dialogo quali valori sono stati importati e quali non lo sono stati. Viene indicato il nome del file e il percorso, lo stato di completamento dell'operazione, il numero di valori importati e non importati e il numero totale di valori elaborati.  
   

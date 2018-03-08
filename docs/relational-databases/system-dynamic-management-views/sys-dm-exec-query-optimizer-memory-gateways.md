@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Microsoft Docs
 description: Restituisce lo stato corrente della risorsa semafori utilizzato per l'ottimizzazione delle query simultanee. limitazione totale
 ms.custom: 
 ms.date: 04/06/2017
@@ -9,7 +9,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,19 +18,21 @@ f1_keywords:
 - dm_exec_query_optimizer_memory_gateways
 - sys.dm_exec_query_optimizer_memory_gateways_TSQL
 - sys.dm_exec_query_optimizer_memory_gateways
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_optimizer_memory_gateways dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf31a066798e1c88d0d6d475edda87f2df08ba05
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b65e22d1cd2f403e2ed3aa1bd1dc14faa90079b9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>Sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+# <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Restituisce lo stato corrente della risorsa semafori utilizzato per l'ottimizzazione delle query simultanee. limitazione totale.
@@ -38,15 +41,15 @@ Restituisce lo stato corrente della risorsa semafori utilizzato per l'ottimizzaz
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|ID pool di risorse in Resource Governor|  
 |**name**|**sysname**|Compilare il nome di controllo (Gateway Small, Medium Gateway, Gateway di grandi dimensioni)|
-|**conteggio_massimo**|**int**|Il numero massimo configurato di compilazioni simultanee|
+|**max_count**|**int**|Il numero massimo configurato di compilazioni simultanee|
 |**active_count**|**int**|Il numero attualmente attivo di compilazioni in questo controllo|
 |**waiter_count**|**int**|Il numero di oggetti waiter in questo controllo|
 |**threshold_factor**|**bigint**|Fattore di soglia che definisce la parte di memoria massima utilizzata da ottimizzazione delle query.  Per il gateway di piccole dimensioni, threshold_factor indica l'utilizzo della memoria query optimizer massima in byte per una query prima che sia necessario per ottenere un accesso nel gateway di piccole dimensioni.  Per il gateway di medie e grandi dimensioni, threshold_factor illustra la parte della memoria totale del server disponibile per questo controllo. Quando si calcola la soglia di utilizzo della memoria per il controllo e viene utilizzato come divisore.|
-|**soglia**|**bigint**|Memoria successiva di soglia in byte.  La query è necessario per ottenere l'accesso a questo gateway, se l'utilizzo della memoria raggiunge questa soglia.  "-1" se la query non è necessario ottenere un accesso a questo gateway.|
+|**threshold**|**bigint**|Memoria successiva di soglia in byte.  La query è necessario per ottenere l'accesso a questo gateway, se l'utilizzo della memoria raggiunge questa soglia.  "-1" se la query non è necessario ottenere un accesso a questo gateway.|
 |**is_active**|**bit**|Se la query è necessario passare il controllo corrente o non.|
 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 SQL Server richiede l'autorizzazione VIEW SERVER STATE nel server.
 
 Database SQL di Azure richiede l'autorizzazione VIEW DATABASE STATE nel database.

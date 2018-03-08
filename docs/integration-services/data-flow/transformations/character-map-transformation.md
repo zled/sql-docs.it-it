@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34c666dc86e9026c5981a6a45f32fc06759de061
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3ad5ceb9c851baab0ddb229787afc23568239325
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="character-map-transformation"></a>Trasformazione Mappa caratteri
   La trasformazione Mappa caratteri consente di applicare funzioni per i valori stringa, quale la conversione da minuscolo a maiuscolo, a dati di tipo carattere. È possibile utilizzare questa trasformazione solo su dati di colonna con un tipo di dati string.  
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/20/2017
  **Destinazione**  
  Consente di specificare se salvare i risultati delle operazioni di stringa sul posto, utilizzando la colonna esistente, o se salvare i dati modificati come nuova colonna.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Nuova colonna|Consente di salvare i dati in una nuova colonna. Assegnare il nome alla colonna in **Alias di output**.|  
 |Modifica sul posto|Consente di salvare i dati modificati nella colonna esistente.|  
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/20/2017
  **Operazione**  
  Consente di selezionare nell'elenco le funzioni per i valori stringa da applicare ai dati della colonna.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Minuscolo|Consente di convertire la stringa in caratteri minuscoli.|  
 |Maiuscolo|Consente di convertire la stringa in caratteri maiuscoli.|  

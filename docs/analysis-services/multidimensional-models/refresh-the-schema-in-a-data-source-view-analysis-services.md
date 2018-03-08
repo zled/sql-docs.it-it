@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 365363d74cd937156e609f8a76caee745d45122f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31b9c4f95cca42e2150cab40b92308df89efbef6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Aggiornare lo schema in una vista origine dati (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dopo aver definito una vista origine dati (DSV) in un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto o un database, lo schema in un'origine dati sottostante venga modificato. Tali modifiche non vengono automaticamente rilevate o aggiornate in un progetto di sviluppo. Inoltre, se è stato distribuito il progetto in un server, verranno rilevati errori di elaborazione qualora non sia più possibile la connessione di Analysis Services all'origine dati esterna.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dopo la definizione di una vista origine dati in un database o un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile che lo schema di un'origine dati sottostante venga modificato. Tali modifiche non vengono automaticamente rilevate o aggiornate in un progetto di sviluppo. Inoltre, se è stato distribuito il progetto in un server, verranno rilevati errori di elaborazione qualora non sia più possibile la connessione di Analysis Services all'origine dati esterna.  
   
  Per aggiornare la vista origine dati in modo che corrisponda all'origine dati esterna, è possibile aggiornare la vista origine dati in Business Intelligence Development Studio (BIDS). L'aggiornamento della vista origine dati consente di rilevare le modifiche apportate alle origini dati esterne su cui è basata la vista origine dati, nonché di compilare un elenco di modifiche in cui vengono enumerate le aggiunte o le eliminazioni nell'origine dati esterna. È possibile applicare quindi il set di modifiche alla vista origine dati che verrà riallineata all'origine dati sottostante. Si noti che sono spesso necessarie operazioni aggiuntive per aggiornare ulteriormente i cubi e le dimensioni nel progetto in cui viene utilizzata la vista origine dati.  
   
@@ -69,6 +67,6 @@ ms.lasthandoff: 12/08/2017
  Dopo aver esaminato il report, è possibile accettare le modifiche oppure annullare l'aggiornamento e rifiutare così qualsiasi modifica. Tutte le modifiche devono essere accettate o rifiutate insieme. Non è possibile scegliere elementi singoli nell'elenco. È inoltre possibile salvare un report delle modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

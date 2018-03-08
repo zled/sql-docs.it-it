@@ -5,10 +5,11 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1592db374d02534121ed75cfe8e07429f1aacac
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Supporto per le regole, valori predefiniti, trigger e Stored procedure, Driver ODBC di Visual FoxPro,
 È possibile creare regole di Visual FoxPro, trigger, i valori predefiniti o stored procedure utilizzando il Driver ODBC di Visual FoxPro. Tuttavia, l'applicazione potrebbe interagire con le regole esistenti, trigger, i valori predefiniti o stored procedure come inserisce, aggiorna o Elimina Visual FoxPro i dati archiviati in un database.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
 |Operatore $|% (Operatore)|& Comando|  
 |& & Comando|* Comando|= Comando|  
   
-## <a name="a"></a>Un  
+## <a name="a"></a>A  
   
 ||||  
 |-|-|-|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,23 +21,23 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bf66d7aa47b9f15428b08943638dac0cd905fde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="index-properties-f1-help"></a>Guida sensibile al contesto di Proprietà indice
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Le sezioni in questo argomento fanno riferimento a varie proprietà di indice disponibili tramite le finestre di dialogo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'argomento:**  
   
  [Pagina Generale di Proprietà indice](#General)  
   
@@ -149,7 +150,7 @@ ms.lasthandoff: 11/17/2017
  Specifica il filegroup per i dati FILESTREAM. Questo elenco visualizza solo i filegroup FILESTREAM. La selezione predefinita nell'elenco è il filegroup PRIMARY FILESTREAM del database. Per altre informazioni, vedere [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
  **Schema di partizione**  
- Archivia l'indice in uno schema di partizione. Facendo clic su **Schema partizione** si abilita la griglia sottostante. La selezione predefinita nell'elenco è lo schema di partizione usato per archiviare i dati di tabella. Selezionando uno schema di partizione diverso nell'elenco si aggiornano le informazioni visualizzate nella griglia. Per altre informazioni, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Archivia l'indice in uno schema di partizione. Facendo clic su **Schema partizione** si abilita la griglia sottostante. La selezione predefinita nell'elenco è lo schema di partizione usato per archiviare i dati di tabella. Selezionando uno schema di partizione diverso nell'elenco si aggiornano le informazioni visualizzate nella griglia. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  L'opzione relativa allo schema di partizione non è disponibile se il database non contiene schemi di partizione.  
   

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OUTPUT_TSQL
 - OUTPUT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - displaying updated rows
 - INSERT statement [SQL Server], OUTPUT clause
@@ -31,16 +33,16 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: "94"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c56150f81604473f87ae9c220ac916be30ce3c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 6a28059e6a30657a67275d317c70bdb26d2507a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="output-clause-transact-sql"></a>Clausola OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
  Se *column_list* non viene specificato, la tabella deve avere lo stesso numero di colonne del set di risultati OUTPUT. Le eccezioni sono le colonne calcolate e Identity, che devono essere ignorate. Se *column_list* viene specificato, le colonne omesse devono consentire valori null o predefinito assegnati a tali valori.  
   
- *output_table* non è possibile:  
+ *output_table* cannot:  
   
 -   avere trigger abilitati definiti  
   
@@ -138,13 +140,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Riferimento di colonna esplicito. Qualsiasi riferimento alla tabella in fase di modifica deve essere qualificato correttamente tramite INSERTED o DELETED prefisso come appropriato, ad esempio: INSERTED**.** *column_name*.  
+ Riferimento di colonna esplicito. Qualsiasi riferimento alla tabella in fase di modifica deve essere qualificato correttamente tramite INSERTED o DELETED prefisso come appropriato, ad esempio: INSERTED **. * * * column_name*.  
   
  $action  
  È disponibile solo per l'istruzione MERGE. Specifica una colonna di tipo **nvarchar (10)** nella clausola OUTPUT in un'istruzione MERGE che restituisce uno dei tre valori per ogni riga: 'INSERT', 'UPDATE' o 'DELETE', in base all'azione eseguita su tale riga.  
   
 ## <a name="remarks"></a>Osservazioni  
- L'OUTPUT \<dml_select_list > clausola e l'OUTPUT \<dml_select_list > INTO {  **@**  *table_variable*  |   *output_table* } possono essere definite in un'unica istruzione INSERT, UPDATE, DELETE o MERGE.  
+ L'OUTPUT \<dml_select_list > clausola e l'OUTPUT \<dml_select_list > INTO {**@ * * * table_variable* | *output_table* } possono essere definite in un'unica istruzione INSERT, UPDATE, DELETE o MERGE.  
   
 > [!NOTE]  
 >  Se non specificato diversamente, i riferimenti alla clausola OUTPUT fanno riferimento a entrambe le clausole OUTPUT e OUTPUT INTO.  
@@ -311,7 +313,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  Utilizzare l'hint di tabella READPAST nelle istruzioni UPDATE e DELETE se lo scenario consente a più applicazioni di eseguire una operazione di lettura distruttiva da una tabella. Ciò evita i problemi relativi ai blocchi che possono verificarsi se un'altra applicazione sta già leggendo il primo record qualificato nella tabella.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono necessarie autorizzazioni SELECT per tutte le colonne recuperate tramite \<dml_select_list > o utilizzata in \<scalar_expression >.  
   
  Le autorizzazioni INSERT sono necessarie in ogni tabella specificata \<output_table >.  
@@ -670,9 +672,9 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ## <a name="see-also"></a>Vedere anche  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [tabella &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

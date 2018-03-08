@@ -8,21 +8,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8fb40241f031cca90bd2be5069d0c61a0c100dd1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bbc725ce1d2f5999486f46f4ab30f6e3fb98f42d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Supplementare lezione - configurare le proprietà di creazione di report per i report Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -79,7 +80,7 @@ Talvolta potrebbe essere necessario creare nuovi dati nel modello utilizzando le
 ## <a name="default-field-set"></a>Set di campi predefiniti  
 Il Set di campi predefinito è un elenco predefinito di colonne e misure per una tabella che vengono aggiunte automaticamente a un'area di disegno report quando si fa clic su un tabella nell'elenco di campi del report. Essenzialmente, è possibile specificare le colonne, le misure e l'ordinamento dei campi predefiniti che gli utenti desiderano visualizzare quando questa tabella viene mostrata nei report Power View.  Per il modello Internet Sales verranno definiti un set di campi predefiniti e l'ordine delle tabelle Customer, Geography e Product. Sono incluse solo le colonne più comuni che gli utenti desiderano visualizzare durante l'analisi dei dati del modello Adventure Works Internet Sales utilizzando i report Power View.  
   
-Per informazioni dettagliate su Set di campi predefiniti, vedere [Configurare il set di campi predefiniti per i report Power View &#40;SSAS tabulare&#41;](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) nella documentazione online di SQL Server.  
+Per informazioni dettagliate sui Set di campi predefiniti, vedere [configurare Set di campi predefiniti per i report Power View](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) nella documentazione Online di SQL Server.  
   
 #### <a name="to-set-default-field-set-for-tables"></a>Per impostare la finestra di dialogo Set di campi predefiniti per le tabelle  
   
@@ -114,7 +115,7 @@ Per informazioni dettagliate su Set di campi predefiniti, vedere [Configurare il
 ## <a name="table-behavior"></a>Comportamento tabella  
 Utilizzando le proprietà Comportamento tabella è possibile modificare il comportamento della tabella per diversi tipi di visualizzazioni e comportamenti di raggruppamento per le tabelle utilizzate nei report Power View. In questo modo viene fornita una posizione predefinita migliore per le informazioni di identificazione quali nomi, immagini o titoli nei layout di sezioni, schede e grafici.  
   
-Per informazioni dettagliate sull'impostazione delle proprietà che determinano il comportamento della tabella, vedere [Configurare le proprietà Comportamento tabella per i report Power View &#40;SSAS tabulare&#41;](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) nella documentazione online di SQL Server.  
+Per informazioni dettagliate sulle proprietà comportamento tabella, vedere [configurare le proprietà del comportamento tabella per i report Power View](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) nella documentazione Online di SQL Server.  
   
 #### <a name="to-set-table-behavior"></a>Per impostare il comportamento delle tabelle 
   
@@ -139,7 +140,7 @@ Per informazioni dettagliate sull'impostazione delle proprietà che determinano 
 ## <a name="reporting-properties-for-columns"></a>Proprietà report per le colonne  
 Per migliorare la creazione di report del modello è possibile impostare diverse proprietà relative alle colonne di base e alla creazione di report specifici. Ad esempio, gli utenti potrebbero non voler visualizzare tutte le colonne in ogni tabella. Nello stesso modo in cui sono state precedentemente nascoste le tabelle Product Category e Product Subcategory, è possibile nascondere colonne particolari di una tabella che, normalmente, sono visualizzate, utilizzando la proprietà Nascosta di una colonna. Altre proprietà, ad esempio Formato dati e Ordina per colonna, possono influire anche sulla modalità di visualizzazione dei dati delle colonne nei report. Nell'esempio, alcune di esse vengono impostate in colonne particolari. Le altre colonne per cui non è richiesta alcuna azione non vengono mostrate di seguito.  
   
-In questo esempio vengono impostate solo alcune delle diverse proprietà di colonne. Per altre informazioni dettagliate sulle proprietà di creazione di report relativi alle colonne, vedere [Scheda Proprietà colonne &#40;SSAS tabulare&#41;](../analysis-services/tabular-models/column-properties-ssas-tabular.md) nella documentazione online di SQL Server.  
+In questo esempio vengono impostate solo alcune delle diverse proprietà di colonne. Per ulteriori informazioni sulla colonna, le proprietà dei report, vedere [proprietà colonna](../analysis-services/tabular-models/column-properties-ssas-tabular.md) nella documentazione Online di SQL Server.  
   
 #### <a name="to-set-properties-for-columns"></a>Per impostare le proprietà per le colonne  
   
@@ -163,11 +164,11 @@ In questo esempio vengono impostate solo alcune delle diverse proprietà di colo
     **Date**  
   
     > [!NOTE]  
-    > Poiché la tabella Date è stata selezionata come tabella data dei modelli utilizzando l'impostazione Contrassegna come tabella data, illustrata nella Lezione 7: Contrassegna come tabella data, e la colonna Date dell'omonima tabella come colonna da utilizzare come identificatore univoco, la proprietà Row Identifier per la colonna Date sarà impostata automaticamente su True e non potrà essere modificata. Quando si utilizzano funzioni di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data. In questo modello sono state create diverse misure utilizzando funzioni di Business Intelligence per le gerarchie temporali per calcolare i dati di vendita per diversi periodi, ad esempio i trimestri precedente e corrente, nonché per essere utilizzati negli indicatori KPI. Per altre informazioni su come specificare una tabella con data, vedere [Specificare Contrassegna come tabella data per l'utilizzo con funzionalità di Business Intelligence per le gerarchie temporali &#40;SSAS tabulare&#41;](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) documentazione online di SQL Server.  
+    > Poiché la tabella Date è stata selezionata come tabella data dei modelli utilizzando l'impostazione Contrassegna come tabella data, illustrata nella Lezione 7: Contrassegna come tabella data, e la colonna Date dell'omonima tabella come colonna da utilizzare come identificatore univoco, la proprietà Row Identifier per la colonna Date sarà impostata automaticamente su True e non potrà essere modificata. Quando si utilizzano funzioni di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data. In questo modello sono state create diverse misure utilizzando funzioni di Business Intelligence per le gerarchie temporali per calcolare i dati di vendita per diversi periodi, ad esempio i trimestri precedente e corrente, nonché per essere utilizzati negli indicatori KPI. Per ulteriori informazioni sulla specifica di una tabella data, vedere [specificare contrassegna come tabella data per l'utilizzo con tempo Intelligence](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) nella documentazione Online di SQL Server.  
   
     |Colonna|Proprietà|Valore|  
     |----------|------------|---------|  
-    |Date|Formato dati|Short Date|  
+    |Data|Formato dati|Short Date|  
     |Day Number of Week|Hidden|True|  
     |Day Name|Sort By Column|Day Number of Week|  
     |Day of Week|Hidden|True|  
@@ -194,7 +195,7 @@ In questo esempio vengono impostate solo alcune delle diverse proprietà di colo
     |Product Id|Hidden|True|  
     |Product Alternate Id|Etichetta predefinita|True|  
     |Product Subcategory Id|Hidden|True|  
-    |Product Start Date|Formato dati|Short Date|  
+    |Product Start Date|Formato dei dati|Short Date|  
     |Product End Date|Formato dati|Short Date|  
   
     **Internet Sales**  
@@ -206,7 +207,7 @@ In questo esempio vengono impostate solo alcune delle diverse proprietà di colo
     |Promotion Id|Hidden|True|  
     |Currency Id|Hidden|True|  
     |ID territorio vendita|Hidden|True|  
-    |Order Quantity|tipo di dati<br /><br />Formato dati<br /><br />Cifre decimali|Decimal Number<br /><br />Decimal Number<br /><br />0|  
+    |Order Quantity|tipo di dati<br /><br />Formato dati<br /><br />Cifre decimali|Decimal Number<br /><br />Numero decimale<br /><br />0|  
     |Order Date|Formato dati|Short Date|  
     |Due Date|Formato dati|Short Date|  
     |Ship Date|Formato dati|Short Date|  

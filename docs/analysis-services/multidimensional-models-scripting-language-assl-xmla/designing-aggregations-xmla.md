@@ -1,19 +1,18 @@
 ---
 title: Progettazione di aggregazioni (XMLA) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - statistical information [XML for Analysis]
 - batches [XML for Analysis]
@@ -23,19 +22,19 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1fa363dc4d38a68a7cf4c9a62a501fb48c3aa0fc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="designing-aggregations-xmla"></a>Progettazione di aggregazioni (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le progettazioni delle aggregazioni sono associate alle partizioni di un determinato gruppo di misure per assicurarsi che le partizioni utilizzano la stessa struttura nell'archiviazione delle aggregazioni. Utilizzando la stessa struttura di archiviazione per le partizioni consente di definire in modo semplice partizioni che possono essere unite in un secondo momento utilizzando il [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Per ulteriori informazioni sulle progettazioni delle aggregazioni, vedere [aggregazioni e progettazione di aggregazioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+  Le progettazioni delle aggregazioni sono associate alle partizioni di un gruppo di misure specifico per garantire che utilizzino la stessa struttura nell'archiviazione delle aggregazioni. Utilizzando la stessa struttura di archiviazione per le partizioni consente di definire in modo semplice partizioni che possono essere unite in un secondo momento utilizzando il [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Per ulteriori informazioni sulle progettazioni delle aggregazioni, vedere [aggregazioni e progettazione di aggregazioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
  Per definire le aggregazioni per una progettazione delle aggregazioni, è possibile utilizzare il [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) comando XML for Analysis (XMLA). Il **DesignAggregations** comando dispone di proprietà che identificano quale progettazione delle aggregazioni da usare come riferimento e il modo controllare il processo di progettazione in base a tale riferimento. Utilizzo di **DesignAggregations** comando e le relative proprietà, è possibile progettare le aggregazioni in modo iterativo o in un batch e quindi visualizzare le statistiche relative alla progettazione risultanti per valutare il processo di progettazione.  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="specifying-queries"></a>Specifica di query  
  Il comando DesignAggregations supporta il comando di ottimizzazione basata sull'utilizzo includendo uno o più **Query** gli elementi di [query](../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) proprietà. Il **query** proprietà può contenere uno o più [Query](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md) elementi. Se il **query** non contiene alcuna proprietà **Query** specifica gli elementi, la progettazione delle aggregazioni di **oggetto** elemento utilizza una struttura predefinita che contiene un set generale di aggregazioni. Questo set generale di aggregazioni è progettato per soddisfare i criteri specificati nel **ottimizzazione** e **archiviazione** le proprietà del **DesignAggregations** comando.  
   
- Ogni elemento **Query** rappresenta una query di tipo goal utilizzata dal processo di progettazione per definire le aggregazioni destinate alle query utilizzate più di frequente. È possibile specificare query di tipo goal personalizzate oppure è possibile utilizzare le informazioni archiviate da un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nel log di query per recuperare informazioni su più di frequente query utilizzate. L'ottimizzazione guidata basata sull'utilizzo utilizza il log di query per recuperare query di tipo goal in base all'ora, utilizzo o un utente specificato durante l'invio di un **DesignAggregations** comando. Per ulteriori informazioni, vedere [basata sull'utilizzo della Guida F1 di ottimizzazione guidata](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763).  
+ Ogni elemento **Query** rappresenta una query di tipo goal utilizzata dal processo di progettazione per definire le aggregazioni destinate alle query utilizzate più di frequente. È possibile specificare query di tipo goal personalizzate oppure utilizzare le informazioni archiviate da un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nel log di query per recuperare le informazioni sulle query utilizzate più di frequente. L'ottimizzazione guidata basata sull'utilizzo utilizza il log di query per recuperare query di tipo goal in base all'ora, utilizzo o un utente specificato durante l'invio di un **DesignAggregations** comando. Per ulteriori informazioni, vedere [basata sull'utilizzo della Guida F1 di ottimizzazione guidata](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763).  
   
  Se si progettano in modo iterativo le aggregazioni, è necessario solo passare query di tipo goal al primo **DesignAggregations** comando perché la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza archivia queste query e le utilizza durante i successivi  **DesignAggregations** comandi. Dopo avere passato query di tipo goal al primo comando **DesignAggregations** di un processo iterativo, qualsiasi comando **DesignAggregations** successivo che contiene query di tipo goal nella proprietà **Queries** genera un errore.  
   
@@ -112,7 +111,7 @@ ms.lasthandoff: 12/08/2017
   
 |Colonna|Tipo di dati|Description|  
 |------------|---------------|-----------------|  
-|Passaggi|Valore intero|Numero di passaggi eseguiti dal comando prima di restituire il controllo all'applicazione client.|  
+|Passaggi|Integer|Numero di passaggi eseguiti dal comando prima di restituire il controllo all'applicazione client.|  
 |Time|Long integer|Numero di millisecondi necessari al comando prima di restituire il controllo all'applicazione client.|  
 |Optimization|Double|Percentuale stimata di miglioramento delle prestazioni ottenuta dal comando prima di restituire il controllo all'applicazione client.|  
 |Archiviazione|Long integer|Numero stimato di byte necessari al comando prima di restituire il controllo all'applicazione client.|  

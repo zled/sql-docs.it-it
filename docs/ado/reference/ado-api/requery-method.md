@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::Requery
 - Recordset15::raw_Requery
-helpviewer_keywords: Requery method [ADO]
+helpviewer_keywords:
+- Requery method [ADO]
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90ca81710f2c20929305e894fe2dbda49bb5b3b8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a6e81cda01f894b87d2741f80735b21b23423ce6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="requery-method"></a>Requery (metodo)
 Aggiorna i dati in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto rieseguendo la query in cui si basa l'oggetto.  
@@ -40,7 +42,7 @@ recordset.Requery Options
   
 #### <a name="parameters"></a>Parametri  
  *Opzioni*  
- Facoltativo. Maschera di bit che contiene [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) e [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valori che influenzano l'operazione.  
+ Facoltativa. Maschera di bit che contiene [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) e [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valori che influenzano l'operazione.  
   
 > [!NOTE]
 >  Se *opzioni* è impostato su **adAsyncExecute**, l'operazione verrà eseguita in modo asincrono e un [RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) verrà generato l'evento quando conclude. Il **ExecuteOpenEnum** valori di **adExecuteStream** o **adExecuteStream** non deve essere utilizzato con **Requery**.  

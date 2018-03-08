@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: faba1c19d221ac79d0be4513f6a1b2802daef7ed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a4c1d3356b91e3cb311c1dbf5ee7246bbb4baaa8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Driver ODBC di Visual FoxPro)
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="b"></a>B  
  SQL_BOOKMARK_PERSISTENCE restituisce SQL_BP_SCROLL.  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
  SQL_COLUMN_ALIAS restituisce 'Y'.  
   
  SQL_CONCAT_NULL_BEHAVIOR restituisce SQL_CB_NULL.  
@@ -311,7 +311,7 @@ ms.lasthandoff: 11/20/2017
   
  SQL_QUOTED_IDENTIFIER_CASE restituisce SQL_IC_MIXED.  
   
-## <a name="r"></a>L  
+## <a name="r"></a>R  
  Restituisce SQL_ROW_UPDATES "N". Il Driver ODBC di Visual FoxPro supporta solo e in avanti i cursori statici.  
   
 ## <a name="s"></a>S  

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OVER_TSQL
 - OVER
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - order of rowsets [SQL Server]
 - rowsets [SQL Server], windowing
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - rowsets [SQL Server], ordering
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-caps.latest.revision: "75"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c7a34974cfcae2d58f7dcaefaffc9bc09e148f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1144e82253c5e9d2988ec9ff4a8aa47bb3cb2fb1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - sulla clausola (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -121,7 +123,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  \<Clausola ORDER BY >  
  Definisce l'ordine logico delle righe all'interno di ogni partizione del set di risultati. In altre parole, specifica l'ordine logico in cui viene eseguito il calcolo della funzione finestra.  
   
- *argomento order_by_expression*  
+ *order_by_expression*  
  Specifica una colonna o un'espressione in base alla quale eseguire l'ordinamento. *argomento order_by_expression* possono fare riferimento solo a colonne rese disponibili dalla clausola FROM. Non è possibile specificare un numero intero per rappresentare un alias o un nome di colonna.  
   
  COLLATE *collation_name*  
@@ -195,7 +197,7 @@ Se viene specificato ROWS/RANGE e \<cornice finestra precedente > viene utilizza
 ### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. Utilizzo della clausola OVER con la funzione ROW_NUMBER  
  Nell'esempio seguente viene illustrato l'utilizzo della clausola OVER con la funzione ROW_NUMBER per visualizzare un numero di riga per ogni riga all'interno di una partizione. La clausola ORDER BY specificata nella clausola OVER ordina le righe in ogni partizione in base alla colonna `SalesYTD`. La clausola ORDER BY nell'istruzione SELECT determina l'ordine in cui viene restituito l'intero set di risultati della query.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
@@ -235,7 +237,7 @@ GO
 ### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. Utilizzo della clausola OVER con funzioni di aggregazione  
  Nell'esempio seguente viene utilizzata la clausola `OVER` con funzioni di aggregazione su tutte le righe restituite dalla query. Nell'esempio l'utilizzo della clausola `OVER` è più efficace rispetto all'utilizzo di sottoquery per derivare i valori di aggregazione.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -278,7 +280,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
   
  Nell'esempio seguente viene illustrato l'utilizzo della clausola `OVER` con una funzione di aggregazione in un valore calcolato.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -322,7 +324,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
 ### <a name="c-producing-a-moving-average-and-cumulative-total"></a>C. Generazione di una media mobile e di un totale cumulativo  
  Nell'esempio seguente vengono utilizzate le funzioni AVG e SUM con la clausola OVER per fornire una media mobile e un totale cumulativo delle vendite annuali per ogni area presente nella tabella `Sales.SalesPerson`. I dati vengono partizionati in base a `TerritoryID` e ordinati logicamente in base a `SalesYTD`. La funzione AVG viene pertanto calcolata per ogni area in base all'anno di vendita. Si noti che per `TerritoryID` 1, sono presenti due righe per l'anno di vendita 2005, a indicare due venditori con vendite in tale anno. Viene calcolata la media delle vendite delle due righe e nel calcolo viene quindi inclusa la terza riga che rappresenta le vendite per l'anno 2006.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
@@ -361,7 +363,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  In questo esempio la clausola OVER non include PARTITION BY. La funzione verrà pertanto applicata a tutte le righe restituite dalla query. La clausola ORDER BY specificata nella clausola OVER determina l'ordine logico in base al quale viene applicata la funzione AVG. La query restituisce una media mobile delle vendite annuali per tutte le aree di vendita specificate nella clausola WHERE. La clausola ORDER BY specificata nell'istruzione SELECT determina l'ordine in cui vengono visualizzate le righe della query.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
@@ -398,7 +400,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  Nell'esempio seguente viene utilizzata la clausola ROWS per definire una finestra in cui vengono calcolate le righe come riga corrente e *N* numero di righe che seguono (1 riga in questo esempio).  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -428,7 +430,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
  Nell'esempio seguente la clausola ROWS viene specificata con UNBOUNDED PRECEDING. Come risultato si ottiene che la finestra inizia in corrispondenza della prima riga della partizione.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -462,7 +464,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. Utilizzo della clausola OVER con la funzione ROW_NUMBER  
  L'esempio seguente restituisce ROW_NUMBER per i venditori in base alle rispettive quote di vendite assegnata.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
@@ -489,7 +491,7 @@ GROUP BY LastName, FirstName;
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. Utilizzo della clausola OVER con funzioni di aggregazione  
  Gli esempi seguenti illustrano l'utilizzo della clausola OVER con funzioni di aggregazione. In questo esempio, l'utilizzo della clausola OVER è più efficiente rispetto all'utilizzo di sottoquery.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey,   
@@ -521,7 +523,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  
  Nell'esempio seguente viene illustrato l'utilizzo della clausola OVER con una funzione di aggregazione in un valore calcolato. Si noti che le aggregazioni vengono calcolate da `SalesOrderNumber` e viene calcolata la percentuale di ordine di vendita totale per ogni riga di ogni `SalesOrderNumber`.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   

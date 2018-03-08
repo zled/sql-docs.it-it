@@ -1,17 +1,14 @@
 ---
-title: "Configurare la modellazione di dati predefinito e le proprietà di distribuzione (SSAS tabulare) | Documenti Microsoft"
+title: "Configurare le proprietà di modellazione e distribuzione dei dati predefinite | Documenti Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +17,20 @@ f1_keywords:
 - sql13.asvs.bidtoolset.asoptions.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f37da1066d505f36b6863dd65d401d689ccdedf5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95406a20ad71e7ed95d1d83b2a8cda44fbba3a8c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Configurare la modellazione dei dati e le proprietà di distribuzione predefinite (SSAS tabulare)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In questo argomento viene descritto come configurare il livello di compatibilità predefinito, distribuzione e impostazioni di proprietà del database dell'area di lavoro, possono essere predefinite per ogni nuovo modello tabulare di progetti è creano in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dopo aver creato un nuovo progetto, queste proprietà possono comunque essere modificate in base a requisiti specifici.  
+# <a name="configure-default-data-modeling-and-deployment-properties"></a>Configurare le proprietà di modellazione e distribuzione dei dati predefinite 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+In questo articolo viene descritto come configurare il livello di compatibilità predefinito, la distribuzione e impostazioni di proprietà del database dell'area di lavoro, possono essere predefinite per ogni nuovo modello tabulare di progetti è creano in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dopo aver creato un nuovo progetto, queste proprietà possono comunque essere modificate in base a requisiti specifici.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>Per configurare l'impostazione della proprietà del livello di compatibilità predefinito per nuovi progetti di modello  
   
@@ -80,8 +78,8 @@ ms.lasthandoff: 12/08/2017
 >  Le modifiche apportate alle proprietà del modello predefinito non influiranno sulle proprietà dei modelli esistenti creati prima delle modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà del progetto &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [Le proprietà del modello &#40; SSAS tabulare &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
- [Livello di compatibilità per i modelli tabulari in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
+ [Proprietà del progetto](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
+ [Proprietà del modello](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
+ [Livello di compatibilità](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

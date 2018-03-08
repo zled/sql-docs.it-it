@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4def71d523f76476c331b8ab63421ccae794077
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad5d4f5c7d28dda4191a3e45bbf991bfbdc4644d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>Funzioni di Generatore report - Funzione RunningValue
   Restituisce un'aggregazione parziale di tutti i valori numerici non Null specificati dall'espressione, valutata per l'ambito specificato.  
@@ -39,7 +37,7 @@ RunningValue(expression, function, scope)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *espressione*  
+ *expression*  
  Espressione su cui eseguire l'aggregazione, ad esempio `[Quantity]`.  
   
  *function*  
@@ -51,7 +49,7 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>Tipo restituito  
  Dipende dalla funzione di aggregazione specificata nel parametro *function* .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il valore per **RunningValue** viene reimpostato su 0 per ogni nuova istanza dell'ambito. Se viene specificato un gruppo, il valore corrente viene reimpostato quando viene modificata l'espressione di raggruppamento. Se viene specificata un'area dati, il valore corrente viene reimpostato per ogni nuova istanza dell'area dati. Se viene specificato un set di dati, il valore corrente non viene reimpostato nell'intero set di dati.  
   
  **RunningValue** non può essere usato in un filtro o un'espressione di ordinamento.  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37bfede873cdcfebd34c8fba985614adc41305e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4189ef6535396998bf9e250a3714efc102201b4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="glossary-report-builder"></a>Glossario (Generatore report)
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
 |nome origine dati|In un report, nome dell'oggetto origine dati.|  
 |Tipo di dati|Attributo che specifica il tipo di informazioni che può essere archiviato in una colonna, un parametro o una variabile.|  
 |data warehouse|Database appositamente strutturato per l'esecuzione di query e analisi.|  
-|database|Raccolta di informazioni, tabelle e altri oggetti organizzati e presentati per scopi specifici, ad esempio la ricerca, l'ordinamento e la ricombinazione dei dati.|  
+|Database|Raccolta di informazioni, tabelle e altri oggetti organizzati e presentati per scopi specifici, ad esempio la ricerca, l'ordinamento e la ricombinazione dei dati.|  
 |catalogo del database|Parte di un database che contiene la definizione di tutti i relativi oggetti, nonché la definizione del database stesso.|  
 |motore di database|Modulo o moduli del programma che forniscono l'accesso a un sistema di gestione di database (DBMS).|  
 |file di database|Uno dei file fisici che compongono un database.|  

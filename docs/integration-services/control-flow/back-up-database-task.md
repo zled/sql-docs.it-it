@@ -8,10 +8,12 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.backupdatabasetask.f1
+f1_keywords:
+- sql13.dts.designer.backupdatabasetask.f1
 helpviewer_keywords:
 - database backups [Integration Services]
 - Back Up Database task [Integration Services]
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa514189f6201b9f5126be6e88830dfa7f4c27cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a78526022b2d3cc16adb8f4706d30a8f430da8f1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="back-up-database-task"></a>Attività Backup database
   L'attività Backup database consente di eseguire diversi tipi di backup dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
@@ -38,10 +40,10 @@ ms.lasthandoff: 11/20/2017
 ## <a name="supported-recover-models-and-backup-types"></a>Modelli di recupero e tipi di backup supportati  
  Nella tabella seguente sono elencati i modelli di recupero e i tipi di backup supportati dall'attività Backup database.  
   
-|Modello di recupero|Database|Differenziale del database|Log delle transazioni|File o differenziale del file|  
+|modello di recupero|Database|Differenziale del database|Log delle transazioni|File o differenziale del file|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
 |Simple|Obbligatorio|Facoltativo|Non supportato|Non supportato|  
-|Completo|Obbligatorio|Facoltativo|Obbligatorio|Facoltativo|  
+|Full|Obbligatorio|Facoltativo|Obbligatorio|Facoltativo|  
 |Registrazione minima delle operazioni bulk|Obbligatorio|Facoltativo|Obbligatorio|Facoltativo|  
   
  L'attività Backup database incapsula l'istruzione Transact-SQL BACKUP. Per altre informazioni, vedere [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  

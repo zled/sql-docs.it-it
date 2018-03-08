@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - samples [ADO]
 - ADO, samples
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a96f520962dc06cb61815a6c9932cd04fcd35695
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ebaa64517591b9ea89700557f02c9e17dfa3c72e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Appendice d: esempi di ADO in Windows SDK
 il SDK di Windows contiene numerose applicazioni di esempio che illustrano l'utilizzo di codice ADO e RDS. Questi esempi servono per apprendere come utilizzare ADO e servizi desktop remoto, ma non è studiati per essere distribuito nei server di produzione.

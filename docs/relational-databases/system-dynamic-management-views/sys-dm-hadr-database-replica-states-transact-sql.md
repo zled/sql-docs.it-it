@@ -1,14 +1,15 @@
 ---
-title: Sys.dm hadr_database_replica_states (Transact-SQL) | Documenti Microsoft
+title: sys.dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 11/08/2017
+ms.date: 02/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_hadr_database_states
 - dm_hadr_database_states
 - dm_hadr_database_states_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: "84"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b57d7550f007eb4a85f7db698aae84f133726c9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c69d36319ca4273fad7b1c4890bf27e4e4fa0797
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +49,14 @@ ms.lasthandoff: 11/17/2017
 |**replica_id**|**uniqueidentifier**|Identificatore della replica di disponibilità all'interno del gruppo di disponibilità.|  
 |**group_database_id**|**uniqueidentifier**|Identificatore del database nel gruppo di disponibilità. L'identificatore è identico su ogni replica a cui è stato aggiunto questo database.|  
 |**is_local**|**bit**|Se il database di disponibilità è locale, uno di:<br /><br /> 0 = Il database non è locale rispetto all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Il database è locale rispetto all'istanza del server.|  
-|**is_primary_replica**|**bit**|Restituisce 1 se la replica è primaria o 0 se si tratta di una replica secondaria. Applicabile a SQL Server 2014 e versioni successive.|  
-|**synchronization_state**|**tinyint**|Stato di spostamento dei dati, uno dei valori seguenti.<br /><br /> 0 = non in sincronizzazione. Per un database primario, indica che il database non è pronto per la sincronizzazione del log delle transazioni con i database secondari corrispondenti. Per un database secondario, indica che il database non ha ancora avviato la sincronizzazione del log a causa di un problema di connessione, è stato sospeso o si trova in stati di transizione durante l'avvio o un cambio di ruolo.<br /><br /> 1 = sincronizzazione in corso. Per un database primario, indica che il database è pronto ad accettare una richiesta di analisi da un database secondario. Per un database secondario, indica che è in corso uno spostamento dati attivo per il database.<br /><br /> 2 = Synchronized. Un database primario risulta essere nello stato SYNCHRONIZED anziché SYNCHRONIZING. Un database secondario con commit sincrono risulta essere nello stato sincronizzato se nella cache locale il database è pronto per il failover ed è in corso la sincronizzazione.<br /><br /> 3 = ripristino. Indica la fase del processo di rollback in cui un database secondario ottiene attivamente le pagine dal database primario. **Attenzione:** quando un database in una replica secondaria è nello stato REVERTING, il failover forzato sulla replica secondaria lascia il database in uno stato in cui può essere avviato come database primario. Il database dovrà essere riconnesso come un database secondario oppure sarà necessario applicare i nuovi record del log da un backup del log.<br /><br /> 4 = inizializzazione in corso. Indica la fase di rollback in cui il log delle transazioni necessario a un database secondario per l'intercettazione dell'LSN di rollback viene fornito e finalizzato su una replica secondaria. **Attenzione:** quando un database in una replica secondaria è nello stato INITIALIZING, il failover forzato sulla replica secondaria lascia il database in uno stato in cui viene avviato come un database primario. Il database dovrà essere riconnesso come un database secondario oppure sarà necessario applicare i nuovi record del log da un backup del log.|  
+|**is_primary_replica**|**bit**|Restituisce 1 se la replica è primaria o 0 se si tratta di una replica secondaria.<br /><br />**Si applica a:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**synchronization_state**|**tinyint**|Stato di spostamento dei dati, uno dei valori seguenti.<br /><br /> 0 = non in sincronizzazione. Per un database primario, indica che il database non è pronto per la sincronizzazione del log delle transazioni con i database secondari corrispondenti. Per un database secondario, indica che il database non ha ancora avviato la sincronizzazione del log a causa di un problema di connessione, è stato sospeso o si trova in stati di transizione durante l'avvio o un cambio di ruolo.<br /><br /> 1 = sincronizzazione in corso. Per un database primario, indica che il database è pronto ad accettare una richiesta di analisi da un database secondario. Per un database secondario, indica che è in corso uno spostamento dati attivo per il database.<br /><br /> 2 = Synchronized. Un database primario risulta essere nello stato SYNCHRONIZED anziché SYNCHRONIZING. Un database secondario con commit sincrono risulta essere nello stato sincronizzato se nella cache locale il database è pronto per il failover ed è in corso la sincronizzazione.<br /><br /> 3 = ripristino. Indica la fase del processo di rollback in cui un database secondario ottiene attivamente le pagine dal database primario.<br />**Attenzione:** quando un database in una replica secondaria è nello stato REVERTING, il failover forzato sulla replica secondaria lascia il database in uno stato in cui può essere avviato come database primario. Il database dovrà essere riconnesso come un database secondario oppure sarà necessario applicare i nuovi record del log da un backup del log.<br /><br /> 4 = inizializzazione in corso. Indica la fase di rollback in cui il log delle transazioni necessario a un database secondario per l'intercettazione dell'LSN di rollback viene fornito e finalizzato su una replica secondaria.<br />**Attenzione:** quando un database in una replica secondaria è nello stato INITIALIZING, il failover forzato sulla replica secondaria lascia il database in uno stato in cui viene avviato come un database primario. Il database dovrà essere riconnesso come un database secondario oppure sarà necessario applicare i nuovi record del log da un backup del log.|  
 |**synchronization_state_desc**|**nvarchar(60)**|Descrizione dello stato di spostamento dei dati, uno di:<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = il commit della transazione non è sincronizzato rispetto a questo database.<br /><br /> 1 = il commit della transazione è sincronizzato rispetto a questo database.<br /><br /> Per un database in una replica di disponibilità con commit asincrono, questo valore è sempre 0.<br /><br /> Per un database in una replica di disponibilità con commit sincrono, questo valore è preciso solo nel database primario.|  
 |**synchronization_health**|**tinyint**|Riflette l'intersezione dello stato di sincronizzazione di un database in cui è unita in join al gruppo di disponibilità sulla replica di disponibilità e la modalità di disponibilità della replica di disponibilità (modalità con commit sincrono o asincrono), uno di valori seguenti.<br /><br /> 0 = non integro. Il **synchronization_state** del database è 0 (non in sincronizzazione).<br /><br /> 1 = parzialmente integro. Un database in una replica di disponibilità con commit sincrono è considerato parzialmente integro se **synchronization_state** è 1 (SYNCHRONIZING).<br /><br /> 2 = integro. Un database in una replica di disponibilità con commit sincrono è considerato integro se **synchronization_state** è 2 (SYNCHRONIZED) e un database in una replica di disponibilità con commit asincrono è considerato integro se **synchronization_state** è 1 (SYNCHRONIZING).|  
 |**synchronization_health_desc**|**nvarchar(60)**|Descrizione di **synchronization_health** del database di disponibilità.<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
 |**database_state**|**tinyint**|0 = Online<br /><br /> 1 = Ripristino in corso<br /><br /> 2 = Recupero in corso<br /><br /> 3 = Recupero in sospeso<br /><br /> 4 = Sospetto<br /><br /> 5 = Emergenza<br /><br /> 6 = Offline<br /><br /> **Nota:** come **stato** colonna in sys. Databases.|  
-|**database_state_desc**|**nvarchar(60)**|Descrizione di **database_state** della replica di disponibilità.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **Nota:** come **stato** colonna in sys. Databases.|  
+|**database_state_desc**|**nvarchar(60)**|Descrizione di **database_state** della replica di disponibilità.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **Nota:** come **state_desc** colonna in sys. Databases.|  
 |**is_suspended**|**bit**|Stato del database, uno di:<br /><br /> 0 = Ripreso<br /><br /> 1 = sospeso|  
 |**suspend_reason**|**tinyint**|Se il database è sospeso, il motivo dello stato sospeso, uno di:<br /><br /> 0 = Azione utente<br /><br /> 1 = Sospensione da parte del partner<br /><br /> 2 = Rollforward<br /><br /> 3 = Acquisizione<br /><br /> 4 = Applicazione<br /><br /> 5 = Riavvio<br /><br /> 6 = Rollback<br /><br /> 7 = Riconvalida<br /><br /> 8 = Errore nel calcolo del punto di sincronizzazione della replica secondaria|  
 |**suspend_reason_desc**|**nvarchar(60)**|Descrizione del motivo dello stato sospeso del database, uno di:<br /><br /> SUSPEND_FROM_USER = Movimento di dati sospeso manualmente dall'utente<br /><br /> SUSPEND_FROM_PARTNER = La replica di database viene sospesa dopo un failover forzato<br /><br /> SUSPEND_FROM_REDO = Si è verificato un errore durante la fase di rollforward<br /><br /> SUSPEND_FROM_APPLY = Si è verificato un errore durante la scrittura del log nel file (vedere il log degli errori)<br /><br /> SUSPEND_FROM_CAPTURE = Si è verificato un errore durante l'acquisizione del log sulla replica primaria<br /><br /> SUSPEND_FROM_RESTART = La replica di database è stata sospesa prima che il database venisse riavviato (vedere il log degli errori)<br /><br /> SUSPEND_FROM_UNDO = Si è verificato un errore durante la fase di annullamento (vedere il log degli errori)<br /><br /> SUSPEND_FROM_REVALIDATION = Rilevata la mancata corrispondenza con le modifiche al log alla riconnessione (vedere il log degli errori)<br /><br /> SUSPEND_FROM_XRF_UPDATE = Impossibile trovare il punto del log comune (vedere il log degli errori)|  
@@ -77,18 +79,18 @@ ms.lasthandoff: 11/17/2017
 |**last_commit_lsn**|**Numeric(25,0)**|Numero di sequenza del file di log effettivo che corrisponde all'ultimo record di commit nel log delle transazioni.<br /><br /> Sul database primario corrisponde all'ultimo record di commit elaborato. Nelle righe per i database secondari viene mostrato il numero di sequenza del file di log (LSN) inviato dalla replica secondaria alla replica primaria.<br /><br /> Sulla replica secondaria si tratta dell'ultimo record di commit di cui è stato eseguito il rollforward.|  
 |**last_commit_time**|**datetime**|Ora che corrisponde all'ultimo record di commit.<br /><br /> Sul database secondario, l'ora equivale a quella sul database primario.<br /><br /> Sulla replica primaria ogni riga del database secondario contiene l'ora in cui la replica secondaria che ospita il database secondario ha riferito alla replica primaria. La differenza oraria tra la riga del database primario e la riga di un database secondario rappresenta approssimativamente l'obiettivo del tempo di recupero (RPO), presupponendo che il processo di rollforward venga intercettato e che lo stato di avanzamento sia stato riferito alla replica primaria da parte della replica secondaria.|  
 |**low_water_mark_for_ghosts**|**bigint**|Numero a incremento progressivo costante per il database che indica un limite minimo usato dall'attività di pulizia dei record fantasma sul database primario. Se questo numero non aumenta nel tempo, implica che la pulizia dei record fantasma potrebbe non avvenire. Per decidere quali righe fantasma pulire, la replica primaria utilizza il valore minimo di questa colonna per questo database in tutte le repliche di disponibilità, inclusa quella primaria.|  
-|**secondary_lag_seconds**|**bigint**|Il numero di secondi durante i quali la replica secondaria alla replica primaria durante la sincronizzazione.|  
+|**secondary_lag_seconds**|**bigint**|Il numero di secondi durante i quali la replica secondaria alla replica primaria durante la sincronizzazione.<br /><br />**Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
-##  <a name="LSNcolumns"></a>Informazioni sui valori delle colonne LSN  
+##  <a name="LSNcolumns"></a> Informazioni sui valori delle colonne LSN  
  I valori del **end_of_log_lsn**, **last_hardened_lsn**, **last_received_lsn**, **last_sent_lsn**, **ripristino _lsn**, e **truncation_lsn** colonne non sono numeri di sequenza effettivo log (LSN). Ognuno di questi valori riflette invece un ID del blocco di log riempito con zeri.  
   
  **end_of_log_lsn**, **last_hardened_lsn**, e **recovery_lsn** sono LSN scaricati. Ad esempio, **last_hardened_lsn** indica l'inizio del blocco successivo oltre i blocchi già presenti sul disco.  Pertanto, qualsiasi LSN < il valore di **last_hardened_lsn** sul disco.  Gli LSN maggiori o uguali a questo valore non vengono scaricati.  
   
  Dei valori LSN restituiti da **Sys.dm hadr_database_replica_states**, solo **last_redone_lsn** è un LSN effettivo.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  

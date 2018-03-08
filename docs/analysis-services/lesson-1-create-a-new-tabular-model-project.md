@@ -8,21 +8,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 57d2db22484a8c6a8b8301e11cbd4799aae6bd91
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fe1c808d84bac0c14e1cf46c4613464e04bbea0c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lezione 1: Creare un nuovo modello di progetto tabulare
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -54,7 +55,7 @@ Questo argomento è la prima lezione di un'esercitazione sulla creazione di mode
       
 6.  In **Livello di compatibilità**verificare che **SQL Server 2016 (1200)** sia selezionato e fare clic su **OK**.   
  
-    ![come-tabulare-lezione 1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
+    ![as-tabular-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
       
     Se non viene visualizzato SQL Server 2016 RTM (1200) nella casella di riepilogo livello compatibilità, non si utilizza la versione più recente di SQL Server Data Tools. Per ottenere l'ultima versione, vedere [Installare SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
 
@@ -67,15 +68,15 @@ Dopo aver creato un nuovo progetto di modello tabulare, è opportuno per esplora
   
 Dopo aver creato il progetto, viene aperto in SSDT. Sul lato destro, in **Esplora modelli tabulari**, si noterà una visualizzazione albero degli oggetti nel modello. Poiché non sono stati ancora importati i dati, le cartelle sarà vuote. Fare doppio clic su una cartella di oggetti per eseguire azioni, simile alla barra dei menu. Mentre si esamina questa esercitazione, si userà Esplora modelli tabulari per esplorare i diversi oggetti nel progetto di modello.
 
-![come-tabulare-lezione 1-tempo](../analysis-services/media/as-tabular-lesson1-tme.png)
+![as-tabular-lesson1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
 
 Fare clic su di **Esplora** scheda. In questo caso, verrà visualizzato il **Model.bim** file. Se non viene visualizzata la finestra di progettazione a sinistra (la finestra vuota con la scheda Model.bim), nel **Esplora**in **progetto AW Internet Sales**, fare doppio clic su di **Model.bim** file. Il file Model.bim contiene tutti i metadati per il progetto di modello. 
 
-![come-tabulare-lezione 1-se](../analysis-services/media/as-tabular-lesson1-se.png)
+![as-tabular-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
   
 Esaminiamo le proprietà del modello. Scegliere **Model.bim**. Nel **proprietà** finestra, verrà visualizzato il [proprietà del modello](../analysis-services/tabular-models/model-properties-ssas-tabular.md), più importante delle quali è il **modalità DirectQuery** proprietà. Questa proprietà specifica se il modello verrà distribuito o meno nella modalità In-Memory (disattivata) o nella modalità DirectQuery (attivata). Per questa esercitazione il modello verrà creato e distribuito nella modalità In-Memory.
 
-![come-tabulare-lezione 1-proprietà](../analysis-services/media/as-tabular-lesson1-properties.png)
+![as-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
   
 Quando si crea un nuovo modello, determinate proprietà del modello vengono impostate automaticamente sulla base delle impostazioni di modellazione dati che possono essere specificate nel **strumenti** > **opzioni** la finestra di dialogo. Le proprietà Backup dei dati, Memorizzazione area di lavoro e Server dell'area di lavoro consentono di specificare la modalità e la posizione per il backup, la conservazione in memoria e la compilazione del database dell'area di lavoro, ovvero il database di creazione di modelli. Queste impostazioni possono essere modificate successivamente, ma per il momento è possibile lasciarle invariate.  
 
@@ -91,10 +92,10 @@ Esplorare alcune delle finestre di dialogo e posizioni per diverse funzionalità
 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
-Per altre informazioni sui diversi tipi di progetti di modelli tabulari, vedere [Progetti di modello tabulare &#40;SSAS tabulare&#41;](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Per altre informazioni sull'ambiente di creazione di modelli tabulari, vedere [Progettazione di modelli tabulari &#40;SSAS&#41;](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+Per ulteriori informazioni sui diversi tipi di progetti di modello tabulare, vedere [progetti di modello tabulare](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Per ulteriori informazioni sull'ambiente di creazione di modelli tabulari, vedere [Progettazione modelli tabulari ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
-## <a name="whats-next"></a>Operazioni successive
+## <a name="whats-next"></a>Quali sono le operazioni successive?
 Passare alla lezione successiva: [lezione 2: aggiungere dati](../analysis-services/lesson-2-add-data.md).
 
   

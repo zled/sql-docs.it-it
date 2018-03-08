@@ -1,7 +1,7 @@
 ---
 title: Converti, carica ed eseguire la migrazione (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89e343044e82f00a2d5d7978c2571bd32fa6d09b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44683ae2b0650a86c04c5a184417f17e5b3acbef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Converti, carica ed eseguire la migrazione (AccessToSQL)
 Il **Converti, carica ed eseguire la migrazione** la finestra di dialogo segnala lo stato di migrazione, quando si utilizza il pulsante Convert, carico e la migrazione o la migrazione guidata.  

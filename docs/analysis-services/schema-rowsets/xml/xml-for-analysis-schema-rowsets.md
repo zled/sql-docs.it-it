@@ -8,39 +8,39 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - rowsets [Analysis Services], XML for Analysis
 - XML for Analysis, schema rowsets
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f5cb613a916f2cff4ec8aca3bb67fc9c14d1b10
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML per il provider Analysis (XMLA) include set di righe dello schema che restituiscono metadati su stato del server, attività e oggetti. Il recupero dei metadati è necessario se si sviluppa un'applicazione client che si connette a un modello di Analysis Services con struttura e caratteristiche variabili.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Il provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) include set di righe dello schema che restituiscono metadati su stato del server, attività e oggetti. Il recupero dei metadati è necessario se si sviluppa un'applicazione client che si connette a un modello di Analysis Services con struttura e caratteristiche variabili.  
   
  I set di righe dello schema forniscono inoltre l'analisi dei processi e delle operazioni interne che possono facilitare il monitoraggio del server e la risoluzione dei problemi. Per supportare meglio le attività amministrative ad hoc, è possibile eseguire una query Dynamic Management View (DMV) sulla maggior parte dei set di righe dello schema. Le query DMV restituiscono risultati in un formato tabulare leggibile che è possibile visualizzare in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
  Nella tabella seguente viene elencato e descritto ogni set di righe dello schema XMLA e viene specificato se restituisce informazioni specifiche dei modelli di dati tabulari.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Set di righe<sup>1</sup>|Description|  
+|Rowset<sup>1</sup>|Description|  
 |------------------------|-----------------|  
 |[Set di righe DISCOVER_CALC_DEPENDENCY](../../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)|Restituisce informazioni sulle dipendenze fra tabelle, colonne, misure e formule delle colonne calcolate.<br /><br /> Si applica ai modelli tabulari distribuiti in un'istanza di Analysis Services e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelli nelle cartelle di lavoro di Excel in esecuzione in un ambiente SharePoint.|  
 |[Set di righe DISCOVER_CONNECTIONS](../../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|Fornisce informazioni sull'utilizzo delle risorse e sulle attività relative alle connessioni attualmente aperte nel server.|  

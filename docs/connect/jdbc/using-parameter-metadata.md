@@ -1,27 +1,28 @@
 ---
 title: Utilizzando i metadati del parametro | Documenti Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a046d61c95e4f687361939bed9b10be5ecd7746d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 812e8af3f3b08cf7cd25de64b157cb76657a6b6f
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-parameter-metadata"></a>Utilizzo dei metadati dei parametri
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,9 +37,10 @@ ms.lasthandoff: 11/18/2017
     
 > [!NOTE]  
 Esistono alcune limitazioni quando si utilizza la classe SQLServerParameterMetaData con le istruzioni preparate. 
-**Con Microsoft JDBC Driver 6.0 (o versione successiva) per SQL Server**: quando si utilizza SQL Server 2008 o 2008 R2, il driver JDBC supporta istruzioni SELECT, DELETE, INSERT e UPDATE purché queste istruzioni non contengano sottoquery e/o join. UNIONE query anche non sono supportate per la classe SQLServerParameterMetaData quando si utilizza SQL Server 2008 o 2008 R2. Sono supportati per SQL Server 2012 e versioni successive i metadati del parametro con query complesse. Recupero dei metadati di parametro per le colonne crittografate non sono supportati. **Con Microsoft JDBC Driver 4.0, 4.1 o 4.2 per SQL Server**: JDBC il driver supporta istruzioni SELECT, DELETE, INSERT e UPDATE purché queste istruzioni non contengano sottoquery e/o join. MERGE di query non è inoltre supportati per la classe SQLServerParameterMetaData.  
+**Con Microsoft JDBC Driver 6.0 (o versione successiva) per SQL Server**: quando si utilizza SQL Server 2008 o 2008 R2, il driver JDBC supporta istruzioni SELECT, DELETE, INSERT e UPDATE purché queste istruzioni non contengano sottoquery e/o join.  
 
-## <a name="see-also"></a>Vedere anche  
- [Gestione dei metadati con il driver JDBC](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)  
+UNIONE query anche non sono supportate per la classe SQLServerParameterMetaData quando si utilizza SQL Server 2008 o 2008 R2. Sono supportati per SQL Server 2012 e versioni successive i metadati del parametro con query complesse.  
+
+Recupero dei metadati di parametro per le colonne crittografate non sono supportati. **Con Microsoft JDBC Driver 4.1 o 4.2 per SQL Server**: JDBC il driver supporta istruzioni SELECT, DELETE, INSERT e UPDATE purché queste istruzioni non contengano sottoquery e/o join. MERGE di query non è inoltre supportati per la classe SQLServerParameterMetaData.  
   
   

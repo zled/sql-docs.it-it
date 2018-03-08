@@ -5,29 +5,27 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a4f1dcea3c74fdf61af401a854aba9c2166f5610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0159070eb0405e49f9813828aa82b1483008b61f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Esplorare dati e metadati in un cubo
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilizzare il **Browser** scheda della finestra di Progettazione cubi per esplorare i dati del cubo. Questa vista può essere utilizzata per esaminare la struttura di un cubo e per controllare dati, calcoli, formattazione e sicurezza di oggetti di database. È possibile esaminare rapidamente un cubo quando gli utenti finali lo visualizzano negli strumenti di report o in altre applicazioni client. Quando si visualizzano dati del cubo, è possibile visualizzare dimensioni diverse, eseguire il drill-down dei membri, nonché eseguire sezionamenti tramite dimensioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Usare la scheda **Esplorazione** di Progettazione cubi per visualizzare i dati di un cubo. Questa vista può essere utilizzata per esaminare la struttura di un cubo e per controllare dati, calcoli, formattazione e sicurezza di oggetti di database. È possibile esaminare rapidamente un cubo quando gli utenti finali lo visualizzano negli strumenti di report o in altre applicazioni client. Quando si visualizzano dati del cubo, è possibile visualizzare dimensioni diverse, eseguire il drill-down dei membri, nonché eseguire sezionamenti tramite dimensioni.  
   
  Prima di visualizzare un cubo, è necessario elaborarlo e riconnetterlo. Al termine dell'elaborazione, aprire la scheda **Esplorazione** di Progettazione cubi. Sulla barra degli strumenti fare clic sul pulsante Riconnetti per aggiornare la connessione.  
   

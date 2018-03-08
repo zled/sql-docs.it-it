@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: "95"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ab834afd90bb347641ba8b5584c45e3e073962d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ef24aef79874e7ade0c0ed0dc78f88faa366299c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connessione di client a una sessione di mirroring del database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per connettersi a una sessione di mirroring del database, un client può usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se configurati per un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questi provider di accesso ai dati supportano entrambi completamente il mirroring del database. Per informazioni relative alle considerazioni di programmazione per l'utilizzo di un database con mirroring, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). È inoltre necessario che l'istanza del server principale corrente sia disponibile e che l'account di accesso del client sia stato creato nell'istanza del server. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Le connessioni client a una sessione di mirroring del database non richiedono l'istanza del server di controllo del mirroring, se ne esiste una.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Per connettersi a una sessione di mirroring del database un client può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se configurati per un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questi provider di accesso ai dati supportano entrambi completamente il mirroring del database. Per informazioni relative alle considerazioni di programmazione per l'utilizzo di un database con mirroring, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). È inoltre necessario che l'istanza del server principale corrente sia disponibile e che l'account di accesso del client sia stato creato nell'istanza del server. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Le connessioni client a una sessione di mirroring del database non richiedono l'istanza del server di controllo del mirroring, se ne esiste una.  
   
   
 ##  <a name="InitialConnection"></a> Creazione della connessione iniziale a una sessione di mirroring del database  
@@ -92,11 +94,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Attributo Server  
  La stringa di connessione deve includere un attributo **Server** indicante il nome partner iniziale, che dovrebbe identificare l'istanza del server principale corrente.  
   
- Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<nome_server>*[**\\***<nome_istanza_SQL_Server>*]. Esempio:  
+ Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<nome_server>*[**\\***<nome_istanza_SQL_Server>*]. Ad esempio  
   
  `Server=Partner_A;`  
   
- o  
+ o Gestione configurazione  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -136,7 +138,7 @@ Server=123.34.45.56,4724;
 |Driver ODBC|**Failover_Partner**|  
 |ADO (ActiveX Data Objects)|**Partner di failover**|  
   
- Il modo più semplice per identificare l'istanza del server è tramite il nome di sistema, *<nome_server>*[**\\***\<nome_istanza_SQL_Server>*].  
+ Il modo più semplice per identificare l'istanza del server è tramite il relativo nome di sistema, *<nome_server>*[**\\***<nome_istanza_SQL_Server>*].  
   
  In alternativa, è possibile specificare l'indirizzo IP e il numero di porta nell'attributo **Partner di failover** . Se il tentativo di connessione iniziale non riesce durante la prima connessione al database, il tentativo di connessione al partner di failover non dovrà più utilizzare necessariamente il DNS e SQL Server Browser. Una volta stabilita una connessione, il nome partner di failover sarà sovrascritto dal nome partner di failover. In questo modo, se si verifica un failover, le connessioni reindirizzate richiederanno il DNS e SQL Server Browser.  
   
@@ -173,7 +175,7 @@ Server=123.34.45.56,4724;
   
  Il tempo di riesecuzione dei tentativi viene calcolato mediante la formula seguente:  
   
- *TempoRiesecuzione* **=** *TempoRiesecuzionePrecedente* **+(** 0,08 **\****TimeoutAccesso***)**  
+ *RetryTime* **=** *PreviousRetryTime* **+(** 0,08 **\****LoginTimeout***)**  
   
  Dove *PreviousRetryTime* è inizialmente pari a 0.  
   

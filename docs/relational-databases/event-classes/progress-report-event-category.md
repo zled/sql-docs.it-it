@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,21 +17,22 @@ helpviewer_keywords:
 - Progress Report event category [SQL Server]
 - SQL Server event classes, Progress Report event category
 ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
-caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17542948a439286dd9acc231e52226a5fca6bc80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca7184fd9988aff8ecfe61f3f174d488a2e0a404
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="progress-report-event-category"></a>Categoria di eventi Report di stato
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La categoria di eventi **Report di stato** include la classe di evento **Progress Report: Online Index Operation**.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Nella categoria di eventi **Report di stato** è inclusa la classe di evento **Progress Report: Online Index Operation** .  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Classe di evento Progress Report: Online Index Operation](../../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)|Indica lo stato di un'operazione di compilazione dell'indice online.|  
   

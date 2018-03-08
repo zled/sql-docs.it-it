@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset
-helpviewer_keywords: Recordset object [ADO]
+f1_keywords:
+- Recordset
+helpviewer_keywords:
+- Recordset object [ADO]
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dec2c20c2450f4db1d0671f365714647c47c7db6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 75e28a7413bc510865e1553e9a548ac1f00d46b5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordset-object-ado"></a>Oggetto Recordset ADO)
 Rappresenta l'intero set di record da una tabella di base o i risultati di un comando eseguito. In qualsiasi momento, il **Recordset** oggetto fa riferimento a un solo record all'interno del set di record corrente.  
@@ -54,7 +57,7 @@ Rappresenta l'intero set di record da una tabella di base o i risultati di un co
   
  È possibile utilizzare il [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**, e **MovePrevious** metodi; [spostare](../../../ado/reference/ado-api/move-method-ado.md) metodo. e [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), e [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà per riposizionare il record corrente, presupponendo che il provider supporta rilevanti funzionalità. Forward-only **Recordset** oggetti supportano solo il [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) metodo. Quando si utilizza il **spostare** metodi per visitare ogni record (o enumerare le **Recordset**), è possibile utilizzare il **BOF** e **EOF** proprietà Se si è andati oltre l'inizio o fine di determinare il **Recordset**.  
   
- Prima di utilizzare qualsiasi funzionalità di un **Recordset** dell'oggetto, è necessario chiamare il **supporta** metodo sull'oggetto per verificare che la funzionalità è disponibile o supportato. Non è necessario utilizzare la funzionalità quando la **supporta** metodo restituisce false. Ad esempio, è possibile utilizzare il **MovePrevious** metodo solo se `Recordset.Supports(adMovePrevious)` restituisce **True**. In caso contrario, si verificherà un errore, perché il **Recordset** oggetto potrebbe essere stato chiuso e la funzionalità di rendering non disponibile nell'istanza. Se non è supportata una funzionalità che si è interessati, **supporta** restituirà false anche. In questo caso, è consigliabile evitare la chiamata di proprietà corrispondente o il metodo sul **Recrodset** oggetto.  
+ Prima di utilizzare qualsiasi funzionalità di un **Recordset** dell'oggetto, è necessario chiamare il **supporta** metodo sull'oggetto per verificare che la funzionalità è disponibile o supportato. Non è necessario utilizzare la funzionalità quando la **supporta** metodo restituisce false. Ad esempio, è possibile utilizzare il **MovePrevious** metodo solo se `Recordset.Supports(adMovePrevious)` restituisce **True**. In caso contrario, si verificherà un errore, perché il **Recordset** oggetto potrebbe essere stato chiuso e la funzionalità di rendering non disponibile nell'istanza. Se non è supportata una funzionalità che si è interessati, **supporta** restituirà false anche. In questo caso, è consigliabile evitare la chiamata di proprietà corrispondente o il metodo sul **Recordset** oggetto.  
   
  **Recordset** oggetti possono supportare due tipi di aggiornamento: immediato e in batch. Aggiornamento immediato, tutte le modifiche ai dati vengono scritti immediatamente all'origine dati sottostante non appena viene chiamato il [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo. È inoltre possibile passare matrici di valori come parametri con il [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) e **aggiornare** metodi e aggiornare contemporaneamente più campi in un record.  
   

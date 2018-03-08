@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d56c0096350b5f8d1d217a2cea85a770ecde6e14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 197c7ef28124fb1b1c52facbec541913330c69c5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="header-files"></a>File di intestazione
 Il file di intestazione SQL contiene prototipi per le funzioni e funzionalità del livello di conformità interfaccia ODBC Core. Il file di intestazione Sqlext. h contiene prototipi per le funzioni e le funzionalità del livello 1 e i livelli di conformità di API di livello 2. Il file di intestazione Sqlext contiene le definizioni di tipo e gli indicatori per i tipi di dati SQL.  

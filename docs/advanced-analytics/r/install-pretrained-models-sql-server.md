@@ -6,22 +6,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 442f4f434e019da241fcaecb380c967d0f405fd6
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 5d9f60684cc749c35674233fbdaaa222953396d9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Installare training preliminare di machine learning i modelli in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo descrive come aggiungere i modelli di training preliminare a un'istanza di SQL Server che già dispone di R Services o installato Servizi di Machine Learning.
 
@@ -42,8 +43,8 @@ Attualmente i modelli disponibili sono i modelli di rete neurali profonde (DNN) 
 La configurazione di ciascuna rete è stato in base alle implementazioni di riferimento seguente:
 
 + ResNet-18
-+ ResNet 50
-+ ResNet 101
++ ResNet-50
++ ResNet-101
 + AlexNet
 
 Per ulteriori informazioni su questi modelli, vedere [con training preliminare modelli di machine learning per il rilevamento di analisi e l'immagine di valutazione](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
@@ -126,7 +127,7 @@ Per ulteriori informazioni sulle reti di formazione e la relativa implementazion
 
     - AlexNet\_Updated.model
     - ImageNet1K\_mean.xml
-    - pretrained.Model
+    - pretrained.model
     - ResNet\_101\_Updated.model
     - ResNet\_18\_Updated.model
     - ResNet\_50\_Updated.model

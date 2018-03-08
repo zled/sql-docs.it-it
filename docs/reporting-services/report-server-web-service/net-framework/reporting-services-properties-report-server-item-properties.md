@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c874a823a27a10f0b915aa7bf6bf221b7dc6ac0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c254ee33efb4ddd644690747c407cce237fb9112
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Proprietà di Reporting Services - Proprietà degli elementi del server di report
   Le proprietà degli elementi sono proprietà specifiche degli elementi del database del server di report. Tali elementi includono report, report collegati, cartelle, risorse, modelli e origini dati.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 |--------------|-----------------|  
 |**CreatedBy**|Nome dell'utente che ha originariamente aggiunto l'elemento al database del server di report.|  
 |**CreationDate**|Data e ora di aggiunta dell'elemento al database del server di report.|  
-|**Description**|Descrizione dell'elemento.|  
+|**Descrizione**|Descrizione dell'elemento.|  
 |**Hidden**|Valore che indica se l'elemento è visibile e disponibile per gli utenti.|  
 |**ID**|ID di un elemento nel database del server di report.|  
 |**ModifiedBy**|Nome dell'utente che ha apportato l'ultima modifica all'elemento nel database del server di report.|  

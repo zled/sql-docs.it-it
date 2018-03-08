@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f3b4210bcd05402336b6be4188042ef9e7188a98
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3b7d1ebc6643cea879bf60d978ba38b844d46f03
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---previous-function"></a>Funzioni di Generatore report - Funzione Previous
   Restituisce il valore o il valore di aggregazione specificato per l'istanza precedente di un elemento all'interno dell'ambito specificato.  
@@ -39,7 +37,7 @@ Previous(expression, scope)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *espressione*  
+ *expression*  
  (**Variant** o **Binary**) Espressione da usare per identificare i dati e per cui recuperare il valore precedente, ad esempio `Fields!Fieldname.Value` o `Sum(Fields!Fieldname.Value)`.  
   
  *ambito*  
@@ -48,7 +46,7 @@ Previous(expression, scope)
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore **Variant** o **Binary**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La funzione **Previous** restituisce il valore precedente per l'espressione valutata nell'ambito specificato dopo l'applicazione di tutti i criteri di ordinamento e di filtro.  
   
  Se in *expression* non è contenuta un'aggregazione, la funzione **Previous** viene impostata per impostazione predefinita sull'ambito corrente per l'elemento del report.  
@@ -71,7 +69,7 @@ Previous(expression, scope)
 ### <a name="description"></a>Description  
  L'esempio di codice seguente, se inserito nella riga di dati predefinita di un'area dati, fornisce il valore per il campo `LineTotal` nella riga precedente.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 =Previous(Fields!LineTotal.Value)  
@@ -82,7 +80,7 @@ Previous(expression, scope)
   
  Ad esempio, per un'area dati con un gruppo padre denominato `Year`che ha un gruppo figlio denominato `Month`che a sua volta ha un gruppo figlio denominato `Day` (3 livelli annidati). L'espressione `=Previous(Sum(Fields!Sales.Value,"Day"),"Year")` in una riga associata al gruppo `Day` restituisce il valore delle vendite per lo stesso giorno e mese dell'anno precedente.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 =Sum(Fields!Sales.Value) & " " & Previous(Sum(Fields!Sales.Value,"GroupbyDay"),"GroupbyYear")  

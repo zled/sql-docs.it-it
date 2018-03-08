@@ -7,27 +7,28 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 61cffc85e6a27ffe4c171da8849d84a19332f223
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d1eb0f1cce23d084516b5446d39274ac3078b0b8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>Governance delle risorse per machine learning in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo fornisce una panoramica di governance delle risorse di funzionalità di SQL Server che consentono di allocare e bilanciare le risorse utilizzate dagli script R e Python.
 
-**Si applica a:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] 
- [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] e [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+**Si applica a:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
+ [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] e [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 
 ## <a name="goals-of-resource-governance-for-machine-learning"></a>Obiettivi di governance delle risorse per machine learning
 

@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 95970bab-aa4d-4e8e-be86-0c96e95a5d0c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f9984bef616c5993ab57892bd5fa2266105d0495
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6a8300259dd2ac5a670a69677cfb7153d30c9825
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="errors-and-events-reference-power-pivot-for-sharepoint"></a>Riferimenti a errori ed eventi (PowerPivot per SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questa sezione vengono fornite informazioni sugli errori e gli eventi [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Gli errori riportati in questa sezione sono identificati dal testo del messaggio di errore visualizzato in una finestra di errore o log.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Questa sezione contiene informazioni su errori ed eventi di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Gli errori riportati in questa sezione sono identificati dal testo del messaggio di errore visualizzato in una finestra di errore o log.  
   
  Per visualizzare l'elenco dei messaggi di errore documentati in questa sezione, utilizzare il sommario della documentazione online.  
   

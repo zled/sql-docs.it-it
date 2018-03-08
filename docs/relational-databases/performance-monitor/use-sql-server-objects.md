@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,23 +33,23 @@ helpviewer_keywords:
 - counters [SQL Server]
 - performance counters [SQL Server], listed
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
-caps.latest.revision: "56"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 753dae7515c2872dd9e4287a25d37f7da39946e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a11f27ebd08fc7d1e7377f7d84fb5e3f95f4e13
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="use-sql-server-objects"></a>Utilizzare oggetti di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rende disponibili oggetti e contatori utilizzabili in Monitoraggio di sistema per il monitoraggio dell'attività nei computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per oggetto si intende qualsiasi risorsa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio un blocco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un processo di Windows. Ogni oggetto contiene uno o più contatori che determinano diversi aspetti degli oggetti da monitorare. Ad esempio, l'oggetto **SQL Server Locks** contiene i contatori **Numero di blocchi critici deadlock/sec** e **Timeout blocchi/sec**.  
   
- Se un computer include più risorse dello stesso tipo, saranno presenti più istanze dello stesso tipo di oggetto. Ad esempio, nei sistemi con più processori saranno presenti più istanze dell'oggetto di tipo **Processor** . Per ogni database di **sarà presente un'istanza dell'oggetto di tipo** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per alcuni tipi di oggetti, ad esempio **Memory Manager** , è prevista una sola istanza. Se sono presenti più istanze di un tipo di oggetto, è possibile aggiungere i contatori per tenere traccia delle statistiche di ogni singola istanza o in molti casi di tutte le istanze contemporaneamente. I contatori per l'istanza predefinita sono visualizzati nel formato **SQLServer:***\<nome oggetto>*. I contatori per le istanze denominate sono visualizzati nel formato **MSSQL$***\<nome istanza>***:***\<nome contatore>* o **SQLAgent$***\<nome istanza>***:***\<nome contatore>*.  
+ Se un computer include più risorse dello stesso tipo, saranno presenti più istanze dello stesso tipo di oggetto. Ad esempio, nei sistemi con più processori saranno presenti più istanze dell'oggetto di tipo **Processor** . Per ogni database di **sarà presente un'istanza dell'oggetto di tipo** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per alcuni tipi di oggetti, ad esempio **Memory Manager** , è prevista una sola istanza. Se sono presenti più istanze di un tipo di oggetto, è possibile aggiungere i contatori per tenere traccia delle statistiche di ogni singola istanza o in molti casi di tutte le istanze contemporaneamente. I contatori per l'istanza predefinita sono visualizzati nel formato **SQLServer:***\<nome oggetto>*. I contatori per le istanze denominate sono visualizzati nel formato **MSSQL$***\<nome istanza>***:***\<nome contatore>* o **SQLAgent$***\<nome istanza>***: ***\<nome contatore>*.  
   
  Per specificare gli oggetti e i contatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da monitorare all'avvio di Monitoraggio di sistema, aggiungere o rimuovere i contatori nel grafico e salvare le impostazioni.  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 >  È inoltre possibile restituire i valori del contatore delle prestazioni eseguendo una query sulla vista a gestione dinamica [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le statistiche sono visualizzate solo quando viene installata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]viene arrestata e riavviata, la visualizzazione delle statistiche viene interrotta e ripresa automaticamente. Si noti inoltre che i contatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno visualizzati nello snap-in di Monitoraggio di sistema anche se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in esecuzione. Su un'istanza di cluster, i contatori delle prestazioni funzionano solo sul nodo in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le statistiche sono visualizzate solo quando viene installata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]viene arrestata e riavviata, la visualizzazione delle statistiche viene interrotta e ripresa automaticamente. Si noti inoltre che i contatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno visualizzati nello snap-in di Monitoraggio di sistema anche se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in esecuzione. Su un'istanza di cluster, i contatori delle prestazioni funzionano solo sul nodo in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione.  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="SQLServerAgentPOs"></a> Oggetti prestazione di SQL Server Agent  
  Nella tabella seguente sono indicati gli oggetti prestazione disponibili per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:  
   
-|Oggetto prestazione|Descrizione|  
+|Oggetto prestazione|Description|  
 |------------------------|-----------------|  
 |[SQLAgent:Avvisi](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|Offre informazioni relative agli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |[SQLAgent:Processi](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Offre informazioni relative ai processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="ServiceBrokerPOs"></a> Oggetti prestazione di Service Broker  
  Nella tabella seguente sono indicati gli oggetti prestazione disponibili per [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-|Oggetto prestazione|Descrizione|  
+|Oggetto prestazione|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Attivazione Broker](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|Offe informazioni sulle attività attivate da [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
 |[SQLServer:Statistiche Broker](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|Offre informazioni generali relative a [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="SQLServerPOs"></a> Oggetti prestazione di SQL Server  
  Nella seguente tabella vengono descritti gli oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Oggetto prestazione|Descrizione|  
+|Oggetto prestazione|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Access Methods](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|Ricerca e misura l'allocazione degli oggetti di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ad esempio, il numero di ricerche eseguite negli indici o il numero di pagine allocate per gli indici e i dati).|  
 |[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|Offre informazioni sui dispositivi di backup utilizzati nelle operazioni di backup e ripristino, ad esempio la velocità effettiva del dispositivo di backup.|  
@@ -135,7 +136,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="SQLServerReplicationPOs"></a> Oggetti prestazione della replica di SQL Server  
  Nella tabella seguente sono indicati gli oggetti prestazione disponibili per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Oggetto prestazione|Descrizione|  
+|Oggetto prestazione|Description|  
 |------------------------|-----------------|  
 |**SQLServer:Agenti di replica**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> Per altre informazioni, vedere [Monitoraggio della replica con Monitor di sistema](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).|Offre informazioni relative all'attività dell'agente di replica.|  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,13 +26,13 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d98e581133e48ec19c9123973a39b6a9c0d3a0ac
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c5b5bc4bfaac7322b902cc4ea941c64c6b58f4f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-design-view-report-builder"></a>Visualizzazione di progettazione report (Generatore report)
   La finestra Generatore report è progettata per semplificare l'organizzazione delle risorse del report e per consentire una più rapida compilazione dei report impaginati necessari. L'area di progettazione si trova al centro della finestra ed è circondata dalla barra multifunzione e dai riquadri. Nell'area di progettazione vengono aggiunti e organizzati gli elementi del report. Questo articolo illustra i riquadri che consentono di aggiungere, selezionare e organizzare le risorse del report, nonché di modificare le proprietà degli elementi del report.  
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/05/2017
  Le dimensioni dell'area di progettazione potrebbero essere diverse da quelle dell'area di stampa della pagina specificata per stampare il report. La modifica delle dimensioni dell'area di progettazione non altera l'area di stampa del report. Indipendentemente dalle dimensioni impostate per l'area di stampa del report, le dimensioni totali dell'area di progettazione non vengono modificate. Per altre informazioni, vedere [Tipi di rendering  &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 > [!TIP]  
->  Per visualizzare il righello, nella scheda **Visualizza** selezionare la casella di controllo **Righello** .  
+>  Per visualizzare il righello, nella scheda **Visualizza** selezionare la casella di controllo **Righello**.  
   
   
 ##  <a name="ReptDataPane"></a> The Report Data Pane  
@@ -172,7 +170,7 @@ ms.lasthandoff: 12/05/2017
  Per altre informazioni, vedere [Anteprima di report in Generatore report](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ### <a name="running-a-report-with-parameters"></a>Esecuzione di un report con parametri  
- Un report eseguito viene elaborato automaticamente. Se il report contiene parametri, tutti i parametri devono disporre di valori predefiniti prima che il report possa essere eseguito automaticamente. Se un parametro non ha un valore predefinito, quando si esegue il report è necessario scegliere un valore per il parametro e quindi fare clic su **Visualizza report** nella scheda Esegui. Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Un report eseguito viene elaborato automaticamente. Se il report contiene parametri, tutti i parametri devono disporre di valori predefiniti prima che il report possa essere eseguito automaticamente. Se un parametro non ha un valore predefinito, quando si esegue il report è necessario scegliere un valore per il parametro e quindi fare clic su **Visualizza report** nella scheda Esegui. Per altre informazioni, vedere [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="print-preview"></a>Anteprima di stampa  
  Quando un report visualizzato in anteprima in modalità di esecuzione assomiglia a un report prodotto in HTML. L'anteprima non è in formato HTML, ma il layout e la paginazione del report sono simili a quelli dell'output HTML. Se si passa alla modalità anteprima di stampa, è possibile visualizzare la rappresentazione del report stampato. Fare clic sul pulsante **Anteprima di stampa** nella scheda **Esegui** . Il report verrà visualizzato come in una pagina fisica. Questa visualizzazione assomiglia all'output generato dalle estensioni per il rendering delle immagini e PDF. L'anteprima di stampa non è un'immagine, né un file PDF, ma l'impaginazione e il layout del report sono simili a quelli dell'output in questi formati.  

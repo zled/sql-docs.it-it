@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: managing data in a table
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 994ef486992a0541323eed37a3e8054091969680
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f5ed59f9911a41b65101115bf821d0b75ec74c51
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-5---summary---managing-data-in-a-hierarchical-table"></a>Lezione 2-5: Riepilogo: Gestione di dati in una tabella gerarchica
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Il tipo di dati **hierarchyid** consente di facilitare la creazione delle tabelle che riflettono i dati gerarchici e quindi di creare indici depth-first e breadth-first per accedere in modo efficiente alla tabella. Utilizzare i metodi gerarchici per eseguire query e modificare i dati.  

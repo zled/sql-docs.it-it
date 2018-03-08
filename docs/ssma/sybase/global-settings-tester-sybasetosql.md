@@ -3,7 +3,7 @@ title: Impostazioni globali (Tester) (SybaseToSQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a08108be504ebe901f6e202af2fd8c1d757c198c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b5ba92c5972df1e29bbe3c4cd3df4f093739a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Impostazioni globali (Tester) (SybaseToSQL)
 Utilizzare la pagina Tester del **impostazioni globali** la finestra di dialogo per specificare le impostazioni per SSMA Tester.  
@@ -39,7 +39,7 @@ Le opzioni seguenti sono disponibili per questa impostazione:
   
 1.  Sì  
   
-2.  No  
+2.  no  
   
 **Modalità di salvataggio di tabelle ausiliarie**  
 Questa impostazione specifica la modalità salvare le tabelle ausiliarie interne create durante l'esecuzione di test case. Per questa impostazione specifica è possibile impostare le opzioni seguenti:  
@@ -61,7 +61,7 @@ Le opzioni seguenti sono disponibili per questa impostazione:
   
 1.  Sì  
   
-2.  No  
+2.  no  
   
 **Arrestare l'esecuzione di test dopo il primo errore**  
 Questa impostazione specifica se interrompere l'esecuzione test case corrente, se si è verificato un errore durante l'esecuzione. Set di opzioni predefinito è **Sì**.  
@@ -70,7 +70,7 @@ Le opzioni seguenti sono disponibili per questa impostazione:
   
 1.  Sì  
   
-2.  No  
+2.  no  
   
 ## <a name="see-also"></a>Vedere anche  
 [Completamento della preparazione del Test Case &#40; SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  

@@ -9,21 +9,23 @@ ms.service:
 ms.component: automatic-tuning
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: performance tuning [SQL Server]
+helpviewer_keywords:
+- performance tuning [SQL Server]
 ms.assetid: 
 caps.latest.revision: 
 author: jovanpop-msft
 ms.author: jovanpop
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5af71149c35f95d55aab382b3b9180c6356f1afb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 04d8ac47233e0556cd54ed9fb2b3d22080b4ee42
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="automatic-tuning"></a>Ottimizzazione automatica
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -33,14 +35,14 @@ ms.lasthandoff: 11/17/2017
 L'ottimizzazione automatica [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] invia una notifica ogni volta che viene rilevato un potenziale problema di prestazioni e consente di applicare azioni correttive o consente il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] risolvere automaticamente i problemi di prestazioni.
 L'ottimizzazione automatica [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] consente di identificare e risolvere i problemi di prestazioni causati da **regressioni nella scelta del piano SQL**. L'ottimizzazione automatica [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] crea indici necessari e vengono eliminati gli indici inutilizzati.
 
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]Consente di monitorare le query che vengono eseguite sul database e automaticamente migliora le prestazioni del carico di lavoro. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]dispone di un meccanismo di intelligence predefinite che è possibile ottimizzare e migliorare le prestazioni delle query da adattare dinamicamente il database per il carico di lavoro automaticamente. Esistono due funzionalità di ottimizzazione automatica che sono disponibili:
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] Consente di monitorare le query che vengono eseguite sul database e automaticamente migliora le prestazioni del carico di lavoro. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] dispone di un meccanismo di intelligence predefinite che è possibile ottimizzare e migliorare le prestazioni delle query da adattare dinamicamente il database per il carico di lavoro automaticamente. Esistono due funzionalità di ottimizzazione automatica che sono disponibili:
 
  -  **Correzione automatica piano** (disponibile in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] e [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]) che identifica i piani di esecuzione di query problematiche e correzioni SQL prevede i problemi di prestazioni.
  -  **La gestione automatica degli indici** (disponibile solo in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]) che identifica gli indici che devono essere aggiunti al database e gli indici che devono essere rimossi.
 
 ## <a name="why-automatic-tuning"></a>Perché l'ottimizzazione automatica?
 
-Una delle attività principali in Amministrazione classica di database esegue il monitoraggio del carico di lavoro, identificazione critico [!INCLUDE[tsql_md](../../includes/tsql_md.md)] esegue una query, gli indici devono essere aggiunti per migliorare le prestazioni di indici utilizzato di rado. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]fornisce informazioni dettagliate sulla query e gli indici che è necessario monitorare. Tuttavia, costantemente il monitoraggio del database è un'attività difficile e noiosa, soprattutto quando si gestiscono molti database. Gestisce un numero elevato di database potrebbero essere impossibili da eseguire in modo efficiente. Invece di monitoraggio e ottimizzazione del database manualmente, è possibile delegare alcuni del monitoraggio e ottimizzazione azioni [!INCLUDE[ssde_md](../../includes/ssde_md.md)] utilizzando le funzionalità di ottimizzazione automatica.
+Una delle attività principali in Amministrazione classica di database esegue il monitoraggio del carico di lavoro, identificazione critico [!INCLUDE[tsql_md](../../includes/tsql_md.md)] esegue una query, gli indici devono essere aggiunti per migliorare le prestazioni di indici utilizzato di rado. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fornisce informazioni dettagliate sulla query e gli indici che è necessario monitorare. Tuttavia, costantemente il monitoraggio del database è un'attività difficile e noiosa, soprattutto quando si gestiscono molti database. Gestisce un numero elevato di database potrebbero essere impossibili da eseguire in modo efficiente. Invece di monitoraggio e ottimizzazione del database manualmente, è possibile delegare alcuni del monitoraggio e ottimizzazione azioni [!INCLUDE[ssde_md](../../includes/ssde_md.md)] utilizzando le funzionalità di ottimizzazione automatica.
 
 ### <a name="how-does-automatic-tuning-works"></a>Qual è works ottimizzazione automatica?
 
@@ -56,21 +58,21 @@ Correzione automatica di piano è una funzionalità di ottimizzazione automatica
 
 ### <a name="what-is-sql-plan-choice-regression"></a>Che cos'è regressione nella scelta del piano SQL?
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)]può utilizzare i diversi piani SQL per eseguire il [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query. I piani di query dipendono da altri fattori, indici e le statistiche. Il piano ottimale che deve essere utilizzato per eseguire alcune [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query potrebbero essere modificate nel corso del tempo. In alcuni casi, il nuovo piano potrebbe non essere migliore rispetto a quello precedente e il nuovo piano potrebbe causare una regressione delle prestazioni.
+[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] può utilizzare i diversi piani SQL per eseguire il [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query. I piani di query dipendono da altri fattori, indici e le statistiche. Il piano ottimale che deve essere utilizzato per eseguire alcune [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query potrebbero essere modificate nel corso del tempo. In alcuni casi, il nuovo piano potrebbe non essere migliore rispetto a quello precedente e il nuovo piano potrebbe causare una regressione delle prestazioni.
 
  ![Regressione nella scelta del piano SQL](media/plan-choice-regression.png "regressione nella scelta del piano SQL") 
 
 Ogni volta che si nota che la regressione nella scelta del piano, è necessario trovare alcuni validi precedenti, piano e forza anziché corrente utilizzando uno `sp_query_store_force_plan` stored procedure.
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] fornisce informazioni sulle regredite piani e le azioni correttive consigliate.
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] fornisce informazioni sulle regredite piani e le azioni correttive consigliate.
 Inoltre, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] consente di automatizzare il processo completamente e consentire [!INCLUDE[ssde_md](../../includes/ssde_md.md)] correggere gli eventuali problemi riscontrati correlati alle modifiche di piano.
 
 ### <a name="automatic-plan-choice-correction"></a>Correzione scelta del piano automatico
 
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]possono passare automaticamente per l'ultimo piano buona noto ogni volta che viene rilevata la regressione nella scelta del piano.
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] possono passare automaticamente per l'ultimo piano buona noto ogni volta che viene rilevata la regressione nella scelta del piano.
 
 ![Correzione scelta del piano SQL](media/force-last-good-plan.png "correzione scelta del piano SQL") 
 
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]rileva automaticamente qualsiasi potenziale regressione nella scelta del piano tra il piano che deve essere utilizzato anziché il piano non corretto.
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva automaticamente qualsiasi potenziale regressione nella scelta del piano tra il piano che deve essere utilizzato anziché il piano non corretto.
 Quando il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verrà applicata l'ultima noto del piano appropriato, automaticamente consente di monitorare le prestazioni del piano forzato. Se il piano forzato non è un vantaggio rispetto al piano regredito, il nuovo piano sarà unforced e [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verrà compilato un nuovo piano. Se [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verifica che il piano forzato è preferibile rispetto a quello regredita, il piano forzato verrà conservato fino a quando la ricompilazione (ad esempio, al prossimo cambio di statistiche o schema) se è preferibile rispetto al piano regredito.
 
 ### <a name="enabling-automatic-plan-choice-correction"></a>Abilitazione di correzione scelta del piano automatico
@@ -88,7 +90,7 @@ Una volta per attivare la questa opzione, [!INCLUDE[ssde_md](../../includes/ssde
 Senza l'ottimizzazione automatica, gli utenti devono monitorare il sistema periodicamente e cercare le query regredite. Se qualsiasi piano regredite, utente dovrebbe trovare alcuni validi precedenti, piano e forza anziché corrente utilizzando uno `sp_query_store_force_plan` stored procedure. La procedura consigliata, è possibile forzare l'ultimo piano buona noto perché i piani precedenti potrebbero non essere validi a causa di modifiche di indice o statistica. L'utente che impone l'ultimo piano buona noto deve monitorare le prestazioni della query che viene eseguita utilizzando il piano forzato e verificare che tale piano forzato funziona come previsto. In base ai risultati dell'analisi e monitoraggio, è necessario forzare il piano o utente deve individuare un altro modo per ottimizzare la query.
 I piani forzati manualmente è necessario non forzare sempre, poiché il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] deve essere in grado di applicare piani ottimali. L'utente o amministratore di database deve infine annullar il piano utilizzando `sp_query_store_unforce_plan` procedura e lasciare il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] trovare il piano ottimale.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornisce tutte le viste necessarie e le procedure necessarie per monitorare le prestazioni e risolvere i problemi nell'archivio Query.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce tutte le viste necessarie e le procedure necessarie per monitorare le prestazioni e risolvere i problemi nell'archivio Query.
 
 In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], è possibile trovare l'utilizzo delle viste di sistema di archivio Query regressioni nella scelta del piano. In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva e Mostra potenziali regressioni nella scelta del piano e le azioni consigliate che devono essere applicate nel [sys.dm_db_tuning_recommendations &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) visualizzazione. La visualizzazione Mostra informazioni sul problema, l'importanza del problema e dettagli, ad esempio la query identificato, l'ID del piano di regredite, l'ID del piano a cui è stato utilizzato come linea di base per il confronto e [!INCLUDE[tsql_md](../../includes/tsql_md.md)] istruzione che può essere eseguito per correggere il esiste un problema.
 
@@ -136,7 +138,7 @@ FROM sys.dm_db_tuning_recommendations
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Tempo di CPU, modificato da ms 3 a 46 ms | 36 | EXEC sp\_query\_archiviare\_forzare\_piano di 12, 17; | 12 | 28 | 17 | 11.59 | 0
 
-`estimated_gain`rappresenta il numero stimato di secondi che verrebbero salvate se verrà eseguito il piano consigliato anziché il piano corrente. Se il miglioramento è maggiore di 10 secondi, è necessario forzare il piano consigliato anziché il piano corrente. Se sono presenti più errori (ad esempio, i timeout o interrotte esecuzioni) nel piano corrente di in consigliata prevede, la colonna `error_prone` verrebbe impostato sul valore `YES`. Piano soggetta a errore è motivo di un altro motivo per cui è necessario forzare il piano consigliato anziché quello corrente.
+`estimated_gain` rappresenta il numero stimato di secondi che verrebbero salvate se verrà eseguito il piano consigliato anziché il piano corrente. Se il miglioramento è maggiore di 10 secondi, è necessario forzare il piano consigliato anziché il piano corrente. Se sono presenti più errori (ad esempio, i timeout o interrotte esecuzioni) nel piano corrente di in consigliata prevede, la colonna `error_prone` verrebbe impostato sul valore `YES`. Piano soggetta a errore è motivo di un altro motivo per cui è necessario forzare il piano consigliato anziché quello corrente.
 
 Sebbene [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fornisce tutte le informazioni necessarie per identificare le regressioni nella scelta del piano; continua il monitoraggio e risoluzione dei problemi di prestazioni potrebbero essere un'operazione laboriosa. L'ottimizzazione automatica semplifica questo processo.
 
@@ -153,7 +155,7 @@ Indici velocizzare alcune delle query che recuperano i dati dalle tabelle; Tutta
 
 Ricerca del set ottimale di indici che consentono di migliorare le prestazioni delle query che può leggere i dati delle tabelle e hanno un impatto minimo per gli aggiornamenti, potrebbe essere necessario analysis continua e complessi.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]Usa intelligenti e regole avanzate che consentono di analizzare le query, identificare gli indici che sarebbero ottimali per i carichi di lavoro corrente e gli indici potrebbero essere rimossa. Database SQL di Azure consente di disporre di un set minimo necessario di indici che ottimizza le query che recuperano i dati, con un impatto ridotto a icona sul altre query.
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] Usa intelligenti e regole avanzate che consentono di analizzare le query, identificare gli indici che sarebbero ottimali per i carichi di lavoro corrente e gli indici potrebbero essere rimossa. Database SQL di Azure consente di disporre di un set minimo necessario di indici che ottimizza le query che recuperano i dati, con un impatto ridotto a icona sul altre query.
 
 ### <a name="automatic-index-management"></a>Gestione automatica degli indici
 
@@ -171,14 +173,14 @@ Le azioni necessarie per creare gli indici necessari [!INCLUDE[ssazure_md](../..
 
 Senza la gestione automatica degli indici, sarebbe necessario eseguire manualmente una query utente [Sys.dm db_missing_index_details &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) vista per individuare gli indici che potrebbero migliorare le prestazioni, creare indici utilizzando le informazioni fornite in questa vista e manualmente il monitoraggio delle prestazioni della query. Per trovare gli indici che devono essere eliminati, gli utenti devono monitorare le statistiche di utilizzo operativo degli indici per gli indici di ricerca utilizzato raramente.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]semplifica questo processo. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]Analizza il carico di lavoro, identifica le query che è stato possibile eseguire più rapidamente con un nuovo indice e identifica gli indici inutilizzati o duplicati. Ulteriori informazioni sull'identificazione degli indici che devono essere modificati in [trovare indicazioni relative agli indici nel portale di Azure](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal).
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] semplifica questo processo. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] Analizza il carico di lavoro, identifica le query che è stato possibile eseguire più rapidamente con un nuovo indice e identifica gli indici inutilizzati o duplicati. Ulteriori informazioni sull'identificazione degli indici che devono essere modificati in [trovare indicazioni relative agli indici nel portale di Azure](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal).
 
 ## <a name="see-also"></a>Vedere anche  
- [AUTOMATIC_TUNING di ALTER DATABASE SET &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [Sys.database_automatic_tuning_options &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [Sys.dm_db_tuning_recommendations &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
- [Sys.dm db_missing_index_details &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sp_query_store_force_plan &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
- [sp_query_store_unforce_plan &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
- [database_query_store_options &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
+ [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
+ [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
+ [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [Funzioni JSON](../../relational-databases/json/index.md)

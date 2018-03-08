@@ -1,19 +1,18 @@
 ---
 title: La gestione delle transazioni (XMLA) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, transactions
 - XMLA, transactions
@@ -25,33 +24,33 @@ helpviewer_keywords:
 - committing transactions
 - starting transactions
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3c61c2edfbc6b2fad49a5d7e08dced6cbffe6673
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9d7a8aefc8c018c56327cd4b5d0101523032dd60
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="managing-transactions-xmla"></a>Gestione di transazioni (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ogni comando XML for Analysis (XMLA) inviato a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito all'interno del contesto di una transazione nella sessione implicita o esplicita corrente. Per gestire ognuna di queste transazioni, si utilizza il [BeginTransaction](../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md), e [RollbackTransaction](../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) comandi. che consentono di creare transazioni implicite o esplicite, modificare il conteggio dei riferimenti alla transazione nonché di avviare le transazioni ed eseguirne il commit e il rollback.  
+  Ogni comando XML for Analysis (XMLA) inviato a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito all'interno del contesto di una transazione nella sessione implicita o esplicita corrente. Per gestire ognuna di queste transazioni, si utilizza il [BeginTransaction](../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md), e [RollbackTransaction](../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) comandi. che consentono di creare transazioni implicite o esplicite, modificare il conteggio dei riferimenti alla transazione nonché di avviare le transazioni ed eseguirne il commit e il rollback.  
   
 ## <a name="implicit-and-explicit-transactions"></a>Transazioni implicite ed esplicite  
  Una transazione può essere implicita o esplicita, come descritto di seguito.  
   
  **Transazione implicita**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Crea un *implicita* transazione per un XMLA comando se il **BeginTransaction** comando non specifica l'inizio di una transazione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue sempre il commit di una transazione implicita se il comando riesce e ne esegue il rollback se il comando non riesce.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Crea un *implicita* transazione per un XMLA comando se il **BeginTransaction** comando non specifica l'inizio di una transazione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue sempre il commit di una transazione implicita se il comando riesce e ne esegue il rollback se il comando non riesce.  
   
  **Transazione esplicita**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Crea un *esplicita* transazione se il **BeginTransaction** comando avvia una transazione. Tuttavia, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue solo il commit di una transazione esplicita se un **CommitTransaction** comando viene inviato e rollback di una transazione esplicita se un **RollbackTransaction** comando viene inviato.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Crea un *esplicita* transazione se il **BeginTransaction** comando avvia una transazione. Tuttavia, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue solo il commit di una transazione esplicita se un **CommitTransaction** comando viene inviato e rollback di una transazione esplicita se un **RollbackTransaction** comando viene inviato.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inoltre esegue il rollback sia di transazioni implicite che di transazioni esplicite se la sessione corrente termina prima del completamento della transazione attiva.  
   
 ## <a name="transactions-and-reference-counts"></a>Transazioni e conteggi dei riferimenti  
- In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene gestito un conteggio dei riferimenti alla transazione per ogni sessione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non supporta tuttavia transazioni nidificate poiché per ogni sessione viene gestita una sola transazione attiva. Se nella sessione corrente non è presente una transazione attiva, il conteggio dei riferimenti alla transazione è impostato su zero.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene un conteggio dei riferimenti delle transazioni per ogni sessione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non supporta tuttavia transazioni nidificate poiché per ogni sessione viene gestita una sola transazione attiva. Se nella sessione corrente non è presente una transazione attiva, il conteggio dei riferimenti alla transazione è impostato su zero.  
   
  In altre parole, ogni **BeginTransaction** comando incrementa il conteggio dei riferimenti di uno, mentre ogni **CommitTransaction** comando decrementa il conteggio riferimenti di uno. Se un **CommitTransaction** comando imposta il numero di transazioni a zero, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il commit della transazione.  
   

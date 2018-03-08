@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b267fa74daf5c8ea83501eb3daadd5b84dc9cb7f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Microsoft Logistic Regression
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La regressione logistica è una nota tecnica statistica utilizzata per modellare i risultati binari.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La regressione logistica è una nota tecnica statistica utilizzata per modellare i risultati binari.  
   
  Sono disponibili varie implementazioni della regressione logistica nella ricerca statistica, utilizzando tecniche di apprendimento diverse. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression è stato implementato utilizzando una variazione dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network. Questo algoritmo consente di condividere molte delle qualità delle reti neurale ma è più facile per eseguire il training.  
   
@@ -65,7 +64,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="viewing-a-logistic-regression-model"></a>Visualizzazione di un modello di regressione logistica  
  Per esplorare il modello, è possibile utilizzare il Visualizzatore Microsoft Neural Network oppure Microsoft Generic Content Tree Viewer.  
   
- Quando il modello viene visualizzato tramite il Visualizzatore Microsoft Neural Network, Analysis Services mostra i fattori che contribuiscono a un determinato risultato, in ordine di importanza. È possibile scegliere un attributo e i valori da confrontare. Per altre informazioni, vedere [Visualizzare un modello usando il Visualizzatore Microsoft Neural Network](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
+ Quando il modello viene visualizzato tramite il Visualizzatore Microsoft Neural Network, Analysis Services mostra i fattori che contribuiscono a un determinato risultato, in ordine di importanza. È possibile scegliere un attributo e i valori da confrontare. Per altre informazioni, vedere [Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
  Per ulteriori informazioni, è possibile esplorare i dettagli del modello tramite Microsoft Generic Content Tree Viewer. Il contenuto di un modello di regressione logistica include un nodo marginale che mostra tutti gli input utilizzati per il modello e le subnet per gli attributi stimabili. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   

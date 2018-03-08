@@ -1,5 +1,5 @@
 ---
-title: sp_update_category (Transact-SQL) | Documenti Microsoft
+title: sp_update_category (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_category
 - sp_update_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fad21c3db995f5eaa57d3f31c6ed057b7c9790b8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: fab5ea9aea708af028114ef59e9274931c8257f9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,14 +54,14 @@ sp_update_category
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**AVVISO**|Aggiorna una categoria di avvisi.|  
-|**PROCESSO**|Aggiorna una categoria di processi.|  
+|**ALERT**|Aggiorna una categoria di avvisi.|  
+|**JOB**|Aggiorna una categoria di processi.|  
 |**(OPERATORE)**|Aggiorna una categoria di operatori.|  
   
  [  **@name =**] **'***vecchio_nome***'**  
  Nome corrente della categoria. *vecchio_nome*è **sysname**, non prevede alcun valore predefinito.  
   
- [  **@new_name =**] **'***nuovo_nome***'**  
+ [ **@new_name =**] **'***new_name***'**  
  Nuovo nome della categoria. *nuovo_nome*è **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -67,7 +70,7 @@ sp_update_category
 ## <a name="remarks"></a>Osservazioni  
  **sp_update_category** deve essere eseguita la **msdb** database.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, è necessario consentire agli utenti di **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
@@ -85,9 +88,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.facet.f1
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 741f4ddad940038388efc7cb6d1c9480ee428fa0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08c7a77bd90f67e325960cd6c6725220abf04596
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Finestra di dialogo Proprietà facet, pagina Generale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa finestra di dialogo per visualizzare le proprietà di un facet della gestione basata su criteri. Ogni facet può essere applicato a uno o più tipi di destinazione, ad esempio server, database o tabella. Utilizzare questa pagina per visualizzare quali tipi di destinazione sono correlati al facet corrente. Le proprietà di un facet vengono definite durante la creazione del facet e non possono essere modificate in questa pagina.  

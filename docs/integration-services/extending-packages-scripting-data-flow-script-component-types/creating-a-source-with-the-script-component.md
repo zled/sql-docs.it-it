@@ -8,26 +8,28 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Script component [Integration Services], source components
 - output columns [Integration Services]
 - sources [Integration Services], components
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 397039d98c68bc6828473099091a70b8777f350d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b31d28b646ff7f1727809179398906a3bab75e61
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Creazione di un'origine con il componente script
   Utilizzare un componente di origine nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per caricare dati da un'origine dati da passare a trasformazioni e destinazioni a valle. Normalmente, ci si connette all'origine dati tramite una gestione connessione esistente.  
@@ -131,7 +133,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Aggiungere un nuovo componente script all'area di progettazione del flusso di dati e configurarlo come origine.  
   
-3.  Aprire **Editor trasformazione Script**. Nella pagina **Input e output** rinominare l'output predefinito con un nome più descrittivo, ad esempio **MyAddressOutput**, quindi aggiungere e configurare le due colonne di output, **AddressID** e **City**.  
+3.  Aprire l'**Editor trasformazione Script**. Nella pagina **Input e output** rinominare l'output predefinito con un nome più descrittivo, ad esempio **MyAddressOutput**, quindi aggiungere e configurare le due colonne di output, **AddressID** e **City**.  
   
     > [!NOTE]  
     >  Assicurarsi di modificare il tipo di dati della colonna di output **City** in DT_WSTR.  
@@ -267,7 +269,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Aggiungere un nuovo componente script all'area di progettazione del flusso di dati e configurarlo come origine.  
   
-4.  Aprire **Editor trasformazione Script**. Nella pagina **Input e output** rinominare l'output predefinito con un nome più descrittivo, ad esempio **MyAddressOutput**. Aggiungere e configurare le due colonne di output, **AddressID** e **City**.  
+4.  Aprire l'**Editor trasformazione Script**. Nella pagina **Input e output** rinominare l'output predefinito con un nome più descrittivo, ad esempio **MyAddressOutput**. Aggiungere e configurare le due colonne di output, **AddressID** e **City**.  
   
 5.  Nella pagina **Gestioni connessioni** aggiungere o creare la gestione connessione file flat usando un nome descrittivo, ad esempio **MyFlatFileSrcConnectionManager**.  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c7a221f337f54f625840fa724db01545a7af2c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75d12d94fb1d58242036abbc91e692414f9da3b5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Attività e funzionalità di Utilità SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gli utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessitano di gestire l'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel suo complesso e questa esigenza viene soddisfatta in questa versione tramite il concetto di gestione delle applicazioni e multiserver in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicazione del livello dati gestita da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere monitorata in base alle definizioni dei criteri globali o alle definizioni dei criteri singoli.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  Utilizzare gli argomenti seguenti per iniziare a utilizzare Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |||  

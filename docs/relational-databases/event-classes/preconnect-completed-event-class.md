@@ -8,35 +8,38 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PreConnect:Completed Event Class
+helpviewer_keywords:
+- PreConnect:Completed Event Class
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ba5e00939d88a810ac709c451d3d9a26706d218
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 380092bc284bdd6ba85f7f7a3d624734b65559ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="preconnectcompleted-event-class"></a>classe di evento PreConnect:Completed
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento PreConnect:Completed indica la fine dell'esecuzione di un trigger LOGON o di una funzione di classificazione di Resource Governor.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La classe di evento PreConnect:Completed indica la fine dell'esecuzione di un trigger LOGON o di una funzione di classificazione di Resource Governor.  
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>Colonne di dati della classe di evento PreConnect:Completed  
   
-|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|EventClass|**int**|216|27|No|  
+|EventClass|**int**|216|27|no|  
 |SPID|**int**|ID del processo del server che genera l'evento.|12|Sì|  
 |EventSubClass|**int**|1 per la funzione di classificazione definita dall'utente.|21|Sì|  
 |StartTime|**datetime**|Ora di avvio della funzione di classificazione definita dall'utente.|14|Sì|  
 |EndTime|**datetime**|Ora di avvio della funzione di classificazione definita dall'utente.|15|Sì|  
-|Durata|**bigint**|Durata della funzione di classificazione in microsecondi.|13|Sì|  
+|Duration|**bigint**|Durata della funzione di classificazione in microsecondi.|13|Sì|  
 |ObjectID|**int**|ID dell'oggetto di classificazione definito dall'utente.|22|Sì|  
 |CPU|**int**|Utilizzo della CPU in millisecondi.|18|Sì|  
 |Reads|**int**|Numero di letture logiche.|16|Sì|  

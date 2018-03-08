@@ -8,26 +8,28 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], parameters
 - user-defined functions [SQL Server], parameters
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 697268f348d50079d2d3f740ea56b9dd28944792
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ab101583f2e16a13dc42d8b8800c2befec2f536f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="parameters"></a>Parametri
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] I parametri vengono usati per lo scambio di dati tra stored procedure/funzioni e l'applicazione o lo strumento con cui sono state chiamate: 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+I parametri vengono utilizzati per lo scambio di dati tra stored procedure/funzioni e l'applicazione o lo strumento con cui sono state chiamate. 
 
 *  I parametri di input consentono al chiamante di passare un valore di dati alla stored procedure o alla funzione.
 *  I parametri di output consentono alla stored procedure di passare nuovamente al chiamante un valore di dati o una variabile di cursore. Con le funzioni definite dall'utente non è possibile specificare parametri di output.

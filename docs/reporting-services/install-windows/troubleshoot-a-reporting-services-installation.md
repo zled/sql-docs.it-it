@@ -1,27 +1,27 @@
 ---
 title: Risolvere i problemi di installazione di Reporting Services | Microsoft Docs
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-caps.latest.revision: "16"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a1e9828a77aac1449f7dbd273ec8deecddf4384a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d71e0f0bfd70ec17552a6114c4378bd79bdfff25
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Risolvere i problemi di installazione di Reporting Services
 
@@ -125,7 +125,7 @@ ms.lasthandoff: 12/05/2017
   
  Se la **Shell di gestione di SharePoint 2013/2016** è aperta quando viene completata una delle soluzioni alternative, chiuderla e riaprirla.  
   
- Per altre informazioni, vedere quanto segue:  
+ Per ulteriori informazioni, vedere quanto segue:  
   
 -   [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -276,10 +276,10 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_additional"></a> Risorse aggiuntive  
  Di seguito sono riportate ulteriori risorse disponibili per la risoluzione dei problemi:  
   
--   Wiki di TechNet: argomenti per la [risoluzione dei problemi di SQL Server Reporting Services (SSRS) in modalità integrata SharePoint](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   Wiki di TechNet: [Risoluzione dei problemi di SQL Server Reporting Services (SSRS) in modalità integrata SharePoint 2010](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
 -   [Forum: SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![Impostazioni SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni SharePoint")[Inviare commenti e suggerimenti e informazioni di contatto tramite Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+-   Si desidera sottoporre commenti o altre domande? Visitare [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
   
   

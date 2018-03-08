@@ -3,7 +3,7 @@ title: Esecuzione di Test case (SybaseToSQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 686e7701014a85e141fed9d4f9bbcecdb029f015
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b78d26a492a73964c39b15c678103537cd9abe1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>Esecuzione di Test case (SybaseToSQL)
 Quando SSMA Tester esegue un Test Case, esegue gli oggetti selezionati per il test e crea un report sui risultati della verifica. Se i risultati sono identici in entrambe le piattaforme, il test completata. La corrispondenza degli oggetti tra Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] viene determinato in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
@@ -43,7 +43,7 @@ Una volta completato il test, viene creato il Report di Test Case. Fare clic su 
   
 ## <a name="test-case-execution-steps"></a>Passaggi per l'esecuzione dei test Case  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
 SSMA Tester controlla se vengono soddisfatti tutti i prerequisiti per l'esecuzione di test prima dell'inizio del test. Se alcune condizioni non vengono soddisfatti, viene visualizzato un messaggio di errore.  
   
 ### <a name="initialization"></a>Inizializzazione  
@@ -53,19 +53,19 @@ Si supponga che la tabella verificata viene denominata USER_TABLE. Per una tabel
   
 I seguenti oggetti vengono creati Sybase in database SSMATESTER2005db o SSMATESTER2008db e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nel database ssmatesterdb_syb.  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Description|  
 |--------|--------|---------------|  
 |Trg $ USER_TABLE|Trigger|Controllo delle modifiche nella tabella verificata di trigger.|  
 |USER_TABLE$ Aud|Tabella|Tabella in cui vengono salvate le righe eliminate o sovrascritte.|  
 |USER_TABLE$ AudID|Tabella|Tabella in cui vengono salvate le righe nuove e modificate.|  
-|USER_TABLE|Visualizza|Rappresentazione semplificata delle modifiche nella tabella.|  
-|$ USER_TABLE nuovo|Visualizza|Rappresentazione semplificata di righe inserite e sovrascritte.|  
-|USER_TABLE$ new_id|Visualizza|Identificazione di righe inserite e modificate.|  
-|$ USER_TABLE precedente|Visualizza|Rappresentazione semplificata di righe eliminate o sovrascritte.|  
+|USER_TABLE|Vista|Rappresentazione semplificata delle modifiche nella tabella.|  
+|$ USER_TABLE nuovo|Vista|Rappresentazione semplificata di righe inserite e sovrascritte.|  
+|USER_TABLE$ new_id|Vista|Identificazione di righe inserite e modificate.|  
+|$ USER_TABLE precedente|Vista|Rappresentazione semplificata di righe eliminate o sovrascritte.|  
   
 L'oggetto seguente viene creato nel database della tabella verificato Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Description|  
 |--------|--------|---------------|  
 |Trg $ USER_TABLE|Trigger|Controllo delle modifiche nella tabella verificata di trigger.|  
   

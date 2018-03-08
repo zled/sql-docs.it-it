@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,21 +13,22 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Field collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 42748fb897d2ec6a7ed226f35852b828ddf82f71
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0ca92f0ab46f11fad94d4dacd6399bc2c97dd8b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-ado---wfc-syntax"></a>Campo (ADO - sintassi WFC)
-## <a name="package-commswfcdata"></a>pacchetto com.ms. wfc.  
+## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="methods"></a>Metodi  
   
@@ -73,7 +75,7 @@ public AdoProperties getProperties()
   
  ADO/WFC implementa il **valore** proprietà con il **getValue** metodo, che restituisce un oggetto VARIANT; e **setValue** metodo, che accetta una variante come argomento. Le varianti sono altamente efficiente in alcuni linguaggi, ad esempio Microsoft Visual Basic.  
   
- Oltre al **valore** proprietà ADO/WFC include *della funzione di accesso* metodi che utilizzano tipi di dati Java per ottenere e impostare il contenuto di **campo** oggetti. La maggior parte di questi metodi ha il formato dei nomi **ottenere***DataType* o **impostare***DataType*.  
+ Oltre al **valore** proprietà ADO/WFC include *della funzione di accesso* metodi che utilizzano tipi di dati Java per ottenere e impostare il contenuto di **campo** oggetti. La maggior parte di questi metodi ha il formato dei nomi **ottenere * * * il tipo di dati* o **impostare * * * il tipo di dati*.  
   
  Esistono due eccezioni degno di nota: una del **getObject** metodi restituisce un oggetto convertito in una classe specificata. Non esiste alcun **importante** proprietà; viene invece utilizzato un **isNull** proprietà che restituisce un valore booleano che indica se il campo è null.  
   

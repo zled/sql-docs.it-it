@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], queries
 - templates [SQLXML], annotated XSD schemas in queries
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a873bc0b382c1b81daed1cedb6ebb6229296ba7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cd63b4426bdc1b4adf9020b5cf4bd3e50622528
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Utilizzo di schemi XSD con annotazioni in query (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]È possibile specificare una query su uno schema con annotazioni per recuperare i dati dal database, specificando le query XPath in un modello sullo schema XSD.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+È possibile specificare query su uno schema con annotazioni per recuperare dati dal database specificando in un modello query XPath sullo schema XSD.  
   
  Il  **\<SQL: XPath-query >** elemento consente di specificare una query XPath sulla vista XML definita dallo schema con annotazioni. Lo schema con annotazioni su cui è possibile eseguire la query XPath viene identificato tramite il **dello schema di mapping** attributo del  **\<SQL: XPath-query >** elemento.  
   
@@ -145,6 +147,6 @@ ms.lasthandoff: 11/17/2017
 </sql:xpath-query>  
 ```  
   
- Il modello specifica una query XPath ma non specifica uno schema di mapping. Pertanto, questa query viene considerata come un **dbobject** query di tipo in cui Production. ProductPhoto è il nome della tabella e @ProductPhotoID= '100' è un predicato che individua una foto del prodotto con il valore ID 100. @LargePhotoè la colonna da cui recuperare il valore.  
+ Il modello specifica una query XPath ma non specifica uno schema di mapping. Pertanto, questa query viene considerata come un **dbobject** query di tipo in cui Production. ProductPhoto è il nome della tabella e @ProductPhotoID= '100' è un predicato che individua una foto del prodotto con il valore ID 100. @LargePhoto è la colonna da cui recuperare il valore.  
   
   

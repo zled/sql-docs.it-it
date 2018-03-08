@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 048cf935a981c0c86c1d11ec90c4064abea03ac9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c0d92d44a11aad84fe249649ef921123f78aa0b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Raccolte predefinite - Riferimenti alle raccolte predefinite Globals e Users (Generatore report)
   La raccolta di campi predefinita, in cui sono incluse le raccolte **Globals** e **User** , rappresenta i valori globali forniti da Reporting Services durante l'elaborazione di un report. La raccolta **Globals** fornisce valori come il nome del report, l'ora di inizio dell'elaborazione e i numeri di pagina correnti per l'intestazione o il piè di pagina. La raccolta **User** fornisce le impostazioni relative a ID utente e lingua. Questi valori possono essere usati nelle espressioni per filtrare i risultati in un report.  
@@ -34,17 +32,17 @@ ms.lasthandoff: 12/05/2017
 ## <a name="using-the-globals-collection"></a>Utilizzo della raccolta Globals  
  La raccolta **Globals** contiene le variabili globali per il report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&ReportName]`. Nella tabella seguente vengono descritti i membri della raccolta **Globals** .  
   
-|**Membro**|**Tipo**|**Description**|  
+|**Membro**|**Tipo**|**Descrizione**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|Data e ora di inizio dell'esecuzione del report.|  
-|PageNumber|**Valore intero**|Numero di pagina corrente relativo a interruzioni di pagina che ne determinano la reimpostazione. All'inizio dell'elaborazione del report, il valore è impostato su 1. Il numero di pagina aumenta per ogni pagina di cui è stato eseguito il rendering.<br /><br /> Per numerare le pagine all'interno di interruzioni di pagina per un rettangolo, un'area dati, un gruppo di aree dati o una mappa, nella proprietà PageBreak impostare la proprietà ResetPageNumber su **True**. Non supportato dai gruppi di gerarchie di colonna Tablix.<br /><br /> La proprietà PageNumber può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
+|PageNumber|**Integer**|Numero di pagina corrente relativo a interruzioni di pagina che ne determinano la reimpostazione. All'inizio dell'elaborazione del report, il valore è impostato su 1. Il numero di pagina aumenta per ogni pagina di cui è stato eseguito il rendering.<br /><br /> Per numerare le pagine all'interno di interruzioni di pagina per un rettangolo, un'area dati, un gruppo di aree dati o una mappa, nella proprietà PageBreak impostare la proprietà ResetPageNumber su **True**. Non supportato dai gruppi di gerarchie di colonna Tablix.<br /><br /> La proprietà PageNumber può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
 |ReportFolder|**String**|Percorso completo della cartella contenente il report. Non include l'URL del server di report.|  
 |ReportName|**String**|Nome del report archiviato nel database del server di report.|  
 |ReportServerUrl|**String**|URL del server di report in cui il report è in esecuzione.|  
-|TotalPages|**Valore intero**|Numero totale di pagine relativo alle interruzioni di pagina che determinano la reimpostazione di PageNumber. Se non sono impostate interruzioni di pagina, questo valore corrisponde a OverallTotalPages.<br /><br /> La proprietà TotalPages può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
+|TotalPages|**Integer**|Numero totale di pagine relativo alle interruzioni di pagina che determinano la reimpostazione di PageNumber. Se non sono impostate interruzioni di pagina, questo valore corrisponde a OverallTotalPages.<br /><br /> La proprietà TotalPages può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
 |PageName|**String**|Nome della pagina. All'inizio dell'elaborazione del report, il valore viene impostato da una proprietà del report, InitialPageName. Quando ciascun elemento del report viene elaborato, questo valore viene sostituito con il valore corrispondente di PageName da un rettangolo, un'area dati, un gruppo di aree dati o una mappa. Non supportato dai gruppi di gerarchie di colonna Tablix.<br /><br /> La proprietà PageName può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
 |OverallPageNumber|**Valore intero**|Numero della pagina corrente per l'intero report. ResetPageNumber non ha effetto su questo valore.<br /><br /> La proprietà OverallPageNumber può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
-|OverallTotalPages|**Valore intero**|Numero complessivo di pagine per l'intero report. ResetPageNumber non ha effetto su questo valore.<br /><br /> La proprietà OverallTotalPages può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
+|OverallTotalPages|**Integer**|Numero complessivo di pagine per l'intero report. ResetPageNumber non ha effetto su questo valore.<br /><br /> La proprietà OverallTotalPages può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
 |RenderFormat|**RenderFormat**|Informazioni sulla richiesta di rendering corrente.<br /><br /> Per altre informazioni, vedere "RenderFormat" nella sezione successiva.|  
   
  I membri della raccolta **Globals** restituiscono una variante. Se si desidera usare un membro di questa raccolta in un'espressione che richiede un tipo di dati specifico, è necessario eseguire dapprima il cast della variabile. Per convertire, ad esempio, la variante relativa alla data e all'ora di esecuzione in un formato di data, usare `=CDate(Globals!ExecutionTime)`. Per altre informazioni, vedere [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
 |Membro|Tipo|Description|  
 |------------|----------|-----------------|  
-|Nome|**String**|Nome del renderer come registrato nel file di configurazione RSReportServer.<br /><br /> Disponibile durante determinate parti del ciclo di elaborazione/rendering del report.|  
+|nome|**String**|Nome del renderer come registrato nel file di configurazione RSReportServer.<br /><br /> Disponibile durante determinate parti del ciclo di elaborazione/rendering del report.|  
 |IsInteractive|**Boolean**|Specifica se nella richiesta di rendering corrente è usato un formato di rendering interattivo.|  
 |DeviceInfo|Raccolta nome/valore di sola lettura|Coppie chiave/valore per i parametri deviceinfo per la richiesta di rendering corrente.<br /><br /> È possibile specificare i valori stringa usando la chiave o un indice nella raccolta.|  
   
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/05/2017
   
  Nella tabella seguente vengono descritti i membri della raccolta **User** .  
   
-|**Membro**|**Tipo**|**Description**|  
+|**Membro**|**Tipo**|**Descrizione**|  
 |----------------|--------------|---------------------|  
 |**Lingua**|**String**|Lingua dell'utente che esegue il report. Ad esempio, `en-US`.|  
 |**UserID**|**String**|ID dell'utente che esegue il report. Se si usa l'autenticazione di Windows, questo valore corrisponde all'account di dominio dell'utente corrente. Il valore è determinato dall'estensione di sicurezza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , che può usare l'autenticazione di Windows o quella personalizzata.|  

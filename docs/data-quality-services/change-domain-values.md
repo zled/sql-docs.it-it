@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ebf88408f523594fc9a74f49d5d613a2d059b36
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 43d5425678270fb224b0a55e70c5f7928545ffaa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="change-domain-values"></a>Modificare i valori di dominio
   In questo argomento viene descritto come modificare e aumentare i metadati in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Dopo avere generato le informazioni mediante l'individuazione delle informazioni, importato le informazioni nella Knowledge Base o nei domini oppure basato una Knowledge Base su un'altra Knowledge Base, è possibile modificare in modo interattivo i valori dei dati. La generazione della Knowledge Base non solo sfrutta i processi computerizzati, ma consente di utilizzare informazioni personalizzate per verificare i valori dei dati e modificarli nei modi seguenti:  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per modificare i valori di dominio, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Change"></a> Modificare i valori di dominio  
@@ -90,20 +90,20 @@ ms.lasthandoff: 11/20/2017
   
     -   **Imposta il valore di dominio selezionato come valore iniziale del gruppo**: per modificare il valore iniziale del gruppo, selezionare un valore nel gruppo non designato come valore iniziale, quindi fare clic sul pulsante **Imposta il valore di dominio selezionato come valore iniziale del gruppo** . In questo modo il valore iniziale verrà impostato come sostituzione dell'altro valore. Questa operazione funziona solo se sono stati impostati due o più valori raggruppati e si desidera modificare il valore iniziale rispetto al valore designato da DQS. Si noti che il valore iniziale viene indicato da una riga blu con il valore in grassetto.  
   
-7.  **Correttore ortografico**: se un valore ha una sottolineatura rossa ondulata, il Correttore ortografico sta suggerendo una correzione al valore. Fare clic con il pulsante destro del mouse sul valore con la sottolineatura e selezionare una correzione, se appropriata. Il tipo di valore diventa (o rimane) in errore e la correzione verrà aggiunta alla colonna **Correggi in** . Fare clic sulla freccia in giù per visualizzare ulteriori correzioni proposte. Immettere una correzione manualmente per aggiungerla al dizionario del Correttore ortografico e poterla selezionare come correzione. Per ulteriori informazioni, vedere [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) e [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+7.  **Correttore ortografico**: se un valore ha una sottolineatura rossa ondulata, il Correttore ortografico sta suggerendo una correzione al valore. Fare clic con il pulsante destro del mouse sul valore con la sottolineatura e selezionare una correzione, se appropriata. Il tipo di valore diventa (o rimane) in errore e la correzione verrà aggiunta alla colonna **Correggi in** . Fare clic sulla freccia in giù per visualizzare ulteriori correzioni proposte. Immettere una correzione manualmente per aggiungerla al dizionario del Correttore ortografico e poterla selezionare come correzione. Per ulteriori informazioni, vedere [Utilizzare il correttore ortografico DQS](../data-quality-services/use-the-dqs-speller.md) e [Imposta proprietà del dominio](../data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Per utilizzare il Correttore ortografico, è possibile abilitarlo nella pagina **Proprietà dominio** o, se è disabilitato nella pagina **Proprietà dominio** , è possibile fare clic sull'icona **Abilita/Disabilita correttore ortografico** nella pagina **Valori di dominio** per abilitarlo in tale pagina.  
   
 8.  **Aggiungi nuovo valore di dominio**: fare clic su questa opzione per aggiungere una riga alla fine della tabella. Dopo avere immesso un valore, la riga verrà riposizionata in ordine alfabetico preceduta da un asterisco per indicare che si tratta di una voce nuova.  
   
-9. **Importa valori di dominio da Excel**: per aggiungere nuovi valori da un foglio di calcolo di Excel, fare clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionare **Importa valori di dominio da Excel**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Per altre informazioni, vedere [Import Values from an Excel File into a Domain](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
+9. **Importa valori di dominio da Excel**: per aggiungere nuovi valori da un foglio di calcolo di Excel, fare clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionare **Importa valori di dominio da Excel**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Per altre informazioni, vedere [Importare i valori da un file di Excel in un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
 10. **Importa valori progetto**: per aggiungere nuovi valori da un progetto Data Quality, fare clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionare **Importa valori progetto**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Selezionare il progetto da cui si desidera importare i valori, quindi fare clic su **OK**. Verranno visualizzati i valori importati. Fare clic su **Fine**. Per ulteriori informazioni, vedere Importare i valori di progetto in un dominio.  
   
 11. **Elimina valori di dominio selezionati**: per rimuovere uno o più valori esistenti dal dominio, selezionare i valori nella tabella dei valori, quindi fare clic sull'icona **Elimina valori di dominio selezionati** . Non è possibile eliminare il valore DQS_NULL, pertanto se si scelgono più valori da eliminare e il valore DQS_NULL è tra questi, l'operazione non riuscirà.  
   
-12. Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+12. Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Completamento: fasi successive alla modifica dei valori di dominio  
  Dopo avere modificato i valori di dominio, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  

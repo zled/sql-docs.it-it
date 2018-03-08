@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: guest privileges in RDS [ADO]
+helpviewer_keywords:
+- guest privileges in RDS [ADO]
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6820750d28fde85db93e4495a31963411554da42
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4c9e1f3dace4916b7d8044a5b21f480bacb04238
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Concessione dei privilegi Guest in un Computer Server Web
 L'account del server Web anonimo (IUSR_*ComputerName*) deve essere aggiunto al gruppo locale utenti guest nel computer server Web per l'utilizzo di RDS.  
@@ -42,6 +44,6 @@ L'account del server Web anonimo (IUSR_*ComputerName*) deve essere aggiunto al g
   
 5.  Se l'account del server Web anonimo non vengono visualizzati nell'elenco di **Seleziona utenti o gruppi** finestra di dialogo digitare il nome (IUSR_*ComputerName*) nella casella vuota nella parte inferiore e quindi fare clic su **Aggiungi** .  
   
-6.  Fare clic su **OK**.
+6.  Scegliere **OK**.
 
 

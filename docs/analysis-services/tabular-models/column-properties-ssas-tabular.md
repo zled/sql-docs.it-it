@@ -1,34 +1,33 @@
 ---
-title: "Le proprietà delle colonne (SSAS tabulare) | Documenti Microsoft"
+title: "Proprietà colonna | Documenti Microsoft"
 ms.custom: 
-ms.date: 05/23/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.columnprop.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ce23f4ec3f28ed2057ac2433615b1ab4fb98938a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b4198d0d71f5c0d14c12391426f4ac4397ede93c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="column-properties-ssas-tabular"></a>Column Properties (SSAS Tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In questo argomento vengono descritte le proprietà di colonna di modello tabulare.  
+# <a name="column-properties"></a>Proprietà delle colonne 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+In questo articolo vengono descritte le proprietà di colonna di modello tabulare.  
   
 >  [!NOTE]  
 >  Alcune proprietà non sono supportate in tutti i livelli di compatibilità.    
@@ -48,10 +47,10 @@ ms.lasthandoff: 12/08/2017
 |**Formato dati**|Determinato automaticamente durante l'importazione.|Viene specificato il formato di visualizzazione da utilizzare per i dati in questa colonna. Per questa proprietà sono disponibili le opzioni seguenti:<br /><br /> **Generale**<br /><br /> **Decimal Number**<br /><br /> **Numero intero**<br /><br /> **Currency**<br /><br /> **Percentuale**<br /><br /> **Notazione scientifica**<br /><br /> Dopo aver impostato un formato dati, è possibile impostare proprietà specifiche per ogni formato. Ad esempio, se si sceglie il formato **Valuta** , è possibile impostare il numero di posizioni decimali visibili e scegliere il separatore delle migliaia e il simbolo di valuta.<br /><br /> <br /><br /> Se nei valori della colonna sono incluse immagini, vedere **Immagine rappresentativa**.|  
 |**Tipo di dati**|Determinato automaticamente durante l'importazione.|Viene specificato il tipo di dati per tutti i valori nella colonna.|  
 |**Description**||Descrizione del testo della colonna.<br /><br /> In determinati client di creazione di report, se un utente finale posiziona il cursore su questa colonna nell'elenco di campi, la descrizione viene visualizzata come descrizione comando.|  
-|**Hidden**|False|Viene specificato se la colonna è nascosta dalla visualizzazione negli elenchi dei campi dello strumento client di creazione report.<br /><br /> Impostare questa proprietà su **True** per nascondere questa colonna nella visualizzazione. Ad esempio, colonne contenenti identificatori o chiavi non sono in genere utili all'utente finale.<br /><br /> Se si nasconde una colonna dalla visualizzazione nello strumento client di creazione report, il campo non viene eliminato nei dati del modello. Tale campo è comunque visibile se viene creata una query sul contenuto del modello. Una colonna nascosta può ancora essere utilizzata per il raggruppamento o l'ordinamento.<br /><br /> La proprietà **Nascosta** non fornisce alcuna forma di sicurezza dei dati. Per proteggere i dati, utilizzare filtri di riga nei ruoli. Per altre informazioni, vedere [Ruoli &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md).|  
+|**Hidden**|False|Viene specificato se la colonna è nascosta dalla visualizzazione negli elenchi dei campi dello strumento client di creazione report.<br /><br /> Impostare questa proprietà su **True** per nascondere questa colonna nella visualizzazione. Ad esempio, colonne contenenti identificatori o chiavi non sono in genere utili all'utente finale.<br /><br /> Se si nasconde una colonna dalla visualizzazione nello strumento client di creazione report, il campo non viene eliminato nei dati del modello. Tale campo è comunque visibile se viene creata una query sul contenuto del modello. Una colonna nascosta può ancora essere utilizzata per il raggruppamento o l'ordinamento.<br /><br /> La proprietà **Nascosta** non fornisce alcuna forma di sicurezza dei dati. Per proteggere i dati, utilizzare filtri di riga nei ruoli. Per ulteriori informazioni, vedere [ruoli](../../analysis-services/tabular-models/roles-ssas-tabular.md).|  
 |**Ordina per colonna**||Viene specificata un'altra colonna per ordinare i valori in questa colonna. Tra le due colonne deve esistere una relazione.<br /><br /> Questo valore deve essere il nome di una colonna esistente. Non è possibile specificare una formula o una misura.|  
 
- **Varie**  
+ **Misc.**  
   
 |Proprietà|Impostazione predefinita|Description|  
 |--------------|---------------------|-----------------|  

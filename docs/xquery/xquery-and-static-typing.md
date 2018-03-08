@@ -8,27 +8,30 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - XQuery, static typing
 - static typing
 - checking static types
 - inference [XQuery]
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2861a4b1460bebf51ea138678dd797e5f0048a41
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 41c21d1689e97b3939d4c479395e5af217e39897
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xquery-and-static-typing"></a>XQuery e tipizzazione statica
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +41,13 @@ ms.lasthandoff: 12/05/2017
 ## <a name="static-type-inference"></a>Inferenza dei tipi statici  
  L'inferenza dei tipi statici determina il tipo restituito di un'espressione considerando i tipi statici dei parametri di input e la semantica statica dell'operazione e derivando il tipo statico del risultato. Ad esempio, il tipo statico dell'espressione 1 + 2,3 viene determinato nel modo seguente:  
   
--   Il tipo statico di 1 è **xs: integer** e il tipo statico di 2,3 è **xs: decimal**. In base alla semantica dinamica, la semantica statica del  **+**  operazione converte l'intero in un numero decimale e quindi restituisce un valore decimale. Il tipo statico derivato è **xs: decimal**.  
+-   Il tipo statico di 1 è **xs:integer** e il tipo statico di 2,3 è **xs:decimal**. In base alla semantica dinamica, la semantica statica del **+** operazione converte l'intero in un numero decimale e quindi restituisce un valore decimale. Il tipo statico derivato sarebbe **xs:decimal**.  
   
  Per le istanze XML non tipizzate, sono disponibili tipi speciali per indicare che i dati non sono tipizzati. Tali informazioni vengono utilizzate durante il controllo dei tipi statici e per l'esecuzione di determinati cast impliciti.  
   
- Per i dati tipizzati, il tipo di input viene derivato dalla raccolta di XML Schema che vincola l'istanza con tipo di dati XML. Ad esempio, se lo schema consente solo gli elementi di tipo **xs: integer**, i risultati di un'espressione di percorso utilizza tale elemento saranno zero o più elementi di tipo **xs: integer**. Questo valore viene espresso attualmente tramite un'espressione, ad esempio `element(age,xs:integer)*` in cui l'asterisco (\*) indica la cardinalità del tipo risultante. In questo esempio, l'espressione può restituire zero o più elementi di nome "age" e tipo **xs: integer**. Altre cardinalità sono esattamente uno e sono espressi usando il nome del tipo da solo, zero o uno, espresso con un punto interrogativo (**?**) e 1 o più, espresso mediante un segno più (**+**) .  
+ Per i dati tipizzati, il tipo di input viene derivato dalla raccolta di XML Schema che vincola l'istanza con tipo di dati XML. Ad esempio, se lo schema consente solo gli elementi di tipo **xs:integer**, i risultati di un'espressione di percorso utilizza tale elemento saranno zero o più elementi di tipo **xs:integer**. Questo valore viene espresso attualmente tramite un'espressione, ad esempio `element(age,xs:integer)*` in cui l'asterisco (\*) indica la cardinalità del tipo risultante. In questo esempio, l'espressione può restituire zero o più elementi con nome "age" e tipo **xs:integer**. Altre cardinalità corrispondono esattamente a uno, vengono espressi utilizzando il nome del tipo; zero o più, espresso con un punto interrogativo (**?**), 1 o più, espresso con un segno più (**+**).  
   
- Talvolta, mediante l'inferenza dei tipi statici è possibile dedurre che un'espressione restituirà sempre una sequenza vuota. Ad esempio, se un'espressione di percorso su un tipo di dati XML tipizzato Cerca un \<nome > elemento all'interno di un \<cliente > elemento (nome cliente /), ma lo schema non consente un \<nome > all'interno di un \<cliente >, l'inferenza del tipo statico dedurrà il risultato sarà vuoto. Questo verrà utilizzato per rilevare query non corrette e verrà segnalato come un errore statico, a meno che l'espressione sia () o **dati (())**.  
+ Talvolta, mediante l'inferenza dei tipi statici è possibile dedurre che un'espressione restituirà sempre una sequenza vuota. Ad esempio, se un'espressione di percorso su un tipo di dati XML tipizzato Cerca un \<nome > elemento all'interno di un \<cliente > elemento (nome cliente /), ma lo schema non consente un \<nome > all'interno di un \<cliente >, l'inferenza del tipo statico dedurrà il risultato sarà vuoto. Questo verrà utilizzato per rilevare query non corrette e verrà segnalato come errore statico, a meno che l'espressione sia () o **dati ( () )**.  
   
  Le regole di inferenza dettagliate sono indicate nella semantica formale delle specifiche XQuery. Microsoft ha modificato solo in misura minima tali regole per utilizzare istanze tipizzate con tipo di dati XML. La modifica più importante rispetto allo standard consiste nel fatto che il nodo di documento implicito conosce il tipo dell'istanza con tipo di dati XML. Di conseguenza, un'espressione di percorso con formato /age verrà tipizzata esattamente in base a tali informazioni.  
   
@@ -61,15 +64,15 @@ ms.lasthandoff: 12/05/2017
   
  I sottotipi vengono definiti in base alle regole di sottotipizzazione per l'utilizzo della derivazione per restrizione o per estensione di XML Schema. Ad esempio, un tipo S è un sottotipo del tipo T se tutti i valori di tipo S sono anche istanze del tipo T.  
   
- Inoltre, tutti i valori interi sono anche valori decimali, basati sulla gerarchia dei tipi di XML Schema. Tuttavia, non tutti i valori decimali sono valori interi. Pertanto, un valore intero è un sottotipo di un valore decimale ma non viceversa. Ad esempio, il  **+**  operazione consente solo valori di determinati tipi, ad esempio i tipi numerici **xs: integer**, **xs: decimal**, **xs: float**, e **xs: double**. Se i valori di altri tipi, ad esempio **xs: String**, vengono passati, l'operazione genera un errore di tipo. Questo processo viene chiamato tipizzazione forte. È possibile convertire in modo implicito valori di altri tipi, ad esempio il tipo atomico utilizzato per indicare istanze XML non tipizzate, in un valore di un tipo accettato dall'operazione. Questo processo viene chiamato tipizzazione debole.  
+ Inoltre, tutti i valori interi sono anche valori decimali, basati sulla gerarchia dei tipi di XML Schema. Tuttavia, non tutti i valori decimali sono valori interi. Pertanto, un valore intero è un sottotipo di un valore decimale ma non viceversa. Ad esempio, il **+** operazione consente solo valori di determinati tipi, ad esempio i tipi numerici **xs:integer**, **xs:decimal**, **xs:float**, e **xs:double**. Se i valori di altri tipi, ad esempio **xs:String**, sono passato, l'operazione genera un errore di tipo. Questo processo viene chiamato tipizzazione forte. È possibile convertire in modo implicito valori di altri tipi, ad esempio il tipo atomico utilizzato per indicare istanze XML non tipizzate, in un valore di un tipo accettato dall'operazione. Questo processo viene chiamato tipizzazione debole.  
   
- Se è necessario dopo una conversione implicita, il controllo dei tipi statici garantisce che solo i valori dei tipi consentiti con la cardinalità corretta vengano passati a un'operazione. Per "string" + 1, riconosce che il tipo statico di "string" è **xs: String**. Poiché non si tratta di un tipo consentito per il  **+**  viene generato un errore di operazione.  
+ Se è necessario dopo una conversione implicita, il controllo dei tipi statici garantisce che solo i valori dei tipi consentiti con la cardinalità corretta vengano passati a un'operazione. Per "string" + 1, riconosce che il tipo statico di "string" è **xs:String**. Poiché non si tratta di un tipo consentito per il **+** viene generato un errore di tipo operazione.  
   
- In caso di addizione del risultato di un'espressione arbitraria E1 a un'espressione arbitraria E2 (E1 + E2), l'inferenza dei tipi statici determina innanzitutto i tipi statici di E1 e di E2 e quindi confronta tali tipi statici con quelli consentiti per l'operazione. Ad esempio, se il tipo statico di E1 può essere un **xs: String** o **xs: integer**, il controllo dei tipi statici genera un errore di tipo, anche se alcuni valori in fase di esecuzione potrebbe essere Integer. Lo stesso sarebbe se fosse il tipo statico di E1 **xs: integer\***. Poiché il  **+**  operazione accetta solo il valore di esattamente un integer ed E1 può restituire zero o maggiore di 1, il controllo dei tipi statici genera un errore.  
+ In caso di addizione del risultato di un'espressione arbitraria E1 a un'espressione arbitraria E2 (E1 + E2), l'inferenza dei tipi statici determina innanzitutto i tipi statici di E1 e di E2 e quindi confronta tali tipi statici con quelli consentiti per l'operazione. Ad esempio, se il tipo statico di E1 può essere un **xs:String** o **xs:integer**, il controllo dei tipi statici genera un errore di tipo, anche se alcuni valori in fase di esecuzione potrebbe essere Integer. Lo stesso sarebbe il caso se il tipo statico di E1 **xs:integer\***. Poiché il **+** operazione accetta solo un numero intero ed E1 può restituire zero o maggiore di 1, il controllo dei tipi statici genera un errore.  
   
  Come menzionato in precedenza, l'inferenza deduce spesso un tipo più complesso rispetto alle informazioni in possesso dell'utente riguardo ai tipi di dati da passare. In tali casi, l'utente deve riformulare la query. In genere, tra i casi tipici rientrano i seguenti:  
   
--   Il tipo deriva un tipo più generale, ad esempio un supertipo o un'unione di tipi. Nel caso di un tipo atomico, è consigliabile utilizzare l'espressione cast o la funzione costruttore per indicare il tipo statico effettivo. Ad esempio, se il tipo derivato dell'espressione E1 è una scelta tra **xs: String** o **xs: integer** e richiede l'aggiunta **xs: integer**, è consigliabile scrivere `xs:integer(E1) + E2` anziché `E1+E2`. Questa espressione potrebbe non riuscire in fase di esecuzione se viene rilevato un valore stringa che non è possibile eseguire il cast **xs: integer**. Tuttavia, l'espressione passerà il controllo dei tipi statici. Viene eseguito il mapping di questa espressione alla sequenza vuota.  
+-   Il tipo deriva un tipo più generale, ad esempio un supertipo o un'unione di tipi. Nel caso di un tipo atomico, è consigliabile utilizzare l'espressione cast o la funzione costruttore per indicare il tipo statico effettivo. Ad esempio, se il tipo derivato dell'espressione E1 è una scelta tra **xs:String** o **xs:integer** e richiede l'aggiunta **xs:integer**, è consigliabile scrivere `xs:integer(E1) + E2` anziché `E1+E2`. Questa espressione può non riuscire in fase di esecuzione se viene rilevato un valore stringa che non può essere convertito **xs:integer**. Tuttavia, l'espressione passerà il controllo dei tipi statici. Viene eseguito il mapping di questa espressione alla sequenza vuota.  
   
 -   Il tipo deriva una cardinalità più elevata rispetto a quella effettiva dei dati. Si verifica frequentemente, in quanto il **xml** tipo di dati può contenere più di un elemento di livello superiore e una raccolta XML schema non può vincolarlo. Per limitare il tipo statico e garantire che venga passato effettivamente un unico valore, è consigliabile utilizzare il predicato basato sulla posizione `[1]`. Ad esempio, per aggiungere 1 al valore dell'attributo `c` dell'elemento `b` di livello inferiore rispetto all'elemento a di livello principale, è necessario scrivere utilizzare `write (/a/b/@c)[1]+1`. È inoltre possibile utilizzare la parola chiave DOCUMENT con una raccolta di XML Schema.  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 12/05/2017
 </xs:element>  
 ```  
   
- Nel contesto di XQuery, la funzione "Media" `fn:avg (//r)` restituisce un errore statico perché il compilatore XQuery non è possibile aggiungere valori di tipi diversi (**xs: int**, **xs: float** o **xs: Double**) per il <`r`> elementi nell'argomento di **fn:avg()**. Per risolvere il problema, è necessario riscrivere la chiamata alla funzione nel modo seguente: `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
+ Nel contesto di XQuery, la funzione "Media" `fn:avg (//r)` restituisce un errore statico perché il compilatore XQuery non può aggiungere valori di tipi diversi (**xs:int**, **xs:float** o **xs:double**) per il `r`> elementi nell'argomento di **fn:avg()**. Per risolvere il problema, è necessario riscrivere la chiamata alla funzione nel modo seguente: `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
   
 ### <a name="example-operator-over-union-type"></a>Esempio: operatore su tipo unione  
  L'operazione di addizione ('+') richiede tipi di operandi specifici. Di conseguenza, per l'elemento <`r`> l'espressione `(//r)[1] + 1` restituisce un errore statico con la definizione di tipo illustrata in precedenza. È possibile risolvere il problema riscrivendo l'espressione nel modo seguente: `(//r)[1] cast as xs:int? +1`, dove "?" indica zero o una occorrenza. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede "cast as" con "?", perché ogni operazione di cast può generare una sequenza vuota in caso di errore di run-time.  

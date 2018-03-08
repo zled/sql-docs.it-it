@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 141b245a49e1d2fa6f83b886c70c159ab089c2fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
   Nelle variabili vengono archiviati valori che possono essere usati in fase di esecuzione da un pacchetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e dai relativi contenitori, attività e gestori di eventi. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
@@ -133,7 +134,17 @@ ms.lasthandoff: 12/21/2017
  Durante la reimpostazione dell'opzione **IncludeInDebugDump** su **false**può essere eseguito l'override del valore selezionato dall'utente.  
   
 **Valore**    
- Il valore di una variabile definita dall'utente può essere un valore letterale o un'espressione. Le variabili includono opzioni per l'impostazione del valore e del relativo tipo di dati. Queste due proprietà devono essere compatibili. Non è ad esempio possibile utilizzare un valore stringa insieme a un tipo di dati Integer.  
+Il valore di una variabile definita dall'utente può essere un valore letterale o un'espressione. Il valore di una variabile non può essere null. Le variabili hanno i seguenti valori predefiniti:
+
+| Tipo di dati | Valore predefinito |
+|---|---|
+| Boolean | False |
+| Tipi di dati numerici e binari | 0 (zero) |
+| Tipi di dati char e stringa | (stringa vuota) |
+| Object | System.Object |
+| | |
+
+Le variabili includono opzioni per l'impostazione del valore della variabile e del relativo tipo di dati. Queste due proprietà devono essere compatibili. Non è ad esempio possibile utilizzare un valore stringa insieme a un tipo di dati Integer.  
   
  Se la variabile è configurata in modo da essere valutata come espressione, sarà necessario specificare un'espressione. In fase di esecuzione l'espressione verrà valutata e la variabile verrà impostata sul risultato della valutazione. Se ad esempio una variabile usa l'espressione `DATEPART("month", GETDATE())` , assumerà un valore equivalente al numero del mese della data corrente. È necessario utilizzare un'espressione valida che utilizza la sintassi della grammatica delle espressioni di [!INCLUDE[ssIS](../includes/ssis-md.md)] . Quando si utilizza un'espressione con variabili, quest'ultima può includere valori letterali, nonché le funzioni e gli operatori previsti dalla grammatica delle espressioni, ma non può fare riferimento a colonne di un flusso di dati del pacchetto. Un'espressione può avere una lunghezza massima di 4000 caratteri. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   

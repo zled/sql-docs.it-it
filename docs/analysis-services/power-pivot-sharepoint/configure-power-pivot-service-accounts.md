@@ -5,29 +5,27 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 016909afa00382f9b1a0905e95423eb82007b758
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configurare gli account del servizio PowerPivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]installazione include due servizi che supportano le operazioni server. **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** è un servizio Windows che offre funzionalità di elaborazione dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e di supporto query in un server applicazioni. L'account di accesso per questo servizio viene sempre specificato durante l'installazione di SQL Server quando si installa Analysis Services in modalità integrata SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]sono inclusi due servizi che supportano le operazioni server. **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** è un servizio Windows che offre funzionalità di elaborazione dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e di supporto query in un server applicazioni. L'account di accesso per questo servizio viene sempre specificato durante l'installazione di SQL Server quando si installa Analysis Services in modalità integrata SharePoint.  
   
  È necessario specificare un secondo account per l'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , un servizio Web condiviso eseguito in un'identità del pool di applicazioni in una farm SharePoint. Questo account viene specificato quando si configura un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]usando lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o PowerShell.  
   
@@ -153,7 +151,7 @@ ms.lasthandoff: 12/08/2017
   
 8.  Aprire **Gruppi**.  
   
-9. Fare doppio clic su SQLServerMSASUser$\<nomeserver > $PowerPivot.  
+9. Double-click SQLServerMSASUser$\<servername>$PowerPivot.  
   
 10. Scegliere **Aggiungi**.  
   

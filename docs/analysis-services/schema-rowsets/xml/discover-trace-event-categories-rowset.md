@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 1ad74fd2-4740-469d-85b5-abf0171737fd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1adc4b7e60c566ac1c46a4b51c06e2ee505916ee
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b95fb2824757a4b45001dd5a1eed4871995b86cb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertraceeventcategories-rowset"></a>Set di righe DISCOVER_TRACE_EVENT_CATEGORIES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Mostra l'elenco delle categorie di eventi supportati dal provider di traccia.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Visualizza l'elenco di categorie di eventi supportate dal provider di traccia.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
   
@@ -51,6 +51,6 @@ ms.lasthandoff: 12/08/2017
 |String|DISCOVER_TRACE_EVENT_CATEGORIES|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML per set di righe dello schema di analisi](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis i rowset dello Schema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
