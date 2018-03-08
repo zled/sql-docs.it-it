@@ -1,4 +1,4 @@
----
+﻿---
 title: DATEPART (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 07/29/2017
