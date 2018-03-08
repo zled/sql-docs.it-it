@@ -8,25 +8,26 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 523dcd99da61b11e42848ea77037baf59a3ea00b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Introduzione a un esempio semplice di importazione/esportazione guidata
 Informazioni sull'importazione/esportazione guidata SQL Server attraverso uno scenario comune da un foglio di calcolo di Excel a un database SQL Server. Anche se si prevede di usare un'origine diversa e una destinazione diversa, in questo argomento è illustrata la maggior parte delle operazioni da conoscere per l'esecuzione della procedura guidata.
 
-## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Prerequisito - La procedura guidata è installata nel computer?
+## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Prerequisito: la procedura guidata è installata nel computer?
 Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile nel computer, è possibile installare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installando SQL Server Data Tools (SSDT). Per altre informazioni, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>Di seguito è riportata l'origine dati di Excel per questo esempio
@@ -47,7 +48,7 @@ Avviare la procedura guidata dal gruppo Microsoft SQL Server 2016 nel menu Start
 > [!NOTE]
 > Per questo esempio, è possibile selezionare la procedura guidata a 32 bit dato che la versione di Microsoft Office è la versione a 32 bit. Di conseguenza, è necessario usare il provider di dati a 32 bit per connettersi a Excel. Per molte altre origini dati, in genere è possibile selezionare la procedura guidata a 64 bit.
 >
-> Per usare la versione a 64 bit per l'importazione e l'esportazione guidate di SQL Server, è necessario installare SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) sono applicazioni a 32 bit e installano solo i file a 32 bit, inclusa la versione a 32 bit della procedura guidata.
+> Per usare la versione a 64 bit dell'Importazione/Esportazione guidata SQL Server, è necessario installare SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) sono applicazioni a 32 bit e installano solo i file a 32 bit, inclusa la versione a 32 bit della procedura guidata.
 
 Per altre informazioni, vedere [Avviare SQL Server importazione / esportazione guidata](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
@@ -91,7 +92,7 @@ Per altre informazioni relative a questa pagina della procedura guidata, vedere 
 Nella pagina successiva **Selezionare tabelle e viste di origine** scegliere la tabella o le tabelle da copiare dall'origine dati. Viene poi eseguito il mapping delle tabelle di origine a tabelle di destinazione nuove o esistenti.
 
 In questo esempio la procedura guidata ha eseguito, per impostazione predefinita, il mapping del foglio di lavoro **WizardWalkthrough$** nella colonna **Origine** a una nuova tabella con lo stesso nome della destinazione di SQL Server. (La cartella di lavoro di Excel contiene solo un singolo foglio di lavoro).
--   Il segno di dollaro ($) nel nome della tabella di origine indica un foglio di lavoro di Excel. (Un oggetto denominato intervallo incluso in Excel è rappresentato solo dal nome.)
+-   Il segno di dollaro ($) nel nome della tabella di origine indica un foglio di lavoro di Excel. Un intervallo denominato incluso in Excel è rappresentato solo dal nome.
 -   Il simbolo sull'icona della tabella di destinazione indica che la procedura guidata sta per creare una nuova tabella di destinazione.
 
 ![Selezionare la tabella (prima di rinominarla)](../../integration-services/import-export-data/media/select-the-table-before-renaming.jpg)
@@ -117,7 +118,7 @@ Mentre è aperta la finestra di dialogo **Mapping delle colonne**, fare clic sul
 Per altre informazioni relative a questa pagina della procedura guidata, vedere [Istruzione SQL CREATE TABLE](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md).
 
 ## <a name="optional-step-9---preview-the-data-to-copy"></a>Passaggio 9, facoltativo: Anteprima dei dati da copiare
-Dopo aver fatto clic su**OK** per chiudere la finestra di dialogo **Istruzione SQL CREATE TABLE**, fare clic su **OK** per chiudere la finestra di dialogo **Mapping colonne**. Si tornerà nella pagina **Selezione tabelle e viste di origine**. Fare clic sul pulsante **Anteprima** per vedere un esempio dei dati che la procedura guidata copierà (facoltativo). In questo esempio, è corretto.
+Dopo aver fatto clic su**OK** per chiudere la finestra di dialogo **Istruzione SQL CREATE TABLE**, fare clic su **OK** per chiudere la finestra di dialogo **Mapping colonne**. Si tornerà nella pagina **Selezione tabelle e viste di origine**. È possibile fare clic sul pulsante **Anteprima** per visualizzare un esempio dei dati che verranno copiati dalla procedura guidata. In questo esempio, è corretto.
 
 ![Anteprima dei dati da copiare](../../integration-services/import-export-data/media/preview-data-to-copy.jpg)
 
@@ -159,6 +160,6 @@ Altre informazioni sul funzionamento della procedura guidata.
 
 -   **Informazioni sui passaggi della procedura guidata.** Per informazioni sui passaggi della procedura guidata, selezionare la pagina desiderata dall'elenco seguente [Passaggi dell'importazione/esportazione guidata SQL Server](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Per ogni pagina della procedura guidata è anche disponibile una pagina di documentazione separata.
 
--   **Informazioni su come connettersi a origini dati e destinazioni.** Se si cercano informazioni su come connettersi ai dati, selezionare la pagina desiderata nell'elenco in [Connettersi a origini dati con l'importazione/esportazione guidata SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). È disponibile una pagina di documentazione separata per ognuna delle diverse origini dati di uso comune.
+-   **Informazioni su come connettersi a origini dati e destinazioni.** Se si cercano informazioni su come connettersi ai dati, selezionare la pagina desiderata nell'elenco in [Connettersi a origini dati con l'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). È disponibile una pagina di documentazione separata per ognuna delle diverse origini dati di uso comune.
 
 

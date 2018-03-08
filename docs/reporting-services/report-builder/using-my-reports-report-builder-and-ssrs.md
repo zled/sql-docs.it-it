@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b80b260f392298dd02d37d411ae910d81b420715
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9b7dd0fec5e2843db1297ed79e7cc3710e393005
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Utilizzo della cartella Report personali (Generatore report e SSRS)
   In un server di report configurato in modalità nativa, la cartella Report personali è un'area di lavoro personale che è possibile utilizzare per archiviare e gestire i report di cui si è proprietari. Le altre cartelle del server di report sono pubbliche e in genere è necessario disporre di autorizzazioni avanzate per aggiungere o modificare contenuto in tali cartelle. Al contrario, la cartella Report personali è un'area di lavoro gestita dall'utente nella quale è possibile aggiungere o rimuovere report o cartelle e salvare report collegati con impostazioni personalizzate.  

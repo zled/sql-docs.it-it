@@ -8,22 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataprofilingtask.general.f1
-helpviewer_keywords: Data Profiling Task Editor
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.general.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe778df2be9b176d95ef78d52daf1bd4ef8bd7e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e05a90b25672e835963384ab19ec218a7b2d3480
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor attività Profiling dati (pagina Generale)
   Usare la pagina **Generale** di **Editor attività Profiling dati** per configurare le opzioni seguenti:  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Consente di specificare se salvare l'output del profilo dei dati in un file o una variabile:  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**FileConnection**|Consente di salvare l'output del profilo in un file nel percorso specificato in una gestione connessione file.<br /><br /> Nota: è possibile specificare la gestione connessione file da usare tramite l'opzione **Destination** .|  
 |**Variabile**|Consente di salvare l'output del profilo in una variabile del pacchetto.<br /><br /> Nota: è possibile specificare la variabile del pacchetto da usare tramite l'opzione **Destination** .|  

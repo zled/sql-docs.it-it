@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 399aaa34-896c-48e7-aacb-18564f31b568
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 924e945003026241f29f532ffd64393ec4623414
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8c1bb47c2273d79e320e53b49c524112b067a2d3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="memberref-element-csdlbi"></a>Elemento MemberRef (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento MemberRef identifica il nome di una proprietà che è la destinazione di un riferimento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+L'elemento MemberRef identifica il nome di una proprietà che è la destinazione di un riferimento.  
   
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente vengono elencati gli attributi e gli elementi che definiscono l'elemento MemberRef.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 |MemberRef|Sì|Stringa contenente il riferimento al membro.|  
   
 ## <a name="example"></a>Esempio  
- **Tabella**  
+ **Tabulare**  
   
  Nell'esempio seguente, in CSDLBI versione 1.1, viene rappresentata una parte del modello di esempio AdventureWorks che definisce la tabella Products. L'elemento MemberRef viene utilizzato per ogni colonna inclusa nel set di campi predefinito per il modello.  
   

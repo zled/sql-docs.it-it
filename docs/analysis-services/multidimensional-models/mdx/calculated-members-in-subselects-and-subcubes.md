@@ -5,29 +5,27 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb3f752fa2a07a2c5e0964cbe91e4fb791bdc3da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95a989d092a5b69662fc9f7f542792d9c2895b47
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membri calcolati in sub-SELECT e sottocubi
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un membro calcolato è un membro della dimensione il cui valore viene calcolato da un'espressione in fase di esecuzione e può essere usato nelle sub-SELECT e sottocubi più selettive precisione il valore cubespace di una query.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Un membro calcolato è un membro di dimensione il cui valore viene calcolato da un'espressione in fase di esecuzione e può essere usato nelle sub-SELECT e nei sottocubi per definire con maggior precisione il valore cubespace di una query.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>Abilitazione dei membri calcolati nel sottospazio  
  La proprietà della stringa di connessione **SubQueries** in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o la proprietà **DBPROPMSMDSUBQUERIES** in [Proprietà XMLA supportate &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) definisce il comportamento o l'utilizzo consentito dei membri calcolati o dei set calcolati su sub-SELECT o sottocubi. Nel contesto di questo documento con il termine sub-SELECT si fa riferimento a sub-SELECT e sottocubi, se non diversamente specificato.  

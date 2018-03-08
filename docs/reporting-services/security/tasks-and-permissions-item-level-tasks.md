@@ -8,23 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 caps.latest.revision: "37"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3abea80a4ddfee5eddd4c4070b79b338d4b398ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a824675df700ba1910d21acea217061acb0879d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Attività e autorizzazioni - Attività a livello di elemento
   Un'attività a livello di elemento è una raccolta di autorizzazioni correlate a un report, una cartella, un modello di report, una risorsa o un'origine dati condivisa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include anche attività a livello di sistema applicabili all'intero sito del server di report. Per altre informazioni, vedere [Attività a livello di sistema](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Per ulteriori informazioni sulle attività e le autorizzazioni in generale, vedere [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
@@ -37,14 +35,14 @@ ms.lasthandoff: 12/05/2017
   
  I set di dati condivisi utilizzano lo stesso set di autorizzazioni dei report. Le parti del report utilizzano lo stesso set di autorizzazioni delle risorse.  
   
-|Attività|Applicabile all'elemento|Permissions|  
+|Attività|Applicabile all'elemento|Autorizzazioni|  
 |----------|---------------------|-----------------|  
 |Utilizzo di report|Report|Lettura di contenuto<br /><br /> Lettura delle definizioni dei report<br /><br /> Lettura di proprietà|  
 |Utilizzo di report|Set di dati condivisi|Lettura di contenuto<br /><br /> Lettura delle definizioni dei report<br /><br /> Lettura di proprietà|  
 |Creazione di report collegati|Report|Creazione di collegamenti<br /><br /> Lettura di proprietà|  
 |Gestione di tutte le sottoscrizioni|Report|Lettura di proprietà<br /><br /> Lettura di qualsiasi sottoscrizione<br /><br /> Creazione di qualsiasi sottoscrizione<br /><br /> Eliminazione di qualsiasi sottoscrizione<br /><br /> Aggiornamento di qualsiasi sottoscrizione|  
 |Gestione di origini dei dati|Cartelle|Creazione di origini dei dati|  
-|Gestione di origini dei dati|Origini dei dati|Aggiornamento di proprietà<br /><br /> Eliminazione del contenuto di aggiornamento<br /><br /> Lettura di proprietà|  
+|Gestione di origini dei dati|Origini dati|Aggiornamento di proprietà<br /><br /> Eliminazione del contenuto di aggiornamento<br /><br /> Lettura di proprietà|  
 |Gestione di cartelle|Cartelle|Creazione di cartelle<br /><br /> Eliminazione delle proprietà di aggiornamento<br /><br /> Lettura di proprietà|  
 |Gestione di sottoscrizioni individuali|Report|Lettura di proprietà<br /><br /> Creazione di sottoscrizioni<br /><br /> Eliminazione di sottoscrizioni<br /><br /> Lettura di sottoscrizioni<br /><br /> Aggiornamento di sottoscrizioni|  
 |Gestione di modelli|Cartelle|Creazione di un modello|  

@@ -1,37 +1,36 @@
 ---
 title: Classi OLAP in AMO | Documenti Microsoft
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d2d64c16bac9814a78a525c43693c6fb10507b6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 609958fd81ee7c703d7608f9a353c15658c1528b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-olap-classes"></a>Classi OLAP di AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Management Objects (AMO) OLAP classi consentono di creare, modificare, eliminare ed elaborare cubi, dimensioni e oggetti correlati, ad esempio indicatori di prestazioni chiave (KPI), azioni e la memorizzazione nella cache.  
+  Le classi OLAP della libreria AMO (Analysis Management Objects) consentono di creare, modificare, eliminare ed elaborare cubi, dimensioni e oggetti correlati, ad esempio indicatori di prestazioni chiave (KPI), azioni e memorizzazione nella cache attiva.  
   
  Per ulteriori informazioni sull'impostazione di ambiente di programmazione AMO, come origini per stabilire una connessione con un server, l'accesso a un database o la definizione dei dati e viste origine dati, vedere [le classi fondamentali AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md).  
   
@@ -65,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="basic-classes"></a>Classi di base  
   
-###  <a name="Dimensions"></a>Oggetti Dimension  
+###  <a name="Dimensions"></a> Oggetti Dimension  
  Per creare una dimensione, aggiungerla alla raccolta di dimensioni del database padre e aggiornare l'oggetto <xref:Microsoft.AnalysisServices.Dimension> nel server tramite il metodo Update.  
   
  Per rimuovere una dimensione, eliminarla tramite il metodo Drop dell'oggetto <xref:Microsoft.AnalysisServices.Dimension>. La rimozione di un oggetto <xref:Microsoft.AnalysisServices.Dimension> dalla raccolta di dimensioni del database tramite il metodo Remove non ne provoca l'eliminazione dal server, ma solo dal modello a oggetti AMO.  
@@ -74,7 +73,7 @@ ms.lasthandoff: 12/08/2017
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.Dimension> in <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Cubes"></a>Oggetti del cubo  
+###  <a name="Cubes"></a> Oggetti del cubo  
  Per creare un cubo, aggiungerlo alla raccolta di cubi del database, quindi aggiornare l'oggetto <xref:Microsoft.AnalysisServices.Cube> nel server tramite il metodo Update. Il metodo Update del cubo può includere il parametro UpdateOptions.ExpandFull che garantisce l'aggiornamento nel server di tutti gli oggetti del cubo che sono stati modificati.  
   
  Per rimuovere un cubo, eliminarlo tramite il metodo Drop dell'oggetto <xref:Microsoft.AnalysisServices.Cube>. La rimozione di un cubo dalla raccolta non influisce sul server.  
@@ -83,24 +82,24 @@ ms.lasthandoff: 12/08/2017
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.Cube> in <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="MeasureGroups"></a>Oggetti MeasureGroup  
+###  <a name="MeasureGroups">Oggetti MeasureGroup</a>  
  Per creare un gruppo di misure, aggiungerlo alla raccolta dei gruppi di misure del cubo, quindi aggiornare l'oggetto <xref:Microsoft.AnalysisServices.MeasureGroup> nel server tramite il relativo metodo Update. Per rimuovere un oggetto <xref:Microsoft.AnalysisServices.MeasureGroup>, utilizzare il relativo metodo Drop.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.MeasureGroup> può essere elaborato dopo che è stato creato. L'oggetto <xref:Microsoft.AnalysisServices.MeasureGroup> può essere elaborato tramite il proprio metodo Process oppure nel momento in cui un oggetto padre elabora se stesso tramite il proprio metodo Process.  
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.MeasureGroup> in <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Partition"></a>Oggetti Partition  
+###  <a name="Partition">Oggetti Partition</a>  
  Per creare un oggetto <xref:Microsoft.AnalysisServices.Partition>, aggiungerlo alla raccolta di partizioni del gruppo di misure padre, quindi aggiornare l'oggetto <xref:Microsoft.AnalysisServices.Partition> nel server tramite il metodo Update. Per rimuovere un oggetto <xref:Microsoft.AnalysisServices.Partition>, utilizzare il metodo Drop.  
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.Partition> in <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="AggregationDesign"></a>Oggetti AggregationDesign  
+###  <a name="AggregationDesign">Oggetti AggregationDesign</a>  
  Le progettazioni delle aggregazioni vengono realizzate tramite il metodo AggregationDesign da un oggetto <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.AggregationDesign> in <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Aggregation"></a>Oggetti Aggregation  
+###  <a name="Aggregation">Oggetti Aggregation</a>  
  Per creare un oggetto <xref:Microsoft.AnalysisServices.Aggregation>, aggiungerlo alla raccolta di progettazioni delle aggregazioni del gruppo di misure padre, quindi aggiornare l'oggetto gruppo di misure padre nel server tramite il metodo Update. Per rimuovere un'aggregazione da <xref:Microsoft.AnalysisServices.AggregationCollection>, utilizzare il metodo Remove o RemoveAt.  
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.Aggregation> in <xref:Microsoft.AnalysisServices>.  
@@ -120,7 +119,7 @@ ms.lasthandoff: 12/08/2017
   
  AMO viene utilizzato per impostare le definizioni per questo comportamento ottimizzato, ma l'esperienza effettiva viene definita dall'esplorazione del client in cui tali miglioramenti sono implementati.  
   
-###  <a name="Action"></a>Oggetti Action  
+###  <a name="Action">Oggetti Action</a>  
  Per creare un oggetto <xref:Microsoft.AnalysisServices.Action>, aggiungerlo alla raccolta di azioni del cubo, quindi aggiornare l'oggetto <xref:Microsoft.AnalysisServices.Cube> nel server tramite il metodo Update. Il metodo Update del cubo può includere il parametro UpdateOptions.ExpandFull che garantisce l'aggiornamento nel server di tutti gli oggetti del cubo che sono stati modificati.  
   
  Per rimuovere un oggetto <xref:Microsoft.AnalysisServices.Action>, è necessario innanzitutto rimuoverlo dalla raccolta e successivamente aggiornare il cubo padre.  
@@ -129,7 +128,7 @@ ms.lasthandoff: 12/08/2017
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.Action> in <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="KPI"></a>Oggetti KPI  
+###  <a name="KPI"></a> Oggetti KPI  
  Per creare un oggetto <xref:Microsoft.AnalysisServices.Kpi>, aggiungerlo alla raccolta di indicatori di prestazioni chiave del cubo, quindi aggiornare l'oggetto <xref:Microsoft.AnalysisServices.Cube> nel server tramite il metodo Update. Il metodo Update del cubo può includere il parametro UpdateOptions.ExpandFull che garantisce l'aggiornamento nel server di tutti gli oggetti del cubo che sono stati modificati.  
   
  Per rimuovere un oggetto <xref:Microsoft.AnalysisServices.Kpi>, è necessario innanzitutto rimuoverlo dalla raccolta e successivamente aggiornare il cubo padre.  
@@ -138,7 +137,7 @@ ms.lasthandoff: 12/08/2017
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.Kpi> in <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Perspective"></a>Oggetti della prospettiva  
+###  <a name="Perspective">Oggetti della prospettiva</a>  
  Per creare un oggetto <xref:Microsoft.AnalysisServices.Perspective>, aggiungerlo alla raccolta di prospettive del cubo, quindi aggiornare l'oggetto <xref:Microsoft.AnalysisServices.Cube> nel server tramite il metodo Update. Il metodo Update del cubo può includere il parametro UpdateOptions.ExpandFull che garantisce l'aggiornamento nel server di tutti gli oggetti del cubo che sono stati modificati.  
   
  Per rimuovere un oggetto <xref:Microsoft.AnalysisServices.Perspective>, è necessario innanzitutto rimuoverlo dalla raccolta e successivamente aggiornare il cubo padre.  
@@ -147,14 +146,14 @@ ms.lasthandoff: 12/08/2017
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.Perspective> in <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Translation"></a>Oggetti Translation  
+###  <a name="Translation">Oggetti Translation</a>  
  Per creare un oggetto <xref:Microsoft.AnalysisServices.Translation>, aggiungerlo alla raccolta di conversioni dell'oggetto desiderato e successivamente aggiornare l'oggetto padre principale più vicino nel server tramite il metodo Update. Il metodo Update dell'oggetto padre più vicino può includere il parametro UpdateOptions.ExpandFull che garantisce l'aggiornamento nel server di tutti gli oggetti del cubo che sono stati modificati.  
   
  Per rimuovere un oggetto <xref:Microsoft.AnalysisServices.Translation>, è necessario innanzitutto rimuoverlo dalla raccolta e successivamente aggiornare l'oggetto padre più vicino.  
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.Translation> in <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="ProactiveCaching"></a>Oggetti ProactiveCaching  
+###  <a name="ProactiveCaching">Oggetti ProactiveCaching</a>  
  Per creare un oggetto <xref:Microsoft.AnalysisServices.ProactiveCaching>, aggiungerlo alla raccolta di oggetti di memorizzazione nella cache attiva della dimensione o partizione, quindi aggiornare l'oggetto partizione o dimensione nel server tramite il metodo Update.  
   
  Per rimuovere un oggetto <xref:Microsoft.AnalysisServices.ProactiveCaching>, è necessario innanzitutto rimuoverlo dalla raccolta e successivamente aggiornare l'oggetto padre.  

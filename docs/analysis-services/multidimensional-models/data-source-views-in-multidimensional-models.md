@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +20,20 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa655c5c761d4ba943bad6c7f8c188b50c45a275
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9e443b461a01c7a8e2ba04e7d759984062f63d6c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Viste origine dati in modelli multidimensionali
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una vista origine dati (DSV) è un'astrazione di un'origine dati relazionale che diventa la base dei cubi e dimensioni creati in un progetto multidimensionale. Lo scopo di una vista origine dati è fornire il controllo sulle strutture di dati utilizzate nel progetto e funzionare indipendentemente dalle origini dati sottostanti (ad esempio, con la possibilità di rinominare o concatenare colonne senza modificare direttamente l'origine dati originale).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una vista origine dati è un'astrazione di un'origine dati relazionale che diventa la base dei cubi e delle dimensioni creati in un progetto multidimensionale. Lo scopo di una vista origine dati è fornire il controllo sulle strutture di dati utilizzate nel progetto e funzionare indipendentemente dalle origini dati sottostanti (ad esempio, con la possibilità di rinominare o concatenare colonne senza modificare direttamente l'origine dati originale).  
   
  In un progetto o un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile compilare più viste origine dati per una o più origini dati e costruire ognuna in modo da soddisfare i requisiti per una diversa soluzione.  
   

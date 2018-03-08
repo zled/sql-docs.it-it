@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e2777ca00cf9535e1c3ddb41eee11f0c5ba6eb5f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a7222a9dcbbf7c979dd46ff554fab5988bcfada4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="was-a-result-set-created"></a>È il risultato creato?
 Nella maggior parte dei casi, i programmatori di applicazioni sapere se le istruzioni in cui che viene eseguita l'applicazione crea un set di risultati. Questo è il caso se l'applicazione Usa istruzioni SQL hard-coded scritte dal programmatore. In genere si verifica quando l'applicazione crea istruzioni SQL in fase di esecuzione: il programmatore facilmente può includere codice che consente di contrassegnare se un **selezionare** istruzione o un **inserire** istruzione è in corso costruito. In alcuni casi, il programmatore non è possibile conoscere se un'istruzione crea un set di risultati. Ciò è vero se l'applicazione consente all'utente di immettere ed eseguire un'istruzione SQL. È anche true quando l'applicazione crea un'istruzione in fase di esecuzione per eseguire una stored procedure.  

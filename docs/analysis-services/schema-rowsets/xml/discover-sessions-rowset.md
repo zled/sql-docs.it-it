@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f8fef815cbb4a648bacb6ab90a40bfc41d57d3e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: daa1e2d464283fa3e2cb37733bb2a705454e50dc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoversessions-rowset"></a>Set di righe DISCOVER_SESSIONS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornisce informazioni sulle risorse di informazioni sull'utilizzo e delle attività relative alle sessioni attualmente aperte nel server.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DISCOVER_SESSIONS** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
+|Nome colonna|Indicatore del tipo|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**SESSION_COMMAND_COUNT**|**DBTYPE_I4**||Numero di comandi di cui è stata avviata l'esecuzione dopo l'inizio della sessione.|  
 |**SESSION_CONNECTION_ID**|**DBTYPE_I4**||Identificatore di connessione per la sessione.|  
@@ -65,15 +63,15 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|SESSION_ID|DBTYPE_WSTR|Facoltativa.|  
-|SESSION_SPID|DBTYPE_I4|Facoltativa.|  
-|SESSION_CONNECTION_ID|DBTYPE_I4|Facoltativa.|  
-|SESSION_USER_NAME|DBTYPE_WSTR|Facoltativa.|  
-|SESSION_CURRENT_DATABASE|DBTYPE_WSTR|Facoltativa.|  
-|SESSION_ELAPSED_TIME_MS|DBTYPE_UI8|Facoltativa.|  
-|SESSION_CPU_TIME_MS|DBTYPE_UI8|Facoltativa.|  
-|SESSION_IDLE_TIME_MS|DBTYPE_UI8|Facoltativa.|  
-|SESSION_STATUS|DBTYPE_I4|Facoltativa.|  
+|SESSION_ID|DBTYPE_WSTR|Facoltativo.|  
+|SESSION_SPID|DBTYPE_I4|Facoltativo.|  
+|SESSION_CONNECTION_ID|DBTYPE_I4|Facoltativo.|  
+|SESSION_USER_NAME|DBTYPE_WSTR|Facoltativo.|  
+|SESSION_CURRENT_DATABASE|DBTYPE_WSTR|Facoltativo.|  
+|SESSION_ELAPSED_TIME_MS|DBTYPE_UI8|Facoltativo.|  
+|SESSION_CPU_TIME_MS|DBTYPE_UI8|Facoltativo.|  
+|SESSION_IDLE_TIME_MS|DBTYPE_UI8|Facoltativo.|  
+|SESSION_STATUS|DBTYPE_I4|Facoltativo.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [XML per set di righe dello schema di analisi](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

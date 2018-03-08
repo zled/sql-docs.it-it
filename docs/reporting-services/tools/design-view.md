@@ -8,24 +8,22 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rtp.rptdesigner.layoutview.f1
 helpviewer_keywords: Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 caps.latest.revision: "38"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d683ce26988ec3edda4706f3fa6903bb52ca556
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 43b324699b0e462f452b106846fe86d5e5e0919a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="design-view"></a>Visualizzazione Progettazione
 In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Progettazione report usare la visualizzazione Progettazione per disporre gli elementi nel report. Tale visualizzazione viene talvolta denominata superficie di progettazione o visualizzazione Layout.  
@@ -41,7 +39,7 @@ Utilizzare la casella degli strumenti per selezionare gli elementi da inserire n
 ## <a name="toolbox"></a>Casella degli strumenti  
  Nella casella degli strumenti sono elencate le aree dati e gli altri elementi disponibili per il report. Per aggiungere un elemento del report dalla casella degli strumenti, fare doppio clic sull'elemento o trascinarlo nell'area di progettazione. In seguito è possibile modificarne forma e dimensioni tramite gli handle dell'oggetto.  
   
-## <a name="report-data-pane"></a>Riquadro Dati report  
+## <a name="report-data-pane"></a>Riquadro dei dati del report  
  Per visualizzare il riquadro dei dati del report, scegliere **Dati report** dal menu **Visualizza**. Utilizzare questo riquadro per definire parametri, immagini, origini dati e set di dati e per fare riferimento a campi predefiniti, ad esempio ReportName. Per aggiungere un nuovo elemento, fare clic sul menu **Nuovo** e selezionare l'elemento. Per aggiungere campi calcolati a un set di dati esistente, fare clic su **Set di dati**e nella finestra di dialogo **Proprietà set di dati** selezionare **Campi**. Selezionare un elemento e fare clic su **Modifica** per aprire la finestra di dialogo **Proprietà** . È inoltre possibile fare clic con il pulsante destro del mouse sugli elementi nel riquadro dei dati del report per aggiungere elementi o aggiornarne le proprietà.  
   
  È possibile aggiungere dati e immagini a un report trascinando gli elementi dal riquadro dei dati del report nelle aree dati e nelle caselle di testo nell'area di progettazione.  

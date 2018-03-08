@@ -8,23 +8,25 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bd792a20eb2b0a641e675a4ca0d8a47d04337c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b34863f4a5f1a20d17cc0e87181a5f7d850b64d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modify the Target Server(s) Associated with a SQL Server Agent Master Job
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come modificare i server di destinazione associati a un processo master di SQL Server Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+# <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modificare i server di destinazione associati a un processo master di SQL Server Agent
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In questo argomento verrà descritto come modificare i server di destinazione associati a un processo master di SQL Server Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
   
 **Contenuto dell'argomento**  
   
@@ -62,7 +64,7 @@ Un processo master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 
   
 4.  Fare clic con il pulsante destro del mouse sul processo in cui si vuole modificare il server di destinazione e scegliere **Proprietà**.  
   
-5.  In **Seleziona una pagina** nella finestra di dialogo **Proprietà processo -***nome_processo* selezionare **Server di destinazione**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [Proprietà processo - nuovo processo &#40;pagina degli obiettivi&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
+5.  Nella finestra di dialogo **Proprietà processo –***nome_processo* selezionare **Server di destinazione** in **Seleziona una pagina**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [Proprietà processo - nuovo processo &#40;pagina Destinazioni&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
   
 6.  Al termine, fare clic su **OK**.  
   

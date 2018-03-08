@@ -28,15 +28,15 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 28f18fd090691e5aae6023fe7282ef235b12778c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 534d9cd96831bfc79475f99111580e36f3603add
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-copy-database-wizard"></a>Utilizzo di Copia guidata database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Copia guidata database consente di spostare o copiare facilmente database e determinati oggetti server da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra istanza, senza tempi di inattività del server. Mediante questa procedura guidata è possibile effettuare le operazioni seguenti: 
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
 
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="Permissions"></a> Permissions  
  È necessario essere membri del ruolo predefinito del server **sysadmin** sia nel server di origine sia in quello di destinazione.  
   
 ##  <a name="Overview"></a> Pagine della Copia guidata database 
@@ -121,7 +121,7 @@ Consente a un utente di connettersi usando un account utente di Microsoft Window
 -    **Usa autenticazione di SQL Server**  
 Consente all'utente di connettersi specificando una password e un nome utente di Autenticazione di SQL Server.
 
-     -    **Nome utente**  
+     -    **User name**  
 Consente di immettere il nome utente per la connessione. Questa opzione è disponibile solo se si è scelto di usare **Autenticazione di SQL Server**per la connessione.
 
      -    **Password**  
@@ -141,7 +141,7 @@ Consente a un utente di connettersi usando un account utente di Microsoft Window
 -    **Usa autenticazione di SQL Server**  
 Consente all'utente di connettersi specificando una password e un nome utente di Autenticazione di SQL Server.
 
-     -    **Nome utente**  
+     -    **User name**  
 Consente di immettere il nome utente per la connessione. Questa opzione è disponibile solo se si è scelto di usare **Autenticazione di SQL Server**per la connessione.
 
      -    **Password**  
@@ -326,7 +326,7 @@ Nell'esempio seguente vengono spostati il database `Sales` , un account di acces
   
 9.  Nella pagina**Configurare il database di destinazione** la **Procedura guidata** ha rilevato che `Sales` esiste già nel server di destinazione, perché è stato creato nel **passaggio 6** precedente, e ha aggiunto `_new` al nome del **Database di destinazione** .  Eliminare `_new` dalla casella di testo **Database di destinazione** .  Facoltativamente, modificare il **Nome file**e la **Cartella di destinazione**.  Selezionare **Elimina il database con lo stesso nome nel server di destinazione, quindi continua il trasferimento sovrascrivendo i file di database esistenti**.  Scegliere **Avanti**.
   
-10. Nel pannello**Oggetti correlati selezionati** della pagina **Selezionare gli oggetti server** fare clic sul pulsante con puntini di sospensione relativo a **Object name Logins**(Account di accesso nome oggetto).  In **Opzioni copia** selezionare **Copia solo gli account di accesso selezionati:**.  Selezionare la casella relativa a **Mostra tutti gli account di accesso al server**.  Controllare la casella **Account di accesso** per `contoso\Jennie`.  Scegliere **OK**.  Nel pannello **Oggetti correlati disponibili:** selezionare **Processi di SQL Server Agent** e quindi fare clic sul pulsante **>** .  Nel pannello **Oggetti correlati selezionati:** fare clic sul pulsante con puntini di sospensione relativo a **Processi di SQL Server Agent**.  In **Opzioni copia** selezionare **Copia solo i processi selezionati:**.  Selezionare la casella per `Jennie’s Report`.  Scegliere **OK**.  Scegliere **Avanti**.  
+10. Nel pannello**Oggetti correlati selezionati** della pagina **Selezionare gli oggetti server** fare clic sul pulsante con puntini di sospensione relativo a **Object name Logins**(Account di accesso nome oggetto).  In **Opzioni copia** selezionare **Copia solo gli account di accesso selezionati:**.  Selezionare la casella relativa a **Mostra tutti gli account di accesso al server**.  Controllare la casella **Account di accesso** per `contoso\Jennie`.  Fare clic su **OK**.  Nel pannello **Oggetti correlati disponibili:** selezionare **Processi di SQL Server Agent** e quindi fare clic sul pulsante **>** .  Nel pannello **Oggetti correlati selezionati:** fare clic sul pulsante con puntini di sospensione relativo a **Processi di SQL Server Agent**.  In **Opzioni copia** selezionare **Copia solo i processi selezionati:**.  Selezionare la casella per `Jennie’s Report`.  Fare clic su **OK**.  Scegliere **Avanti**.  
   
 11. Nella pagina**Percorso dei file di database di origine** fare clic sul pulsante con puntini di sospensione relativo a **Condivisione file nel server di origine** e passare al percorso per il percorso della cartella specificato.  Ad esempio, per il percorso di cartella `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` usare `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` per **Condivisione file nel server di origine**.  Scegliere **Avanti**.
   
@@ -377,7 +377,7 @@ In questo esempio il database `Sales` verrà copiato e creato come `SalesCopy` n
  
     1. Nella casella di testo**Nome** della pagina **Nuova pianificazione processo** immettere `Weekly on Sunday`. 
           
-    2. Scegliere **OK**.
+    2. Fare clic su **OK**.
 
 11. Selezionare il proxy rilevante dall'elenco a discesa **Account proxy di Integration Services** .  Scegliere **Avanti**.
 
@@ -389,7 +389,7 @@ In questo esempio il database `Sales` verrà copiato e creato come `SalesCopy` n
 
   
 ##  <a name="FollowUp"></a> Completamento: Dopo l'aggiornamento di un database  
- Dopo aver utilizzato Copia guidata database per aggiornare un database da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene reso immediatamente disponibile e aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti anche che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestire e monitorare la ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Dopo aver utilizzato Copia guidata database per aggiornare un database da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene reso immediatamente disponibile e aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestire e monitorare la ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità era 90 prima dell'aggiornamento, nel database aggiornato questo valore viene impostato su 100, cioè sul livello di compatibilità più basso supportato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
  

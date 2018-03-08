@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e1f5b27d158714d5e379617e935a2b152a343278
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 697a387240a9e2e0edafeac45b68264187c2a3f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS
 
@@ -111,10 +109,10 @@ ms.lasthandoff: 12/05/2017
  > [!NOTE]  
 >  Un'altra risorsa per ottenere esempi di stringhe di connessione è[ConnectionStrings.com](http://www.connectionstrings.com/) . 
   
-|**Data source**|**Esempio**|**Description**|  
+|**Data source**|**Esempio**|**Descrizione**|  
 |---------------------|-----------------|---------------------|  
 |Database SQL Server sul server locale|`data source="(local)";initial catalog=AdventureWorks`|Impostare il tipo di origine dati su **Microsoft SQL Server**. Per altre informazioni, vedere [Tipo di connessione SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).|  
-|Istanza di SQL Server<br /><br /> database|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Impostare il tipo di origine dati su **Microsoft SQL Server**.|  
+|Istanza di SQL Server<br /><br /> Database|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Impostare il tipo di origine dati su **Microsoft SQL Server**.|  
 |Database SQL Server Express|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|Impostare il tipo di origine dati su **Microsoft SQL Server**.|  
 |Database SQL di Azure|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Impostare il tipo di origine dati su **Database SQL di Microsoft Azure**. Per altre informazioni, vedere [Tipo di connessione SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Impostare il tipo di origine dati su **Microsoft SQL Server Parallel Data Warehouse**. Per altre informazioni, vedere [Tipo di connessione SQL Server Parallel Data Warehouse &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  

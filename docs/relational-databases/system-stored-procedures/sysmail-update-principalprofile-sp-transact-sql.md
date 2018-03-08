@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_principalprofile_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_update_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_principalprofile_sp
 - sysmail_update_principalprofile_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_update_principalprofile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_update_principalprofile_sp
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b988aa656b4285218b51ce1bcd091f5381ffc411
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7539eb785bc0ae03a68b8a734b89012a29590d3d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +48,16 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@principal_id**  =] *principal_id*  
+ [ **@principal_id** = ] *principal_id*  
  L'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione da modificare. *principal_id* è **int**, con un valore predefinito è NULL. Entrambi *principal_id* o *principal_name* deve essere specificato.  
   
  [  **@principal_name**  =] **'***principal_name***'**  
  Il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione da aggiornare. *principal_name* è **sysname**, con un valore predefinito è NULL. Entrambi *principal_id* o *principal_name* può essere specificato.  
   
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  ID del profilo per l'associazione da modificare. *profile_id* è **int**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* deve essere specificato.  
   
- [  **@profile_name**  =] **'***profile_name***'**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  Nome del profilo per l'associazione da modificare. *profile_name* è **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* deve essere specificato.  
   
  [  **@is_default**  =] **'***is_default***'**  
@@ -75,7 +78,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  La stored procedure **sysmail_update_principalprofile_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  

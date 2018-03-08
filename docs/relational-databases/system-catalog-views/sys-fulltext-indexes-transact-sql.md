@@ -1,5 +1,5 @@
 ---
-title: Sys. fulltext_indexes (Transact-SQL) | Documenti Microsoft
+title: sys.fulltext_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - fulltext_indexes_TSQL
 - sys.fulltext_indexes_TSQL
 - sys.fulltext_indexes
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fulltext_indexes catalog view
 - full-text indexes [SQL Server], properties
 ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b076a1b71cf60974fae4d18c7736be9f2d33b1d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6f19f05239629553594f52f30fe2eb4ef0854cb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,19 +45,19 @@ ms.lasthandoff: 11/17/2017
 |**unique_index_id**|**int**|ID dell'indice univoco non full-text corrispondente utilizzato per mettere in relazione l'indice full-text e le righe.|  
 |**fulltext_catalog_id**|**int**|ID del catalogo full-text in cui si trova l'indice full-text.|  
 |**is_enabled**|**bit**|1 = L'indice full-text è abilitato.|  
-|**change_tracking_state**|**Char (1)**|Stato del rilevamento delle modifiche.<br /><br /> M = Manuale<br /><br /> A = Automatico<br /><br /> O = Disattivato|  
+|**change_tracking_state**|**char(1)**|Stato del rilevamento delle modifiche.<br /><br /> M = Manuale<br /><br /> A = Automatico<br /><br /> O = Disattivato|  
 |**change_tracking_state_desc**|**nvarchar(60)**|Descrizione dello stato del rilevamento delle modifiche.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
 |**has_crawl_completed**|**bit**|Ultima ricerca per indicizzazione (popolamento) completata dall'indice full-text.|  
-|**crawl_type**|**Char (1)**|Tipo dell'ultima ricerca per indicizzazione o di quella corrente.<br /><br /> F = Ricerca per indicizzazione completa<br /><br /> I = Ricerca per indicizzazione incrementale basata su timestamp<br /><br /> U = Ricerca per indicizzazione di aggiornamento, in base alle notifiche<br /><br /> P = La ricerca per indicizzazione è stata sospesa|  
+|**crawl_type**|**char(1)**|Tipo dell'ultima ricerca per indicizzazione o di quella corrente.<br /><br /> F = Ricerca per indicizzazione completa<br /><br /> I = Ricerca per indicizzazione incrementale basata su timestamp<br /><br /> U = Ricerca per indicizzazione di aggiornamento, in base alle notifiche<br /><br /> P = La ricerca per indicizzazione è stata sospesa|  
 |**crawl_type_desc**|**nvarchar(60)**|Descrizione dell'ultima ricerca per indicizzazione o di quella corrente.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
 |**crawl_start_date**|**datetime**|Inizio dell'ultima ricerca per indicizzazione o di quella corrente.<br /><br /> NULL = Nessuno.|  
 |**crawl_end_date**|**datetime**|Fine dell'ultima ricerca per indicizzazione o di quella corrente.<br /><br /> NULL = Nessuno.|  
-|**incremental_timestamp**|**Binary (8)**|Valore di timestamp utilizzato per la successiva ricerca per indicizzazione incrementale.<br /><br /> NULL = Nessuno.|  
+|**incremental_timestamp**|**binary(8)**|Valore di timestamp utilizzato per la successiva ricerca per indicizzazione incrementale.<br /><br /> NULL = Nessuno.|  
 |**stoplist_id**|**int**|ID del [stoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) associato l'indice full-text.|  
 |**data_space_id**|**int**|Filegroup in cui si trova l'indice full-text.|  
 |**property_list_id**|**int**|ID dell'elenco delle proprietà di ricerca associato all'indice full-text specifico. NULL indica che non vi è alcun elenco delle proprietà di ricerca associato all'indice full-text. Per ottenere ulteriori informazioni su questo elenco di proprietà di ricerca, utilizzare il [registered_search_property_lists &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) vista del catalogo.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="examples"></a>Esempi  
@@ -73,13 +75,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [fulltext_index_fragments &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
+ [sys.fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
  [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
- [Sys.fulltext_index_catalog_usages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
+ [sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
  [Oggetto viste del catalogo &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Creazione e gestione di indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
+ [DROP FULLTEXT INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   

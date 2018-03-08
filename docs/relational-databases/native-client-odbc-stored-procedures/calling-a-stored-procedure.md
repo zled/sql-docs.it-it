@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a5e9efb687e9a554841e945f7575a75a5ac3d4ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31c151ab9942e09149b6e244d4ec6eba0b9f22b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="calling-a-stored-procedure"></a>Chiamata di una stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  La sequenza di escape ODBC CALL per la chiamata a una procedura è la seguente:  
   
- {[**? =**]**chiamare***procedure_name*[([*parametro*] [**,**[*parametro*]] ...)]}  
+ {[**? =**]**chiamata * **procedure_name*[([*parametro*] [**, **[*parametro *]]...)]}  
   
  dove *procedure_name* specifica il nome di una stored procedure e *parametro* specifica un parametro di routine. I parametri denominati sono supportati solo nelle istruzioni che utilizzano la sequenza di escape ODBC CALL.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
  I parametri di input e di input/output possono essere omessi dalle chiamate alle procedure. Se una procedura viene chiamata con parentesi ma senza alcun parametro, il driver indica all'origine dati di utilizzare il valore predefinito per il primo parametro. Esempio:  
   
- {**chiamare** *procedure_name***()**}  
+ {**chiamare** * procedure_name ***()**}  
   
  Se la procedura non include alcun parametro, può non essere eseguita. Se una procedura viene chiamata senza parentesi, il driver non invia alcun valore di parametro. Esempio:  
   

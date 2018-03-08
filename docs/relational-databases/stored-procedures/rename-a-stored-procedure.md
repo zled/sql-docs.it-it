@@ -8,26 +8,28 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], renaming
 - renaming stored procedures
 ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 728dc13fa5a46e00ac1917eea2dfa166c1ba89bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1dd52bd311a8c976ed5967c71315aca5b59923c7
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="rename-a-stored-procedure"></a>Rinominare una stored procedure
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questo argomento illustra come rinominare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In questo argomento viene descritto come rinominare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per rinominare una stored procedure tramite:**  
   
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  CREATE PROCEDURE  
  Sono richieste l'autorizzazione CREATE PROCEDURE per il database e ALTER per lo schema in cui viene creata la procedura oppure è richiesta l'appartenenza al ruolo predefinito **db_ddladmin** del database.  
   
@@ -75,13 +77,13 @@ ms.lasthandoff: 11/17/2017
 5.  Modificare il nome della stored procedure.  
 6.  Modificare il nome della stored procedure in qualsiasi oggetto dipendente o script che vi fa riferimento.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-rename-a-stored-procedure"></a>Per rinominare una stored procedure  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
 2.  Dalla barra Standard fare clic su **Nuova query**.  
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene illustrato come rinominare una stored procedure eliminandola e ricreandola con un nuovo nome. Nel primo esempio si crea la stored procedure `'HumanResources.uspGetAllEmployeesTest`, nel secondo esempio la stored procedure viene rinominata in `HumanResources.uspEveryEmployeeTest`.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene illustrato come rinominare una stored procedure eliminandola e ricreandola con un nuovo nome. Nel primo esempio si crea la stored procedure `'HumanResources.uspGetAllEmployeesTest`, nel secondo esempio la stored procedure viene rinominata in `HumanResources.uspEveryEmployeeTest`.  
   
 ```sql  
 --Create the stored procedure.  
@@ -96,7 +98,7 @@ AS
 GO  
   
 --Rename the stored procedure.  
-EXEC sp_rename 'HumanResources.uspGetAllEmployeesTest', 'HumanResources.uspEveryEmployeeTest'; 
+EXEC sp_rename 'HumanResources.uspGetAllEmployeesTest', 'uspEveryEmployeeTest'; 
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -8,27 +8,30 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: Azure SQL Database
-f1_keywords: sys.elastic_pool_resource_stats catalog view
+applies_to:
+- Azure SQL Database
+f1_keywords:
+- sys.elastic_pool_resource_stats catalog view
 helpviewer_keywords:
 - sys.elastic_pool_resource_stats_TSQL
 - sys.elastic_pool_resource_stats
 - elastic_pool_resource_stats_TSQL
 - elastic_pool_resource_stats
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9505470a81f88e457a8b2f0b9429cee60cef7dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7af69bdd1f98560d3a6ae9699551b4f3062f68c6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys.elastic_pool_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,20 +46,20 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|Ora UTC indicante l'inizio dell'intervallo di reporting di 15 secondi.|  
 |**end_time**|**datetime2**|Ora UTC che indica la fine del 15 secondo intervallo di reporting.|  
-|**elastic_pool_name**|**nvarchar (128)**|Nome del pool di database elastico.|  
-|**avg_cpu_percent**|**Decimal(5,2)**|Utilizzo di calcolo Media in percentuale del limite del pool.|  
-|**avg_data_io_percent**|**Decimal(5,2)**|Utilizzo dei / o medio espresso come percentuale del limite del pool.|  
-|**avg_log_write_percent**|**Decimal(5,2)**|Medio di scrittura in percentuale del limite del pool di utilizzo delle risorse.|  
-|**avg_storage_percent**|**Decimal(5,2)**|Utilizzo di archiviazione medio, espresso in percentuale del limite di archiviazione del pool.|  
-|**max_worker_percent**|**Decimal(5,2)**|Massimi simultanee processi di lavoro (richieste) espresso come percentuale del limite del pool.|  
-|**max_session_percent**|**Decimal(5,2)**|Numero massimo di sessioni simultaneo espresso come percentuale del limite del pool.|  
+|**elastic_pool_name**|**nvarchar(128)**|Nome del pool di database elastico.|  
+|**avg_cpu_percent**|**decimal(5,2)**|Utilizzo di calcolo Media in percentuale del limite del pool.|  
+|**avg_data_io_percent**|**decimal(5,2)**|Utilizzo dei / o medio espresso come percentuale del limite del pool.|  
+|**avg_log_write_percent**|**decimal(5,2)**|Medio di scrittura in percentuale del limite del pool di utilizzo delle risorse.|  
+|**avg_storage_percent**|**decimal(5,2)**|Utilizzo di archiviazione medio, espresso in percentuale del limite di archiviazione del pool.|  
+|**max_worker_percent**|**decimal(5,2)**|Massimi simultanee processi di lavoro (richieste) espresso come percentuale del limite del pool.|  
+|**max_session_percent**|**decimal(5,2)**|Numero massimo di sessioni simultaneo espresso come percentuale del limite del pool.|  
 |**elastic_pool_dtu_limit**|**int**|Max pool elastico DTU impostazione corrente per questo pool elastico durante questo intervallo.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|L'impostazione per questo pool elastico in megabyte durante questo intervallo corrente limite di archiviazione massima del pool elastico.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Questa vista è presente nel database master del server logico. È necessario essere connessi al database master per query **sys.elastic_pool_resource_stats**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza di **dbmanager** ruolo.  
   
 ## <a name="examples"></a>Esempi  

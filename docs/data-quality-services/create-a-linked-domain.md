@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 898177d27b1c580d8cf40f6d2966ab91c7b01733
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 30f25b5b1c71f6a84bdd114173c8fc04c0b3902d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-linked-domain"></a>Creazione di un dominio collegato
   In questo argomento viene descritto come creare un dominio collegato in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio collegato viene creato da un altro dominio esistente in precedenza ed eredita tutti i valori, le regole e le proprietà dal dominio al quale è collegato, ad eccezione del nome e della descrizione. È possibile gestire un set di domini collegati come un unico dominio. Connettendo un dominio all'altro, si crea un dominio che eredita il proprio contenuto da un altro dominio.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per creare un dominio collegato, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Create"></a> Creazione di un dominio collegato  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  Se necessario, è possibile modificare il nome o la descrizione del dominio collegato nella scheda Proprietà dominio.  
   
-7.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   

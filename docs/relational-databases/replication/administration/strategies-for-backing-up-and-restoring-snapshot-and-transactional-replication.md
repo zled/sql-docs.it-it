@@ -23,15 +23,15 @@ helpviewer_keywords:
 - backups [SQL Server replication], transactional replication
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69c0da57bc8bf51162dcc26771726bf2e9f6091d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d7e9c5e24951afe3a997dce86f10b63b6fcfdf4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategie per il backup e il ripristino della replica snapshot e della replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si progetta una strategia di backup e ripristino per la replica snapshot e la replica transazionale, occorre considerare tre fattori:  
@@ -353,8 +353,8 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di database SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Eseguire il backup e ripristino di database replicati](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
- [Configurare la distribuzione](../../../relational-databases/replication/configure-distribution.md)   
+ [Backup e ripristino di database replicati](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
+ [Configura distribuzione](../../../relational-databases/replication/configure-distribution.md)   
  [Pubblicare dati e oggetti di database](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [Inizializzare una sottoscrizione](../../../relational-databases/replication/initialize-a-subscription.md)   

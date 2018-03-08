@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c43d7eaae7a8286252048d75102e27688b4bcd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9070b4ea757325e2f037140383bc525be75e1fe2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importare i domini da un file di Excel in Individuazione informazioni
   In questo argomento viene descritto come importare uno o più domini da un file di Excel nell'attività di individuazione delle informazioni di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Il processo di importazione semplifica il processo di generazione delle informazioni, risparmiando tempo e fatica. In questo modo è possibile creare una Knowledge Base con i dati presenti in un file di Excel o in un file di testo. Per altre informazioni sull'importazione di valori in un dominio di una Knowledge Base esistente, vedere [Importare i valori da un file di Excel in un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md). L'esportazione in un file di Excel non è supportata.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per importare i domini da un file di Excel, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Import"></a> Importare i domini da un file di Excel in una Knowledge Base  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 8.  Selezionare una colonna, quindi eseguire il mapping di un dominio esistente alla colonna o creare un nuovo dominio facendo clic sull'icona **Crea un dominio** , creando un dominio nella finestra di dialogo **Crea un dominio** e quindi eseguendo il mapping del dominio alla colonna. Il tipo di dati del dominio deve corrispondere al tipo di dati della colonna. Ripetere l'operazione per tutte le colonne del foglio di calcolo.  
   
-9. Fare clic su **Avanti**.  
+9. Scegliere **Avanti**.  
   
 10. Nella pagina **Individua** fare clic su **Avvia** per analizzare i dati nel foglio di calcolo di Excel.  
   

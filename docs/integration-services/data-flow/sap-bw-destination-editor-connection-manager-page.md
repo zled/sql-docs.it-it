@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sapbwdestination.connection.f1
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c63ac10d6cb4726817d8481be70533df8e2014c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8b97acdf1b5621100c9fcfce5d5072126ff794d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor destinazione SAP BW (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione SAP BW** per selezionare la gestione connessione SAP BW che verrà usata dalla destinazione SAP BW. In questa pagina vengono inoltre selezionati i parametri per il caricamento dei dati nel sistema SAP Netweaver BW.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 >  Se non si conoscono tutti i valori richiesti per configurare la destinazione, può essere necessario consultare l'amministratore SAP.  
   
  **Gestione connessione SAP BW**  
- Selezionare una gestione connessione esistente nell'elenco oppure crearne una nuova facendo clic su **Nuova**.  
+ Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
  **Nuova**  
  Creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione SAP BW** .  
@@ -76,7 +78,7 @@ ms.lasthandoff: 11/20/2017
  **Sistema logico**  
  Immettere il nome del sistema logico associato all'InfoPackage.  
   
- **Ricerca**  
+ **Cerca**  
  Individuare l'InfoPackage usando la finestra di dialogo **Cerca InfoPackage** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoPackage](../../integration-services/data-flow/look-up-infopackage.md).  
   
 ### <a name="rfc-destination-options"></a>Opzioni della destinazione RFC  
@@ -91,7 +93,7 @@ ms.lasthandoff: 11/20/2017
  **ID programma**  
  Immettere l'ID programma associato alla destinazione RFC.  
   
- **Ricerca**  
+ **Cerca**  
  Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoPackage](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
 ### <a name="create-sap-bw-objects-options"></a>Opzioni di Crea oggetti SAP BW  
@@ -106,7 +108,7 @@ ms.lasthandoff: 11/20/2017
   
 -   InfoPackage  
   
- **Create**  
+ **Creare**  
  Creare il tipo selezionato di oggetto SAP Netweaver BW.  
   
 |Tipo oggetto|Risultato|  

@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-ole-db-table-valued-parameters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: table-valued parameters, inserting data into
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9af0dffd12d09a28fb1a6b375abec34847e46f79
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9f40d26c1e3d44e90375907845ea5ee60ef414fb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Inserimento di dati in parametri con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,15 +57,15 @@ ms.lasthandoff: 11/17/2017
   
  Per utilizzare il modello pull, i consumer devono specificare l'implementazione personalizzata di un oggetto set di righe. Quando si utilizza il modello pull con set di righe di parametri con valori di tabella (CLSID_ROWSET_TVP), il consumer viene richiesto di aggregare l'oggetto set di righe di parametri con valori di tabella esposte dal provider tramite il ITableDefinitionWithConstraints:: Metodo CreateTableWithConstraints o IOpenRowset:: OPENROWSET. Il comportamento previsto per l'oggetto consumer consiste esclusivamente nel sostituire l'implementazione dell'interfaccia IRowset. È necessario sostituire le funzioni seguenti:  
   
--   IRowset:: GetNextRows  
+-   IRowset::GetNextRows  
   
--   IRowset:: Addrefrows  
+-   IRowset::AddRefRows  
   
--   IRowset:: GetData  
+-   IRowset::GetData  
   
--   IRowset:: ReleaseRows  
+-   IRowset::ReleaseRows  
   
--   IRowset:: RestartPosition  
+-   IRowset::RestartPosition  
   
  Il provider OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client leggerà una o più righe per volta dall'oggetto set di righe del consumer per supportare l'esecuzione del flusso in parametri con valori di tabella. L'utente, ad esempio, potrebbe disporre dei dati dei set di righe di parametri con valori di tabella su disco (non in memoria) e implementare la funzionalità di lettura dei dati dal disco se richiesto dal provider OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   

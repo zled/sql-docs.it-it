@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 669c3d72bd6287d0e534dd34f874978a8157da21
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e659322d66c01081c664850366a6cc4abf190d16
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-source"></a>Origine OLE DB
   L'origine OLE DB consente di estrarre dati da un'ampia gamma di database relazionali conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB consente ad esempio di estrarre dati dalle tabelle nei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
  Se si utilizza una query con parametri, sarà possibile eseguire il mapping delle variabili ai parametri per specificare i valori dei singoli parametri nelle istruzioni SQL.  
   
- Per connettersi a un'origine dei dati questa origine utilizza una gestione connessione OLE DB, che specifica il provider OLE DB da utilizzare. Per altre informazioni, vedere [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Per connettersi a un'origine dei dati questa origine utilizza una gestione connessione OLE DB, che specifica il provider OLE DB da utilizzare. Per altre informazioni, vedere [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  In un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene inoltre fornito l'oggetto di origine dati da cui è possibile creare una gestione connessione OLE DB, rendendo disponibili origini dati e relative viste all'origine OLE DB.  
   
@@ -106,15 +107,15 @@ ms.lasthandoff: 11/20/2017
   
 -   [Proprietà personalizzate OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Estrazione dei dati tramite l'origine OLE DB](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
--   [Mapping dei parametri di query a variabili in un componente del flusso di dati](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
+-   [Mapping dei parametri di query a variabili in un componente flusso di dati](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinare i dati per le trasformazioni Unione e Merge Join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Articolo di Wiki sui [connettori SSIS con Oracle](http://go.microsoft.com/fwlink/?LinkId=220670)sul sito Web social.technet.microsoft.com.  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
 3.  Fare clic su **Gestione connessione**.  
   
 ### <a name="static-options"></a>Opzioni statiche  
- **gestione connessione OLE DB**  
+ **Gestione connessione OLE DB**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
  **Nuova**  
@@ -222,7 +223,7 @@ ms.lasthandoff: 11/20/2017
  **Troncamento**  
  Consente di specificare l'azione da eseguire in caso di troncamenti, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
- **Description**  
+ **Descrizione**  
  Consente di visualizzare la descrizione dell'errore.  
   
  **Imposta questo valore nelle celle selezionate**  

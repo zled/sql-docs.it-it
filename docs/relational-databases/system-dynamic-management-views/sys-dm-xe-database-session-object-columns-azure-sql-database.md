@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f28c9cf92402fcecfc15eb0d527becbc9c3ddd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c0799d00819bade1e0f87fceb916aa649aef150a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>Sys.dm_xe_database_session_object_columns (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,20 +35,20 @@ ms.lasthandoff: 11/17/2017
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|Indirizzo di memoria della sessione dell'evento. Ha una relazione molti-a-uno con sys.dm_xe_database_sessions.address. Non ammette i valori Null.|  
+|event_session_address|**varbinary(8)**|Indirizzo di memoria della sessione dell'evento. Ha una relazione molti-a-uno con sys.dm_xe_database_sessions.address. Non ammette i valori Null.|  
 |column_name|**nvarchar(60)**|Nome del valore di configurazione. Non ammette i valori Null.|  
 |column_id|**int**|ID della colonna. Valore univoco all'interno dell'oggetto. Non ammette i valori Null.|  
-|column_value|**nvarchar (2048)**|Valore configurato della colonna. Ammette i valori Null.|  
+|column_value|**nvarchar(2048)**|Valore configurato della colonna. Ammette i valori Null.|  
 |object_type|**nvarchar(60)**|Tipo dell'oggetto.  Non è nullable.object_type è uno di:<br /><br /> evento<br /><br /> target|  
 |object_name|**nvarchar(60)**|Nome dell'oggetto a cui appartiene la colonna. Non ammette i valori Null.|  
 |object_package_guid|**uniqueidentifier**|GUID del pacchetto che contiene l'oggetto. Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|Per|Relazione|  
+|From|Per|Relazione|  
 |----------|--------|------------------|  
 |dm_xe_database_session_object_columns.object_name<br /><br /> dm_xe_database_session_object_columns.object_package_guid|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|Molti-a-uno|  
 |dm_xe_database_session_object_columns.column_name<br /><br /> dm_xe_database_session_object_columns.column_id|sys.dm_xe_object_columns.name<br /><br /> sys.dm_xe_object_columns.column_id|Molti-a-uno|  

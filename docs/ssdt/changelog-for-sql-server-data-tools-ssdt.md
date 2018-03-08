@@ -1,32 +1,144 @@
 ---
 title: Log delle modifiche per SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: 
-ms.date: 10/19/2017
+ms.date: 02/09/2018
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssdt
+ms.technology:
+- tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 06b6fbdbf9d53273abe660ca6d16ba2afb51fa26
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log delle modifiche per SQL Server Data Tools (SSDT)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questo log delle modifiche è per [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Questo log delle modifiche è per [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Per i post dettagliati sulle novità e le modifiche, vedere il [blog del team di SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT per Visual Studio 2017 (15.5.2)
+Numero di build: 14.0.16156.0
+  
+### <a name="whats-new"></a>Novità
+
+**SSIS**
+1.  È stato risolto un problema a causa del quale la migrazione dei progetti SSIS 2008 non riesce quando SSAS e SSIS sono entrambi installati nella stessa istanza di VS 2017.
+2.  È stato risolto un problema a causa del quale non è possibile compilare i progetti RDLC quando Progettazione report RDLC e SSIS sono entrambi installati nella stessa istanza di VS 2017.
+3.  È stato risolto un problema a causa del quale non è possibile aggiornare il colore delle annotazioni.
+4.  È stato risolto un problema a causa del quale alcune stringhe nell'Editor gestione connessione Hadoop risultano troncate in altre lingue.
+5.  È stato risolto un problema a causa del quale alcune stringhe vengono troncate nell'Editor gestione connessione OData.
+6.  È stato risolto un problema a causa del quale alcune stringhe vengono troncate nella finestra di Importazione guidata progetto di Integration Services.
+7.  È stato risolto un problema relativo al titolo nella finestra delle informazioni della casella degli strumenti SSIS.
+8.  È stato risolto un problema a causa del quale alcune stringhe vengono troncate nella finestra di Distribuzione guidata Integration Services. 
+
+**Programma di installazione**
+- È stato risolto un problema a causa del quale a volte il download del payload non riesce con l'errore "Impossibile trovare il file specificato (0x80070002)"  
+
+### <a name="known-issues"></a>Problemi noti
+- L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
+
+
+
+
+## <a name="ssdt-for-visual-studio-2017-1551"></a>SSDT per Visual Studio 2017 (15.5.1)
+Numero di build: 14.0.16148.0
+  
+### <a name="whats-new"></a>Novità
+
+Visual Studio 2017 (15.5.1) è uguale alla versione 15.5.0 tranne che per le correzioni di bug seguenti apportate al programma di installazione:
+
+1.  Risolvere il problema per cui il programma di installazione si blocca dopo l'installazione di SQL Server Integration Services.
+2.  Risolvere il problema per cui l'installazione non riesce e viene visualizzato il messaggio di errore seguente: "L'operazione metafile richiesta non è supportata (0x800707D3)".
+
+A parte queste due correzioni di bug, i dettagli seguenti per la versione 15.5.0 si applicano anche alla versione 15.5.1
+
+## <a name="ssdt-for-visual-studio-2017-1550"></a>SSDT per Visual Studio 2017 (15.5.0)
+Numero di build: 14.0.16146.0
+  
+### <a name="whats-new"></a>Novità
+
+SSDT per Visual Studio 2017 (15.5.0) passa dalla versione di anteprima alla disponibilità generale.
+
+**Programma di installazione**
+1. L'interfaccia utente del programma di installazione è localizzata.
+1. L'icona è stata sostituita con una versione di qualità superiore.
+
+**Integration Services (IS)**
+1. È stato aggiunto un passaggio di convalida del pacchetto nella distribuzione guidata durante la distribuzione nel runtime di integrazione di Azure SSIS nel file di definizione dell'applicazione (ADF), che consente di individuare potenziali problemi di compatibilità nei pacchetti SSIS per l'esecuzione nel runtime di integrazione di Azure SSIS. Per altre informazioni, vedere [Convalidare pacchetti SSIS distribuiti in Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+1. L'estensione SSIS è localizzata.
+
+### <a name="bug-fixes"></a>Correzioni di bug
+
+**Integration Services (IS)**
+1. È stato risolto un problema per cui il layout della gestione connessione OLEDB e ADO.NET risultava danneggiata.
+2. È stato risolto un problema per cui veniva generato un errore di assembly non trovato durante il tentativo di modifica di un'attività di elaborazione della dimensione.
+
+### <a name="known-issues"></a>Problemi noti
+
+**Integration Services (SSIS)** L'attività di esecuzione dei pacchetti SSIS non supporta il debug quando l'elemento ExecuteOutOfProcess è impostato su True. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
+
+
+
+## <a name="ssdt-174-for-visual-studio-2015"></a>SSDT 17.4 per Visual Studio 2015
+Numero di build: 14.0.61712.050
+
+### <a name="whats-new"></a>Novità
+
+**Progetti Analysis Services (SSAS)**
+- Sono state aggiunte tre nuove opzioni per progetti tabulari in Opzioni > Analysis Services Tabular > Importazione dati:
+  - Abilita origini dati legacy: consente all'utente di creare origini dati precedenti alla "modalità di compatibilità 1200" in modalità di compatibilità più recenti.
+  - Automatic type detection (Rilevamento tipo automatico): se abilitato, l'editor di query per le origini dati moderne tenta di rilevare i tipi di dati per le query non strutturate quando vengono caricate. Se il rilevamento ha esito positivo, è possibile aggiungere un nuovo passaggio alla query.
+  - Esegui analisi in background nell'editor di query: quando è abilitato, l'editor di query per le origini dati moderne esegue le query sull'origine dati quando le query vengono caricate per analizzare lo schema di output della query.
+
+**Integration Services (IS)**
+- È stato aggiunto un passaggio di convalida del pacchetto nella distribuzione guidata durante la distribuzione nel runtime di integrazione di Azure SSIS nel file di definizione dell'applicazione (ADF), che consente di individuare potenziali problemi di compatibilità nei pacchetti SSIS per l'esecuzione nel runtime di integrazione di Azure SSIS. Per altre informazioni, vedere [Convalidare pacchetti SSIS distribuiti in Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+
+
+### <a name="bug-fixes"></a>Correzioni di bug
+
+**Progetti Analysis Services (SSAS):**
+- È stato risolto un problema che poteva causare un'eccezione non gestita durante l'archiviazione delle modifiche del modello in TFS.
+- È stato risolto un problema che poteva causare un'eccezione durante l'aggiunta di una tabella con espressioni M complesse a un modello 1400.
+- È stato risolto un problema che poteva causare un arresto anomalo di Visual Studio durante la ricerca di metadati nella vista diagramma del modello.
+- È stato risolto un problema con i modelli 1400 che poteva causare la rimozione delle colonne calcolate dalla definizione della tabella durante il salvataggio delle modifiche alle query della partizione M.
+- È stato risolto un problema che si verificava durante l'uso di Rinomina query nei modelli 1400 nell'interfaccia utente di recupero dei dati/editor di tabella che si bloccava durante la convalida della compatibilità con il modello di dati corrente.
+- È stato risolto un problema che causava un mancato riferimento all'assembly Newtonsoft durante la distribuzione del modello 1400 in Azure Analysis Services.
+- È stato risolto un problema che in alcuni casi causava un errore di importazione di dati tramite PQ nel modello 1400.
+- È stato risolto un problema di ridimensionamento nelle finestre di dialogo dell'interfaccia utente di PowerQuery che venivano visualizzate quando veniva impostato il ridimensionamento di Windows.
+- È stato risolto un problema con la ridenominazione dei ruoli.
+- Sono stati risolti problemi con le configurazioni dei progetti che in alcuni casi potevano causare il mancato salvataggio o la sincronizzazione non corretta delle modifiche.
+- È stato risolto un problema nell'editor di PowerQuery che aggiungeva automaticamente passaggi di tipo di modifica.
+- È stato risolto un problema che causava un errore di apertura del file BIM dopo il cambio di modalità in/da Area di lavoro integrata.
+- La proprietà MaxConnections è ora visibile per le origini dati nei modelli tabulari.
+- Sono state aumentate le dimensioni iniziali della finestra dell'editor di PowerQuery.
+- Le parole chiave di query M, come ad esempio "Origine" nell'editor di PowerQuery sono state localizzate.
+- Le credenziali vengono memorizzate nella cache quando si usano i modelli 1400 e le origini dati strutturate per evitare di dover immettere le stesse credenziali per ogni tabella modificata.
+
+**Progetti SSRS:**
+- È stato risolto un problema che impediva la distribuzione di un singolo report in un progetto a più report
+- È stato risolto un problema con le origini dati condivise che potevano causare un problema nella distribuzione
+- È stato risolto un problema che poteva causare l'arresto in modo anomalo della gestione degli annullamenti quando ci si postava tra la visualizzazione Codice, la visualizzazione Progettazione e la finestra dell'editor di query
+- È stato risolto un problema che poteva causare la mancata visualizzazione del pannello dei parametri dopo un errore di runtime
+- È stato risolto un problema con i progetti report che potevano causare la perdita dei mapping del controllo del codice sorgente
+
+**Integration Services:**
+- È stato risolto un problema che poteva verificarsi durante il passaggio di una connessione in un'attività di processo di Analysis Services
+- È stato risolto un problema per cui alcune attività e alcuni componenti non venivano localizzati correttamente.
+- È stato risolto un problema per cui i componenti CDC si interrompevano dopo l'applicazione di una correzione SQL per CDC che aggiungeva la colonna \__$command\_id.
 
 
 ## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>SSDT per Visual Studio 2017 (anteprima della versione 15.4.0)
@@ -165,7 +277,6 @@ Questa anteprima è la prima versione di SSDT per Visual Studio 2017. Questa ver
 - SSIS non è localizzato.
 - L'attività di esecuzione pacchetti SSIS non supporta il debug quando *ExecuteOutofProcess* è impostato su *True*. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
 - Per un elenco completo delle modifiche, vedere il [log delle modifiche](changelog-for-sql-server-data-tools-ssdt.md).
-- Per segnalare eventuali problemi, è possibile usare il [Centro commenti e suggerimenti per SSDT Connect](https://connect.microsoft.com/SQLServer/Feedback).
 - I pacchetti SSIS che contengono estensioni di terze parti non possono essere destinati all'uso con altre versioni di server.
 
 

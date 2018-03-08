@@ -8,10 +8,11 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-caps.latest.revision: "66"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58548ba72a81257c14b2db3535fd1131c4983099
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d7fe4ecd4b618f508dccc123b31611658fe5000c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Caricamento dell'output di un pacchetto locale
   Le applicazioni client possono leggere l'output dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando viene salvato nelle destinazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o quando viene salvato in una destinazione file flat usando le classi dello spazio dei nomi **System.IO**. Tuttavia, un'applicazione client può anche leggere l'output di un pacchetto direttamente dalla memoria, senza la necessità di un passaggio intermedio per rendere persistenti i dati. La chiave per questa soluzione è lo spazio dei nomi **Microsoft.SqlServer.Dts.DtsClient**, che contiene implementazioni speciali delle interfacce **IDbConnection**, **IDbCommand**, e **IDbDataParameter** dello spazio dei nomi **System. Data**. L'assembly Microsoft.SqlServer.Dts.DtsClient.dll è installato per impostazione predefinita in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  Creare un oggetto di tipo **DtsClient.DtsCommand** che usi l'oggetto **DtsConnection** creato in precedenza e impostare la relativa proprietà **CommandText** sul nome della destinazione DataReader nel pacchetto. Chiamare quindi il metodo **ExecuteReader** dell'oggetto comando per caricare i risultati del pacchetto in un nuovo DataReader.  
   
-5.  Facoltativamente, è possibile parametrizzare indirettamente l'output del pacchetto usando la raccolta di oggetti **DtsDataParameter** nell'oggetto **DtsCommand** per passare i valori alle variabili definite nel pacchetto. All'interno del pacchetto è possibile utilizzare queste variabili come parametri di query o in espressioni per influire sui risultati restituiti alla destinazione DataReader. È necessario definire queste variabili nel pacchetto nello spazio dei nomi **DtsClient** affinché sia possibile usarli con l'oggetto **DtsDataParameter** da un'applicazione client. Può essere necessario fare clic sul pulsante della barra degli strumenti **Selezione colonne finestra Variabili** nella finestra **Variabili** per visualizzare la colonna **Spazio dei nomi**. Nel codice client, quando si aggiunge un oggetto **DtsDataParameter** alla raccolta **Parametri** di **DtsCommand** omettere il riferimento allo spazio dei nomi DtsClient dal nome della variabile. Esempio:  
+5.  Facoltativamente, è possibile parametrizzare indirettamente l'output del pacchetto usando la raccolta di oggetti **DtsDataParameter** nell'oggetto **DtsCommand** per passare i valori alle variabili definite nel pacchetto. All'interno del pacchetto è possibile utilizzare queste variabili come parametri di query o in espressioni per influire sui risultati restituiti alla destinazione DataReader. È necessario definire queste variabili nel pacchetto nello spazio dei nomi **DtsClient** affinché sia possibile usarli con l'oggetto **DtsDataParameter** da un'applicazione client. Può essere necessario fare clic sul pulsante della barra degli strumenti **Selezione colonne finestra Variabili** nella finestra **Variabili** per visualizzare la colonna **Spazio dei nomi**. Nel codice client, quando si aggiunge un oggetto **DtsDataParameter** alla raccolta **Parametri** di **DtsCommand** omettere il riferimento allo spazio dei nomi DtsClient dal nome della variabile. Ad esempio  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  

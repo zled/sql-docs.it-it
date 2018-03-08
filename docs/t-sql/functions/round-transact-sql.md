@@ -1,34 +1,36 @@
 ---
 title: ROUND (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ROUND_TSQL
 - ROUND
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - rounding expressions
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9cb05c7f0b00f93f2602e114de2b502b8be0213
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 9dbfe719e4216e778a28f1a9afb8a1995c09acb1
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,15 +42,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>Sintassi  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
   
 ROUND ( numeric_expression , length [ ,function ] )  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-ROUND (numeric_expression , length )  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -88,7 +83,7 @@ ROUND (numeric_expression , length )
 |ROUND (748.58 ASSUME, -1)|750.00|  
 |ROUND (748.58 ASSUME, -2)|700.00|  
 |ROUND(748.58, -3)|Genera un overflow aritmetico, perché 748.58 assume il valore decimal(5,2), tramite il quale non può essere restituito 1000.00.|  
-|Per un arrotondamento fino a 4 cifre, modificare il tipo di dati di input. Esempio:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
+|Per un arrotondamento fino a 4 cifre, modificare il tipo di dati di input. Ad esempio<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
 ## <a name="examples"></a>Esempi  
   
@@ -143,22 +138,6 @@ GO
 150.00  
   
 (1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-using-round-and-estimates"></a>D. Utilizzo della funzione ROUND e delle stime  
- In questo esempio vengono utilizzate due espressioni per illustrare che con la funzione `ROUND` l'ultima cifra è sempre una stima.  
-  
-```  
-SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-
- ```
---------  ---------
-123.995000    123.995444
 ```
   
 ## <a name="see-also"></a>Vedere anche  
@@ -166,7 +145,4 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [FLOOR &#40; Transact-SQL &#41;](../../t-sql/functions/floor-transact-sql.md)   
- [Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-  
-  
-
+ [Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

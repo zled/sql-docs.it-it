@@ -22,13 +22,13 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d945149c7bb6dc583f378c0d8823e2eff0e925b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b73573c8fb57c50bbca5e74587952e7ed50fa307
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Informazioni sull'accesso alla connessione client per le repliche di disponibilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In un gruppo di disponibilità AlwaysOn è possibile configurare una o più repliche di disponibilità per consentire connessioni di sola lettura quando in esecuzione nel ruolo secondario, ovvero quando in esecuzione come replica secondaria. È inoltre possibile configurare ogni replica di disponibilità per consentire o escludere le connessioni di sola lettura quando l'esecuzione avviene nel ruolo primario, ossia come replica primaria.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Per informazioni sul listener del gruppo di disponibilità che gestisce le richieste di connessione del client, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Tipi di accesso alla connessione supportati dal ruolo secondario](#ConnectAccessForSecondary)  
   
@@ -86,13 +86,13 @@ ms.lasthandoff: 11/20/2017
   
 |Ruolo di replica|Accesso alla connessione supportato sulla replica|Finalità di connessione|Risultato tentativo di connessione|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secondari|Tutto|Finalità di lettura, lettura e scrittura o nessuna finalità di connessione specificata|Operazione completata|  
+|Secondari|All|Finalità di lettura, lettura e scrittura o nessuna finalità di connessione specificata|Esito positivo|  
 |Secondari|Nessuno (comportamento predefinito nel ruolo secondario).|Finalità di lettura, lettura e scrittura o nessuna finalità di connessione specificata|Failure|  
-|Secondari|Solo finalità di lettura|Con finalità di lettura|Operazione completata|  
+|Secondari|Solo finalità di lettura|Con finalità di lettura|Esito positivo|  
 |Secondari|Solo finalità di lettura|Finalità di lettura e scrittura o nessuna finalità di connessione specificata|Failure|  
-|Primaria|Tutto (comportamento predefinito del ruolo primario).|Sola lettura, lettura e scrittura o nessuna finalità di connessione specificata|Operazione completata|  
+|Primaria|Tutto (comportamento predefinito del ruolo primario).|Sola lettura, lettura e scrittura o nessuna finalità di connessione specificata|Esito positivo|  
 |Primaria|Lettura/scrittura|Solo finalità di lettura|Failure|  
-|Primaria|Lettura/scrittura|Finalità di lettura e scrittura o nessuna finalità di connessione specificata|Operazione completata|  
+|Primaria|Lettura/scrittura|Finalità di lettura e scrittura o nessuna finalità di connessione specificata|Esito positivo|  
   
  Per informazioni sulla configurazione di un gruppo di disponibilità in modo che accetti le connessioni dei client alle proprie repliche, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
@@ -103,8 +103,8 @@ ms.lasthandoff: 11/20/2017
   
 |Replica|Modalità di commit|Ruolo iniziale|Accesso alla connessione per il ruolo secondario|Accesso alla connessione per il ruolo primario|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|Sincrona|Primaria|Nessuno|Lettura/scrittura|  
-|Replica2|Sincrona|Secondari|Nessuno|Lettura/scrittura|  
+|Replica1|Sincrona|Primaria|None|Lettura/scrittura|  
+|Replica2|Sincrona|Secondari|None|Lettura/scrittura|  
 |Replica3|Asincrona|Secondari|Solo con finalità di lettura|Lettura/scrittura|  
 |Replica4|Asincrona|Secondari|Solo finalità di lettura|Lettura/scrittura|  
   
@@ -129,7 +129,7 @@ ms.lasthandoff: 11/20/2017
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (Blog del team di SQL Server AlwaysOn: blog ufficiale del team di SQL Server AlwaysOn)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Statistiche](../../../relational-databases/statistics/statistics.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_add_job (Transact-SQL) | Documenti Microsoft
+title: sp_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_job_TSQL
 - sp_add_job
-dev_langs: TSQL
-helpviewer_keywords: sp_add_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 330ad1186afa47b55ed6365be76fe96d1878e980
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +61,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  Nome del processo. Il nome deve essere univoco e non può contenere la percentuale (**%**) caratteri. *job_name*è **nvarchar (128)**, non prevede alcun valore predefinito.  
   
  [  **@enabled =** ] *abilitato*  
@@ -67,16 +70,16 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@description =** ] **'***descrizione***'**  
  Descrizione del processo. *Descrizione* è **nvarchar (512)**, con un valore predefinito è NULL. Se *descrizione* viene non omesso, viene utilizzata "Nessuna descrizione disponibile".  
   
- [  **@start_step_id =** ] *step_id*  
+ [ **@start_step_id =** ] *step_id*  
  Numero di identificazione del primo passaggio da eseguire per il processo. *step_id*è **int**, con un valore predefinito è 1.  
   
- [  **@category_name =** ] **'***categoria***'**  
+ [ **@category_name =** ] **'***category***'**  
  Categoria per il processo. *categoria*è **sysname**, con un valore predefinito è NULL.  
   
- [  **@category_id =** ] *category_id*  
+ [ **@category_id =** ] *category_id*  
  Meccanismo indipendente dal linguaggio per specificare una categoria di processi. *category_id*è **int**, con un valore predefinito è NULL.  
   
- [  **@owner_login_name =** ] **'***accesso***'**  
+ [ **@owner_login_name =** ] **'***login***'**  
  Nome dell'account di accesso proprietario del processo. *account di accesso*è **sysname**, il valore predefinito è NULL, che viene interpretato come nome di accesso corrente. Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per  **@owner_login_name** . Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di  **@owner_login_name** , l'esecuzione della stored procedure ha esito negativo e viene restituito un errore.  
   
  [  **@notify_level_eventlog =** ] *eventlog_level*  
@@ -92,10 +95,10 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@notify_level_email =** ] *email_level*  
  Valore che indica quando inviare un messaggio di posta elettronica al termine del processo. *email_level*è **int**, il valore predefinito è **0**, non ovvero mai. *email_level*utilizza gli stessi valori *eventlog_level*.  
   
- [  **@notify_level_netsend =** ] *netsend_level*  
+ [ **@notify_level_netsend =** ] *netsend_level*  
  Valore che indica quando inviare un messaggio di rete al termine del processo. *netsend_level*è **int**, il valore predefinito è **0**, non ovvero mai. *netsend_level* utilizza gli stessi valori *eventlog_level*.  
   
- [  **@notify_level_page =** ] *page_level*  
+ [ **@notify_level_page =** ] *page_level*  
  Valore che indica quando inviare una pagina al termine del processo. *page_level*è **int**, il valore predefinito è **0**, non ovvero mai. *page_level*utilizza gli stessi valori *eventlog_level*.  
   
  [  **@notify_email_operator_name =** ] **'***indirizzo_posta_elettronica***'**  
@@ -104,16 +107,16 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
  Nome dell'operatore a cui viene inviato il messaggio di rete al termine del processo. *netsend_name*è **sysname**, con un valore predefinito è NULL.  
   
- [  **@notify_page_operator_name =** ] **'***page_name***'**  
+ [ **@notify_page_operator_name =** ] **'***page_name***'**  
  Nome dell'operatore a cui inviare il messaggio sul cercapersone al termine del processo. *page_name*è **sysname**, con un valore predefinito è NULL.  
   
- [  **@delete_level =** ] *i possibili*  
+ [ **@delete_level =** ] *delete_level*  
  Valore che indica quando eliminare il processo. *delete_value*è **int**, il valore predefinito è 0, non ovvero mai. *i possibili*utilizza gli stessi valori *eventlog_level*.  
   
 > [!NOTE]  
 >  Quando *i possibili* è **3**, il processo viene eseguito una sola volta, indipendentemente dalle pianificazioni definite per il processo. Inoltre, se un processo si autoelimina, viene eliminato anche il contenuto della cronologia corrispondente.  
   
- [  **@job_id =** ] *job_id***OUTPUT**  
+ [ **@job_id =** ] *job_id***OUTPUT**  
  Numero di identificazione del processo assegnato al processo se creato correttamente. *job_id*è una variabile di output di tipo **uniqueidentifier**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -131,7 +134,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, gli utenti devono essere un membro del **sysadmin** ruolo predefinito del server o appartenere a uno dei seguenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente ruoli predefiniti del database, che si trovano nel **msdb** database:  
   
 -   **SQLAgentUserRole**  
@@ -185,16 +188,16 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_add_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_add_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_apply_job_to_targets &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_delete_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_remove_job_from_targets &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
- [sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_update_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

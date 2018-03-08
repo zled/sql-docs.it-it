@@ -7,26 +7,28 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 7fe670f3-5e62-43ef-97eb-b9af54df9128
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9a47e9d2b2bec007af27b8e8ce26d6a6c6f67c3f
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 7d0d272c2623d2a23a8e486f15c320d40cba6bf5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lezione 3: Esplorare e visualizzare i dati
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo fa parte di un'esercitazione per gli sviluppatori SQL su come usare il linguaggio R in SQL Server.
 
@@ -56,7 +58,7 @@ Nel set di dati originale gli identificatori di taxi e i record delle corse si t
   
 -   I valori utilizzati per le colonne di etichetta sono tutti basati sul _suggerimento\_quantità_ colonna utilizzando le regole business:
   
-    |Nome colonna derivata|Regola|
+    |Nome colonna derivata|Rule|
     |-|-|
      |tipped|Se tip_amount > 0, tipped = 1, altrimenti tipped = 0|
     |tip_class|Classe 0: tip_amount = $0<br /><br />Classe 1: tip_amount > $0 e tip_amount <= $5<br /><br />Classe 2: tip_amount > $5 e tip_amount <= $10<br /><br />Classe 3: tip_amount > $10 e tip_amount <= $20<br /><br />Classe 4: tip_amount > $20|
@@ -130,7 +132,7 @@ La stored procedure restituisce l'immagine come un flusso di dati varbinary, che
   
     **Risultati**
     
-    *tracciato*
+    *plot*
     *0xFFD8FFE000104A4649...*
   
 2.  Aprire un prompt dei comandi di PowerShell ed eseguire il comando seguente specificando il nome dell'istanza appropriata, il nome del database, il nome utente e le credenziali come argomenti:

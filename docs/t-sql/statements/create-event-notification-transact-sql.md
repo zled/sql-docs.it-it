@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,22 +19,23 @@ f1_keywords:
 - NOTIFICATION
 - CREATE EVENT NOTIFICATION
 - EVENT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE EVENT NOTIFICATION statement
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48d7a50927d6fc3e193b54e85dd534aa859d13fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +123,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Gli errori che si verificano durante l'invio di una notifica degli eventi vengono registrati.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per creare una notifica degli eventi con ambito database (ON DATABASE), è necessario disporre dell'autorizzazione CREATE DATABASE DDL EVENT NOTIFICATION per il database corrente.  
   
  Per creare una notifica degli eventi per un'istruzione DDL con ambito server (ON SERVER), è necessario disporre dell'autorizzazione CREATE DDL EVENT NOTIFICATION nel server.  
@@ -140,7 +142,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Creazione di una notifica degli eventi con ambito server  
  Nell'esempio seguente vengono creati gli oggetti necessari per la configurazione di un servizio di destinazione con [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Il servizio di destinazione fa riferimento al tipo di messaggio e al contratto del servizio di inizializzazione per le notifiche degli eventi, quindi viene creata una notifica degli eventi per tale servizio di destinazione che invia una notifica ogni volta che si verifica un evento di traccia `Object_Created` nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 --Create a queue to receive messages.  
 CREATE QUEUE NotifyQueue ;  
 GO  
@@ -167,7 +169,7 @@ TO SERVICE 'NotifyService',
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. Creazione di una notifica degli eventi con ambito database  
  Nell'esempio seguente viene creata una notifica degli eventi per lo stesso servizio di destinazione utilizzato nell'esempio precedente. La notifica degli eventi viene attivata dopo che si verifica un evento `ALTER_TABLE` nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  
 ON DATABASE  
 FOR ALTER_TABLE  
@@ -186,7 +188,7 @@ WHERE name = 'log_ddl1';
 ### <a name="d-getting-information-about-an-event-notification-that-is-database-scoped"></a>D. Recupero di informazioni su una notifica degli eventi con ambito database  
  Nell'esempio seguente viene eseguita una query sulla vista del catalogo `sys.event_notifications` per recuperare metadati sulla notifica degli eventi `Notify_ALTER_T1` definita a livello di ambito del database.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.event_notifications  
 WHERE name = 'Notify_ALTER_T1';  
 ```  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_describe_first_result_set_for_object (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set_for_object_TSQL
 - sys.dm_exec_describe_first_result_set_for_object
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_describe_first_result_set_for_object catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f09208161dd4b36f1b798925a58fffaa475e6176
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bcdb3bd85543ae5feeb4b224350a5b72a2d95f7b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -120,7 +123,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |12|OBJECT_ID_NOT_SUPPORTED|Il @object_id passato alla funzione è supportata (non una stored procedure)|  
 |13|OBJECT_ID_DOES_NOT_EXIST|Il @object_id passato a funzione non è stata trovata nel catalogo di sistema.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione per eseguire il @tsql argomento.  
   
 ## <a name="examples"></a>Esempi  
@@ -155,8 +158,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [Sys.dm exec_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   

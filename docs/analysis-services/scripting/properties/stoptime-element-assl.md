@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: StopTime Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6102abc0aa7b14d14a5bc1bcebc5e8a5d4c5d96
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5fedfcb3eb2d75419927d8d3c2b0686e80954992
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="stoptime-element-assl"></a>Elemento StopTime (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Specifica la data e ora in cui un [traccia](../../../analysis-services/scripting/objects/trace-element-assl.md) elemento deve essere arrestata.  
@@ -47,10 +45,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|DateTime|  
-|Valore predefinito|Nessuno|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[Traccia](../../../analysis-services/scripting/objects/trace-element-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
  L'elemento che corrisponde all'elemento padre **StopTime** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Trace>.  
   

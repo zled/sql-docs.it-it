@@ -8,24 +8,27 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c0552652fba104adb69ac0fc1b00cf7316bec5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 78de6a2a9f403c08f30ce72f5db8194563ec318a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le applicazioni che usano SqlOpenFilestream() per aprire gli handle di file Win32 per la lettura o la scrittura di dati BLOB FILESTREAM possono entrare in conflitto con le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] gestite in una transazione comune. Sono incluse le query [!INCLUDE[tsql](../../includes/tsql-md.md)] o MARS la cui esecuzione richiede molto tempo. È necessario progettare con attenzione le applicazioni per evitare questi tipi di conflitti.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Le applicazioni che usano SqlOpenFilestream() per aprire gli handle di file Win32 per la lettura o la scrittura di dati BLOB FILESTREAM possono entrare in conflitto con le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] gestite in una transazione comune. Sono incluse le query [!INCLUDE[tsql](../../includes/tsql-md.md)] o MARS la cui esecuzione richiede molto tempo. È necessario progettare con attenzione le applicazioni per evitare questi tipi di conflitti.  
   
  Quando il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o le applicazioni provano ad aprire dati BLOB FILESTREAM, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] controlla il contesto di transazione associato. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] consente o nega la richiesta a seconda che l'operazione di apertura funzioni o meno con le istruzioni DDL, le istruzioni DML, il recupero dei dati o la gestione delle transazioni. Nella tabella seguente viene illustrato il modo in cui il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina se un 'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] verrà consentita o negata in base al tipo di file aperti nella transazione.  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DISCOVER_LITERALS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1e66c7b388fd0f488bdb95f4e18de07de7773036
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ae4dfbe2c5f7d9ce9281dd483b7544fb358dd1df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverliterals-rowset"></a>Set di righe DISCOVER_LITERALS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce informazioni sui valori letterali, inclusi tipi di dati e i valori, supportati dal [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML per il provider Analysis (XMLA).  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DISCOVER_LITERALS** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
+|Nome colonna|Indicatore del tipo|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**LiteralName**|**DBTYPE_WSTR**||Nome del valore letterale descritto nella riga.<br /><br /> Ad esempio: **DBLITERAL_LIKE_PERCENT**|  
 |**LiteralValue**|**DBTYPE_WSTR**||Valore letterale effettivo.<br /><br /> Ad esempio, se **LiteralName** è **DBLITERAL_LIKE_PERCENT** e il carattere di percentuale (**%**) consente di ricercare zero o più caratteri in una clausola LIKE, il valore del **LiteralValue** colonna è "**%**".|  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**LiteralName**|**DBTYPE_WSTR**|Facoltativa.|  
+|**LiteralName**|**DBTYPE_WSTR**|Facoltativo.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [XML for Analysis i rowset dello Schema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)   

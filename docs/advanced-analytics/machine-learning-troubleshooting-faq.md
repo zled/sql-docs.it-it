@@ -8,20 +8,21 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7c0c86caa318176d1bff25e5562db630a163d0d7
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-machine-learning"></a>Risoluzione dei problemi di apprendimento
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo fornisce informazioni sulla risoluzione dei problemi relativi a installazione e configurazione delle funzionalità di machine learning in SQL Server. Le informazioni includono i collegamenti alle guide di installazione, problemi noti e note sulla versione. Altri articoli collegata in questo articolo fornisce consigli sull'ottimizzazione delle prestazioni per le soluzioni di machine learning in SQL Server.
 

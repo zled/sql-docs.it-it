@@ -8,7 +8,8 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d235f0af092b5780686abbe2b8d191f04547fd6a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 018d765aace9ef2f46a1dd8da4e0a6c503a0d35f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-scale-out-groups"></a>Gruppi con scalabilità orizzontale di PolyBase
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un'istanza di SQL Server autonomo con PolyBase può diventare un collo di bottiglia in termini di prestazioni quando si lavora con grandi set di dati in Hadoop o in Archiviazione BLOB di Azure. La funzionalità Gruppo di PolyBase consente di creare un cluster di istanze di SQL Server per elaborare grandi quantità di set di dati da origini dati esterne, come ad esempio Hadoop o archiviazione BLOB di Azure, in un meccanismo di scalabilità orizzontale che consente di migliorare le prestazioni delle query.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Un'istanza di SQL Server autonomo con PolyBase può diventare un collo di bottiglia in termini di prestazioni quando si lavora con grandi set di dati in Hadoop o in archiviazione BLOB di Azure. La funzionalità Gruppo di PolyBase consente di creare un cluster di istanze di SQL Server per elaborare grandi quantità di set di dati da origini dati esterne, come ad esempio Hadoop o archiviazione BLOB di Azure, in un meccanismo di scalabilità orizzontale che consente di migliorare le prestazioni delle query.  
   
  Vedere [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) (Introduzione a PolyBase) e [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)(Guida di Polybase).  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/18/2017
  Il nodo head contiene l'istanza di SQL Server alla quale vengono inviate le query PolyBase. Ogni gruppo di PolyBase può avere un solo nodo head. Un nodo head è un gruppo logico costituito dal motore di database SQL, dal motore PolyBase e da PolyBase Data Movement Service nell'istanza di SQL Server.  
   
 ### <a name="compute-node"></a>Nodo di calcolo  
- Un nodo di calcolo contiene l'istanza di SQL Server che assiste nell'elaborazione delle query di scalabilità orizzontale sui dati esterni. Un nodo di calcolo è un gruppo logico costituito da SQL Server e da PolyBase Data Movement Service nell'istanza di SQL Server. Un gruppo di PolyBase può presentare più nodi di calcolo.  
+ Un nodo di calcolo contiene l'istanza di SQL Server che assiste nell'elaborazione delle query di scalabilità orizzontale sui dati esterni. Un nodo di calcolo è un gruppo logico costituito da SQL Server e da PolyBase Data Movement Service nell'istanza di SQL Server. Un gruppo di PolyBase può presentare più nodi di calcolo.  Il nodo head e tutti i nodi di calcolo devono eseguire la stessa versione di SQL Server.
   
 ### <a name="distributed-query-processing"></a>Elaborazione delle query distribuite  
  Le query PolyBase vengono inviate a SQL Server nel nodo head. La parte della query che fa riferimento a tabelle esterne viene passata al motore PolyBase.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="to-configure-a-polybase-group"></a>Per configurare un gruppo di PolyBase  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
   
 -   N computer nello stesso dominio  
   
@@ -62,7 +64,7 @@ ms.lasthandoff: 11/18/2017
   
 ### <a name="steps"></a>Passaggi  
   
-1.  Installare SQL Server con PolyBase su N computer.  
+1.  Installare la stessa versione di SQL Server con PolyBase su N computer.  
   
 2.  Selezionare un'istanza di SQL Server come nodo head. Un nodo head può essere definito solo in un'istanza di SQL Server Enterprise.  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 11/18/2017
   
 4.  Monitorare i nodi nel gruppo usando [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).  
   
-5.  Facoltativa. Rimuovere un nodo di calcolo usando [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+5.  Facoltativo. Rimuovere un nodo di calcolo usando [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
 ## <a name="example-walk-through"></a>Procedura dettagliata di esempio  
  Di seguito vengono illustrati i passaggi per configurare un gruppo di PolyBase con:  

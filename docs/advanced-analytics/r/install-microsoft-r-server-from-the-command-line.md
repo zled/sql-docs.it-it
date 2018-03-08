@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c10594fdecd48782a80b5d609bb21c6a937f8863
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Installazione dalla riga di comando di Machine Learning Server (Standalone) o Microsoft R Server (Standalone)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo viene descritto come utilizzare gli argomenti della riga di comando di SQL Server per installare le seguenti funzionalità di SQL Server tramite la riga di comando:
 
@@ -33,7 +34,7 @@ Un **automatica** installazione è necessario specificare il percorso dell'utili
 
 Per un'installazione **non interattiva** , specificare gli stessi argomenti e aggiungere l'opzione **/q** . Nessuna richiesta viene fornita e l'intervento del non è obbligatorio. Tuttavia, il programma di installazione non riesce se vengono omessi gli argomenti richiesti.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 È necessario sapere eseguire un'installazione da riga di comando di SQL Server e acquisire familiarità con i relativi argomenti di scripting.
 
@@ -95,8 +96,8 @@ Al termine dell'installazione, è possibile esaminare il file di configurazione 
 
 Per impostazione predefinita, tutti del programma di installazione dei riepiloghi e i registri per SQL Server e le funzionalità correlate vengono create nelle cartelle seguenti:
 
-+ SQL Server 2017:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
-+ SQL Server 2016:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
++ SQL Server 2017: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016:  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
 Viene creata una sottocartella di separato per ogni funzionalità che è stato installato.
 

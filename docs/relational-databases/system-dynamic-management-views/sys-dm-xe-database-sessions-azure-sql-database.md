@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ef44b8f0b3217aca23aee99419053dc8e2af3c0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 85584709967e1ef7988a12389b5b40e30ee47a7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>Sys.dm xe_database_sessions (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,12 +35,12 @@ ms.lasthandoff: 11/17/2017
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|Indirizzo di memoria della sessione dell'evento. Non ammette i valori Null.|  
+|event_session_address|**varbinary(8)**|Indirizzo di memoria della sessione dell'evento. Non ammette i valori Null.|  
 |event_name|**nvarchar(60)**|Nome dell'evento associato all'azione. Non ammette i valori Null.|  
 |event_package_guid|**uniqueidentifier**|GUID per il pacchetto che contiene l'evento. Non ammette i valori Null.|  
-|event_predicate|**nvarchar (2048)**|Rappresentazione XML dell'albero predicativo applicato all'evento. Ammette i valori Null.|  
+|event_predicate|**nvarchar(2048)**|Rappresentazione XML dell'albero predicativo applicato all'evento. Ammette i valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
@@ -47,8 +48,8 @@ A partire da 2015-07-13, xe_objects' fa parte di queste DMV XEvent che non conte
   
 |From|Per|Relazione|  
 |--------|------|----------------|  
-|Sys.dm_xe_database_session_events.event_session_address|Sys.dm_xe_database_sessions.Address|Molti-a-uno|  
-|Sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Molti-a-uno|  
+|sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|Molti-a-uno|  
+|sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Molti-a-uno|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Eventi estesi nel Database SQL di Azure](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  

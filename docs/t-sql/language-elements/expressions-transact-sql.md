@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Boolean expressions
 - expressions [SQL Server], about expressions
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bc14512bf2ab1eaa2eaa6b51891361f26189314d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 49efa9c940ff4428747942c88259bdd58b96a658
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expressions-transact-sql"></a>Espressioni (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,11 +89,11 @@ ms.lasthandoff: 11/17/2017
   
 |Nome|Definizione|  
 |----------|----------------|  
-|*(costante)*|Simbolo che rappresenta un singolo valore di dati specifico. Per ulteriori informazioni, vedere [costanti &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).|  
-|*funzione_scalare*|È un'unità di [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi che fornisce un servizio specifico e restituisce un singolo valore. *funzione_scalare* possono essere funzioni scalari predefinite, ad esempio le funzioni SUM, GETDATE o CAST, o funzioni scalari definite dall'utente.|  
-|[ *table_name***.** ]|Nome o alias di una tabella.|  
-|*colonna*|Nome di colonna. In un'espressione è consentito soltanto il nome della colonna.|  
-|*variabile*|Nome di una variabile o parametro. Per altre informazioni, vedere [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
+|*constant*|Simbolo che rappresenta un singolo valore di dati specifico. Per ulteriori informazioni, vedere [costanti &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).|  
+|*scalar_function*|È un'unità di [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi che fornisce un servizio specifico e restituisce un singolo valore. *funzione_scalare* possono essere funzioni scalari predefinite, ad esempio le funzioni SUM, GETDATE o CAST, o funzioni scalari definite dall'utente.|  
+|[ *table_name * * *.* * ]|Nome o alias di una tabella.|  
+|*column*|Nome di colonna. In un'espressione è consentito soltanto il nome della colonna.|  
+|*variable*|Nome di una variabile o parametro. Per altre informazioni, vedere [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
 |**(** *espressione***)** |Qualsiasi espressione valida, in base a quanto definito in questo argomento. Le parentesi sono operatori di raggruppamento che assicurano che tutti gli operatori dell'espressione tra parentesi siano valutati prima che l'espressione risultante venga combinata con un'altra espressione.|  
 |**(** *scalar_subquery* **)**|Sottoquery che restituisce un valore. Esempio:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Gli operatori unari possono essere applicati solo a espressioni che restituiscono un tipo di dati appartenente alla categoria dei tipi di dati numerici. Operatore con un solo operando numerico:<br /><br /> + indica un numero positivo.<br /><br /> - indica un numero negativo.<br /><br /> ~ indica l'operatore di complemento a uno.|  
@@ -134,17 +136,17 @@ GO
  L'espressione `1+2` restituisce `3` in ogni riga del set di risultati. Sebbene l'espressione `ProductID` generi un valore univoco in ogni riga del set di risultati, ogni riga include un solo valore per `ProductID`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [FUSO orario &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
- [CASE &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [COALESCE &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [Conversione tipo di dati &#40; motore di Database &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Precedenza tipo di dati &#40; Transact-SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Ad esempio &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [NULLIF &#40; Transact-SQL &#41;](../../t-sql/language-elements/nullif-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [NULLIF &#40;Transact-SQL&#41;](../../t-sql/language-elements/nullif-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [IN &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

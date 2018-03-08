@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -25,7 +26,8 @@ f1_keywords:
 - NOLOCK_TSQL
 - MAXDOP_TSQL
 - USE_HINT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - REPORT PLAN query hint
 - FORCE ORDER query hint
@@ -55,18 +57,18 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: "136"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0a3c74aa7b1da86c6d0ac54025d337700019465d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
+# <a name="hints-transact-sql---query"></a>Hints (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gli hint per la query specificano che gli hint indicati devono essere utilizzati in tutta la query e influiscono su tutti gli operatori dell'istruzione. Se la query principale include l'operatore UNION, la clausola OPTION può essere specificata solo nell'ultima query che prevede un'operazione di tipo UNION. Hint per la query vengono specificati come parte di [clausola OPTION](../../t-sql/queries/option-clause-transact-sql.md). Se in seguito alla presenza di uno o più hint per la query non viene creato un piano valido da Query Optimizer, viene generato l'errore 8622.  
@@ -158,7 +160,7 @@ ms.lasthandoff: 11/17/2017
   
  Con questo hint per la query viene praticamente disabilitato l'utilizzo diretto di viste indicizzate e di relativi indici nel piano di query.  
   
- La vista indicizzata non viene espansa solo se la vista fa riferimento direttamente nella sezione SELECT della query e WITH (NOEXPAND) o WITH (NOEXPAND, INDEX ( *index_value* [ **,***... n*])) è specificato. Per ulteriori informazioni sull'hint per la query WITH (NOEXPAND), vedere [FROM](../../t-sql/queries/from-transact-sql.md).  
+ La vista indicizzata non viene espansa solo se la vista fa riferimento direttamente nella sezione SELECT della query e WITH (NOEXPAND) o WITH (NOEXPAND, INDEX ( *index_value* [**, *... n* ])) è specificato. Per ulteriori informazioni sull'hint per la query WITH (NOEXPAND), vedere [FROM](../../t-sql/queries/from-transact-sql.md).  
   
  L'hint influisce solo sulle viste nella sezione SELECT delle istruzioni, comprese le sezioni delle istruzioni INSERT, UPDATE, MERGE e DELETE.  
   
@@ -185,12 +187,12 @@ ms.lasthandoff: 11/17/2017
   
  Impedisce alla query l'utilizzo di un indice columnstore con ottimizzazione per la memoria non cluster. Se la query contiene l'hint per la query per evitare l'utilizzo dell'indice columnstore e un hint per l'indice per utilizzare un indice columnstore, gli hint sono in conflitto e la query restituisce un errore.  
   
- MAX_GRANT_PERCENT = *%*  
+ MAX_GRANT_PERCENT = *percent*  
  Dimensioni in percentuale di concessione di memoria massima. La query non è sicuramente supera questo limite. Il limite effettivo può essere inferiore se è inferiore rispetto a questa impostazione di resource governor. I valori validi sono compresi tra 0,0 e 100.0.  
   
 **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- MIN_GRANT_PERCENT = *%*  
+ MIN_GRANT_PERCENT = *percent*  
  Dimensioni in percentuale di concessione di memoria minima = % del limite predefinito. La query sarà disponibile per ottenere MAX (memoria necessaria, grant min), poiché almeno richiesta di memoria necessaria per avviare una query. I valori validi sono compresi tra 0,0 e 100.0.  
   
 **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -201,7 +203,7 @@ ms.lasthandoff: 11/17/2017
  Esegue l'override di **massimo grado di parallelismo** opzione di configurazione di **sp_configure** e Resource Governor per la query che specifica tale opzione. L'hint per la query MAXDOP può superare il valore configurato con sp_configure. Se MAXDOP supera il valore configurato con Resource Governor il [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza il valore MAXDOP di Resource Governor, descritto in [ALTER WORKLOAD GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-workload-group-transact-sql.md). Tutte le regole semantiche utilizzate con la **massimo grado di parallelismo** opzione di configurazione sono applicabili quando si utilizza l'hint per la query MAXDOP. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!WARNING]  
->  Se MAXDOP è impostato su zero, il server sceglie il grado massimo di parallelismo.  
+> Se MAXDOP è impostato su zero, il server sceglie il grado massimo di parallelismo.  
   
  MAXRECURSION *numero*  
  Specifica il numero massimo di ricorsioni consentito per questa query. *numero* è un numero intero non negativo compreso tra 0 e 32767. Se è specificato 0, non viene applicato alcun limite. Se questa opzione non viene specificata, il limite predefinito per il server è 100.  
@@ -223,7 +225,7 @@ ms.lasthandoff: 11/17/2017
  *@variable_name*  
  Nome di una variabile locale utilizzata in una query alla quale è possibile assegnare un valore da utilizzare con l'hint per la query OPTIMIZE FOR.  
   
- *SCONOSCIUTO*  
+ *UNKNOWN*  
  Specifica che Query Optimizer utilizza dati statistici anziché il valore iniziale per determinare il valore per una variabile locale durante l'ottimizzazione della query.  
   
  *literal_constant*  
@@ -240,7 +242,7 @@ ms.lasthandoff: 11/17/2017
  Specifica le regole di parametrizzazione applicate da Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla query durante la compilazione di questa.  
   
 > [!IMPORTANT]  
->  L'hint per la query PARAMETERIZATION può essere specificato solo all'interno di una guida di piano e non direttamente all'interno di una query.  
+> L'hint per la query PARAMETERIZATION può essere specificato solo all'interno di una guida di piano e non direttamente all'interno di una query.  
   
  SIMPLE indica a Query Optimizer di tentare la parametrizzazione semplice. FORCED indica a Query Optimizer di tentare la parametrizzazione forzata. L'hint per la query PARAMETERIZATION viene utilizzato per sostituire l'impostazione corrente dell'opzione SET dell'hint di database PARAMETERIZATION all'interno di una guida di piano. Per ulteriori informazioni, vedere [specificare parametrizzazione delle Query da utilizzare le guide di piano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
@@ -254,11 +256,10 @@ ms.lasthandoff: 11/17/2017
   
  Se non è possibile implementare tale piano, viene restituito un errore anziché posticipare il rilevamento dell'errore fino all'esecuzione della query. Le righe possono includere colonne di lunghezza variabile. In [!INCLUDE[ssDE](../../includes/ssde-md.md)] è consentito definire righe con dimensioni massime superiori alla capacità di elaborazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In un'applicazione tuttavia vengono in genere archiviate righe le cui dimensioni effettive rientrano nei limiti della capacità di elaborazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Se in [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene rilevata una riga di lunghezza eccessiva, viene restituito un errore di esecuzione.  
  
- HINT USE ( **'***hint_name***'** )  
- **Si applica a**: si applica a SQL Server (a partire da 2016 SP1) e Database SQL di Azure.
+<a name="use_hint"></a>HINT USE ( **'***hint_name***'** )  
+ **Si applica a**: si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Fornisce uno o più hint aggiuntivi per il processore di query come specificato da un nome di hint **all'interno di virgolette singole**. 
-  **Si applica a**: a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
  Sono supportati i nomi di hint seguenti:
  
@@ -291,7 +292,7 @@ ms.lasthandoff: 11/17/2017
  USE PLAN N**'***xml_plan***'**  
  Impone a query optimizer di utilizzare un piano di query esistente per una query specificato da **'***xml_plan***'**. USE PLAN non può essere specificato nelle istruzioni INSERT, UPDATE, MERGE o DELETE.  
   
-HINT di tabella **(***exposed_object_name* [ **,** \<table_hint > [[**,** ]...  *n*  ]] **)** Si applica l'hint di tabella specificato alla tabella o vista che corrisponde a *exposed_object_name*. È consigliabile utilizzare un hint di tabella come hint per la query solo nel contesto di un [Guida di piano](../../relational-databases/performance/plan-guides.md).  
+HINT di tabella  **(* * * exposed_object_name* [ **,** \<table_hint > [[* *,**]...  *n*  ]] **)** Si applica l'hint di tabella specificato alla tabella o vista che corrisponde a *exposed_object_name*. È consigliabile utilizzare un hint di tabella come hint per la query solo nel contesto di un [Guida di piano](../../relational-databases/performance/plan-guides.md).  
   
  *exposed_object_name* può essere uno dei seguenti riferimenti:  
   
@@ -301,7 +302,7 @@ HINT di tabella **(***exposed_object_name* [ **,** \<table_hint > [[**,** ]...  
   
  Quando *exposed_object_name* senza specificare anche un hint di tabella, tutti gli indici specificati nella query come parte di un hint di tabella per l'oggetto viene ignorato e l'utilizzo degli indici è determinato da query optimizer. È possibile utilizzare questa tecnica per eliminare l'effetto di un hint di tabella INDEX quando non è possibile modificare la query originale. Vedere l'esempio J.  
   
-**\<table_hint >:: =** {[NOEXPAND] {indice ( *index_value* [,... *n* ] ) | INDICE = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZZABILE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} è l'hint di tabella da applicare alla tabella o vista che corrisponde a *exposed_object_name* come hint per la query. Per una descrizione di questi hint, vedere [hint di tabella &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint >:: =** {[NOEXPAND] {indice ( *index_value* [,... *n* ] ) | INDICE = ( *index_value* ) | FORCESEEK [**(***index_value***(* * * index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZZABILE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} è l'hint di tabella da applicare alla tabella o vista che corrisponde a *exposed_object_name* come hint per la query. Per una descrizione di questi hint, vedere [hint di tabella &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. Per altre informazioni, vedere la sezione Osservazioni.  
   
@@ -363,7 +364,7 @@ GO
 ### <a name="c-using-maxrecursion"></a>C. Utilizzo di MAXRECURSION  
  È possibile utilizzare MAXRECURSION per evitare che un'espressione di tabella comune (CTE) ricorsiva non corretta provochi un ciclo infinito. Nell'esempio seguente è intenzionalmente crea un ciclo infinito e utilizza l'hint MAXRECURSION per limitare il numero di livelli di ricorsione a due. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 --Creates an infinite loop  
 WITH cte (CustomerID, PersonID, StoreID) AS  
 (  
@@ -554,9 +555,9 @@ GO
 ```  
     
 ## <a name="see-also"></a>Vedere anche  
- [Hint per la &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sp_control_plan_guide &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
  [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   

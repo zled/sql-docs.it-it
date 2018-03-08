@@ -8,10 +8,12 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.disableindexes.f1
+f1_keywords:
+- sql13.swb.disableindexes.f1
 helpviewer_keywords:
 - disabled indexes [SQL Server], index operations
 - nonclustered indexes [SQL Server], disabling
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - index disabling [SQL Server]
 - indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f32d91eea1ea94b345691aa136645d88effa25ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04a01391e07ff089e16179c8645e705d08aee449
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="disable-indexes-and-constraints"></a>Disabilitazione di indici e vincoli
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per disabilitare un indice tramite:**  
   
@@ -94,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per eseguire l'istruzione ALTER INDEX, è necessario disporre almeno dell'autorizzazione ALTER per la tabella o la vista.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -166,7 +168,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Fare clic sul collegamento ipertestuale per visualizzare una finestra di dialogo contenente l'errore completo.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>Per disabilitare un indice  
   
@@ -174,7 +176,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  
@@ -191,7 +193,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

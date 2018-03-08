@@ -23,15 +23,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: "69"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 859646732d7add898319c11193aedebb77c7239a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae3c32d0636b37afb15005eb823629f7dfd5194e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtri con parametri - Filtri di riga con parametri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] I filtri di riga con parametri consentono l'invio di partizioni di dati diverse a Sottoscrittori diversi senza che sia necessario creare più pubblicazioni. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], i filtri con parametri vengono definiti filtri dinamici. Una partizione è un subset delle righe di una tabella. In base alle impostazioni scelte durante la creazione di un filtro di riga con parametri, ogni riga di una tabella pubblicata può appartenere a un'unica partizione, con la conseguente produzione di partizioni non sovrapposte, o a due o più partizioni, con la conseguente produzione di partizioni sovrapposte.  
@@ -130,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>Impostazione di "partition options"  
  Durante la creazione di un articolo, si specifica un valore per la proprietà **partition options** in base al modo in cui i dati nella tabella filtrata verranno condivisi dai Sottoscrittori. È possibile impostare la proprietà su uno di quattro valori utilizzando [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)e la finestra di dialogo **Proprietà articolo** . La proprietà può essere impostata su uno dei due valori utilizzando la finestra di dialogo **Aggiungi filtro** o **Modifica filtro** , disponibile nella Creazione guidata nuova pubblicazione, e nella finestra di dialogo **Proprietà pubblicazione** . Nella tabella seguente vengono descritti i valori disponibili.  
   
-|Descrizione|Valore in Aggiungi filtro e Modifica filtro|Valore in Proprietà articolo|Valore nelle stored procedure|  
+|Description|Valore in Aggiungi filtro e Modifica filtro|Valore in Proprietà articolo|Valore nelle stored procedure|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |I dati nelle partizioni sono sovrapposti e il Sottoscrittore può aggiornare le colonne a cui si fa riferimento in un filtro con parametri.|**Una riga di questa tabella verrà inviata a più sottoscrizioni**|**Sovrapposte**|**0**|  
 |I dati nelle partizioni sono sovrapposti e il Sottoscrittore non può aggiornare le colonne a cui si fa riferimento in un filtro con parametri.|N/D*|**Sovrapposte, non ammesse modifiche dei dati fuori partizione**|**1**|  

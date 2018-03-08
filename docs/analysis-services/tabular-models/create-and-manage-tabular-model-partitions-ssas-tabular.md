@@ -1,30 +1,27 @@
 ---
-title: Creare e gestire partizioni di modelli tabulari (SSAS tabulare) | Documenti Microsoft
+title: Creare e gestire partizioni di modelli tabulari | Documenti Microsoft
 ms.custom: 
-ms.date: 05/31/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 231545ecf1ecbaaaeb24041347772f558164112a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1dfe0ae7dd1ee92cd365a34cf6502d8358c474cb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>Creare e gestire partizioni di modelli tabulari
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -69,6 +66,6 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Partizioni di modelli tabulari](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [Elaborare partizioni di modelli tabulari](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
+ [Partizioni di modelli tabulari processo](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
   
   

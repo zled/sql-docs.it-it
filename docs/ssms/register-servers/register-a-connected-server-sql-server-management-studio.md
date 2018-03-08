@@ -8,27 +8,30 @@ ms.service:
 ms.component: ssms-registration
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.registerserver.f1
+f1_keywords:
+- sql13.swb.registerserver.f1
 helpviewer_keywords:
 - Registered Servers [SQL Server], register connected servers
 - connected server registrations [SQL Server]
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5140781326b2ada6fcc7e99dcf3cb566e70cba4b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6b6639909649cd9f988b5dd308f831763a82ef3c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrazione di un server connesso (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questo argomento descrive come registrare un server connesso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). Tramite la registrazione del server è possibile salvare le informazioni di connessione per i server ai quali si accede di frequente. È possibile registrare un server prima della connessione o durate la connessione da Esplora oggetti.  Per visualizzare i server registrati in SSMS, selezionare **Visualizza**\\**Server registrati** dal menu.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Questo argomento descrive come registrare un server connesso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). Tramite la registrazione del server è possibile salvare le informazioni di connessione per i server ai quali si accede di frequente. È possibile registrare un server prima della connessione o durate la connessione da Esplora oggetti.  Per visualizzare i server registrati in SSMS, selezionare **Visualizza**\\**Server registrati** dal menu.
   
  **Contenuto dell'argomento**  
   

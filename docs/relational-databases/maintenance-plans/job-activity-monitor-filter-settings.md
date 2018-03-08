@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ff338e1a2fd9fa170d880d6f7719ce3a08ac599
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b03932c680b2f46485ec633ba31149b3e5d41235
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitoraggio attività processi (Impostazioni filtro)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa pagina per ridurre il numero di righe visualizzate in Monitoraggio attività processi. Immettere i criteri in una o più caselle disponibili per visualizzare solo le righe che soddisfano i valori specificati. Alcune caselle, ad esempio **Stato** o **Tipo blocco** , consentono di immettere un numero finito di valori possibili, disponibili in un elenco a discesa. In altre caselle, ad esempio **Applicazione** , è invece possibile immettere qualsiasi tipo e numero di valori sotto forma di elenco delimitato da virgole. Le icone sulla barra degli strumenti possono essere utilizzate per ordinare le caselle disponibili alfabeticamente o in base alla categoria. Fare clic sui criteri per visualizzarne una breve descrizione.  

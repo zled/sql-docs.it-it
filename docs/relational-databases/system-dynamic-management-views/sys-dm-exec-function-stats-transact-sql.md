@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_function_stats (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,32 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - sys.dm_exec_function_stats
 - sys.dm_exec_function_stats_tsql
 - dm_exec_function_stats
 - dm_exec_function_stats_tsql
-helpviewer_keywords: sys.dm_exec_function_stats dynamic management view
+helpviewer_keywords:
+- sys.dm_exec_function_stats dynamic management view
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d24236d659a9d92233764ffdc7159b6054ebeafe
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c9071315f8adebb6a889840b919f4bd50d4a8bde
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecfunctionstats-transact-sql"></a>Sys.dm exec_function_stats (Transact-SQL)
+# <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Restituisce le statistiche sulle prestazioni per le funzioni memorizzati nella cache di aggregazione. La vista restituisce una riga per ogni piano funzione memorizzata nella cache e la durata della riga fino a quando la funzione rimane nella cache. Quando una funzione viene rimosso dalla cache, la riga corrispondente viene eliminata dalla vista. In quel momento, viene generato un evento di traccia di SQL di Performance Statistics simile a **Sys.dm exec_query_stats**. Restituisce informazioni sulle funzioni scalari, comprese le funzioni in memoria e le funzioni scalari CLR. Non restituisce informazioni sulle funzioni con valori di tabella.  
@@ -45,9 +48,9 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID del database in cui risiede la funzione.|  
 |**object_id**|**int**|Numero di identificazione di oggetto della funzione.|  
-|**tipo**|**Char(2)**|Tipo di oggetto: FN = funzioni a valori scalari|  
+|**type**|**char(2)**|Tipo di oggetto: FN = funzioni a valori scalari|  
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo di oggetto: SQL_SCALAR_FUNCTION|  
-|**valore di sql_handle**|**varbinary(64)**|Può essere utilizzato per correlare le query in **Sys.dm exec_query_stats** che sono stati eseguiti dall'interno di questa funzione.|  
+|**sql_handle**|**varbinary(64)**|Può essere utilizzato per correlare le query in **Sys.dm exec_query_stats** che sono stati eseguiti dall'interno di questa funzione.|  
 |**plan_handle**|**varbinary(64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con il **Sys.dm exec_cached_plans** vista a gestione dinamica.<br /><br /> Sarà sempre 0x000 quando una tabella di query ottimizzato della memoria della funzione compilata in modo nativo.|  
 |**cached_time**|**datetime**|Ora in cui la funzione è stato aggiunto alla cache.|  
 |**last_execution_time**|**datetime**|Ultima volta in cui è stata eseguita la funzione.|  
@@ -73,7 +76,7 @@ ms.lasthandoff: 11/17/2017
 |**min_elapsed_time**|**bigint**|Tempo minimo trascorso, in microsecondi, per qualsiasi esecuzione completata di questa funzione.|  
 |**max_elapsed_time**|**bigint**|Tempo massimo trascorso, in microsecondi, per qualsiasi esecuzione completata di questa funzione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.  
   
@@ -91,10 +94,10 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40; relative all'esecuzione Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys.dm exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
- [Sys.dm exec_trigger_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
- [Sys.dm exec_procedure_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+ [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+ [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
   
   

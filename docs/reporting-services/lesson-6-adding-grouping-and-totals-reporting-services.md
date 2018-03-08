@@ -8,23 +8,24 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 950b8b49b79139405018fd20301241eb2d0e558d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2949110180da3c51a0bb536279cc9003d60be947
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lezione 6: Aggiunta di gruppi e totali (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali al report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per organizzare e riepilogare i dati.  
   
   
@@ -56,7 +57,7 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
   
 8.  Nella casella **Tipo** selezionare **31 Gennaio 2000**.  
   
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)].  
+9.  [!INCLUDE[clickOK](../includes/clickok-md.md)],  
   
 10.  Per visualizzare un'anteprima del report, passare alla scheda **Anteprima** . Il risultato dovrebbe essere simile a quanto illustrato nella figura seguente:  
     ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.png) 
@@ -151,7 +152,7 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
 7.  Accedere al portale Web con privilegi di amministratore, ad esempio, fare clic con il pulsante destro del mouse sull'icona di Internet Explorer e scegliere **Esegui come amministratore**.  
   
     Individuare l'URL del portale Web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
-    **Nota:** l'URL del *portale* è "Reports", non l'URL del *server* di report di "Reportserver".  Esempio:   
+    **Nota:** l'URL del *portale* è "Reports", non l'URL del *server* di report di "Reportserver".  Ad esempio   
     - `http://<server name>/reports`.  
      - `http://localhost/reports` funziona se la progettazione del report viene eseguita nel server di report.  
   

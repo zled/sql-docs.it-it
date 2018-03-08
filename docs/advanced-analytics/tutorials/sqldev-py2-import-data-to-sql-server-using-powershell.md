@@ -7,25 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 0bee2bcdee8eb5b46d59e43699399fa68cdf3d24
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: 1c97a15d3b70d42337d3054f97e2e695813ca6f8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>Passaggio 2: Importare dati in SQL Server tramite PowerShell
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo fa parte di un'esercitazione, [analitica Python nel database per gli sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -56,7 +58,7 @@ Se si verificano problemi, è possibile utilizzare lo script come riferimento pe
     - Il nome o l'indirizzo di un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] istanza in cui è installato Servizi di Machine Learning con Python.
     - Il nome utente e la password di un account nell'istanza. L'account utilizzato deve avere la possibilità di creare database, creare tabelle e stored procedure e caricamento bulk dei dati alle tabelle. 
     - Se non si specifica il nome utente e password, l'identità di Windows viene utilizzata per accedere a SQL Server e vengono alzate di livello per immettere una password.
-    - Il percorso e il nome del file con i dati di esempio appena scaricato. Ad esempio, usare `C:\temp\pysql\nyctaxi1pct.csv`
+    - Il percorso e il nome del file con i dati di esempio appena scaricato. Ad esempio, `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > Per caricare i dati correttamente, il file xmlrw.dll sia libreria deve essere nella stessa cartella bcp.exe.

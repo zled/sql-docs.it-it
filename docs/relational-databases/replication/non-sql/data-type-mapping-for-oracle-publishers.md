@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8c754c1796f76236b5efeda3f53bb785c8daf76f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4078e78f9f1e8879d709ef154a11e44055e2dcd5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mapping dei tipi di dati per i server di pubblicazione Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] I tipi di dati Oracle e i tipi di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sempre corrispondono in modo esatto. Se possibile, durante la pubblicazione di una tabella Oracle viene selezionato automaticamente il tipo di dati corrispondente. Nei casi in cui il mapping di un singolo tipo di dati non risulti chiaro, vengono forniti mapping di tipi di dati alternativi. Per informazioni sulla selezione di mapping alternativi, vedere la sezione "Specifica di mapping di tipi di dati alternativi" più avanti in questo argomento.  
@@ -39,30 +39,30 @@ ms.lasthandoff: 11/17/2017
 |CHAR([1-2000])|CHAR([1-2000])|Sì|  
 |CLOB|VARCHAR(MAX)|Sì|  
 |DATE|DATETIME|Sì|  
-|FLOAT|FLOAT|No|  
-|FLOAT([1-53])|FLOAT([1-53])|No|  
-|FLOAT([54-126])|FLOAT|No|  
+|FLOAT|FLOAT|no|  
+|FLOAT([1-53])|FLOAT([1-53])|no|  
+|FLOAT([54-126])|FLOAT|no|  
 |INT|NUMERIC(38)|Sì|  
 |INTERVAL|DATETIME|Sì|  
 |LONG|VARCHAR(MAX)|Sì|  
 |LONG RAW|IMAGE|Sì|  
-|NCHAR([1-1000])|NCHAR([1-1000])|No|  
+|NCHAR([1-1000])|NCHAR([1-1000])|no|  
 |NCLOB|NVARCHAR(MAX)|Sì|  
 |NUMBER|FLOAT|Sì|  
-|NUMBER([1-38])|NUMERIC([1-38])|No|  
+|NUMBER([1-38])|NUMERIC([1-38])|no|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Sì|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|No|  
-|RAW([1-2000])|VARBINARY([1-2000])|No|  
-|REAL|FLOAT|No|  
-|ROWID|CHAR(18)|No|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|no|  
+|RAW([1-2000])|VARBINARY([1-2000])|no|  
+|real|FLOAT|no|  
+|ROWID|CHAR(18)|no|  
 |TIMESTAMP|DATETIME|Sì|  
 |TIMESTAMP(0-7)|DATETIME|Sì|  
 |TIMESTAMP(8-9)|DATETIME|Sì|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Sì|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|No|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|no|  
 |TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Sì|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|No|  
-|UROWID|CHAR(18)|No|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|no|  
+|UROWID|CHAR(18)|no|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Sì|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Considerazioni sul mapping dei tipi di dati  
@@ -113,6 +113,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Considerazioni e limitazioni relative alla progettazione dei server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Panoramica della pubblicazione Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

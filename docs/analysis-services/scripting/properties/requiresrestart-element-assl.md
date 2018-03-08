@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: RequiresRestart Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 63ec03cfe64087327e9e1a491ef082b00a9b87d1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 45da0bd3f677acdc917c15ac0a7f2e04910115d0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="requiresrestart-element-assl"></a>Elemento RequiresRestart (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene un valore di sola lettura associato a un [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md) elemento che determina se la modifica del valore della proprietà server richiede che l'istanza venga riavviata rendere effettive le modifiche.  
@@ -47,10 +45,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|Boolean|  
-|Valore predefinito|Nessuno|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  L'elemento che corrisponde all'elemento padre **RequiresRestart** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ServerProperty>.  

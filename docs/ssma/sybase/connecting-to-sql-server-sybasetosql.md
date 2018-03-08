@@ -3,7 +3,7 @@ title: Connessione a SQL Server (SybaseToSQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ac694c943bc781801804a5ab249ca12a039fd22
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 222e32803e197a18d47c7bf65b76de3f8d24fa15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>Connessione a SQL Server (SybaseToSQL)
 Per eseguire la migrazione dei database Sybase Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è necessario connettersi a qualsiasi istanza di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e visualizza i metadati del database nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Visualizzatore metadati. SSMA archivia le informazioni sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si è connessi a, ma non archivia le password.  

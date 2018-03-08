@@ -5,28 +5,27 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b90ffa3645d844d066542e0c2cd8ac7e6999250d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9ac94cfcd17842f118ea6bda19af830d8d737b94
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importare un progetto di data mining utilizzando l'Importazione guidata di Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo argomento viene descritto come creare un nuovo progetto di data mining importando i metadati da un progetto di data mining esistente in un altro server, utilizzando il modello, **Importa da Server (multidimensionale e Data Mining)**, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In questo argomento viene descritto come creare un nuovo progetto di data mining importando i metadati da un progetto di data mining esistente in un altro server, usando il modello **Importa da server (multidimensionale e data mining)** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importare origini dati, strutture e modelli di data mining da un progetto di data mining esistente  
  Quando si usa il modello **Importa da server (multidimensionale e data mining)**, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene creato un nuovo progetto di data mining, quindi vengono copiati i metadati dal progetto di data mining specificato. Il nuovo progetto contiene le stesse origini dati, viste origine dati, strutture e modelli di data mining del database di ssASnoversion da cui è stata effettuata l'importazione. Tuttavia, non è possibile utilizzare il progetto finché non sono state aggiornate alcune proprietà e non sono stati elaborati gli oggetti come descritto:  
@@ -67,6 +66,6 @@ ms.lasthandoff: 12/08/2017
      Il nuovo progetto viene aperto automaticamente tramite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà del progetto &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
+ [Proprietà progetto](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

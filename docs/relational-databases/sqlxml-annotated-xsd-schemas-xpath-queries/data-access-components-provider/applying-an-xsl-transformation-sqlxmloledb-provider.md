@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - Base Path property
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c1e66cf59b69b1dbcedc898cef8426c814eac78
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb5a39d9069824e21b9c6fee2489b0c16c66e76f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Applicazione di una trasformazione XSL (provider SQLXMLOLEDB)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]In questa applicazione ADO di esempio, viene eseguita una query SQL e una trasformazione XSL viene applicata al risultato. Proprietà ClientSideXML impostata su True determina l'elaborazione del set di righe sul lato client. Il sottolinguaggio del comando è impostato su {5d531cb2-e6ed-11d2-b252-00c04f681b71}, in quanto la query SQL è specificata in un modello e questo sottolinguaggio deve essere specificato per l'esecuzione di un modello. La proprietà xsl specifica il file XSL da utilizzare per applicare la trasformazione. Il valore della proprietà percorso di Base è utilizzato per cercare il file XSL. Se si specifica un percorso nel valore della proprietà xsl, il percorso è relativo al percorso specificato nella proprietà percorso di Base.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In questa applicazione ADO di esempio viene eseguita una query SQL e viene applicata una trasformazione XSL al risultato. Proprietà ClientSideXML impostata su True determina l'elaborazione del set di righe sul lato client. Il sottolinguaggio del comando è impostato su {5d531cb2-e6ed-11d2-b252-00c04f681b71}, in quanto la query SQL è specificata in un modello e questo sottolinguaggio deve essere specificato per l'esecuzione di un modello. La proprietà xsl specifica il file XSL da utilizzare per applicare la trasformazione. Il valore della proprietà percorso di Base è utilizzato per cercare il file XSL. Se si specifica un percorso nel valore della proprietà xsl, il percorso è relativo al percorso specificato nella proprietà percorso di Base.  
   
  In questo esempio viene illustrato come utilizzare le proprietà specifiche del provider SQLXMLOLEDB seguenti:  
   

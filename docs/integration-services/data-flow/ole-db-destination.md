@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ead74161f0527901680d4495e0feb4056c17011
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 32e0ce09ff9c804a3d7beac5e1ba251a5bc8105e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-destination"></a>Destinazione OLE DB
   La destinazione OLE DB consente di caricare dati in un'ampia gamma di database conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB, ad esempio, può caricare dati nelle tabelle dei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  In base al tipo di destinazione può essere necessario modificare l'istruzione CREATE TABLE generata dalla finestra di dialogo **Editor destinazione OLE DB** . Alcune destinazioni non supportano ad esempio i tipi di dati utilizzati dall'istruzione CREATE TABLE.  
   
- Per connettersi a un'origine dei dati questa destinazione utilizza una gestione connessione OLE DB, che specifica il provider OLE DB da utilizzare. Per altre informazioni, vedere [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Per connettersi a un'origine dei dati questa destinazione utilizza una gestione connessione OLE DB, che specifica il provider OLE DB da utilizzare. Per altre informazioni, vedere [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Con un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene inoltre fornito l'oggetto di origine dati da cui è possibile creare una gestione connessione OLE DB, rendendo disponibili origini dati e viste origine dati alla destinazione OLE DB.  
   
@@ -121,7 +122,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Caricamento dei dati tramite la destinazione OLE DB](../../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md)  
   
--   [Impostare le proprietà di un componente del flusso di dati](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="ole-db-destination-editor-connection-manager-page"></a>Editor destinazione OLE DB (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione OLE DB** per selezionare la connessione OLE DB per la destinazione. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
@@ -133,7 +134,7 @@ ms.lasthandoff: 11/20/2017
 >  La proprietà **CommandTimeout** della destinazione OLE DB non è disponibile nell' **Editor destinazione OLE DB**, tuttavia può essere impostata usando l' **Editor avanzato**. Inoltre alcune opzioni di caricamento rapido sono disponibili solo nell' **Editor avanzato**. Per altre informazioni su queste proprietà, vedere la sezione relativa alla destinazione OLE DB in [Proprietà personalizzate OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md).  
   
 ### <a name="static-options"></a>Opzioni statiche  
- **gestione connessione OLE DB**  
+ **Gestione connessione OLE DB**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
  **Nuova**  
@@ -250,7 +251,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  La destinazione OLE DB non supporta parametri. Per eseguire un'istruzione INSERT con parametri, è possibile utilizzare la trasformazione Comando OLE DB. Per altre informazioni, vedere [Trasformazione Comando OLE DB](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
- **Build query**  
+ **Compila query**  
  Usare la finestra di dialogo **Generatore query** per creare la query SQL con strumenti grafici.  
   
  **Sfoglia**  
@@ -293,7 +294,7 @@ ms.lasthandoff: 11/20/2017
  **Troncamento**  
  Non usato.  
   
- **Description**  
+ **Descrizione**  
  Consente di visualizzare la descrizione dell'operazione.  
   
  **Imposta questo valore nelle celle selezionate**  

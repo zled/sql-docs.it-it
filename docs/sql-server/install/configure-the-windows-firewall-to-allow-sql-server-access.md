@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,30 +26,31 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 90d281884a092adda6f50777dd5403e275611bf4
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 0827e7946df18bff42ad09285ad93c5c3a3b3996
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 
  > Per informazioni relative alle versioni precedenti di SQL Server, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
 
 I sistemi firewall contribuiscono a impedire l'accesso non autorizzato alle risorse del computer. Se un firewall viene abilitato ma non configurato correttamente, i tentativi di connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbero essere bloccati.  
   
-Per accedere a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attraverso un firewall, è necessario configurare il firewall nel computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il firewall è un componente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. È possibile anche installare un firewall di un altro produttore. In questo argomento viene illustrato come configurare Windows Firewall, ma i principi di base si applicano anche ad altri tipi di firewall.  
+Per accedere a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attraverso un firewall, è necessario configurare il firewall nel computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il firewall è un componente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. È possibile anche installare un firewall di un altro produttore. Questo articolo illustra come configurare Windows Firewall, ma i principi di base si applicano anche ad altri programmi firewall.  
   
 > [!NOTE]  
->  In questo argomento viene fornita una panoramica della configurazione del firewall e vengono riepilogate le informazioni utili a un amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sul firewall, vedere la documentazione di riferimento, ad esempio [Windows Firewall with Advanced Security and IPSec](http://go.microsoft.com/fwlink/?LinkID=116904).  
+>  Questo articolo offre una panoramica della configurazione del firewall e riepiloga le informazioni utili a un amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni sul firewall, vedere la documentazione di riferimento, ad esempio [Windows Firewall with Advanced Security and IPSec](http://go.microsoft.com/fwlink/?LinkID=116904).  
   
- Gli utenti che già conoscono l'elemento **Windows Firewall** del Pannello di controllo, lo snap-in MMC Windows Firewall con sicurezza avanzata e le impostazioni da configurare possono passare direttamente agli argomenti elencati di seguito:  
+ Gli utenti che già conoscono l'elemento **Windows Firewall** del Pannello di controllo e lo snap-in MMC Windows Firewall con sicurezza avanzata e che sanno quali impostazioni configurare, possono passare direttamente agli articoli elencati di seguito:  
   
 -   [Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
@@ -65,7 +67,7 @@ Per accedere a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 -   Le eccezioni per il firewall vengono configurate dall'amministratore. In questo modo è possibile accedere a programmi specificati in esecuzione o a porte di connessione specificate nel computer. In questo caso, il computer accetta il traffico in ingresso non richiesto quando svolge le funzioni di server, listener o peer. Questo è il tipo di configurazione che è necessario completare per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- La scelta del tipo di firewall più adatto alle proprie esigenze non si limita alla decisione relativa alla necessità di aprire o chiudere una determinata porta e presuppone che vengano prese in considerazione tutte le regole e le opzioni di configurazione disponibili. In questo argomento non verranno esaminate tutte le possibili opzioni del firewall. Si consiglia di consultare i documenti seguenti:  
+ La scelta del tipo di firewall più adatto alle proprie esigenze non si limita alla decisione relativa alla necessità di aprire o chiudere una determinata porta e presuppone che vengano prese in considerazione tutte le regole e le opzioni di configurazione disponibili. Questo articolo non prende in esame tutte le opzioni possibili del firewall. Si consiglia di consultare i documenti seguenti:  
   
  [Guida introduttiva a Windows Firewall con sicurezza avanzata](http://go.microsoft.com/fwlink/?LinkId=116080)  
   
@@ -84,11 +86,11 @@ Configurare le impostazioni di Windows Firewall con **Microsoft Management Conso
 
 -  **Microsoft Management Console (MMC)**  
   
-     Lo snap-in MMC Windows Firewall con sicurezza avanzata consente di configurare impostazioni del firewall più avanzate. Questo snap-in presenta la maggior parte delle opzioni di firewall in una modalità di facile utilizzo e presenta tutti i profili firewall. Per altre informazioni, vedere [Utilizzo dello snap-in Windows Firewall con sicurezza avanzata](#BKMK_WF_msc) più avanti in questo argomento.  
+     Lo snap-in MMC Windows Firewall con sicurezza avanzata consente di configurare impostazioni del firewall più avanzate. Questo snap-in presenta la maggior parte delle opzioni di firewall in una modalità di facile utilizzo e presenta tutti i profili firewall. Per altre informazioni, vedere [Utilizzo dello snap-in Windows Firewall con sicurezza avanzata](#BKMK_WF_msc) più avanti in questo articolo.  
   
 -   **netsh**  
   
-     Lo strumento **netsh.exe** può essere usato da un amministratore per configurare e monitorare i computer basati su Windows in un prompt dei comandi o con un file batch**.** Usando lo strumento **netsh** è possibile indirizzare i comandi contestuali all'helper adatto per far sì che questo esegua il comando desiderato. Un helper è un file DLL (Dynamic Link Library, libreria di collegamento dinamico) che estende la funzionalità dello strumento **netsh** e fornisce configurazione, monitoraggio e supporto per uno o più servizi, utilità o protocolli. Tutti i sistemi operativi che supportano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispongono di un helper del firewall. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ha anche un helper del firewall avanzato denominato **advfirewall**. I dettagli sull'uso di **netsh** non vengono descritti in questo argomento. Tuttavia, molte delle opzioni di configurazione descritte possono essere configurate con **netsh**. Ad esempio, eseguire lo script seguente al prompt dei comandi per aprire la porta TCP 1433:  
+     Lo strumento **netsh.exe** può essere usato da un amministratore per configurare e monitorare i computer basati su Windows in un prompt dei comandi o con un file batch**.** Usando lo strumento **netsh** è possibile indirizzare i comandi contestuali all'helper adatto per far sì che questo esegua il comando desiderato. Un helper è un file DLL (Dynamic Link Library, libreria di collegamento dinamico) che estende la funzionalità dello strumento **netsh** e fornisce configurazione, monitoraggio e supporto per uno o più servizi, utilità o protocolli. Tutti i sistemi operativi che supportano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispongono di un helper del firewall. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ha anche un helper del firewall avanzato denominato **advfirewall**. I dettagli sull'uso di **netsh** non vengono trattati in questo articolo. Tuttavia, molte delle opzioni di configurazione descritte possono essere configurate con **netsh**. Ad esempio, eseguire lo script seguente al prompt dei comandi per aprire la porta TCP 1433:  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -114,9 +116,9 @@ Configurare le impostazioni di Windows Firewall con **Microsoft Management Conso
 ###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
  Nella tabella seguente sono indicate le porte più utilizzate dal [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-|Scenario|Porta|Commenti|  
+|Scenario|Port|Commenti|  
 |--------------|----------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione su TCP|Porta TCP 1433|Si tratta della porta più comune consentita dal firewall. Viene utilizzata nelle connessioni di routine all'installazione predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)]o a un'istanza denominata che rappresenta l'unica istanza in esecuzione nel computer. Le istanze denominate presuppongo alcune considerazioni speciali. Vedere [Porte dinamiche](#BKMK_dynamic_ports) più avanti in questo argomento.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione su TCP|Porta TCP 1433|Si tratta della porta più comune consentita dal firewall. Viene utilizzata nelle connessioni di routine all'installazione predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)]o a un'istanza denominata che rappresenta l'unica istanza in esecuzione nel computer. Le istanze denominate presuppongo alcune considerazioni speciali. Vedere [Porte dinamiche](#BKMK_dynamic_ports) più avanti in questo articolo.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella configurazione predefinita|La porta TCP è una porta dinamica determinata all'avvio del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|Vedere la discussione che segue nella sezione [Porte dinamiche](#BKMK_dynamic_ports). La porta UDP 1434 potrebbe essere richiesta per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser durante l'utilizzo di istanze denominate.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando vengono configurate per l'utilizzo di una porta fissa|Il numero di porta configurato dall'amministratore.|Vedere la discussione che segue nella sezione [Porte dinamiche](#BKMK_dynamic_ports).|  
 |Dedicated Admin Connection|Porta TCP 1434 per l'istanza predefinita. Per le istanze denominate vengono utilizzate altre porte. Per informazioni sul numero di porta, controllare il log degli errori.|Per impostazione predefinita, le connessioni amministrative dedicate (DAC, Dedicated Administrator Connection) remote non sono abilitate. Per abilitare le connessioni DAC remote, utilizzare il facet Configurazione superficie di attacco. Per ulteriori informazioni, vedere [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).|  
@@ -162,7 +164,7 @@ Per altre informazioni sugli endpoint, vedere [Configurazione del Motore di data
 ###  <a name="BKMK_ssas"></a> Porte utilizzate da Analysis Services  
  Nella tabella seguente sono indicate le porte più utilizzate da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Funzionalità|Porta|Commenti|  
+|Funzionalità|Port|Commenti|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Porta TCP 2383 per l'istanza predefinita|La porta standard per l'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|Porta TCP 2382 necessaria solo per un'istanza denominata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Le richieste di connessione client per un'istanza denominata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che non specificano un numero di porta vengono indirizzate alla porta 2382, ovvero la porta su cui è in attesa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser la richiesta viene quindi reindirizzata alla porta utilizzata dall'istanza denominata.|  
@@ -176,7 +178,7 @@ Per altre informazioni sugli endpoint, vedere [Configurazione del Motore di data
 ###  <a name="BKMK_ssrs"></a> Porte utilizzate da Reporting Services  
 Nella tabella seguente sono indicate le porte più utilizzate da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-|Funzionalità|Porta|Commenti|  
+|Funzionalità|Port|Commenti|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Servizi Web|Porta TCP 80|Utilizzata per una connessione HTTP a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tramite un URL. È consigliabile non usare la regola preconfigurata **Servizi Web (HTTP)**. Per ulteriori informazioni, vedere la sezione [Interazione con altre regole del firewall](#BKMK_other_rules) più avanti.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurato per l'utilizzo tramite HTTPS|Porta TCP 443|Utilizzata per una connessione HTTPS tramite un URL. HTTPS è una connessione HTTP che utilizza il protocollo SSL (Secure Sockets Layer). È consigliabile non usare la regola preconfigurata **Servizi Web protetti (HTTP)**. Per ulteriori informazioni, vedere la sezione [Interazione con altre regole del firewall](#BKMK_other_rules) più avanti.|  
@@ -186,7 +188,7 @@ Quando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si connette
 ###  <a name="BKMK_ssis"></a> Porte utilizzate da Integration Services  
  Nella tabella seguente sono indicate le porte utilizzate dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-|Funzionalità|Porta|Commenti|  
+|Funzionalità|Port|Commenti|  
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Remote Procedure Call (MS RPC)<br /><br /> Utilizzate dal runtime di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|Porta TCP 135<br /><br /> Vedere [Considerazioni speciali per la porta 135](#BKMK_port_135)|Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizza il protocollo DCOM sulla porta 135. Gestione controllo servizi utilizza la porta 135 per eseguire operazioni come l'avvio e l'arresto del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e la trasmissione di richieste di controllo al servizio in esecuzione. Il numero di porta non può essere modificato.<br /><br /> Questa porta deve essere aperta solo se si sta effettuando la connessione a un'istanza remota del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o da un'applicazione personalizzata.|  
   
@@ -195,7 +197,7 @@ Per istruzioni dettagliate su come configurare Windows Firewall per [!INCLUDE[ss
 ###  <a name="BKMK_additional_ports"></a> Porte e servizi aggiuntivi  
 Nella tabella riportata di seguito sono elencati i servizi e le porte da cui potrebbe dipendere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Scenario|Porta|Commenti|  
+|Scenario|Port|Commenti|  
 |--------------|----------|--------------|  
 |Strumentazione gestione Windows (WMI)<br /><br /> Per ulteriori informazioni su Strumentazione gestione Windows (WMI), vedere [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md).|WMI viene eseguito come parte di un host del servizio condiviso con porte assegnate tramite DCOM e potrebbe utilizzare la porta TCP 135.<br /><br /> Vedere [Considerazioni speciali per la porta 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza WMI per elencare e gestire servizi. È consigliabile usare il gruppo di regole preconfigurate **Strumentazione gestione Windows (WMI)**. Per ulteriori informazioni, vedere la sezione [Interazione con altre regole del firewall](#BKMK_other_rules) più avanti.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC)|Porta TCP 135<br /><br /> Vedere [Considerazioni speciali per la porta 135](#BKMK_port_135)|Se l'applicazione utilizza transazioni distribuite, può essere necessario configurare il firewall in modo da consentire il flusso del traffico di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) tra istanze MS DTC separate e tra MS DTC e strumenti di gestione delle risorse come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile utilizzare il gruppo di regole preconfigurato **Distributed Transaction Coordinator** .<br /><br /> Quando è configurato un solo oggetto MS DTC condiviso per l'intero cluster in un gruppo di risorse distinto, è necessario aggiungere sqlservr.exe come eccezione al firewall.|  

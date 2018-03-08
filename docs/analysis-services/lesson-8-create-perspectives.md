@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1b024c48c9a033f65804c3cfe67a518f436052b7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 76fc2643bf8d160b38dbcc1009ad37926051407c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-8-create-perspectives"></a>Lezione 8: Creare prospettive
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -35,7 +35,7 @@ Lo scopo di questa lezione è quello di descrivere come creare prospettive e di 
   
 Tempo stimato per il completamento della lezione: **5 minuti**  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 7: creare indicatori di prestazioni chiave](../analysis-services/lesson-7-create-key-performance-indicators.md).  
   
 ## <a name="create-perspectives"></a>Creare prospettive  
@@ -54,7 +54,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
     In una lezione successiva si utilizzerà l'analizza nella funzionalità di Excel per testare questa prospettiva. Nell'elenco campi tabella pivot di Excel includerà ogni tabella, tranne la tabella DimCustomer.  
 
-## <a name="whats-next"></a>Operazioni successive
+## <a name="whats-next"></a>Quali sono le operazioni successive?
 Passare alla lezione successiva: [lezione 9: creare gerarchie](../analysis-services/lesson-9-create-hierarchies.md).
   
   

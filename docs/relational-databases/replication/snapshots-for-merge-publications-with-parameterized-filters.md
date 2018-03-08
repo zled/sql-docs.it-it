@@ -19,15 +19,15 @@ helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83e1c3bcb6cc4a435f3db4b3e96812a0c308c8b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec934637b86851a4d6fdc57722ac46aeebd0429e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>Snapshot per pubblicazioni di tipo merge con filtri con parametri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si usano filtri di riga con parametri nelle pubblicazioni di tipo merge, ogni sottoscrizione con uno snapshot in due parti viene inizializzata dalla replica. Viene innanzitutto creato uno snapshot dello schema contenente tutti gli oggetti necessari alla replica e lo schema degli oggetti pubblicati, ma non i dati. Ogni sottoscrizione viene quindi inizializzata con uno snapshot che include gli oggetti e lo schema dello snapshot dello schema e i dati appartenenti alla partizione della sottoscrizione. Se più di una sottoscrizione riceve una determinata partizione, ovvero riceve lo stesso schema e gli stessi dati, lo snapshot di tale partizione viene creato una sola volta. Dallo stesso snapshot vengono inizializzate più sottoscrizioni. Per ulteriori informazioni sui filtri di riga con parametri, vedere [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  

@@ -1,5 +1,5 @@
 ---
-title: STRING_AGG (Transact-SQL) | Documenti Microsoft
+title: STRING_AGG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - STRING_AGG
 - STRING_AGG_TSQL
-helpviewer_keywords: STRING_AGG function
+helpviewer_keywords:
+- STRING_AGG function
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fed0fc07f27a3069ba56309b1da7f18197bd987f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: f2bcc8b02b0228dc403fffc4ef1c6b82557872a4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -52,12 +54,12 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo. Le espressioni vengono convertite in `NVARCHAR` o `VARCHAR` tipi durante la concatenazione. Tipi stringa non vengono convertiti in `NVARCHAR` tipo.
 
 
-< order_clause >   
+<order_clause>   
 Specificare l'ordine dei risultati di concatenati `WITHIN GROUP` clausola:
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
-< order_by_expression_list >   
+<order_by_expression_list>   
  
   Elenco non costante [espressioni](../../t-sql/language-elements/expressions-transact-sql.md) che può essere utilizzato per l'ordinamento dei risultati. Un solo `order_by_expression` è consentito per ogni query. Per impostazione predefinita, l'ordinamento è crescente.   
   
@@ -70,14 +72,14 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR (1... 4000) |NVARCHAR (4000) |
-|VARCHAR (1... 8000) |VARCHAR(8000) |
-|int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR (4000) |
+|NVARCHAR(1…4000) |NVARCHAR(4000) |
+|VARCHAR(1…8000) |VARCHAR(8000) |
+|int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
 
 ## <a name="remarks"></a>Osservazioni  
  
-`STRING_AGG`funzione di aggregazione accetta tutte le espressioni da righe e concatenati in una singola stringa. I valori dell'espressione vengono convertiti in modo implicito in tipi di stringa e quindi concatenati. Per la conversione implicita in stringhe vengono seguite le regole esistenti per le conversioni dei tipi di dati. Per ulteriori informazioni sulle conversioni dei tipi di dati, vedere [CAST e CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
+`STRING_AGG`è una funzione di aggregazione che accetta tutte le espressioni da righe e concatenati in una singola stringa. I valori dell'espressione vengono convertiti in modo implicito in tipi di stringa e quindi concatenati. Per la conversione implicita in stringhe vengono seguite le regole esistenti per le conversioni dei tipi di dati. Per ulteriori informazioni sulle conversioni dei tipi di dati, vedere [CAST e CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
 Se l'espressione di input è di tipo `VARCHAR`, il separatore non può essere di tipo `NVARCHAR`. 
 
@@ -90,7 +92,7 @@ I valori null vengono ignorati e non è stato aggiunto il separatore corrisponde
 
 ### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Generare l'elenco di nomi separati in nuove righe 
 Nell'esempio seguente genera un elenco di nomi in una cella singolo risultato, separati con ritorno a capo.
-```tsql
+```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
 ```
@@ -107,7 +109,7 @@ FROM Person.Person;
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Generare l'elenco di nomi separati da virgola senza valori NULL   
 Nell'esempio seguente sostituisce i valori null con 'N/d' e restituisce i nomi separati da virgole in una cella singolo risultato.  
-```tsql
+```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
 ```
@@ -115,14 +117,14 @@ FROM Person.Person;
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
  
 
-|CSV | 
+|Csv | 
 |--- |
-|Giorgio, n/d, Mike, Peter, n/d, n/d, Alice, Bob |  
+|John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
 
 ### <a name="c-generate-comma-separated-values"></a>C. Generare valori separati da virgola 
 
-```tsql   
+```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -141,7 +143,7 @@ FROM Person.Person;
 ### <a name="d-return-news-articles-with-related-tags"></a>D. Restituire news con tag correlati 
 
 Articolo e nei tag vengono suddivisi in tabelle diverse. Sviluppatore desidera restituire una riga per ogni articolo con tutti i tag associati. Utilizzo di query riportata di seguito: 
-```tsql
+```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
 LEFT JOIN dbo.ArticleTag AS t 
@@ -151,7 +153,7 @@ GROUP BY a.articleId, title;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|ID articolo |title |tags |
+|articleId |title |tags |
 |--- |--- |--- |
 |172 |Esegue il polling indica elezione Chiudi risultati |politica, sondaggi, municipio | 
 |176 |Nuovo autostrada previsto per ridurre la congestione |NULL |
@@ -160,7 +162,7 @@ GROUP BY a.articleId, title;
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. Generare l'elenco di messaggi di posta elettronica per ogni città
 
 La query seguente consente di trovare gli indirizzi di posta elettronica dei dipendenti e li raggruppa in base a città: 
-```tsql
+```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
 GROUP BY town; 
@@ -178,7 +180,7 @@ Messaggi di posta elettronica restituito nella colonna può essere utilizzata pe
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Generare un elenco ordinato di messaggi di posta elettronica per ogni città   
    
 Simile all'esempio precedente, la query seguente consente di trovare gli indirizzi di posta elettronica dei dipendenti, li raggruppa in base a città e ordina i messaggi di posta elettronica:   
-```tsql
+```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
 FROM dbo.Employee 
@@ -194,6 +196,15 @@ GROUP BY town;
 
 
 ## <a name="see-also"></a>Vedere anche  
-
-[Funzioni stringa (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [Funzioni di aggregazione &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

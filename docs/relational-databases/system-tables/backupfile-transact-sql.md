@@ -1,5 +1,5 @@
 ---
-title: backupfile (Transact-SQL) | Documenti Microsoft
+title: backupfile (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupfile
 - backupfile_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f51eff63650e1cf3572b7b2e8ea77a89eb4a8265
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84b26ca09b8cd537ed40f0af8844f3f0c7627c86
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,18 +42,18 @@ ms.lasthandoff: 11/17/2017
 |**backup_set_id**|**int**|Numero di identificazione univoco del file che include il set di backup. Riferimenti **backupset (backup_set_id)**.|  
 |**first_family_number**|**tinyint**|Numero di gruppo del primo supporto che include il file di backup. Può essere NULL.|  
 |**first_media_number**|**smallint**|Numero del primo supporto che include il file di backup. Può essere NULL.|  
-|**filegroup_name**|**nvarchar (128)**|Nome del filegroup che include un file di database di backup. Può essere NULL.|  
+|**filegroup_name**|**nvarchar(128)**|Nome del filegroup che include un file di database di backup. Può essere NULL.|  
 |**page_size**|**int**|Dimensioni della pagina in byte.|  
 |**file_number**|**Numeric(10,0)**|Numero di identificazione del file univoco all'interno di un database (corrisponde a **Sys. database_files**. **file_id**).|  
 |**backed_up_page_count**|**Numeric(10,0)**|Numero di pagine di cui è stato eseguito il backup. Può essere NULL.|  
-|**file_type**|**Char (1)**|File di cui è stato eseguito il backup. I valori possibili sono:<br /><br /> D = file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = file di log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = catalogo full-text.<br /><br /> Può essere NULL.|  
+|**file_type**|**char(1)**|File di cui è stato eseguito il backup. I valori possibili sono:<br /><br /> D = file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = file di log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = catalogo full-text.<br /><br /> Può essere NULL.|  
 |**source_file_block_size**|**Numeric(10,0)**|Dispositivo in cui si trova il file di dati o di log originale quando viene eseguito il backup. Può essere NULL.|  
-|**FILE_SIZE**|**Numeric(20,0)**|Lunghezza in byte del file di cui è stato eseguito il backup. Può essere NULL.|  
-|**logical_name**|**nvarchar (128)**|Nome logico del file di cui è stato eseguito il backup. Può essere NULL.|  
-|**physical_drive**|**nvarchar (260)**|Nome di dispositivo fisico o partizione. Può essere NULL.|  
-|**physical_name**|**nvarchar (260)**|Parte rimanente del nome fisico del file (sistema operativo). Può essere NULL.|  
-|**stato**|**tinyint**|Stato del file. I valori possibili sono:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = ELIMINATO<br /><br /> Nota: Il valore 5 viene ignorato in modo che questi valori corrispondono ai valori per gli stati del database.|  
-|**state_desc**|**nvarchar (64)**|Descrizione del file. I valori possibili sono:<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
+|**file_size**|**Numeric(20,0)**|Lunghezza in byte del file di cui è stato eseguito il backup. Può essere NULL.|  
+|**logical_name**|**nvarchar(128)**|Nome logico del file di cui è stato eseguito il backup. Può essere NULL.|  
+|**physical_drive**|**nvarchar(260)**|Nome di dispositivo fisico o partizione. Può essere NULL.|  
+|**physical_name**|**nvarchar(260)**|Parte rimanente del nome fisico del file (sistema operativo). Può essere NULL.|  
+|**state**|**tinyint**|Stato del file. I valori possibili sono:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = ELIMINATO<br /><br /> Nota: Il valore 5 viene ignorato in modo che questi valori corrispondono ai valori per gli stati del database.|  
+|**state_desc**|**nvarchar(64)**|Descrizione del file. I valori possibili sono:<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**Numeric(25,0)**|Numero di sequenza del file di log in corrispondenza del quale il file è stato creato.|  
 |**drop_lsn**|**Numeric(25,0)**|Numero di sequenza del file di log in corrispondenza del quale il file è stato eliminato. Può essere NULL.<br /><br /> Se il file non è stato eliminato, questo valore è NULL.|  
 |**file_guid**|**uniqueidentifier**|Identificatore univoco del file.|  
@@ -75,6 +77,6 @@ ms.lasthandoff: 11/17/2017
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Tabelle di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

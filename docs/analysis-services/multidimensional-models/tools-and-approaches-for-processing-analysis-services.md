@@ -5,32 +5,30 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad1cff7114e6891af5cdf54cfc29b658213c6bb4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2cf9e507347a28aa36f96b1d2499ec0ff0ee741f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Strumenti e approcci per l'elaborazione (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L'elaborazione è un'operazione in cui Analysis Services esegue una query di un'origine dati relazionale e gli oggetti di Analysis Services utilizzando tali dati vengono popolati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'elaborazione è un'operazione durante la quale tramite Analysis Services viene effettuata una query su un'origine dati relazionale e gli oggetti di Analysis Services vengono popolati utilizzando i dati ottenuti.  
   
  Un amministratore di sistema di Analysis Services può eseguire e monitorare l'elaborazione degli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando i seguenti approcci:  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
  L'elaborazione è un'operazione estremamente configurabile, controllata da un set di opzioni che determinano se si verifica un'elaborazione completa o incrementale a livello di oggetto. Per altre informazioni sulle opzioni di elaborazione e gli oggetti, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) ed [Elaborazione di oggetti di Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  In questo argomento vengono descritti gli strumenti e gli approcci per l'elaborazione di modelli multidimensionali. Per altre informazioni sull'elaborazione dei modelli tabulari, vedere [Elaborare database, tabelle o partizioni &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) ed [Elaborare dati &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+>  In questo argomento vengono descritti gli strumenti e gli approcci per l'elaborazione di modelli multidimensionali. Per ulteriori informazioni sull'elaborazione di modelli tabulari, vedere [elaborare Database, tabella, o partizione &#40; Analysis Services &#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) e [elaborare dati](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Gestione di oggetti in SQL Server Management Studio  
   

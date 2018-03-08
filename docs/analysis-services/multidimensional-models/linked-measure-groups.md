@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +18,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cc306874fed195a649dd0cc18d43db4a426cefa4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a5139e2e9e9d5bb06d594f9463f6632b6ee9fb78
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="linked-measure-groups"></a>Gruppi di misure collegati
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un gruppo di misure collegato si basa su un altro gruppo di misure in un cubo diverso all'interno dello stesso database o un database di Analysis Services diverso. È possibile usare un gruppo di misure collegato se si desidera riusare un set di misure e i valori di dati corrispondenti in più cubi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un gruppo di misure collegato si basa su un altro gruppo di misure in un cubo diverso all'interno dello stesso database o in un database di Analysis Services diverso. È possibile usare un gruppo di misure collegato se si desidera riusare un set di misure e i valori di dati corrispondenti in più cubi.  
   
  Microsoft consiglia che i gruppi di misure collegati e originali risiedano in soluzioni eseguite sullo stesso server. È prevista la deprecazione del collegamento a un gruppo di misure in un server remoto nelle versioni future, vedere [Funzionalità di Analysis Services deprecate in SQL Server 2016](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md).  
   

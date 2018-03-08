@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Progress Reports event category
 - event classes [Analysis Services], progress reports
 ms.assetid: c130f160-28ef-49bc-9ee6-da47dc9aab2a
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c2038ea3e714991c6574619b4de9084a06876b4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c90cfbe7e30d0678d13a329737c21f7d45575e22
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="progress-reports-event-category"></a>categoria di eventi di report di stato
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria di eventi report di stato include le classi di eventi descritte nella tabella seguente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La categoria di eventi di report di stato include le classi di eventi descritte nella tabella seguente.  
   
 |Event Class|ID evento|Description|  
 |-----------------|--------------|-----------------|  

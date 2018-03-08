@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AttributeBinding Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a13555dccbca9c6d013d27df55224b8727bdcc6c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 676d0e6d27921963511b8df380db46cd8a49553d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attributebinding-data-type-assl"></a>Tipo di dati AttributeBinding (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definisce un tipo di dati derivato che rappresenta un'associazione per un [attributo](../../../analysis-services/scripting/objects/attribute-element-assl.md) elemento.  
@@ -47,16 +45,16 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Caratteristiche tipo di dati  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipi di dati di base|[Associazione](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
-|Tipi di dati derivati|Nessuno|  
+|Tipi di dati derivati|None|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|Nessuno|  
+|Elementi padre|None|  
 |Elementi figlio|[AttributeID](../../../analysis-services/scripting/properties/attributeid-element-assl.md), [ordinale](../../../analysis-services/scripting/properties/ordinal-element-assl.md), [tipo](../../../analysis-services/scripting/properties/type-element-binding-assl.md)|  
 |Elementi derivati|Vedere [associazione](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
   

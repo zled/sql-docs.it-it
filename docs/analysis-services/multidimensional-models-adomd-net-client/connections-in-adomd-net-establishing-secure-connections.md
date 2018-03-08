@@ -1,36 +1,35 @@
 ---
 title: Tentativo di stabilire connessioni protette in ADOMD.NET | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 192686dd747d307163e4530c55459e2c2d814cc4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6916e57fc0135fc5688c6569eaeb8341caa23b82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connessioni in ADOMD.NET - stabilire connessioni protette
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si utilizza una connessione in ADOMD.NET, il metodo di sicurezza utilizzato per la connessione dipende dal valore del **ProtectionLevel** proprietà della stringa di connessione utilizzata quando si chiama il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> metodo il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
+  Quando si utilizza una connessione in ADOMD.NET, il metodo di sicurezza utilizzato per la connessione dipende dal valore del **ProtectionLevel** proprietà della stringa di connessione utilizzata quando si chiama il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> metodo il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
  Il **ProtectionLevel** proprietà offre quattro livelli di sicurezza: non autenticato, autenticato, firmato e crittografato. Nella tabella seguente vengono descritti i diversi livelli di sicurezza.  
   
@@ -81,9 +80,9 @@ ms.lasthandoff: 12/08/2017
   
 |Valore di ProtectionLevel|Utilizzo con HTTP o HTTPS|  
 |---------------------------|----------------------------|  
-|**Nessuno**|No|  
+|**Nessuno**|no|  
 |**Connetti**|HTTP|  
-|**Integrità PKT** o **PktIntegrity**|No|  
+|**Integrità PKT** o **PktIntegrity**|no|  
 |**Privacy PKT** o **PktPrivacy**|HTTPS|  
   
 ### <a name="opening-a-secure-http-connection"></a>Apertura di una connessione HTTP protetta  

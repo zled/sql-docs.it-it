@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Distributors [SQL Server replication], information scripts
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd2332c1e14a1c0987de06232837320a18cbe5dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 875ed870e28e1a3ff0822a677905282f1fbd87ae
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script di informazioni sui server di distribuzione e di pubblicazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo script usa le tabelle di sistema e le stored procedure di replica per rispondere a domande frequenti su oggetti presenti nei server di distribuzione e pubblicazione. Può essere utilizzato senza alcuna variazione e può inoltre costituire la base per la generazione di script personalizzati. Per eseguire lo script nel proprio ambiente potrebbe essere necessario apportare due modifiche:  

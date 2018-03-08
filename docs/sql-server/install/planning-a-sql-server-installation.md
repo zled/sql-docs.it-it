@@ -8,23 +8,27 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords: installing SQL Server, planning
+helpviewer_keywords:
+- installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 5f45fe1c93f33f8f4666791c9014c1ca3f4a5aec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6fa512799bf19e284b25b7f847d71d3f6e5aab7a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="planning-a-sql-server-installation"></a>Pianificazione di un'installazione di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eseguire le operazioni seguenti:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], effettuare le operazioni seguenti:  
   
 -   Esaminare i requisiti di installazione, i controlli di configurazione del sistema e le considerazioni sulla sicurezza per un'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -41,25 +45,25 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
  [Novità relative all'installazione di SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
- In questo argomento vengono descritti i dettagli sulle caratteristiche di installazione nuove o migliorate disponibili in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ In questo articolo vengono descritti i dettagli sulle funzionalità di installazione nuove o migliorate disponibili in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Requisiti hardware e software per l'installazione di SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- In questo argomento vengono elencati i requisiti hardware e software minimi per l'installazione e l'esecuzione di un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ In questo articolo vengono elencati i requisiti hardware e software minimi per l'installazione e l'esecuzione di un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
- Questo argomento illustra alcune procedure consigliate per la sicurezza, da prendere in considerazione prima dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Questo articolo illustra alcune procedure consigliate per la sicurezza da prendere in considerazione prima dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
- Nel presente argomento viene fornita la descrizione della configurazione predefinita dei servizi disponibili in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e delle opzioni di configurazione per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile impostare durante e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Questo articolo illustra la configurazione predefinita dei servizi disponibili in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le opzioni di configurazione per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile impostare durante e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Protocolli e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)  
- In questo argomento viene fornita la descrizione della configurazione predefinita dei protocolli di rete disponibili questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e delle opzioni di configurazione disponibili.  
+ Questo articolo illustra la configurazione predefinita dei protocolli di rete in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le opzioni di configurazione disponibili.  
   
- [Utilizzare più versioni e istanze di SQL Server](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
- In questo argomento sono contenute le considerazioni relative alle installazioni di più versioni e istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Usare più versioni e istanze di SQL Server](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
+ Questo articolo illustra le considerazioni relative all'installazione di più versioni e istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Versioni in lingua locale di SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md)  
- In questo argomento vengono descritte le versioni localizzate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Questo articolo illustra le versioni localizzate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Installare SQL Server](../../database-engine/install-windows/install-sql-server.md)  

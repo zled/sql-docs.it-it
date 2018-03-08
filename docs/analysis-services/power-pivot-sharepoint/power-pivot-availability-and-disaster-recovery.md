@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7b2cfe66cc530881a848d7f3d8850c62c0af1486
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5a7e94aeb9f547220a3b3bc836e59ef81ce3bfe9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Ripristino di emergenza e disponibilità elevata di Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Piani di ripristino di emergenza e disponibilità per [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dipendono principalmente dalla struttura della farm di SharePoint, il tempo di inattività accettabile per i diversi componenti e gli strumenti e procedure consigliate implementano per la disponibilità di SharePoint. In questo argomento vengono riepilogate le tecnologie e inclusi i diagrammi di topologia di esempio da considerare quando si pianifica la disponibilità e il ripristino di emergenza per una distribuzione di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+I piani di ripristino di emergenza e disponibilità per [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dipendono principalmente dalla struttura della farm di SharePoint, dalla quantità di inattività accettabile per i diversi componenti e dagli strumenti e dalle procedure consigliate che si implementano per la disponibilità di SharePoint. In questo argomento vengono riepilogate le tecnologie e inclusi i diagrammi di topologia di esempio da considerare quando si pianifica la disponibilità e il ripristino di emergenza per una distribuzione di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
 ||  
 |-|  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
  ![disponibilità di PowerPivot in 2013](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "la disponibilità di powerpivot in 2013")  
   
--   **(1)** I server front-end Web. Usare il componente aggiuntivo di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 per installare i provider di dati in ogni server. Per altre informazioni, vedere [Installare o disinstallare il componente aggiuntivo PowerPivot per &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   **(1)** I server front-end Web. Usare il componente aggiuntivo di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 per installare i provider di dati in ogni server. Per altre informazioni, vedere [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   **(2)** Il servizio condiviso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] viene eseguito **in ognuno** dei server applicazioni e consente l'esecuzione dell'applicazione del servizio **su tutti** i server applicazioni. Pertanto se un singolo server applicazioni è offline, l'applicazione [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] sarà comunque disponibile.  
   
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/08/2017
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in una farm per la disponibilità.|Supportato ma non consigliato. Si consiglia di usare Always On in modalità di commit sincrono.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in modalità di commit sincrono|Supportato e consigliato.|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] mirroring asincrono o log shipping a un'altra farm per il ripristino di emergenza.|Supportato.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] con commit asincrono per il ripristino di emergenza|Supportato|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] con commit asincrono per il ripristino di emergenza|Supported|  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_help_category (Transact-SQL) | Documenti Microsoft
+title: sp_help_category (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efec4c1ef04ef95e74ef13479b5f51cfe2d84bdb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: debc3b8cef2aeb0a9f4893ff5e9287a2a5fdd016
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +54,8 @@ sp_help_category [ [ @class = ] 'class' ]
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**PROCESSO**|Restituisce informazioni su una categoria di processi.|  
-|**AVVISO**|Restituisce informazioni su una categoria di avvisi.|  
+|**JOB**|Restituisce informazioni su una categoria di processi.|  
+|**ALERT**|Restituisce informazioni su una categoria di avvisi.|  
 |**(OPERATORE)**|Restituisce informazioni su una categoria di operatori.|  
   
  [  **@type=** ] **'***tipo***'**  
@@ -60,14 +63,14 @@ sp_help_category [ [ @class = ] 'class' ]
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**LOCALE**|Categoria di processi locali.|  
+|**LOCAL**|Categoria di processi locali.|  
 |**MULTI-SERVER**|Categoria di processi multiserver.|  
 |**NONE**|Categoria per una classe diversa da **processo**.|  
   
  [  **@name=** ] **'***nome***'**  
  Nome della categoria su cui vengono richieste informazioni. *nome* è **sysname**, con un valore predefinito è NULL.  
   
- [  **@suffix=** ] *suffisso*  
+ [ **@suffix=** ] *suffix*  
  Specifica se il **category_type** colonna nel set di risultati è un ID o un nome. *suffisso* è **bit**, il valore predefinito è **0**. **1** Mostra il **category_type** come nome, e **0** è visualizzata come un ID.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -95,7 +98,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
  Se non viene specificato alcun parametro, il set di risultati include informazioni su tutte le categorie dei processi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -134,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

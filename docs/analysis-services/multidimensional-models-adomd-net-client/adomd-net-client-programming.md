@@ -1,36 +1,35 @@
 ---
 title: Programmazione di Client ADOMD.NET | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f6ed705a9cd5f4084dcf6e09b619431479a23826
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 453848d922a5e2a88258922f764403cf4126de12
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="adomdnet-client-programming"></a>Programmazione di client ADOMD.NET
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]I componenti client ADOMD.NET si trovano all'interno di **Microsoft.AnalysisServices.AdomdClient** dello spazio dei nomi (in microsoft.analysisservices.adomdclient.dll). Questi componenti forniscono la funzionalità per client e applicazioni di livello intermedio per facilmente i dati di query e i metadati da un archivio dati analitici, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  I componenti client ADOMD.NET si trovano all'interno di **Microsoft.AnalysisServices.AdomdClient** dello spazio dei nomi (in microsoft.analysisservices.adomdclient.dll). Questi componenti forniscono la funzionalità per client e applicazioni di livello intermedio per facilmente i dati di query e i metadati da un archivio dati analitici, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="using-the-adomdnet-client-objects"></a>Utilizzo di oggetti client ADOMD.NET  
  Nell'esecuzione di query su un'origine dati analitici è necessario eseguire un set di attività comuni. Nella tabella seguente vengono indicate le attività comuni in cui si utilizzano gli oggetti client ADOMD.NET per eseguire una query di questo tipo.  

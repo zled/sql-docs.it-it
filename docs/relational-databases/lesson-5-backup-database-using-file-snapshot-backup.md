@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 910053b9953a1352c98b6b8f67dc844204933b2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 075262fd0b079d8f4e9f2decab233f6f793dd2df
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>Lezione 5: Backup del database con il backup di snapshot di file
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In questa lezione si eseguirà il backup del database AdventureWorks2014 nella macchina virtuale di Azure usando il backup di snapshot di file per eseguire un backup quasi istantaneo con gli snapshot di Azure. Per altre informazioni sui backup di snapshot, vedere [Backup di snapshot di file per i file di database in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+# <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>Lezione 5: Eseguire il backup del database con il backup di snapshot di file
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In questa lezione si eseguirà il backup del database AdventureWorks2014 nella macchina virtuale di Azure usando il backup di snapshot di file per eseguire un backup quasi istantaneo con gli snapshot di Azure. Per altre informazioni sui backup di snapshot, vedere [Backup di snapshot di file per i file di database in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
 Per eseguire il backup del database AdventureWorks2014 usando un backup di snapshot, eseguire queste operazioni:  
   

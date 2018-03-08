@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ForeColor Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e9db6570825c23e85ca936e8733c96d7ed1a97b0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a836b575e1f7c2db966f3ecc3878c774bc89508c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="forecolor-element-assl"></a>Elemento ForeColor (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descrive le caratteristiche di visualizzazione correlate al colore di [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) o [misura](../../../analysis-services/scripting/objects/measure-element-assl.md) elemento padre.  
@@ -47,10 +45,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String|  
-|Valore predefinito|Nessuno|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md), [misura](../../../analysis-services/scripting/objects/measure-element-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il **ForeColor** proprietà contiene un'espressione MDX (Multidimensional Expressions) e si applica a **CalculationProperty** gli elementi che hanno un [CalculationType](../../../analysis-services/scripting/properties/calculationtype-element-assl.md) di *Membro* o *celle*.  

@@ -1,5 +1,5 @@
 ---
-title: SET STATISTICS IO (Transact-SQL) | Documenti Microsoft
+title: SET STATISTICS IO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - IO
 - IO_TSQL
 - SET STATISTICS IO
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - disk I/O statistics [SQL Server]
 - I/O [SQL Server], disk activity information
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - SET STATISTICS IO statement
 - statistical information [SQL Server], disk activity
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d19ec8f11ae314dd4c420ba8b72689169e5e29b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 3b2aad11610a23c3686e279daa60c57bf7c8154f
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +63,7 @@ SET STATISTICS IO { ON | OFF }
 |Elemento di output|Significato|  
 |-----------------|-------------|  
 |**Tabella**|Nome della tabella.|  
-|**Conteggio analisi**|Numero di ricerche/analisi avviate dopo aver raggiunto il livello foglia in qualsiasi direzione per recuperare tutti i valori in modo da costruire il set di dati finale per l'output.<br /><br /> Il conteggio analisi è 0 se l'indice utilizzato è univoco o cluster in una chiave primaria e si cerca un unico valore. Ad esempio `WHERE Primary_Key_Column = <value>`.<br /><br /> Il conteggio analisi è 1 quando si cerca un valore utilizzando un indice cluster non univoco definito in una colonna chiave non primaria. Questa operazione viene effettuata per verificare valori duplicati per il valore di chiave che si sta cercando. Ad esempio `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Il conteggio analisi è N quando N è il numero di ricerche/analisi differenti avviate verso sinistra o destra nel livello foglia dopo aver individuato un valore di chiave utilizzando la chiave di indice.|  
+|**Conteggio analisi**|Numero di ricerche/analisi avviate dopo aver raggiunto il livello foglia in qualsiasi direzione per recuperare tutti i valori in modo da costruire il set di dati finale per l'output.<br /><br /> Il conteggio analisi è 0 se l'indice utilizzato è univoco o cluster in una chiave primaria e si cerca un unico valore. Ad esempio `WHERE Primary_Key_Column = <value>`.<br /><br /> Conteggio analisi è 1 quando cerca un valore utilizzando un indice cluster non univoco, definito in una colonna chiave non primaria. Questa operazione viene effettuata per verificare valori duplicati per il valore di chiave che si sta cercando. Ad esempio `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Il conteggio analisi è N quando N è il numero di ricerche/analisi differenti avviate verso sinistra o destra nel livello foglia dopo aver individuato un valore di chiave utilizzando la chiave di indice.|  
 |**letture logiche**|Numero di pagine lette dalla cache dei dati.|  
 |**letture fisiche**|Numero di pagine lette dal disco.|  
 |**letture read-ahead**|Numero di pagine inserite nella cache per la query.|  
@@ -74,7 +76,7 @@ SET STATISTICS IO { ON | OFF }
 > [!NOTE]  
 >  Durante il recupero di colonne LOB da parte di istruzioni Transact-SQL, alcune operazioni di recupero possono richiedere più volte l'attraversamento dell'albero LOB. Per questo motivo SET STATISTICS IO può segnalare un numero di letture logiche superiore al previsto.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per utilizzare l'opzione SET STATISTICS IO, gli utenti devono disporre delle autorizzazioni appropriate per eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. Non sarà necessario disporre dell'autorizzazione SHOWPLAN.  
   
 ## <a name="examples"></a>Esempi  
@@ -103,7 +105,7 @@ lob read-ahead reads 0.
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET STATISTICS TIME &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  
   
   

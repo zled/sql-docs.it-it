@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: customization file in RDS [ADO]
+helpviewer_keywords:
+- customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f630817b87a464d3f02e5fdad6c88c161a081b23
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="understanding-the-customization-file"></a>Informazioni sui File di personalizzazione
 Ogni intestazione di sezione nel file di personalizzazione è costituita da parentesi quadre (**[]**) contenente un parametro e tipo. I quattro tipi di sezioni sono indicati da stringhe letterali **connettersi**, **sql**, **userlist**, o **log**. Il parametro è il valore letterale stringa, il valore predefinito, un identificatore specificato dall'utente o nulla.  
@@ -48,18 +50,18 @@ identifier
   
 |Parte|Description|  
 |----------|-----------------|  
-|**la connessione**|Una stringa letterale che modifica una stringa di connessione.|  
-|**SQL**|Una stringa letterale che modifica una stringa di comando.|  
-|**elenco utenti**|Una stringa letterale che modifica i diritti di accesso di un utente specifico.|  
-|**registri**|Valore letterale stringa che specifica un file di log errori di registrazione.|  
-|**impostazione predefinita**|Una stringa letterale che viene utilizzata alcun identificatore è specificato se trovato.|  
-|*Identificatore*|Stringa che corrisponde a una stringa nel **connettersi** o **comando** stringa.<br /><br /> -Utilizzare questa sezione se contiene l'intestazione di sezione **connettersi** e la stringa dell'identificatore è stata trovata nella stringa di connessione.<br />-Utilizzare questa sezione se contiene l'intestazione di sezione **sql** e la stringa dell'identificatore è stata trovata nella stringa di comando.<br />-Utilizzare questa sezione se contiene l'intestazione di sezione **userlist** e la stringa dell'identificatore corrisponde un **connettersi** identificatore di sezione.|  
+|**connect**|Una stringa letterale che modifica una stringa di connessione.|  
+|**sql**|Una stringa letterale che modifica una stringa di comando.|  
+|**userlist**|Una stringa letterale che modifica i diritti di accesso di un utente specifico.|  
+|**logs**|Valore letterale stringa che specifica un file di log errori di registrazione.|  
+|**default**|Una stringa letterale che viene utilizzata alcun identificatore è specificato se trovato.|  
+|*identifier*|Stringa che corrisponde a una stringa nel **connettersi** o **comando** stringa.<br /><br /> -Utilizzare questa sezione se contiene l'intestazione di sezione **connettersi** e la stringa dell'identificatore è stata trovata nella stringa di connessione.<br />-Utilizzare questa sezione se contiene l'intestazione di sezione **sql** e la stringa dell'identificatore è stata trovata nella stringa di comando.<br />-Utilizzare questa sezione se contiene l'intestazione di sezione **userlist** e la stringa dell'identificatore corrisponde un **connettersi** identificatore di sezione.|  
   
  Il **DataFactory** chiama il gestore, passando i parametri dei client. Il gestore esegue la ricerca di stringhe intere nei parametri del client corrispondenti agli identificatori nelle intestazioni della sezione appropriata. Se viene trovata una corrispondenza, il contenuto della sezione viene applicato al parametro del client.  
   
  Una particolare sezione viene utilizzata nelle seguenti circostanze:  
   
--   Oggetto **connettersi** sezione viene utilizzata se la parte del valore del client di connettersi, parola chiave della stringa "**origine dati =***valore*", corrisponde a un **connettersi** Identificatore di sezione*.*  
+-   A **connettersi** sezione viene utilizzata se la parte del valore del client di connettersi, parola chiave della stringa "**origine dati = * * * valore*", corrisponde a un **connettersi** identificatore sezione*.*  
   
 -   Un **sql** sezione viene utilizzata se la stringa di comando del client contiene una stringa che corrisponde a un **sql** identificatore di sezione.  
   

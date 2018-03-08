@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - TRUNCATE TABLE
 - TRUNCATE_TSQL
 - TRUNCATE_TABLE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - row removal [SQL Server], TRUNCATE TABLE statement
 - table truncating [SQL Server]
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - deleting rows
 - dropping rows
 ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5523e2797d3f0a69e39f0fb3cdbd70a6f389eed2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 71f05b47a4a070e5d797a6f9ff6b5f4d88e585c5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```  
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
@@ -59,7 +61,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>  
 ```  
   
-```tsql  
+```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
@@ -112,7 +114,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  Se la tabella include una colonna Identity, il contattore per quella colonna viene reimpostato sul valore di inizializzazione definito per la colonna. Se non è stato definito alcun valore di inizializzazione, viene utilizzato il valore predefinito 1. Per mantenere il contatore della tabella Identity, utilizzare l'istruzione DELETE.  
   
-## <a name="restrictions"></a>Restrizioni  
+## <a name="restrictions"></a>Restrictions  
  Non è possibile utilizzare TRUNCATE TABLE sulle tabelle:  
   
 -   a cui fa riferimento un vincolo FOREIGN KEY È possibile troncare una tabella con una chiave esterna che fa riferimento alla tabella stessa.  
@@ -134,7 +136,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ## <a name="truncating-large-tables"></a>Troncamento delle tabelle di grandi dimensioni  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha la possibilità di eliminare o troncare le tabelle che includono più di 128 extent senza mantenere blocchi simultanei in tutti gli extent necessari per l'eliminazione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione minima necessaria è ALTER su *table_name*. Le autorizzazioni per l'istruzione TRUNCATE TABLE vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server sysadmin, dei ruoli predefiniti del database db_owner e db_ddladmin e al proprietario della tabella e non sono trasferibili. È tuttavia possibile incorporare l'istruzione TRUNCATE TABLE all'interno di un modulo, ad esempio una stored procedure, e concedere le autorizzazioni necessarie al modulo tramite la clausola EXECUTE AS.  
   
 ## <a name="examples"></a>Esempi  
@@ -142,7 +144,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ### <a name="a-truncate-a-table"></a>A. Troncare una tabella  
  Nell'esempio seguente vengono rimossi tutti i dati dalla tabella `JobCandidate`. Le istruzioni `SELECT` vengono inserite prima e dopo l'istruzione `TRUNCATE TABLE` per confrontare i risultati.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT COUNT(*) AS BeforeTruncateCount   
@@ -161,7 +163,7 @@ GO
   
  L'esempio seguente tronca le partizioni specificate di una tabella partizionata. La sintassi `WITH (PARTITIONS (2, 4, 6 TO 8))` consente di troncare i numeri di partizione 2, 4, 6, 7 e 8.  
   
-```  
+```sql  
 TRUNCATE TABLE PartitionTable1   
 WITH (PARTITIONS (2, 4, 6 TO 8));  
 GO  

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9b46a11c3edc4ca3e9c735d324f961165bd022cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo argomento descrive contenuto del modello di data mining che è specifico dei modelli che utilizzano il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Decision Trees. Per una spiegazione generale del contenuto del modello di data mining valida per tutti i tipi di modello, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). È importante ricordare che l'algoritmo Microsoft Decision Trees è un algoritmo ibrido che consente di creare modelli con funzioni molto diverse: un albero delle decisioni può rappresentare associazioni, regole o persino regressione lineare. La struttura dell'albero è sostanzialmente la stessa, ma la modalità di interpretazione delle informazioni dipenderà dallo scopo per il quale è stato creato il modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. Per una spiegazione del modello di data mining applicabile a tutti i tipi di modello, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). È importante ricordare che l'algoritmo Microsoft Decision Trees è un algoritmo ibrido che consente di creare modelli con funzioni molto diverse: un albero delle decisioni può rappresentare associazioni, regole o persino regressione lineare. La struttura dell'albero è sostanzialmente la stessa, ma la modalità di interpretazione delle informazioni dipenderà dallo scopo per il quale è stato creato il modello.  
   
 ##  <a name="bkmk_Top"></a> Informazioni sulla struttura di un modello di albero delle decisioni  
  Un modello di albero delle decisioni dispone di un singolo nodo padre che rappresenta il modello e i relativi metadati. Sotto il nodo padre sono presenti alberi indipendenti che rappresentano gli attributi stimabili selezionati. Se ad esempio il modello di albero delle decisioni viene configurato per stimare se un cliente acquisterà un prodotto e fornire input relativi a genere e reddito, il modello creerà un singolo albero per l'attributo relativo agli acquisti, con molti rami riferiti alle condizioni correlate al genere e al reddito.  
@@ -53,9 +52,9 @@ ms.lasthandoff: 12/08/2017
  L'algoritmo Microsoft Decision Trees non consente di utilizzare tipi di dati continui come input; pertanto, se una colonna dispone di un tipo di dati numerici continui, i valori vengono discretizzati. Per tutti gli attributi continui, l'algoritmo esegue la discretizzazione in corrispondenza di una divisione.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]viene automaticamente scelto un metodo per bucket di attributi continui; Tuttavia, è possibile controllare i valori come continui negli input vengono discretizzati impostando il tipo di contenuto della colonna della struttura di data mining per **Discretized** e impostando il <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> o <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> proprietà.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene automaticamente scelto un metodo per bucket di attributi continui; Tuttavia, è possibile controllare i valori come continui negli input vengono discretizzati impostando il tipo di contenuto della colonna della struttura di data mining per **Discretized** e impostando il <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> o <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> proprietà.  
   
- [Torna all'inizio](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ##  <a name="bkmk_ModelContent"></a> Contenuto di un modello di albero delle decisioni  
  In questa sezione vengono forniti dettagli ed esempi specifici delle colonne del contenuto dei modelli di data mining particolarmente importanti per i modelli di albero delle decisioni. Per informazioni sulle colonne generiche del set di righe dello schema e per spiegazioni sulla terminologia dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -174,7 +173,7 @@ ms.lasthandoff: 12/08/2017
   
  Per esempi su come recuperare queste statistiche, vedere [Esempi di query sul modello di alberi delle decisioni](../../analysis-services/data-mining/decision-trees-model-query-examples.md).  
   
- [Torna all'inizio](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ## <a name="example-of-decision-tree-structure"></a>Esempio di struttura di albero delle decisioni  
  Per comprendere il funzionamento di un albero delle decisioni, considerare un esempio come lo scenario dell'acquirente di biciclette di AdventureWorks. Presupponendo che l'attributo stimabile sia dato dagli acquisti del cliente, l'algoritmo Decision Trees tenta di trovare una colonna di dati, tra tutti gli input forniti, che individui i clienti aventi maggiori probabilità di acquistare una bicicletta e quelli aventi le minori probabilità. Ad esempio, il modello potrebbe rilevare che l'attributo Age (età) è il migliore indicatore del comportamento di acquisto. In particolare, è possibile che venga rilevato che i clienti di età superiore a 30 anni hanno maggiori probabilità di acquistare una bicicletta, rispetto a quelli di altre età. In questo scenario il modello crea una *divisione* sull'attributo Age. Ciò significa che l'albero si divide in due rami, uno contenente i clienti di età superiore a 30 anni e l'altro i clienti di età inferiore a 30 anni. I nuovi rami vengono rappresentati nella struttura del modello come due nuovi alberi interni (NODE_TYPE = 3).  
@@ -196,7 +195,7 @@ ms.lasthandoff: 12/08/2017
   
  Se l'attributo stimabile è un numero continuo, l'algoritmo tenta di creare una formula di regressione che modella la relazione tra l'attributo stimabile e gli input.  
   
- [Torna all'inizio](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ###  <a name="NodeCaption"></a> Didascalia del nodo e descrizione del nodo  
  In un modello di albero delle decisioni la didascalia del nodo e la descrizione del nodo contengono informazioni simili. Tuttavia, la descrizione del nodo è più completa e contiene un numero maggiore di informazioni man mano che ci si avvicina ai nodi foglia. Sia la didascalia sia la descrizione sono stringhe localizzate.  
@@ -214,9 +213,9 @@ ms.lasthandoff: 12/08/2017
  L'attributo rappresentato dal frammento XML può essere semplice o complesso. Un attributo semplice contiene il nome della colonna del modello e il valore dell'attributo. Se la colonna del modello contiene una tabella nidificata, l'attributo di tale tabella è rappresentato come una concatenazione del nome della tabella, del valore della chiave e dell'attributo.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta la versione 2.0 dello standard PMML, con le estensioni per supportare l'utilizzo della tabella nidificata. Se i dati contengono tabelle nidificate e viene generata una versione PMML del modello, tutti gli elementi del modello che includono i predicati sono contrassegnati come un'estensione.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta la versione 2.0 dello standard PMML, con le estensioni per supportare l'utilizzo della tabella nidificata. Se i dati contengono tabelle nidificate e viene generata una versione PMML del modello, tutti gli elementi del modello che includono i predicati sono contrassegnati come un'estensione.  
   
- [Torna all'inizio](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> Distribuzione del nodo per attributi discreti  
  In un modello di albero delle decisioni la tabella NODE_DISTRIBUTION contiene statistiche utili. Tuttavia, il tipo di statistiche varia a seconda che nell'albero venga stimato un attributo discreto o continuo. In questa sezione viene descritto il significato delle statistiche di distribuzione del nodo per attributi discreti.  
@@ -284,7 +283,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Se si crea un modello di albero delle decisioni che include attributi stimabili continui e discreti, verranno visualizzati punteggi completamente diversi nei nodi (Tutti) che rappresentano ogni tipo di albero. Ogni modello deve essere considerato in modo indipendente e i metodi utilizzati per il calcolo del punteggio di regressione sono completamente diversi da quelli utilizzati per il calcolo del punteggio di classificazione. Non è possibile confrontare i valori del punteggio del nodo.  
   
- [Torna all'inizio](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ##  <a name="bkmk_RegressionNodes"></a> Nodi di regressione in un modello di albero delle decisioni  
  Se un modello di albero delle decisioni contiene un attributo stimabile con dati numerici continui, l'algoritmo Microsoft Decision Trees cerca di individuare aree nei dati in cui la relazione tra lo stato stimato e le variabili di input è lineare. Se l'algoritmo trova una relazione lineare, crea un albero speciale (NODE_TYPE = 25) che rappresenta una regressione lineare. Questi nodi dell'albero di regressione sono più complessi dei nodi che rappresentano valori discreti.  
@@ -302,9 +301,9 @@ ms.lasthandoff: 12/08/2017
  Per altre informazioni sui nodi di regressione, vedere [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Visualizzatori modello di data mining](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Contenuto del modello di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Visualizzatori modello di Data Mining](../../analysis-services/data-mining/data-mining-model-viewers.md)   
+ [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo Microsoft Decision Trees](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   

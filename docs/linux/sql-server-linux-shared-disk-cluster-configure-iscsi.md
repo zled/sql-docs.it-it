@@ -3,26 +3,26 @@ title: Configurare il failover del cluster istanza archiviazione iSCSI, SQL Serv
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9d4ab14772f78370563c6117553ea9e45203a8b9
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurare l'istanza del cluster di failover SQL Server in Linux - iSCSI:
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In questo articolo viene illustrato come configurare l'archiviazione iSCSI per un'istanza cluster di failover (FCI) in Linux. 
 
@@ -57,7 +57,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
 
     - iface.net_ifacename è il nome della scheda di rete, come illustrato nel sistema operativo.
     - iface.hwaddress è l'indirizzo MAC di un nome univoco che verrà creato per questa interfaccia riportata di seguito.
-    - iface.IPAddress
+    - iface.ipaddress
     - iface.subnet_Mask 
 
     Vedere l'esempio seguente:
@@ -99,7 +99,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
     ```bash
     sudo grep “Attached SCSI” /var/log/messages
     ```
-    ![30 iSCSIattachedDisks][7]
+    ![30-iSCSIattachedDisks][7]
 
 7.  Creare un volume fisico sul disco iSCSI.
 
@@ -200,7 +200,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
     ls /var/opt/mssql/data
     ```
 
-    ![45 CopyMove][8]
+    ![45-CopyMove][8]
  
    *    Tipo `exit` per tornare all'utente root.
 
@@ -210,7 +210,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > è il nome del gruppo di volumi e \<LogicalVolumeName > è il nome del volume logico che è stato creato. La sintassi di esempio riportato di seguito corrisponde al gruppo di volumi e di un volume logico creato in precedenza.
+    \<VolumeGroupName > è il nome del gruppo di volumi e \<LogicalVolumeName > è il nome del volume logico che è stato creato. La sintassi di esempio seguente consente di ricercare il gruppo di volumi e il volume logico dal comando precedente.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -278,7 +278,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
     mkdir <FolderName>
     ```
 
-    \<Nome cartella > è il nome della cartella. Percorso completo della cartella dovrà essere specificato ma non nella posizione corretta. Nell'esempio seguente crea una cartella denominata /var/opt/mssql/userdata.
+    \<Nome cartella > è il nome della cartella. Percorso completo della cartella deve essere specificato ma non nella posizione corretta. Nell'esempio seguente crea una cartella denominata /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -358,7 +358,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
 
     \<ListOfVGsNotUsedByPacemaker > è riportato l'elenco di gruppi di volumi dall'output del passaggio 20 che non verrà utilizzato dall'istanza FCI. Inserire ognuno racchiuso tra virgolette e separato da una virgola. Di seguito è riportato un esempio.
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. All'avvio di Linux, esegue il montaggio del file system. Per assicurarsi che solo Pacemaker possibile montare il disco iSCSI, ricompilare l'immagine del file System radice. 

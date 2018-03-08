@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AggregateFunction Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 02c2d8362f8fc0b8b7cb63f5c4bd2e3b552ab867
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2eb41e7a281d3ee343b8b96c339fb8baa1a5283e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregatefunction-element-assl"></a>Elemento AggregateFunction (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definisce il tipo di funzione di aggregazione usata da un [misura](../../../analysis-services/scripting/objects/measure-element-assl.md) elemento.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|*Sum*|  
@@ -58,12 +56,12 @@ ms.lasthandoff: 12/08/2017
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Misura](../../../analysis-services/scripting/objects/measure-element-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |*Sum*|La misura viene aggregata utilizzando il **somma** (funzione).|  
 |*Conteggio*|La misura viene aggregata utilizzando il **conteggio** (funzione).|  

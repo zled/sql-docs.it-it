@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.sortcolumns.f1
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f88b55e8e3168d60224ff5215b12c06804059111
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 58c20200282fcba44851188ca451d82ab934f2c0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sort-columns"></a>Ordina colonne
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La finestra di dialogo **Ordina colonne** consente di ordinare le griglie in Monitoraggio replica in base a una o più colonne. È anche possibile eseguire l'ordinamento in base a una singola colonna facendo clic sull'intestazione di colonna nella griglia di Monitoraggio replica. Per ordinare, ad esempio, le sottoscrizioni nella scheda **Tutte le sottoscrizioni** in base allo stato e quindi al tipo di connessione, eseguire la procedura seguente:  

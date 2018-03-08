@@ -3,7 +3,7 @@ title: Elemento database per Server (DTA) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Database element
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fa21cbda68a6ec8234b3143e686fe8d361a9ae3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d5150ec15a3cdd1f218bb108b8e305eaae7f2121
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="database-element-for-server-dta"></a>Elemento Database per Server (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Specifica il database a cui che si desidera ottimizzare in un server specifico.  
@@ -49,8 +49,8 @@ ms.lasthandoff: 12/05/2017
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|Elemento padre|[Elemento Server &#40;DTA&#41;](../../tools/dta/server-element-dta.md)|  
-|Elementi figlio|[Elemento Name per Database &#40;DTA&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Elemento Schema per Database &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
+|Elemento padre|[Elemento server &#40; DTA &#41;](../../tools/dta/server-element-dta.md)|  
+|Elementi figlio|[Elemento Name per Database &#40; DTA &#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Elemento schema per Database &#40; DTA &#41;](../../tools/dta/schema-element-for-database-dta.md)|  
   
 ## <a name="remarks"></a>Osservazioni  
  Questo elemento appartiene al nome **DatabaseDetailsTypecomplexType** nell'XML Schema di Ottimizzazione guidata motore di database. Questo elemento **Database** non deve essere confuso con quello il cui padre radice è l'elemento **Configuration**. Per altre informazioni, vedere [Elemento Database per Configuration &#40;DTA&#41;](../../tools/dta/database-element-for-configuration-dta.md).  
@@ -59,6 +59,6 @@ ms.lasthandoff: 12/05/2017
  Per un esempio di uso di questo elemento **Database** , vedere [Elemento Server &#40;DTA&#41;](../../tools/dta/server-element-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

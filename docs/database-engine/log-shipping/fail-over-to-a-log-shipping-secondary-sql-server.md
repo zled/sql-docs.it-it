@@ -20,13 +20,13 @@ ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1e994ededa0a1316bf4edd529fc056ed3de6848
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6358e0fe4be60bcb57441a864b30e036147e5eed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Failover su un database secondario per il log shipping (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'esecuzione del failover in un database secondario per il log shipping è utile in caso di errore o di manutenzione dell'istanza del server primario.  

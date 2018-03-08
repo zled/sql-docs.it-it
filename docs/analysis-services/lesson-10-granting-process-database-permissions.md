@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdeda5d56ce61482e1ba46d697fa8e49ce0ebdef
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f7a6e9524efcebab174073290983a20f7f242d81
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-10---granting-process-database-permissions"></a>Lezione 10 - concessione di autorizzazioni di Database di elaborazione
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dopo aver installato un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tutti i membri del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] il ruolo di amministratore di server in tale istanza dispone delle autorizzazioni a livello di server per eseguire qualsiasi attività all'interno dell'istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per impostazione predefinita, nessun altro utente dispone dell'autorizzazione per amministrare o visualizzare gli oggetti nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Dopo l'installazione di un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tutti i membri del ruolo di amministratore del server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nell'istanza dispongono di autorizzazioni valide per l'intero server per eseguire qualsiasi attività all'interno dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per impostazione predefinita, nessun altro utente dispone dell'autorizzazione per amministrare o visualizzare gli oggetti nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 Un membro del ruolo di amministratore del server può consentire agli utenti l'accesso amministrativo a livello del server rendendoli membri del ruolo. Un membro del ruolo di amministratore del server può inoltre concedere agli utenti un accesso più limitato concedendo autorizzazioni amministrative o di accesso limitate o complete a livello di database. Le autorizzazioni amministrative limitate includono autorizzazioni per l'elaborazione o la visualizzazione delle definizioni degli oggetti a livello di database, cubo o dimensione.  
   
@@ -63,7 +66,7 @@ Nelle procedure descritte in questo argomento viene definito un ruolo di sicurez
 > È possibile ottenere un progetto completo per la lezione 10 scaricando e installando gli esempi aggiornati. Per altre informazioni, vedere [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../analysis-services/install-sample-data-and-projects.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Ruoli e autorizzazioni &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+[Ruoli e autorizzazioni &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
   

@@ -8,22 +8,25 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: DROP XML INDEX statement
-dev_langs: TSQL
+f1_keywords:
+- DROP XML INDEX statement
+dev_langs:
+- TSQL
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 573003dda4029b73bc9cf7a59a496738adbe14d1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: ffe5e33598d0af816f31888c6c0fabfa9ac3ad94
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (indici XML selettivi)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -67,9 +70,9 @@ DROP INDEX index_name ON <object>
   
  *\<drop_index_option >* per informazioni sulle opzioni di indice di rilascio, vedere [DROP INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-index-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Per eseguire DROP INDEX, è necessario disporre dell'autorizzazione ALTER per la tabella o la vista. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server sysadmin e ai ruoli predefiniti del database db_ddladmin e db_owner.  
   
 ## <a name="example"></a>Esempio  

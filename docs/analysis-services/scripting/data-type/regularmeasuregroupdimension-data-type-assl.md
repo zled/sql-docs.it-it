@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: RegularMeasureGroupDimension Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5ea868b276a682a362d10608a58849e1f2cf99a7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7e2ebc73971224e8ce6c44c192580a6436bc4521
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="regularmeasuregroupdimension-data-type-assl"></a>Tipo di dati RegularMeasureGroupDimension (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definisce un tipo di dati derivato che rappresenta una relazione di tipo regolare tra una dimensione e un gruppo di misure.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Caratteristiche tipo di dati  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipi di dati di base|[MeasureGroupDimension](../../../analysis-services/scripting/data-type/measuregroupdimension-data-type-assl.md)|  
 |Tipi di dati derivati|[ReferenceMeasureGroupDimension](../../../analysis-services/scripting/data-type/referencemeasuregroupdimension-data-type-assl.md), [DegenerateMeasureGroupDimension](../../../analysis-services/scripting/data-type/degeneratemeasuregroupdimension-data-type-assl.md)|  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|Nessuno|  
+|Elementi padre|None|  
 |Elementi figlio|[Attributi](../../../analysis-services/scripting/collections/attributes-element-assl.md), [cardinalità](../../../analysis-services/scripting/properties/cardinality-element-assl.md)|  
 |Elementi derivati|[Dimensione](../../../analysis-services/scripting/objects/dimension-element-assl.md) ([dimensioni](../../../analysis-services/scripting/collections/dimensions-element-assl.md) raccolta)|  
   

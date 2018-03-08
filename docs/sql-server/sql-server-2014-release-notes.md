@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: "100"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)] Il presente documento Note sulla versione descrive i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere problemi relativi a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+Nel presente documento Note sulla versione vengono descritti i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere problemi relativi a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ## <a name="top"></a>Sommario  
 [1.0 Prima di installare](#BeforeInstall)  
@@ -245,7 +246,7 @@ optimized table or natively compiled stored procedure with object ID
 #### <a name="328-using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>3.2.8 L'utilizzo di un parametro di stringa o di una variabile con DATEPART e funzioni correlate in una stored procedure compilata in modo nativo genera un errore  
 **Problema:** quando si usa un parametro o una variabile con un tipo di dati stringa, ad esempio (var)char o n(var)char, con le funzioni predefinite DATEPART, DAY, MONTH e YEAR in una stored procedure compilata in modo nativo, viene visualizzato un messaggio di errore indicante che il tipo di dati datetimeoffset non è supportato con le stored procedure compilate in modo nativo.  
   
-**Soluzione alternativa:** assegnare la variabile o il parametro di stringa a una nuova variabile di tipo datetime2 e utilizzare tale variabile nella funzione DATEPART, DAY, MONTH o YEAR. Esempio:  
+**Soluzione alternativa:** assegnare la variabile o il parametro di stringa a una nuova variabile di tipo datetime2 e utilizzare tale variabile nella funzione DATEPART, DAY, MONTH o YEAR. Ad esempio  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -293,13 +294,13 @@ Se si è già verificato il problema relativo ai valori instance_id non corrispo
   
 **Altre informazioni:**  
   
-La modalità nativa di[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non può essere eseguita side-by-side con nessuno degli elementi seguenti:  
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] La modalità nativa non può essere eseguita side-by-side con nessuno degli elementi seguenti:  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Componente aggiuntivo per prodotti SharePoint  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - Componente aggiuntivo per prodotti SharePoint  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Servizio condiviso di SharePoint  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Servizio SharePoint Shared  
   
-L'installazione side-by-side impedisce l'avvio del servizio Windows in modalità nativa di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Nel log degli eventi di Windows saranno presenti messaggi di errore simili ai seguenti:  
+L'installazione side-by-side impedisce l'avvio del servizio Windows in modalità nativa di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Nel log degli eventi di Windows saranno presenti messaggi di errore simili ai seguenti:  
   
 ```  
 Log Name:   Application  

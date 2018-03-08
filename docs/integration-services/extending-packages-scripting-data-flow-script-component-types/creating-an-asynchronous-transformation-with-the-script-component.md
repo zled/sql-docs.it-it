@@ -8,26 +8,28 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - asynchronous outputs [Integration Services]
 - transformation components [Integration Services]
 - Script component [Integration Services], transformation components
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24f37e9db3b2e20cba50ad3fa303694b6d23d74e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7a7d607fda10fa8e3ae020e6b702867e9f8ef0a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Creazione di una trasformazione asincrona con il componente script
   Utilizzare un componente di trasformazione nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per modificare e analizzare i dati quando vengono passati dall'origine alla destinazione. Una trasformazione con output sincroni elabora ogni riga di input non appena viene passata attraverso il componente. Una trasformazione con output asincroni potrebbe invece attendere di ricevere tutte le righe di input prima di completare l'elaborazione oppure inviare determinate righe all'output prima di aver ricevuto tutte le righe di input. In questo argomento viene descritta una trasformazione asincrona. Se l'elaborazione richiede una trasformazione sincrona, vedere [Creazione di una trasformazione sincrona con il componente script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md). Per altre informazioni sulle differenze tra componenti sincroni e asincroni, vedere [Informazioni sulle trasformazioni sincrone e asincrone](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -122,7 +124,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Connettere l'output di un'origine o di un'altra trasformazione al nuovo componente di trasformazione nella finestra di progettazione. Questo output deve specificare dati della tabella **Person.Address** del database di esempio **AdventureWorks** che contiene almeno le colonne **AddressID** e **City**.  
   
-3.  Aprire **Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne **AddressID** e **City**.  
+3.  Aprire l'**Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne **AddressID** e **City**.  
   
 4.  Nella pagina **Input e output** aggiungere e configurare le colonne di output **AddressID** e **City** nel primo output. Aggiungere un secondo output, quindi aggiungere una colonna di output per il valore di riepilogo nel secondo output. Impostare la proprietà SynchronousInputID del primo output su 0, perché in questo esempio ogni riga di input viene copiata in modo esplicito nel primo output. La proprietà SynchronousInputID dell'output appena creato è già impostata su 0.  
   

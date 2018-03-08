@@ -18,13 +18,13 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fa2fa79f818c344f9228dffe500fbe96236954b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 342d284b458c1eacb6ba358e51a502630268bc67
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici/chiavi (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questa finestra di dialogo consente di creare o modificare indici, chiavi primarie e chiavi univoche. Per accedere a questa finestra di dialogo, aprire la definizione della tabella con l'indice o la chiave, fare clic con il pulsante destro del mouse sulla griglia della definizione della tabella e quindi scegliere **Indici/chiavi**.  

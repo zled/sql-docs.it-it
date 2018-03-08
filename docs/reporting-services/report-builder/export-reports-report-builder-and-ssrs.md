@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10437"
@@ -18,13 +16,13 @@ ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: be5b29f8f01eaaee1f1ea225ec47c0665762984f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ed5a8e47a39df2d7d521181fff55fe6734062ce8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Esportare report (Generatore Report e SSRS)
 
@@ -124,14 +122,14 @@ ms.lasthandoff: 12/05/2017
 |Formato|Tipi di estensione per il rendering|Description|  
 |------------|------------------------------|-----------------|  
 |File Acrobat (PDF)|Interruzione di pagina manuale|L'estensione per il rendering PDF consente di eseguire il rendering di un report in file che possono essere aperti in Adobe Acrobat e in altri visualizzatori PDF di terze parti che supportano il formato PDF 1.3. Anche se PDF 1.3 è compatibile con Adobe Acrobat 4.0 e versioni successive, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta Adobe Acrobat 6 e versioni successive. Non è necessaria l'applicazione Adobe per convertire i report mediante l'estensione per il rendering. I visualizzatori PDF, ad esempio Adobe Acrobat, sono tuttavia necessari per visualizzare o stampare un report in formato PDF.<br /><br /> Per altre informazioni, vedere [Esportazione in un file PDF](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
-|Atom|Dati|L'estensione per il rendering Atom genera feed di dati conformi ad Atom dai report. I feed di dati sono leggibili e interscambiabili con applicazioni come Power Pivot o Power BI in grado di usare i feed di dati conformi ad Atom.<br /><br /> L'output è un documento di servizio Atom in cui sono elencati i feed di dati disponibili in un report. Per ogni area dati di un report viene creato almeno un feed di dati. A seconda del tipo di area dati e dei dati in essa contenuti, potrebbero essere generati più feed di dati.<br /><br /> Per altre informazioni, vedere [Generazione di feed di dati dai report](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
-|CSV|Dati|L'estensione per il rendering CSV (Comma-Separated Value) consente di eseguire il rendering di report come rappresentazione bidimensionale dei dati di un report in un formato di testo normale standardizzato, facilmente leggibile e interscambiabile con numerose applicazioni.<br /><br /> Per altre informazioni, vedere [Esportazione in un file CSV](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
+|Atom|data|L'estensione per il rendering Atom genera feed di dati conformi ad Atom dai report. I feed di dati sono leggibili e interscambiabili con applicazioni come Power Pivot o Power BI in grado di usare i feed di dati conformi ad Atom.<br /><br /> L'output è un documento di servizio Atom in cui sono elencati i feed di dati disponibili in un report. Per ogni area dati di un report viene creato almeno un feed di dati. A seconda del tipo di area dati e dei dati in essa contenuti, potrebbero essere generati più feed di dati.<br /><br /> Per altre informazioni, vedere [Generazione di feed di dati dai report](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
+|CSV|data|L'estensione per il rendering CSV (Comma-Separated Value) consente di eseguire il rendering di report come rappresentazione bidimensionale dei dati di un report in un formato di testo normale standardizzato, facilmente leggibile e interscambiabile con numerose applicazioni.<br /><br /> Per altre informazioni, vedere [Esportazione in un file CSV](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
 |EXCELOPENXML|Interruzione di pagina automatica|Visualizzato come "Excel" nel menu di esportazione durante la revisione dei report. L'estensione per il rendering di Excel consente di eseguire il rendering di un report in formato Excel (con estensione xlsx) compatibile con [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013.  Per altre informazioni, vedere [Esportazione in Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |PowerPoint|Interruzione di pagina manuale|L'estensione per il rendering di PowerPoint consente di eseguire il rendering di un report in formato PowerPoint (con estensione pptx) compatibile con PowerPoint 2013.|  
 |File TIFF|Interruzione di pagina manuale|L'estensione per il rendering delle immagini genera bitmap o metafile dei report. Per impostazione predefinita, l'estensione per il rendering delle immagini crea un file TIFF del report, che può essere visualizzato in più pagine. Nel client l'immagine può essere visualizzata in un visualizzatore di immagini e stampata.<br /><br /> L'estensione per il rendering delle immagini consente di generare file in tutti i formati supportati da [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG e TIFF.<br /><br /> Per altre informazioni, vedere [Esportazione in un file di immagine](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
 |Archivio Web|Interruzione di pagina automatica|L'estensione per il rendering HTML consente di eseguire il rendering di un report in formato HTML. Può inoltre generare pagine HTML complete o frammenti di HTML da incorporare in altre pagine HTML. Tutto il codice HTML viene generato con la codifica UTF-8.<br /><br /> L'estensione per il rendering HTML è l'estensione per il rendering predefinita per i report visualizzati in anteprima in Generatore report e visualizzati in un browser, inclusi quelli eseguiti nel portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Per altre informazioni, vedere [Rendering in formato HTML](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md).|  
 |WORDOPENXML|Interruzione di pagina automatica|Visualizzato come "Word" nel menu di esportazione durante la visualizzazione dei report. L'estensione per il rendering di Word consente di eseguire il rendering di un report in formato Word (con estensione docx) compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013.  Per altre informazioni, vedere [Esportazione in Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
-|XML|Dati|L'estensione per il rendering XML genera report in formato XML. Lo schema per il report XML è specifico del report e contiene solo dati. Il rendering delle informazioni di layout non viene eseguito e la paginazione non viene mantenuta dall'estensione per il rendering XML. Il codice XML generato da questa estensione può essere importato in un database, utilizzato come messaggio di dati XML o inviato a un'applicazione personalizzata.<br/><br/> Per altre informazioni, vedere [Esportazione in XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  
+|XML|Dati|L'estensione per il rendering XML genera report in formato XML. Lo schema per il report XML è specifico del report e contiene solo dati. Il rendering delle informazioni di layout non viene eseguito e la paginazione non viene mantenuta dall'estensione per il rendering XML. Il codice XML generato da questa estensione può essere importato in un database, usato come messaggio di dati XML o inviato a un'applicazione personalizzata.<br/><br/> Per altre informazioni, vedere [Esportazione in XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  
   
 ##  <a name="GeneratingDataFeedsFromReport"></a> Generazione di feed di dati da un report  
  Per generare feed di dati da un report, eseguire il report nel portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e quindi fare clic sull'icona **Generazione di feed di dati** sulla barra degli strumenti del portale Web. Verrà chiesto se si desidera salvare o aprire il file. Se si sceglie **Apri**, il documento di servizio Atom verrà aperto nell'applicazione associata all'estensione di file atomsvc. Se si sceglie **Salva**, il documento verrà salvato come file con estensione atomsvc. Per impostazione predefinita, il nome del file corrisponde al nome del report. È possibile modificare il nome per renderlo più descrittivo.  

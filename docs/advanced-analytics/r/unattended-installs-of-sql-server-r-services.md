@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: fdd28279b99f0dd39a0b971412d1252feb978413
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Installazione automatica di Machine Learning Services (In-Database)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo viene descritto come utilizzare gli argomenti della riga di comando con l'installazione di SQL Server per l'installazione di machine learning componenti.
 
@@ -34,7 +35,7 @@ Per l'installazione automatica, si intende non utilizzare le funzionalità inter
 
 **Si applica a: SQL Server 2017 Machine Learning Services (In-Database), SQL Server 2016 R Services**
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 + È necessario installare il motore di database in ogni istanza in cui verrà utilizzato l'apprendimento.
 
@@ -48,9 +49,9 @@ Per l'installazione automatica, si intende non utilizzare le funzionalità inter
 
 > [!IMPORTANT]
 > 
-> Al termine dell'installazione per abilitare la funzionalità, sono necessari passaggi aggiuntivi. Queste includono una riconfigurazione e riavvio dell'istanza. Assicurarsi di esaminare tutti gli elementi nella sezione [passaggi di post-installazione] (#bkmk_PostInstall) per determinare le azioni necessario al termine dell'installazione.
+> Al termine dell'installazione per abilitare la funzionalità, sono necessari passaggi aggiuntivi. Queste includono una riconfigurazione e riavvio dell'istanza. Assicurarsi di esaminare tutti gli elementi nella sezione in [passaggi di post-installazione](#bkmk_PostInstall) per determinare le azioni necessarie al termine dell'installazione.
 
-## <a name="bkmk_NewInstall"></a>Installazione della riga di comando per SQL Server 2017
+## <a name="bkmk_NewInstall"></a>  Installazione della riga di comando per SQL Server 2017
 
 Di seguito sono riportati esempi di **minimo** funzionalità necessarie.
 
@@ -72,7 +73,7 @@ Si noti il flag necessari per R in SQL Server 2017:
 
 + `ADVANCEDANALYTICS`
 + `SQL_INST_MR`
-+ `IACCEPTROPENLICENSETERMS`(Indici per tabelle con ottimizzazione per la memoria).
++ `IACCEPTROPENLICENSETERMS`.
 
 ### <a name="install-python-only"></a>Solo l'installazione di Python
 
@@ -96,7 +97,7 @@ Nell'esempio seguente visualizza gli argomenti necessari per eseguire un invisib
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>Installazione della riga di comando per SQL Server 2016
+## <a name="OldInstall"></a> Installazione della riga di comando per SQL Server 2016
  
 L'esempio seguente mostra gli argomenti necessari per eseguire un invisibile all'utente, automatica di installazione di SQL Server 2016 con il linguaggio R aggiunto.
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1780b770f45bd53f8f0735c092f2859593f9fa5c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3491077486daf90c414a00eec3d382ae1537284a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-data-flow"></a>Debug di un flusso di dati
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi dei flussi di dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -157,7 +158,7 @@ order by source_component_name desc
   
 6.  Impostare l'opzione **Troncamento** per ogni colonna.  
   
-7.  Scegliere **OK**.  
+7.  Fare clic su **OK**.  
   
 8.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
   
@@ -217,7 +218,7 @@ order by source_component_name desc
     > [!NOTE]  
     >  I valori nella griglia che rappresentano i tipi di dati DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET vengono visualizzati come stringhe in formato ISO 8601. Uno spazio separatore sostituisce il separatore **T** . I valori che rappresentano i tipi di dati DT_DATE e DT_FILETIME includono sette cifre per i secondi frazionari. Poiché il tipo di dati DT_FILETIME memorizza solo tre cifre dei secondi frazionari, nella griglia viene visualizzato zero per le quattro cifre rimanenti. I valori che rappresentano il tipo di dati DT_DBTIMESTAMP includono tre cifre per i secondi frazionari. Per i valori che rappresentano i tipi di dati DT_DBTIME2, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET, il numero di cifre dei secondi frazionari corrisponde alla scala specificata per il tipo di dati della colonna. Per altre informazioni sui formati ISO 8601, vedere [Formati di data e ora](http://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). Per altre informazioni sui tipi di dati, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-10. Scegliere **OK**.  
+10. Fare clic su **OK**.  
 
 ## <a name="data-flow-taps"></a>Scelte del flusso di dati
  È possibile aggiungere una scelta dei dati in un percorso del flusso di dati di un pacchetto in fase di esecuzione e indirizzare l'output della scelta dei dati a un file esterno. Per utilizzare questa funzionalità, è necessario distribuire il progetto SSIS utilizzando il modello di distribuzione del progetto in un server SSIS. Al termine della distribuzione del pacchetto nel server, è necessario eseguire script T-SQL nel database SSISDB per aggiungere le scelte dei dati prima dell'esecuzione del pacchetto. Di seguito è riportato uno scenario di esempio:  

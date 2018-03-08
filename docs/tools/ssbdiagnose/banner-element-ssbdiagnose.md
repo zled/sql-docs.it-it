@@ -3,7 +3,7 @@ title: Banner (ssbdiagnose) elemento | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssbdiagnose
 ms.reviewer: 
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57351e5fae1d9cd7a52eab4f1ad441ada4564471
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 67483820a6f6b9e0033808df7233d1908002fa69
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="banner-element-ssbdiagnose"></a>Elemento Banner (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Identifica quale utilità ha generato il **ssbdiagnose** file XML di output.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|Attribute|Descrizione|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**title**|Identifica l'utilità che ha generato il file di output XML di **ssbdiagnose** .|  
 |**product**|Identifica il prodotto che ha generato il file di output XML di **ssbdiagnose** .|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/05/2017
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento DiagnosticInformation &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
+|**Elemento padre**|[Elemento DiagnosticInformation &#40; ssbdiagnose &#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
 |**Elementi figlio**|Nessuno|  
   
 ## <a name="example"></a>Esempio  
@@ -71,6 +71,6 @@ ms.lasthandoff: 12/05/2017
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilità ssbdiagnose &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+ [Utilità ssbdiagnose &#40; Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   

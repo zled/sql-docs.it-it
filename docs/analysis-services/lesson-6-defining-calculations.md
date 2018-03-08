@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6ad53ac85c3ea996714684d4cc0fb114f5317697
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9491f840fdf7d1848fd4cc6bdf23bf98a4acd4b3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-6-defining-calculations"></a>Lezione 6: Definizione di calcoli
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In questa lezione vengono definiti i calcoli, che sono espressioni MDX (Multidimensional Expressions) o gli script. I calcoli consentono di definire membri calcolati e set denominati, nonché di eseguire altri comandi script per estendere le capacità di un cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È ad esempio possibile eseguire un comando script per definire un sottocubo e quindi assegnare un calcolo alle celle incluse nel sottocubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+In questa lezione verranno descritte le procedure per definire calcoli, che sono espressioni MDX (Multidimensional Expressions) o script. I calcoli consentono di definire membri calcolati e set denominati, nonché di eseguire altri comandi script per estendere le capacità di un cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È ad esempio possibile eseguire un comando script per definire un sottocubo e quindi assegnare un calcolo alle celle incluse nel sottocubo.  
   
 Quando si definisce un nuovo calcolo in Progettazione cubi, il calcolo viene aggiunto al riquadro **Libreria script** della scheda **Calcoli** di Progettazione cubi e i campi relativi al tipo di calcolo specifico vengono visualizzati in un form di calcoli nel riquadro **Espressione** . L'esecuzione dei calcoli segue lo stesso ordine di visualizzazione all'interno del riquadro **Libreria script** . È possibile riordinare i calcoli facendo clic con il pulsante destro del mouse su un calcolo specifico e quindi scegliendo **Sposta su** o **Sposta giù**oppure facendo clic su un calcolo specifico e quindi facendo clic sull'icona **Sposta su** o **Sposta giù** nella barra degli strumenti della scheda **Calcoli** .  
   
@@ -59,12 +62,12 @@ In questa attività vengono definiti i membri calcolati.
 In questa procedura vengono definiti i set denominati.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Lezione 7: Definizione di indicatori di prestazioni chiave &#40; Gli indicatori KPI &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[Creare set denominati](../analysis-services/multidimensional-models/create-named-sets.md)  
+[Modellazione multidimensionale &#40; Esercitazione di AdventureWorks &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Creazione di set denominati](../analysis-services/multidimensional-models/create-named-sets.md)  
 [Creare membri calcolati](../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   

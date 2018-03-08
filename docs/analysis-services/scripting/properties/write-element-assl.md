@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Write Element
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ccedd06a86af813254a13706c516f1cbe23262fc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6f9d8858780b25c6c993e181ce329f05b5158a0b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="write-element-assl"></a>Elemento Write (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Determina se i dati o metadati possono essere scritti per un determinato [CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md) o [autorizzazione](../../../analysis-services/scripting/data-type/permission-data-type-assl.md) elemento.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|*Nessuno*|  
@@ -57,12 +55,12 @@ ms.lasthandoff: 12/08/2017
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[CubeDimensionPermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md), [autorizzazione](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |*Nessuno*|Non è permesso alcun accesso a dati o metadati dall'oggetto padre.|  
 |*È consentito*|È permesso l'accesso in scrittura a dati o metadati dall'oggetto padre.|  

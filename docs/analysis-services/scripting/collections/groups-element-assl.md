@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Groups Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 791580a0f887c5c6aa4d38180bd8a5d36fea032d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0ccfbd9a1cf28125e026a6ead5f75080e59059f8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="groups-element-assl"></a>Elemento Groups (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene la raccolta di gruppi di membri associati a un attributo.  
@@ -49,10 +47,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|1-1: elemento obbligatorio visualizzato una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  

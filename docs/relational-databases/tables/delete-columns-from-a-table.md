@@ -18,15 +18,15 @@ helpviewer_keywords:
 - dropping columns
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5805280a29d623652afcbddd310b5a45e9ec21f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 57897bbf048817c930984a58a244525ceb4a48ee
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-columns-from-a-table"></a>Eliminare le colonne da una tabella
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per eliminare una colonna da una tabella:**  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Se la colonna fa parte di una relazione (FOREIGN KEY o PRIMARY KEY), verrà visualizzato un messaggio in cui viene chiesto di confermare l'eliminazione delle colonne selezionate e delle corrispondenti relazioni. Scegliere **Sì**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-delete-columns"></a>Per eliminare le colonne  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributi CSDLBI per la progettazione di report
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questa sezione vengono descritti gli attributi nelle estensioni a CSDL per la modellazione tabulare che interessano [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] progettazione delle query.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In questa sezione vengono descritti gli attributi nelle estensioni a CSDL per la modellazione tabulare che influiscono sulla progettazione delle query di [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
 ## <a name="model-attributes"></a>Attributi di modellazione  
  Questi attributi sono definiti su un sottoelemento di un file CSDL [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) elemento.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/08/2017
 |**Allineamento**|Enum|Valore che indica come devono essere allineati i valori del campo in una presentazione tabulare. I valori possibili sono **predefinito**, **Center**, **sinistra**, **destra**. Se omesso, il valore predefinito determina l'allineamento in base al tipo di dati del campo.|  
 |**FormatString**|Text|Stringa di formato .NET che indica come deve essere formattato il valore del campo per impostazione predefinita. Se omesso, si presuppone il formato seguente:<br /><br /> I campi - Datetime: data breve regionale o "d"<br /><br /> -Funzione di aggregazione di campi a virgola mobile e integrali e il valore predefinito: numero regionale o "n"<br /><br /> -Funzione di aggregazione di valori integer prevede alcun valore predefinito: numero decimale regionale o "d"<br /><br /> Per tutti gli altri tipi di campi, non è applicabile alcuna stringa di formato.|  
 |**Unità**|Text|Simbolo applicato ai valori del campo per esprimere unità. Se omesso, si presuppone che le unità non siano note.|  
-|**Width**|Valore intero|Larghezza preferita in caratteri che deve essere riservata alla visualizzazione dei valori del campo in una presentazione tabulare. Se omesso, una larghezza predefinita viene basata sul tipo di dati del campo.|  
+|**Larghezza**|Integer|Larghezza preferita in caratteri che deve essere riservata alla visualizzazione dei valori del campo in una presentazione tabulare. Se omesso, una larghezza predefinita viene basata sul tipo di dati del campo.|  
 |**SortDirection**|Enum|Valore che indica la modalità di ordinamento dei valori del campo. I valori possibili sono **predefinito**, **crescente**, **decrescente**. Se omesso, il valore predefinito assegna una direzione di ordinamento in base al tipo di dati del campo.|  
 |**IsRightToLeft**|Boolean|Indica se il campo contiene testo che deve essere letto da destra a sinistra. Se omesso, si presuppone l'impostazione del modello.|  
 |**OrderBy**|MemberRef|Riferimento a un altro campo all'interno del modello che definisce l'ordinamento per i valori di questo campo. I valori per i due campi devono presentare un mapping 1:1 oppure il comportamento di ordinamento non è definito. Se omesso, il campo viene ordinato in base al proprio valore.|  

@@ -1,5 +1,5 @@
 ---
-title: STRING_SPLIT (Transact-SQL) | Documenti Microsoft
+title: STRING_SPLIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STRING_SPLIT
 - STRING_SPLIT_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STRING_SPLIT function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bfcb6ae66bc431304e70e2db52801c9788f5f92d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 00debf90f1b79a0e38cb883f31479ae5731f40d3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,7 +66,7 @@ STRING_SPLIT ( string , separator )
 |Valore|  
 |-----------|  
 |Lorem|  
-|Ipsum|  
+|ipsum|  
 |dolor|  
 |sit|  
 |Amet.|  
@@ -92,10 +95,10 @@ WHERE RTRIM(value) <> '';
 ### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. Stringa del valore in una colonna di separati da virgola di divisione  
  Tabella Product dispone di una colonna con elenco separato da virgole di tag illustrato nell'esempio seguente:  
   
-|productId|Nome|Tag|  
+|ProductId|Nome|Tag|  
 |---------------|----------|----------|  
 |1|Un dito full guanti|abbigliamento, strada, touring, bike|  
-|2|LL cuffie|biciclette|  
+|2|LL cuffie|bike|  
 |3|HL Mountain Frame|bike, mountain|  
   
  La query seguente trasforma ogni elenco di tag e le unisce con la riga originale:  
@@ -108,14 +111,14 @@ FROM Product
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|productId|Nome|Valore|  
+|ProductId|Nome|Valore|  
 |---------------|----------|-----------|  
 |1|Un dito full guanti|abbigliamento|  
 |1|Un dito full guanti|strada|  
 |1|Un dito full guanti|Touring|  
-|1|Un dito full guanti|biciclette|  
-|2|LL cuffie|biciclette|  
-|3|HL Mountain Frame|biciclette|  
+|1|Un dito full guanti|bike|  
+|2|LL cuffie|bike|  
+|3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  
   
 ### <a name="c-aggregation-by-values"></a>C. Aggregazione di valori  
@@ -171,7 +174,12 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [SOTTOSTRINGA &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
   
   

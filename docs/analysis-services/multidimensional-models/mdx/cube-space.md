@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a9e9eab17c37cee31e0155af8fcb0d2e092e56b3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 316809a9fa0b00a04dd6cee85eceb3d9a0349801
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cube-space"></a>Spazio del cubo
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Spazio del cubo è il prodotto dei membri delle gerarchie di attributi di un cubo con le misure del cubo. Quindi lo spazio del cubo è determinato dal prodotto combinatorio di tutti i membri della gerarchia dell'attributo nel cubo e delle misure del cubo e definisce la dimensione massima del cubo. È importante sottolineare che questo spazio comprende tutte le possibili combinazioni di membri della gerarchia dell'attributo, anche combinazioni che si possono considerare impossibili nel mondo reale, ad esempio combinazioni in cui la città è Parigi e i paesi sono Inghilterra o Spagna o Giappone o India o altro.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Lo spazio del cubo è il prodotto dei membri delle gerarchie dell'attributo di un cubo per le misure del cubo. Quindi lo spazio del cubo è determinato dal prodotto combinatorio di tutti i membri della gerarchia dell'attributo nel cubo e delle misure del cubo e definisce la dimensione massima del cubo. È importante sottolineare che questo spazio comprende tutte le possibili combinazioni di membri della gerarchia dell'attributo, anche combinazioni che si possono considerare impossibili nel mondo reale, ad esempio combinazioni in cui la città è Parigi e i paesi sono Inghilterra o Spagna o Giappone o India o altro.  
   
 ## <a name="autoexists-and-cube-space"></a>Spazio del cubo e Auto Exist  
  Il concetto di *Auto Exist* limita questo spazio del cubo alle celle effettivamente esistenti. È possibile che membri di una gerarchia dell'attributo non contengano membri di un'altra gerarchia dell'attributo nella stessa dimensione.  
@@ -138,12 +136,12 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>Contesto di calcolo  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti chiave di MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Concetti chiave di MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Tuple](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Auto Exist](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [Utilizzo di membri, tuple e set &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Utilizzo di membri, tuple e set &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Totali visualizzati e Non totali](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [Guida di riferimento al linguaggio MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Guida di riferimento a MDX &#40;Multidimensional Expressions&#41;](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Riferimenti al linguaggio MDX &#40; MDX &#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Espressioni MDX &#40; MDX &#41; Riferimento](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

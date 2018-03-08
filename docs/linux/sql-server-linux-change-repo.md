@@ -1,35 +1,47 @@
 ---
-title: "Registrare il repository disponibilità generale per SQL Server in Linux | Documenti Microsoft"
-description: "Modificare repository dal repository anteprima 2017 di SQL Server nel repository General Availability (GA) in Linux (GA è talvolta anche detto RTM)."
-author: annashres
-ms.author: anshrest
-manager: jhubbard
-ms.date: 10/02/2017
+title: Configurare repository per SQL Server in Linux | Documenti Microsoft
+description: Controllare e configurare il repository di origine per 2017 di SQL Server in Linux. Repository di origine riguarda la versione di SQL Server in cui viene applicata durante l'installazione e aggiornamento.
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: 53c2c674c90b327cfe4baf2d109fab09d045f890
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.workload: Active
+ms.openlocfilehash: 33f02349d10cfd0ada76325c378d0259ec931002
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>Repository di modifica dal repository di anteprima per il repository GA
+# <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurare repository per l'installazione e aggiornamento di SQL Server in Linux
 
-Quando si aggiorna SQL Server 2017 CTP 2.1, RC1 o RC2 alla versione GA (General Availability) è necessario passare repository. Le sezioni seguenti illustrano la scelta del repository e su come apportare le modifiche prima dell'aggiornamento.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-## <a name="repository-choices"></a>Opzioni di repository
+In questo articolo viene descritto come configurare il repository corretto per gli aggiornamenti e le installazioni di SQL Server 2017 in Linux.
+
+> [!IMPORTANT]
+> Se si è precedentemente installato una versione CTP o versione RC di SQL Server 2017, è necessario utilizzare i passaggi in questo articolo per registrare un repository GA (General Availability) e di aggiornare o reinstallare. Le versioni di anteprima di SQL Server 2017 non sono supportate e scadranno.
+
+## <a id="repositories"></a>Repository
+
+Quando si installa SQL Server in Linux, è necessario configurare un repository di Microsoft. Questo archivio viene usato per acquisire il pacchetto di motore di database, **mssql server**e i relativi pacchetti di SQL Server. Esistono attualmente tre repository principale:
+
+| Archivio | Nome | Description |
+|---|---|---|
+| **Anteprima** | **mssql-server** | Repository di anteprima per le versioni di SQL Server CTP e RC. Questo repository non è supportato per SQL Server 2017. |
+| **CU** | **mssql-server-2017** | Repository di SQL Server 2017 Cumulative Update (CU). |
+| **GDR** | **mssql-server-2017-gdr** | Repository di SQL Server 2017 GDR per gli aggiornamenti critici. |
+
+## <a id="cuversusgdr"></a> Aggiornamento cumulativo e GDR
 
 È importante notare che esistono due tipi principali di repository per ogni distribuzione:
-
-  > [!IMPORTANT]
-  > Qualsiasi versione precedente alla versione CTP 2.1 è necessario aggiornare a almeno 2.1 prima dell'aggiornamento a GA.
 
 - **Gli aggiornamenti cumulativi (CU)**: l'aggiornamento cumulativo (CU) repository contiene i pacchetti per la versione di SQL Server base ed eventuali correzioni o miglioramenti Release. Gli aggiornamenti cumulativi sono specifici di una versione di rilascio, ad esempio SQL Server 2017. Essi vengono rilasciati a un ritmo regolare.
 
@@ -40,40 +52,134 @@ Ogni versione CU e GDR contiene il pacchetto di SQL Server completo e tutti gli 
 > [!NOTE]
 > È possibile aggiornare da una versione GDR a CU rilasciare in qualsiasi momento modificando repository. L'aggiornamento da un pacchetto CU versione a una versione GDR non è supportata. 
 
-## <a name="change-to-a-ga-repository"></a>Modificare in un repository GA
+## <a id="configure"></a> Configurare un repository
 
-Per modificare dal repository di anteprima per un repository di origine (CU o GDR), utilizzare la procedura seguente:
+Le sezioni seguenti descrivono come verificare e configurare un repository per le piattaforme supportate seguenti:
 
-1. Rimuovere il repository di anteprima configurate in precedenza.
+- [Red Hat Enterprise Server](#rhel)
+- [Ubuntu](#ubuntu)
+- [SUSE Linux Enterprise Server](#sles)
 
-   | Piattaforma | Comando di rimozione del repository |
-   |-----|-----|
-   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+## <a id="rhel"></a> Configurare il repository RHEL
+Utilizzare la procedura seguente per configurare repository in Red Hat Enterprise Server (RHEL).
 
-1. Per **Ubuntu solo**, importare le chiavi GPG archivio pubblico.
+### <a name="check-for-previously-configured-repositories-rhel"></a>Verificare la presenza di repository configurate in precedenza (RHEL)
+Verificare innanzitutto se è già stato registrato un repository di SQL Server.
+
+1. Visualizzare i file di **/etc/yum.repos.d** directory con il comando seguente:
+
+   ```bash
+   sudo ls /etc/yum.repos.d
+   ```
+
+2. Cercare un file che configura la directory di SQL Server, ad esempio **mssql server.repo**.
+
+3. Stampare il contenuto del file.
+
+   ```bash
+   sudo cat /etc/yum.repos.d/mssql-server.repo
+   ```
+
+4. Il **nome** proprietà è il repository configurato. Sarà possibile identificare con la tabella di [repository](#repositories) sezione di questo articolo.
+
+### <a name="remove-old-repository-rhel"></a>Rimuovere il repository precedente (RHEL)
+Se necessario, rimuovere il vecchio repository con il comando seguente.
+
+```bash
+sudo rm -rf /etc/yum.repos.d/mssql-server.repo
+```
+
+Questo comando si presuppone che il file identificato nella sezione precedente è stata **mssql server.repo**.
+
+### <a name="configure-new-repository-rhel"></a>Configurare di nuovo repository (RHEL)
+Configurare il nuovo repository da utilizzare per gli aggiornamenti e installazioni di SQL Server. Utilizzare uno dei comandi seguenti per configurare il repository di propria scelta.
+
+| Archivio | Command |
+|---|---|
+| **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+
+## <a id="sles"></a> Configurare il repository SLES
+Utilizzare la procedura seguente per configurare i repository nel SLES.
+
+### <a name="check-for-previously-configured-repositories-sles"></a>Verificare la presenza di repository configurate in precedenza (SLES)
+Verificare innanzitutto se è già stato registrato un repository di SQL Server.
+
+1. Utilizzare **zypper info** per ottenere informazioni su qualsiasi repository configurate in precedenza.
+
+   ```bash
+   sudo zypper info mssql-server
+   ```
+
+2. Il **Repository** proprietà è il repository configurato. Sarà possibile identificare con la tabella di [repository](#repositories) sezione di questo articolo.
+
+### <a name="remove-old-repository-sles"></a>Rimuovere il repository precedente (SLES)
+Se necessario, rimuovere il repository precedente. Utilizzare uno dei comandi seguenti in base al tipo di repository configurate in precedenza.
+
+| Archivio | Comando per rimuovere |
+|---|---|
+| **Anteprima** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+
+### <a name="configure-new-repository-sles"></a>Configurare di nuovo repository (SLES)
+Configurare il nuovo repository da utilizzare per gli aggiornamenti e installazioni di SQL Server. Utilizzare uno dei comandi seguenti per configurare il repository di propria scelta.
+
+| Archivio | Command |
+|---|---|
+| **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+
+## <a id="ubuntu"></a> Configurare il repository di Ubuntu
+Utilizzare la procedura seguente per configurare repository in Ubuntu.
+
+### <a name="check-for-previously-configured-repositories-ubuntu"></a>Verificare la presenza di repository configurate in precedenza (Ubuntu)
+Verificare innanzitutto se è già stato registrato un repository di SQL Server.
+
+1. Visualizzare il contenuto del **/etc/apt/sources.list** file.
+
+   ```bash
+   sudo cat /etc/apt/sources.list
+   ```
+
+2. Esaminare l'URL del pacchetto per mssql server. Sarà possibile identificare con la tabella di [repository](#repositories) sezione di questo articolo.
+
+### <a name="remove-old-repository-ubuntu"></a>Rimuovere il repository precedente (Ubuntu)
+Se necessario, rimuovere il repository precedente. Utilizzare uno dei comandi seguenti in base al tipo di repository configurate in precedenza.
+
+| Archivio | Comando per rimuovere |
+|---|---|
+| **Anteprima** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
+| **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+| **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
+
+### <a name="configure-new-repository-ubuntu"></a>Configurare di nuovo repository (Ubuntu)
+Configurare il nuovo repository da utilizzare per gli aggiornamenti e installazioni di SQL Server.
+
+1. Importare le chiavi GPG archivio pubblico.
 
    ```bash
    sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Configurare il nuovo repository.
+2. Utilizzare uno dei comandi seguenti per configurare il repository di propria scelta.
 
-   | Piattaforma | Archivio | Command |
-   |-----|-----|-----|
-   | RHEL | AGGIORNAMENTO CUMULATIVO | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-   | SLES | AGGIORNAMENTO CUMULATIVO  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-   | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | AGGIORNAMENTO CUMULATIVO | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
+   | Archivio | Command |
+   |---|---|
+   | **CU** | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | **GDR** | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
-1. [Installare](sql-server-linux-setup.md#platforms) o [aggiornare](sql-server-linux-setup.md#upgrade) SQL Server tramite il repository GA.
+3. Eseguire **apt get aggiornamento**.
 
-   > [!IMPORTANT]
-   > A questo punto, se si sceglie di eseguire un'installazione completa utilizzando il [esercitazioni delle Guide rapide](#platforms), tenere presente che si è appena configurato del repository di destinazione. Non ripetere il passaggio nelle esercitazioni. Ciò vale soprattutto se si configura il repository GDR, poiché le esercitazioni utilizzano il repository CU.
+   ```bash
+   sudo apt-get update
+   ```
 
 ## <a name="next-steps"></a>Passaggi successivi
+
+Dopo aver configurato il repository corretto, è possibile procedere a [installare](sql-server-linux-setup.md#platforms) o [aggiornare](sql-server-linux-setup.md#upgrade) SQL Server e i relativi pacchetti dal repository di nuovo.
+
+> [!IMPORTANT]
+> A questo punto, se si sceglie di utilizzare uno degli articoli di installazione, ad esempio il [Guide rapide](sql-server-linux-setup.md#platforms), tenere presente che sono già configurate del repository di destinazione. Non ripetere il passaggio nelle esercitazioni. Ciò vale soprattutto se si configura il repository GDR, perché la Guida introduttiva di utilizza il repository CU.
 
 Per ulteriori informazioni su come installare SQL Server 2017 in Linux, vedere [Guida all'installazione per SQL Server in Linux](sql-server-linux-setup.md).

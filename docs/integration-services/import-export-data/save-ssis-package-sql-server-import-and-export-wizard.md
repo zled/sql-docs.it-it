@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.savedtspackage.f1
+f1_keywords:
+- sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b938ef910a1c1e8c302529364ab6cfddfec54fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f20252884bd2adc8003603107ed4efbd45c01ca9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Salva pacchetto SSIS (Importazione/Esportazione guidata SQL Server)
   Se nella pagina **Salvare ed eseguire il pacchetto** l'utente ha specificato di voler salvare le proprie impostazioni come pacchetto di SQL Server Integration Services (SSIS), l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Salva pacchetto SSIS**. In questa pagina è necessario specificare opzioni aggiuntive per il salvataggio del pacchetto creato dalla procedura guidata.  
@@ -112,7 +114,7 @@ L'immagine seguente illustra la pagina **Salva pacchetto SSIS** della procedura 
 ## <a name="customize-the-saved-package"></a>Personalizzazione del pacchetto salvato  
  Per informazioni su come personalizzare il pacchetto salvato, vedere [Pacchetti di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
-## <a name="whats-next"></a>Operazioni successive  
+## <a name="whats-next"></a>Quali sono le operazioni successive?  
  Dopo aver specificato le opzioni aggiuntive per il salvataggio del pacchetto, la pagina successiva è **Completare la procedura guidata**. In questa pagina è possibile rivedere le scelte effettuate nella procedura guidata, quindi di avviare l'operazione. Per altre informazioni, vedere [Completare la procedura guidata](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
  
 ## <a name="see-also"></a>Vedere anche  

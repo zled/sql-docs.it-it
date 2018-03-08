@@ -8,26 +8,28 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 225e2dafcaac744ed1ecd67ec928d13490472c7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e87fd686f9962562af63a50f216254081a17581
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-offline-log-files"></a>Visualizzare file di log offline
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], è possibile visualizzare file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un'istanza locale o remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando l'istanza di destinazione è offline o non può essere avviata.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], è possibile visualizzare file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un'istanza locale o remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando l'istanza di destinazione è offline o non può essere avviata.  
   
  È possibile accedere ai file di log offline tramite lo strumento Server registrati o a livello di codice tramite query WMI e WQL (WMI Query Language).  
   
@@ -80,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
     3.  Immettere il nome del computer remoto, quindi fare clic su **OK**.  
   
-3.  Fare clic con il pulsante destro del mouse su **Controllo WMI (computer locale)** o **Controllo WMI (***NomeComputerRemoto***)**, quindi scegliere **Proprietà**.  
+3.  Fare clic on il pulsante destro del mouse su **Controllo WMI (computer locale)** o **Controllo WMI (***NomeComputerRemoto***)** e scegliere **Proprietà**.  
   
 4.  Nella finestra di dialogo delle proprietà di **Controllo WMI** fare clic sulla scheda **Sicurezza** .  
   

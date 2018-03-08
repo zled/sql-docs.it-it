@@ -17,15 +17,15 @@ helpviewer_keywords:
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bb4c95f567173101b0a8168823ccfa15576a4217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a0535029665ac86975ce384d6a2fd093dab816b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reinitialize-a-subscription"></a>Reinizializzare una sottoscrizione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come reinizializzare una sottoscrizione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o RMO (Replication Management Objects). È possibile contrassegnare singole sottoscrizioni per la reinizializzazione in modo che nel corso della successiva sincronizzazione venga applicato un nuovo snapshot.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Nella finestra di dialogo **Reinizializza sottoscrizioni** selezionare le opzioni desiderate e quindi fare clic su **Contrassegna per la reinizializzazione**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile reinizializzare le sottoscrizioni a livello di programmazione tramite le stored procedure di replica. La stored procedure utilizzata dipende dal tipo di sottoscrizione, ovvero push o pull, nonché dal tipo di pubblicazione a cui appartiene la sottoscrizione.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Per reinizializzare una sottoscrizione pull in una pubblicazione transazionale  

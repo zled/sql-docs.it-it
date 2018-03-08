@@ -8,34 +8,37 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: CPU Threshold Exceeded Event Class
+helpviewer_keywords:
+- CPU Threshold Exceeded Event Class
 ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 435ae4a32337b62b2a93ea942936acf21ee35871
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3631fe1c9034a20577431478cabf416feb02bc70
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Classe di evento CPU Threshold Exceeded
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Questa classe di evento indica che Resource Governor ha rilevato una query che supera il valore soglia della CPU specificato per REQUEST_MAX_CPU_TIME_SEC.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Questa classe di evento indica il rilevamento di una query che supera il valore soglia della CPU specificato per REQUEST_MAX_CPU_TIME_SEC.  
   
 > [!NOTE]  
 >  L'intervallo di rilevamento per questo evento è cinque secondi. È garantita la generazione di un evento se una query supera il limite specificato di almeno cinque secondi. Tuttavia, se una query supera la soglia specificata di meno di cinque secondi, il rilevamento potrebbe non riuscire a seconda del momento della query e dell'ora dell'ultima operazione di rilevamento.  
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>Colonne di dati di CPU Threshold Exceeded  
   
-|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |CPU|**int**|Utilizzo della CPU in millisecondi.|18|Sì|  
-|EventClass|**int**|214|27|No|  
+|EventClass|**int**|214|27|no|  
 |EventSubClass|**int**|Violazione del limite della CPU.|21|Sì|  
 |GroupID|**int**|ID del gruppo in cui si verifica la violazione.|66|Sì|  
 |OwnerID|**int**|SPID del processo che provoca la violazione.|58|Sì|  

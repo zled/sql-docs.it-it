@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69f4f470cf049deb3ce3b38a2bcb75f37265b31b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 4957b8d665f9aa887a5ad4ab18a2e8441ea4cc2d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREARE una funzione (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -72,7 +74,7 @@ RETURNS return_data_type
  *schema_name*  
  Nome dello schema a cui appartiene la funzione definita dall'utente.  
   
- *nome_funzione*  
+ *function_name*  
  Nome della funzione definita dall'utente. Nomi di funzione devono essere conformi alle regole per gli identificatori e devono essere univoci all'interno del database e al relativo schema.  
   
 > [!NOTE]  
@@ -107,7 +109,7 @@ RETURNS return_data_type
  *scalar_expression*  
  Specifica il valore scalare restituito dalla funzione scalare.  
   
- **\<function_option >:: =** 
+ **\<function_option>::=** 
   
  Specifica che la funzione includerà una o più delle opzioni seguenti.  
   
@@ -173,7 +175,7 @@ GO
   
  [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : Visualizza gli oggetti sottostanti a cui fa riferimento una funzione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione CREATE FUNCTION nel database e dell'autorizzazione ALTER per lo schema in cui la funzione è in fase di creazione.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

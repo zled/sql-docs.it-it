@@ -8,25 +8,27 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: UNIQUE_TSQL
+f1_keywords:
+- UNIQUE_TSQL
 helpviewer_keywords:
 - UNIQUE constraints [SQL Server], creating
 - constraints [SQL Server], creating
 - constraints [SQL Server], unique
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f910102bc812d065d63632335714c1e4609aecf3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e17b48e1575ba0be09eea74cb96d8f471d67185d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-unique-constraints"></a>Creare vincoli univoci
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per creare un vincolo univoco:**  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -64,9 +66,9 @@ ms.lasthandoff: 11/17/2017
   
 4.  Nella griglia in **Generale**fare clic su **Tipo** e selezionare **Chiave univoca** dall'elenco a discesa a destra della proprietà.  
   
-5.  Nel menu **File** scegliere **Salva***table name*.  
+5.  Scegliere **Salva***nome tabella* dal menu **File**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-unique-constraint"></a>Per creare un vincolo univoco  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene creata la tabella `TransactionHistoryArchive4` e un vincolo univoco sulla colonna `TransactionID`.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene creata la tabella `TransactionHistoryArchive4` e un vincolo univoco sulla colonna `TransactionID`.  
   
     ```  
     USE AdventureWorks2012;  
@@ -94,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene creato un vincolo univoco nelle colonne `PasswordHash` e `PasswordSalt` della tabella `Person.Password`.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene creato un vincolo univoco nelle colonne `PasswordHash` e `PasswordSalt` della tabella `Person.Password`.  
   
     ```  
     USE AdventureWorks2012;   
@@ -111,7 +113,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene creata una tabella e definito un vincolo univoco nelle colonne `TransactionID`.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene creata una tabella e definito un vincolo univoco nelle colonne `TransactionID`.  
   
     ```  
     USE AdventureWorks2012;  

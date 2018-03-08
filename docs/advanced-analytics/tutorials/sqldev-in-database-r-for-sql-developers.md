@@ -7,26 +7,28 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e3767912b2b2cd7390b1329ff1c584324e8bd673
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 0062a75b92fc633e61b0aa73ae2c955ccd60cec5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>Analitica R nel database per gli sviluppatori SQL (esercitazione)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 L'obiettivo di questa esercitazione è fornire ai programmatori SQL con la creazione di un di machine learning soluzioni in SQL Server. In questa esercitazione verrà illustrato come incorporare R in un'applicazione o di una soluzione di Business Intelligence eseguendo il wrapping di codice R nelle stored procedure.
 

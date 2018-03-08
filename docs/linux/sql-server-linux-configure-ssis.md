@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 015c170e998fc824a8816010288b33be33d89005
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d71490df718bfcb6f8ce35c7d087bac4d5961aff
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Configurare SQL Server Integration Services in Linux con ssis-conf
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Eseguire il `ssis-conf` script di configurazione quando si installa SQL Server Integration Services (SSIS) per Red Hat Enterprise Linux e Ubuntu. Per ulteriori informazioni sull'installazione di SSIS, vedere [installare SQL Server Integration Services (SSIS) in Linux](sql-server-linux-setup-ssis.md).
 
@@ -143,3 +145,9 @@ enabled = Y
                        
 lcid = 2052
 ```
+
+## <a name="related-content-about-ssis-on-linux"></a>Contenuto correlato su SSIS in Linux
+-   [Estrarre, trasformare e caricare i dati in Linux con SSIS](sql-server-linux-migrate-ssis.md)
+-   [Installare SQL Server Integration Services (SSIS) in Linux](sql-server-linux-setup-ssis.md)
+-   [Limitazioni e problemi noti per SSIS in Linux](sql-server-linux-ssis-known-issues.md)
+-   [Esecuzione in Linux con cron del pacchetto di pianificazione di SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)

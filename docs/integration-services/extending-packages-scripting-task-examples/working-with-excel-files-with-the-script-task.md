@@ -8,26 +8,28 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Script task [Integration Services], Excel files
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cb50dc174d4a1763416b4ccc313db56f26a5b1b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bfbe8efdeab1af1ba6c802d69abdce4b1b4696fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Uso di file di Excel con l'attività Script
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili la gestione connessione, l'origine e la destinazione Excel per l'utilizzo di dati archiviati in fogli di calcolo nel formato di file di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Per le tecniche descritte in questo argomento si utilizza l'attività Script per ottenere informazioni sui database (file di cartelle di lavoro) e sulle tabelle (fogli di lavoro e intervalli denominati) di Excel disponibili. Questi esempi possono essere facilmente modificati per utilizzare una delle altre origini dati basate su file supportate dal provider OLE DB di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  

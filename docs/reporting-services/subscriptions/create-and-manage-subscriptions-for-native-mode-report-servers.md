@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e470d64c425f967b37a42eed2467b925f05ad0e4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77666065993e86cbee7fa90beb4865a1562580c2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità nativa
   Il termine sottoscrizione standard si riferisce alla sottoscrizione creata dai singoli utenti che desiderano che un report venga recapitato tramite posta elettronica o a una cartella condivisa. In questo argomento vengono fornite informazioni sulle sottoscrizioni standard che vengono create e gestite dai singoli utenti. Le sottoscrizioni guidate dai dati prevedono procedure e requisiti diversi e sono illustrate in un altro argomento. Per altre informazioni, vedere [Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  

@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6325133adefc387c9fbcd59a5b7b32547ead4909
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 73de345a79e96800bf194c73bc17d70de7bd4055
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Creare un report per dispositivi mobili di Reporting Services
 Con SQL Server Mobile Report Publisher è possibile creare rapidamente report per dispositivi mobili di SQL Server 2016 Reporting Services che si adattano alle dimensioni di qualsiasi schermo, in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili del report per dispositivi mobili.  
@@ -58,11 +58,11 @@ La prima volta che si crea un report per dispositivi mobili è possibile install
     
      ![SSMRP_AddExcelData](../../reporting-services/mobile-reports/media/ssmrp-addexceldata.png)  
   
-8. Sempre nella scheda **Dati**, nella casella **Proprietà dati** selezionare la tabella e i campi da includere nel grafico.  
+8. Sempre nella scheda **Dati** , nella casella **Proprietà dati** selezionare la tabella e i campi da includere nel grafico.  
   
    ![SSMRP_DataProps](../../reporting-services/mobile-reports/media/ssmrp-dataprops.png)  
   
-9. Tornare alla scheda **Layout**. Nella casella **Proprietà visive** è possibile impostare proprietà quali **Titolo**, **Unità di tempo** e **Formato numeri**.  
+9. Tornare alla scheda **Layout** . Nella casella **Proprietà visive** è possibile impostare proprietà quali **Titolo**, **Unità di tempo**e **Formato numeri**.  
   
    ![SSMRP_ChartVizProps](../../reporting-services/mobile-reports/media/ssmrp-chartvizprops.png)  
     

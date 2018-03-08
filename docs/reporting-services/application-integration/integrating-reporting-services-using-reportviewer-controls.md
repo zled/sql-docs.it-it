@@ -8,9 +8,7 @@ ms.service:
 ms.component: application-integration
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - integrating reports [Reporting Services]
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 caps.latest.revision: "26"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b43ad81f907ff035170095bebbebc08b93526553
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f92e88661e521db0d38265a750c1b2af7a37bb89
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls"></a>Integrazione di Reporting Services tramite i controlli ReportViewer
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 sono disponibili due controlli ReportViewer per l'integrazione delle funzionalità di visualizzazione dei report nelle applicazioni. È disponibile una versione per le applicazioni basate su Windows Form e una per le applicazioni Web Form. Ogni controllo offre funzionalità simili, ma ognuno è progettato per un ambiente specifico. Entrambi i controlli consentono di elaborare i report distribuiti in un server di report (modalità di elaborazione remota) o copiati in un computer in cui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è stato installato (modalità di elaborazione locale).  

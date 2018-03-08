@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BufferWithTolerance_TSQL
 - BufferWithTolerance
-dev_langs: TSQL
-helpviewer_keywords: BufferWithTolerance (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a6a932ffe43e978bdc9e06f96cac300d45a035b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1cb8520351369dad761862132211b5222c52e3ae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ Restituisce i valori di un oggetto geometrico che rappresenta l'unione di tutti 
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *distanza*  
+ *distance*  
  È un **float** espressione che specifica la distanza tra il **geometry** istanza intorno alla quale calcolare il buffer.  
   
  *tolleranza di errore*  
@@ -51,7 +54,7 @@ Restituisce i valori di un oggetto geometrico che rappresenta l'unione di tutti 
   
  La distanza ideale del buffer di un punto ad esempio è un cerchio, che però deve essere approssimato da un poligono. Minore è il valore della tolleranza, maggiore sarà il numero di punti del poligono. In questo caso aumenterà la complessità del risultato, ma diminuirà l'errore.  
   
- *relativo*  
+ *relative*  
  È un **bit** che specifica se il *tolleranza* valore è relativo o assoluto. Se 'TRUE' o 1, quindi tolleranza è relativa e viene calcolata come prodotto tra il *tolleranza* parametro e il diametro del rettangolo di selezione dell'istanza. Se 'FALSE' o 0, tolleranza è assoluta e *tolleranza* valore è la variazione massima assoluta nella distanza del buffer ideale per l'approssimazione lineare restituita.  
   
 ## <a name="return-types"></a>Tipi restituiti  

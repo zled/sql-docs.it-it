@@ -18,13 +18,13 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc1923dcca1052c3c0bcdc2d1ba9abfb7935803a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ac44c00dd2ffb0a37a4a7a53a33dbddb54df49f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Creazione di query mediante l'utilizzo di altre origini oltre a una tabella (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quando si crea una query di recupero dati, si definiscono le colonne e le righe da estrarre e la posizione dei dati originali. I dati originali in genere sono costituiti da una tabella o da più tabelle unite in join, ma possono anche provenire da origini diverse dalle tabelle, quali viste, query, sinonimi o funzioni definite dall'utente che restituiscono una tabella.  

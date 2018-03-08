@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - building database objects [CLR integration]
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
-caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51fd445775e428d259a53176e3aaafdb2d1e47a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bffc0c6796955eee2a23bc4885c3cfc23a7e9304
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Compilazione di oggetti di database con l'integrazione con CLR (Common Language Runtime)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]È possibile compilare oggetti di database utilizzando il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integrazione con common language runtime (CLR) di .NET Framework. Il codice gestito che viene eseguito all'interno di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene definito "routine CLR". Queste routine includono gli elementi seguenti:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+È possibile compilare oggetti di database utilizzando l'integrazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di .NET Framework. Il codice gestito che viene eseguito all'interno di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene definito "routine CLR". Queste routine includono gli elementi seguenti:  
   
 -   Funzioni definite dall'utente con valori scalari  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/17/2017
  [Restrizioni relative al modello di programmazione dell'integrazione con CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  
  Include informazioni sulle restrizioni del modello di programmazione dell'integrazione CLR.  
   
- [Tipi di dati di SQL Server in .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
+ [Tipi di dati SQL Server in .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  Panoramica dei tipi di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e degli equivalenti di .NET Framework.  
   
  [Panoramica di attributi personalizzati di integrazione CLR](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/17/2017
  [Funzioni CLR definite dall'utente](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  Viene descritto come implementare e utilizzare i diversi tipi di funzioni CLR, ovvero le funzioni con valori di tabella, le funzioni scalari e le funzioni di aggregazione definite dall'utente.  
   
- [Tipi definiti dall'utente per CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipi CLR definiti dall'utente](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Viene descritto come implementare e utilizzare i tipi CLR definiti dall'utente.  
   
  [Stored procedure CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  

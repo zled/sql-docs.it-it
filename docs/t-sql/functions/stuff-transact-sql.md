@@ -1,5 +1,5 @@
 ---
-title: STUFF (Transact-SQL) | Documenti Microsoft
+title: STUFF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STUFF
 - STUFF_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deleting characters
 - STUFF function
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - characters [SQL Server], replacing
 - inserting data
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db5876abd95b4eb9b21d91deeeb6bc0f1a242303
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 10edb8b1b1e3008321bc03e2e65419dca8956f86
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,10 +54,10 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  *character_expression*  
  È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) dati di tipo carattere. *character_expression* può essere una costante, variabile o colonna di tipo carattere o binario.  
   
- *inizio*  
+ *start*  
  Valore intero che indica la posizione da cui iniziare le operazioni di eliminazione e inserimento. Se *avviare* è negativo o zero, verrà restituita una stringa null. Se *avviare* è più lungo rispetto alla prima *character_expression*, viene restituita una stringa null. *Avviare* può essere di tipo **bigint**.  
   
- *length*  
+ *lunghezza*  
  Valore intero che indica il numero di caratteri da eliminare. Se *lunghezza* è negativo, viene restituita una stringa null. Se *lunghezza* è più lungo rispetto alla prima *character_expression*, l'eliminazione viene eseguita fino all'ultimo carattere dell'ultima *character_expression*.  Se *lunghezza* è zero, viene inserito prima del primo carattere nella stringa. *lunghezza* può essere di tipo **bigint**.
 
  *replaceWith_expression*  
@@ -90,5 +92,14 @@ aijklmnef
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  

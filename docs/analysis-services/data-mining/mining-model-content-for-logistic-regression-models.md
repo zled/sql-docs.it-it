@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcc42dbd4d53a3d5a967933bebf22b1f73ac91e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Mining Model Content for Logistic Regression Models
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questo argomento descrive contenuto del modello di data mining che è specifico dei modelli che utilizzano l'algoritmo Microsoft Logistic Regression. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Logistic Regression. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>Informazioni sulla struttura di un modello di regressione logistica  
  Un modello di regressione logistica viene creato tramite l'algoritmo Microsoft Neural Network con parametri che impongono al modello l'eliminazione del nodo nascosto. La struttura globale di un modello di regressione logistica è pertanto quasi identica a quella di una rete neurale, in cui ogni modello ha un solo nodo padre che rappresenta il modello e i relativi metadati e un nodo speciale delle statistiche marginali (NODE_TYPE = 24) che fornisce statistiche descrittive sugli input utilizzati nel modello.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
  ![struttura del contenuto per il modello di regressione logistica](../../analysis-services/data-mining/media/skt-modelcontentstructure-logregc.gif "struttura del contenuto per il modello di regressione logistica")  
   
- Per impostazione predefinita, un modello di regressione logistica è visualizzato nel **Visualizzatore Microsoft Neural Network**. Con questo visualizzatore personalizzato, è possibile impostare un filtro sugli attributi di input e i relativi valori e visualizzarne graficamente l'impatto sugli output. Le descrizioni comandi nel visualizzatore mostrano la probabilità e l'accuratezza associate a ogni coppia di input e valori di output. Per altre informazioni, vedere [Visualizzare un modello usando il Visualizzatore Microsoft Neural Network](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
+ Per impostazione predefinita, un modello di regressione logistica è visualizzato nel **Visualizzatore Microsoft Neural Network**. Con questo visualizzatore personalizzato, è possibile impostare un filtro sugli attributi di input e i relativi valori e visualizzarne graficamente l'impatto sugli output. Le descrizioni comandi nel visualizzatore mostrano la probabilità e l'accuratezza associate a ogni coppia di input e valori di output. Per altre informazioni, vedere [Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
  Per esplorare la struttura degli input e delle subnet e visualizzare statistiche dettagliate, è possibile utilizzare il Microsoft Generic Content Tree Viewer. È possibile fare clic su qualsiasi nodo per espanderlo e visualizzare i nodi figlio oppure visualizzare i pesi e le altre statistiche contenute nel nodo.  
   
@@ -103,7 +102,7 @@ ms.lasthandoff: 12/08/2017
 |Statistiche marginali|Sempre 0.|  
 |Livello di input|Indica il numero di coppie attributo-valori di input utilizzate dal modello.|  
 |Nodo di input|Sempre 0.|  
-|Livello nascosto|In un modello di regressione logistica, è sempre 0.|  
+|hidden layer|In un modello di regressione logistica, è sempre 0.|  
 |Livello di output|Indica il numero di valori di output.|  
 |Nodo di output|Sempre 0.|  
   
@@ -134,7 +133,7 @@ ms.lasthandoff: 12/08/2017
 |Statistiche marginali|Vuoto|  
 |Livello di input|Vuoto|  
 |Nodo di input|Frammento XML che contiene le stesse informazioni della colonna NODE_DESCRIPTION.|  
-|Livello nascosto|Vuoto|  
+|hidden layer|Vuoto|  
 |Livello di output|Vuoto|  
 |Nodo di output|Frammento XML che contiene le stesse informazioni della colonna NODE_DESCRIPTION.|  
   
@@ -195,6 +194,6 @@ ms.lasthandoff: 12/08/2017
  [Algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Contenuto del modello di data mining per i modelli di rete neurale &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Esempi di Query del modello di regressione logistica](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)   
- [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
+ [Riferimento tecnico l'algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   

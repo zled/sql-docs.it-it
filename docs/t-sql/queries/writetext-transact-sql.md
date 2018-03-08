@@ -1,5 +1,5 @@
 ---
-title: WRITETEXT (Transact-SQL) | Documenti Microsoft
+title: WRITETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WRITETEXT_TSQL
 - WRITETEXT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - replacing data
 - WRITETEXT statement
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - overwriting data
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 534fa1494ec97efb8258222f512902d15efa1f36
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: fda340750c555d7e6e858ddac1a87401e215891e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +72,7 @@ WRITETEXT [BULK]
  WITH LOG  
  Argomento ignorato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La registrazione è definita dal modello di recupero attivo nel database.  
   
- *dati*  
+ *data*  
  Effettivi **testo**, **ntext** o **immagine** dati da archiviare. *dati* può essere un valore letterale o un parametro. La lunghezza massima del testo che può essere inserito in modo interattivo tramite WRITETEXT è di circa 120 KB per **testo**, **ntext**, e **immagine** dati.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -91,7 +93,7 @@ WRITETEXT [BULK]
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nella riga puntatori di testo **testo**, **ntext**, o **immagine** possono esistere, ma potrebbe non essere valido. Per informazioni sull'opzione text in row, vedere [sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Per informazioni su come invalidare i puntatori di testo, vedere [sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione UPDATE per la tabella specificata. L'autorizzazione è trasferibile in caso di trasferimento dell'autorizzazione UPDATE.  
   
 ## <a name="examples"></a>Esempi  

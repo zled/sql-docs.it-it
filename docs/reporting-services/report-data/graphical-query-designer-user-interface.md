@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,20 +22,20 @@ helpviewer_keywords:
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 caps.latest.revision: "54"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 27cbba801cfa54e30dc69534f6835b3c2d381dfc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b68330e1d9297462462888e1138e57649d03efa7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaccia utente della finestra Progettazione query con interfaccia grafica
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dispone di due finestre Progettazione query, una con interfaccia grafica e una basata su testo, per la creazione di query che consentano di recuperare i dati da un database relazionale per un set di dati del report in Progettazione report. Usare la finestra Progettazione query con interfaccia grafica per compilare in modo interattivo una query e visualizzare i risultati per origine dati di tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC. Usare la finestra Progettazione query basata su testo per specificare più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , la sintassi di una query complessa o del comando, nonché query basate su espressioni. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c). Per altre informazioni sull'uso di specifici tipi di origine dati, vedere [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
- .  
+ ,  
   
 ## <a name="graphical-query-designer"></a>Finestra Progettazione query con interfaccia grafica  
  La finestra Progettazione query con interfaccia grafica supporta tre tipi di comandi di query: **Text**, **StoredProcedure**o **TableDirect**. Prima di creare una query per il set di dati, è necessario selezionare l'opzione del tipo di comando nella pagina Query della finestra di dialogo [Proprietà set di dati](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
@@ -144,7 +142,7 @@ EXEC uspGetEmployeeManagers '1';
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i file con estensione sql e rdl. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Esecuzione della query](../../reporting-services/report-data/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la stored procedure selezionata.|  
-|Elenco a discesa Stored procedure|Fare clic sulla freccia ﻿﻿GIÙ per visualizzare un elenco delle stored procedure disponibili dall'origine dei dati. Fare clic su una stored procedure nell'elenco per selezionarla.|  
+|Elenco a discesa Stored procedure|Fare clic sulla freccia GIÙ per visualizzare un elenco delle stored procedure disponibili dall'origine dei dati. Fare clic su una stored procedure nell'elenco per selezionarla.|  
   
 #### <a name="example"></a>Esempio  
  La stored procedure seguente chiama un elenco sotto forma di struttura gerarchica dei responsabili dal database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Questa stored procedure accetta *BusinessEntityID* come parametro. È possibile immettere qualsiasi integer di piccole dimensioni.  

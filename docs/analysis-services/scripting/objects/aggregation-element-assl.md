@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Aggregation Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a792776717a3a333ef25b4a67456d77aa598b544
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e4d6801123ab0a07ff4243d1147673f3baedb07d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregation-element-assl"></a>Elemento Aggregation (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definisce una singola aggregazione per un [partizione](../../../analysis-services/scripting/objects/partition-element-assl.md) elemento.  
@@ -51,10 +49,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  

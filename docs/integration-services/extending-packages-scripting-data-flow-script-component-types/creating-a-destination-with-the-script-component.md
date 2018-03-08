@@ -8,26 +8,28 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Script component [Integration Services], destination components
 - destinations [Integration Services], components
 - input columns [Integration Services]
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 743519a2f80f4cc2a490bcb5b513431d73d13478
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bf01202003f2fc42f5e6527348d95ec3fe9e4859
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Creazione di una destinazione con il componente script
   Utilizzare un componente di destinazione nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per salvare in un'origine dati i dati ricevuti dalle origini e dalle trasformazioni upstream. Normalmente, il componente di destinazione si connette all'origine dati tramite una gestione connessione esistente.  
@@ -107,7 +109,7 @@ ms.lasthandoff: 11/20/2017
  Gli esempi seguenti visualizzano il codice necessario nella classe **ScriptMain** per creare un componente di destinazione.  
   
 > [!NOTE]  
->  Gli esempi usano la tabella **Person.Address** del database di esempio **AdventureWorks** e passano la prima e la quarta colonna, ovvero le colonne **int*AddressID*** e **nvarchar(30)City**, attraverso il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.  
+>  Gli esempi usano la tabella **Person.Address** del database di esempio **AdventureWorks** e passano la prima e la quarta colonna, ovvero le colonne **int*AddressID*** e **nvarchar(30)City** attraverso il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.  
   
 ### <a name="adonet-destination-example"></a>Esempio di destinazione ADO.NET  
  In questo esempio è illustrato un componente di destinazione che usa una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] esistente per salvare i dati del flusso di dati in una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -127,7 +129,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. È possibile connettere direttamente un'origine a una destinazione senza alcuna trasformazione. Questo output deve specificare dati della tabella **Person.Address** del database di esempio **AdventureWorks** che contiene almeno le colonne **AddressID** e **City**.  
   
-5.  Aprire **Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne di input **AddressID** e **City**.  
+5.  Aprire l'**Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne di input **AddressID** e **City**.  
   
 6.  Nella pagina **Input e output** rinominare l'input con un nome più descrittivo, ad esempio **MyAddressInput**.  
   
@@ -244,7 +246,7 @@ public class ScriptMain:
   
 3.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. È possibile connettere direttamente un'origine a una destinazione senza alcuna trasformazione. Questo output deve specificare i dati della tabella **Person.Address** del database di esempio **AdventureWorks** e deve contenere almeno le colonne **AddressID** e **City**.  
   
-4.  Aprire **Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne **AddressID** e **City**.  
+4.  Aprire l'**Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne **AddressID** e **City**.  
   
 5.  Nella pagina **Input e output** rinominare l'input con un nome più descrittivo, ad esempio **MyAddressInput**.  
   

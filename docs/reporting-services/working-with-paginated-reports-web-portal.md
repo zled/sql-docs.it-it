@@ -8,20 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 68a7523b0c044a90c9c71d53ffbb00c6e680b5a1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0f8ff65614eac486e11fc907c42737eb330c8b83
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Utilizzo di report impaginati (portale web)
 
@@ -70,7 +70,7 @@ Nella schermata delle proprietà è possibile modificare **Nome** e **Descrizion
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## <a name="data-source"></a>Data Source  
+## <a name="data-source"></a>origine dati  
 È possibile selezionare un'origine dati condivisa oppure immettere le informazioni di connessione per un'origine dati personalizzata.  
   
 ![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
@@ -187,7 +187,7 @@ Per generare uno snapshot, è necessario che il report possa essere eseguito in 
   
 È possibile fare clic su uno snapshot della cronologia del report per visualizzarlo. L'unico elemento distintivo degli snapshot visualizzati nella cronologia del report è rappresentato dalla data e ora di creazione. Non sono disponibili indicatori visivi per distinguere gli snapshot generati tramite una pianificazione o un'operazione manuale.  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
 La pagina Proprietà di sicurezza consente di visualizzare o modificare le impostazioni di sicurezza che regolano l'accesso al report. Questa pagina è disponibile per gli elementi per i quali l'utente è autorizzato a definire le impostazioni di sicurezza.  
   
 Il livello di accesso agli elementi viene impostato tramite assegnazioni di ruolo che specificano le attività consentite per un gruppo o un utente. Le assegnazioni di ruolo sono costituite da un nome di utente o gruppo e da una o più definizioni di ruolo che specificano la raccolta di attività consentite.  

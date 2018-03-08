@@ -19,13 +19,13 @@ ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21d31eaa4084dffbb4ef3110f10165709b9c4000
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8761a09f4ee59bcdcabb99d78e7135e6e919d61
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Rimuovere il server di controllo del mirroring da una sessione di mirroring del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come rimuovere un server di controllo del mirroring da una sessione di mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Durante una sessione di mirroring del database, il proprietario del database può disabilitare il server di controllo del mirroring in qualsiasi momento.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per rimuovere il server di controllo del mirroring utilizzando:**  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È richiesta l'autorizzazione ALTER per il database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Se si passa dalla modalità a protezione elevata con failover automatico alla modalità a prestazioni elevate, il contenuto del campo **Server di controllo del mirroring** viene automaticamente cancellato.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-remove-the-witness"></a>Per rimuovere il server di controllo del mirroring  
   

@@ -8,19 +8,20 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 42ac4136c77b3ba00784276b12898f3d4e08d7f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: d4b3fcfe0e335b53dc483cde24520ea136c9af37
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>Sys.dm_xe_database_session_event_actions (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,22 +34,22 @@ ms.lasthandoff: 11/17/2017
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|Indirizzo di memoria della sessione dell'evento. Non ammette i valori Null.|  
+|event_session_address|**varbinary(8)**|Indirizzo di memoria della sessione dell'evento. Non ammette i valori Null.|  
 |action_name|**nvarchar(60)**|Nome dell'azione. Non ammette i valori Null.|  
 |action_package_guid|**uniqueidentifier**|GUID per il pacchetto che contiene l'azione. Non ammette i valori Null.|  
 |event_name|**nvarchar(60)**|Nome dell'evento associato all'azione. Non ammette i valori Null.|  
 |event_package_guid|**uniqueidentifier**|GUID per il pacchetto che contiene l'evento. Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|Per|Relazione|  
+|From|Per|Relazione|  
 |----------|--------|------------------|  
-|Sys.dm_xe_database_session_event_actions.event_session_address|Sys.dm_xe_database_sessions.Address|Molti-a-uno|  
-|Sys.dm_xe_database_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> Sys.dm_xe_database_session_events.event_package_guid|Molti-a-uno|  
-|Sys.dm_xe_database_session_event_actions.EVENT_NAME<br /><br /> Sys.dm_xe_database_session_event_actions.event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Molti-a-uno|  
+|sys.dm_xe_database_session_event_actions.event_session_address|sys.dm_xe_database_sessions.address|Molti-a-uno|  
+|sys.dm_xe_database_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_database_session_events.event_package_guid|Molti-a-uno|  
+|sys.dm_xe_database_session_event_actions.event_name<br /><br /> sys.dm_xe_database_session_event_actions.event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Molti-a-uno|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  

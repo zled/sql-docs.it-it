@@ -16,15 +16,15 @@ helpviewer_keywords:
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56a9141ce472f9419eca3504dae859dab886689
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5549947b718e1303d1c6a065cb5790b7af5dabe7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configurazione dei protocolli di rete predefiniti di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per una maggiore sicurezza, per alcune nuove installazioni [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] disabilita la connettività di rete. La connettività di rete che utilizza TCP/IP non viene disabilitata se si utilizza l'edizione Enterprise, Standard, Evaluation o Workgroup oppure se è presente un'installazione precedente di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . Per tutte le installazioni è attivato il protocollo Shared Memory, che consente le connessioni locali al server. È possibile che il servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser venga arrestato, in base alle condizioni e alle opzioni di installazione.
@@ -41,7 +41,7 @@ Edizione | Presenza di nuova installazione o installazione precedente | Shared M
 Enterprise  | Nuova installazione  | Abilitata   | Abilitata   | Disabilitate per le connessioni di rete.
 Standard    | Nuova installazione  | Abilitata   | Abilitata   | Disabilitate per le connessioni di rete.
 Web | Nuova installazione  | Abilitata   | Abilitata   | Disabilitate per le connessioni di rete.
-Sviluppatore   | Nuova installazione  | Abilitata   | Disabilitata  | Disabilitate per le connessioni di rete.
+Developer   | Nuova installazione  | Abilitata   | Disabilitata  | Disabilitate per le connessioni di rete.
 Copia di valutazione  | Nuova installazione  | Abilitata   | Abilitata   | Disabilitate per le connessioni di rete.
 SQL Server Express  | Nuova installazione  | Abilitata   | Disabilitata  | Disabilitate per le connessioni di rete.
 Tutte le edizioni    | L'installazione precedente è presente, ma non viene aggiornata.   | Come in una nuova installazione  | Come in una nuova installazione  | Come in una nuova installazione

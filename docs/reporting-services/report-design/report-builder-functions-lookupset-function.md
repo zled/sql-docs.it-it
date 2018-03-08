@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 04ec945b59d77ad8b885d5c8403f833ab4c73ab2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 54455fd8ab820d9f32525308220c5dd427470d07
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funzioni di Generatore report - Funzione LookupSet
   Viene restituito il set di valori corrispondenti per il nome specificato da un set di dati contenente coppie nome/valore.  
@@ -54,7 +52,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Return  
  Restituisce **VariantArray**o **Nothing** se non viene rilevata alcuna corrispondenza.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Usare **LookupSet** per recuperare un set di valori dal set di dati specificato per una coppia nome/valore in cui è presente una relazione uno-a-molti. Per un identificatore di cliente in una tabella, ad esempio, è possibile usare la funzione **LookupSet** per recuperare tutti i numeri di telefono relativi al cliente da un set di dati non associato all'area dati.  
   
  Tramite la funzione**LookupSet** vengono effettuate le operazioni seguenti:  

@@ -1,29 +1,30 @@
 ---
 title: Transazioni in tabelle con ottimizzazione per la memoria| Microsoft Docs
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 808602a0671f64daaf313af49ef4974d6e754061
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a5cb6088e12b51dcc8992093b65e8dc95ad8d57
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
+# <a name="transactions-with-memory-optimized-tables"></a>Transazioni in tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
@@ -116,7 +117,7 @@ Le tabelle basate su disco hanno indirettamente un sistema per il controllo dell
   
 La tabella che segue indica i livelli di isolamento possibili per le transazioni, ordinate dall'isolamento minimo a quello massimo. Per informazioni dettagliate sui conflitti che possono verificarsi e sulla logica di ripetizione dei tentativi per affrontare questi conflitti, vedere [Rilevamento dei conflitti e logica di ripetizione dei tentativi](#confdetretry34ni). 
   
-| Livello di isolamento | Descrizione |   
+| Livello di isolamento | Description |   
 | :-- | :-- |   
 | READ UNCOMMITTED | Non disponibile: non è possibile accedere alle tabelle ottimizzate per la memoria con isolamento Read Uncommitted. È comunque possibile accedere alle tabelle ottimizzate per la memoria con isolamento SNAPSHOT se l'opzione TRANSACTION ISOLATION LEVEL a livello di sessione è impostata su READ UNCOMMITTED, usando l'hint di tabella WITH (SNAPSHOT) o impostando l'opzione di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT su ON. | 
 | READ COMMITTED | L'opzione è supportata per le tabelle ottimizzate per la memoria solo quando è attiva la modalità autocommit. È comunque possibile accedere alle tabelle ottimizzate per la memoria con isolamento SNAPSHOT se l'opzione TRANSACTION ISOLATION LEVEL a livello di sessione è impostata su READ COMMITTED, usando l'hint di tabella WITH (SNAPSHOT) o impostando l'opzione di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT su ON.<br/><br/>Se l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON, non è possibile accedere a una tabella ottimizzata per la memoria e a una tabella basata su disco con il livello di isolamento READ COMMITTED nella stessa istruzione. |  
@@ -164,13 +165,14 @@ Esistono due tipi di condizioni di errore relative alle transazioni che causano 
 
 Di seguito sono indicate le condizioni di errore che possono causare errori delle transazioni durante l'accesso alle tabelle ottimizzate per la memoria.
 
-| Codice errore | Descrizione | Causa |
+| Codice errore | Description | Causa |
 | :-- | :-- | :-- |
 | **41302** | Si è tentato di aggiornare una riga che è stata aggiornata in un'altra transazione dopo l'avvio di questa transazione. | Questa condizione di errore si verifica se due transazioni simultanee tentano di aggiornare o eliminare la stessa riga nello stesso momento. Una delle due transazioni riceve questo messaggio di errore e dovrà essere ritentata. <br/><br/>  | 
 | **41305**| Errore di convalida di lettura ripetibile. Una riga letta da una tabella ottimizzata per la memoria è stata aggiornata da un'altra transazione che ha eseguito il commit prima del commit di questa transazione. | Questo errore può verificarsi quando si usa l'isolamento REPEATABLE READ o SERIALIZABLE e anche se le azioni di una transazione simultanea causano la violazione del vincolo di chiave esterna. <br/><br/>Questa violazione simultanea dei vincoli di chiave esterna è rara e solitamente indica un problema relativo alla logica dell'applicazione o all'immissione di dati. Tuttavia, l'errore può verificarsi anche se non esiste alcun indice nelle colonne coinvolte nel vincolo FOREIGN KEY. Per questo motivo è consigliabile creare sempre un indice nelle colonne di chiavi esterne in una tabella ottimizzata per la memoria. <br/><br/> Per considerazioni più specifiche sugli errori di convalida dovuti a violazioni di chiavi esterne, vedere [questo post di blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) del team di consulenza clienti di SQL Server. |  
 | **41325** | Errore di convalida serializzabile. È stata inserita una nuova riga in un intervallo analizzato in precedenza da questa transazione. Si tratta di una cosiddetta riga fantasma. | Questo errore può verificarsi quando si usa l'isolamento SERIALIZABLE e anche se le azioni di una transazione simultanea causano la violazione di un vincolo PRIMARY KEY, UNIQUE o FOREIGN KEY. <br/><br/> Questa violazione simultanea dei vincoli è rara e solitamente indica un problema relativo alla logica dell'applicazione o all'immissione di dati. Comunque, analogamente agli errori di convalida di lettura ripetibile, questo errore può verificarsi anche se è presente un vincolo FOREIGN KEY senza indice sulle colonne coinvolte. |  
 | **41301** | Errore di dipendenza: è stata acquisita una dipendenza da un'altra transazione di cui in seguito non è stato eseguito il commit. | Questa transazione (Tx1) ha acquisito una dipendenza da un'altra transazione (Tx2) mentre tale transazione (Tx2) era in fase di elaborazione della convalida o del commit, leggendo i dati scritti da Tx2. Successivamente, Tx2 non è riuscita a eseguire il commit. Le cause più comuni per il mancato commit di Tx2 sono gli errori di convalida di lettura ripetibile (41305) e serializzabile (41325). Una causa meno comune è un errore di I/O del log. |
-| **41839** | La transazione ha superato il numero massimo di dipendenze di commit. | Il numero di transazioni da cui una determinata transazione (Tx1) può dipendere è limitato. Queste transazioni sono le dipendenze in uscita. Anche il numero di transazioni che possono dipendere da una determinata transazione (Tx1) è limitato. Queste transazioni sono le dipendenze in ingresso. Il limite in entrambi i casi è 8. <br/><br/> Lo scenario più comune per questo errore è la presenza di un ampio numero di transazioni di lettura che accedono a dati scritti da una singola transazione di scrittura. Le probabilità che si verifichi questa condizione aumentano se tutte le transazioni di lettura eseguono ampie analisi degli stessi dati e se l'elaborazione della convalida o del commit della transazione di scrittura richiede molto tempo, ad esempio quando la transazione di scrittura esegue vaste analisi con il livello di isolamento serializable (aumenta la durata della fase di convalida) o il log delle transazioni si trova in un dispositivo di I/O di log lento (aumenta la durata dell'elaborazione del commit). Se le transazioni di lettura eseguono ampie analisi ed è previsto che accedano solo a poche righe, potrebbe mancare un indice. Analogamente, se la transazione di scrittura usa l'isolamento serializable ed esegue ampie analisi, ma è previsto che acceda a poche righe, anche questo indica la mancanza di un indice. <br/><br/> Il limite sul numero delle dipendenze di commit può essere eliminato usando il flag di traccia **9926**. È importante usare questo flag di traccia solo se questa condizione di errore si presenta anche dopo avere verificato che non manca alcun indice, perché potrebbe mascherare questi problemi nei casi sopra indicati. Un'altra precauzione è il fatto che i grafici complessi delle dipendenze, in cui ogni transazione ha un numero elevato di dipendenze in ingresso e in uscita e ogni transazione può avere molti livelli di dipendenze, possono determinare inefficienze nel sistema.  |
+| **41823** e **41840** | È stata raggiunta la quota di dati utente in tabelle ottimizzate per la memoria e variabili tabella. | L'errore 41823 si applica a SQL Server Express/Web/Standard Edition e anche ai database autonomi in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. L'errore 41840 si applica a pool elastici in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> Nella maggior parte dei casi questi errori indicano che sono state raggiunte le dimensioni massime di dati utente e che, per risolvere l'errore, è necessario eliminare i dati dalle tabelle ottimizzate per la memoria. In casi sporadici questo errore è invece temporaneo. È pertanto consigliabile ritentare quando questi errori si verificano per la prima volta.<br/><br/> Come gli altri errori in questo elenco, gli errori 41823 e 41840 comportano l'interruzione della transazione attiva. |
+| **41839** | La transazione ha superato il numero massimo di dipendenze di commit. |**Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Nelle versioni successive di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] non vi sono limiti al numero di dipendenze di commit.<br/><br/> Il numero di transazioni da cui una determinata transazione (Tx1) può dipendere è limitato. Queste transazioni sono le dipendenze in uscita. Anche il numero di transazioni che possono dipendere da una determinata transazione (Tx1) è limitato. Queste transazioni sono le dipendenze in ingresso. Il limite in entrambi i casi è 8. <br/><br/> Lo scenario più comune per questo errore è la presenza di un ampio numero di transazioni di lettura che accedono a dati scritti da una singola transazione di scrittura. Le probabilità che si verifichi questa condizione aumentano se tutte le transazioni di lettura eseguono ampie analisi degli stessi dati e se l'elaborazione della convalida o del commit della transazione di scrittura richiede molto tempo, ad esempio quando la transazione di scrittura esegue vaste analisi con il livello di isolamento serializable (aumenta la durata della fase di convalida) o il log delle transazioni si trova in un dispositivo di I/O di log lento (aumenta la durata dell'elaborazione del commit). Se le transazioni di lettura eseguono ampie analisi ed è previsto che accedano solo a poche righe, potrebbe mancare un indice. Analogamente, se la transazione di scrittura usa l'isolamento serializable ed esegue ampie analisi, ma è previsto che acceda a poche righe, anche questo indica la mancanza di un indice. <br/><br/> Il limite al numero delle dipendenze di commit può essere eliminato usando il flag di traccia **9926**. È importante usare questo flag di traccia solo se questa condizione di errore si presenta anche dopo avere verificato che non manca alcun indice, perché potrebbe mascherare questi problemi nei casi sopra indicati. Un'altra precauzione è il fatto che i grafici complessi delle dipendenze, in cui ogni transazione ha un numero elevato di dipendenze in ingresso e in uscita e ogni transazione può avere molti livelli di dipendenze, possono determinare inefficienze nel sistema.  |
  
   
 ### <a name="retry-logic"></a>Logica di ripetizione dei tentativi 
@@ -219,7 +221,7 @@ BEGIN
             SET @retry -= 1;
 
             IF (@retry > 0 AND
-                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41839, 1205)
+                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41823, 41840, 41839, 1205)
                 )
             BEGIN
                 IF XACT_STATE() = -1
@@ -303,7 +305,7 @@ go
   
 <a name="natcompstorprocs42ni"/>  
   
-## <a name="natively-compiled-stored-procedures"></a>Stored procedure compilate in modo nativo  
+## <a name="natively-compiled-stored-procedures"></a>stored procedure compilate in modo nativo  
   
 - In una procedura nativa ATOMIC BLOCK deve dichiarare il livello di isolamento della transazione per l'intero blocco, ad esempio:  
   - `... BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, ...) ...`  

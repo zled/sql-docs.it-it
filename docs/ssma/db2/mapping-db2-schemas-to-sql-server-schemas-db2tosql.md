@@ -1,7 +1,7 @@
 ---
 title: DB2 schemi di mapping per gli schemi di SQL Server (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ea0c28ff859b6ca3c54016b808389647e814e22
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 19abc8a901b2241a4fa7d6c69da2ffd90b77afb9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>DB2 schemi di mapping per gli schemi di SQL Server (DB2ToSQL)
 In DB2, ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti in uno schema DB2 per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] denominato per lo schema di database. Tuttavia, è possibile personalizzare il mapping tra gli schemi di DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
@@ -68,7 +68,7 @@ Se si personalizza il mapping tra uno schema DB2 e [!INCLUDE[ssNoVersion](../../
   
 1.  Nella scheda mapping dello schema, selezionare una riga e fare clic su **Ripristina predefiniti** per ripristinare il database predefinito e lo schema.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Se si desidera analizzare la conversione di oggetti di DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti, è possibile [Report di migrazione di dati (SSMA comune)](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241).  
   
 ## <a name="see-also"></a>Vedere anche  

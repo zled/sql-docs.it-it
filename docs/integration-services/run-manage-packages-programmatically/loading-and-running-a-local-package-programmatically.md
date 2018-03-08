@@ -8,11 +8,13 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Integration Services packages, running
 - events [Integration Services], capturing
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7a017f2d0b04df41b25e093bdeccd53036aa5710
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 604c25de1d6ca478612bd3a83f79e35b969e5d8c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Caricamento ed esecuzione di un pacchetto locale a livello di codice
   È possibile eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in base alle necessità o a orari predeterminati utilizzando i metodi descritti in [Esecuzione di pacchetti](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Tuttavia, con poche righe di codice, è anche possibile eseguire un pacchetto da un'applicazione personalizzata, ad esempio un'applicazione Windows Form, un'applicazione console, un Web Form o un servizio Web ASP.NET oppure un servizio Windows.  
@@ -63,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  Avviare l'ambiente di sviluppo di Visual Studio e creare una nuova applicazione nel linguaggio di sviluppo preferito. In questo esempio viene utilizzata un'applicazione console. Tuttavia, è anche possibile eseguire un pacchetto da un'applicazione Windows Form, da un Web Form o servizio Web ASP.NET oppure da un servizio Windows.  
   
-2.  Scegliere **Aggiungi riferimento** dal menu **Progetto**, quindi aggiungere un riferimento a **Microsoft.SqlServer.ManagedDTS.dll**. Scegliere **OK**.  
+2.  Scegliere **Aggiungi riferimento** dal menu **Progetto**, quindi aggiungere un riferimento a **Microsoft.SqlServer.ManagedDTS.dll**. Fare clic su **OK**.  
   
 3.  Usare l'istruzione **Imports** di Visual Basic o l'istruzione C# **using** per importare lo spazio dei nomi **Microsoft.SqlServer.Dts.Runtime**.  
   

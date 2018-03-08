@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 8c9c9e933c57a17e8b64846e25d6e9fe80f8f61d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ed3dbf6b45af894f4f2f841d7c8b3496a332028f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurare e visualizzare SharePoint e la registrazione diagnostica
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] operazioni del server, gli eventi e messaggi vengono registrati in file di log di SharePoint. Usare le informazioni in questo argomento per configurare i livelli di registrazione e visualizzare le informazioni sui file di log. È possibile controllare quali eventi server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] vengono registrati nel file. È inoltre possibile controllare la gravità di messaggi registrati. Per altre informazioni, vedere [Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] vengono registrati in file di log di SharePoint. Usare le informazioni in questo argomento per configurare i livelli di registrazione e visualizzare le informazioni sui file di log. È possibile controllare quali eventi server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] vengono registrati nel file. È inoltre possibile controllare la gravità di messaggi registrati. Per altre informazioni, vedere [Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  Contenuto dell'argomento:  
   
@@ -128,10 +126,10 @@ ms.lasthandoff: 12/08/2017
 |Process|Area|Category|Level|Message|Dettagli|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Utilizzo|Dettagliato|Non sono disponibili statistiche sulle richieste, nulla da registrare.|A intervalli predefiniti, il servizio riporta le statistiche sulle risposte alle query come evento di utilizzo nel sistema di raccolta dei dati di utilizzo. Questo messaggio indica che non ci sono statistiche sulle query da riportare.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Front-end Web|Verbose|Iniziare a individuare un server di applicazioni per l'origine dati =\<*percorso*>|Quando riceve una richiesta di connessione, il servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponibile per gestire la richiesta. Se è presente un solo server nella farm, il server locale accetta la richiesta in tutti i casi.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Front-end Web|Dettagliato|Iniziare a individuare un server di applicazioni per l'origine dati =\<*percorso*>|Quando riceve una richiesta di connessione, il servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponibile per gestire la richiesta. Se è presente un solo server nella farm, il server locale accetta la richiesta in tutti i casi.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Front-end Web|Dettagliato|Individuazione del server applicazioni riuscita.|La richiesta è stata allocata a un'applicazione di servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Front-end Web|Verbose|Reindirizzamento della richiesta per il \< *origine dati PowerPivot*> per il [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|La richiesta è stata inoltrata a [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Elaborazione delle richieste|Verbose|Reindirizzamento della richiesta per nomeutente\<*utente di SharePoint*> al database|Una connessione rappresentata all'origine dati [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] è stata creata per conto dell'utente SharePoint.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Front-end Web|Dettagliato|Reindirizzamento della richiesta per il \< *origine dati PowerPivot*> per il [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|La richiesta è stata inoltrata a [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Elaborazione delle richieste|Dettagliato|Reindirizzamento della richiesta per nomeutente\<*utente di SharePoint*> al database|Una connessione rappresentata all'origine dati [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] è stata creata per conto dell'utente SharePoint.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta dati di utilizzo di PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   

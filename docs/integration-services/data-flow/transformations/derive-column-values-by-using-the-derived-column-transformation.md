@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c48aea11f3e1c72f134fdd5dad856d8d7a827ec4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80c5df3dec8351c6ab47e596081a5c4f8f7fd3fb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivazione di valori di colonna tramite la trasformazione Colonna derivata
   È possibile aggiungere e configurare una trasformazione Colonna derivata solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
 10. Per configurare l'output degli errori, fare clic su **Configura output errori**. Per altre informazioni, vedere [Debug di un flusso di dati](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
-11. Scegliere **OK**.  
+11. Fare clic su **OK**.  
   
 12. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   

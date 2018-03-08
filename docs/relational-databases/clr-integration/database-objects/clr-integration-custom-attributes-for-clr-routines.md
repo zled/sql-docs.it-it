@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +24,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], attributes
 - SqlUserDefinedTypeAttribute attribute
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
-caps.latest.revision: "82"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d1ddfeafa4d4b678a9fb20bb597e9fd041bb201
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6df69b1b413ca79e2ee6c9bb1de7c9d3e9ff1213
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>Attributi personalizzati di integrazione CLR per le routine CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gli attributi elencati possono essere applicati per le routine di common language runtime (CLR), tipi definiti dall'utente e aggregazioni definite dall'utente che sono registrate in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se l'attributo non viene applicato, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assume il valore predefinito. Gli attributi elencati vengono definiti nel **Microsoft.SqlServer.Server** dello spazio dei nomi.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Gli attributi elencati possono essere applicati per le routine di common language runtime (CLR), tipi definiti dall'utente e aggregazioni definite dall'utente che sono registrate in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se l'attributo non viene applicato, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assume il valore predefinito. Gli attributi elencati vengono definiti nel **Microsoft.SqlServer.Server** dello spazio dei nomi.  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>Attributo SqlUserDefinedAggregate  
  Il **SqlUserDefinedAggregate** attributo indica che il metodo deve essere registrato come una funzione di aggregazione definita dall'utente. Ogni aggregazione definita dall'utente deve essere annotata con questo attributo.  

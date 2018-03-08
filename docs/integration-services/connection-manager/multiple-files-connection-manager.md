@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d0287dd164b06ac94cadf264c35be1d2708e26d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5ff3fcef1362333dc1ac2de5774d63ce025b8557
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multiple-files-connection-manager"></a>gestione connessione per più file
   Una gestione connessione per più file consente a un pacchetto di fare riferimento a file e cartelle esistenti o di creare file e cartelle in fase di esecuzione.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
   
  Nella tabella seguente vengono elencati i possibili valori di **FileUsageType**.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0**|La gestione connessione per più file utilizza un file esistente.|  
 |**1**|La gestione connessione per più file crea un file.|  
@@ -65,12 +66,12 @@ ms.lasthandoff: 11/20/2017
   
  \<*percorso*>|\<*percorso*>  
   
- Per specificare più file o cartelle è inoltre possibile utilizzare caratteri jolly. Per fare riferimento, ad esempio, a tutti i file di testo sull'unità C è possibile impostare il valore della proprietà **ConnectionString** su C:\\*.txt.  
+ Per specificare più file o cartelle è inoltre possibile utilizzare caratteri jolly. Per fare riferimento, ad esempio, a tutti i file di testo sull'unità C è possibile impostare il valore della proprietà **ConnectionString** su C:\\\*.txt.  
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
  Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione file](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md).  
   
- Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
   

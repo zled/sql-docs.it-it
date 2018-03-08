@@ -8,22 +8,25 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: f8f670c4eb380a5fb4a43d547133c64d616e1b54
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: e538fc7315661cf76dc807cb54cbd0d518cb8603
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installare SQL Server con SysPrep
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le azioni di installazione correlate a SysPrep sono accessibili tramite Centro installazione. Nella pagina **Avanzate** di **Centro installazione** sono disponibili due opzioni: **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Completamento immagine di un'istanza autonoma predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Nelle sezioni di [preparazione](#prepare) e [completamento](#complete) viene descritto in modo dettagliato il processo di installazione. Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
 È possibile inoltre preparare e completare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il prompt dei comandi o un file di configurazione. Per altre informazioni, vedere:  
@@ -32,8 +35,8 @@ ms.lasthandoff: 11/20/2017
   
 - [Installare SQL Server tramite un file di configurazione](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>Prerequisiti  
-Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rivedere gli argomenti in [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
+## <a name="prerequisites"></a>Prerequisites  
+Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rivedere gli articoli in [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
   
 Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sui requisiti hardware e software, vedere [Requisiti hardware e software per l'installazione di SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
     
@@ -54,7 +57,7 @@ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/s
   
 3. Creare il cluster di failover di Windows. 
   
-4. Eseguire setup.exe con **/ACTION=PrepareFailoverCluster** su tutti i nodi. Esempio:  
+4. Eseguire setup.exe con **/ACTION=PrepareFailoverCluster** su tutti i nodi. Ad esempio  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -173,7 +176,7 @@ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/s
   
      **Istanze installate** : nella griglia vengono visualizzate le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguito il programma di installazione. 
   
-10. Il flusso di lavoro relativo alla restante parte di questo argomento dipende dalle funzionalità selezionate durante il passaggio relativo alla preparazione. Le pagine visualizzate dipendono dalle selezioni effettuate. 
+10. Il flusso di lavoro relativo alla parte restante di questo articolo dipende dalle funzionalità selezionate durante il passaggio relativo alla preparazione. Le pagine visualizzate dipendono dalle selezioni effettuate. 
   
 11. Nella pagina **Configurazione server** - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione. 
   
@@ -181,7 +184,7 @@ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/s
   
      Per specificare lo stesso account di accesso per tutti gli account del servizio in questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], immettere le credenziali nei campi visualizzati nella parte inferiore della pagina. 
   
-     **Nota sulla protezione** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Nota sulla sicurezza** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      Dopo aver specificato le informazioni di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Avanti**. 
   
@@ -246,7 +249,7 @@ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/s
   
 9. Nella pagina **Regole di preparazione immagine** Controllo configurazione sistema consente di eseguire le regole di preparazione immagine per convalidare la configurazione del computer rispetto alle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarlo come report HTML. 
   
-10. Nella pagina **Inizio preparazione immagine** viene illustrata una visualizzazione albero delle opzioni di installazione specificate durante l'installazione. Per continuare, fare clic su **Installa**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione consentirà innanzitutto di installare i prerequisiti obbligatori per le funzionalità selezionate e, successivamente, le funzionalità stesse. 
+10. Nella pagina **Inizio preparazione immagine** viene illustrata una visualizzazione albero delle opzioni di installazione specificate durante l'installazione. Per continuare, fare clic su **Installa**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno innanzitutto installati i prerequisiti obbligatori per le funzionalità selezionate e, successivamente, le funzionalità stesse. 
   
 11. Durante l'installazione, nella pagina **Avanzamento preparazione immagine** è possibile monitorare lo stato di avanzamento del processo. 
   
@@ -301,7 +304,7 @@ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/s
 10. Ripetere i passaggi da 1 a 9 fino a rimuovere tutti i componenti di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . 
   
 ##  <a name="bk_Modifying_Uninstalling"></a> Modifica o disinstallazione di un'istanza completata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
- Il processo per l'aggiunta o la rimozione di funzionalità o per la disinstallazione di un'istanza completata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è simile al processo per un'istanza installata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere gli argomenti seguenti:  
+ Il processo per l'aggiunta o la rimozione di funzionalità o per la disinstallazione di un'istanza completata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è simile al processo per un'istanza installata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere gli articoli seguenti:  
   
 - [Aggiungere funzionalità a un'istanza di SQL Server &#40;programma di installazione&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   

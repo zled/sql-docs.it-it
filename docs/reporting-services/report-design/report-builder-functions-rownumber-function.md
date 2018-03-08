@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33f3b559c924f6a5cb9751ad938a01f495172701
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6edb97aaf3da5499568c4893c02cfd208d556696
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---rownumber-function"></a>Funzioni di Generatore report - Funzione RowNumber
   Restituisce il conteggio parziale del numero di righe per l'ambito specificato.  
@@ -42,7 +40,7 @@ RowNumber(scope)
  *ambito*  
  (**String**) Nome di un set di dati, area dati o gruppo oppure valore Null (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) che specifica il contesto in cui valutare il numero di righe. Tramite**Nothing** viene specificato il contesto più esterno, generalmente il set di dati del report.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  **RowNumber** restituisce il valore corrente del conteggio di righe all'interno dell'ambito specificato, così come [RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md) restituisce il valore corrente di una funzione di aggregazione. Durante la definizione di un ambito, si specifica quando reimpostare il conteggio delle righe su 1.  
   
  *scope* non può essere un'espressione. Il parametro*scope* deve essere un ambito contenitore. I tipici ambiti, dal contenuto più esterno fino al più interno, sono set di dati di report, aree dati, gruppi di righe o di colonne.  

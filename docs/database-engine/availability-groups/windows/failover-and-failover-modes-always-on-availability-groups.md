@@ -20,13 +20,13 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: "75"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d521b60320fc490d2ba7e824e85bb2eabe1e9bb3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e688f4c428df93491b2f6e449022a447504b5e3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modalità di failover (gruppi di disponibilità AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,8 +87,8 @@ ms.lasthandoff: 11/20/2017
   
 ||Modalità commit asincrono|Modalità commit sincrono con modalità di failover manuale|Modalità commit sincrono con modalità di failover automatico|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|Failover automatico|No|No|Sì|  
-|Failover manuale pianificato|No|Sì|Sì|  
+|Failover automatico|no|no|Sì|  
+|Failover manuale pianificato|no|Sì|Sì|  
 |failover forzato|Sì|Sì|Sì**\***|  
   
  **\***Se si esegue un comando di failover forzato su una replica secondaria sincronizzata, la replica secondaria si comporta come con un failover manuale.  
@@ -264,9 +264,9 @@ ms.lasthandoff: 11/20/2017
   
 |Modalità di disponibilità della replica secondaria|Il database è sincronizzato?|È possibile che si verifichi una perdita dei dati?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchronous-commit|Sì|No|  
-|Synchronous-commit|No|Sì|  
-|Asynchronous-commit|No|Sì|  
+|Synchronous-commit|Sì|no|  
+|Synchronous-commit|no|Sì|  
+|Asynchronous-commit|no|Sì|  
   
  I database secondari registrano solo due fork di recupero, pertanto se si eseguono più failover forzati, qualsiasi database secondario che abbia dato inizio alla sincronizzazione dati con il failover forzato precedente non potrà essere ripreso. In questo caso, i database secondari che non possono essere ripresi dovranno essere rimossi dal gruppo di disponibilità, ripristinati fino al momento corretto e nuovamente aggiunti al gruppo di disponibilità. Un ripristino non funziona tra più fork di recupero, pertanto, assicurarsi di eseguire un backup del log dopo avere eseguito più failover forzati.  
   

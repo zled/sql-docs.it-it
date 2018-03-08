@@ -32,7 +32,7 @@
 ### [Aggiungere colonne a una tabella](add-columns-to-a-table-ssas-tabular.md)  
 ### [Eliminare una colonna](delete-a-column-ssas-tabular.md)  
 ### [Modificare i mapping di filtri tabella, colonna o riga](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
-### [Specificare Contrassegna come tabella data per l'uso con funzionalità di Business Intelligence per le gerarchie temporali (SSAS tabulare)](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)  
+### [Specificare Contrassegna come tabella data per l'uso con funzionalità di Business Intelligence per le gerarchie temporali](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)  
 ### [Aggiungere una tabella](add-a-table-ssas-tabular.md)  
 ### [Eliminare una tabella](delete-a-table-ssas-tabular.md)  
 ### [Creare una tabella calcolata](create-a-calculated-table-ssas-tabular.md)  

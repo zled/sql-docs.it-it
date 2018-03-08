@@ -20,13 +20,13 @@ ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f95b84f259ba5abf6f74574e315c767aa1acbc9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b05916edacd132c1e151b77f3be7935a369fe85a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>Pagina Risultati (procedure guidate gruppi di disponibilità Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,19 +39,19 @@ ms.lasthandoff: 11/20/2017
  **Nome**  
  Visualizza una frase che descrive un'operazione specifica.  
   
- **Risultato**  
+ **Result**  
  Per ogni passaggio completato, viene visualizzato uno dei seguenti testi di collegamenti ipertestuali.  
   
-|Risultato|Descrizione|  
+|Risultato|Description|  
 |------------|-----------------|  
 |**Errore**|Indica che il passaggio di convalida non è riuscito. Fare clic sul collegamento per visualizzare il messaggio di errore.|  
-|**Operazione completata**|Indica che il passaggio di convalida è riuscito.|  
+|**Esito positivo**|Indica che il passaggio di convalida è riuscito.|  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Usare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Utilizzare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [Usare la procedura guidata Aggiungi database a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   

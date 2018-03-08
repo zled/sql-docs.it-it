@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENQUERY_TSQL
 - OPENQUERY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DELETE statement [SQL Server], OPENQUERY function
 - OPENQUERY function
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - pass-through queries [SQL Server]
 - INSERT statement [SQL Server], OPENQUERY function
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 66c1c5dc3f116cc88b8e61111f626361a1a601b6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 5b302ea6346c33431d87e1923156253411170ea5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,15 +59,15 @@ OPENQUERY ( linked_server ,'query' )
 ## <a name="remarks"></a>Osservazioni  
  La funzione OPENQUERY non accetta variabili come argomenti.  
   
- OPENQUERY non può essere utilizzata per eseguire stored procedure estese in un server collegato. È tuttavia possibile eseguire una stored procedure estesa in un server collegato utilizzando un nome in quattro parti, Esempio:  
+ OPENQUERY non può essere utilizzata per eseguire stored procedure estese in un server collegato. È tuttavia possibile eseguire una stored procedure estesa in un server collegato utilizzando un nome in quattro parti, Ad esempio  
   
-```t-sql  
+```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
 ```  
   
  Qualsiasi chiamata a OPENDATASOURCE, OPENQUERY o OPENROWSET nella clausola FROM viene valutata separatamente e indipendentemente da qualsiasi altra chiamata a queste funzioni utilizzate come destinazione dell'aggiornamento, anche se alle due chiamate vengono forniti argomenti identici. In particolare, le condizioni di filtro o join applicate al risultato di una di tali chiamate non hanno effetto sui risultati dell'altra.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può eseguire OPENQUERY. Le autorizzazioni utilizzate per la connessione al server remoto sono ottenute dalle impostazioni definite per il server collegato.  
   
 ## <a name="examples"></a>Esempi  
@@ -73,7 +75,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ### <a name="a-executing-an-update-pass-through-query"></a>A. Esecuzione di una query pass-through UPDATE  
  Nell'esempio seguente viene eseguita una query pass-through `UPDATE` sul server collegato creato nell'esempio A.  
   
-```t-sql  
+```sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
 SET name = 'ADifferentName';  
 ```  
@@ -81,7 +83,7 @@ SET name = 'ADifferentName';
 ### <a name="b-executing-an-insert-pass-through-query"></a>B. Esecuzione di una query pass-through INSERT  
  Nell'esempio seguente viene eseguita una query pass-through `INSERT` sul server collegato creato nell'esempio A.  
   
-```t-sql  
+```sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
 VALUES ('NewTitle');  
 ```  
@@ -89,14 +91,14 @@ VALUES ('NewTitle');
 ### <a name="c-executing-a-delete-pass-through-query"></a>C. Esecuzione di una query pass-through DELETE  
  Nell'esempio seguente viene eseguita una query pass-through `DELETE` per eliminare la riga inserita nell'esempio C.  
   
-```t-sql  
+```sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. Esecuzione di una query pass-through SELECT  
  L'esempio seguente usa pass-through `SELECT` query per selezionare la riga inserita nell'esempio C.  
   
-```t-sql  
+```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     

@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +18,20 @@ helpviewer_keywords:
 - classification algorithms [Analysis Services]
 - naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ec33ea83457850aed338c46534ca3cb85d53c61
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0ac78f4108cfde4efa5de2e04be3a7e2e9c7a2ff
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algoritmo Microsoft Naive Bayes
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Naive Bayes è un algoritmo di classificazione basato su teoremi di Bayes e può essere utilizzato per la modellazione predittiva sia esplorativo. La parola naive nel nome Naive Bayes deriva dal fatto che nell'algoritmo vengono utilizzate tecniche di Bayes, ma non vengono considerate le dipendenze eventualmente presenti.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes è un algoritmo di classificazione basato su teoremi di Bayes e può essere usato sia per la modellazione predittiva che per quella esplorativa. La parola naive nel nome Naive Bayes deriva dal fatto che nell'algoritmo vengono utilizzate tecniche di Bayes, ma non vengono considerate le dipendenze eventualmente presenti.  
   
  Questo algoritmo include funzionalità di calcolo più semplici di quelle di altri algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] ed è utile pertanto per generare rapidamente i modelli di data mining al fine di individuare le relazioni tra colonne di input e colonne stimabili. È possibile utilizzare questo algoritmo per eseguire l'esplorazione iniziale dei dati e applicare successivamente i risultati ottenuti per creare modelli di data mining aggiuntivi con altri algoritmi dotati di funzionalità di calcolo più avanzate e accurate.  
   
@@ -98,10 +97,10 @@ ms.lasthandoff: 12/08/2017
 -   Supporta l'utilizzo di modelli di data mining OLAP.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di Data Mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Selezione funzionalità &#40; Data Mining &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
  [Esempi di Query modello Naive Bayes](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
  [Contenuto del modello di data mining per i modelli Naive Bayes &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
- [Riferimento tecnico per l'algoritmo Microsoft Naive Bayes](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
+ [Riferimento tecnico di Microsoft Naive Bayes algoritmo](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

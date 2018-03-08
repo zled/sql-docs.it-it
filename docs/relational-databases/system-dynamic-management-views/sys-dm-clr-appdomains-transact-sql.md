@@ -1,5 +1,5 @@
 ---
-title: Sys.dm clr_appdomains (Transact-SQL) | Documenti Microsoft
+title: sys.dm_clr_appdomains (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_appdomains
 - dm_clr_appdomains_TSQL
 - sys.dm_clr_appdomains_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_appdomains dynamic management dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 16f729bc78a42984716d2f30fc2bf30badc1ade5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +44,17 @@ ms.lasthandoff: 11/27/2017
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary (8)**|Indirizzo del **AppDomain**. Database gestito tutti gli oggetti appartenenti a un utente vengono sempre caricati nello stesso **AppDomain**. È possibile utilizzare questa colonna per cercare tutti gli assembly attualmente caricati in questo **AppDomain** in **Sys.dm clr_loaded_assemblies**.|  
+|**appdomain_address**|**varbinary(8)**|Indirizzo del **AppDomain**. Database gestito tutti gli oggetti appartenenti a un utente vengono sempre caricati nello stesso **AppDomain**. È possibile utilizzare questa colonna per cercare tutti gli assembly attualmente caricati in questo **AppDomain** in **Sys.dm clr_loaded_assemblies**.|  
 |**appdomain_id**|**int**|ID di **AppDomain**. Ogni **AppDomain** ha un ID univoco.|  
 |**appdomain_name**|**varchar(386)**|Nome di **AppDomain** assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**creation_time**|**datetime**|Ora in cui il **AppDomain** è stato creato. Poiché **AppDomain** vengono memorizzati nella cache e riutilizzati per migliorare le prestazioni, **creation_time** non è necessariamente l'esecuzione quando il codice.|  
-|**DB_ID**|**int**|ID del database in cui il **AppDomain** è stato creato. Codice archiviato in due database diversi non può condividere un **AppDomain**.|  
-|**USER_ID**|**int**|ID dell'utente i cui oggetti possono essere eseguiti in questa **AppDomain**.|  
-|**stato**|**nvarchar (128)**|Un descrittore per lo stato corrente del **AppDomain**. Un AppDomain può trovarsi in stati diversi dalla creazione all'eliminazione. Per ulteriori informazioni, vedere la sezione Osservazioni di questo argomento.|  
+|**db_id**|**int**|ID del database in cui il **AppDomain** è stato creato. Codice archiviato in due database diversi non può condividere un **AppDomain**.|  
+|**user_id**|**int**|ID dell'utente i cui oggetti possono essere eseguiti in questa **AppDomain**.|  
+|**state**|**nvarchar(128)**|Un descrittore per lo stato corrente del **AppDomain**. Un AppDomain può trovarsi in stati diversi dalla creazione all'eliminazione. Per ulteriori informazioni, vedere la sezione Osservazioni di questo argomento.|  
 |**strong_refcount**|**int**|Numero di riferimenti forti al **AppDomain**. Ciò riflette il numero di batch in esecuzione che utilizzano questo **AppDomain**. Si noti che l'esecuzione di questa vista verrà creato un **strong refcount**; anche se nessun codice attualmente in esecuzione, **strong_refcount** avrà un valore pari a 1.|  
 |**weak_refcount**|**int**|Numero di riferimenti deboli al **AppDomain**. Indica il numero di oggetti di **AppDomain** vengono memorizzati nella cache. Quando si esegue un oggetto di database gestito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memorizza nella cache all'interno di **AppDomain** per il riutilizzo futuro. Ciò migliora le prestazioni.|  
-|**costo**|**int**|Costo del **AppDomain**. Maggiore è il costo, più è probabile che questo **AppDomain** debba essere scaricato eccessivo della memoria. Costo dipende in genere la quantità di memoria è necessario ricreare questo **AppDomain**.|  
-|**valore**|**int**|Valore di **AppDomain**. Minore è il valore, più è probabile che questo **AppDomain** debba essere scaricato eccessivo della memoria. Valore dipende in genere che utilizzano il numero di connessioni o batch **AppDomain**.|  
+|**cost**|**int**|Costo del **AppDomain**. Maggiore è il costo, più è probabile che questo **AppDomain** debba essere scaricato eccessivo della memoria. Costo dipende in genere la quantità di memoria è necessario ricreare questo **AppDomain**.|  
+|**Valore**|**int**|Valore di **AppDomain**. Minore è il valore, più è probabile che questo **AppDomain** debba essere scaricato eccessivo della memoria. Valore dipende in genere che utilizzano il numero di connessioni o batch **AppDomain**.|  
 |**total_processor_time_ms**|**bigint**|Tempo totale del processore, in millisecondi, utilizzato da tutti i thread durante l'esecuzione nel dominio dell'applicazione corrente dall'avvio del processo. Ciò equivale a **System.AppDomain.MonitoringTotalProcessorTime**.|  
 |**total_allocated_memory_kb**|**bigint**|Dimensioni totali, in kilobyte, di tutte le allocazioni di memoria eseguite dal dominio dell'applicazione dalla sua creazione, senza sottrarre la memoria raccolta. Ciò equivale a **System.AppDomain.MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Numero di kilobyte rimanenti dall'ultima raccolta di blocco completa e a cui fa riferimento il dominio dell'applicazione corrente. Ciò equivale a **System.AppDomain.MonitoringSurvivedMemorySize**.|  
@@ -79,13 +82,13 @@ ms.lasthandoff: 11/27/2017
   
 |State|Description|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ha richiesto che CLR scarichi il **AppDomain**, in genere perché l'assembly che contiene gli oggetti di database gestiti è stato modificato o eliminato.|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha richiesto che CLR scarichi il **AppDomain**, in genere perché l'assembly che contiene gli oggetti di database gestiti è stato modificato o eliminato.|  
 |E_APPDOMAIN_UNLOADED|Il CLR ha scaricato la **AppDomain**. Si tratta in genere il risultato di una procedura di escalation a causa di **ThreadAbort**, **OutOfMemory**, o un'eccezione non gestita nel codice utente.|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|Il **AppDomain** è stato scaricato in CLR e impostato per l'eliminazione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |E_APPDOMAIN_DESTROY|Il **AppDomain** è in corso l'eliminazione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |E_APPDOMAIN_ZOMBIE|Il **AppDomain** è stato eliminato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; tuttavia, non tutti i riferimenti di **AppDomain** sono stati puliti.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE nel database.  
   
 ## <a name="examples"></a>Esempi  
@@ -114,7 +117,7 @@ where appdomain_id = 15);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys.dm clr_loaded_assemblies &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
+ [sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Common Language Runtime relative viste a gestione dinamica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

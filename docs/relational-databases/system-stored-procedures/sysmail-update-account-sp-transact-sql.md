@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_account_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_update_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/17/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_account_sp
 - sysmail_update_account_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_update_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_update_account_sp
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 312d700fce5cc48950b531a2a524bfee0d56aa8e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4be8c0c87771f89d92cc0344c207149467c4554c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +59,16 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  ID dell'account da aggiornare. *account_id* è **int**, con un valore predefinito è NULL. Almeno uno dei *account_id* o *account_name* deve essere specificato. Se si specificano entrambi, la stored procedure modifica il nome dell'account.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  Nome dell'account da aggiornare. *account_name* è **sysname**, con un valore predefinito è NULL. Almeno uno dei *account_id* o *account_name* deve essere specificato. Se si specificano entrambi, la stored procedure modifica il nome dell'account.  
   
  [  **@email_address**  =] **'***email_address***'**  
  Nuovo indirizzo di posta elettronica da cui inviare il messaggio. Deve essere un indirizzo di posta elettronica Internet. Il nome del server nell'indirizzo è il server utilizzato da Posta elettronica database per l'invio di posta da questo account. *email_address* è **nvarchar (128)**, con un valore predefinito è NULL.  
   
- [  **@display_name**  =] **'***display_name***'**  
+ [ **@display_name** = ] **'***display_name***'**  
  Nuovo nome visualizzato da utilizzare nei messaggi di posta elettronica provenienti da questo account. *nome_visualizzato* è **nvarchar (128)**, non prevede alcun valore predefinito.  
   
  [  **@replyto_address**  =] **'***replyto_address***'**  
@@ -74,7 +77,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [  **@description**  =] **'***descrizione***'**  
  Nuova descrizione dell'account. *Descrizione* è **nvarchar (256)**, con un valore predefinito è NULL.  
   
- [  **@mailserver_name**  =] **'***nome_server***'**  
+ [ **@mailserver_name** = ] **'***server_name***'**  
  Nome del nuovo server di posta elettronica SMTP da utilizzare per l'account. Il computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere in grado di risolvere il *nome_server* in un indirizzo IP. *nome_server* è **sysname**, non prevede alcun valore predefinito.  
   
  [  **@mailserver_type**  =] **'***server_type***'**  
@@ -95,7 +98,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [  **@use_default_credentials**  =] use_default_credentials  
  Specifica se inviare la posta elettronica al server SMTP utilizzando le credenziali del servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** è di tipo bit e non prevede alcun valore predefinito. Se questo parametro è 1, Posta elettronica database utilizza le credenziali di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando questo parametro è 0, posta elettronica Database utilizza il  **@username**  e  **@password**  per l'autenticazione sul server SMTP. Se  **@username**  e  **@password**  sono NULL, utilizzata l'autenticazione anonima. Prima di specificare questo parametro consultare l'amministratore del server SMTP.  
   
- [  **@enable_ssl**  =] enable_ssl  
+ [ **@enable_ssl** = ] enable_ssl  
  Specifica l'utilizzo della crittografia mediante SSL (Secure Sockets Layer) da parte di Posta elettronica database. Utilizzare questa opzione se SSL è obbligatorio per il server SMTP. **enable_ssl** è di tipo bit e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -106,7 +109,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
  La stored procedure **sysmail_update_account_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0dcc596e8b7fbac6338e3e619d3ebcf48194f25
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7ba9d82630fb03efbc0b0ce199082ce57d05e0ae
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-domain"></a>Creazione di un dominio
   In questo argomento viene descritto come creare un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). I valori nel dominio sono una rappresentazione semantica dei dati in un campo. Per altre informazioni sui domini, vedere [Gestione di un dominio](../data-quality-services/managing-a-domain.md).  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per creare un dominio, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Discovery"></a> Creare un dominio nell'attività di individuazione delle informazioni  
@@ -90,9 +90,9 @@ ms.lasthandoff: 11/20/2017
   
 8.  Se il tipo di dati è **Stringa**, selezionare **Disabilita algoritmi di errore sintassi** per popolare il dominio senza verificare la presenza di errori di sintassi nei valori stringa.  
   
-9. Scegliere **OK**.  
+9. Fare clic su **OK**.  
   
-10. Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+10. Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Completamento: fasi successive alla creazione di un dominio  
  Dopo avere creato un dominio, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  

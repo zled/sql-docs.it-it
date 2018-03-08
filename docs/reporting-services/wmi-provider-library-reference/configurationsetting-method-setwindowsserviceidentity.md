@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: SetWindowsServiceIdentity method
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1546b0dda5a6f72c3d34ff7d5c450394e0794e00
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c7c0887b3049f935b5a8cab7649acb7ce8a9f000
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>Metodo di ConfigurationSetting - SetWindowsServiceIdentity
   Consente l'esecuzione del servizio Windows ReportServer in base a un utente di Windows specificato e concede a tale account autorizzazioni per il file system sufficienti, in modo da consentire il funzionamento del server di report.  
@@ -60,7 +58,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando il parametro *UseBuiltInAccount* è impostato su **true** e il server di report è in esecuzione in Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] o Windows XP, il valore dei parametri *Nome*, *Dominio*e *Password* vengono ignorati e si usa l'account di sistema locale.  
   
  Quando il parametro *UseBuiltInAccount* è impostato su **true** e il server di report è in esecuzione in Windows Server 2003, le proprietà *Dominio* e *Password* vengono ignorate e il campo del nome deve contenere "Builtin\NetworkService", "Builtin\System" o "Builtin\LocalService".  

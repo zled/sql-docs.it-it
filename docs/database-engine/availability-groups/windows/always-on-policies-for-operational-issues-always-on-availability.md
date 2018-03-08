@@ -18,20 +18,20 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbbfe6e6d06a71e54b93e90cf42c121fdaab7927
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b92e1a679cfa738620e8e46195b2df14e8ee03ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>Criteri Always On per problemi operativi con gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Il modello di integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] consente di valutare un set di criteri di gestione basata su criteri (PBM, Policy Based Management) predefiniti. Questi criteri possono essere utilizzati per la visualizzazione dell'integrità di un gruppo di disponibilità, nonché delle repliche e dei database di disponibilità relativi in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- **Contenuto dell'argomento:**  
+ **Contenuto dell'argomento**  
   
 -   [Termini e definizioni](#TermsAndDefinitions)  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
  database di disponibilità  
  Database che appartiene a un gruppo di disponibilità. Per ogni database di disponibilità, il gruppo di disponibilità gestisce una sola copia di lettura e scrittura (il *database primario*) e da una a quattro copie di sola lettura (*database secondari*).  
   
- Dashboard Always On  
+ Dashboard AlwaysOn  
  Un dashboard [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] fornisce una vista immediata dell'integrità di un gruppo di disponibilità. Per altre informazioni, vedere [Dashboard Always On](#Dashboard)di seguito in questo argomento.  
   
 ##  <a name="Always OnPBM"></a> Criteri predefiniti e problemi  
@@ -80,9 +80,9 @@ ms.lasthandoff: 11/20/2017
 |Stato di connessione della replica di disponibilità|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Critico|replica di disponibilità|  
 |Stato di join della replica di disponibilità|[La replica di disponibilità non è unita in join](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|Avviso|replica di disponibilità|  
 |Stato di sincronizzazione dei dati delle repliche di disponibilità|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Avviso|replica di disponibilità|  
-|Stato di sospensione del database di disponibilità|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md).|Avviso|database di disponibilità|  
-|Stato di join del database di disponibilità|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Avviso|database di disponibilità|  
-|Stato di sincronizzazione dei dati del database di disponibilità|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Avviso|database di disponibilità|  
+|Stato di sospensione del database di disponibilità|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md).|Avviso|Database di disponibilità|  
+|Stato di join del database di disponibilità|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Avviso|Database di disponibilità|  
+|Stato di sincronizzazione dei dati del database di disponibilità|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Avviso|Database di disponibilità|  
   
 > [!IMPORTANT]  
 >  **\*** Per i criteri Always On, i nomi delle categorie vengono usati come ID. La modifica del nome di una categoria Always On causa l'interruzione della funzionalità di valutazione dell'integrità. Evitare quindi di modificare i nomi di categorie Always On.  
@@ -129,11 +129,11 @@ ms.lasthandoff: 11/20/2017
   
 -   [The Always On Health Model Part 2 -- Extending the Health Model](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx)  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni Always On di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Amministrazione di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   

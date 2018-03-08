@@ -1,37 +1,35 @@
 ---
-title: DAX nei modelli tabulari (SSAS tabulare) | Documenti Microsoft
+title: DAX nei modelli tabulari | Documenti Microsoft
 ms.custom: 
 ms.date: 10/21/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e44414be7517bbecf0411753bdd55337cc9e0d39
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-in-tabular-models-ssas-tabular"></a>DAX nei modelli tabulari (SSAS tabulare)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Data Analysis Expressions (DAX) è un linguaggio delle formule utilizzato per creare calcoli personalizzati in Analysis Services, Power BI Desktop e Power Pivot in Excel. Le formule DAX includono funzioni, operatori e valori che consentono di eseguire calcoli avanzati sui dati in tabelle e colonne.  
+# <a name="dax-in-tabular-models"></a>DAX nei modelli tabulari 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Data Analysis Expressions (DAX) è un linguaggio delle formule utilizzato per creare calcoli personalizzati in Analysis Services, Power BI Desktop e Power Pivot in Excel. Le formule DAX includono funzioni, operatori e valori che consentono di eseguire calcoli avanzati sui dati in tabelle e colonne.  
   
  Mentre DAX viene utilizzato in Analysis Services, Power BI Desktop e Power Pivot in Excel, in questo argomento si applica più ai progetti di modello tabulare di Analysis Services creati in SQL Server Data Tools (SSDT).  
   
-##  <a name="bkmk_DAX"></a>Formule DAX in colonne calcolate, misure e filtri di riga  
+##  <a name="bkmk_DAX"></a> Formule DAX in colonne calcolate, misure e filtri di riga  
  Per i modelli tabulari creati in SSDT, le formule DAX vengono utilizzate in colonne calcolate, misure e filtri di riga.  
   
 ### <a name="calculated-columns"></a>Colonne calcolate  
@@ -369,7 +367,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  L'elaborazione e il ricalcolo non hanno effetto sulle formule del filtro di riga, a meno che il risultato di un ricalcolo restituisca un valore diverso, rendendo in tal modo possibile o impedendo l'esecuzione di query sulla riga da parte di membri del ruolo.  
   
- Per altre informazioni, vedere [Elaborare dati &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+ Per ulteriori informazioni, vedere [elaborare dati](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_troubleshoot"></a> Risoluzione degli errori nelle formule  
  Se si ottiene un errore quando si definisce una formula, è possibile che la formula contenga un *errore sintattico*, un *errore semantico*o un *errore di calcolo*.  

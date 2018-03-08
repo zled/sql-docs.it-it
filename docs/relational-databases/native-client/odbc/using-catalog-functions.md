@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|ODBC
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - functions [ODBC]
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aff780deb05345a242a34f4da6ed1c4bfe0a10ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77d2f7de5e43df5cfc559b12bb88dcdd4412af6e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-catalog-functions"></a>Utilizzo delle funzioni di catalogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta query distribuite grazie alle quali è possibile accedere con un'unica query ai dati provenienti da più origini dati OLE DB eterogenee. Uno dei metodi di accesso a un'origine dati OLE DB remota consiste nel definire l'origine dati come server collegato. Questa operazione può essere eseguita tramite [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Dopo che è stato definito il server collegato, è possibile fare riferimento agli a oggetti del server nelle istruzioni Transact-SQL utilizzando un nome costituito da quattro parti:  
   
- *linked_server_name*.  
+ *linked_server_name.catalog.schema.object_name*.  
   
  Il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta due funzioni specifiche del driver per il recupero delle informazioni di catalogo dai server collegati:  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
      Restituisce un elenco dei cataloghi presenti in un server collegato.  
   
- Dopo aver creato un server collegato e un nome di catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta il recupero di informazioni dal catalogo utilizzando un nome in due parti di *linked_server_name***.** *catalogo* per *CatalogName* in ODBC seguenti funzioni di catalogo:  
+ Dopo aver creato un server collegato e un nome di catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta il recupero di informazioni dal catalogo utilizzando un nome in due parti di *linked_server_name***.*** catalogo* per *CatalogName* in ODBC seguenti funzioni di catalogo:  
   
 -   **SQLColumnPrivileges**  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **SQLTables**  
   
- Le due parti *linked_server_name***.** *catalogo* è supportata anche per *FKCatalogName* e *PKCatalogName* su [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
+ Le due parti *linked_server_name***.*** catalogo* è supportata anche per *FKCatalogName* e *PKCatalogName* su [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
   
  L'utilizzo di SQLLinkedServers e SQLLinkedCatalogs richiede i file seguenti:  
   

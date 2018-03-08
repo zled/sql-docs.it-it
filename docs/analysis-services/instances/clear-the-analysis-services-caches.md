@@ -5,29 +5,27 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 66d337637c1e8d1798172392f2821a4213497136
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 19055dc68ebd1e9baa2fa1b1330370d01f7d864a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="clear-the-analysis-services-caches"></a>Cancellare le cache di Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services vengono memorizzati nella cache i dati per migliorare le prestazioni delle query. In questo argomento vengono forniti consigli per l'utilizzo del comando XMLA ClearCache con cui cancellare le cache create in risposta a una query MDX. Gli effetti dell'esecuzione di ClearCache variano a seconda che si utilizzi un modello tabulare o multidimensionale.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services consente di memorizzare i dati nella cache per migliorare le prestazioni delle query. In questo argomento vengono forniti consigli per l'utilizzo del comando XMLA ClearCache con cui cancellare le cache create in risposta a una query MDX. Gli effetti dell'esecuzione di ClearCache variano a seconda che si utilizzi un modello tabulare o multidimensionale.  
   
  **Quando cancellare la cache per i modelli multidimensionali**  
   

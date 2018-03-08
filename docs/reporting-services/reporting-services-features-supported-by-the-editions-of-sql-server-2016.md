@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 caps.latest.revision: "3"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 65f5adb42afa0ec3217e5726cb4b53f4547a29fd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ef2e6405ce01442ca8a9709db2f1aa61a4934dc3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Funzionalità di Reporting Services supportate dalle edizioni di SQL Server 2016
 
@@ -49,7 +47,7 @@ Per passare alla tabella per una tecnologia SQL Server, fare clic sul relativo c
 
 ##  <a name="SSRS"></a> Reporting Services  
   
-|Nome funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Sviluppatore|  
+|Nome funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Report e KPI per dispositivi mobili|Sì||||||Sì|  
 |Edizione supportata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per il database del catalogo|Standard o versione successiva|Standard o versione successiva|Web|Express|||Standard o versione successiva|  
@@ -97,7 +95,7 @@ Per passare alla tabella per una tecnologia SQL Server, fare clic sul relativo c
 ##  <a name="BIC"></a> Client di Business Intelligence  
  Le seguenti applicazioni client del software sono disponibili nell'Area download Microsoft e sono disponibili come supporto per la creazione di documenti di Business Intelligence eseguiti in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Quando questi documenti vengono ospitati in un ambiente server, usare un'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supportata per tale tipo di documento. Nella tabella seguente viene indicata l'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contenente le funzionalità del server richieste per ospitare i documenti creati in queste applicazioni client.  
   
-|Nome dello strumento|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Sviluppatore|  
+|Nome dello strumento|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (rdl e rds)|Sì|Sì|||||Sì|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (rsmobile)|Sì||||||Sì|  

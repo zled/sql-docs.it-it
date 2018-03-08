@@ -7,20 +7,21 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f9a7802848f5355b3bab8a45cd5d2f55b861bfe9
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Panoramica dell'architettura per i servizi di Machine Learning con Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo argomento viene fornita una panoramica di come Python è integrato con SQL Server, tra cui il modello di sicurezza, i componenti motore di database che supportano l'esecuzione dello script esterno e nuovi componenti che consentono l'interoperabilità di Python con SQL Server. Per informazioni dettagliate, vedere gli argomenti collegati.
 
@@ -39,7 +40,7 @@ Il framework di estendibilità introdotto in SQL Server 2016 ora supporta l'esec
 
 Per una descrizione dettagliata dei componenti che supportano Python, ad esempio il [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] e PythonLauncher, vedere [nuovi componenti](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md).
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 Le attività di Python vengono eseguite all'esterno del processo di SQL Server, per fornire sicurezza e maggiore facilità di gestione.
 

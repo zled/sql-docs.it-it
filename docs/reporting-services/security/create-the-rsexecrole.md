@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 6d137b42fd99f18c0742d4535762c9cfd36d4b1a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4698782486ccae04b7f2b343beda95edad676568
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-the-rsexecrole"></a>Creare RSExecRole
 
@@ -77,13 +75,13 @@ ms.lasthandoff: 12/05/2017
   
 11. Fare clic su **Cerca**. Verrà visualizzata la finestra di dialogo **Aggiungi oggetti** . L'opzione **Specifica oggetti** è selezionata per impostazione predefinita.  
   
-12. Scegliere **OK**. Verrà visualizzata la finestra di dialogo **Seleziona oggetti** .  
+12. Fare clic su **OK**. Verrà visualizzata la finestra di dialogo **Seleziona oggetti** .  
   
 13. Fare clic su **Tipi di oggetti**.  
   
 14. Fare clic su **Stored procedure estese**.  
   
-15. Scegliere **OK**.  
+15. Fare clic su **OK**.  
   
 16. Fare clic su **Sfoglia**.  
   
@@ -126,13 +124,13 @@ ms.lasthandoff: 12/05/2017
   
 9. Scegliere **Aggiungi**. Verrà visualizzata la finestra di dialogo **Aggiungi oggetti** . L'opzione **Specifica oggetti** è selezionata per impostazione predefinita.  
   
-10. Scegliere **OK**.  
+10. Fare clic su **OK**.  
   
 11. Fare clic su **Tipi di oggetti**.  
   
 12. Fare clic su **Stored procedure**.  
   
-13. Scegliere **OK**.  
+13. Fare clic su **OK**.  
   
 14. Fare clic su **Sfoglia**.  
   
@@ -168,13 +166,13 @@ ms.lasthandoff: 12/05/2017
   
 20. Nella scheda Entità a sicurezza diretta fare clic nuovamente su **Aggiungi** . Verrà visualizzata la finestra di dialogo **Aggiungi oggetti** . L'opzione **Specifica oggetti** è selezionata per impostazione predefinita.  
   
-21. Scegliere **OK**.  
+21. Fare clic su **OK**.  
   
 22. Fare clic su **Tipi di oggetti**.  
   
 23. Fare clic su **Tabelle**.  
   
-24. Scegliere **OK**.  
+24. Fare clic su **OK**.  
   
 25. Fare clic su **Sfoglia**.  
   

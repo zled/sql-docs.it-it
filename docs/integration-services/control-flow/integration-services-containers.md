@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32617273341026d55a6ac63baa99c2a2d02c4a6e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 79759c7f5ec38bb2c729f092248866b87bf9e611
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-containers"></a>Contenitori in Integration Services
   I contenitori sono oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che forniscono la struttura ai pacchetti e i servizi alle attività. Supportano la ripetizione dei flussi di controllo nei pacchetti e consentono di raggruppare attività e contenitori in unità di lavoro significative. Oltre alle attività, i contenitori possono includere anche altri contenitori.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
 |Proprietà|Description|  
 |--------------|-----------------|  
 |**DelayValidation**|Valore booleano che indica se la convalida del contenitore viene posticipata fino alla fase di esecuzione. Il valore predefinito di questa proprietà è **False**.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
-|**Description**|Descrizione del contenitore. La proprietà contiene una stringa, ma può essere vuota.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
+|**Descrizione**|Descrizione del contenitore. La proprietà contiene una stringa, ma può essere vuota.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
 |**Disable**|Valore booleano che indica se il contenitore verrà eseguito. Il valore predefinito di questa proprietà è **False**.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>.|  
 |**DisableEventHandlers**|Valore booleano che indica se i gestori di eventi associati al contenitore verranno eseguiti. Il valore predefinito di questa proprietà è **False**.|  
 |**FailPackageOnFailure**|Valore booleano che specifica se il pacchetto deve essere interrotto in caso di errore nel contenitore. Il valore predefinito di questa proprietà è **False**.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>.|  

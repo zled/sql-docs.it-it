@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 caps.latest.revision: "12"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11b9cf94deb2f686939beec038d241c4b868928a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d81ff7ff9d78eed04f1b635f45b661dda601808
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Aggiungere dati da origini dati esterne (SSRS)
   Per recuperare dati da un'origine dati esterna, utilizzare una connessione dati. Le informazioni di connessione dati vengono in genere fornite dal proprietario dell'origine dati esterna che è responsabile della concessione delle autorizzazioni e di specificare i tipi di credenziali da utilizzare. Le informazioni di connessione dati vengono salvate come un'origine dati del report. Il tipo di origine dati consente di specificare quale estensione per i dati utilizzare per recuperare i dati.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/05/2017
 -   **Origine dati esterna** Posizione da cui vengono recuperati i dati del report, ad esempio un database, un file, un cubo o un servizio Web.  
   
 > [!NOTE]  
->  Quando non si è connessi a un server di report, è possibile scegliere tra le estensioni per i dati installate con Generatore report. Si accede ai dati come utente singolo utilizzando le credenziali del computer. Quando si è connessi a un server di report, è possibile scegliere tra le estensioni per i dati installate nel server di report. Si accede ai dati come uno degli utenti che eseguono il report e si utilizzano le credenziali nel server di report. Per altre informazioni, vedere [Specificare credenziali in Generatore report](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+>  Quando non si è connessi a un server di report, è possibile scegliere tra le estensioni per i dati installate con Generatore report. Si accede ai dati come utente singolo utilizzando le credenziali del computer. Quando si è connessi a un server di report, è possibile scegliere tra le estensioni per i dati installate nel server di report. Si accede ai dati come uno degli utenti che eseguono il report e si utilizzano le credenziali nel server di report. Per altre informazioni, vedere [Specifica di credenziali in Generatore report](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ##  <a name="ReportData"></a> Informazioni sui dati del report  
  Nella sua forma più semplice, un report visualizza i dati di un set di dati in un'area dati nella pagina del report, ovvero in una singola tabella, in un grafico, in una matrice o in un altro tipo di area dati del report. I dati di un set di dati del report provengono dal primo set di risultati restituito da un singolo comando di query eseguito dall'accesso in sola lettura a un'origine dati esterna. Ogni area dati può essere espansa in base alle esigenze per visualizzare tutti i dati del set di dati.  

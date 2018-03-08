@@ -8,20 +8,20 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2946428883f9db43a3f00ac2f6cb5ebfa4191dcb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9920958902d2803c9135f1745be7c47f573c36fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>Nomi SPN (Service Principal Name) nelle connessioni client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |IDataInitialize::GetInitializationString|Se SSPROP_INIT_SERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN dispongono di valori non predefiniti, verranno inclusi nella stringa di inizializzazione tramite *ppwszInitString* come valori di parola chiave per **ServerSPN**e **FailoverPartnerSPN**. In caso contrario, queste parole chiave non saranno incluse nella stringa di inizializzazione.|  
 |IDBInitialize::Initialize|Se la richiesta viene abilitata impostando DBPROP_INIT_PROMPT nelle proprietà di inizializzazione dell'origine dati, verrà visualizzata la finestra di dialogo di accesso OLE DB. Ciò consente di immettere i nomi SPN per il server principale e per il relativo partner di failover.<br /><br /> La stringa del provider in DPPROP_INIT_PROVIDERSTRING, se impostata, riconoscerà le nuove parole chiave **ServerSPN** e **FailoverPartnerSPN** e utilizzare i relativi valori, se presente, per inizializzare SSPROP_INIT_SERVER_ Nome SPN e SSPROP_INIT_FAILOVER_PARTNER_SPN.<br /><br /> IDBProperties:: SetProperties può essere chiamato per impostare le proprietà SSPROP_INIT_SERVER_SPN e SSPROP_INIT_FAILOVER_PARTNER_SPN prima che venga chiamato IDBInitialize:: Initialize. Si tratta di un'alternativa all'utilizzo di una stringa del provider.<br /><br /> Se una proprietà viene impostata in più posizioni, un valore impostato a livello di programmazione ha la precedenza su un valore impostato nella stringa del provider. Un valore impostato in una stringa di inizializzazione ha la precedenza su un valore impostato in una finestra di dialogo.<br /><br /> Se la stessa parola chiave viene visualizzata più volte nella stringa del provider, il valore della prima occorrenza avrà la precedenza.|  
 |IDBProperties::GetProperties|IDBProperties::GetProperties può essere chiamato per ottenere i valori delle nuove proprietà origine dati inizializzazione SSPROP_INIT_SERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN e delle nuove proprietà origine dati sprop_authenticationmethod e SSPROP_ MUTUALLYAUTHENTICATED.|  
-|IDBProperties:: GetPropertyInfo|IDBProperties:: GetPropertyInfo includerà le nuove proprietà origine dati inizializzazione SSPROP_INIT_SERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN oppure le nuove proprietà di origine dati sprop_authenticationmethod e SSPROP_MUTUALLYAUTHENTICATED.|  
+|IDBProperties::GetPropertyInfo|IDBProperties:: GetPropertyInfo includerà le nuove proprietà origine dati inizializzazione SSPROP_INIT_SERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN oppure le nuove proprietà di origine dati sprop_authenticationmethod e SSPROP_MUTUALLYAUTHENTICATED.|  
 |IDBProperties::SetProperties|Per impostare i valori di una nuova origine dati SSPROP_INITSERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN le proprietà di inizializzazione può essere chiamato IDBProperties:: SetProperties.<br /><br /> È possibile impostare queste proprietà in qualsiasi momento; tuttavia, se l'origine dati è già aperta, verrà restituito il seguente errore: DB_E_ERRORSOCCURRED, "Si sono verificati errori in un'operazione OLE DB composta da più passaggi. Controllare i singoli valori di stato OLE DB, se disponibili. Nessuna operazione eseguita".|  
   
 ## <a name="see-also"></a>Vedere anche  

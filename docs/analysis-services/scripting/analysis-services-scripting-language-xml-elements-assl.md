@@ -8,31 +8,31 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Services Scripting Language, elements
 - elements [Analysis Services Scripting Language]
 - ASSL, elements
 ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2415205d4898e4c16d9a6b5d004f3ff75082ead9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 87d59c2d4041cbb7267054d2a691e0e39745827a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Elementi XML di Analysis Services Scripting Language (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Benché lo schema di Analysis Services Scripting Language (ASSL) includa solo elementi XML, dal punto di vista dello sviluppatore, questi elementi corrispondono ai concetti seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Benché lo schema ASSL (Analysis Services Scripting Language) includa solo elementi XML, dal punto di vista di uno sviluppatore questi elementi corrispondono ai concetti seguenti:  
   
 -   Oggetti, ad esempio **Database**, **cubo**, e **dimensione** oggetti nella gerarchia di oggetti contenuti in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/08/2017
     > [!NOTE]  
     >  Questa sezione non riguarda gli elementi tipi di dati. Per ulteriori informazioni, vedere, [Analysis Services Scripting Language tipi di dati XML &#40; ASSL &#41; ](../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Description|  
 |-----------|-----------------|  

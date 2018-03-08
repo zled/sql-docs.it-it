@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: EventColumn Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e84b0f43490e5154ccfcebf6c42c3222dfe84551
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cb58ea2676265b5dcd5b67819b70020c365ec7ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="eventcolumn-data-type-assl"></a>Tipo di dati EventColumn (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definisce un tipo di dati primitivo che rappresenta una colonna di informazioni da acquisire per un [evento](../../../analysis-services/scripting/objects/event-element-assl.md) come parte dell'elemento un [traccia](../../../analysis-services/scripting/objects/trace-element-assl.md) elemento.  
@@ -45,16 +43,16 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Caratteristiche tipo di dati  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipi di dati di base|Nessuno|  
-|Tipi di dati derivati|Nessuno|  
+|Tipi di dati di base|None|  
+|Tipi di dati derivati|None|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|Nessuno|  
+|Elementi padre|None|  
 |Elementi figlio|[ColumnID](../../../analysis-services/scripting/properties/columnid-element-eventcolumn-assl.md)|  
 |Elementi derivati|[Colonna](../../../analysis-services/scripting/objects/column-element-assl.md) ([colonne](../../../analysis-services/scripting/collections/columns-element-assl.md) insieme di [traccia](../../../analysis-services/scripting/objects/trace-element-assl.md))|  
   

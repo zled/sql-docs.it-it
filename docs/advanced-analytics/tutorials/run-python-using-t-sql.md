@@ -7,22 +7,25 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: Python
-caps.latest.revision: "2"
+applies_to:
+- SQL Server 2016
+dev_langs:
+- Python
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: f584f98f5c30e4ca30b4f75748ee173bb2f1a257
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: ea8010bb51e02e9676653bb0dc2f12cbfe02761a
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="run-python-using-t-sql"></a>Eseguire Python con T-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo esempio viene illustrato come eseguire un semplice script Python in SQL Server, tramite la stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 

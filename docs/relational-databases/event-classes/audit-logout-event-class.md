@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Logout event class
+helpviewer_keywords:
+- Audit Logout event class
 ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fbf12181cfe5ba30133df2ba05a9e5769642d6e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 07d96ee2ea1cf3a53b0009d988b0927f922b6b4c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-logout-event-class"></a>Audit Logout - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento **Audit Logout** indica che un utente ha effettuato la disconnessione da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli eventi di questa classe vengono attivati da nuove connessioni o da connessioni riutilizzate da un pool di connessioni.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La classe di evento **Audit Logout** indica che un utente ha effettuato la disconnessione da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli eventi di questa classe vengono attivati da nuove connessioni o da connessioni riutilizzate da un pool di connessioni.  
   
 ## <a name="audit-logout-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Logout  
   
-|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
@@ -38,8 +41,8 @@ ms.lasthandoff: 11/17/2017
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
 |**Durata**|**bigint**|Quantità di tempo trascorsa approssimativamente dopo l'accesso dell'utente.|13|Sì|  
 |**EndTime**|**datetime**|Ora di fine della disconnessione.|15|Sì|  
-|**EventClass**|**int**|Tipo di evento = 15.|27|No|  
-|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|**EventClass**|**int**|Tipo di evento = 15.|27|no|  
+|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |**EventSubClass**|**int**|Tipo di connessione utilizzato dall'account di accesso. 1 = Non in pool, 2 = In pool.|21|Sì|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  

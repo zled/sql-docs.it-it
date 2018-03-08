@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7c760c40bfdde79f13285270be5038d67096c09
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2bc56113933e993b5748564a1c64ef1798ed8ef1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-size"></a>Dimensioni di colonna
 Le dimensioni di colonna (o parametro) dei tipi di dati numerici sono definita come il numero massimo di cifre utilizzate dal tipo di dati della colonna o parametro o la precisione dei dati. Per i tipi di carattere, si tratta della lunghezza in caratteri dei dati. per i tipi di dati binari, dimensioni della colonna sono definita come la lunghezza in byte dei dati. Per l'ora, timestamp e tutti i tipi di dati di intervallo, questo è il numero di caratteri nella rappresentazione di caratteri dei dati. La dimensione della colonna definita per ogni tipo di dati SQL conciso è illustrata nella tabella seguente.  
@@ -46,7 +46,7 @@ Le dimensioni di colonna (o parametro) dei tipi di dati numerici sono definita c
 |Tutti i tipi binari [a], [b].|La lunghezza massima o definita in byte della colonna o del parametro. Ad esempio, la lunghezza di una colonna definita come Binary (10) è 10.|  
 |Tipo SQL_TYPE_DATE [c]|10 (il numero di caratteri di *aaaa-mm-gg* formato).|  
 |SQL_TYPE_TIME [c]|8 (il numero di caratteri di *hh-mm-ss* formato), o 9 + *s* (il numero di caratteri nel *hh: mm:*formato [. fff], in cui *s*è la precisione dei secondi).|  
-|SQL_TYPE_TIMESTAMP|16 (il numero di caratteri di *aaaa-mm-gg hh.mm* formato)<br /><br /> 19 (il numero di caratteri di *aaaa-mm-gg* *hh: mm:* formato)<br /><br /> o<br /><br /> 20 + *s* (il numero di caratteri di *aaaa-mm-gg hh: mm:*formato [. fff], dove *s* è la precisione dei secondi).|  
+|SQL_TYPE_TIMESTAMP|16 (il numero di caratteri di *aaaa-mm-gg hh.mm* formato)<br /><br /> 19 (il numero di caratteri di *aaaa-mm-gg* *hh: mm:* formato)<br /><br /> o Gestione configurazione<br /><br /> 20 + *s* (il numero di caratteri di *aaaa-mm-gg hh: mm:*formato [. fff], dove *s* è la precisione dei secondi).|  
 |SQL_INTERVAL_SECOND|Dove *p* è l'intervallo di precisione iniziale e *s* è la precisione dei secondi, *p* (se *s*= 0) o *p* + *s*+ 1 (se *s*> 0). [ d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|Dove *p* è l'intervallo di precisione iniziale e *s* è la precisione dei secondi 9 +*p* (se *s*= 0) o 10 +*p* + *s* (se *s*> 0). [ d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|Dove *p* è l'intervallo di precisione iniziale e *s* è la precisione dei secondi 6 +*p* (se *s*= 0) o 7 +*p* + *s* (se *s*> 0). [ d]|  

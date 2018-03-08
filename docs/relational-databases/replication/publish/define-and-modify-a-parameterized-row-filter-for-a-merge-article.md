@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1bf6db754bdc9e0bfb9e43578ebf54cee13e082
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a199039c0535cb3eb7fee8accadcdb28ecf12ed2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Definizione e modifica di un filtro di riga con parametri per un articolo di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come definire e modificare un filtro di riga con parametri in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** di **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Elimina**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile creare e modificare a livello di programmazione i filtri di riga con parametri tramite le stored procedure di replica.  
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Per definire un filtro di riga con parametri per un articolo in una pubblicazione di tipo merge  
@@ -144,7 +144,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Vedere anche  
  [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Modificare le proprietà di pubblicazioni e articoli](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Filtri di join](../../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

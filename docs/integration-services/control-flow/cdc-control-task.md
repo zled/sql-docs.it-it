@@ -8,23 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d098ce43f58a5a65424b536742da199bb162957f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0990c664bb8a962dc8a9c1eebd862808965f2c02
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-control-task"></a>Attività di controllo CDC
   L'attività di controllo CDC viene utilizzata per controllare il ciclo di vita di pacchetti Change Data Capture (CDC). Questa attività consente di gestire la sincronizzazione del pacchetto CDC con il pacchetto di caricamento iniziale e la gestione di intervalli di numeri di sequenza del file di log (LSN) elaborati in un'esecuzione di un pacchetto CDC. L'attività di controllo CDC, inoltre, consente di gestire gli scenari di errore e il recupero da errori.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Proprietà personalizzate dell'attività di controllo CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [Definire una variabile di stato](../../integration-services/data-flow/define-a-state-variable.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  

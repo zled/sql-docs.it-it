@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: EndSession Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9cc62b7d87aeaade6984b44c7724de120b17dcaf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 274c56e96093da4e71614d1e32a4b2e3300d07cc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="endsession-element-xmla"></a>Elemento EndSession (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Utilizza l'intestazione SOAP in un messaggio di richiesta SOAP per terminare una sessione esistente in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -59,26 +57,26 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|Nessuno|  
-|Elementi figlio|Nessuno|  
+|Elementi padre|None|  
+|Elementi figlio|None|  
   
 ## <a name="attributes"></a>Attributi  
   
-|Attribute|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |SessionId|Richiesto **stringa** attributo che identifica la sessione da terminare. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilizza un identificatore univoco globale (GUID) per identificare una sessione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **EndSession** intestazione elemento fa parte della richiesta SOAP inviata a una sessione esistente avviata in modo esplicito su un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza. Se il **EndSession** elemento intestazione viene inviato, ma contiene un identificatore di sessione non è più valido, viene restituito un errore SOAP che indica che è Impossibile trovare la sessione.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -7,22 +7,24 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 88d8e1c0948a51ab8ed6aaeb5a74e771bba95032
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 3aecbcf80a76fdfd84cca277f5f0de0f8dc7bb4e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-code-profiling-functions"></a>Uso delle funzioni di profiling del codice R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Oltre a usare risorse e strumenti di SQL Server per monitorare l'esecuzione di script R, è possibile usare gli strumenti per le prestazioni forniti da altri pacchetti R per ottenere altre informazioni sulle chiamate di funzioni interne. Questo argomento contiene un elenco di alcune risorse di base per iniziare. Per linee guida per utenti esperti, è consigliabile fare riferimento al capitolo sulle [prestazioni](http://adv-r.had.co.nz/Performance.html) del libro ""Advanced R"" di Hadley Wickham.
 
 ## <a name="using-rprof"></a>Uso di RPROF

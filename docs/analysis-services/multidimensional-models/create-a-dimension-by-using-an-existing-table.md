@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - dimensions [Analysis Services], standard
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b27073cb4276e73ed4e28507d2c3ae55fd956945
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b748f139d4eed14ea9d00d275aedcc8ef8fc9fec
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Creare una dimensione utilizzando una tabella esistente
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile utilizzare la creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione da una tabella esistente. A questo scopo selezionare l'opzione **Usa una tabella esistente** nella pagina **Seleziona metodo di creazione** della procedura guidata. L'utilizzo di questa opzione fa sì che la struttura della dimensione venga creata in base alle tabelle della dimensione, alle relative colonne e a tutte le relazioni tra colonne presenti in una vista origine dati esistente. La procedura guidata campiona i dati nella tabella di origine e nelle tabelle correlate. Usa questi dati per definire le colonne attributo basate sulle colonne nelle tabelle delle dimensioni, nonché per definire le gerarchie di attributi, denominate gerarchie *definite dall'utente* . È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile usare Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione da una tabella esistente. A questo scopo selezionare l'opzione **Usa una tabella esistente** nella pagina **Seleziona metodo di creazione** della procedura guidata. L'utilizzo di questa opzione fa sì che la struttura della dimensione venga creata in base alle tabelle della dimensione, alle relative colonne e a tutte le relazioni tra colonne presenti in una vista origine dati esistente. La procedura guidata campiona i dati nella tabella di origine e nelle tabelle correlate. Usa questi dati per definire le colonne attributo basate sulle colonne nelle tabelle delle dimensioni, nonché per definire le gerarchie di attributi, denominate gerarchie *definite dall'utente* . È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
   
  Durante l’utilizzo di una tabella esistente per creare una dimensione, Creazione guidata dimensione consente di effettuare in modo semplificato i seguenti passaggi:  
   
@@ -95,10 +93,10 @@ ms.lasthandoff: 12/08/2017
  Nella pagina **Completamento procedura guidata** si completa la procedura guidata digitando un nome per la dimensione nuova e rivedendo la struttura della dimensione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una dimensione generando una tabella non temporale nell'origine dati](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
- [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Riferimento alle proprietà degli attributi delle dimensioni](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
- [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Creare una dimensione generando una tabella non temporale nell'origine dati](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [Creare una dimensione generando una tabella Non temporale nell'origine dati](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
+ [Creare una dimensione temporale generando una tabella dei tempi](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+ [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Creare una dimensione temporale generando una tabella dei tempi](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+ [Creare una dimensione generando una tabella Non temporale nell'origine dati](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

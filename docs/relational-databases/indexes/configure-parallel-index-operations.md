@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - MAXDOP index option, parallel index operations
 - parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53114677b0aa3635e4c031c4b24309bcb7b4ab9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b8008f980f72c76ded7911329c2d86d5c67ab13c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-parallel-index-operations"></a>Configurazione di operazioni parallele sugli indici
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per configurare l'opzione max degree of parallelism utilizzando:**  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
 -   L'opzione di indice MAXDOP è prioritaria rispetto all'opzione di configurazione max degree of parallelism solo per la query che specifica tale opzione. La tabella seguente elenca i valori integer validi che è possibile specificare con l'opzione di configurazione max degree of parallelism e l'opzione di indice MAXDOP.  
   
-    |Valore|Descrizione|  
+    |valore|Description|  
     |-----------|-----------------|  
     |0|Specifica che il server determina il numero di CPU utilizzate, a seconda del carico di lavoro del sistema corrente. Si tratta del valore predefinito e dell'impostazione consigliata.|  
     |1|Disattiva la generazione di piani paralleli. L'operazione verrà eseguita in modo serializzato.|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È richiesta l'autorizzazione ALTER per la tabella o la vista.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -104,9 +105,9 @@ ms.lasthandoff: 11/17/2017
   
 7.  Selezionare **Maximum degree of parallelism**e immettere un valore compreso tra 1 e 64.  
   
-8.  Scegliere **OK**.  
+8.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>Per impostare l'opzione max degree of parallelism su un indice esistente  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;   
@@ -134,7 +135,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

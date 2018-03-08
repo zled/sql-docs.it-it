@@ -8,23 +8,24 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e764d14059dbb4015c213fc9f35e75f529d4b10
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 06721e22794de1ed9e7661d8606759e2035f710f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +39,7 @@ I sistemi con memoria virtuale consentono il commit in eccesso della memoria fis
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-memory-architecture"></a>Architettura della memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-In[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la memoria viene acquisita e liberata in modo dinamico in base alle esigenze. In genere non è necessario che un amministratore specifichi la quantità di memoria da allocare a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'opzione corrispondente, tuttavia, è ancora disponibile e in alcuni ambienti è necessario impostarla.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acquisisce e libera la memoria in modo dinamico in base alle esigenze. In genere non è necessario che un amministratore specifichi la quantità di memoria da allocare a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'opzione corrispondente, tuttavia, è ancora disponibile e in alcuni ambienti è necessario impostarla.
 
 Uno dei principali obiettivi di progettazione di tutti i software di database è la riduzione del disco I/O dal momento che le letture e le scritture del disco sono le operazioni che consumano più risorse. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crea un pool di buffer in memoria per contenere le pagine lette dal database. Gran parte del codice in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è dedicata alla riduzione del numero di letture e scritture fisiche tra il disco e il pool di buffer. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tenta di raggiungere un equilibrio tra i due obiettivi:
 
@@ -62,7 +63,7 @@ Usando AWE e il privilegio Blocco di pagine in memoria, è possibile fornire al 
 |-------|-------|-------| 
 |Memoria convenzionale |Tutte le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Fino al limite dello spazio degli indirizzi virtuali di processo: <br>- 2 GB<br>- 3 GB con parametro di avvio /3gb <sup>2</sup> <br>- 4 GB su WOW64 <sup>3</sup> |Tutte le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Fino al limite dello spazio degli indirizzi virtuali di processo: <br>- 7 TB con architettura IA64 (IA64 non è supportato in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e versioni successive)<br>- Valore massimo del sistema operativo con architettura x64 <sup>4</sup>
 |Meccanismo AWE (consente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di superare il limite dello spazio degli indirizzi virtuali di processo nelle piattaforme a 32 bit) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edizioni Standard, Enterprise e Developer: il pool di buffer è in grado di accedere a una memoria limite di 64 GB.|Non applicabile <sup>5</sup> |
-|Privilegio Blocco di pagine in memoria del sistema operativo (consente di bloccare la memoria fisica, impedendo il paging della memoria bloccata da parte del sistema operativo). <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edizioni Standard, Enterprise e Developer: necessari per il processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che usa il meccanismo AWE. La memoria allocata tramite il meccanismo AWE non può essere trasferita. <br> La concessione di questo privilegio senza l'attivazione di AWE non ha alcun effetto sul server. | Usato solo quando necessario, ovvero in presenza di segnali di page out del processo sqlservr. In questo caso, verrà segnalato l'errore 17890 nel log degli errori, simile a quello riportato nell'esempio seguente:`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+|Privilegio Blocco di pagine in memoria del sistema operativo (consente di bloccare la memoria fisica, impedendo il paging della memoria bloccata da parte del sistema operativo). <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edizioni Standard, Enterprise e Developer: necessario per l'uso del meccanismo AWE da parte del processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La memoria allocata tramite il meccanismo AWE non può essere trasferita. <br> La concessione di questo privilegio senza l'attivazione di AWE non ha alcun effetto sul server. | Usato solo quando necessario, ovvero in presenza di segnali di page out del processo sqlservr. In questo caso, verrà segnalato l'errore 17890 nel log degli errori, simile a quello riportato nell'esempio seguente:`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> Le versioni a 32 bit non sono disponibili a partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb è un parametro di avvio del sistema operativo. Per altre informazioni, consultare MSDN Library.  
@@ -260,7 +261,7 @@ Gli I/O lunghi isolati apparentemente non correlati a una delle condizioni prece
 ### <a name="error-detection"></a>Rilevamento degli errori  
 Per le pagine di database sono disponibili due meccanismi facoltativi, ovvero la protezione delle pagine incomplete e la protezione dei checksum, che consentono di assicurare l'integrità della pagina dal momento in cui viene scritta sul disco fino a quando viene letta di nuovo. Questi meccanismi offrono una modalità indipendente di verifica della correttezza non solo dell'archiviazione dei dati, ma anche di componenti hardware quali controller, driver, cavi e perfino del sistema operativo. La protezione viene aggiunta alla pagina immediatamente prima della scrittura sul disco e viene verificata dopo la lettura della pagina dal disco.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esegue quattro tentativi per qualsiasi operazione di lettura non riuscita a causa di un errore di checksum, di pagina incompleta o di I/O. Se la lettura viene completata correttamente durante uno di questi tentativi, viene scritto un messaggio nel log degli errori e l'esecuzione del comando che ha attivato la lettura continua. Se tutti i tentativi hanno esito negativo, il comando viene interrotto con il messaggio di errore 824. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esegue quattro tentativi per qualsiasi operazione di lettura non riuscita a causa di un errore di checksum, di pagina incompleta o di un altro errore di I/O. Se la lettura viene completata correttamente durante uno di questi tentativi, viene scritto un messaggio nel log degli errori e l'esecuzione del comando che ha attivato la lettura continua. Se tutti i tentativi hanno esito negativo, il comando viene interrotto con il messaggio di errore 824. 
 
 Il tipo di protezione di pagina utilizzato è un attributo del database che contiene la pagina. La protezione dei checksum è la protezione predefinita per i database creati in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e versioni successive. Il meccanismo di protezione di pagina viene specificato al momento della creazione del database e può essere modificato usando ALTER DATABASE SET. È possibile determinare l'impostazione corrente per la protezione di pagina eseguendo una query nella colonna *page_verify_option* della vista del catalogo [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o nella proprietà *IsTornPageDetectionEnabled* della funzione [DATABASEPROPERTYEX](../t-sql/functions/databasepropertyex-transact-sql.md). 
 

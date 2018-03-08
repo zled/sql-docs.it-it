@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 763199247d5c6b1c86f7e078c4687c78dfc12650
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 106fb25d4fd8f58d34881e692a3bf508d6571d8c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] offre caratteristiche di sicurezza predefinite che è possibile usare per concedere l'accesso agli elementi del server di report dai siti e dalle raccolte di SharePoint. Se sono già state assegnate le autorizzazioni agli utenti, questi ultimi potranno accedere alle operazioni e agli elementi del server di report subito dopo la configurazione delle impostazioni per l'integrazione tra [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e un server di report. È possibile utilizzare le autorizzazioni esistenti per caricare le definizioni dei report e altri documenti, visualizzare report, creare sottoscrizioni e gestire elementi.  
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/05/2017
   
  Per utilizzare le caratteristiche di sicurezza incorporate, è necessario assegnare account utente e di gruppo di Windows ai gruppi di SharePoint. Ad eccezione dell'amministratore del server e del proprietario del sito portale, i quali dispongono di accesso automatico a [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fin dall'installazione del software, a tutti gli altri utenti devono essere concesse le autorizzazioni affinché possano accedere al server.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Utilizzare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Illustra le modalità di utilizzo dei livelli di autorizzazione e dei gruppi di SharePoint predefiniti per l'accesso agli elementi del server di report.  
   

@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd7202378a76fb0de0552685343fc681f39ea4bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9c1676681c21b306c6df820957b07863c5db6c5a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-composite-domain"></a>Creazione di un dominio composito
   In questo argomento viene descritto come creare un dominio composito in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio composito è costituito da uno o più singoli domini che si applicano a un singolo campo di dati. Per informazioni dettagliate sui domini compositi, vedere [Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md).  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare un dominio composito.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a> Creazione di un dominio composito nell'attività di individuazione delle informazioni  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  In **Elenco di domini**, selezionare i domini che faranno parte del dominio composito e fare clic sulla freccia a destra per spostarli nella tabella **Domini nel dominio composito** .  
   
-7.  Scegliere **OK**.  
+7.  Fare clic su **OK**.  
   
 ##  <a name="CompositeDomainProperties"></a> Impostazione delle proprietà di un dominio composito  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  Se è stato selezionato **Delimitatori** per il metodo di analisi, è inoltre possibile selezionare **Usa analisi Knowledge Base**. Per altre informazioni, vedere [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+6.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Completamento: Dopo la creazione di un dominio composito  
  Dopo avere creato un dominio composito, è possibile eseguire ulteriori attività di gestione sul dominio, quali l'individuazione delle informazioni per aggiungere informazioni o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  

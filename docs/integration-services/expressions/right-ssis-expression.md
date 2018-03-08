@@ -8,21 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RIGHT function
+helpviewer_keywords:
+- RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dec985a3df57fead2a3b2462ba523fe6c29e615e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8927e53f0cb8bf082211a7f35a112c7ca626d83c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="right-ssis-expression"></a>RIGHT (espressione SSIS)
   Viene restituito il numero specificato di caratteri della parte più a destra dell'espressione di caratteri indicata.  
@@ -44,7 +46,7 @@ RIGHT(character_expression,integer_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se *integer_expression* è maggiore della lunghezza di *character_expression*, la funzione restituirà *character_expression*.  
   
  Se *integer_expression* ha valore 0, la funzione restituirà una stringa di lunghezza zero.  

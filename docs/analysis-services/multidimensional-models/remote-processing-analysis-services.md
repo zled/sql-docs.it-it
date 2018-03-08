@@ -5,29 +5,27 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 190fc7bd8fa6a88d5a55068f32a4c55d2d1fd455
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remote-processing-analysis-services"></a>Elaborazione remota (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile eseguire pianificata o automatica, l'elaborazione in un remoto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza, in cui la richiesta di elaborazione proviene da un computer ma viene eseguita in un altro computer nella stessa rete.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+È possibile eseguire l'elaborazione pianificata o automatica in un'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , dove la richiesta di elaborazione proviene da un computer ma viene eseguita in un computer diverso nella stessa rete.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
   
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Nel server remoto, **Consenti connessioni remote al computer** deve essere abilitato e l'account che esegue la richiesta di elaborazione deve essere elencato come utente consentito.  
   
--   Le regole di Windows Firewall devono essere configurate per consentire connessioni in ingresso ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Verificare che sia possibile connettersi all'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vedere [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Le regole di Windows Firewall devono essere configurate per consentire connessioni in ingresso ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Verificare che sia possibile connettersi all'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   Risolvere tutti gli errori di elaborazione locale esistenti prima di tentare l'elaborazione remota. Verificare che quando la richiesta di elaborazione è locale, i dati possono essere recuperati correttamente dall'origine dati relazionale esterna. Vedere [Impostare opzioni di rappresentazione &#40;SSAS - multidimensionale&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md) per istruzioni su come specificare le credenziali usate per recuperare i dati.  
   
@@ -100,10 +98,10 @@ ms.lasthandoff: 12/08/2017
 2.  Come passaggio finale, modificare il processo da eseguire in base a una pianificazione definita, aggiungendo le notifiche o gli avvisi necessari per amministrare il processo. Potrebbe inoltre essere necessario ridefinire lo script di elaborazione oppure creare più passaggi del processo per elaborare in modo indipendente gli oggetti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+ [Componenti di SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [Pianificare attività amministrative SSAS con SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [L'elaborazione batch &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [L'elaborazione batch & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Elaborazione degli oggetti &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [Elaborazione degli oggetti & #40; XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - events [SQL Server], Showplan XML
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c213109a08829f1007ac3af8d729b397406b855
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 106a627a50964d482776401bf27db6f2c83ac0ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Salvare eventi Showplan XML in modo indipendente (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come salvare eventi **Showplan XML** acquisiti in tracce in file SQLPlan distinti usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. È possibile aprire i file di eventi **Showplan XM** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per visualizzare graficamente il piano di esecuzione di ogni evento.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Per acquisire la traccia in una tabella di database, selezionare la casella di controllo **Salva nella tabella**. 
     
-        Facoltativamente selezionare **Numero massimo di righe**e specificare un valore.  
+        Facoltativamente selezionare **Numero massimo di righe** e specificare un valore.  
   
 5. Facoltativamente, selezionare la casella di controllo **Data e ora di arresto della traccia** e specificare una data e un'ora di arresto della traccia. 
   

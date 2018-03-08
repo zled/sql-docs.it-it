@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ProcessingMode Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf0c215395e22f96994280d9b1c17bfc7dd5ceed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 401f094cc9dee47e799cac9addd5e82de484b699
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processingmode-element-assl"></a>Elemento ProcessingMode (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Indica se l'istanza deve essere indicizzata e aggregata durante o dopo l'elaborazione.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|*Regolare*|  
@@ -58,14 +56,14 @@ ms.lasthandoff: 12/08/2017
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Cubo](../../../analysis-services/scripting/objects/cube-element-assl.md), [dimensione](../../../analysis-services/scripting/objects/dimension-element-assl.md), [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md), [partizione](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il valore di **ProcessingMode** sul **cubo** fornisce il valore predefinito per il cubo e possono essere sostituiti dagli **ProcessingMode** per ogni partizione.  
   
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |*Regolare*|L'istanza indicizza ed esegue le aggregazioni durante l'elaborazione.|  
 |*LazyOptimizations*|L'istanza indicizza ed esegue le aggregazioni durante l'elaborazione.|  

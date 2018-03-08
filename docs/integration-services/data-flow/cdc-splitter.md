@@ -16,20 +16,20 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a680f3d08dcc3cc9e6cb196e02bc3429ac526a6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 19b09b99c30e0dffd81b1778c3df25596d455110
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="cdc-splitter"></a>Barra di divisione CDC
+# <a name="cdc-splitter"></a>CDC Splitter
   La barra di divisione CDC suddivide un singolo flusso di righe delle modifiche da un flusso di dati dell'origine CDC in diversi flussi di dati per operazioni di inserimento, aggiornamento ed eliminazione. Il flusso di dati viene suddiviso in base alla colonna obbligatoria `__$operation` e ai relativi valori standard nelle tabelle delle modifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 |Valore dell'operazione|Output|Description|  
 |------------------------|------------|-----------------|  
-|1|Elimina|Riga eliminata|  
+|1|DELETE|Riga eliminata|  
 |2|Insert|Riga inserita (non disponibile quando si usa la modalità CDC **Net with Merge** (Rete con unione))|  
 |3|Update|Riga prima dell'aggiornamento (disponibile solo quando si usa la modalità CDC **All with Old Values** (Tutto con valori precedenti))|  
 |4|Update|Riga dopo l'aggiornamento (segue l'operazione prima dell'aggiornamento)|  

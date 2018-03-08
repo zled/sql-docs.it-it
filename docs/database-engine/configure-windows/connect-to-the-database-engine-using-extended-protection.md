@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cdc286f5ab945e2897e69dcfe7f1a98dec1c4b8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d5bf850e985baccb1d16d77697ea7cd2611af222
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Connessione al motore di database mediante la protezione estesa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta la **protezione estesa** a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protezione estesa per l'autenticazione** è una funzionalità dei componenti di rete implementata dal sistema operativo. La**protezione estesa** è supportata in Windows 7 e in Windows Server 2008 R2 La**protezione estesa** è inclusa nei Service Pack per i sistemi operativi [!INCLUDE[msCoName](../../includes/msconame-md.md)] meno recenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è più sicuro quando le connessioni vengono effettuate tramite **protezione estesa**.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/20/2017
   
     -   Se impostata su **Disattivata**, la **protezione estesa** è disabilitata. L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accetterà connessioni da qualsiasi client, protetto o non protetto. Il valore**Disattivata** è compatibile con i sistemi operativi precedenti e senza patch installate, sebbene sia meno sicuro. Utilizzare questa impostazione quando si è sicuri che i sistemi operativi dei client non supportano la protezione estesa.  
   
-    -   Se impostata su **Consentita**, la **protezione estesa** è obbligatoria per le connessioni da sistemi operativi che supportano **tale caratteristica**. **Protezione estesa** viene invece ignorata per le connessioni da sistemi operativi che non supportano **tale caratteristica**. Le connessioni da applicazioni client non protette in esecuzione su sistemi operativi client protetti vengono rifiutate. Sebbene sia più sicura di **Disattivata**, questa impostazione non garantisce il livello più elevato di sicurezza. Utilizzare questa impostazione negli ambienti misti, dove alcuni sistemi operativi supportano la **protezione estesa** e altri no.  
+    -   Se impostata su **Consentita**, la **protezione estesa** è obbligatoria per le connessioni da sistemi operativi che supportano la **protezione estesa**. **Protezione estesa** viene invece ignorata per le connessioni da sistemi operativi che non supportano **tale caratteristica**. Le connessioni da applicazioni client non protette in esecuzione su sistemi operativi client protetti vengono rifiutate. Sebbene sia più sicura di **Disattivata**, questa impostazione non garantisce il livello più elevato di sicurezza. Utilizzare questa impostazione negli ambienti misti, dove alcuni sistemi operativi supportano la **protezione estesa** e altri no.  
   
     -   Se impostata su **Obbligatoria**, vengono accettate solo le connessioni da applicazioni protette su sistemi operativi protetti. Questa impostazione è la più sicura, ma le connessioni a **da sistemi operativi o applicazioni che non supportano la** protezione estesa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non riuscirà.  
   

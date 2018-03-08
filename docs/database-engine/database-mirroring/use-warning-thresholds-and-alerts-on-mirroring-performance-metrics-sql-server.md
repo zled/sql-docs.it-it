@@ -22,20 +22,20 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 caps.latest.revision: "40"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba4368ce9a1557d8cd199f0bad59fb3d40a2cdf4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 01d279d30860e0e10cf3a76b447aaec245541fcc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utilizzare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento contiene informazioni sugli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui è possibile configurare e gestire valori soglia degli avvisi per il mirroring del database. È possibile usare Monitoraggio mirroring del database o le stored procedure **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**e **sp_dbmmonitordropalert** . Nell'argomento sono inoltre incluse informazioni relative alle configurazione degli avvisi per gli eventi di mirroring del database.  
   
  Dopo aver stabilito il monitoraggio per un database con mirroring, un amministratore di sistema può configurare soglie di avviso su alcune metriche chiave delle prestazioni. Un amministratore può inoltre configurare avvisi su questi e altri eventi di mirroring del database.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Misurazioni delle prestazioni e delle soglie di avviso](#PerfMetricsAndWarningThresholds)  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/20/2017
   
      Il set seguente di stored procedure di sistema consente a un amministratore di impostare e gestire le soglie di avviso su database con mirroring di un partner alla volta.  
   
-    |Procedura|Descrizione|  
+    |Procedura|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|Aggiunge o modifica la soglia di avviso per una misurazione delle prestazioni di mirroring specificata.|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|Restituisce informazioni sulle soglie di avviso su una o tutte le misurazioni delle prestazioni di monitoraggio del mirroring del database.|  
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/20/2017
   
  **Per monitorare il mirroring del database**  
   
--   [Avviare Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
+-   [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 -   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)  
   

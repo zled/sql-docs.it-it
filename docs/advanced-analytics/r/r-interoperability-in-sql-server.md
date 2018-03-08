@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e787434895facaa394a2676f37ec7c612dce48d3
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 3dd916a0d91d5f237d7a60963c1b3fab1f90b5e9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>Interoperabilità di R in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo argomento descrive il meccanismo per l'esecuzione di R in SQL Server e vengono descritte le differenze tra Microsoft R e open source R.
 
@@ -32,11 +33,11 @@ Per informazioni sui componenti aggiuntivi, vedere [nuovi componenti di SQL Serv
 
 ### <a name="open-source-r-components"></a>Componenti di R open source
 
-[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] include una distribuzione completa degli strumenti e dei pacchetti R di base. Per altre informazioni sui componenti inclusi nella distribuzione base, vedere la documentazione installata durante l'installazione nel percorso predefinito seguente: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] include una distribuzione completa di base pacchetti R e strumenti. Per altre informazioni sui componenti inclusi nella distribuzione base, vedere la documentazione installata durante l'installazione nel percorso predefinito seguente: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
 Nell'ambito dell'installazione di [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)], è necessario accettare i termini della licenza GNU Public License. Successivamente, è possibile eseguire i pacchetti R standard senza ulteriori modifiche, esattamente come per qualsiasi altra distribuzione open source di R.
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] non modifica in alcun modo il runtime di R. Il runtime di R viene eseguito all'esterno del processo di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e può essere eseguito in modo indipendente da [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Tuttavia, è consigliabile non eseguire questi strumenti mentre [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] usa R, per evitare conflitti di risorse.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] non modificare il runtime di R in alcun modo. Il runtime di R viene eseguito all'esterno del processo di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e può essere eseguito in modo indipendente da [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Tuttavia, è consigliabile non eseguire questi strumenti mentre [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] usa R, per evitare conflitti di risorse.
 
 La distribuzione base dei pacchetti R associata a una specifica istanza di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] è disponibile nella cartella associata all'istanza. Ad esempio, se è installato R Services nell'istanza predefinita, le librerie R si trovano in questa cartella per impostazione predefinita:
 

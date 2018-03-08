@@ -1,5 +1,5 @@
 ---
-title: SQLSetStmtAttr | Documenti Microsoft
+title: SQLSetStmtAttr | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,22 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords: SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d73d30b8335e3dc99c15013be9bc6cb32ed67ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cbc51d2212db08a4b3cce5d07673e96f263445d
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  L'impostazione di SQL_SOPT_SS_PARAM_FOCUS su 0 ripristina l'accesso ai record del descrittore per i parametri.  
   
- SQLSetStmtAttr può anche essere utilizzata per impostare SQL_SOPT_SS_NAME_SCOPE. Per ulteriori informazioni, vedere la sezione SQL_SOPT_SS_NAME_SCOPE più avanti in questo argomento.  
+ SQLSetStmtAttr can also be used to set SQL_SOPT_SS_NAME_SCOPE. Per ulteriori informazioni, vedere la sezione SQL_SOPT_SS_NAME_SCOPE più avanti in questo argomento.  
   
  Per ulteriori informazioni, vedere [i metadati del parametro con valori di tabella per le istruzioni preparate](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md).  
   
@@ -154,6 +154,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione SQLGetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59355)   
- [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Dettagli di implementazione di API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

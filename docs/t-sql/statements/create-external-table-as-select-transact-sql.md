@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -81,7 +82,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  [[ *database_name* . [ *schema_name* ]. ] | *schema_name* . ] *table_name*  
  Uno a tre - nome parte della tabella da creare nel database. Per una tabella esterna, solo i metadati della tabella sono archiviato nel database relazionale.  
   
- PERCORSO = '*hdfs_folder*'  
+ LOCATION =  '*hdfs_folder*'  
  Specifica la posizione in cui scrivere i risultati dell'istruzione SELECT nell'origine dati esterna. Il percorso è un nome di cartella e, facoltativamente, può includere un percorso relativo alla cartella radice del Hadoop Cluster o Blob di archiviazione di Azure.  PolyBase creerà il percorso e la cartella se non esiste già.  
   
  Vengono scritti i file esterni *hdfs_folder* e denominato *Queryid_date_time_id*, dove *ID* è un identificatore incrementale e *formato* è il formato dei dati esportati. Ad esempio, QID776_20160130_182739_0.orc.  
@@ -131,12 +132,12 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   Il caricamento non riesce con righe 50% non è riuscita dopo il tentativo di caricamento di 200 righe, che è maggiore del limite di 30% specificato.  
   
- CON *common_table_expression*  
+ WITH *common_table_expression*  
  Indica un set di risultati denominato temporaneo, noto come espressione di tabella comune (CTE). Per ulteriori informazioni, vedere [con common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  Selezionare \<select_criteria > consente di popolare la nuova tabella con i risultati da un'istruzione SELECT. *select_criteria* è il corpo dell'istruzione SELECT che determina i dati da copiare nella nuova tabella. Per informazioni sulle istruzioni SELECT, vedere [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire il comando di **utente del database** tutte queste autorizzazioni o appartenenze deve:  
   
 -   **ALTER SCHEMA** autorizzazione per lo schema locale che conterrà la nuova tabella o l'appartenenza di **db_ddladmin** ruolo predefinito del database.  

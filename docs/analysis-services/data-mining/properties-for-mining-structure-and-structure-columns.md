@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42ee21307542c7e204ac7b4616714c2285cce032
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Proprietà delle strutture di data mining e delle colonne delle strutture di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile impostare o modificare le proprietà per una struttura di data mining e delle colonne associate e tabelle nidificate tramite il **struttura di Data Mining** scheda Progettazione modelli di Data Mining. Le impostazioni delle proprietà eseguite in questa scheda vengono propagate in ogni modello di data mining associato alla struttura.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Nella scheda **Struttura di data mining** della finestra di progettazione di data mining è possibile impostare o modificare le proprietà di una struttura di data mining e delle colonne e tabelle annidate associate. Le impostazioni delle proprietà eseguite in questa scheda vengono propagate in ogni modello di data mining associato alla struttura.  
   
 > [!NOTE]  
 >  Se si modifica il valore di una proprietà nella struttura di data mining, anche di metadati come, ad esempio, un nome o descrizione, la struttura di data mining e i relativi modelli devono essere rielaborati prima che sia possibile visualizzare o eseguire una query sul modello.  
@@ -56,7 +55,7 @@ ms.lasthandoff: 12/08/2017
 |**HoldoutSeed**|Specifica un valore per l'inizializzazione del partizionamento del set di test di controllo, per assicurare che il set di dati di test possa essere ricreato. **Nota:**  per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su **KeepTrainingCases**.|  
 |**ID**|Consente di visualizzare l'identificatore univoco della struttura di data mining.<br /><br /> Il nome assegnato alla struttura di data mining quando è stata creata viene utilizzato come ID. Se successivamente si modifica il nome digitando un nuovo valore per la proprietà **nome** , il nuovo nome viene utilizzato solo come alias. L'ID non viene modificato.|  
 |**Lingua**|Specifica la lingua delle didascalie della struttura di data mining.|  
-|**nome**|Specifica il nome o l'alias della struttura di data mining.<br /><br /> Se si modifica il valore della proprietà Name, il nuovo nome viene utilizzato solo come didascalia o alias. L'identificatore della struttura di data mining non viene modificato.|  
+|**Nome**|Specifica il nome o l'alias della struttura di data mining.<br /><br /> Se si modifica il valore della proprietà Name, il nuovo nome viene utilizzato solo come didascalia o alias. L'identificatore della struttura di data mining non viene modificato.|  
 |**Origine**|Visualizza il nome dell'origine dati e il tipo di origine dati.|  
   
 ### <a name="properties-of-the-mining-structure-columns"></a>Proprietà delle colonne della struttura di data mining  

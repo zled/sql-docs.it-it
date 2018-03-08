@@ -16,15 +16,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d27cca1b3e5a35dfcf405b8f10cd0e099e2a756
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec8c660444c11a95896c2d3e0cfd47a7d8bc8514
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Peer-to-peer - Rilevamento dei conflitti nella replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replica transazionale peer-to-peer consente di inserire, aggiornare o eliminare dati in qualsiasi nodo di una topologia e di propagare le modifiche agli altri nodi. Poiché è possibile modificare i dati in qualsiasi nodo, si potrebbe verificare un conflitto tra le modifiche apportate ai dati in nodi diversi. Se una riga viene modificata in più nodi, può causare un conflitto o persino la perdita di un aggiornamento quando viene propagata in altri nodi.  

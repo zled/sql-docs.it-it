@@ -8,12 +8,11 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - aggregations [Analysis Services], about aggregations
 - storage [Analysis Services], aggregations
@@ -23,19 +22,20 @@ helpviewer_keywords:
 - storing data [Analysis Services], aggregations
 - aggregations [Analysis Services]
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b51ee2cb78ff5309e6f2fe3ffc515a15a1649619
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f88fe2a55b2c6e56cd36db492d56893319c6bed5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="aggregations-and-aggregation-designs"></a>Aggregazioni e progettazione di aggregazioni
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un <xref:Microsoft.AnalysisServices.AggregationDesign> oggetto definisce un set di definizioni di aggregazione che possono essere condivise tra più partizioni.  
+# <a name="aggregations-and-aggregation-designs"></a>Aggregations and Aggregation Designs
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un oggetto <xref:Microsoft.AnalysisServices.AggregationDesign> definisce un set di definizioni di aggregazione che possono essere condivise tra più partizioni.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.Aggregation> rappresenta il riepilogo dei dati dei gruppi di misure a una determinata granularità delle dimensioni.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/08/2017
  Nonostante il calcolo preliminare di tutte le possibili aggregazioni in un cubo possa consentire di ottimizzare il tempo di risposta per tutte le query, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può calcolare facilmente determinati valori aggregati da altre aggregazioni precalcolate. Inoltre, il calcolo di tutte le possibili aggregazioni comporta tempi di elaborazione e spazio di archiviazione notevoli. Pertanto, è necessario raggiungere un compromesso tra i requisiti di archiviazione e la percentuale di possibili aggregazioni precalcolate. Se nessuna aggregazione viene precalcolata (0%), il tempo di elaborazione e lo spazio di archiviazione necessari per un cubo saranno ridotti al minimo, ma il tempo di risposta alle query potrebbe essere lungo, perché i dati necessari per fornire una risposta a ogni query devono essere recuperati dalle celle foglia e poi aggregati in fase di query per fornire una risposta a ogni query. La restituzione del singolo numero rappresentante la risposta alla query formulata sopra ("A quanto ammontavano le vendite del prodotto X nel 1998 per la regione Nord-Ovest"), ad esempio, potrebbe richiedere la lettura di migliaia di righe di dati, l'estrazione del valore della colonna utilizzata per specificare la misura Sales in ogni riga e quindi il calcolo della somma. Inoltre, il periodo di tempo necessario per il recupero di tali dati varierà in base alla modalità di archiviazione scelta per i dati, ovvero MOLAP, HOLAP o ROLAP.  
   
 ## <a name="designing-aggregations"></a>Progettazione di aggregazioni  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include un sofisticato algoritmo che consente di selezionare aggregazioni da precalcolare in modo possano calcolare rapidamente altre aggregazioni rispetto ai valori precalcolati. Se, ad esempio, le aggregazioni vengono precalcolate per il livello mese di una gerarchia temporale, il calcolo di un livello trimestre richiederà semplicemente la somma di tre numeri, un'operazione eseguibile rapidamente. Questa tecnica consente sia di ridurre il tempo di elaborazione sia di limitare i requisiti di archiviazione, con un impatto minimo sul tempo di risposta alle query.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include un sofisticato algoritmo che consente di selezionare aggregazioni da precalcolare in modo possano calcolare rapidamente altre aggregazioni rispetto ai valori precalcolati. Se, ad esempio, le aggregazioni vengono precalcolate per il livello mese di una gerarchia temporale, il calcolo di un livello trimestre richiederà semplicemente la somma di tre numeri, un'operazione eseguibile rapidamente. Questa tecnica consente sia di ridurre il tempo di elaborazione sia di limitare i requisiti di archiviazione, con un impatto minimo sul tempo di risposta alle query.  
   
  Progettazione guidata aggregazioni include opzioni che consentono di impostare vincoli relativi allo spazio di archiviazione e alla percentuale di calcolo preliminare per l'algoritmo, in modo da raggiungere un adeguato compromesso tra il tempo di risposta alle query e i requisiti di archiviazione. L'algoritmo della Progettazione guidata aggregazioni, tuttavia, presuppone che il valore della probabilità sia lo stesso per tutte le query. L'Ottimizzazione guidata basata sulle statistiche di utilizzo consente di modificare la progettazione di un'aggregazione per un gruppo di misure tramite un'analisi delle query inviate da applicazioni client. Utilizzando la procedura guidata per ottimizzare l'aggregazione di un cubo è possibile aumentare i tempi di risposta alle query frequenti e ridurre i tempi di risposta alle query poco frequenti senza un impatto significativo sullo spazio di archiviazione necessario per il cubo.  
   

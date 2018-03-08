@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_virtualfilestats (Transact-SQL) | Documenti Microsoft
+title: sys.fn_virtualfilestats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/16/2016
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_virtualfilestats_TSQL
 - fn_virtualfilestats
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - I/O [SQL Server], statistics
 - fn_virtualfilestats function
 - sys.fn_virtualfilestats function
 - statistical information [SQL Server], I/O
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75af14c94dd17ae6caead3f6b5dee9e0bf0b257e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 19ef497fad4032f1e0bdb0b40c2f2a850ad40cdf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +75,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ## <a name="remarks"></a>Osservazioni  
  **fn_virtualfilestats** è un funzione con valori di tabella che fornisce informazioni statistiche, ad esempio il numero totale dei / o eseguite in un file di sistema. Questa funzione consente di tenere traccia della durata dell'attesa da parte degli utenti per la lettura o la scrittura in un file. Consente inoltre di identificare i file in cui si verifica un elevato numero di operazioni di I/O.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="examples"></a>Esempi  
@@ -81,7 +83,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ### <a name="a-displaying-statistical-information-for-a-database"></a>A. Visualizzazione di informazioni statistiche per un database  
  Nell'esempio seguente vengono visualizzate informazioni statistiche per il file con ID 1 nel database con ID `1`.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(1, 1);  
 GO  
@@ -90,7 +92,7 @@ GO
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. Visualizzazione di informazioni statistiche per un database e un file con nome  
  Nell'esempio seguente vengono visualizzate informazioni statistiche per il file di log nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La funzione di sistema `DB_ID` viene utilizzata per specificare il *database_id* parametro.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
@@ -99,15 +101,15 @@ GO
 ### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>C. Visualizzazione di informazioni statistiche per tutti i database e i file  
  Nell'esempio seguente vengono visualizzate informazioni statistiche per tutti i file di tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(NULL,NULL);  
 GO  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DB_ID &#40; Transact-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)   
- [FILE_IDEX &#40; Transact-SQL &#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
+ [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

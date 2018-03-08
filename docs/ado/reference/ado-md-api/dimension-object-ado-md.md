@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Dimension
-helpviewer_keywords: Dimension object [ADO MD]
+f1_keywords:
+- Dimension
+helpviewer_keywords:
+- Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeab1d9f91ac80c78bd5c3f546d26ff1c868f3cd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a222c6495302f06e5fa2b8dd0e0d355869e3d40
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dimension-object-ado-md"></a>Oggetto dimensione (ADO MD)
 Rappresenta una delle dimensioni di un cubo multidimensionale, contenente uno o più gerarchie di membri.  
@@ -42,11 +45,11 @@ Rappresenta una delle dimensioni di un cubo multidimensionale, contenente uno o 
   
  Il **proprietà** insieme contiene le proprietà specifiche del provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione del provider per un elenco completo delle proprietà disponibili.  
   
-|nome|Description|  
+|Nome|Description|  
 |----------|-----------------|  
 |CatalogName|Il nome del catalogo a cui appartiene il cubo.|  
 |CubeName|Nome del cubo.|  
-|Proprietà DefaultHierarchy|Il nome univoco della gerarchia predefinita.|  
+|DefaultHierarchy|Il nome univoco della gerarchia predefinita.|  
 |Description|Una descrizione significativa del cubo.|  
 |DimensionCaption|Etichetta o didascalia associata alla dimensione.|  
 |DimensionCardinality|Il numero di membri nella dimensione.|  

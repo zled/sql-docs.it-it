@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4db2f357942eb7bab34a17e8f9c03e442731055
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>I cursori scorrevoli e isolamento delle transazioni
 Nella tabella seguente elenca i fattori che controllano la visibilità delle modifiche.  
@@ -46,17 +46,17 @@ Nella tabella seguente elenca i fattori che controllano la visibilità delle mod
 |Cursore type\action|Self|Proprietario<br /><br /> TXN|Othr<br /><br /> TXN<br /><br /> (RU[a])|Othr<br /><br /> TXN<br /><br /> (RC[a])|Othr<br /><br /> TXN<br /><br /> (RR[a])|Othr<br /><br /> TXN<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Statico|||||||  
-|Insert|Ad esempio [b]|No|No|No|No|No|  
-|Update|Ad esempio [b]|No|No|No|No|No|  
-|DELETE|Ad esempio [b]|No|No|No|No|No|  
+|Insert|Ad esempio [b]|no|no|no|no|no|  
+|Update|Ad esempio [b]|no|no|no|no|no|  
+|DELETE|Ad esempio [b]|no|no|no|no|no|  
 |Gestito da keyset|||||||  
-|Insert|Ad esempio [b]|No|No|No|No|No|  
-|Update|Sì|Sì|Sì|Sì|No|No|  
-|DELETE|Ad esempio [b]|Sì|Sì|Sì|No|No|  
+|Insert|Ad esempio [b]|no|no|no|no|no|  
+|Update|Sì|Sì|Sì|Sì|no|no|  
+|DELETE|Ad esempio [b]|Sì|Sì|Sì|no|no|  
 |Dynamic|||||||  
-|Insert|Sì|Sì|Sì|Sì|Sì|No|  
-|Update|Sì|Sì|Sì|Sì|No|No|  
-|DELETE|Sì|Sì|Sì|Sì|No|No|  
+|Insert|Sì|Sì|Sì|Sì|Sì|no|  
+|Update|Sì|Sì|Sì|Sì|no|no|  
+|DELETE|Sì|Sì|Sì|Sì|no|no|  
   
  [a] le lettere tra parentesi indicano il livello di isolamento della transazione contenente il cursore. il livello di isolamento della transazione (in cui è stata effettuata la modifica) è irrilevante.  
   

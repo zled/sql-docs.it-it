@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9fa0b3192455d022288100f2997309598dae774b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8ab77d362f9758e21a1bce78c31bc066d39f51c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati file flat (Importazione/Esportazione guidata SQL Server)
 Questo argomento illustra come connettersi a un'origine dati **file flat** (file di testo) dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata SQL Server. Poiché per i file flat queste due pagine della procedura guidata visualizzano set di opzioni diversi, questo argomento descrive l'origine file flat e la destinazione file flat separatamente.
@@ -39,7 +40,7 @@ Pagina|Consiglio  |Tipo
 ----|---------|---------
 **Generale**|Assicurarsi di aggiornare le opzioni della sezione **Formato**.|Consigliato    
 **Colonne**|Assicurarsi di controllare i delimitatori di colonna e riga (per un file delimitato) o di contrassegnare le colonne (per un file a larghezza fissa).|Consigliato
-**Avanzate**|Facoltativamente, controllare i tipi di dati e le altre proprietà assegnate per impostazione predefinita alle colonne.|Facoltativo
+**Advanced**|Facoltativamente, controllare i tipi di dati e le altre proprietà assegnate per impostazione predefinita alle colonne.|Facoltativo
 **Anteprima**|Facoltativamente, visualizzare in anteprima un campione di dati usando le impostazioni specificate.|Facoltativo
 
 ## <a name="general-page-source"></a>Pagina Generale (origine)
@@ -67,7 +68,7 @@ Pagina|Consiglio  |Tipo
  **Formato**  
  Specificare se il file usa il tipo di formattazione delimitato, a larghezza fissa o non allineato a destra.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate da delimitatori. Specificare il delimitatore nella pagina **Colonne**.|  
 |A larghezza fissa|Le colonne hanno una larghezza fissa.|  
@@ -82,7 +83,7 @@ Pagina|Consiglio  |Tipo
  **Delimitatore riga di intestazione**  
  Consente di selezionare il delimitatore per la riga di intestazione nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La riga di intestazione è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
@@ -109,7 +110,7 @@ Pagina|Consiglio  |Tipo
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
@@ -123,7 +124,7 @@ Pagina|Consiglio  |Tipo
  **Delimitatore di colonna**  
  Consente di selezionare il delimitatore di colonna desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le colonne sono delimitate da un ritorno a capo.|  
@@ -181,7 +182,7 @@ Nella pagina **Colonne** verificare l'elenco di colonne e i delimitatori che la 
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
@@ -219,10 +220,10 @@ Nello screenshot si noti che il tipo di dati della colonna **id**, che contiene 
 |**OutputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore corrisponde al conteggio di caratteri. Nell'attività Flusso di dati questo valore viene utilizzato per impostare la larghezza della colonna di output per l'origine file flat. Nel modello a oggetti il nome di questa proprietà è MaximumWidth.|  
 |**TextQualified**|Consente di indicare se i dati di tipo testo sono racchiusi tra qualificatori di testo, ad esempio le virgolette.<br /><br /> True: i dati di tipo testo nel file flat sono qualificati. False: i dati di tipo testo nel file flat NON sono qualificati.|  
   
-**Nuovi**  
+**Nuova**  
  Consente di aggiungere una **nuova**colonna. Per impostazione predefinita, il pulsante **Nuova** aggiunge una colonna alla fine dell'elenco. Il pulsante dispone inoltre delle opzioni seguenti, disponibili nell'elenco a discesa.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Aggiungi colonna**|Consente di aggiungere una nuova colonna alla fine dell'elenco.|  
 |**Inserisci prima**|Consente di inserire una nuova colonna prima di quella selezionata.|  
@@ -290,7 +291,7 @@ Per una destinazione file flat, è disponibile solo una singola pagina di opzion
  **Formato**  
  Specificare se il file usa il tipo di formattazione delimitato, a larghezza fissa o non allineato a destra.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate da delimitatori. Specificare il delimitatore nella pagina **Colonne**.|  
 |A larghezza fissa|Le colonne hanno una larghezza fissa.|  

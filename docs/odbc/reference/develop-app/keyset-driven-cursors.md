@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f908db305a92399ccb5ca9e4930460db249fff46
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eff91b12ebf378aa4bbcdbbfbdfa84c40a66f06b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keyset-driven-cursors"></a>Cursori basati su keyset
 Un cursore gestito da keyset è compresa tra un valore statico e un cursore dinamico, la possibilità di rilevare le modifiche apportate. Un cursore statico, non sempre rileva le modifiche per l'appartenenza e l'ordine del set di risultati. È un cursore dinamico, di rilevare le modifiche ai valori delle righe nel set (soggetti a livello di isolamento della transazione, come impostato dall'attributo di connessione SQL_ATTR_TXN_ISOLATION) di risultati.  

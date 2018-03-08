@@ -8,21 +8,23 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: master database [SQL Server], restoring
+helpviewer_keywords:
+- master database [SQL Server], restoring
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b78a32fec05225fc178cda86a844c0d46404013c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bdcb8f41a3eb6abd20f905f573f84fb1b426f014
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Ripristinare il database master (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
  Nell'esempio seguente viene ripristinato il database `master` nell'istanza predefinita del server. In questo esempio si presuppone che l'istanza del server sia già in esecuzione in modalità utente singolo. Viene avviata l'utilità `sqlcmd` ed eseguita un'istruzione `RESTORE DATABASE` che ripristina un backup completo del database `master` da un dispositivo disco: `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]  
->  Per un'istanza denominata, il comando **sqlcmd** deve specificare l'opzione **-S***\<NomeComputer>*\\*\<NomeIstanza>*.  
+>  Per un'istanza denominata, il comando **sqlcmd** deve specificare l'opzione *-S***\<NomeComputer>*\\*\<<NomeIstanza*.  
   
 ```  
   

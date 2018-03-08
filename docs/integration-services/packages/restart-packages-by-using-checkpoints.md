@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c12ab9b92aa37b0e60f699fbec07e13c97cdbddc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5630458cf4f925ad1cce7cfab27cedbcf66bf3eb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Riavvio dei pacchetti tramite checkpoint
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] può riavviare i pacchetti non eseguiti correttamente a partire dal punto in cui si è verificato l'errore, invece di eseguire di nuovo l'intero pacchetto. Se un pacchetto è configurato per l'utilizzo di checkpoint, le informazioni sull'esecuzione del pacchetto vengono scritte in un file del checkpoint. Questo file viene quindi utilizzato per il riavvio di un pacchetto dal punto in cui si è verificato l'errore. Se il pacchetto viene eseguito correttamente, il file del checkpoint viene eliminato e quindi creato nuovamente alla successiva esecuzione del pacchetto.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="checkpoint-usage"></a>Utilizzo dei checkpoint  
  I possibili valori della proprietà ForceExecutionResult sono i seguenti:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Never**|Specifica che il file del checkpoint non viene utilizzato e che il pacchetto viene eseguito dall'inizio del flusso di lavoro.|  
 |**Always**|Specifica che il file del checkpoint viene sempre utilizzato e che il pacchetto viene riavviato a partire dal punto in cui si è verificato l'errore. Se il file del checkpoint non viene individuato, il pacchetto ha esito negativo.|  

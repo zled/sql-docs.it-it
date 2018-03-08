@@ -16,15 +16,15 @@ helpviewer_keywords:
 - columns [SQL Server], copying
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3f4cad9d5695de70072694ddfae257dc2c7639d2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ab6c5c510e8f1d13c5212f316d27dabcdedd1009
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copia di colonne da una tabella a un'altra (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per copiare le colonne tramite:**  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
 9.  Eseguire la query per inserire i dati dalla tabella di origine alla tabella di destinazione.
 
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Per copiare le definizioni delle colonne tra tabelle  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

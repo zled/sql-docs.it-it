@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9fffe98d01164f8af7ebe5c59153eb7c0b06c79a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6ee5c4c70581b275ce19b597f505a8d577ea88a0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-projects-dqs"></a>Progetti Data Quality (DQS)
   Un progetto di qualità dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consiste nell'utilizzo di una Knowledge Base per migliorare la qualità dei dati di origine eseguendo attività di *pulizia dei dati* e di *individuazione di corrispondenze tra dati* ed esportando quindi i dati risultanti in un database SQL Server o in un file csv. È possibile creare un progetto di qualità dei dati come progetto di pulizia o come progetto di corrispondenza per eseguire le rispettive attività. È possibile eseguire progetti di pulizia e di individuazione delle corrispondenze utilizzando la stessa Knowledge Base, poiché le informazioni per la pulizia e per l'individuazione di corrispondenze possono essere inserite all'interno della stessa Knowledge Base.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="ProfilingNotification"></a> Profiling di dati e notifiche  
  Durante l'esecuzione delle attività di pulizia e corrispondenza in un progetto Data Quality, è possibile ottenere statistiche e informazioni in tempo reale sui dati elaborati da DQS. Il profiling dati consente di valutare l'efficacia dei processi di pulizia e di corrispondenza nonché l'entità del miglioramento dei dati grazie alla pulizia o all'individuazione delle corrispondenze. Il profiling DQS fornisce due dimensioni della qualità dei dati: *completezza* (l'entità della presenza dei dati) e *accuratezza* (la misura entro cui i dati possono essere utilizzati per gli scopi previsti). Inoltre, in base alle informazioni sul profiling dei dati, vengono presentate notifiche riguardanti azioni che possono essere intraprese per migliorare la pulizia dei dati e le operazioni di individuazione delle corrispondenze. Per informazioni dettagliate sul profiling dei dati e sulle notifiche, vedere [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

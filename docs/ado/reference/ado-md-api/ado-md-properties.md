@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,27 +16,27 @@ helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c59077cbb3604cca9ef352c348a49e6301ace6df
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ae381b20c4073ff5da87b6e3d26a964ed6a6ca60
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-properties"></a>Proprietà ADO MD
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indica a quale ADO **connessione** set di celle corrente dell'oggetto o catalogo a cui appartiene attualmente.|  
-|[Didascalia](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica la didascalia di testo da utilizzare per visualizzare un **livello** o **membro** oggetto.|  
+|[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica la didascalia di testo da utilizzare per visualizzare un **livello** o **membro** oggetto.|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Indica il numero di membri per cui corrente **membro** oggetto è l'elemento padre in una gerarchia.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Restituisce una raccolta di **membri** per il quale corrente **membro** padre nella gerarchia.|  
-|[Conteggio](../../../ado/reference/ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
 |[Livello nidificazione](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica il numero di livelli tra il **livello** e la radice del livello della gerarchia.|  
-|[Descrizione](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Restituisce una descrizione di testo dell'oggetto corrente.|  
+|[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Restituisce una descrizione di testo dell'oggetto corrente.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indica il numero di dimensioni su un asse.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Indica se nessuno degli elementi figlio segue immediatamente il membro sull'asse.|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|Indica informazioni sui filtri per set di celle corrente.|  

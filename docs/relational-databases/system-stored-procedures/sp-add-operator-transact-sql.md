@@ -1,5 +1,5 @@
 ---
-title: sp_add_operator (Transact-SQL) | Documenti Microsoft
+title: sp_add_operator (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_operator
 - sp_add_operator_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc0807d00d85fcdb9f41d4cf13b696bff7566d7a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 534a5b973d0d35d660a07fc85bb8c7934f13a5c5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,22 +78,22 @@ sp_add_operator [ @name = ] 'name'
  [  **@pager_address=** ] **'***pager_address***'**  
  Indirizzo del cercapersone dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *pager_address* è **narchar(100)**, con un valore predefinito è NULL.  
   
- [  **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
+ [ **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
  Data e ora successivamente alle quali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent invia notifica tramite cercapersone all'operatore specificato nei giorni della settimana, dal lunedì al venerdì. *weekday_pager_start_time*è **int**, il valore predefinito è **090000**, che indica le 9.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
  [  **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
  Il tempo trascorso il quale **SQLServerAgent** servizio non invia notifiche al cercapersone dell'operatore specificato giorni feriali da lunedì a venerdì. *weekday_pager_end_time*è **int**, il valore predefinito è 180000, che indica le 18.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
- [  **@saturday_pager_start_time =**] *saturday_pager_start_time*  
+ [ **@saturday_pager_start_time =**] *saturday_pager_start_time*  
  Il tempo trascorso il quale **SQLServerAgent** servizio invia notifiche al cercapersone dell'operatore specificato sabato. *saturday_pager_start_time* è **int**, il valore predefinito è 090000, che indica le 9.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
- [  **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
+ [ **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
  Il tempo trascorso il quale **SQLServerAgent** servizio non invia notifiche al cercapersone dell'operatore specificato sabato. *saturday_pager_end_time*è **int**, il valore predefinito è **180000**, ovvero le 18.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
- [  **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
+ [ **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
  Il tempo trascorso il quale **SQLServerAgent** servizio invia notifiche al cercapersone dell'operatore specificato domenica. *sunday_pager_start_time*è **int**, il valore predefinito è **090000**, che indica le 9.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
- [  **@sunday_pager_end_time =**] *sunday_pager_end_time*  
+ [ **@sunday_pager_end_time =**] *sunday_pager_end_time*  
  Il tempo trascorso il quale **SQLServerAgent** servizio non invia notifiche al cercapersone dell'operatore specificato domenica. *sunday_pager_end_time*è **int**, il valore predefinito è **180000**, ovvero le 18.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
  [  **@pager_days=** ] *pager_days*  
@@ -106,7 +109,7 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Venerdì|  
 |**64**|Sabato|  
   
- [  **@netsend_address=** ] **'***netsend_address***'**  
+ [ **@netsend_address=** ] **'***netsend_address***'**  
  Indirizzo di rete dell'operatore a cui viene inviato il messaggio di rete. *netsend_address*è **nvarchar (100)**, con un valore predefinito è NULL.  
   
  [  **@category_name=** ] **'***categoria***'**  
@@ -125,7 +128,7 @@ sp_add_operator [ @name = ] 'name'
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_add_operator**.  
   
 ## <a name="examples"></a>Esempi  
@@ -147,9 +150,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_delete_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

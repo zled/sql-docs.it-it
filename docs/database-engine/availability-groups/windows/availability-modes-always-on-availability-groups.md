@@ -22,13 +22,13 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 095b40c8525e83a6d686a0d40d1f6aa1974a3442
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7f1e90e1892eae4763b8afd1af575cc6b3ef16a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modalità di disponibilità (gruppi di disponibilità AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,8 @@ ms.lasthandoff: 11/20/2017
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 e 03|04|Sì|  
 |02|01|01 e 03|04|Sì|  
-|03||01 e 02|04|No|  
-|04|||01, 02 e 03|No|  
+|03||01 e 02|04|no|  
+|04|||01, 02 e 03|no|  
   
  In genere il nodo 04 come replica con commit asincrono viene distribuito in un sito per il ripristino di emergenza. Il fatto che i nodi 01, 02 e 03 rimangano nella modalità con commit asincrono dopo il failover al nodo 04 contribuisce ad evitare possibili cali delle prestazioni nel gruppo di disponibilità dovute all'elevata latenza di rete tra i due siti.  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [Utilizzare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
  **Per visualizzare il gruppo e la replica di disponibilità, nonché gli stati dei database**  
   

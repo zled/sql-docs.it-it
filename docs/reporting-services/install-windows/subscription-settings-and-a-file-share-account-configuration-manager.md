@@ -8,21 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a39e6c65d56d17330a3ffbcf5b1b2bace51d93ac
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8faf295d4afa2967adaa1bcb922f8b360bbc138e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione)
   Usare la pagina **Impostazioni sottoscrizione** di Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un account di condivisione file per i server di report in modalità nativa e le sottoscrizioni con recapito tramite condivisione file. L'account di condivisione file consente di usare un singolo set di credenziali in più sottoscrizioni che recapitano i report a una condivisione file. Quando è necessario modificare le credenziali, è possibile configurare la modifica per l'account di condivisione file e non è necessario aggiornare ogni sottoscrizione.  

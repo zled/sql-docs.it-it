@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - validate_package stored procedure [Integration Services]
 - catalog.validate_package stored procedure [Integration Services]
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e4bfde2a35b234e5a48f96d1d5632316a3b2af9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 597b0642825c7009ad79fbf2722944857ea66c38
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +70,9 @@ catalog.validate_package [ @folder_name = ] folder_name
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni READ sul progetto e, se applicabile, autorizzazioni READ su ambienti a cui si fa riferimento  
@@ -97,7 +98,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   Riferimento alla variabili effettuato nei parametri del pacchetto, ma nessuna inclusione di ambienti di riferimento nella convalida.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La convalida consente di identificare i problemi che possono impedire la corretta esecuzione del pacchetto. Usare la vista [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) o [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) per monitorare lo stato della convalida.  
   
   

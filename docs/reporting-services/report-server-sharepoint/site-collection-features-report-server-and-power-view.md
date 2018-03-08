@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6f5df6ae4406ec1bab8449a2dd07ffa1e267cece
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9e463bbaf3e74706d49e7815c7e02da7f0706f53
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Attivare le funzionalità di integrazione del server di report e di Power View in SharePoint
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/05/2017
   Le funzionalità di raccolta siti di Reporting Services vengono attivate per impostazione predefinita dopo l'installazione del componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] per prodotti SharePoint. In alcune situazioni è necessario attivare le funzionalità manualmente.  
 
 > [!NOTE]
-> L'integrazione di Reporting Services con SharePoint non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
  Se si installa il componente aggiuntivo Reporting Services per prodotti SharePoint 2010 dopo l'installazione del prodotto SharePoint, la funzionalità di integrazione del server di report e la funzionalità di integrazione di Power View verranno attivate solo per le raccolte siti radice. Per le altre raccolte di siti è necessario attivare le funzionalità manualmente. Ad esempio, in presenza di una raccolta siti **http://[nome server]/sites/[nome raccolta siti]** sarà necessario attivare manualmente le funzionalità di raccolta siti di Reporting Services.  
   

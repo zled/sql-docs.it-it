@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c4994f77321278c9f923cb5899e70c10a688d95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e385362666a573b97579a3f0e99924152b1bcdd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-memory-manager-object"></a>Oggetto Memory Manager di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'oggetto **Memory Manager** di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include contatori per il monitoraggio dell'utilizzo complessivo della memoria del server. Tale monitoraggio che consente di misurare l'attività degli utenti e l'utilizzo delle risorse può risultare utile per identificare eventuali colli di bottiglia. Con il monitoraggio dell'utilizzo della memoria da parte di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile rilevare le situazioni seguenti:  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="memory-manager-counters"></a>Contatori Memory Manager  
  Nella tabella seguente vengono descritti i contatori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** .  
   
-|Contatori Memory Manager di SQL Server|Descrizione|  
+|Contatori Memory Manager di SQL Server|Description|  
 |----------------------------------------|-----------------|  
 |**Memoria connessioni (KB)**|Specifica la quantità totale di memoria dinamica utilizzata dal server per gestire le connessioni.|  
 |**Memoria cache di database (KB)**|Specifica la quantità totale di memoria attualmente utilizzata dal server per la cache delle pagine del database.|  

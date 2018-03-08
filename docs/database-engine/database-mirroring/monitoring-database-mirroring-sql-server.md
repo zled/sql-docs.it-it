@@ -8,26 +8,28 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: "78"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7fd9182030c2be57d0d059a0807b06d24637cbba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitoraggio del mirroring del database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa sezione presenta il monitoraggio del mirroring del database e le stored procedure di sistema **sp_dbmmonitor**, descrive il funzionamento del monitoraggio del mirroring del database, incluso il funzionamento del processo **Monitoraggio mirroring del database**, e fornisce un riepilogo delle informazioni che è possibile monitorare sulle sessioni di mirroring del database. Vengono inoltre fornite informazioni generali sulla definizione di valori soglia degli avvisi per un set di eventi di mirroring del database predefiniti e sull'impostazione di avvisi per qualsiasi evento di mirroring del database.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Questa sezione presenta il monitoraggio del mirroring del database e le stored procedure di sistema **sp_dbmmonitor** , descrive il funzionamento del monitoraggio del mirroring del database, incluso il funzionamento del processo **Monitoraggio mirroring del database**, e fornisce un riepilogo delle informazioni che è possibile monitorare sulle sessioni di mirroring del database. Vengono inoltre fornite informazioni generali sulla definizione di valori soglia degli avvisi per un set di eventi di mirroring del database predefiniti e sull'impostazione di avvisi per qualsiasi evento di mirroring del database.  
   
  È possibile monitorare un database con mirroring durante una sessione di mirroring per verificare se i dati fluiscono correttamente. Per impostare e gestire il monitoraggio per uno o più database con mirroring in un'istanza del server, è possibile usare Monitoraggio mirroring del database oppure le stored procedure di sistema **sp_dbmmonitor** .  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 11/20/2017
   
      Nella tabella seguente vengono illustrate le stored procedure per la gestione e l'utilizzo del monitoraggio del mirroring del database in modo indipendente da Monitoraggio mirroring del database.  
   
-    |Procedura|Descrizione|  
+    |Procedura|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|Crea un processo che aggiorna periodicamente le informazioni relative allo stato per ogni database con mirroring nell'istanza del server.|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|Cambia il valore di un parametro del monitoraggio di mirroring del database.|  
@@ -311,7 +313,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Usare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   
--   [Avviare Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
+-   [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 -   [Visualizzazione dello stato di un database con mirroring &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
   

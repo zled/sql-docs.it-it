@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,13 +19,13 @@ ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cc58472700406b764c1e8364f0d6972748c7e880
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ff3ae7e2e01eab4629fa30f4ab188ac714d4fd2e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>Aggiungere, modificare o eliminare valori disponibili per un parametro di report
   Dopo aver creato un parametro del report, è possibile specificare un elenco di valori disponibili da visualizzare. Tale elenco limita le scelte dell'utente ai soli valori validi per il parametro.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Dopo aver pubblicato un report, è possibile eseguire l'override dei valori disponibili definiti nel report nello strumento di creazione di report, impostando i valori delle proprietà del parametro nel server di report. Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Dopo aver pubblicato un report, è possibile eseguire l'override dei valori disponibili definiti nel report nello strumento di creazione di report, impostando i valori delle proprietà del parametro nel server di report. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="to-add-or-change-the-available-values-for-a-report-parameter"></a>Per aggiungere o modificare i valori disponibili per un parametro di report  
   

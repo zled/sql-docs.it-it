@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ac27d37604a2245346b307b0dff8d648de26ebd
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f9cbe1802a5a4a353ad4af72abcb092187aa8e0a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilazione nativa di tabelle e stored procedure
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Con OLTP in memoria viene introdotto il concetto di compilazione nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può compilare in modo nativo stored procedure che accedono alle tabelle ottimizzate per la memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è anche in grado di compilare in modo nativo tabelle ottimizzate per la memoria. Con la compilazione nativa si accede ai dati più velocemente e si eseguono le query in modo più efficiente rispetto al tradizionale [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretato. La compilazione nativa di tabelle e stored procedure produce DLL.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Con OLTP in memoria viene introdotto il concetto di compilazione nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può compilare in modo nativo stored procedure che accedono alle tabelle ottimizzate per la memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è anche in grado di compilare in modo nativo tabelle ottimizzate per la memoria. Con la compilazione nativa si accede ai dati più velocemente e si eseguono le query in modo più efficiente rispetto al tradizionale [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretato. La compilazione nativa di tabelle e stored procedure produce DLL.
 
 È anche supportata la compilazione nativa dei tipi di tabella con ottimizzazione per la memoria. Per altre informazioni, vedere [Tabella temporanea più rapida e variabile di tabella tramite l'ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
 

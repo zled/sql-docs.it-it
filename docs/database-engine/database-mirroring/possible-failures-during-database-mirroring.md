@@ -23,13 +23,13 @@ ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69059bd6bc4a095b8f046d58c63762b5af4deba9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 16801b4bcf5cfbaf01090d716d4e77f0fbdd1e41
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possibili errori durante il mirroring del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gli errori in una sessione di mirroring del database possono essere causati da problemi di tipo fisico, del sistema operativo o di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il mirroring del database non controlla regolarmente i componenti sui quali Sqlservr.exe si basa per verificare se stiano funzionando correttamente o abbiano generato un errore. In alcuni casi, tuttavia, il componente interessato invia una segnalazione di errore a Sqlservr.exe. Un errore segnalato da un altro componente è denominato *errore hardware*. Per rilevare altri errori che altrimenti non verrebbero rilevati, il mirroring del database implementa un proprio meccanismo di timeout. Quando si verifica un timeout di mirroring, il mirroring del database presuppone che si sia verificato un errore e dichiara un *errore software*. Tuttavia, alcuni errori che si verificano a livello dell'istanza di SQL Server non provocano il timeout del mirroring a timeout e possono non essere rilevati.  

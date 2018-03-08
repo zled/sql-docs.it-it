@@ -1,7 +1,7 @@
 ---
 title: Impostazioni globali (Tester) (OracleToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8f539352279a21b6f736616c5425b4f24856cb03
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4aa9d87eefc0b268fbd8fca9cabf26e7cd27b663
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-tester-oracletosql"></a>Impostazioni globali (Tester) (OracleToSQL)
 Utilizzare la pagina Tester del **impostazioni globali** la finestra di dialogo per specificare le impostazioni per SSMA Tester.  
@@ -36,7 +36,7 @@ Le opzioni seguenti sono disponibili per questa impostazione:
   
 1.  Sì  
   
-2.  No  
+2.  no  
   
 **Modalità di salvataggio di tabelle ausiliarie**  
 Questa impostazione specifica la modalità salvare le tabelle ausiliarie interne create durante l'esecuzione di test case. Per questa impostazione specifica è possibile impostare le opzioni seguenti:  
@@ -58,7 +58,7 @@ Le opzioni seguenti sono disponibili per questa impostazione:
   
 1.  Sì  
   
-2.  No  
+2.  no  
   
 **Arrestare l'esecuzione di test dopo il primo errore**  
 Questa impostazione specifica se interrompere l'esecuzione test case corrente, se si è verificato un errore durante l'esecuzione. Set di opzioni predefinito è **Sì**.  
@@ -67,7 +67,7 @@ Le opzioni seguenti sono disponibili per questa impostazione:
   
 1.  Sì  
   
-2.  No  
+2.  no  
   
 ## <a name="see-also"></a>Vedere anche  
 [Completamento della preparazione del Test Case &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  

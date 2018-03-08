@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c213a3cf52c65b83609bb5f7a0a1acc1cbbc906
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c805ba92cc4b83e09b4328ab2cffa9947eb93c33
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Utilizzare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report
   In SharePoint sono disponibili funzionalità di sicurezza predefinite che è possibile utilizzare per accedere agli elementi del server di report da siti e raccolte di SharePoint. Se sono già state assegnate autorizzazioni per siti ed elenchi agli utenti, questi ultimi potranno accedere alle operazioni e agli elementi del server di report subito dopo la configurazione delle impostazioni per l'integrazione tra SharePoint e un server di report.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/05/2017
 |---------------------------|--------------------------|-----------------|------------------------------|  
 |**Proprietari**|Controllo completo|I proprietari dispongono di autorizzazioni complete per la creazione, la gestione e la protezione di operazioni ed elementi del server di report.|Impostazione di autorizzazioni che controllano l'accesso a tutti gli elementi del server di report archiviati nelle raccolte del sito. Impostazione di autorizzazioni all'interno di un modello di report (in questo caso si parla anche di sicurezza degli elementi di un modello). Personalizzazione di una web part Visualizzatore report. Aggiunta di report e altri elementi alle raccolte. Modifica delle proprietà degli elementi per report e altri documenti. Eliminazione di report e altri elementi. Visualizzazione di report, inclusi quelli che utilizzano modelli di report per l'esplorazione dei dati. Impostazione di parametri per i report. Impostazione di opzioni di elaborazione per un report. Generazione di modelli di report. Creazione di report in Generatore report. Creazione e gestione di origini dati condivise. Creazione, modifica ed eliminazione di sottoscrizioni di proprietà di un utente. Creazione e gestione di pianificazioni condivise utilizzate in tutto il sito. Creazione e gestione delle diverse versioni di uno stesso documento, inclusa la cronologia del report. Download del file di origine per una definizione del report o modello di report. Sostituzione di una definizione del report, di un modello di report, di un'origine dati condivisa o di una risorsa senza modificare autorizzazioni e proprietà degli elementi.|  
 |**Membri**|Collaborazione|I membri possono creare nuovi elementi e pubblicare modelli ed elementi di report dagli strumenti di progettazione alle raccolte di SharePoint.|Aggiunta di report e altri elementi alle raccolte. Modifica delle proprietà degli elementi per report e altri documenti. Eliminazione di report e altri elementi. Visualizzazione di report, inclusi quelli che utilizzano modelli di report per l'esplorazione dei dati. Visualizzazione delle versioni precedenti di un documento, inclusi gli snapshot della cronologia del report (l'utente deve disporre anche dell'autorizzazione per l'apertura del report per cui è stata creata la cronologia del report). Impostazione di parametri per i report. Impostazione di opzioni di elaborazione per un report. Generazione di modelli di report. Creazione di report in Generatore report. Creazione e gestione di origini dati condivise. Creazione, modifica ed eliminazione di sottoscrizioni di proprietà dell'utente. Utilizzo di pianificazioni condivise con una sottoscrizione. Creazione e gestione delle diverse versioni di uno stesso documento, inclusa la cronologia del report. Download del file di origine per una definizione del report o modello di report. Sostituzione di una definizione del report, di un modello di report, di un'origine dati condivisa o di una risorsa senza modificare autorizzazioni e proprietà degli elementi.|  
-|**Visitatori** e **Visualizzatori**|Lettura|I visitatori possono visualizzare i report|Visualizzazione di report, inclusi quelli che utilizzano modelli di report per l'esplorazione dei dati.|  
+|**Visitatori** e **Visualizzatori**|lettura|I visitatori possono visualizzare i report|Visualizzazione di report, inclusi quelli che utilizzano modelli di report per l'esplorazione dei dati.|  
   
  Se non si utilizzano i livelli di autorizzazione e i gruppi incorporati, per accedere alle funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sarà necessario includere autorizzazioni specifiche. Per altre informazioni, vedere [Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   

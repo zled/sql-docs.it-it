@@ -1,35 +1,33 @@
 ---
-title: Soluzioni di modelli tabulari (SSAS tabulare) | Documenti Microsoft
+title: Soluzioni di modelli tabulari | Documenti Microsoft
 ms.date: 05/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 147f0b4f37d0b24e78ad8c314e9cdff12e85459e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5b84ae0fa5911c0140213583462b20c9054f0f4b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="creating-tabular-models"></a>Creazione di modelli tabulari
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Negli argomenti di questa sezione forniscono informazioni su come creare modelli tabulari utilizzando la progettazione di modelli tabulari in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Negli argomenti di questa sezione si forniscono informazioni sulla creazione di modelli tabulari utilizzando la progettazione di modelli tabulari in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Progettazione di modelli tabulari](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)  
   
  [Database dell'area di lavoro](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
@@ -62,9 +60,9 @@ ms.lasthandoff: 12/08/2017
   
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
- [Modello](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analizza in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Distribuzione di una soluzione del modello tabulare](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Distribuzione della soluzione di modello tabulare](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Scaricare SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)   

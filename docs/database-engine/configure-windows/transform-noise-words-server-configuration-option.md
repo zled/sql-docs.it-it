@@ -19,22 +19,22 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1993c216407c262d9256da15ecf81a2854c2b840
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80045bc6eeef7fc608d33095aa1bd7b3052925d8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>Opzione di configurazione del server transform noise words Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Usare l'opzione di configurazione del server **transform noise words** per evitare la visualizzazione di un messaggio di errore se, a causa di [parole non significative](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md), un'operazione booleana su una query full-text restituisce zero righe. Questa opzione è utile per le query full-text in cui viene utilizzato il predicato CONTAINS e con operazioni booleane o operazioni NEAR che includono parole non significative. I valori possibili sono illustrati nella tabella seguente.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |0|Le parole non significative non vengono trasformate. Quando una query full-text contiene parole non significative, la query restituisce zero righe e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene generato un avviso. Questo è il comportamento predefinito.<br /><br /> Nota: l'avviso generato è un avviso di run-time. Pertanto, se la clausola full-text nella query non viene eseguita, l'avviso non viene generato. Per una query locale, viene generato un solo avviso, anche se sono presenti più clausole di query full-text. Per una query remota, il server collegato potrebbe non inoltrare l'errore ed è pertanto possibile che l'avviso non venga generato.|  
 |1|Le parole non significative vengono trasformate. Tali parole vengono ignorate e viene valutato e il resto della query.<br /><br /> Se vengono specificate parole non significative in un termine di prossimità, queste vengono rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La parola non significativa `is` viene ad esempio rimossa da `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`, trasformando la query di ricerca in `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`. Si noti che la query `CONTAINS(<column_name>, 'NEAR(hello,is)')` verrebbe trasformata semplicemente in `CONTAINS(<column_name>, hello)` in quanto vi è un solo termine di ricerca valido.|  

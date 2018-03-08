@@ -3,7 +3,7 @@ title: Elemento DatabaseToConnect (DTA) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: DatabaseToConnect element
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d487b07c39a0203da364345423c03da581709074
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e57133b7158ba1fae461f2d058f9cd8065226c8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="databasetoconnect-element-dta"></a>Elemento DatabaseToConnect (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Specifica il primo database al quale Ottimizzazione guidata motore di Database si connette durante l'ottimizzazione di un carico di lavoro.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/05/2017
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Elemento padre**|[Elemento TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Elementi figlio**|Nessuno|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -59,6 +59,6 @@ ms.lasthandoff: 12/05/2017
  Per un esempio di uso, vedere [Esempio di file di input XML con carico di lavoro inline &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

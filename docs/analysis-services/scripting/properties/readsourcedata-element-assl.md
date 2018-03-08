@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ReadSourceData Element
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d8ebaaddf17daf1544cc7bd351581b5d21e5050c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a50c6ffd2d0a305edb4bf4ed78579d0bf4108ca9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="readsourcedata-element-assl"></a>Elemento ReadSourceData (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Determina i nomi univoci generati per le gerarchie contenute all'interno di [CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md).  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|*Nessuno*|  
@@ -57,17 +55,17 @@ ms.lasthandoff: 12/08/2017
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |*Nessuno*|Non è consentito alcun accesso ai dati disponibili nella sessione di calcolo 0.|  
 |*È consentito*|È consentito l'accesso ai dati disponibili nella sessione di calcolo 0.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'elemento che corrisponde all'elemento padre **ReadSourceData** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.CubePermission>.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, invalid characters
 - FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
-caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 403d2431769b8e19b0b80ce41473d0b2db6baa13
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1490c56f7df93aee63d9a8f90e0902893d2b7d08
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Caratteri non validi e regole di escape
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Questo argomento descrive il modo in cui i caratteri XML non validi vengono gestiti dalla clausola FOR XML ed elenca le regole di escape per i caratteri non validi nei nomi XML.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Questo argomento descrive il modo in cui i caratteri XML non validi vengono gestiti dalla clausola FOR XML ed elenca le regole di escape per i caratteri non validi nei nomi XML.  
   
 ## <a name="for-xml-and-invalid-characters"></a>Per i caratteri XML non validi  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sostituisce caratteri XML non validi con entità quando vengono restituiti all'interno di query FOR XML che non usano la direttiva TYPE.  

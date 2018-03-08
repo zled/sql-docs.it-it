@@ -5,32 +5,30 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d3f3148837cd2e511ffd6d8fc539c32db362c88
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2d9b665cc3aa5dd70ea481cd6b3328ffb6d7aa82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-linked-dimensions"></a>Definizione delle dimensioni collegate
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una dimensione collegata è basata su una dimensione creata e archiviata in un altro database di Analysis Services della stessa versione e il livello di compatibilità. Utilizzando una dimensione collegata è possibile creare, archiviare e mantenere una dimensione in un database facendo in modo che tale dimensione sia disponibile per gli utenti di più database. Per gli utenti una dimensione collegata ha lo stesso aspetto di qualsiasi altra dimensione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una dimensione collegata è basata su una dimensione creata e archiviata in un altro database di Analysis Services con la stessa versione e lo stesso livello di compatibilità. Utilizzando una dimensione collegata è possibile creare, archiviare e mantenere una dimensione in un database facendo in modo che tale dimensione sia disponibile per gli utenti di più database. Per gli utenti una dimensione collegata ha lo stesso aspetto di qualsiasi altra dimensione.  
   
  Le dimensioni collegate sono di sola lettura. Se si desidera modificare la dimensione o creare nuove relazioni, è necessario modificare la dimensione di origine, quindi eliminare e ricreare la dimensione collegata e le sue relazioni. Non è possibile aggiornare una dimensione collegata per visualizzare le modifiche dell'oggetto di origine.  
   

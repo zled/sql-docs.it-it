@@ -16,15 +16,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], defining
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8edc949b81a6b8c6d336ecaf3fd955d406a3648
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee95ce967637c9b1be05d0ee4de552b1cb7ea4e4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-modify-and-delete-publications-and-articles-replication"></a>Creazione, modifica ed eliminazione di pubblicazioni e articoli (replica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa sezione della documentazione include le procedure relative alle attività correlate alla creazione di pubblicazioni e alla definizione di articoli.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
--   [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md)  
+-   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)  
   
 -   [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   

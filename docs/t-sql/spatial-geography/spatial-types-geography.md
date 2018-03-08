@@ -8,30 +8,33 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: geography
-dev_langs: TSQL
+f1_keywords:
+- geography
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - geography data type [SQL Server], Transact-SQL
 - spatial data types [SQL Server]
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e13e451fefafe8f213bd63da41c22ede4c0f1b5b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 2f9a5b86f49e2d5e9b07908cd3c866999ff2f646
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="spatial-types---geography"></a>Tipi di dati spaziali, geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Il tipo di dati spaziali geografici, **geography**, viene implementato come common language runtime (CLR) tipo di dati .NET nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo rappresenta i dati in un sistema di coordinate di tipo terra rotonda. Il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
+  Il tipo di dati spaziali geografici, **geography**, viene implementato come common language runtime (CLR) tipo di dati .NET nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo rappresenta i dati in un sistema di coordinate di tipo terra rotonda. Il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** archivia dati ellissoidali (terra rotonda), ad esempio coordinate di latitudine e longitudine GPS.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta un set di metodi per il **geography** tipo di dati spaziali. Inclusi metodi per **geography** che sono definiti dallo standard Open Geospatial Consortium (OGC) e un set di [!INCLUDE[msCoName](../../includes/msconame-md.md)] estensioni a tale standard.  
  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-showing-how-to-add-and-query-geography-data"></a>A. Informazioni su come aggiungere ed eseguire una query su dati geography  
- Negli esempi seguenti viene illustrato come aggiungere ed eseguire query su dati geography. Nel primo esempio viene creata una tabella con una colonna Identity e una colonna `geography`, ovvero `GeogCol1`. Una terza colonna effettua il rendering della colonna `geography` nella rappresentazione Well-Known Text (WKT) OGC (Open Geospatial Consortium) e utilizza il metodo `STAsText()` . Vengono quindi inserite due righe: in una riga è contenuta un'istanza `LineString` di `geography`e in una seconda è contenuta un'istanza `Polygon` .  
+ Negli esempi seguenti viene illustrato come aggiungere ed eseguire query su dati geography. Nel primo esempio viene creata una tabella con una colonna Identity e una colonna `geography`, ovvero `GeogCol1`. Una terza colonna effettua il rendering della colonna `geography` nella rappresentazione Well-Known Text (WKT) OGC (Open Geospatial Consortium) e utilizza il metodo `STAsText()`. Vengono quindi inserite due righe: in una riga è contenuta un'istanza `LineString` di `geography`e in una seconda è contenuta un'istanza `Polygon` .  
   
 ```  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

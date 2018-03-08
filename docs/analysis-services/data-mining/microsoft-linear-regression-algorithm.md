@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - linear regression [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 07588cbc2548028565db1f0d6da706d48bf0540b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b904dc4d9858b87f135b180b66ea24e8f688f0c2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo Microsoft Linear Regression
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Linear Regression è una variante del [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Decision Trees che consente di calcolare una relazione lineare tra una variabile dipendente e indipendente e quindi utilizzare tale relazione per la stima.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression è una variante dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees che consente di calcolare una relazione lineare tra una variabile dipendente e indipendente e quindi di usare tale relazione per la stima.  
   
  La relazione assume la forma di un'equazione relativa alla linea che rappresenta meglio una serie di dati. Ad esempio, la linea contenuta nel diagramma seguente è la migliore rappresentazione lineare possibile dei dati.  
   
@@ -85,9 +84,9 @@ ms.lasthandoff: 12/08/2017
 -   Supporta l'utilizzo di modelli di data mining OLAP.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di Data Mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Riferimento tecnico l'algoritmo Microsoft Linear Regression](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [Esempi di Query del modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli di regressione lineare &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

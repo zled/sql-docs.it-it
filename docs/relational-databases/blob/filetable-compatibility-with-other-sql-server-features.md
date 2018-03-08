@@ -8,24 +8,27 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], using with other features
+helpviewer_keywords:
+- FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f1d34f1aef0eddb13a57860fa8eb9f4219ec577
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ba1eeb760eda46825448d3ba56bae1777c533ae
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilità di FileTable con altre funzionalità di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Viene descritto il funzionamento delle tabelle FileTable con altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Viene descritto il funzionamento delle tabelle FileTable con altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson"></a> Gruppi di disponibilità AlwaysOn e tabelle FileTable  
  Quando il database che contiene dati FILESTREAM o FileTable appartiene a un gruppo di disponibilità AlwaysOn:  
@@ -91,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
 -   È possibile che la vista sia aggiornabile in base alla semantica relativa alle viste aggiornabili, ma i vincoli di tabella sottostanti possono rifiutare gli aggiornamenti come nella tabella.  
   
--   È possibile visualizzare il percorso per un file nella vista aggiungendolo come colonna esplicita nella vista. Esempio:  
+-   È possibile visualizzare il percorso per un file nella vista aggiungendolo come colonna esplicita nella vista. Ad esempio  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
   
@@ -124,6 +127,6 @@ ms.lasthandoff: 11/17/2017
  È possibile impostare l'indipendenza del database su PARTIAL se si desidera utilizzare alcune funzionalità dei database indipendenti, ad esempio gli utenti indipendenti. In tal caso, tuttavia, è necessario tenere presente che alcune impostazioni del database non sono contenute nel database e non vengono spostate automaticamente quando viene spostato il database.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione di tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
+ [Gestire tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
   
   

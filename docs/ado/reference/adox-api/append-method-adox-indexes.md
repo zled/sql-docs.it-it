@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Indexes::Append
-helpviewer_keywords: Append method [ADOX]
+f1_keywords:
+- Indexes::Append
+helpviewer_keywords:
+- Append method [ADOX]
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7630383843d6d057e91c4c2ed88efb2fd0e751e9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 00c0f00c1c5de2e049742603c08d323e2978d3fd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-indexes"></a>Append (metodo) (ADOX indici)
 Aggiunge un nuovo [indice](../../../ado/reference/adox-api/index-object-adox.md) dell'oggetto per il [indici](../../../ado/reference/adox-api/indexes-collection-adox.md) insieme.  
@@ -41,7 +44,7 @@ Indexes.Append Index [,Columns]
  Il **indice** oggetto da accodare o il nome dell'indice per creare e aggiungere.  
   
  *Colonne*  
- Facoltativo. Oggetto **Variant** valore che specifica il nome di una o più colonne da indicizzare. Il *colonne* parametro corrisponde ai valori del [nome](../../../ado/reference/adox-api/name-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md) o più oggetti.  
+ Facoltativa. Oggetto **Variant** valore che specifica il nome di una o più colonne da indicizzare. Il *colonne* parametro corrisponde ai valori del [nome](../../../ado/reference/adox-api/name-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md) o più oggetti.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il *colonne* parametro può accettare il nome di una colonna o una matrice di nomi di colonna.  

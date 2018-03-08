@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: bfbc9274-053a-421a-bb81-2095bba710be
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0dbdaee8077ccfeb374f1ef360d397fa194dbfca
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd9dfea18c7b201dfcf5838b43d59ae0f5b942a7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measure-element-csdlbi"></a>Elemento Measure (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento Measure è un tipo complesso basato sull'elemento Property di CSDL. Le annotazioni CSDLBI aggiungono gli attributi che supportano la definizione delle formule complesse da utilizzare nei modelli di dati di Business Intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+L'elemento Measure è un tipo complesso basato sull'elemento Property di CSDL. Le annotazioni CSDLBI aggiungono gli attributi che supportano la definizione delle formule complesse da utilizzare nei modelli di dati di Business Intelligence.  
   
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente vengono elencati gli elementi e gli attributi che definiscono l'elemento Measure, oltre agli attributi applicabili all'elemento Property.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/08/2017
 |IsSimpleMeasure|No|Valore true/false che indica se la formula utilizzata nella misura è o meno un'aggregazione semplice (SUM, COUNT, MIN, MAX, AVG, DistinctCount).<br /><br /> Il valore predefinito è true.|  
   
 ## <a name="example"></a>Esempio  
- **Tabella**  
+ **Tabulare**  
   
  Nell'esempio seguente, in CSDLBI versione 1.1, vengono illustrate due misure del modello tabulare di esempio di AdventureWorks. La seconda misura è stata convertita in un indicatore KPI, aggiungendo elementi KPI.  
   

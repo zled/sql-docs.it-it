@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 605c4ae52c6e6f51ff03eb5ff161603b9fb082e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c34913be54a2eb74401d602f1ecafee25d5921c6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-8-defining-actions"></a>Lezione 8: Definizione di azioni
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In questa lezione verrà descritto come definire le azioni nel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto. Un'azione è semplicemente un'istruzione MDX (Multidimensional Expressions) archiviata in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , che può essere incorporata in applicazioni client e avviata da un utente.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+In questa lezione verranno descritte le procedure per definire le azioni del progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Un'azione è semplicemente un'istruzione MDX (Multidimensional Expressions) archiviata in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , che può essere incorporata in applicazioni client e avviata da un utente.  
   
 > [!NOTE]  
 > I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
@@ -60,7 +63,7 @@ In questa procedura viene definita, utilizzata e utilizzerà e quindi modificata
 ## <a name="see-also"></a>Vedere anche  
 [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)  
 [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[Azioni &#40;Analysis Services - Dati multidimensionali&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
+[Azioni &#40; Analysis Services - dati multidimensionali &#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [Azioni nei modelli multidimensionali](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

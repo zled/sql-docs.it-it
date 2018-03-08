@@ -8,24 +8,22 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rtp.rptdesigner.previewview.f1
 helpviewer_keywords: Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8bc7aa1def90295e81b98ab91a505219b3ce08f7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ff72cb8ca44709cabd38f122c87150f901bb476
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preview-view"></a>Visualizzazione Anteprima
 In Progettazione report [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usare la visualizzazione **Anteprima** per visualizzare il report di cui è stato eseguito il rendering. Quando si visualizza l'anteprima di un report, Progettazione report esegue il report localmente e lo visualizza nella visualizzazione Anteprima. Nella modalità di anteprima, il report viene completamente elaborato. Se la query del report è complessa o il report contiene una grande quantità di dati, la visualizzazione dell'anteprima potrebbe impiegare alcuni minuti la prima volta. Per le modifiche successive che riguardano solo il formato del report, l'anteprima utilizza i dati nella cache.

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RESTORE_REWINDONLY_TSQL
 - RESTORE REWINDONLY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - closing backup devices
 - backup devices [SQL Server], rewinding
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 457ce42346ec53d30cc8a47a6bc4f82a3271d8fc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: bf67d54e58f08296878c0781158e7b878b0b2a49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Istruzioni - RESTORE REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,15 +63,13 @@ FROM <backup_device> [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **\<dispositivo_backup >:: =** 
+ **\<backup_device> ::=** 
   
  Specifica i dispositivi di backup logici o fisici da utilizzare per il ripristino.  
   
- { *logical_backup_device_name* | **@***logical_backup_device_name_var* }  
- Nome logico, che deve seguire le regole per gli identificatori, i dispositivi di backup creati da **sp_addumpdevice** da cui viene ripristinato il database. Se specificato come variabile (**@***logical_backup_device_name_var*), il nome di dispositivo di backup può essere specificato come costante stringa ( **@**  *logical_backup_device_name_var* = *logical_backup_device_name*) o come una variabile di tipo carattere, ad eccezione di **ntext** o **testo** tipi di dati.  
+ { *logical_backup_device_name* | **@ * * * logical_backup_device_name_var* } è il nome logico, conforme alle regole per gli identificatori, i dispositivi di backup creato da **sp_addumpdevice** da cui viene ripristinato il database. Se specificato come variabile (**@***logical_backup_device_name_var*), il nome di dispositivo di backup può essere specificato come costante stringa (**@ * * * logical_backup_device_name_var*  =   *logical_backup_device_name*) o come una variabile di tipo carattere, ad eccezione di **ntext** o **testo** tipi di dati.  
   
- {DISCO | NASTRO}  **=**  { **'***nome_dispositivo_backup_fisico***'**  |   **@**  *physical_backup_device_name_var* }  
- Consente di ripristinare i backup dal dispositivo disco o nastro specificato. I tipi di dispositivo del disco e nastro devono essere specificati con il nome effettivo (ad esempio, percorso e il nome completo) del dispositivo: disco = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\. \TAPE0'. Se specificato come variabile (**@***physical_backup_device_name_var*), il nome del dispositivo può essere specificato come costante stringa ( **@**  *physical_backup_device_name_var* = '*physical_backup_device_name*') o come una variabile di tipo carattere, ad eccezione di **ntext**o **testo** tipi di dati.  
+ {DISCO | NASTRO}  **=**  { **'***nome_dispositivo_backup_fisico***'** | **@ * * * physical_backup_device_name_var*  } Consente il backup da ripristinare dal dispositivo disco o nastro denominato. I tipi di dispositivo del disco e nastro devono essere specificati con il nome effettivo (ad esempio, percorso e il nome completo) del dispositivo: disco = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\. \TAPE0'. Se specificato come variabile (**@***physical_backup_device_name_var*), il nome del dispositivo può essere specificato come costante stringa (**@ * * * physical_backup_device_name_var* = '* physical_backup_device_name *') o come una variabile di tipo carattere, ad eccezione di **ntext** o **testo** tipi di dati.  
   
  Se si utilizza un server di rete avente un nome UNC (che deve contenere il nome del server), specificare un dispositivo disco. Per ulteriori informazioni sull'utilizzo dei nomi UNC, vedere [dispositivi di Backup &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -98,9 +98,9 @@ FROM <backup_device> [ ,...n ]
 ## <a name="general-remarks"></a>Osservazioni generali  
  RESTORE REWINDONLY è un'alternativa a RESTORE LABELONLY FROM TAPE = \<name > WITH REWIND. È possibile ottenere un elenco di unità nastro aperte dal [Sys.dm io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) vista a gestione dinamica.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può utilizzare RESTORE REWINDONLY.  
   
 ## <a name="see-also"></a>Vedere anche  

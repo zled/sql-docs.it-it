@@ -3,34 +3,34 @@ title: "Configurare RHEL Cluster per il gruppo di disponibilità di SQL Server |
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: 11eea4891b1214e48f70ca56462322305fa97c06
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurare RHEL Cluster per il gruppo di disponibilità di SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Questo documento illustra come creare un cluster di gruppo di disponibilità di tre nodi per SQL Server su Red Hat Enterprise Linux. Per la disponibilità elevata, un gruppo di disponibilità in Linux richiede tre nodi, vedere [elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità](sql-server-linux-availability-group-ha.md). Il livello di clustering si basa su Red Hat Enterprise Linux (RHEL) [componente aggiuntivo a disponibilità elevata](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) compilato in cima [Pacemaker](http://clusterlabs.org/). 
 
 > [!NOTE] 
 > Accesso alla documentazione completa di Red Hat richiede una sottoscrizione valida. 
 
-Per ulteriori informazioni su configurazione cluster, le opzioni di agenti di risorsa e la gestione, visitare [la documentazione di riferimento RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Per ulteriori informazioni sulla configurazione del cluster, le opzioni di agenti di risorse e gestione, visitare [la documentazione di riferimento RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server non è come strettamente integrato con Pacemaker su Linux e Windows Server failover clustering. Un'istanza di SQL Server non è a conoscenza del cluster. Pacemaker fornisce l'orchestrazione della risorsa cluster. Inoltre, il nome di rete virtuale è specifico per il clustering di failover di Windows Server - Pacemaker è disponibile un equivalente. Disponibilità gruppo viste a gestione dinamica (DMV) informazioni del cluster per le query restituiscono righe vuote nei cluster Pacemaker. Per creare un listener per la riconnessione dopo il failover trasparente, registrare manualmente il nome del listener in DNS con l'indirizzo IP utilizzato per creare la risorsa IP virtuale. 
@@ -129,7 +129,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Impostare la proprietà cluster start-errore-è-errore irreversibile per false
 
-`start-failure-is-fatal`indica se un errore di avvio di una risorsa in un nodo impedisce ulteriori tentativi di avvio in tale nodo. Se impostato su `false`, il cluster decide di provare ad avviare nello stesso nodo in base alle corrente conteggio e la migrazione soglia di errore della risorsa. Dopo che si verifica il failover, tentativi Pacemaker avvio la disponibilità gruppo risorsa per il primo primario quando l'istanza SQL è disponibile. Pacemaker Abbassa di livello la replica secondaria e viene automaticamente aggiunto nuovamente il gruppo di disponibilità. 
+`start-failure-is-fatal` indica se un errore di avvio di una risorsa in un nodo impedisce ulteriori tentativi di avvio in tale nodo. Se impostato su `false`, il cluster decide di provare ad avviare nello stesso nodo in base alle corrente conteggio e la migrazione soglia di errore della risorsa. Dopo che si verifica il failover, tentativi Pacemaker avvio la disponibilità gruppo risorsa per il primo primario quando l'istanza SQL è disponibile. Pacemaker Abbassa di livello la replica secondaria e viene automaticamente aggiunto nuovamente il gruppo di disponibilità. 
 
 Per aggiornare il valore della proprietà da `false` eseguire:
 
@@ -151,7 +151,7 @@ Per informazioni sulle proprietà cluster Pacemaker, vedere [Pacemaker cluster p
 Per creare la risorsa del gruppo di disponibilità, utilizzare `pcs resource create` comando e impostare le proprietà della risorsa. Il comando seguente crea un `ocf:mssql:ag` master/slave, tipo di risorsa per il gruppo di disponibilità con nome `ag1`.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
@@ -160,10 +160,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## <a name="create-virtual-ip-resource"></a>Creare la risorsa IP virtuale
 
-Per creare la risorsa di indirizzo IP virtuale, eseguire il comando seguente in un nodo. Utilizzare un indirizzo IP statico disponibile dalla rete. Sostituire l'indirizzo IP tra `**<10.128.16.240>**` con un indirizzo IP valido.
+Per creare la risorsa di indirizzo IP virtuale, eseguire il comando seguente in un nodo. Utilizzare un indirizzo IP statico disponibile dalla rete. Sostituire l'indirizzo IP tra `<10.128.16.240>` con un indirizzo IP valido.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 Nessun nome server virtuale è equivalente al Pacemaker. Per utilizzare una stringa di connessione che punta a un nome di server stringa anziché un indirizzo IP, registrare il nome del server virtuale desiderata e l'indirizzo di risorse IP virtuale nel DNS. Per le configurazioni di ripristino di emergenza, registrare il nome del server virtuale desiderato e l'indirizzo IP con i server DNS primario sia del sito di ripristino di emergenza.

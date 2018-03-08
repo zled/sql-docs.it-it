@@ -1,5 +1,5 @@
 ---
-title: Sys.dm db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Documenti Microsoft
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - dm_db_objects_disabled_on_compatibility_level_change_TSQL
 - sys.dm_db_objects_disabled_on_compatibility_level_change
 - sys.dm_db_objects_disabled_on_compatibility_level_change_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bafca706c9fa8aa1f90bfb38b16df067c317a475
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f52daf2257ac6a2d8ea34d61ed2dd869b0363bce
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>I dati spaziali - Sys.dm db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Spatial Data - sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Elenca gli indici e i vincoli che saranno disabilitati come risultato della modifica del livello di compatibilità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Indici e vincoli che contengono colonne calcolate persistenti le cui espressioni utilizzano tipi definiti dall'utente spaziali saranno disabilitati dopo l'aggiornamento o la modifica del livello di compatibilità. Utilizzare questa funzione a gestione dinamica per determinare l'impatto di una modifica nel livello di compatibilità.  
@@ -39,23 +42,23 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```sql  
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
 ##  <a name="Arguments"></a> Argomenti  
- *COMPATIBILITY_LEVEL*  
+ *compatibility_level*  
  **int** che identifica il livello di compatibilità che si intende impostare.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**classe**|**int**|1 = vincoli<br /><br /> 7 = indici e heap|  
+|**class**|**int**|1 = vincoli<br /><br /> 7 = indici e heap|  
 |**class_desc**|**nvarchar(60)**|OBJECT o COLUMN per i vincoli<br /><br /> INDEX per indici e heap|  
 |**major_id**|**int**|OBJECT ID dei vincoli<br /><br /> OBJECT ID della tabella che contiene indici e heap|  
 |**minor_id**|**int**|NULL per i vincoli<br /><br /> Index_id per indici e heap|  
-|**dipendenza**|**nvarchar(60)**|Descrizione della dipendenza che provoca la disabilitazione del vincolo o dell'indice. Gli stessi valori vengono utilizzati inoltre negli avvisi generati durante l'aggiornamento. Negli esempi vengono illustrati gli aspetti seguenti:<br /><br /> "space" per una funzione intrinseco<br /><br /> 'geometry' per un tipo definito dall'utente del sistema<br /><br /> 'geography::Parse' per un metodo di un tipo definito dall'utente del sistema|  
+|**dependency**|**nvarchar(60)**|Descrizione della dipendenza che provoca la disabilitazione del vincolo o dell'indice. Gli stessi valori vengono utilizzati inoltre negli avvisi generati durante l'aggiornamento. Negli esempi vengono illustrati gli aspetti seguenti:<br /><br /> "space" per una funzione intrinseco<br /><br /> 'geometry' per un tipo definito dall'utente del sistema<br /><br /> 'geography::Parse' per un metodo di un tipo definito dall'utente del sistema|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Le colonne calcolate persistenti in cui sono utilizzate alcune funzioni intrinseche vengono disabilitate quando il livello di compatibilità viene modificato. In modo analogo, anche le colonne calcolate persistenti che utilizzano metodi geometry o geography vengono disabilitate quando un database viene aggiornato.  
@@ -143,15 +146,15 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  Poiché non è possibile disabilitare una sola colonna, l'intera tabella viene disabilitata applicando questa operazione all'indice cluster o all'heap.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrata una query su **Sys.dm db_objects_disabled_on_compatibility_level_change** per trovare gli oggetti interessati dall'impostazione del livello di compatibilità su 120.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  
 GO  
   

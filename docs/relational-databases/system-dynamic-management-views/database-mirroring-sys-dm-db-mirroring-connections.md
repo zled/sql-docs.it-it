@@ -1,5 +1,5 @@
 ---
-title: Sys.dm db_mirroring_connections (Transact-SQL) | Documenti Microsoft
+title: sys.dm_db_mirroring_connections (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_mirroring_connections
 - sys.dm_db_mirroring_connections_TSQL
 - dm_db_mirroring_connections_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_mirroring_connections dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a41dda4348e565a62b18349f301dd29102ff7a5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 11d696315b97009d86ff19f850064cd8ce71ebb1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="database-mirroring---sysdmdbmirroringconnections"></a>Database Mirroring - Sys.dm db_mirroring_connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +42,13 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Identificatore della connessione.|  
 |**transport_stream_id**|**uniqueidentifier**|Identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connessione di interfaccia di rete (SNI) utilizzato dalla connessione per le comunicazioni TCP/IP.|  
-|**stato**|**smallint**|Stato corrente della connessione. I valori possibili sono:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = CHIUSO|  
+|**state**|**smallint**|Stato corrente della connessione. I valori possibili sono:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = CHIUSO|  
 |**state_desc**|**nvarchar(60)**|Stato corrente della connessione. I valori possibili sono:<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|Data e ora di apertura della connessione.|  
 |**login_time**|**datetime**|Data e ora in cui è stato eseguito l'accesso per la connessione.|  
-|**authentication_method**|**nvarchar (128)**|Nome del metodo di autenticazione di Windows, ad esempio NTLM o KERBEROS. Questo valore proviene da Windows.|  
-|**principal_name**|**nvarchar (128)**|Nome dell'account di accesso convalidato per le autorizzazioni di connessione. Per l'autenticazione di Windows, corrisponde al nome dell'utente remoto. Per l'autenticazione basata su certificati, corrisponde al proprietario del certificato.|  
-|**remote_user_name**|**nvarchar (128)**|Nome dell'utente peer dell'altro database utilizzato dall'autenticazione di Windows.|  
+|**authentication_method**|**nvarchar(128)**|Nome del metodo di autenticazione di Windows, ad esempio NTLM o KERBEROS. Questo valore proviene da Windows.|  
+|**principal_name**|**nvarchar(128)**|Nome dell'account di accesso convalidato per le autorizzazioni di connessione. Per l'autenticazione di Windows, corrisponde al nome dell'utente remoto. Per l'autenticazione basata su certificati, corrisponde al proprietario del certificato.|  
+|**remote_user_name**|**nvarchar(128)**|Nome dell'utente peer dell'altro database utilizzato dall'autenticazione di Windows.|  
 |**last_activity_time**|**datetime**|Data e ora dell'ultimo utilizzo della connessione per l'invio o la ricezione di informazioni.|  
 |**is_accept**|**bit**|Specifica se la connessione ha avuto origine sul lato remoto.<br /><br /> 1 = La connessione è una richiesta accettata dall'istanza remota.<br /><br /> 0 = La connessione è stata avviata dall'istanza locale.|  
 |**login_state**|**smallint**|Stato del processo di accesso per la connessione. I valori possibili sono:<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = ONLINE<br /><br /> 13 = ERROR|  
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |**total_receives**|**bigint**|Numero totale di richieste di ricezione in rete generate dalla connessione.|  
 |**peer_arbitration_id**|**uniqueidentifier**|Identificatore interno dell'endpoint. Ammette valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="physical-joins"></a>Join fisici  
@@ -73,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|Per|Relazione|  
+|From|Per|Relazione|  
 |----------|--------|------------------|  
 |**dm_db_mirroring_connections.connection_id**|**dm_exec_connections.connection_id**|Uno-a-uno|  
   

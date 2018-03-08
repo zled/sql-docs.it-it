@@ -5,29 +5,27 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 664aa30f1b4dca46597ba464e93eb8534e44dca3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="subselects-in-queries"></a>Sub-SELECT nelle query
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Le espressioni sub-SELECT sono espressioni SELECT nidificate utilizzate per impedire che lo spazio del cubo in cui viene valutata la SELECT esterna. Le sub-SELECT consentono di definire un nuovo spazio sul quale tutti i calcoli vengono valutati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Le espressioni sub-SELECT sono espressioni SELECT nidificate utilizzate per limitare lo spazio del cubo dal quale viene valutata l'istruzione SELECT esterna. Le sub-SELECT consentono di definire un nuovo spazio sul quale tutti i calcoli vengono valutati.  
   
 ## <a name="subselects-by-example"></a>Esempio di sub-SELECT  
  Si inizia con un esempio di come le sub-SELECT possono consentire di produrre i risultati che si desidera mostrare. Si supponga che sia stato richiesto di produrre una tabella che mostri il comportamento delle vendite, durante gli anni, per i primi 10 prodotti.  

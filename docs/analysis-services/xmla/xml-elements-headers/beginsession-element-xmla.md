@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: BeginSession Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a15bcf21dd23ddaf4a881e152cf83fcc9190b7b7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b35ff5467daa888cfc9eefa47a7e2cf48b037946
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="beginsession-element-xmla"></a>Elemento BeginSession (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Utilizza un'intestazione SOAP in un messaggio di richiesta SOAP per avviare una nuova sessione in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -58,18 +56,18 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|Nessuno|  
-|Elementi figlio|Nessuno|  
+|Elementi padre|None|  
+|Elementi figlio|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il **BeginSession** elemento intestazione fa parte di una richiesta SOAP inviata a un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza e, in modo esplicito, consente di avviare una nuova sessione nell'istanza. L'intestazione SOAP restituita dalla risposta SOAP contiene un [sessione](../../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md) elemento che identifica la nuova sessione. Questo nuovo ID di sessione verrà archiviato e inviato nelle richieste SOAP successive utilizzando il **sessione** elemento intestazione.  

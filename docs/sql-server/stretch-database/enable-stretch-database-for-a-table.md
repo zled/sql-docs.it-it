@@ -8,26 +8,28 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 931c88853bc5f2b0ecca65aa40cf5d4b4f29bd48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ebf0e74709450f3f6bcee076c6ac4921996c54b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Per configurare una tabella per Stretch Database, selezionare **Stretch | Abilita** per una tabella in SQL Server Management Studio in modo da aprire la procedura guidata **Abilita la tabella per Stretch**. È anche possibile usare Transact-SQL per abilitare Stretch Database in una tabella esistente o creare una nuova tabella con Stretch Database abilitato.  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Se la tabella contiene dati usati più di frequente e dati usati meno di frequente, è possibile specificare una funzione di filtro per selezionare le righe di cui eseguire la migrazione.    
  
- **Prerequisiti**. Se si seleziona **Stretch | Abilita** per una tabella e Stretch Database non è ancora stato abilitato per il database, la procedura guidata configura prima di tutto il database per Stretch Database. Seguire i passaggi in [Avviare la procedura guidata Abilitare il database per l'estensione](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) anziché quelli riportati in questo argomento.  
+ **Prerequisiti**. Se si seleziona **Stretch | Abilita** per una tabella e Stretch Database non è ancora stato abilitato per il database, la procedura guidata configura prima di tutto il database per Stretch Database. Seguire i passaggi descritti in [Avviare la procedura guidata Abilitare il database per Stretch](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) anziché quelli riportati in questo articolo.  
   
  **Autorizzazioni**. Per abilitare Stretch Database in un database o una tabella sono necessarie autorizzazioni db_owner. L'abilitazione di Stretch Database in una tabella richiede anche autorizzazioni ALTER sulla tabella.  
 
@@ -55,13 +57,13 @@ ms.lasthandoff: 12/05/2017
  **Selezionare le tabelle del database**  
  Verificare che la tabella che si vuole abilitare sia visualizzata e selezionata.  
   
- È possibile eseguire la migrazione di un'intera tabella oppure specificare una funzione di filtro semplice nella procedura guidata. Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe di cui eseguire la migrazione, effettuare una delle seguenti operazioni.  
+ È possibile eseguire la migrazione di un'intera tabella oppure specificare una funzione di filtro semplice nella procedura guidata. Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe di cui eseguire la migrazione, eseguire una di queste operazioni.  
   
 -   Uscire dalla procedura guidata ed eseguire l'istruzione ALTER TABLE per abilitare l'Estensione per la tabella e specificare una funzione di filtro.  
   
 -   Eseguire l'istruzione ALTER TABLE per specificare una funzione di filtro dopo l'uscita dalla procedura guidata. Per i passaggi necessari, vedere [Aggiungere una funzione di filtro dopo l'esecuzione della procedura guidata](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz).  
   
- La sintassi di ALTER TABLE è descritta di seguito in questo argomento.  
+ La sintassi di ALTER TABLE è descritta più avanti in questo articolo.  
   
  **Riepilogo**  
  Esaminare i valori immessi e le opzioni selezionate nella procedura guidata. Selezionare quindi **Fine** per abilitare l'estensione.  

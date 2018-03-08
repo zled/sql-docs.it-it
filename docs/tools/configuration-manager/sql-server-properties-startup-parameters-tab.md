@@ -3,28 +3,30 @@ title: "Proprietà SQL Server (scheda parametri di avvio) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc88c227ddad0cabd100e78d4424375399aa5fb6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c845f8c174f96ba2e0dd5595d49721ae800777e2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Proprietà di SQL Server (scheda Parametri di avvio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilizzare questa finestra di dialogo per aggiungere o rimuovere i parametri di avvio per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I parametri di avvio possono avere un effetto significativo sulle prestazioni di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Prima di aggiungere o modificare i parametri di avvio, vedere l'argomento "Utilizzo delle opzioni di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Utilizzare questa finestra di dialogo per aggiungere o rimuovere parametri di avvio per [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I parametri di avvio possono avere un effetto significativo sulle prestazioni di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Prima di aggiungere o modificare i parametri di avvio, vedere l'argomento "Utilizzo delle opzioni di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opzioni  
  **Specificare un parametro di avvio**  
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/05/2017
  Per rimuovere un parametro, selezionarlo e quindi fare clic su **Rimuovi**.  
   
 ## <a name="parameter-format"></a>Formato dei parametri  
- Non inserire un separatore tra parametri. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione aggiunge automaticamente il separatore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione applica i requisiti dei parametri seguenti.  
+ Non inserire un separatore tra parametri. Il separatore viene aggiunto automaticamente in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager consente di applicare i seguenti requisiti di parametro.  
   
 -   Spazi iniziali e finali vengono tagliati da qualsiasi parametro di avvio.  
   

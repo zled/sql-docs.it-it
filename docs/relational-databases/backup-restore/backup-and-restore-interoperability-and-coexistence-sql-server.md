@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e6025d1b69bb5c9f2492c45967eb05c6469a389
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1045fc2174cc299e5122306289c92df0ded602d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e ripristino: interoperabilità e coesistenza (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  Se si verifica un problema durante l'avvio del database, il recupero non riesce e il database viene contrassegnato come sospetto. Se è possibile isolare uno o più file in cui è presente il problema, l'amministratore del database può attivare la modalità offline per i file e tentare di riavviare il database. Per attivare la modalità offline per un file, è possibile utilizzare l'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) seguente:  
   
- ALTER DATABASE *database_name* MODIFY FILE (NAME **='***filename***'**, OFFLINE)  
+ ALTER DATABASE *nome_database* MODIFY FILE (NAME **='***nomefile***'**, OFFLINE)  
   
  Se l'avvio ha esito positivo, tutti i filegroup che includono un file offline rimangono in modalità offline.  
   
@@ -133,7 +134,7 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
+-   [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
 -   [Backup e ripristino di indici e cataloghi full-text](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: "92"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c5d4d5a7a4e0e6adf52d430d6d32352b531dd03f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1fb279220f0ec15cc81613d2dfcc3c0bb68a3b1b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono utilizzate le connessioni per eseguire varie attività e implementare le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] seguenti:  
@@ -301,7 +302,7 @@ Tutti i tipi di gestione connessione possono essere configurati nella finestra *
   
 5.  Nella finestra **Proprietà** modificare i valori delle proprietà. La finestra **Proprietà** consente di accedere ad alcune proprietà che non è possibile configurare nell'editor standard di una gestione connessione.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 7.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   

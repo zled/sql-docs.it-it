@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - building database objects [CLR integration], debugging
 - common language runtime [SQL Server], debugging
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e822a52ab516d65c9e28aaaa3bcfb7d78f2eec16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3970e10bc77ccbee1cc52435e1b28a2a1dc7b4a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="debugging-clr-database-objects"></a>Debug di oggetti di database CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce il supporto per il debug [!INCLUDE[tsql](../../includes/tsql-md.md)] e oggetti di common language runtime (CLR) nel database. Gli aspetti principali del debug in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono la facilità di installazione e utilizzo e l'integrazione del debugger di SQL Server con il debugger di Microsoft Visual Studio. Inoltre, il debug funziona tra linguaggi diversi. Gli utenti possono passare senza problemi agli oggetti CLR da [!INCLUDE[tsql](../../includes/tsql-md.md)] e viceversa. Il debugger Transact-SQL in SQL Server Management Studio non può essere utilizzato per eseguire il debug di oggetti di database gestiti, ma è possibile eseguire il debug degli oggetti tramite i debugger disponibili in Visual Studio. Il debug di oggetti di database gestiti in Visual Studio supporta tutte le caratteristiche di debug comuni, ad esempio l'esecuzione di istruzioni e routine all'interno di routine in esecuzione nel server. Tramite i debugger è possibile impostare punti di interruzione, controllare lo stack di chiamate, controllare le variabili e modificarne i valori durante il debug. Notare che Visual Studio .NET 2003 non può essere utilizzato per la programmazione o il debug dell'integrazione CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene fornito con .NET Framework preinstallato e non è possibile utilizzare assembly di .NET Framework 2.0 in Visual Studio .NET 2003.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre il supporto per il debug di oggetti CLR (Common Language Runtime) e [!INCLUDE[tsql](../../includes/tsql-md.md)] nel database. Gli aspetti principali del debug in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono la facilità di installazione e utilizzo e l'integrazione del debugger di SQL Server con il debugger di Microsoft Visual Studio. Inoltre, il debug funziona tra linguaggi diversi. Gli utenti possono passare senza problemi agli oggetti CLR da [!INCLUDE[tsql](../../includes/tsql-md.md)] e viceversa. Il debugger Transact-SQL in SQL Server Management Studio non può essere utilizzato per eseguire il debug di oggetti di database gestiti, ma è possibile eseguire il debug degli oggetti tramite i debugger disponibili in Visual Studio. Il debug di oggetti di database gestiti in Visual Studio supporta tutte le caratteristiche di debug comuni, ad esempio l'esecuzione di istruzioni e routine all'interno di routine in esecuzione nel server. Tramite i debugger è possibile impostare punti di interruzione, controllare lo stack di chiamate, controllare le variabili e modificarne i valori durante il debug. Notare che Visual Studio .NET 2003 non può essere utilizzato per la programmazione o il debug dell'integrazione CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene fornito con .NET Framework preinstallato e non è possibile utilizzare assembly di .NET Framework 2.0 in Visual Studio .NET 2003.  
   
  Per ulteriori informazioni sul debug di codice gestito utilizzando Visual Studio, vedere la "[debug del codice gestito](http://go.microsoft.com/fwlink/?LinkId=120377)" argomento nella documentazione di Visual Studio.  
   

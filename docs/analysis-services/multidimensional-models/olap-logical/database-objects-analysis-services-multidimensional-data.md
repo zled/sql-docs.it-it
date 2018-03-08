@@ -8,12 +8,11 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Services], about objects
 - SQL Server Analysis Services, objects
@@ -22,19 +21,20 @@ helpviewer_keywords:
 - Analysis Services objects
 - objects [Analysis Services]
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ace461fd29f5c1a1176ddab2f41056df939592e8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f328102326537d201daa4bb627d818a3a58661dc
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Oggetti di database (Analysis Services - Dati multidimensionali)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Oggetto [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza contiene oggetti di database e assembly da utilizzare con l'elaborazione analitica online (OLAP) e il data mining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Oggetto [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza contiene oggetti di database e assembly da utilizzare con l'elaborazione analitica online (OLAP) e il data mining.  
   
 -   I database contengono oggetti OLAP e di data mining, ad esempio origini dei dati, viste origine dati, cubi, misure, gruppi di misure, dimensioni, attributi, gerarchie, strutture di data mining, modelli di data mining e ruoli.  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/08/2017
   
 -   L'impostazione di visibilità per il database.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  Negli argomenti seguenti vengono descritti gli oggetti condivisi sia dalle caratteristiche OLAP che da quelle di data mining in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 |Argomento|Description|  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Origini dati supportate &#40; SSAS - multidimensionale &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [Soluzioni di modelli multidimensionali &#40; SSAS &#41;](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Soluzioni di modelli multidimensionali ](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Soluzioni di Data Mining](../../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

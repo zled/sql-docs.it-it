@@ -7,29 +7,30 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: r-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a159a3198037e21664bb9b07647a01b1d5317d22
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Installazione automatica di Python Machine Learning Services (In-Database)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo argomento viene descritto come utilizzare gli argomenti della riga di comando di installazione di SQL Server 2017 per installare il motore di database di SQL Server con servizi di Machine Learning e Python, utilizzando la modalità non interattiva.
 
 > [!NOTE]
 > Non dimenticare di includere gli argomenti della riga di comando per i contratti di licenza, uno per Python e uno per SQL Server.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di avviare il processo di installazione, tenere presenti questi requisiti:
 

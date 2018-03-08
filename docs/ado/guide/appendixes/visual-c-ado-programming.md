@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae662529fc9297fa709d1a185b63d0648b0af903
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 995c833e24f23c7a30ea8c4e5893215222e0867a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-ado-programming"></a>Programmazione di ADO in Visual C++
 Il riferimento all'API ADO viene descritta la funzionalità delle ADO application programming interface (API) utilizzando una sintassi simile a Microsoft Visual Basic. Sebbene i destinatari sono tutti gli utenti, i programmatori di ADO utilizzano lingue diverse, ad esempio Visual Basic, Visual C++ (con e senza il **#import** (direttiva)) e Visual J++ (con il pacchetto di classe ADO/WFC).  
@@ -44,7 +46,7 @@ Il riferimento all'API ADO viene descritta la funzionalità delle ADO applicatio
   
  Per ogni operazione all'interno di una classe (ovvero, una chiamata di metodo o proprietà), non vi è una dichiarazione per chiamare direttamente l'operazione (ovvero, la forma dell'operazione "non elaborata") e una dichiarazione per chiamare l'operazione non elaborato e genera un errore COM se l'operazione non riesce a eseguire succ essfully. Se l'operazione è una proprietà, è in genere una direttiva del compilatore che crea una sintassi alternativa per l'operazione con una sintassi simile a Visual Basic.  
   
- Le operazioni che recuperano il valore di una proprietà hanno il formato dei nomi delle **ottenere***proprietà*. Le operazioni che impostano il valore di una proprietà avere nomi del modulo, **inserire***proprietà*. Le operazioni che impostano il valore di una proprietà con un puntatore a un oggetto ADO hanno nomi di modulo, **PutRef***proprietà*.  
+ Le operazioni che recuperano il valore di una proprietà hanno il formato dei nomi delle **ottenere * * * proprietà*. Le operazioni che impostano il valore di una proprietà avere nomi del modulo, **inserire * * * proprietà*. Le operazioni che impostano il valore di una proprietà con un puntatore a un oggetto ADO hanno nomi di modulo, **PutRef * * * proprietà*.  
   
  È possibile ottenere o impostare una proprietà con le chiamate delle forme seguenti:  
   
@@ -69,13 +71,13 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```  
   
- Il compilatore genererà appropriata **ottenere***-*, **inserire**-, o **PutRef***proprietà* chiamata in base a sintassi alternativa viene dichiarata e se la proprietà viene letta o scritta.  
+ Il compilatore genererà appropriata **Get * * *-*, **inserire**-, o **PutRef * * * proprietà* chiamata in base alle quali sintassi alternativa dichiarata e se la proprietà è che viene letto o scritto.  
   
  Il **declspec**  direttiva del compilatore è possibile dichiarare solo **ottenere**, **inserire**, o **ottenere** e **inserire** sintassi alternativa per una funzione. Operazioni di sola lettura hanno solo un **ottenere** dichiarazione; le operazioni di sola scrittura avere solo un **inserire** dichiarazione; le operazioni che sono di lettura e scrittura hanno entrambi **ottenere** e **inserire** dichiarazioni.  
   
- Solo due dichiarazioni sono possibili con questa direttiva; Tuttavia, ogni proprietà può includere tre funzioni di proprietà: **ottenere***proprietà*, **inserire***proprietà*, e **PutRef**  *Proprietà*. In tal caso, solo due tipi di proprietà presentano la sintassi alternativa.  
+ Solo due dichiarazioni sono possibili con questa direttiva; Tuttavia, ogni proprietà può includere tre funzioni di proprietà: **ottenere * * * proprietà*, **inserire * * * proprietà*, e **PutRef * * * proprietà*. In tal caso, solo due tipi di proprietà presentano la sintassi alternativa.  
   
- Ad esempio, il **comando** oggetto **ActiveConnection** proprietà è dichiarata con una sintassi alternativa per **ottenere***ActiveConnection*e **PutRef***ActiveConnection*. Il **PutRef**-sintassi è consigliabile poiché in pratica, è consigliabile inserire open **connessione** oggetto (vale a dire un **connessione** puntatore all'oggetto) in questo proprietà. D'altra parte, il **Recordset** oggetto ha **ottenere**-, **inserire**-, e **PutRef***ActiveConnection*operazioni, ma nessuna sintassi alternativa.  
+ Ad esempio, il **comando** oggetto **ActiveConnection** proprietà è dichiarata con una sintassi alternativa per **ottenere * * * ActiveConnection* e **PutRef * * * ActiveConnection*. Il **PutRef**-sintassi è consigliabile poiché in pratica, è consigliabile inserire open **connessione** oggetto (vale a dire un **connessione** puntatore all'oggetto) in questo proprietà. D'altra parte, il **Recordset** oggetto ha **ottenere**-, **inserire**-, e **PutRef * * * ActiveConnection* operazioni, ma nessuna alternativa sintassi.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>La proprietà dell'elemento, il metodo GetItem e raccolte  
  ADO definisce le raccolte diverse, tra cui **campi**, **parametri**, **proprietà**, e **errori**. In Visual C++, il **GetItem (***indice***)** metodo restituisce un membro della raccolta. *Indice* è un **Variant**, il cui valore è un indice numerico del membro della raccolta o una stringa contenente il nome del membro.  
@@ -437,7 +439,7 @@ cn.Close
 End Sub  
 ```  
   
- Questo esempio di Visual C++ viene illustrato il **ottenere**/**inserire**/**PutRef***proprietà*.  
+ Questo esempio di Visual C++ viene illustrato il **ottenere**/**inserire**/**PutRef * * * proprietà*.  
   
 #### <a name="notes"></a>Note  
  Le note seguenti corrispondono alle sezioni commentate nell'esempio di codice.  

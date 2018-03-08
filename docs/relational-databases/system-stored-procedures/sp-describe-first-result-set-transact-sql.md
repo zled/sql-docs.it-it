@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1ad511e008e2d2c1d975f54a03db8290b26e527
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a1b0d3b22cfecff2fc09551400adfc338de341bd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set** non supporta la ricorsione indiretta.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione per eseguire il @tsql argomento.  
   
 ## <a name="examples"></a>Esempi  
@@ -186,7 +186,7 @@ WHERE object_id = @id1'
   
  Nell'esempio in cui viene utilizzato 0 non viene restituita alcuna informazione.  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.t (a int PRIMARY KEY, b1 int);  
 GO  
 CREATE VIEW dbo.v AS SELECT b1 AS b2 FROM dbo.t;  
@@ -196,33 +196,33 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
  Nell'esempio in cui viene utilizzato 1 vengono restituite informazioni come se nella query fosse stata specificata un'opzione FOR BROWSE.  
   
-```tsql  
+```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1  
   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
   
  Nell'esempio in cui viene utilizzato 2 viene indicata l'esecuzione di un'analisi come se si stesse effettuando la preparazione di un cursore.  
   
-```tsql  
+```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  

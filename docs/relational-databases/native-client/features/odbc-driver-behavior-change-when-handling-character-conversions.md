@@ -8,20 +8,20 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cf1cebdc2c3b0fb1f5b9f8279740212b35634e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a16cbebca3c625fc5ed54241842b62c21c42b34f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Modifica del comportamento del driver ODBC quando si gestiscono le conversioni di caratteri
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
   
  Di seguito viene illustrato l'impatto della modifica del driver quando si utilizza il modello errato. Questa query applicazione un **varchar** colonna e l'associazione come Unicode (SQL_UNICODE/SQL_WCHAR):  
   
- Query:`select convert(varchar(36), '123')`  
+ Query:  `select convert(varchar(36), '123')`  
   
 ```  
 SQLGetData(hstmt, SQL_WCHAR, ….., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
@@ -84,7 +84,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
 ```  
   
 ## <a name="sqlbindcol-behavior"></a>Comportamento di SQLBindCol  
- Query:`select convert(varchar(36), '1234567890')`  
+ Query:  `select convert(varchar(36), '1234567890')`  
   
 ```  
 SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecting String Data Right Truncation behavior  
@@ -96,7 +96,7 @@ SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecti
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versione 11.0.2100.60) o successive|-4 (SQL_NO_TOTAL)|**SQLFetch** segnala che non vi è un troncamento a destra dei dati.<br /><br /> Tramite la lunghezza viene indicato -4 (SQL_NO_TOTAL) poiché il resto dei dati non è stato convertito.<br /><br /> I dati archiviati nel buffer sono 123\0. - Viene garantito che la terminazione del buffer sia NULL.|  
   
 ## <a name="sqlbindparameter-output-parameter-behavior"></a>SQLBindParameter (comportamento del parametro OUTPUT)  
- Query:`create procedure spTest @p1 varchar(max) OUTPUT`  
+ Query:  `create procedure spTest @p1 varchar(max) OUTPUT`  
   
  `select @p1 = replicate('B', 1234)`  
   

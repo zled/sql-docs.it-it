@@ -8,9 +8,7 @@ ms.service:
 ms.component: application-integration
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 caps.latest.revision: "33"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6df0883b69c98971251dcd76868df38b1c2e7f7e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b9937f5e81096cda3187f8c5eae408d89e0871a9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>Integrazione di Reporting Services tramite l'accesso con URL - Applicazione Web
   L'accesso con URL in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è progettato in maniera specifica per consentire l'accesso ai singoli report in una rete. Questo tipo di accesso è ottimale per l'integrazione delle funzionalità di visualizzazione e navigazione del report in un'applicazione Web personalizzata. Per utilizzare l'accesso con URL nelle applicazioni Web, è possibile:  

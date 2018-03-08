@@ -8,24 +8,27 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-query-tuning
+ms.technology:
+- dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10de1655781e7e19db0b5468294221da4ef11d93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69702e51df3f1cec504647f333105abe56ecbd65
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-1---create-the-off-by-default-policy"></a>Lezione 1-1: Creare criteri Disattivata per impostazione predefinita
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa attività consente di creare una condizione denominata Posta disattivata basata sul facet Configurazione superficie di attacco. e di creare quindi un criterio denominato Disattivata per impostazione predefinita.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Questa attività consente di creare una condizione denominata Posta disattivata basata sul facet Configurazione superficie di attacco e di creare quindi un criterio denominato Disattivata per impostazione predefinita.  
   
 ### <a name="to-create-the-mail-off-condition"></a>Per creare la condizione Posta disattivata  
   

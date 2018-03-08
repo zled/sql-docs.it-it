@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca2abbc8b7ebe6a123680c0ff59b8a162282cd7a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d2c40fcf9fb82db4a56e8d2985fab67190df8b1f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="building-a-knowledge-base"></a>Compilazione di una Knowledge Base
   Una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) è un repository di informazioni sui dati che consente di comprenderli e mantenerne l'integrità. Una Knowledge Base è costituita da domini ognuno dei quali rappresenta i dati in un campo dati. La Knowledge Base viene utilizzata da DQS per eseguire la pulizia dei dati e la deduplicazione su un database. Per preparare la Knowledge Base per la pulizia dei dati, è possibile eseguire un'analisi computerizzata di un campione di dati e gestire in modo interattivo i valori nei domini. DQS consente di importare informazioni, creare regole e relazioni, modificare direttamente valori di dati e sfruttare un database predefinito.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 |Aggiungere informazioni a una Knowledge Base tramite l'individuazione delle informazioni, la gestione dei valori di dominio, l'aggiunta di criteri di corrispondenza, l'importazione di informazioni, di un dominio o di valori oppure l'utilizzo della Knowledge Base predefinita, Dati DQS.|[Aggiunta di informazioni a una Knowledge Base](../data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
 |Analizzare un campione di dati per i criteri di qualità dei dati.|[Eseguire l'individuazione di informazioni](../data-quality-services/perform-knowledge-discovery.md)|  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

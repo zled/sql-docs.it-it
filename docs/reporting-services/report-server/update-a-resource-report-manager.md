@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 caps.latest.revision: "17"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d88f10131832c28a00da5d8c4afca2413d99b54c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0a7662d051951a32d15138b8c47c7cf5e6451729
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="update-a-resource-report-manager"></a>Aggiornare una risorsa (Gestione report)
   L'aggiornamento di una risorsa viene eseguito mediante la sostituzione con una versione più recente. Le risorse sono elementi archiviati in un server di report che includono contenuto da un file caricato dall'utente. È possibile sostituire una risorsa esistente mediante l'importazione di contenuto di file diverso o nuovo nella risorsa esistente. Con l'aggiornamento di una risorsa è possibile aggiornare contenuto mantenendo le proprietà e le impostazioni di sicurezza esistenti nella risorsa.  

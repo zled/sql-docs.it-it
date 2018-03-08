@@ -3,28 +3,30 @@ title: "Proprietà SQL Server Agent (scheda Avanzate) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44ab270aef5436ced00f4f8289ece1e0adefb62e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7e704be1826d638b7e2c92b53a21da1b39450ad6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>Proprietà - SQL Server Agent (scheda Avanzate)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sono presenti cinque proprietà sul **avanzate** scheda per impostazione predefinita. Se sono state definite proprietà personalizzate, verranno visualizzate anche in questa scheda con i rispettivi valori.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Per impostazione predefinita, nella scheda **Avanzate** sono presenti cinque proprietà. Se sono state definite proprietà personalizzate, verranno visualizzate anche in questa scheda con i rispettivi valori.  
   
 ## <a name="options"></a>Opzioni  
  **Cluster**  

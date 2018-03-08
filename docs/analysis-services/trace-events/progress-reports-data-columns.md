@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Progress Reports event category
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fabf6b9f902d02462b6dc6dfe5beb5edfbb7bb88
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eb8a5e4ba89eb9fc56b3498829e2ab2733c74b18
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="progress-reports-data-columns"></a>Colonne di dati degli eventi di report di stato
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria di eventi report di stato include le classi di evento seguenti:  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Contiene l'ora corrente dell'evento restituito, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene l'ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene l'ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Durata|5|2|Contiene la quantità di tempo trascorso in millisecondi richiesta dall'evento.|  
+|Duration|5|2|Contiene la quantità di tempo trascorso in millisecondi richiesta dall'evento.|  
 |CPUTime|6|2|Contiene il tempo della CPU in millisecondi utilizzato dall'evento.|  
 |JobID|7|1|Contiene l'ID processo associato all'evento restituito.|  
 |SessionType|8|8|Contiene il tipo di sessione, ovvero l'entità che provoca l'evento, associato all'evento restituito. Per l'elaborazione degli eventi, i valori validi sono:<br /><br /> 1= Utente<br /><br /> 2= Memorizzazione nella cache attiva<br /><br /> 3= Elaborazione lenta|  
@@ -127,7 +127,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Contiene l'ora corrente dell'evento restituito, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene l'ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene l'ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Durata|5|2|Contiene la quantità di tempo trascorso in millisecondi richiesta dall'evento.|  
+|Duration|5|2|Contiene la quantità di tempo trascorso in millisecondi richiesta dall'evento.|  
 |JobID|7|1|Contiene l'ID processo associato all'evento restituito.|  
 |SessionType|8|8|Contiene il tipo di sessione, ovvero l'entità che provoca l'evento, associato all'evento restituito. Per l'elaborazione degli eventi, i valori validi sono:<br /><br /> 1= Utente<br /><br /> 2= Memorizzazione nella cache attiva<br /><br /> 3= Elaborazione lenta|  
 |ProgressTotal|9|1|Contiene informazioni sullo stato complessivo dell'evento restituito.|  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm resource_governor_resource_pools (Transact-SQL) | Documenti Microsoft
+title: sys.dm_resource_governor_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_resource_governor_resource_pools_TSQL
 - sys.dm_resource_governor_resource_pools
 - dm_resource_governor_resource_pools
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_resource_governor_resource_pools dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d98b1faa8a39ae5b347fd6dbe9a35db1b4ce9097
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a66fe36785d2f54e265144df3b9fa1d454fd305c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -79,20 +82,20 @@ ms.lasthandoff: 11/17/2017
 |write_io_stall_queued_ms|**bigint**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Il tempo totale espresso in millisecondi tra l'arrivo degli I/O di scrittura e il problema. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O. Vale a dire che l'impostazione MIN_IOPS_PER_VOLUME del pool di risorse e l'impostazione MAX_IOPS_PER_VOLUME sono 0.<br /><br /> Si tratta del ritardo introdotto dalla governance delle risorse di I/O.|  
 |io_issue_violations_total|**int**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Totale delle violazioni di generazione di I/O. Vale a dire, il numero di volte che la frequenza di generazione di I/O era inferiore alla frequenza riservata. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O. Vale a dire che l'impostazione MIN_IOPS_PER_VOLUME del pool di risorse e l'impostazione MAX_IOPS_PER_VOLUME sono 0.|  
 |io_issue_delay_total_ms|**bigint**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Il tempo totale espresso in millisecondi tra la generazione pianificata e quella effettiva degli I/O. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O. Vale a dire che l'impostazione MIN_IOPS_PER_VOLUME del pool di risorse e l'impostazione MAX_IOPS_PER_VOLUME sono 0.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
   
 ## <a name="remarks"></a>Osservazioni  
  I gruppi del carico di lavoro e i pool di risorse di Resource Governor presentano un mapping molti-a-uno. Di conseguenza, molte delle statistiche dei pool di risorse derivano da quelle del gruppo del carico di lavoro.  
   
  Questa vista a gestione dinamica mostra la configurazione in memoria. Per visualizzare i metadati di configurazione archiviati, utilizzare la vista del catalogo resource_governor_resource_pools.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Sys.dm resource_governor_workload_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [resource_governor_resource_pools &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

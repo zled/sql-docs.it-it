@@ -1,5 +1,5 @@
 ---
-title: sysmail_delete_profileaccount_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_delete_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_profileaccount_sp
 - sysmail_delete_profileaccount_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_profileaccount_sp
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
-caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67c1f60356209a9f39d0ac902fea41b5f6ec2f2a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 26daacbb43092e81ec4798d8199d69f67fe067f1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  ID del profilo da eliminare. *profile_id* è **int**, con un valore predefinito è NULL. Entrambi i *profile_id* o *profile_name* può essere specificato.  
   
- [  **@profile_name**  =] **'***profile_name***'**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  Nome del profilo da eliminare. *profile_name* è **sysname**, con un valore predefinito è NULL. Entrambi i *profile_id* o *profile_name* può essere specificato.  
   
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  ID dell'account da eliminare. *account_id* è **int**, con un valore predefinito è NULL. Entrambi i *account_id* o *account_name* può essere specificato.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  Nome dell'account da eliminare. *account_name* è **sysname**, con un valore predefinito è NULL. Entrambi i *account_id* o *account_name* può essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -71,7 +74,7 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
   
  La stored procedure **sysmail_delete_profileaccount_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  

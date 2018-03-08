@@ -3,29 +3,32 @@ title: Configurazione SQL Native Client 11.0 | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: client configuration [SQL Server], SQL Server Native Client
+helpviewer_keywords:
+- client configuration [SQL Server], SQL Server Native Client
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f5f68510e6a36c34d0c4735b66cdb550c22bfc1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b49f2efcee75e737d6caeacc752999203c2358af
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-native-client-110-configuration"></a>Configurazione SQL Native Client 11.0
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questa sezione contiene gli argomenti della Guida F1 per le **configurazione di SQL Server Native Client** le finestre di dialogo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è la libreria di rete utilizzata dai computer client per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a partire da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+In questa sezione sono disponibili gli argomenti della Guida per le finestre di dialogo di **Configurazione SQL Server Native Client** in Gestione configurazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è la libreria di rete utilizzata dai computer client per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a partire da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Le impostazioni configurate in Configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vengono utilizzate nel computer in cui viene eseguito il programma client. Se vengono configurate nel computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vengono applicate esclusivamente ai programmi client in esecuzione sul server.  
   
@@ -55,6 +58,6 @@ ms.lasthandoff: 12/05/2017
   
     -   [Creazione di una stringa di connessione valida con TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
-    -   [Creazione di una stringa di connessione valida tramite named pipe](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+    -   [Creazione di una stringa di connessione valida tramite Named pipe](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

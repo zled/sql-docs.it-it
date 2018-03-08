@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - Data Mining Wizard
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffd9987c39cdffda3052ed075cb3abb137e4d1b2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eab8188020685603ba45054b42957f6cc725b638
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Creazione guidata modello di data mining (Analysis Services - Data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Creazione guidata di Data Mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene avviato ogni volta che si aggiunge una nuova struttura di data mining a un progetto di data mining. La procedura guidata consente di scegliere un'origine dati e di configurare una vista origine dati per definire i dati da utilizzare per l'analisi, quindi consente di creare un modello iniziale.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La Creazione guidata modello di data mining di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene avviata ogni volta che si aggiunge una nuova struttura di data mining a un progetto di data mining. La procedura guidata consente di scegliere un'origine dati e di configurare una vista origine dati per definire i dati da utilizzare per l'analisi, quindi consente di creare un modello iniziale.  
   
  Nella fase finale della procedura guidata, è possibile dividere facoltativamente i dati in set di training e di testing e abilitare funzionalità quali il drill-through.  
   
@@ -66,10 +65,10 @@ ms.lasthandoff: 12/08/2017
   
  Per una descrizione dettagliata di ogni opzione vedere gli argomenti seguenti:  
   
- [Creare una struttura di data mining relazionale](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
+ [Creare una struttura di Data Mining relazionale](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
  Vengono analizzate le decisioni da prendere per la compilazione di un modello di data mining relazionale.  
   
- [Create an OLAP Mining Structure](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
+ [Creare una struttura di Data Mining OLAP](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
  Vengono descritte le opzioni e le selezioni aggiuntive da impostare per la scelta dei dati da un cubo OLAP.  
   
 > [!NOTE]  
@@ -78,7 +77,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="choosing-an-algorithm"></a>Scelta di un algoritmo  
  A questo punto, è necessario decidere quale algoritmo utilizzare per l'elaborazione dei dati. Questa decisione comporta delle difficoltà. Ogni algoritmo disponibile in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] presenta funzionalità diverse e produce risultati diversi, pertanto è possibile provare modelli diversi prima di determinare quale sia il più appropriato per i dati e il problema aziendale da risolvere. Per una spiegazione delle attività per le quali ogni algoritmo è più appropriato, vedere gli argomenti seguenti:  
   
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmi di Data Mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  Di nuovo, è possibile creare più modelli utilizzando algoritmi diversi o modificare i parametri in modo che gli algoritmi creino modelli diversi. La scelta dell'algoritmo non deve essere un ostacolo ed è consigliabile creare diversi modelli sugli stessi dati.  
   
@@ -112,20 +111,20 @@ ms.lasthandoff: 12/08/2017
 ## <a name="related-content"></a>Contenuto correlato  
  Per ulteriori informazioni sulle decisioni è necessario prendere per la creazione di un modello di data mining, vedere i collegamenti seguenti:  
   
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmi di Data Mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Tipi di contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [Contenuto di Data Mining tipi &#40; &#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [Tipi di dati &#40;data mining&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Tipi di dati &#40; Data Mining &#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [Selezione delle caratteristica &#40;Data mining&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [Selezione funzionalità &#40; Data Mining &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [Valori mancanti &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [I valori mancanti &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
- [Drill-through sui modelli di data mining](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
+ [Drill-through sui modelli di Data Mining](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti di data mining](../../analysis-services/data-mining/data-mining-tools.md)   
- [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md)  
+ [Strumenti di Data Mining](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Soluzioni di Data Mining](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

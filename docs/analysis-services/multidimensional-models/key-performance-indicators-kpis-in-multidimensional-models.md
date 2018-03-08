@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +21,20 @@ helpviewer_keywords:
 - parent KPIs [Analysis Services]
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 166c09d9d8b2c767767ffda7914f8d465af43829
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicatori KPI nei modelli multidimensionali
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Nella terminologia aziendale, un indicatore di prestazioni chiave (KPI) è una misurazione quantificabile per la valutazione dei risultati aziendali.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Nella terminologia aziendale, un indicatore di prestazioni chiave (KPI) rappresenta una misurazione quantificabile per la valutazione dei risultati aziendali e  
   
  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un indicatore KPI è costituito da una raccolta di calcoli associati a un gruppo di misure in un cubo e usati per valutare il successo aziendale. Questi calcoli sono in genere una combinazione di espressioni MDX (Multidimensional Expressions) o di membri calcolati. Gli indicatori KPI dispongono inoltre di metadati aggiuntivi che offrono informazioni sulla modalità di visualizzazione dei risultati dei calcoli degli indicatori stessi nelle applicazioni client.  
   

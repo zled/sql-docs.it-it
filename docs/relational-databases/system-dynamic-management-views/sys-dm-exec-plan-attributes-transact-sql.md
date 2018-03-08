@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_plan_attributes (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_plan_attributes_TSQL
 - dm_exec_plan_attributes
 - sys.dm_exec_plan_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_plan_attributes dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3346d20f183810891615615c493d1d39c3339658
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c9a90a964bd8c1fce911e62ac9081b47d349e0a5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +54,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|attributo|**varchar (128)**|Nome dell'attributo associato al piano. Nella tabella immediatamente sotto quella sono elencati i possibili attributi, i tipi di dati e le relative descrizioni.|  
+|attributo|**varchar(128)**|Nome dell'attributo associato al piano. Nella tabella immediatamente sotto quella sono elencati i possibili attributi, i tipi di dati e le relative descrizioni.|  
 |Valore|**sql_variant**|Valore dell'attributo associato al piano.|  
 |is_cache_key|**bit**|Indica se l'attributo viene utilizzato come parte della chiave di ricerca nella cache per il piano.|  
 
@@ -83,7 +86,7 @@ La tabella precedente, **attributo** può avere i valori seguenti:
 |sql_handle|**varbinary**(64)|Handle SQL per il batch.|  
 |merge_action_type|**smallint**|Il tipo di piano di esecuzione del trigger utilizzato come risultato di un'istruzione MERGE.<br /><br /> 0 indicano un piano non-trigger, un piano del trigger che non viene eseguito come risultato di un'istruzione MERGE o un piano del trigger che viene eseguito come risultato di un'istruzione MERGE in cui viene specificata solo un'azione DELETE.<br /><br /> 1 indica un piano di trigger INSERT che è in esecuzione come risultato di un'istruzione MERGE.<br /><br /> 2 indica un piano di trigger UPDATE in esecuzione come risultato di un'istruzione MERGE.<br /><br /> 3 indica un piano di trigger DELETE che viene eseguito come risultato di un'istruzione MERGE che contiene un'azione INSERT o UPDATE corrispondente.<br /><br /> Per i trigger nidificati eseguiti da azioni a catena, questo valore è l'azione dell'istruzione MERGE che provoca la propagazione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessaria l'autorizzazione VIEW SERVER STATE nel server.  
   
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Premium richiede l'autorizzazione VIEW DATABASE STATE nel database. In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Standard e Basic richiede il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] account amministratore.  
@@ -116,7 +119,7 @@ La tabella precedente, **attributo** può avere i valori seguenti:
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Indica che l'opzione di database PARAMETERIZATION era impostata su FORCED al momento della compilazione del piano.|131072|  
-|ROWCOUNT|**Si applica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] per[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**Si applica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>Cursori  
  I cursori inattivi vengono memorizzati nella cache in un piano compilato in modo che la memoria utilizzata per archiviare il cursore possa essere riutilizzata da utenti simultanei dei cursori. Si supponga, ad esempio, che un batch dichiari e utilizzi un cursore senza deallocarlo. Se due utenti eseguono lo stesso batch, saranno presenti due cursori attivi. Dopo la deallocazione dei cursori, potenzialmente in batch diversi, la memoria utilizzata per archiviare il cursore viene assegnata alla cache e non rilasciata. Questo elenco dei cursori inattivi viene mantenuto nel piano compilato. In occasione della successiva esecuzione del batch, la memoria per il cursore nella cache verrà riutilizzata e inizializzata in modo appropriato come cursore attivo.  
@@ -148,7 +151,7 @@ La tabella precedente, **attributo** può avere i valori seguenti:
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. Restituzione degli attributi per un piano specifico  
  Nell'esempio seguente vengono restituiti tutti gli attributi per un piano specificato. Viene prima di tutto eseguita una query sulla vista a gestione dinamica `sys.dm_exec_cached_plans` per ottenere l'handle del piano specificato. Nella seconda query, sostituire `<plan_handle>` con il valore di handle di piani restituito dalla prima query.  
   
-```tsql  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -160,7 +163,7 @@ GO
 ### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>B. Restituzione delle opzioni SET per i piani compilati e dell'handle SQL per i piani memorizzati nella cache  
  Nell'esempio seguente viene restituito un valore che rappresenta le opzioni con cui è stato compilato ogni piano. Inoltre, viene restituito l'handle SQL per tutti i piani memorizzati nella cache.  
   
-```tsql  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   
@@ -174,9 +177,9 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica &#40; relative all'esecuzione Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [Sys.dm exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Sys. Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

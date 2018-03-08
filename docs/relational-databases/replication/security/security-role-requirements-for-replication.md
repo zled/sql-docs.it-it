@@ -16,15 +16,15 @@ helpviewer_keywords:
 - roles [SQL Server], replication
 ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e931c6ce014ea1446e09e8fbcdcd7f5246d05067
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf0a2ab236eca599756a6cd8b983ad4e94fa115b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-role-requirements-for-replication"></a>Requisiti del ruolo di sicurezza per la replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replica limita le azioni specifiche che un utente può eseguire in base ai ruoli a cui viene eseguito il mapping dell'account di accesso dell'utente. La replica concede determinate autorizzazioni al ruolo predefinito del server **sysadmin** , al ruolo predefinito del database **db_owner** e agli account di accesso presenti nell'elenco di accesso alla pubblicazione.  
@@ -57,6 +57,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Sicurezza e protezione &#40;replica&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Sicurezza e protezione #40;replica&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

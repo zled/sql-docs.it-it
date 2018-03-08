@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - modifying named queries
 - data source views [Analysis Services], named queries
 ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d83f1264b7eb9f3b306c4540dca9f1407eff0b4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e82aedbca1db294e94a803db8541c2ff88876211
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definire query denominate in una vista origine dati (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una query denominata è un'espressione SQL rappresentata come una tabella. In una query denominata è possibile specificare un'espressione SQL per la selezione di righe e colonne restituite da una o più tabelle in una o più origini dati. Una query denominata è simile a qualsiasi altra tabella in una vista origine dati con righe e relazioni, con la differenza che la query denominata è basata su un'espressione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una query denominata è un'espressione SQL rappresentata come tabella. In una query denominata è possibile specificare un'espressione SQL per la selezione di righe e colonne restituite da una o più tabelle in una o più origini dati. Una query denominata è simile a qualsiasi altra tabella in una vista origine dati con righe e relazioni, con la differenza che la query denominata è basata su un'espressione.  
   
  Una query denominata consente di estendere lo schema relazionale delle tabelle esistenti in una vista origine dati senza modificare l'origine dati sottostante. Una serie di query denominate può, ad esempio, essere utilizzata per suddividere una tabella delle dimensioni complessa in tabelle delle dimensioni più piccole e più semplici, da utilizzare nelle dimensioni del database. È inoltre possibile utilizzare una query denominata per unire in join più tabelle di database di una o più origini dati in una singola tabella della vista origine dati.  
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/08/2017
 5.  Scegliere **OK**. Nell'intestazione di tabella verrà visualizzata un'icona con due tabelle sovrapposte, indicante che la tabella è stata sostituita da una query denominata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Definire calcoli denominati in una vista origine dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: fts_active_catalogs (Transact-SQL) | Documenti Microsoft
+title: sys.dm_fts_active_catalogs (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_active_catalogs
 - dm_fts_active_catalogs_TSQL
 - sys.dm_fts_active_catalogs
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_active_catalogs dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_active_catalogs dynamic management view
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3712a9cb104058d46cc0f2b9b21d1ad0f5bf062c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c6031073091f63185f58cd256900719c25d8a7ae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,8 +46,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID del database contenente il catalogo full-text attivo.|  
 |**catalog_id**|**int**|ID del catalogo full-text attivo.|  
-|**memory_address**|**varbinary (8)**|Indirizzo dei buffer di memoria allocati per l'attività di popolamento correlata al catalogo full-text.|  
-|**name**|**nvarchar (128)**|Nome del catalogo full-text attivo.|  
+|**memory_address**|**varbinary(8)**|Indirizzo dei buffer di memoria allocati per l'attività di popolamento correlata al catalogo full-text.|  
+|**name**|**nvarchar(128)**|Nome del catalogo full-text attivo.|  
 |**is_paused**|**bit**|Indica se il popolamento del catalogo full-text attivo è stato sospeso.|  
 |**status**|**int**|Stato corrente del catalogo full-text. I tipi validi sono:<br /><br /> 0 = Inizializzazione in corso<br /><br /> 1 = Pronto<br /><br /> 2 = sospeso<br /><br /> 3 = Errore temporaneo<br /><br /> 4 = Rimontaggio necessario<br /><br /> 5 = Chiusura<br /><br /> 6 = In stato di inattività per backup<br /><br /> 7 = Il backup viene eseguito tramite il catalogo<br /><br /> 8 = Il catalogo è danneggiato|  
 |**status_description**|**nvarchar(120)**|Descrizione dello stato corrente del catalogo full-text attivo.|  
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>Osservazioni  
  La colonna is_importing è stata introdotta in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.  
   
@@ -70,7 +73,7 @@ In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessar
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|Per|Relazione|  
+|From|Per|Relazione|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Uno-a-uno|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Uno-a-uno|  

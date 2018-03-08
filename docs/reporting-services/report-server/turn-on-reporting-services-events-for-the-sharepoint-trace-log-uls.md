@@ -8,28 +8,26 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7dfb7020fe79961b4b52a5a6b36919e7abdbb7b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89baca75b96115ac70e6f520cd2248f03497cbda
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint (ULS)
 
   A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], tramite i server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint è possibile scrivere gli eventi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nel log di traccia del Servizio di registrazione unificato (ULS, Unified Logging Service) di SharePoint. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili nella pagina di monitoraggio di Amministrazione centrale SharePoint.  
   
- Contenuto dell'argomento  
+ Contenuto dell'argomento:  
   
 -   [Indicazioni generali per il log ULS](#bkmk_general)  
   
@@ -50,11 +48,11 @@ ms.lasthandoff: 12/05/2017
   
 |Category|Level|Description|  
 |--------------|-----------|-----------------|  
-|Database|Verbose|Registra eventi che comportano l'accesso al database.|  
-|Generale|Verbose|Registra eventi che comportano l'accesso agli elementi seguenti:<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pagine Web<br /><br /> Gestore HTTP Visualizzatore report<br /><br /> Accesso al report (file con estensione rdl)<br /><br /> Origini dati (file con estensione rsds)<br /><br /> URL nel sito di SharePoint (file con estensione smdl)|  
+|Database|Dettagliato|Registra eventi che comportano l'accesso al database.|  
+|Generale|Dettagliato|Registra eventi che comportano l'accesso agli elementi seguenti:<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pagine Web<br /><br /> Gestore HTTP Visualizzatore report<br /><br /> Accesso al report (file con estensione rdl)<br /><br /> Origini dati (file con estensione rsds)<br /><br /> URL nel sito di SharePoint (file con estensione smdl)|  
 |Office Server General|Exception|Registra errori di accesso.|  
 |Topologia|Verbose|Registra informazioni sull'utente corrente|  
-|web part|Verbose|Consente di registrare eventi che comportano l'accesso alla web part Visualizzatore report.|  
+|web part|Dettagliato|Consente di registrare eventi che comportano l'accesso alla web part Visualizzatore report.|  
   
 ##  <a name="bkmk_turnon"></a> Per abilitare e disabilitare gli eventi di Reporting Services nella categoria Reporting Services  
   

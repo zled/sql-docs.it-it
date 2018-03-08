@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], incremental search
 - incremental searches [SQL Server Management Studio]
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1f235f48a9ac1cd0082bd0c7476d0d5ab844143
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: ba2c50eadb3e3f8a93a4f1f24bddf7d4bc7c6637
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="search-an-active-document-incrementally"></a>Ricerca incrementale in un documento attivo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile eseguire una ricerca incrementale in un singolo documento o in una singola finestra immettendo il testo. Verrà evidenziato il primo set di caratteri che corrisponde ai caratteri immessi durante la ricerca incrementale nel documento o nella finestra. La ricerca viene estesa automaticamente a tutto il testo all'interno di un documento o di una finestra, fatta eccezione per il testo nascosto.  

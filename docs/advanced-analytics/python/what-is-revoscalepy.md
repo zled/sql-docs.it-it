@@ -7,19 +7,20 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 3863cb3ec0c50de9d5189927b01cba3f7f4277df
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="introducing-revoscalepy"></a>Introduzione a revoscalepy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **revoscalepy** è una nuova libreria fornita da Microsoft per supportare l'elaborazione distribuita, di calcolo remoto contesti e gli algoritmi ad alte prestazioni per Python.
 
@@ -65,7 +66,7 @@ Crei l'oggetto origine dati mediante le funzioni elencate nella tabella seguente
 > [!IMPORTANT]
 > Numero di nomi di funzione è cambiati dalla versione iniziale di Python nella versione CTP 2.0.
 
-**Dati di SQL Server**
+**SQL Server data**
 
 + Utilizzare [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) per definire un'origine dati da una query o una tabella
 + Utilizzare [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserver) per creare un contesto di calcolo di SQL Server
@@ -83,12 +84,12 @@ I seguenti algoritmi di machine learning e funzioni di riepilogo da RevoScaleR s
 
 | Funzione| Description|Note|
 | ------ | ------ |------ |
-|`rx_btrees` | Gli alberi delle decisioni con Boosting di Adatta sfumatura stocastica|`rx_btrees_ex`Nella versione CTP 2.0|
-|`rx_dforest` | Adatta una classificazione e regressione foreste delle decisioni|`rx_dforest_ex`Nella versione CTP 2.0|
-|`rx_dtree` | Alberi di classificazione e regressione appropriati |`rx_dtree_ex`Nella versione CTP 2.0|
-|`rx_lin_mod` | Creare un modello lineare|`rx_lin_mod_ex`Nella versione CTP 2.0|
-|`rx_logit` | Creare un modello di regressione logistica|`rx_logit_ex`Nella versione CTP 2.0|
-|`rx_predict` | Generare stime da un modello con training|`rx_predict_ex`Nella versione CTP 2.0|
+|`rx_btrees` | Gli alberi delle decisioni con Boosting di Adatta sfumatura stocastica|`rx_btrees_ex` in CTP 2.0|
+|`rx_dforest` | Adatta una classificazione e regressione foreste delle decisioni|`rx_dforest_ex` in CTP 2.0|
+|`rx_dtree` | Alberi di classificazione e regressione appropriati |`rx_dtree_ex` in CTP 2.0|
+|`rx_lin_mod` | Creare un modello lineare|`rx_lin_mod_ex` in CTP 2.0|
+|`rx_logit` | Creare un modello di regressione logistica|`rx_logit_ex` in CTP 2.0|
+|`rx_predict` | Generare stime da un modello con training|`rx_predict_ex` in CTP 2.0|
 |`rx_summary` | Generare un riepilogo del modello||
 
 Nuovi algoritmi di machine learning vengono anche forniti dalla versione di Python [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):

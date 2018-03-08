@@ -1,33 +1,35 @@
 ---
 title: SQL Server Integration Services (SSIS) Scale Out Worker | Microsoft Docs
+ms.description: This article describes the Scale Out Master component of SSIS Scale Out
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb36dc89fbe8fbedc96e426d00f6982213d7d4c9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0cd80620f668e87eba8a77f1ac6a9e5faa2378da
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Ruolo di lavoro di scalabilità orizzontale di Integration Services (SSIS)
 
-Il ruolo di lavoro di scalabilità orizzontale esegue un servizio Ruolo di lavoro di scalabilità orizzontale di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] per effettuare il pull delle attività di esecuzione dal master di scalabilità orizzontale ed esegue i pacchetti in locale con ISServerExec.exe.
+Scale Out Worker esegue il servizio Scale Out Worker per eseguire il pull di attività di esecuzione da Scale Out Master. Quindi il servizio worker esegue i pacchetti in locale con `ISServerExec.exe`.
 
-## <a name="configure-sql-server-integration-services-scale-out-worker-service"></a>Configurare il servizio Ruolo di lavoro di scalabilità orizzontale di SQL Server Integration Services
-Il servizio Ruolo di lavoro di scalabilità orizzontale può essere configurato usando l' \<unità\>: \Programmi\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config file. Il servizio deve essere riavviato dopo l'aggiornamento del file di configurazione.
+## <a name="configure-the-scale-out-worker-service"></a>Configurare il servizio Scale Out Worker
+È possibile configurare il servizio Scale Out Worker usando il file ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. Il servizio deve essere riavviato dopo l'aggiornamento del file di configurazione.
 
 Configurazione  |Description  |Valore predefinito  
 ---------|---------|---------
@@ -45,20 +47,24 @@ TaskRequestMaxCPU|Limite massimo di CPU per il ruolo di lavoro di scalabilità o
 TaskRequestMinMemory|Limite massimo di memoria espressa in MB per il ruolo di lavoro di scalabilità orizzontale per richiedere attività. **NON in uso in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|100.0         
 MaxTaskCount|Numero massimo di attività che il ruolo di lavoro di scalabilità orizzontale può gestire.|10         
 LeaseInternval|Intervallo di lease di un'attività gestito dal ruolo di lavoro di scalabilità orizzontale.|00:01:00         
-TasksRootFolder|Cartella dei log delle attività. Se il valore è vuoto, viene usato il percorso della cartella dell' \<unità\>:\Users\\*[account]*\AppData\Local\SSIS\Cluster\Tasks. [account] è l'account che esegue il servizio Ruolo di lavoro di scalabilità orizzontale. Per impostazione predefinita, l'account è SSISScaleOutWorker140.|Vuoto         
-TaskLogLevel|Livello di log dell'attività del ruolo di lavoro di scalabilità orizzontale. (Verbose 0x01, Information 0x02, Warning 0x04, Error 0x08, Progress 0x10, CriticalError 0x20, Audit 0x40)|126 (Information,Warning,Error,Progress,CriticalError,Audit)     
+TasksRootFolder|Cartella dei log delle attività. Se il valore è vuoto, viene usato il percorso cartella `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks`. [account] è l'account che esegue il servizio Ruolo di lavoro di scalabilità orizzontale. Per impostazione predefinita, l'account è SSISScaleOutWorker140.|Vuoto         
+TaskLogLevel|Livello di log dell'attività del ruolo di lavoro di scalabilità orizzontale. (Verbose 0x01, Information 0x02, Warning 0x04, Error 0x08, Progress 0x10, CriticalError 0x20, Audit 0x40)|126 (Information, Warning, Error, Progress, CriticalError, Audit)     
 TaskLogSegment|Intervallo di tempo di un file di log dell'attività.|00:00:00         
 TaskLogEnabled|Specifica se il log dell'attività è abilitato.|true         
-ExecutionLogCacheFolder|Cartella usata per memorizzare nella cache il log di esecuzione del pacchetto. Se il valore è vuoto, viene usato il percorso della cartella dell' \<unità\>:\Users\\*[account]*\AppData\Local\SSIS\Cluster\Agent\ELogCache. [account] è l'account che esegue il servizio Ruolo di lavoro di scalabilità orizzontale. Per impostazione predefinita, l'account è SSISScaleOutWorker140.|Vuoto         
+ExecutionLogCacheFolder|Cartella usata per memorizzare nella cache il log di esecuzione del pacchetto. Se il valore è vuoto, viene usato il percorso cartella ` \<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache`. [account] è l'account che esegue il servizio Ruolo di lavoro di scalabilità orizzontale. Per impostazione predefinita, l'account è SSISScaleOutWorker140.|Vuoto         
 ExecutionLogMaxBufferLogCount|Numero massimo di log di esecuzione memorizzati nella cache, un buffer del log di esecuzione in memoria.|10000        
 ExecutionLogMaxInMemoryBufferCount|Numero massimo di buffer del log di esecuzione in memoria per i log di esecuzione.|10         
 ExecutionLogRetryCount|Numero di tentativi se si verifica un errore del log di esecuzione.|3
-ExecutionLogRetryTimeout|Timeout per i tentativi se si verifica un errore del log di esecuzione. Se viene raggiunto ExecutionLogRetryTimeout, ExecutionLogRetryCount viene ignorato.|7.00:00:00 (7 giorni)        
-AgentId|Id dell'agente di lavoro del ruolo di lavoro di scalabilità orizzontale|Generato automaticamente        
+ExecutionLogRetryTimeout|Timeout per i tentativi se si verifica un errore del log di esecuzione. i\Se viene raggiunto ExecutionLogRetryTimeout, ExecutionLogRetryCount viene ignorato. |7.00:00:00 (7 giorni)        
+AgentId|ID agente worker di Scale Out Worker|Generato automaticamente    
+||||    
 
-## <a name="view-scale-out-worker-log"></a>Visualizzare il log del ruolo di lavoro di scalabilità orizzontale
-Il file di log del servizio Ruolo di lavoro di scalabilità orizzontale è nel percorso della cartella \<unità\>: \Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Agent.
+## <a name="view-the-scale-out-worker-log"></a>Visualizzare il log Scale Out Worker
+Il file di log del servizio Scale Out Worker si trova nella cartella `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent`.
 
-Il percorso del log di ogni attività viene configurato nel file WorkerSettings.config da TasksRootFolder. Se non è specificato, il log si trova nel percorso della cartella \<unità\>:\Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Tasks. 
+Il percorso del log di ogni singola attività è configurato nel file `WorkerSettings.config` in `TasksRootFolder`. Se non è specificato alcun valore, il log si trova nella cartella `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. 
 
-*[account]* è l'account che esegue il servizio Ruolo di lavoro di scalabilità orizzontale. Per impostazione predefinita, l'account è SSISScaleOutWorker140.
+Il parametro *[account]* è l'account che esegue il servizio Scale Out Worker. Per impostazione predefinita, l'account è `SSISScaleOutWorker140`.
+
+## <a name="next-steps"></a>Passaggi successivi
+[Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)

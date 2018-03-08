@@ -1,7 +1,7 @@
 ---
 title: Oracle schemi di mapping per gli schemi di SQL Server (OracleToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 592c5385efd4c9457405ffec77eac723109fdf6e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 025f3f049b5efccb83e13d5baebacbe8b0fa2a1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Oracle schemi di mapping per gli schemi di SQL Server (OracleToSQL)
 In Oracle, ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti in uno schema Oracle per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] denominato per lo schema di database. Tuttavia, è possibile personalizzare il mapping tra gli schemi di Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
@@ -65,7 +65,7 @@ Se si personalizza il mapping tra uno schema di Oracle e un [!INCLUDE[ssNoVersio
   
 1.  Nella scheda mapping dello schema, selezionare una riga e fare clic su **Ripristina predefiniti** per ripristinare il database predefinito e lo schema.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Se si desidera analizzare la conversione degli oggetti Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti, è possibile [creare un report di conversione](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357). In caso contrario, è possibile [convertire le definizioni degli oggetti di database Oracle](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definizioni di oggetti.  
   
 ## <a name="see-also"></a>Vedere anche  

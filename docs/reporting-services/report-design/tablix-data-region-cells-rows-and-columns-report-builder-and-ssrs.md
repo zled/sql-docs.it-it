@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,13 +20,13 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 456f5fe95d2b5899360efaf0f2ab1d2ba492c228
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2ab98b38e62004a5537515b1963f61d01b820697
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)
   Per controllare la modalità di visualizzazione in un report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dei dati di righe e colonne di un'area dati Tablix, è necessario comprendere in che modo specificare righe e colonne relative a dati dettaglio, dati di gruppo, etichette e totali. Per visualizzare i dati, in molti casi è possibile utilizzare le strutture predefinite per una tabella, una matrice o un elenco. Per altre informazioni, vedere [Tabelle &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md),  [Creare una matrice (Generatore report e SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) o [Creare le fatture e form con elenchi (Generatore report e SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  

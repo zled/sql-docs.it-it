@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +17,20 @@ helpviewer_keywords:
 - deploying assemblies [CLR integration]
 - deploying [CLR integration]
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 73dd29d7c658a9537c6860aecfb69c5fcd538460
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac5aa32532c32b3e3066dd4aa3c8cf575e1e83ff
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deploying-clr-database-objects"></a>Distribuzione di oggetti di database CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]La distribuzione è il processo di distribuzione di un'applicazione finita o al modulo per essere installato ed eseguito in un altro computer. L'uso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio consente di sviluppare oggetti di database CLR (Common Language Runtime) e di distribuirli a un server di prova. In alternativa, è possibile compilare gli oggetti di database gestiti con i file di ridistribuzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Una volta compilati, gli assembly contenenti gli oggetti di database CLR possono essere distribuiti a un server di prova utilizzando Visual Studio o le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Notare che Visual Studio .NET 2003 non può essere utilizzato per la programmazione o la distribuzione dell'integrazione CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene fornito con .NET Framework preinstallato e non è possibile utilizzare assembly di .NET Framework 2.0 in Visual Studio .NET 2003.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La distribuzione rappresenta il processo tramite il quale si mette a disposizione un'applicazione o un modulo pronto per l'utilizzo perché venga installato ed eseguito in altri computer. L'uso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio consente di sviluppare oggetti di database CLR (Common Language Runtime) e di distribuirli a un server di prova. In alternativa, è possibile compilare gli oggetti di database gestiti con i file di ridistribuzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Una volta compilati, gli assembly contenenti gli oggetti di database CLR possono essere distribuiti a un server di prova utilizzando Visual Studio o le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Notare che Visual Studio .NET 2003 non può essere utilizzato per la programmazione o la distribuzione dell'integrazione CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene fornito con .NET Framework preinstallato e non è possibile utilizzare assembly di .NET Framework 2.0 in Visual Studio .NET 2003.  
   
  Dopo aver testato e verificato i metodi CLR sul server di prova, sarà possibile distribuirli a server di produzione utilizzando uno script di distribuzione che può essere generato manualmente o tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (vedere la procedura riportata più avanti in questo argomento).  
   

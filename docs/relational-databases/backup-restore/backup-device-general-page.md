@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7aff7cfef8a57056964cc688c563edce84cbe92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 783ec3d28cac152932ffd2088d0aa53c92f9dcb7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-device-general-page"></a>Dispositivo di backup (pagina Generale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la pagina **Generale** per specificare o visualizzare le proprietà generali di un dispositivo di backup logico.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  Poiché l'esecuzione del backup dei dati in rete può essere soggetta a errori di rete, è consigliabile verificare l'operazione di backup dopo il suo completamento. Per altre informazioni, vedere [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I backup disponibili in un set di uno o più dispositivi di backup costituiscono un singolo set di supporti. Un *set di supporti* è una raccolta ordinata di supporti di backup, nastri o file su disco, su cui una o più operazioni di backup hanno eseguito la scrittura utilizzando un tipo e un numero fisso di dispositivi di backup. Per informazioni sui set di supporti, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
  Il dispositivo di backup fisico corrisponde a un dispositivo di backup logico che viene inizializzata quando il primo backup nel set di supporti viene scritto sul dispositivo di backup logico. Se il dispositivo di backup fisico è un file non ancora esistente, viene creato in quel momento.  

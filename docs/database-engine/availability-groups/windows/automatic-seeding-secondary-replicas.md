@@ -10,20 +10,22 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2dc72a3874e9742b3bf73d0bdaf2b3d0e00f33c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Seeding automatico per le repliche secondarie
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +37,8 @@ In SQL Server 2012 e 2014, l'unico modo per inizializzare una replica secondaria
 Le considerazioni sull'uso del seeding automatico includono:
 
 * [Impatto del log delle prestazioni e delle transazioni sulla replica primaria](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Layout dei dischi](#disk-layout)
-* [Sicurezza](#security)
+* [Layout dei dischi](#disklayout)
+* [Security](#security)
 
 
 ### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Impatto del log delle prestazioni e delle transazioni sulla replica primaria
@@ -155,9 +157,6 @@ Se l'operazione ha esito positivo, i database vengono creati automaticamente nel
 
 ![Log di SQL Server][2]
 
-
-
-
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>Combinare operazioni di backup e ripristino con il seeding automatico
 
 Con il seeding automatico è possibile combinare le operazioni tradizionali di backup, copia e ripristino. In questo caso, ripristinare prima il database in una replica secondaria, inclusi tutti i log delle transazioni disponibili. Successivamente, abilitare il seeding automatico quando si crea il gruppo di disponibilità per "aggiornare" il database della replica secondaria, come se venisse ripristinato un backup della parte finale del log (vedere [Backup della parte finale del log (SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
@@ -169,7 +168,7 @@ Se per la replica secondaria è stato usato il seeding automatico quando è stat
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>Modificare la modalità di seeding di una replica
 
-La modalità di seeding di una replica può essere modificata dopo la creazione del gruppo di disponibilità, pertanto il seeding automatico può essere abilitato o disabilitato. Abilitando il seeding automatico dopo la creazione consente a un database di essere aggiunto al gruppo di disponibilità con il seeding automatico, se è stato creato con le operazioni di backup, copia e ripristino. Esempio:
+La modalità di seeding di una replica può essere modificata dopo la creazione del gruppo di disponibilità, pertanto il seeding automatico può essere abilitato o disabilitato. Abilitando il seeding automatico dopo la creazione consente a un database di essere aggiunto al gruppo di disponibilità con il seeding automatico, se è stato creato con le operazioni di backup, copia e ripristino. Ad esempio
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -249,7 +248,7 @@ GO
 
 La tabella seguente elenca gli eventi estesi correlati al seeding automatico.
 
-|Nome|Descrizione|
+|nome|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Messaggio di richiesta di seeding.|
 |hadr_physical_seeding_backup_state_change|Modifica dello stato lato backup del seed fisico.|

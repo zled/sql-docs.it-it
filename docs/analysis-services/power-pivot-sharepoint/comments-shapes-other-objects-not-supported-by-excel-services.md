@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7be7712be44114606ec89f89683defeee8e3bd31
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e81433f28d9b3b3f20ceb99f2e6436a689ba4e86
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="comments-shapes-other-objects-not-supported-by-excel-services"></a>Commenti, forme, altri oggetti non supportati da Excel Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questo errore si verifica quando si aggiungono filtri dei dati da un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartella di lavoro da un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] elenco campi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Questo errore si verifica quando si aggiungono filtri dei dati a una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] da un elenco dei campi [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ## <a name="details"></a>Dettagli  
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7e8fd8fd42f2c9ee41562062b846c95f4b192b71
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 302974548c3f57cf9e700c1a995929463d34604d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>Funzioni di Generatore report - Funzione CountDistinct
   Restituisce un conteggio di tutti i distinti valori non Null specificati dall'espressione, valutato nel contesto dell'ambito specificato.  
@@ -39,7 +37,7 @@ CountDistinct(expression, scope, recursive)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *espressione*  
+ *expression*  
  (**Variant**) Espressione su cui eseguire l'aggregazione.  
   
  *ambito*  
@@ -51,7 +49,7 @@ CountDistinct(expression, scope, recursive)
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore **Integer**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  
   
  *Expression* può contenere chiamate alle funzioni di aggregazione nidificate con le eccezioni e le condizioni seguenti:  

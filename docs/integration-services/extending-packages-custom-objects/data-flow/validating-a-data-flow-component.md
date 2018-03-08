@@ -8,10 +8,11 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c3953a6c1fbf676d82b3057df2eb9a61f9cc6e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9602ce6cb6c55aabae923613c7525d7d85851603
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="validating-a-data-flow-component"></a>Convalida di un componente del flusso di dati
   Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> della classe di base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> viene fornito per impedire l'esecuzione di un componente che non è configurato correttamente. Utilizzare questo metodo per verificare che un componente includa il numero previsto di oggetti di input e output, che i valori delle proprietà personalizzate del componente siano accettabili e che siano state specificate le eventuali connessioni richieste. Utilizzare questo metodo anche per verificare che le colonne nelle raccolte di input e output includano i tipi di dati corretti e che l'oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> di ogni colonna sia impostato correttamente per il componente. L'implementazione della classe di base assiste nel processo di convalida controllando la raccolta di colonne di input del componente e verificando che ogni colonna della raccolta faccia riferimento a una colonna presente in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> del componente a monte.  

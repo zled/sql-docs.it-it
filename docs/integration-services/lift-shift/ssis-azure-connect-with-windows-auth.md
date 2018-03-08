@@ -1,6 +1,6 @@
 ---
-title: Connettersi a origini dati locali e condivisioni file di Azure con autenticazione di Windows | Microsoft Docs
-ms.date: 11/27/2017
+title: Connettersi a origini dati e condivisioni file con autenticazione di Windows | Microsoft Docs
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,21 +8,29 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0f5e1e2319e58e9013b1f67e8a81efa9a07d556
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: 87f8b79fd8e950038658c13b502f5f26ac9a8f87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Connettersi a origini dati locali e condivisioni file di Azure con autenticazione di Windows
 In questo articolo viene descritto come configurare il catalogo SSIS nel database SQL di Azure per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati locali e condivisioni file di Azure. È possibile usare l'autenticazione di Windows per connettersi alle origini dati nella stessa rete virtuale del runtime di integrazione SSIS di Azure, sia in locale che nelle macchine virtuali di Azure e in File di Azure.
 
-Le credenziali del dominio specificate quando si esegue la procedura illustrata in questo articolo sono valide per tutte le esecuzioni di pacchetti nell'istanza del database SQL finché non si modificano o rimuovono le credenziali.
+> [!WARNING]
+> Se non si specificano credenziali di dominio valide per l'autenticazione di Windows eseguendo `catalog`.`set_execution_credential` come descritto in questo articolo, i pacchetti che dipendono dall'autenticazione di Windows non possono connettersi alle origini dati e restituiscono errori in fase di esecuzione.
+
+## <a name="you-can-only-use-one-set-of-credentials"></a>È possibile usare un solo set di credenziali
+
+In questo momento, è possibile usare un solo set di credenziali in un pacchetto. Le credenziali del dominio specificate quando si esegue la procedura illustrata in questo articolo sono valide per tutte le esecuzioni di pacchetti interattive o pianificate sull'istanza del database SQL, finché non si modificano o rimuovono le credenziali. Se il pacchetto deve connettersi a più origini dati con set di credenziali diversi, potrebbe essere necessario dividere il pacchetto in più pacchetti.
+
+Se una delle origini dati è File di Azure, è possibile aggirare questa limitazione eseguendo il montaggio della condivisione file di Azure in fase di esecuzione del pacchetto con `net use` o equivalente in un'attività Esegui processo. Per altre informazioni, vedere [Montare una condivisione file di Azure e accedere alla condivisione in Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows).
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Fornire le credenziali di dominio per l'autenticazione di Windows
 Per specificare le credenziali del dominio che consentono ai pacchetti che usano l'autenticazione di Windows di connettersi alle origini dati locali, eseguire le operazioni seguenti:
@@ -80,7 +88,7 @@ Per verificare se è possibile connettersi a un'istanza di SQL Server locale, es
 
 3.  Controllare da SSMS se è possibile connettersi all'istanza di SQL Server locale che si prevede di usare.
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>Prerequisites
 Per connettersi a SQL Server locale da un pacchetto in esecuzione in Azure, è necessario abilitare i prerequisiti seguenti:
 
 1.  In Gestione configurazione SQL Server abilitare il protocollo TCP/IP.

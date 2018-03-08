@@ -1,5 +1,5 @@
 ---
-title: Sys.dm fts_index_keywords_by_document (Transact-SQL) | Documenti Microsoft
+title: sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_fts_index_keywords_by_document_TSQL
 - sys.dm_fts_index_keywords_by_document
 - dm_fts_index_keywords_by_document
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], troubleshooting
 - sys.dm_fts_index_keywords_by_document dynamic management function
 - full-text search [SQL Server], viewing keywords
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5db2c784b48c6a1c9ef97f11fb0fbb7903bc85e4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e2662effefa1c05c33364923342e0f73829a1df3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -59,10 +61,10 @@ sys.dm_fts_index_keywords_by_document
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- DB_ID ('*database_name*')  
+ db_id('*database_name*')  
  Una chiamata al [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) (funzione). Tale funzione accetta un nome di database e restituisce l'ID del database utilizzato da sys.dm_fts_index_keywords_by_document per eseguire la ricerca del database specificato. Se *database_name* viene omesso, viene restituito l'ID del database corrente.  
   
- object_id ('*table_name*')  
+ object_id('*table_name*')  
  Una chiamata al [object_id ()](../../t-sql/functions/object-id-transact-sql.md) (funzione). Tale funzione accetta un nome di tabella e restituisce l'ID della tabella che contiene l'indice full-text da controllare.  
   
 ## <a name="table-returned"></a>Tabella restituita  
@@ -114,7 +116,7 @@ GO
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono necessarie l'autorizzazione SELECT per le colonne analizzate dall'indice full-text e le autorizzazioni CREATE FULLTEXT CATALOG.  
   
 ## <a name="examples"></a>Esempi  
@@ -133,10 +135,10 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca full-Text e funzioni e viste a gestione dinamica della ricerca semantica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Ricerca full-text](../../relational-databases/search/full-text-search.md)   
- [Sys.dm fts_index_keywords &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
- [Sys.dm_fts_index_keywords_by_property &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
- [sp_fulltext_keymappings &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
+ [Ricerca full-Text](../../relational-databases/search/full-text-search.md)   
+ [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+ [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
  [Migliorare le prestazioni degli indici full-text](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)  
   
   

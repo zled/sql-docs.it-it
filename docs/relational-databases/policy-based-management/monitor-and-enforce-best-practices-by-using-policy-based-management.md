@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31cd1294590d81c25a0a09d67a7746ea7dee49ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f48c7d177acea6812a7b10610a2ab67930b3e9e2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La gestione basata su criteri consente di monitorare le procedure consigliate per [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un set di file di criteri che è possibile importare per le procedure consigliate e descrive come valutare i criteri rispetto a un set di destinazione con istanze, oggetti di istanza, database e oggetti di database. Valutare manualmente i criteri, impostare i criteri per la valutazione di un set di destinazioni in base a una pianificazione oppure per la valutazione di un set di destinazioni in base a un evento. Per altre informazioni sulla gestione basata su criteri, vedere [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |Modalità di accesso SQL Server|[Scegliere una modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md)|  
 |Massimo grado parallelismo SQL Server|[Impostazione dell'opzione relativa al massimo grado di parallelismo per ottenere prestazioni ottimali](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)|  
 |Numero massimo thread di lavoro di SQL Server per SQL Server 2000 a 32 bit|[Verifica dell'impostazione relativa al numero massimo di thread di lavoro](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
-|Numero massimo thread di lavoro SQL Server per SQL Server 2000 a 64 bit|[Verifica dell'impostazione relativa al numero massimo di thread di lavoro](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
+|Numero massimo thread di lavoro SQL Server per SQL Server 2000 a 64 bit|[Verificare l'impostazione relativa al numero massimo di thread di lavoro](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |Numero massimo thread di lavoro SQL Server per SQL Server 2005 e versioni successive|[Verifica dell'impostazione relativa al numero massimo di thread di lavoro](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |Dimensioni pacchetto di rete SQL Server|[Valore massimo per le dimensioni del pacchetto di rete impostato su 8060 byte](../../relational-databases/policy-based-management/network-packet-size-should-not-exceed-8060-bytes.md)|  
 |Scadenza password SQL Server|[Scadenza della password di accesso di SQL server](../../relational-databases/policy-based-management/sql-server-login-password-expiration.md)|  

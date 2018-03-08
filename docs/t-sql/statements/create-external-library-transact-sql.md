@@ -3,12 +3,12 @@ title: CREARE una libreria esterna (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,16 +20,16 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 8d0f700ba30b77e892b37e98c43996d6e654e7ea
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-library-transact-sql"></a>CREARE una libreria esterna (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 Carica i pacchetti R in un database dal percorso di file o flusso di byte specificata.
 
@@ -99,7 +99,7 @@ Librerie di caricamento per l'istanza possono essere pubblici o privati. Se la c
 
 È possibile utilizzare i BLOB come origine dati nella versione SQL Server 2017.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 Richiede il `CREATE ANY EXTERNAL LIBRARY` autorizzazione.
 
@@ -191,7 +191,7 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 
 ## <a name="see-also"></a>Vedere anche
 
-[LIBRERIA esterna ALTER (Transact-SQL)](alter-external-library-transact-sql.md)  
+[ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [ELIMINARE una libreria esterna (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

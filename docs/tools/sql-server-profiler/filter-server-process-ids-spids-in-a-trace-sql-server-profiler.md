@@ -3,7 +3,7 @@ title: Filtrare gli ID del processo Server (SPID) in una traccia (SQL Server Pro
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: f5945c39-be6b-4632-91cb-92066c80e188
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a41b9ade1c1336d8e2591e136054f6fd81c57eea
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 67926fa0506f797c4f39988061c4d1b7b731e5fa
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>Filtrare gli ID del processo server (SPID) in una traccia (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questo argomento viene descritto come filtrare gli identificatori di processo server (SPID) in una traccia utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -34,18 +34,18 @@ ms.lasthandoff: 12/05/2017
   
 1.  Scegliere **Nuova traccia** dal menu **File**e quindi connettersi a un'istanza di SQL Server.  
   
-     Verrà visualizzata la finestra di dialogo **Proprietà traccia**.  
+     Verrà visualizzata la finestra di dialogo **Proprietà traccia** .  
   
     > [!NOTE]  
-    >  Se l'opzione **Avvia traccia non appena viene stabilita una connessione**è selezionata, la finestra di dialogo **Proprietà traccia**non viene visualizzata e viene invece avviata la traccia. Per disabilitare questa impostazione, scegliere **Opzioni**dal menu **Strumenti**e deselezionare la casella di controllo **Avvia traccia non appena viene stabilita una connessione** .  
+    >  Se **Avvia traccia non appena viene stabilita una connessione** è selezionata, il **proprietà traccia** non viene visualizzata la finestra di dialogo e viene invece avviata la traccia. Per disabilitare questa impostazione, scegliere il **strumenti** menu, fare clic su **opzioni**e deselezionare il **Avvia traccia non appena viene stabilita una connessione** casella di controllo.  
   
 2.  Nella casella **Nome traccia** digitare un nome per la traccia.  
   
-3.  Nell'elenco dei nomi di **modello**selezionare un modello di traccia.  
+3.  Nel **utilizzare il modello** elenco dei nomi, selezionare un modello di traccia.  
   
 4.  Facoltativamente, è possibile specificare un file o una tabella di destinazione in cui salvare i risultati della traccia.  
   
-5.  Nella scheda **Selezione eventi**fare clic sull'intestazione di colonna **SPID**per visualizzare la finestra di dialogo **Modifica filtro** . È anche possibile fare clic con il pulsante destro del mouse sull'intestazione di colonna e scegliere **Modifica filtro colonne**. Se non viene visualizzata la colonna **SPID** , selezionare la casella **Mostra tutte le colonne** .  
+5.  Nel **selezione eventi** scheda, fare clic su di **SPID** sull'intestazione di colonna per avviare il **Modifica filtro** la finestra di dialogo. È anche possibile fare clic con il pulsante destro del mouse sull'intestazione di colonna e scegliere **Modifica filtro colonne**. Se non viene visualizzata la colonna **SPID** , selezionare la casella **Mostra tutte le colonne** .  
   
 6.  Nella finestra di dialogo **Modifica filtro** espandere l'operatore di confronto appropriato e immettere uno SPID come valore di confronto.  
   

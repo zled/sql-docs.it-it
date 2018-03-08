@@ -8,25 +8,27 @@ ms.service:
 ms.component: ssms-tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - tql
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 159bc72c37ef0da4a862079c77d0bba821878280
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 770b33f7fb7fa22d1a2e86d4b5c7a9d3f8c84b35
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>Lezione 3-2 - Creare modelli personalizzati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 7.  Nell'editor di query digitare lo script seguente per creare una stored procedure che ricerca negli ordini una determinata parte, in questo caso Blade. (È possibile copiare e incollare il codice dalla finestra dell'esercitazione).  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -71,11 +73,11 @@ ms.lasthandoff: 12/21/2017
   
 8.  Premere F5 per eseguire lo script e creare la procedura **WorkOrdersForBlade** .  
   
-9. In Esplora oggetti fare clic con il pulsante destro del mouse sul server e scegliere **Nuova query**. Verrà visualizzata una nuova finestra dell'editor di query.  
+9. In Esplora oggetti fare clic con il pulsante destro del mouse sul database **AdventureWorks2012**, quindi fare clic su **Nuova query**. Verrà visualizzata una nuova finestra dell'editor di query.  
   
 10. Nell'editor di query digitare **EXECUTE dbo.WorkOrdersForBlade**e premere F5 per eseguire la query. Verificare che nel riquadro **Risultati** sia visualizzato l'elenco di ordini di blade richiesto.  
   
-11. Modificare lo script del modello, quello del passaggio 7, sostituendo il nome del prodotto Blade con il parametro ***\<*product_name**, **nvarchar(50)**, **name*>***, in quattro punto.  
+11. Modificare lo script del modello, ovvero lo script del passaggio 7, sostituendo il nome del prodotto Blade con il parametro **\<nome_prodotto, nvarchar(50), nome>**, in quattro punti.  
   
     > [!NOTE]  
     > Per i parametri sono necessari tre elementi, ovvero il nome che si desidera restituire, il tipo di dati e il valore predefinito.  
@@ -83,7 +85,7 @@ ms.lasthandoff: 12/21/2017
 12. Lo script dovrebbe corrispondere a quanto segue:  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   

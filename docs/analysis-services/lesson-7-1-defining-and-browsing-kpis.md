@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8361308afe6ffabf33fd152f308ad12c9bedd479
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 304f42d1e177e25a0aa44c071af27c4723647802
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>Lezione 7-1-definizione ed esplorazione dei KPI
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Per definire gli indicatori di prestazioni chiave (KPI), è innanzitutto necessario definire un nome di indicatore KPI e il gruppo di misure a cui è associato l'indicatore KPI. Un indicatore KPI può essere associato a tutti i gruppi di misure o a un unico gruppo di misure. In seguito è possibile definire gli elementi seguenti dell'indicatore KPI:  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Per definire gli indicatori di prestazioni chiave (KPI), è innanzitutto necessario definire un nome per l'indicatore KPI e il gruppo di misure a cui è associato. Un indicatore KPI può essere associato a tutti i gruppi di misure o a un unico gruppo di misure. In seguito è possibile definire gli elementi seguenti dell'indicatore KPI:  
   
 -   L'espressione valore  
   

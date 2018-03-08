@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55f89b361e4c210c252a0fc629f7b5664390c056
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fef7b422366598e1974a07e4ee36e0100157dfa2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-term-based-relations"></a>Creare relazioni basate su termini
   In questo argomento viene descritto come creare relazioni basate su termini per un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una relazione basata su termini (TRB) consente di effettuare una correzione a un termine che fa parte di un valore in un dominio, consentendo in questo modo a più valori identici ad eccezione dell'ortografia di una parte in comune tra essi di essere considerati sinonimi identici. È possibile, ad esempio, configurare una relazione basata su termini che modifica il termine "Inc." in "Incorporated". Il termine "Inc." verrà modificato ogni volta che viene trovato nel dominio. Le istanze di "Contoso, Inc." verranno modificate in "Contoso, Incorporated" e i due valori saranno considerati sinonimi esatti.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per creare relazioni basate su termini, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Create"></a> Creare relazioni basate su termini  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/20/2017
   
     6.  Trovare un valore nella tabella Relazioni immettendo una o più cifre nella casella di testo **Trova** . Le corrispondenze per la stringa verranno evidenziate. Utilizzare le frecce in su o in giù per spostarsi tra le diverse istanze della stringa nella tabella.  
   
-    7.  **Correttore ortografico**: se un valore nella colonna **Valore** o **Correggi a** ha una sottolineatura rossa ondulata, il Correttore ortografico sta suggerendo una correzione al valore. Fare clic con il pulsante destro del mouse sul valore con il carattere di sottolineatura e selezionare uno dei valori proposti dal correttore ortografico. In alternativa, è possibile fare clic su **Aggiungi** nel menu di scelta rapida per mantenere il valore originale. Per ulteriori informazioni, vedere [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) e [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+    7.  **Correttore ortografico**: se un valore nella colonna **Valore** o **Correggi a** ha una sottolineatura rossa ondulata, il Correttore ortografico sta suggerendo una correzione al valore. Fare clic con il pulsante destro del mouse sul valore con il carattere di sottolineatura e selezionare uno dei valori proposti dal correttore ortografico. In alternativa, è possibile fare clic su **Aggiungi** nel menu di scelta rapida per mantenere il valore originale. Per ulteriori informazioni, vedere [Utilizzare il correttore ortografico DQS](../data-quality-services/use-the-dqs-speller.md) e [Imposta proprietà del dominio](../data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Per utilizzare il correttore ortografico, è possibile abilitarlo nella pagina **Proprietà dominio** o, se è disabilitato nella pagina **Proprietà dominio** , è possibile fare clic sull'icona **Abilita/Disabilita correttore ortografico** nella pagina **Relazioni basate su termini** per abilitarlo in tale pagina.  

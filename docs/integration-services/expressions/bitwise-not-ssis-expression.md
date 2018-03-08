@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57e1a67408db2b1ed6412e269559be3faa9c9d1a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c1b209c8b8c224022b5cce905dbfea29fe81e269
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (NOT bit per bit) (espressione SSIS)
   Viene eseguita una negazione bit per bit di un valore integer. Questo operatore può essere applicato a tipi di dati integer con e senza segno.  
@@ -44,8 +45,8 @@ ms.lasthandoff: 11/20/2017
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati di *integer_expression.*  
   
-## <a name="remarks"></a>Osservazioni  
- Nessuno  
+## <a name="remarks"></a>Remarks  
+ None  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio viene applicato l'operatore ~ (NOT) bit per bit al numero 170 (0000 0000 1010 1010). Il numero è un valore integer con segno.  

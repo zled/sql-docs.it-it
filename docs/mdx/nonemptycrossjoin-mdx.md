@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: NONEMPTYCROSSJOIN
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 356f5c7c807645e798527fc29fc5ccb587e3bac4
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ffa983a749245022d0815906fe8e17850f9aabdf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *Conteggio*  
  Espressione numerica valida che specifica il numero di set da restituire.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **NonEmptyCrossjoin** funzione restituisce il prodotto incrociato di due o più set, escludendo le tuple vuote o le tuple senza dati ottenuti dalle tabelle dei fatti sottostanti. A causa di come **NonEmptyCrossjoin** funzione works tutte calcolate i membri vengono automaticamente esclusi.  
   
  Se *conteggio* viene omesso, la funzione cross join di tutti i set specificati e consente di escludere i membri vuoti dal set risultante. Se si specifica un numero di set, la funzione eseguirà il cross join dei numeri di set specificati, a partire dal primo set specificato. Il **NonEmptyCrossjoin** funzione utilizza tutti i set rimanenti specificati nei set successivi, ma che non sono stati cross join, per determinare quali membri sono considerati non vuoti in risultante dal cross join di set. Il **NonEmptyCrossjoin** funzione rispetta il **NON_EMPTY_BEHAVIOR** impostazione delle misure calcolate.  

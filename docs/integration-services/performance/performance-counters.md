@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1906bfa062b4c38c00c708bbbb9d09cbf0612071
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a94529428cccaa61e3e36b028770ac53113a4f98
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performance-counters"></a>Contatori delle prestazioni
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installa un set di contatori delle prestazioni che è possibile usare per monitorare le prestazioni del motore flusso di dati. Ad esempio controllando il contatore "Buffer con spooling" è possibile stabilire se i buffer dei dati vengano scritti temporaneamente sul disco mentre il pacchetto è in esecuzione. Lo swapping riduce le prestazioni e indica che la memoria del computer è insufficiente.  
@@ -95,7 +96,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 3.  Nella finestra di dialogo **Prestazioni** espandere il nodo **Avvisi e registri di prestazioni**, fare clic con il pulsante destro del mouse su **Registri contatori**e quindi fare clic su **Nuove impostazioni registro**. Digitare il nome del registro, ad esempio **MioRegistro**.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 5.  Nella finestra di dialogo **MioRegistro** fare clic su **Aggiungi contatori**.  
   
@@ -117,7 +118,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 12. Per aggiungere altri contatori, ripetere i passaggi da 5 a 10.  
   
-13. Scegliere **OK**.  
+13. Fare clic su **OK**.  
   
     > [!NOTE]  
     >  Il servizio Avvisi e registri di prestazioni deve essere avviato in base a un account locale o un account di dominio appartenente al gruppo Administrators.  

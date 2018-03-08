@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-engine
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - deprecation [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b457c021a4692a2e29becf690b684215f860c77d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86369f3a423be60c73ed2024e1490e7de9c97c30
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>Compatibilità con le versioni precedenti del Motore di database di SQL Server
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Gli argomenti della sezione relativa alla compatibilità con le versioni precedenti illustrano le modifiche nel comportamento tra le versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+Negli argomenti della sezione relativa alla compatibilità con le versioni precedenti vengono descritte le modifiche di comportamento tra le versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |Argomento|Description|  
 |-----------|-----------------|  

@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - dm_continuous_copy_status_TSQL
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4556ca83115890372c53c28c1ee15adfb0d5d835
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 34d840580edb8bb15f4af379575bc0f24b44edcc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>Sys.dm continuous_copy_status (Database SQL di Azure)
+# <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni database utente (V11) che è attualmente occupato in una relazione di copia continua della replica geografica. Se è stata avviata più di una relazione di copia continua per un determinato database primario, questa tabella contiene una riga per ogni database secondario attivo.  
@@ -53,7 +55,7 @@ Se si utilizza SQL Database V12 è necessario utilizzare [sys.dm_geo_replication
 |**is_target_role**|**bit**|0 = Origine della relazione di copia<br /><br /> 1 = Destinazione della relazione di copia|  
 |**is_interlink_connected**|**bit**|1 = L'interlink è connesso.<br /><br /> 0 = L'interlink è disconnesso.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per recuperare i dati, è richiesta l'appartenenza di **db_owner** ruolo del database. L'utente dbo, i membri del **dbmanager** ruolo del database e l'account di accesso sa possono effettuare query anche questa visualizzazione.  
   
 ## <a name="remarks"></a>Osservazioni  

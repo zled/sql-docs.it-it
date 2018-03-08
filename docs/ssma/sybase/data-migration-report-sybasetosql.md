@@ -3,7 +3,7 @@ title: Report di migrazione di dati (SybaseToSQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ca76d13c4cac2f5218b59898e75332b13089cf3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a0e73ad484ee145d2631aeca286de17ed451a4b0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-migration-report-sybasetosql"></a>Report di migrazione di dati (SybaseToSQL)
 Il **Report di migrazione di dati** la finestra di dialogo viene visualizzata dopo la migrazione di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

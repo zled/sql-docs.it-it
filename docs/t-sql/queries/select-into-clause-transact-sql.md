@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - INTO
 - INTO clause
 - INTO_clause_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - copying data [SQL Server], into a new table
 - INTO clause
@@ -29,19 +31,19 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-caps.latest.revision: "63"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: df016654700bd36ebb553e7b3cd66f50d35eadc1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 410e71466944f1744d0c8092f0ad030ffa1da29b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>-Clausola SELECT INTO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT…INTO crea una nuova tabella nel filegroup predefinito e vi inserisce le righe restituite dalla query. Per visualizzare la sintassi SELECT completa, vedere [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
@@ -101,7 +103,7 @@ Se una di queste condizioni risulta vera, la colonna viene creata come colonna N
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
  La quantità di registrazioni per SELECT INTO dipende dal modello di recupero attivato per il database. Nel modello di recupero con registrazione minima o in quello con registrazione minima delle operazioni bulk, per tali operazioni la registrazione prevista è quella minima. Con registrazione minima, utilizzando l'istruzione SELECT... UN'istruzione può essere più efficiente rispetto alla creazione di una tabella e quindi popolamento della tabella con un'istruzione INSERT. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione CREATE TABLE nel database di destinazione.  
   
 ## <a name="examples"></a>Esempi  
@@ -109,7 +111,7 @@ Se una di queste condizioni risulta vera, la colonna viene creata come colonna N
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. Creazione di una tabella specificando colonne provenienti da più origini  
  Nell'esempio seguente viene creata la tabella `dbo.EmployeeAddresses` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] selezionando sette colonne da diverse tabelle relative a dipendenti e indirizzi.  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +130,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>B. Inserimento di righe utilizzando la registrazione minima  
  Nell'esempio seguente viene creata la tabella `dbo.NewProducts`, in cui vengono inserite righe della tabella `Production.Product`. L'esempio presuppone che il modello di recupero del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sia impostato su FULL. Per assicurare l'utilizzo della registrazione minima, il modello di recupero del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] viene impostato su BULK_LOGGED prima che le righe vengano inserite e reimpostato su FULL dopo l'istruzione SELECT...INTO. In tal modo, si assicura l'utilizzo da parte dell'istruzione SELECT...INTO di uno spazio minimo nel log delle transazioni con risultati efficienti.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +146,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. Creazione di una colonna Identity tramite la funzione IDENTITY  
  Nell'esempio seguente viene utilizzata la funzione IDENTITY per creare una colonna Identity nella nuova tabella `Person.USAddress` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Questa operazione è necessaria perché l'istruzione SELECT che definisce la tabella contiene un join che fa in modo che la proprietà IDENTITY non venga trasferita nella nuova tabella. Si noti che il valore di inizializzazione e il valore di incremento specificati nella funzione IDENTITY sono diversi da quelli della colonna `AddressID` nella tabella di origine `Person.Address`.  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +175,7 @@ WHERE name = 'AddressID';
   
  **Si applica a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +218,7 @@ GO
   
  **Si applica a:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -230,11 +232,11 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Crea una nuova tabella come copia di un'altra tabella e caricamento di un filegroup specificato
-Il seguente esempio viene illustrato la creazione di una nuova tabella come copia di un'altra tabella e caricarli in un filegroup specificato diverso dal filegroup predefinito dell'utente.
+Nell'esempio seguente illustra la creazione di una nuova tabella come copia di un'altra tabella e caricarli in un filegroup specificato diverso dal filegroup predefinito dell'utente.
 
  **Si applica a:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
@@ -250,7 +252,7 @@ SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
 ## <a name="see-also"></a>Vedere anche  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Selezionare esempi &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [IDENTITÀ &#40; Funzione &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)  
+ [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [IDENTITY &#40;Function&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   

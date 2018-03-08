@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SystemGetAccuracyResults
 - cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 183fbed8a59f4f6288b321b47d30895e4a7c7394
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Restituisce le metriche di accuratezza di convalida incrociata di una struttura di data mining e tutti i modelli correlati, esclusi i modelli di clustering.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Restituisce la metrica di accuratezza per la convalida incrociata di una struttura di data mining e di tutti i modelli correlati, tranne i modelli di clustering.  
   
  Questa stored procedure restituisce la metrica per l'intero set di dati come un'unica partizione. Per partizionare il set di dati in sezioni trasversali e restituire la metrica per ogni partizione, usare [SystemGetCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   
@@ -72,12 +73,12 @@ SystemGetAccuracyResults(<mining structure>,
   
  Per un elenco completo dei valori possibili, vedere la sezione Osservazioni di questo argomento.  
   
- (Obbligatorio)  
+ (obbligatorio)  
   
  *target attribute*  
  Stringa che contiene il nome di un oggetto stimabile. Un oggetto stimabile può essere una colonna, una colonna della tabella nidificata o una colonna chiave della tabella nidificata di un modello di data mining.  
   
- (Obbligatorio)  
+ (obbligatorio)  
   
  *target state*  
  Stringa che contiene un valore specifico da stimare.  
@@ -88,19 +89,19 @@ SystemGetAccuracyResults(<mining structure>,
   
  Il valore predefinito è **null**.  
   
- (Facoltativo)  
+ (facoltativo).  
   
  *target threshold*  
  Numero compreso tra 0.0 e 1 che specifica la probabilità minima entro cui il valore della stima viene conteggiato come corretto.  
   
  Il valore predefinito è **null**, ovvero tutte le stime vengono conteggiate come corrette.  
   
- (Facoltativo)  
+ (facoltativo).  
   
  *test list*  
  Stringa che specifica le opzioni di testing. Questo parametro è riservato per usi futuri.  
   
- (Facoltativo)  
+ (facoltativo).  
   
 ## <a name="return-type"></a>Tipo restituito  
  Il set di righe restituito contiene punteggi per ogni partizione e aggregazioni per tutti i modelli.  
@@ -168,6 +169,6 @@ CALL SystemGetAccuracyResults (
  [SystemGetCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8dd3250558baf193890bee80ca272de30510dc5b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f388389edcd3546f94bc120862e8933b3f790c7c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lezione 5-1-definizione di una relazione di riferimento
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Fino a questo punto dell'esercitazione, ogni dimensione del cubo definita è stata basata su una tabella direttamente collegata alla tabella dei fatti per un gruppo di misure tramite una chiave primaria per la relazione di chiave esterna. Nelle attività di questo argomento la dimensione **Geography** verrà collegata alla tabella dei fatti relativa alle vendite dei rivenditori tramite la dimensione **Reseller** , denominata *dimensione di riferimento*. Ciò consente agli utenti di dimensionare le vendite dei rivenditori in base all'area geografica. Per altre informazioni, vedere [Definire una relazione di tipo Riferimento e le relative proprietà](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Fino a questo punto dell'esercitazione, ogni dimensione del cubo definita è stata basata su una tabella direttamente collegata alla tabella dei fatti per un gruppo di misure tramite una relazione chiave primaria–chiave esterna. Nelle attività di questo argomento la dimensione **Geography** verrà collegata alla tabella dei fatti relativa alle vendite dei rivenditori tramite la dimensione **Reseller** , denominata *dimensione di riferimento*. Ciò consente agli utenti di dimensionare le vendite dei rivenditori in base all'area geografica. Per altre informazioni, vedere [Definire una relazione di tipo Riferimento e le relative proprietà](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="dimensioning-reseller-sales-by-geography"></a>Dimensionamento di Reseller Sales in base a Geography  
   
@@ -128,7 +131,7 @@ Il problema verrà risolto nell'attività successiva, definendo un attributo bas
     ![Finestra di dialogo Definisci relazione](../analysis-services/media/l5-referencedrelationship-5.gif "la finestra di dialogo Definisci relazione")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Definizione di una relazione di tipo Fatti](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
+[Definizione di una relazione di tipo fatti](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Relazioni tra attributi](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  

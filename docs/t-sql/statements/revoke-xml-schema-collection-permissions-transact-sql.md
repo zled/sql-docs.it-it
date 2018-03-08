@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - REVOKE statement, XML schema collections
 - XML schema collections [SQL Server], permissions
 - schema collections [SQL Server], permissions
 ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d73cd5f12601cfc3abab5cb6dee736fd805ad8a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7a8ffbc542c9a9490f497ff590f6bcf995979ed4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE - autorizzazioni per raccolte di XML Schema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -58,10 +60,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere revocata per una raccolta di XML Schema. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- RACCOLTA di XML SCHEMA ON:: [ *schema_name***.** ] *XML_schema_collection_name*  
+ RACCOLTA di XML SCHEMA ON:: [ *schema_name * * *.* *] *XML_schema_collection_name*  
  Specifica la raccolta di XML Schema per cui viene revocata l'autorizzazione. Il qualificatore di ambito (::) è obbligatorio. Se *schema_name* non viene specificato, verrà utilizzato lo schema predefinito. Se *schema_name* è specificato, il qualificatore di ambito dello schema (.) è obbligatorio.  
   
  GRANT OPTION  
@@ -116,12 +118,12 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |--------------------------------------|-------------------------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|Eseguire|CONTROL|Eseguire|  
+|EXECUTE|CONTROL|EXECUTE|  
 |REFERENCES|CONTROL|REFERENCES|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la raccolta di XML Schema. Se si utilizza l'opzione AS, l'entità specificata deve essere proprietaria della raccolta di XML Schema.  
   
 ## <a name="examples"></a>Esempi  
@@ -136,10 +138,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="see-also"></a>Vedere anche  
  [GRANT-autorizzazioni per raccolte XML Schema &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
  [NEGARE autorizzazioni per raccolte XML Schema &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
- [xml_schema_collections &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [CREARE una raccolta di XML SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Entità &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
 

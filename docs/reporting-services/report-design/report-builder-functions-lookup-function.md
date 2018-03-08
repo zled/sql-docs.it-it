@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 7ae2972cdb62c24ed9299b18d3b44de30e17caa8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9b1777520453efb9a38b687825249705bf66fd81
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---lookup-function"></a>Funzioni di Generatore report - Funzione Lookup
   Viene restituito il primo valore corrispondente per il nome specificato da un set di dati contenente coppie nome/valore.  
@@ -54,7 +52,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Return  
  Restituisce **Variant**o **Nothing** se non viene rilevata alcuna corrispondenza.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Usare la funzione **Ricerca** per recuperare il valore dal set di dati specificato per una coppia nome-valore in cui esista una relazione uno-a-uno. Ad esempio, per un campo ID in una tabella è possibile usare **Ricerca** per recuperare il campo Nome corrispondente da un set di dati non associato all'area dati.  
   
  Tramite la funzione**Lookup** vengono effettuate le operazioni seguenti:  

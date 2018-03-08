@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f62fcdcbc840bab91f49a07edf832aa88be305bc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7c46c3a21aa5d2bed2f21b07a7085c4559bb164a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-sql-server"></a>Dati XML (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una potente piattaforma per lo sviluppo di applicazioni complete per la gestione di dati semistrutturati. Il supporto per XML è integrato in tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e include i seguenti elementi:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una potente piattaforma per lo sviluppo di applicazioni complete per la gestione di dati semistrutturati. Il supporto per XML è integrato in tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e include i seguenti elementi:  
   
 -   Tipo di dati **xml** . I valori XML possono essere archiviati in modo nativo in una colonna con tipo di dati **xml** che può essere tipizzata in base a una raccolta di XML Schema oppure lasciata non tipizzata. La colonna XML può essere indicizzata.  
   

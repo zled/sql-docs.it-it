@@ -1,5 +1,5 @@
 ---
-title: bcp_gettypename | Documenti Microsoft
+title: bcp_gettypename | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f452b3c5e12b76ba2d1327b59f1cfa17f16bb46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccb5d8652421aa0d52fd941e99cbcd01a0cfb6b2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ RETCODE bcp_gettypename (
  *token*  
  Valore che indica un token di tipo BCP.  
   
- *campo*  
+ *field*  
  Indica se il token richiesto è un tipo max.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
@@ -67,22 +67,22 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|Prima o dopo|**money**|  
 |**SQLFLT8**|Prima o dopo|**float**|  
 |**SQLDATETIME**|Prima o dopo|**datetime**|  
-|**SQLBITN**|Prima o dopo|**bit null**|  
+|**SQLBITN**|Prima o dopo|**bit-null**|  
 |**SQLBIT**|Prima o dopo|**bit**|  
-|**SQLBIGCHAR**|No|**char**|  
-|**SQLCHARACTER**|No|**char**|  
-|**SQLBIGVARCHAR**|No|**varchar**|  
-|**SQLVARCHAR**|No|**varchar**|  
+|**SQLBIGCHAR**|no|**char**|  
+|**SQLCHARACTER**|no|**char**|  
+|**SQLBIGVARCHAR**|no|**varchar**|  
+|**SQLVARCHAR**|no|**varchar**|  
 |**SQLTEXT**|Prima o dopo|**text**|  
-|**SQLBIGBINARY**|No|**binary**|  
-|**SQLBINARY**|No|**Binario**|  
-|**SQLBIGVARBINARY**|No|**Varbinary**|  
-|**SQLVARBINARY**|No|**Varbinary**|  
+|**SQLBIGBINARY**|no|**binary**|  
+|**SQLBINARY**|no|**Binario**|  
+|**SQLBIGVARBINARY**|no|**Varbinary**|  
+|**SQLVARBINARY**|no|**Varbinary**|  
 |**SQLIMAGE**|Prima o dopo|**Immagine**|  
 |**SQLINTN**|Prima o dopo|**int-null**|  
-|**SQLDATETIMN**|Prima o dopo|**DateTime-null**|  
-|**SQLMONEYN**|Prima o dopo|**Money null**|  
-|**SQLFLTN**|Prima o dopo|**float null**|  
+|**SQLDATETIMN**|Prima o dopo|**datetime-null**|  
+|**SQLMONEYN**|Prima o dopo|**money-null**|  
+|**SQLFLTN**|Prima o dopo|**float-null**|  
 |**SQLAOPSUM**|Prima o dopo|**Sum**|  
 |**SQLAOPAVG**|Prima o dopo|**Avg**|  
 |**SQLAOPCNT**|Prima o dopo|**Count**|  
@@ -92,15 +92,15 @@ RETCODE bcp_gettypename (
 |**SQLMONEY4**|Prima o dopo|**Smallmoney**|  
 |**SQLFLT4**|Prima o dopo|**Reale**|  
 |**SQLUNIQUEID**|Prima o dopo|**uniqueidentifier**|  
-|**SQLNCHAR**|No|**Nchar**|  
-|**SQLNVARCHAR**|No|**Nvarchar**|  
+|**SQLNCHAR**|no|**Nchar**|  
+|**SQLNVARCHAR**|no|**Nvarchar**|  
 |**SQLNTEXT**|Prima o dopo|**Ntext**|  
 |**SQLVARIANT**|Prima o dopo|**sql_variant**|  
 |**SQLINT8**|Prima o dopo|**Bigint**|  
-|**SQLCHARACTER**|Sì|**varchar(max)**|  
-|**SQLBIGCHAR**|Sì|**varchar(max)**|  
-|**SQLBIGVARCHAR**|Sì|**varchar(max)**|  
-|**SQLVARCHAR**|Sì|**varchar(max)**|  
+|**SQLCHARACTER**|Sì|**ntext**|  
+|**SQLBIGCHAR**|Sì|**ntext**|  
+|**SQLBIGVARCHAR**|Sì|**ntext**|  
+|**SQLVARCHAR**|Sì|**ntext**|  
 |**SQLBINARY**|Sì|**varbinary(max)**|  
 |**SQLBIGBINARY**|Sì|**varbinary(max)**|  
 |**SQLBIGVARBINARY**|Sì|**varbinary(max)**|  

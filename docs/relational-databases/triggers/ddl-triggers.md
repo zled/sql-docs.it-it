@@ -8,24 +8,27 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ddl
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: DDL triggers, about DDL triggers
+helpviewer_keywords:
+- DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6e2dea1e93b07c728120c9043b41ab9e03596420
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fe470ea983e3f397c5afdb41a3526dd87256746e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ddl-triggers"></a>Trigger DDL
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] I trigger DDL vengono eseguiti in risposta a vari eventi DDL (Data Definition Language). Questi eventi corrispondono principalmente a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che iniziano con le parole chiave CREATE, ALTER, DROP, GRANT, DENY, REVOKE o UPDATE STATISTICS. Alcune stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare trigger DDL.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+I trigger DDL vengono eseguiti in risposta a vari eventi DDL (Data Definition Language), Questi eventi corrispondono principalmente a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che iniziano con le parole chiave CREATE, ALTER, DROP, GRANT, DENY, REVOKE o UPDATE STATISTICS. Alcune stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare trigger DDL.  
   
  Utilizzare trigger DDL nei casi seguenti:  
   
@@ -113,12 +116,12 @@ GO
   
  Per un elenco dei gruppi predefiniti di istruzioni DDL disponibili per i trigger DDL e per informazioni sulle istruzioni specifiche incluse nei gruppi di eventi e sugli ambiti in cui è possibile programmare tali gruppi, vedere [Gruppi di eventi DDL](../../relational-databases/triggers/ddl-event-groups.md).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Attività|Argomento|  
 |----------|-----------|  
 |Vengono descritte le procedure di creazione, modifica e disabilitazione dei trigger DDL.|[Implementazione di trigger DDL](../../relational-databases/triggers/implement-ddl-triggers.md)|  
-|Viene illustrato come creare un trigger CLR DDL.|[Creazione di trigger CLR](../../relational-databases/triggers/create-clr-triggers.md)|  
+|Viene illustrato come creare un trigger CLR DDL.|[Creare trigger CLR](../../relational-databases/triggers/create-clr-triggers.md)|  
 |Viene descritto come restituire informazioni sui trigger DDL.|[Ottieni informazioni sui trigger DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)|  
 |Viene descritto come restituire informazioni relative a un evento che attiva un trigger DDL utilizzando la funzione EVENTDATA.|[Utilizzo della funzione EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |Viene descritto come gestire la sicurezza dei trigger.|[Gestione della sicurezza dei trigger](../../relational-databases/triggers/manage-trigger-security.md)|  

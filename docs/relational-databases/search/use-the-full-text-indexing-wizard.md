@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cfca84ed59bd6922a6667a0b214668836e421ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85be544c13310a98863b03d8bd515c5a1990a5ba
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utilizzare l'Indicizzazione guidata full-text
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] L'Indicizzazione guidata full-text in SQL Server Management Studio semplifica la procedura di creazione di un indice full-text.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+L'Indicizzazione guidata full-text in SQL Server Management Studio illustra la procedura di creazione di un indice full-text.  
   
 ## <a name="create-a--full-text-index"></a>Creare un indice full-text 
 
@@ -89,10 +91,10 @@ ms.lasthandoff: 11/17/2017
  10. **Crea un nuovo catalogo**
  - Selezionare un catalogo full-text.  
   
-    a. **Nome**  
+    A. **Nome**  
      Immettere un nome per il nuovo catalogo full-text.  
   
-     b. **Imposta come catalogo predefinito**  
+     B. **Imposta come catalogo predefinito**  
      Selezionare questa opzione per impostare il catalogo come predefinito per il database.  
   
      c. **Distinzione caratteri accentati/non accentati**  
@@ -102,7 +104,7 @@ ms.lasthandoff: 11/17/2017
      Consente di specificare il filegroup in cui creare l'indice full-text.  
   
      e. Selezionare un valore:  
-      |Valore|Descrizione|  
+      |valore|Description|  
       |-----------|-----------------|
       |**<default>**| Se la tabella o la vista non è partizionata, selezionare questa opzione per utilizzare lo stesso filegroup della tabella o della vista sottostante. Se la tabella o la vista è partizionata, viene usato il filegroup primario|
       |**PRIMARY**|Selezionare questa opzione per utilizzare il filegroup primario per il nuovo indice full-text.|
@@ -116,7 +118,7 @@ ms.lasthandoff: 11/17/2017
   
      Selezionare uno dei valori seguenti:  
   
-   |Valore|Descrizione|  
+   |valore|Description|  
     |-----------|-----------------|  
     |**<system>**|Selezionare questa opzione per utilizzare l'elenco di parole non significative di sistema nel nuovo indice full-text. Si tratta dell'impostazione predefinita.|  
     |**<off>**|Selezionare questa opzione per disabilitare gli elenchi di parole non significative per il nuovo indice full-text.|  
@@ -135,7 +137,7 @@ ms.lasthandoff: 11/17/2017
      **Modifica**  
      Consente di modificare una pianificazione.  
   
-     **Delete**  
+     **Elimina**  
      Consente di eliminare una pianificazione.  
   
 5.  Visualizzare o controllare lo stato dell'Indicizzazione guidata full-text.  

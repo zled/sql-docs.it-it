@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_COLUMNS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 967951f1e8eef13fd3d7862d39dc546f2bc15ca5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e37841617289eaa71af4d7c2c091459f32a745b6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>Set di righe DMSCHEMA_MINING_COLUMNS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Vengono descritte le singole colonne di tutti i modelli di data mining in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Questo set di righe è limitato al catalogo corrente.  
@@ -84,10 +82,10 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facoltativa.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
-|**COLUMN_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe dello schema di data mining](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

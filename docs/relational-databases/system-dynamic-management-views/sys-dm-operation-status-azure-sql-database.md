@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_operation_status
 - sys.dm_operation_status
 - sys.dm_operation_status_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6d6096c5a32f4c7cbcd2ddd99a8990545c552c1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 59e6d4c26fe241cc9137b55a75854396a224064f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|ID dell'operazione. Non Null.|  
 |resource_type|**int**|Indica il tipo di risorsa in cui viene eseguita l'operazione. Non Null. Nella versione corrente questa vista tiene traccia delle operazioni eseguite solo nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e il valore intero corrispondente è 0.|  
-|resource_type_desc|**nvarchar (2048)**|Descrizione del tipo di risorsa in cui viene eseguita l'operazione. Nella versione corrente, questa vista tiene traccia delle operazioni eseguite solo nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|resource_type_desc|**nvarchar(2048)**|Descrizione del tipo di risorsa in cui viene eseguita l'operazione. Nella versione corrente, questa vista tiene traccia delle operazioni eseguite solo nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |major_resource_id|**sql_variant**|Nome del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in cui viene eseguita l'operazione. Non Null.|  
 |minor_resource_id|**sql_variant**|Solo per uso interno. Non Null.|  
 |operazione|**nvarchar(60)**|Operazione eseguita su un [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ad esempio CREATE o ALTER.|  
@@ -49,13 +51,13 @@ ms.lasthandoff: 11/17/2017
 |state_desc|**nvarchar(120)**|PENDING = l'operazione è in attesa della disponibilità della quota o delle risorse.<br /><br /> IN_PROGRESS = l'operazione è stata avviata ed è in esecuzione.<br /><br /> COMPLETED = operazione completata.<br /><br /> FAILED = operazione non riuscita. Vedere il **error_desc** colonna per i dettagli.<br /><br /> CANCELLED = l'operazione è stata arrestata su richiesta dell'utente.|  
 |percent_complete|**int**|Percentuale dell'operazione completata. I valori non sono continui e i valori validi sono elencati di seguito. Non è NULL.<br/><br/>0 = operazione non è stato avviato<br/>50 = operazione in corso<br/>100 = operazione completata|  
 |error_code|**int**|Codice che indica l'errore che si è verificato durante un'operazione non riuscita. Se il valore è 0, indica che l'operazione è stata completata correttamente.|  
-|error_desc|**nvarchar (2048)**|Descrizione dell'errore che si è verificato durante un'operazione non riuscita.|  
+|error_desc|**nvarchar(2048)**|Descrizione dell'errore che si è verificato durante un'operazione non riuscita.|  
 |error_severity|**int**|Livello di gravità dell'errore che si è verificato durante un'operazione non riuscita. Per ulteriori informazioni sui livelli di gravità di errore, vedere [gravità degli errori del motore di Database](http://go.microsoft.com/fwlink/?LinkId=251052).|  
 |error_state|**int**|Riservato per utilizzi futuri. Non è garantita la compatibilità con le versioni future.|  
 |start_time|**datetime**|Timestamp dell'inizio dell'operazione.|  
 |last_modify_time|**datetime**|Timestamp dell'ultima modifica del record per un'operazione a esecuzione prolungata. In caso di operazioni completate correttamente, in questo campo viene visualizzato il timestamp del completamento dell'operazione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa vista è disponibile solo nel **master** database all'account di accesso dell'entità a livello di server.  
   
 ## <a name="remarks"></a>Osservazioni  

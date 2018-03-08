@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,13 +28,13 @@ ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b230522d04db42f66884acfcd110e1f1594df5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c03ea200e96115c78fcb824f8a1327f6a4fd55a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Intestazioni di pagina e piè di pagina (Generatore report e SSRS)
   Un report può contenere un'intestazione e un piè di pagina, posizionati rispettivamente nella parte superiore e inferiore di ogni pagina. Le intestazioni e i piè di pagina possono contenere testo statico, immagini, linee, rettangoli, bordi, colore di sfondo, immagini di sfondo ed espressioni. Le espressioni includono riferimenti ai campi del set di dati per i report contenenti un solo set di dati e chiamate di funzioni di aggregazione che includono il set di dati come ambito.  
@@ -65,9 +63,9 @@ ms.lasthandoff: 12/05/2017
   
 |Elementi supportati nell'espressione|Aggregazioni ReportItems|Aggregazioni Dataset (l'ambito deve essere il nome del set di dati)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Caselle di testo nel corpo del report|Sì|No|  
-|&PageNumber|Sì|No|  
-|&TotalPages|Sì|No|  
+|Caselle di testo nel corpo del report|Sì|no|  
+|&PageNumber|Sì|no|  
+|&TotalPages|Sì|no|  
 |Funzione di aggregazione|Sì. Ad esempio,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Sì. Ad esempio,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Raccolta Fields per gli elementi della pagina|Indirettamente. Ad esempio,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Sì. Ad esempio,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Immagine con associazione a dati|Indirettamente. Ad esempio, `=ReportItems!TXT_Photo.Value`|Sì. Ad esempio,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

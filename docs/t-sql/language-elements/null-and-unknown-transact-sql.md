@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0523877d572bd644fa772713f3c7edb82d645f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c26004fdfa5f2607235ffe7dddb7826a77f38b31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL e sconosciuto (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,28 +41,28 @@ ms.lasthandoff: 11/17/2017
   
 -   I valori null possono essere utilizzati come le informazioni necessarie per distinguere una riga in una tabella da un'altra riga in una tabella, ad esempio le chiavi primarie, o per le informazioni utilizzate per distribuire le righe, ad esempio le chiavi di distribuzione.  
   
- Se i dati includono valori Null, gli operatori logici e di confronto possono restituire potenzialmente un terzo valore, ovvero UNKNOWN, anziché TRUE o FALSE. Questa logica a tre valori è necessaria, ma causa numerosi errori nelle applicazioni. Nelle tabelle riportate di seguito viene descritto il risultato ottenuto dal confronto tra valori Null.  
+ Se i dati includono valori Null, gli operatori logici e di confronto possono restituire potenzialmente un terzo valore, ovvero UNKNOWN, anziché TRUE o FALSE. Questa logica a tre valori è necessaria, ma causa numerosi errori nelle applicazioni. Operatori logici in un'espressione booleana che include incognite restituirà sconosciuto a meno che il risultato dell'operatore non dipende da espressione sconosciuto. Queste tabelle sono esempi di questo comportamento.  
   
- La tabella seguente illustra i risultati dell'applicazione di un operatore AND a due operandi booleani, dove un operando restituisce NULL.  
+ Nella tabella seguente mostra i risultati di applicazione di un operatore AND a due espressioni booleane in un'espressione restituisce UNKNOWN.  
   
-|Operando di 1|Operando 2|Risultato|  
+|Espressione di 1|Espressione 2|Risultato|  
 |---------------|---------------|------------|  
-|TRUE|NULL|FALSE|  
-|NULL|NULL|FALSE|  
-|FALSE|NULL|FALSE|  
+|TRUE|UNKNOWN|UNKNOWN|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|FALSE|  
   
- La tabella seguente illustra i risultati dell'applicazione di un operatore OR a due operandi booleani, dove un operando restituisce NULL.  
+ Nella tabella seguente mostra i risultati di applicazione di un operatore OR a due espressioni booleane in un'espressione restituisce UNKNOWN.  
   
-|Operando di 1|Operando 2|Risultato|  
+|Espressione di 1|Espressione 2|Risultato|  
 |---------------|---------------|------------|  
-|TRUE|NULL|TRUE|  
-|NULL|NULL|UNKNOWN|  
-|FALSE|NULL|UNKNOWN|  
+|TRUE|UNKNOWN|TRUE|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|UNKNOWN|  
   
 ## <a name="see-also"></a>Vedere anche  
- [E &#40; Transact-SQL &#41;](../../t-sql/language-elements/and-transact-sql.md)   
- [O &#40; Transact-SQL &#41;](../../t-sql/language-elements/or-transact-sql.md)   
- [NON &#40; Transact-SQL &#41;](../../t-sql/language-elements/not-transact-sql.md)   
- [È NULL &#40; Transact-SQL &#41;](../../t-sql/queries/is-null-transact-sql.md)  
+ [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)   
+ [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md)   
+ [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)   
+ [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)  
   
   

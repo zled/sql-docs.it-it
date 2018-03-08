@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - PARTITION_FUNCTION_TSQL
 - PARTITION_TSQL
 - CREATE_PARTITION_FUNCTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - RANGE RIGHT partition functions
 - RANGE LEFT partition functions
@@ -28,16 +30,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], functions
 - CREATE PARTITION FUNCTION statement
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea94b26815eb1bc3453a1bcf01eb6b522f41e037
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: a095e1de4fdffc97d615a39fd7cf185c99493d02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -83,7 +85,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
  Tutte le righe la cui colonna di partizionamento contiene valori NULL vengono inserite nella prima partizione a sinistra, a meno che non sia specificato NULL come valore limite e indicato RIGHT. In questo caso la prima partizione a sinistra sarà una partizione vuota e i valori NULL verranno inseriti nella partizione successiva.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire CREATE PARTITION FUNCTION è possibile usare qualsiasi delle autorizzazioni seguenti:  
   
 -   Autorizzazione ALTER ANY DATASPACE. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_owner** e **db_ddladmin** .  
@@ -97,7 +99,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. Creazione di una funzione di partizione RANGE LEFT in una colonna int  
  La funzione di partizione seguente crea quattro partizioni in una tabella o un indice.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 ```  
@@ -111,7 +113,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Creazione di una funzione di partizione RANGE RIGHT in una colonna int  
  La funzione di partizione seguente usa gli stessi valori per *boundary_value* [ **,***... n* ] dell'esempio precedente, ma viene specificato RANGE RIGHT.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
 AS RANGE RIGHT FOR VALUES (1, 100, 1000);  
 ```  
@@ -125,7 +127,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. Creazione di una funzione di partizione RANGE RIGHT in una colonna datetime  
  La funzione di partizione seguente suddivide una tabella o un indice in 12 partizioni, una per ogni mese del valore dell'anno di valori in un **datetime** colonna.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION [myDateRangePF1] (datetime)  
 AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',  
                '20030501', '20030601', '20030701', '20030801',   
@@ -141,7 +143,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
 ### <a name="d-creating-a-partition-function-on-a-char-column"></a>D. Creazione di una funzione di partizione in una colonna char  
  La funzione di partizione seguente crea quattro partizioni in una tabella o un indice.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF3 (char(20))  
 AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');  
 ```  
@@ -155,7 +157,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
 ### <a name="e-creating-15000-partitions"></a>E. Creazione di 15.000  
  La funzione di partizione seguente crea 15.000 partizioni in una tabella o un indice.  
   
-```tsql  
+```sql  
 --Create integer partition function for 15,000 partitions.  
 DECLARE @IntegerPartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION IntegerPartitionFunction (int) 
@@ -174,7 +176,7 @@ GO
 ### <a name="f-creating-partitions-for-multiple-years"></a>F. Creazione di partizioni per più anni  
  La funzione di partizione seguente partizioni di una tabella o un indice in 50 partizioni in un **datetime2** colonna. È presente una partizione per ogni mese tra gennaio 2007 e gennaio 2011.  
   
-```tsql  
+```sql  
 --Create date partition function with increment by month.  
 DECLARE @DatePartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION DatePartitionFunction (datetime2) 

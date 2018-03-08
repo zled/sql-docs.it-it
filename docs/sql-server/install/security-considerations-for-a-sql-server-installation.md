@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,18 +29,20 @@ helpviewer_keywords:
 - file system security [SQL Server]
 - installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: bbb5675b3429f73a83fa7cda214d90666a674541
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 65e1702f5886205858c5fc917d15837f6a3dfa8c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considerazioni sulla sicurezza per un'installazione di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La sicurezza rappresenta un fattore importante per ogni prodotto e azienda. Con alcune semplici procedure consigliate è possibile evitare molte vulnerabilità di sicurezza. In questo argomento sono illustrate alcune procedure consigliate per la sicurezza, da prendere in considerazione prima dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le indicazioni sulla sicurezza per specifiche funzionalità sono riportate negli argomenti di riferimento relativi a tali funzionalità.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+ La sicurezza rappresenta un fattore importante per ogni prodotto e azienda. Con alcune semplici procedure consigliate è possibile evitare molte vulnerabilità di sicurezza. Questo articolo illustra alcune procedure consigliate per la sicurezza da prendere in considerazione prima dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le indicazioni sulla sicurezza per specifiche funzionalità sono riportate negli articoli di riferimento relativi a tali funzionalità.  
   
 ## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>Prima dell'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Procedure consigliate da eseguire durante la configurazione dell'ambiente server:  

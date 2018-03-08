@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1a02b3f56bd56fd7b86bbf3a998b7fdfd7316e9d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b40b75f21b77e6dd17cf426be3ea70fe05ac0757
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;modello&gt;. CASE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +53,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativa. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco di espressioni separate da virgola. Un'espressione può includere identificatori di colonna, funzioni definite dall'utente (UDF), funzioni VBA e altro.  
@@ -68,8 +66,8 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *espressione della condizione*  
  Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
- *espressione*  
- Facoltativa. Espressione che restituisce un valore scalare.  
+ *expression*  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
  Se il drill-through è attivato sia nella struttura di data mining che nel modello di data mining, gli utenti membri di un ruolo con autorizzazioni drill-through sul modello e sulla struttura possono accedere alle colonne della struttura di data mining che non sono incluse nel modello di data mining. Pertanto, per proteggere dati riservati o informazioni personali, è necessario costruire la vista origine dati per mascherare informazioni personali e concedere **AllowDrillthrough** autorizzazioni su una struttura di data mining solo quando è necessario.  
@@ -108,6 +106,6 @@ AND IsInNode('002')
  [DMX SELECT &#40; &#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40; DMX &#41; Istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40; DMX &#41; Istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

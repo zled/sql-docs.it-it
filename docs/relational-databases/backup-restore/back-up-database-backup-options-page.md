@@ -16,22 +16,22 @@ f1_keywords:
 - swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1d587759b7c57accdc4836346446e181f7df60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b476e0436b392d2b3c093a6a4424dc3445d8e27e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-backup-options-page"></a>Backup database (pagina Opzioni di backup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la pagina **Opzioni di backup** della finestra di dialogo **Backup database** per visualizzare o modificare le opzioni di backup del database.  
   
  **Per creare un backup utilizzando SQL Server Management Studio**  
   
--   [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+-   [Creare un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
 -   [Creare un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
  Per informazioni sui set di backup, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
- **Description**  
+ **Descrizione**  
  Consente di immettere una descrizione del set di backup.  
   
  **Scadenza set di backup**  

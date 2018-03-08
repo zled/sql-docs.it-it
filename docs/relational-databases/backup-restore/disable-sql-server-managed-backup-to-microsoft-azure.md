@@ -8,20 +8,21 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
-caps.latest.revision: "8"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 533a68638853c9703966e7c6eb8ea815950d7108
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f462b0563e37d528808f43b180435fa75a15dc3
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Disabilitare il backup gestito di SQL Server in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come disabilitare o sospendere [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] a livello di database e di istanza.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
 ```  
 EXEC msdb.managed_backup.sp_backup_config_basic  
@@ -54,7 +55,7 @@ GO
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. L'esempio seguente determina se [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è configurato a livello di istanza e tutti i database abilitati da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nell'istanza ed esegue la stored procedure di sistema **sp_backup_config_basic** per disabilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. L'esempio seguente determina se [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è configurato a livello di istanza e tutti i database abilitati da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nell'istanza ed esegue la stored procedure di sistema **sp_backup_config_basic** per disabilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
 ```  
 -- Create a working table to store the database names  
@@ -77,7 +78,8 @@ SELECT db_name
        FROM   
   
        msdb.managed_backup.fn_backup_db_config (NULL)  
-       WHERE is_managed_backup_enabled = 1  
+       WHERE is_managed_backup_enabled = 1 
+       AND is_dropped = 0
   
        --Select DBName from @DBNames  
   
@@ -121,7 +123,7 @@ GO
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     EXEC msdb.managed_backup.sp_backup_config_basic  

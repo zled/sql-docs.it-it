@@ -1,36 +1,37 @@
 ---
 title: Indici columnstore - Linee guida per la progettazione | Microsoft Docs
 ms.custom: 
-ms.date: 01/27/2017
+ms.date: 12/1/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2166cfa2f5ab944ac302916085c7abbebb687457
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 879b9942203bdf6d889fa649c1888335335d2d64
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Indici columnstore - Linee guida per la progettazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Suggerimenti generali per la progettazione di indici columnstore. Bastano poche scelte oculate per ottenere gli alti livelli di compressione dei dati e di prestazioni delle query per cui sono progettati gli indici columnstore. 
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-In questo articolo si presuppone una certa familiarità con la terminologia e l'architettura degli indici columnstore. Per altre informazioni, vedere [Indici columnstore - Panoramica](../../relational-databases/indexes/columnstore-indexes-overview.md) e [Indici columnstore - Architettura](../../relational-databases/indexes/columnstore-indexes-architecture.md).
+In questo articolo si presuppone una certa familiarità con la terminologia e l'architettura degli indici columnstore. Per altre informazioni, vedere [Indici columnstore - Panoramica](../../relational-databases/indexes/columnstore-indexes-overview.md) e [Architettura degli indici columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).
 
 ### <a name="know-your-data-requirements"></a>Conoscere i requisiti per i dati
 Prima di progettare un indice columnstore, è importante conoscere i requisiti per i dati nel modo più approfondito possibile. Ad esempio, valutare le risposte a queste domande:
@@ -52,10 +53,9 @@ Di seguito è riportato un riepilogo delle opzioni e dei suggerimenti.
 | Opzione per columnstore | Uso consigliato | Compressione |
 | :----------------- | :------------------- | :---------- |
 | Indice columnstore cluster | Usare per:<br></br>1) Carico di lavoro di data warehouse tradizionale con schema star o snowflake<br></br>2) Carichi di lavoro Internet delle cose (IOT) per l'inserimento di grandi volumi di dati con aggiornamenti ed eliminazioni minimi. | 10x in media |
-| Indici albero B non cluster su un indice columnstore cluster | Usare per:<br></br>    1) Applicare vincoli di chiave primaria e di chiave esterna su un indice columnstore cluster.<br></br>    2) Velocizzare le query che eseguono la ricerca di valori specifici o in intervalli di valori limitati.<br></br>    3) Velocizzare gli aggiornamenti e le eliminazioni di righe specifiche.| 10x in media, con ulteriore spazio di archiviazione per gli indici non cluster.|
+| Indici albero B non cluster su un indice columnstore cluster | Usare per:<br></br>    1. Applicare vincoli di chiave primaria e di chiave esterna su un indice columnstore cluster.<br></br>    2. Velocizzare le query che eseguono la ricerca di valori specifici o in intervalli di valori limitati.<br></br>    3. Velocizzare gli aggiornamenti e le eliminazioni di righe specifiche.| 10x in media, con ulteriore spazio di archiviazione per gli indici non cluster.|
 | Indice columnstore non cluster su un indice heap o albero B basato su disco | Usare per: <br></br>1) Un carico di lavoro OLTP con alcune query analitiche. È possibile eliminare gli indici albero B creati per l'analisi e sostituirli con un solo indice columnstore non cluster.<br></br>2) Molti carichi di lavoro OLTP tradizionali che eseguono operazioni di estrazione, trasformazione e caricamento (ETL) per spostare i dati in un data warehouse separato. È possibile evitare le operazioni ETL e la necessità di un data warehouse separato creando un indice columnstore non cluster su alcune delle tabelle OLTP. | L'indice columnstore non cluster è un indice aggiuntivo che richiede in media il 10% in più di spazio di archiviazione.|
 | Indice columnstore su una tabella in memoria | Le stesse indicazioni valide per un indice columnsore non cluster su una tabella basata su disco, ma la tabella di base è una tabella in memoria. | L'indice columnstore è un indice aggiuntivo.|
-
 
 ## <a name="use-a-clustered-columnstore-index-for-large-data-warehouse-tables"></a>Usare un indice columnstore cluster per tabelle di data warehouse di grandi dimensioni
 L'indice columnstore cluster non è semplicemente un indice, ma è lo spazio di archiviazione principale per le tabelle. Consente di ottenere alti livelli di compressione dei dati e un miglioramento significativo delle prestazioni delle query per le tabelle dei fatti e delle dimensioni di data warehouse di grandi dimensioni. Gli indici columnstore cluster sono più adatti a query di analisi piuttosto che a query transazionali, perché le query di analisi eseguono tendenzialmente operazioni su grandi intervalli di valori piuttosto che ricerche di valori specifici. 
@@ -75,16 +75,16 @@ Non usare un indice columnstore cluster nei casi seguenti:
 
 Per altre informazioni, vedere [Indici columnstore - Data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
-## <a name="add-btree-nonclustered-indexes-for-efficient-table-seeks"></a>Aggiungere indici non cluster albero B per ricerche efficienti nelle tabelle
+## <a name="add-b-tree-nonclustered-indexes-for-efficient-table-seeks"></a>Aggiungere indici albero B non cluster per ricerche efficienti nelle tabelle
 
-A partire da SQL Server 2016, è possibile creare indici albero B non cluster come indici secondari in un indice columnstore cluster. L'indice albero B non cluster viene aggiornato con le modifiche apportate all'indice columnstore. Si tratta di una funzionalità potente con numerosi vantaggi. 
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile creare indici albero B non cluster come indici secondari in un indice columnstore cluster. L'indice albero B non cluster viene aggiornato con le modifiche apportate all'indice columnstore. Si tratta di una funzionalità potente con numerosi vantaggi. 
 
-L'uso di un indice albero B secondario consente di eseguire ricerche di righe specifiche in modo efficiente, senza dover analizzare tutte le righe.  Sono disponibili anche altre opzioni. È possibile, ad esempio, applicare un vincolo di chiave primaria o chiave esterna tramite un vincolo UNIQUE sull'indice albero B. Di conseguenza, poiché non è possibile inserire un valore non univoco nell'indice albero B, SQL Server non può inserire il valore nel columnstore. 
+L'uso di un indice albero B secondario consente di eseguire ricerche di righe specifiche in modo efficiente, senza dover analizzare tutte le righe.  Sono disponibili anche altre opzioni. È possibile ad esempio applicare un vincolo chiave primaria o chiave esterna tramite un vincolo UNIQUE sull'indice albero B. Dato che non è possibile inserire un valore non univoco nell'indice albero B, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può inserire il valore nel columnstore. 
 
 Valutare la possibilità di usare un indice albero B su un indice columnstore nei casi seguenti:
 * Per eseguire query per la ricerca di valori specifici o in intervalli di valori limitati.
 * Per applicare un vincolo, ad esempio un vincolo di chiave primaria o di chiave esterna.
-* Per eseguire con efficienza operazioni di aggiornamento ed eliminazione. L'indice albero B consente di individuare rapidamente le righe specifiche per gli aggiornamenti e le eliminazioni, senza analizzare l'intera tabella o un'intera partizione di una tabella.
+* Per eseguire con efficienza operazioni di aggiornamento ed eliminazione. L'indice albero B consente di trovare rapidamente le righe specifiche per gli aggiornamenti e le eliminazioni, senza analizzare l'intera tabella o un'intera partizione di una tabella.
 * È disponibile spazio aggiuntivo per l'archiviazione dell'indice albero B.
 
 ## <a name="use-a-nonclustered-columnstore-index-for-real-time-analytics"></a>Usare un indice columnstore non cluster per analisi in tempo reale
@@ -99,7 +99,7 @@ Un indice columnstore consente di ottenere livelli di compressione dei dati 10 v
   
 *   Per evitare la necessità di un data warehouse separato. In genere, le aziende eseguono le transazioni in una tabella rowstore e quindi caricano i dati in un data warehouse separato per le operazioni di analisi. Per molti carichi di lavoro, è possibile evitare il processo di caricamento e la disponibilità di un data warehouse separato creando un indice columnstore non cluster sulle tabelle transazionali.
 
-  SQL Server 2016 offre diverse strategie per rendere efficiente questo scenario. È molto semplice da provare, perché è possibile abilitare un indice columnstore non cluster senza dover modificare l'applicazione OLTP. 
+  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] offre diverse strategie per rendere efficiente questo scenario. È molto semplice da provare, perché è possibile abilitare un indice columnstore non cluster senza dover modificare l'applicazione OLTP. 
 
 Per aggiungere ulteriori risorse di elaborazione, è possibile eseguire le operazioni di analisi su una replica secondaria leggibile. L'uso di una replica secondaria leggibile consente di separare l'elaborazione del carico di lavoro transazionale e del carico di lavoro di analisi. 
 
@@ -148,22 +148,22 @@ La compressione degli archivi è progettata per ottenere la massima compressione
 
 ## <a name="use-optimizations-when-you-convert-a-rowstore-table-to-a-columnstore-index"></a>Usare le ottimizzazioni per convertire una tabella rowstore in un indice columnstore
 
-Se i dati sono già disponibili in una tabella rowstore, è possibile usare l'istruzione [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md) per convertire la tabella in un indice columnstore cluster. Esistono un paio di ottimizzazioni in grado di migliorare le prestazioni delle query dopo la conversione della tabella.
+Se i dati sono già disponibili in una tabella rowstore, è possibile usare l'istruzione [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md) per convertire la tabella in un indice columnstore cluster. Le due ottimizzazioni descritte di seguito migliorano le prestazioni delle query dopo la conversione della tabella.
 
 ### <a name="use-maxdop-to-improve-rowgroup-quality"></a>Usare MAXDOP per migliorare la qualità del rowgroup
-È possibile configurare il numero massimo di processori per la conversione di un indice heap o albero B cluster in un indice columnstore. Per configurare i processori, usare l'opzione per il massimo grado di parallelismo (MAXDOP). 
+È possibile configurare il numero massimo di processori per la conversione di un indice heap o un indice albero B cluster in un indice columnstore. Per configurare i processori, usare l'opzione per il massimo grado di parallelismo (MAXDOP). 
 
-In presenza di grandi quantità di dati, è probabile che l'opzione MAXDOP 1 sia troppo lenta.  È possibile ottenere buoni risultati aumentando MAXDOP a 4. Se si ottengono meno rowgroup senza il numero ottimale di righe, è possibile usare [ALTER INDEX REORG](../../t-sql/statements/alter-index-transact-sql.md) per unirli in background.
+In presenza di grandi quantità di dati, è probabile che l'opzione MAXDOP 1 sia troppo lenta.  È possibile ottenere buoni risultati aumentando MAXDOP a 4. Se si ottengono meno rowgroup senza il numero ottimale di righe, è possibile usare [ALTER INDEX REORGANIZE](../../t-sql/statements/alter-index-transact-sql.md) per unirli in background.
 
-### <a name="keep-the-sorted-order-of-a-btree-index"></a>Mantenere l'ordinamento di un indice albero B
-Dato che le righe vengono già archiviate con un ordine nell'indice albero B, mantenere tale ordinamento quando le righe vengono compresse nell'indice columnstore può portare a un miglioramento delle prestazioni delle query.
+### <a name="keep-the-sorted-order-of-a-b-tree-index"></a>Mantenere l'ordinamento di un indice albero B
+Dato che le righe vengono già archiviate con un ordinamento nell'indice albero B, il fatto di mantenere tale ordinamento quando le righe vengono compresse nell'indice columnstore può portare a un miglioramento delle prestazioni delle query.
 
 L'indice columnstore non ordina i dati, ma usa i metadati per tenere traccia dei valori minimi e massimi di ogni segmento di colonna in ogni rowgroup.  Durante l'analisi di un intervallo di valori, può rapidamente calcolare quando ignorare il rowgroup. Quando i dati sono ordinati, possono essere ignorati più rowgroup. 
 
 Per mantenere l'ordinamento durante la conversione:
 * Usare [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md) con la clausola DROP_EXISTING. Viene così mantenuto anche il nome dell'indice. Se esistono script che usano già il nome dell'indice rowstore non sarà necessario aggiornarli. 
 
-    Questo esempio converte un indice rowstore cluster su una tabella denominata ```MyFactTable``` in un indice columnstore cluster. Il nome dell'indice, ```ClusteredIndex_d473567f7ea04d7aafcac5364c241e09```, rimane invariato.
+    Questo esempio converte un indice rowstore cluster su una tabella denominata `MyFactTable` in un indice columnstore cluster. Il nome dell'indice, `ClusteredIndex_d473567f7ea04d7aafcac5364c241e09`, rimane invariato.
 
     ```sql
     CREATE CLUSTERED COLUMNSTORE INDEX ClusteredIndex_d473567f7ea04d7aafcac5364c241e09  
@@ -171,7 +171,7 @@ Per mantenere l'ordinamento durante la conversione:
     WITH (DROP_EXISTING = ON);  
     ```
 
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
 La tabella seguente riepiloga le attività per la creazione e la manutenzione degli indici columnstore. 
   
 |Attività|Argomenti di riferimento|Note|  
@@ -181,10 +181,10 @@ La tabella seguente riepiloga le attività per la creazione e la manutenzione de
 |Convertire una tabella rowstore in un columnstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Convertire un heap o un albero binario esistente o in un columnstore. Gli esempi illustrano come gestire gli indici esistenti e il nome dell'indice quando si esegue questa conversione.|  
 |Convertire una tabella columnstore in un rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Di solito non è necessario eseguire questa conversione, ma talvolta potrebbe presentarsene la necessità. Gli esempi illustrano come convertire un columnstore in un heap o in un indice cluster.|  
 |Creare un indice columnstore per una tabella rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Una tabella rowstore può avere un solo indice columnstore.  A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]l'indice columnstore può avere una condizione di filtro. Gli esempi illustrano la sintassi di base.|  
-|Creare indici ad alte prestazioni per l'analisi operativa.|[Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Descrive come creare indici columnstore e BTree complementari in modo che le query OLTP usino gli indici BTree e le query di analisi usino gli indici columnstore.|  
-|Creare indici columnstore efficienti per il data warehousing.|[Indici columnstore - Data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Descrive come usare gli indici BTree con le tabelle columnstore per creare query di data warehousing ad alte prestazioni.|  
-|Usare un indice BTree per imporre un vincolo di chiave primaria per un indice columnstore.|[Indici columnstore - Data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Illustra come combinare indici BTree e columnstore per imporre vincoli di chiave primaria per l'indice columnstore.|  
-|Rimuovere un indice columnstore|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Per rimuovere un indice columnstore si usa la sintassi DROP INDEX standard usata dagli indici BTree. La rimozione di un indice columnstore cluster converte la tabella columnstore in un heap.|  
+|Creare indici ad alte prestazioni per l'analisi operativa.|[Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Descrive come creare indici columnstore e indici albero B complementari in modo che le query OLTP usino gli indici albero B e le query di analisi usino gli indici columnstore.|  
+|Creare indici columnstore efficienti per il data warehousing.|[Indici columnstore - Data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Descrive come usare gli indici albero B con le tabelle columnstore per creare query di data warehousing ad alte prestazioni.|  
+|Usare un indice albero B per imporre un vincolo di chiave primaria per un indice columnstore.|[Indici columnstore - Data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Illustra come combinare indici albero B e indici columnstore per imporre vincoli di chiave primaria per l'indice columnstore.|  
+|Rimuovere un indice columnstore|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Per rimuovere un indice columnstore si usa la sintassi DROP INDEX standard usata dagli indici albero B. La rimozione di un indice columnstore cluster converte la tabella columnstore in un heap.|  
 |Eliminare una riga da un indice columnstore|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Usare [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) per eliminare una riga.<br /><br /> Riga**columnstore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrassegna la riga come eliminata logicamente ma recupera lo spazio di archiviazione fisico della riga solo dopo che l'indice è stato ricompilato.<br /><br /> Riga**deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina la riga logicamente e fisicamente.|  
 |Aggiornare una riga nell'indice columnstore|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Usare [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) per aggiornare una ruga.<br /><br /> Riga**columnstore** :  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrassegna la riga come eliminata logicamente e quindi inserisce la riga aggiornata nel deltastore.<br /><br /> Riga**deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiorna la riga nel deltastore.|  
 |Forzare il passaggio di tutte le righe del deltastore nel columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Indici columnstore - Deframmentazione](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX con l'opzione REBUILD forza il passaggio di tutte le righe nel columnstore.|  
@@ -195,19 +195,8 @@ La tabella seguente riepiloga le attività per la creazione e la manutenzione de
 ## <a name="next-steps"></a>Passaggi successivi
 Per creare un indice columnstore vuoto per:
 
-* SQL Server, usare [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
-* Database SQL, usare [CREATE TABLE (database SQL di Azure)](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)
-* SQL Data Warehouse, usare [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
+* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
-Per convertire un indice heap o albero B rowstore esistente in un indice columnstore cluster o per creare un indice columnstore non cluster, usare:
-
-* [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
-
-
-
-
-
-
-
-  
+Per altre informazioni su come convertire un heap rowstore o un indice albero B esistente in un indice columnstore cluster o su come creare un indice columnstore non cluster, vedere [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 

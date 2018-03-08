@@ -1,5 +1,5 @@
 ---
-title: Sys.dm hadr_database_replica_cluster_states (Transact-SQL) | Documenti Microsoft
+title: sys.dm_hadr_database_replica_cluster_states (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_hadr_database_replica_cluster_states_TSQL
 - sys.dm_hadr_database_replica_cluster_states_TSQL
 - dm_hadr_database_replica_cluster_states
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_database_replica_cluster_states dynamic management view
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 797a83b3f0493a2fb7d65e9c7c541a0e6b64e253
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 69737d323e06a7224334abbe89e0970e7f1e706e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Se la replica primaria non è attualmente disponibile, quale replica secondaria limiterebbe la perdita di dati se diventasse la replica primaria?  
   
--   Quando il valore di [Sys. Databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** colonna è "AVAILABILITY_REPLICA", quale replica secondaria in un gruppo di disponibilità trattiene il troncamento del log su un determinato database primario ?     
+-   Quando il valore di [Sys. Databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** colonna è "AVAILABILITY_REPLICA", quale replica secondaria in un gruppo di disponibilità trattiene il troncamento del log su un determinato database primario ?  
    
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -57,16 +59,16 @@ ms.lasthandoff: 11/17/2017
 |**recovery_lsn**|**Numeric(25,0)**|Sulla replica primaria la fine del log delle transazioni prima che la replica scriva qualsiasi nuovo record del log dopo il failover o il recupero. Sulla replica primaria la riga per un determinato database secondario conterrà il valore a cui la replica secondaria deve essere sincronizzata (ripristino e reinizializzazione).<br /><br /> Sulle repliche secondarie questo valore è NULL. Si noti che ogni replica secondaria avrà il valore MAX o un valore inferiore a cui la replica secondaria dovrà tornare.|  
 |**truncation_lsn**|**Numeric(25,0)**|Il valore di troncamento del log di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] che potrebbe essere maggiore dell'LSN di troncamento locale se il troncamento del log locale è bloccato (ad esempio da un'operazione di backup).|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e DMV di Gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Viste del catalogo dei gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Monitorare gruppi di disponibilità &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
+ [Sys.dm hadr_database_replica_states &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
   

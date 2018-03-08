@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7a7378573859a1cc1961347e358a93ec1dea8fc5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8412ab6ab529d51a8dc2626ff724b70440b1e357
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Grafici a barre (Generatore report e SSRS)
   Nei grafici a barre le serie vengono visualizzate come set di barre orizzontali. Il grafico a barre semplice è strettamente correlato all'istogramma, in cui le serie vengono visualizzate come set di barre verticali, e al grafico a barre a intervalli, in cui le serie vengono visualizzate come set di barre orizzontali con punti iniziali e finali variabili.  

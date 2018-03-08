@@ -8,31 +8,31 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - schema rowsets [OLE DB]
 - schema rowsets [Analysis Services], OLE DB
 - OLE DB schema rowsets
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10a60e9e3696076a4e3672e7bcb5037f362f161b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59d17cb1345f7ba32a2cbaac27f5ec002aadfa40
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="ole-db-schema-rowsets"></a>Set di righe dello schema OLE DB
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]I rowset dello schema di OLE DB seguenti sono supportati dal [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML per il provider Analysis (XMLA). Utilizzare il **DISCOVER_ENUMERATORS** set di righe con la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo per verificare se un provider dell'origine dati supporta un set di righe.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+I set di righe dello schema OLE DB seguenti sono supportati dal provider di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA). Utilizzare il **DISCOVER_ENUMERATORS** set di righe con la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo per verificare se un provider dell'origine dati supporta un set di righe.  
   
  Per ottenere informazioni dettagliate su questi set di righe, è inoltre possibile cercare l'argomento "Set di righe dello schema" nella parte relativa alla OLE DB Programmer's Reference in MSDN® Library nel sito Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/08/2017
 |**DBSCHEMA_TABLE_CONSTRAINTS**|Identifica i vincoli di tabella definiti nel catalogo e di proprietà di un determinato utente.|  
 |**DBSCHEMA_TABLE_PRIVILEGES**|Identifica i privilegi sulle tabelle definiti nel catalogo e disponibili per un determinato utente o concessi da un determinato utente.|  
 |**DBSCHEMA_TABLE_STATISTICS**|Descrive i set di statistiche disponibili relativi alle tabelle nel provider.<br /><br /> Questo set di righe non è correlato il **statistiche** set di righe.|  
-|[Set di righe DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) <sup>1</sup>|Identifica i gruppi di misure e le dimensioni esposte come tabelle all'interno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[DBSCHEMA_TABLES Rowset](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) <sup>1</sup>|Identifica i gruppi di misure e le dimensioni esposte come tabelle all'interno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |**DBSCHEMA_TABLES_INFO** <sup>1</sup>|Identifica le tabelle, incluse le viste, definite nel catalogo e accessibili a un determinato utente.|  
 |**DBSCHEMA_TRANSLATIONS**|Identifica le traduzioni dei caratteri definite nel catalogo e accessibili a un determinato utente.|  
 |**DBSCHEMA_TRUSTEE**|Enumera le terze parti trusted per un'origine dati.|  
@@ -79,6 +79,6 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)   
- [Set di righe dello schema di Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Set di righe dello Schema di Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ProactiveCachingObjectNotificationBinding Data Type
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1f3c3f0288f64011ea7e68d986a4f1e5fb74db92
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ab6c427eb4b138c7883083527fd5643b76471798
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="proactivecachingobjectnotificationbinding-data-type-assl"></a>Tipo di dati ProactiveCachingObjectNotificationBinding (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definisce un tipo di dati derivato astratto che rappresenta le informazioni per il [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) elemento relative alle modifiche di origine dati, tabelle e viste specificate o in tabelle e viste identificate tramite le associazioni dati esistenti che richiedono la ricompilazione della cache.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Caratteristiche tipo di dati  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipi di dati di base|[ProactiveCachingBinding](../../../analysis-services/scripting/data-type/proactivecachingbinding-data-type-assl.md)|  
 |Tipi di dati derivati|[ProactiveCachingInheritedBinding](../../../analysis-services/scripting/data-type/proactivecachinginheritedbinding-data-type-assl.md), [ProactiveCachingTablesBinding](../../../analysis-services/scripting/data-type/proactivecachingtablesbinding-data-type-assl.md)|  
@@ -54,9 +52,9 @@ ms.lasthandoff: 12/08/2017
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|Nessuno|  
+|Elementi padre|None|  
 |Elementi figlio|[NotificationTechnique](../../../analysis-services/scripting/properties/notificationtechnique-element-assl.md)|  
-|Elementi derivati|Nessuno|  
+|Elementi derivati|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  Per ulteriori informazioni sul **ProactiveCachingBinding** tipo, inclusa una tabella della gerarchia di ereditarietà di **ProactiveCachingBinding** tipi, vedere [dati ProactiveCachingBinding Tipo &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/proactivecachingbinding-data-type-assl.md).  

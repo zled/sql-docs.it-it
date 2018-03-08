@@ -5,31 +5,30 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2255369fe9a3e8c74088a13efba5eaab19f7bb53
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a716193df7a74d9845cc8f70434bb525883f5936
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logistic-regression-model-query-examples"></a>Esempi di query sul modello di regressione logistica
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, o è possibile creare una query di stima che utilizza i criteri del modello per eseguire stime utilizzando nuovi dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, oppure una query di stima, che utilizza i criteri presenti nel modello di data mining per eseguire stime utilizzando nuovi dati.  
   
  In questa sezione viene illustrato come creare entrambi i tipi di query per i modelli basati sull'algoritmo Microsoft Logistic Regression.  
   
@@ -46,9 +45,9 @@ ms.lasthandoff: 12/08/2017
  [Esecuzione di stime per un valore discreto](#bkmk_Query4)  
   
 ##  <a name="bkmk_top"></a> Acquisizione di informazioni sul modello di regressione logistica  
- I modelli di regressione logistica vengono creati utilizzando l'algoritmo Microsoft Neural Network con un particolare set di parametri. In un modello di regressione logistica sono pertanto contenute alcune delle informazioni presenti in un modello di rete neurale, ma in forma meno complessa. Per comprendere la struttura del contenuto del modello e i tipi di informazioni archiviati dai diversi tipi di nodo, vedere [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
+ I modelli di regressione logistica vengono creati utilizzando l'algoritmo Microsoft Neural Network con un particolare set di parametri. In un modello di regressione logistica sono pertanto contenute alcune delle informazioni presenti in un modello di rete neurale, ma in forma meno complessa. Per comprendere la struttura del contenuto del modello e i tipi di informazioni archiviati dai diversi tipi di nodo, vedere [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
- Per proseguire negli scenari di query, è possibile creare un modello di regressione logistica come descritto nella sezione seguente di Esercitazione intermedia sul data mining: [Lezione 5: Compilazione dei modelli di rete neurale e di regressione logistica &#40;Esercitazione intermedia sul data mining&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b).  
+ Per proseguire negli scenari di query, è possibile creare un modello di regressione logistica come descritto nella sezione seguente di Esercitazione intermedia sul data mining: [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b).  
   
  È possibile usare anche la struttura di data mining, Targeted Mailing, da [Esercitazione di base sul data mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
@@ -107,7 +106,7 @@ FROM [TM_Logistic Regression].CONTENT
 |Commute Distance|Missing|0|0|0|1|  
 |Commute Distance|5-10 Miles|3033|0.173472889|0|4|  
   
- Tramite la query effettiva vengono restituite molte più righe, tuttavia in questo esempio viene illustrato il tipo di informazioni fornite sugli input. Per gli input discreti, nella tabella viene elencato ogni valore possibile. Poiché per gli input con valore continuo, ad esempio Age, è impossibile fornire un elenco completo, l'input viene discretizzato come media. Per altre informazioni su come usare le informazioni nel nodo delle statistiche marginali, vedere [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
+ Tramite la query effettiva vengono restituite molte più righe, tuttavia in questo esempio viene illustrato il tipo di informazioni fornite sugli input. Per gli input discreti, nella tabella viene elencato ogni valore possibile. Poiché per gli input con valore continuo, ad esempio Age, è impossibile fornire un elenco completo, l'input viene discretizzato come media. Per altre informazioni su come usare le informazioni nel nodo delle statistiche marginali, vedere [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
 > [!NOTE]  
 >  I risultati sono stati resi bidimensionali per consentirne una visualizzazione più immediata, ma è possibile restituire la tabella nidificata in una sola colonna, se il provider supporta set di righe gerarchici.  
@@ -138,7 +137,7 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 |||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- Per altre informazioni su probabilità, supporto e deviazione standard di valori nella tabella NODE_DISTRIBUTION nidificata, vedere [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
+ Per altre informazioni su probabilità, supporto e deviazione standard di valori nella tabella NODE_DISTRIBUTION nidificata, vedere [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
 ###  <a name="bkmk_Query4"></a> Query di esempio 4: Esecuzione di stime per un valore discreto  
  La regressione logistica viene in genere utilizzata negli scenari nei quali si desidera analizzare i fattori che contribuiscono a un risultato binario. Anche se tramite il modello usato nell'esercitazione viene stimato un valore continuo, **ServiceGrade**, in uno scenario reale è necessario configurare il modello per stimare se il livello di servizio ha soddisfatto un valore target discretizzato. In alternativa, è possibile restituire le stime usando un valore continuo, ma in un secondo momento è necessario raggruppare i risultati stimati in **Buono**, **Discreto**o **Scarso**.  
@@ -198,13 +197,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Funzione di stima|Utilizzo|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Viene restituita la probabilità adattata dello stato specificato.|  
-|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Viene restituito un valore, o un set di valori, stimato per una colonna specificata.|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Viene restituita la probabilità per uno stato specificato.|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Viene restituita la deviazione standard per il valore stimato.|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Viene restituito il valore di supporto per uno stato specificato.|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Restituisce la varianza di una colonna specificata.|  
+|[DMX IsDescendant &#40; &#41;](../../dmx/isdescendant-dmx.md)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Viene restituita la probabilità adattata dello stato specificato.|  
+|[DMX PredictHistogram &#40; &#41;](../../dmx/predicthistogram-dmx.md)|Viene restituito un valore, o un set di valori, stimato per una colonna specificata.|  
+|[DMX PredictProbability &#40; &#41;](../../dmx/predictprobability-dmx.md)|Viene restituita la probabilità per uno stato specificato.|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Viene restituita la deviazione standard per il valore stimato.|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Viene restituito il valore di supporto per uno stato specificato.|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Restituisce la varianza di una colonna specificata.|  
   
  Per un elenco delle funzioni comuni a tutti gli algoritmi di [!INCLUDE[msCoName](../../includes/msconame-md.md)], vedere [Funzioni di stima correlate &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
@@ -212,10 +211,10 @@ NATURAL PREDICTION JOIN
 >  Per i modelli di reti neurali e di regressione logistica la funzione [PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md) restituisce un solo valore che rappresenta la dimensione del set di training per l'intero modello.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Riferimento tecnico l'algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Contenuto del modello di data mining per i modelli di regressione logistica &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Lezione 5: Compilazione Neural Network e i modelli di regressione logistica &#40; esercitazione intermedia di Data Mining &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - deleting columns
 - columns [data mining], mining structure columns
 ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5592cefdc8e4e77ec5b6e92ee0d4d671b5df3408
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e9ef642c3d82331b3bbf9443a0f65181566dfe8c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>Rimuovere colonne da una struttura di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile utilizzare Progettazione modelli di Data Mining per rimuovere le colonne da una struttura di data mining dopo la struttura è già stata creata. I motivi per cui rimuovere una colonna della struttura di data mining possono includere i seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+È possibile utilizzare Progettazione modelli di data mining per rimuovere le colonne da una struttura di data mining dopo averla creata. I motivi per cui rimuovere una colonna della struttura di data mining possono includere i seguenti:  
   
 -   La struttura di data mining contiene più copie di una colonna e si desidera evitare l'utilizzo di dati duplicati in un modello.  
   
@@ -52,6 +51,6 @@ ms.lasthandoff: 12/08/2017
 4.  Nella finestra di dialogo **Elimina oggetti** fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Data mining struttura attività e procedure](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

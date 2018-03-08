@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Execute21 method [RDS]
+helpviewer_keywords:
+- Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b94d4cdb75cbdcfaa2dfece8d7172e2935d6759d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fd79bbbd0ccce5e5e2f2bef181ba958c76f6afb5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute21-method-rds"></a>Metodo Execute21 (RDS)
 Esegue la richiesta e crea un recordset ADO per l'utilizzo in ADO 2.1.  
@@ -45,7 +47,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *HandlerString*  
  La stringa identifica il gestore da utilizzare con questa esecuzione. La stringa contiene due parti. La prima parte contiene il nome (ProgID) del gestore da utilizzare. La seconda parte della stringa contiene gli argomenti vengono passati al gestore. Modalità di interpretazione della stringa di argomenti è gestore specifico. Le due parti sono separate dalla prima istanza di una virgola nella stringa (anche se la stringa di argomenti può contenere virgole aggiuntive). Gli argomenti sono facoltativi.  
   
- *Stringa di query*  
+ *QueryString*  
  Un comando nel linguaggio di comando supportato dal provider OLE DB identificato nella stringa di connessione. Per i provider basato su SQL, è possibile che contenga un [!INCLUDE[tsql](../../../includes/tsql_md.md)] istruzione di comando, ma per i provider non SQL (ad esempio, MSDataShape) non è possibile un [!INCLUDE[tsql](../../../includes/tsql_md.md)] istruzione di query.  
   
  Inoltre, se viene utilizzato un gestore e si consiglia di utilizzare un gestore, il gestore può modificare o sostituire il valore specificato qui. Ad esempio, in genere sostituisce il gestore *QueryString* con una stringa di query dal file ini. Per impostazione predefinita, viene utilizzato il file MSDFMAP.  

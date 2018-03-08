@@ -1,28 +1,29 @@
 ---
 title: Installazione dei componenti di machine learning senza accesso a internet | Documenti Microsoft
 ms.custom: 
-ms.date: 11/30/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 93adacb061b3bf4c77606294ae8341144eaf24c9
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1c4a63077cf9801a6c83502f2fdea6f88c063227
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Installazione dei componenti di machine learning senza accesso a internet
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Poiché i componenti di R e Python forniti con SQL Server 2016 e SQL Server 2017 sono open source di, Microsoft non vengono installati i componenti di R o Python per impostazione predefinita. È invece fornire i programmi di installazione correlate e in bundle di pacchetti per motivi di praticità nel Microsoft Download Center e altri siti attendibili. Deve accettare la licenza appropriata e quindi il programma di installazione di SQL Server installa i componenti di R o Python per l'utente.
 
@@ -109,32 +110,37 @@ Microsoft R Server     |[SRS_9.0.2.100_1033.cab](https://go.microsoft.com/fwlink
 Microsoft R Open     |[SRO_3.3.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842800)
 Microsoft R Server     |[SRS_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842799)
 Aprire Microsoft Python     |[SPO_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842828)
-Server Microsoft Python    |[SPS_9.1.0.0__1033.cab](https://go.microsoft.com/fwlink/?LinkId=842848)
+Microsoft Python Server    |[SPS_9.1.0.0__1033.cab](https://go.microsoft.com/fwlink/?LinkId=842848)
 **SQL Server 2017 RC1** |
 Microsoft R Open     |[SRO_3.3.3.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851503)|
 Microsoft R Server     |[SRS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851498)|
 Aprire Microsoft Python     |[SPO_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851499)|
-Server Microsoft Python    |[SPS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851504)|
+Microsoft Python Server    |[SPS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851504)|
 **SQL Server 2017 RC 2** |
 Microsoft R Open     |[SRO_3.3.3.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851493)|
 Microsoft R Server     |[SRS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851505)|
 Aprire Microsoft Python     |[SPO_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851506)|
-Server Microsoft Python    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
+Microsoft Python Server    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
 **SQL Server 2017 RTM** |
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Aprire Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Server Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 CU1** |
-Microsoft R Open     |Utilizzare precedente|
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Aprire Microsoft Python     |Utilizzare precedente |
-Server Microsoft Python    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
+Aprire Microsoft Python     |Nessuna modifica. Utilizzare precedente |
+Microsoft Python Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
 **SQL Server 2017 CU2** |
-Microsoft R Open     |Utilizzare precedente|
-Microsoft R Server      |Utilizzare precedente|
-Aprire Microsoft Python     |Utilizzare precedente |
-Server Microsoft Python    |Utilizzare precedente|
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
+Microsoft R Server      |Nessuna modifica. Utilizzare precedente|
+Aprire Microsoft Python     |Nessuna modifica. Utilizzare precedente|
+Microsoft Python Server    |Nessuna modifica. Utilizzare precedente|
+**SQL Server 2017 CU3** |
+Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
+Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
+Aprire Microsoft Python     |Nessuna modifica. Utilizzare precedente|
+Microsoft Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
 
 ### <a name="bkmk_2016Installers"></a>Download di SQL Server 2016
 
@@ -174,7 +180,7 @@ Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwli
 **SQL Server 2016 SP 1 CU1**     |
 Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
 Microsoft R Server     |Nessuna modifica. Utilizzare precedente|
-**SQL Server 2016 SP1 CU2**     |
+**SQL Server 2016 SP 1 CU2**     |
 Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
 **SQL Server 2016 SP 1 CU3**     |
@@ -187,7 +193,7 @@ Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlin
 Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
 Microsoft R Server    |Nessuna modifica. Utilizzare precedente |
 
-Se si desidera visualizzare il codice sorgente per Microsoft R, è disponibile per il download come archivio in formato con estensione tar: [programmi di installazione Scarica R Server](https://docs.microsoft.com/r-server/install/r-server-install-windows#download)
+Se si desidera visualizzare il codice sorgente per Microsoft R, è disponibile per il download come archivio in formato con estensione tar: [programmi di installazione Scarica R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
 ### <a name = "bkmk_OtherComponents"></a>Requisiti aggiuntivi
 

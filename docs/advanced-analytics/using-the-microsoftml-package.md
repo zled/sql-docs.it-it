@@ -8,23 +8,25 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: "132"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d2b01b0e1618dc92bdfe11060f1b4c9d9eb17dbc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>Mediante il pacchetto MicrosoftML con SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Il [ **MicrosoftML** ](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) pacchetto che viene fornito con Microsoft R Server e SQL Server 2017 include più algoritmi di machine learning. Queste API sono state sviluppate da Microsoft per applicazioni di apprendimento automatico interno e sono state perfezionate negli anni per supportare ad alte prestazioni sui big data, tramite l'elaborazione multicore e il flusso di dati veloce. MicrosoftML inoltre include numerose trasformazioni per l'elaborazione di immagini e testo.
 

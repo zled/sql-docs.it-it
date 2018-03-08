@@ -1,14 +1,15 @@
 ---
 title: Rinominare tabelle (motore di database) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,22 +17,22 @@ helpviewer_keywords:
 - table names [SQL Server]
 - tables [SQL Server], Visual Database Tools
 - renaming tables
-ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1a341ca5d2c39c5d7c5071d135f58fd37d6b9d73
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 61aa8b3a739b03201e92cd81007bc1c43c6ab435
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="rename-tables-database-engine"></a>Ridenominazione di tabelle (motore di database)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  È possibile rinominare una tabella in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Rinominare una tabella in SQL Server o nel database SQL di Azure.
+
+Per rinominare una tabella in Azure SQL Data Warehouse o Parallel Data Warehouse, usare l'istruzione T-SQL [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md). 
   
 > [!CAUTION]  
 >  Fare attenzione prima di rinominare una tabella. Se query, viste, funzioni definite dall'utente, stored procedure o programmi esistenti fanno riferimento a tale tabella, la modifica del nome renderà questi oggetti non validi.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per rinominare una tabella:**  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -72,9 +73,9 @@ ms.lasthandoff: 11/17/2017
   
 4.  Per annullare questa azione, premere ESC prima di uscire dal campo.  
   
-5.  Dal menu **File** scegliere **Salva***nome tabella*.  
+5.  Scegliere **Salva***nome tabella* dal menu **File**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-rename-a-table"></a>Per rinominare una tabella  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Nell'esempio seguente la tabella `SalesTerritory` viene rinominata in `SalesTerr` nello schema `Sales` . Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Nell'esempio seguente la tabella `SalesTerritory` viene rinominata in `SalesTerr` nello schema `Sales` . Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm xtp_system_memory_consumers (Transact-SQL) | Documenti Microsoft
+title: sys.dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_xtp_system_memory_consumers_TSQL
 - sys.dm_xtp_system_memory_consumers
 - dm_xtp_system_memory_consumers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_xtp_system_memory_consumers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e48ffede3b2aea0ff69c9dce9fc7abd2fe4bc4f9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a7b5e11f35e5ae6665d32355da60fb7e1e2b5f6d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +49,8 @@ select * from sys.dm_xtp_system_memory_consumers
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interno del consumer di memoria.|  
 |memory_consumer_type|**int**|Un numero intero che rappresenta il tipo del consumer di memoria con uno dei valori seguenti:<br /><br /> 0 – Non deve essere visualizzato. Aggrega l'utilizzo della memoria due o più consumer.<br /><br /> 1 – LOOKASIDE: Tiene traccia dell'utilizzo di memoria per un lookaside del sistema.<br /><br /> 2 - VARHEAP: Tiene traccia dell'utilizzo di memoria per un heap a lunghezza variabile.<br /><br /> 4 - il pool di pagine di IO: tiene traccia dell'utilizzo di memoria per un pool di pagine di sistema utilizzato per le operazioni dei / o.|  
-|memory_consumer_type_desc|**nvarchar (16)**|Descrizione del tipo del consumer di memoria:<br /><br /> 0 – Non deve essere visualizzato.<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar (64)**|Descrizione dell'istanza del consumer di memoria:<br /><br /> VARHEAP: <br />Heap di sistema. Uso generale. Utilizzato solo per allocare gli elementi di lavoro di Garbage Collection.<br />OPPURE<br />Heap di lookaside. Utilizzato da looksides quando il numero di elementi contenuti nell'elenco raggiunge un limite predeterminato (in genere circa 5.000 elementi).<br /><br /> PGPOOL: Per il sistema dei / o pool vi sono tre pool di pagine di dimensioni diverse System 4K, riserva di paging da 64 KB di sistema e il pool di pagine di sistema 256 KB.|  
+|memory_consumer_type_desc|**nvarchar(16)**|Descrizione del tipo del consumer di memoria:<br /><br /> 0 – Non deve essere visualizzato.<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|Descrizione dell'istanza del consumer di memoria:<br /><br /> VARHEAP: <br />Heap di sistema. Uso generale. Utilizzato solo per allocare gli elementi di lavoro di Garbage Collection.<br />OPPURE<br />Heap di lookaside. Utilizzato da looksides quando il numero di elementi contenuti nell'elenco raggiunge un limite predeterminato (in genere circa 5.000 elementi).<br /><br /> PGPOOL: Per il sistema dei / o pool vi sono tre pool di pagine di dimensioni diverse System 4K, riserva di paging da 64 KB di sistema e il pool di pagine di sistema 256 KB.|  
 |lookaside_id|**bigint**|ID del provider di memoria dell'elenco lookaside e locale a livello di thread.|  
 |pagepool_id|**bigint**|ID del provider di memoria del pool di pagine e locale a livello di thread.|  
 |allocated_bytes|**bigint**|Numero di byte riservati al consumer.|  
@@ -59,7 +62,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |max_sizeclass|**int**|Solo per uso interno.|  
 |memory_consumer_address|**varbinary**|Indirizzo interno del consumer.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE nel server.  
   
 ## <a name="user-scenario"></a>Scenario utente  

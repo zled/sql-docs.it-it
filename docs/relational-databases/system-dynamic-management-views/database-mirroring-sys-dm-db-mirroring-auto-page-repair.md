@@ -1,5 +1,5 @@
 ---
-title: Sys.dm db_mirroring_auto_page_repair (Transact-SQL) | Documenti Microsoft
+title: sys.dm_db_mirroring_auto_page_repair (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.dm_db_mirroring_auto_page_repair_TSQL
 - sys.dm_db_mirroring_auto_page_repair
 - dm_db_mirroring_auto_page_repair
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - automatic page repair
 - database mirroring [SQL Server], automatic page repair
 - sys.dm_db_mirroring_auto_page_repair dynamic management view
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73eaff69578cd56e98895e504d8450f346fc11db
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 35b8224cfb63709a6096aaa937aa19dd04d9c212
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>Database Mirroring - Sys.dm db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +49,9 @@ ms.lasthandoff: 11/27/2017
 |**page_status**|**int**|La stato del tentativo di ripristino della pagina:<br /><br /> 2 = in coda per la richiesta dal partner.<br /><br /> 3 = richiesta inviata al partner.<br /><br /> 4 = in coda per il ripristino automatico della pagina (risposta ricevuta dal partner).<br /><br /> 5 = il ripristino automatico della pagina è stato completato e la pagina può essere utilizzata.<br /><br /> 6 = irreparabile. Indica che si è verificato un errore durante il tentativo di ripristino della pagina, ad esempio perché la pagina è danneggiata anche per il partner, il partner è disconnesso o si è verificato un problema di rete. Questo stato non è finale; se il danno si verifica nuovamente nella pagina, questa verrà nuovamente richiesta dal partner.|  
 |**modification_time**|**datetime**|Ora dell'ultima modifica dello stato della pagina.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  

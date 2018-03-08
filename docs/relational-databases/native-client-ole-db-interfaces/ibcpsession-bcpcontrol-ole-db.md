@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: BCPControl method
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72969fb998915015b59e47c602df075921f46a0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 123232c2815dcb2e7086a58e363a0003d747f80d
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ HRESULT BCPControl(
 |------------|-----------------|  
 |BCP_OPTION_ABORT|Arresta un'operazione di copia bulk già in corso. È possibile chiamare il **BCPControl** metodo con un *eOption* argomento di BCP_OPTION_ABORT da un altro thread per arrestare un'operazione di copia bulk in esecuzione. Il *iValue* argomento viene ignorato.|  
 |BCP_OPTION_BATCH|Numero di righe per batch. L'impostazione predefinita è 0 e indica tutte le righe di una tabella quando i dati vengono estratti oppure tutte le righe nel file di dati dell'utente quando i dati vengono copiati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un valore minore di 1 consente di reimpostare BCP_OPTION_BATCH sul valore predefinito.|  
-|BCP_OPTION_DELAYREADFMT|Un valore booleano, se impostato su true, causerà [ibcpsession:: Bcpreadfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) per leggere in esecuzione. Se false (impostazione predefinita), ibcpsession:: Bcpreadfmt verrà immediatamente la lettura del file di formato. Se si verificherà un errore nella sequenza **BCP_OPTION_DELAYREADFMT** è true e si chiama ibcpsession:: BCPColumns o ibcpsession:: BCPColFmt.<br /><br /> Sequenza verificherà un errore anche se si chiama `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` dopo la chiamata `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` e ibcpsession:: Bcpwritefmt.<br /><br /> Per ulteriori informazioni, vedere [individuazione dei metadati](../../relational-databases/native-client/features/metadata-discovery.md).|  
+|BCP_OPTION_DELAYREADFMT|Un valore booleano, se impostato su true, causerà [ibcpsession:: Bcpreadfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) per leggere in esecuzione. Se false (impostazione predefinita), ibcpsession:: Bcpreadfmt verrà immediatamente la lettura del file di formato. Se si verificherà un errore nella sequenza **BCP_OPTION_DELAYREADFMT** è true e si chiama ibcpsession:: BCPColumns o ibcpsession:: BCPColFmt.<br /><br /> Sequenza verificherà un errore anche se si chiama `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` dopo la chiamata `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` e ibcpsession:: Bcpwritefmt.<br /><br /> Per ulteriori informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).|  
 |BCP_OPTION_FILECP|Il *iValue* argomento contiene il numero della tabella codici per il file di dati. È possibile specificare il numero della tabella codici, ad esempio 1252 o 850, o uno dei valori seguenti:<br /><br /> BCP_FILECP_ACP: i dati contenuti nel file sono inclusi nella tabella codici di Microsoft Windows® del client.<br /><br /> BCP_FILECP_OEMCP: i dati contenuti nel file sono inclusi nella tabella codici OEM del client (impostazione predefinita).<br /><br /> BCP_FILECP_RAW: i dati contenuti nel file sono inclusi nella tabella codici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |BCP_OPTION_FILEFMT|Numero di versione del formato del file di dati. Il valore può essere 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) o 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 è il valore predefinito. Questo valore è utile per l'esportazione e l'importazione di dati in formati supportati da una versione precedente del server.  Ad esempio, per importare i dati ottenuti da una colonna di testo in un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server in un **varchar (max)** colonna in un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] server o versione successiva, è necessario specificare 80. Analogamente, se si specifica 80 durante l'esportazione di dati da un **varchar (max)** colonna, verrà salvata come colonne di testo vengono salvate nel [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] formattare e possono essere importati in una colonna di testo di un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.|  
 |BCP_OPTION_FIRST|Prima riga di dati del file o della tabella da copiare. Il valore predefinito è 1. Un valore minore di 1 reimposta l'opzione sul valore predefinito.|  

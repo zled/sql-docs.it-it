@@ -3,28 +3,30 @@ title: "Proprietà SQL Server (scheda servizio) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c041e027aa9e64c70bdea5e1f7e52cf98d9aae8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: af6abd37fa23a4bfd77695296118896f27e8f3b0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-properties-service-tab"></a>Proprietà - SQL Server (scheda Servizio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilizzare il **servizio**scheda la **proprietà MSSQLSERVER** la finestra di dialogo per visualizzare o specificare le opzioni seguenti.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Usare la scheda **Servizio**della finestra di dialogo **Proprietà - SQL (MSSQLSERVER)** per visualizzare o specificare le opzioni seguenti.  
   
 ## <a name="options"></a>Opzioni  
  **Percorso binario**  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/05/2017
  Visualizza l'ID di processo di Windows.  
   
  **Tipo di servizio**  
- Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati diversi servizi.  
+ Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa diversi servizi.  
   
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  

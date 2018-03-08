@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 35995be90a36fa2037d4f571b7af509afb271871
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: efb98dd68a61c2952de23dde6d6c61086d5e4207
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>Configurazione e amministrazione di un server di report di SQL Server Reporting Services
 
@@ -40,7 +38,7 @@ Usare le sezioni seguenti per meglio comprendere concetti, scenari di distribuzi
   
     -   [Gestione avvisi dati per utenti di SharePoint](../../reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
-    -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+    -   [Creare e gestire sottoscrizioni per server di report in modalità SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [Aggiornare le credenziali nelle origini dati dei report da un sito di SharePoint](../../reporting-services/report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   

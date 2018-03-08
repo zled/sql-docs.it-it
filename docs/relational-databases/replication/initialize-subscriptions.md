@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newsubwizard.initializesubscriptions.f1
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7207993940a0875513e095f61cb21be74d60ff87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11573e80fe10775fd567d4ef11eb3e139421ab2f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="initialize-subscriptions"></a>Inizializzazione sottoscrizioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È necessario inizializzare i Sottoscrittori prima che possano iniziare a ricevere dati replicati. Non è necessario un set di dati iniziale, ma è necessario che il Sottoscrittore disponga almeno dello schema per ogni oggetto replicato, nonché delle tabelle dei metadati e delle procedure necessarie per la replica.  
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/17/2017
 >  Durante la procedura guidata è possibile che venga richiesto di selezionare la connessione al server di distribuzione per consentire l'avvio del processo appropriato per l'agente di distribuzione o l'agente di merge.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Inizializzare una sottoscrizione](../../relational-databases/replication/initialize-a-subscription.md)   
- [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Sottoscrizione delle pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

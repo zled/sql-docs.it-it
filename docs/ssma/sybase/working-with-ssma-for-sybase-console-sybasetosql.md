@@ -3,7 +3,7 @@ title: Utilizzo di SSMA per Sybase Console (SybaseToSQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f2e07c869e1562a2fc563646eac8b69890557dd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a872584b3b854de713ef6a741a8fa19f956ece8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Utilizzo di SSMA per Sybase Console (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA), versione per Sybase Adaptive Server Enterprise (ASE), ora è accessibile tramite un'applicazione console dalla riga di comando. I file di script formano l'input per l'applicazione per l'esecuzione dei comandi. Come applicazione console, SSMA consente l'interazione a livello di script, riduce il ciclo di migrazione e scala sforzo di migrazione.  
@@ -35,7 +35,7 @@ Gli argomenti trattati in questa sezione includono:
   
 |||  
 |-|-|  
-|**Argomenti**|**Description**|  
+|**Argomenti**|**Descrizione**|  
 |[Introduzione a SSMA per Sybase Console &#40; SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|Viene illustrata la procedura per eseguire l'applicazione console.|  
 |[Opzioni della riga di comando nella Console SSMA &#40; SybaseToSQL &#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|Descrive le opzioni della riga di comando e i parametri per il funzionamento dell'applicazione console SSMA.|  
 |[Creazione di file di Script &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|Viene illustrato come creare un file di script.|  

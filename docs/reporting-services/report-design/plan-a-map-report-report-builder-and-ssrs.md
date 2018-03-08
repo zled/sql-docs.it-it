@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b6581db08d67cef66d9ea4134493b3c83a4b0d80
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d934c4314aa149c4e220fc0b91a9cc182083f6d6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Pianificare un report mappa (Generatore report e SSRS)
 Report validi presentano informazioni che consentono una migliore comprensione e determinano azioni specifiche. Per presentare dati analitici, come i totali delle vendite o i dati demografici, rispetto a un contesto geografico, è possibile aggiungere una mappa al report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Una mappa può contenere più livelli, in ciascuno dei quali vengono visualizzati elementi della mappa definiti da un tipo specifico di dati spaziali, ossia punti che rappresentano posizioni, linee che rappresentano percorsi o poligoni che rappresentano aree. È possibile associare i dati analitici agli elementi della mappa su ogni livello.  
@@ -115,8 +113,8 @@ Report validi presentano informazioni che consentono una migliore comprensione e
   
 |Icona della procedura guidata|Stile del livello|Tipo di livello|Descrizione e opzioni|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mappa di base|Poligono|Mappa che visualizza solo le aree, ad esempio i territori di vendita.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o utilizzo di un solo colore. Una tavolozza è un set predefinito di colori. Una volta assegnati tutti i colori di una tavolozza, vengono assegnate anche le sfumature.|  
-|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Mappa analitica a colori|Poligono|Mappa che visualizza i dati analitici variando il colore, ad esempio i dati di vendita per area.|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mappa di base|Polygon|Mappa che visualizza solo le aree, ad esempio i territori di vendita.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o utilizzo di un solo colore. Una tavolozza è un set predefinito di colori. Una volta assegnati tutti i colori di una tavolozza, vengono assegnate anche le sfumature.|  
+|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Mappa analitica a colori|Polygon|Mappa che visualizza i dati analitici variando il colore, ad esempio i dati di vendita per area.|  
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mappa a bolle|Poligono|Mappa che visualizza i dati analitici variando le dimensioni delle bolle al centro delle aree, ad esempio i dati di vendita per area.<br /><br /> Opzioni: variazione dei colori dell'area in base a un secondo campo analitico e indicazione delle regole colore.|  
 |![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mappa linea di base|Riga|Mappa che visualizza solo le linee, ad esempio gli itinerari di recapito.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o utilizzo di un solo colore.|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mappa linea analitica|Riga|Mappa che varia il colore e lo spessore della linea, ad esempio il numero di pacchetti recapitati e le metriche di puntualità per itinerari.<br /><br /> Opzioni: variazione dello spessore della linea in base a un campo analitico, variazione del colore della linea in base a un secondo campo analitico e indicazione delle regole colore.|  

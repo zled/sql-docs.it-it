@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: SetSecureConnectionLevel method
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 caps.latest.revision: "21"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4bd99314d2b3e62585c2a9bad53c39ffa01ef16c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3278c7f0ff788ca99fb10adcac0266545a3931d1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>Metodo ConfigurationSetting - SetSecureConnectionLevel
   Imposta il livello di connessione protetta del server di report.  
@@ -54,7 +52,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando viene chiamata, la proprietà SecureConnectionLevel del server di report è impostata sul valore specificato. Il valore 0 indica che SSL è disattivato. Il valore maggiore di o pari a 1 indica che SSL è abilitato.  
   
 -   Quando il valore è impostato, l'elemento SecureConnectionLevel del file di configurazione del server di report viene modificato e l'elemento **URLRoot** del file di configurazione viene impostato per usare "https://" se il valore specificato per *Level* è maggiore o uguale a 1 oppure "http://" se il valore specificato per *Level* è 0.  

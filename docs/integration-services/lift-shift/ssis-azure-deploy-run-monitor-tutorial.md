@@ -1,6 +1,6 @@
 ---
 title: Distribuire, eseguire e monitorare un pacchetto SSIS in Azure | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,25 +8,26 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bf9df198105549f481dda8472f7142533fa8f23
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Distribuire, eseguire e monitorare un pacchetto SSIS in Azure
 Questa esercitazione illustra come distribuire un progetto di SQL Server Integration Services per il database del catalogo SSISDB nel database SQL di Azure, eseguire un pacchetto nel runtime di integrazione SSIS di Azure e monitorare il pacchetto in esecuzione.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Prima di iniziare, verificare di avere la versione 17.2 o successiva di SQL Server Management Studio. Per scaricare la versione più recente di SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Verificare inoltre se il database SSISDB è configurato e se è stato eseguito il provisioning del runtime di integrazione SSIS di Azure. Per informazioni su come eseguire il provisioning di SSIS in Azure, vedere [Distribuire pacchetti SQL Server Integration Services in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Verificare inoltre se il database SSISDB è configurato e se è stato eseguito il provisioning del runtime di integrazione SSIS di Azure. Per informazioni su come eseguire il provisioning di SSIS in Azure, vedere [Distribuire pacchetti SQL Server Integration Services in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Connettersi al database SSISDB
 
@@ -44,8 +45,8 @@ Usare SQL Server Management Studio per connettersi al catalogo SSIS nel server d
    | **Tipo server** | Motore di database | Questo valore è obbligatorio. |
    | **Nome server** | Nome completo del server | Il nome deve essere nel formato **mysqldbserver.database.windows.net**. Per sapere qual è il nome del server, vedere [Connettersi al database del catalogo SSISDB in Azure](ssis-azure-connect-to-catalog-database.md). |
    | **Autenticazione** | autenticazione di SQL Server | In questa guida rapida viene usata l'autenticazione SQL. |
-   | **Account di accesso** | Account amministratore del server | Si tratta dell'account specificato al momento della creazione del server. |
-   | **Password** | Password per l'account amministratore del server | Si tratta della password specificata al momento della creazione del server. |
+   | **Account di accesso** | Account amministratore del server | Account specificato al momento della creazione del server. |
+   | **Password** | Password per l'account amministratore del server | Password specificata al momento della creazione del server. |
 
 3. **Connettersi al database SSISDB**. Selezionare **Opzioni** per espandere la finestra di dialogo **Connetti al server**. Nella finestra di dialogo **Connetti al server** espansa selezionare la scheda **Proprietà connessione**. Nel campo **Connetti al database** selezionare o immettere `SSISDB`.
 
@@ -53,7 +54,7 @@ Usare SQL Server Management Studio per connettersi al catalogo SSIS nel server d
 
 5. In Esplora oggetti espandere **Cataloghi di Integration Services** e quindi espandere **SSISDB** per visualizzare gli oggetti nel database del catalogo SSIS.
 
-## <a name="deploy-a-project"></a>Distribuire un progetto
+## <a name="deploy-a-project-with-the-deployment-wizard"></a>Distribuire un progetto con la procedura guidata
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>Avviare la Distribuzione guidata Integration Services
 1. In Esplora oggetti di SQL Server Management Studio, con il nodo **Cataloghi di Integration Services** e il nodo **SSISDB** espansi, espandere una cartella di progetto.
@@ -78,11 +79,77 @@ Usare SQL Server Management Studio per connettersi al catalogo SSIS nel server d
 4.  Nella pagina **Verifica** rivedere le impostazioni selezionate.
     -   Per apportare modifiche alle impostazioni, selezionare **Indietro** o uno dei passaggi nel riquadro sinistro.
     -   Selezionare **Distribuisci** per avviare il processo di distribuzione.
-  
+
+    > ![NOTA] Se viene visualizzato il messaggio di errore **Nessun agente di lavoro attivo. (provider di dati SqlClient .Net)**, assicurarsi che il runtime di integrazione SSIS di Azure sia in esecuzione. Questo errore si verifica se si tenta di eseguire la distribuzione mentre il runtime di integrazione SSIS di Azure è arrestato.
+
 5.  Al termine del processo di distribuzione viene visualizzata la pagina **Risultati**. Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
     -   Se l'azione ha avuto esito negativo, selezionare **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore.
     -   In alternativa, selezionare **Salva report...** per salvare i risultati in un file XML.
     -   Per uscire dalla procedura guidata, fare clic su **Chiudi**.
+
+## <a name="deploy-a-project-with-powershell"></a>Distribuire un progetto con PowerShell
+
+Per distribuire un progetto con PowerShell in SSISDB nel database SQL di Azure, adattare lo script seguente secondo i propri requisiti. Lo script enumera le cartelle figlio in `$ProjectFilePath` e i progetti in ogni cartella figlio, quindi crea le stesse cartelle in SSISDB e distribuisce i progetti in tali cartelle.
+
+Questo script richiede SQL Server Data Tools versione 17.x o SQL Server Management Studio installato nel computer in cui viene eseguito lo script.
+
+```powershell
+# Variables
+$ProjectFilePath = "C:\<folder>"
+$SSISDBServerEndpoint = "<servername>.database.windows.net"
+$SSISDBServerAdminUserName = "<username>"
+$SSISDBServerAdminPassword = "<password>"
+
+# Load the IntegrationServices Assembly
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices") | Out-Null;
+
+# Store the IntegrationServices Assembly namespace to avoid typing it every time
+$ISNamespace = "Microsoft.SqlServer.Management.IntegrationServices"
+
+Write-Host "Connecting to server ..."
+
+# Create a connection to the server
+$sqlConnectionString = "Data Source=" + $SSISDBServerEndpoint + ";User ID="+ $SSISDBServerAdminUserName +";Password="+ $SSISDBServerAdminPassword + ";Initial Catalog=SSISDB"
+$sqlConnection = New-Object System.Data.SqlClient.SqlConnection $sqlConnectionString
+
+# Create the Integration Services object
+$integrationServices = New-Object $ISNamespace".IntegrationServices" $sqlConnection
+
+# Get the catalog
+$catalog = $integrationServices.Catalogs['SSISDB']
+
+write-host "Enumerating all folders..."
+
+$folders = ls -Path $ProjectFilePath -Directory
+
+if ($folders.Count -gt 0)
+{
+    foreach ($filefolder in $folders)
+    {
+        Write-Host "Creating Folder " $filefolder.Name " ..."
+
+        # Create a new folder
+        $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
+        $folder.Create()
+
+        $projects = ls -Path $filefolder.FullName -File -Filter *.ispac
+        if ($projects.Count -gt 0)
+        {
+            foreach($projectfile in $projects)
+            {
+                $projectfilename = $projectfile.Name.Replace(".ispac", "")
+                Write-Host "Deploying " $projectfilename " project ..."
+
+                # Read the project file, and deploy it to the folder
+                [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)
+                $folder.DeployProject($projectfilename, $projectFileContent)
+            }
+        }
+    }
+}
+
+Write-Host "All done." 
+```
 
 ## <a name="run-a-package"></a>Eseguire un pacchetto
 

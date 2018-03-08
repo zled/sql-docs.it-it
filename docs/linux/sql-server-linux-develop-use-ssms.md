@@ -3,29 +3,29 @@ title: La gestione di SQL Server in Linux con SSMS | Documenti Microsoft
 description: In questa esercitazione viene illustrato come utilizzare SQL Server Management Studio in Windows per connettersi a SQL Server in esecuzione in Linux.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
-ms.openlocfilehash: 784c2c01365eba64fb8e19925c176033af9a1339
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 442d57154222fdb06ba26ad7858eb783103e93cd
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Utilizzare SQL Server Management Studio (SSMS) in Windows per la gestione di SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In questo argomento viene illustrato come utilizzare [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) per connettersi a SQL Server 2017 in Linux. SQL Server Management Studio è un'applicazione Windows, pertanto utilizzare SQL Server Management Studio, quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux.
+In questo articolo viene illustrato come utilizzare [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) per connettersi a SQL Server 2017 in Linux. SQL Server Management Studio è un'applicazione Windows, pertanto utilizzare SQL Server Management Studio, quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux.
 
 Dopo avere stabilito la connessione, si esegue una semplice query Transact-SQL (T-SQL) per verificare la comunicazione con il database.
 

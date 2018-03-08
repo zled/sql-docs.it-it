@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: PropertyStrVal Property (ClientNetworkProtocolProperty Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- PropertyStrVal Property (ClientNetworkProtocolProperty Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: PropertyStrVal property
+helpviewer_keywords:
+- PropertyStrVal property
 ms.assetid: eeb15b13-4fee-47ac-81c3-cba19d450bd9
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df8a3b1fc20642c7e44098f18f2682ce8fcd2fce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5b88757cd0aa8e1638d593a08c1b440c1f98af2f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="propertystrval-property-clientnetworkprotocolproperty-class"></a>Proprietà PropertyStrVal (classe ClientNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ottiene il valore di stringa della proprietà corrente a cui fa riferimento il [proprietà PropertyIdx (classe ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) valore.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ottiene il valore string della proprietà corrente a cui fa riferimento il valore della [proprietà PropertyIdx (classe ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,6 +52,6 @@ object.PropertyStrVal [= value]
 ## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [Configurare i protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_trace_create (Transact-SQL) | Documenti Microsoft
+title: sp_trace_create (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_create_TSQL
 - sp_trace_create
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_create
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ca00a949b0fe0122f6aba9b8fecfa072374e96f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d370ebe5730f9b87d7303c067b9edc1a14d27509
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +54,10 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  È il numero assegnato dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla nuova traccia. Qualsiasi input dell'utente verrà ignorato. *trace_id* è **int**, con un valore predefinito è NULL. L'utente utilizza il *trace_id* valore per identificare, modificare e controllare la traccia definita dalla stored procedure.  
   
- [  **@options=** ] *option_value*  
+ [ **@options=** ] *option_value*  
  Specifica le opzioni impostate per la traccia. *option_value* è **int**, non prevede alcun valore predefinito. Gli utenti possono impostare una combinazione di queste opzioni specificando la somma dei valori delle opzioni scelte. Per attivare le opzioni TRACE_FILE_ROLLOVER e SHUTDOWN_ON_ERROR, ad esempio, è consigliabile specificare **6** per *option_value*.  
   
  Nella tabella seguente sono incluse le opzioni e le descrizioni, accompagnate dai relativi valori.  
@@ -68,11 +71,11 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  [  **@tracefile=** ] *'**trace_file**'*  
  Specifica il percorso e il nome di file in cui verrà scritta la traccia. *trace_file* è **nvarchar(245)** prevede alcun valore predefinito. *trace_file* può essere una directory locale (ad esempio N 'C:\MSSQL\Trace\trace.trc') o un percorso UNC di una condivisione o un percorso (N'\\\\*Servername*\\*Sharename* \\ *Directory*\trace.trc').  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verranno aggiunti un **trc** estensione a tutti i nomi di file di traccia. Se l'opzione TRACE_FILE_ROLLOVER e un *max_file_size* vengono specificati, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un nuovo file di traccia quando raggiunge la dimensione massima file di traccia originale. Il nuovo file con lo stesso nome di file originale, ma _ *n*  viene aggiunto per indicare la sequenza, a partire da **1**. Ad esempio, se il primo file di traccia denominato **nomefile.trc**, il secondo file di traccia è denominato **filename_1.trc**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno aggiunti un **trc** estensione a tutti i nomi di file di traccia. Se l'opzione TRACE_FILE_ROLLOVER e un *max_file_size* vengono specificati, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un nuovo file di traccia quando raggiunge la dimensione massima file di traccia originale. Il nuovo file con lo stesso nome di file originale, ma _ *n*  viene aggiunto per indicare la sequenza, a partire da **1**. Ad esempio, se il primo file di traccia denominato **nomefile.trc**, il secondo file di traccia è denominato **filename_1.trc**.  
   
  Se si utilizza l'opzione TRACE_FILE_ROLLOVER, si consiglia di non utilizzare caratteri di sottolineatura nel nome del file di traccia originale. Se vengono utilizzati caratteri di sottolineatura, si verifica il comportamento seguente:  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]non carica automaticamente o richiesta di caricare i file di rollover (se configurata una di queste opzioni di rollover dei file).  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] non carica automaticamente o richiesta di caricare i file di rollover (se configurata una di queste opzioni di rollover dei file).  
   
 -   La funzione fn_trace_gettable non carica i file di rollover (quando è specificato utilizzando il *number_files* argomento) in cui il nome del file originale termina con un carattere di sottolineatura e un valore numerico. Ciò non vale per il carattere di sottolineatura e il numero che vengono aggiunti automaticamente all'esecuzione del rollover di un file.  
   
@@ -81,7 +84,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  *trace_file* non può essere specificato quando viene utilizzata l'opzione TRACE_PRODUCE_BLACKBOX.  
   
- [  **@maxfilesize=** ] *max_file_size*  
+ [ **@maxfilesize=** ] *max_file_size*  
  Specifica le dimensioni massime in megabyte (MB) che possono essere raggiunte da un file di traccia. *valore di max_file_size* è **bigint**, con un valore predefinito di **5**.  
   
  Se questo parametro viene specificato senza l'opzione TRACE_FILE_ROLLOVER, la traccia viene arrestata la registrazione al file quando lo spazio su disco utilizzato supera la quantità specificata da *max_file_size*.  
@@ -91,7 +94,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  Se entrambi *stop_time* e *max_file_size* vengono specificati, e TRACE_FILE_ROLLOVER, non è specificato, la traccia alto quando viene raggiunta l'ora di arresto specificata o di dimensioni massime del file. Se *stop_time*, *max_file_size*e vengono specificati TRACE_FILE_ROLLOVER, la traccia viene arrestata all'ora specificata, presupponendo che la traccia non venga riempito l'unità.  
   
- [  **@filecount=** ] **'***max_rollover_files***'**  
+ [ **@filecount=** ] **'***max_rollover_files***'**  
  Specifica il numero massimo di file di traccia da mantenere con lo stesso nome file di base. *MAX_ROLLOVER_FILES* è **int**, maggiore di uno. Questo parametro è valido solo se è specificata l'opzione TRACE_FILE_ROLLOVER. Quando *max_rollover_files* è specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di non più di *max_rollover_files* eliminando il file di traccia meno recente prima di aprire un nuovo file di traccia. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene tenuto traccia dell'età dei file di traccia aggiungendo un numero al nome del file di base.  
   
  Ad esempio, quando il *trace_file* parametro è specificato come "c:\mytrace", un file con nome "c:\mytrace_123.trc" è precedente rispetto a un file con il nome "c:\mytrace_124.trc". Se *max_rollover_files* è impostato su 2, il Server SQL elimina il file "c:\mytrace_123.trc" prima di creare il file di traccia "c:\mytrace_125.trc".  
@@ -153,11 +156,11 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 -   Non è possibile specificare i filtri per questa traccia.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente deve disporre delle autorizzazioni ALTER TRACE.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_trace_generateevent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   

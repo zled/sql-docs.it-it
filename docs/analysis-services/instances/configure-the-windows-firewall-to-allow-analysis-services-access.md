@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 50841f276b204ed30de97636c5d3c5cccd7204e0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0cb0930e6fd3faf0b44c5b8ac46359ec959b85c9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurare Windows Firewall per consentire l'accesso ad Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un primo passaggio importante rendere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] disponibile nella rete consiste nel determinare se è necessario sbloccare le porte di un firewall. Per la maggior parte delle installazioni è necessario creare almeno una regola del firewall in entrata per consentire le connessioni a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un primo passaggio importante per rendere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] disponibile nella rete consiste nel determinare se è necessario sbloccare le porte in un firewall. Per la maggior parte delle installazioni è necessario creare almeno una regola del firewall in entrata per consentire le connessioni a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  I requisiti di configurazione del firewall variano in base alla modalità di installazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   

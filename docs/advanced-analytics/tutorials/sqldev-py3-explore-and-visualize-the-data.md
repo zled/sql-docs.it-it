@@ -7,25 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: ecf1953fd7b4d77e38973a929a23318b77910e91
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: 737a925e2902fbd017abcdf996d88652c995a044
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-3-explore-and-visualize-the-data"></a>Passaggio 3: Esplorare e visualizzare i dati
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo fa parte di un'esercitazione, [analitica Python nel database per gli sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
 

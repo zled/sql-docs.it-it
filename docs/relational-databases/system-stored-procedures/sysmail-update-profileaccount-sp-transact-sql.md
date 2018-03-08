@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_profileaccount_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_update_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_profileaccount_sp_TSQL
 - sysmail_update_profileaccount_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_update_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_update_profileaccount_sp
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d88e4c11359e5861e1f3758a9397ccbef5209ffa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fc4c797f149d3139beede4617a7b81721397615c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +49,16 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  ID del profilo da aggiornare. *profile_id* è **int**, con un valore predefinito è NULL. Entrambi i *profile_id* o *profile_name* deve essere specificato.  
   
- [  **@profile_name**  =] **'***profile_name***'**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  Nome del profilo da aggiornare. *profile_name* è **sysname**, con un valore predefinito è NULL. Entrambi i *profile_id* o *profile_name* deve essere specificato.  
   
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  ID dell'account da aggiornare. *account_id* è **int**, con un valore predefinito è NULL. Entrambi i *account_id* o *account_name* deve essere specificato.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  Nome dell'account da aggiornare. *account_name* è **sysname**, con un valore predefinito è NULL. Entrambi i *account_id* o *account_name* deve essere specificato.  
   
  [  **@sequence_number**  =] *sequence_number*  
@@ -76,7 +79,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
  La stored procedure **sysmail_update_profileaccount_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  

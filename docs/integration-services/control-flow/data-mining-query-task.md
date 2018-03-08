@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72ed17f506e2da78c972c54e19e98c8deacc287c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8ffadcd36d1df013d8e5a9a9aeb3f85d4056c27
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-query-task"></a>Attività Query di data mining
   L'attività Query di data mining consente di eseguire query di stima basate sui modelli di data mining compilati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Una query di stima genera una stima per nuovi dati utilizzando modelli di data mining. È ad esempio possibile utilizzare una query di stima per stimare il numero di barche a vela che si prevede di vendere durante i mesi estivi o per generare un elenco dei potenziali clienti che probabilmente acquisteranno una barca a vela.  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
   
- **Description**  
+ **Descrizione**  
  Consente di digitare una descrizione dell'attività Query di data mining.  
   
 ### <a name="mining-model-tab-options"></a>Opzioni della scheda Modello di data mining  
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
   
- **Description**  
+ **Descrizione**  
  Consente di digitare una descrizione dell'attività Query di data mining.  
   
 ### <a name="build-query-tab-options"></a>Opzioni della scheda Compila query  
@@ -170,7 +171,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
   
- **Description**  
+ **Descrizione**  
  Consente di digitare una descrizione dell'attività Query di data mining.  
   
 ### <a name="output-tab-options"></a>Opzioni della scheda Output  

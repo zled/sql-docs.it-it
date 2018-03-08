@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,15 +31,15 @@ helpviewer_keywords:
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 caps.latest.revision: "61"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 4dca189f8895ebe919a91fa390777c7bf3b1fdd7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9cea8af15340bcc5cbf744e59678e04d6ab6e8b6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Specificare le credenziali e le informazioni sulla connessione per le origini dati del report
   Un server di report utilizza credenziali per connettersi a origini dei dati esterne che forniscono contenuto ai report o informazioni sui destinatari alle sottoscrizioni guidate dai dati. È possibile specificare credenziali che utilizzano l'autenticazione di Windows, l'autenticazione del database, l'autenticazione personalizzata o che non utilizzano alcuna autenticazione. Quando si invia una richiesta di connessione in rete, il server di report rappresenterà un account utente o l'account di esecuzione automatica. Per altre informazioni sul contesto di protezione in cui viene eseguita una richiesta di connessione, vedere [Configurazione dell'origine dei dati e connessioni di rete](#DataSourceConfigurationConnections) più avanti in questo argomento.  
@@ -164,7 +162,7 @@ ms.lasthandoff: 12/05/2017
 |sicurezza integrata|Rappresenta l'utente corrente|Per tutti i tipi di origine dei dati, la connessione viene eseguita tramite l'account utente corrente.|  
 |Credenziali di Windows|Rappresenta l'utente specificato|Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB la connessione viene eseguita tramite l'account utente rappresentato.|  
 |Credenziali di database|Rappresenta l'account di esecuzione automatica o l'account del servizio.<br /><br /> (Reporting Services rimuove le autorizzazioni di amministratore quando la richiesta di connessione viene inviata tramite l'identità del servizio).|Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Il nome utente e la password vengono accodati alla stringa di connessione.<br /><br /> Per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> La connessione ha esito positivo se viene utilizzato il protocollo TCP/IP, in caso contrario ha esito negativo.<br /><br /> Per XML:<br /><br /> La connessione sul server di report ha esito negativo se vengono utilizzate le credenziali del database.|  
-|Nessuno|Rappresenta l'account di esecuzione automatica.|Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Vengono utilizzate le credenziali definite nella stringa di connessione. La connessione ha esito negativo sul server di report se l'account di esecuzione automatica non è definito.<br /><br /> Per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> La connessione ha sempre esito negativo se non vengono specificate credenziali, anche se l'account di esecuzione automatica è stato definito.<br /><br /> Per XML:<br /><br /> La connessione viene eseguita come utente anonimo se l'account di esecuzione automatica è definito; in caso contrario, la connessione ha esito negativo.|  
+|None|Rappresenta l'account di esecuzione automatica.|Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Vengono utilizzate le credenziali definite nella stringa di connessione. La connessione ha esito negativo sul server di report se l'account di esecuzione automatica non è definito.<br /><br /> Per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> La connessione ha sempre esito negativo se non vengono specificate credenziali, anche se l'account di esecuzione automatica è stato definito.<br /><br /> Per XML:<br /><br /> La connessione viene eseguita come utente anonimo se l'account di esecuzione automatica è definito; in caso contrario, la connessione ha esito negativo.|  
   
 ## <a name="setting-credentials-programmatically"></a>Impostazione di credenziali a livello di programmazione  
  È possibile impostare le credenziali tramite codice per controllare l'accesso ai report e al server di report. Per altre informazioni, vedere [Origini dati e metodi di connessione](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md).  

@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee561435c401a1b0e3299216172bf4e25e146137
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5cd348cbc4968f915203ff1b0e0fa1d1f13f955c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Abilitare e disabilitare RDL Sandboxing per Reporting Services in modalità integrata SharePoint
 
@@ -82,9 +80,9 @@ La funzionalità RDL (Report Definition Language) Sandboxing consente di rilevar
 |**MaxArrayResultLength**|Numero massimo di elementi consentiti in un valore restituito della matrice per un'espressione RDL.<br /><br /> Valore predefinito: 100|  
 |**Tipi**|Elenco di membri da consentire nelle espressioni RDL.|  
 |**Allow**|Tipo o set di tipi da consentire nelle espressioni RDL.|  
-|**Spazio dei nomi**|Attributo per **Allow** che è lo spazio dei nomi contenente uno o più tipi applicabili a Value. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
+|**Namespace**|Attributo per **Allow** che è lo spazio dei nomi contenente uno o più tipi applicabili a Value. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
 |**AllowNew**|Attributo booleano per **Allow** che controlla se le nuove istanze del tipo possono essere create in espressioni RDL o in un elemento RDL **\<Class>**.<br /><br /> Quando **RDLSandboxing** è abilitato non è possibile creare nuove matrici in espressioni RDL, indipendentemente dall'impostazione di **AllowNew**.|  
-|**Valore**|Valore per **Allow** che è il nome del tipo da consentire nelle espressioni RDL. Il valore **\*** indica che sono consentiti tutti i tipi nello spazio dei nomi. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
+|**Value**|Valore per **Allow** che è il nome del tipo da consentire nelle espressioni RDL. Il valore **\*** indica che sono consentiti tutti i tipi nello spazio dei nomi. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
 |**Membri**|Per l'elenco dei tipi inclusi nell'elemento **\<Types>**, l'elenco dei nomi membro non consentiti nelle espressioni RDL.|  
 |**Nega**|Nome di un membro non consentito nelle espressioni RDL. Questa proprietà supporta la distinzione tra maiuscole e minuscole.<br /><br /> Quando per un membro è specificato **Deny** non è consentito nessun membro con questo nome per nessun tipo.|  
   

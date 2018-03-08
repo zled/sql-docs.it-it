@@ -8,25 +8,26 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db3ca1fcbc3fd431cd9abdfb316026401024b79a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dbc5fe44566779dae76d3bb314c97a126630fd87
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Inviare tramite posta elettronica un file di query collegamento (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]inviare tramite posta elettronica un file di query collegamento a un'altra persona per assicurarsi di usare gli stessi dati. È necessario condividere query anziché salvare il foglio di lavoro e inviarlo tramite posta elettronica.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario che sia installato Outlook 2010 o versioni successive.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Nel gruppo **Salva e invia** fare clic su **Invia query**. Verrà visualizzato un messaggio di posta elettronica con il file di query collegamento allegato.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
   
 -   Per aprire il file di query collegamento, nel computer del destinatario del messaggio di posta elettronica deve essere installato MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] . Il destinatario può fare doppio clic sul file per aprirlo.  
   

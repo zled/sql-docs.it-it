@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_cdc_increment_lsn (Transact-SQL) | Documenti Microsoft
+title: sys.fn_cdc_increment_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - fn_cdc_increment_lsn_TSQL
 - sys.fn_cdc_increment_lsn_TSQL
 - sys.fn_cdc_increment_lsn
 - fn_cdc_increment_lsn
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_cdc_increment_lsn
 - sys.fn_cdc_increment_lsn
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c1715fc71449c822db2bb692bc2cce4005cb5a1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 87a9b418504d938ea5f201aabed8a727b9474887
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +62,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
  Per eseguire sistematicamente query su un flusso di dati delle modifiche, è possibile ripetere periodicamente la chiamata della funzione di query, specificando ogni volta un nuovo intervallo di query per delimitare le modifiche restituite nella query. Per assicurarsi che non si verifichino perdite di dati, il limite superiore della query precedente viene spesso utilizzato per generare il limite inferiore della query successiva. Poiché l'intervallo di query è un intervallo chiuso, il nuovo limite inferiore deve essere più grande del limite superiore precedente, ma piccolo abbastanza da garantire che nessuna modifica abbia valori LSN compresi tra questo valore e il limite superiore precedente. La funzione sys.fn_cdc_increment_lsn viene utilizzata per ottenere questo valore.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo del database public.  
   
 ## <a name="examples"></a>Esempi  
@@ -77,9 +80,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [fn_cdc_decrement_lsn &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
- [CDC. fn_cdc_get_all_changes_ &#60; capture_instance &#62;  &#40; Transact-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [CDC. fn_cdc_get_net_changes_ &#60; capture_instance &#62; &#40; Transact-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_decrement_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

@@ -1,19 +1,18 @@
 ---
 title: AMO altri metodi e classi | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restores [AMO]
 - AMO, backup and restore
@@ -24,19 +23,19 @@ helpviewer_keywords:
 - traces [AMO]
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 50ac79584b61002a71c792fe485bce6f5115a0ef
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5ae261375e96cf6bfa322262b0b13653b9534331
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>Altre classi e altri metodi AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In questa sezione contiene le classi comuni che non sono specifiche per OLAP o di data mining e che sono utili per l'amministrazione o gestione di oggetti in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Tali classi riguardano caratteristiche quali stored procedure, traccia, eccezioni e backup e ripristino.  
+  In questa sezione contiene le classi comuni che non sono specifiche per OLAP o di data mining e che sono utili per l'amministrazione o gestione di oggetti in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Tali classi riguardano caratteristiche quali stored procedure, traccia, eccezioni e backup e ripristino.  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -54,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
  ![Altre classi AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-otherclasses.gif "altre classi AMO")  
   
-##  <a name="Assembly"></a>Oggetti assembly  
+##  <a name="Assembly">Oggetti assembly</a>  
  Per creare un oggetto <xref:Microsoft.AnalysisServices.Assembly>, aggiungerlo alla raccolta di assembly del server, quindi aggiornare l'oggetto <xref:Microsoft.AnalysisServices.Assembly> nel server tramite il metodo Update.  
   
  Per rimuovere un oggetto <xref:Microsoft.AnalysisServices.Assembly>, è necessario eliminarlo tramite il metodo Drop dell'oggetto <xref:Microsoft.AnalysisServices.Assembly>. La rimozione di un oggetto <xref:Microsoft.AnalysisServices.Assembly> dalla raccolta di assembly del database non comporta l'eliminazione dell'assembly, ma ne impedisce la visualizzazione nell'applicazione fino alla successiva esecuzione dell'applicazione stessa.  
@@ -64,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 > [!IMPORTANT]  
 >  Gli assembly COM potrebbero comportare un rischio per la sicurezza. A causa di tale rischio e di altre considerazioni, gli assembly COM sono stati deprecati in [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)] e potrebbero non essere supportati nelle versioni future.  
   
-##  <a name="Backup"></a>Metodi backup e ripristino  
+##  <a name="Backup">Metodi backup e ripristino</a>  
  I metodi Backup e Restore consentono di creare copie di un database di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e di eseguirne il recupero tramite la copia. Il metodo Backup appartiene all'oggetto <xref:Microsoft.AnalysisServices.Database>, mentre il metodo Restore appartiene all'oggetto <xref:Microsoft.AnalysisServices.Server>.  
   
  Il backup di un database può essere eseguito solo dagli amministratori del server e di database. Solo gli amministratori del server possono ripristinare un database in un server diverso da quello da cui è stato eseguito il backup, mentre gli amministratori di database possono ripristinare un database sovrascrivendo il database esistente solo se risultano proprietari del database da sovrascrivere. Dopo un ripristino, l'amministratore di database può perdere l'accesso al database ripristinato se il database è stato ripristinato con le definizioni di sicurezza originali.  
@@ -75,21 +74,21 @@ ms.lasthandoff: 12/08/2017
  Per eseguire il backup di un database, utilizzare il metodo Backup dell'oggetto di database con il nome del file di backup come parametro.  
   
 ##### <a name="default-values"></a>Valori predefiniti:  
- AllowOverwrite =**false**  
+ AllowOverwrite=**false**  
   
- BackupRemotePartitions =**false**  
+ BackupRemotePartitions=**false**  
   
  Sicurezza =**CopyAll**  
   
- ApplyCompression =**true**  
+ ApplyCompression=**true**  
   
 ### <a name="restore-method"></a>Metodo Restore  
  Per ripristinare un database in un server, utilizzare il metodo Restore del server con il file di backup come parametro.  
   
 ##### <a name="default-values"></a>Valori predefiniti:  
- AllowOverwrite =**false**  
+ AllowOverwrite=**false**  
   
- DataSourceType =**remoto**  
+ DataSourceType=**Remote**  
   
  Sicurezza =**CopyAll**  
   
@@ -117,7 +116,7 @@ ms.lasthandoff: 12/08/2017
   
 -   **Password**, se non è vuota, specifica che il server consente di crittografare il file di backup.  
   
-##  <a name="Traces"></a>Oggetti di traccia  
+##  <a name="Traces">Oggetti di traccia</a>  
  Gli oggetti Trace rappresentano un framework utilizzato per il monitoraggio, la riproduzione e la gestione di un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Un'applicazione client, ad esempio [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], sottoscrive una traccia e il server restituisce eventi di traccia come specificato nella definizione della traccia stessa.  
   
  Ogni evento viene descritto da una classe di evento che illustra il tipo di evento generato. In una classe di evento le sottoclassi di evento descrivono un livello di categorizzazione più dettagliato. Ogni evento viene descritto da un numero di colonne. Le colonne che descrivono un evento di traccia sono coerenti per tutti gli eventi e conformi alla struttura di traccia SQL. Le informazioni registrate in ogni colonna possono differire a seconda della classe di evento. Sebbene per ogni traccia sia specificato un set predefinito di colonne, il significato della colonna può differire a seconda della classe di evento. La colonna TextData ad esempio viene utilizzata per registrare il codice ASSL per tutti gli eventi relativi alle istruzioni.  
@@ -156,19 +155,19 @@ ms.lasthandoff: 12/08/2017
   
 6.  Continuare l'applicazione.  
   
-##  <a name="CaptureLog"></a>Classe CaptureLog e Capturexml  
+##  <a name="CaptureLog">Classe CaptureLog e Capturexml</a>  
  Tutte le azioni che devono essere eseguite da AMO vengono inviate al server come messaggi XMLA. In AMO sono disponibili gli strumenti per acquisire tutti i messaggi di questo tipo senza le intestazioni SOAP. Per ulteriori informazioni, vedere [Introduzione a classi AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md). La classe CaptureLog è il meccanismo disponibile in AMO per inserire nello script oggetti e operazioni. Per gli oggetti e le operazioni gli script verranno generati in XMLA.  
   
  Per iniziare ad acquisire il codice XML, la proprietà dell'oggetto server CaptureXML deve essere impostata su **true**. In questo modo verrà avviata l'acquisizione di tutte le azioni che devono essere inviate al server nella classe CaptureLog, senza che sia necessario inviare le azioni stesse al server. CaptureLog è considerata una classe poiché dispone del metodo Clear che consente di cancellare il log relativo all'acquisizione.  
   
  Per leggere il log, individuare la raccolta di stringhe e avviare l'iterazione sulle stringhe stesse. È possibile inoltre concatenare tutti i log in una stringa tramite il metodo dell'oggetto server ConcatenateCaptureLog cui sono associati tre parametri, due dei quali sono obbligatori. I parametri obbligatori sono *transazionale*, di tipo booleano, e *parallela*, di tipo Boolean. Se *transazionale* è impostato su **true**, indica che il file batch XML verrà creato come una singola transazione anziché ogni comando viene considerato come una transazione separata. Se *parallela* è impostato su **true**, indica che tutti i comandi nel file batch verranno registrati per l'esecuzione simultanea anziché in sequenza come sono stati registrati.  
   
-##  <a name="AMO"></a>Classe eccezione AMOException  
+##  <a name="AMO">Classe eccezione AMOException</a>  
  È possibile utilizzare la classe eccezione AMOException per rilevare facilmente nell'applicazione eccezioni generate da AMO.  
   
  In caso di rilevamento di problemi, in AMO verrà generata un'eccezione. Nella tabella seguente vengono elencati i tipi di eccezioni gestite da AMO. Le eccezioni derivano dalla classe <xref:Microsoft.AnalysisServices.AmoException>.  
   
-|Exception|Origine|Description|  
+|Eccezione|Origine|Description|  
 |---------------|------------|-----------------|  
 |<xref:Microsoft.AnalysisServices.AmoException>|Classe di base|L'applicazione riceve questa eccezione quando un oggetto padre obbligatorio è mancante o quando un elemento necessario non è presente in una raccolta.|  
 |<xref:Microsoft.AnalysisServices.OutOfSyncException>|Derivata da AMOException|L'applicazione riceve questa eccezione quando AMO non è sincronizzato con il motore e quest'ultimo restituisce un riferimento a un oggetto sconosciuto in AMO.|  

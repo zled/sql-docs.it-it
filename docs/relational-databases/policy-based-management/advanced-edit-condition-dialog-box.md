@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbb1759fcdf89686498698c4bd77ce529da4ed1d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f7d494c40e02e96d53f827e9553c743d72660d0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Finestra di dialogo Modifica avanzata (Condizione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la finestra di dialogo **Modifica avanzata** per creare espressioni complesse per le condizioni della gestione basata su criteri.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 > **IMPORTANTE** Le funzioni che è possibile utilizzare per creare le condizioni della gestione basata su criteri non utilizzano sempre la sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] . Verificare di seguire la sintassi di esempio. Ad esempio, quando si usa la funzione **DateAdd** o **DatePart** , è necessario racchiudere l'argomento *datepart* tra virgolette singole.  
   
-|Funzione|Firma|Descrizione|Argomenti|Valore restituito|Esempio|  
+|Funzione|Firma|Description|Argomenti|Valore restituito|Esempio|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric *expression1*, Numeric *expression2*)|Esegue la somma di due numeri.|*expression1* ed *expression2* : qualsiasi espressione valida di un qualsiasi tipo di dati della categoria numerica, ad eccezione del tipo **bit** . Può essere una costante, una proprietà o una funzione che restituisce un tipo numerico.|Restituisce il tipo di dati dell'argomento con precedenza maggiore.|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs *expression*)|Crea una matrice da un elenco di valori. Può essere utilizzata con funzioni di aggregazione, ad esempio Sum() e Count().|*expression* : espressione che verrà convertita in matrice.|Matrice|`Array(2,3,4,5,6)`|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 |**ExecuteSQL()**|Variant ExecuteSQL (String *returnType*, String *sqlQuery*)|Esegue la query [!INCLUDE[tsql](../../includes/tsql-md.md)] nel server di destinazione.<br /><br /> Per altre informazioni su ExecuteSql(), vedere [Funzione ExecuteSql()](http://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx).|*returnType* : specifica il tipo restituito dei dati restituiti dall'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . I valori letterali validi per *returnType* sono: **Numeric**, **String**, **Bool**, **DateTime**, **Array**e **Guid**.<br /><br /> *sqlQuery* : stringa che contiene la query da eseguire.||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> Esegue una query Transact-SQL con valori scalari su un'istanza di destinazione di SQL Server. È possibile specificare una sola colonna in un'istruzione `SELECT` . Le colonne aggiuntive oltre la prima vengono ignorate. La query risultante deve restituire una sola riga. Le righe aggiuntive oltre la prima vengono ignorate. Se la query restituisce un set vuoto, l'espressione della condizione compilata in base a `ExecuteSQL` restituirà false. `ExecuteSql` supporta le modalità di valutazione **Su richiesta** e **Su pianificazione** .<br /><br /> -`@@ObjectName`:<br />                      Corrisponde al campo del nome in [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). La variabile verrà sostituita con il nome dell'oggetto corrente.<br /><br /> -`@@SchemaName`: corrisponde al campo del nome in [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md). La variabile verrà sostituita con il nome dello schema per l'oggetto corrente, se applicabile.<br /><br /> Nota: per includere una virgoletta singola in un'istruzione ExecuteSQL, trasformarla in una sequenza di escape con una seconda virgoletta singola. Ad esempio, per includere un riferimento a un utente di nome O'Brian, digitare O"Brian.|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string *returnType* , string *namespace*, string *wql*)|Esegue lo script WQL sullo spazio dei nomi specificato. L'istruzione Select può contenere solo una singola colonna restituita. Se vengono specificate più colonne, verrà generato un errore.|*returnType* : specifica il tipo restituito dei dati restituiti da WQL. I valori letterali validi sono **Numeric**, **String**, **Bool**, **DateTime**, **Array**e **Guid**.<br /><br /> *namespace* : spazio dei nomi WMI su cui eseguire la funzione.<br /><br /> *wql* : stringa che contiene la funzione WQL da eseguire.||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|Restituisce il valore booleano FALSE.|Nessuno|Restituisce il valore booleano FALSE.|`IsDatabaseMailEnabled = False()`|  
-|**GetDate()**|DateTime GetDate()|Restituisce la data di sistema.|Nessuno|Restituisce la data di sistema come valore DateTime.|`@DateLastModified = GetDate()`|  
+|**GetDate()**|DateTime GetDate()|Restituisce la data di sistema.|None|Restituisce la data di sistema come valore DateTime.|`@DateLastModified = GetDate()`|  
 |**Guid()**|Guid Guid(String *guidString*)|Restituisce un GUID da una stringa.|*guidString* : rappresentazione stringa del GUID da creare.|Restituisce il GUID creato dalla stringa.|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)|Il valore di *check_expression* viene restituito se non è NULL. In caso contrario, viene restituito *replacement_value* . Se i tipi sono diversi, *replacement_value* viene convertito in modo implicito nel tipo *check_expression*.|*check_expression* : l'espressione da verificare per determinare se è NULL. *check_expression* può essere uno dei tipi supportati dalla gestione basata su criteri: Numeric, String, Bool, DateTime, Array e Guid.<br /><br /> *replacement_value* : espressione da restituire se *check_expression* è NULL. *replacement_value* deve essere di un tipo che viene convertito in modo implicito nel tipo *check_expression*.|Il tipo restituito è il tipo di *check_expression* se *check_expression* non è NULL. In caso contrario, viene restituito il tipo di *replacement_value* .||  
 |**Len()**|Numeric Len (*string_expression*)|Restituisce il numero dei caratteri contenuti nell'espressione stringa specificata, esclusi gli spazi vuoti finali.|*string_expression* : espressione stringa da valutare.|Restituisce un valore della categoria di tipi di dati integer.|`Len('Hello')` restituisce `5` in questo esempio.|  

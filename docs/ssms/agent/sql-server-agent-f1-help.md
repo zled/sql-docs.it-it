@@ -15,13 +15,13 @@ ms.assetid: 55f4bd55-aa61-4d5c-98fd-f85824206ea0
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 706b282a09baa08e9cf3f124cf9c912f86d04ffd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ff8d050afe694b38d4dcb43e2822f125f8cd8461
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent-f1-help"></a>Guida sensibile al contesto di SQL Server Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa sezione contiene gli argomenti della Guida sensibile al contesto per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Per accedere a questi argomenti dall'interfaccia utente, premere F1 o fare clic su ? nelle finestre di dialogo.  

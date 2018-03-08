@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4cc8bdd0f4c3a4b212661e4ac9363ce6bdefb64f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7ca0b129013f5bdced79d8fb8245893a3db7ff06
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertransactions-rowset"></a>Set di righe DISCOVER_TRANSACTIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce il set corrente di transazioni in sospeso nel sistema.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Restituisce il set corrente di transazioni in sospeso nel sistema.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
   
@@ -63,6 +63,6 @@ ms.lasthandoff: 12/08/2017
 |String|DISCOVER_TRANSACTIONS|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML per set di righe dello schema di analisi](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis i rowset dello Schema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_sql_text (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_sql_text (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_sql_text
 - sys.dm_exec_sql_text_TSQL
 - dm_exec_sql_text_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_sql_text dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_sql_text dynamic management function
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 91602b959da7ed3b622fcc77e59670cdfc803722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2a2e9eac12ffb3c3ef7ada6e94013ed387e2dd9f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*valore di sql_handle*  
+*sql_handle*  
 Handle SQL del batch da cercare. *valore di sql_handle* è **varbinary(64)**. *valore di sql_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
@@ -71,13 +74,13 @@ Identifica in modo univoco un piano di query per un batch memorizzato nella cach
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**DBID**|**smallint**|ID del database.<br /><br /> Per istruzioni SQL ad hoc e preparate, l'ID del database in cui sono state compilate le istruzioni.|  
-|**ObjectID**|**int**|ID dell'oggetto.<br /><br /> Per istruzioni SQL ad hoc e preparate viene restituito NULL.|  
-|**numero**|**smallint**|Per una stored procedure numerata, questa colonna restituisce il numero della stored procedure. Per ulteriori informazioni, vedere [numbered_procedures &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Per istruzioni SQL ad hoc e preparate viene restituito NULL.|  
-|**crittografato**|**bit**|1 = Il testo SQL è crittografato.<br /><br /> 0 = Il testo SQL non è crittografato.|  
-|**text**|**nvarchar (max** **)**|Testo della query SQL.<br /><br /> Per gli oggetti crittografati viene restituito NULL.|  
+|**dbid**|**smallint**|ID del database.<br /><br /> Per istruzioni SQL ad hoc e preparate, l'ID del database in cui sono state compilate le istruzioni.|  
+|**objectid**|**int**|ID dell'oggetto.<br /><br /> Per istruzioni SQL ad hoc e preparate viene restituito NULL.|  
+|**number**|**smallint**|Per una stored procedure numerata, questa colonna restituisce il numero della stored procedure. Per ulteriori informazioni, vedere [numbered_procedures &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Per istruzioni SQL ad hoc e preparate viene restituito NULL.|  
+|**encrypted**|**bit**|1 = Il testo SQL è crittografato.<br /><br /> 0 = Il testo SQL non è crittografato.|  
+|**text**|**nvarchar(max** **)**|Testo della query SQL.<br /><br /> Per gli oggetti crittografati viene restituito NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -96,7 +99,7 @@ Handle del piano è un valore hash derivato dal piano compilato dell'intero batc
 Di seguito è riportato un esempio di base per illustrare il passaggio di un **sql_handle** direttamente o mediante **CROSS APPLY**.
   1.  Creare attività.  
 Eseguire T-SQL seguente in una nuova finestra query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
-      ```tsql
+      ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -108,7 +111,7 @@ Eseguire T-SQL seguente in una nuova finestra query in [!INCLUDE[ssManStudioFull
     2.  Utilizzando **CROSS APPLY**.  
     Il valore di sql_handle da **Sys.dm exec_requests** verranno passate al **Sys.dm exec_sql_text** utilizzando **CROSS APPLY**. Aprire una nuova finestra query e passare il valore di spid identificato nel passaggio 1. In questo esempio il valore di spid possono essere `59`.
 
-        ```tsql
+        ```sql
         SELECT t.*
         FROM sys.dm_exec_requests AS r
         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
@@ -118,7 +121,7 @@ Eseguire T-SQL seguente in una nuova finestra query in [!INCLUDE[ssManStudioFull
     2.  Il passaggio di **sql_handle** direttamente.  
 Acquisire il **sql_handle** da **Sys.dm exec_requests**. Quindi, passare il **sql_handle** direttamente a **Sys.dm exec_sql_text**. Aprire una nuova finestra query e passare il valore di spid identificato nel passaggio 1 per **Sys.dm exec_requests**. In questo esempio il valore di spid possono essere `59`. Quindi passare l'oggetto restituito **sql_handle** come argomento di **Sys.dm exec_sql_text**.
 
-        ```tsql
+        ```sql
         -- acquire sql_handle
         SELECT sql_handle FROM sys.dm_exec_requests WHERE session_id = 59  -- modify this value with your actual spid
         
@@ -130,7 +133,7 @@ Acquisire il **sql_handle** da **Sys.dm exec_requests**. Quindi, passare il **sq
 ### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. Ottenere informazioni sulle prime cinque query per tempo medio CPU  
  Nell'esempio seguente vengono restituiti il testo dell'istruzione SQL e il tempo medio di CPU per le prime cinque query.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -145,7 +148,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### <a name="c-provide-batch-execution-statistics"></a>C. Le statistiche di esecuzione dei batch  
  Nell'esempio seguente viene restituito il testo delle query SQL eseguite in batch e vengono visualizzate le relative informazioni statistiche.  
   
-```tsql  
+```sql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   
@@ -176,11 +179,11 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica &#40; relative all'esecuzione Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys.dm exec_query_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [Sys.dm exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [Sys.dm exec_cursors &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
- [Sys.dm exec_xml_handles – &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
- [Sys.dm exec_query_memory_grants &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
+ [sys.dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [Utilizzo di APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)   
- [Sys.dm exec_text_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
+ [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

@@ -1,37 +1,35 @@
 ---
 title: Origini dati supportate nei modelli tabulari di SQL Server Analysis Services | Documenti Microsoft
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ac5c3ca68f52a946195797e64ea650d82b1cde7f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-sources-supported-in-tabular-models"></a>Origini dati supportate nei modelli tabulari
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Per Azure Analysis Services, vedere [origini dati supportate in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Per Azure Analysis Services, vedere [origini dati supportate in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
 
-  In questo argomento vengono descritti i tipi di origini dati che possono essere utilizzati con i modelli tabulari.  
+  In questo articolo vengono descritti i tipi di origini dati che possono essere utilizzate con i modelli tabulari.  
   
-##  <a name="bkmk_supported_ds"></a>Origini dati supportate per i modelli tabulari in memoria  
+##  <a name="bkmk_supported_ds"></a> Origini dati supportate per i modelli tabulari in memoria  
 Il programma di installazione di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non consente di installare i provider elencati per ogni origine dati. Alcuni provider potrebbero essere installati con altre applicazioni nel computer in uso. In altri casi, potrebbe essere necessario scaricare e installare il provider.  
   
 |||||  
@@ -49,7 +47,7 @@ Il programma di installazione di [!INCLUDE[ssBIDevStudioFull](../../includes/ssb
 |File di Microsoft Excel|Excel 2010 e versioni successive|Con estensione xlsx, xlsm, xlsb, xltx, xltm|Provider OLE DB per ACE 14|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartella di lavoro|Microsoft SQL Server 2008 e versioni successive di Analysis Services|Con estensione xlsx, xlsm, xlsb, xltx, xltm|ASOLEDB 10.5<br /><br /> (usato solo con le cartelle di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicate nelle farm di SharePoint con [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installato)|  
 |Cubo di Analysis Services|Microsoft SQL Server 2008 e versioni successive di Analysis Services|(non applicabile)|ASOLEDB 10|  
-|Feed di dati<br /><br /> (utilizzato per importare dati dai report di Reporting Services, documenti di servizio Atom, Microsoft Azure Marketplace DataMarket e singoli feed di dati)|Formato Atom 1.0<br /><br /> Qualsiasi database o documento esposto come Windows Communication Foundation (WCF) Data Service (precedentemente ADO.NET Data Services).|`.atomsvc`per un documento di servizio che definisce uno o più feed<br /><br /> Con estensione atom per un documento di feed Web Atom|Provider di feed di dati Microsoft per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Provider di feed di dati .NET Framework per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
+|Feed di dati<br /><br /> (utilizzato per importare dati dai report di Reporting Services, documenti di servizio Atom, Microsoft Azure Marketplace DataMarket e singoli feed di dati)|Formato Atom 1.0<br /><br /> Qualsiasi database o documento esposto come Windows Communication Foundation (WCF) Data Service (precedentemente ADO.NET Data Services).|`.atomsvc` per un documento di servizio che definisce uno o più feed<br /><br /> Con estensione atom per un documento di feed Web Atom|Provider di feed di dati Microsoft per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Provider di feed di dati .NET Framework per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |File Office Database Connection||Con estensione odc||  
   
   

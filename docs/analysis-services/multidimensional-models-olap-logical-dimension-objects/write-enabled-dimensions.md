@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bde831aea891db84e76ae4d00612663ed315d869
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 175199b7090abc373e0ac39d1e99e81480df4e2e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="write-enabled-dimensions"></a>Dimensioni abilitate per la scrittura
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Il writeback della dimensione non è supportato dalle dimensioni collegate.  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
  Gli unici utenti aziendali autorizzati ad aggiornare una dimensione abilitata per la scrittura sono quelli inclusi nei ruoli del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a cui sono state concesse le autorizzazioni di lettura/scrittura nella dimensione. Per ogni ruolo, è possibile impostare i membri che possono o meno essere aggiornati. Affinché gli utenti aziendali possano aggiornare le dimensioni abilitate per la scrittura, è necessario che le applicazioni client utilizzate supportino questa funzionalità. Per tali utenti, è necessario che la dimensione abilitata per la scrittura sia inclusa in un cubo elaborato dopo l'ultima modifica della dimensione. Per altre informazioni, vedere [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
  Gli utenti e i gruppi inclusi nel ruolo Administrators possono aggiornare i membri degli attributi di una dimensione abilitata per la scrittura, anche se la dimensione non è inclusa in un cubo.  

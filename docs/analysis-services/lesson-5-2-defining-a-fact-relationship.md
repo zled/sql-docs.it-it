@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0223be3eb321aee4ecae975fe77a776082ed495f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5ffe10857e0111735cd92fefdae106641ad2954e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lezione 5-2-definizione di una relazione di tipo fatti
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Talvolta può essere in grado di dimensionare le misure per gli elementi di dati contenuti nella tabella dei fatti o eseguire query sulla tabella dei fatti per informazioni correlate specifiche aggiuntive, ad esempio i numeri delle fatture o degli ordini di acquisto relative ai dati di vendita specifici. Quando viene definita una dimensione basata su un elemento della tabella dei fatti di questo tipo, la dimensione viene denominata *dimensione dei fatti*. Le dimensioni dei fatti sono inoltre note come dimensioni degeneri. Le dimensioni dei fatti sono utili per raggruppare righe di tabelle dei fatti collegate, come ad esempio tutte le righe collegate a un particolare numero di fattura. Sebbene sia possibile inserire queste informazioni in una tabella della dimensione separata del database relazionale, la creazione di una tale tabella non si rivela vantaggiosa in quanto la tabella della dimensione aumenterebbe allo stesso modo della tabella dei fatti determinando un'inutile duplicazione dei dati nonché un'inutile complessità.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Talvolta può essere necessario dimensionare le misure in base ai dati contenuti nella tabella dei fatti o eseguire query per trovare informazioni correlate specifiche aggiuntive, come ad esempio i numeri delle fatture o degli ordini di acquisto collegati a operazioni di vendita specifiche. Quando viene definita una dimensione basata su un elemento della tabella dei fatti di questo tipo, la dimensione viene denominata *dimensione dei fatti*. Le dimensioni dei fatti sono inoltre note come dimensioni degeneri. Le dimensioni dei fatti sono utili per raggruppare righe di tabelle dei fatti collegate, come ad esempio tutte le righe collegate a un particolare numero di fattura. Sebbene sia possibile inserire queste informazioni in una tabella della dimensione separata del database relazionale, la creazione di una tale tabella non si rivela vantaggiosa in quanto la tabella della dimensione aumenterebbe allo stesso modo della tabella dei fatti determinando un'inutile duplicazione dei dati nonché un'inutile complessità.  
   
 In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è possibile determinare se duplicare i dati delle dimensioni dei fatti in una struttura della dimensione MOLAP per aumentare le prestazioni delle query o se definire la dimensione dei fatti come una dimensione ROLAP per risparmiare spazio di archiviazione a discapito delle prestazioni delle query. Quando si archivia una dimensione con modalità MOLAP, tutti i membri della dimensione vengono archiviati nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in una struttura MOLAP a compressione elevata, oltre a essere archiviati nelle partizioni del gruppo di misure. Quando una dimensione viene archiviata tramite la modalità di archiviazione ROLAP, solo la definizione della dimensione viene archiviata nella struttura MOLAP; le query sui membri della dimensione vengono eseguite dalla tabella relazionale dei fatti sottostante durante la fase di esecuzione delle query. È possibile decidere la modalità di archiviazione appropriata in base alla frequenza con la quale vengono eseguite query sulla dimensione dei fatti, al numero delle righe restituite da una query tipica, alle prestazioni delle query e ai costi di elaborazione. Se una dimensione viene definita come ROLAP non è necessario che anche tutti i cubi in cui viene utilizzata la dimensione siano archiviati tramite la modalità di archiviazione ROLAP. La modalità di archiviazione di ogni dimensione può essere configurata in modo indipendente.  
   
@@ -129,7 +132,7 @@ Nelle attività di questo argomento verrà aggiunta una nuova dimensione del cub
   
 ## <a name="see-also"></a>Vedere anche  
 [Relazioni tra dimensioni](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
-[Definire una relazione di tipo Fatti e le relative proprietà](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
+[Definire una relazione di tipo fatti e le relative proprietà](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   
   

@@ -12,6 +12,7 @@
 # [Configurazione superficie di attacco](surface-area-configuration.md)  
 # [Attacco SQL injection](sql-injection.md)
 # [Valutazione della vulnerabilità SQL](sql-vulnerability-assessment.md)  
+# [Individuazione e classificazione dei dati SQL](sql-data-discovery-and-classification.md)  
 # [Proprietà di database TRUSTWORTHY](trustworthy-database-property.md)  
 # [Autorizzazioni](permissions-database-engine.md)  
 # [Gerarchia delle autorizzazioni](permissions-hierarchy-database-engine.md)  

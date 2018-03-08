@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: affe8545e4bf5ab1cd2db4b2ce8ce0addfba8b8a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 570d6f884ee1e5b2949c38a5e61873d31a646dc5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Disabilitare o sospendere l'elaborazione di report e sottoscrizioni
   Esistono diversi approcci per disabilitare o sospendere l'elaborazione di report e sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Gli approcci descritti in questo argomento vanno dalla disabilitazione di una sottoscrizione all'interruzione della connessione all'origine dati. Non tutti gli approcci sono praticabili con entrambe le modalità server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le tabelle seguenti riepilogano i metodi e le modalità server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supportate:  

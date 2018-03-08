@@ -8,21 +8,23 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: computed columns, define
+helpviewer_keywords:
+- computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 99d055062a15f35f31a44176ece3af03e3dc5771
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 95980febab6a2801ca2f751a0cadd22f14991c59
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Specificare le colonne calcolate in una tabella
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
      [Limitazioni e restrizioni](#Limitations)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per specificare una colonna calcolata:**  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -71,19 +73,19 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  Quando una formula combina due espressioni di tipi di dati diversi, le regole per la precedenza dei tipi di dati specificano che i tipi con precedenza inferiore vengano convertiti nei tipi con precedenza superiore. Se la conversione non è una conversione implicita supportata, viene restituito l'errore`Error validating the formula for column column_name.`. Utilizzare la funzione CAST o CONVERT per risolvere il conflitto del tipo di dati. Ad esempio, se una colonna di tipo **nvarchar** viene combinata con una colonna di tipo **int**, il tipo integer deve essere convertito in **nvarchar** come mostrato in questa formula `('Prod'+CONVERT(nvarchar(23),ProductID))`. Per altre informazioni, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-5.  Indicare se i dati sono persistenti selezionando **Sì** oppure **No** nell'elenco a discesa della proprietà figlio **Persistente**.  
+5.  Indicare se i dati sono persistenti selezionando **Sì** oppure **No** nell'elenco a discesa della proprietà figlio **Persistente** .  
   
-6.  Nel menu **File** scegliere **Salva***table name*.  
+6.  Scegliere **Salva***nome tabella* dal menu **File**.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Per aggiungere una definizione di colonna calcolata a una colonna esistente  
   
 1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella con la colonna per cui si vuole modificare ed espandere la cartella **Colonne** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla colonna per cui si vuole specificare una formula di colonna calcolata e scegliere **Elimina**. Scegliere **OK**.  
+2.  Fare clic con il pulsante destro del mouse sulla colonna per cui si vuole specificare una formula di colonna calcolata e scegliere **Elimina**. Fare clic su **OK**.  
   
 3.  Aggiungere una nuova colonna e specificare la formula della colonna calcolata attenendosi alla procedura precedente per aggiungere una nuova colonna calcolata.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-add-a-computed-column-when-creating-a-table"></a>Per aggiungere una colonna calcolata quando si crea una tabella  
   

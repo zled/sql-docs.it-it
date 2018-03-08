@@ -1,5 +1,5 @@
 ---
-title: Sys.dm os_memory_cache_hash_tables (Transact-SQL) | Documenti Microsoft
+title: sys.dm_os_memory_cache_hash_tables (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_memory_cache_hash_tables
 - dm_os_memory_cache_hash_tables
 - dm_os_memory_cache_hash_tables_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_cache_hash_tables dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_cache_hash_tables dynamic management view
 ms.assetid: 68b94f35-8f80-4d2b-bcde-7a21934219af
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 887ff777b24fd130692368352e05396659a60b12
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d18182e52de0c0324e15b4fa36fb89f57af8209
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemorycachehashtables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,9 +43,9 @@ ms.lasthandoff: 11/17/2017
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**cache_address**|**varbinary (8)**|Indirizzo (chiave primaria) della voce nella cache. Non ammette i valori Null.|  
+|**cache_address**|**varbinary(8)**|Indirizzo (chiave primaria) della voce nella cache. Non ammette i valori Null.|  
 |**name**|**nvarchar(256)**|Nome della cache. Non ammette i valori Null.|  
-|**tipo**|**nvarchar(60)**|Tipo di cache. Non ammette i valori Null.|  
+|**type**|**nvarchar(60)**|Tipo di cache. Non ammette i valori Null.|  
 |**table_level**|**int**|Numero di tabella hash. Una cache specifica può avere più tabelle hash corrispondenti a funzioni hash diverse. Non ammette i valori Null.|  
 |**buckets_count**|**int**|Numero di bucket nella tabella hash. Non ammette i valori Null.|  
 |**buckets_in_use_count**|**int**|Numero di bucket in uso. Non ammette i valori Null.|  
@@ -54,9 +57,9 @@ ms.lasthandoff: 11/17/2017
 |**misses_count**|**bigint**|Numero di mancati riscontri nella cache. Non ammette i valori Null.|  
 |**buckets_avg_scan_hit_length**|**int**|Numero medio di voci controllate in un bucket prima che venga individuato un elemento ricercato. Non ammette i valori Null.|  
 |**buckets_avg_scan_miss_length**|**int**|Numero medio di voci controllate in un bucket prima che la ricerca venga conclusa con esito negativo. Non ammette i valori Null.|  
-|**pdw_node_id**|**int**|L'identificatore per il nodo che utilizza questo tipo di distribuzione.<br /><br /> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**pdw_node_id**|**int**|L'identificatore per il nodo che utilizza questo tipo di distribuzione.<br /><br /> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.  
   

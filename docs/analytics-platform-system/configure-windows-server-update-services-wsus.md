@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: "41"
-ms.openlocfilehash: 234c1ee3b13f3440e3f8a0377f3423ccf937acbc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 
+ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Configurare Windows Server Update Services (WSUS)
 Queste istruzioni consentono di eseguire i passaggi per utilizzare la procedura guidata configurazione di Windows Server Update Services (WSUS) per configurare WSUS per il sistema di piattaforma Analitica. È necessario configurare WSUS prima di poter applicare aggiornamenti software al dispositivo. WSUS è già installata nella macchina virtuale VMM del dispositivo.  
@@ -61,7 +61,7 @@ Per configurare WSUS, è necessario:
   
     1.  Nel **Dashboard di Server Manager**via il **strumenti** menu, fare clic su **Windows Server Update Services**.  
   
-    2.  Nel riquadro a sinistra del **Update Services** finestra, fare clic per espandere il server di gestione delle macchine virtuali nodo (***appliance_domain*- VMM**), quindi fare clic su **Opzioni**.  
+    2.  Nel riquadro a sinistra del **Update Services** finestra, fare clic per espandere il server di gestione delle macchine virtuali nodo (***appliance_domain *-VMM**), quindi fare clic su **opzioni**.  
   
     3.  Nel **opzioni** riquadro, fare clic su **configurazione guidata del Server WSUS** per avviare la configurazione guidata.  
   
@@ -81,7 +81,7 @@ Per configurare WSUS, è necessario:
   
     Verrà visualizzato il **scelta Server Upstream** pagina. Nella schermata seguente è il punto iniziale della configurazione guidata.  
   
-    ![WSUS-sincronizzazione Server a monte](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+    ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
 4.  Scegliere il server upstream.  
   
@@ -91,7 +91,7 @@ Per configurare WSUS, è necessario:
   
     1.  Se si sceglie di eseguire la sincronizzazione con Microsoft Update, non è necessario apportare modifiche per il **scelta Server Upstream** pagina. Scegliere **Avanti**.  
   
-        ![WSUS-sincronizzazione Server a monte](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+        ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
     #### <a name="to-update-from-another-wsus-server"></a>Per l'aggiornamento da un altro server WSUS  
   
@@ -113,7 +113,7 @@ Per configurare WSUS, è necessario:
   
     Se il server richiede un server proxy per accedere a Microsoft Update o un altro server upstream, è possibile configurare le impostazioni del server proxy. in caso contrario, fare clic su **Avanti**.  
   
-    ![WSUS-Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
+    ![WSUS Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
     #### <a name="to-configure-proxy-server-settings"></a>Per configurare le impostazioni di proxy server  
   
@@ -148,7 +148,7 @@ Per configurare WSUS, è necessario:
   
     Deselezionare tutti gli aggiornamenti selezionati.  
   
-    Selezionare **SQL Server 2014**, **Windows Server 2012 R2**, e **System Center 2012 R2 - Virtual Machine Manager**, quindi fare clic su **Avanti**.  
+    Selezionare **SQL Server 2014**, **SQL Server 2016**, **Windows Server 2012 R2**, e **System Center 2012 R2 - Virtual Machine Manager**, e quindi fare clic su **Avanti**.  
   
 9. Scegliere le classificazioni.  
   
@@ -159,13 +159,13 @@ Per configurare WSUS, è necessario:
   
     Selezionare **gli aggiornamenti critici** e **gli aggiornamenti della sicurezza** per gli aggiornamenti che verranno sincronizzati per il dispositivo di sistema della piattaforma Analitica e quindi fare clic su **Avanti**.  
   
-    ![Scegliere le classificazioni](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Choose classifications](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
 10. Configurare la pianificazione della sincronizzazione.  
   
     Selezionare **sincronizzare manualmente**, quindi fare clic su **Avanti**.  
   
-    ![Pianificazione della sincronizzazione set](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
+    ![Set sync schedule](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. Avvia sincronizzazione iniziale.  
   
@@ -201,7 +201,7 @@ Dopo la configurazione di WSUS per il sistema di piattaforma Analitica, il passa
   
 5.  Selezionare il nuovo gruppo di computer creato facendo clic sulla casella di controllo e quindi facendo clic su **OK**.  
   
-    ![L'appartenenza al gruppo di Computer set](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
+    ![Set Computer Group Membership](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
 6.  Selezionare il nuovo gruppo di computer, modificare il relativo **stato** a **qualsiasi**e quindi fare clic su **aggiornamento**. Tutti i computer dovrebbero ora essere assegnati a questo gruppo ed elencati nel riquadro di destra. È in genere, è possibile continuare quando i nodi visualizzare avvisi, ad esempio **questo nodo non è stato segnalato ancora stato**.  
   

@@ -5,32 +5,30 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4304b6b25595bab37df01bdada4a046411cc3f4d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9f536c0956cec0be863b099b2c0540ccf7ac3da2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Creare o personalizzare una libreria di feed di dati (Power Pivot per SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto *libreria feed di dati* è una raccolta di SharePoint con scopi speciali che consente di registrare e condividere documenti di servizio dati Atom (atomsvc). Questi documenti forniscono feed di dati XML alle cartelle di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o ad altre applicazioni client che supportano il formato di feed di dati Atom. Una libreria di feed di dati è diversa dalle altre raccolte di SharePoint poiché consente di:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una *libreria feed di dati* è una raccolta di SharePoint speciale che consente di registrare e condividere documenti di servizio dati Atom (atomsvc). Questi documenti forniscono feed di dati XML alle cartelle di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o ad altre applicazioni client che supportano il formato di feed di dati Atom. Una libreria di feed di dati è diversa dalle altre raccolte di SharePoint poiché consente di:  
   
 -   Creare o modificare un *documento di servizio dati*usato per specificare una connessione HTTP a un feed specifico.  
   

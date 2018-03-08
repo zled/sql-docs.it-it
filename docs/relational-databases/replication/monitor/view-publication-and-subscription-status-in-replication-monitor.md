@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Replication Monitor, publication and subscription status
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea47f9f50242003e4aa933da2e5657bb7e2ed5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ab769d9d4a6c5c311fa6695056ef503999455d8f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Visualizzazione dello stato delle pubblicazioni e delle sottoscrizioni in Monitoraggio replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Monitoraggio replica per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] visualizza informazioni sullo stato delle pubblicazioni e delle sottoscrizioni:  

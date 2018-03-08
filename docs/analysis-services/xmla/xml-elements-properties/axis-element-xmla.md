@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Axis Element
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 790fdec7656fa1af8b273a2a3ca7941933480be4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bb0538869453af24bd432a1d7f995e0007e79ec7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="axis-element-xmla"></a>Elemento Axis (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene un set di tuple utilizzato per rappresentare un singolo asse in un dataset multidimensionale contenuto in un [assi](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) elemento che utilizza il [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo di dati restituito dal [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) metodo.  
@@ -54,10 +52,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/08/2017
 |Gerarchia **Time**|1999|1999|2000|  
 |Gerarchia **Category**|Valore effettivo|Budget|Budget|  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 <Axes>  
@@ -140,7 +138,7 @@ ms.lasthandoff: 12/08/2017
 |Gerarchia **Category**|Valore effettivo|Budget|Budget|Budget|  
 |Clusters|Cluster 1|Cluster 1|Cluster 1|Cluster 2|  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 <Axes>  

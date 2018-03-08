@@ -1,7 +1,7 @@
 ---
-title: Sys. sql_modules (Transact-SQL) | Documenti Microsoft
+title: sys.sql_modules (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 496ed3e4d3aad1cea7a0b9c153f4e85da1a46489
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a2ed39676fc1bd477cce716b5c9d86c721df40fe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto contenitore. Valore univoco all'interno di un database.|  
-|**definizione**|**nvarchar(max)**|Testo SQL che definisce il modulo.<br /><br /> NULL = Crittografato.|  
+|**definition**|**nvarchar(max)**|Testo SQL che definisce il modulo. Questo valore può anche essere ottenuto utilizzando il [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) funzione predefinita.<br /><br /> NULL = Crittografato.|  
 |**uses_ansi_nulls**|**bit**|Modulo creato con SET ANSI_NULLS ON.<br /><br /> È sempre = 0 per regole e impostazioni predefinite.|  
 |**uses_quoted_identifier**|**bit**|Modulo creato con SET QUOTED_IDENTIFIER ON.|  
 |**is_schema_bound**|**bit**|Modulo creato con l'opzione SCHEMABINDING.<br /><br /> Contiene sempre il valore 1 per le stored procedure compilate in modo nativo.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  Queste informazioni sono descritta anche in [Sys.dm db_uncontained_entities &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  

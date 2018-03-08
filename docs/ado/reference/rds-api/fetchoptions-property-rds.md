@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: FetchOptions property [ADO]
+helpviewer_keywords:
+- FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77ed1de5f9506512e3f7812b2355b1c52d5fa8f3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f53c6be35a4b3035e81653ecd828c52ea0c959db
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchoptions-property-rds"></a>Proprietà FetchOptions (RDS)
 Indica il tipo di recupero asincrono.  
@@ -37,7 +39,7 @@ Indica il tipo di recupero asincrono.
 |Costante|Description|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|Tutti i record del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) vengono recuperati prima che il controllo viene restituito all'applicazione. L'intero **Recordset** viene recuperato prima che l'applicazione è possibile utilizzarlo.|  
-|**valore adcFetchBackground**|Controllo può restituire all'applicazione, non appena il primo batch di record è stato recuperato. Una lettura successiva del **Recordset** che tenta di accedere a un record non recuperato nel primo batch verrà ritardata fino al recupero record ricercato è in realtà, in cui il tempo di controllo viene restituito all'applicazione.|  
+|**adcFetchBackground**|Controllo può restituire all'applicazione, non appena il primo batch di record è stato recuperato. Una lettura successiva del **Recordset** che tenta di accedere a un record non recuperato nel primo batch verrà ritardata fino al recupero record ricercato è in realtà, in cui il tempo di controllo viene restituito all'applicazione.|  
 |**adcFetchAsync**|Valore predefinito. Controllo viene restituito immediatamente all'applicazione durante i record vengono recuperati in background. Se l'applicazione tenta di leggere un record che non è ancora stato recuperato, verrà letto il record più vicino a quello ricercato e controllo restituirà immediatamente, che indica che alla fine corrente del **Recordset** è stato raggiunto. Ad esempio, una chiamata a [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) spostare la posizione corrente all'ultimo record effettivamente recuperato, anche se altri record continueranno popolare il **Recordset**.|  
   
 > [!NOTE]

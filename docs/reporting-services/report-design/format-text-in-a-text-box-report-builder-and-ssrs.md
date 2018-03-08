@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4752ac55673b7c208a2d051da928fee1404693f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0dd47857407e353a3b6208554625f29126615da7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Formattare il testo in una casella di testo (Generatore report e SSRS)
   È possibile formattare qualsiasi parte del testo all'interno di una casella di testo in modo indipendente e combinare testo segnaposto e testo statico in un'unica casella di testo. La possibilità di combinare i formati e aggiungere testo segnaposto consente di creare stampe unione o modelli per il testo nel report. Qualsiasi espressione può essere definita e formattata separatamente utilizzando un segnaposto.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/05/2017
   
          **HTML**  Il testo selezionato viene visualizzato in formato HTML. Se il valore dell'espressione del segnaposto contiene tag HTML validi, questi verranno visualizzati in formato HTML. Per altre informazioni, vedere [Importazione di codice HTML in un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 6.  Ripetere i passaggi da 2 a 5 per la parte di testo rimanente che si desidera formattare.  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
   
      Per applicare più opzioni di formattazione, fare clic con il pulsante destro del mouse sul testo segnaposto, quindi fare clic su **Proprietà segnaposto**.  
   
-6.  Scegliere **OK**. Nella visualizzazione Progettazione report, la casella di testo conterrà "**Mio campo**: [*NomeCampo*]", dove *NomeCampo* è il nome del campo.  
+6.  Fare clic su **OK**. Nella visualizzazione Progettazione report, la casella di testo conterrà "**Mio campo**: [*NomeCampo*]", dove *NomeCampo* è il nome del campo.  
   
 7.  Fare clic su **Esegui**.  
   

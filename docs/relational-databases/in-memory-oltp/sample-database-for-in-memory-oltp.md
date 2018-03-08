@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e8a9a30e4221c0c425c45d46b1e3bdddda9a66e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Database di esempio per OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Utilizzo della memoria e dello spazio su disco nell'esempio](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/17/2017
   
 -   *Colonne calcolate*. Le colonne calcolate SalesOrderNumber e TotalDue vengono omesse, poiché in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non sono supportate colonne calcolate nelle tabelle ottimizzate per la memoria. La nuova vista Sales.vSalesOrderHeader_extended_inmem riflette le colonne SalesOrderNumber e TotalDue. Pertanto, può essere utilizzata qualora queste colonne fossero necessarie.  
 
-    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle ottimizzate per la memoria.
 
   
@@ -571,7 +572,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  Si prevede che la memoria verrà recuperata quando il carico di lavoro transazionale è in esecuzione.  
   
- Se si avvia una seconda esecuzione del carico di lavoro dimostrativo, si noterà inizialmente una diminuzione dell'utilizzo della memoria, dal momento che le righe eliminate in precedenza vengono rimosse. A un certo punto le dimensioni della memoria aumenteranno di nuovo, finché il carico di lavoro non viene completato. Dopo l'inserimento di 10 milioni di righe al termine della reimpostazione della dimostrazione, l'utilizzo della memoria sarà molto simile all'utilizzo dopo la prima esecuzione. Esempio:  
+ Se si avvia una seconda esecuzione del carico di lavoro dimostrativo, si noterà inizialmente una diminuzione dell'utilizzo della memoria, dal momento che le righe eliminate in precedenza vengono rimosse. A un certo punto le dimensioni della memoria aumenteranno di nuovo, finché il carico di lavoro non viene completato. Dopo l'inserimento di 10 milioni di righe al termine della reimpostazione della dimostrazione, l'utilizzo della memoria sarà molto simile all'utilizzo dopo la prima esecuzione. Ad esempio  
   
 ```  
 SELECT type  
@@ -745,7 +746,7 @@ ORDER BY state, file_type
   
  Al termine di una seconda esecuzione del carico di lavoro dimostrativo, inserendo 10 milioni di ordini vendita dopo la reimpostazione della dimostrazione, si noterà che i file creati durante la prima esecuzione del carico di lavoro sono stati rimossi. Se si esegue la query sopra indicata più volte durante l'esecuzione del carico di lavoro, si potranno visualizzare i file del checkpoint durante le varie fasi.  
   
- Dopo la seconda esecuzione del carico di lavoro con l'inserimento di 10 milioni di ordini vendita, si visualizzerà un utilizzo del disco molto simile a (ma non necessariamente lo stesso di quello dopo la prima esecuzione) quello del sistema dinamico in natura. Esempio:  
+ Dopo la seconda esecuzione del carico di lavoro con l'inserimento di 10 milioni di ordini vendita, si visualizzerà un utilizzo del disco molto simile a (ma non necessariamente lo stesso di quello dopo la prima esecuzione) quello del sistema dinamico in natura. Ad esempio  
   
 ```  
 SELECT state_desc  

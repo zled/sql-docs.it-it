@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,26 +18,30 @@ helpviewer_keywords:
 - modifying system data
 - viewing system database data
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: fac90b998c51feb54a0fe496e6d09b3bf59c1129
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bb1953a20292a1b56766861479699faed049bb18
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="system-databases"></a>Database di sistema.
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include i database di sistema seguenti.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono inclusi i database di sistema seguenti.  
   
-|Database di sistema|Descrizione|  
+|Database di sistema|Description|  
 |---------------------|-----------------|  
 |[Database master](../../relational-databases/databases/master-database.md)|Registra tutte le informazioni di sistema per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Database msdb](../../relational-databases/databases/msdb-database.md)|Utilizzato da SQL Server Agent per la pianificazione di avvisi e processi.|  
 |[Database model](../../relational-databases/databases/model-database.md)|Utilizzato come modello per tutti i database creati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le modifiche apportate al database **model** , ad esempio per quanto riguarda dimensioni, regole di confronto, modello di recupero e altre opzioni del database, vengono applicate a tutti i database creati successivamente.|  
 |[Database Resource](../../relational-databases/databases/resource-database.md)|Database di sola lettura che contiene gli oggetti di sistema inclusi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli oggetti di sistema sono fisicamente mantenuti nel database **Resource** ma appaiono logicamente nello schema **sys** di ogni database.|  
 |[Database tempdb](../../relational-databases/databases/tempdb-database.md)|Area di lavoro per l'archiviazione di oggetti temporanei o set di risultati intermedi.|  
+
+> [!IMPORTANT]
+> Per il database SQL di Azure, si applicano solo il database master e il database tempdb. Per il concetto di server logico e database master logico, vedere [Che cos'è un server logico SQL di Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). Per una descrizione di tempdb nel contesto del database SQL di Azure, vedere [Database tempdb nel database SQL](tempdb-database.md#tempdb-database-in-sql-database).
   
 ## <a name="modifying-system-data"></a>modifica dei dati di sistema  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta l'aggiornamento diretto delle informazioni da parte degli utenti in oggetti di sistema, ad esempio tabelle di sistema, stored procedure di sistema e viste del catalogo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre, tuttavia, un set completo di strumenti di amministrazione che consentono agli utenti di amministrare completamente il sistema e gestire tutti gli utenti e gli oggetti di un database. tra cui:  
@@ -67,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] Funzioni predefinite e stored procedure di sistema.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [Backup e ripristino di database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
  [Nascondere oggetti di sistema in Esplora oggetti](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)  

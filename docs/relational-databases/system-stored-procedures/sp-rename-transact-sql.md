@@ -1,7 +1,7 @@
 ---
-title: sp_rename (Transact-SQL) | Documenti Microsoft
+title: sp_rename (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb402624e8b25f43a1969a91df85cfe5fa85d9af
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,11 +84,11 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  La stored procedure sp_rename può essere utilizzata per rinominare indici XML primari e secondari.  
   
- Ridenominazione di una stored procedure, funzione, vista o trigger non modificherà il nome del nome dell'oggetto corrispondente nella colonna della definizione di [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catalogo. È pertanto consigliabile evitare di utilizzare sp_rename per rinominare questi tipi di oggetto. In alternativa, eliminare e ricreare l'oggetto con il nuovo nome.  
+ Ridenominazione di una stored procedure, funzione, vista o trigger non modificherà il nome dell'oggetto corrispondente nella colonna definition del [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catalogo o ottenuto utilizzando il [Object DEFINIZIONE](../../t-sql/functions/object-definition-transact-sql.md) funzione predefinita. È pertanto consigliabile evitare di utilizzare sp_rename per rinominare questi tipi di oggetto. In alternativa, eliminare e ricreare l'oggetto con il nuovo nome.  
   
- La ridenominazione di un oggetto, ad esempio una tabella o una colonna, non aggiorna automaticamente i riferimenti a tale oggetto ed è necessario modificare manualmente tutti gli oggetti che fanno riferimento all'oggetto rinominato. Se, ad esempio, si rinomina una colonna di una tabella a cui viene fatto riferimento all'interno di un trigger, è necessario modificare il trigger in base al nuovo nome della colonna. Utilizzare[Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) per elencare le dipendenze per l'oggetto prima di rinominarlo.  
+ La ridenominazione di un oggetto, ad esempio una tabella o una colonna, non aggiorna automaticamente i riferimenti a tale oggetto ed è necessario modificare manualmente tutti gli oggetti che fanno riferimento all'oggetto rinominato. Se, ad esempio, si rinomina una colonna di una tabella a cui viene fatto riferimento all'interno di un trigger, è necessario modificare il trigger in base al nuovo nome della colonna. Usare [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) per elencare le dipendenze dall'oggetto prima di rinominarlo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per rinominare oggetti, colonne e indici, è necessario disporre dell'autorizzazione ALTER per l'oggetto. Per rinominare tipi definiti dall'utente, è necessario disporre dell'autorizzazione CONTROL per il tipo. Per rinominare un database, è richiesta l'appartenenza al ruolo predefinito del server sysadmin o dbcreator.  
   
 ## <a name="examples"></a>Esempi  

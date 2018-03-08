@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_cursors (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_cursors
 - dm_exec_cursors_TSQL
 - sys.dm_exec_cursors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_cursors dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b2978fe15394ed17d63c5c98b562a332a629866
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e659c10857c8a5248707e592738375fc5c7c483
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +59,7 @@ dm_exec_cursors (session_id | 0 )
 |**cursor_id**|**int**|ID dell'oggetto cursore.|  
 |**name**|**nvarchar(256)**|Nome del cursore definito dall'utente.|  
 |**proprietà**|**nvarchar(256)**|Specifica le proprietà del cursore. I valori delle proprietà seguenti vengono concatenati per comporre il valore di questa colonna:<br />Interfaccia di dichiarazione<br />Tipo di cursore <br />Concorrenza dei cursori<br />Scopo del cursore<br />Livello di nidificazione del cursore<br /><br /> Ad esempio, il valore restituito in questa colonna potrebbe essere "TSQL &#124; Dinamica &#124; Ottimistica &#124; Global (0) ".|  
-|**valore di sql_handle**|**varbinary(64)**|Handle per il testo del batch che ha dichiarato il cursore.|  
+|**sql_handle**|**varbinary(64)**|Handle per il testo del batch che ha dichiarato il cursore.|  
 |**statement_start_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui inizia l'istruzione in esecuzione. Può essere utilizzato con il **sql_handle**, **statement_end_offset**e [Sys.dm exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) funzione a gestione dinamica per recuperare l'attualmente esecuzione istruzione per la richiesta.|  
 |**statement_end_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui termina l'istruzione in esecuzione. Può essere utilizzato con il **sql_handle**, **statement_start_offset**e **Sys.dm exec_sql_text** funzione a gestione dinamica per recuperare l'attualmente esecuzione istruzione per la richiesta.|  
 |**plan_generation_num**|**bigint**|Numero di sequenza utilizzabile per distinguere le istanze dei piani dopo la ricompilazione.|  
@@ -64,7 +67,7 @@ dm_exec_cursors (session_id | 0 )
 |**is_open**|**bit**|Specifica se il cursore è aperto.|  
 |**is_async_population**|**bit**|Specifica se il thread in background sta ancora popolando un cursore KEYSET o STATIC in modo asincrono.|  
 |**is_close_on_commit**|**bit**|Specifica se il cursore è stato dichiarato tramite CURSOR_CLOSE_ON_COMMIT.<br /><br /> 1 = Il cursore verrà chiuso al termine della transazione.|  
-|**FETCH_STATUS**|**int**|Restituisce l'ultimo stato di recupero del cursore. Questa è l'ultima restituito@FETCH_STATUS valore.|  
+|**fetch_status**|**int**|Restituisce l'ultimo stato di recupero del cursore. Questa è l'ultima restituito@FETCH_STATUS valore.|  
 |**fetch_buffer_size**|**int**|Restituisce le informazioni sulle dimensioni del buffer di recupero.<br /><br /> 1 = Cursori Transact-SQL. Può essere impostato su un valore più elevato per i cursori API.|  
 |**fetch_buffer_start**|**int**|Per i cursori FAST_FORWARD e DYNAMIC, restituisce 0 se il cursore non è aperto o se è posizionato prima della riga iniziale. In caso contrario, restituisce -1.<br /><br /> Per i cursori STATIC e KEYSET, restituisce 0 se il cursore non è aperto e -1 se il cursore è posizionato oltre l'ultima riga.<br /><br /> In caso contrario, restituisce il numero di riga in cui è posizionato.|  
 |**ansi_position**|**int**|Posizione del cursore all'interno del buffer di recupero.|  
@@ -73,7 +76,7 @@ dm_exec_cursors (session_id | 0 )
 |**operazioni di scrittura**|**bigint**|Numero di scritture eseguite dal cursore.|  
 |**dormant_duration**|**bigint**|Millisecondi trascorsi a partire dall'avvio dell'ultima query (apertura o recupero) sul cursore.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="remarks"></a>Osservazioni  

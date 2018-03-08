@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,13 +24,13 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f765c32963d149c42bda40849f67e9206a1ff3b2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec9e18aeee47b023b6afcf8dbac2e733fd2c6223
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtro, raggruppamento e ordinamento di dati (Generatore report e SSRS)
   In un report le espressioni vengono usate per facilitare il controllo, l'organizzazione e l'ordinamento di dati del report. Per impostazione predefinita, mentre si creano set di dati e si progetta il layout del report, le proprietà degli elementi del report vengono impostate automaticamente su espressioni basate su campi del set di dati, parametri e altri elementi visualizzati nel riquadro dei dati del report. È inoltre possibile aggiungere un pulsante di ordinamento interattivo a una tabella o una cella della matrice, in modo da consentire a un utente di modificare in modo interattivo l'ordinamento della riga per gruppi o righe all'interno di gruppi.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **Ordinamento interattivo** Per consentire a un utente di ordinare o invertire l'ordinamento di una colonna, è possibile aggiungere un pulsante di ordinamento interattivo a un'intestazione di colonna o una cella di intestazione del gruppo in una tabella o una matrice.  
   
- Per consentire agli utenti di personalizzare le espressioni di filtro, raggruppamento o ordinamento, è possibile modificare un'espressione in modo che venga aggiunto un riferimento a un parametro del report. Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Per consentire agli utenti di personalizzare le espressioni di filtro, raggruppamento o ordinamento, è possibile modificare un'espressione in modo che venga aggiunto un riferimento a un parametro del report. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
  Per ulteriori informazioni ed esempi, vedere gli argomenti seguenti:  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 12/05/2017
   
  In un'area dati tabella o matrice è possibile creare più gruppi di righe e di colonne. È possibile visualizzare i dati in una gerarchia visiva organizzando gruppi nidificati, gruppi adiacenti e gruppi di gerarchie ricorsivi, ad esempio un organigramma.  
   
- Il nome del gruppo identifica l'ambito di un'espressione. È possibile specificare il nome di un gruppo come un ambito nel quale calcolare aggregazioni, organizzare gerarchicamente dati e attivare o disattivare la visualizzazione di nodi figlio da nodi padre in un report drill-down, visualizzare viste diverse degli stessi dati in più aree dati e visualizzare dati riepilogativi in una tabella, una matrice, un grafico, un misuratore o una mappa. Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Il nome del gruppo identifica l'ambito di un'espressione. È possibile specificare il nome di un gruppo come un ambito nel quale calcolare aggregazioni, organizzare gerarchicamente dati e attivare o disattivare la visualizzazione di nodi figlio da nodi padre in un report drill-down, visualizzare viste diverse degli stessi dati in più aree dati e visualizzare dati riepilogativi in una tabella, una matrice, un grafico, un misuratore o una mappa. Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)sottostante.  
   
  Per raggruppare diversi campi del set di dati, aggiungere ogni campo al set di espressioni di raggruppamento. È anche possibile scrivere espressioni di raggruppamento personalizzate in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. È possibile ad esempio eseguire il raggruppamento in base a un intervallo di valori oppure usando un parametro del report per consentire all'utente di selezionare la modalità di raggruppamento dei dati in un'area dati. Per altre informazioni, vedere [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   

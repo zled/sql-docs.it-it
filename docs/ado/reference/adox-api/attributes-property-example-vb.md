@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Attributes property [ADOX], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Attributes property [ADOX], Visual Basic example
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a97cb58f1030960cef68c8220d8edbf7a60b79e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 736d3c89b24a4a7da05aa4e754f1776ffff53c92
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-property-example-vb"></a>Esempio di proprietà Attributes (VB)
 Questo esempio viene illustrato il [attributi](../../../ado/reference/adox-api/attributes-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md). Se è impostato su **adColNullable** consente all'utente di impostare il valore di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [campo](../../../ado/reference/ado-api/field-object.md) su una stringa vuota. In questo caso, sarà possibile distinguere tra un record in cui i dati non sono noto e un record in cui i dati non validi.  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Warning Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d4962988a5c21183ac6e4f841c43a422eb48528e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 195e45dbde159409196a56657d14cbc168e99fdf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="warning-element-xmla"></a>Elemento Warning (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene informazioni su un avviso restituito da un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -54,10 +52,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -65,15 +63,15 @@ ms.lasthandoff: 12/08/2017
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Message](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
 ## <a name="attributes"></a>Attributi  
   
-|Attribute|Descrizione|  
+|attribute|Description|  
 |---------------|-----------------|  
 |ErrorCode|Attributo **UnsignedInt** obbligatorio. Contiene il codice numerico restituito dell'avviso.|  
 |Gravità|Attributo **String** facoltativo. Contiene la gravità dell'avviso.|  
-|Descrizione|Attributo **String** facoltativo. Contiene il testo descrittivo dell’avviso.|  
+|Description|Attributo **String** facoltativo. Contiene il testo descrittivo dell’avviso.|  
 |Origine|Attributo **String** facoltativo. Contiene il nome del componente che genera l'avviso.|  
 |FileGuida|Attributo **String** facoltativo. Contiene il percorso o URL al file Guida o all’argomento che descrive l'avviso.|  
   

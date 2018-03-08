@@ -8,24 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataprofilingtask.profilerequests.f1
-helpviewer_keywords: Data Profiling Task Editor
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63b377a6412dc2c886f1aec2a76e6f94fa78eda5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6883b8ec802392c0ae4d3a92a41f54433d403f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-profiling-task-editor-profile-requests-page"></a>Editor attività Profiling dati (pagina Richieste profilo)
+# <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   Utilizzare la pagina **Richieste profilo** di **Editor attività Profiling dati** per selezionare e configurare i profili che si desidera calcolare. In una singola attività Profiling dati è possibile calcolare più profili per più colonne o combinazioni di colonne in più tabelle o viste.  
   
  Per altre informazioni sull'uso dell'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Per altre informazioni sull'uso del Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/20/2017
  **Tipo profilo**  
  Selezionare un profilo dati nelle opzioni seguenti:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Richiesta profilo Chiave candidata**|Consente di calcolare un profilo Chiave candidata.<br /><br /> Questo profilo segnala se una colonna o un set di colonne è una chiave, o una chiave approssimativa, per la tabella selezionata. consente inoltre di identificare eventuali problemi nei dati, ad esempio i valori duplicati in una possibile colonna chiave.|  
 |**Richiesta profilo Distribuzione lunghezze di colonna**|Consente di calcolare un profilo Distribuzione lunghezze di colonna.<br /><br /> Il profilo Distribuzione lunghezze di colonna segnala tutte le singole lunghezze dei valori stringa nella colonna selezionata e la percentuale di righe nella tabella rappresentata da ogni lunghezza. e consente di identificare eventuali problemi nei dati, ad esempio i valori non validi. Si analizza, ad esempio, una colonna di codici a due caratteri degli stati degli Stati Uniti e si individuano valori con lunghezza maggiore di due caratteri.|  

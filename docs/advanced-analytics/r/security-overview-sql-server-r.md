@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dba0ea904e9b22cb99e4e0deb9befc32dd9e1abe
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 9ee0460e1e6a14e1d40c4e4f4bb3cf084c7d5b85
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="security-for-sql-server-machine-learning-and-r"></a>Sicurezza per SQL Server machine learning e R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo vengono descritti l'architettura di sicurezza globale che viene utilizzato per connettere il [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] dal database e i componenti correlati al runtime di R. Vengono forniti esempi del processo di protezione per questi scenari comuni per l'uso di R in un ambiente aziendale:
 

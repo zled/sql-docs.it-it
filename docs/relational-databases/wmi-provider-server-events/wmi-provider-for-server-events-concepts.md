@@ -8,7 +8,7 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,21 +18,22 @@ helpviewer_keywords:
 - monitoring events [WMI]
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fbc18f0f540d144955040fb909840da30d54f5dc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 90490b4884521f509d6e008f2bbde49605afd7b4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Concetti relativi al provider WMI per eventi del server
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Il Provider WMI per eventi del Server consente di utilizzare Strumentazione gestione Windows (WMI) per monitorare gli eventi in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Il provider WMI per eventi del server consente di utilizzare il servizio Strumentazione gestione Windows (WMI) per monitorare gli eventi in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Informazioni sul provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  
  Viene fornita una panoramica dell'architettura del provider e viene illustrato come programmare SQL Server Agent per l'utilizzo in questa architettura.  
   

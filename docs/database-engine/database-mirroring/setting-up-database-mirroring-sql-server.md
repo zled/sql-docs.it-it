@@ -16,13 +16,13 @@ ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 caps.latest.revision: "62"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d7056cfd99338221679acbb9eee74de203546a72
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 72ba23869786b5d1351279a586b51aa2ffc5d11f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Impostazione del mirroring del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa sezione illustra i prerequisiti, le indicazioni e la procedura per l'impostazione del mirroring del database. Per un'introduzione al mirroring del database, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Verificare che nel server mirror siano presenti account di accesso per tutti gli utenti del database. Per altre informazioni, vedere [Configurare gli account di accesso per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
-3.  Sull'istanza del server che ospiterà il database mirror, configurare il resto dell'ambiente richiesto per il database con mirroring. Per altre informazioni, vedere [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+3.  Sull'istanza del server che ospiterà il database mirror, configurare il resto dell'ambiente richiesto per il database con mirroring. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="EstablishUsingWinAuthentication"></a> Cenni preliminari: apertura di una sessione di mirroring del database  
  I passaggi di base per stabilire una sessione di mirroring sono i seguenti:  

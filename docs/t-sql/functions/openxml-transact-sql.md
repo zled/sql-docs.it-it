@@ -1,5 +1,5 @@
 ---
-title: OPENXML (Transact-SQL) | Documenti Microsoft
+title: OPENXML (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENXML_TSQL
 - OPENXML
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OPENXML statement
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b1fb1d28c4bddb679bd4aab8ce6cb11f21caca5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +49,13 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *IDOC*  
+ *idoc*  
  Handle di documento della rappresentazione interna di un documento XML. La rappresentazione interna di un documento XML viene creata chiamando **sp_xml_preparedocument**.  
   
  *rowpattern*  
  È il modello XPath utilizzato per identificare i nodi (in cui viene passato l'handle nel documento XML di *idoc* parametro) da elaborare come righe.  
   
- *flag*  
+ *flags*  
  Indica il mapping da utilizzare tra i dati XML e il set di righe relazionale e la modalità di riempimento della colonna spill-over. *flag* è un parametro di input facoltativo e può essere uno dei valori seguenti.  
   
 |Valore byte|Description|  
@@ -64,7 +66,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Può essere utilizzato in combinazione (OR logico) con XML_ATTRIBUTES o XML_ELEMENTS. Nel contesto di recupero, questo flag indica che i dati consumati non devono essere copiati nella proprietà di overflow  **@mp:xmltext** .|  
   
  *SchemaDeclaration*  
- È la definizione dello schema nel formato: *ColName**ColType* [*ColPattern* | *metaproprietà*] [**,***ColNameColType* [*ColPattern* | *metaproprietà*]...]  
+ È la definizione dello schema nel formato: *ColName * * ColType* [*ColPattern* | *metaproprietà*] [**, * * * ColNameColType* [*ColPattern * | *Metaproprietà*]...]  
   
  *ColName*  
  Nome della colonna nel set di righe.  
@@ -72,7 +74,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *ColType*  
  Tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della colonna nel set di righe. Se i tipi di colonna diversi da sottostante **xml** si verifica il tipo di dati dell'attributo, la coercizione di tipo.  
   
- *Parametro ColPattern*  
+ *ColPattern*  
  Modello generale XPath facoltativo che indica il criterio di mapping dei nodi XML alle colonne. Se *ColPattern* non viene specificato, il mapping predefinito (**incentrato sugli attributi** o **incentrato** mapping come specificato da *flag* ) viene eseguita.  
   
  Il modello XPath specificato come *ColPattern* viene utilizzata per specificare la natura del mapping (nel caso di **incentrato sugli attributi** e **incentrato** mapping) che sovrascrive o migliora il mapping predefinito indicato in *flag*.  
@@ -90,11 +92,11 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  Nella tabella seguente descrive la struttura del **bordo** tabella.  
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ID univoco del nodo del documento.<br /><br /> Il valore dell'ID dell'elemento radice è 0. I valori di ID negativi sono riservati.|  
 |**parentid**|**bigint**|Identifica il padre del nodo. Il padre identificato da questo ID non corrisponde necessariamente all'elemento padre. Dipende infatti dal valore NodeType del nodo il cui padre è identificato da questo ID. Se ad esempio il nodo è di tipo testo, il relativo elemento padre potrebbe essere un nodo attributo.<br /><br /> Se il nodo si trova al livello principale nel documento XML, il relativo valore **ParentID** è NULL.|  
-|**tipo di nodo**|**int**|Identifica il tipo di nodo. Valore intero corrispondente alla numerazione del tipo di nodo XML DOM.<br /><br /> I possibili tipi di nodo sono i seguenti:<br /><br /> 1 = Nodo elemento<br /><br /> 2 = Nodo attributo<br /><br /> 3 = Nodo testo|  
+|**nodetype**|**int**|Identifica il tipo di nodo. Valore intero corrispondente alla numerazione del tipo di nodo XML DOM.<br /><br /> I possibili tipi di nodo sono i seguenti:<br /><br /> 1 = Nodo elemento<br /><br /> 2 = Nodo attributo<br /><br /> 3 = Nodo testo|  
 |**localname**|**nvarchar**|Nome locale dell'elemento o attributo. È NULL se l'oggetto DOM non è associato a un nome.|  
 |**prefix**|**nvarchar**|Prefisso dello spazio dei nomi del nome del nodo.|  
 |**namespaceuri**|**nvarchar**|URI dello spazio dei nomi del nodo. Se il valore è NULL, non sono presenti spazi dei nomi.|  

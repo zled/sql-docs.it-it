@@ -1,5 +1,5 @@
 ---
-title: sp_trace_setstatus (Transact-SQL) | Documenti Microsoft
+title: sp_trace_setstatus (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setstatus_TSQL
 - sp_trace_setstatus
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_setstatus
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_setstatus
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 028f6484fd1edec8a3cb8d133b880ff2acebf25f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: aa482d6b81a7ac0486635f4d301f7803cda305b0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  ID della traccia da modificare. *trace_id* è **int**, non prevede alcun valore predefinito. L'utente può *trace_id* valore per identificare, modificare e controllare la traccia. Per informazioni sul recupero di *trace_id*, vedere [sys.fn_trace_getinfo &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
  [  **@status=** ] *stato*  
@@ -81,13 +84,13 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  Per un esempio dell'uso di stored procedure relative alla traccia, vedere [Creare una traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente deve disporre delle autorizzazioni ALTER TRACE.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys. fn_trace_geteventinfo &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sp_trace_generateevent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)  

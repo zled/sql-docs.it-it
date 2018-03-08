@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da9ecaba4dd896f93d7a8e035dd51ae00c429eb8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c115827f6c7efb8236c65648fb959594cbfcdc30
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Set di righe dello schema - supporto di Query distribuite
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 
   Per supportare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , query distribuite di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client **IDBSchemaRowset** interfaccia restituisce i metadati nei server collegati.  
   
- Se la proprietà SSPROP_QUOTEDCATALOGNAMES di DBPROPSET_SQLSERVERSESSION è VARIANT_TRUE, è possibile utilizzare un identificatore tra virgolette per specificare il nome di catalogo (ad esempio "catalogo.personale"). Quando si restringe l'output di set di righe dello schema dal catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client riconosce un nome in due parti che contiene il nome del catalogo e del server collegato. Per i set di righe dello schema nella tabella seguente, specificando un nome di catalogo in due parti *server_collegato***.** *catalogo* limita l'output al catalogo applicabile del server collegato denominato.  
+ Se la proprietà SSPROP_QUOTEDCATALOGNAMES di DBPROPSET_SQLSERVERSESSION è VARIANT_TRUE, è possibile utilizzare un identificatore tra virgolette per specificare il nome di catalogo (ad esempio "catalogo.personale"). Quando si restringe l'output di set di righe dello schema dal catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client riconosce un nome in due parti che contiene il nome del catalogo e del server collegato. Per i set di righe dello schema nella tabella seguente, specificando un nome di catalogo in due parti *server_collegato***.*** catalogo* limita l'output al catalogo applicabile del server collegato denominato.  
   
 |Set di righe dello schema|Restrizione per catalogo|  
 |-------------------|-------------------------|  

@@ -8,25 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3f8399c5430cf34d947e881586bacef5ade46587
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Introduzione al modello a oggetti tabulare (TOM) in Analysis Services AMO
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Il modello a oggetti tabulare (TOM) è un'estensione della libreria client servizi oggetto AMO (Analysis Management), creata per supportare scenari di programmazione per modelli tabulari compilati a livello di compatibilità 1200 e versioni successiva. Come con gli oggetti AMO, TOM fornisce un modo programmatico per gestire le funzioni amministrative quali la creazione di modelli, importazione e aggiornamento dei dati e l'assegnazione di ruoli e autorizzazioni.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Il modello a oggetti tabulare (TOM) è un'estensione della libreria client servizi oggetto AMO (Analysis Management), creata per supportare scenari di programmazione per modelli tabulari compilati a livello di compatibilità 1200 e versioni successiva. Come con gli oggetti AMO, TOM fornisce un modo programmatico per gestire le funzioni amministrative quali la creazione di modelli, importazione e aggiornamento dei dati e l'assegnazione di ruoli e autorizzazioni.  
   
 TOM espone metadati tabulari nativo, ad esempio **modello**, **tabelle**, **colonne**, e **relazioni** oggetti.  Una vista di alto livello dell'albero del modello oggetto riportata di seguito viene illustrato come correlazione tra le parti componenti.  
   
@@ -55,7 +54,7 @@ Al contrario, quando si gestiscono gli oggetti che fanno parte di metadati tabul
 
 ### <a name="tom-and-xmla"></a>TOM e XMLA
 
-In transito, TOM utilizza il protocollo XMLA per comunicare con il server Analysis Services e per gestire gli oggetti. Quando si gestiscono gli oggetti non tabulari, TOM utilizza [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), l'estensione di Analysis Services Scripting Language di XMLA. Quando si gestiscono oggetti tabulari, TOM utilizza il protocollo tabulare di SSAS, anche un'estensione di XMLA. Vedere [documentazione relativa al protocollo MS-SSAS-T SQL Server Analysis Services tabulare](https://msdn.microsoft.com/library/mt719260.aspx) per ulteriori informazioni.
+In transito, TOM utilizza il protocollo XMLA per comunicare con il server Analysis Services e per gestire gli oggetti. Quando si gestiscono gli oggetti non tabulari, TOM utilizza [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), l'estensione di Analysis Services Scripting Language di XMLA. Quando si gestiscono oggetti tabulari, TOM il protocollo MS SSAS tabulare, anche un'estensione di XMLA. Vedere [documentazione relativa al protocollo MS-SSAS-T SQL Server Analysis Services tabulare](https://msdn.microsoft.com/library/mt719260.aspx) per ulteriori informazioni.
 
 ### <a name="tom-and-json"></a>TOM e JSON
 

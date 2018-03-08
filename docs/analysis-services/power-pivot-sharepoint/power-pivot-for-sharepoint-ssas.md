@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6661b744ba630607b237f2754e9c22b1a5ec91df
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 864e795be41ccc9e68df3d1fc33b05f73e0695c7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot per SharePoint (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modalità offre hosting nel server di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dati in una farm di SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono un modello di dati analitici che viene compilato con uno degli elementi seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] offre funzionalità di hosting nel server di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una farm SharePoint. I dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono un modello di dati analitici che viene compilato con uno degli elementi seguenti:  
   
 -   Componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel 2010  
   

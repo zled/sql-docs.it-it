@@ -8,38 +8,41 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lezione 4-1-utilizzo di una versione modificata del progetto Analysis Services Tutorial
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Le lezioni rimanenti di questa esercitazione si basano su una versione avanzata del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto Tutorial completato nelle prime tre lezioni. Altre tabelle e calcoli denominati sono stati aggiunti alla vista origine dati **Adventure Works DW 2012** ; sono state aggiunte altre dimensioni al progetto e al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Infine, è stato aggiunto un secondo gruppo di misure contenente le misure di una seconda tabella dei fatti. Il progetto migliorato consente di approfondire la conoscenza delle tecniche per l'aggiunta di funzionalità alla propria applicazione di Business Intelligence senza la necessità di tornare su informazioni già acquisite.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Le lezioni rimanenti di questa esercitazione sono basate su una versione migliorata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial completato nelle prime tre lezioni. Altre tabelle e calcoli denominati sono stati aggiunti alla vista origine dati **Adventure Works DW 2012** ; sono state aggiunte altre dimensioni al progetto e al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Infine, è stato aggiunto un secondo gruppo di misure contenente le misure di una seconda tabella dei fatti. Il progetto migliorato consente di approfondire la conoscenza delle tecniche per l'aggiunta di funzionalità alla propria applicazione di Business Intelligence senza la necessità di tornare su informazioni già acquisite.  
   
 Per continuare l'esercitazione è necessario scaricare, estrarre, caricare ed elaborare la versione migliorata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  Utilizzare le istruzioni riportate in questa lezione per verificare di avere eseguito tutti i passaggi.  
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Download ed estrazione del file di progetto  
   
-1.  [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per accedere alla pagina di download in cui si trovano i progetti di esempio usati in questa esercitazione. I progetti dell'esercitazione sono inclusi nel download **Analysis Services Tutorial SQL Server 2012** .  
+1.  [Fare clic qui](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) per accedere alla pagina di download in cui si trovano i progetti di esempio usati in questa esercitazione. I progetti dell'esercitazione sono inclusi nel **adventure-works-multidimensionale-esercitazione-projects.zip** scaricare.  
   
-2.  Fare clic su **Analysis Services Tutorial SQL Server 2012** per scaricare il pacchetto in cui sono contenuti i progetti per questa esercitazione.  
+2.  Fare clic su **adventure-works-multidimensionale-esercitazione-projects.zip** per scaricare il pacchetto che contiene i progetti per questa esercitazione.  
   
     Per impostazione predefinita, nella cartella Downloads viene salvato un file con estensione ZIP. È necessario spostare il file ZIP in un percorso più breve, ad esempio creare una cartella C:\Tutorials per archiviare i file.  È quindi possibile estrarre i file contenuti nel file ZIP. Se si tenta di decomprimere i file dalla cartella Downloads il cui percorso è più lungo, si otterrà solo la Lezione 1.  
   
 3.  Creare una sottocartella al livello dell'unità radice, ad esempio C:\Tutorial, o a un livello immediatamente inferiore.  
   
-4.  Spostare il file **Analysis Services Tutorial SQL Server 2012.zip** nella sottocartella.  
+4.  Spostare il **adventure-works-multidimensionale-esercitazione-projects.zip** file nella sottocartella.  
   
 5.  Fare clic con il pulsante destro del mouse sul file e scegliere **Estrai tutto**.  
   
@@ -49,7 +52,7 @@ Per continuare l'esercitazione è necessario scaricare, estrarre, caricare ed el
   
 1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]scegliere **Chiudi soluzione** dal menu **File** per chiudere i file che non verranno usati.  
   
-2.  Scegliere **Apri** dal menu **File**e fare clic su **Progetto/Soluzione**.  
+2.  Scegliere **Apri** dal menu **File** e fare clic su **Progetto/Soluzione**.  
   
 3.  Passare al percorso in cui sono stati estratti i file di progetto dell'esercitazione.  
   

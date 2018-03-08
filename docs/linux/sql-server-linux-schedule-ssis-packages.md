@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: b2251e306098c2f4e9c0fe7a7cbe0200eddf8a4e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7543c17a0ac9a1014658f83f0c8595bff2cda608
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Esecuzione in Linux con cron del pacchetto di pianificazione di SQL Server Integration Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Quando si esegue SQL Server Integration Services (SSIS) e SQL Server in Windows, è possibile automatizzare l'esecuzione di pacchetti SSIS utilizzando SQL Server Agent. Quando si esegue SQL Server e SSIS in Linux, tuttavia, l'utilità di SQL Server Agent non è disponibile per pianificare i processi in Linux. È invece necessario utilizzare il servizio cron, che è ampiamente utilizzato su piattaforme Linux per automatizzare l'esecuzione del pacchetto.
 
@@ -78,3 +80,9 @@ Per ottenere una descrizione più dettagliata del formato di file crontab, utili
 Ecco un esempio parziale dell'output che consente di illustrare nell'esempio riportato in questo articolo:
 
 ![Descrizione parziale del formato crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
+
+## <a name="related-content-about-ssis-on-linux"></a>Contenuto correlato su SSIS in Linux
+-   [Estrarre, trasformare e caricare i dati in Linux con SSIS](sql-server-linux-migrate-ssis.md)
+-   [Installare SQL Server Integration Services (SSIS) in Linux](sql-server-linux-setup-ssis.md)
+-   [Configurare SQL Server Integration Services in Linux con ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Limitazioni e problemi noti per SSIS in Linux](sql-server-linux-ssis-known-issues.md)

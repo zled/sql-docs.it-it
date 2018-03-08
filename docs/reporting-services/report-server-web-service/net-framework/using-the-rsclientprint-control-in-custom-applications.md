@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: "31"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d641ec2dacd6f0296199e9f547bce6baa1c0cb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34becf7210dd08dbf663d99e6cf5cd1b7f57c190
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilizzo del controllo RSClientPrint in applicazioni personalizzate
   Il controllo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** consente la stampa sul lato client dei report visualizzati nel Visualizzatore HTML. Offre una finestra di dialogo **Stampa** per consentire all'utente di avviare un processo di stampa, visualizzare un'anteprima di un report, specificare le pagine da stampare e modificare i margini. Durante la stampa sul lato client, il server di report esegue il rendering del report con l'estensione per il rendering Immagine (EMF) e utilizza le funzionalità di stampa del sistema operativo per creare il processo di stampa e inviarlo a una stampante.  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="rsclientprint-properties"></a>Proprietà di RSClientPrint  
   
-|Proprietà|Tipo|LS|Valore predefinito|Description|  
+|Proprietà|Tipo|LS|Default|Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|LS|Impostazione del report|Recupera o imposta il margine sinistro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
 |MarginRight|Double|LS|Impostazione del report|Recupera o imposta il margine destro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  

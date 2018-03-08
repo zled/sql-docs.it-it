@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9a4d8e4383bfe7b961975771f196c8c6fe02a0c5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b795c6ab6d2106c781dbcd75cbf913dda85298d5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Esplorazione della flessibilità di un'area dati Tablix (Generatore report e SSRS)
 In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , quando si aggiunge una tabella, una matrice o un'area dati elenco dalla scheda Inserisci sulla barra multifunzione, si può partire con un modello iniziale per un'area dati Tablix. La scelta iniziale del modello, tuttavia, non è vincolante. Per continuare a sviluppare la modalità di visualizzazione dei dati è possibile aggiungere o rimuovere caratteristiche dell'area dati Tablix quali gruppi, righe e colonne.  

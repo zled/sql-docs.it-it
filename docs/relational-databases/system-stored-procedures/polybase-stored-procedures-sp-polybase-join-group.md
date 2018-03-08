@@ -1,5 +1,5 @@
 ---
-title: sp_polybase_join_group | Documenti Microsoft
+title: sp_polybase_join_group | Microsoft Docs
 ms.custom: 
 ms.date: 05/24/2016
 ms.prod: sql-non-specified
@@ -8,22 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sp_polybase_join_group
-helpviewer_keywords: PolyBase
+f1_keywords:
+- sp_polybase_join_group
+helpviewer_keywords:
+- PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5c9529c61e5f89b5bf049b36279cb8b7611af60
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7f6e4a77e5ce1341269bf9220c5d2a5305b4c314
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="polybase-stored-procedures---sppolybasejoingroup"></a>Stored procedure di PolyBase - sp_polybase_join_group
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +47,19 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *@head_node_address*= N'*head_node_address*'  
+ *@head_node_address* = N'*head_node_address*'  
  Il nome del computer che ospita il nodo head di SQL Server del gruppo di scalabilità orizzontale di PolyBase. *@head_node_address*è nvarchar (255).  
   
- *@dms_control_channel_port*= dms_control_channel_port  
+ *@dms_control_channel_port* = dms_control_channel_port  
  La porta in cui è in esecuzione il canale di controllo per il nodo head PolyBase Data Movement Service. *@dms_control_channel_port*è un unsigned int16. Il valore predefinito è **16450**.  
   
- *@head_node_sql_server_instance_name*= head_node_sql_server_instance_name  
+ *@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
  Il nome dell'istanza di SQL Server del nodo head del gruppo di scalabilità orizzontale di PolyBase. *@head_node_sql_server_instance_name*è nvarchar (16).  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="remarks"></a>Osservazioni  

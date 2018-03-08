@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], bitwise
 - bitwise operators
 - bit manipulations
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f9441cf26142e70340e23212991665f67fb7bf62
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b0706080c0a878987fab8d2cc5f0c1677f43309b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bitwise-operators-transact-sql"></a>Operatori bit per bit (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +42,7 @@ Converte l'intero 75 0100 1011 binario.
 |operatore|matematiche bit per bit|
 |---- |---- |
 |AND <br> Se il bit in qualsiasi posizione sono entrambi pari a 1, il risultato è 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|o <br> Se un bit in qualsiasi posizione è 1, il risultato è 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
+|OPPURE <br> Se un bit in qualsiasi posizione è 1, il risultato è 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
 |NOT  <br> Inverte il valore di bit in ogni posizione di bit. |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 Vedere gli argomenti seguenti:   
@@ -64,7 +66,7 @@ Vedere gli argomenti seguenti:
 |[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint**, o **tinyint**|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   

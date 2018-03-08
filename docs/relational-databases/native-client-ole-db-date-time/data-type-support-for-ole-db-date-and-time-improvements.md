@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d602336d96fe81a55655640efe48287c4959e0ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a3782a4cf615cc09d7358806647af40697c2a24
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Supporto tipo di dati per OLE DB data e ora miglioramenti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,8 +40,8 @@ ms.lasthandoff: 11/17/2017
 |datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |data|DBTYPE_DBDATE|133 (OleDb)|  
-|time|DBTYPE_DBTIME2|145 (SQLNCLI. h)|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (SQLNCLI. h)|  
+|time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
 ## <a name="data-formats-strings-and-literals"></a>Formati di dati: stringhe e valori letterali  
@@ -184,7 +184,7 @@ enum SQLVARENUM {
 |DBTYPE_DBDATE|data||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il DBCOLUMDESC *bScale* membro per determinare la precisione dei secondi frazionari.|  
 |DBTYPE_DBTIME2|**tempo**(p)|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il DBCOLUMDESC *bScale* membro per determinare la precisione dei secondi frazionari.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**DateTimeOffset**(p)|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il DBCOLUMDESC *bScale* membro per determinare la precisione dei secondi frazionari.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il DBCOLUMDESC *bScale* membro per determinare la precisione dei secondi frazionari.|  
   
  Quando un'applicazione specifica DBTYPE_DBTIMESTAMP in *wType*, può eseguire l'override del mapping al **datetime2** fornendo un nome di tipo in *pwszTypeName*. Se **datetime** è specificato, *bScale* deve essere 3. Se **smalldatetime** è specificato, *bScale* deve essere 0. Se *bScale* non è coerente con *wType* e *pwszTypeName*, viene restituito DB_E_BADSCALE.  
   

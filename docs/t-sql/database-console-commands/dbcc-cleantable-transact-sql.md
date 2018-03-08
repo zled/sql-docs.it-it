@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_CLEANTABLE_TSQL
 - DBCC CLEANTABLE
 - CLEANTABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - disk space [SQL Server], reclaiming
 - reclaiming space
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
-caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af5d7e7dab04bf6999b8c8085a4f154a4192d96c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: dbc034e7ed5dd1d6f4704376adf73d517d3b5c47
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Recupera lo spazio delle colonne a lunghezza variabile eliminate nelle tabelle o viste indicizzate.
@@ -59,7 +61,7 @@ DBCC CLEANTABLE
  *database_name* | *database_id* | 0  
  Database a cui appartiene la tabella in cui recuperare lo spazio. Se si specifica 0, viene utilizzato il database corrente. I nomi di database devono seguire le regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
- *TABLE_NAME* | *table_id* | *view_name*| *view_id*  
+ *table_name* | *table_id* | *view_name*| *view_id*  
  Tabella o vista indicizzata in cui recuperare lo spazio.  
   
  *batch_size*  
@@ -85,7 +87,7 @@ DBCC CLEANTABLE restituisce:
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Chiamante deve essere proprietario della tabella o vista indicizzata o essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database, o **db_ddladmin** ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
@@ -165,6 +167,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [Sys. allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
   
   

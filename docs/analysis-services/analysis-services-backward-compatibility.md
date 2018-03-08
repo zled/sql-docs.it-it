@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 33b53fb1f2015fe83e8803b10be6e981922d90ec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dbefbaac019a9e7b4193162384469524336cb430
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilità con le versioni precedenti di Analysis Services (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -67,11 +67,11 @@ Le funzionalità seguenti sono state deprecate in una versione precedente e non 
 |||  
 |-|-|  
 |**Funzionalità**|**Sostituzione o soluzione alternativa**|  
-|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Nessuno Questa funzionalità è stata deprecata in SQL Server 2005.|  
-|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Nessuno Questa funzionalità è stata deprecata in SQL Server 2005.|  
-|Hint di Query Optimizer NON_EMPTY_BEHAVIOR|Nessuno Questa funzionalità è stata deprecata in SQL Server 2008.|  
-|Assembly COM|Nessuno Questa funzionalità è stata deprecata in SQL Server 2008.|  
-|Proprietà intrinseca di cella CELL_EVALUATION_LIST|Nessuno Questa funzionalità è stata deprecata in SQL Server 2005.|  
+|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|nessuna. Questa funzionalità è stata deprecata in SQL Server 2005.|  
+|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|nessuna. Questa funzionalità è stata deprecata in SQL Server 2005.|  
+|Hint di Query Optimizer NON_EMPTY_BEHAVIOR|nessuna. Questa funzionalità è stata deprecata in SQL Server 2008.|  
+|Assembly COM|nessuna. Questa funzionalità è stata deprecata in SQL Server 2008.|  
+|Proprietà intrinseca di cella CELL_EVALUATION_LIST|nessuna. Questa funzionalità è stata deprecata in SQL Server 2005.|  
   
 > [!NOTE]  
 >  Gli annunci di funzionalità precedentemente deprecate di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] rimangono validi. Considerato che il codice che supporta tali funzionalità non è ancora stato eliminato dal prodotto, molte di queste funzionalità sono ancora presenti in questa versione. Mentre le funzionalità precedentemente deprecate potrebbero essere accessibili, che sono ancora considerate deprecate e potrebbero essere fisicamente rimosse dal prodotto in qualsiasi momento.  

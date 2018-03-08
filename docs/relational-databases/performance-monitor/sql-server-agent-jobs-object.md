@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Jobs object
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 077245e1ece089fa0a0b4ef98f2dd1fa6b9ec0d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f372eced96ca17d4fd547a11a56cfefd732394b9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-agent-jobs-object"></a>Oggetto Processi di SQL Server Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'oggetto prestazione **Processi** di SQL Server Agent include contatori delle prestazioni che forniscono informazioni relative ai processi di SQL Server Agent. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
   
  Nella tabella seguente sono illustrati i contatori di **SQLAgent:Processi** .  
   
-|Nome|Descrizione|  
+|nome|Description|  
 |----------|-----------------|  
 |**Processi attivi**|Questo contatore indica il numero di processi attualmente in esecuzione.|  
 |**Processi non riusciti**|Questo contatore indica il numero di processi chiusi con un errore.|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  Per ogni contatore nell'oggetto sono disponibili le istanze seguenti:  
   
-|Istanza|Descrizione|  
+|Istanza|Description|  
 |--------------|-----------------|  
 |**_Total**|Informazioni relative a tutti i processi.|  
 |**Avvisi**|Informazioni relative ai processi avviati da avvisi.|  
@@ -52,6 +52,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di processi](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
  [Utilizzo degli oggetti prestazioni](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
- [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

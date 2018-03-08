@@ -36,15 +36,15 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c7f10d27faf1c0fc658550f962c71c2419ff8607
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a44dc24eff94398ce3c33bab9d38ba58ab79ccaa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informazioni sulla cronologia e sull'intestazione del backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nel database **msdb** viene archiviata una cronologia completa di tutte le operazioni di backup e ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguite in un'istanza del server. In questo argomento vengono fornite informazioni generali sulle tabelle di cronologia di backup e ripristino e sulle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzate per accedere alla cronologia di backup. L'argomento tratta anche dell'utilità dell'elenco di file del database e del log delle transazioni e di quando utilizzare informazioni sull'intestazione supporto rispetto alle informazioni dell'intestazione del backup.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  Per gestire il rischio di perdita delle modifiche recenti alla cronologia di backup e ripristino, eseguire backup frequenti di **msdb** . Per informazioni sui database di sistema di cui è necessario eseguire il backup,vedere [Backup e ripristino di database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Tabelle di cronologia di backup e ripristino](#BnRHistoryTables)  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="BnRHistoryTables"></a> Tabelle di cronologia di backup e ripristino  
  In questa sezione vengono fornite informazioni generali sulle tabelle di cronologia in cui vengono archiviati i metadati di backup e ripristino nel database di sistema **msdb** .  
   
-|Tabella di cronologia|Descrizione|  
+|Tabella di cronologia|Description|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Include una riga per ogni file di dati o di log di cui viene eseguito il backup.|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|Include una riga per ciascun filegroup di un set di backup.|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  Per le istruzioni Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY e RESTORE VERIFYONLY è richiesta l'autorizzazione CREATE DATABASE. Questo requisito consente di proteggere i file di backup in modo da rendere le informazioni di backup più sicure rispetto alle versioni precedenti. Per informazioni su questa autorizzazione, vedere [GRANT - autorizzazioni per database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-|Istruzione di tipo informativo|Tabella di cronologia di backup|Descrizione|  
+|Istruzione di tipo informativo|Tabella di cronologia di backup|Description|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Restituisce un set di risultati con l'elenco dei file di database e del log contenuti nel set di backup specificato.<br /><br /> Per ulteriori informazioni, vedere "Elenco dei file di database e dei file del log delle transazioni" di seguito in questo argomento.|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Recupera tutte le informazioni sull'intestazione del backup per tutti i set di backup di un dispositivo specifico. Il risultato dell'esecuzione di RESTORE HEADERONLY è un set di risultati.<br /><br /> Per ulteriori informazioni, vedere "Visualizzazione delle informazioni sull'intestazione del backup" di seguito in questo argomento.|  

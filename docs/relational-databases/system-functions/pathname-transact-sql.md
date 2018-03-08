@@ -1,5 +1,5 @@
 ---
-title: PathName (Transact-SQL) | Documenti Microsoft
+title: PathName (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PathName_TSQL
 - PathName
-dev_langs: TSQL
-helpviewer_keywords: PathName FILESTREAM [SQL Server]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 029ba3a0508e3198b3b81e94a508783308a4257d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 880ee799e833a3181d3ee1a6eaa51b25f1456a58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +89,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. Lettura del percorso di un oggetto BLOB FILESTREAM  
  Nell'esempio seguente viene assegnato `PathName` a una variabile `nvarchar(max)`.  
   
-```tsql  
+```sql  
 DECLARE @PathName nvarchar(max);  
 SET @PathName = (  
     SELECT TOP 1 photo.PathName()  
@@ -98,7 +101,7 @@ SET @PathName = (
 ### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. Visualizzazione dei percorsi di oggetti BLOB FILESTREAM in una tabella  
  Nell'esempio seguente vengono creati e visualizzati i percorsi di tre oggetti BLOB FILESTREAM.  
   
-```tsql  
+```sql  
 -- Create a FILESTREAM-enabled database.  
 -- The c:\data directory must exist.  
 CREATE DATABASE PathNameDB  
@@ -152,8 +155,8 @@ DROP DATABASE PathNameDB;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dati BLOB (Binary Large Object) (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40; Transact-SQL &#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [Dati BLOB (Binary Large Object) &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Accesso ai dati FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

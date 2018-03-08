@@ -14,36 +14,22 @@ ms.topic: article
 helpviewer_keywords: primary keys [SQL Server], creating
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 388ea24b3ae23533db81025287d41ccdce10efbc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cbd22a0b9fdd7b33ff7d4ccf9999d7142acf4fb7
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-primary-keys"></a>Creazione di chiavi primarie
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Creazione di chiavi primarie](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx).
 
-  È possibile definire una chiave primaria in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con la creazione di una chiave primaria è possibile creare automaticamente un indice univoco corrispondente, cluster o non cluster.  
-  
- **Contenuto dell'argomento**  
-  
--   **Prima di iniziare:**  
-  
-     [Limitazioni e restrizioni](#Restrictions)  
-  
-     [Sicurezza](#Security)  
-  
--   **Per creare una chiave primaria:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
+  È possibile definire una chiave primaria in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con la creazione di una chiave primaria è possibile creare automaticamente un indice cluster univoco o un indice non cluster corrispondente in base a quanto specificato.  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -55,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per la creazione di una nuova tabella con una chiave primaria è richiesta l'autorizzazione CREATE TABLE per il database e l'autorizzazione ALTER per lo schema in cui viene creata la tabella.  
   
  Per la creazione di una chiave primaria in una tabella esistente è richiesta l'autorizzazione ALTER per la tabella.  
@@ -79,45 +65,68 @@ ms.lasthandoff: 11/17/2017
   
  Se si definisce una chiave composta, l'ordine delle colonne nella chiave primaria corrisponderà all'ordine delle colonne come visualizzate nella tabella. È comunque possibile modificare l'ordine delle colonne dopo la creazione della chiave primaria. Per altre informazioni, vedere [Modifica chiavi primarie](../../relational-databases/tables/modify-primary-keys.md).  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
-  
-#### <a name="to-create-a-primary-key-in-an-existing-table"></a>Per creare una chiave primaria in una tabella esistente  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+
+### <a name="to-create-a-primary-key-in-an-existing-table"></a>Per creare una chiave primaria in una tabella esistente  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio si crea una chiave primaria nella colonna `TransactionID`.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio si crea una chiave primaria nella colonna `TransactionID`.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER TABLE Production.TransactionHistoryArchive   
     ADD CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID);  
     GO  
-  
     ```  
   
-#### <a name="to-create-a-primary-key-in-a-new-table"></a>Per creare una chiave primaria in una nuova tabella  
+### <a name="to-create-a-primary-key-in-a-new-table"></a>Per creare una chiave primaria in una nuova tabella  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio si crea una tabella e si definisce una chiave primaria nella colonna `TransactionID`.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio si crea una tabella e si definisce una chiave primaria nella colonna `TransactionID`.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE TABLE Production.TransactionHistoryArchive1  
     (  
-       TransactionID int NOT NULL,  
+       TransactionID int IDENTITY (1,1) NOT NULL,  
        CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID)  
     );  
     GO  
-  
     ```  
+
+### <a name="to-create-a-primary-key-with-nonclustered-index-in-a-new-table"></a>Per creare una chiave primaria con un indice non cluster in una nuova tabella  
   
-     Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).  
+1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-###  <a name="TsqlExample"></a>  
+2.  Sulla barra Standard fare clic su **Nuova query**.  
+  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio si crea una tabella e si definisce una chiave primaria nella colonna `CustomerID` e un indice cluster in `TransactionID`.  
+  
+    ```sql  
+    USE AdventureWorks2012;  
+    GO  
+    CREATE TABLE Production.TransactionHistoryArchive1  
+    (  
+       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
+       TransactionID int IDENTITY (1,1) NOT NULL,  
+       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)  
+    );  
+    GO  
+
+    -- Now add the clustered index
+    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
+    GO
+    ```  
+
+## <a name="see-also"></a>Vedere anche    
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
+[table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)    

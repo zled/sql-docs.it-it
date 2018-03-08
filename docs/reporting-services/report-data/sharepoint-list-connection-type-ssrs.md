@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2dc5ac094612cbe2566b505fe4088d02762ae853
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ba9625e6d50c14ee47070b4980e6b376cc68e738
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
 
@@ -52,9 +50,9 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
 ||Credenziali supportate|Autenticazione di Windows in modalità classica|* Autenticazione attestazioni|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Sì|  
-||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|Sì|No|  
-|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|No<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
-||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|Sì|No<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
+||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|Sì|no|  
+|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|no<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
+||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|Sì|no<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
   
  * Autenticazione di Windows, autenticazione basata su form (FBA), token SAML (Secure Application Markup Language), altri provider di identità o una combinazione di più provider di autenticazione tra quelli indicati in precedenza.  
   
@@ -63,9 +61,9 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
 ||Credenziali supportate|Autenticazione di Windows in modalità classica|* Autenticazione attestazioni|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Sì|  
-||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|No|No|  
-|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|No<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
-||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|No|No<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
+||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|no|no|  
+|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|no<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
+||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|no|no<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
   
  * Autenticazione di Windows, autenticazione basata su form (FBA), token SAML (Secure Application Markup Language), altri provider di identità o una combinazione di più provider di autenticazione tra quelli indicati in precedenza.  
   

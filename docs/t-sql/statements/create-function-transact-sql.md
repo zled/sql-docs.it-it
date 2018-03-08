@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE FUNCTION
 - CREATE_FUNCTION_TSQL
 - FUNCTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - invoking functions
 - extended stored procedures [SQL Server], functions
@@ -36,16 +38,16 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: "162"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e570da6faf04bb8aef58829911cdf19e7f5951c9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -346,15 +348,15 @@ RETURNS return_data_type
  Specifica l'assembly e il metodo a cui dovrà fare riferimento il nome della funzione creata.  
   
 -   *nome_assembly* -deve corrispondere a un valore di `name` colonna di   
-    `SELECT * FROM sys.assemblies;`.  
+    `SELECT * FROM sys.assemblies;`(Indici per tabelle con ottimizzazione per la memoria).  
     Si tratta del nome usato nell'istruzione `CREATE ASSEMBLY`.  
   
 -   *CLASS_NAME* -deve corrispondere a un valore di `assembly_name` colonna di  
-    `SELECT * FROM sys.assembly_modules;`.  
+    `SELECT * FROM sys.assembly_modules;`(Indici per tabelle con ottimizzazione per la memoria).  
     Spesso il valore contiene un punto incorporato. In questi casi, l'istruzione Transact-SQL sintassi richiede che il valore deve essere delimitata con una coppia di parentesi quadre retta [] o con una coppia di virgolette doppie "".  
   
 -   *nome_metodo* -deve corrispondere a un valore di `method_name` colonna di   
-    `SELECT * FROM sys.assembly_modules;`.  
+    `SELECT * FROM sys.assembly_modules;`(Indici per tabelle con ottimizzazione per la memoria).  
     Il metodo deve essere statico.  
   
  In un tipico esempio di MyFood.DLL, in cui tutti i tipi sono nello spazio dei nomi MyFood, il valore `EXTERNAL NAME` potrebbe essere:   
@@ -656,7 +658,7 @@ RETURNS return_data_type
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Visualizza le informazioni sui parametri definiti nelle funzioni definite dall'utente.|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|Visualizza gli oggetti sottostanti a cui fa riferimento una funzione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione CREATE FUNCTION nel database e dell'autorizzazione ALTER per lo schema in cui la funzione è in fase di creazione. Se per la funzione viene specificato un tipo definito dall'utente, è necessario disporre dell'autorizzazione EXECUTE per tale tipo.  
   
 ## <a name="examples"></a>Esempi  
@@ -668,7 +670,7 @@ RETURNS return_data_type
   
  Di seguito è riportata la chiamata della funzione, in cui `DATEFIRST` è impostato su `1`.  
   
-```tsql
+```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
 RETURNS int  
 WITH EXECUTE AS CALLER  
@@ -703,7 +705,7 @@ ISO Week
 ### <a name="b-creating-an-inline-table-valued-function"></a>B. Creazione di una funzione inline con valori di tabella  
  Nell'esempio seguente viene restituita una funzione con valori di tabella inline nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Vengono restituite tre colonne `ProductID`, `Name` e l'aggregazione dei totali year-to-date per negozio come `YTD Total` per ogni prodotto venduto al Negozio.  
   
-```tsql  
+```sql  
 CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  
 RETURNS TABLE  
 AS  
@@ -722,14 +724,14 @@ GO
 
  Per richiamare la funzione, eseguire la query seguente.    
 
-```tsql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
 ### <a name="c-creating-a-multi-statement-table-valued-function"></a>C. Creazione di una funzione a istruzioni multiple con valori di tabella  
  Nell'esempio seguente viene creata la funzione con valori di tabella `fn_FindReports(InEmpID)` nel database AdventureWorks2012. Se si specifica un ID dipendente valido, la funzione restituisce una tabella che include tutti i dipendenti che hanno rapporti diretti o indiretti con il dipendente specificato. La funzione utilizza un'espressione di tabella comune ricorsiva (CTE, Common Table Expression) per restituire l'elenco gerarchico dei dipendenti. Per ulteriori informazioni sulle espressioni CTE ricorsive, vedere [con common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
 RETURNS @retFindReports TABLE   
 (  
@@ -779,7 +781,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 DECLARE @SamplesPath nvarchar(1024);  
 -- You may have to modify the value of this variable if you have  
 -- installed the sample in a location other than the default location.  
@@ -803,7 +805,7 @@ GO
   
 ### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. Visualizzazione della definizione di [!INCLUDE[tsql](../../includes/tsql-md.md)] funzioni definite dall'utente  
   
-```tsql  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o ON m.object_id = o.object_id   

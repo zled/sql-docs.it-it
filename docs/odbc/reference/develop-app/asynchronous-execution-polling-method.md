@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67943839b7e7425d22ab32251fd1993faf9552eb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 357ee77565e711e886184d803540b5745edb1f25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-execution-polling-method"></a>Esecuzione asincrona (metodo di Polling)
 Prima di ODBC 3.8 e Windows 7 SDK, le operazioni asincrone sono state consentite solo su funzioni a istruzioni. Per ulteriori informazioni, vedere il **esecuzione asincrona delle operazioni istruzione**, più avanti in questo argomento.  
@@ -219,7 +219,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 ### <a name="description"></a>Description  
  Nell'esempio seguente viene illustrato come utilizzare **SQLSetConnectAttr** per abilitare l'esecuzione asincrona per le funzioni correlate alla connessione.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 BOOL AsyncConnect (SQLHANDLE hdbc)   
@@ -273,7 +273,7 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
 ### <a name="description"></a>Description  
  Questo esempio illustra le operazioni di commit asincrono. Operazioni di rollback possono essere eseguite anche in questo modo.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 BOOL AsyncCommit ()   

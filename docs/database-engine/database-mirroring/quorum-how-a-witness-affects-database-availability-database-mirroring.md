@@ -26,13 +26,13 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dae91182bc6cbfc48f06ebfa8b079969a088e86b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2f01ca52594ddf49dc65f48099822b2a61a92f11
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database (mirroring del database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ogni volta che viene impostato un server di controllo del mirroring per una sessione di mirroring del database, è necessario che esista il *quorum*. Il quorum è una relazione esistente quando due o più istanze del server in una sessione di mirroring del database sono connesse l'una all'altra. In genere, un quorum coinvolge tre istanze del server interconnesse. Quando è impostato un server di controllo del mirroring, il quorum è necessario per rendere disponibile il database. Progettato per la modalità a protezione elevata con failover automatico, il quorum garantisce che un database sia di proprietà di un singolo partner alla volta.  

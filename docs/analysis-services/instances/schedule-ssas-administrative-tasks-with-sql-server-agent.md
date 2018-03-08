@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4842c80e3ac4cd34ec419e1577f7a2354a2ae34a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d8872cadbcbd7da67212fa26417ac66debc5f79c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Pianificare attività amministrative SSAS con SQL Server Agent
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Usa il servizio Agente SQL Server, è possibile pianificare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] attività amministrative da eseguire nell'ordine e gli orari in cui è necessario. Le attività pianificate consentono di automatizzare processi eseguiti in cicli regolari o prevedibili. È possibile pianificare l'esecuzione di attività amministrative, ad esempio l'elaborazione di cubi, nei periodi in cui l'attività aziendale è ridotta. È inoltre possibile determinare l'ordine di esecuzione delle attività creando passaggi di processo in un processo di SQL Server Agent. È possibile ad esempio elaborare un cubo ed eseguirne quindi un backup.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Usando il servizio SQL Server Agent, è possibile pianificare l'esecuzione delle attività amministrative di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nell'ordine e agli orari necessari. Le attività pianificate consentono di automatizzare processi eseguiti in cicli regolari o prevedibili. È possibile pianificare l'esecuzione di attività amministrative, ad esempio l'elaborazione di cubi, nei periodi in cui l'attività aziendale è ridotta. È inoltre possibile determinare l'ordine di esecuzione delle attività creando passaggi di processo in un processo di SQL Server Agent. È possibile ad esempio elaborare un cubo ed eseguirne quindi un backup.  
   
  I passaggi di processo consentono di controllare il flusso dell'esecuzione. Se uno dei processi ha esito negativo, è possibile configurare SQL Server Agent per continuare a eseguire le attività rimanenti o per arrestare l'esecuzione. È inoltre possibile configurare SQL Server Agent per l'invio di notifiche relative all'esito positivo o negativo dell'esecuzione di un processo.  
   
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="prerequisites"></a>Prerequisiti  
  È necessario che il servizio SQL Server Agent sia installato.  
   
- Per impostazione predefinita, i processi vengono eseguiti con l'account del servizio. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l'account predefinito per SQL Server Agent è NT Service\SQLAgent$\<instancename >. Per eseguire un backup o un'attività di elaborazione, è necessario utilizzare un account amministratore di sistema nell'istanza di Analysis Services. Per altre informazioni, vedere [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Per impostazione predefinita, i processi vengono eseguiti con l'account del servizio. L'account predefinito per SQL Server Agent è NT Service\SQLAgent$\<instancename >. Per eseguire un backup o un'attività di elaborazione, è necessario utilizzare un account amministratore di sistema nell'istanza di Analysis Services. Per altre informazioni, vedere [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
  È consigliabile utilizzare un database di test. È possibile distribuire il database di esempio multidimensionale AdventureWorks o un progetto dell'esercitazione multidimensionale di Analysis Services da utilizzare in questa procedura dettagliata. Per altre informazioni, vedere [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../../analysis-services/install-sample-data-and-projects.md).  
   

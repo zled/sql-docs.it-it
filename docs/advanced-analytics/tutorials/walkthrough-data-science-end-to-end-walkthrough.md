@@ -7,23 +7,26 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 9d6654109e3cb5ff2e2c174dc37fd02bfc02dcb3
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: eee99c95b17438fa810501b653a83538e658b205
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Procedura dettagliata di analisi scientifica dei dati end-to-end per R e SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questa procedura dettagliata, si sviluppa una soluzione end-to-end per la modellazione predittiva in base a Microsoft R con SQL Server 2016 o SQL Server 2017.
 
@@ -57,7 +60,7 @@ Questa procedura dettagliata è destinata agli sviluppatori di R o SQL. Offre un
 + Tutti gli script SQL e R sono inclusi.
 + Si potrebbe essere necessario modificare le stringhe di script, per l'esecuzione nell'ambiente in uso. È possibile farlo con qualsiasi editor di codice, ad esempio [codice di Visual Studio](https://code.visualstudio.com/Download).
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
 + È necessario avere accesso a un'istanza di SQL Server 2016, o una versione di valutazione di SQL Server 2017.
 + [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] deve essere installato in almeno un'istanza del computer SQL Server.

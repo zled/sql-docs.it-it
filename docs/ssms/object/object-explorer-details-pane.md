@@ -23,13 +23,13 @@ ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bf7fdbd0c791ae6302774116769b91fcd4a6ee3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8798c67cc730cef471e28de51ae27213bc04565d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="object-explorer-details-pane"></a>Riquadro Dettagli di Esplora oggetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dettagli Esplora oggetti è un componente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] che fornisce una vista tabulare di tutti gli oggetti nel server e offre un'interfaccia utente che consente di gestire tali oggetti. Le funzionalità di Esplora oggetti variano leggermente in base al tipo di server, ma in genere comprendono le funzionalità di sviluppo per i database e di gestione per tutti i tipi di server.  

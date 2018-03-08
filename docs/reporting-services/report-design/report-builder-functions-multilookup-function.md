@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3b5c2254a10b9effafd6ac0640ddc5233a3efd8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a935d3281eae92baacc6741d7e276b3046f2ba
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Funzioni di Generatore report - Funzione Multilookup
   Viene restituito il set di valori di prima corrispondenza per il set di nomi specificato da un set di dati che contiene coppie nome/valore.  
@@ -54,7 +52,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>Return  
  Restituisce **VariantArray**o **Nothing** se non viene rilevata alcuna corrispondenza.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Usare **Multilookup** per recuperare un set di valori da un set di dati per coppie nome/valore in ciascuna delle quali è presente una relazione uno-a-uno. **MultiLookup** è l'equivalente alla chiamata di **Lookup** per un set di nomi o chiavi. Per un parametro multivalore basato su identificatori di chiave primaria, ad esempio, è possibile utilizzare la funzione **Multilookup** in un'espressione in una casella di testo di una tabella per recuperare i valori associati da un set di dati non associato al parametro o alla tabella.  
   
  Tramite la funzione**Multilookup** vengono effettuate le operazioni seguenti:  
@@ -98,7 +96,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Nel set di dati CategoryNames sono contenuti l'identificatore e il nome della categoria, come illustrato nella tabella seguente.  
   
-|ID|Nome|  
+|ID|nome|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  
@@ -121,7 +119,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 |ColorID|Colore|  
 |-------------|-----------|  
 |1|Red|  
-|2|Blue|  
+|2|Blu|  
 |3|Green|  
   
  Si supponga che il parametro multivalore *MyColors* non sia associato a un set di dati per i valori disponibili. I valori predefiniti per il parametro sono impostati su 2 e 3. L'espressione seguente, se inserita in una casella di testo all'interno di una tabella, consente di concatenare i valori selezionati per il parametro in un elenco delimitato da virgole e visualizza "Blue, Green".  

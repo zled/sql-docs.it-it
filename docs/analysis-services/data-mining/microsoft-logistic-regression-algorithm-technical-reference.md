@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +21,20 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41ce8bab5404398328cef0a769c2163805940e44
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fd3dee20e57342542e271cfb3f153b1c35c0764d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Logistic Regression
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Logistic Regression è una variante del [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network, in cui il *HIDDEN_NODE_RATIO* parametro è impostato su 0. Questa impostazione creerà un modello di rete neurale che non contiene un livello nascosto e che pertanto è equivalente alla regressione logistica.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression è una variante dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, in cui il parametro *HIDDEN_NODE_RATIO* è impostato su 0. Questa impostazione creerà un modello di rete neurale che non contiene un livello nascosto e che pertanto è equivalente alla regressione logistica.  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Implementazione dell'algoritmo Microsoft Logistic Regression  
  Si supponga che la colonna stimabile contenga solo due stati e che tuttavia si intenda eseguire comunque un'analisi di regressione, stabilendo una relazione tra le colonne di input e la probabilità che la colonna stimabile includa uno stato specifico. Nel diagramma seguente sono illustrati i risultati che si otterranno se si assegnano i valori 1 e 0 agli stati della colonna stimabile, si calcola la probabilità che la colonna contenga uno stato specifico e si esegue una regressione lineare in base a una variabile di input.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
  Si noti che la curva non si sposta mai su valori maggiori di 1 o minori di 0. È possibile utilizzare la regressione logistica per descrivere le colonne di input significative ai fini della determinazione dello stato della colonna stimabile.  
   
-### <a name="feature-selection"></a>Selezione funzionalità  
+### <a name="feature-selection"></a>Selezione caratteristiche  
  Tutti gli algoritmi di data mining di Analysis Services utilizzano automaticamente la caratteristica di selezione degli attributi per migliorare l'analisi e ridurre il carico di elaborazione. Il metodo utilizzato per la caratteristica di selezione degli attributi in un modello di regressione logistica dipende dal tipo di dati dell'attributo. Poiché è basata sull'algoritmo Microsoft Neural Network, la regressione logistica utilizza un subset dei metodi relativi alla caratteristica di selezione degli attributi che si applicano alle reti neurali. Per altre informazioni, vedere [Selezione delle funzionalità &#40;Data mining&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md).  
   
 ### <a name="scoring-inputs"></a>Valutazione degli input  
@@ -163,7 +162,7 @@ WHERE NODE_TYPE = 23
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Esempi di Query del modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Contenuto del modello di data mining per i modelli di regressione logistica &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

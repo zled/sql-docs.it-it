@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44f3131bff34d35b334495c7c718eb513f5d88bf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provider Microsoft OLE DB per ODBC Panoramica
 Per un programmatore di ADO o RDS, un mondo ideale sarebbe uno in cui ogni tipo di dati origine espone un'interfaccia OLE DB, in modo che ADO è possibile chiamare direttamente nell'origine dati. Anche se un numero sempre maggiore di fornitori di database siano implementando le interfacce OLE DB, alcune origini dati non sono ancora esposte in questo modo. Tuttavia, è possano accedere la maggior parte dei sistemi DBMS attualmente in uso tramite ODBC.
@@ -145,7 +146,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 "{ [ ? = ] call procedure [ ( ? [, ? [ , … ]] ) ] }"
 ```
 
- Ogni **?** fa riferimento a un oggetto di [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) insieme. Il primo **?** riferimenti **parametri**(0), alla successiva **?** riferimenti **parametri**(1), e così via.
+ Each **?** fa riferimento a un oggetto di [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) insieme. Il primo **?** riferimenti **parametri**(0), alla successiva **?** riferimenti **parametri**(1), e così via.
 
  I parametri di riferimento sono facoltativi e dipendono dalla struttura della stored procedure. Se si desidera chiamare una stored procedure che non definisce alcun parametro, la stringa avrà un aspetto simile al seguente:
 
@@ -184,12 +185,12 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
-|[Segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[Filtra](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[Tipo di blocco](../../../ado/reference/ado-api/locktype-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
@@ -210,20 +211,20 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Sì|Sì|Sì|Sì|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sì|Sì|Sì|Sì|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sì|Sì|Sì|Sì|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|no|no|Sì|Sì|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|no|No|Sì|Sì|
 |[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Sì|Sì|Sì|Sì|
 |[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|Sì|Sì|Sì|
 |[Sposta](../../../ado/reference/ado-api/move-method-ado.md)|Sì|Sì|Sì|Sì|
-|[Metodo MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|Sì|Sì|Sì|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|Sì|Sì|Sì|
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|no|Sì|Sì|Sì|
 |[Metodo MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|Sì|Sì|Sì|
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|no|Sì|Sì|Sì|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sì|Sì|Sì|Sì|
-|[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
+|[Apertura](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sì|Sì|Sì|Sì|
-|[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|no|no|Sì|Sì|
-|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Sì|Sì|Sì|Sì|
+|[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|no|No|Sì|Sì|
+|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Sì|Sì|Sì|Sì|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Sì|Sì|Sì|Sì|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sì|Sì|Sì|Sì|
 
@@ -248,8 +249,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Definizione di colonna|DBPROP_COLUMNDEFINITION|
 |Timeout di connessione|DBPROP_INIT_TIMEOUT|
 |Catalogo corrente|DBPROP_CURRENTCATALOG|
-|origine dati|DBPROP_INIT_DATASOURCE|
-|Nome origine dati|VALORE DBPROP_DATASOURCENAME|
+|Data Source|DBPROP_INIT_DATASOURCE|
+|Nome origine dati|DBPROP_DATASOURCENAME|
 |Modello di Threading oggetto origine dei dati|DBPROP_DSOTHREADMODEL|
 |Nome DBMS|DBPROP_DBMSNAME|
 |Versione DBMS|DBPROP_DBMSVER|
@@ -266,7 +267,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Dimensioni massime delle righe|DBPROP_MAXROWSIZE|
 |Dimensioni massime riga con BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Numero massimo di tabelle in SELECT|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|Elabora partizione/i|DBPROP_INIT_MODE|
 |Più set di parametri|DBPROP_MULTIPLEPARAMSETS|
 |Più risultati|DBPROP_MULTIPLERESULTS|
 |Più oggetti di archiviazione|DBPROP_MULTIPLESTORAGEOBJECTS|

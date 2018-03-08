@@ -6,26 +6,28 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 51e8e66f-a0a5-4e96-aa71-f5c870e6d0d4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3f26a5850ffe3245029486a2be4406790e36b6ab
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1ca2c7227163816092e7248fe20cb377fc03ac03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-and-run-r-scripts-sql-and-r-deep-dive"></a>Creare ed eseguire gli script R (SQL e R approfondimento)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo fa parte dell'esercitazione approfondimento di analisi scientifica dei dati, su come usare [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
@@ -100,7 +102,7 @@ Per verificare il funzionamento del contesto di calcolo, provare la generazione 
 
  *numIntlTrans     4.0868    8.726757 0      60 10000    0           100000*
 
- *creditLine 9.1856 9.870364 1 75 10000 0 100000*
+ *creditLine       9.1856    9.870364 1      75 10000    0          100000*
 
  *Conteggi delle categorie per sesso*
 

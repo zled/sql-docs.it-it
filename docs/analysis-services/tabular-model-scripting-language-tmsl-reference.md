@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c700d7f8-7e01-4052-a9ad-8200dd4009f2
@@ -19,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6a897c2cc561d5a313f2f7c7b30d987c5ad21d01
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: de637476cd0aa2577c850062dffebc0e4fc66238
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>Scripting Language (TMSL) riferimento del modello tabulare
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Tabular Model Scripting Language (TMSL) è la sintassi di definizione del modello di comando e oggetti per i database modello tabulare di Analysis Services a livello di compatibilità 1200 o superiore. TMSL comunica con Analysis Services tramite il protocollo XMLA, in cui il [XMLA. Eseguire](../analysis-services/xmla/xml-elements-methods-execute.md) metodo accetta sia basata su JSON **istruzione** script TMSL, nonché gli script tradizionale basato su XML in [Analysis Services Scripting Language &#40; ASSL per XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Tabular Model Scripting Language (TMSL) è la sintassi di definizione del modello di comando e oggetti per i database modello tabulare di Analysis Services a livello di compatibilità 1200 o superiore. TMSL comunica con Analysis Services tramite il protocollo XMLA, in cui il [XMLA. Eseguire](../analysis-services/xmla/xml-elements-methods-execute.md) metodo accetta sia basata su JSON **istruzione** script TMSL, nonché gli script tradizionale basato su XML in [Analysis Services Scripting Language &#40; ASSL per XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  Gli elementi chiave del linguaggio TMSL, tra cui:  
   

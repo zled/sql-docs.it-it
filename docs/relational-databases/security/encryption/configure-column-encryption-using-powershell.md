@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: powershell
+ms.technology:
+- powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f50d2a739aace9dbe433bda79d4827020fa8cd1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b558ecb78086123cff3c65ae95446fb1a30f9cf4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Configurare la crittografia della colonna tramite PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/17/2017
 Questo articolo descrive la procedura per la configurazione Always Encrypted di destinazione per le colonne del database tramite il cmdlet [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) nel modulo di PowerShell *SqlServer* . Il cmdlet **Set-SqlColumnEncryption** modifica sia lo schema del database di destinazione che i dati archiviati nelle colonne selezionate. I dati archiviati in una colonna possono essere crittografati, crittografati nuovamente o decrittografati, a seconda delle impostazioni di crittografia di destinazione specificate per le colonne e la configurazione di crittografia corrente.
 Per altre informazioni sul supporto di Always Encrytped nel modulo di PowerShell SqlServer, vedere [Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per impostare la configurazione di crittografia di destinazione, è necessario assicurarsi che:
 - nel database sia configurata una chiave di crittografia della colonna (se si vuole crittografare o crittografare nuovamente una colonna). Per i dettagli, vedere [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)(Configurare le chiavi Always Encrypted tramite PowerShell).
@@ -61,10 +62,10 @@ Il cmdlet **Set-SqlColumnEncryption** , usato per configurare la crittografia pe
 
 Attività  |Articolo  |Accede alle chiavi in testo non crittografato o all'archivio delle chiavi  |Accede al database   
 ---|---|---|---
-Passaggio 1. Avviare un ambiente PowerShell e importare il modulo SqlServer. | [Importare il modulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
-Passaggio 2. Connettersi al server e al database | [Connessione a un database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Sì
-Passaggio 3. Eseguire l'autenticazione ad Azure, se la chiave master della colonna, che protegge la chiave di crittografia della colonna da ruotare, è archiviata nell'insieme di credenziali delle chiavi di Azure | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sì | No
-Passaggio 4. Costruire una matrice di oggetti SqlColumnEncryptionSettings, uno per ogni colonna del database che si vuole crittografare, crittografare nuovamente o decrittografare. In PowerShell SqlColumnMasterKeySettings è un oggetto presente in memoria che specifica lo schema di crittografia di destinazione per una colonna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | No | No
+Passaggio 1. Avviare un ambiente PowerShell e importare il modulo SqlServer. | [Importare il modulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | no | no
+Passaggio 2. Connettersi al server e al database | [Connessione a un database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | no | Sì
+Passaggio 3. Eseguire l'autenticazione ad Azure, se la chiave master della colonna, che protegge la chiave di crittografia della colonna da ruotare, è archiviata nell'insieme di credenziali delle chiavi di Azure | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sì | no
+Passaggio 4. Costruire una matrice di oggetti SqlColumnEncryptionSettings, uno per ogni colonna del database che si vuole crittografare, crittografare nuovamente o decrittografare. In PowerShell SqlColumnMasterKeySettings è un oggetto presente in memoria che specifica lo schema di crittografia di destinazione per una colonna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | no | no
 Passaggio 5. Impostare la configurazione di crittografia desiderata, specificata nella matrice di oggetti SqlColumnMasterKeySettings creata nel passaggio precedente. Una colonna viene crittografata, crittografata nuovamente o decrittografata a seconda delle impostazioni di destinazione e la configurazione di crittografia corrente della colonna stessa.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Nota:** questo passaggio può richiedere molto tempo. Le applicazioni non potranno accedere alle tabelle durante l'intera operazione o una parte di essa, a seconda dell'approccio (online o offline) selezionato. | Sì | Sì
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Crittografare colonne con l'approccio offline - Esempio

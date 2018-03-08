@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3ab63b576841aef6dec553ecc0c07ccec010319
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 508b89f5ff60b5cf64a03d167bf1ad4476edb734
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgettypeinfo-function"></a>Funzione SQLGetTypeInfo
 **Conformità**  
@@ -113,7 +113,7 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo** potrebbe non restituire tutti i tipi di dati. Ad esempio, un driver potrebbe non restituire i tipi di dati definito dall'utente. Le applicazioni possono utilizzare qualsiasi tipo di dati valido, indipendentemente dal fatto se viene restituito da **SQLGetTypeInfo**. I tipi di dati restituiti da **SQLGetTypeInfo** sono quelli supportati dall'origine dati. Essi devono essere utilizzati nelle istruzioni Data Definition Language (DDL). I driver possono restituire dati di set di risultati utilizzando tipi di dati diversi dai tipi restituiti dalla **SQLGetTypeInfo**. Nella creazione di set di risultati per una funzione di catalogo, il driver potrebbe utilizzare un tipo di dati che non è supportato dall'origine dati.  
   
-|Nome colonna|Colonna<br /><br /> number|Tipo di dati|Commenti|  
+|Nome colonna|colonna<br /><br /> number|Tipo di dati|Commenti|  
 |-----------------|-----------------------|---------------|--------------|  
 |TYPE_NAME (ODBC 2.0)|1|Varchar non NULL|Nome del tipo di dati dipende dall'origine dati. ad esempio, "Char ()", "Varchar ()", "MONEY", "LONG VARBINARY" o "CHAR () FOR BIT DATA". Le applicazioni devono utilizzare il nome specificato nel **CREATE TABLE** e **ALTER TABLE** istruzioni.|  
 |DATA_TYPE (ODBC 2.0)|2|Smallint non NULL|Tipo di dati SQL. Può trattarsi di un tipo di dati SQL ODBC o un tipo di dati specifici del driver SQL. Per i tipi di dati datetime o intervallo, questa colonna restituisce il tipo di dati conciso (ad esempio SQL_TYPE_TIME o SQL_INTERVAL_YEAR_TO_MONTH). Per un elenco dei tipi di dati ODBC SQL validi, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) appendice d: tipo di dati. Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.|  

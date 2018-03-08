@@ -3,12 +3,13 @@ title: Guida sensibile al contesto di Server registrati | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd228d9af6de24bc8e57a1ae640af9fa0e613695
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fec25c98a971d3f38d4113042d50a25469e56777
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="registered-servers-f1-help"></a>Guida sensibile al contesto di Server registrati
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questa sezione contiene gli argomenti della Guida sensibile al contesto per il componente Server registrati di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Descrive le varie opzioni.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Questa sezione contiene gli argomenti della Guida sensibile al contesto per il componente Server registrati di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Descrive le varie opzioni.
   
  Per informazioni su Server registrati e collegamenti alle operazioni correlate, vedere l'argomento [Registrazione di server](../../tools/sql-server-management-studio/register-servers.md) . 
  

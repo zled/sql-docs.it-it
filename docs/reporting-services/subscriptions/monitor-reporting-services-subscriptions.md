@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,13 +21,13 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 caps.latest.revision: "36"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 642ad2cf385ce5d880e5f62d58694ce1f79d34fd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4ba511d35e7358093839df3daa415d767fd2c550
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorare le sottoscrizioni di Reporting Services
   È possibile monitorare le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dall'interfaccia utente, da Windows PowerShell o dai file di log. Le opzioni disponibili per il monitoraggio dipendono dalla modalità del server di report in esecuzione.  
@@ -106,7 +104,7 @@ ms.lasthandoff: 12/05/2017
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|Data|Process|Area|Category|Level|Correlation|Message|  
+|date|Process|Area|Category|Level|Correlation|Message|  
 |5/21/2014 14:34:06:15|App Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Report Server Email Extension|Unexpected|(empty)|**Error sending email.** Exception: System.Net.Mail.SmtpException: Mailbox unavailable. The server response was: 5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> Usare PowerShell per monitorare le sottoscrizioni  

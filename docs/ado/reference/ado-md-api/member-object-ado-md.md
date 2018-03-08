@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Member
-helpviewer_keywords: Member object [ADO MD], members
+f1_keywords:
+- Member
+helpviewer_keywords:
+- Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6624e44343ef680c317338ea1fe32ead2aa0d9d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c7b34e45ff23a1a71c1a45b1190d923e94328154
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="member-object-ado-md"></a>Oggetto membro (ADO MD)
 Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro di un livello o un membro di una posizione lungo un asse di un set di celle.  
@@ -72,7 +75,7 @@ Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro
   
  Il **proprietà** insieme contiene le proprietà specifiche del provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione del provider per un elenco completo delle proprietà disponibili.  
   
-|nome|Description|  
+|Nome|Description|  
 |----------|-----------------|  
 |CatalogName|Il nome del catalogo a cui appartiene il cubo.|  
 |ChildrenCardinality|Numero di elementi figlio del membro.|  
@@ -87,7 +90,7 @@ Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro
 |MemberName|Nome del membro.|  
 |MemberOrdinal|Il numero ordinale del membro.|  
 |MemberType|Tipo del membro.|  
-|MemberUniqueName + + +|Nome univoco del membro.|  
+|MemberUniqueName|Nome univoco del membro.|  
 |ParentCount|Il conteggio del numero di elementi padre del membro.|  
 |ParentLevel|Il numero del livello del padre del membro.|  
 |ParentUniqueName|Nome univoco del padre membro.|  

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 141f7fb3b0645ccc32fbee78fa40c403afad5726
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3087497e8c3757002bc6b80556499ad7c096d51c
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="column-properties-general-page"></a>Proprietà colonna (pagina Generale)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
  **Espressione calcolo valore**  
  Indica l'istruzione utilizzata per il calcolo dell'espressione del testo della colonna. Per altre informazioni, vedere [Specificare le colonne calcolate in una tabella](../../relational-databases/tables/specify-computed-columns-in-a-table.md).  
   
- **Identity**  
+ **Identità**  
  Indica se la colonna è la colonna Identity per la tabella. I valori possibili sono **True** e **False**.  
   
  **Valore di inizializzazione Identity**  

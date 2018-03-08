@@ -8,9 +8,7 @@ ms.service:
 ms.component: application-integration
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 caps.latest.revision: "32"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1706d9ad033ccb1517e73ebee6d13f0d749b9f9e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f82228cfa6f52195c7d0836fe557aad9da068f2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrazione di Reporting Services tramite l'accesso con URL
   L'accesso con URL consente di accedere ai report tramite un URL del server di report. Una richiesta URL consente di accedere a un server di report specifico, nonché ai report, alle risorse e agli altri elementi presenti nel database del server di report. È anche possibile personalizzare la visualizzazione del report e l'esperienza di navigazione per gli utenti. La stringa di query dell'URL contiene le impostazioni relative alle informazioni sul dispositivo, nonché i parametri del report e l'output di rendering scelto. Il modo in cui le richieste URL vengono gestite dal server di report dipende dai parametri, dai prefissi di parametro e dal tipo di elemento a cui si accede tramite l'URL.  

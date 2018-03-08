@@ -17,15 +17,15 @@ helpviewer_keywords:
 - non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2de231ff458d52de6aa4caf4ecda59eb6785490
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 528537bd5cf2e1b0d3020b8a22fe532e5c616cbb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Creazione di una sottoscrizione per un Sottoscrittore non SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come creare una sottoscrizione per un Sottoscrittore non SQL Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replica transazionale e la replica snapshot supportano la pubblicazione di dati su Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per informazioni sulle piattaforme di Sottoscrittori supportate, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-enable-a-publication-for-non-sql-server-subscribers"></a>Per abilitare una pubblicazione per Sottoscrittori non SQL Server  
   
-1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.  
+1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], quindi espandere il nodo del server.  
   
 2.  Espandere la cartella **Replica** e quindi la cartella **Pubblicazioni locali** .  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
   
  Al termine della generazione dello snapshot da parte dell'agente, viene visualizzato un messaggio come ""[100%] Generato uno snapshot di 17 articoli."  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile creare sottoscrizioni push a Sottoscrittori[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a livello di programmazione tramite le stored procedure di replica.  
   
 > [!IMPORTANT]  

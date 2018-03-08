@@ -22,15 +22,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d6f6fc1ab13564faaab865410f9b9d132c3b6fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 082b20b502afb8201ab63db204bf0fff25e17c66
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Aggiunta ed eliminazione di articoli a e da pubblicazioni esistenti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dopo la creazione di una pubblicazione, è possibile aggiungere ed eliminare articoli. Gli articoli possono essere aggiunti in qualsiasi momento, ma le azioni necessarie per eliminarli dipendono dal tipo di replica e dal momento in cui avviene l'eliminazione.  

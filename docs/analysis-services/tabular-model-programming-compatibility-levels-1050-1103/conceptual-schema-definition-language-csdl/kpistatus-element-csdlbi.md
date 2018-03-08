@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 6fee5b82-caa8-46a1-ad68-bbce3e11e01e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 714326df1756cb74b862c8145d7bff2facebdb1b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: af4c2fd061dcfcce4316fd16dd0272bbac45c6c9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="kpistatus-element-csdlbi"></a>Elemento KpiStatus (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento KpiStatus definisce un riferimento alla colonna che contiene il valore utilizzato come indicatore di stato in un indicatore di prestazioni chiave (KPI).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+L'elemento KpiStatus definisce un rifermento alla colonna contenente il valore utilizzato come indicatore di stato in un indicatore di prestazioni di chiave.  
   
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente vengono elencati gli attributi e gli elementi che definiscono l'elemento KpiStatus.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/08/2017
 |PropertyRef|Sì|Riferimento a una colonna contenente il valore utilizzato come indicatore di stato in un indicatore KPI.<br /><br /> Questo elemento DEVE contenere una sola colonna di riferimento, come definito dal tipo TPropertyRefcomplex.|  
   
 ## <a name="example"></a>Esempio  
- **Tabella**  
+ **Tabulare**  
   
  Nell'esempio seguente, in CSDLBI versione 1.1, viene illustrato un indicatore KPI del modello tabulare di esempio di AdventureWorks. L'elemento KpiStatus fa riferimento a una colonna (rappresentata come PropertyRef) contenente il valore.  
   

@@ -1,38 +1,37 @@
 ---
 title: Programmazione di oggetti di base OLAP in AMO | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e92a5a964dc95906cc6d74e983723868e7b48c61
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f3b03ad50bf5921217c4313909c050a5afe6acf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Programmazione di oggetti di base OLAP in AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Creazione di complessi [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oggetti è semplice e lineare, ma è necessario prestare attenzione ai dettagli. In questo argomento vengono descritti i dettagli relativi alla programmazione di oggetti di base OLAP. In questo argomento sono incluse le sezioni seguenti:  
+  La creazione di oggetti di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] complessi è un'operazione estremamente semplice per cui è necessario tuttavia prestare attenzione ai dettagli. In questo argomento vengono descritti i dettagli relativi alla programmazione di oggetti di base OLAP. In questo argomento sono incluse le sezioni seguenti:  
   
 -   [Oggetti Dimension](#Dim)  
   
@@ -44,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [Oggetti Aggregation](#AD)  
   
-##  <a name="Dim"></a>Oggetti Dimension  
+##  <a name="Dim"></a> Oggetti Dimension  
  Per amministrare o elaborare una dimensione, programmare l'oggetto <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ### <a name="creating-dropping-and-finding-a-dimension"></a>Creazione, eliminazione e individuazione di una dimensione  
@@ -181,7 +180,7 @@ static void UpdateAllDimensions(Database db)
 }  
 ```  
   
-##  <a name="Cub"></a>Oggetti del cubo  
+##  <a name="Cub"></a> Oggetti del cubo  
  Per amministrare o elaborare un cubo, programmare l'oggetto <xref:Microsoft.AnalysisServices.Cube>.  
   
 ### <a name="creating-dropping-and-finding-a-cube"></a>Creazione, eliminazione e individuazione di un cubo  
@@ -266,7 +265,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG"></a>Oggetti MeasureGroup  
+##  <a name="MG">Oggetti MeasureGroup</a>  
  Per amministrare o elaborare un gruppo di misure, programmare l'oggetto <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>Creazione, eliminazione e individuazione di un oggetto MeasureGroup  
@@ -435,7 +434,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part"></a>Oggetti Partition  
+##  <a name="Part">Oggetti Partition</a>  
  Per amministrare o elaborare una partizione, programmare un oggetto <xref:Microsoft.AnalysisServices.Partition>.  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>Creazione, eliminazione e individuazione di una partizione  
@@ -486,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 }  
 ```  
   
-###  <a name="ProcPart"></a>Elaborazione di una partizione  
+###  <a name="ProcPart"></a> Elaborazione di una partizione  
  L'elaborazione di una dimensione è semplice come l'utilizzo del metodo Process dell'oggetto <xref:Microsoft.AnalysisServices.Partition>.  
   
  Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di oggetti &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md) e [l'elaborazione di un modello multidimensionale &#40; Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
@@ -534,7 +533,7 @@ static void MergeAllPartitions(MeasureGroup mg)
     }  
 ```  
   
-##  <a name="AD"></a>Oggetti Aggregation  
+##  <a name="AD">Oggetti Aggregation</a>  
  Per progettare un'aggregazione e applicarla a una o più a partizioni, programmare l'oggetto <xref:Microsoft.AnalysisServices.Aggregation>.  
   
 ### <a name="creating-and-dropping-aggregations"></a>Creazione ed eliminazione di aggregazioni  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8803b1a18ce1a0987c9ebfcbd718345cfc3ef60
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a0a97971dcd8a16a2ac15b1013dbbe96a43f21c0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-source-wizard-screen-3"></a>Schermata di creazione guidata origine dati 3
 
@@ -82,6 +83,10 @@ Modifica il comportamento della **failover su più subnet** per consentire la ri
 ### <a name="column-encryption"></a>Crittografia di colonna.
 
 Consente la decrittografia automatica e la crittografia dei trasferimenti di dati da e verso le colonne crittografate con la [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) funzionalità disponibili in SQL Server 2016 e versioni successive.
+
+### <a name="use-fmtonly-metadata-discovery"></a>Utilizzare l'individuazione dei metadati FMTONLY:
+
+Utilizzare il metodo di individuazione di metadati SET FMTONLY legacy quando la connessione a SQL Server 2012 o versione successiva. Abilitare questa opzione solo quando si utilizza una query non è supportata da [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), ad esempio quelli contenenti tabelle temporanee. 
 
 ### <a name="next"></a>Avanti
 

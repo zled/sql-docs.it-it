@@ -1,5 +1,5 @@
 ---
-title: CLOSE (Transact-SQL) | Documenti Microsoft
+title: CLOSE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CLOSE_TSQL
 - CLOSE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - closing cursors
 - cursors [SQL Server], closing
 - CLOSE statement
 ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd8a9e007b5f9cfd81c6e9ac779ce9beec6cdfb8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d056ab67537c6b0646f58242bc8d3d7ab445f73f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,8 +77,8 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Cursori](../../relational-databases/cursors.md)   
  [Cursori &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
- [DEALLOCARE &#40; Transact-SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [Operazione di recupero &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [Apri &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

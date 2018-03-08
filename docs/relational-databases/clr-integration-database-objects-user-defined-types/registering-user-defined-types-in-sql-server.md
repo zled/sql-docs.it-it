@@ -8,10 +8,11 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - UDTs [CLR integration], maintaining
 - user-defined types [CLR integration], maintaining
@@ -34,19 +35,20 @@ helpviewer_keywords:
 - UDTs [CLR integration], registering
 - ADD FILE clause
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 788eeeb4acb1a2acc562f71dfe4d59a7f622192e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49a0a9d7c9bf8d023b748a34b622ba15e6406233
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrazione dei tipi definiti dall'utente in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Per utilizzare un tipo definito dall'utente (UDT) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario registrarlo. La registrazione di un tipo definito dall'utente (UDT) comporta la registrazione dell'assembly e la creazione del tipo nel database in cui si desidera utilizzarlo. I tipi definiti dall'utente (UDT) vengono definiti nell'ambito di un singolo database e non possono essere utilizzati in più database a meno che lo stesso assembly e lo stesso tipo definito dall'utente (UDT) non vengano registrati con ogni database. Dopo la registrazione dell'assembly del tipo definito dall'utente (UDT) e la creazione del tipo, è possibile utilizzare il tipo definito dall'utente (UDT) in [!INCLUDE[tsql](../../includes/tsql-md.md)] e nel codice client. Per altre informazioni, vedere [Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Per utilizzare un tipo definito dall'utente (UDT) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario registrarlo. La registrazione di un tipo definito dall'utente (UDT) comporta la registrazione dell'assembly e la creazione del tipo nel database in cui si desidera utilizzarlo. I tipi definiti dall'utente (UDT) vengono definiti nell'ambito di un singolo database e non possono essere utilizzati in più database a meno che lo stesso assembly e lo stesso tipo definito dall'utente (UDT) non vengano registrati con ogni database. Dopo la registrazione dell'assembly del tipo definito dall'utente (UDT) e la creazione del tipo, è possibile utilizzare il tipo definito dall'utente (UDT) in [!INCLUDE[tsql](../../includes/tsql-md.md)] e nel codice client. Per altre informazioni, vedere [Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Utilizzo di Visual Studio per distribuire i tipi definiti dall'utente (UDT)  
  Il modo più semplice per distribuire il tipo definito dall'utente (UDT) è utilizzare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio. Per scenari di distribuzione più complessi e una maggiore flessibilità utilizzare tuttavia [!INCLUDE[tsql](../../includes/tsql-md.md)] come illustrato più avanti in questo argomento.  
@@ -182,7 +184,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  Numero che identifica ogni oggetto, con il primo oggetto associato a un determinato **assembly_id** viene assegnato il valore di 1. Se sono presenti più oggetti associati allo stesso **assembly_id**, quindi ogni successivo **file_id** valore viene incrementato di 1.  
   
- **contenuto**  
+ **content**  
  Rappresentazione esadecimale dell'assembly o del file.  
   
  È possibile utilizzare la funzione CAST o CONVERT per convertire il contenuto del **contenuto** colonna in testo leggibile. Nella query seguente il contenuto del file Point.cs viene convertito in testo leggibile, utilizzando il nome nella clausola WHERE per limitare il set di risultati a una singola riga.  
@@ -221,6 +223,6 @@ SELECT CAST(content AS varchar(8000))
  Si noti che è necessario intraprendere alcuna azione per l'utilizzo di tipi definiti dall'utente quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crea le tabelle di lavoro nel **tempdb** database di sistema. Ciò include la gestione dei cursori, variabili di tabella, e funzioni definite dall'utente con valori di tabella che includono in modo trasparente i tipi definiti dall'utente e che usano **tempdb**. Tuttavia, se si crea in modo esplicito una tabella temporanea in **tempdb** che definisce una colonna di tipo definito dall'utente, quindi il tipo definito dall'utente deve essere registrato **tempdb** uguali a quelle di un database utente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi definiti dall'utente per CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

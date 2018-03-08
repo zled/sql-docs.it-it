@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e66f9c6503aa52add3de25c35365feeeca488e82
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 252164e0a5ce8b3eeae00549d36450acb1a7d44e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>lato client Formattazione XML sul lato server (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]In questo argomento vengono descritte le differenze generali tra la formattazione sul lato client e lato server XML in SQLXML.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In questo argomento vengono descritte le differenze generali tra la formattazione XML sul lato client e quella sul lato server in SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Query su più set di righe non supportate nella formattazione sul lato client  
  Le query che generano più set di righe non sono supportate quando si utilizza la formattazione XML sul lato client. Supporre, ad esempio, di disporre di una directory virtuale nella quale è stata specificata la formattazione sul lato client. Considerare questo modello di esempio con due istruzioni SELECT in un  **\<SQL: query >** blocco:  

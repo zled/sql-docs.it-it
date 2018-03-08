@@ -5,29 +5,27 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1bf91c2e3c09b30f5e9ea48756ae2b7c9f889644
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Database Consistency Checker (DBCC) per Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC fornisce la convalida del database su richiesta per i database multidimensionali e tabulari in un'istanza di Analysis Services. È possibile eseguire DBCC in una finestra di query MDX o XMLA in SQL Server Management Studio (SSMS) e tracciare l'output di DBCC in SQL Server Profiler o in sessioni xEvent di SSMS.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+DBCC fornisce la convalida su richiesta dei database multidimensionali e tabulari in un'istanza di Analysis Services. È possibile eseguire DBCC in una finestra di query MDX o XMLA in SQL Server Management Studio (SSMS) e tracciare l'output di DBCC in SQL Server Profiler o in sessioni xEvent di SSMS.  
 Il comando accetta una definizione di oggetto e restituisce un set di risultati vuoto o informazioni dettagliate sull'errore se l'oggetto è danneggiato.   Questo articolo illustra come eseguire il comando, interpretare i risultati e risolvere eventuali problemi.  
   
  Per i database tabulari, le verifiche di coerenza eseguite da DBCC equivalgono alla convalida predefinita eseguita automaticamente ogni volta che si ricarica, si sincronizza o si ripristina un database.  Al contrario, le verifiche di coerenza per i database multidimensionali si verificano solo quando si esegue DBCC su richiesta.  
@@ -175,7 +173,7 @@ Execution complete
   
 4.  In SQL Server Profiler l'attività di DBCC è indicata tramite gli eventi **Command** che hanno una sottoclasse di evento DBCC:  
   
-     ![SSAS-dbcc-profiler-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-profiler-eventsubclass")  
+     ![ssas-dbcc-profiler-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-profiler-eventsubclass")  
   
      Il codice evento 32 indica l'esecuzione di DBCC.  
   

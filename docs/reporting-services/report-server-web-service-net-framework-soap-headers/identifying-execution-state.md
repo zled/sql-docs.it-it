@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service-net-framework-soap-headers
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 caps.latest.revision: "46"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c021d2633a21ddcd6c3d5aafcfd5d53fd74d253
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b3d94c2de26ebdb1256812b4aad40f8a2c1f1653
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="identifying-execution-state"></a>Identificazione dello stato di esecuzione
   HTTP (Hypertext Transfer Protocol) è un protocollo senza connessione e senza stato, ovvero non indica automaticamente se diverse richieste provengono dallo stesso client o se una singola istanza di un browser continua a visualizzare attivamente una pagina o un sito. Le sessioni creano una connessione logica per gestire lo stato tra server e client tramite HTTP. Le informazioni specifiche dell'utente relative a una particolare sessione sono note come stato della sessione.  

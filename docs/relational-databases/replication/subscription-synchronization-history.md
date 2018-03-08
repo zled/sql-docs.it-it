@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.subscription.synchhistory.f1
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7f8b884fedc5f602297e4aa579d5eda7a1011f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec6cfef6e74a1bf6479a78301f85c6d062992db3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-synchronization-history"></a>Sottoscrizione, Cronologia sincronizzazione
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La scheda **Cronologia sincronizzazione** visualizza informazioni dettagliate sull'agente di merge, tra cui lo stato, le statistiche degli articoli, la cronologia, i messaggi informativi e gli eventuali messaggi di errore.  
@@ -103,6 +103,6 @@ ms.lasthandoff: 11/17/2017
  [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Monitoraggio della replica](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Panoramica degli agenti di replica](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

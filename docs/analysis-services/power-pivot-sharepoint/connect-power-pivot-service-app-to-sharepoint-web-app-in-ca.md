@@ -5,29 +5,27 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7eacb900494941994ff38fd01f8b58e8939c1ebf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>La connessione di servizio App di Power Pivot per App Web di SharePoint nella CA
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] applicazione di servizio è utilizzabile da un numero qualsiasi di applicazioni SharePoint Web nella farm. Per rendere disponibile un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , aggiungerla a un elenco di associazioni del servizio.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] può essere usata da un numero qualsiasi di applicazioni Web SharePoint nella farm. Per rendere disponibile un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , aggiungerla a un elenco di associazioni del servizio.  
   
 > [!IMPORTANT]  
 >  Per assicurare il corretto funzionamento del dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , è necessario che almeno un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sia presente nel gruppo predefinito. Non aggiungere più di un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] al gruppo predefinito. L'aggiunta di più voci dello stesso tipo di applicazione di servizio non è una configurazione supportata e potrebbe provocare errori. Se si creano applicazioni di servizio aggiuntive, aggiungerle agli elenchi personalizzati.  

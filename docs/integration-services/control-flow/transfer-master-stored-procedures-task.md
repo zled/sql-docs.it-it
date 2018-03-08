@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfermasterspstask.f1
 - sql13.dts.designer.transferstoredprocedurestask.general.f1
 - sql13.dts.designer.transferstoredprocedurestask.storedprocedures.f1
-helpviewer_keywords: Transfer Master Stored Procedures task [Integration Services]
+helpviewer_keywords:
+- Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3028cc454a6957672a0c0fd9f34ce5582849dd1f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9fd702ba3b0b498a8ede7e0ed32632b53ba27770
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Attività Trasferisci stored procedure master
   L'attività Trasferisci stored procedure master trasferisce una o più stored procedure definite dall'utente tra i database **master** di istanze diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per trasferire una stored procedure dal database **master** , è necessario che il proprietario stored della procedure sia un dbo.  
@@ -79,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
 ### <a name="configuring-the-transfer-master-stored-procedures-task-programmatically"></a>Configurazione dell'attività Trasferisci stored procedure master a livello di codice  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
 -   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
@@ -97,7 +99,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
   
- **Description**  
+ **Descrizione**  
  Consente di digitare una descrizione dell'attività Trasferisci stored procedure master.  
   
 ## <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Editor attività Trasferisci stored procedure master (pagina Stored procedure)
@@ -118,7 +120,7 @@ ms.lasthandoff: 11/20/2017
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**FailTask**|L'attività viene interrotta se nel database **master** del server di destinazione esistono già stored procedure con lo stesso nome.|  
 |**Overwrite**|L'attività sovrascrive le stored procedure con lo stesso nome presenti nel database **master** del server di destinazione.|  
@@ -127,7 +129,7 @@ ms.lasthandoff: 11/20/2017
  **TransferAllStoredProcedures**  
  Selezionare un valore per indicare se nel server di destinazione debbano essere copiate tutte le stored procedure definite dall'utente nel database **master** del server di origine.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**True**|Copia tutte le stored procedure definite dall'utente nel database **master** .|  
 |**False**|Copia solo le stored procedure specificate.|  

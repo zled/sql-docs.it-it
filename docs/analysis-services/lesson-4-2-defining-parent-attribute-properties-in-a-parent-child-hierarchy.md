@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d8a8e45d9785d9eb4b449ad36689aadd8e454c6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a7430bd3692788b8977d4c1849a599ada77dfc59
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Lezione 4-2-definizione di proprietà dell'attributo padre in una gerarchia padre-figlio
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Una gerarchia padre-figlio è una gerarchia in una dimensione che si basa su due colonne della tabella. Nell'insieme, queste colonne definiscono le relazioni gerarchiche tra i membri della dimensione. La prima colonna, denominata *colonna chiave membro*, identifica ogni membro della dimensione. L'altra colonna, denominata *colonna padre*, identifica l'elemento padre di ogni membro della dimensione. La proprietà **NamingTemplate** di un attributo padre consente di determinare il nome di ogni livello nella gerarchia padre-figlio e la proprietà **MembersWithData** consente di determinare se i dati del membro padre devono essere visualizzati.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Una gerarchia padre-figlio è una gerarchia in una dimensione basata su due colonne di tabella. Nell'insieme, queste colonne definiscono le relazioni gerarchiche tra i membri della dimensione. La prima colonna, denominata *colonna chiave membro*, identifica ogni membro della dimensione. L'altra colonna, denominata *colonna padre*, identifica l'elemento padre di ogni membro della dimensione. La proprietà **NamingTemplate** di un attributo padre consente di determinare il nome di ogni livello nella gerarchia padre-figlio e la proprietà **MembersWithData** consente di determinare se i dati del membro padre devono essere visualizzati.  
   
 Per altre informazioni, vedere [Dimensioni padre-figlio](../analysis-services/multidimensional-models/parent-child-dimension.md), [Attributi nelle gerarchie padre-figlio](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  
   
@@ -96,7 +99,7 @@ Questo argomento illustra le attività che consentono di creare un modello di de
   
 ## <a name="browsing-the-employee-dimension-with-the-modified-attributes"></a>Visualizzazione della dimensione Employee con gli attributi modificati  
   
-1.  Scegliere **Deploy Analysis Services Tutorial** (Distribuisci Analysis Services Tutorial) dal menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Compila **di**.  
+1.  Scegliere **Deploy Analysis Services Tutorial** (Distribuisci Analysis Services Tutorial) dal menu **Compila** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Dopo aver completato la distribuzione, passare a Progettazione cubi per il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial e fare clic sul pulsante **Riconnetti** sulla barra degli strumenti della scheda **Esplorazione** .  
   

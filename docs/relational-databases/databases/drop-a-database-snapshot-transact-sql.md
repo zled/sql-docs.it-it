@@ -17,22 +17,22 @@ helpviewer_keywords:
 - database snapshots [SQL Server], deleting
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2a86dbd8133febc11c103a97515fe486a79726de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 941d0f44ca37d0b2e9b7df202b9650cf172dd352
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>Eliminare uno snapshot del database (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La rimozione di uno snapshot del database comporta l'eliminazione dello snapshot da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'eliminazione dei file sparse da esso usati. Quando si elimina uno snapshot del database, tutte le relative connessioni utente vengono interrotte.  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="Permissions"></a> Permissions  
  Uno snapshot del database può essere rimosso da qualsiasi utente che disponga delle autorizzazioni DROP DATABASE.  
   
 ##  <a name="TsqlProcedure"></a> Come eliminare uno snapshot del database (tramite Transact-SQL)  

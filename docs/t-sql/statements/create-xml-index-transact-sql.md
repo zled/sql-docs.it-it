@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,23 +22,24 @@ f1_keywords:
 - CREATE XML INDEX
 - XML_INDEX_TSQL
 - FOR_XML_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE XML INDEX statement
 - CREATE INDEX statement
 - index creation [SQL Server], XML indexes
 - XML indexes [SQL Server], creating
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 28de81b28ee31c172d1a31644f6847579af4e961
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 133c957937d1c05cd108eeb2deb0847cd7944771
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +120,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  Specifica il tipo di indice XML secondario.  
   
- Value  
+ VALUE  
  Crea un indice XML secondario su colonne con le colonne chiave (valore di nodo e percorso) dell'indice XML primario.  
   
  PATH  
@@ -127,7 +129,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PROPERTY  
  Crea un indice XML secondario su colonne (valore di chiave primaria, percorso e nodo) dell'indice XML primario, dove il valore di chiave primaria è la chiave primaria della tabella di base.  
   
- **\<Oggetto >:: =**  
+ **\<object>::=**  
   
  Oggetto con nome completo o non completo che si desidera indicizzare.  
   
@@ -140,7 +142,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *table_name*  
  Nome della tabella da indicizzare.  
   
- **\<xml_index_option >:: =** 
+ **\<xml_index_option> ::=** 
   
  Specifica le opzioni da usare quando si crea l'indice.  
   
@@ -155,7 +157,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  L'opzione PAD_INDEX risulta utile solo quando si specifica FILLFACTOR, in quanto PAD_INDEX usano la percentuale specificata in FILLFACTOR. Se la percentuale specificata in FILLFACTOR non consente l'inserimento di una riga, [!INCLUDE[ssDE](../../includes/ssde-md.md)] sostituisce internamente tale percentuale in modo da rendere disponibile lo spazio minimo necessario. Il numero di righe in una pagina di indice intermedio non è mai inferiore a due, indipendentemente dal valore di *fillfactor*.  
   
- Fattore di riempimento  **=**  *fattore di riempimento*  
+ Fattore di riempimento **= * * * fattore di riempimento*  
  Specifica una percentuale che indica il livello di riempimento del livello foglia di ogni pagina di indice applicato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] durante la creazione o la ricompilazione dell'indice. *fattore di riempimento* deve essere un valore intero compreso tra 1 e 100. Il valore predefinito è 0. Se *fillfactor* è 100 o 0, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono creati indici con pagine foglia riempite fino alla capacità.  
   
 > [!NOTE]  
@@ -179,7 +181,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  Oltre allo spazio necessario nel database utente per creare l'indice, **tempdb** deve essere disponibile la stessa quantità di spazio aggiuntivo per archiviare i risultati intermedi dell'ordinamento. Per ulteriori informazioni, vedere [opzione SORT_IN_TEMPDB per indici](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- IGNORE_DUP_KEY **= OFF**  
+ IGNORE_DUP_KEY **=OFF**  
  Non ha effetto per gli indici XML perché il tipo di indice non è mai univoco. Non impostare questa opzione su ON. In caso contrario, viene generato un errore.  
   
  DROP_EXISTING  **=**  {ON | **OFF** }  
@@ -199,7 +201,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Un'operazione offline sull'indice che crea, ricompila o elimina un indice XML acquisisce un blocco di modifica dello schema (SCH-M) per la tabella. Il blocco impedisce agli utenti di accedere alla tabella sottostante per la durata dell'operazione.  
   
 > [!NOTE]  
->  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Operazioni sugli indici online non sono disponibili in ogni edizione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ALLOW_ROW_LOCKS  **=**  { **ON** | OFF}  
  Specifica se sono consentiti blocchi di riga. Il valore predefinito è ON.  
@@ -219,13 +221,13 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  I blocchi a livello di pagina non vengono utilizzati.  
   
- MAXDOP  **=**  *max_degree_of_parallelism*  
+ MAXDOP **=***max_degree_of_parallelism*  
  Esegue l'override di [il max degree of parallelism opzione di configurazione Server Configurare](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) opzione di configurazione per la durata dell'operazione sull'indice. Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
   
 > [!IMPORTANT]  
 >  Sebbene l'opzione MAXDOP sia supportata a livello di sintassi per tutti gli indici XML, per un indice XML primario CREATE XML INDEX usano solo un processore singolo.  
   
- *max_degree_of_parallelism* può essere:  
+ *max_degree_of_parallelism* can be:  
   
  1  
  Disattiva la generazione di piani paralleli.  
@@ -256,7 +258,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 ### <a name="a-creating-a-primary-xml-index"></a>A. Creazione di un indice XML primario  
  Nell'esempio seguente viene creato un indice XML primario sulla colonna `CatalogDescription` della tabella `Production.ProductModel`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT * FROM sys.indexes  
@@ -272,7 +274,7 @@ GO
 ### <a name="b-creating-a-secondary-xml-index"></a>B. Creazione di un indice XML secondario  
  Nell'esempio seguente viene creato un indice XML secondario sulla colonna `CatalogDescription` della tabella `Production.ProductModel`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.indexes  
@@ -291,16 +293,16 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [CREATE SPATIAL INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/drop-index-transact-sql.md)   
+ [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [Sys. xml_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
+ [sys.xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   

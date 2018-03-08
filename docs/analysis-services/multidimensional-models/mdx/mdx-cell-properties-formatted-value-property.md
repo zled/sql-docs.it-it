@@ -5,29 +5,27 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23c043a3c35dd63927596c5bba0d9b8cf8d76bf4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>Proprietà di cella MDX - proprietà FORMATTED_VALUE
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]La proprietà FORMATTED_VALUE è basata sulle interazioni delle proprietà VALUE, FORMAT_STRING e LANGUAGE della cella. In questo argomento viene illustrato come interagiscono queste proprietà per compilare la proprietà FORMATTED_VALUE.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+La proprietà FORMATTED_VALUE è compilata in base alle interazioni delle proprietà VALUE, FORMAT_STRING e LANGUAGE della cella. In questo argomento viene illustrato come interagiscono queste proprietà per compilare la proprietà FORMATTED_VALUE.  
   
 ## <a name="value-formatstring-language-properties"></a>Proprietà VALUE, FORMAT_STRING e LANGUAGE  
  Nella tabella seguente vengono descritte queste proprietà e viene illustrato come utilizzarle insieme.  
@@ -151,9 +149,9 @@ ms.lasthandoff: 12/08/2017
 |L|06:30|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `Short Time` e `1041` (giapponese).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto di FORMAT_STRING &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [Contenuto di FORMAT_STRING &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
  [Utilizzando le proprietà della cella &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [Creazione e utilizzo di valori di proprietà &#40; MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Nozioni fondamentali sulle Query MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

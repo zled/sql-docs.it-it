@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +18,20 @@ helpviewer_keywords:
 - log score [data mining]
 - likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52d3932d577ed93c3c1ab4122323a04a1c27771e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8a98814c3b71a8a39b1f77bdeaf1de7eb4758e54
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measures-in-the-cross-validation-report"></a>Misure nel report di convalida incrociata
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Durante la convalida incrociata, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suddivide i dati in una struttura di data mining in più sezioni trasversali e quindi in modo iterativo test della struttura e modelli di data mining associati. In base a questa analisi, viene restituito un set di misure di accuratezza standard per la struttura e ciascun modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Durante la convalida incrociata, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di dividere i dati di una struttura di data mining in più sezioni trasversali e quindi di eseguire il test della struttura e di tutti i modelli di data mining associati in modo iterativo. In base a questa analisi, viene restituito un set di misure di accuratezza standard per la struttura e ciascun modello.  
   
  Nel report sono contenute alcune informazioni di base sul numero di riduzioni nei dati e la quantità di dati in ciascuna riduzione, nonché un set di metriche generali che consentono di descrivere la distribuzione dei dati. Confrontando la metrica generale per ogni sezione trasversale, è possibile valutare l'affidabilità della struttura o del modello.  
   
@@ -63,6 +62,6 @@ ms.lasthandoff: 12/08/2017
 ||**Deviazione standard**:<br />                      Media della deviazione rispetto al valore medio per una misura specifica, calcolata in tutte le partizioni di un modello.<br /><br /> Per la convalida incrociata, un valore superiore per questo punteggio implica una variazione sostanziale tra le riduzioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

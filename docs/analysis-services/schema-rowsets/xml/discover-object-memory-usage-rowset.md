@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23243ea41463a735ce4e44a586b828af7640ec97
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9be5091d26d264d71dad5e6892f7f8d7448d83c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverobjectmemoryusage-rowset"></a>Set di righe DISCOVER_OBJECT_MEMORY_USAGE
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Vengono fornite informazioni sulle risorse di memoria utilizzata dagli oggetti.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DISCOVER_OBJECT_MEMORY_USAGE** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
+|Nome colonna|Indicatore del tipo|Length|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**OBJECT_PARENT_PATH**|**DBTYPE_WSTR**||Percorso dell'elemento padre dell'oggetto corrente.|  
 |**OBJECT_ID**|**DBTYPE_WSTR**||ID dell'oggetto come definito in fase di creazione.|  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**OBJECT_PARENT_PATH**|**DBTYPE_WSTR**|Facoltativa.|  
+|**OBJECT_PARENT_PATH**|**DBTYPE_WSTR**|Facoltativo.|  
 |**OBJECT_ID**|**DBTYPE_WSTR**|Facoltativo|  
   
 ## <a name="see-also"></a>Vedere anche  

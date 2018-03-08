@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a7076a1a1fad871c03c55ef87e87591d45acb3a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 358a1ce1e7351fa61e19b78f766a7aaa71c3b441
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-browsing-example"></a>Esempio di esplorazione di SQL Server
 L'esempio seguente mostra come **SQLBrowseConnect** potrebbe essere utilizzato per esplorare le connessioni disponibili con un driver per SQL Server. In primo luogo, l'applicazione richiede un handle di connessione:  
@@ -82,7 +82,7 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- La stringa di connessione finale restituita dal driver non contiene i nomi descrittivi dopo ogni parola chiave, né contiene parole chiave facoltative non specificate dall'applicazione. L'applicazione può utilizzare questa stringa con **SQLDriverConnect** per ristabilire la connessione all'origine dati nell'handle di connessione corrente (dopo la disconnessione) o per connettersi all'origine dati su un handle di connessione diversa. Esempio:  
+ La stringa di connessione finale restituita dal driver non contiene i nomi descrittivi dopo ogni parola chiave, né contiene parole chiave facoltative non specificate dall'applicazione. L'applicazione può utilizzare questa stringa con **SQLDriverConnect** per ristabilire la connessione all'origine dati nell'handle di connessione corrente (dopo la disconnessione) o per connettersi all'origine dati su un handle di connessione diversa. Ad esempio  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  

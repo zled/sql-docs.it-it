@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bef441eba4e4aa9353a496282680449bc39fa629
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d3140b2022e312094df84693acb69b2ea04917a7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lezione 5-4-definizione granularità della dimensione all'interno di un gruppo di misure
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Gli utenti desiderano dati della dimensione dei fatti a vari livelli di granularità o specificità per scopi diversi. È ad esempio possibile registrare per ogni giorno i dati relativi alle vendite per rivenditore o le vendite effettuate tramite Internet, mentre le informazioni sulle quote di vendita esistono solo per il mese o il trimestre. In questi casi è possibile che la dimensione temporale abbia un livello di dettaglio diverso per ognuna di queste diverse tabelle dei fatti. Sebbene sia possibile definire una nuova dimensione del database come dimensione temporale con tale diverso livello di dettaglio, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è disponibile un modo più semplice.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+È possibile dimensionare le tabelle dei fatti a diversi livelli di dettaglio o granularità a seconda degli scopi. È ad esempio possibile registrare per ogni giorno i dati relativi alle vendite per rivenditore o le vendite effettuate tramite Internet, mentre le informazioni sulle quote di vendita esistono solo per il mese o il trimestre. In questi casi è possibile che la dimensione temporale abbia un livello di dettaglio diverso per ognuna di queste diverse tabelle dei fatti. Sebbene sia possibile definire una nuova dimensione del database come dimensione temporale con tale diverso livello di dettaglio, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è disponibile un modo più semplice.  
   
 Per impostazione predefinita in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], quando si utilizza una dimensione in un gruppo di misure, il livello di dettaglio dei dati della dimensione è basato sull'attributo chiave della dimensione stessa. Ad esempio, quando una dimensione temporale è inclusa in un gruppo di misure e il livello di dettaglio predefinito della dimensione temporale è giornaliero, il livello di dettaglio predefinito della dimensione nel gruppo di misure è anch'esso giornaliero. In molti casi ciò risulta appropriato, ad esempio per i gruppi di misure **Internet Sales** e **Reseller Sales** di questa esercitazione. Quando tuttavia una dimensione di questo tipo è inclusa in altri tipi di gruppi di misure, quali gruppi di misure relative a budget o quote di vendita, risulta generalmente più appropriato un livello di dettaglio mensile o trimestrale.  
   

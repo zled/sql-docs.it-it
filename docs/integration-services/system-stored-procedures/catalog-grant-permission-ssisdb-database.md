@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d9115186c35eaae94e36cc079753bbdbe798638
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c7c079453409e0af538aaeb2c82f6596e05b7d49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,9 +68,9 @@ catalog.grant_permission [ @object_type = ] object_type
  5 (altro errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni ASSIGN_PERMISSIONS sull'oggetto  
@@ -80,14 +81,14 @@ catalog.grant_permission [ @object_type = ] object_type
 
 Questa procedura non può essere chiamata tramite account di accesso autenticati con SQL Server. Non può essere chiamato tramite l'account di accesso sa.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa stored procedure consente all'utente di concedere i tipi di autorizzazione descritti nella tabella seguente:  
   
 |Valore di permission_type|Nome dell'autorizzazione|Descrizione dell'autorizzazione|Tipi di oggetti applicabili|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Consente all'entità di leggere le informazioni considerate parte dell'oggetto, ad esempio le proprietà. Non consente all'entità di enumerare o leggere il contenuto di altri oggetti inseriti all'interno dell'oggetto.|Cartella, progetto, ambiente, operazione|  
 |`2`|MODIFY|Consente all'entità di modificare le informazioni considerate parte dell'oggetto, ad esempio le proprietà. Non consente all'entità di modificare gli altri oggetti contenuti all'interno dell'oggetto.|Cartella, progetto, ambiente, operazione|  
-|`3`|Eseguire|Consente all'entità di eseguire tutti i pacchetti nel progetto.|Progetto|  
+|`3`|EXECUTE|Consente all'entità di eseguire tutti i pacchetti nel progetto.|Progetto|  
 |`4`|MANAGE_PERMISSIONS|Consente all'entità di assegnare autorizzazioni agli oggetti.|Cartella, progetto, ambiente, operazione|  
 |`100`|CREATE_OBJECTS|Consente all'entità di creare oggetti nella cartella.|Cartella|  
 |`101`|READ_OBJECTS|Consente all'entità di leggere tutti gli oggetti nella cartella.|Cartella|  

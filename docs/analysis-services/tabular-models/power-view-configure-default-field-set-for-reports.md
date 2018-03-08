@@ -1,34 +1,33 @@
 ---
-title: Configurare il Set di campi predefinito per i report di Power View (SSAS tabulare) | Documenti Microsoft
+title: Configurare il Set di campi predefinito per i report Power View | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: ql12.asvs.bidtoolset.deffieldset.f1
+f1_keywords:
+- ql12.asvs.bidtoolset.deffieldset.f1
 ms.assetid: 6836b42f-28b8-4a98-a86d-2c3c109f0189
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e5a36f650081d5932e7100abc923b627a4aa47c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 41d0e52ae037e05f60409d891dc1f3f167f7459f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="power-view---configure-default-field-set-for-reports"></a>Power View: configurare i Set di campi predefinito per i report
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Un set di campi predefinito è un elenco predefinito di colonne e misure che vengono aggiunti automaticamente a un [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] area di disegno report quando la tabella viene selezionata nell'elenco di campi del report. I creatori del modello tabulare possono creare un set di campi predefinito per eliminare passaggi ridondanti per i creatori di report che utilizzano il modello. Ad esempio, se è noto che la maggior parte degli autori del report che utilizza le informazioni di contatto dei clienti desidera vedere sempre il nome di un contatto, il numero telefonico principale, un indirizzo di posta elettronica e il nome dell'azienda, è possibile pre-selezionare tali colonne in modo che vengano sempre aggiunte all'area di disegno del report quando l'autore fa clic sulla tabella Customer Contact.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Un set di campi predefiniti è un elenco predefinito di colonne e misure che vengono aggiunte automaticamente all'area di disegno di un report [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] quando si seleziona la tabella nell'elenco dei campi del report. I creatori del modello tabulare possono creare un set di campi predefinito per eliminare passaggi ridondanti per i creatori di report che utilizzano il modello. Ad esempio, se è noto che la maggior parte degli autori del report che utilizza le informazioni di contatto dei clienti desidera vedere sempre il nome di un contatto, il numero telefonico principale, un indirizzo di posta elettronica e il nome dell'azienda, è possibile pre-selezionare tali colonne in modo che vengano sempre aggiunte all'area di disegno del report quando l'autore fa clic sulla tabella Customer Contact.  
   
 > [!NOTE]  
 >  Un set di campi predefinito si applica solo a un modello tabulare utilizzato come modello di dati in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. I set di campi predefiniti non sono supportati nei report pivot di Excel.  
@@ -51,6 +50,6 @@ ms.lasthandoff: 12/08/2017
 6.  Ripetere questi passaggi per le altre tabelle della cartella di lavoro.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- Dopo aver creato un set di campi predefinito, è possibile influire ulteriormente sulla progettazione dei report specificando etichette e immagini predefinite, un comportamento del gruppo predefinito o indicando se le righe contenenti lo stesso valore vengono raggruppate in una riga o elencate individualmente. Per altre informazioni, vedere [Configurare le proprietà Comportamento tabella per i report Power View &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
+ Dopo aver creato un set di campi predefinito, è possibile influire ulteriormente sulla progettazione dei report specificando etichette e immagini predefinite, un comportamento del gruppo predefinito o indicando se le righe contenenti lo stesso valore vengono raggruppate in una riga o elencate individualmente. Per ulteriori informazioni, vedere [configurare le proprietà del comportamento tabella per i report Power View](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6de3f50f2a0630e2488b33c6fe98c1fe20c1b0d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1ba138c4315bf31efc281aff9a42b0e8a513b756
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Costanti enumerate in espressioni di proprietà
   Nelle espressioni di proprietà che includono valori di un elenco di membri di un enumeratore è necessario utilizzare i valori numerici dei membri dell'enumeratore, anziché i relativi nomi descrittivi. In un'espressione che imposta la proprietà **LoggingMode** , ad esempio, è necessario usare il valore numerico 2, anziché il nome descrittivo Disabled.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
 |Nome descrittivo in DTSPackageType|Valore numerico|  
 |-------------------------------------|-------------------|  
-|Valore predefinito|0|  
+|Default|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/20/2017
   
 |Nome descrittivo in DTSPriorityClass|Valore numerico|  
 |---------------------------------------|-------------------|  
-|Valore predefinito|0|  
+|Default|0|  
 |AboveNormal|1|  
 |Normal|2|  
 |BelowNormal|3|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/20/2017
   
 |Nome descrittivo|Valore numerico|  
 |-------------------|-------------------|  
-|Operazione completata|0|  
+|Esito positivo|0|  
 |Failure|1|  
 |Completion|2|  
 |Canceled|3|  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/20/2017
 |FileConnection|1|  
 |Variabile|2|  
   
-### <a name="bulk-insert-task"></a>Attività Inserimento bulk  
+### <a name="bulk-insert-task"></a>Inserimento bulk - attività  
  Proprietà**DataFileType** : impostata usando i valori dell'enumerazione **DTSBulkInsert_DataFileType** .  
   
 |Nome descrittivo in DTSBulkInsert_DataFileType|Valore numerico|  
@@ -209,7 +210,7 @@ ms.lasthandoff: 11/20/2017
   
 |Nome descrittivo in DTSFileSystemAttributes|Valore numerico|  
 |----------------------------------------------|-------------------|  
-|Normal|0|  
+|Normale|0|  
 |Archive|1|  
 |Hidden|2|  
 |ReadOnly|4|  
@@ -229,7 +230,7 @@ ms.lasthandoff: 11/20/2017
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### <a name="message-queue-task"></a>Attività Message Queue  
+### <a name="message-queue-task"></a>Message Queue Task  
  Proprietà**MessageType** : impostata usando i valori dell'enumerazione **MQMessageType** .  
   
 |Nome descrittivo in MQMessageType|Valore numerico|  
@@ -255,7 +256,7 @@ ms.lasthandoff: 11/20/2017
 |DTSMQType_Sender|0|  
 |DTSMQType_Receiver|1|  
   
-### <a name="send-mail-task"></a>Attività Invia messaggi  
+### <a name="send-mail-task"></a>Invia messaggi - attività  
  Proprietà**MessageSourceType** : impostata usando i valori dell'enumerazione **SendMailMessageSourceType** .  
   
 |Nome descrittivo in SendMailMessageSourceType|Valore numerico|  
@@ -278,7 +279,7 @@ ms.lasthandoff: 11/20/2017
 |Nome descrittivo in TransferAction|Valore numerico|  
 |-------------------------------------|-------------------|  
 |Copia|0|  
-|Sposta|1|  
+|Visualizzazione Dettagli|1|  
   
  Proprietà**Method** : impostata usando i valori dell'enumerazione **TransferMethod** .  
   
@@ -463,7 +464,7 @@ ms.lasthandoff: 11/20/2017
   
 |Nome descrittivo in DTSXMLDiffOptions|Valore numerico|  
 |----------------------------------------|-------------------|  
-|Nessuno|0|  
+|None|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -493,8 +494,8 @@ ms.lasthandoff: 11/20/2017
   
 |Nome descrittivo in DatabaseSelection|Valore numerico|  
 |----------------------------------------|-------------------|  
-|Nessuno|0|  
-|Tutto|1|  
+|None|0|  
+|All|1|  
 |Sistema|2|  
 |Utente|3|  
 |Specific|4|  
@@ -503,8 +504,8 @@ ms.lasthandoff: 11/20/2017
   
 |Nome descrittivo in TableSelection|Valore numerico|  
 |-------------------------------------|-------------------|  
-|Nessuno|0|  
-|Tutto|1|  
+|None|0|  
+|All|1|  
 |Specific|2|  
   
  Proprietà**ObjectTypeSelection** : impostata usando i valori dell'enumerazione **ObjectType** .  
@@ -512,7 +513,7 @@ ms.lasthandoff: 11/20/2017
 |Nome descrittivo in ObjectType|Valore numerico|  
 |---------------------------------|-------------------|  
 |Tabella|0|  
-|Visualizza|1|  
+|Vista|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Attività Backup database  
@@ -548,7 +549,7 @@ ms.lasthandoff: 11/20/2017
 |Pipe|3|  
 |VirtualDevice|4|  
   
-### <a name="maintenance-cleanup-task"></a>Attività Pulizia file manutenzione  
+### <a name="maintenance-cleanup-task"></a>Pulizia file manutenzione - attività  
  Proprietà**FileTypeSelected** : impostata usando i valori dell'enumerazione **FileType** .  
   
 |Nome descrittivo in FileType|Valore numerico|  
@@ -570,9 +571,9 @@ ms.lasthandoff: 11/20/2017
   
 |Nome descrittivo in StatisticsTarget|Valore numerico|  
 |---------------------------------------|-------------------|  
-|Colonna|1|  
+|colonna|1|  
 |Indice|2|  
-|Tutto|3|  
+|All|3|  
   
 ##  <a name="CommonProperties"></a> Proprietà comuni  
  I pacchetti, le attività e i contenitori Ciclo Foreach, Ciclo For e Sequenza possono utilizzare le enumerazioni seguenti per impostare le proprietà specificate.  
@@ -581,8 +582,8 @@ ms.lasthandoff: 11/20/2017
   
 |Nome descrittivo in DTSForcedExecResult|Valore numerico|  
 |------------------------------------------|-------------------|  
-|Nessuno|-1|  
-|Operazione completata|0|  
+|None|-1|  
+|Esito positivo|0|  
 |Failure|1|  
 |Completion|2|  
   
@@ -602,10 +603,10 @@ ms.lasthandoff: 11/20/2017
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
 |Supportato|1|  
-|Required|2|  
+|Obbligatorio|2|  
   
-## <a name="related-tasks"></a>Attività correlate  
- [Aggiunta o modifica di un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md)  
+## <a name="related-tasks"></a>Related Tasks  
+ [Aggiungere o modificare un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md)   

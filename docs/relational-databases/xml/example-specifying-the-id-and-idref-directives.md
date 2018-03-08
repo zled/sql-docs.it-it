@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07d914dcef815b50aeafc6e278d025f28df09bb6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9998ad6318f303861473e5e510c782b16fbb42ff
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Esempio: specifica delle direttive ID, IDREF
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Questo esempio è pressoché lo stesso illustrato in [Specificare la direttiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md). L'unica differenza è che la query specifica le direttive **ID** e **IDREF** . Queste direttive sovrascrivono i tipi dell'attributo **SalesPersonID** negli elementi <`OrderHeader`> e <`OrderDetail`>. creano collegamenti tra più documenti. Per visualizzare i tipi sovrascritti è necessario lo schema. La query specifica pertanto l'opzione **XMLDATA** nella clausola FOR XML per ottenere il recupero dello schema.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Questo esempio è pressoché lo stesso di [Specificare la direttiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . L'unica differenza è che la query specifica le direttive **ID** e **IDREF** . Queste direttive sovrascrivono i tipi dell'attributo **SalesPersonID** negli elementi <`OrderHeader`> e <`OrderDetail`>. creano collegamenti tra più documenti. Per visualizzare i tipi sovrascritti è necessario lo schema. La query specifica pertanto l'opzione **XMLDATA** nella clausola FOR XML per ottenere il recupero dello schema.  
   
 ```  
 USE AdventureWorks2012;  

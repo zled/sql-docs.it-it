@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.completewizard.f1
+f1_keywords:
+- sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b06adc095408d010acc2008352447a2ee48d8f67
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 738281bcaef0bce47cfc4c54890b48fd840eb91c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Completamento procedura guidata (Importazione/Esportazione guidata SQL Server)
 Dopo aver specificato se si vuole eseguire immediatamente l'operazione di copia e, facoltativamente, dopo aver salvato il pacchetto creato dalla procedura guidata, Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Completamento procedura guidata**. In questa pagina è possibile rivedere le scelte effettuate nella procedura guidata e quindi scegliere **Fine** per avviare l'operazione di copia.
@@ -40,7 +42,7 @@ Rivedere il riepilogo e verificare le informazioni seguenti:
 -   Se il pacchetto verrà salvato o meno.
 -   Se il pacchetto verrà eseguito immediatamente.  
   
-## <a name="whats-next"></a>Operazioni successive  
+## <a name="whats-next"></a>Quali sono le operazioni successive?  
  Dopo avere esaminato le scelte effettuate nella procedura guidata, scegliere **Fine**. La pagina successiva è **Esecuzione dell'operazione**. In questa pagina è possibile visualizzare lo stato di avanzamento e il risultato dell'operazione configurata nelle pagine precedenti. Per altre informazioni, vedere [Performing Operation](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)(Esecuzione dell'operazione).
  
 ## <a name="see-also"></a>Vedere anche

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Log Reader Agent, performance
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac5c385cfdff8c4c024c02534d8c040534c400ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63a14e8eb3342d0d03f61028d20aea9ba018f3a8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-transactional-replication-performance"></a>Miglioramento delle prestazioni della replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dopo aver considerato i suggerimenti sulle prestazioni generali descritti nella sezione [Miglioramento delle prestazioni generali della replica](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), tenere presente le aree aggiuntive specifiche della replica transazionale riportate di seguito.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Configurare il server di distribuzione in un server dedicato.  
   
-     È possibile ridurre l'overhead di elaborazione sul server di pubblicazione configurando un server di distribuzione remoto. Per altre informazioni, vedere [Configurazione della distribuzione](../../../relational-databases/replication/configure-distribution.md).  
+     È possibile ridurre l'overhead di elaborazione sul server di pubblicazione configurando un server di distribuzione remoto. Per altre informazioni, vedere [Configure Distribution](../../../relational-databases/replication/configure-distribution.md).  
   
 -   Ridimensionare in modo appropriato il database di distribuzione.  
   
@@ -106,6 +106,6 @@ ms.lasthandoff: 11/17/2017
   
 -   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Concetti di base relativi ai file eseguibili dell'agente di replica](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

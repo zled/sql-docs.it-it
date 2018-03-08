@@ -1,38 +1,37 @@
 ---
 title: Per stabilire le connessioni in ADOMD.NET | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - opening connections
 - closing connections
 - connections [ADOMD.NET]
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcda3b90d2157869be1c187e8c6d86449790f7b0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 36325fc2b6c7dd9ed948b0e5ccf70d41f5df1b9f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet"></a>Connessioni in ADOMD.NET
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In ADOMD.NET, utilizzare il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto per aprire connessioni con origini dati analitici, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Quando la connessione non è più necessaria, deve essere chiusa in modo esplicito.  
+  In ADOMD.NET, utilizzare il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto per aprire connessioni con origini dati analitici, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Quando la connessione non è più necessaria, deve essere chiusa in modo esplicito.  
   
 ## <a name="opening-a-connection"></a>Apertura di una connessione  
  Per aprire una connessione in ADOMD.NET, è necessario prima specificare una stringa di connessione a un'origine dati analitici valida e un database. Successivamente è necessario stabilire in modo esplicito la connessione con tale origine dati.  

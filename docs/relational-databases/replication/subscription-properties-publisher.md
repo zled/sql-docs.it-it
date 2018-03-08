@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.newsubwizard.subproperties.publisher.f1
 helpviewer_keywords: Subscription Properties dialog box
 ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f971a24eaa58022a12a139bc6a6bd960b0dec76
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: baba517b574179be16ef1376d0b1eff113c6338d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-properties---publisher"></a>Proprietà sottoscrizione - Server di pubblicazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La finestra di dialogo **Proprietà sottoscrizione** nel server di pubblicazione consente di visualizzare e impostare proprietà per le sottoscrizioni push. Sebbene sia possibile visualizzare alcune proprietà per le sottoscrizioni pull, nella finestra di dialogo **Proprietà sottoscrizione** nel Sottoscrizione sono incluse proprietà aggiuntive ed è possibile modificarle.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
  Se un'opzione è visualizzata in modalità di sola lettura, può essere impostata solo al momento della creazione della sottoscrizione. Se si desidera impostare opzioni non disponibili nella Creazione guidata nuova sottoscrizione, creare la sottoscrizione tramite stored procedure. Per ulteriori informazioni, vedere [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) e [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
 ## <a name="options-for-all-subscriptions"></a>Opzioni per tutte le sottoscrizioni  
- **Sicurezza**  
+ **Security**  
  Fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà (**...**) per modificare l'account utilizzato per l'esecuzione dell'agente di distribuzione o dell'agente di merge nel server di distribuzione. Per modificare l'account utilizzato dall'agente di distribuzione o dall'agente di merge per creare connessioni al Sottoscrittore, fare clic su **Connessione al Sottoscrittore**e quindi sul pulsante delle proprietà (**...**).  
   
  Per ulteriori informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -66,6 +66,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Visualizzare e modificare le proprietà delle sottoscrizioni push](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Sottoscrizione delle pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

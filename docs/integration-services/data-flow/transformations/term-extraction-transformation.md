@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4282ad429a54af716010bc8b0463551477a771fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cb9671f2cc2e595b12d1ddef1f962faa25d7563e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-extraction-transformation"></a>Estrazione termini - trasformazione
   La trasformazione Estrazione termini consente di estrarre termini da un testo in una colonna di input di una trasformazione e quindi scrivere tali termini in una colonna di output della trasformazione. La trasformazione è applicabile solo a testo in lingua inglese, utilizza un dizionario inglese interno e le proprie informazioni sulla lingua inglese.  
@@ -211,7 +212,7 @@ ms.lasthandoff: 11/20/2017
  **Usa termini di esclusione**  
  Consente di indicare se escludere termini specifici durante l'estrazione dei termini specificando una colonna che contiene termini di esclusione. Se si sceglie di escludere termini, è necessario specificare le proprietà delle origini dei dati seguenti.  
   
- **gestione connessione OLE DB**  
+ **Gestione connessione OLE DB**  
  Selezionare una gestione connessione OLE DB esistente oppure fare clic su **Nuova**per creare una nuova connessione.  
   
  **Nuova**  

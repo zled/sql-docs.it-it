@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Value Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81c84c7e407a7f2f57c9f750314dafa6fb99e1ef
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d40497916d4ec482fae217dfbddac4a12bd011d0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="value-element-xmla"></a>Elemento Value (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene il valore desiderato di un [attributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elemento devono essere aggiunti da un [inserire](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) comando, o un [cella](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) elemento da aggiornare tramite un [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) comando.  
@@ -50,10 +48,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|Qualsiasi|  
-|Valore predefinito|Nessuno|  
+|Valore predefinito|None|  
 |Cardinalità|1-1: elemento obbligatorio visualizzato una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Attributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md), [cella](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  Per **attributo** elementi, il **valore** elemento contiene il valore desiderato che deve contenere il membro dopo il **inserire** comando viene eseguito il commit. Per ulteriori informazioni sull'inserimento di membri, vedere [inserimento, aggiornamento e rimozione di membri &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  

@@ -8,21 +8,22 @@ ms.service:
 ms.component: develop
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf661093a0c0851bb0c8663251bf56f273038013
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21898c90044ec62c1a7d55fbcfa0cf03d46ba7ce
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-developer-documentation"></a>Guida per gli sviluppatori
   Vengono fornite informazioni su come scrivere il codice per personalizzare la modalità di interazione degli utenti con [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Viene illustrato come:  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/20/2017
  Elenco per categoria delle operazioni del servizio Web della classe <xref:Microsoft.MasterDataServices.ServiceClient>.  
   
 ## <a name="custom-workflows"></a>Flussi di lavoro personalizzati  
- In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] vengono utilizzate le regole business per creare soluzioni di base per il flusso di lavoro. È possibile aggiornare e convalidare automaticamente i dati, nonché inviare notifiche mediante posta elettronica in base alle condizioni specificate. Le regole business in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] vengono utilizzate per gestire gli scenari di flussi di lavoro più comuni. Se il flusso di lavoro richiede l'elaborazione di eventi più complessi, ad esempio approvazioni multilivello o alberi delle decisioni complessi, è possibile configurare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in modo da inviare i dati a un assembly personalizzato creato. Per gestire i flussi di lavoro personalizzati, è necessario configurare e avviare SQL Server MDS Workflow Integration Service sul computer dell'applicazione Web e creare un assembly che implementi l'interfaccia <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa le regole business per creare soluzioni di base per il flusso di lavoro. È possibile aggiornare e convalidare automaticamente i dati, nonché inviare notifiche mediante posta elettronica in base alle condizioni specificate. Le regole business in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] vengono utilizzate per gestire gli scenari di flussi di lavoro più comuni. Se il flusso di lavoro richiede l'elaborazione di eventi più complessi, ad esempio approvazioni multilivello o alberi delle decisioni complessi, è possibile configurare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in modo da inviare i dati a un assembly personalizzato creato. Per gestire i flussi di lavoro personalizzati, è necessario configurare e avviare SQL Server MDS Workflow Integration Service sul computer dell'applicazione Web e creare un assembly che implementi l'interfaccia <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
   
 ### <a name="custom-workflow-content"></a>Contenuto del flusso di lavoro personalizzato  
  [Creare un flusso di lavoro personalizzato &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="web-server-namespaces"></a>Spazi dei nomi del server Web  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installa un set di assembly nel computer del server Web. Questi assembly contengono spazi dei nomi utilizzabili per scenari avanzati che consentono di personalizzare il comportamento del computer del server Web. Nella tabella seguente vengono descritti tali spazi dei nomi.  
   
-|Spazio dei nomi|Description|  
+|Namespace|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|Contiene classi utilizzabili per creare un pacchetto di distribuzione da un modello e distribuire un pacchetto in un database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
 |<xref:Microsoft.MasterDataServices.Services>|Contiene una classe che riceve ed elabora operazioni del servizio Web eseguite sul computer del server Web tramite l'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  

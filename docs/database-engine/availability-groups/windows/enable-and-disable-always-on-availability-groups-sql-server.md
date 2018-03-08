@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], disabling
 - Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d3d6adde41f8500a4932c557e2eb801765d75d7e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c795cc98d8dffa44d7f9759b8f66e896f75123c4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>Abilitare e disabilitare la funzionalità Gruppi di disponibilità Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
      [Prerequisiti](#Prerequisites)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Procedura:**  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="Security"></a> Sicurezza  
  Mentre la funzionalità Gruppi di disponibilità Always On è abilitata in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'istanza del server ha il controllo completo sul cluster WSFC.  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È richiesta l'appartenenza al gruppo degli **amministratori** nel computer locale, nonché il controllo totale nel cluster WSCF. Quando si abilita Always On usando PowerShell, aprire la finestra del prompt dei comandi con l'opzione **Esegui come amministratore** .  
   
  Richiede le autorizzazioni per la gestione e la creazione degli oggetti di Active Directory.  
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/20/2017
     ```  
   
     > [!NOTE]  
-    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Per impostare e utilizzare il provider PowerShell per SQL Server**  
   
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Nel menu **Start** scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione SQL Server**.  
   
-3.  In **Gestione configurazione SQL Server** fare clic su **Servizi di SQL Server**, fare clic con il pulsante destro del mouse su SQL Server (**\<***nome istanza***),** dove **\<***nome istanza***>** è il nome di un'istanza locale per cui si vuole abilitare Gruppi di disponibilità Always On, quindi scegliere **Proprietà.**  
+3.  In **Gestione configurazione SQL Server** fare clic su **Servizi di SQL Server**, fare clic con il pulsante destro del mouse su SQL Server (**\<***nome istanza***>)**, dove **\<***nome istanza***>** è il nome di un'istanza locale per cui si vuole abilitare Gruppi di disponibilità Always On, quindi scegliere **Proprietà**.  
   
 4.  Selezionare la scheda **Disponibilità elevata Always On**.  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Per abilitare Gruppi di disponibilità AlwaysOn, usare il cmdlet **Enable-SqlAlwaysOn**.  
   
-     Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+     Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
     > [!NOTE]  
     >  Per informazioni su come controllare se il cmdlet **Enable-SqlAlwaysOn** riavvia il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Situazioni in cui un cmdlet comporta il riavvio del servizio SQL Server](#WhenCmdletRestartsSQL), più avanti in questo argomento.  
@@ -203,7 +204,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  Nel menu **Start** scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione SQL Server**.  
   
-3.  In **Gestione configurazione SQL Server** fare clic su **Servizi di SQL Server**, fare clic con il pulsante destro del mouse su SQL Server (**\<***nome istanza***&gt;)**, dove **\<***nome istanza***>** è il nome di un'istanza locale per cui si vuole disabilitare Gruppi di disponibilità Always On, quindi scegliere **Proprietà**.  
+3.  In **Gestione configurazione SQL Server** fare clic su **Servizi di SQL Server**, fare clic con il pulsante destro del mouse su SQL Server (**\<***nome istanza***>)**, dove **\<***nome istanza***>** è il nome di un'istanza locale per cui si vuole disabilitare Gruppi di disponibilità Always On, quindi scegliere **Proprietà**.  
   
 4.  Deselezionare la casella di controllo**Abilita gruppi di disponibilità Always On**nella scheda **Disponibilità elevata Always On** e scegliere **OK**.  
   
@@ -227,7 +228,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
     > [!IMPORTANT]  
     >  Per informazioni su come controllare se il cmdlet **Disable-SqlAlwaysOn** riavvia il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Situazioni in cui un cmdlet comporta il riavvio del servizio SQL Server](#WhenCmdletRestartsSQL), più avanti in questo argomento.  
   
-     Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+     Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Per impostare e utilizzare il provider PowerShell per SQL Server**  
   
@@ -259,13 +260,13 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 |Specifica del parametro -NoServiceRestart|Specifica del parametro -Force|Riavvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  
-|No|No|Per impostazione predefinita. Tuttavia dal cmdlet è richiesto quanto segue:<br /><br /> **Per completare l'azione, è necessario riavviare il servizio SQL Server per l'istanza del server '<nome_istanza>'. Continuare?**<br /><br /> **[Y] Sì [N] No [S] Sospendi [?] Guida (l'impostazione predefinita è "Y"):**<br /><br /> Se si specifica **N** o **S**, il servizio non viene riavviato.|  
-|No|Sì|Servizio riavviato.|  
-|Sì|No|Servizio non riavviato.|  
+|no|no|Per impostazione predefinita. Tuttavia dal cmdlet è richiesto quanto segue:<br /><br /> **Per completare l'azione, è necessario riavviare il servizio SQL Server per l'istanza del server '<nome_istanza>'. Continuare?**<br /><br /> **[Y] Sì [N] No [S] Sospendi [?] Guida (l'impostazione predefinita è "Y"):**<br /><br /> Se si specifica **N** o **S**, il servizio non viene riavviato.|  
+|no|Sì|Servizio riavviato.|  
+|Sì|no|Servizio non riavviato.|  
 |Sì|Sì|Servizio non riavviato.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../../t-sql/functions/serverproperty-transact-sql.md)  
   
   

@@ -8,29 +8,27 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 488bdc3d56427922095ba1ed35e73cb82c88c41b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c9377c8a436f057a1b257af70c0c8d23ee52a8ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo di connessione PowerPivot (SSRS)
   È possibile usare l'estensione per l'elaborazione dati di SQL Server Analysis Services per recuperare dati da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicata in una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] di SharePoint.  
   
  Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [Aggiungere e verificare una connessione dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  L'origine dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve essere pubblicata in una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un sito di SharePoint.  
   
  Per supportare connessioni da Generatore report in una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , è necessario che nel computer workstation sia disponibile SQL Server 2008 R2 ADOMD.NET. La libreria client viene installata con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel, ma se si usa un computer che non include questa applicazione, è necessario scaricare e installare ADOMD.NET dalla pagina relativa a [SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565).  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="parameters"></a>Parametri  
  Nel riquadro Filtri selezionare l'opzione **Parametri** affinché un filtro crei automaticamente un parametro di report con valori disponibili che corrispondono alle selezioni del filtro.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se viene aperto Generatore report dalla cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , le tabelle pivot, i grafici pivot, i filtri dei dati e altre caratteristiche di layout e analitiche della cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non vengono ricreati nel report. Al contrario, nel report vuoto è inclusa un'origine dati preconfigurata che punta ai dati della cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . La progettazione di report basati su una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] può richiedere molto tempo a seconda del numero di filtri dei dati, di filtri, di tabelle o di grafici che si vuole ricreare nel report. Un approccio migliore consiste nel prevedere la presentazione dei dati desiderati in un report indipendentemente dalla progettazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  I dati di una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono molto compressi, mentre i dati recuperati dalla cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per un report non sono compressi. Utilizzare Progettazione query per specificare i filtri e i parametri utili per limitare i dati a quelli necessari per il report.  

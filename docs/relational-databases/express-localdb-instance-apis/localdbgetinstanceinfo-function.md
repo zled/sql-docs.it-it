@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBGetInstanceInfo
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBGetInstanceInfo
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4de3cd9c76c21b4b5013581ab40fcd15bb976d5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7599164714f1eeb8e1a7b7a1a82541416fecf83
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Funzione LocalDBGetInstanceInfo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Restituisce informazioni per l'istanza specificata di SQL Server Express LocalDB, ad esempio se esiste, la versione del database locale utilizzata, se è in esecuzione e così via.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Vengono restituite le informazioni per l'istanza del database locale di SQL Server Express specificata, se esistente, la versione del database locale utilizzata dall'istanza, se quest'ultima è in esecuzione e così via.  
   
  Vengono restituite le informazioni un **struct** denominato **LocalDBInstanceInfo**, che presenta la definizione seguente.  
   

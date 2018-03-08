@@ -1,5 +1,5 @@
 ---
-title: sp_remove_job_from_targets (Transact-SQL) | Documenti Microsoft
+title: sp_remove_job_from_targets (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_remove_job_from_targets_TSQL
 - sp_remove_job_from_targets
-dev_langs: TSQL
-helpviewer_keywords: sp_remove_job_from_targets
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_remove_job_from_targets
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8748e6968197faeb3809cf8adef59bc9b2452d57
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d27f90f6b4ec53b0bf68bd052c17483990205cfe
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +49,22 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  Numero di identificazione del processo da cui rimuovere i server di destinazione o i gruppi di server di destinazioni specificati. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  Nome del processo da cui rimuovere i server di destinazione o i gruppi di server di destinazione specificati. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *job_name* è **sysname**, con un valore predefinito è NULL.  
   
- [  **@target_server_groups =**] **'***target_server_groups***'**  
+ [ **@target_server_groups =**] **'***target_server_groups***'**  
  Elenco delimitato da virgole dei gruppi di server di destinazione da rimuovere dal processo specificato. *target_server_groups* è **nvarchar (1024)**, con un valore predefinito è NULL.  
   
- [  **@target_servers =**] **'***target_servers***'**  
+ [ **@target_servers =**] **'***target_servers***'**  
  Elenco delimitato da virgole dei server di destinazione da rimuovere dal processo specificato. *target_servers* è **nvarchar (1024)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -79,8 +82,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_apply_job_to_targets &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

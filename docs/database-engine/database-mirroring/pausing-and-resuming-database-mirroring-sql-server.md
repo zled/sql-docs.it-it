@@ -21,13 +21,13 @@ ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d504cd71dc0cfaab100f32ab82ba19ca8b34aeed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 75f700428ebe213ad7faaef691bf1460e263c268
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Sospensione e ripresa del mirroring del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Il proprietario del database può sospendere una sessione di mirroring del database, riprenderla in qualsiasi momento e preservare così lo stato della sessione durante la sospensione del mirroring. In caso di colli di bottiglia, la sospensione può essere utile per migliorare le prestazioni del server principale.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT]  
 >  In un servizio forzato, quando il server principale originale esegue nuovamente la connessione il mirroring viene sospeso. Se si riprende il mirroring in questa situazione, è possibile che si verifichi una perdita di dati nel server principale originale. Per informazioni sulla gestione della potenziale perdita di dati, vedere [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
- **Contenuto dell'argomento:**  
+ **Contenuto dell'argomento**  
   
 -   [Impatto della sospensione e ripresa sul troncamento del log](#EffectOnLogTrunc)  
   

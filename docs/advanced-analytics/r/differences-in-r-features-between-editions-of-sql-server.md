@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b33a3e2-04d3-4bad-9335-9568ae09db0b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 57b4279882cf2c1363dc40616175552260aff0c9
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: f4fd73dd213b004916fb99dcb95146221116da8e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="differences-in-machine-learning-features-between-editions-of-sql-server"></a>Differenze nelle funzionalità di machine learning tra le edizioni di SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  Supporto per machine learning è disponibile in SQL Server 2016 e SQL Server 2017. In questo articolo sono elencate le edizioni che supportano la funzionalità, vengono descritte le limitazioni aggiuntive che si applicano in edizioni specifiche e vengono elencate le funzionalità disponibili solo in alcune edizioni.
 

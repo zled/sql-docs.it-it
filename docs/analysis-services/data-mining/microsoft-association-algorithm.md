@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,19 +32,20 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d68a5b94df379a3ab19d4df5d4621c986762473
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2deac725bc544b305f9207e2538981bfdea3df46
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo Microsoft Association Rules
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un algoritmo che viene spesso utilizzato per i motori di raccomandazione. Un motore dei suggerimenti consiglia articoli ai clienti in base agli articoli che hanno già acquistato o a cui sono interessati. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è utile anche per analisi di mercato sugli acquisti.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un algoritmo di associazione spesso usato per i motori dei suggerimenti. Un motore dei suggerimenti consiglia articoli ai clienti in base agli articoli che hanno già acquistato o a cui sono interessati. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è utile anche per analisi di mercato sugli acquisti.   
   
  I modelli di associazione vengono compilati in base a set di dati che includono sia gli indicatori dei singoli case che gli indicatori degli elementi contenuti nei case. Un gruppo di elementi in un case viene chiamato *set di elementi*. Un modello di associazione è costituito da una serie di set di elementi e di regole che descrivono la modalità di raggruppamento di tali elementi all'interno dei case. È possibile utilizzare le regole identificate dall'algoritmo per stimare i probabili acquisti futuri di un cliente, in base agli elementi già esistenti nel relativo carrello acquisti. Nel diagramma seguente viene illustrata una serie di regole all'interno di un set di elementi.  
   
@@ -78,7 +77,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="viewing-an-association-model"></a>Visualizzazione di un modello di associazione  
  Per esplorare il modello, è possibile usare il **Visualizzatore Microsoft Association Rules**. Quando si visualizza un modello di associazione, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono presentate le correlazioni da diverse angolazioni, in modo che sia possibile identificare più facilmente le relazioni e le regole individuate nei dati. Il riquadro **Set di elementi** del visualizzatore fornisce una suddivisione dettagliata delle combinazioni più comuni, ovvero set di elementi. Il riquadro **Regole** presenta un elenco di regole generalizzate dai dati e consente di aggiungere calcoli di probabilità, nonché di classificare le regole in base all'importanza relativa. Il visualizzatore di reti di dipendenza consente di esplorare visivamente le connessioni tra elementi diversi. Per altre informazioni, vedere [Visualizzare un modello usando il Visualizzatore Microsoft Clustering](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
- Per altri dettagli sui set di elementi e le regole, è possibile esplorare il modello in [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Il contenuto archiviato per il modello include il supporto per ogni set di elementi, un punteggio per ogni regola e altre statistiche. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di associazione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
+ Per altri dettagli sui set di elementi e le regole, è possibile esplorare il modello in [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Il contenuto archiviato per il modello include il supporto per ogni set di elementi, un punteggio per ogni regola e altre statistiche. Per altre informazioni, vedere [Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Creazione di stime  
  Dopo l'elaborazione del modello, è possibile utilizzare le regole e i set di elementi per eseguire stime. In un modello di associazione una stima indica quale elemento è probabile che si verifichi data la presenza dell'elemento specificato. La stima può includere informazioni come la probabilità, il supporto o la priorità. Per alcuni esempi su come creare query su un modello di associazione, vedere [Esempi di query sul modello di associazione](../../analysis-services/data-mining/association-model-query-examples.md).  
@@ -105,10 +104,10 @@ ms.lasthandoff: 12/08/2017
 -   Supporta la creazione di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di Data Mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzare un modello utilizzando il visualizzatore Microsoft Association Rules](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
  [Contenuto del modello di data mining per i modelli di associazione &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Association Rules](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [Esempi di query sul modello di associazione](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Esempi di Query sul modello Association](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   

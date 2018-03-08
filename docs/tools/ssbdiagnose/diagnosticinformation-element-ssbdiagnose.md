@@ -3,7 +3,7 @@ title: Elemento DiagnosticInformation (ssbdiagnose) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssbdiagnose
 ms.reviewer: 
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9660c8661ff83f94a08b79f64ced7fa35df44dad
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 82593d8330e5f7263ff43c6b408998164425617f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>Elemento DiagnosticInformation (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il **DiagnosticInformation** elemento contiene tutti gli elementi che segnalano le informazioni di diagnostica rilevate dall'utilità. **DiagnosticInformation** è l'elemento radice di un file di output XML **ssbdiagnostic** .  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|Attribute|Descrizione|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**Nessuno**|N/D|  
   
@@ -58,12 +58,12 @@ ms.lasthandoff: 12/05/2017
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|Nessuno|  
-|**Elementi figlio**|[Elemento Banner &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)<br /><br /> [Elemento Issue &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)|  
+|**Elementi figlio**|[Elemento banner &#40; ssbdiagnose &#41;](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)<br /><br /> [Elemento Issue &#40; ssbdiagnose &#41;](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)|  
   
 ## <a name="remarks"></a>Osservazioni  
  Per ulteriori informazioni sugli spazi dei nomi XML, vedere [Spazi dei nomi in un documento XML](http://go.microsoft.com/fwlink/?LinkId=7341) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN Library.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilità ssbdiagnose &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+ [Utilità ssbdiagnose &#40; Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   

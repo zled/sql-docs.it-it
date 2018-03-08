@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cbabea62b99f36adb2adf9f12e52d80644f33ea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a8da466d7fb1cc988df297dee72d80ed19fed44
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-bookmarks"></a>Utilizzo di segnalibri
 È spesso utile tornare direttamente a un record specifico dopo vari spostamenti **Recordset** senza dover scorrere ogni record e confrontare i valori. Ad esempio, se si tenta di eseguire la ricerca di un record utilizzando il **trovare** metodo ma la ricerca non restituisce alcun record, si viene automaticamente posizionati in delle estremità del **Recordset**. Se il provider supporta questa funzionalità, è possono utilizzare i segnalibri per contrassegnare la posizione prima di utilizzare il **trovare** metodo in modo da poter ritornare alla posizione dell'utente. Un segnalibro è un **Variant** tipo di valore che identifica in modo univoco un record in un **Recordset** oggetto.  

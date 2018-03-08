@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +23,20 @@ helpviewer_keywords:
 - continuous columns
 - regression algorithms [Analysis Services]
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c5b1fd05f99d361aabc8e5f340cd3d013475203d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 68821f25ad1a0defca193fa2c8023f64def0da1b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Algoritmo Microsoft Decision Trees
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Decision Trees è un algoritmo di classificazione e regressione per la modellazione predittiva di attributi sia discreti che continui.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees è un algoritmo di classificazione e di regressione per la modellazione predittiva di attributi sia discreti che continui.  
   
  Per gli attributi discreti, l'algoritmo esegue le stime in base alle relazioni tra le colonne di input in un set di dati. I valori, noti come stati, di tali colonne vengono utilizzati per stimare gli stati di una colonna designata come stimabile. In particolare, l'algoritmo identifica le colonne di input correlate alla colonna stimabile. Se ad esempio, in uno scenario finalizzato alla stima dei clienti che probabilmente acquisteranno una bicicletta, nove su dieci tra i clienti più giovani acquistano la bicicletta mentre solo due su dieci tra i clienti meno giovani la acquistano, l'algoritmo desume che l'età rappresenta un criterio di stima valido per l'acquisto di biciclette. L'albero delle decisioni esegue le stime in base alla tendenza verso un determinato risultato.  
   
@@ -95,7 +94,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="viewing-a-decision-trees-model"></a>Visualizzazione di un modello di albero delle decisioni  
  Per esplorare il modello, è possibile usare il **Visualizzatore Microsoft Decision Trees**. Se il modello genera più alberi, è possibile selezionare un albero per visualizzare dettagli sulla classificazione dei case per ciascun attributo stimabile. È inoltre possibile visualizzare l'interazione degli alberi utilizzando il Visualizzatore rete di dipendenze. Per altre informazioni, vedere [Visualizzare un modello usando il Visualizzatore Microsoft Decision Trees](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
   
- Per ulteriori dettagli sui nodi o sui rami dell'albero, è anche possibile esplorare il modello in [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Il contenuto memorizzato per il modello include la distribuzione per tutti i valori in ogni nodo, le probabilità di ogni livello dell'albero e le formule di regressione degli attributi continui. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Per ulteriori dettagli sui nodi o sui rami dell'albero, è anche possibile esplorare il modello in [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Il contenuto memorizzato per il modello include la distribuzione per tutti i valori in ogni nodo, le probabilità di ogni livello dell'albero e le formule di regressione degli attributi continui. Per altre informazioni, vedere [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Creazione di stime  
  In seguito all'elaborazione del modello, i risultati vengono archiviati come un set di modelli e statistiche che è possibile utilizzare per esplorare le relazioni o per eseguire stime.  
@@ -113,9 +112,9 @@ ms.lasthandoff: 12/08/2017
 -   Supporta l'utilizzo di modelli di data mining OLAP e la creazione di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di Data Mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft Decision Trees riferimento tecnico per l'algoritmo](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
  [Esempi di Query modello di alberi delle decisioni](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli di albero delle decisioni &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

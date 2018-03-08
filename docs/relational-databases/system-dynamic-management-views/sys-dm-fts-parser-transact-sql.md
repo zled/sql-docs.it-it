@@ -1,5 +1,5 @@
 ---
-title: Sys.dm fts_parser (Transact-SQL) | Documenti Microsoft
+title: sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_fts_parser
 - dm_fts_parser_TSQL
 - sys.dm_fts_parser
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dad0375eeffff881c1887fea3c82343202f6b77
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 97e1eb8f7c4b37e8f1d3bb84ff7b1607712f729c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *stringa_query*  
+ *query_string*  
  Query da analizzare. *stringa_query* può essere una catena di stringhe che [CONTAINS](../../t-sql/queries/contains-transact-sql.md) supportano la sintassi. È possibile ad esempio includere forme flessive, un thesaurus e operatori logici.  
   
  *lcid*  
@@ -74,7 +76,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |parola chiave|**varbinary(128)**|Rappresentazione esadecimale di una parola chiave specificata restituita da un word breaker. Tale rappresentazione viene utilizzata per archiviare la parola chiave nell'indice full-text. Questo valore non è leggibile, ma è utile per relative a una determinata parola chiave per l'output restituito da altre viste a gestione dinamica che restituiscono il contenuto di un indice full-text, ad esempio [Sys.dm fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ Sys.dm fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF rappresenta il carattere speciale che indica la fine di un file o un set di dati.|  
-|group_id|**int**|Contiene un valore integer utile per differenziare il gruppo logico dal quale è stato generato un termine specifico. '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produce ad esempio i seguenti valori di group_id in inglese:<br /><br /> 1: server<br />2: DB<br />3: DB|  
+|group_id|**int**|Contiene un valore integer utile per differenziare il gruppo logico dal quale è stato generato un termine specifico. '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produce ad esempio i seguenti valori di group_id in inglese:<br /><br /> 1: Server<br />2: DB<br />3: DB|  
 |phrase_id|**int**|Contiene un valore integer utile per differenziare i casi in cui il word breaker invia forme alternative di parole composte, come full-text. In presenza di parole composte, ad esempio "multi-million", a volte il word breaker invia forme alternative. In alcuni casi tali forme alternative (frasi) devono essere differenziate.<br /><br /> '`multi-million`' produce ad esempio i seguenti valori di phrase_id in inglese:<br /><br /> 1 per`multi`<br />1 per`million`<br />2 per`multimillion`|  
 |occurrence|**int**|Indica l'ordine di ogni termine nel risultato dell'analisi. Per la frase "`SQL Server query processor`", ad esempio, in occurrence sarebbero presenti i seguenti valori di occorrenza per i termini, in inglese:<br /><br /> 1 per`SQL`<br />2 per`Server`<br />3 per`query`<br />4 per`processor`|  
 |special_term|**nvarchar(4000)**|Contiene informazioni sulle caratteristiche del termine inviato dal word breaker, tra cui:<br /><br /> Corrispondenza esatta<br /><br /> Parola non significativa<br /><br /> Fine di frase<br /><br /> Fine di paragrafo<br /><br /> Fine di capitolo|  
@@ -129,7 +131,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
  Oltre agli scenari di utilizzo precedenti, sys.dm_fts_parser può risultare estremamente utile nella comprensione e nella risoluzione di molti altri problemi relativi alla query full-text.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza di **sysadmin** fissa diritti di accesso e ruolo del server per l'elenco di parole non significative specificato.  
   
 ## <a name="examples"></a>Esempi  
@@ -169,7 +171,7 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca full-Text e funzioni e viste a gestione dinamica della ricerca semantica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Ricerca full-text](../../relational-databases/search/full-text-search.md)   
+ [Ricerca full-Text](../../relational-databases/search/full-text-search.md)   
  [Configurazione e gestione di word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurare e gestire i file del Thesaurus per la ricerca Full-Text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [Configurare e gestire parole non significative ed elenchi per la ricerca Full-Text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   

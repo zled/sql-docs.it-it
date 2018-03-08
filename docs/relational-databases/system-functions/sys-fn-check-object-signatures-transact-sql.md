@@ -1,5 +1,5 @@
 ---
-title: (Transact-SQL) fn_check_object_signatures | Documenti Microsoft
+title: sys.fn_check_object_signatures (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - fn_check_object_signatures_TSQL
 - fn_check_object_signatures
 - sys.fn_check_object_signatures
-dev_langs: TSQL
-helpviewer_keywords: sys.fn_check_object_signatures function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fn_check_object_signatures function
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4f237723380c7220086f4b6642609f6e9177315
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c09d861dd588e4edf0fca567b5a379e95ce58209
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -73,7 +76,7 @@ fn_ check_object_signatures (
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare **fn_check_object_signatures** per confermare che gli utenti malintenzionati non hanno manomesso gli oggetti.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DEFINITION per il certificato o la chiave asimmetrica.  
   
 ## <a name="examples"></a>Esempi  
@@ -95,6 +98,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [IS_OBJECTSIGNED &#40; Transact-SQL &#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
+ [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

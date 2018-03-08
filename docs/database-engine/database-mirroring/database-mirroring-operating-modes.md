@@ -16,13 +16,13 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 664c1bf039edfafe035752ef9a8cfaa196074c28
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8c716fa65c68b44c6a4eb53e9c63bbe378298633
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-operating-modes"></a>Modalità di funzionamento del mirroring del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra le modalità di funzionamento sincrono e asincrono per le sessioni di mirroring del database.  
@@ -251,7 +251,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="ViewWitness"></a> Visualizzazione dell'impostazione di sicurezza e dello stato del server di controllo del mirroring  
  Per visualizzare l'impostazione di sicurezza e lo stato del server di controllo del mirroring per un database, usare la vista del catalogo **sys.database_mirroring** . Le colonne rilevanti sono le seguenti:  
   
-|Fattore|Colonne|Descrizione|  
+|Fattore|Colonne|Description|  
 |------------|-------------|-----------------|  
 |Livello di sicurezza delle transazioni|**mirroring_safety_level** o **mirroring_safety_level_desc**|Impostazione del livello di protezione delle transazioni per gli aggiornamenti nel database mirror, scelta tra le seguenti:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL = database non online|  
 |Disponibilità di un server di controllo del mirroring|**mirroring_witness_name**|Nome del server di controllo del mirroring del database o valore NULL se tale server non esiste.|  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 691d717b5cb5545a86fe9fbefffd0f545f77f934
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 192a91539b35a718556e50707a6f74cb15cfc5b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="token--ssis-expression"></a>TOKEN (espressione SSIS)
   Restituisce un token (sottostringa) da una stringa in base ai delimitatori specificati che separano i token nella stringa e al numero del token che indica quale token deve essere restituito.  
@@ -45,7 +46,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa funzione suddivide la stringa <character_expression> in un set di token separati dai delimitatori specificati nella <delimiter_string>, quindi restituisce l'N token dove N è il numero di occorrenze del token specificato dal parametro \<occurrence>. Per utilizzi di esempio di questa funzione, vedere la sezione Esempi.  
   
  Le osservazioni seguenti riguardano la funzione TOKEN:  

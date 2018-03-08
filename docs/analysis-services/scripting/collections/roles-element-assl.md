@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Roles Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d125df9535303152449ad54ef577995a1da9b6d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 06fe47cbf3a13cc1c816f698b2ee80bec9e09f63
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="roles-element-assl"></a>Elemento Roles (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene la raccolta di [ruolo](../../../analysis-services/scripting/objects/role-element-assl.md) gli elementi definiti nell'elemento padre.  
@@ -49,10 +47,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/08/2017
 |Elementi padre|[Database](../../../analysis-services/scripting/objects/database-element-assl.md), [Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
 |Elementi figlio|[Ruolo](../../../analysis-services/scripting/objects/role-element-assl.md)|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'elemento **Roles** associato a un elemento **Server** contiene solo uno ruolo, denominato Administrators, che rappresenta il ruolo di amministratore del server. Il ruolo di amministratore del server non può essere modificato o eliminato, né altri ruoli possono essere aggiunti alla raccolta.  
   
  L'elemento **Roles** associato a un elemento **Database** contiene i ruoli definiti per il database.  

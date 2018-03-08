@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ed345b4e0562fd61b7995d91bd2db12cad4cd57
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 05a5397987761530d783097ec76914b01fe5356c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="readwritemode-element"></a>Elemento ReadWriteMode
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Il **ReadWriteMode** proprietà di database consente di specificare se il database è in **ReadWrite** modalità o in **ReadOnly** modalità. Questi sono i due soli valori possibili della proprietà.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|ReadWrite|  
@@ -54,14 +52,14 @@ ms.lasthandoff: 12/08/2017
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Database](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
 ## <a name="remarks"></a>Osservazioni  
  I database vengono creati **ReadWrite** solo in modalità. Non possono essere creati **ReadOnly** modalità.  
   
  Il valore di **ReadWriteMode** elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |*Sola lettura*|Non è possibile applicare modifiche o aggiornamenti al database.|  
 |*Lettura/scrittura*|È possibile applicare modifiche e aggiornamenti al database.|  

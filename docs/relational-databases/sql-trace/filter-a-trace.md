@@ -19,15 +19,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49755f29a54164f008e19bc542a9ca650e54b37b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a53a67bdd997f3daa8168f445ce8eada527b5608
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-a-trace"></a>Filtrare una traccia
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] I filtri consentono di limitare gli eventi raccolti in una traccia. Se non si imposta un filtro, tutti gli eventi delle classi di evento selezionate vengono restituiti nell'output di traccia. Ad esempio, se si limitano i nomi utente di Windows in una traccia, consentendo solo utenti specifici, i dati dell'output saranno ridotti solo a tali utenti.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  La disponibilità dei filtri dipende dalla colonna di dati. Non è possibile filtrare alcune colonne di dati. Le colonne di dati che possono essere filtrate consentono solo determinati operatori relazionali, come illustrato nella tabella seguente.  
   
-|Operatore relazionale|Simbolo operatore|Descrizione|  
+|Operatore relazionale|Simbolo operatore|Description|  
 |-------------------------|---------------------|-----------------|  
 |Simile a|Simile a|Consente di specificare che i dati dell'evento di traccia devono essere simili al testo specificato. Supporta più valori.|  
 |Non simile a|Non simile a|Specifica che i dati dell'evento di traccia devono essere diversi dal testo specificato. Supporta più valori.|  
@@ -133,7 +133,7 @@ ms.lasthandoff: 11/17/2017
 |**SqlHandle**|Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per filtrare gli eventi in questa colonna di dati. Per altre informazioni, vedere [Filtrare le tracce tramite SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
-|**Operazione completata**|=, <>, >=, <=|  
+|**Esito positivo**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per filtrare gli eventi in questa colonna di dati. Per altre informazioni, vedere [Filtrare le tracce tramite SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  

@@ -8,28 +8,30 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: optimize for ad hoc workloads option
+helpviewer_keywords:
+- optimize for ad hoc workloads option
 ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 96e21a0eb32b9aeecabdfeb574d3e793b3ab99d8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c2b8c7645880d3e6a1ff2ee9d48e2666d7659c68
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>ottimizzare per l'opzione di configurazione del server dei carichi di lavoro a hoc
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  L'opzione **optimize for ad hoc workloads** consente di migliorare l'efficienza della cache dei piani per carichi di lavoro che contengono molti batch ad hoc a uso singolo. Quando questa opzione viene impostata su 1, alla prima compilazione di un batch il [!INCLUDE[ssDE](../../includes/ssde-md.md)] archivia un piccolo stub del piano compilato nella cache dei piani, anziché il piano compilato completo. In questo modo si riducono le richieste di memoria evitando che la cache dei piani si riempia con piani compilati che non vengono riutilizzati.  
+  L'opzione **optimize for ad hoc workloads** consente di migliorare l'efficienza della cache dei piani per carichi di lavoro che contengono molti batch ad hoc a uso singolo. Quando questa opzione viene impostata su 1, alla prima compilazione di un batch il [!INCLUDE[ssDE](../../includes/ssde-md.md)] archivia un piccolo stub del piano compilato nella cache dei piani, anziché il piano compilato completo. In questo modo si riducono le richieste di memoria evitando che la cache dei piani si riempia con piani compilati che non vengono riutilizzati. 
   
- Poiché grazie allo stub del piano compilato il [!INCLUDE[ssDE](../../includes/ssde-md.md)] riconosce che il batch ad hoc è stato compilato in precedenza e ha archiviato solo uno stub del piano compilato, quando il batch viene nuovamente richiamato (compilato o eseguito), il [!INCLUDE[ssDE](../../includes/ssde-md.md)] compila il batch, rimuove lo stub del piano compilato dalla cache dei piani e aggiunge il piano compilato completo alla cache dei piani. 
+  Poiché grazie allo stub del piano compilato il [!INCLUDE[ssDE](../../includes/ssde-md.md)] riconosce che il batch ad hoc è stato compilato in precedenza e ha archiviato solo uno stub del piano compilato, quando il batch viene nuovamente richiamato (compilato o eseguito), il [!INCLUDE[ssDE](../../includes/ssde-md.md)] compila il batch, rimuove lo stub del piano compilato dalla cache dei piani e aggiunge il piano compilato completo alla cache dei piani. 
   
  Lo stub del piano compilato è uno dei cacheobjtype visualizzato nella vista del catalogo sys.dm_exec_cached_plans. Dispone di handle SQL e del piano univoci. Lo stub del piano compilato non ha un piano di esecuzione associato e l'esecuzione di query per l'handle del piano non restituisce uno showplan XML.  
   
@@ -39,6 +41,8 @@ ms.lasthandoff: 01/02/2018
 >  Il flag di traccia 8032 può provocare prestazioni ridotte se cache di grandi dimensioni rendono disponibile meno memoria per altri consumer di memoria, ad esempio il pool di buffer.  
 
 ## <a name="recommendations"></a>Indicazioni
+Evitare la presenza di un numero elevato di piani a uso singolo nella cache dei piani. Una causa comune di questo problema è la definizione non coerente dei tipi di dati o dei parametri di query. Questo è vero specificamente per la lunghezza delle stringhe ma è applicabile a qualsiasi tipo di dati che dispone di una lunghezza massima, una precisione o una scala. Se ad esempio un parametro con nome @Greeting viene passato come nvarchar(10) in una chiamata e come nvarchar(20) nella chiamata seguente, vengono creati piani separati per ogni dimensione del parametro. Se una query include diversi parametri e questi non sono definiti in modo coerente quando vengono chiamati, è possibile che per ogni query esista un numero elevato di piani di query. È possibile che esistano piani per ogni combinazione di tipi di dati dei parametri di query e lunghezze.
+
 Se il numero di piani a utilizzo singolo occupa una parte significativa della memoria di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in un server OLTP e questi piani sono piani ad-hoc, usare questa opzione server per ridurre l'utilizzo della memoria con questi oggetti.
 Per trovare il numero di piani a uso singolo memorizzati nella cache, eseguire la query seguente:
 

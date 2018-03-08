@@ -8,26 +8,28 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - format files [SQL Server], skipping data fields
 - skipping data fields when importing
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fbe24a2b8a4865121a3bf949be1434a23c0383de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05ae27bef9252585d9f1a3413a48eb28a6f062f2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Utilizzo di un file di formato per escludere un campo di dati (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile che un file di dati contenga un numero di campi maggiore del numero di colonne presenti nella tabella. In questo argomento viene descritta la modifica dei file di formato XML e non XML per consentire l'utilizzo di un file di dati con un numero maggiore di campi tramite il mapping delle colonne della tabella ai campi dati corrispondenti e l'esclusione dei campi aggiuntivi.  Per altre informazioni, vedere [Creazione di un file di formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) .
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+È possibile che un file di dati contenga un numero di campi maggiore del numero di colonne presenti nella tabella. In questo argomento viene descritta la modifica dei file di formato XML e non XML per consentire l'utilizzo di un file di dati con un numero maggiore di campi tramite il mapping delle colonne della tabella ai campi dati corrispondenti e l'esclusione dei campi aggiuntivi.  Per altre informazioni, vedere [Creazione di un file di formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) .
 
 |Riquadro|
 |---|

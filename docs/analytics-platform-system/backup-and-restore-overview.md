@@ -14,12 +14,12 @@ description: Viene descritto come dati di backup e ripristino works per SQL Serv
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: "50"
+caps.latest.revision: 
 ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backup-and-restore"></a>Backup e ripristino
 Viene descritto come dati di backup e ripristino works per SQL Server Parallel Data Warehouse (PDW). Operazioni di backup e ripristino vengono utilizzate per il ripristino di emergenza. Backup e ripristino è consente anche di copiare un database da un dispositivo a un altro dispositivo.  
@@ -85,7 +85,7 @@ Il processo di backup funziona nel modo seguente:
   
     -   Una copia di backup può essere ripristinato solo a appliance PDW che presenta un numero uguale o maggiore di nodi di calcolo.  
   
-    -   Prima di eseguire un ripristino, è possibile modificare il nome del backup. Il nome della directory di backup deve corrispondere al nome del nome originale del backup. Il nome originale del backup si trova nel file backup.xml all'interno della directory di backup. Per ripristinare un database in un nome diverso, è possibile specificare il nuovo nome nel comando restore. Ad esempio: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
+    -   Prima di eseguire un ripristino, è possibile modificare il nome del backup. Il nome della directory di backup deve corrispondere al nome del nome originale del backup. Il nome originale del backup si trova nel file backup.xml all'interno della directory di backup. Per ripristinare un database in un nome diverso, è possibile specificare il nuovo nome nel comando restore. Esempio: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
 ## <a name="RestoreModes"></a>Modalità di ripristino di database  
 Un ripristino completo del database consente di ricreare il database PDW utilizzando i dati nel backup del database. Il ripristino di database viene effettuato prima di ripristinare un backup completo e quindi, facoltativamente, il ripristino di un backup differenziale. Il ripristino di database include gli utenti di database e i ruoli del database.  
@@ -129,11 +129,11 @@ Ad esempio, quando si ripristina un database di 60 GB da un dispositivo 2 nodi (
   
 Dopo la ridistribuzione ogni nodo di calcolo contiene meno dati effettivi e più spazio rispetto a ogni nodo di calcolo nel dispositivo di origine più piccolo. Utilizzare lo spazio aggiuntivo per aggiungere ulteriori dati al database. Se le dimensioni del database ripristinato sono superiore al necessario, è possibile utilizzare [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) per compattare le dimensioni dei file di database.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Backup e attività di ripristino|Description|  
 |---------------------------|---------------|  
-|Preparare un server come server di backup.|[Acquisire e configurare un server di backup](acquire-and-configure-backup-server.md)|  
+|Preparare un server come server di backup.|[Acquisire e configurare un server di backup ](acquire-and-configure-backup-server.md)|  
 |Backup di un database.|[DATABASE DI BACKUP](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |Ripristinare un database.|[RIPRISTINO DI DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 <!-- MISSING LINKS

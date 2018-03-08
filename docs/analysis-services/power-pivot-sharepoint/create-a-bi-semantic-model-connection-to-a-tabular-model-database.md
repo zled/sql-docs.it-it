@@ -5,29 +5,27 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: feb8740550ba5488ff07425ce20036140d84e3dc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Creare una connessione BISM a un database modello tabulare
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilizzare le informazioni in questo argomento per impostare una connessione BI semantic model che reindirizza a un database modello tabulare in esecuzione in un'istanza di Analysis Services all'esterno della farm di SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Utilizzare le informazioni fornite in questo argomento per impostare una connessione BISM che esegue il reindirizzamento a un database modello tabulare in esecuzione in un'istanza di Analysis Services esterna alla farm di SharePoint.  
   
  Dopo avere creato una connessione BISM e configurato le autorizzazioni di SharePoint e Analysis Services, sarà possibile utilizzare la connessione come origine dati per i report di Excel o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
@@ -88,7 +86,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_BISM"></a> Concedere autorizzazioni di lettura per il database modello tabulare  
  Poiché il database è in esecuzione in un server esterno alla farm, parte dell'impostazione delle connessioni includerà la concessione di autorizzazioni dell'utente di database sul server Analysis Services di back-end. In Analysis Services viene utilizzato un modello di autorizzazione basato sui ruoli. Gli utenti che si connettono ai database modello devono eseguire questa operazione con le autorizzazioni di lettura, o superiori, tramite un ruolo che concede accesso in lettura ai relativi membri.  
   
- I ruoli e talvolta l'appartenenza ai ruoli sono definiti quando si crea il modello in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Non è possibile utilizzare SQL Server Management Studio per creare ruoli, ma è possibile utilizzarlo per aggiungere membri a un ruolo già definito. Per altre informazioni sulla creazione di ruoli, vedere [Creare e gestire ruoli &#40; SSAS tabulare&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
+ I ruoli e talvolta l'appartenenza ai ruoli sono definiti quando si crea il modello in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Non è possibile utilizzare SQL Server Management Studio per creare ruoli, ma è possibile utilizzarlo per aggiungere membri a un ruolo già definito. Per ulteriori informazioni sulla creazione di ruoli, vedere [creare e gestire ruoli](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
 #### <a name="assign-role-membership"></a>Assegnare le appartenenze a ruoli  
   

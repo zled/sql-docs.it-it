@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7966552f130ce8ab4825c77929c5fd4599fd6209
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d2ae8d60d6e41536bc67bd14f9252c372fdeaa5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="batches-of-sql-statements"></a>Batch di istruzioni SQL
 Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singola istruzione SQL che ha lo stesso effetto di un gruppo di due o più istruzioni SQL. In alcune implementazioni, l'istruzione dell'intero batch viene eseguito prima che i risultati siano disponibili. Questo è spesso più efficiente rispetto all'invio istruzioni separatamente, poiché il traffico di rete spesso può essere ridotto e l'origine dati in alcuni casi può ottimizzare l'esecuzione di un batch di istruzioni SQL. Nelle altre implementazioni di chiamata **SQLMoreResults** attiva l'esecuzione dell'istruzione successiva nel batch. ODBC supporta i seguenti tipi di batch:  

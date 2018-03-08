@@ -1,28 +1,30 @@
 ---
 title: Creazione di flussi di lavoro di Business Intelligence con R | Documenti Microsoft
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 04/18/2017
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f9d289d2a5eaf2e04f771f0a51309e50d2821184
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>Creazione di flussi di lavoro di Business Intelligence con R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Un database relazionale è una tecnologia altamente ottimizzata per la realizzazione di soluzioni scalabili per l'elaborazione delle transazioni, l'archiviazione e l'esecuzione di query sui dati.
 
@@ -67,7 +69,7 @@ Ecco alcuni ideass per come è possibile automatizzare l'elaborazione di un dmod
 
 Questo post di blog illustra le tecniche di base per la modifica di codice R usando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: 
 
-+ Chiamare R utilizzando l'attività Esegui SQL per generare i dati e salvarlo in[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ Chiamare R utilizzando l'attività Esegui SQL per generare i dati e salvarlo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 + Usare una stored procedure per eseguire il training di un modello R e archiviarlo nel database
 

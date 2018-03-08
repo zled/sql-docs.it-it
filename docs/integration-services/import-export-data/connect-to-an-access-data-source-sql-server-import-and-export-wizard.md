@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfecde5790f25c254428d53ec613b968d7d3efd9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3217fe03497c2d72f3ce0a2c321df5e089ce4e1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati Access (Importazione/Esportazione guidata SQL Server)
 Questo argomento illustra come connettersi a un'origine dati **Microsoft Access** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata SQL Server.
@@ -65,7 +66,7 @@ Se un file di informazioni sul gruppo di lavoro è associato al database, specif
  
 Se il database è protetto con un'unica password per tutti gli utenti, vedere [File di database protetto da password](#database_password).
   
- **Avanzate**  
+ **Advanced**  
 Specificare le opzioni avanzate, ad esempio la password del database o un file di informazioni sul gruppo di lavoro diverso da quello predefinito, nella finestra di dialogo **Proprietà di Data Link**.  
 
 ## <a name="i-dont-see-access-in-the-list-of-data-sources"></a>Access non è incluso nell'elenco delle origini dati
@@ -81,7 +82,7 @@ La versione più recente dei componenti può aprire file creati da versioni prec
 
 Se il computer ha una versione a 32 bit di Office, è necessario installare la versione a 32 bit dei componenti e verificare anche di eseguire il pacchetto in modalità a 32 bit.
 
-Se si ha un abbonamento a Office 365, assicurarsi di scaricare Access Database Engine 2016 Redistributable e non Microsoft Access 2016 Runtime. Durante l'esecuzione del programma di installazione potrebbe essere visualizzato un messaggio di errore che indica non è possibile installare il download side-by-side con i componenti di Office a portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva aprendo una finestra del prompt dei comandi ed eseguendo il file con estensione EXE scaricato con l'opzione `/quiet`. Esempio:
+Se si ha un abbonamento a Office 365, assicurarsi di scaricare Access Database Engine 2016 Redistributable e non Microsoft Access 2016 Runtime. Durante l'esecuzione del programma di installazione potrebbe essere visualizzato un messaggio di errore che indica non è possibile installare il download in modalità affiancata con i componenti di Office A portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva aprendo una finestra del prompt dei comandi ed eseguendo il file con estensione EXE scaricato con l'opzione `/quiet`. Ad esempio
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

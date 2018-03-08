@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -41,19 +42,20 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5a22d5c69dd9e3250f559dc0d08ae639ed2ff2da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come abilitare e configurare Posta elettronica database usando la Configurazione guidata Posta elettronica database e come creare uno script di configurazione per Posta elettronica database usando i modelli.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In questo argomento viene illustrato come abilitare e configurare Posta elettronica database utilizzando la Configurazione guidata Posta elettronica database e come creare uno script di configurazione per Posta elettronica database utilizzando i modelli.  
   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
   
@@ -159,7 +161,7 @@ ms.lasthandoff: 11/17/2017
  Consente di digitare l'indirizzo di posta elettronica che verrà utilizzato per le risposte ai messaggi di posta elettronica inviati da questo account. L'indirizzo risposte è facoltativo. Le risposte a un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ad esempio, possono essere indirizzate all'amministratore del database danw@Adventure-Works.com.  
   
  **Nome server**  
- Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. In genere, presenta un formato simile a **smtp.***<nome_società>***.com**. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
+ Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. In genere, è in un formato simile a **smtp.***<nome_società>***.com**. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
   
  **Numero di porta**  
  Digitare il numero di porta del server SMTP per l'account. La maggior parte dei server SMTP utilizza la porta 25.  
@@ -193,7 +195,7 @@ ms.lasthandoff: 11/17/2017
  **Nome account**  
  Consente di selezionare l'account da visualizzare, aggiornare o eliminare.  
   
- **Delete**  
+ **Elimina**  
  Consente di eliminare l'account selezionato. È necessario rimuovere l'account dai profili associati, o eliminare tali profili, prima di poter eliminare l'account selezionato.  
   
  **Descrizione**  
@@ -223,7 +225,7 @@ ms.lasthandoff: 11/17/2017
  **Autenticazione di base**  
  Consente di specificare il nome utente e la password necessari per il server SMTP.  
   
- **Nome utente**  
+ **User name**  
  Consente di visualizzare o aggiornare il nome utente utilizzato da Posta elettronica database per accedere al server SMTP. Il nome utente è necessario se il server SMTP richiede l'autenticazione di base.  
   
  **Password**  
@@ -273,7 +275,7 @@ ms.lasthandoff: 11/17/2017
  **Nome profilo**  
  Consente di selezionare il nome del profilo da gestire.  
   
- **Delete**  
+ **Elimina**  
  Consente di eliminare il profilo selezionato. Verrà richiesto di scegliere **Sì** per eliminare il profilo selezionato e impostare un errore per gli eventuali messaggi non inviati oppure di scegliere **No** per eliminare il profilo selezionato solo se non sono presenti messaggi non inviati.  
   
  **Descrizione**  
@@ -367,7 +369,7 @@ ms.lasthandoff: 11/17/2017
   
  Un profilo può essere predefinito. In questo caso, gli utenti o i ruoli possono inviare messaggi di posta elettronica utilizzando il profilo senza specificarlo esplicitamente. Se l'utente o il ruolo che invia il messaggio di posta elettronica dispone di un profilo privato predefinito, Posta elettronica database utilizzerà tale profilo. Se all'utente o ruolo non è associato alcun profilo privato predefinito, **sp_send_dbmail** usa il profilo pubblico predefinito per il database **msdb** . Se non è disponibile un profilo privato predefinito per l'utente o il ruolo oppure un profilo pubblico predefinito per il database, **sp_send_dbmail** restituisce un errore.  
   
- **Nome utente**  
+ **User name**  
  Consente di selezionare il nome di un utente o di un ruolo nel database **msdb** .  
   
  **Accesso**  

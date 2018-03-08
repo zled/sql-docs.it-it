@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Blocked Process Report event class
+helpviewer_keywords:
+- Blocked Process Report event class
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9b92c3ed426d733243916372a15df601d3c01e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36d8b302c134bdb18e55f69eeeb7bb916d825929
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento **Blocked Process Report** indica che un'attività è stata bloccata per un periodo di tempo più lungo di quello specificato. Questa classe di evento non include attività di sistema o attività in attesa di risorse per le quali non sono rilevabili i deadlock.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La classe di evento **Blocked Process Report** indica che un'attività è stata bloccata per un periodo di tempo più lungo di quello specificato. Questa classe di evento non include attività di sistema o attività in attesa di risorse per le quali non sono rilevabili i deadlock.  
   
  Per configurare la soglia e la frequenza relative alla generazione di report, utilizzare il comando **sp_configure** per impostare l'opzione **blocked process threshold** . Per eseguire questa operazione occorrono pochi secondi. Per impostazione predefinita, non vengono generati report relativi ai processi bloccati. Per altre informazioni sull'opzione **blocked process threshold**, vedere [Opzione di configurazione del server blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
   
@@ -33,13 +36,13 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="blocked-process-report-event-class-data-columns"></a>Colonne di dati della classe di evento Blocked Process Report  
   
-|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID del database in cui è stato acquisito il blocco. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**Durata**|**bigint**|Durata in millisecondi del blocco relativo al processo.|13|Sì|  
 |**EndTime**|**datetime**|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, come **SQL:BatchStarting** o **SP:Starting**.|15|Sì|  
-|**EventClass**|**int**|Tipo di evento = 137.|27|No|  
-|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|**EventClass**|**int**|Tipo di evento = 137.|27|no|  
+|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |**IndexID**|**int**|ID dell'indice dell'oggetto interessato dall'evento. Per determinare l'ID di indice di un oggetto, utilizzare la colonna **indid** della tabella di sistema **sysindexes** .|24|Sì|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
 |**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Questo evento viene segnalato sempre dal thread di sistema. IsSystem = 1; SID = sa.|41|Sì|  

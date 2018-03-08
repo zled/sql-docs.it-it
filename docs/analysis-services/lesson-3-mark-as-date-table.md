@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d7211e221f95a4217924bfe29aa56306aebdfcb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e463f148b07d8fbe7061dca0eed66bba1b0fee94
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-mark-as-date-table"></a>Lezione 3: Contrassegna come tabella data
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +37,7 @@ Prima si contrassegna la tabella relativa alla data e la colonna di data, è nec
   
 Tempo stimato per il completamento della lezione: **3 minuti**  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 2: aggiungere dati](../analysis-services/lesson-2-add-data.md). 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>Per rinominare la colonna FullDateAlternateKey
@@ -53,11 +53,11 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 2.  Fare clic sul menu **Tabella** , selezionare **Data**, quindi scegliere **Contrassegna come tabella data**.  
   
-3.  Nella casella di riepilogo **Data** della finestra di dialogo **Contrassegna come tabella data** selezionare la colonna **Data** come identificatore univoco. Verrà in genere selezionato per impostazione predefinita. Scegliere **OK**. 
+3.  Nella casella di riepilogo **Data** della finestra di dialogo **Contrassegna come tabella data** selezionare la colonna **Data** come identificatore univoco. Verrà in genere selezionato per impostazione predefinita. Fare clic su **OK**. 
 
     ![come tabulare-lesson3-data-tabella-](../analysis-services/media/as-tabular-lesson3-date-table.png)
   
 
-## <a name="whats-next"></a>Operazioni successive
+## <a name="whats-next"></a>Quali sono le operazioni successive?
 Passare alla lezione successiva: [lezione 4: creare relazioni](../analysis-services/lesson-4-create-relationships.md).
   

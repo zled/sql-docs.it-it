@@ -4,41 +4,43 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS programming model [ADO], details
+helpviewer_keywords:
+- RDS programming model [ADO], details
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e3edfd1b1ec33d4c014fae4a0fed8d61d5ef8ed
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5a2798c750ba20b03c9e423b5897575ce4d5d697
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-programming-model-in-detail"></a>Modello di programmazione di servizi desktop remoto in modo dettagliato
 Di seguito sono indicati gli elementi chiave del modello di programmazione di servizi desktop remoto:  
   
--   RDS. DataSpace  
+-   RDS.DataSpace  
   
--   RDSServer  
+-   RDSServer.DataFactory  
   
--   RDS. DataControl  
+-   RDS.DataControl  
   
 -   Evento  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="rdsdataspace"></a>RDS. DataSpace  
+## <a name="rdsdataspace"></a>RDS.DataSpace  
  L'applicazione client deve specificare il server e il programma di server da richiamare. In cambio, l'applicazione riceve un riferimento all'applicazione server e può gestire il riferimento come se fosse il programma server stesso.  
   
  Il modello a oggetti RDS integra questa funzionalità di [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetto.  
@@ -47,7 +49,7 @@ Di seguito sono indicati gli elementi chiave del modello di programmazione di se
   
  Servizi Desktop remoto viene fatta distinzione internamente a seconda se l'applicazione server è in un server remoto tramite Internet o una intranet. un server in una rete locale; o non in un server, ma in una libreria di collegamento dinamico (DLL) locale. Questa distinzione determina come le informazioni scambiate tra il client e il server e fa la differenza tangibile nel tipo di riferimento restituito all'applicazione client. Tuttavia, dal punto di vista, questa distinzione hanno alcun significato speciale. Tutto ciò che è importante è che viene restituito un riferimento di un programma utilizzabile.  
   
-## <a name="rdsserverdatafactory"></a>RDSServer  
+## <a name="rdsserverdatafactory"></a>RDSServer.DataFactory  
  Servizi Desktop remoto offre un'applicazione server predefinita in grado di eseguire una query SQL sull'origine dati e restituire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto o richiedere un **Recordset** dell'oggetto e aggiornare l'origine dati.  
   
  Il modello a oggetti RDS integra questa funzionalità di [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto.  
@@ -58,7 +60,7 @@ Di seguito sono indicati gli elementi chiave del modello di programmazione di se
   
  L'applicazione server è a volte definita un *oggetto business*. È possibile scrivere il proprio oggetto business personalizzato che è possibile eseguire l'accesso ai dati complesse, controlli di validità e così via. Anche quando si scrive un oggetto business personalizzato, è possibile creare un'istanza di un **RDSServer** dell'oggetto e utilizzare alcuni dei relativi metodi per eseguire le proprie attività.  
   
-## <a name="rdsdatacontrol"></a>RDS. DataControl  
+## <a name="rdsdatacontrol"></a>RDS.DataControl  
  Consente di combinare le funzionalità di servizi desktop remoto di **RDS. DataSpace** e **RDSServer**e inoltre abilitare i controlli visual utilizzare facilmente la **Recordset** oggetto restituito da una query da un'origine dati. Tenta di servizi desktop remoto, nel caso più comune, eseguire il più possibile accedere a informazioni su un server e visualizzarli in un controllo visivo automaticamente.  
   
  Il modello a oggetti RDS integra questa funzionalità di [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  

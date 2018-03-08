@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0702ee29dfab00296971fe36f2397720fd63ee28
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e06346c3562f438e962eda3ff01a4068bafa750
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Aggiungere indicatori ai report per dispositivi mobili | Reporting Services
 I misuratori sono gli oggetti visivi più semplici e più usati nei report per dispositivi mobili. Viene visualizzato un singolo valore in un set di dati: solo il valore oppure il valore rispetto a un obiettivo.
@@ -95,4 +95,4 @@ Determina le modalità di formattazione dei numeri visualizzati nel misuratore, 
 * [Eseguire il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Aggiungere gli strumenti di navigazione ai report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizations to Reporting Services mobile reports (Visualizzazioni nei report per dispositivi mobili di Reporting Services)](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
-* [Aggiungere griglie dei dati al report per dispositivi mobili](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
+* [Aggiungere griglie dei dati al report per dispositivi mobili in Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 

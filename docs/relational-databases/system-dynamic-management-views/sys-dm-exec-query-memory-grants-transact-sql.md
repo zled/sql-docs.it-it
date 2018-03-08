@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_query_memory_grants (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_memory_grants
 - sys.dm_exec_query_memory_grants_TSQL
 - dm_exec_query_memory_grants
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_memory_grants dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_memory_grants dynamic management view
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2e10e979e962c7f0e2f98a8fbabff47995dc7e86
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92b11100a0a037374871dc38844fecc8b69b0c72
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |**session_id**|**smallint**|ID (SPID) della sessione nella quale viene eseguita la query.|  
 |**request_id**|**int**|ID della richiesta. Valore univoco nel contesto della sessione.|  
 |**scheduler_id**|**int**|ID dell'utilità di pianificazione che sta pianificando la query.|  
-|**grado di parallelismo**|**smallint**|Grado di parallelismo della query.|  
+|**dop**|**smallint**|Grado di parallelismo della query.|  
 |**request_time**|**datetime**|Data e ora in cui la query ha richiesto la concessione di memoria.|  
 |**grant_time**|**datetime**|Data e ora in cui la memoria è stata concessa alla query. È NULL se la memoria non è stata ancora concessa.|  
 |**requested_memory_kb**|**bigint**|Quantità totale di memoria richiesta, espressa in kilobyte.|  
@@ -56,19 +59,19 @@ ms.lasthandoff: 11/17/2017
 |**query_cost**|**float**|Costo stimato della query.|  
 |**timeout_sec**|**int**|Timeout in secondi prima che la query rinunci alla richiesta di concessione di memoria.|  
 |**resource_semaphore_id**|**smallint**|ID non univoco del semaforo di risorsa su cui la query è in attesa.<br /><br /> **Nota:** questo ID è univoco nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. La modifica può influire sulla risoluzione dei problemi relativi all'esecuzione di query. Per ulteriori informazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.|  
-|**il valore queue_id**|**smallint**|ID della coda nella quale la query sta attendendo la concessione di memoria. È NULL se la memoria è già stata concessa.|  
+|**queue_id**|**smallint**|ID della coda nella quale la query sta attendendo la concessione di memoria. È NULL se la memoria è già stata concessa.|  
 |**wait_order**|**int**|Ordine sequenziale delle query in attesa della **queue_id**. Questo valore può variare in caso di timeout o di concessione di memoria ad altre query. È NULL se la memoria è già stata concessa.|  
 |**is_next_candidate**|**bit**|Candidato alla concessione di memoria successiva.<br /><br /> 1 = Sì<br /><br /> 0 = No<br /><br /> NULL = Memoria già concessa|  
 |**wait_time_ms**|**bigint**|Periodo di attesa espresso in millisecondi. È NULL se la memoria è già stata concessa.|  
 |**plan_handle**|**varbinary(64)**|Identificatore del piano di query. Utilizzare **Sys.dm exec_query_plan** per estrarre il piano XML effettivo.|  
-|**valore di sql_handle**|**varbinary(64)**|Identificatore del testo [!INCLUDE[tsql](../../includes/tsql-md.md)] della query. Utilizzare **Sys.dm exec_sql_text** per ottenere l'effettivo [!INCLUDE[tsql](../../includes/tsql-md.md)] testo.|  
+|**sql_handle**|**varbinary(64)**|Identificatore del testo [!INCLUDE[tsql](../../includes/tsql-md.md)] della query. Utilizzare **Sys.dm exec_sql_text** per ottenere l'effettivo [!INCLUDE[tsql](../../includes/tsql-md.md)] testo.|  
 |**group_id**|**int**|ID per il gruppo del carico di lavoro nel quale viene eseguita la query.|  
 |**pool_id**|**int**|ID del pool di risorse a cui appartiene il gruppo del carico di lavoro.|  
 |**is_small**|**tinyint**|Se il valore è 1, questa concessione utilizza il semaforo piccolo di risorsa. Se il valore è 0, viene utilizzato un semaforo normale.|  
 |**ideal_memory_kb**|**bigint**|Dimensioni, in kilobyte (KB), della concessione di memoria per inserire tutto nella memoria fisica. Si basa su una stima della cardinalità.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.  
   
@@ -117,7 +120,7 @@ In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessar
  La funzionalità Resource Governor consente a un amministratore di database di distribuire risorse del server fra un massimo di 64 pool di risorse. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ogni pool si comporta come una piccola indipendenti istanza del server e richiede 2 semafori. Il numero di righe restituite da **Sys.dm exec_query_resource_semaphores** può essere fino a 20 volte superiore alle righe restituite in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys.dm exec_query_resource_semaphores &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
+ [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
  [Funzioni e viste a gestione dinamica &#40; relative all'esecuzione Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

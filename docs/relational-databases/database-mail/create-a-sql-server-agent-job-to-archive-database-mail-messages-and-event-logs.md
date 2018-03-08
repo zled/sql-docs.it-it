@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Database Mail [SQL Server], archiving
 - saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc840281d8a9cd2ae9a1f85988f850cc29ab1582
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8823296f7fd9a64fdc0d5b978a22e89e8b415d37
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Creazione di un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Oltre al log eventi di Posta elettronica database, nelle tabelle del database **msdb** viene mantenuta una copia dei messaggi di Posta elettronica database e dei relativi allegati. È consigliabile ridurre periodicamente le dimensioni delle tabelle e archiviare i messaggi e gli eventi non più necessari. Nelle procedure seguenti viene illustrato come creare un processo di SQL Server Agent per eseguire queste operazioni in modo automatico.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Oltre al log eventi di Posta elettronica database, nelle tabelle del database **msdb** viene mantenuta una copia dei messaggi di Posta elettronica database e dei relativi allegati. È consigliabile ridurre periodicamente le dimensioni delle tabelle e archiviare i messaggi e gli eventi non più necessari. Nelle procedure seguenti viene illustrato come creare un processo di SQL Server Agent per eseguire queste operazioni in modo automatico.  
   
 -   **Prima di iniziare:** [Prerequisiti](#Prerequisites), [Raccomandazioni](#Recommendations), [Autorizzazioni](#Permissions)  
   

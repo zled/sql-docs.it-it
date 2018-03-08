@@ -1,6 +1,7 @@
 ---
 title: Problemi comuni con l'esecuzione dello script esterno in SQL Server | Documenti Microsoft
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 10/11/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
@@ -8,21 +9,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4f515ba26c4eeae70eaf9244c0eaedaa954954b4
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problemi comuni con l'esecuzione dello script esterno in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo contiene un elenco di problemi noti e i problemi comuni relativi all'esecuzione di codice R o Python in SQL Server.
 

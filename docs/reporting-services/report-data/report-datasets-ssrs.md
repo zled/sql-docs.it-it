@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b455aded926c073e3992165a35fb6b938b66e2de
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3cd7440b6913d40b14fc50aed332b9a51af3cd23
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-datasets-ssrs"></a>Set di dati del report (SSRS)
   Per aggiungere dati a un rapporto, è necessario creare set di dati. Ogni set di dati rappresenta il set di risultati dall'esecuzione di un comando di query su un'origine dati. Le colonne del set di risultati sono la raccolta di campi. Le righe del set di risultati sono i dati. Un set di dati non contiene i dati effettivi. Un set di dati contiene le informazioni necessarie per recuperare un set di dati specifico da un'origine dati.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)  
   
--   [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
 ##  <a name="QuickStart"></a> Aggiunta di dati con parti di report  

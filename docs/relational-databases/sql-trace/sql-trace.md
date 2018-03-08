@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e664c24d37f41986789998bdd20db49232b05609
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b035b11167895581588de96db1c1db3f65931307
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-trace"></a>Traccia SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In Traccia SQL vengono raccolti unicamente gli eventi che rappresentano istanze delle classi di evento elencate nella definizione di traccia. Tali eventi possono essere esclusi dalla traccia tramite un filtro oppure essere inseriti in coda per la relativa destinazione. La destinazione può essere un file o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO), che è in grado di utilizzare le informazioni della traccia nelle applicazioni che gestiscono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

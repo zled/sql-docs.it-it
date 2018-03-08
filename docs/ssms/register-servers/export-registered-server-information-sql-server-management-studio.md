@@ -8,28 +8,31 @@ ms.service:
 ms.component: ssms-registration
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.exportregisteredservers.f1
+f1_keywords:
+- sql13.swb.exportregisteredservers.f1
 helpviewer_keywords:
 - Registered Servers [SQL Server], exporting
 - exporting registered server information
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e7f96a7298d67a10bfee5847f8647915a595d975
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b47f3de05f1d1143774803579c0b1ede7258ab77
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Esportare informazioni relative a server registrati (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questo argomento descrive come salvare ed esportare le informazioni relative a server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e distribuirle ad altri dipendenti o server. È possibile utilizzare questa funzionalità di esportazione per ottenere un'interfaccia utente coerente su più computer.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In questo argomento viene illustrato come salvare ed esportare le informazioni relative a server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e distribuirle ad altri dipendenti o server. È possibile utilizzare questa funzionalità di esportazione per ottenere un'interfaccia utente coerente su più computer.  
   
  L'esportazione e la successiva importazione dei file dei server registrati consente di configurare con facilità diversi computer con gli stessi server presenti in Server registrati. Ciò risulta utile quando si gestisce un numero elevato di server da computer distribuiti in diversi luoghi oppure quando si desidera configurare le impostazioni di connessione di base per un utente non esperto.  
   

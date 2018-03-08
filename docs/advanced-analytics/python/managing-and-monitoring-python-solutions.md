@@ -1,5 +1,5 @@
 ---
-title: Monitoraggio | Documenti Microsoft
+title: Monitoring| Microsoft Docs
 ms.custom: 
 ms.date: 04/18/2017
 ms.reviewer: 
@@ -7,21 +7,21 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7bbc4b726583508fe3a7523d6eddec1d6f3ca70a
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 3abd3145f4de3d1e5d0fee4ff2adbc7d965d4d3b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="monitoring"></a>Monitoraggio
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!NOTE]
 > Supporto Python è una nuova funzionalità di SQL Server 2017 ed è in versione provvisoria.

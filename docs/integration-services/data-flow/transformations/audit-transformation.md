@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,18 +19,18 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa1ed88a75603d7a943dfb05089c0a79092507ef
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a3e8e346a8b71c3bd11fad1847dc33fa4b47145
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="audit-transformation"></a>Trasformazione Controllo
+# <a name="audit-transformation"></a>Controllo - trasformazione
   La trasformazione Controllo consente di includere nel flusso di dati di un pacchetto informazioni sull'ambiente in cui viene eseguito il pacchetto. Ad esempio, il nome del pacchetto, del computer e dell'operatore può essere aggiunto al flusso di dati. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include variabili di sistema che forniscono queste informazioni.  
   
 ## <a name="system-variables"></a>Variabili di sistema  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/20/2017
  **Tipo di controllo**  
  Consente di selezionare una variabile di sistema disponibile per visualizzare le informazioni di controllo.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**GUID istanza esecuzione**|Consente di specificare il GUID che identifica in modo univoco l'istanza di esecuzione del pacchetto.|  
 |**ID pacchetto**|Consente di specificare il GUID che identifica in modo univoco il pacchetto.|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/20/2017
 |**ID versione**|Consente di specificare il GUID che identifica in modo univoco la versione del pacchetto.|  
 |**Ora di inizio esecuzione**|Consente di specificare l'ora di inizio dell'esecuzione del pacchetto.|  
 |**Nome computer**|Consente di specificare il nome del computer sul quale è stato avviato il pacchetto.|  
-|**Nome utente**|Consente di specificare il nome dell'account di accesso dell'utente che ha avviato il pacchetto.|  
+|**User name**|Consente di specificare il nome dell'account di accesso dell'utente che ha avviato il pacchetto.|  
 |**Nome attività**|Consente di specificare il nome dell'attività Flusso di dati a cui è associata la trasformazione Controllo.|  
 |**ID attività**|Consente di specificare il GUID che identifica in modo univoco l'attività Flusso di dati a cui è associata la trasformazione Controllo.|  
   

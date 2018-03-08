@@ -9,21 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: a01c079431b3ca574df80757f98b1d0670b6a9fe
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utilizzare Visual Studio per creare database per SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server Data Tools (SSDT) diventa un potente database lifecycle management (DLM) ambiente di sviluppo e Visual Studio per SQL Server in Linux. È possibile sviluppare, compilare, testare e pubblicare il database da un progetto di controllo del codice sorgente, esattamente come si sviluppa il codice dell'applicazione.
 
@@ -103,7 +103,7 @@ SQL Server Data Tools (SSDT) diventa un potente database lifecycle management (D
 
 5. Archiviare lo stato di pubblicazione di **operazioni degli strumenti dati** finestra.
 
-6. Fare clic su **vista Reulst** o **Visualizza Script** per visualizzare i dettagli di Microsoft Azure di pubblicare i risultati in SQL Server in Linux.
+6. Fare clic su **vista Reulst** o **Visualizza Script** per visualizzare i dettagli del database di pubblicare i risultati in SQL Server in Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 

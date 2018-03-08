@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b18fd84d31e95aa2973dd0d5377fbc8f51fafe4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 859324a8cbf2f08bfae2ac18e86525a9e65914d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-connect-section"></a>Collegare il File di personalizzazione
 Il comportamento predefinito del gestore consiste nel negare tutte le connessioni. Il **connettersi** sezione specifica le eccezioni a questo comportamento. Ad esempio, se tutti i **connettersi** sezioni sono assenti o vuota, quindi per impostazione predefinita può essere eseguita alcuna connessione.  
@@ -61,7 +62,7 @@ connectionString
   
 |Parte|Description|  
 |----------|-----------------|  
-|**Connect**|Una stringa letterale che indica che si è una stringa di connessione.|  
+|**Connetti**|Una stringa letterale che indica che si è una stringa di connessione.|  
 |***connectionString***|Stringa che sostituisce la stringa di connessione client intero.|  
 |**Accesso**|Una stringa letterale che indica che si è una voce di accesso.|  
 |***accessRight***|Uno dei diritti di accesso seguenti:<br /><br /> -   **NoAccess** : utente non è possibile accedere all'origine dati.<br />-   **ReadOnly** : l'utente può leggere l'origine dati.<br />-   **ReadWrite** , in grado di leggere o scrivere nell'origine dati utente.|  

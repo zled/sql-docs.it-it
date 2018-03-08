@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53621c73a5a5504287ff959f54aa27131f4c26c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1fa8f72d601130df15f73e856f676b07bf8f0e52
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-data-sources"></a>Origini dati dei file
 *Origini dati del file* vengono archiviati in un file e consentire di informazioni di connessione a essere utilizzato ripetutamente per un singolo utente o condiviso da più utenti. Quando si utilizza un'origine dati file, Driver Manager esegue la connessione all'origine dati utilizzando le informazioni in un file DSN. Questo file può essere gestito come qualsiasi altro file. Un'origine dati file non dispone di un nome dell'origine dati, come non a un'origine dati macchina e non è registrato a un utente o computer.  

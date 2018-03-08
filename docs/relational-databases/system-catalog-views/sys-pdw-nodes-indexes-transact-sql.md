@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_nodes_indexes (Transact-SQL) | Documenti Microsoft
+title: sys.pdw_nodes_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9dcf0c5cc21d01359c13f13b33914d73a0a7b5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77d90e50801abe9a8d9bd6c9ed67223486630b9e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syspdwnodesindexes-transact-sql"></a>Sys.pdw_nodes_indexes (Transact-SQL)
+# <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Restituisce gli indici per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
@@ -51,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |filter_definition|**nvarchar(max)**|Espressione per il subset di righe incluso nell'indice filtrato.|Sempre NULL.|  
 |pdw_node_id|**int**|Identificatore univoco di un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|NOT NULL|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="see-also"></a>Vedere anche  

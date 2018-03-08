@@ -1,5 +1,5 @@
 ---
-title: sp_cleanup_log_shipping_history (Transact-SQL) | Documenti Microsoft
+title: sp_cleanup_log_shipping_history (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_cleanup_log_shipping_history_TSQL
 - sp_cleanup_log_shipping_history
-dev_langs: TSQL
-helpviewer_keywords: sp_cleanup_log_shipping_history
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_cleanup_log_shipping_history
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a17ea82aaae0dedb2f178c1b75b16205a36e6ce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 368df0eee8a25341b2abde865175644a2cd6405d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spcleanuplogshippinghistory-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +48,7 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@agent_id =** ] '*agent_id*',  
+ [ **@agent_id =** ] '*agent_id*',  
  ID primario per il backup o ID secondario per la copia o il ripristino. *agent_id* è **uniqueidentifier** e non può essere NULL.  
   
  [  **@agent_type =** ] '*agent_type*'  
@@ -55,16 +58,16 @@ sp_cleanup_log_shipping_history
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- nessuna.  
+ Nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_cleanup_log_shipping_history** deve essere eseguita la **master** database in qualsiasi server di log shipping. Questa stored procedure pulisce copie locali e remote di **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail** in base al periodo di memorizzazione della cronologia.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul Log Shipping &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - FileTable [SQL Server], see FileTables [SQL Server]
 - FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d8d5ce9a3a0ab49fb62fd434fe523ecfa937c6ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0702c1621fb3f37ef61e5fcd2df66fa9a7019cf7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La funzionalità FileTable include supporto per lo spazio dei nomi dei file di Windows e compatibilità con le applicazioni di Windows ai dati dei file archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FileTable consente l'integrazione dei componenti di archiviazione e gestione dei dati da parte di un'applicazione e fornisce servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrati, incluse la ricerca full-text e la ricerca semantica, su dati e metadati non strutturati.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La funzionalità FileTable fornisce supporto per lo spazio dei nomi dei file di Windows e la compatibilità con le applicazioni di Windows ai dati dei file archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FileTable consente l'integrazione dei componenti di archiviazione e gestione dei dati da parte di un'applicazione e fornisce servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrati, incluse la ricerca full-text e la ricerca semantica, su dati e metadati non strutturati.  
   
  In altre parole, è possibile archiviare file e documenti in speciali tabelle denominate FileTable in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma accedere a tali file e documenti da applicazioni di Windows come se questi fossero archiviati nel file system, senza apportare alcuna modifica alle applicazioni del client.  
   
@@ -107,16 +109,16 @@ ms.lasthandoff: 11/17/2017
  Le tabelle FileTable non supportano file con mapping in memoria. Blocco note e Paint sono due esempi comuni di applicazioni in cui vengono utilizzati file con mapping in memoria. Non è possibile utilizzare queste applicazioni nello stesso computer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per aprire file archiviati in una tabella FileTable. Tuttavia è possibile utilizzare queste applicazioni da un computer remoto per aprire file archiviati in una tabella FileTable, perché in queste circostanze la caratteristica con mapping in memoria non viene utilizzata.  
    
 ##  <a name="reltasks"></a> Attività correlate  
- [Abilitazione dei prerequisiti per la tabella FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
+ [Abilitare i prerequisiti per la tabella FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
  Viene descritto come abilitare i prerequisiti per la creazione e l'utilizzo di tabelle FileTable.  
   
- [Creare, modificare e rilasciare FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
+ [Creare, modificare ed eliminare FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
  Viene descritto come creare una nuova tabella FileTable o modificarne o eliminarne una esistente.  
   
  [Caricamento di file in FileTable](../../relational-databases/blob/load-files-into-filetables.md)  
  Viene descritto come caricare o eseguire la migrazione dei file in tabelle FileTable.  
   
- [Utilizzare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Usare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
  Descrive la struttura di directory nella quale vengono archiviati i file in FileTable.  
   
  [Accesso a tabelle FileTable tramite Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)  
@@ -125,7 +127,7 @@ ms.lasthandoff: 11/17/2017
  [Accedere alle tabelle FileTable con API di Input-Output dei file](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
  Viene descritto il funzionamento dell'I/O del file system in una tabella FileTable.  
   
- [Gestione di tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
+ [Gestire tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
  Vengono descritte attività amministrative comuni per la gestione di tabelle FileTable.  
   
 ##  <a name="relcontent"></a> Contenuto correlato  

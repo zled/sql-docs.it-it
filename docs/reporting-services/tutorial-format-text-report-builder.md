@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9ef86f150b0fdbc1184ed4e54752bcd50af584fc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5791f58be1674011744036de4c6ddd5c5c90754
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione di testo (Generatore report)
 
@@ -323,7 +323,7 @@ Nel report verranno visualizzati i dati formattati che rendono più facile la le
   
 6.  Nella scheda **Generale** in **Tipo di markup**fare clic su **HTML - Interpreta i tag HTML come stili**.  
   
-7.  Scegliere **OK**.  
+7.  Fare clic su **OK**.  
   
 8.  Fare clic su Esegui (**!**) per visualizzare l'anteprima del report.  
   
@@ -362,7 +362,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
   
 4.  Fare clic su **Salva**.  
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Next Steps
 
 Ci sono vari modi per formattare il testo in Generatore report. L'[Esercitazione: Creazione di un report in formato libero](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) include più esempi.  
 

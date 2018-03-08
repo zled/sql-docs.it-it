@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: transactional replication, propagation methods
+helpviewer_keywords:
+- transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cee636f1b2188ddf72d63feeaedc7b955446ea3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d7b807d914d84a818e9ce9cccadde597a163955c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Specificare la modalità di propagazione delle modifiche per gli articoli transazionali
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replica transazionale consente di specificare la modalità di propagazione delle modifiche dei dati dal server di pubblicazione ai Sottoscrittori. Per ogni tabella pubblicata è possibile specificare una delle quattro modalità con cui ogni operazione (INSERT, UPDATE o DELETE) dovrebbe propagarsi al Sottoscrittore:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La replica transazionale consente di specificare la modalità di propagazione delle modifiche dei dati dal server di pubblicazione ai Sottoscrittori. Per ogni tabella pubblicata è possibile specificare una delle quattro modalità con cui ogni operazione (INSERT, UPDATE o DELETE) dovrebbe propagarsi al Sottoscrittore:  
   
 -   Specificare che la replica transazionale deve inserire in uno script e in un secondo momento chiamare una stored procedure per propagare le modifiche ai Sottoscrittori (impostazione predefinita).  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **sp_MSdel_\<** *NomeTabella* **>**, per la gestione delle eliminazioni.  
   
- Il **\<***tablename***>** utilizzato nella procedura dipende dalla modalità impiegata per aggiungere l'articolo alla pubblicazione e dal fatto che il database di sottoscrizione contenga una tabella con lo stesso nome, ma di un proprietario diverso.  
+ Il valore **\<***NomeTabella***>** usato nella procedura dipende dalla modalità adottata per aggiungere l'articolo alla pubblicazione e dal fatto che il database di sottoscrizione contenga o meno una tabella con lo stesso nome, ma di un proprietario diverso.  
   
  Ognuna di queste procedure può essere sostituita da una procedura personalizzata che viene specificata durante l'aggiunta di un articolo a una pubblicazione. Le procedure personalizzate vengono utilizzate se un'applicazione richiede una logica personalizzata, ad esempio l'inserimento di dati in una tabella di controllo quando una riga viene aggiornata in un Sottoscrittore. Per ulteriori informazioni sulla definizione di stored procedure personalizzate, vedere l'elenco delle procedure riportato sopra.  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Se si apportano modifiche allo schema in una tabella pubblicata, è necessario rigenerare le procedure personalizzate. Per altre informazioni, vedere [Rigenerare procedure transazionali personalizzate per riflettere le modifiche dello schema](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Se si usa un valore maggiore di 1 per il parametro **-SubscriptionStreams** dell'agente di distribuzione, sarà necessario verificare che vengano completati gli aggiornamenti alle colonne chiave primaria. Esempio:  
+-   Se si usa un valore maggiore di 1 per il parametro **-SubscriptionStreams** dell'agente di distribuzione, sarà necessario verificare che vengano completati gli aggiornamenti alle colonne chiave primaria. Ad esempio  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  

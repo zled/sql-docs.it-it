@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Browser service
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0965646dc2f9c645006f2ad014a383af1d077953
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cf94cff3e764a7079eb5166a6a204453fd217ce3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Servizio SQL Server Browser (Motore database e SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Il programma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser viene eseguito come servizio Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser rimane in attesa delle richieste in entrata di risorse di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornisce informazioni sulle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installate nel computer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser consente di eseguire le azioni seguenti:  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
 <drive>\<path>\sqlbrowser.exe -c  
 ```  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="account-privileges"></a>Privilegi dell'account  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser rimane in attesa su una porta UDP e accetta le richieste non autenticate tramite il protocollo SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser deve essere eseguito nel contesto di sicurezza di un utente con pochi privilegi per ridurre l'esposizione agli attacchi da parte di utenti malintenzionati. È possibile modificare l'account di accesso usando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Di seguito vengono indicati i diritti utente minimi per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser:  

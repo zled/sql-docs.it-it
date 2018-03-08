@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: aggregate functions [Analysis Services]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7a146e6be066f8669757d15f5fe76ac67c5c172b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-aggregate-functions"></a>Utilizzare le funzioni di aggregazione
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando una dimensione viene utilizzata per sezionare una misura, la misura viene riepilogata in base alle gerarchie contenute in tale dimensione. Il comportamento della somma dipende dalla funzione di aggregazione specificata per la misura. Per la maggior parte delle misure contenenti dati numerici, la funzione di aggregazione è **Sum**. Il valore della misura sarà la somma di quantità diverse a seconda di quale sarà il livello della gerarchia attivo.  

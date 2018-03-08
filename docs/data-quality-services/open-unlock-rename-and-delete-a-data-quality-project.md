@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b92dba54db168d503d371c927df66d8e9e8dbf7c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c46bc57e30a9d6b119e708ad3a93aabb4183b7fd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Aprire, sbloccare, rinominare ed eliminare un progetto Data Quality
   In questo argomento viene descritto come gestire un progetto Data Quality utilizzando [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ed effettuare operazioni sul progetto quali apertura, ridenominazione ed eliminazione.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per gestire un progetto Data Quality è necessario disporre del ruolo dqs_kb_editor o dqs_kb_operator nel database DQS_MAIN.  
   
 ##  <a name="Open"></a> Apertura di un progetto Data Quality  

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ba02d945babd10cca11d07f6aa9e6ac01545661
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 51b4813c67c7f7346bea533764b13fceef06db12
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-services-concepts"></a>Concetti di Data Quality Services
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) nell'ambito della gestione delle informazioni, dei progetti Data Quality e dell'amministrazione della qualità dei dati.  

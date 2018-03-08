@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - deleting primary keys
 - primary keys [SQL Server], deleting
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d323df73b07a65b7415aa1967d480436c997e30
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 185ab2d26ef049e211ae42624dae3e1517361cca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="delete-primary-keys"></a>Eliminazione di chiavi primarie
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per eliminare una chiave primaria:**  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -70,9 +71,9 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  Per annullare questa operazione, chiudere la tabella senza salvare le modifiche. L'eliminazione di una chiave primaria non può essere annullata senza perdere tutte le altre modifiche apportate alla tabella.  
   
-3.  Nel menu **File** scegliere **Salva***table name*.  
+3.  Scegliere **Salva***nome tabella* dal menu **File**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-delete-a-primary-key-constraint"></a>Per eliminare un vincolo di chiave primaria  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene prima identificato il nome del vincolo di chiave primaria, quindi questo viene eliminato.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene prima identificato il nome del vincolo di chiave primaria, quindi questo viene eliminato.  
   
     ```  
     USE AdventureWorks2012;  

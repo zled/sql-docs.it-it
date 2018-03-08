@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: FieldStatusEnum
-helpviewer_keywords: FieldStatusEnum enumeration [ADO]
+f1_keywords:
+- FieldStatusEnum
+helpviewer_keywords:
+- FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12e543a4baa7bbcc46ea39e906d57d001ea5f078
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e04f98c5691a66b02a4c5daa8d745f529a9820e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Specifica il [stato](../../../ado/reference/ado-api/status-property-ado-field.md) di un [campo oggetto](../../../ado/reference/ado-api/field-object.md).  
   
  Il **adFieldPending\***  indica l'operazione che ha causato lo stato da impostare e può essere combinato con altri valori di stato.  
   
-|Costante|valore|Description|  
+|Costante|Valore|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|Indica che il campo specificato esiste già.|  
 |**adFieldBadStatus**|12|Indica che un valore di stato non valido è stato inviato da ADO per il provider OLE DB. Cause possibili includono un OLE DB 1.0 o 1.1 provider o una combinazione non corretta di [valore](../../../ado/reference/ado-api/value-property-ado.md) e [stato](../../../ado/reference/ado-api/status-property-ado-field.md).|  
@@ -48,10 +51,10 @@ Specifica il [stato](../../../ado/reference/ado-api/status-property-ado-field.md
 |**adFieldIsNull**|3|Indica che il provider ha restituito un valore VARIANT di tipo VT_NULL e che il campo non è vuoto.|  
 |**adFieldOK**|0|Valore predefinito. Indica che il campo è stato correttamente aggiunto o eliminato.|  
 |**adFieldOutOfSpace**|22|Indica che il provider non riesce a ottenere spazio di archiviazione sufficiente per completare un'operazione di spostamento o l'operazione di copia.|  
-|**uguali a adFieldPendingChange**|0x40000|Indica che il campo è stato eliminato e quindi riaggiunte, magari con un tipo di dati diverso oppure che il valore del campo in precedenza, era stato di **adFieldOK** è stato modificato. Verrà modificato il formato finale del campo di [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta dopo il [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo viene chiamato.|  
+|**adFieldPendingChange**|0x40000|Indica che il campo è stato eliminato e quindi riaggiunte, magari con un tipo di dati diverso oppure che il valore del campo in precedenza, era stato di **adFieldOK** è stato modificato. Verrà modificato il formato finale del campo di [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta dopo il [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo viene chiamato.|  
 |**adFieldPendingDelete**|0x20000|Indica che il **eliminare** l'operazione ha causato lo stato da impostare. Il campo è stato contrassegnato per l'eliminazione di **campi** raccolta dopo il **aggiornamento** metodo viene chiamato.|  
 |**adFieldPendingInsert**|0x10000|Indica che il **Append** l'operazione ha causato lo stato da impostare. Il **campo** è stato contrassegnato per essere aggiunto il **campi** raccolta dopo il **aggiornamento** metodo viene chiamato.|  
-|**su adFieldPendingUnknown**|0x80000|Indica che il provider non è possibile determinare quali lo stato del campo operazione causato da impostare.|  
+|**adFieldPendingUnknown**|0x80000|Indica che il provider non è possibile determinare quali lo stato del campo operazione causato da impostare.|  
 |**adFieldPendingUnknownDelete**|0x100000|Indica che il provider può determinare l'operazione che ha causato lo stato del campo da impostare e che il campo verrà eliminato dal **campi** raccolta dopo il **aggiornamento** metodo viene chiamato.|  
 |**adFieldPermissionDenied**|9|Indica che il campo non può essere modificato perché è definito come di sola lettura.|  
 |**adFieldReadOnly**|24|Indica che il campo nell'origine dati viene definito come di sola lettura.|  

@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 51bfbb7fa3cbfad5c8415fcda1fab0e54643ec62
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e2df021da6f2cf8c32e0b0581c5d5d61a422d5ef
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="power-pivot-configuration-tools"></a>Strumenti di configurazione di Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Configurare, ripristinare o rimuovere un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con il [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] strumenti di configurazione.  
+# <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Configurare, ripristinare o rimuovere [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con gli strumenti di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  L'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non installa gli strumenti di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Gli strumenti di configurazione saranno disponibili per il download nelle versioni future di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Requisiti per l'utilizzo degli strumenti di configurazione](#bkmk_requirements)  
   

@@ -8,25 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e447f20374700fa1e6e64837a336ba17d2b7570b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d2f92077fd1424827866820a0627ac62447e3f2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-flow-components"></a>Componenti di flusso ODBC
   In questo argomento vengono descritti i concetti necessari per la creazione di un flusso di dati ODBC tramite [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- Con il connettore per ODBC (Open Database Connectivity) di Attunity per [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] gli sviluppatori di SSIS possono creare in modo facile pacchetti per il caricamento e lo scaricamento di dati da database supportati da ODBC.  
+ Con il connettore per ODBC (Open Database Connectivity) per [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] gli sviluppatori di SSIS possono creare in modo facile pacchetti per il caricamento e lo scaricamento di dati da database supportati da ODBC.  
   
  Il connettore ODBC è progettato per ottenere prestazioni ottimali per il caricamento o lo scaricamento dei dati in o da un database supportato da ODBC nel contesto di [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
@@ -135,7 +136,7 @@ I tipi di dati C estensibili non sono supportati, come descritto nelle specifich
 |SQL_INTERVAL_YEAR<br /><br />SQL_INTERVAL_MONTH<br /><br />SQL_INTERVAL_DAY<br /><br />SQL_INTERVAL_HOUR<br /><br />SQL_INTERVAL_MINUTE<br /><br />SQL_INTERVAL_SECOND<br /><br />SQL_INTERVAL_YEAR_TO_MONTH<br /><br />SQL_INTERVAL_DAY_TO_HOUR<br /><br />SQL_INTERVAL_DAY_TO_MINUTE<br /><br />SQL_INTERVAL_DAY_TO_SECOND<br /><br />SQL_INTERVAL_HOUR_TO_MINUTE<br /><br />SQL_INTERVAL_HOUR_TO_SECOND<br /><br />SQL_INTERVAL_MINUTE_TO_SECOND|DT_WSTR|  
 |Tipi di dati specifici del provider|DT_BYTES<br /><br />DT_IMAGE|DT_BYTES viene utilizzato se la lunghezza di colonna è minore o uguale a 8000.<br /><br />DT_IMAGE viene utilizzato se la lunghezza di colonna è uguale a zero o maggiore di 8000.|  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Origine ODBC](../../integration-services/data-flow/odbc-source.md)  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f013f2302663b1ff21a87107e98ec372848bef68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ac9182378fb003f492e052318e9c5b42d613efc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Creazione di una pubblicazione da un database Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come creare una pubblicazione da un database Oracle in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
 11. Nella pagina **Completamento procedura guidata** specificare un nome per la pubblicazione.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  Dopo aver configurato il database Oracle come server di pubblicazione, è possibile creare una pubblicazione transazionale o snapshot in modo analogo a quanto possibile con un server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , utilizzando stored procedure di sistema.  
   
 #### <a name="to-create-an-oracle-publication"></a>Per creare una pubblicazione Oracle  

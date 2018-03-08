@@ -5,34 +5,34 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
 - schema rowsets [Analysis Services]
 - rowsets [Analysis Services], data mining
 - data mining [Analysis Services], schema rowsets
 ms.assetid: bd7d5df5-500b-4159-8467-880e141bc043
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcde375ccb8186f0ef5d38dca2c7f88aefaaf4b7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: de34fa80e547b38216ca83458501347888488774
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-schema-rowsets"></a>Set di righe dello schema di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un server che esegue [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta i seguenti set di righe dello schema di data mining. Per verificare se un determinato provider XML/A supporta un set di righe specifico, utilizzare il [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) set di righe con la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Un server che esegue [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta i seguenti set di righe dello schema di data mining. Per verificare se un determinato provider XML/A supporta un set di righe specifico, utilizzare il [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) set di righe con la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo.  
   
  In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] i set di righe dello schema di data mining vengono esposti come tabelle nel linguaggio Transact-SQL nello schema $SYSTEM. Ad esempio, la query seguente su un'istanza di Analysis Services restituisce un elenco degli schemi disponibili sull'istanza corrente.  
   

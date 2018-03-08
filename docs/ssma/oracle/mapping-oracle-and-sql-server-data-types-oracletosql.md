@@ -1,7 +1,7 @@
 ---
 title: Mapping di Oracle e tipi di dati SQL Server (OracleToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6c12d5cb52f510f97816bc452cc2961230a5bd43
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8984f279cb6a42d057093f048a29149a7be2d981
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mapping di Oracle e tipi di dati SQL Server (OracleToSQL)
 Diversi tipi di database Oracle da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di database. Quando si esegue la conversione di oggetti di database Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti, è necessario specificare come eseguire il mapping dei tipi di dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. È possibile accettare i mapping dei tipi di dati predefinito oppure è possibile personalizzare i mapping, come illustrato nelle sezioni seguenti.  
@@ -92,7 +92,7 @@ La procedura seguente viene illustrato come eseguire il mapping di tipi di dati 
   
         È possibile rimuovere i mapping ereditati. Tuttavia, i mapping ereditati vengono sovrascritte dai mapping personalizzati in un oggetto specifico o una categoria dell'oggetto.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Il passaggio successivo del processo di migrazione è su [creare una relazione di valutazione](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357) o [convertire gli oggetti di database Oracle in sintassi SQL Server](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272). Se si crea una relazione di valutazione, oggetti Oracle vengono convertiti automaticamente durante la valutazione.  
   
 ## <a name="see-also"></a>Vedere anche  

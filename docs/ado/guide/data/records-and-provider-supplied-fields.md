@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69cb7375808e3c11dd8d92bab48a3588693e30e8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5341eac5d18d222e2e0d1f97a006179ffa8927d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>I record e campi specificati dal Provider
 Quando un [Record](../../../ado/reference/ado-api/record-object-ado.md) viene aperto, la relativa origine può essere la riga corrente di un elemento aperto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), un URL assoluto o un URL relativo in combinazione con un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto .  
@@ -72,13 +73,13 @@ Quando un [Record](../../../ado/reference/ado-api/record-object-ado.md) viene ap
 |RESOURCE_CONTENTCLASS|AdVarWChar|Indica il tipo MIME del documento, che indica il formato, ad esempio "`text/html`".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indica la lingua in cui è archiviato il contenuto.|  
 |RESOURCE_CREATIONTIME|adFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora di che creazione della risorsa. Il tempo è espresso nel formato Coordinated Universal Time (UTC).|  
-|RESOURCE_LASTACCESSTIME|adFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultimo accesso alla risorsa. L'ora è in formato UTC. I membri FILETIME sono pari a zero se il provider non supporta questo membro temporale.|  
-|RESOURCE_LASTWRITETIME|adFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultima scrittura della risorsa. L'ora è in formato UTC. I membri FILETIME sono pari a zero se il provider non supporta questo membro temporale.|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultimo accesso alla risorsa. L'ora è in formato UTC. I membri FILETIME sono pari a zero se il provider non supporta questo membro temporale.|  
+|RESOURCE_LASTWRITETIME|AdFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultima scrittura della risorsa. L'ora è in formato UTC. I membri FILETIME sono pari a zero se il provider non supporta questo membro temporale.|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|Di sola lettura. Indica le dimensioni della risorsa predefinita, in byte del flusso.|  
 |RESOURCE_ISCOLLECTION|adBoolean|Di sola lettura. True se la risorsa è una raccolta, ad esempio una directory. False se la risorsa è un file semplice.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|True se la risorsa è un documento strutturato. False se la risorsa non è un documento strutturato. Potrebbe trattarsi di una raccolta o un file semplice.|  
 |DEFAULT_DOCUMENT|AdVarWChar|Di sola lettura. Indica che la risorsa contiene un URL per il documento semplice predefinito di una cartella o un documento strutturato. Utilizzato quando viene richiesto il flusso predefinito da una risorsa. Questa proprietà è vuota per un file semplice.|  
-|CHAPTERED_CHILDREN|AdChapter|Di sola lettura. Facoltativo. Indica il capitolo del set di righe che contiene gli elementi figlio della risorsa. (Il *il Provider OLE DB per Internet Publishing* non usare questa colonna.)|  
+|CHAPTERED_CHILDREN|AdChapter|Di sola lettura. Facoltativa. Indica il capitolo del set di righe che contiene gli elementi figlio della risorsa. (Il *il Provider OLE DB per Internet Publishing* non usare questa colonna.)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|Di sola lettura. Indica il nome visualizzato della risorsa.|  
 |RESOURCE_ISROOT|adBoolean|Di sola lettura. True se la risorsa è la radice di una raccolta o di un documento strutturato.|  
   

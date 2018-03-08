@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab6b1bde36e0e2b84c2bacfd52baca137e894f0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 40bcb89844fb9b5cea09dab93765a32c8dedcc90
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>Creazione di guide di piano per più istruzioni all'interno di un piano di query  
  Analogamente a sp_create_plan_guide, sp_create_plan_guide_from_handle rimuove il piano di query per il batch o il modulo applicato dalla cache dei piani. Questa operazione consente a tutti gli utenti di iniziare a utilizzare la nuova guida di piano. Quando si crea una guida di piano per più istruzioni all'interno di un unico piano di query, è possibile posticipare la rimozione del piano dalla cache creando tutte le guide di piano in una transazione esplicita. Questo metodo consente al piano di rimanere nella cache fino al completamento della transazione e alla creazione di una guida di piano per ogni istruzione specificata. Vedere l'esempio B.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE. In aggiunta, sono richieste autorizzazioni singole per ogni guida di piano creata utilizzando sp_create_plan_guide_from_handle. Per creare una guida di piano di tipo OBJECT è necessario disporre dell'autorizzazione ALTER per l'oggetto a cui si fa riferimento. Per creare una guida di piano di tipo SQL o TEMPLATE è necessario disporre dell'autorizzazione ALTER per il database corrente. Per determinare il tipo di guida di piano che verrà creato, eseguire la query seguente:  
   
 ```  
@@ -84,7 +84,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
 ### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>A. Creazione di una guida di piano da un piano di query nella cache dei piani  
  Nell'esempio seguente viene creata una guida di piano per una singola istruzione SELECT specificando un piano di query dalla cache dei piani. Viene innanzitutto eseguita una semplice istruzione `SELECT` per la quale verrà creata la guida di piano. Il piano per la query viene esaminato utilizzando le viste a gestione dinamica `sys.dm_exec_sql_text` e `sys.dm_exec_text_query_plan`. La guida di piano viene quindi creata per la query specificando il piano di query nella cache dei piani a essa associata. Nell'esempio, l'istruzione finale verifica l'esistenza della guida di piano.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT WorkOrderID, p.Name, OrderQty, DueDate  

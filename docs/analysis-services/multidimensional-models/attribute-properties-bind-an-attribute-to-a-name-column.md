@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - name columns [Analysis Services]
 - attributes [Analysis Services], binding
 ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 819c027aa1adfbfae7d6057e988b1d93327233f4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4b17e4ed33f172dd109fdd3aad43269a0daf31b3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Attributo di proprietà: associare un attributo a una colonna nome
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questa procedura viene descritto come associare manualmente un attributo a una colonna nome utilizzando il **attributi** in Progettazione dimensioni e tramite il **associazione oggetto** la finestra di dialogo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Questa procedura descrive come associare manualmente un attributo al nome di una colonna tramite il riquadro **Attributi** di Progettazione dimensioni e tramite la finestra di dialogo **Associazione oggetto**.  
   
 ### <a name="to-bind-an-attribute-to-a-name-column"></a>Per associare un attributo a una colonna del nome  
   

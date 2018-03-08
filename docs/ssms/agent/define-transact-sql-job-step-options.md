@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 - job steps [Transact-SQL]
 - SQL Server Agent jobs, Transact-SQL step
 ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b63ef329df1e98844febcc6ba01d5e71a1daa31
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e68e6b11cc23c4f6f0a5caa6c0da1e1bfb8e4536
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="define-transact-sql-job-step-options"></a>Define Transact-SQL Job Step Options
+# <a name="define-transact-sql-job-step-options"></a>Definire le opzioni del passaggio di processo Transact-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come definire le opzioni per i passaggi del processo [!INCLUDE[msCoName](../../includes/msconame_md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o SQL Server Management Objects.  
   
 **Contenuto dell'argomento**  

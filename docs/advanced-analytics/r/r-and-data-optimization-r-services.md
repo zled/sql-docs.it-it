@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 134565923ab191fb8fe821f82920562bc1616dd4
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Prestazioni per R Services - ottimizzazione dati
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo è il terzo in una serie che descrive l'ottimizzazione delle prestazioni per R Services in base alle due case study. In questo articolo descrive le ottimizzazioni delle prestazioni per R o Python script in esecuzione in SQL Server. Vengono inoltre descritti i metodi che è possibile utilizzare per aggiornare il codice R, per migliorare le prestazioni e per evitare problemi noti.
 

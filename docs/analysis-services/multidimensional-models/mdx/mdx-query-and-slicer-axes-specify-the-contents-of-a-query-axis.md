@@ -5,32 +5,30 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cellsets [MDX]
 - query axis [MDX]
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9b7100066015b84fafb6ed11428b318ef79fc78d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 99ee0b35cbb913a1e0332bda07394fe6541309a4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Query MDX e assi di sezionamento - specificare il contenuto di un asse della Query
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gli assi della query specificano i bordi di un set di celle restituito da un'istruzione SELECT di MDX (Multidimensional Expressions). L'impostazione dei bordi di un set di celle consente di limitare i dati restituiti visibili al client.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Gli assi della query specificano i bordi di un set di celle restituito dall'istruzione SELECT di MDX (Multidimensional Expression). L'impostazione dei bordi di un set di celle consente di limitare i dati restituiti visibili al client.  
   
  Per specificare gli assi della query è necessario assegnare un set a un asse particolare utilizzando `<SELECT query axis clause>` . Ogni valore `<SELECT query axis clause>` definisce un asse della query. Il numero di assi nel set di dati è pari al numero di valori `<SELECT query axis clause>` nell'istruzione SELECT.  
   
@@ -124,6 +122,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostazione del contenuto di un asse di sezionamento &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Specifica il contenuto di un asse di sezionamento &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

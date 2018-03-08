@@ -8,20 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f2d4daa75f8a339b1b0c83d7920b770e80f44525
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7c5db49ed18a5c025b1f237b59ca78ca5fbdbf71
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint
 
@@ -81,11 +81,11 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\` (SharePoint 2013)
   
-     o  
+     o Gestione configurazione  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
-3.  Nell'Amministrazione centrale SharePoint configurare le impostazioni e l'attivazione delle funzionalità del server di report. . Per altre informazioni sull'installazione e sulla configurazione della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vedere [Installare la modalità SharePoint di Reporting Services per SharePoint 2013](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+3.  Nell'Amministrazione centrale SharePoint configurare le impostazioni e l'attivazione delle funzionalità del server di report. , Per altre informazioni sull'installazione e sulla configurazione della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vedere [Installare la modalità SharePoint di Reporting Services per SharePoint 2013](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 ###  <a name="bkmk_files_only_installation"></a> Installazione di tipo "solo file"  
  Per installare i file ignorando la fase di installazione delle azioni personalizzate, eseguire rssharepoint.msi dalla riga di comando con l'opzione SKIPCA:  
@@ -264,7 +264,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  Nella tabella seguente vengono riepilogate le opzioni di rscustomaction.exe:  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |i|Installazione delle azioni personalizzate. Consente di registrare i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint. W3SVCservice verrà riavviato.|  
 |r|Repair|  

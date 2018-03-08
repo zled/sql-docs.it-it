@@ -1,5 +1,5 @@
 ---
-title: Sys.dm io_backup_tapes (Transact-SQL) | Documenti Microsoft
+title: sys.dm_io_backup_tapes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_io_backup_tapes_TSQL
 - sys.dm_io_backup_tapes_TSQL
 - dm_io_backup_tapes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_io_backup_tapes dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d2a6365411d66238512fddf23e7f71848acf5de
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80f1fdab524409956921aa9087177b2ef9d8ae7f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**mount_request_time**|**datetime**|Data e ora in cui il montaggio è stato richiesto. NULL se non vi è alcun montaggio in sospeso (**stato! = 2**). Ammette i valori Null.|  
 |**mount_expiration_time**|**datetime**|Data e ora di scadenza della richiesta di montaggio (timeout). NULL se non vi è alcun montaggio in sospeso (**stato! = 2**). Ammette i valori Null.|  
 |**database_name**|**nvarchar(256)**|Database di cui eseguire il backup nel dispositivo. Ammette i valori Null.|  
-|**SPID**|**int**|ID di sessione. Identifica l'utente del nastro. Ammette i valori Null.|  
+|**spid**|**int**|ID di sessione. Identifica l'utente del nastro. Ammette i valori Null.|  
 |**comando**|**int**|Comando che esegue il backup. Ammette i valori Null.|  
 |**command_desc**|**nvarchar(120)**|Descrizione del comando. Ammette i valori Null.|  
 |**media_family_id**|**int**|Indice del gruppo di supporti (1... *n* ),  *n*  è il numero di gruppi di supporti nel set di supporti. Ammette i valori Null.|  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |**mount_request_type**|**int**|Tipo di richiesta di montaggio:<br /><br /> 1 = Nastro specifico. Il nastro identificato dal **Media _\***  campi è obbligatorio.<br /><br /> 2 = Successivo gruppo di supporti. È richiesto il successivo gruppo di supporti non ancora ripristinato. Viene utilizzato quando si effettua il ripristino da un numero di dispositivi inferiore al numero di gruppi di supporti.<br /><br /> 3 = Nastro di continuità. Il gruppo di supporti viene esteso ed è necessario un nastro di continuità.<br /><br /> Ammette i valori Null.|  
 |**mount_request_type_desc**|**nvarchar(120)**|Tipo di richiesta di montaggio:<br /><br /> SPECIFIC TAPE<br /><br /> NEXT MEDIA FAMILY<br /><br /> CONTINUATION VOLUME<br /><br /> Ammette i valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente deve disporre dell'autorizzazione VIEW SERVER STATE nel server.  
   
 ## <a name="see-also"></a>Vedere anche  

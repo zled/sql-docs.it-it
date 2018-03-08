@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +18,20 @@ helpviewer_keywords:
 - UPDATE CUBE statement
 - cubes [Analysis Services], writeback
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3306e20389ece189a8f40c449ea88aa640af4f0e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f658740766736a83dd374cf647523ea9f8e2bfe4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-modification---using-cube-writebacks"></a>Modifica dei dati MDX - utilizzo dei writeback dei cubi
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Aggiornamento di un cubo utilizzando la [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) istruzione. Tale istruzione consente di aggiornare una tupla con un valore specifico. Per utilizzare in modo efficace l'istruzione UPDATE CUBE per l'aggiornamento di un cubo, è importante conoscere la sintassi dell'istruzione, le condizioni di errore che possono verificarsi e i possibili effetti degli aggiornamenti su un cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+È possibile aggiornare un cubo usando l'istruzione [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md). Tale istruzione consente di aggiornare una tupla con un valore specifico. Per utilizzare in modo efficace l'istruzione UPDATE CUBE per l'aggiornamento di un cubo, è importante conoscere la sintassi dell'istruzione, le condizioni di errore che possono verificarsi e i possibili effetti degli aggiornamenti su un cubo.  
   
 ## <a name="update-cube-statement-syntax"></a>Sintassi dell'istruzione UPDATE CUBE  
  La sintassi dell'istruzione UPDATE CUBE è la seguente:  
@@ -126,6 +124,6 @@ USE_EQUAL_ALLOCATION
 -   Modifica della granularità di una dimensione inclusa nel writeback.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modifica dei dati &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+ [Modifica di dati &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 caps.latest.revision: "20"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 75de98271fbae87840e52e38a634bf002a37c81d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8b43b5506c4b604c2270d06a3ca065f664a3bab8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---setservicestate"></a>Metodo di ConfigurationSetting - SetServiceState
   Attiva e disattiva i servizi Windows ReportServer e Web ReportServer.  
@@ -64,7 +62,7 @@ public void SetServiceState(Boolean EnableWindowsService,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

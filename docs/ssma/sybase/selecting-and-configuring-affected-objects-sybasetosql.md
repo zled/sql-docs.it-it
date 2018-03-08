@@ -3,7 +3,7 @@ title: Selezione e configurazione interessati oggetti (SybaseToSQL) | Documenti 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 016fc9d6f7250756a098cd4b1876ca74ed67e3cc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 102de8f523d91c34369ca84a4577e5978934349d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selezione e configurazione interessato (SybaseToSQL) di oggetti
 In questa pagina è possibile selezionare tabelle e le chiavi esterne, le modifiche in cui devono essere confrontate quando SSMA verifica i risultati dell'esecuzione per gli oggetti scelto nel passaggio precedente. Inoltre, è possibile personalizzare i parametri di verifica.  
@@ -46,9 +46,9 @@ Scheda della tabella contiene la visualizzazione della griglia della tabella sel
   
 -   Scala  
   
--   Rule  
+-   Regola  
   
--   Valore predefinito  
+-   Default  
   
 -   Identity  
   

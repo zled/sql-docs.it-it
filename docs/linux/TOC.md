@@ -2,9 +2,10 @@
 
 # Panoramica
 ## [Note sulla versione](sql-server-linux-release-notes.md)
-## [Novità in questa versione](sql-server-linux-whats-new.md)
+## [Novità](sql-server-linux-whats-new.md)
 ## [Articoli nuovi e aggiornati](new-updated-linux.md)
 ## [Edizioni e funzionalità supportate ](sql-server-linux-editions-and-components-2017.md)
+## [FAQ](sql-server-linux-faq.md)
 
 # Guide introduttive
 ## [Installazione e connessione - Red Hat](quickstart-install-connect-red-hat.md)
@@ -26,6 +27,7 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 ## [7_Distribuire un cluster Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md)
 ## [8_Creare e configurare gruppi di disponibilità](sql-server-linux-create-availability-group.md)
+## [9_Configurare in Kubernetes per una disponibilità elevata](tutorial-sql-server-containers-kubernetes.md)
 
 # Concetti
 ## Install
@@ -34,7 +36,7 @@
 ### [Installare SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 ### [Installare la ricerca full-text di SQL Server](sql-server-linux-setup-full-text-search.md)
 ### [Installare SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-### [Registrare il repository GA](sql-server-linux-change-repo.md)
+### [Configurare i repository](sql-server-linux-change-repo.md)
 
 ## Configura
 ### [Configurare con mssql-conf](sql-server-linux-configure-mssql-conf.md)
@@ -84,12 +86,14 @@
 ##### [Gestire](sql-server-linux-availability-group-failover-ha.md)
 #### [Creare solo per la scalabilità in lettura]()
 ##### [Configurare AG](sql-server-linux-availability-group-configure-rs.md)
+#### [Configurazione multipiattaforma (Windows e Linux)](sql-server-linux-availability-group-cross-platform.md)
 
-## [Sicurezza](sql-server-linux-security-overview.md)
+## [Security](sql-server-linux-security-overview.md)
 ### [Introduzione alle funzionalità di sicurezza](sql-server-linux-security-get-started.md)
+### [Autenticazione di Azure Active Directory](sql-server-linux-active-directory-auth-overview.md)
 ### [Crittografia delle connessioni](sql-server-linux-encrypted-connections.md)
 
-## Prestazioni
+## restazioni
 ### [Procedure consigliate](sql-server-linux-performance-best-practices.md)
 ### [Introduzione alle funzionalità relative alle prestazioni](sql-server-linux-performance-get-started.md)
 
@@ -100,7 +104,6 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Risorse
-## [FAQ](sql-server-linux-faq.md)
 ## [Risoluzione dei problemi](sql-server-linux-troubleshooting-guide.md)
 ## [Documentazione di SQL Server](../sql-server/sql-server-technical-documentation.md)
 ## Partner
@@ -111,5 +114,5 @@
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ## [Forum di MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-## [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+## [Invio di commenti e suggerimenti:](https://feedback.azure.com/forums/908035-sql-server)
 ## [Reddit](https://www.reddit.com/r/SQLServer)

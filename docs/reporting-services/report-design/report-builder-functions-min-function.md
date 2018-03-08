@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5388b629501bc1e882646fd4e35c75014982ab67
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dbadd517c4d4a2eadf5f4fce374fab3a1d06d8e1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---min-function"></a>Funzioni di Generatore report - Funzione Min
   Restituisce il valore minimo di tutti i valori numerici non Null specificati dall'espressione, nel contesto dell'ambito specificato.  
@@ -39,7 +37,7 @@ Min(expression, scope, recursive)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *espressione*  
+ *expression*  
  (**Variant**) Espressione su cui eseguire l'aggregazione.  
   
  *ambito*  
@@ -51,7 +49,7 @@ Min(expression, scope, recursive)
 ## <a name="return-type"></a>Tipo restituito  
  Determinato dal tipo di espressione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il set di dati specificato nell'espressione deve essere dello stesso tipo di dati. Per convertire dati con più tipi di dati numerici nello stesso tipo di dati, usare funzioni di conversione come **CInt**, **CDbl** o **CDec**. Per altre informazioni, vedere [Funzioni di conversione del tipo](http://go.microsoft.com/fwlink/?LinkId=96142).  
   
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  

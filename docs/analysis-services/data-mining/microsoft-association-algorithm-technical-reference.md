@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +22,20 @@ helpviewer_keywords:
 - MAXIMUM_ITEMSET_SIZE parameter
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1fcc5b1089397672226b526654f611147e81e99
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Association Rules
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Microsoft Association Rules è un'implementazione semplice del noto algoritmo Apriori.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un'implementazione semplice del noto algoritmo Apriori.  
   
  Sia l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees che l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules possono essere usati per analizzare associazioni, ma le regole individuate da ognuno di essi possono essere diverse. In un modello di albero delle decisioni le divisioni che portano a regole specifiche sono basate su Information Gain, mentre in un modello di associazione le regole sono interamente basate sulla confidenza. Pertanto, in un modello di associazione una regola efficace o caratterizzata da una confidenza elevata può non essere necessariamente interessante, in quanto non fornisce nuove informazioni.  
   
@@ -172,6 +171,6 @@ ms.lasthandoff: 12/08/2017
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Association Rules](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Esempi di Query sul modello Association](../../analysis-services/data-mining/association-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli di associazione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli di associazione &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

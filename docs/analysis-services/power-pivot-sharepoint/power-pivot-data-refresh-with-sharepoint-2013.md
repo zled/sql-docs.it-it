@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5fefda98d12920fb3f7ae2cb03c52f932f371602
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59648b6a3f3dc221fa1e80be1e737606b5fede04
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Aggiornamento dati PowerPivot con SharePoint 2013
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La progettazione per l'aggiornamento di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelli di dati in SharePoint 2013 viene utilizzato Excel Services come componente principale per caricare e aggiornare i modelli di dati in un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità SharePoint. Il server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito esternamente alla farm di SharePoint. L'architettura in SharePoint 2013 Excel Services supporta sia l' **aggiornamento dati interattivo** che l' **aggiornamento dati pianificato**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'aggiornamento dei modelli di dati di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SharePoint 2013 prevede l'utilizzo di Excel Services come componente principale per caricare e aggiornare i modelli di dati in un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eseguita in modalità SharePoint. Il server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito esternamente alla farm di SharePoint. L'architettura in SharePoint 2013 Excel Services supporta sia l' **aggiornamento dati interattivo** che l' **aggiornamento dati pianificato**.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -63,8 +61,8 @@ ms.lasthandoff: 12/08/2017
 |Cartella di lavoro creata in|aggiornamento dati pianificato|Aggiornamento interattivo|  
 |-------------------------|----------------------------|-------------------------|  
 |2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel|Non supportato. Aggiornare la cartella di lavoro **(\*)**|Non supportato. Aggiornare la cartella di lavoro **(\*)**|  
-|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel|Supportato|Non supportato. Aggiornare la cartella di lavoro **(\*)**|  
-|Excel 2013|Supportato|Supportato|  
+|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel|Supported|Non supportato. Aggiornare la cartella di lavoro **(\*)**|  
+|Excel 2013|Supported|Supported|  
   
  **(\*)** Per altre informazioni, vedere [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
@@ -138,7 +136,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Punti chiave di interesse dell'aggiornamento dati pianificato:**  
   
--   È richiesta la distribuzione del componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Per altre informazioni, vedere [Installare o disinstallare il componente aggiuntivo PowerPivot per &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   È richiesta la distribuzione del componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Per altre informazioni, vedere [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   Un utente configura una pianificazione dell'aggiornamento per una cartella di lavoro. All'ora pianificata, con il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] viene inviata una richiesta a Excel Services per:  
   

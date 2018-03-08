@@ -1,7 +1,7 @@
 ---
 title: La connessione al Database Oracle (OracleToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 848af110f61c80cc8b54b890f8754844506948f0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: df379493d026c3cc3da3bf01ea036e8f32072625
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>La connessione al Database Oracle (OracleToSQL)
 Per eseguire la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è necessario connettersi al database Oracle che si desidera eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti gli schemi di Oracle e quindi visualizzato nel riquadro di esplorazione dei metadati di Oracle. SSMA archivia le informazioni relative al server di database, ma non archivia le password.  

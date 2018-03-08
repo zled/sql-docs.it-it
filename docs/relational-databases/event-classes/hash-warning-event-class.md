@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Hash Warning event class
+helpviewer_keywords:
+- Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e96888456d728f0ac572e526fdc00218d6e3b7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7e3d82475509a6707001787ff1c08ab66636292c
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] È possibile usare la classe di evento Hash Warning per monitorare il momento in cui si verifica una ricorsione di hash o l'interruzione dell'hashing (hash bailout) durante un'operazione di hashing.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+È possibile utilizzare la classe di evento Hash Warning per monitorare il momento in cui si verifica una ricorsione di hash o l'interruzione dell'hashing (hash bailout) durante un'operazione di hashing.  
   
  La ricorsione di hash si verifica quando la memoria disponibile non è sufficiente per l'input di compilazione, che viene quindi suddiviso in più partizioni elaborate separatamente. Se la memoria disponibile non è sufficiente per una delle partizioni, la partizione viene suddivisa ulteriormente in sottopartizioni che vengono elaborate separatamente. Il processo di suddivisione continua fino a quando non vengono inserite nella memoria disponibile tutte le partizioni o non viene raggiunto il livello massimo di ricorsione (visualizzato nella colonna di dati IntegerData).  
   
@@ -51,14 +54,14 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="hash-warning-event-class-data-columns"></a>Colonne di dati della classe di evento Hash Warning  
   
-|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione anziché con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se il client fornisce l'ID del processo client.|9|Sì|  
 |DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|EventClass|**int**|Tipo di evento = 55.|27|No|  
-|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|EventClass|**int**|Tipo di evento = 55.|27|no|  
+|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 0=Ricorsione<br /><br /> 1=Bailout|21|Sì|  
 |GroupID|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
@@ -78,6 +81,7 @@ ms.lasthandoff: 11/17/2017
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)    
+ [Join](../../relational-databases/performance/joins.md)    
   
   

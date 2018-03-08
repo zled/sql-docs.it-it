@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d56c906c87ef69e444ee1424324cc99e3fa05ed8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Motore di database)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
  Un cliente ha un'applicazione client locale presso la propria sede aziendale. L'applicazione usa dati sensibili archiviati in un database ospitato in Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in esecuzione in una macchina virtuale in Microsoft Azure). Il cliente usa Always Encrypted e archivia le relative chiavi in un archivio attendibile ospitato localmente, per assicurarsi che gli amministratori cloud di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] non abbiano accesso ai dati sensibili.  
   
 ### <a name="client-and-data-in-azure"></a>Client e dati in Azure  
- Un cliente ha un'applicazione client, ospitata in Microsoft Azure (ad esempio in un ruolo di lavoro o in un ruolo web), che usa dati sensibili anch'essi archiviati in Microsoft Azure. (SQL Database o SQL Server sono eseguiti in un computer virtuale di Microsoft Azure). Sebbene Always Encrypted non assicura isolamento completo dei dati dagli amministratori di cloud perché sia i dati sia le chiavi sono esposti agli amministratori di cloud della piattaforma che ospita il livello client, il cliente tuttavia può beneficiare della riduzione della superficie di attacco della sicurezza (i dati nel database sono sempre crittografati).  
+ Un cliente ha un'applicazione client, ospitata in Microsoft Azure, ad esempio in un ruolo di lavoro o in un ruolo Web, che usa dati sensibili anch'essi archiviati in Microsoft Azure, in un database SQL o SQL Server in esecuzione in una macchina virtuale di Microsoft Azure. Sebbene Always Encrypted non assicura isolamento completo dei dati dagli amministratori di cloud perché sia i dati sia le chiavi sono esposti agli amministratori di cloud della piattaforma che ospita il livello client, il cliente tuttavia può beneficiare della riduzione della superficie di attacco della sicurezza (i dati nel database sono sempre crittografati).  
  
 ## <a name="how-it-works"></a>Funzionamento
 
@@ -85,10 +86,10 @@ Per informazioni dettagliate sugli algoritmi crittografici di Always Encrypted, 
 
 |Attività|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|Provisioning di chiavi master della colonna, chiavi di crittografia di colonne e chiavi di crittografia della colonna crittografata con le chiavi master della colonna corrispondenti.|Sì|Sì|No|
+|Provisioning di chiavi master della colonna, chiavi di crittografia di colonne e chiavi di crittografia della colonna crittografata con le chiavi master della colonna corrispondenti.|Sì|Sì|no|
 |Creazione di metadati della chiave nel database.|Sì|Sì|Sì|
 |Creazione di nuove tabelle con colonne crittografate|Sì|Sì|Sì|
-|Crittografia dei dati esistenti nelle colonne selezionate del database|Sì|Sì|No|
+|Crittografia dei dati esistenti nelle colonne selezionate del database|Sì|Sì|no|
 
 > [!NOTE]
 > Accertarsi di eseguire il provisioning delle chiavi o gli strumenti di crittografia dei dati in un ambiente protetto o in un computer diverso da quello che ospita il database. Altrimenti potrebbero verificarsi delle perdite di chiavi o dati sensibili verso l'ambiente del server, e questo ridurrebbe i benefici dell'uso di Always Encrypted.  
@@ -117,7 +118,7 @@ Per iniziare a usare rapidamente questa funzionalità, eseguire la [procedura gu
   
 ## <a name="feature-details"></a>Informazioni sulle funzionalità  
   
--   Le query possono eseguire il confronto di uguaglianza sulle colonne crittografate usando la crittografia deterministica, ma non altre operazioni (ad esempio maggiore/minore di, criteri di ricerca usando l'operatore LIKE o operazioni aritmetiche).  
+-   Le query possono eseguire il confronto delle uguaglianze sulle colonne crittografate usando la crittografia deterministica, ma non altre operazioni, come ad esempio maggiore/minore di, criteri di ricerca usando l'operatore LIKE o operazioni aritmetiche.  
   
 -   Le query sulle colonne crittografate con la crittografia casuale non possono eseguire operazioni su una qualsiasi di tali colonne. L'indicizzazione di colonne crittografate usando la crittografia casuale non è supportata.  
 
@@ -127,7 +128,7 @@ Per iniziare a usare rapidamente questa funzionalità, eseguire la [procedura gu
 
 -   Dopo aver modificato la definizione di un oggetto codificato, eseguire [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) per aggiornare i metadati di Always Encrypted per l'oggetto.
   
-Always Encrypted non è supportata per le colonne con le caratteristiche seguenti (ad esempio, la clausola *Encrypted WITH* non può essere usata nell'istruzione **CREATE TABLE/ALTER TABLE** per una colonna, se alla colonna si applica una qualsiasi delle seguenti condizioni):  
+Always Encrypted non è supportata per le colonne con le caratteristiche seguenti. Ad esempio, la clausola *Encrypted WITH* non può essere usata nell'istruzione **CREATE TABLE/ALTER TABLE** per una colonna, se alla colonna si applica una qualsiasi delle seguenti condizioni:  
   
 -   Colonne che usano uno dei seguenti tipi di dati: **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, alias, tipi definiti dall'utente.  
 - Colonne FILESTREAM  

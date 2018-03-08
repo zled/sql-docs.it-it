@@ -3,29 +3,29 @@ title: Utilizzare l'estensione di Visual Studio Code mssql per SQL Server | Docu
 description: In questa esercitazione viene illustrato come utilizzare l'estensione mssql per il codice di Visual Studio. Questa estensione consente di modificare ed eseguire script Transact-SQL nel codice di Visual Studio.
 author: erickangMSFT
 ms.author: erickang
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: f7620db7f18c07544158ba49efbead9025c7a19a
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Usare codice di Visual Studio per creare ed eseguire script Transact-SQL per SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In questo argomento viene illustrato come utilizzare il **mssql** estensione per Visual Studio Code (codice di Visual Studio) per lo sviluppo di database di SQL Server.
+In questo articolo viene illustrato come utilizzare il **mssql** estensione per Visual Studio Code (codice di Visual Studio) per lo sviluppo di database di SQL Server.
 
 Codice di Visual Studio è un editor di codice con interfaccia grafica per Linux, macOS e Windows che supporta le estensioni. Il [**mssql** estensione per il codice di Visual Studio] consente di connettersi a SQL Server, query Transact-SQL (T-SQL) e visualizzare i risultati.
 
@@ -80,7 +80,7 @@ Il **mssql** estensione consente mssql comandi e T-SQL IntelliSense nell'editor 
 
 La procedura seguente viene illustrato come connettersi a SQL Server con Visual Studio Code.
 
-1. Nel codice di Visual Studio, premere **CTRL + MAIUSC + P** (o **F1**) per aprire il riquadro comandi.
+1. In Visual Studio Code premere **CTRL+MAIUSC+P** (o **F1**) per aprire il riquadro comandi.
 
 2. Tipo **sql** per visualizzare i comandi mssql.
 
@@ -91,7 +91,7 @@ La procedura seguente viene illustrato come connettersi a SQL Server con Visual 
 
 4. Selezionare **Crea profilo di connessione**. Verrà creato un profilo di connessione per l'istanza di SQL Server.
 
-5. Seguire le istruzioni per specificare le proprietà di connessione per il nuovo profilo di connessione. Dopo aver specificato ogni valore, premere **invio** per continuare. 
+5. Seguire le istruzioni per specificare le proprietà di connessione per il nuovo profilo di connessione. Dopo aver specificato ogni valore, premere **INVIO** per continuare. 
 
    Nella tabella seguente vengono descritte le proprietà di profilo di connessione.
 
@@ -99,15 +99,15 @@ La procedura seguente viene illustrato come connettersi a SQL Server con Visual 
    |-----|-----|
    | **Nome server** | Il nome dell'istanza SQL Server. Per questa esercitazione, usare **localhost** per connettersi all'istanza di SQL Server locale nel computer. Se la connessione a un Server SQL remoto, immettere il nome del computer SQL Server di destinazione o il relativo indirizzo IP. |
    | **[Facoltativo] Nome del database** | Il database che si desidera utilizzare. Ai fini di questa esercitazione, non specificare un database e premere **invio** per continuare. |
-   | **User name** | Immettere il nome di un utente con accesso a un database nel server. Per questa esercitazione, usare il valore predefinito **SA** account creato durante l'installazione di SQL Server. |
+   | **Nome utente** | Immettere il nome di un utente con accesso a un database nel server. Per questa esercitazione, usare il valore predefinito **SA** account creato durante l'installazione di SQL Server. |
    | **Password (account di accesso SQL)** | Immettere la password per l'utente specificato. | 
-   | **Salva Password?** | Tipo **Sì** per salvare la password. In caso contrario, digitare **n** chiesto di immettere la password ogni volta che viene utilizzato il profilo di connessione. |
+   | **Salvare la password?** | Tipo **Sì** per salvare la password. In caso contrario, digitare **n** chiesto di immettere la password ogni volta che viene utilizzato il profilo di connessione. |
    | **[Facoltativo] Immettere un nome per questo profilo** | Il nome del profilo di connessione. Ad esempio, è possibile specificare il nome del profilo **profilo localhost**. 
 
    > [!Tip] 
    > È possibile creare e modificare i profili di connessione nel file di impostazioni utente (Settings). Aprire il file di impostazioni selezionando **preferenza** e quindi **impostazioni utente** nel menu di Visual Studio Code. Per ulteriori informazioni, vedere [gestire i profili di connessione].
 
-6. Premere il **ESC** tasto per chiudere il messaggio informativo che informa che il profilo viene creato e collegato.
+6. Premere il tasto **ESC** per chiudere il messaggio che informa che il profilo è stato creato e connesso.
 
    > [!TIP]
    > Se si verifica un errore di connessione, tenta di diagnosticare il problema dal messaggio di errore nel **Output** pannello in Visual Studio Code (selezionare **Output** sul **vista** menu). Rivedere poi i [consigli per la risoluzione dei problemi di connessione].

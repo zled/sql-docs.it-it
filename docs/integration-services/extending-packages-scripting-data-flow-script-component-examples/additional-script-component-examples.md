@@ -8,23 +8,26 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
-helpviewer_keywords: Script component [Integration Services], examples
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
+helpviewer_keywords:
+- Script component [Integration Services], examples
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb41338dff0e0ae09f6ae7b6b84106af4c9bc42a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e02c62ab6362c0fb423f522d7f70fe0855b77931
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="additional-script-component-examples"></a>Ulteriori esempi di componente script
   Il componente script è uno strumento configurabile che è possibile utilizzare nel flusso di dati di un pacchetto per rispondere ai requisiti non soddisfatti dalle origini, dalle trasformazioni e dalle destinazioni incluse in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Questa sezione contiene esempi di codice del componente script che dimostrano i vari tipi di funzionalità disponibili.  

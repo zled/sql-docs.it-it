@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.welcome.f1
+f1_keywords:
+- sql13.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 36872efe2081ae755f796d4ed19e96dbcbcfe341
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2edc03674b5456f68e484f29c1bbd71c4064ca8b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Importazione/Esportazione guidata SQL Server
   La prima pagina visualizzata all'avvio dell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è **Importazione/Esportazione guidata SQL Server**. Non è necessario eseguire alcuna operazione in questa pagina.
@@ -42,7 +44,7 @@ Lo screenshot seguente illustra la pagina **Importazione/Esportazione guidata SQ
 **Non visualizzare più questa pagina iniziale.**  
  Consente di evitare la visualizzazione della pagina di benvenuto alla successiva apertura della procedura guidata.  
   
-## <a name="whats-next"></a>Operazioni successive  
+## <a name="whats-next"></a>Quali sono le operazioni successive?  
  Dopo la pagina iniziale, la pagina successiva è **Scelta origine dati**. In questa pagina è necessario fornire informazioni sull'origine dati e su come connettersi a tale origine. Per altre informazioni, vedere [Scelta origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="related"></a> Attività e argomenti correlati  

@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling Task Editor
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 261a970e305400a70f784057a700b5e262618896
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 861b01ee4002bb592f5fc85978a5afd08994f606
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Distribuzione valori di colonna (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni della **Richiesta profilo Distribuzione valori di colonna** selezionata nel riquadro delle richieste. Il profilo Distribuzione valori di colonna segnala tutti i valori distinct nella colonna selezionata e la percentuale di righe della tabella rappresentata da ogni valore. Può inoltre segnalare i valori che rappresentano più percentuali specificate di righe nella tabella. Il profilo consente infine di identificare eventuali problemi nei dati, ad esempio un numero non corretto di valori distinct in una colonna. Si analizza, ad esempio, una colonna contenente gli stati degli Stati Uniti e si individuano più di 50 valori distinct.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Le opzioni descritte in questo argomento vengono visualizzate nella pagina **Richieste profilo** in **Editor attività Profiling dati**. Per altre informazioni su questa pagina dell'editor, vedere [Editor attività Profiling dati &#40;pagina Richieste profilo&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
   
- Per altre informazioni sull'uso dell'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Per altre informazioni sull'uso del Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  
+ Per altre informazioni su come usare l'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Per altre informazioni sull'uso del Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  
   
 ## <a name="request-properties-options"></a>Opzioni del riquadro Proprietà richiesta  
  Nel riquadro **Proprietà richiesta**per **Richiesta profilo Distribuzione valori di colonna** vengono visualizzati i gruppi di opzioni seguenti:  
@@ -75,7 +77,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Se si usa il carattere jolly **(\*)** per **ColumnName**, la proprietà **CompareOptions** è di sola lettura ed è impostata su **Default**.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Default**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
 |**BinarySort**|Ordina e confronta i dati di in base ai modelli di bit definiti per ogni carattere. L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
@@ -83,7 +85,7 @@ ms.lasthandoff: 11/20/2017
   
  Se si seleziona **DictionarySort**, è inoltre possibile selezionare qualsiasi combinazione delle opzioni elencate nella tabella seguente. Per impostazione predefinita, nessuna di queste opzioni aggiuntive è selezionata.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |**IgnoreNonSpace**|Specifica se nel confronto viene fatta distinzione tra i caratteri con spaziatura e quelli con segni diacritici. Se questa opzione è impostata, nel confronto verranno ignorati i segni diacritici. Ad esempio, il carattere "å" verrà considerato uguale al carattere "a".|  
@@ -98,7 +100,7 @@ ms.lasthandoff: 11/20/2017
  **ValueDistributionOption**  
  Consente di specificare se calcolare la distribuzione per tutti i valori di colonna. Il valore predefinito di questa opzione è **FrequentValues**.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**AllValues**|La distribuzione viene calcolata per tutti i valori di colonna.|  
 |**FrequentValues**|La distribuzione viene calcolata solo per i valori la cui frequenza supera il valore minimo specificato in **FrequentValueThreshold**. Valori che non soddisfano **FrequentValueThreshold** sono esclusi dal report di output.|  

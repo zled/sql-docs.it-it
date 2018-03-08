@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -25,16 +23,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e29ed3613253db0f93580717f126dbc53a37c108
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1076c683c164c2d084b431f4190c549d0a5a0cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="propertylist-element---supported-xmla-properties"></a>Elemento PropertyList - supportate proprietà XMLA
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta le proprietà elencate nella tabella seguente. Utilizzare queste proprietà elencate nel [proprietà](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) elemento del [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) e [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) metodi.  
   
-|Nome|Description|Tipo|Valori|  
+|nome|Description|Tipo|Valori|  
 |----------|-----------------|----------|------------|  
 |AxisFormat|Determina il formato utilizzato all'interno di un [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) set di risultati per descrivere gli assi del set di dati multidimensionali. Questa proprietà può assumere i valori elencati nella tabella seguente.<br /><br /> Questa proprietà può essere utilizzata con la **Execute** metodo.|Facoltativa, di sola scrittura **stringa** proprietà|*ClusterFormat*: il **MDDataSet** asse è costituito da uno o più [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) elementi.<br /><br /> *CustomFormat*: <br />                          [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]Usa il *TupleFormat* formato per questa impostazione.<br /><br /> *TupleFormat* predefinito. Il **MDDataSet** asse contiene uno o più [tupla](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) elementi.|  
 |BeginRange|Contiene un valore intero in base zero corrisponde a un **CellOrdinal** valore dell'attributo. (Il **CellOrdinal** attributo fa parte di [cella](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md) elemento il [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) sezione di **MDDataSet**.)<br /><br /> Il valore predefinito per questa proprietà è -1.<br /><br /> Questa proprietà può essere utilizzata con la **Execute** metodo.<br /><br /> Utilizzata in combinazione con il **EndRange** proprietà, l'applicazione client può utilizzare questa proprietà per limitare un set di dati OLAP restituito da un comando a un intervallo specifico di celle. Se viene specificato -1, tutte le celle fino a quella specificata nel **EndRange** proprietà vengono restituiti.|Facoltativa, di sola scrittura **intero** proprietà||  

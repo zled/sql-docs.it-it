@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87af188936ad4c7b2101760b7b18ca63c90db9b9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8b5b63c7f76695853ab216aee1aaab63a3139cc2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
  [  **@OptionName =**] **'***option_name***'**  
  Nome di opzione di indice. *option_name* è **varchar (35)**, non prevede alcun valore predefinito. *option_name* può avere uno dei valori seguenti.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Se è TRUE, i blocchi a livello di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi di riga. Se è FALSE, i blocchi a livello di riga non vengono utilizzati. Il valore predefinito è TRUE.|  
 |**AllowPageLocks**|Se è TRUE, i blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina. Se è FALSE, i blocchi a livello di pagina non vengono utilizzati. Il valore predefinito è TRUE.|  
@@ -86,7 +86,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 -   Quando **AllowPageLocks** opzione è impostata a FALSE o **DisAllowPageLocks** è impostata su TRUE, l'impostazione viene applicata completamente agli indici non cluster. ovvero vengono disattivati tutti i blocchi a livello di pagina negli indici non cluster. Nell'heap sono disattivati solo i blocchi condivisi (S), i blocchi di aggiornamento (U) e i blocchi esclusivi (X) a livello di pagina. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] può comunque acquisire un blocco preventivo a livello di pagina (IS, IU o IX) per scopi interni.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ## <a name="examples"></a>Esempi  
@@ -94,7 +94,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. Impostazione di un'opzione in un indice specifico  
  Nell'esempio seguente non consente blocchi di pagina sul `IX_Customer_TerritoryID` indice il `Customer` tabella.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',  
@@ -104,7 +104,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
 ### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>B. Impostazione di un'opzione in tutti gli indici di una tabella  
  Nell'esempio seguente i blocchi a livello di riga vengono disattivati in tutti gli indici associati alla tabella `Product`. Viene eseguita una query sulla vista del catalogo `sys.indexes` prima e dopo l'esecuzione della stored procedure `sp_indexoption` per visualizzare i risultati dell'istruzione.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options for all indexes on the table.  
@@ -126,7 +126,7 @@ GO
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. Impostazione di un'opzione in una tabella senza indici cluster  
  Nell'esempio seguente i blocchi a livello di pagina vengono disattivati in una tabella senza indici cluster (heap). Il `sys.indexes` è una query sulla vista di catalogo prima e dopo il `sp_indexoption` procedure viene eseguita per visualizzare i risultati dell'istruzione.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options of the table.   

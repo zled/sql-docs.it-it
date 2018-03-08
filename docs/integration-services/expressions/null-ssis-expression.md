@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29f3820518e10bf0b4066d7cf3e8e11d9e50ce3c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5b8b9f8e703b402b55bef24b30977b086b75d1f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="null-ssis-expression"></a>NULL (espressione SSIS)
   Restituisce un valore Null di un tipo di dati richiesto.  
@@ -43,7 +44,7 @@ NULL(typespec)
 ## <a name="result-types"></a>Tipi restituiti  
  Qualsiasi tipo di dati valido con valore Null.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se l'argomento è Null, NULL restituirà Null.  
   
  Per ottenere un valore Null per determinati tipi di dati, è necessario specificare i parametri appropriati. Nella tabella seguente vengono elencati tali tipi di dati e i parametri corrispondenti.  

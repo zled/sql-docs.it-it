@@ -1,5 +1,5 @@
 ---
-title: SET FORCEPLAN (Transact-SQL) | Documenti Microsoft
+title: SET FORCEPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET FORCEPLAN
 - FORCEPLAN
 - FORCEPLAN_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - joins [SQL Server], overriding query optimizer process
 - FORCEPLAN option
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - query optimizer [SQL Server], optimizing process
 - overriding query optimizer process
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2edac268c50a5958abe4c47a3339eb54dda511bd
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
@@ -49,14 +51,14 @@ ms.lasthandoff: 11/21/2017
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'opzione SET FORCEPLAN sostanzialmente sostituisce la logica utilizzata in Query Optimizer per l'elaborazione di un'istruzione SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)]. I dati restituiti dall'istruzione SELECT sono gli stessi, indipendentemente dall'impostazione. L'unica differenza è la modalità in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elabora le tabelle per soddisfare la query.  
   
  È inoltre possibile utilizzare gli hint di Query Optimizer in query che hanno effetto sulla modalità di elaborazione dell'istruzione SELECT in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  L'opzione SET FORCEPLAN viene applicata in fase di esecuzione, non in fase di analisi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per l'opzione SET FORCEPLAN vengono assegnate per impostazione predefinita a tutti gli utenti.  
   
 ## <a name="examples"></a>Esempi  
@@ -108,7 +110,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

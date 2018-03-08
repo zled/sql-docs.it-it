@@ -16,13 +16,13 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc21ac20f60dfbe503779d4ad41c47d99068259f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0cf165a803e6b6b8fa5640b5dd3e38173f59fa4c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utilizzo di report personalizzati con proprietà dei nodi di Esplora oggetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] I report personalizzati possono essere eseguiti nel contesto di un nodo Esplora oggetti selezionato, a condizione che facciano riferimento ai parametri di report di tale nodo. Un report personalizzato può pertanto utilizzare il contesto corrente, ad esempio il database corrente, oppure un oggetto server o database.  

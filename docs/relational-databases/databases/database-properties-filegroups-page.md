@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12c30e38d6f10e519cb4c635a5a23c561dc3ad93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b5059c901a9b2dc517b765a642ddbe16bb926471
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-filegroups-page"></a>Proprietà database (pagina Filegroup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa pagina per visualizzare i filegroup o aggiungere un nuovo filegroup al database selezionato. I tipi di filegroup sono suddivisi in filegroup di *righe*, in filegroup di dati FILESTREAM e in filegroup ottimizzati per la memoria.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
  **Sola lettura**  
  Consente di impostare il filegroup sullo stato di sola lettura.  
   
- **Valore predefinito**  
+ **Default**  
  Consente di impostare il filegroup come filegroup predefinito. È possibile avere un filegroup predefinito per le righe e un filegroup predefinito per i dati FILESTREAM.  
   
  **Aggiungi**  

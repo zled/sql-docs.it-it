@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3fc868b66f6322d9769176671c8df2913d58150e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC Programmer ' &#39; s riferimento
 Il *riferimento per programmatori ODBC* include le sezioni seguenti.  
@@ -60,7 +60,7 @@ Il *riferimento per programmatori ODBC* include le sezioni seguenti.
 |**SQLEndTran**|Grassetto indica che la sintassi deve essere digitata esattamente come indicato, inclusi i nomi di funzione.|  
 |&#124;|Una barra verticale separa le due opzioni si escludono a vicenda in una riga di sintassi.|  
 |...|I puntini di sospensione indica che gli argomenti possono essere ripetuti più volte.|  
-|. . .|Una colonna di tre punti indica mantenimento delle righe di codice precedenti.|  
+|, , ,|Una colonna di tre punti indica mantenimento delle righe di codice precedenti.|  
   
 ## <a name="about-the-code-examples"></a>Informazioni sugli esempi di codice  
  Gli esempi di codice in questa guida sono progettati per solo scopo illustrativo. Poiché sono formulate principalmente per illustrare i concetti ODBC, l'efficienza è talvolta stato riservato a fini di chiarezza. Inoltre, intere sezioni del codice in alcuni casi sono stati omessi per maggiore chiarezza. Tra le definizioni di funzioni non ODBC (tali funzioni i cui nomi non iniziano con "SQL") e la maggior parte di gestione degli errori.  

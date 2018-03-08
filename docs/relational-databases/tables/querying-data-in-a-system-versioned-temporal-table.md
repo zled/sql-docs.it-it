@@ -15,20 +15,20 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 caps.latest.revision: "7"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bdac67ec17d4dd47ce413822833db543cbbe6043
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5bd4678f0a17e570f089f3c532df5a32e284787d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Query sui dati in una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Quando occorre recuperare lo stato (effettivo) più aggiornato dei dati in una tabella temporale, è possibile eseguire query esattamente nello stesso modo valido per l'esecuzione di query in tabelle non temporali. Se le colonne PERIOD non sono nascoste, i rispettivi valori compariranno in una query SELECT \* . Se le colonne **PERIOD** sono state specificate come nascoste, i rispettivi valori non saranno visualizzati in una query SELECT \* . Quando le colonne **PERIOD** sono nascoste, è possibile fare riferimento in modo specifico alle colonne **PERIOD** nella clausola SELECT per restituire i valori per queste colonne.  
   
- Per eseguire qualsiasi tipo di analisi basata sul tempo, usare la nuova clausola  **FOR SYSTEM_TIME** con quattro sottoclausole specifiche per i dati temporali per eseguire query sui dati nelle tabelle correnti e di cronologia. Per ulteriori informazioni su queste clausole, vedere [Tabelle temporali](../../relational-databases/tables/temporal-tables.md) e [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
+ Per eseguire qualsiasi tipo di analisi basata sul tempo, usare la nuova clausola  **FOR SYSTEM_TIME** con quattro sottoclausole specifiche per i dati temporali per eseguire query sui dati nelle tabelle correnti e di cronologia. Per ulteriori informazioni su queste clausole, vedere [Tabelle temporali](../../relational-databases/tables/temporal-tables.md) e [FROM &#40;Transact-SQL #41;](../../t-sql/queries/from-transact-sql.md)  
   
 -   AS OF <data_ora>  
   

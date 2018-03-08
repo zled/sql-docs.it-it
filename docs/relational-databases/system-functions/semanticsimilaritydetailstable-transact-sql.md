@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritydetailstable
 - semanticsimilaritydetailstable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: semanticsimilaritydetailstable function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- semanticsimilaritydetailstable function
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7ea0123e9d5c86bdd6b3983d0b6c20ceed59c0e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 69d13d3b16d1b58062cd93dc18e2f20f3fd01b42
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
+```sql  
 SEMANTICSIMILARITYDETAILSTABLE  
     (  
     table,  
@@ -78,7 +81,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 |Nome della colonna|Tipo|Description|  
 |------------------|----------|-----------------|  
 |**frasi chiave**|**NVARCHAR**|Frase chiave che contribuisce alla somiglianza tra documento di origine e il documento corrispondente.|  
-|**punteggio**|**REALE**|Valore relativo per la frase chiave nella relazione con tutte le altre frasi chiave analoghe nei due documenti.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta un peso maggiore e 1.0 costituisce il punteggio perfetto.|  
+|**score**|**REAL**|Valore relativo per la frase chiave nella relazione con tutte le altre frasi chiave analoghe nei due documenti.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta un peso maggiore e 1.0 costituisce il punteggio perfetto.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Per ulteriori informazioni, vedere [trovare documenti simili e correlati tramite la ricerca semantica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
@@ -90,15 +93,15 @@ SEMANTICSIMILARITYDETAILSTABLE
   
 -   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie autorizzazioni SELECT per la tabella di base in cui sono stati creati gli indici full-text e semantico.  
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente recupera le 5 frasi chiave che al punteggio di somiglianza più elevato tra i candidati specificati nella **Jobcandidate** tabella del database di esempio AdventureWorks2012. Il @CandidateId e @MatchedID le variabili rappresentano i valori della colonna chiave dell'indice full-text.  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROMSEMANTICSIMILARITYDETAILSTABLE  
     (  

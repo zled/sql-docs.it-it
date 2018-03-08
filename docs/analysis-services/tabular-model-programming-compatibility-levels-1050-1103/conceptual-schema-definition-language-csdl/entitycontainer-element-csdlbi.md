@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21ad4c6d328c8c299a2ae34c4ac5aab27feec794
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>Elemento EntityContainer (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento EntityContainer è un tipo complesso, in base al tipo CSDL, EntityContainer, che definisce una raccolta di entità all'interno di un singolo modello di dati. In un'applicazione Business Intelligence, il modello di dati rappresentato da EntityContainer potrebbe contenere più tabelle con una colonna collegata tramite relazioni, nonché calcoli, misure e indicatori KPI. È concettualmente simile a un database o a un'origine dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+L'elemento EntityContainer rappresenta un tipo complesso, in base al tipo CSDL, EntityContainer, che definisce una raccolta di entità all'interno di un singolo modello di dati. In un'applicazione Business Intelligence, il modello di dati rappresentato da EntityContainer potrebbe contenere più tabelle con una colonna collegata tramite relazioni, nonché calcoli, misure e indicatori KPI. È concettualmente simile a un database o a un'origine dati.  
   
  L'elemento EntityContainer deve specificare ognuno dei tipi di entità inclusi nel modello di dati, comprese tabelle e relazioni. Le informazioni su queste entità del modello vengono specificate elencando le entità figlio del tipo, l'elemento Entità. Per altre informazioni, vedere [Elemento EntityType &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md).  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |DirectQuery|Indica che le query eseguite sul modello utilizzano solo i dell'origine dati relazionale.|  
   
 ## <a name="example"></a>Esempio  
- **Tabella**  
+ **Tabulare**  
   
  Nell'esempio seguente, in CSDLBI versione 1.1, viene rappresentata una parte del modello di dati tabulare AdventureWorks.  
   

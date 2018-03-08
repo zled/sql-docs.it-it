@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MATCH
 - MATCH_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - MATCH statement [SQL Server], SQL graph
 - SQL graph, MATCH statement
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8944c6b5ca481e61a1ca18e7c453d2c2035e1acb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: cbfa524cb9957ba557cfd239dae16a93aed919bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="match-transact-sql"></a>CORRISPONDENZA (Transact-SQL)
+# <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   Specifica una condizione di ricerca per un grafico. CORRISPONDENZA possa essere utilizzata solo con graph nodo e bordo tabelle, nell'istruzione SELECT come parte della clausola WHERE. 
@@ -151,6 +153,6 @@ AND Person1.name = 'Alice';
  
 
 ## <a name="see-also"></a>Vedere anche  
- [CREARE una tabella &#40; Grafico SQL &#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL grafico)](../../t-sql/statements/insert-sql-graph.md)]  
  [L'elaborazione con SQL Server 2017 grafico](../../relational-databases/graphs/sql-graph-overview.md)  

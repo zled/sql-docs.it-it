@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CONVERT_TSQL
 - CAST
 - CONVERT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CAST function
 - automatic data type conversion
@@ -35,16 +37,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: "136"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd3db7627c4190a51db01082138677bc2b6d40d9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +60,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-|Originale   |int    |decimal |  
+|Originale   |int    |Decimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
@@ -84,10 +86,10 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 *data_type*  
 Tipo di dati di destinazione. Ciò include **xml**, **bigint**, e **sql_variant**. Non è possibile usare i tipi di dati alias.
   
-*length*  
+*lunghezza*  
 Numero intero facoltativo che specifica la lunghezza del tipo di dati di destinazione. Il valore predefinito è 30.
   
-*stile*  
+*style*  
 Espressione integer che specifica la modalità per convertire la funzione CONVERT *espressione*. Se il valore di style è NULL, viene restituito NULL. L'intervallo è determinato dal *data_type*. 
   
 ## <a name="return-types"></a>Tipi restituiti
@@ -166,7 +168,7 @@ Quando *espressione* è **money** o **smallmoney**, *stile* può essere uno dei 
 |**126**|Equivalente allo stile 2 in caso di conversione in char(n) o varchar(n)|  
   
 ## <a name="xml-styles"></a>stili XML
-Quando *espressione* è **xml***, stile* può essere uno dei valori indicati nella tabella seguente. Gli altri valori vengono elaborati come 0.
+Quando *espressione* è **xml * * *, stile* può essere uno dei valori indicati nella tabella seguente. Gli altri valori vengono elaborati come 0.
   
 |Valore|Output|  
 |---|---|
@@ -711,8 +713,10 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Conversione tipo di dati &#40; motore di Database &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-[Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
-[Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md)
+ [Conversione tipo di dati &#40; motore di Database &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+ [Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md)
   

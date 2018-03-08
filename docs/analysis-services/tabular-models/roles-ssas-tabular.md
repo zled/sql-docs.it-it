@@ -1,33 +1,31 @@
 ---
-title: Ruoli (SSAS tabulare) | Documenti Microsoft
+title: Ruoli | Documenti Microsoft
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 121aa11fa1238529d4d3c382c0347878615a3068
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="roles"></a>Ruoli
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Ruoli nei modelli tabulari, definiscono le autorizzazioni di membro per un modello. I membri del ruolo possono eseguire azioni sul modello, come definito dall'autorizzazione del ruolo. I ruoli definiti con autorizzazioni di lettura possono garantire inoltre sicurezza aggiuntiva a livello di riga tramite i relativi filtri. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+I ruoli, nei modelli tabulari, consentono di definire le autorizzazioni dei membri per un modello. I membri del ruolo possono eseguire azioni sul modello, come definito dall'autorizzazione del ruolo. I ruoli definiti con autorizzazioni di lettura possono garantire inoltre sicurezza aggiuntiva a livello di riga tramite i relativi filtri. 
   
  Per SQL Server Analysis Services, i ruoli contengono membri di un utente dal nome utente di Windows o dal gruppo di Windows e le autorizzazioni (lettura, process, amministratore). Per Azure Analysis Services, gli utenti devono essere in Azure Active Directory e i nomi utente e i gruppi specificati devono essere dall'indirizzo di posta elettronica aziendale o UPN. 
   
@@ -49,14 +47,14 @@ ms.lasthandoff: 12/08/2017
   
  Per impostazione predefinita, quando si crea un nuovo progetto di modello tabulare, il progetto di modello non dispone di alcun ruolo. I ruoli possono essere definiti utilizzando la finestra di dialogo Gestione ruoli in SSDT. Quando i ruoli vengono definiti durante la creazione di modelli, essi vengono applicati al database dell'area di lavoro modello. Quando viene distribuito il modello, gli stessi ruoli vengono applicati al modello distribuito. Dopo la distribuzione di un modello, i membri del ruolo di server ([Analysis Services amministratore) e gli amministratori di database possono gestire i ruoli associati al modello e i membri associati a ogni ruolo utilizzando SQL Server Management Studio.  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> Autorizzazioni  
  Ogni ruolo dispone di una singola autorizzazione definita per il database, eccetto l'autorizzazione combinata di lettura ed elaborazione. Per impostazione predefinita, un nuovo ruolo disporrà dell'autorizzazione Nessuno. Ovvero, una volta che i membri sono stati aggiunti al ruolo con l'autorizzazione Nessuno, non possono modificare il database, eseguire operazioni di elaborazione, eseguire query sui dati né esaminare il database, a meno che non venga concessa un'autorizzazione diversa.  
   
  Un gruppo o un utente può essere un membro di un numero qualsiasi di ruoli, ogni ruolo con un'autorizzazione diversa. Se un utente è membro di più ruoli, le autorizzazioni definite per ogni ruolo sono cumulative. Ad esempio, se un utente è membro di un ruolo con l'autorizzazione di lettura, e anche membro di un ruolo con l'autorizzazione Nessuno, tale utente disporrà delle autorizzazioni di lettura.  
   
  Ciascun ruolo può disporre di una delle seguenti autorizzazioni definite:  
   
-|Permissions|Description|Filtri di riga tramite DAX|  
+|Autorizzazioni|Description|Filtri di riga tramite DAX|  
 |-----------------|-----------------|----------------------------|  
 |Nessuno|I membri non possono apportare alcuna modifica allo schema del database modello, né eseguire query sui dati.|Filtri di riga non applicabili. Agli utenti con questo ruolo non è visibile alcun dato.|  
 |Lettura|I membri possono eseguire query sui dati, in base ai filtri di riga, ma non possono visualizzare il database modello in SSMS, né possono apportare modifiche allo schema del database modello e l'utente non può elaborare il modello.|Filtri di riga applicabili. Agli utenti sono visibili solo i dati specificati nella formula DAX del filtro di riga.|  
@@ -125,7 +123,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_testroles"></a> Testing roles  
  Quando si crea un progetto di modello, è possibile utilizzare la funzionalità Analizza in Excel in Progettazione modelli per eseguire un test circa l'efficacia dei ruoli definiti. Se si sceglie **Analizza in Excel** dal menu **Modello**in Progettazione modelli prima che venga aperto Excel, viene visualizzata la finestra di dialogo **Choose Credentials and Perspective** (Scegli credenziali e prospettiva). In questa finestra di dialogo è possibile specificare il nome utente corrente, un nome utente diverso, un ruolo e una prospettiva che verranno utilizzati per la connessione al modello dell'area di lavoro come origine dati. Per ulteriori informazioni, vedere [analizza in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
-##  <a name="bkmk_rt"></a> Attività correlate  
+##  <a name="bkmk_rt"></a> Related tasks  
   
 |Argomento|Description|  
 |-----------|-----------------|  

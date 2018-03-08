@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_add_policy_category_subscription (Transact-SQL) | Documenti Microsoft
+title: sp_syspolicy_add_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_add_policy_category_subscription
 - sp_syspolicy_add_policy_category_subscription_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_add_policy_category_subscription
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_add_policy_category_subscription
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec357296ce840bad84b6a0f1985858684f610a2b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bf76a1f42289d52919605c85733304ba58024ca1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +49,18 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@target_type=** ] **'***target_type***'**  
+ [ **@target_type=** ] **'***target_type***'**  
  Tipo di destinazione della sottoscrizione di categoria. *target_type* è **sysname**, è necessario e deve essere impostato su 'DATABASE'.  
   
- [  **@target_object=** ] **'***target_object***'**  
+ [ **@target_object=** ] **'***target_object***'**  
  È il nome del database in cui viene eseguita la sottoscrizione alla categoria. *target_object* è **sysname**ed è obbligatorio.  
   
- [  **@policy_category=** ] **'***policy_category***'**  
+ [ **@policy_category=** ] **'***policy_category***'**  
  È il nome della categoria di criteri per la sottoscrizione. *policy_category* è **sysname**ed è obbligatorio.  
   
  Per ottenere valori per *policy_category*, eseguire una query sulla vista di sistema syspolicy_policy_categories.  
   
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
+ [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  Identificatore della sottoscrizione di categoria. *policy_category_subscription_id* è **int**e viene restituito come OUTPUT.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -68,7 +71,7 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
   
  Se si specifica una categoria di criteri non esistente, verrà creata una nuova categoria di criteri e la sottoscrizione sarà obbligatoria per tutti i database all'esecuzione della stored procedure. Se la sottoscrizione obbligatoria per la nuova categoria viene successivamente cancellata, la sottoscrizione sarà valida solo per il database specificato come *target_object*. Per altre informazioni sulla modifica dell'impostazione di una sottoscrizione obbligatoria, vedere [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa stored procedure viene eseguita nel contesto del proprietario corrente della stessa.  
   
 ## <a name="examples"></a>Esempi  
@@ -84,7 +87,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione basata su criteri di Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
- [sp_syspolicy_unsubscribe_from_policy_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
+ [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   
   

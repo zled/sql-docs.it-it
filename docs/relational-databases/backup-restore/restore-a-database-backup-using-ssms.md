@@ -22,15 +22,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: "79"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d0c0f0112eee81379e2c1548dd9938e27088dea8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d51837413865aedb9b4610b045355556634ea6df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Ripristinare un backup del database tramite SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Se si ripristina un database di una versione precedente a [!INCLUDE[ssCurrent](.
   
 In genere, il database diventa subito disponibile. Tuttavia, se in un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono inclusi indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga.     
     
-Quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestire e monitorare la ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
+Quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
 
 Per informazioni sul ripristino di SQL Server da un servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
@@ -80,7 +80,7 @@ Per informazioni sul ripristino di SQL Server da un servizio di archiviazione BL
             **Aggiungi**  
             In base al tipo di supporto selezionato nell'elenco a discesa **Tipo di supporti di backup** , facendo clic su **Aggiungi** , si apre una delle finestre di dialogo seguenti. Se l'elenco nella casella di riepilogo **Supporti di backup** è pieno, il pulsante **Aggiungi** non è disponibile.
 
-            |Tipo di supporto|Finestra di dialogo|Descrizione|    
+            |Tipo di supporto|Finestra di dialogo|Description|    
             |----------------|----------------|-----------------|    
             |**File**|**Individua file di backup**|In questa finestra di dialogo è possibile selezionare un file locale nell'albero o specificare un file remoto utilizzandone il nome completo in formato UNC (Universal Naming Convention). Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
             |**Dispositivo**|**Seleziona dispositivo di backup**|In questa finestra di dialogo è possibile eseguire una selezione da un elenco di dispositivi di backup logici definiti sull'istanza del server.|    
@@ -241,13 +241,13 @@ Nei due esempi seguenti viene eseguito un ripristino di `Sales` da un backup che
     10. Espandere **Contenitori** e scegliere `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
     
     11. Tenendo premuto CTRL e selezionare i file `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.
-    12. Scegliere **OK**.
+    12. Fare clic su **OK**.
     13. Fare clic su **OK** per tornare alla pagina **Generale** .
     14. Fare clic su **Opzioni** nel riquadro **Seleziona una pagina** .
     15. Nella sezione **Opzioni di ripristino** selezionare **Sovrascrivi il database esistente (WITH REPLACE)**.
     16. Nella sezione **Backup della parte finale del log** deselezionare **Esegui il backup della parte finale del log prima del ripristino**.
     17. Nella sezione **Connessioni server** selezionare **Chiudi connessioni esistenti ai database di destinazione**.
-    18. Scegliere **OK**.
+    18. Fare clic su **OK**.
 
     #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2.   Non esiste una firma di accesso condiviso**
     In questo esempio il database `Sales` non esiste attualmente nel server.
@@ -258,7 +258,7 @@ Nei due esempi seguenti viene eseguito un ripristino di `Sales` da un backup che
     10. Espandere **Contenitori** e scegliere `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
     11. Selezionare il file e fare clic su **OK**.
     12. Fare clic su **OK** per tornare alla pagina **Generale** .
-    13. Scegliere **OK**.
+    13. Fare clic su **OK**.
 
 #### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F.   Ripristinare un backup locale nell'archiviazione di Microsoft Azure (URL)**
 Il database `Sales` sarà ripristinato nel contenitore di archiviazione di Microsoft Azure `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` da un backup che si trova nel percorso `E:\MSSQL\BAK`.  Le credenziali di SQL Server per il contenitore di Azure sono già state create.  È necessario che le credenziali di SQL Server per il contenitore di destinazione siano già esistenti in quanto non è possibile crearle nell'attività di **ripristino** .  Il database `Sales` non esiste attualmente nel server.
@@ -274,7 +274,7 @@ Il database `Sales` sarà ripristinato nel contenitore di archiviazione di Micro
 9.  Selezionare **File** nel riquadro **Seleziona una pagina** .
 10. Selezionare la casella **Riloca tutti i file nella cartella**.
 11. Immettere il contenitore `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`nelle caselle di testo per **Cartella file di dati:** e **Cartella file di log:**.
-12. Scegliere **OK**.
+12. Fare clic su **OK**.
 
 
 ## <a name="see-also"></a>Vedere anche    

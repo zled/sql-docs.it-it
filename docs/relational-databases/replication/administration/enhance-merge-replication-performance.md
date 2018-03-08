@@ -22,15 +22,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c9b6f552ef52af748dcce74977bfc74806c9546
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10bc53216b65298837a5086adf89550ad97606a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>Miglioramento delle prestazioni della replica di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dopo aver valutato i suggerimenti relativi alle prestazioni generali descritti in [Miglioramento delle prestazioni generali della replica](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), è opportuno considerare questi ulteriori aspetti specifici della replica di tipo merge.  
@@ -69,11 +69,11 @@ ms.lasthandoff: 11/17/2017
   
 -   Utilizzare partizioni pre-calcolate con filtri con parametri (funzionalità utilizzata per impostazione predefinita). Per altre informazioni, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-     Le partizioni pre-calcolate impongono vari limiti al funzionamento dei filtri. Se l'applicazione non è in grado di rispettare tali limiti, impostare l'opzione **keep_partition_changes** su **True**. Ciò consente di migliorare le prestazioni. Per altre informazioni, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Le partizioni pre-calcolate impongono vari limiti al funzionamento dei filtri. Se l'applicazione non è in grado di rispettare tali limiti, impostare l'opzione **keep_partition_changes** su **True**. Ciò consente di migliorare le prestazioni. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Utilizzare partizioni non sovrapposte se i dati vengono filtrati ma non condivisi tra gli utenti.  
   
-     La replica consente di ottimizzare le prestazioni dei dati che non vengono condivisi tra partizioni o sottoscrizioni. Per altre informazioni, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     La replica consente di ottimizzare le prestazioni dei dati che non vengono condivisi tra partizioni o sottoscrizioni. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Evitare di creare gerarchie di filtri join complesse.  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Concetti di base relativi ai file eseguibili dell'agente di replica](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   Provare ad aumentare il valore del parametro **-MakeGenerationInterval** , in particolare se la sincronizzazione prevede più caricamenti che download dai Sottoscrittori.  
   

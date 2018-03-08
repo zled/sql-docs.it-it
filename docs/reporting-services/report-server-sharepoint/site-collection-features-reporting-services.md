@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d3a72452ef0383c4d05d1758bab92570db0df51
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2bf533a432526a99dfaca1b46caf95f274dd562b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-site-collection-features"></a>Funzionalità di raccolta siti di Reporting Services
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/05/2017
 La modalità SharePoint di Reporting Services offre tre funzionalità di raccolta siti SharePoint. Le funzionalità supportano l'ambiente generale di report della modalità SharePoint di Reporting Services, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una funzionalità del componente aggiuntivo SQL Server 2016 Reporting Services, e le operazioni di gestione per Reporting Services in Amministrazione centrale SharePoint.
 
 > [!NOTE]
-> L'integrazione di Reporting Services con SharePoint non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
   
 ## <a name="site-collection-features"></a>Funzionalità di raccolta siti
 

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 68298d631d672ffc5752762612864bb96e88eecf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4caf6c242eabb3f3be393c896723314beff5c8ef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="full-file-backups-sql-server"></a>Backup completi del file (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le informazioni contenute in questo argomento sono rilevanti per i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che includono più file o filegroup.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  I backup completi dei file in genere vengono definiti semplicemente *backup dei file*, tranne quando vengono confrontati in modo esplicito con i *backup differenziali dei file*.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Vantaggi dei backup di file](#Benefits)  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per creare backup di file o filegroup**  
   
--   [Eseguire il backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
+-   [Backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/17/2017
  [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [Ripristino in linea &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
+ [Ripristino online &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

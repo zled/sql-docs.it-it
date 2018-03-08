@@ -5,31 +5,30 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - singleton queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a311450bae77c533860c09c06f53497dbba4035e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 88119afa32933b6c35d8e404de13bc1c5acfefb1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Creare una query singleton in Progettazione modelli di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una query singleton è utile se si desidera creare una stima per un singolo case. Per altre informazioni sulle query singleton, vedere [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una query singleton è utile quando si desidera creare una stima per un singolo case. Per altre informazioni sulle query singleton, vedere [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md).  
   
  Nella scheda **Stima modello di data mining** della Progettazione modelli di data mining è possibile creare diversi tipi di query. È possibile creare una query utilizzando la finestra di progettazione oppure digitando istruzioni Data Mining Extensions (DMX). È anche possibile iniziare con la finestra di progettazione e modificare la query creata cambiando le istruzioni DMX o aggiungendo una clausola WHERE o ORDER BY.  
   
@@ -88,6 +87,6 @@ AS [t]
      Verrà visualizzata una nuova schermata con il risultato della query. Per visualizzare l'istruzione DMX appena creata, fare clic su **SQL**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di stima &#40;Data Mining&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Query di stima &#40; Data Mining &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -33,26 +34,27 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ceefaed7dc9bc407880a8b7bc88240315a837f5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b954b9690d8e6f67995a45336296e2ff1f404f1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modello a oggetti per il caricamento bulk XML di SQL Server (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modello a oggetti di caricamento Bulk XML è costituito da sqlxmlbulkload-oggetto. Questo oggetto supporta i metodi e le proprietà seguenti.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modello a oggetti di caricamento Bulk XML è costituito da sqlxmlbulkload-oggetto. Questo oggetto supporta i metodi e le proprietà seguenti.  
   
 ## <a name="methods"></a>Metodi  
  Execute  
  Esegue il caricamento bulk dei dati utilizzando il file dello schema e il file di dati (o flusso) forniti come parametri.  
   
 ## <a name="properties"></a>Proprietà  
- Caricamento BULK  
+ BulkLoad  
  Specifica se deve essere eseguito un caricamento bulk. Questa proprietà è utile se si desidera generare solo gli schemi (vedere la proprietà SchemaGen, SGDropTables e SGUseID che seguono) e non esegue un caricamento bulk. Si tratta di una proprietà booleana. Quando la proprietà è impostata su TRUE, viene eseguito il caricamento bulk XML. Quando la proprietà è impostata su FALSE, il caricamento bulk XML non viene eseguito.  
   
  Il valore predefinito è TRUE.  
@@ -142,7 +144,7 @@ ms.lasthandoff: 11/17/2017
   
  Il valore predefinito è FALSE.  
   
- File temporanei  
+ TempFilePath  
  Specifica il percorso del file in cui il caricamento bulk XML crea i file temporanei per un caricamento bulk in transazioni. Questa proprietà è utile solo quando la proprietà Transaction è impostata su TRUE. È necessario verificare che l'account di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzato per il caricamento bulk XML possa accedere a tale percorso. Se questa proprietà non è impostata, il caricamento bulk XML archivia i file temporanei nel percorso specificato nella variabile di ambiente TEMP.  
   
  Transazione  

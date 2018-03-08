@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_describe_first_result_set (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set
 - sys.dm_exec_describe_first_result_set_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_describe_first_result_set catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2c7db2d6b9af5bf47f0019ec5e20336edad2a744
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 05555f2e64b191a43738c145e9c3029f8afe8cd5
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ```  
   
-sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)  
+sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_information)  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -50,9 +53,9 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
  Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* potrebbe essere **nvarchar (***n***)** o **nvarchar (max)**.  
   
  *@params*  
- @paramsfornisce una stringa di dichiarazione per i parametri per il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, simile a sp_executesql. I parametri possono essere **nvarchar (n)** o **nvarchar (max)**.  
+ @params fornisce una stringa di dichiarazione per i parametri per il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, simile a sp_executesql. I parametri possono essere **nvarchar (n)** o **nvarchar (max)**.  
   
- Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati nel [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n*è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in stmt deve essere definito in @params. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch nell'istruzione o l'istruzione non contiene parametri, @params non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
+ Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati nel [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in stmt deve essere definito in @params. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch nell'istruzione o l'istruzione non contiene parametri, @params non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
   
  *@include_browse_information*  
  Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Vengono restituite informazioni aggiuntive sulla tabella di origine e sulle colonne chiave.  
@@ -71,7 +74,7 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
 |**max_length**|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = la colonna è di tipo di dati **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**.<br /><br /> Per **testo** colonne, il **max_length** valore sarà 16 o il valore impostato da **sp_tableoption 'text in row'**.|  
 |**precisione**|**tinyint**|Precisione della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
 |**scala**|**tinyint**|Scala della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
-|**collation_name**|**sysname**|Nome delle regole di confronto della colonna se basata su caratteri. In caso contrario, viene restituito NULL.|  
+|**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto della colonna se basata su caratteri. In caso contrario, viene restituito NULL.|  
 |**user_type_id**|**int**|Per i tipi di alias e CLR, contiene il valore user_type_id del tipo di dati della colonna come specificato in sys.types. In caso contrario, è NULL.|  
 |**user_type_database**|**sysname**|Per i tipi di alias e CLR, contiene il nome del database in cui è definito il tipo. In caso contrario, è NULL.|  
 |**user_type_schema**|**sysname**|Per i tipi di alias e CLR, contiene il nome dello schema in cui è definito il tipo. In caso contrario, è NULL.|  
@@ -125,7 +128,7 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
 |12|OBJECT_TYPE_NOT_SUPPORTED|Il @object_id passato alla funzione è supportata (non una stored procedure)|  
 |13|OBJECT_DOES_NOT_EXIST|Il @object_id passato a funzione non è stata trovata nel catalogo di sistema.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione per eseguire il @tsql argomento.  
   
 ## <a name="examples"></a>Esempi  
@@ -173,8 +176,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [Sys.dm exec_describe_first_result_set_for_object &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

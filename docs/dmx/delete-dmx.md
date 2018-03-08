@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DELETE
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 35c908eaed7147a454d02c5bf6620e274e45df18
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 566ae835ad06e99edbf624ab6d25611c0a8427f7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,9 +59,9 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |.|Risultato|  
 |---------------|------------|  
-|DELETE FROM MINING STRUCTURE*\<struttura >*<br /><br /> o<br /><br /> DELETE FROM MINING STRUCTURE*\<struttura >*. CONTENUTO|Esegue ProcessClear nella struttura di data mining. Viene cancellato tutto il contenuto della struttura di data mining e dei modelli di data mining associati.|  
+|DELETE FROM MINING STRUCTURE*\<struttura >*<br /><br /> o Gestione configurazione<br /><br /> DELETE FROM MINING STRUCTURE*\<struttura >*. CONTENUTO|Esegue ProcessClear nella struttura di data mining. Viene cancellato tutto il contenuto della struttura di data mining e dei modelli di data mining associati.|  
 |DELETE FROM MINING STRUCTURE*\<struttura >*. CASI|Esegue ProcessClearStructureOnly nella struttura di data mining. Viene cancellato tutto il contenuto della struttura di data mining, lasciando invariati i modelli di data mining associati. Dopo la cancellazione della struttura di data mining non è possibile eseguire il drill-through sui modelli di data mining associati.|  
-|ELIMINARE dal modello di data MINING*\<modello >*<br /><br /> o<br /><br /> ELIMINARE dal modello di data MINING*\<modello >*. CONTENUTO|Esegue ProcessClear nel modello di data mining, ma lascia invariati i valori dello stato. I valori di stato sono i possibili stati di una colonna. Per la colonna del genere, ad esempio, i valori di stato sono maschio e femmina.|  
+|ELIMINARE dal modello di data MINING*\<modello >*<br /><br /> o Gestione configurazione<br /><br /> ELIMINARE dal modello di data MINING*\<modello >*. CONTENUTO|Esegue ProcessClear nel modello di data mining, ma lascia invariati i valori dello stato. I valori di stato sono i possibili stati di una colonna. Per la colonna del genere, ad esempio, i valori di stato sono maschio e femmina.|  
   
  Per ulteriori informazioni sui tipi di elaborazione, vedere [tipo elemento &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md).  
   
@@ -77,6 +75,6 @@ DELETE FROM NB_Sample.CONTENT
 ## <a name="see-also"></a>Vedere anche  
  [Data Mining Extensions &#40; DMX &#41; Istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40; DMX &#41; Istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

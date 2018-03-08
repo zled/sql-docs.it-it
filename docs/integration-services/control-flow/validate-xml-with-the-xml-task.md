@@ -8,25 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML validation
 - XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71429997374af75e681da85b0f54588448e8937a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 131ef697bc63cfe5edbc6dcae01a1b9e831e2bc5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="validate-xml-with-the-xml-task"></a>Eseguire la convalida XML con Attività XML
+# <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   È possibile convalidare documenti XML e ottenere output avanzato degli errori abilitando la proprietà **ValidationDetails** dell'Attività XML.  
   
  L'immagine seguente mostra l' **Editor attività XML** con le impostazioni necessarie per la convalida di XML con l'output di errore completo.  

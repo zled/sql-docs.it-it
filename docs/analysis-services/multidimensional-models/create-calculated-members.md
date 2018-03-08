@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - members [Analysis Services], calculated
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f91c068837043959e63e5e5f99d8ba719a51bb16
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92d18934426772d34d4b63e087d235fe6c48dfe3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-calculated-members"></a>Creare membri calcolati
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile creare misure personalizzate o i membri della dimensione, denominati membri calcolati, combinando dati del cubo, operatori aritmetici, numeri e funzioni. È ad esempio possibile creare un membro calcolato denominato Euro in grado di convertire valori in dollari in euro moltiplicando una misura dollaro esistente per un tasso di conversione. Gli importi in euro potranno quindi essere visualizzati agli utenti finali in una riga o una colonna separata.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+È possibile creare misure o membri di dimensioni personalizzati, denominati membri calcolati, combinando dati del cubo, operatori aritmetici, numeri e funzioni. È ad esempio possibile creare un membro calcolato denominato Euro in grado di convertire valori in dollari in euro moltiplicando una misura dollaro esistente per un tasso di conversione. Gli importi in euro potranno quindi essere visualizzati agli utenti finali in una riga o una colonna separata.  
   
  Le definizioni dei membri calcolati vengono archiviate, mentre i relativi valori sono presenti solo in memoria. Nell'esempio precedente, i valori convertiti vengono visualizzati agli utenti finali, ma non sono archiviati come dati del cubo.  
   

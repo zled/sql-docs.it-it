@@ -17,15 +17,15 @@ helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], merge article resolvers
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fcb4796dacff9d221e0329d069f5224933e66b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fe9fd09314e8800921efbacec9289cf4e4df586b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-a-merge-article-resolver"></a>Impostazione di un sistema di risoluzione dei conflitti dell'articolo di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come specificare un sistema di risoluzione dei conflitti dell'articolo di merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Ripetere questa procedura per ogni articolo che richiede un sistema di risoluzione dei conflitti.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-register-a-custom-conflict-resolver"></a>Per registrare un sistema di risoluzione dei conflitti personalizzato  
   

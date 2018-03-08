@@ -23,15 +23,15 @@ helpviewer_keywords:
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7181ebd6219df4a3b016ea0b366fae7c883399d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d54016fe377d7ed10fffd8831bfe07d5c26e1ce8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminazione di un'applicazione livello dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile eliminare un'applicazione livello dati usando la procedura guidata Elimina applicazione livello dati o uno script di Windows PowerShell. È possibile specificare se il database associato viene mantenuto, scollegato o eliminato.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 >  La ricompilazione di un'istanza di applicazione livello dati mediante la registrazione di un'applicazione livello dati da un database ripristinato o ricollegato non implica la ricreazione di alcune parti dell'applicazione originale, quali i criteri di selezione dei server.  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="Permissions"></a> Permissions  
  Un'applicazione livello dati può essere eliminata unicamente da membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure dal proprietario del database. È inoltre possibile avviare la procedura guidata usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** .  
   
 ##  <a name="UsingDeleteDACWizard"></a> Utilizzo della procedura guidata Elimina applicazione livello dati  

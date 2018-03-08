@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Recordset destination
+helpviewer_keywords:
+- Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7cf8f2ed8875856da5756288c8e3fb707f1a397
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d18d5e683bfc30270fcf83a2002350a75da9a24c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-a-recordset-destination"></a>Utilizzo di una destinazione recordset
   La destinazione recordset non salva i dati in un'origine dati esterna, ma in un recordset in memoria archiviato in una variabile del pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo di dati **Object** . Dopo che la destinazione recordset ha salvato i dati, in genere si utilizza un contenitore Ciclo Foreach con l'enumeratore Foreach ADO per elaborare una riga del recordset alla volta. L'enumeratore Foreach ADO salva il valore di ogni colonna della riga corrente in una variabile del pacchetto distinta. Quindi, le attività configurate nel contenitore Ciclo Foreach leggono tali valori dalle variabili ed eseguono alcune azioni.  
@@ -103,7 +105,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  Nella scheda **Flusso di controllo** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] aggiungere un'attività Flusso di dati nell'area di progettazione.  
   
-2.  Nella scheda **Flusso di dati** aggiungere un'origine OLE DB all'attività Flusso di dati e quindi aprire **Editor origine OLE DB.**  
+2.  Nella scheda **Flusso di dati** tab, add an OLE DB source to the Flusso di dati task, and then open the **Editor origine OLE DB**.  
   
 3.  Nella pagina **Gestione connessione** dell'editor configurare l'origine con le impostazioni seguenti:  
   

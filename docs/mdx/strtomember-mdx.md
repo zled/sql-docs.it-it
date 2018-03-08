@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: STRTOMEMBER
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 453b69fd273e5d5c06d33eac52221fc2c08a3ce5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b26a0a5922f138bc13bbb13099809629ee336b02
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="strtomember-mdx"></a>StrToMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ StrToMember(Member_Name [,CONSTRAINED] )
  *Member_Name*  
  Espressione stringa valida che specifica, in modo diretto o indiretto, un membro.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **StrToMember** funzione restituisce il membro specificato nell'espressione stringa. Il **StrToMember** funzione viene in genere utilizzata con funzioni definite dall'utente per restituire una specifica del membro da una funzione esterna a un'istruzione MDX o quando una query MDX con parametri.  
   
 -   Quando viene utilizzato il flag CONSTRAINED, il nome del membro deve essere direttamente risolvibile in un nome di membro completo o non qualificato. Questo flag viene utilizzato per ridurre il rischio di attacchi intrusivi tramite la stringa specificata. Se viene specificata una stringa non direttamente risolvibile in un nome di membro completo o non qualificato, viene visualizzato l'errore seguente: "Le restrizioni imposte dal flag CONSTRAINED nella funzione STRTOMEMBER sono state violate".  

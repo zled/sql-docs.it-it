@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ParameterDirectionEnum
-helpviewer_keywords: ParameterDirectionEnum enumeration [ADO]
+f1_keywords:
+- ParameterDirectionEnum
+helpviewer_keywords:
+- ParameterDirectionEnum enumeration [ADO]
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51083883a293bb44c76cadf3971e920e8c3ed05c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 40c8ef97704d48b13eebd7c76aeb6dbe0d709377
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Specifica se il [parametro](../../../ado/reference/ado-api/parameter-object.md) rappresenta un parametro di input, un parametro di output, entrambi un input e un parametro di output o il valore restituito da una stored procedure.  
   
-|Costante|valore|Description|  
+|Costante|Valore|Description|  
 |--------------|-----------|-----------------|  
 |**adParamInput**|1|Valore predefinito. Indica che il parametro rappresenta un parametro di input.|  
 |**adParamInputOutput**|3|Indica che il parametro rappresenta un parametro input e output.|  
@@ -38,7 +41,7 @@ Specifica se il [parametro](../../../ado/reference/ado-api/parameter-object.md) 
 |**adParamUnknown**|0|Indica che la direzione del parametro è sconosciuta.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacchetto: **com.ms. wfc.**  
+ Package: **com.ms.wfc.data**  
   
 |Costante|  
 |--------------|  

@@ -8,27 +8,32 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.portal.Installation.f1
+f1_keywords:
+- sql13.portal.Installation.f1
 helpviewer_keywords:
 - installing SQL Server, initial installation
 - installation [SQL Server]
 - initial installation [SQL Server]
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 5a37ff592c7ee2bc997d85bf98ad728b485f9c8d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 8fe0874d637f1597814bf14c8d12d111ece4cee1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-installation"></a>Installazione di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un singolo albero delle funzionalità per installare tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+L'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un singolo albero delle funzionalità per installare tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  

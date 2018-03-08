@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection15::ConnectionString
-helpviewer_keywords: ConnectionString property [ADO]
+f1_keywords:
+- Connection15::ConnectionString
+helpviewer_keywords:
+- ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41f887dbd21f120706e32059128227669f517ea4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionstring-property-ado"></a>Proprietà ConnectionString (ADO)
 Indica le informazioni utilizzate per stabilire una connessione a un'origine dati.  
@@ -62,8 +65,8 @@ Indica le informazioni utilizzate per stabilire una connessione a un'origine dat
   
 |Provider ADO predefinito|Sistema operativo Windows|  
 |--------------------------|------------------------------|  
-|MSDASQL<br /><br /> (Per migliorare la leggibilità del codice sorgente, specificare in modo esplicito il nome del provider nella stringa di connessione.)|Windows 2000 (32 bit)<br /><br /> Windows XP (32 bit)<br /><br /> Windows Server 2003 (32 bit)<br /><br /> Windows Vista (32 bit)<br /><br /> Windows Vista Service Pack 1 o versioni successive (32 bit e 64 bit)<br /><br /> Versioni di Windows, Windows Vista (32 bit e 64 bit)|  
-|Nessuna impostazione predefinita.<br /><br /> Quando un'applicazione ADO viene eseguito nei seguenti sistemi operativi e non specifica il provider in modo esplicito, ADO restituisce l'errore seguente: "ADODB. Connessione: il provider non è specificato e nessun provider predefinito designato "|Windows 2000 (64 bit)<br /><br /> Windows XP (64 bit)<br /><br /> Windows Server 2003 (64 bit)<br /><br /> Windows Vista (64 bit)|  
+|MSDASQL<br /><br /> (Per migliorare la leggibilità del codice sorgente, specificare in modo esplicito il nome del provider nella stringa di connessione.)|Windows 2000 (32-bit)<br /><br /> Windows XP (32 bit)<br /><br /> Windows Server 2003 (32 bit)<br /><br /> Windows Vista (32 bit)<br /><br /> Windows Vista Service Pack 1 o versioni successive (32 bit e 64 bit)<br /><br /> Versioni di Windows, Windows Vista (32 bit e 64 bit)|  
+|Nessuna impostazione predefinita.<br /><br /> Quando un'applicazione ADO viene eseguito nei seguenti sistemi operativi e non specifica il provider in modo esplicito, ADO restituisce l'errore seguente: "ADODB. Connessione: il provider non è specificato e nessun provider predefinito designato "|Windows 2000 (64-bit)<br /><br /> Windows XP (64 bit)<br /><br /> Windows Server 2003 (64 bit)<br /><br /> Windows Vista (64 bit)|  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  

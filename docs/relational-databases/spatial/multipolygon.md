@@ -8,26 +8,28 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5019063adb70a4f8935f23fae0af89aec18e506a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5972eb0a549d42c2549ef8ce664a26d5ec8eff95
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="multipolygon"></a>MultiPolygon
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un'istanza **MultiPolygon** è una raccolta di zero o più istanze **Polygon**.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Un'istanza **MultiPolygon** è una raccolta di zero o più istanze **Polygon** .  
   
 ## <a name="polygon-instances"></a>Istanze Polygon  
  Nella figura seguente vengono illustrati esempi di istanze **MultiPolygon** .  

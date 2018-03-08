@@ -8,24 +8,27 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: tables [XML]
+helpviewer_keywords:
+- tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1773816e8d536415d83a09afc0995f46ceb0b17a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f04a60816bc02bef8ce4bb670e2ac5416608388c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Conversione di colonne esistenti a colonne XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] L'istruzione ALTER TABLE supporta il tipo di dati **xml**. Ad esempio, è possibile modificare qualsiasi colonna di tipo string nel tipo di dati **xml** . Si noti che in questi casi è necessaria la correttezza del formato dei documenti contenuti nella colonna. Se inoltre si sta modificando il tipo della colonna da stringa a XML tipizzato, i documenti nella colonna vengono convalidati rispetto agli schemi XSD specificati.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+L'istruzione ALTER TABLE supporta il tipo di dati **xml** . Ad esempio, è possibile modificare qualsiasi colonna di tipo string nel tipo di dati **xml** . Si noti che in questi casi è necessaria la correttezza del formato dei documenti contenuti nella colonna. Se inoltre si sta modificando il tipo della colonna da stringa a XML tipizzato, i documenti nella colonna vengono convalidati rispetto agli schemi XSD specificati.  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 nvarchar(max))  
@@ -38,7 +41,7 @@ ALTER COLUMN Col2 xml
 GO  
 ```  
   
- È possibile modificare una colonna di tipo `xml` da XML non tipizzato a XML tipizzato. Esempio:  
+ È possibile modificare una colonna di tipo `xml` da XML non tipizzato a XML tipizzato. Ad esempio  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 xml)  

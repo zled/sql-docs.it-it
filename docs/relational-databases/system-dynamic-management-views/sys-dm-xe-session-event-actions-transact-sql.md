@@ -1,5 +1,5 @@
 ---
-title: Sys.dm xe_sessions_event_actions (Transact-SQL) | Documenti Microsoft
+title: sys.dm_xe_session_event_actions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_xe_session_event_actions_TSQL
 - dm_xe_session_event_actions
 - sys.dm_xe_session_event_actions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - extended events [SQL Server], views
 - sys.dm_xe_session_event_actions dynamic management view
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 840e7ead2035b45d37ca87ec8acc9a5b1c2461eb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d5e342265fe96a892983af51e6efc119a5bac914
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxesessioneventactions-transact-sql"></a>sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,18 +41,18 @@ ms.lasthandoff: 11/27/2017
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|Indirizzo di memoria della sessione dell'evento. Non ammette i valori Null.|  
+|event_session_address|**varbinary(8)**|Indirizzo di memoria della sessione dell'evento. Non ammette i valori Null.|  
 |action_name|**nvarchar(60)**|Nome dell'azione. Non ammette i valori Null.|  
 |action_package_guid|**uniqueidentifier**|GUID per il pacchetto che contiene l'azione. Non ammette i valori Null.|  
 |event_name|**nvarchar(60)**|Nome dell'evento associato all'azione. Non ammette i valori Null.|  
 |event_package_guid|**uniqueidentifier**|GUID per il pacchetto che contiene l'evento. Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|Per|Relazione|  
+|From|Per|Relazione|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_event_actions.event_session_address|sys.dm_xe_sessions.address|Molti-a-uno|  
 |sys.dm_xe_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_session_events.event_package_guid|Molti-a-uno|  

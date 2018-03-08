@@ -23,13 +23,13 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: "55"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab5346433b15163cf6bf9a757923e06d32d0985
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 99a526a432e0e7567022891e28129a12d5b09ef3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Prerequisiti restrizioni e indicazioni per il mirroring del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,42 +1,43 @@
 ---
 title: Crittografia delle connessioni a SQL Server in Linux | Documenti Microsoft
-description: Questo argomento descrive la crittografia delle connessioni a SQL Server in Linux.
+description: Questo articolo descrive la crittografia delle connessioni a SQL Server in Linux.
 author: tmullaney
-ms.date: 10/02/2017
-ms.author: meetb;rickbyh
-manager: jhubbard
+ms.date: 01/30/2018
+ms.author: meetb
+manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-helpviewer_keywords: Linux, encrypted connections
+helpviewer_keywords:
+- Linux, encrypted connections
 ms.workload: Inactive
-ms.openlocfilehash: 57fe1aac60bdb888ccbc47ebee33687dd309c8b7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 646a876fb7cedc4733e4d3a60ef86361ab151c4f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Crittografia delle connessioni a SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]in Linux possono usare Transport Layer Security (TLS) per crittografare i dati trasmessi in una rete tra un'applicazione client e un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]supporta gli stessi protocolli TLS in Windows e Linux: TLS 1.0, 1.1 e 1.2. Tuttavia, i passaggi per configurare TLS sono specifici del sistema operativo in cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux possono usare Transport Layer Security (TLS) per crittografare i dati trasmessi in una rete tra un'applicazione client e un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta gli stessi protocolli TLS in Windows e Linux: TLS 1.0, 1.1 e 1.2. Tuttavia, i passaggi per configurare TLS sono specifici del sistema operativo in cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione.  
 
 ## <a name="requirements-for-certificates"></a>Requisiti per i certificati 
 Prima di iniziare, è necessario assicurarsi che i certificati di rispettare i requisiti seguenti:
 - Ora di sistema corrente deve essere successiva alla proprietà del certificato valido dalla proprietà del certificato e prima valido.
 - Il certificato deve essere destinato all'autenticazione del server. Ciò richiede che la proprietà utilizzo chiavi avanzato del certificato per specificare l'autenticazione Server (1.3.6.1.5.5.7.3.1).
-- Tramite l'opzione KeySpec di AT_KEYEXCHANGE, è necessario creare il certificato. Proprietà di utilizzo della chiave del certificato (KEY_USAGE) vengono inclusi in genere, crittografia chiave (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
+- Tramite l'opzione KeySpec di AT_KEYEXCHANGE, è necessario creare il certificato. In genere, proprietà di utilizzo della chiave del certificato (KEY_USAGE) include anche la crittografia chiave (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
 - La proprietà Subject del certificato deve indicare che il nome comune (CN) è lo stesso come il nome host o nome di dominio completo (FQDN) del computer server. Nota: i certificati con caratteri jolly sono supportati. 
 
 ## <a name="overview"></a>Panoramica
-TLS è utilizzato per crittografare le connessioni da un'applicazione client [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando è configurato correttamente, TLS fornisce privacy e l'integrità dei dati per le comunicazioni tra client e il server.  Le connessioni TLS possono essere initited intiated o server di client. 
+TLS è utilizzato per crittografare le connessioni da un'applicazione client [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando è configurato correttamente, TLS fornisce privacy e l'integrità dei dati per le comunicazioni tra client e il server.  Le connessioni TLS possono essere avviato dal client o server avviato. 
 
 
 ## <a name="client-initiated-encryption"></a>Crittografia iniziata dal client 
@@ -62,16 +63,16 @@ TLS è utilizzato per crittografare le connessioni da un'applicazione client [!I
 
 - **Registrare il certificato nel computer client (Windows, Linux o Mac OS)**
 
-    -   Se si usa un certificato CA firmato è necessario copiare il certificato di autorità di certificazione (CA) anziché il certificato utente nel computer client. 
-    -   Se si utilizza il certificato autofirmato appena copiare il file PEM nelle cartelle seguenti rispettive al distribuzione ed eseguire i comandi per abilitarli 
-        - **Ubuntu** : il certificato di copia al ```/usr/share/ca-certificates/``` Rinomina estensione CRT usare i certificati ca dpkg reconfigure per abilitarlo come autorità di certificazione del certificato. 
-        - **RHEL** : il certificato di copia al ```/etc/pki/ca-trust/source/anchors/``` utilizzare ```update-ca-trust``` per abilitarlo come autorità di certificazione del certificato.
-        - **SUSE** : il certificato di copia al ```/usr/share/pki/trust/anchors/``` utilizzare ```update-ca-certificates``` per abilitare il relativo come autorità di certificazione del certificato.
+    -   Se si utilizza certificato CA firmato, è necessario copiare il certificato di autorità di certificazione (CA) anziché il certificato utente nel computer client. 
+    -   Se si utilizza il certificato autofirmato, è sufficiente copiare il file PEM nelle cartelle seguenti corrispondente alla distribuzione ed eseguire i comandi per abilitare il 
+        - **Ubuntu**: il certificato di copia al ```/usr/share/ca-certificates/``` Rinomina estensione CRT usare i certificati ca dpkg reconfigure per abilitarlo come autorità di certificazione del certificato. 
+        - **RHEL**: il certificato di copia al ```/etc/pki/ca-trust/source/anchors/``` utilizzare ```update-ca-trust``` per abilitarlo come autorità di certificazione del certificato.
+        - **SUSE**: il certificato di copia al ```/usr/share/pki/trust/anchors/``` utilizzare ```update-ca-certificates``` per abilitarlo come autorità di certificazione del certificato.
         - **Windows**: Importa il file con estensione PEM come un certificato in utente corrente -> attendibile l'autorità di certificazione radice -> certificati
         - **macOS**: 
-           - Copiare il certificato```/usr/local/etc/openssl/certs```
-           - Eseguire il comando seguente per ottenere il valore hash:```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - Rinominare il certificato come valore. Esempio: ```mv mssql.pem dc2dd900.0```. Verificare che sia dc2dd900.0 in```/usr/local/etc/openssl/certs```
+           - Copiare il certificato ```/usr/local/etc/openssl/certs```
+           - Eseguire il comando seguente per ottenere il valore hash: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - Rinominare il certificato come valore. Esempio: ```mv mssql.pem dc2dd900.0```. Verificare che sia dc2dd900.0 in ```/usr/local/etc/openssl/certs```
     
 -   **Esempi di stringhe di connessione** 
 

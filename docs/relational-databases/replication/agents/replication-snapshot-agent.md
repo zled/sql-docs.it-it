@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 368401643f14af5c3f59621ce5ef6180305318cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf23217acf677478ae0dc46b161f1731e4d88494
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'agente di snapshot della replica è un file eseguibile che consente di preparare i file di snapshot contenenti lo schema e i dati delle tabelle pubblicate e degli oggetti di database, di archiviare i file nella cartella snapshot e di registrare i processi di sincronizzazione nel database di distribuzione.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Agente snapshot repliche è un file eseguibile che consente di preparare i file di snapshot contenenti lo schema e i dati delle tabelle pubblicate e degli oggetti di database, di archiviare i file nella cartella snapshot e di registrare i processi di sincronizzazione nel database di distribuzione.  
   
 > [!NOTE]  
 >  I parametri possono essere specificati in qualsiasi ordine.  
@@ -83,7 +85,7 @@ snapshot [ -?]
  **-?**  
  Stampa tutti i parametri disponibili.  
   
- **-Publisher**  *server_name*[**\\***instance_name*]  
+ **-Publisher**  *nome_server*[**\\***nome_istanza*]  
  Nome del server di pubblicazione. Specificare server_name per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare *server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-Publication** *pubblicazione*  
@@ -98,13 +100,13 @@ snapshot [ -?]
  **-DefinitionFile** *def_path_and_file_name*  
  Percorso del file di definizione dell'agente. Un file di definizione dell'agente contiene argomenti della riga di comando per l'agente. Il contenuto del file viene analizzato come file eseguibile. Utilizzare virgolette doppie (") per specificare valori dell'argomento contenenti caratteri arbitrari.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
+ **-Distributor** *nome_server*[**\\***nome_istanza*]  
  Nome del database di distribuzione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare *server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  Priorità della connessione dell'agente snapshot con il server di distribuzione quando si verifica un deadlock. Questo parametro è specificato per risolvere deadlock che possono verificarsi tra l'agente snapshot e le applicazioni utente durante la generazione dello snapshot.  
   
-|Valore di DistributorDeadlockPriority|Descrizione|  
+|Valore di DistributorDeadlockPriority|Description|  
 |---------------------------------------|-----------------|  
 |**-1**|Le applicazioni diverse dall'agente snapshot hanno la priorità quando si verifica un deadlock nel server di distribuzione.|  
 |**0** (predefinito)|La priorità non è assegnata.|  
@@ -114,7 +116,7 @@ snapshot [ -?]
  Account di accesso utilizzato per la connessione al server di distribuzione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **-DistributorPassword** *distributor_password*  
- Password utilizzata per la connessione al server di distribuzione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
+ Password utilizzata per la connessione al server di distribuzione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . ,  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  Specifica la modalità di sicurezza del database di distribuzione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  
@@ -131,7 +133,7 @@ snapshot [ -?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Livello di crittografia SSL (Secure Sockets Layer) utilizzato dall'agente snapshot quando vengono stabilite le connessioni.  
   
-|Valore di EncryptionLevel|Descrizione|  
+|Valore di EncryptionLevel|Description|  
 |---------------------------|-----------------|  
 |**0**|Specifica che SSL non viene utilizzato.|  
 |**1**|Specifica che SSL viene utilizzato, ma l'agente non verifica che il certificato server SSL sia firmato da un'autorità emittente attendibile.|  
@@ -145,7 +147,7 @@ snapshot [ -?]
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  Specifica la quantità di cronologia registrata durante un'operazione snapshot. Per ridurre al minimo l'effetto della registrazione della cronologia sulle prestazioni, selezionare **1**.  
   
-|Valore di HistoryVerboseLevel|Descrizione|  
+|Valore di HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**|I messaggi di stato vengono scritti nella console o in un file di output. I record della cronologia non vengono registrati nel database di distribuzione.|  
 |**1**|Aggiorna sempre un messaggio di cronologia precedente con lo stesso stato (avvio, avanzamento, esito positivo e così via). Se non è presente un record precedente con lo stesso stato, inserisce un nuovo record.|  
@@ -158,7 +160,7 @@ snapshot [ -?]
 > [!NOTE]  
 >  Questo parametro viene utilizzato per ottimizzare le prestazioni di **bcp** da un server di pubblicazione Oracle.  
   
- -**HRBcpBlockSize***block_size*  
+ -**HRBcpBlockSize***dimensione_blocco*  
  Dimensione, in kilobyte (KB), di ogni blocco di dati **bcp** . Il valore predefinito è 64 KB. **HRBcpBlocks** viene utilizzato solo con pubblicazioni Oracle.  
   
 > [!NOTE]  
@@ -191,7 +193,7 @@ snapshot [ -?]
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Specifica se l'output deve essere dettagliato.  
   
-|Valore di OutputVerboseLevel|Descrizione|  
+|Valore di OutputVerboseLevel|Description|  
 |------------------------------|-----------------|  
 |**0**|Vengono stampati solo i messaggi di errore.|  
 |**1** (impostazione predefinita)|Vengono stampati tutti i messaggi di report di stato (impostazione predefinita).|  
@@ -212,20 +214,20 @@ snapshot [ -?]
  **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
  Priorità della connessione dell'agente snapshot con il server di pubblicazione quando si verifica un deadlock. Questo parametro è specificato per risolvere deadlock che possono verificarsi tra l'agente snapshot e le applicazioni utente durante la generazione dello snapshot.  
   
-|Valore di PublisherDeadlockPriority|Descrizione|  
+|Valore di PublisherDeadlockPriority|Description|  
 |-------------------------------------|-----------------|  
 |**-1**|Le applicazioni diverse dall'agente snapshot hanno la priorità quando si verifica un deadlock nel server di pubblicazione.|  
 |**0** (predefinito)|La priorità non è assegnata.|  
 |**1**|L'agente snapshot ha la priorità quando si verifica un deadlock nel server di pubblicazione.|  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Specifica l'istanza del partner di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che partecipa in una sessione di mirroring del database con il database di pubblicazione. Per altre informazioni, vedere [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ **-PublisherFailoverPartner** *nome_server*[**\\***nome_istanza*]  
+ Specifica l'istanza del partner di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che partecipa in una sessione di mirroring del database con il database di pubblicazione. Per altre informazioni, vedere [Mirroring e replica del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  
  Account di accesso utilizzato per la connessione al server di pubblicazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- **-PublisherPassword**  *publisher_password*  
- Password utilizzata per la connessione al server di pubblicazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
+ **-PublisherPassword**  *password_server_pubblicazione*  
+ Password utilizzata per la connessione al server di pubblicazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . ,  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  Specifica la modalità di sicurezza del server di pubblicazione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  
@@ -245,7 +247,7 @@ snapshot [ -?]
  \- **UsePerArticleContentsView** *use_per_article_contents_view*  
  Questo parametro è deprecato ed è ancora supportato solo per garantire la compatibilità con le versioni precedenti.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è stato installato per l'esecuzione con un account di sistema locale anziché un account utente di dominio (impostazione predefinita), il servizio può accedere solo al computer locale. Se l'agente snapshot in esecuzione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è configurato per l'utilizzo della modalità di autenticazione di Windows durante l'accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'agente snapshot si interrompe. L'impostazione predefinita prevede l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

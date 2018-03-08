@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.chooseadatasource.f1
+f1_keywords:
+- sql13.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-caps.latest.revision: "124"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 90577058fc3501239ac1c3ad72c96e9df2bc5f04
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7fe6c34e33f62bf5205763b2f2cf22f868ff418e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Scelta origine dati (Importazione/Esportazione guidata SQL Server)
   Dopo la pagina di benvenuto, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Scelta origine dati**. In questa pagina è necessario fornire informazioni sull'origine dati e su come connettersi a tale origine.
@@ -52,7 +54,7 @@ Specificare l'origine dati selezionando un provider di dati che può connettersi
 -   **Provider a 32 bit e a 64 bit.** Se è in esecuzione la procedura guidata a 64 bit, non vengono visualizzate le origini dati per cui è installato solo un provider a 32 bit e viceversa.
 
 > [!NOTE]
-> Per usare la versione a 64 bit per l'importazione e l'esportazione guidate di SQL Server, è necessario installare SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) sono applicazioni a 32 bit e installano solo i file a 32 bit, inclusa la versione a 32 bit della procedura guidata.
+> Per usare la versione a 64 bit dell'Importazione/Esportazione guidata SQL Server, è necessario installare SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) sono applicazioni a 32 bit e installano solo i file a 32 bit, inclusa la versione a 32 bit della procedura guidata.
 
 ## <a name="after-you-choose-a-data-source"></a>Dopo aver scelto un'origine dati
 Dopo aver scelto un'origine dati, il resto della pagina **Scelta origine dati** ha un numero variabile di opzioni a seconda del provider di dati scelto.
@@ -60,7 +62,7 @@ Dopo aver scelto un'origine dati, il resto della pagina **Scelta origine dati** 
 Per connettersi a un'origine dati di uso comune, vedere una delle pagine seguenti.
 -   [Connettersi a SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [Connettersi a Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
--   [Connettersi a file flat file (file di testo)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
+-   [Connettersi a file flat (file di testo)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Connettersi a Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [Connettersi ad Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
 -   [Connettersi con ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
@@ -68,9 +70,9 @@ Per connettersi a un'origine dati di uso comune, vedere una delle pagine seguent
 -   [Connettersi a PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [Connettersi a MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
-Per informazioni su come connettersi a un'origine dati non elencata, vedere [The Connection Strings Reference](https://www.connectionstrings.com/). Questo sito di terze parti contiene stringhe di connessione di esempio e altre informazioni sui provider di dati e sulle informazioni di connessione richieste da questi.
+Per informazioni su come connettersi a un'origine dati non elencata qui, vedere [The Connection Strings Reference](https://www.connectionstrings.com/). Questo sito di terze parti contiene stringhe di connessione di esempio e altre informazioni sui provider di dati e sulle informazioni di connessione richieste dai provider.
 
-## <a name="whats-next"></a>Operazioni successive  
+## <a name="whats-next"></a>Quali sono le operazioni successive?  
  Dopo avere fornito informazioni sull'origine dei dati e su come connettersi a tale origine, la pagina successiva è **Scelta destinazione**. In questa pagina fornire informazioni sulla destinazione per i dati e su come connettersi a tale destinazione. Per altre informazioni, vedere [Scelta destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
  
 ## <a name="see-also"></a>Vedere anche

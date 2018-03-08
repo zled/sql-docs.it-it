@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +19,20 @@ helpviewer_keywords:
 - storage [SMO]
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e306099efb3f667637adfbbfd0e47854e065ad66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5622269022dcbf63d717fb2dec2efac7692f0e52
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>Utilizzo di filegroup e file per archiviare dati
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]File di dati vengono utilizzati per archiviare i file di database. I file di dati vengono suddivisi in filegroup. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> dispone di una proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> che fa riferimento a un oggetto <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>. Ogni oggetto <xref:Microsoft.SqlServer.Management.Smo.FileGroup> di quella raccolta dispone di una proprietà <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A>. Questa proprietà fa riferimento a una raccolta <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> che contiene tutti i file di dati che appartengono al database. Un filegroup viene utilizzato principalmente per raggruppare file utilizzati per archiviare un oggetto di database. È opportuno distribuire un oggetto di database su diversi file poiché questa operazione può migliorare le prestazioni, specialmente se i file sono archiviati su unità disco diverse.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  I file di dati vengono utilizzati per archiviare file di database. I file di dati vengono suddivisi in filegroup. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> dispone di una proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> che fa riferimento a un oggetto <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>. Ogni oggetto <xref:Microsoft.SqlServer.Management.Smo.FileGroup> di quella raccolta dispone di una proprietà <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A>. Questa proprietà fa riferimento a una raccolta <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> che contiene tutti i file di dati che appartengono al database. Un filegroup viene utilizzato principalmente per raggruppare file utilizzati per archiviare un oggetto di database. È opportuno distribuire un oggetto di database su diversi file poiché questa operazione può migliorare le prestazioni, specialmente se i file sono archiviati su unità disco diverse.  
   
  Ogni database creato automaticamente dispone di un filegroup denominato "Primary" e di un file di dati con lo stesso nome del database. È possibile aggiungere file e gruppi supplementari alle raccolte.  
   

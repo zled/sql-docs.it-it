@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f926f312b1696b3fcc3433e6234dc0f44005b7cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1992b3fc6d6013859c1bdd46d119f633db46acfc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors"></a>Cursori scorrevoli
 Nelle applicazioni moderne basate su schermo, l'utente scorre avanti e indietro i dati. Per tali applicazioni, la restituzione di una riga recuperata in precedenza è un problema. Una possibilità consiste nel chiudere e riaprire il cursore e quindi recuperare le righe finché il cursore raggiunge la riga necessaria. Un'altra possibilità consiste nel leggere il set di risultati, memorizzarlo nella cache in locale e implementare lo scorrimento nell'applicazione. Entrambe le possibilità funzionano bene solo con set di risultati di piccole dimensioni e la possibilità di quest'ultima è difficile da implementare. Una soluzione migliore consiste nell'utilizzare un *con cursori scorrevoli,* che può spostarsi avanti e indietro nel set di risultati.  

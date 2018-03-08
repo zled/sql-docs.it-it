@@ -3,7 +3,7 @@ title: Eseguire una traccia dopo la sospensione o l'arresto (SQL Server Profiler
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - stopping traces
 ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ccaa3b09b9c0f632dc523e0bdef96baeafa06dca
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d9983653d8ba6496dc26f5104d584ca2a2151364
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>Eseguire una traccia dopo la sospensione o l'arresto (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questo argomento viene descritto come riavviare una traccia dopo averla sospesa o arrestata utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

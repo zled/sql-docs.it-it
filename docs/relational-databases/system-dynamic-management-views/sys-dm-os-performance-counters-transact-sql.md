@@ -1,5 +1,5 @@
 ---
-title: Sys.dm os_performance_counters (Transact-SQL) | Documenti Microsoft
+title: sys.dm_os_performance_counters (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_performance_counters_TSQL
 - dm_os_performance_counters_TSQL
 - sys.dm_os_performance_counters
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_performance_counters dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_performance_counters dynamic management view
 ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e0251869bd6dc3fb3ef39b5aebb31af346648b2d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 32640c1c4bbc1a40927bece5663401cfcad3ac05
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -42,10 +45,10 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar(128)**|Categoria di appartenenza del contatore.|  
 |**counter_name**|**nchar(128)**|Nome del contatore. Per ottenere ulteriori informazioni su un contatore, questo è il nome dell'argomento da selezionare dall'elenco dei contatori [usare oggetti di SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
-|**instance_name**|**nchar(128)**|Nome dell'istanza specifica del contatore. Spesso include il nome del database.|  
+|**nome_istanza**|**nchar(128)**|Nome dell'istanza specifica del contatore. Spesso include il nome del database.|  
 |**cntr_value**|**bigint**|Valore corrente del contatore.<br /><br /> **Nota:** per i contatori al secondo, questo valore è cumulativo. Il valore relativo alla frequenza deve essere calcolato tramite il campionamento del valore a intervalli di tempo discreti. La differenza tra due valori di campionamento successivi è uguale alla frequenza dell'intervallo di tempo utilizzato.|  
 |**cntr_type**|**int**|Tipo di contatore definito dall'architettura di controllo delle prestazioni di Windows. Vedere [tipi di contatori delle prestazioni WMI](http://msdn2.microsoft.com/library/aa394569.aspx) su MSDN o la documentazione di Windows Server per ulteriori informazioni sui tipi di contatori delle prestazioni.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Se l'istanza dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in grado di visualizzare i contatori delle prestazioni del sistema operativo Windows, utilizzare la query [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per verificare se i contatori delle prestazioni sono stati disabilitati.  

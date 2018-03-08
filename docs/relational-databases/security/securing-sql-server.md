@@ -8,10 +8,12 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: Security [SQL Server]
+f1_keywords:
+- Security [SQL Server]
 helpviewer_keywords:
 - database objects [SQL Server], security
 - SQL Server, security
@@ -19,19 +21,20 @@ helpviewer_keywords:
 - security [SQL Server], planning
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bbd55e01a64a767b08156cde776c030a081b65e9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 24936f55d153d046b775ddbbf4188fc4a81c583d
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="securing-sql-server"></a>Sicurezza di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] E possibile considerare la sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come una serie di passaggi che interessano quattro aree: la piattaforma, l'autenticazione, gli oggetti (inclusi i dati) e le applicazioni che accedono al sistema. Gli argomenti seguenti guideranno l'utente nella creazione e implementazione di un piano di sicurezza efficace.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+E possibile considerare la sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come una serie di passaggi che interessano quattro aree: la piattaforma, l'autenticazione, gli oggetti (inclusi i dati) e le applicazioni che accedono al sistema. Gli argomenti seguenti guideranno l'utente nella creazione e implementazione di un piano di sicurezza efficace.  
   
  Altre informazioni sulla sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili sul sito Web di [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) . che include una guida alle procedure consigliate e un elenco di controllo per la sicurezza. Questo sito contiene inoltre informazioni aggiornate sul service pack e i download più recenti.  
   
@@ -149,7 +152,6 @@ GO
 [Procedure consigliate per la sicurezza di SQL Server 2012 - Attività operative e amministrative](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [Blog sulla sicurezza di SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [Procedura consigliata per la sicurezza e white paper di Label Security Toolkit](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
-[Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
 [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md)   
 [Protezione della proprietà intellettuale di SQL Server](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   

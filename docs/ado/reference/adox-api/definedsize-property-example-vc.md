@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: DefinedSize property [ADOX], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- DefinedSize property [ADOX], VC++ example
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f92507c374f38b9d1128aae569d52c617e083930
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f7a9366879aa23b1ceefa6bfe688f168fff2dfee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="definedsize-property-example-vc"></a>Esempio di proprietà DefinedSize (VC + +)
 Questo esempio viene illustrato il [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md). Il codice verrà ridefinire le dimensioni della colonna FirstName del **dipendenti** sommario il *Northwind* database. Quindi, la modifica i valori di nome [campo](../../../ado/reference/ado-api/field-object.md) di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in base il **dipendenti** tabella viene visualizzata. Si noti che per impostazione predefinita, il campo FirstName verranno aggiunti spazi dopo si ridefinisce il **DefinedSize** proprietà.  

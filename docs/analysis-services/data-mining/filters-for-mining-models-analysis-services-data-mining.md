@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +18,20 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: de1d81ae0dba51e98cb8d883ca5e7ae22eb4314b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtri per i modelli di data mining (Analysis Services - Data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Filtri dei modelli basati su dati consente di creare modelli di data mining che utilizzano subset di dati in una struttura di data mining. I filtri garantiscono grande flessibilità per la progettazione di strutture di data mining e origini dati, poiché è possibile creare una sola struttura di data mining sulla base di una vista origine dati completa. Sarà quindi possibile creare filtri per utilizzare solo una parte dei dati per il training e il testing di una varietà di modelli, anziché compilare una struttura diversa e i relativi modelli per ciascun subset di dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+I filtri dei modelli basati sui dati consentono di creare modelli di data mining che utilizzano subset di dati in una struttura di data mining. I filtri garantiscono grande flessibilità per la progettazione di strutture di data mining e origini dati, poiché è possibile creare una sola struttura di data mining sulla base di una vista origine dati completa. Sarà quindi possibile creare filtri per utilizzare solo una parte dei dati per il training e il testing di una varietà di modelli, anziché compilare una struttura diversa e i relativi modelli per ciascun subset di dati.  
   
  Ad esempio, definire la vista origine dati nella tabella Customers e nelle tabelle correlate. Quindi, definire una sola struttura di data mining che include tutti i campi necessari. Infine, creare un modello filtrato su un determinato attributo del cliente, ad esempio la regione. È quindi possibile creare facilmente una copia di quel modello e modificare solo la condizione di filtro per generare un nuovo modello basato su una regione diversa.  
   
@@ -130,6 +129,6 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Sintassi ed esempi di filtri dei modelli &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

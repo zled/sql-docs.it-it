@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a73b246595630e1f0a35a977bc439dbc8829920
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: baebe314605badced365be3c30212e2f20262737
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definizione di una relazione tra record logici degli articoli di tabelle di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come definire una relazione tra record logici tra articoli di tabella del merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o RMO (Replication Management Objects).  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Nella pagina **Filtro righe** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Elimina**. Se il filtro di join eliminato è esteso da altri join, anch'essi verranno eliminati.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  Per specificare a livello di programmazione relazioni tra record logici tra gli articoli, è possibile utilizzare stored procedure di replica.  
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>Per definire una relazione tra record logici senza un filtro di join associato  
@@ -176,7 +176,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Nome della pubblicazione per <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>.  
   
-    -   (Facoltativo) Se l'articolo è filtrato orizzontalmente, specificare la clausola del filtro di riga per la proprietà <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> . Utilizzare questa proprietà per specificare un filtro di riga statico o con parametri. Per altre informazioni, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   (Facoltativo) Se l'articolo è filtrato orizzontalmente, specificare la clausola del filtro di riga per la proprietà <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> . Utilizzare questa proprietà per specificare un filtro di riga statico o con parametri. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
      Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   

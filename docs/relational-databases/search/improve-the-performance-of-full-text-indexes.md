@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Questo argomento descrive alcune delle cause comuni della riduzione delle prestazioni per gli indici e le query full-text. Vengono inoltre forniti alcuni suggerimenti per limitare i problemi e migliorare le prestazioni.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Questo argomento descrive alcune delle cause comuni della riduzione delle prestazioni per gli indici e le query full-text. Vengono inoltre forniti alcuni suggerimenti per limitare i problemi e migliorare le prestazioni.
   
 ##  <a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>Problemi relativi alle risorse hardware
@@ -183,7 +185,7 @@ Le prestazioni di esecuzione dei popolamenti completi non sono ottimali quando l
   
      Nella tabella seguente vengono descritti i tipi di attesa relativi a questo contesto.  
   
-    |Tipo di attesa|Descrizione|Possibile soluzione|  
+    |Tipo di attesa|Description|Possibile soluzione|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX o _UP)|Può indicare un collo di bottiglia a livello di IO, caso in cui anche la lunghezza media della coda del disco sarebbe elevata.|Lo spostamento dell'indice full-text in un filegroup diverso in un disco diverso potrebbe contribuire a ridurre il collo di bottiglia a livello di IO.|  
     |PAGELATCH_EX (o _UP)|Può indicare contese tra i thread che tentano di scrivere nello stesso file di database.|L'aggiunta di file al filegroup in cui risiede l'indice full-text potrebbe contribuire ad attenuare queste contese.|  

@@ -1,5 +1,5 @@
 ---
-title: ELIMINARE la tabella esterna (Transact-SQL) | Documenti Microsoft
+title: DROP EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,23 +8,25 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 02a6a236-0756-4570-abfa-6f677a7df042
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3de77f0fd34519d29222dd4c16fb7ae353db1806
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e29508550528b1f98318bec26676707c72f0b5fc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-table-transact-sql"></a>ELIMINARE la tabella esterna (Transact-SQL)
+# <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Rimuove una tabella esterna PolyBase da. Questa operazione non elimina i dati esterni.  
@@ -43,7 +45,7 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
  [ *database_name* . [*schema_name*]. | *schema_name* . ] *table_name*  
  Il nome di uno di tre parti della tabella esterna da rimuovere. Il nome di tabella può includere facoltativamente, lo schema o il database e lo schema.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
   
 -   Richiede **ALTER** autorizzazione per lo schema a cui appartiene la tabella.  
   

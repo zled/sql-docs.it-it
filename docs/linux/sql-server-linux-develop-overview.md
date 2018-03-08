@@ -1,28 +1,29 @@
 ---
 title: Sviluppo di applicazioni per SQL Server in Linux | Documenti Microsoft
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 11/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
+ms.custom: sql-linux
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.workload: On Demand
-ms.openlocfilehash: 9c0067f0af9f37d433c862991d773847964ee06a
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fb07628c8818b16709abab07efc1f52248426305
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Come iniziare a sviluppare applicazioni destinate a SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 È possibile creare applicazioni che si connettono e utilizzano 2017 di SQL Server in Linux da una varietà di linguaggi di programmazione, ad esempio c#, Java, Node.js, PHP, Python, Ruby e C++. È inoltre possibile utilizzare Framework web più comuni e altri framework relazionale Mapping ORM (Object).
 
@@ -71,13 +72,13 @@ Vedere gli argomenti seguenti per ulteriori informazioni:
 
 È inoltre possibile utilizzare nuovi strumenti della riga di comando che sono di tipo nativi per Linux. Questi strumenti comprendono quanto segue:
 
-- [SQLCMD](../tools/sqlcmd-utility.md)
+- [sqlcmd](../tools/sqlcmd-utility.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
-- [MSSQL-conf](sql-server-linux-configure-mssql-conf.md)
+- [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per iniziare, installare SQL Server in Linux con una delle esercitazioni di avvio rapido seguenti:
+Per iniziare, installare SQL Server in Linux con una delle Guide rapide seguenti:
 
 - [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

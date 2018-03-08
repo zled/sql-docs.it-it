@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,18 +17,19 @@ f1_keywords:
 - FLUSHAUTHCACHE
 - DBCC_FLUSHAUTHCACHE_TSQL
 - FLUSHAUTHCACHE_TSQL
-helpviewer_keywords: DBCC FLUSHAUTHCACHE
+helpviewer_keywords:
+- DBCC FLUSHAUTHCACHE
 ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18fe9c70a774bce85bfdb8a59b54b57064e6c1ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f3eca7d8191ff7ff7570167c6ec4250258ab2ac5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,13 +45,13 @@ DBCC FLUSHAUTHCACHE [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-nessuna.
+Nessuno
   
 ## <a name="remarks"></a>Osservazioni  
 La cache di autenticazione esegue una copia di account di accesso e delle regole firewall del server che vengono archiviate nel database master e li inserisce in memoria nel database utente.  Poiché le informazioni relative agli utenti di database indipendente sono già memorizzate nel database utente, gli utenti del database indipendente non fanno parte della cache di autenticazione.
 Connessioni attive continuamente al [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiedono la riautorizzazione (eseguite dal [!INCLUDE[ssDE](../../includes/ssde-md.md)]) almeno ogni 10 ore. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] di input la riautorizzazione tentativi utilizzando la password inviata e nessun utente è obbligatorio. Per motivi di prestazioni quando si reimposta una password in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], la connessione non verrà nuovamente autenticata, anche se la connessione viene reimpostata a causa del pool di connessioni. Questo comportamento è diverso dal comportamento di on-premise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se la password è stata modificata dopo la connessione è stata inizialmente autorizzata, è necessario terminare la connessione e stabilire una nuova connessione utilizzando la nuova password. Un utente con l'autorizzazione KILL DATABASE CONNECTION possa terminare in modo esplicito una connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] utilizzando il [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md) comando.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Richiede il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] account amministratore.
   
 ## <a name="example"></a>Esempio  

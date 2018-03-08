@@ -1,34 +1,36 @@
 ---
 title: La gestione e monitoraggio di soluzioni di machine learning | Documenti Microsoft
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 07/26/2016
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 42da1c7becbb7003ab66b7ce58cbdbb307326aaa
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 248b3b27a8df1320eb809c4cd537a12cefe4eacb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>La gestione e monitoraggio di soluzioni di machine learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo descrive le funzionalità di SQL Server Machine Learning Services rilevanti per gli amministratori di database che desiderano iniziare a lavorare con le soluzioni R e Python.
 
 **Si applica a:** R Services SQL Server 2016, SQL Server 2017 di Machine Learning Services
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 Gli amministratori di database è necessario fornire l'accesso ai dati non solo per gli esperti di dati, ma a un'ampia gamma di sviluppatori di report, analisti aziendali e fruitori dei dati aziendali. L'integrazione di R (e l'ora di Python) in SQL Server offre numerosi vantaggi all'amministratore di database che supporta il ruolo della scienza dei dati.
 

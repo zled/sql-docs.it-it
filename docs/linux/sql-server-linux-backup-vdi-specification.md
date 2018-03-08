@@ -3,27 +3,27 @@ title: Specifica di Backup VDI - SQL Server in Linux | Documenti Microsoft
 description: Specifica di interfaccia SQL Server Backup dispositivo virtuale.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: 31fc2a5d96f38cbbcd0c4b616bcfc75c552c1340
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server nel client Linux VDI specifica SDK
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Questo documento descrive le interfacce fornite da SQL Server in Linux virtual interface (VDI) client dispositivo SDK. Fornitori di software indipendenti (ISV) è possono utilizzare il Virtual Backup Device interfaccia API (Application Programming) per integrare i prodotti di SQL Server. In generale, un'infrastruttura VDI in Linux è simile alla VDI in Windows con le modifiche seguenti:
 
@@ -87,7 +87,7 @@ In questo capitolo contiene le descrizioni di tutte le funzioni di client. Le de
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
 | | **name** | Identifica il set di dispositivo virtuale. Le regole per i nomi utilizzati dai CreateFileMapping() devono essere seguite. Qualsiasi carattere tranne una barra rovesciata (\) possono essere utilizzate. Si tratta di una stringa di caratteri. È consigliabile apponendo il prefisso della stringa con nome di prodotto o la società e del database dell'utente. |
-| |**Guard flusso di controllo** | Questa è la configurazione per il set di dispositivo virtuale. Per ulteriori informazioni, vedere "Configurazione" più avanti in questo documento.
+| |**cfg** | Questa è la configurazione per il set di dispositivo virtuale. Per ulteriori informazioni, vedere "Configurazione" più avanti in questo documento.
 
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
@@ -111,7 +111,7 @@ In questo capitolo contiene le descrizioni di tutte le funzioni di client. Le de
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
 | | **timeout** | Questo è il timeout in millisecondi. Utilizzare INFINITE o qualsiasi numero intero negativo per impedire i timeout.
-| | **Guard flusso di controllo** | Al termine dell'esecuzione ha esito positivo, contiene la configurazione selezionata dal server. Per ulteriori informazioni, vedere "Configurazione" più avanti in questo documento.
+| | **cfg** | Al termine dell'esecuzione ha esito positivo, contiene la configurazione selezionata dal server. Per ulteriori informazioni, vedere "Configurazione" più avanti in questo documento.
 
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
@@ -199,7 +199,7 @@ Quando questa routine deve bloccarsi in attesa per un comando, il thread è disp
 | |**pCmd** |Questo è l'indirizzo di un comando precedentemente restituito da ClientVirtualDevice::GetCommand.
 | |**completionCode** |Si tratta di un codice di stato che indica lo stato di completamento. Questo parametro deve essere restituito per tutti i comandi. Il codice restituito deve essere appropriato per il comando viene eseguito. ERROR_SUCCESS è usato in tutti i casi per indicare un comando eseguito correttamente. Per l'elenco completo dei possibili codici, vedere il file, vdierror.h. Un elenco di codici di stato per ogni comando viene visualizzata in "Comandi" più avanti in questo documento.
 | |**bytesTransferred** |Questo è il numero di byte trasferiti. Viene restituito solo per il trasferimento di dati, i comandi di lettura e scrittura.
-| |**posizione** |Si tratta di una risposta al comando GetPosition solo.
+| |**position** |Si tratta di una risposta al comando GetPosition solo.
         
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |

@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,15 +30,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: "53"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 30c9b46ae50450697f9288b0e40e062a20af8a82
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 624f3aa0fd17e6d3fc119cad25997e4832be3cde
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di monitorare lo stato dei processi in esecuzione nel server di report. Tramite il server di report viene effettuata un'analisi a intervalli regolari dei processi in corso e vengono scritte informazioni sullo stato nel database del server di report o nei database dell'applicazione di servizio per la modalità SharePoint. Un processo è considerato in corso se è in esecuzione una delle operazioni seguenti, ovvero esecuzione di query su un server di database locale o remoto, elaborazione di report e rendering di report.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Per annullare un processo, in rare circostanze potrebbe essere necessario riavviare il server. Per la modalità SharePoint, potrebbe essere necessario riavviare il pool di applicazioni in cui viene ospitata l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Avviare e arrestare il servizio del server di report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
   
- Contenuto dell'argomento  
+ Contenuto dell'argomento:  
   
 -   [Visualizzare e annullare i processi (modalità nativa)](#bkmk_native)  
   

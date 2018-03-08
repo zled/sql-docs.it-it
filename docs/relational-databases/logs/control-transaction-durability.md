@@ -8,28 +8,29 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c55b9f3bc4df4048c2edb058e7c70579fb80bdba
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 0f54b24d7395584a8182b607bfc491179e314336
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="control-transaction-durability"></a>Controllo della durabilità delle transazioni
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Il commit delle transazioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere completamente durevole, l'impostazione predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , oppure con durabilità ritardata (noto come Lazy Commit).    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il commit delle transazioni può essere completamente durevole, l'impostazione predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oppure con durabilità ritardata (Lazy Commit).    
     
  Il commit delle transazioni completamente durevole è sincrono e segnala il completamento del commit restituendo il controllo al client solo dopo che i record del log per la transazione vengono scritti su disco. Il commit delle transazioni con durabilità ritardata è asincrono e segnala il completamento del commit prima che i record del log per la transazione vengano scritti su disco. La scrittura delle voci di log delle transazioni su disco è necessaria affinché una transazione sia durevole. Le transazioni con durabilità ritardata diventano durevoli quando le voci di log delle transazioni vengono scaricate su disco.    
     

@@ -1,35 +1,33 @@
 ---
-title: Creare e gestire gerarchie (SSAS tabulare) | Documenti Microsoft
+title: Creare e gestire gerarchie | Documenti Microsoft
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c8e53bd34427fa3aa556163f0e1fd4205c77953e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 96af188d39d583c53b2520d03f6fd0962092a90f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-hierarchies-ssas-tabular"></a>Creare e gestire gerarchie (SSAS tabulare)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Le gerarchie possono essere create e gestite in Progettazione modelli in vista diagramma. Per visualizzare Progettazione modelli in Vista diagramma, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fare clic sul menu **Modello** , scegliere **Vista modelli**, quindi **Vista diagramma**.  
+# <a name="create-and-manage-hierarchies"></a>Creare e gestire gerarchie 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Le gerarchie possono essere create e gestite in Progettazione modelli in Vista diagramma. Per visualizzare Progettazione modelli in Vista diagramma, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fare clic sul menu **Modello** , scegliere **Vista modelli**, quindi **Vista diagramma**.  
   
- In questo argomento sono incluse le attività seguenti:  
+ In questo articolo include le attività seguenti:  
   
 -   [Creare una gerarchia](#bkmk_create)  
   
@@ -103,8 +101,8 @@ ms.lasthandoff: 12/08/2017
 -   In alternativa, fare clic sul livello padre della gerarchia e premere CANC. Verranno rimossi anche tutti i livelli figlio.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Progettazione di modelli tabulari &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [Gerarchie &#40; SSAS tabulare &#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
- [Misure &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+ [Progettazione di modelli tabulari ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Gerarchie](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [Misure](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

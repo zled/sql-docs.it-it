@@ -22,15 +22,15 @@ helpviewer_keywords:
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4b004cbaba4cab6d83680ce0d7b827366c3e8a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3bdce7c18b7097217152a9c57964a2f92eb02ec6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="utility-explorer-f1-help"></a>Guida sensibile al contesto di Gestione Utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le sezioni seguenti includono informazioni sulle funzionalità di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sulle operazioni associate.  
@@ -136,7 +136,7 @@ ms.lasthandoff: 11/17/2017
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
- Per accedere alle opzioni di filtro per la visualizzazione Elenco di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic con il pulsante destro del mouse sul nodo **Applicazioni livello dati distribuite** nel riquadro di spostamento Esplora utilità e selezionare **Filtro**. Dopo l'implementazione delle impostazioni di filtro, il nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in Esplora utilità sarà identificato dall'etichetta **Deployed Data-tier Applications (filtered)** (Applicazioni livello dati distribuite - con filtro). Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Per accedere alle opzioni di filtro per la visualizzazione Elenco di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic con il pulsante destro del mouse sul nodo **Applicazioni livello dati distribuite** nel riquadro di spostamento Esplora utilità e selezionare **Filtro**. Dopo l'implementazione delle impostazioni di filtro, il nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in Esplora utilità sarà identificato dall'etichetta **Deployed Data-tier Applications (filtered)**(Applicazioni livello dati distribuite - con filtro). Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
   
  Per impostazione predefinita, nelle colonne seguenti sono visualizzate informazioni sullo stato di integrità relative a ogni applicazione del livello dati.  
   
@@ -516,6 +516,6 @@ Scheda **Data warehouse** - Consente di visualizzare i dettagli relativi alla co
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Risoluzione dei problemi relativi a Utilità SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [Attività e funzionalità di Utilità SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

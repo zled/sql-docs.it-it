@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), metadata
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6473fb0962aa6b3a7fc0ac3af5914478adcd2f8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 14a20ad29eb227da04544e3d0695e4536702f8f7
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Metadati aggiuntivi dei parametri con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,8 +38,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint non NULL|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar(128) non NULL|Nome del tipo del parametro con valori di tabella.|  
-|COLUMN_SIZE|Valore intero|NULL|  
-|BUFFER_LENGTH|Valore intero|0|  
+|COLUMN_SIZE|Integer|NULL|  
+|BUFFER_LENGTH|Integer|0|  
 |DECIMAL_DIGITS|Smallint|NULL|  
 |NUM_PREC_RADIX|Smallint|NULL|  
 |NULLABLE|Smallint non NULL|SQL_NULLABLE|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |COLUMN_DEF|WVarchar(4000)|NULL|  
 |SQL_DATA_TYPE|Smallint non NULL|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|NULL|  
-|CHAR_OCTET_LENGTH|Valore intero|NULL|  
+|CHAR_OCTET_LENGTH|Integer|NULL|  
 |ORDINAL_POSITION|Integer non NULL|Posizione ordinale del parametro.|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar(128) non NULL|Catalogo contenente la definizione di tipo per il tipo di tabella del parametro con valori di tabella.|  

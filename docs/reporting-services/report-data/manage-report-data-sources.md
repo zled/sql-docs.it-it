@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c38232b3e2f201cc392d39cde0b5ffcb31ddf0db
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 443b1f6a2249fd836555bb7cb6822d3dbbae199d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-report-data-sources"></a>Gestire origini dati dei report
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]i report, i modelli di report e le sottoscrizioni guidate dai dati recuperano i dati da origini dati esterne. Per connettersi a un'origine dati esterna, un server di report utilizza le informazioni di connessione all'origine dei dati definite in o a cui si fa riferimento dal report, dal modello o dalla sottoscrizione. Le proprietà di connessione alle origini dati vengono sempre definite al momento della creazione del report o del modello, ma possono essere gestite in modo indipendente dopo la pubblicazione del report o del modello in un server di report.  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 |Attività|Strumento|Collegamento|  
 |----------|----------|----------|  
-|Visualizzare esempi di stringhe di connessione.||[Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
+|Visualizzare esempi di stringhe di connessione.||[Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Scegliere un approccio per ottenere le credenziali per la connessione a un'origine dati.||[Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
 |Aggiungere proprietà di connessione alle origini dati in un file di definizione del report (con estensione rdl).|Progettazione report|[Creare un'origine dati incorporata o condivisa &#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
 |Aggiungere un collegamento al file di un'origine dati condivisa (con estensione rds) nel progetto di un report.|Progettazione report|[Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  

@@ -8,29 +8,32 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: Stretch Database, stored procedures
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Stretch Database, stored procedures
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f71e898f656b1177c8b7ea0630b87babd5a0a82
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5cb8f4a339cb3f6a51631dba4e2a3b3c58a6a18c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Estensione Database Extended Stored procedure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  In questa sezione vengono descritte le stored procedure estese che riguardano l'estensione Database.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 [Sys. sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) rimuove la connessione autenticata tra un database locale abilitata per l'estensione e sul database Azure remoto.
 
 [sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md) Ottiene il numero di ore di dati migrati che mantiene di SQL Server in una tabella di gestione temporanea per garantire un ripristino completo del database Azure remoto, se è necessario un ripristino.

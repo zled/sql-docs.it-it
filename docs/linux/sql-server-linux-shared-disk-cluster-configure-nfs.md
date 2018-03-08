@@ -3,26 +3,26 @@ title: Configurare l'archiviazione failover istanza cluster NFS - SQL Server in 
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 1b944d36e968234d5ea77a861c595e440cbbb15b
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 368fce4b3c9595f89ea14ca310049a52cf180a28
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurare i cluster di failover - NFS - SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In questo articolo viene illustrato come configurare l'archiviazione NFS per un'istanza del cluster di failover (FCI) in Linux. 
 
@@ -33,14 +33,14 @@ NFS o network file system, è un metodo comune per la condivisione di dischi in 
 L'origine hosting NFS (un server Linux o altro) deve essere utilizzando/conforme con la versione 4.2 o versioni successive. Le versioni precedenti non funzioneranno con SQL Server in Linux.
 
 Quando si configurano le cartelle per essere condivisa nel server NFS, assicurarsi che le funzioni seguono queste opzioni di linee guida generali:
-- `rw`Per garantire che la cartella possono essere essere letti e scritti
-- `sync`Per garantire operazioni di scrittura per la cartella è garantito
+- `rw` Per garantire che la cartella possono essere essere letti e scritti
+- `sync` Per garantire operazioni di scrittura per la cartella è garantito
 - Non utilizzare `no_root_squash` un rischio per la sicurezza viene considerato come un'opzione.
 - Verificare che la cartella disponga di diritti completi (777) applicati
 
 Verificare che gli standard di sicurezza vengono applicati per l'accesso. Quando si configura la cartella, assicurarsi che solo i server che fanno parte dell'istanza FCI devono visualizzare la cartella NFS. Un esempio di un /etc/exports modificato in una soluzione basata su Linux NFS è illustrato di seguito in cui la cartella è limitata a FCIN1 e FCIN2.
 
-![05 nfsacl][1]
+![05-nfsacl][1]
 
 ## <a name="instructions"></a>Istruzioni
 
@@ -80,7 +80,7 @@ Verificare che gli standard di sicurezza vengono applicati per l'accesso. Quando
     mkdir <TempDir>
     ```
 
-    \<TempDir > è il nome della cartella. Nell'esempio seguente crea una cartella denominata /var/opt/mssql/tmp.
+    \<TempDir > è il nome della cartella. Nell'esempio seguente viene creata una cartella denominata /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -167,7 +167,7 @@ Verificare che gli standard di sicurezza vengono applicati per l'accesso. Quando
     sudo systemctl status mssql-server
     ```
     
-   * Creare un database per verificare che la protezione è stata impostata correttamente. Nell'esempio seguente si potrà notare che viene eseguita tramite codice Transact-SQL può essere eseguita tramite SQL Server Management Studio.
+   * Creare un database per verificare che la protezione è stata impostata correttamente. L'esempio seguente mostra che viene eseguita tramite codice Transact-SQL può essere eseguita tramite SQL Server Management Studio.
  
     ![CreateTestdatabase][3]
 
@@ -204,7 +204,7 @@ Verificare che gli standard di sicurezza vengono applicati per l'accesso. Quando
     mkdir <FolderName>
     ```
 
-    \<Nome cartella > è il nome della cartella. Percorso completo della cartella dovrà essere specificato ma non nella posizione corretta. Nell'esempio seguente crea una cartella denominata /var/opt/mssql/userdata.
+    \<Nome cartella > è il nome della cartella. Percorso completo della cartella deve essere specificato ma non nella posizione corretta. Nell'esempio seguente viene creata una cartella denominata /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -230,9 +230,9 @@ Verificare che gli standard di sicurezza vengono applicati per l'accesso. Quando
   
    * Digitare exit per non essere più l'utente avanzato.
 
-   * Per eseguire il test, creare un database in tale cartella. Nell'esempio illustrato di seguito utilizza sqlcmd per creare un database, passare il contesto, verificare i file presenti nel livello del sistema operativo e quindi Elimina il percorso temporaneo. È possibile utilizzare SQL Server Management Studio.
+   * Per eseguire il test, creare un database in tale cartella. L'esempio seguente usa sqlcmd per creare un database, passare il contesto, verificare i file presenti nel livello del sistema operativo e quindi Elimina il percorso temporaneo. È possibile utilizzare SQL Server Management Studio.
 
-    ![15 createtestdatabase][4]
+    ![15-createtestdatabase][4]
  
    * Disinstallare la condivisione 
 

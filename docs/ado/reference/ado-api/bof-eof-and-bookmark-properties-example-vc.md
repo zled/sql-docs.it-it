@@ -4,29 +4,31 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Bookmark property [ADO], VC++ example
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cec7c2312c67b6d66331ea8350add5d405a46a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 483c759639f623ea1f37b74b1cc60ebd22cf1ca7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>Esempio di proprietà di segnalibro (VC + +), EOF e BOF
 La prima funzione in questo esempio viene utilizzato il [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) proprietà per visualizzare un messaggio se un utente tenta di superare il primo o ultimo record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa il [segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md) proprietà per consentire all'utente di contrassegnare un record in un **Recordset** e si torna in un secondo momento.  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - modifying passwords
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 04193c3a06fd99a4f69cc4da9d4ae073315963cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6ee1c96bf8a302f5451fe985aacae66a5fd768d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>Gestione configurazione SQL Server - Modificare la password degli account
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come modificare la password degli account usati dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite Gestione configurazione SQL Server. Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent vengono eseguiti in un computer come servizi, utilizzando credenziali fornite inizialmente durante l'installazione. Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita in un account di dominio e la password per tale account viene modificata, è necessario aggiornare la password utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostando la nuova password. Se la password non viene aggiornata, è possibile che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sia più in grado di accedere a determinate risorse di dominio e se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestato, il servizio non verrà riavviato fino all'aggiornamento della password.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario essere l'amministratore del computer per modificare la password utilizzata da un servizio.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
     >  -   **Windows 10**:  
     >          per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nella **pagina iniziale**digitare SQLServerManager13.msc (per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). Per le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sostituire 13 con un numero inferiore. Se si fa clic su SQLServerManager13.msc, viene aperto Gestione configurazione. Per aggiungere Gestione configurazione alla pagina iniziale o alla barra delle applicazioni, fare clic con il pulsante destro del mouse su SQLServerManager13.msc e quindi scegliere **Apri percorso file**. In Esplora file di Windows fare clic con il pulsante destro del mouse su SQLServerManager13.msc e quindi scegliere **Aggiungi a Start** o **Aggiungi alla barra delle applicazioni**.  
     > -   **Windows 8**:  
-    >          Per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'accesso alla **ricerca** in **App** digitare **SQLServerManager\<versione>.msc**, ad esempio **SQLServerManager13.msc** e quindi premere **INVIO**.  
+    >          Per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'accesso alla **ricerca**in **App** digitare **SQLServerManager\<versione>.msc**, ad esempio **SQLServerManager13.msc** e quindi premere **INVIO**.  
   
 2.  In Gestione configurazione SQL Server fare clic su **Servizi di SQL Server**.  
   

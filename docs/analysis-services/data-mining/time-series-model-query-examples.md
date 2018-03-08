@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +22,20 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e72bec5f3ff9a0dbc14912fb2bba656744a678d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4467fa9fcf4b695b77d533e358019b020545861c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="time-series-model-query-examples"></a>Esempi di query sul modello di serie temporale
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, o è possibile creare una query di stima che utilizza i criteri del modello per eseguire stime per i nuovi dati. Una query sul contenuto per un modello Time Series, ad esempio, potrebbe fornire dettagli aggiuntivi sulle strutture periodiche rilevate, mentre una query di stima potrebbe fornire stime per i 5-10 intervalli di tempo successivi. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che consente di fornire dettagli sui criteri individuati durante l'analisi, o una query di stima, che consente di utilizzare i criteri presenti nel modello di data mining per eseguire stime relative ai nuovi dati. Una query sul contenuto per un modello Time Series, ad esempio, potrebbe fornire dettagli aggiuntivi sulle strutture periodiche rilevate, mentre una query di stima potrebbe fornire stime per i 5-10 intervalli di tempo successivi. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
   
  In questa sezione viene illustrato come creare entrambi i tipi di query per i modelli basati sull'algoritmo Microsoft Time Series.  
   
@@ -112,11 +111,11 @@ WHERE NODE_NAME = 'TA00000007'
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
- Per altre indicazioni su come interpretare queste informazioni, vedere [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Per altre indicazioni su come interpretare queste informazioni, vedere [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
   
 ###  <a name="bkmk_Query3"></a> Query di esempio 3: Recupero dell'equazione per un modello ARTxp  
- Per un modello ARTxp, a ogni livello dell'albero vengono archiviate informazioni diverse. Per altre informazioni sulla struttura di un modello ARTxp e su come interpretare le informazioni nell'equazione, vedere [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Per un modello ARTxp, a ogni livello dell'albero vengono archiviate informazioni diverse. Per altre informazioni sulla struttura di un modello ARTxp e su come interpretare le informazioni nell'equazione, vedere [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
  L'istruzione DMX seguente recupera le informazioni su una parte dell'albero ARTxp che rappresenta la quantità di vendite per il modello R250 in Europa.  
   
@@ -133,7 +132,7 @@ WHERE NODE_ATTRIBUTE_NAME = 'R250 Europe:Quantity'
 AND NODE_TYPE = 15  
 ```  
   
- Per altre indicazioni su come interpretare queste informazioni, vedere [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Per altre indicazioni su come interpretare queste informazioni, vedere [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
   
 ## <a name="creating-predictions-on-a-time-series-model"></a>Creazione di stime in un modello Time Series  
@@ -195,7 +194,7 @@ AND NODE_TYPE = 15
   
  Quando si usa l'argomento **REPLACE_MODEL_CASES** , in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono continuamente aggiunti nuovi case alla fine del case set, mentre un numero corrispondente di case viene eliminato dall'inizio del case set. Se si aggiunge una quantità di nuovi dati maggiore rispetto a quella nel set di training originale, i dati meno recenti vengono eliminati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se si specifica un numero sufficiente di nuovi valori, le stime possono essere basate sui dati completamente nuovi.  
   
- Si supponga ad esempio di avere eseguito il training per il modello in un set di dati di case contenente 1000 righe. Si aggiungono quindi 100 righe di nuovi dati. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono eliminate le prime 100 righe dal set di training e le 100 righe di nuovi dati vengono aggiunte alla fine del set, in modo da ottenere un totale di 1000. Se si aggiungono 1100 righe di dati nuovi, vengono utilizzate solo le 1000 righe più recenti.  
+ Si supponga ad esempio di avere eseguito il training per il modello in un set di dati di case contenente 1000 righe. Si aggiungono quindi 100 righe di nuovi dati. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono eliminate le prime 100 righe dal set di training e le 100 righe di nuovi dati vengono aggiunte alla fine del set, in modo da ottenere un totale di 1000. Se si aggiungono 1100 righe di dati nuovi, vengono utilizzate solo le 1000 righe più recenti.  
   
  Per fare un altro esempio, si supponga di volere aggiungere nuovi dati relativi a tre mesi ed eseguire tre nuove stime. In tal caso, effettuare quanto segue:  
   
@@ -223,19 +222,19 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |Funzione di stima|Utilizzo|  
-|[Lag &#40;DMX&#41;](../../dmx/lag-dmx.md)|Viene restituito un numero di intervalli di tempo tra la data del case corrente e l'ultima data del set di training.<br /><br /> Un tipico utilizzo di questa funzione consiste nell'identificare i case di training recenti per poter recuperare dati dettagliati sui case.|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Restituisce l'ID nodo per la colonna stimabile specificata.<br /><br /> Un tipico utilizzo di questa funzione consiste nell'identificare il nodo che genera un determinato valore stimato per poter esaminare i case associati al nodo o recuperare l'equazione e altri dettagli.|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Restituisce la deviazione standard delle stime nella colonna stimabile specificata.<br /><br /> Questa funzione sostituisce l'argomento INCLUDE_STATISTICS, non supportato per i modelli Time Series.|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Restituisce la varianza delle stime per la colonna stimabile specificata.<br /><br /> Questa funzione sostituisce l'argomento INCLUDE_STATISTICS, non supportato per i modelli Time Series.|  
-|[PredictTimeSeries &#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)|Restituisce i valori futuri stimati o cronologici per una serie temporale.<br /><br /> È anche possibile eseguire una query sui modelli della serie temporale con la funzione di stima generale [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md).|  
+|[DMX Lag &#40; &#41;](../../dmx/lag-dmx.md)|Viene restituito un numero di intervalli di tempo tra la data del case corrente e l'ultima data del set di training.<br /><br /> Un tipico utilizzo di questa funzione consiste nell'identificare i case di training recenti per poter recuperare dati dettagliati sui case.|  
+|[DMX PredictNodeId &#40; &#41;](../../dmx/predictnodeid-dmx.md)|Restituisce l'ID nodo per la colonna stimabile specificata.<br /><br /> Un tipico utilizzo di questa funzione consiste nell'identificare il nodo che genera un determinato valore stimato per poter esaminare i case associati al nodo o recuperare l'equazione e altri dettagli.|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Restituisce la deviazione standard delle stime nella colonna stimabile specificata.<br /><br /> Questa funzione sostituisce l'argomento INCLUDE_STATISTICS, non supportato per i modelli Time Series.|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Restituisce la varianza delle stime per la colonna stimabile specificata.<br /><br /> Questa funzione sostituisce l'argomento INCLUDE_STATISTICS, non supportato per i modelli Time Series.|  
+|[DMX PredictTimeSeries &#40; &#41;](../../dmx/predicttimeseries-dmx.md)|Restituisce i valori futuri stimati o cronologici per una serie temporale.<br /><br /> È anche possibile eseguire una query sui modelli della serie temporale con la funzione di stima generale [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md).|  
   
  Per un elenco delle funzioni comuni a tutti gli algoritmi di [!INCLUDE[msCoName](../../includes/msconame-md.md)], vedere [Funzioni di stima generali &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Riferimento tecnico per algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli Time Series &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

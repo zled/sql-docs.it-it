@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], managing
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0e7931a3389bbe64b5eb0d9f47b40cb06a321f25
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 16b6cd8267c22570cabf04470810bd4dadc68059
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="publishing-data-sources-and-reports"></a>Pubblicazione di origini dati e report
   Prima di pubblicare il report, è necessario visualizzare l'anteprima del report per verificarne l'aspetto durante l'esecuzione. È possibile modificare la progettazione finché non si è soddisfatti dei risultati.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/05/2017
   
  Se per la creazione del report è stata utilizzata un'origine dei dati condivisa, è necessario pubblicarla nello stesso percorso del report. Analogamente ai report, le origini dei dati condivise possono essere gestite separatamente sul server di report.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Anteprima dei report](../../reporting-services/reports/previewing-reports.md)  
  Viene descritto come visualizzare l'anteprima di un report prima di pubblicarlo.  
   

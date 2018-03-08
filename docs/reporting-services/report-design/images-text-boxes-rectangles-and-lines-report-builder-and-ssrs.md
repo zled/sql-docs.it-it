@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea493c80dba54d0c9b497c7c41423d24764a9533
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: addd20b5bf083ad99b0d877f519f86170ac2a57c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Immagini, caselle di testo, rettangoli e linee (Generatore report e SSRS)
   Oltre alle aree dati quali tabelle, matrici e grafici, nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] vengono usati altri elementi, ad esempio immagini, caselle di testo e rettangoli, per aumentarne l'impatto visivo, evidenziare le informazioni più importanti o fornire informazioni correlate. È possibile modificare la formattazione di un elemento del report. È possibile, ad esempio, aggiungere un bordo o un riempimento, modificare la visibilità o la direzione iniziale oppure specificare valori esatti per le dimensioni e la posizione dell'elemento.  
@@ -31,7 +29,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Caselle di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
  Le caselle di testo possono essere inserite in qualunque punto del report e possono contenere etichette, campi o dati calcolati. Per definire il valore da visualizzare in una casella di testo quando si apre un report, si utilizzano le espressioni.  
   

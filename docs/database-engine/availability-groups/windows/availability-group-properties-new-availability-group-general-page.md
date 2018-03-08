@@ -16,20 +16,20 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49b34cb2867b26be38f9d6c9086f5ea038d8cbdc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 43306a76937572c93f01642e5943d24a141690b6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Proprietà dei gruppi di disponibilità: Nuovo gruppo di disponibilità (pagina Generale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento si applica alla scheda **Generale** della finestra di dialogo **Nuovo gruppo di disponibilità** e della finestra di dialogo **Proprietà gruppo di disponibilità**.  Nella finestra di dialogo **Nuovo gruppo di disponibilità** è possibile creare un nuovo gruppo di disponibilità senza usare la [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. Nella finestra di dialogo **Proprietà gruppo di disponibilità** è possibile visualizzare e modificare la configurazione di un gruppo di disponibilità esistente.  
   
  **Per visualizzare le proprietà del gruppo di disponibilità**  
   
--   [Visualizzare le proprietà dei gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
+-   [Visualizzazione delle Proprietà dei gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
   
 -   [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  Nome del gruppo di disponibilità. Si tratta di un nome specificato dall'utente che deve essere univoco all'interno del cluster di failover di Windows Server (WSFC).  
   
 ## <a name="availability-databases"></a>Database di disponibilità  
- **Nome database**  
+ **Database Name**  
  Nome di un database aggiunto al gruppo di disponibilità.  
   
  **Aggiungi**  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/20/2017
  **Commit sincrono**  
  La replica primaria attende che la replica secondaria salvi la transazione su disco prima di eseguirne il commit.  
   
- Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  **Modalità di failover**  
  Modalità di failover della replica. I valori possibili sono:  

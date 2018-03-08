@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a7333141672e9c6979202a95f24d42cae0ed82e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b0b325cea845e82519752b04591c2c7724b1acf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Specifica di uno spazio dei nomi di destinazione mediante l'attributo targetNamespace (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Nella creazione degli schemi XSD, è possibile utilizzare lo schema XSD **targetNamespace** attributo per specificare uno spazio dei nomi di destinazione. Questo argomento viene descritto come XSD **targetNamespace**, **elementFormDefault**, e **attributeFormDefault** gli attributi di lavoro, come influiscono l'istanza XML che è generato, e come vengono specificate query XPath con spazi dei nomi.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Nella creazione degli schemi XSD, è possibile utilizzare lo schema XSD **targetNamespace** attributo per specificare uno spazio dei nomi di destinazione. Questo argomento viene descritto come XSD **targetNamespace**, **elementFormDefault**, e **attributeFormDefault** gli attributi di lavoro, come influiscono l'istanza XML che è generato, e come vengono specificate query XPath con spazi dei nomi.  
   
  È possibile utilizzare il **xsd: targetNamespace** attributo per inserire elementi e attributi dello spazio dei nomi predefinito in uno spazio dei nomi diversi. È inoltre possibile specificare se gli elementi e gli attributi dello schema dichiarati localmente devono essere qualificati da uno spazio dei nomi, sia in modo esplicito mediante un prefisso sia in modo implicito per impostazione predefinita. È possibile utilizzare il **elementFormDefault** e **attributeFormDefault** gli attributi di  **\<xsd: schema >** elemento per specificare a livello globale la qualifica degli elementi locali e gli attributi, oppure è possibile utilizzare il **modulo** attributo per specificare separatamente i singoli elementi e attributi.  
   
@@ -106,7 +108,7 @@ ms.lasthandoff: 11/17/2017
   
  Questo documento dell'istanza definisce lo spazio dei nomi urn: MyNamespace e associa un prefisso (y0) a esso. Il prefisso viene applicato solo al  **\<cliente >** elemento globale. (L'elemento è globale poiché è stato dichiarato come elemento figlio di  **\<xsd: schema >** elemento nello schema.)  
   
- Il prefisso non viene applicato agli elementi locali e gli attributi perché il valore di **elementFormDefault** e **attributeFormDefault** attributi è impostato su **"unqualified"**nello schema. Si noti che il  **\<ordine >** elemento è locale poiché la relativa dichiarazione appare come elemento figlio di  **\<complexType >** elemento che definisce il  **\< CustomerType >** elemento. Analogamente, gli attributi (**CustomerID**, **OrderID**, e **ContactName**) sono locali, non globali.  
+ Il prefisso non viene applicato agli elementi locali e gli attributi perché il valore di **elementFormDefault** e **attributeFormDefault** attributi è impostato su **"unqualified"** nello schema. Si noti che il  **\<ordine >** elemento è locale poiché la relativa dichiarazione appare come elemento figlio di  **\<complexType >** elemento che definisce il  **\< CustomerType >** elemento. Analogamente, gli attributi (**CustomerID**, **OrderID**, e **ContactName**) sono locali, non globali.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>Per creare un esempio reale di questo schema  
   

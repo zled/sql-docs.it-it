@@ -16,13 +16,13 @@ ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: afeccf4ae46e3f4b9f31ddd99ba99328b12f23e2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e5034c799d17151acf7c2cb3a42dd96f3c978a28
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Visualizzazione delle Proprietà dei gruppi di disponibilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come visualizzare le proprietà di un gruppo di disponibilità per un gruppo di disponibilità Always On tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
   
-2.  Espandere il nodo **Disponibilità elevata Always On** e il nodo **Gruppi di disponibilità** .  
+2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità**.  
   
 3.  Fare clic con il pulsante destro del mouse sul gruppo di disponibilità di cui visualizzare le proprietà e scegliere il comando **Proprietà** .  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
      Utilizzare la pagina **Autorizzazioni** per visualizzare gli account di accesso, i ruoli e le autorizzazioni esplicite correnti associati al gruppo di disponibilità. Per ulteriori informazioni, vedere [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per visualizzare le proprietà e lo stato di un gruppo di disponibilità**  
   
  Per eseguire una query sulle proprietà e sugli stati dei gruppi di disponibilità per cui l'istanza del server ospita una replica di disponibilità, utilizzare le viste seguenti:  
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/20/2017
 -   [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   

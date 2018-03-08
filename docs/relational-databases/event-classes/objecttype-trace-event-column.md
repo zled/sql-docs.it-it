@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,29 +18,30 @@ helpviewer_keywords:
 - event classes [SQL Server], Object Type column values
 - Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1c0753ed19215c5d45610aa5582fbce2c906cd6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 063bab84aeaa695ace1087df518640b611749b5f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="objecttype-trace-event-column"></a>Colonna ObjectType per gli eventi di traccia
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La colonna ObjectType viene usata in un'ampia gamma di eventi di traccia. In questo argomento vengono descritti i possibili valori di tale colonna e le definizioni associate.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La colonna ObjectType viene utilizzata in un'ampia gamma di eventi di traccia. In questo argomento vengono descritti i possibili valori di tale colonna e le definizioni associate.  
   
 ## <a name="object-type-column-values"></a>Valori della colonna ObjectType  
   
-|Valore|Definizione|  
+|valore|Definizione|  
 |-----------|----------------|  
 |8259|Vincolo CHECK|  
 |8260|Predefinito (vincolo o autonomo)|  
 |8262|Vincolo FOREIGN KEY|  
 |8272|Stored procedure|  
-|8274|Rule|  
+|8274|Regola|  
 |8275|Tabella di sistema|  
 |8276|Trigger nel server|  
 |8277|Tabella (definita dall'utente)|  
@@ -47,10 +49,10 @@ ms.lasthandoff: 11/17/2017
 |8280|Stored procedure estesa|  
 |16724|Trigger CLR|  
 |16964|Database|  
-|16975|Oggetto|  
+|16975|Object|  
 |17222|Catalogo full-text|  
 |17232|Stored procedure CLR|  
-|17235|Schema|  
+|17235|schema|  
 |17475|Credenziale|  
 |17491|Evento DDL|  
 |17741|Evento di gestione|  
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 |19283|ObfusKey|  
 |19521|Account di accesso con chiave asimmetrica|  
 |19523|Account di accesso con certificato|  
-|19538|Ruolo|  
+|19538|Role|  
 |19539|Account di accesso SQL|  
 |19543|Account di accesso Windows|  
 |20034|Associazione al servizio remoto|  

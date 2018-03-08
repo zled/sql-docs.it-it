@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - status information [SQL Server], triggers
 - DML triggers, viewing
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b524575ffd1f2c10451f2aabcbf9e675f42859b7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4d9dac7711cc7eb07ce507e4749b82dcb2a1a7be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-information-about-dml-triggers"></a>Ottieni informazioni sui trigger DML
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Questo argomento descrive come ottenere informazioni sui trigger DML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste informazioni possono includere i tipi di trigger in una tabella, nonché il nome, il proprietario e la data di creazione o modifica di un trigger. Se il trigger non è stato crittografato al momento della creazione, se ne ottiene la definizione. È possibile utilizzare la definizione per comprendere gli effetti del trigger sulla tabella su cui è stato definito. È inoltre possibile rilevare gli oggetti utilizzati da un trigger specifico. Con queste informazioni, è possibile identificare gli oggetti che influiscono sul trigger qualora vengano modificati o eliminati dal database.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+In questo argomento viene descritto come ottenere informazioni sui trigger DML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste informazioni possono includere i tipi di trigger in una tabella, nonché il nome, il proprietario e la data di creazione o modifica di un trigger. Se il trigger non è stato crittografato al momento della creazione, se ne ottiene la definizione. È possibile utilizzare la definizione per comprendere gli effetti del trigger sulla tabella su cui è stato definito. È inoltre possibile rilevare gli oggetti utilizzati da un trigger specifico. Con queste informazioni, è possibile identificare gli oggetti che influiscono sul trigger qualora vengano modificati o eliminati dal database.  
   
  **Contenuto dell'argomento**  
   

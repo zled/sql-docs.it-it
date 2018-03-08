@@ -1,7 +1,7 @@
 ---
 title: Installazione dei componenti SSMA in SQL Server (MySQLToSql) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9e191282cdba94d3c3e48db0a59b7b6d90b6d5b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Installazione dei componenti SSMA in SQL Server (MySQLToSql)
 Oltre a installare SSMA, è necessario installare anche i componenti nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Questi componenti includono il pacchetto estensione SSMA, che supporta la migrazione dei dati e i provider di MySQL per abilitare la connettività di server a server.  
@@ -35,7 +35,7 @@ Il pacchetto di estensione SSMA viene aggiunto un database, **sysdb**, per l'ist
   
 Inoltre, quando si esegue la migrazione dei dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], crea SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] processi agente, quando il modulo di migrazione dei dati lato server viene utilizzato per la migrazione dei dati.  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
 Prima di installare SSMA per i componenti server di MySQL in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], assicurarsi che il computer soddisfi i requisiti seguenti:  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 o versione successiva.  

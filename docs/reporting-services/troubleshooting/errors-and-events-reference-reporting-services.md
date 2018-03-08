@@ -8,9 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - events [Reporting Services]
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 caps.latest.revision: "42"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 81987c0d3de479bf0779da8f6d248444dbdec71f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9cf4c5c0764d1525fd0f33c16b1303d6a23ae1a1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Guida di riferimento a errori ed eventi (Reporting Services)
   In questo argomento vengono fornite informazioni sugli errori e sugli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Anche i file di log di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contengono informazioni sugli errori. Per altre informazioni sui tipi di file di log disponibili e sulla modalità di visualizzazione di tali file, vedere [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/05/2017
 |109|Informazioni|Gestione|Server di report<br /><br /> Gestione report|Un file di configurazione è stato modificato. Per altre informazioni, vedere [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md).|  
 |110|Avviso|Gestione|Server di report<br /><br /> Gestione report|Un'impostazione in uno dei file di configurazione è stata modificata in modo da non risultare più valida. Verrà utilizzato un valore predefinito. Per altre informazioni, vedere [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md).|  
 |111|Errore|Registrazione|Server di report<br /><br /> Gestione report|*\<Source>* non è in grado di creare il log di traccia. Per altre informazioni, vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
-|112|Avviso|Sicurezza|Server di report|Nel server di report è stato rilevato un possibile attacco Denial of Service. Per altre informazioni, vedere [Sicurezza e protezione di Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).|  
+|112|Avviso|Security|Server di report|Nel server di report è stato rilevato un possibile attacco Denial of Service. Per altre informazioni, vedere [Sicurezza e protezione di Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).|  
 |113|Errore|Registrazione|Server di report|Il server di report non è in grado di creare un contatore delle prestazioni.|  
 |114|Errore|Avvio/Chiusura|Gestione report|Gestione report non è in grado di connettersi al servizio del server di report.|  
 |115|Avviso|Pianificazione|Elaborazione pianificazione e recapito|Un'attività pianificata nella coda di SQL Server Agent è stata modificata o eliminata.|  
@@ -67,8 +65,8 @@ ms.lasthandoff: 12/05/2017
 |128|Errore|Attivazione|Server di report|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Impossibile utilizzare contemporaneamente componenti appartenenti a edizioni diverse di|  
 |129|Errore|Gestione|Server di report<br /><br /> Elaborazione pianificazione e recapito|Impossibile decrittografare un'impostazione crittografata nel file di configurazione.|  
 |130|Errore|Gestione|Server di report<br /><br /> Elaborazione pianificazione e recapito|*\<Origine>* non è in grado di trovare il file di configurazione. I file di configurazione sono necessari per il server di report.|  
-|131|Errore|Sicurezza|Server di report<br /><br /> Elaborazione pianificazione e recapito|Impossibile decrittografare un valore di dati utente crittografato.|  
-|132|Errore|Sicurezza|Server di report|Errore durante l'operazione di crittografia dei dati utente. Impossibile salvare il valore.|  
+|131|Errore|Security|Server di report<br /><br /> Elaborazione pianificazione e recapito|Impossibile decrittografare un valore di dati utente crittografato.|  
+|132|Errore|Security|Server di report|Errore durante l'operazione di crittografia dei dati utente. Impossibile salvare il valore.|  
 |133|Errore|Gestione|Server di report<br /><br /> Gestione report<br /><br /> Elaborazione pianificazione e recapito|Impossibile caricare un file di configurazione. Questo errore potrebbe essere dovuto a codice XML non valido.|  
 |134|Errore|Gestione|Server di report|Il server di report non è stato in grado di crittografare i valori per un'impostazione in un file di configurazione.|  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: "74"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74cd98740e15437e44fc782cf71389daccd1beea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82b43b985c462d5748079a8e9b6eea84a7fe2a53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="piecemeal-restores-sql-server"></a>Ripristini a fasi (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le informazioni contenute in questo argomento sono rilevanti solo per i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition in cui sono contenuti più file o filegroup e, nel modello di recupero con registrazione minima, solo per i filegroup di sola lettura.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
      Per informazioni sui ripristini a fasi di database OLTP in memoria, vedere [Backup e ripristino a fasi di database con tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
-## <a name="restrictions"></a>Restrizioni  
+## <a name="restrictions"></a>Restrictions  
  Se una sequenza di ripristino parziale esclude qualsiasi filegroup [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) , il ripristino temporizzato non è supportato. È possibile forzare la continuazione della sequenza di ripristino. Tuttavia i filegroup FILESTREAM omessi dall'istruzione RESTORE non potranno mai più essere ripristinati. Per forzare un ripristino temporizzato, specificare l'opzione CONTINUE_AFTER_ERROR insieme all'opzione STOPAT, STOPATMARK o STOPBEFOREMARK che è necessario specificare anche nelle istruzioni RESTORE LOG successive. Se si specifica CONTINUE_AFTER_ERROR, la sequenza di ripristino parziale ha esito positivo e il filegroup FILESTREAM non può più essere recuperato.  
   
 ## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>Ripristino a fasi nel modello di recupero con registrazione minima  

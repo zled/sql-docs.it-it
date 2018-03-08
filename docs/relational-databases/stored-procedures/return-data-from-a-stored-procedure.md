@@ -8,29 +8,57 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 785491c26c65252756c49e7b405d10cdbece831c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d4ec18d40f6777a2d72b838030e3b4305c891e6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Restituire dati da una stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Restituire dati da una stored procedure](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
 
-  Sono disponibili due modalità di restituzione di set di risultati o di dati da una procedura a un programma chiamante, cioè i parametri di output e i codici restituiti. In questo argomento vengono fornite informazioni su entrambi gli approcci.  
+  Sono disponibili tre modalità per la restituzione di dati da una procedura a un programma chiamante: i set di risultati, i parametri di output e i codici restituiti. Questo argomento offre informazioni sui tre approcci.  
+  
+  ## <a name="returning-data-using-result-sets"></a>Restituzione di dati tramite i set di risultati
+ Se si include nel corpo di una stored procedure un'istruzione SELECT (ma non un'istruzione SELECT... INTO o INSERT... SELECT), le righe specificate dall'istruzione SELECT vengono inviate direttamente al client.  Per set di risultati di grandi dimensioni, l'esecuzione della stored procedure non passa all'istruzione successiva fino a quando l'intero set di risultati non è stato inviato al client.  Per set di risultati di piccole dimensioni, i risultati vengono sottoposti a spooling per la restituzione al client e nel frattempo l'esecuzione continua.  Se durante l'esecuzione della stored procedure vengono eseguite più istruzioni SELECT di questo tipo, vengono inviati al client più set di risultati.  Questo comportamento si applica anche ai batch TSQL nidificati, alle stored procedure nidificate e ai batch TSQL di primo livello.
+ 
+ 
+ ### <a name="examples-of-returning-data-using-a-result-set"></a>Esempi di restituzione di dati tramite un set di risultati 
+  L'esempio seguente visualizza una stored procedure che restituisce i valori LastName e SalesYTD per tutte le righe SalesPerson che appaiono anche nella vista vEmployee.
+  
+ ```  
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
+    DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
+GO  
+CREATE PROCEDURE Sales.uspGetEmployeeSalesYTD  
+AS    
+  
+    SET NOCOUNT ON;  
+    SELECT LastName, SalesYTD  
+    FROM Sales.SalesPerson AS sp  
+    JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
+    
+RETURN  
+GO  
+  
+```  
+
   
 ## <a name="returning-data-using-an-output-parameter"></a>Restituzione di dati tramite un parametro di output  
  Se si specifica la parola chiave OUTPUT per un parametro nella definizione della procedura, il valore corrente del parametro può essere restituito al programma chiamante dalla procedura, se quest'ultima è disponibile. Per salvare il valore del parametro in una variabile che può essere utilizzata nel programma chiamante, in tale programma deve essere utilizzata la parola chiave OUTPUT durante l'esecuzione della procedura. Per altre informazioni sui tipi di dati che possono essere usati come parametri di output, vedere [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
@@ -114,7 +142,7 @@ GO
   
 ### <a name="examples-of-cursor-output-parameters"></a>Esempi di parametri di output di tipo cursor  
  Nell'esempio seguente viene creata una procedura in cui è specificato un parametro di output `@currency_cursor` usando il tipo di dati **cursor**. La procedura viene quindi chiamata in un batch.  
-  
+ 
  Creare innanzitutto la procedura per la dichiarazione e l'apertura di un cursore per la tabella Currency.  
   
 ```  
@@ -161,7 +189,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- I codici restituiti vengono in genere utilizzati nei blocchi per il controllo di flusso all'interno delle procedure per impostare il valore del codice restituito per ogni possibile situazione di errore. È possibile usare la funzione @@ERROR dopo un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] per rilevare se si è verificato un errore durante l'esecuzione dell'istruzione.  
+ I codici restituiti vengono in genere utilizzati nei blocchi per il controllo di flusso all'interno delle procedure per impostare il valore del codice restituito per ogni possibile situazione di errore. È possibile usare la funzione @@ERROR dopo un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] per rilevare se si è verificato un errore durante l'esecuzione dell'istruzione.  Prima dell'introduzione della gestione degli errori TRY/CATCH/THROW in TSQL, in certi casi i codici restituiti erano necessari per determinare l'esito positivo o negativo delle stored procedure.  Le stored procedure devono sempre indicare un esito negativo con un errore (se necessario, generato mediante THROW o RAISERROR) e non basarsi su un codice restituito per la segnalazione dell'errore.  È consigliabile evitare l'uso del codice restituito anche per la restituzione di dati dell'applicazione.
   
 ### <a name="examples-of-return-codes"></a>Esempi di codici restituiti  
  Nell'esempio seguente viene illustrata la procedura `usp_GetSalesYTD` con una modalità di gestione degli errori che consente di impostare valori speciali del codice restituito per errori diversi. Nella tabella seguente sono inclusi i valori interi assegnati dalla procedura a ogni possibile errore e viene indicato il significato di ogni valore.  

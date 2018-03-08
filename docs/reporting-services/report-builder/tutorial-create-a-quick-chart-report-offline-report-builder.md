@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,13 +19,13 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: "31"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7aeaa7ce698d5fd2b7f0d9823fb89a201bed96eb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3851cd1793ddb98c29fddd82654adfba887b44d3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Grafico a torta rapido di Generatore report](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Grafico a torta rapido di Generatore report")  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Se si usano dati XML o una query [!INCLUDE[tsql](../../includes/tsql-md.md)], è necessario avere accesso a Generatore report. È possibile avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] da un server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint, oppure è possibile scaricare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dall'Area download Microsoft. Per altre informazioni, vedere [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Due modi per eseguire questa esercitazione  
@@ -225,7 +223,7 @@ L'area di progettazione viene ingrandita man mano che viene trascinata.
 
 5. Nella scheda **Carattere** selezionare **Grassetto** e modificare **Colore** in **Bianco**.
 
-6. Scegliere **OK**.     
+6. Fare clic su **OK**.     
   
  Per altre informazioni sulla personalizzazione di etichette e legende dei grafici, vedere [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) e [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   

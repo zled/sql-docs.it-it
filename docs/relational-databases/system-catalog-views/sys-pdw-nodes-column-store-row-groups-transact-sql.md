@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Documenti Microsoft
+title: sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31eb71e09e041f6d23c0c88e1ca1423f3693faa7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75e4229fde3cae66cdd2172c0f2bea0cbf63bf10
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>Sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Fornisce informazioni sull'indice columnstore cluster in base al segmento per facilitare l'amministratore di system management in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **Sys.pdw_nodes_column_store_row_groups** dispone di una colonna per il numero totale di righe archiviate fisicamente (incluse quelle contrassegnate come eliminate) e una colonna per il numero di righe contrassegnate come eliminate. Utilizzare **sys.pdw_nodes_column_store_row_groups** per determinare quale riga gruppi hanno una percentuale elevata di righe eliminate e deve essere ricompilati.  
@@ -33,10 +35,10 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID della tabella sottostante. Questa è la tabella fisica sul nodo di calcolo, non object_id per la tabella logica nel nodo di controllo. Ad esempio, object_id corrisponde a object_id in sys. Tables.<br /><br /> Per creare un join con Sys. Tables, utilizzare sys.pdw_index_mappings.|  
 |**index_id**|**int**|ID dell'indice columnstore cluster in *object_id* tabella.|  
-|**numero_partizione**|**int**|ID di partizione della tabella che contiene il gruppo di righe *row_group_id*. È possibile utilizzare *numero_partizione* per unire questa DMV a Sys. Partitions.|  
+|**partition_number**|**int**|ID di partizione della tabella che contiene il gruppo di righe *row_group_id*. È possibile utilizzare *numero_partizione* per unire questa DMV a Sys. Partitions.|  
 |**row_group_id**|**int**|ID del gruppo di righe. Univoco all'interno della partizione.|  
 |**dellta_store_hobt_id**|**bigint**|Hobt_id per i gruppi di righe delta o NULL se il tipo del gruppo di righe non è delta. Un gruppo di righe delta è un gruppo di righe di lettura/scrittura che accetta nuovi record. È un gruppo di righe delta di **aprire** stato. Un gruppo di righe delta presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.|  
-|**stato**|**tinyint**|Numero ID associato a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state**|**tinyint**|Numero ID associato a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|Descrizione dello stato persistente del gruppo di righe:<br /><br /> OPEN: un gruppo di righe di lettura/scrittura che accetta nuovi record. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> CLOSED: un gruppo di righe riempito, ma non ancora compresso dal processo tuple-mover.<br /><br /> COMPRESSED: un gruppo di righe riempito e compresso.|  
 |**total_rows**|**bigint**|Righe totali archiviate fisicamente nel gruppo di righe. È possibile che alcune siano state eliminate, ma risultano comunque archiviate. Il numero massimo di righe in un gruppo di righe è 1.048.576 (esadecimale FFFFF).|  
 |**deleted_rows**|**bigint**|Numero di righe archiviate fisicamente nel gruppo di righe contrassegnate per l'eliminazione.<br /><br /> Sempre 0 per DELTA i gruppi di righe.|  
@@ -55,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  Quando un gruppo di righe columnstore risulta riempito, viene compresso e non accetta più nuove righe. Quando vengono eliminate righe da un gruppo compresso, vengono contrassegnate come eliminate, ma risultano ancora presenti. Gli aggiornamenti a un gruppo compresso vengono implementati come un'eliminazione dal gruppo compresso e come un inserimento in un gruppo aperto.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede **VIEW SERVER STATE** autorizzazione.  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -111,8 +113,8 @@ ORDER BY 1, 2
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Data Warehouse e viste del catalogo Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [CREATE COLUMNSTORE INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [Sys.pdw_nodes_column_store_segments &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [Sys.pdw_nodes_column_store_dictionaries &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

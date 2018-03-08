@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8eb6456165c38406ac0aceb35d9e402b8d0706b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 877f35988bceb86425b4517eb331ce526b9168f8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;struttura&gt;. CASI
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +53,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativa. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco di espressioni separate da virgola.  
@@ -68,8 +66,8 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *espressione della condizione*  
  Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
- *espressione*  
- Facoltativa. Espressione che restituisce un valore scalare.  
+ *expression*  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
  Se il drill-through è attivato sia nella struttura che nel modello, qualsiasi membro di un ruolo che dispone di autorizzazioni drill-through per il modello di data mining e per la struttura di data mining può restituire le colonne della struttura non incluse nel modello utilizzando la sintassi seguente:  
@@ -108,6 +106,6 @@ WHERE IsTestCase();
  [DMX SELECT &#40; &#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40; DMX &#41; Istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40; DMX &#41; Istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

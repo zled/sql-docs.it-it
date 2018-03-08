@@ -1,39 +1,31 @@
 ---
 title: Posta elettronica database e gli avvisi di posta elettronica con SQL Agent in Linux | Documenti Microsoft
-description: In questo argomento viene descritto come utilizzare posta elettronica database e gli avvisi di posta elettronica con SQL Server in Linux
+description: In questo articolo viene descritto come utilizzare posta elettronica database e gli avvisi di posta elettronica con SQL Server in Linux
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: tbd
 ms.workload: Inactive
-ms.openlocfilehash: 5ee028c91cfc9a3a5b32a7f75526c9a10b01db86
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 69d1ff539d2e488030f32b9246f1ccf40d92bdd8
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Posta elettronica database e gli avvisi di posta elettronica con SQL Agent in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 La procedura seguente mostra come impostare posta elettronica database e usarlo con SQL Server Agent (**mssql-server agent**) in Linux. 
-
-> [!NOTE]
-> Per utilizzare posta elettronica database con SQL Server in Linux, è necessario utilizzare SQL Server 2017 RC1 o versioni successive.
-
-## <a name="prerequisites"></a>Prerequisiti
-
-- SQL Server 2017 RC1 e versioni successive
-- SQL Server Agent v14.0.800.90-2 e versioni successive (se si prevede di utilizzare la posta elettronica per gli avvisi)
 
 ## <a name="1-enable-db-mail"></a>1. Abilitare posta elettronica database
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - endpoints [SQL Server], database mirroring
 - server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2563b8b93e4f3f9d4d0387a6cda8804b2f0453e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33ae2be4dae083d5b404bdcb4cd1b91d5b85feea
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Specificare un indirizzo di rete del server (Mirroring del database)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per impostare una sessione di mirroring del database, è necessario un indirizzo di rete del server per ogni istanza del server. Tale indirizzo deve identificare in maniera univoca l'istanza includendo un indirizzo di sistema e il numero di porta su cui l'istanza è in attesa.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Per impostare una sessione di mirroring del database, è necessario un indirizzo di rete del server per ogni istanza del server. Tale indirizzo deve identificare in maniera univoca l'istanza includendo un indirizzo di sistema e il numero di porta su cui l'istanza è in attesa.  
   
  Per poter specificare una porta in un indirizzo di rete del server, è necessario che l'endpoint del mirroring del database sia disponibile sull'istanza del server. Per altre informazioni, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="Syntax"></a> Sintassi per un indirizzo di rete del server  
  La sintassi per un indirizzo di rete del server presenta la struttura seguente:  
   
- TCP**://***\<indirizzo_sistema>***:***\<porta>*  
+ TCP**://***\<indirizzo-sistema>***:***\<porta>*  
   
  dove  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/20/2017
   
     -   Se i sistemi si trovano nello stesso dominio, è possibile utilizzare il nome del computer, ad esempio `SYSTEM46`.  
   
-    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio **[***<indirizzo_IPv6>***]**.  
+    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio: **[***<indirizzo_IPv6>***]**.  
   
          Per individuare l'indirizzo IP di un sistema, al prompt dei comandi di Windows immettere il comando **ipconfig** .  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
          *nome_computer* **.** *segmento_dominio*[...**.***segmento_dominio*]  
   
-         dove *nome_computer*è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[...**.***segmento_dominio*] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
+         dove *nome_computer* è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[...**.***segmento_dominio*] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
   
          Il contenuto e il numero dei segmenti di dominio sono determinati all'interno della società o dell'organizzazione. Se non si conosce il nome di dominio completo del server, consultare l'amministratore di sistema.  
   

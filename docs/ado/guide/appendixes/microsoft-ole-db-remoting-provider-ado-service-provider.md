@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbc0d0060a58d1e73fe2df94c598a1fa054abd15
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 189be564682e59c64a49e7b53dd9e6a763e92cdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Cenni preliminari sul Provider di servizi remoti Microsoft OLE DB
 Il Provider remoto Microsoft OLE DB consente a un utente locale in un computer client richiamare i provider di dati in un computer remoto. Specificare i parametri di provider di dati per il computer remoto come se fosse un utente locale sul computer remoto. Quindi specificare i parametri utilizzati dal Provider di servizi remoti di accedere al computer remoto. È quindi possibile accedere al computer remoto, come se trattasse di un utente locale.

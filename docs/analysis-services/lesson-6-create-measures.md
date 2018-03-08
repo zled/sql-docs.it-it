@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28d9d9b4cda3c97a555cce45db525cfb4a6c26f5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f3eaadefd65c49f86e4081ba0547f5ca05ae0514
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-create-measures"></a>Lezione 6: Creare misure
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +37,7 @@ In questa lezione verranno create misure sia immettendo una formula DAX sulla ba
   
 Tempo stimato per il completamento della lezione: **30 minuti**  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 5: creare colonne calcolate](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Creare misure  
@@ -92,16 +92,16 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 1.  Utilizzando la funzionalità Somma automatica, è possibile creare le misure seguenti e assegnare loro un nome:  
   
-    |Nome misura|Colonna|Somma automatica (∑)|Formula|  
+    |Nome misura|colonna|Somma automatica (∑)|Formula|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margin|Sum|=SUM([Margin])|  
-    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|Sum|=SUM([Freight])|  
+    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margin|SUM|=SUM([Margin])|  
+    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|SUM|=SUM([Freight])|  
   
 2.  Facendo clic su una cella vuota nella griglia delle misure e utilizzando la barra della formula, creare e denominare le misure seguenti nell'ordine:  
   
@@ -131,7 +131,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 Le misure create per la tabella FactInternetSales è utilizzabile per analizzare dati finanziari critici, ad esempio vendite, costi e margine di profitto per elementi definiti dal filtro selezionato di utenti.  
   
-## <a name="whats-next"></a>Operazioni successive
+## <a name="whats-next"></a>Quali sono le operazioni successive?
 Passare alla lezione successiva: [lezione 7: creare indicatori di prestazioni chiave](../analysis-services/lesson-7-create-key-performance-indicators.md).  
 
   

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '%=_TSQL'
 - '%='
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - '%= (modulo equals)'
 - '%= (modulus assignment)'
@@ -22,18 +24,18 @@ helpviewer_keywords:
 - assignment operators, %=
 - augmented operators, %=
 ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06b2992236f5d1705c10249ca07793e5fe01dff6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 064b586b1e6bbf10828ce7dfa1f8d759e5201e85
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="-modulus-assignment-transact-sql"></a>% = (Operatore di assegnazione) (Transact-SQL)
+# <a name="-modulus-assignment-transact-sql"></a>%= (Modulus Assignment) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Esegue la divisione tra due numeri e imposta un valore sul risultato dell'operazione. Ad esempio, se una variabile @x è uguale a 38, quindi @x % = 5 accetta il valore originale di @x, divisione per 5 e imposta @x al resto della divisione (3).  
@@ -58,7 +60,7 @@ expression %= expression
   
 ## <a name="see-also"></a>Vedere anche  
  [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

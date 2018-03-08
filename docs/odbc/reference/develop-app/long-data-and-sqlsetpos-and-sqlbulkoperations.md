@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 51662d6540fb8db0eed5456e918313a71ccbccc8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7684c15df244828211c2b87acd7314a7e05bea5e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Dati di tipo Long e SQLSetPos e SQLBulkOperations
 Come accade con i parametri nelle istruzioni SQL, dati di tipo long possono essere inviati quando l'aggiornamento di righe con **SQLBulkOperations** o **SQLSetPos** o durante l'inserimento di righe con **SQLBulkOperations**. I dati vengono inviati in parti, con più chiamate a **SQLPutData**. Le colonne per cui i dati vengono inviati in fase di esecuzione sono noti come *colonne data-at-execution*.  

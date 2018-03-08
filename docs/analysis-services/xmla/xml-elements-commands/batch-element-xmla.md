@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Batch Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e1edca7bbdaed14cf90d6fbe8cc92de5ad1f24d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8591a521cb1d3fce934e32be3d7b5cd3a4a977c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="batch-element-xmla"></a>Elemento Batch (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Esegue uno o più XML per i comandi Analysis (XMLA) come un'operazione batch, in sequenza o in parallelo, in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -55,10 +53,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>Attributi  
   
-|Attribute|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |ProcessAffectedObjects|(Facoltativo **booleano** attributo) indica se tutti gli oggetti che richiedono la rielaborazione saranno elaborati.<br /><br /> Se impostato su true, il [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza elabora tutti gli oggetti che richiedono la rielaborazione in seguito all'elaborazione di un oggetto incluso nel **Batch** comando.<br /><br /> Se impostato su **false**, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza elabora solo gli oggetti inclusi nel **Batch** comando.|  
 |Transazione|(Facoltativo **booleano** attributo) indica se il comando è incluso nel **Batch** comando vengono considerati come una singola transazione o le singole transazioni.<br /><br /> Se impostato su true, tutti i comandi inclusi nel **Batch** comando sono considerati una singola transazione. Se un comando ha esito negativo, i comandi eseguiti prima del comando non riuscito il rollback e **Batch** comando Arresta senza eseguire i comandi successivi.<br /><br /> Se impostato su **false**, **Batch** comando tenta di eseguire ogni comando e viene eseguito il commit i risultati di ogni comando che viene completata correttamente.|  

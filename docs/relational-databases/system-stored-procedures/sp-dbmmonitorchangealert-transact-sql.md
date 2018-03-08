@@ -1,5 +1,5 @@
 ---
-title: sp_dbmmonitorchangealert (Transact-SQL) | Documenti Microsoft
+title: sp_dbmmonitorchangealert (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorchangealert_TSQL
 - sp_dbmmonitorchangealert
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 276f3b3f6f3194a311874db3724f07bf8ab053d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41132fa5fd69036e9bc504628cd353d809d6a0bf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +74,7 @@ sp_dbmmonitorchangealert database_name
 > [!NOTE]  
 >  Per visualizzare i valori correnti, eseguire il [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) stored procedure.  
   
- *abilitato*  
+ *enabled*  
  Specifica se l'avviso è abilitato.  
   
  0 = L'avviso è disabilitato.  
@@ -88,7 +90,7 @@ sp_dbmmonitorchangealert database_name
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -99,7 +101,7 @@ sp_dbmmonitorchangealert database_name
 |1|Transazione non inviata meno recente|30 minuti|Sì|  
 |2|Log non inviato|10.000 KB|Sì|  
 |3|Log non ripristinato|10.000 KB|Sì|  
-|4|Overhead commit mirror|1.000 millisecondi|No|  
+|4|Overhead commit mirror|1.000 millisecondi|no|  
 |5|Periodo di memorizzazione|8 ore|Sì|  
   
 ```  
@@ -112,7 +114,7 @@ EXEC sp_dbmmonitorchangealert AdventureWorks2012, 5, 8, 1 ;
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorhelpalert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
+ [sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)  
   
   

@@ -21,12 +21,12 @@ ms.assetid:
 caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: aeb43f32eba3a900be154abf3beeb457836d730a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 9faba068fd3712b2ada9dbe3260795d4ecd19a6c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurare il gruppo di disponibilità per le transazioni distribuite
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ In una transazione distribuita, le applicazioni client funzionano con Microsoft 
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] non impedisce le transazioni distribuite per i database in un gruppo di disponibilità, anche quando il gruppo di disponibilità non è configurato per le transazioni distribuite. Tuttavia quando un gruppo di disponibilità non è configurato per le transazioni distribuite, in alcuni casi il failover potrebbe non riuscire. In particolare, l'istanza di [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] della nuova replica primaria potrebbe non essere in grado di ottenere il risultato della transazione da DTC. Per consentire all'istanza di [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] di ottenere il risultato delle transazioni in dubbio da DTC dopo il failover, configurare il gruppo di disponibilità per le transazioni distribuite. 
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Prima di configurare un gruppo di disponibilità per supportare le transazioni distribuite, è necessario soddisfare i prerequisiti seguenti:
 
@@ -86,7 +86,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
-   WITH (
+   SET (
       DTC_SUPPORT = PER_DB  
       );
 ```
@@ -187,7 +187,7 @@ Dopo il commit o il rollback della transazione, è possibile usare `ALTER DATABA
 
 Per altre informazioni sulla risoluzione delle transazioni in dubbio, vedere [Risolvere le transazioni manualmente](http://technet.microsoft.com/library/cc754134.aspx).
 
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 
 [Transazioni distribuite](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

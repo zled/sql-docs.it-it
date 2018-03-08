@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d53ac25527e482ae043adeef1c56e5024cb78eb1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-source"></a>Origine CDC
   Tramite l'origine CDC viene letto un intervallo di dati delle modifiche da tabelle delle modifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; queste vengono poi recapitate a valle ad altri componenti SSIS.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Error Code**: il valore è sempre -1.  
   
--   **Error Column**: colonna di origine che provoca l'errore (per gli errori di conversione).  
+-   **Error Column**(Colonna errore): colonna di origine che provoca l'errore (per gli errori di conversione).  
   
 -   **Error Row Columns**: dati del record che provocano l'errore.  
   
@@ -228,7 +229,7 @@ use <cdc-enabled-database-name>
  **Troncamento**  
  Consente di selezionare il modo in cui l'origine CDC deve gestire il troncamento in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
- **Description**  
+ **Descrizione**  
  Non usato.  
   
  **Imposta questo valore nelle celle selezionate**  

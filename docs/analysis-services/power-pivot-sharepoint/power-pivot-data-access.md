@@ -5,29 +5,27 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9e5ea91f535ca2897e0b0de7859647992a1bd388
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7783dd3fabfe32359b8d2da35ad9eda25a91057f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-access"></a>Accesso ai dati PowerPivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo argomento vengono descritte le modalità con cui i dati vengono recuperati da un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartella di lavoro pubblicata in una raccolta di SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Questo argomento illustra la modalità con cui i dati vengono recuperati da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicata in una raccolta di SharePoint.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono archiviati in una cartella di lavoro di Excel. La stringa di connessione è un URL di una cartella di lavoro in un sito di SharePoint.  
   
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/08/2017
  Non tutti i dati nella cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono gestiti da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Tramite Excel Services vengono elaborati i dati di celle e tabelle in un foglio di lavoro. Solo le tabelle e i grafici pivot e i filtri dei dati che non risultano allineati ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono gestiti da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Connetti ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
+ [Connettersi ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Accesso ai dati di modello tabulare](../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   

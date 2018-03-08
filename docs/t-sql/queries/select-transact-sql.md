@@ -1,5 +1,5 @@
 ---
-title: SELECT (Transact-SQL) | Documenti Microsoft
+title: SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT_TSQL
 - SELECT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - retrieving rows
 - SELECT statement [SQL Server]
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: b8cca7419cce15dcbb83b4aa72dc551e5eb89eb1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +146,7 @@ SELECT <select_criteria>
 >
 > Si supponga, ad esempio, si dispone di un indice cluster in una vista, e la vista esclude alcune righe di tabella, elenco selezionare la colonna della vista utilizza una conversione che modifica un tipo di dati da *varchar* a *intero*. In questo caso, la funzione CONVERT può essere eseguita prima della clausola WHERE viene eseguita. Insolito effettivamente. Spesso è possibile modificare la vista per evitare la sequenza di diversi, se è importante nel caso specifico. 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  La selezione di dati richiede l'autorizzazione **SELECT** per la tabella o la vista che potrebbe essere ereditata da un ambito più elevato, ad esempio l'autorizzazione **SELECT** per lo schema o l'autorizzazione **CONTROL** per la tabella. O richiede l'appartenenza di **db_datareader** o **db_owner** ruoli predefiniti del database, o **sysadmin** ruolo predefinito del server. Creazione di una nuova tabella tramite **SELECTINTO** richiede inoltre il **CREATETABLE** autorizzazione e **ALTERSCHEMA** autorizzazione per lo schema a cui appartiene la nuova tabella.  
   
 ## <a name="examples"></a>Esempi:   
@@ -269,6 +271,6 @@ ORDER BY OrderDateKey;
   
 ## <a name="see-also"></a>Vedere anche  
  [Selezionare esempi &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
- [Hint per la &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
   
 

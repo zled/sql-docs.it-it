@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - pausing Stretch Database
 - resuming Stretch Database
 ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ba1259f621ec2741d958ae2930b5d0d8b21e886
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a668af6406490e36584d9ad7754f4f783b8b0be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>Sospendere e riprendere la migrazione dei dati (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Per sospendere o riprendere la migrazione dei dati in Azure, selezionare **Estendi** per una tabella in SQL Server Management Studio e quindi selezionare **Sospendi** o **Riprendi** per sospendere o riprendere la migrazione dei dati. È anche possibile usare Transact-SQL per sospendere o riprendere la migrazione dei dati.  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 2.  Fare clic con il pulsante destro del mouse e selezionare **Estendi**, quindi scegliere **Sospendi**.  
   
 ### <a name="use-transact-sql-to-pause-data-migration"></a>Usare Transact-SQL per sospendere la migrazione dei dati  
- Eseguire questo comando.  
+ Eseguire il comando seguente.  
   
 ```sql  
 USE <Stretch-enabled database name>;

@@ -1,5 +1,5 @@
 ---
-title: DATEADD (Transact-SQL) | Documenti Microsoft
+title: DATEADD (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEADD
 - DATEADD_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - add interval to date or time [SQL Server]
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEADD
 - DATEADD function [SQL Server]
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-caps.latest.revision: "71"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db5499d73b4eab7ff4ba3079469412cc30a111a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: f3aa417b85782fa806961b107658403e51f7afe6
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,23 +56,23 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>Argomenti  
 *parte di una data*  
-È la parte di *data* a cui un **intero***numero* viene aggiunto. La tabella seguente elenca tutti validi *datepart* argomenti. Variabili definite dall'utente equivalenti non sono valide.
+È la parte di *data* a cui un **integer * * * numero* viene aggiunto. La tabella seguente elenca tutti validi *datepart* argomenti. Variabili definite dall'utente equivalenti non sono valide.
   
 |*parte di una data*|Abbreviazioni|  
 |---|---|
-|**anno**|**aa**, **aaaa**|  
-|**trimestre**|**q**, **q**|  
-|**mese**|**mm**, **m**|  
-|**DayOfYear**|**dy**, **y**|  
-|**giorno**|**gg**, **d**|  
+|**anno**|**yy**, **yyyy**|  
+|**trimestre**|**qq**, **q**|  
+|**month**|**mm**, **m**|  
+|**dayofyear**|**dy**, **y**|  
+|**day**|**dd**, **d**|  
 |**settimana**|**wk**, **ww**|  
-|**giorno della settimana**|**DW**, **w**|  
-|**ora**|**hh**|  
-|**minuto**|**mi**,**n**|  
-|**secondo**|**ss**, **s**|  
-|**millisecondi**|**MS**|  
-|**microsecondi**|**MCS**|  
-|**nanosecondi**|**NS**|  
+|**giorno della settimana**|**dw**, **w**|  
+|**hour**|**hh**|  
+|**minute**|**mi**, **n**|  
+|**second**|**ss**, **s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *number*  
 È un'espressione che può essere risolta in un [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) che viene aggiunto a un *datepart* di *data*. Le variabili definite dall'utente sono valide.  
@@ -93,24 +95,24 @@ Ogni *datepart* e relative abbreviazioni restituiscono lo stesso valore.
 Se *datepart* è **mese** e *data* mese ha più giorni del mese restituito e *data* giorno non esiste nel mese restituito, viene restituito l'ultimo giorno del mese. Ad esempio, settembre ha 30 giorni. Pertanto, le due istruzioni seguenti restituiscono 2006-09-30 00:00:00.000:
   
 ```sql
-SELECT DATEADD(month, 1, '2006-08-30');
-SELECT DATEADD(month, 1, '2006-08-31');
+SELECT DATEADD(month, 1, '20060830');
+SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>Argomento number  
 Il *numero* argomento non può superare l'intervallo di **int**. Nelle istruzioni seguenti, l'argomento per *numero* supera l'intervallo di **int** di 1. Viene restituito il messaggio di errore seguente: "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
   
 ```sql
-SELECT DATEADD(year,2147483648, '2006-07-31');  
-SELECT DATEADD(year,-2147483649, '2006-07-31');  
+SELECT DATEADD(year,2147483648, '20060731');  
+SELECT DATEADD(year,-2147483649, '20060731');  
 ```  
   
 ## <a name="date-argument"></a>Argomento date  
 Il *data* argomento non può essere incrementato su un valore compreso nell'intervallo del tipo di dati. Nelle istruzioni seguenti, il *numero* valore aggiunto per il *data* valore supera l'intervallo del *data* tipo di dati. Viene restituito il messaggio di errore seguente: "`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`".
   
 ```sql
-SELECT DATEADD(year,2147483647, '2006-07-31');  
-SELECT DATEADD(year,-2147483647, '2006-07-31');  
+SELECT DATEADD(year,2147483647, '20060731');  
+SELECT DATEADD(year,-2147483647, '20060731');  
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>Valori restituiti per una data smalldatetime e un valore datepart in secondi o secondi frazionari  

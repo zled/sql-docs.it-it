@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syslanguages_TSQL
 - syslanguages
 - syslanguages_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syslanguages system table
 - sys.syslanguages compatibility view
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d0a0b2a001f40b8884faa1c8c22415708ba377f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 47eb77543c650a16650680435e5d0db7d395eade
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,12 +50,12 @@ ms.lasthandoff: 11/17/2017
 |months|**nvarchar(372)**|Elenco delimitato da virgole dei nomi completi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 20 caratteri.|  
 |shortmonths|**nvarchar(132)**|Elenco delimitato da virgole dei nomi brevi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 9 caratteri.|  
 |days|**nvarchar(217)**|Elenco delimitato da virgole dei nomi dei giorni da lunedì a domenica. Ogni nome contiene un massimo di 30 caratteri.|  
-|lcid|**int**|ID delle impostazioni locali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows relative alla lingua.|  
-|msglangid|**smallint**|ID del gruppo di messaggi di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ID delle impostazioni locali di Windows relative alla lingua.|  
+|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] ID del gruppo di messaggi.|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] include le lingue installate seguenti.  
   
-|Nome in italiano|Identificatore delle impostazioni locali (LCID) di Windows|ID del gruppo di messaggi di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|Nome in italiano|Identificatore delle impostazioni locali (LCID) di Windows|[!INCLUDE[ssDE](../../includes/ssde-md.md)] ID gruppo di messaggi|  
 |---------------------|------------------|-----------------------------------------|  
 |Inglese|1033|1033|  
 |Tedesco|1031|1031|  

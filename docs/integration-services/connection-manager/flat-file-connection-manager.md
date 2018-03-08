@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,18 +25,18 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 29a1b62455247f2ba3cbcb17fafb6f0f78865230
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 73ab1f41223d78f627bd13523bf76eb4ab4d19e8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="flat-file-connection-manager"></a>Gestione connessione file flat
+# <a name="flat-file-connection-manager"></a>Flat File Connection Manager
   Una gestione connessione file flat consente a un pacchetto di accedere ai dati contenuti in un file flat. L'origine e la destinazione del file flat possono ad esempio utilizzare gestioni connessioni file flat per estrarre e caricare dati.  
   
  La gestione connessione file flat è in grado di accedere a un solo file. Per fare riferimento a più file, al posto di una gestione connessione file flat utilizzare una gestione connessione per più file flat. Per ulteriori informazioni, vedere [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/20/2017
  **Nome gestione connessione**  
  Consente di specificare un nome univoco per la connessione file flat nel flusso di lavoro. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrizione**  
  Consente di aggiungere una descrizione per la connessione. È consigliabile includere nella descrizione informazioni sugli scopi della connessione, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
  **Nome file**  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
  **Formato**  
  Consente di indicare se il file utilizza il tipo di formattazione delimitato, a larghezza fissa o non allineato a destra.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate dai delimitatori specificati nella pagina **Colonne** .|  
 |A larghezza fissa|Le colonne hanno una larghezza fissa.|  
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitatore riga di intestazione**  
  Consente di selezionare il delimitatore per la riga di intestazione nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La riga di intestazione è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
  **Nome gestione connessione**  
  Consente di specificare un nome univoco per la connessione del file flat nel flusso di lavoro. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrizione**  
  Consente di aggiungere una descrizione per la connessione. È consigliabile includere nella descrizione informazioni sugli scopi della connessione, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
 ### <a name="flat-file-format-dynamic-options"></a>Opzioni dinamiche relative al formato file flat  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
@@ -175,7 +176,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitatore di colonna**  
  Consente di selezionare il delimitatore di colonna desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le colonne sono delimitate da un ritorno a capo.|  
@@ -222,7 +223,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
@@ -246,7 +247,7 @@ ms.lasthandoff: 11/20/2017
  **Nome gestione connessione**  
  Consente di specificare un nome univoco per la gestione connessione file flat nel flusso di lavoro. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrizione**  
  Consente di aggiungere una descrizione per la gestione connessione. È consigliabile includere nella descrizione informazioni sugli scopi della gestione connessione, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
  **Configurare le proprietà delle singole colonne**  
@@ -267,7 +268,7 @@ ms.lasthandoff: 11/20/2017
  **Nuova**  
  Consente di aggiungere una **nuova**colonna. Per impostazione predefinita, il pulsante **Nuova** aggiunge una colonna alla fine dell'elenco. Il pulsante dispone inoltre delle opzioni seguenti, disponibili nell'elenco a discesa.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Aggiungi colonna**|Consente di aggiungere una nuova colonna alla fine dell'elenco.|  
 |**Inserisci prima**|Consente di inserire una nuova colonna prima di quella selezionata.|  
@@ -287,7 +288,7 @@ ms.lasthandoff: 11/20/2017
  **Nome gestione connessione**  
  Consente di specificare un nome univoco per la connessione del file flat nel flusso di lavoro. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrizione**  
  Consente di aggiungere una descrizione per la connessione. È consigliabile includere nella descrizione informazioni sugli scopi della connessione, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
  **Righe di dati da ignorare**  

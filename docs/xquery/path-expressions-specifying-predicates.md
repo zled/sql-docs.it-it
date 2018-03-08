@@ -8,27 +8,30 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - axis step [XQuery]
 - predicates [XQuery]
 - qualifiers [XQuery]
 - path expressions [XQuery]
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f852df031ee80c4db8b7161e65f4289f6c6df97
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9eafae8a2834073ef6e6db380d074b7e0290f1ee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-predicates"></a>Espressioni di percorso - specifica di predicati
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +145,7 @@ WHERE ProductModelID=7
   
      L'espressione di percorso nella query restituisce solo i nodi elemento <`Location`> per i quali è stato specificato un attributo LotSize. Se il predicato restituisce una sequenza vuota per un nodo elemento <`Location`> specifico, il relativo centro di lavorazione non verrà restituito nel risultato.  
   
-2.  Il predicato valori possono solo essere xs: integer, xs: Boolean o nodo\*. Per il nodo\*, il predicato restituisce True se sono presenti nodi e False per una sequenza vuota. Qualsiasi altro tipo numerico, ad esempio double e float, genera un errore di tipizzazione statica. Il valore di verità del predicato di un'espressione è True se e solo se il valore di tipo integer risultante è uguale al valore della posizione del contesto. Inoltre, i valori letterali integer solo e **Last** funzione riducono la cardinalità dell'espressione per passi filtrata a 1.  
+2.  Il predicato i possibili valori sono solo xs:integer, xs:Boolean o nodo\*. Per il nodo\*, il predicato restituisce True se sono presenti nodi e False per una sequenza vuota. Qualsiasi altro tipo numerico, ad esempio double e float, genera un errore di tipizzazione statica. Il valore di verità del predicato di un'espressione è True se e solo se il valore di tipo integer risultante è uguale al valore della posizione del contesto. Inoltre, i valori letterali integer solo e **Last** funzione riducono la cardinalità dell'espressione per passi filtrata a 1.  
   
      Ad esempio, la query seguente recupera il terzo nodo figlio dell'elemento <`Features`>.  
   
@@ -223,7 +226,7 @@ WHERE CatalogDescription.exist('
   
 -   La clausola WHERE specifica i [metodo exist () (tipo di dati XML)](../t-sql/xml/exist-method-xml-data-type.md).  
   
--   L'espressione di percorso all'interno di **exist ()** metodo specifica un predicato nel secondo passaggio. Se l'espressione del predicato restituisce una sequenza di almeno una caratteristica, il valore di verità dell'espressione del predicato è True. In questo caso, poiché il **exist ()** metodo restituisce True, viene restituito ProductModelID.  
+-   L'espressione di percorso all'interno di **exist()** metodo specifica un predicato nel secondo passaggio. Se l'espressione del predicato restituisce una sequenza di almeno una caratteristica, il valore di verità dell'espressione del predicato è True. In questo caso, poiché il **exist()** metodo restituisce True, viene restituito ProductModelID.  
   
 ## <a name="static-typing-and-predicate-filters"></a>Tipizzazione statica e filtri del predicato  
  I predicati possono inoltre influire sul tipo di un'espressione derivato staticamente. I valori letterali integer e **Last** funzione riducono la cardinalità dell'espressione per passi filtrata al massimo uno.  

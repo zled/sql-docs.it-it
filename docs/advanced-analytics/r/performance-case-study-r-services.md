@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0ee44976c109818292f7fa1587d6828e9f209fc1
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 83c3590714660201d7411c360958f9ff4263240b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Prestazioni per R Services: risultati e le risorse
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo è la quarta e finale in una serie che descrive ottimizzazione delle prestazioni per R Services. In questo articolo sono riepilogati i metodi, i risultati e conclusioni del case due study test diversi metodi di ottimizzazione.
 

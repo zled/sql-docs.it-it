@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46f0e525814b648b5f2b1236e1b093321974eb39
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2042efcdacf45a8638bb5197da04f903a6ffdd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deferred-fields"></a>Campi posticipati
 I valori di *posticipata campi* non vengono utilizzati quando sono impostati, ma il driver vengono salvati gli indirizzi delle variabili per un effetto posticipata. Per un descrittore del parametro dell'applicazione, il driver utilizza il contenuto delle variabili al momento della chiamata a **SQLExecDirect** o **SQLExecute**. Per un descrittore di riga dell'applicazione, il driver utilizza il contenuto delle variabili al momento l'operazione di recupero.  

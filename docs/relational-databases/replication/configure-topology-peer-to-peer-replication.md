@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc8f91a4da3bfa31f6eab0bcb492e16c9bccba0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba3f308aaa3e5eea99a7cae23630c8462414a1fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configura topologia (replica peer-to-peer)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La pagina **Configura topologia** consente di eseguire attività di configurazione comuni, ad esempio l'aggiunta di nuovi nodi, l'eliminazione di nodi e l'aggiunta di nuove connessioni tra nodi esistenti. Il nodo selezionato nella pagina **Pubblicazione** di questa procedura guidata viene visualizzato nell'area di progettazione. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse su un nodo, su una connessione o sull'area di progettazione.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="options"></a>Opzioni  
  La pagina **Configura topologia** contiene elementi e opzioni dell'interfaccia che sono disponibili quando si fa clic con il pulsante destro del mouse su un elemento. Nella tabella riportata di seguito viene descritto ogni elemento dell'interfaccia.  
   
-|Elemento dell'interfaccia|Descrizione|  
+|Elemento dell'interfaccia|Description|  
 |-----------------------|-----------------|  
 |Area di progettazione|Consente di visualizzare gli altri elementi dell'interfaccia. Per aggiungere elementi, fare clic con il pulsante destro del mouse sull'area di progettazione.|  
 |![Primo nodo in una topologia](../../relational-databases/replication/media/p2pwizard-firstnode.gif "Primo nodo in una topologia")|Nodo originale nella topologia. I nuovi nodi vengono inizializzati utilizzando una copia del database di pubblicazione dal nodo originale.|  
@@ -88,6 +88,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Vedere anche  
  [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Amministrare una topologia peer-to-peer &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Replica transazionale peer-to-peer](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

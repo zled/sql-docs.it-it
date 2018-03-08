@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_text_query_plan (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_text_query_plan_TSQL
 - dm_exec_text_query_plan_TSQL
 - sys.dm_exec_text_query_plan
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_text_query_plan dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7bb3aa76b6d09b2a1c31f30c20fb4ce4374d48d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 38650de120ae1c7cb80be3d279de9bfa0da37434
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +71,7 @@ Identifica in modo univoco un piano di query per un batch memorizzato nella cach
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_start_offset* | 0 | IMPOSTAZIONE PREDEFINITA  
+*statement_start_offset* | 0 | DEFAULT  
 Indica, in byte, la posizione iniziale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente. *statement_start_offset* è **int**. Il valore 0 indica l'inizio del batch. Il valore predefinito è 0.  
   
 È possibile ottenere l'offset iniziale dell'istruzione dagli oggetti a gestione dinamica seguenti:  
@@ -77,7 +80,7 @@ Indica, in byte, la posizione iniziale della query descritta dalla riga all'inte
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_end_offset* | -1 | IMPOSTAZIONE PREDEFINITA  
+*statement_end_offset* | -1 | DEFAULT  
 Indica, in byte, la posizione finale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente.  
   
 *statement_start_offset* è **int**.  
@@ -88,10 +91,10 @@ Il valore -1 indica la fine del batch. Il valore predefinito è -1.
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**DBID**|**smallint**|ID del database di contesto attivo al momento della compilazione dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] corrispondente a questo piano. Per istruzioni SQL ad hoc e preparate, l'ID del database in cui sono state compilate le istruzioni.<br /><br /> La colonna ammette i valori Null.|  
-|**ObjectID**|**int**|ID dell'oggetto (ad esempio, stored procedure o funzione definita dall'utente) per il piano della query. Per i batch ad hoc e preparate, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
-|**numero**|**smallint**|Valore intero della stored procedure numerata. Ad esempio, un gruppo di procedure per la **ordini** applicazione potrebbe essere denominata **orderproc; 1**, **orderproc; 2**e così via. Per i batch ad hoc e preparate, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
-|**crittografato**|**bit**|Indica se la stored procedure corrispondente è crittografata.<br /><br /> 0 = non crittografata<br /><br /> 1 = crittografata<br /><br /> La colonna non ammette i valori Null.|  
+|**dbid**|**smallint**|ID del database di contesto attivo al momento della compilazione dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] corrispondente a questo piano. Per istruzioni SQL ad hoc e preparate, l'ID del database in cui sono state compilate le istruzioni.<br /><br /> La colonna ammette i valori Null.|  
+|**objectid**|**int**|ID dell'oggetto (ad esempio, stored procedure o funzione definita dall'utente) per il piano della query. Per i batch ad hoc e preparate, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
+|**number**|**smallint**|Valore intero della stored procedure numerata. Ad esempio, un gruppo di procedure per la **ordini** applicazione potrebbe essere denominata **orderproc; 1**, **orderproc; 2**e così via. Per i batch ad hoc e preparate, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
+|**encrypted**|**bit**|Indica se la stored procedure corrispondente è crittografata.<br /><br /> 0 = non crittografata<br /><br /> 1 = crittografata<br /><br /> La colonna non ammette i valori Null.|  
 |**query_plan**|**nvarchar(max)**|Contiene la rappresentazione Showplan della fase di compilazione del piano di esecuzione di query specificato con *plan_handle*. La rappresentazione Showplan è in formato testo. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente.<br /><br /> La colonna ammette i valori Null.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -105,7 +108,7 @@ Il valore -1 indica la fine del batch. Il valore predefinito è -1.
   
 Quando una query ad hoc utilizza [semplice](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) o [parametrizzazione forzata](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), **query_plan** colonna conterrà solo il testo dell'istruzione e non il piano di query effettivo. Per restituire il piano di query, chiamare **Sys.dm exec_text_query_plan** per l'handle del piano della query con parametri preparata. È possibile determinare se la parametrizzazione della query è stata facendo riferimento al **sql** colonna del [Sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) visualizzazione o la colonna di testo del [exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)vista a gestione dinamica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire **Sys.dm exec_text_query_plan**, un utente deve essere un membro del **sysadmin** ruolo predefinito del server o disporre dell'autorizzazione VIEW SERVER STATE nel server.  
   
 ## <a name="examples"></a>Esempi  
@@ -118,7 +121,7 @@ Quando una query ad hoc utilizza [semplice](../../relational-databases/query-pro
   
  Utilizzare innanzitutto la stored procedure `sp_who` per recuperare l'ID del processo server (SPID, Server Process ID) per il processo che esegue la query o il batch:  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_who;  
@@ -127,7 +130,7 @@ GO
   
  Il set dei risultati restituito da `sp_who` indica che il valore di SPID è `54`. È possibile utilizzare questo SPID con la vista a gestione dinamica `sys.dm_exec_requests` per recuperare l'handle del piano utilizzando la query seguente:  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -137,7 +140,7 @@ GO
   
  La tabella restituita da **Sys.dm exec_requests** indica che l'handle del piano per la query con esecuzione prolungata o il batch è `0x06000100A27E7C1FA821B10600`. Nell'esempio seguente viene restituito il piano di query per l'handle del piano specificato e vengono utilizzati i valori predefiniti 0 e -1 per restituire tutte le istruzioni nella query o nel batch.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT query_plan   
@@ -148,7 +151,7 @@ GO
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. Recupero di tutti i piani di query dalla cache dei piani  
  Per recuperare uno snapshot di tutti i piani di query disponibili nella cache dei piani, è possibile recuperare gli handle per tutti i piani di query nella cache eseguendo una query sulla vista a gestione dinamica `sys.dm_exec_cached_plans`. Gli handle dei piani sono archiviati nella colonna `plan_handle` della vista `sys.dm_exec_cached_plans`. È quindi necessario utilizzare l'operatore CROSS APPLY per passare gli handle dei piani a `sys.dm_exec_text_query_plan` come illustrato di seguito. L'output per ogni piano attualmente nella cache dei piani viene indicato Showplan il `query_plan` colonna della tabella restituita.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT *   
@@ -160,7 +163,7 @@ GO
 ### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. Recupero di tutti i piani di query per cui il server ha raccolto informazioni statistiche sulle query dalla cache dei piani  
  Per recuperare uno snapshot di tutti i piani di query disponibili nella cache dei piani per i quali il server ha raccolto informazioni statistiche, è possibile recuperare gli handle dei piani per tutti i piani di query nella cache eseguendo una query sulla vista a gestione dinamica `sys.dm_exec_query_stats`. Gli handle dei piani sono archiviati nella colonna `plan_handle` della vista `sys.dm_exec_query_stats`. È quindi necessario utilizzare l'operatore CROSS APPLY per passare gli handle dei piani a `sys.dm_exec_text_query_plan` come illustrato di seguito. L'output Showplan per ogni piano viene indicato nella colonna `query_plan` della tabella restituita.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_query_stats AS qs   
@@ -171,7 +174,7 @@ GO
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Recupero di informazioni sulle prime cinque query in base al tempo medio di CPU  
  Nell'esempio seguente vengono restituiti i piani di query e il tempo medio di CPU per le prime cinque query. Il **Sys.dm exec_text_query_plan** funzione specifica i valori predefiniti 0 e -1 per restituire tutte le istruzioni nel batch nel piano di query.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
 Plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  
@@ -181,4 +184,4 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys.dm exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+ [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

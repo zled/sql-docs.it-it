@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,26 +16,26 @@ helpviewer_keywords:
 - RDS objects [ADO], object model summary
 - RDS object model [ADO]
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09738022f51016f50986e8f6164db87eff24d5f2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9423b2f6072f142336e1f36f02785b69f9efdae6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-object-model-summary"></a>Riepilogo del modello oggetto di servizi desktop remoto
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
-|Object|Description|  
+|Oggetto|Description|  
 |------------|-----------------|  
-|[RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|Questo oggetto contiene un metodo per ottenere un proxy server. Il proxy può essere il valore predefinito o un'applicazione server personalizzata (oggetto business). L'applicazione server può essere richiamata su Internet, intranet, una rete locale o da una libreria a collegamento dinamico locale.<br /><br /> Il **DataSpace** oggetto è sicuro per lo script.|  
-|[RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Questo oggetto rappresenta l'applicazione server predefinita. Esegue il servizio dati di riferimento dati aggiornamento e recupero comportamento predefinito.<br /><br /> Il **DataFactory** oggetto non è sicuro per lo scripting.|  
-|[RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Questo oggetto può richiamare automaticamente il **RDS. DataSpace** e **RDSServer** oggetti.<br /><br /> Utilizzare questo oggetto per richiamare il comportamento di aggiornamento o il recupero dei dati di servizi desktop remoto predefinito.<br /><br /> Questo oggetto consente inoltre ai controlli visuali di accesso restituito **Recordset** oggetto.<br /><br /> Il **DataControl** oggetto è sicuro per lo script.|  
+|[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|Questo oggetto contiene un metodo per ottenere un proxy server. Il proxy può essere il valore predefinito o un'applicazione server personalizzata (oggetto business). L'applicazione server può essere richiamata su Internet, intranet, una rete locale o da una libreria a collegamento dinamico locale.<br /><br /> Il **DataSpace** oggetto è sicuro per lo script.|  
+|[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Questo oggetto rappresenta l'applicazione server predefinita. Esegue il servizio dati di riferimento dati aggiornamento e recupero comportamento predefinito.<br /><br /> Il **DataFactory** oggetto non è sicuro per lo scripting.|  
+|[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Questo oggetto può richiamare automaticamente il **RDS. DataSpace** e **RDSServer** oggetti.<br /><br /> Utilizzare questo oggetto per richiamare il comportamento di aggiornamento o il recupero dei dati di servizi desktop remoto predefinito.<br /><br /> Questo oggetto consente inoltre ai controlli visuali di accesso restituito **Recordset** oggetto.<br /><br /> Il **DataControl** oggetto è sicuro per lo script.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni di base di servizi desktop remoto](../../../ado/guide/remote-data-service/rds-fundamentals.md)   

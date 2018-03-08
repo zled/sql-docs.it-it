@@ -8,9 +8,7 @@ ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: aea0b5ff0ec119cc19744220442761ae74e9bf86
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77dfb20f08e02c035cc4898fa9a5157dadd03f41
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurare un server di report per l'amministrazione remota
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è possibile configurare istanze del server di report in modalità locale o remota. Per configurare un'istanza remota del server di report, è possibile usare lo strumento di configurazione di Reporting Services oppure scrivere codice personalizzato che usi il provider WMI (Windows Management Instrumentation) per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lo strumento Gestione configurazione Reporting Services offre un'interfaccia grafica al provider WMI, per consentire di configurare un server di report senza dover scrivere codice. Quando si avvia lo strumento, è possibile specificare un server remoto a cui connettersi.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  A tale scopo, è necessario accedere al sistema localmente ed essere membri del gruppo Administrators locale. Non è possibile modificare le impostazioni di Windows Firewall di un computer remoto tramite una connessione remota.  
   
  Se si desidera abilitare l'amministrazione remota per un utente non amministratore, è necessario concedere all'account le autorizzazioni per l'attivazione remota DCOM (Distributed Component Object Model). In questo argomento vengono fornite le istruzioni per la configurazione del server per l'accesso da parte di utenti non amministratori.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="tasks"></a>Attività  
  Tra le attività che consentono di configurare un server di report remoto sono incluse le seguenti:  
   
--   Abilitare le porte in Windows Firewall per consentire le richieste sulle porte utilizzate dal server di report e dall'istanza del Motore di database di SQL Server.  Vedere [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) e [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+-   Abilitare le porte in Windows Firewall per consentire le richieste sulle porte utilizzate dal server di report e dall'istanza del Motore di database di SQL Server.  Vedere [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) e [Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 -   Consentire le connessioni remote all'istanza del Motore di database che ospita il database del server di report. Una connessione remota è necessaria per la configurazione della connessione al database del server di report e per la gestione delle chiavi di crittografia.  
   

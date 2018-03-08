@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bc82bed550b790ffc191d4d10463d2255368ff8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8092282c18758860ee76f9e61108aa6db1551bc8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-user-defined-types"></a>Utilizzo dei tipi definiti dall'utente (UDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,16 +51,16 @@ ms.lasthandoff: 11/17/2017
 ### <a name="data-bindings-and-coercions"></a>Associazione dati e coercizioni  
  Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si utilizzano i tipi di dati elencati con un tipo definito dall'utente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le colonne di tipo definito dall'utente vengono esposte tramite il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client come DBTYPE_UDT. È possibile ottenere i metadati tramite i set di righe dello schema appropriati in modo da potere gestire i tipi definiti personalizzati come oggetti.  
   
-|Tipo di dati|Al server<br /><br /> **UDT**|Al server<br /><br /> **non definito dall'utente**|Dal server<br /><br /> **UDT**|Dal server<br /><br /> **non definito dall'utente**|  
+|Tipo di dati|Al server<br /><br /> **UDT**|Al server<br /><br /> **non-UDT**|Dal server<br /><br /> **UDT**|Dal server<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Supportato<sup>6</sup>|Errore<sup>1</sup>|Supportato<sup>6</sup>|Errore<sup>5</sup>|  
-|DBTYPE_BYTES|Supportato<sup>6</sup>|N/D<sup>2</sup>|Supportato<sup>6</sup>|N/D<sup>2</sup>|  
-|DBTYPE_WSTR|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|Supportato<sup>4, 6</sup>|N/D<sup>2</sup>|  
-|DBTYPE_BSTR|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|Supportato<sup>4</sup>|N/D<sup>2</sup>|  
-|DBTYPE_STR|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|Supportato<sup>4, 6</sup>|N/D<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Non supportato|N/D<sup>2</sup>|Non supportato|N/D<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 SINGOLO &#124; VT_ARRAY)|Supportato<sup>6</sup>|N/D<sup>2</sup>|Supportato<sup>4</sup>|N/D<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|N/D|N/D<sup>2</sup>|  
+|DBTYPE_BYTES|Supportato<sup>6</sup>|N/A<sup>2</sup>|Supportato<sup>6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_WSTR|Supportato<sup>3,6</sup>|N/A<sup>2</sup>|Supportato<sup>4, 6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_BSTR|Supportato<sup>3,6</sup>|N/A<sup>2</sup>|Supportato<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_STR|Supportato<sup>3,6</sup>|N/A<sup>2</sup>|Supportato<sup>4, 6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Non supportato|N/A<sup>2</sup>|Non supportato|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Supportato<sup>6</sup>|N/A<sup>2</sup>|Supportato<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Supportato<sup>3,6</sup>|N/A<sup>2</sup>|N/D|N/A<sup>2</sup>|  
   
  <sup>1</sup>se un server di tipo diverso da DBTYPE_UDT è specificato con **ICommandWithParameters:: SetParameterInfo** e il tipo di funzione di accesso è DBTYPE_UDT, si verifica un errore quando viene eseguita l'istruzione (DB_E_ERRORSOCCURRED; stato del parametro è DBSTATUS_E_BADACCESSOR). In caso contrario, i dati vengono inviati al server, ma il server restituisce un errore indicando che non è possibile eseguire una conversione implicita dal tipo definito dall'utente al tipo di dati del parametro.  
   
@@ -214,7 +214,7 @@ ms.lasthandoff: 11/17/2017
  Quando si esegue la conversione dai tipi di dati C ai tipi di dati SQL, SQL_C_WCHAR, SQL_C_BINARY e SQL_C_CHAR possono essere convertiti tutti in SQL_SS_UDT. Tenere tuttavia presente che i dati binari vengono convertiti in una stringa esadecimale durante la conversione dai tipi di dati SQL SQL_C_WCHAR e SQL_C_CHAR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità di SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Funzionalità SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [OLE DB ISSCommandWithParameters &#40; &#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

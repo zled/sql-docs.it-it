@@ -8,22 +8,20 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4eb8037bfbb7f1fd3edebcd108c59fe8168ffeff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6dd79986579847f890ec4387602c833b4f48d7cb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
@@ -154,7 +152,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  In **Percorso report**specificare una barra seguita dal percorso della cartella e dal nome del report. **Non** includere il nome del server o la directory virtuale di Gestione report. Ad esempio, per aprire il report "Company Sales" nella cartella Adventure Works, specificare **/Adventure Works/Company Sales**. Di seguito è riportato un altro esempio in cui il report "Products" si trova nella cartella radice del server di report **/Products**.  
   
-9. Scegliere **OK**.  
+9. Fare clic su **OK**.  
   
 #### <a name="add-report-explorer-and-connect-to-report-viewer"></a>Aggiungere Esplora report ed effettuare il collegamento a Visualizzatore report  
   
@@ -166,7 +164,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  Facoltativamente, impostare il **Percorso iniziale**. Il percorso iniziale rappresenta la cartella nella gerarchia di cartelle del server di report. È possibile specificare un percorso iniziale se si desidera che la pagina predefinita sia una cartella che si trova a un livello inferiore nella gerarchia. Il percorso deve iniziare con una barra. È necessario specificare un percorso completo che inizi con il nodo radice della gerarchia di cartelle del server di report, ma non includa il nome del server o la directory virtuale di Gestione report. Per aprire ad esempio una cartella denominata Adventure Works che si trova al livello immediatamente inferiore rispetto al nodo radice, specificare **/Adventure Works** come percorso iniziale.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 6.  In Esplora report verrà visualizzato un elenco degli elementi del report nel relativo server. Per impostazione predefinita, se si fa clic sul nome di un report, quest'ultimo verrà aperto in una nuova finestra. Completare i passaggi riportati di seguito se si desidera collegare Esplora report a Visualizzatore report in modo che quando si fa clic sul nome di un report in Esplora report, questo venga visualizzato in Visualizzatore report.  
   

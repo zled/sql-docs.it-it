@@ -1,7 +1,7 @@
 ---
 title: Impostazioni (conversione) (DB2ToSQL) del progetto | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e40e6f4d56f3c246516de617dbdc4a7c9516db9c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f459472409e9fc85322aca5067d0953bd24831a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Impostazioni del progetto (conversione) (DB2ToSQL)
 La pagina di conversione del **impostazioni progetto** la finestra di dialogo contiene le impostazioni che consentono di personalizzare come SSMA Converte la sintassi per DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintassi.  

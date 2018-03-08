@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e51769f7-aac7-4835-a5ae-91aac04aa476
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 60d264dccf042ec9447d92f17045f238597cd29e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4992c9a621964f8125178f114a930b1f4e007179
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>Installare, distribuire e fare riferimento al modello a oggetti tabulare
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In questo articolo viene illustrato come scaricare, fare riferimento e ridistribuire Analysis Services tabulare oggetto modello TOM (), una libreria di c# per la creazione e gestione di database nel codice gestito e i modelli tabulari.  
@@ -39,8 +37,8 @@ La tabella seguente descrive ciascun assembly.
 Assembly  |Funzionalità  |Classi importanti |
 ---------|---------|--------------  |
 Core <br/>Microsoft.AnalysisServices.Core.dll | In genere per il database sia tabulare e multidimensionale. <br/><br/>Fornisce gestione delle eccezioni, generiche connessioni a un'istanza di Analysis Services e un database e l'accesso a proprietà e metodi comuni per gli oggetti Server e Database. <br/><br/>È necessario per qualsiasi soluzione AMO per SQL Server 2016. | Core&nbsp;Server<br/>Core&nbsp;Database<br/>Eccezione AmoException
-TOM<br/> Microsoft.AnalysisServices.Tabular.dll, versione 13.0.1601.5 o versione successiva.| Creare e gestire gli oggetti di metadati tabulari. | TOM&nbsp;Server <br/>TOM&nbsp;Database<br /> Modello<br /> Tabella<br /> Colonna<br /> Relazione
-  AMO<br /> Microsoft.AnalysisServices.dll| Creare e gestire oggetti di metadati multidimensionali, inclusi i database tabulare 1050-1103. | AMO&nbsp;Server <br />AMO&nbsp;Database <br /> Cube <br /> Dimensione <br /> MeasureGroup 
+TOM<br/> Microsoft.AnalysisServices.Tabular.dll, versione 13.0.1601.5 o versione successiva.| Creare e gestire gli oggetti di metadati tabulari. | TOM&nbsp;Server <br/>TOM&nbsp;Database<br /> Modello<br /> Tabella<br /> colonna<br /> Relazione
+  AMO<br /> Microsoft.AnalysisServices.dll| Creare e gestire oggetti di metadati multidimensionali, inclusi i database tabulare 1050-1103. | AMO&nbsp;Server <br />AMO&nbsp;Database <br /> Cube <br /> Dimension <br /> MeasureGroup 
 Json<br/>Microsoft.AnalysisServices.Tabular.Json.dll | Supporto DLL che esegue il wrapping NewtonSoftJson.dll (JSON.NET) per controllare gli aggiornamenti, rimuovendo il rischio di introdurre modifiche funzionali per la serializzazione JSON nei carichi di lavoro di Analysis Services. <br /> <br />Questa DLL esiste come una dipendenza in TOM e non deve essere utilizzato direttamente nel codice. | nessuna.  
   
  ### <a name="understanding-assembly-dependencies"></a>Informazioni sulle dipendenze di assembly
@@ -106,7 +104,7 @@ Spazio dei nomi principale nel codice di riferimento non è necessaria. le class
    * Microsoft.AnalysisServices.Tabular  
    * Microsoft.AnalysisSerivces.Tabular.Json  
   
-3. Scegliere **OK**.  In **Esplora**, verificare gli assembly siano presenti nella cartella riferimenti.
+3. Fare clic su **OK**.  In **Esplora**, verificare gli assembly siano presenti nella cartella riferimenti.
   
 4. Nella pagina di codice, aggiungere lo spazio dei nomi analysisservces se i database e i modelli tabulari 1200 o livello di compatibilità superiore. 
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-visual-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - database diagrams [SQL Server], saving
 - diagrams [SQL Server], saving
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6da23abe1967901dad49287cb757bf1832369fa9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2c3a0745ab34f997bd614b091cb8d2c6a0b1aa80
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Salvataggio di diagrammi di database (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Salvando un diagramma di database è possibile salvare tutte le modifiche, comprese quelle apportate nelle tabelle, nelle colonne e in altri oggetti di database.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Salvando un diagramma di database è possibile salvare tutte le modifiche, comprese quelle apportate nelle tabelle, nelle colonne e in altri oggetti di database.  
   
 ### <a name="to-save-the-database-diagram"></a>Per salvare il diagramma di database  
   
-1.  Dal menu **File** scegliere **Salva \<***nometabella***>**.  
+1.  Scegliere **Salva \<***nometabella***>** dal menu **File**.  
   
 2.  Se si salvano diagrammi nuovi per la prima volta, viene visualizzata la finestra di dialogo **Salva con nome** . Digitare un nome per il diagramma.  
   

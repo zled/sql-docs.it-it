@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: DataTypeEnum
-helpviewer_keywords: DataTypeEnum enumeration [ADO]
+f1_keywords:
+- DataTypeEnum
+helpviewer_keywords:
+- DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 70e44dc6ea6eb3622b43f241827ad5cae7a7df44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f99476b2ccbf9e405d29eca6adbf49ce22fc3f85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Specifica il tipo di dati di un [campo](../../../ado/reference/ado-api/field-object.md), [parametro](../../../ado/reference/ado-api/parameter-object.md), o [proprietà](../../../ado/reference/ado-api/property-object-ado.md). L'indicatore del tipo OLE DB corrispondente è racchiusa tra parentesi nella colonna Descrizione della tabella seguente.  
   
-|Costante|valore|Description|  
+|Costante|Valore|Description|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|Un valore del flag, sempre combinato con un'altra costante del tipo di dati, che indica una matrice del tipo di dati. Si applica ad ADOX.|  
 |**adBigInt**|20|Indica un intero con segno a 8 byte (DBTYPE_I8).|  
@@ -37,7 +40,7 @@ Specifica il tipo di dati di un [campo](../../../ado/reference/ado-api/field-obj
 |**adBoolean**|11|Indica un **booleano** valore (DBTYPE_BOOL).|  
 |**adBSTR**|8|Indica una stringa di caratteri con terminazione null (Unicode) (DBTYPE_BSTR).|  
 |**adChapter**|136|Indica un valore a quattro byte capitolo che identifica le righe in un set di righe figlio (DBTYPE_HCHAPTER).|  
-|**Famiglia**|129|Indica un valore stringa (DBTYPE_STR).|  
+|**adChar**|129|Indica un valore stringa (DBTYPE_STR).|  
 |**adCurrency**|6|Indica un valore di valuta (DBTYPE_CY). Valuta è un numero a virgola fissa con quattro cifre a destra del separatore decimale. Vengono archiviati in un intero con segno a 8 byte ridimensionato di 10.000.|  
 |**adDate**|7|Indica un valore di data (DBTYPE_DATE). Una data viene archiviata come valore double, la parte intera è il numero di giorni a partire dal 30 dicembre 1899, e la parte frazionaria è la frazione del giorno.|  
 |**adDBDate**|133|Indica un valore di data (aaaammgg) (DBTYPE_DBDATE).|  
@@ -50,7 +53,7 @@ Specifica il tipo di dati di un [campo](../../../ado/reference/ado-api/field-obj
 |**adFileTime**|64|Indica un valore a 64 bit che rappresenta il numero di intervalli da 100 nanosecondi trascorsi dal 1 gennaio 1601 (DBTYPE_FILETIME).|  
 |**adGUID**|72|Indica un identificatore univoco globale (GUID) (DBTYPE_GUID).|  
 |**adIDispatch**|9|Indica un puntatore a un **IDispatch** interfaccia su un oggetto COM (DBTYPE_IDISPATCH).<br /><br /> **Nota** questo tipo di dati non è supportato da ADO. Utilizzo può provocare risultati imprevisti.|  
-|**Tutti**|3|Indica un intero con segno a 4 byte (DBTYPE_I4).|  
+|**adInteger**|3|Indica un intero con segno a 4 byte (DBTYPE_I4).|  
 |**adIUnknown**|13|Indica un puntatore a un **IUnknown** interfaccia su un oggetto COM (DBTYPE_IUNKNOWN).<br /><br /> **Nota** questo tipo di dati non è supportato da ADO. Utilizzo può provocare risultati imprevisti.|  
 |**adLongVarBinary**|205|Indica un valore binario lungo.|  
 |**adLongVarChar**|201|Indica un valore stringa lunga.|  
@@ -73,7 +76,7 @@ Specifica il tipo di dati di un [campo](../../../ado/reference/ado-api/field-obj
 |**adWChar**|130|Indica una terminazione null stringa di caratteri Unicode (DBTYPE_WSTR).|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacchetto: **com.ms. wfc.**  
+ Package: **com.ms.wfc.data**  
   
 |Costante|  
 |--------------|  

@@ -3,7 +3,7 @@ title: Eseguire SQL Server Profiler | Documenti Microsoft
 ms.custom: 
 ms.date: 7/7/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f9327a1cdb70be829701fa0710f5833545f8a0d2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7b875fa70017ce162ca50aa7d6d0235627d2f5f8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-sql-server-profiler"></a>Eseguire SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]È possibile eseguire [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in diversi modi, per supportare la raccolta di traccia di output in una vasta gamma di scenari. È possibile avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] da Windows 10 **avviare** dal menu dal **strumenti** menu [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata e da diverse posizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

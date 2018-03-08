@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b321e64b93a696f9a21ceef3279a6b89bea90974
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2341db7864a6122ae9bb182afe664f10fd73359
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-7-restore-a-database-to-a-point-in-time"></a>Lezione 7: Ripristino di un database con temporizzazione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In questa lezione il database AdventureWorks2014 verrà ripristinato in base a un dato momento tra due backup del log delle transazioni.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In questa lezione il database AdventureWorks2014 verrà ripristinato in base a un dato momento tra due backup del log delle transazioni.  
   
 Con i backup tradizionali, per eseguire il ripristino temporizzato è necessario usare il backup completo del database, ad esempio un backup differenziale, e tutti i file di log delle transazioni fino al e subito dopo il momento in base al quale si esegue il ripristino. Per i backup di snapshot di file sono necessari solo i due file di backup del log che rappresentano i due limiti del periodo di tempo a cui si riferisce il ripristino. Sono necessari due soli set di backup di snapshot di file di log poiché ogni backup del log crea uno snapshot di ogni file del database (file di dati e file di log).  
   

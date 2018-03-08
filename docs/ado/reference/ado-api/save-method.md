@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Recordset::Save
 - _Recordset::raw_Save
-helpviewer_keywords: Save method [ADO]
+helpviewer_keywords:
+- Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb9651c4bf6de24fd3cdf7c7d42e6c0c24365fda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ca1aa95841be1331ad1b214b2a8b377622883d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="save-method"></a>Save (metodo)
 Salva il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in un file o [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
@@ -40,10 +42,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parametri  
  *Destinazione*  
- Facoltativo. Oggetto **Variant** che rappresenta il nome di percorso completo del file in cui il **Recordset** deve essere salvato, o un riferimento a un **flusso** oggetto.  
+ Facoltativa. Oggetto **Variant** che rappresenta il nome di percorso completo del file in cui il **Recordset** deve essere salvato, o un riferimento a un **flusso** oggetto.  
   
  *PersistFormat*  
- Facoltativo. Oggetto [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valore che specifica il formato in cui il **Recordset** deve essere salvato (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
+ Facoltativa. Oggetto [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valore che specifica il formato in cui il **Recordset** deve essere salvato (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il [metodo Save](../../../ado/reference/ado-api/save-method.md) metodo può essere richiamato solo su un oggetto aperto **Recordset**. Utilizzare il [Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo di ripristino successive il **Recordset** da *destinazione*.  

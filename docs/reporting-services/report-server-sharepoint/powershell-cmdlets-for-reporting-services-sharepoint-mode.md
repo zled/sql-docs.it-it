@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 96e9ea12df36219b11fe74e3328e6817b03471e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7b2d501e76e281716d1d88f858d6642c3a0a1ef5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlet di PowerShell per la modalità SharePoint di Reporting Services
 
@@ -69,7 +67,7 @@ Quando si installa la modalità SharePoint di SQL Server 2016 Reporting Services
   
 3.  Fare clic su **Shell di gestione SharePoint**.  
   
- Per visualizzare le informazioni della Guida relative alla riga di comando per un cmdlet, usare il comando PowerShell "Get-Help" al prompt dei comandi di PowerShell. Esempio:  
+ Per visualizzare le informazioni della Guida relative alla riga di comando per un cmdlet, usare il comando PowerShell "Get-Help" al prompt dei comandi di PowerShell. Ad esempio  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
@@ -117,7 +115,7 @@ Quando si installa la modalità SharePoint di SQL Server 2016 Reporting Services
 |New-SPRSExtension|Registra una nuova estensione con un'applicazione di servizio Reporting Services.|  
 |Set-SPRSExtension|Imposta le proprietà di un'estensione di Reporting Services esistente.|  
 |Remove-SPRSExtension|Rimuove un'estensione da un'applicazione di servizio Reporting Services.|  
-|Get-SPRSExtension|Ottiene una o più estensioni di Reporting Services per un'applicazione di servizio Reporting Services.<br /><br /> I valori validi sono:<br /><br /> <br /><br /> Recapito<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> Dati<br /><br /> Sicurezza<br /><br /> Autenticazione<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Finestra di progettazione<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Ottiene una o più estensioni di Reporting Services per un'applicazione di servizio Reporting Services.<br /><br /> I valori validi sono:<br /><br /> <br /><br /> Recapito<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> Security<br /><br /> Autenticazione<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Finestra di progettazione<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|Ottiene i siti di SharePoint in base all'eventuale abilitazione della funzionalità "ReportingService". Per impostazione predefinita, vengono restituiti i siti in cui la funzionalità "ReportingService" è abilitata.|  
   
 ## <a name="basic-samples"></a>Esempi di base

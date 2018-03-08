@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - drillthrough actions [Analysis Services]
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 078c21b0af6caeed8700861e315aeeefa53c108f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6c68c3d8eba2ec1519c38a89c7a1b0b71f3be4e3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="actions-in-multidimensional-models"></a>Azioni nei modelli multidimensionali
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un'azione è un'operazione avviata dall'utente finale su un cubo selezionato o una parte di un cubo. L'operazione consente di avviare un'applicazione con l'elemento selezionato come parametro oppure di recuperare informazioni sull'elemento selezionato. Per altre informazioni sulle azioni, vedere [Azioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un'azione è un'operazione inizializzata dall'utente finale su un cubo o una parte di un cubo selezionati. L'operazione consente di avviare un'applicazione con l'elemento selezionato come parametro oppure di recuperare informazioni sull'elemento selezionato. Per altre informazioni sulle azioni, vedere [Azioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  Usare la scheda **Azioni** di Progettazione cubi per compilare azioni per un cubo. Specificare le opzioni seguenti:  
   

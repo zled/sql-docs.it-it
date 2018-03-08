@@ -1,5 +1,5 @@
 ---
-title: Spiegare (Transact-SQL) | Documenti Microsoft
+title: EXPLAIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,23 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 515c21cbf7874c0268eeedad0b67e0ce7cf3726d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="explain-transact-sql"></a>Spiegare (Transact-SQL)
+# <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Restituisce il piano di query per un [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] istruzione senza eseguire l'istruzione. Utilizzare **ESPLICATIVO** per le operazioni che richiede lo spostamento dei dati di anteprima e visualizzare i costi stimati delle operazioni di query.  
@@ -42,7 +43,7 @@ EXPLAIN SQL_statement
  *SQL_statement*  
  Il [!INCLUDE[DWsql](../../includes/dwsql-md.md)] istruzione in cui **ESPLICATIVO** verrà eseguito. *SQL_statement* può essere uno dei seguenti comandi: **selezionare**, **inserire**, **aggiornamento**, **eliminare**,  **CREATE TABLE AS SELECT**, **crea una tabella remota**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede il **SHOWPLAN** autorizzazione e dell'autorizzazione per eseguire *SQL_statement*. Vedere [autorizzazioni: GRANT, DENY, REVOKE &#40; Azure SQL Data Warehouse, Parallel Data Warehouse &#41; ](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>Valore restituito  
@@ -66,13 +67,13 @@ EXPLAIN SQL_statement
   
  I tag XML contengono queste informazioni:  
   
-|(Tag XML)|Riepilogo, attributi e contenuto|  
+|XML Tag|Riepilogo, attributi e contenuto|  
 |-------------|--------------------------------------|  
-|\<dsql_query >|Elemento di livello superiore o documento.|
-|\<SQL >|Esegue l'eco del *SQL_statement*.|  
-|\<params >|Questo tag non viene usato in questo momento.|  
-|\<dsql_operations >|Vengono riepilogati e contiene i passaggi di query e include informazioni sui costi per la query. Contiene anche tutte le `<dsql_operation>` blocchi. Il tag contiene informazioni relative al conteggio per l'intera query:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* il tempo stimato per la query da eseguire, in millisecondi.<br /><br /> *total_number_operations* è il numero totale di operazioni per la query. Un'operazione che verrà eseguito in parallelo ed eseguire su più nodi viene conteggiata come una singola operazione.|  
-|\<dsql_operation >|Descrive una singola operazione all'interno del piano di query. Il \<dsql_operation > tag contiene il tipo di operazione come attributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* è uno dei valori disponibili nel [query su dati (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Il contenuto di `\<dsql_operation>` blocco dipende dal tipo di operazione.<br /><br /> Vedere la tabella riportata di seguito.|  
+|\<dsql_query>|Elemento di livello superiore o documento.|
+|\<sql>|Esegue l'eco del *SQL_statement*.|  
+|\<params>|Questo tag non viene usato in questo momento.|  
+|\<dsql_operations>|Vengono riepilogati e contiene i passaggi di query e include informazioni sui costi per la query. Contiene anche tutte le `<dsql_operation>` blocchi. Il tag contiene informazioni relative al conteggio per l'intera query:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* il tempo stimato per la query da eseguire, in millisecondi.<br /><br /> *total_number_operations* è il numero totale di operazioni per la query. Un'operazione che verrà eseguito in parallelo ed eseguire su più nodi viene conteggiata come una singola operazione.|  
+|\<dsql_operation>|Descrive una singola operazione all'interno del piano di query. Il \<dsql_operation > tag contiene il tipo di operazione come attributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* è uno dei valori disponibili nel [query su dati (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Il contenuto di `\<dsql_operation>` blocco dipende dal tipo di operazione.<br /><br /> Vedere la tabella riportata di seguito.|  
   
 |Tipo di operazione|Contenuto|Esempio|  
 |--------------------|-------------|-------------|  

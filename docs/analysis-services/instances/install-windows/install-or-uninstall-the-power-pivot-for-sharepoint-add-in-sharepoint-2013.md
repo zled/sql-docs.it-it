@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5f899bb9902c06d1288db8d94d719c27c250112
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7066ed9aafe287f5ed4a2bb5ed2981d27bd0e35f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>Installare o disinstallare il componente aggiuntivo Power Pivot per SharePoint (SharePoint 2013)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] è una raccolta di componenti del server applicazioni e servizi di back-end che forniscono [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] di accesso ai dati un [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] farm. Il componente aggiuntivo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint (**spPowerpivot.msi**) è un pacchetto di installazione utilizzato per installare i componenti del server applicazioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] è una raccolta di servizi back-end e componenti del server applicazioni che forniscono l'accesso a dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in una farm di [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] . Il componente aggiuntivo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint (**spPowerpivot.msi**) è un pacchetto di installazione utilizzato per installare i componenti del server applicazioni.  
   
 -   Il componente aggiuntivo non è necessario per le distribuzioni di SharePoint 2010.  
   
@@ -34,25 +35,7 @@ ms.lasthandoff: 12/08/2017
   
  Per informazioni su come scaricare **spPowerPivot.msi**, vedere la pagina relativa a [Microsoft® SQL Server® 2014 Power Pivot® per Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854).  
   
- **Contenuto dell'argomento:**  
-  
--   [Informazioni preliminari](#bkmk_background)  
-  
--   [Percorso in cui installare il file spPowerPivot.msi](#bkmk_where_to_install)  
-  
--   [Requisiti e prerequisiti](#bkmk_prereq)  
-  
--   [Per disinstallare Power Pivot per SharePoint](#bkmk_install)  
-  
--   [Distribuire i file della soluzione di SharePoint con lo strumento di configurazione di Power Pivot per SharePoint 2013](#bkmk_deploy_solution)  
-  
--   [Disinstallare o ripristinare il componente aggiuntivo](#bkmk_remove_addin)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
-  
-##  <a name="bkmk_background"></a> Informazioni preliminari  
+##  <a name="bkmk_background"></a> Background  
   
 -   **Server applicazioni:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in SharePoint 2013 sono inclusi l'uso delle cartelle di lavoro come origine dati, l'aggiornamento dati pianificato e il dashboard di gestione [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   
@@ -150,7 +133,7 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
 Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
 ```  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |Analysis_Server_SP_addin|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Configurazione|  
 |SQL_OLAPDM|MSOLAP|  
@@ -210,7 +193,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
     msiexec.exe /f spPowerPivot.msi  
     ```  
   
- o  
+ OPPURE  
   
 -   Per effettuare la disinstallazione, eseguire il comando riportato di seguito:  
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BufferWithTolerance_TSQL
 - BufferWithTolerance
-dev_langs: TSQL
-helpviewer_keywords: BefferWithTolerance method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fea21e57554a1ff68e83ba8cc85ea004d250ca2c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: bb70f24c521fd5f0325ecbb718e7d76aa43f935d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *distanza*  
+ *distance*  
  È un **float** espressione che specifica la distanza tra il **geography** istanza intorno alla quale calcolare il buffer.  
   
  La distanza massima del buffer non può superare 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* della circonferenza della terra di 1/2) o l'intero globo.  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
  Il limite minimo è lo 0,1 percento della distanza e qualsiasi tolleranza inferiore verrà arrotondata al limite minimo.  
   
- *relativo*  
+ *relative*  
  È un **bit** che specifica se il *tolleranza* valore è relativo o assoluto. Se 'TRUE' o 1, tolleranza è relativa e viene calcolata come prodotto tra il *tolleranza* parametro e l'estensione angolare \* raggio equatoriale dell'ellissoide. Se 'FALSE' o 0, tolleranza è assoluta e *tolleranza* valore è la variazione massima assoluta nella distanza del buffer ideale per l'approssimazione lineare restituita.  
   
 ## <a name="return-types"></a>Tipi restituiti  

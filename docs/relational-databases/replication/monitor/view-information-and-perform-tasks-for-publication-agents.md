@@ -17,15 +17,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], tasks in Replication Monitor
 ms.assetid: 2a420da2-66f4-4650-9bdd-1992221ed3fd
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dbe419ea1a8042a607045d60873794252378406
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f23a88fa322ef64be50c02c5c1b73eb685163fb4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-information-and-perform-tasks-for-publication-agents"></a>Visualizzare le informazioni ed eseguire attività relative agli agenti di pubblicazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In Monitoraggio replica è disponibile la scheda **Agenti**, che contiene informazioni sugli agenti associati alla pubblicazione selezionata. L'agente di distribuzione e l'agente di merge sono associati alle sottoscrizioni. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,15 +16,15 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a83a6615e75b3051793318f71d8bb84c427b360e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0319d1e52281bf389b13564d89b5e6543b7d41aa
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lezione 5: Formattazione di un report (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
 Dopo avere aggiunto un'area dati e alcuni campi al report Sales Orders, è possibile formattare i campi relativi a data e valuta e le intestazioni di colonna.  
   
 ## <a name="bkmk_format_date"></a>Formattare la data  
@@ -88,7 +88,7 @@ Nel campo **LineTotal** viene visualizzato un numero generico. È possibile form
   
 5.  Per salvare il report, scegliere **Salva tutti** nel menu **File** .  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Sono stati formattati le intestazioni di colonna e i valori di data e valuta. È possibile aggiungere gruppi e totali al report. Vedere [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -8,10 +8,12 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.precedenceconstraint.f1
+f1_keywords:
+- sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84b5d39132c85d7aa34dbb1e4bfb53d400d3cfa0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="precedence-constraints"></a>Vincoli di precedenza
   I vincoli di precedenza collegano eseguibili, contenitori e attività di pacchetti in modo da formare un flusso di controllo e specificano le condizioni che determinano se tali eseguibili devono essere eseguiti. Un eseguibile può essere costituito da un gestore di evento o da un contenitore Ciclo For, Ciclo Foreach o Sequenza. Anche nei gestori di eventi vengono utilizzati vincoli di precedenza per collegare gli eseguibili in modo da formare un flusso di controllo.  
@@ -117,7 +119,7 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
  **Operazione di valutazione**  
  Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono **Vincolo**, **Espressione**, **Espressione e vincolo**e **Espressione o vincolo**.  
   
- **Valore**  
+ **Value**  
  Consente di specificare il valore di vincolo, ovvero **Operazione completata**, **Errore**oppure **Completamento**.  
   
 > [!NOTE]  
@@ -157,9 +159,9 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
     |EvalOp|Selezionare un'operazione di valutazione. In caso di selezione dell'operazione **Expression**, **ExpressionAndConstant**o **ExpressionOrConstant** , è possibile specificare un'espressione.|  
     |Espressione|Se l'operazione di valutazione include un'espressione, specificare l'espressione. L'espressione deve restituire un valore booleano. Per altre informazioni sul linguaggio delle espressioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Impostare **LogicalAnd** in modo da specificare se il vincolo di precedenza viene valutato insieme ad altri vincoli di precedenza, quando più eseguibili precedono e sono collegati all'eseguibile soggetto al vincolo|  
-    |Nome|Aggiornare il nome del vincolo di precedenza.|  
+    |nome|Aggiornare il nome del vincolo di precedenza.|  
     |ShowAnnotation|Specificare il tipo di annotazione da utilizzare. Selezionare **Never** per disabilitare le annotazioni, **AsNeeded** per attivare le annotazioni su richiesta, **ConstraintName** per aggiungere automaticamente annotazioni usando il valore della proprietà Name, **ConstraintDescription** per aggiungere automaticamente annotazioni usando il valore della proprietà Description e **ConstraintOptions** per aggiungere automaticamente annotazioni usando i valori delle proprietà Value ed Expression.|  
-    |Valore|Se l'operazione di valutazione specificata nella proprietà EvalOP include un vincolo, selezionare il risultato dell'esecuzione dell'eseguibile vincolante.|  
+    |valore|Se l'operazione di valutazione specificata nella proprietà EvalOP include un vincolo, selezionare il risultato dell'esecuzione dell'eseguibile vincolante.|  
   
 5.  Chiudere la finestra Proprietà.  
   
@@ -256,7 +258,7 @@ La prima volta che si usa Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.m
   
 5.  Nell'elenco a discesa selezionare **Usa vincolo Esito negativo per la nuova forma** oppure **Usa vincolo Completamento per la nuova forma**.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 ## <a name="create-a-default-precedence-constraint"></a>Creare un vincolo di precedenza predefinito  
   

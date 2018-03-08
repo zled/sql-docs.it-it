@@ -5,13 +5,10 @@ ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6309c988b279db0e96915e6ae4d17011255d47f6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measures"></a>Misure
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nei modelli tabulari, una misura è un calcolo creato utilizzando una formula DAX per l'utilizzo in un client di creazione report. Le misure vengono valutate in base ai campi, ai filtri e ai filtri dei dati selezionati dagli utenti nell'applicazione client di creazione report.  
@@ -81,7 +78,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 |Proprietà|Impostazione predefinita|Description|  
 |--------------|---------------------|-----------------|  
-|**Description**|Vuoto|Descrizione della misura. La descrizione non verrà visualizzata con la misura in uno strumento client di creazione report.|  
+|**Descrizione**|Vuoto|Descrizione della misura. La descrizione non verrà visualizzata con la misura in uno strumento client di creazione report.|  
 |**Formato**|Determinato automaticamente in base al tipo di dati della colonna a cui viene fatto riferimento nell'espressione della formula.|Formato della misura, ad esempio, valuta o percentuale.|  
 |**Formula**|Formula immessa nella relativa barra quando è stata creata la misura.|Formula della misura.|  
 |**Nome misura**|Se viene utilizzata la somma automatica, il nome della misura precederà il nome della colonna seguito da due punti. Se viene immessa una formula personalizzata, digitare un nome seguito da due punti, quindi la formula.|Nome della misura come viene visualizzato nell'elenco dei campi di uno strumento client di creazione report.|  
@@ -91,7 +88,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  Qualsiasi misura può essere utilizzata come misura base di un indicatore KPI. Per creare un indicatore KPI, nella griglia delle misure fare clic con il pulsante destro del mouse su una misura e quindi selezionare **Crea KPI**. Verrà visualizzata la finestra di dialogo relativa all'indicatore di prestazioni chiave in cui è possibile specificare un valore di destinazione (definito tramite una misura o un valore assoluto), nonché definire i valori di soglia dello stato e un tipo di grafico. Per ulteriori informazioni, vedere [gli indicatori KPI](../../analysis-services/tabular-models/kpis-ssas-tabular.md).  
   
-##  <a name="bkmk_rel_tasks"></a> Attività correlate  
+##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
 |Argomento|Description|  
 |-----------|-----------------|  

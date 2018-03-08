@@ -3,26 +3,26 @@ title: Configurare il failover del cluster istanza archiviazione SMB - SQL Serve
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8043cd57758749399500b206410694c1735b30e8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurazione di cluster di failover - SMB - SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In questo articolo viene illustrato come configurare l'archiviazione SMB per un'istanza cluster di failover (FCI) in Linux. 
  
@@ -81,7 +81,7 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
     mkdir <TempDir>
     ```
 
-    <TempDir>è il nome della cartella. Nell'esempio seguente crea una cartella denominata /var/opt/mssql/tmp.
+    <TempDir> è il nome della cartella. Nell'esempio seguente viene creata una cartella denominata /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -209,7 +209,7 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
     mkdir <FolderName>
     ```
 
-    \<Nome cartella > è il nome della cartella. Percorso completo della cartella dovrà essere specificato ma non nella posizione corretta. Nell'esempio seguente crea una cartella denominata /var/opt/mssql/userdata.
+    \<Nome cartella > è il nome della cartella. Percorso completo della cartella deve essere specificato ma non nella posizione corretta. Nell'esempio seguente viene creata una cartella denominata /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -239,7 +239,7 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
  
    * Digitare exit per non essere più l'utente avanzato.
 
-   * Per eseguire il test, creare un database in tale cartella. Nell'esempio illustrato di seguito utilizza sqlcmd per creare un database, passare il contesto, verificare i file presenti nel livello del sistema operativo e quindi Elimina il percorso temporaneo. È possibile utilizzare SQL Server Management Studio.
+   * Per eseguire il test, creare un database in tale cartella. L'esempio seguente usa sqlcmd per creare un database, passare il contesto, verificare i file presenti nel livello del sistema operativo e quindi Elimina il percorso temporaneo. È possibile utilizzare SQL Server Management Studio.
  
    * Disinstallare la condivisione 
 

@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfersqlserverobjectstask.f1
 - sql13.dts.designer.transfersqlserverobjects.general.f1
 - sql13.dts.designer.transfersqlserverobjects.objects.f1
-helpviewer_keywords: Transfer SQL Server Objects task [Integration Services]
+helpviewer_keywords:
+- Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05b3013e4e0328766b0131d41d0fd9b6cd38148b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d27b4617e47266a377d2412c79d126ea0cd6dc48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-sql-server-objects-task"></a>Attività Trasferisci oggetti di SQL Server
   L'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trasferisce uno o più tipi di oggetti di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio, tabelle e stored procedure. A seconda della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usata come origine, sono disponibili per la copia tipi di oggetti diversi. Ad esempio, schemi e aggregati definiti dall'utente sono inclusi solo nei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
  Nella tabella seguente sono elencati i tipi di oggetti che è possibile copiare.  
   
-|Oggetto|  
+|Object|  
 |------------|  
 |Tabelle|  
 |Viste|  
@@ -138,7 +140,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
   
- **Description**  
+ **Descrizione**  
  Consente di digitare una descrizione dell'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor attività Trasferisci oggetti di SQL Server (pagina Oggetti)
@@ -172,7 +174,7 @@ ms.lasthandoff: 11/20/2017
  **ExistingData**  
  Consente di specificare la modalità di copia dei dati nel server di destinazione. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Sostituisci**|I dati nel server di destinazione verranno sovrascritti.|  
 |**Accoda**|I dati copiati dal server di origine verranno accodati a quelli esistenti nel server di destinazione.|  

@@ -1,5 +1,5 @@
 ---
-title: bcp_setcolfmt | Documenti Microsoft
+title: bcp_setcolfmt | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c01a4e7098524e14c8198894a4f282b602cb1166
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 553681c7e0e56978f5df44b23041e52a66f129a9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ RETCODE bcp_setcolfmt (
  *HDBC*  
  Handle di connessione ODBC abilitato per la copia bulk.  
   
- *campo*  
+ *field*  
  Numero di colonna ordinale per cui viene impostata la proprietà.  
   
  *proprietà*  
@@ -71,7 +71,7 @@ RETCODE bcp_setcolfmt (
  *pValue*  
  Puntatore al valore da associare al *proprietà*. Consente di impostare singolarmente ogni proprietà di formato di colonna.  
   
- *cbValue*  
+ *cbvalue*  
  Lunghezza in byte del buffer delle proprietà.  
   
 ## <a name="returns"></a>Valori di codice restituiti  

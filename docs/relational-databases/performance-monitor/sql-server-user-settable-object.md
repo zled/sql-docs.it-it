@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c5a83f9a773f2d0894ed0ed7e4b11e3c7384d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d60d2059230ed74f72ef4e5ad7f32a3f91aa40b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-user-settable-object"></a>Oggetto Definibile dall'utente di SQLServer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'oggetto **Definibile dall'utente** di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di creare istanze di contatore personalizzate. Utilizzare istanze di contatore personalizzate per monitorare gli aspetti del server non monitorati dai contatori esistenti, quali i componenti specifici del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato (ad esempio, il numero di ordini registrati o l'inventario dei prodotti).  
@@ -36,13 +36,13 @@ ms.lasthandoff: 11/17/2017
   
  Questa tabella illustra l'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** object.  
   
-|Contatori di SQLServer:Definibile dall'utente|Descrizione|  
+|Contatori di SQLServer:Definibile dall'utente|Description|  
 |---------------------------------------|-----------------|  
 |**Query**|L'oggetto **Definibile dall'utente** contiene il contatore di query. Gli utenti configurano il valore delle istanze **User counter** all'interno dell'oggetto query.|  
   
  Questa tabella illustra le **istanze** del contatore **Query** .  
   
-|Istanze del contatore Query|Descrizione|  
+|Istanze del contatore Query|Description|  
 |-----------------------------|-----------------|  
 |**User counter 1**|Definito tramite **sp_user_counter1**.|  
 |**User counter 2**|Definito tramite **sp_user_counter2**.|  

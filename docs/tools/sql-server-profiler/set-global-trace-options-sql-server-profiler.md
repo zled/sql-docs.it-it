@@ -3,7 +3,7 @@ title: Impostare le opzioni di traccia globali (SQL Server Profiler) | Documenti
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ffc9ee6552a206928f7b70705d894686d503f01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a830b25f8719953dec13a2ad43d0d7db275ee8a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Impostare opzioni di traccia globali (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questo argomento viene descritto come impostare le opzioni che si applicano a tutte le tracce vengono create con un'istanza specifica di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/05/2017
         |**86400**|Valore massimo. Il polling dei processi di blocco viene eseguito una volta ogni **86400** secondi, ovvero una volta al giorno.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare i valori predefiniti per la visualizzazione delle tracce &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [Impostare i valori predefiniti di visualizzazione di tracce &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

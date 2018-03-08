@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c58756989760d56c2f7906c0493cefb2b30d2b0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4618510f90d373aaba8a602b3f473cd6ed3a4a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-encryption"></a>Crittografia dei backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento fornisce una panoramica delle opzioni di crittografia per i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vengono illustrati i dettagli di utilizzo, i vantaggi e le procedure consigliate per eseguire la crittografia durante il backup.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 -   L'opzione Accoda al set di backup esistente non è supportata per i backup crittografati.  
   
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="Permissions"></a> Permissions  
  **Per crittografare un backup o per eseguire il ripristino da un backup crittografato:**  
   
  **VIEW DEFINITION** Autorizzazione per la chiave asimmetrica o il certificato usato per crittografare il backup del database.  
@@ -138,7 +138,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
-|Argomento/Attività|Descrizione|  
+|Argomento/Attività|Description|  
 |-----------------|-----------------|  
 |[Creare un backup crittografato](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Vengono descritti i passaggi di base necessari per creare un backup crittografato|  
 |[Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Fornisce un esempio di creazione di un backup crittografato protetto da chiavi nell'insieme di credenziali delle chiavi di Azure.|  

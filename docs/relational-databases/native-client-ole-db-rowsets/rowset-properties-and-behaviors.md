@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68f4ffdbf0408a936d7a2c9b49f18eb8adb32520
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fad9cc93c8faa050d537e687604a8934d3ee3386
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Proprietà e comportamenti dei set di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,8 +75,8 @@ ms.lasthandoff: 11/17/2017
 |DBPROP_MAYWRITECOLUMN|Questa proprietà set di righe non è implementata dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  
 |DBPROP_MEMORYUSAGE|Questa proprietà set di righe non è implementata dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  
 |DBPROP_NOTIFICATIONGRANULARITY|Questa proprietà set di righe non è implementata dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  
-|DBPROP_NOTIFICATIONPHASES|L/S: Sola lettura<br /><br /> Impostazione predefinita: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Descrizione: Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta tutte le fasi di notifica.|  
-|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|L/S: Sola lettura<br /><br /> Impostazione predefinita: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Descrizione: Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fasi di notifica del provider OLE DB Native Client sono annullabili prima un tentativo di eseguire la modifica del set di righe indicata. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client non supporta l'annullamento della fase dopo il tentativo di completamento.|  
+|DBPROP_NOTIFICATIONPHASES|L/S: Sola lettura<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Descrizione: Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta tutte le fasi di notifica.|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|L/S: Sola lettura<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Descrizione: Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fasi di notifica del provider OLE DB Native Client sono annullabili prima un tentativo di eseguire la modifica del set di righe indicata. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client non supporta l'annullamento della fase dopo il tentativo di completamento.|  
 |DBPROP_ORDEREDBOOKMARKS|Questa proprietà set di righe non è implementata dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: Impostazione di visibilità proprietà cause modifica il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client da utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursori per supportare il set di righe. Per ulteriori informazioni, vedere [set di righe e cursori del Server SQL](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_QUICKRESTART|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: Se impostata su VARIANT_TRUE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client tenta di utilizzare un cursore del server per il set di righe.|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
 |ID proprietà|Description|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|Colonna: ColumnID<br /><br /> L/S: Sola lettura<br /><br /> Tipo: VT_U12 &#124; VT_ARRAY<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Descrizione: matrice di valori integer che rappresenta la posizione ordinale (base 1) di una colonna di risultati della clausola COMPUTE all'interno dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT. Si tratta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equivalente del provider OLE DB Native Client dell'attributo ODBC SQL_CA_SS_COLUMN_ID.|  
+|SSPROP_COLUMN_ID|Colonna: ColumnID<br /><br /> L/S: Sola lettura<br /><br /> Type: VT_U12 &#124; VT_ARRAY<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Descrizione: matrice di valori integer che rappresenta la posizione ordinale (base 1) di una colonna di risultati della clausola COMPUTE all'interno dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT. Si tratta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equivalente del provider OLE DB Native Client dell'attributo ODBC SQL_CA_SS_COLUMN_ID.|  
 |SSPROP_DEFERPREPARE|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_BOOL<br /><br /> Impostazione predefinita: VARIANT_TRUE<br /><br /> Descrizione: VARIANT_TRUE: In esecuzione preparata, la preparazione del comando viene posticipata fino alla **ICommand:: Execute** viene chiamato o viene eseguita un'operazione di metaproprietà. Se la proprietà è impostata su<br /><br /> VARIANT_FALSE: L'istruzione viene preparata quando **ICommandPrepare:: Prepare** viene eseguita.|  
 |SSPROP_IRowsetFastLoad|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_BOOL<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: Impostare questa proprietà su VARIANT_TRUE per aprire un set di righe di caricamento rapido tramite **IOpenRowset:: OPENROWSET**. È possibile impostare questa proprietà **ICommandProperties:: SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_BOOL<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: Impostare questa proprietà su VARIANT_TRUE per consentire operazioni asincrone mediante il [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md) interfaccia.|  

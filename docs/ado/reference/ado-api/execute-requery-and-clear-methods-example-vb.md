@@ -4,29 +4,31 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - Requery method [ADO], Visual Basic example
 - Clear method [ADO], Visual Basic example
 - Execute method [ADO], Visual Basic example
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8e80a2611a70d65c77e7c54dd60d7f3539c542cc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1549486e1dc4efc0325f935ce80d25627aeb72df
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Execute, Requery e deselezionare l'esempio di metodi (VB)
 Questo esempio viene illustrato il **Execute** metodo quando eseguito sia da un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Utilizza inoltre il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per recuperare dati correnti in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e [deselezionare](../../../ado/reference/ado-api/clear-method-ado.md) metodo per cancellare il contenuto del [errori](../../../ado/reference/ado-api/errors-collection-ado.md)insieme. (Il **errori** raccolta è accessibile tramite il **connessione** oggetto del [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Le procedure ExecuteCommand e PrintOutput sono necessarie per eseguire questa procedura.  

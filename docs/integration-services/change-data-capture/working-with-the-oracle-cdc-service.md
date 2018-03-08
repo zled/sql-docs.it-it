@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c72863715fb807cba939c997da386b93004332f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95197ab786c24da00fc87f7788575d5847770c6b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilizzo del servizio Oracle CDC
   In questa sezione vengono descritti alcuni concetti importanti relativi al servizio Oracle CDC. I concetti inclusi in questa sezione sono i seguenti:  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
 |Elemento|Description|  
 |----------|-----------------|  
-|timestamp|Timestamp UTC esatto della scrittura del record di traccia.|  
+|TIMESTAMP|Timestamp UTC esatto della scrittura del record di traccia.|  
 |tipo|Contiene uno dei valori seguenti.<br /><br /> errore<br /><br /> INFO<br /><br /> traccia|  
 |node|Nome del nodo in cui è stato scritto il record.|  
 |status|Codice di stato utilizzato dalla tabella dello stato.|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
 |Elemento|Description|  
 |----------|-----------------|  
-|name|Nome del database Oracle nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|NAME|Nome del database Oracle nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|Timestamp (UTC) per l'ultima modifica della tabella **xdbcdc_config** del database CDC corrispondente o timestamp (UTC) per la riga corrente di questa tabella.<br /><br /> Il trigger UPDATE applica un valore di GETUTCDATE () per questo elemento. Tramite**config_version** il servizio CDC identifica l'istanza di CDC che deve essere controllata per la modifica della configurazione o per l'abilitazione o la disabilitazione.|  
 |cdc_service_name|Tramite questo elemento è possibile determinare quale servizio Oracle CDC gestisce il database Oracle selezionato.|  
 |enabled|Indica se l'istanza di Oracle CDC è attiva (1) o disabilitata (0). All'avvio del servizio Oracle CDC verranno avviate solo le istanze contrassegnate come abilitate (1).<br /><br /> **Nota**: un'istanza di Oracle CDC può essere disabilitata in seguito a un errore non ripetibile. In questo caso, è necessario riavviare manualmente l'istanza dopo avere risolto l'errore.|  
@@ -187,7 +188,7 @@ ms.lasthandoff: 11/20/2017
   
  **Vedere anche**  
   
- [Procedura di utilizzo dell'interfaccia della riga di comando del servizio CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)  
+ [Procedura per l'uso dell'interfaccia della riga di comando del servizio CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)  
   
 ### <a name="service-program-commands"></a>Comandi del programma del servizio  
  In questa sezione vengono descritti i comandi da utilizzare per la configurazione del servizio CDC.  

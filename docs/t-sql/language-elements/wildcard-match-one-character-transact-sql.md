@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -20,21 +21,22 @@ f1_keywords:
 - _TSQL
 - Match One
 - _
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - wildcard characters [SQL Server]
 - _ (wildcard - match one character)
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f6134bec732593480cd20973eb7687a29cfbf2b8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 01bc0c4c006ae55395d752a0377575fa680dffaa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (carattere jolly per corrispondenze di singoli caratteri) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ Utilizzare il carattere di sottolineatura _ per la corrispondenza di qualsiasi c
 
 L'esempio seguente restituisce tutti i nomi che iniziano con la lettera di database `m` e avere la lettera `d` come la terza lettera. Il carattere di sottolineatura specifica che il secondo carattere del nome può essere qualsiasi lettera. Il `model` e `msdb` database soddisfino questi criteri. Il `master` non di database.
 
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm_d%';
 ```   
@@ -65,7 +67,7 @@ msdb
 ### <a name="b-more-complex-example"></a>B: esempio più complesso
  L'esempio seguente usa l'operatore _ per trovare tutti gli utenti di `Person` tabella, che hanno un nome che termina con tre lettere `an`.  
   
-```tsql  
+```sql  
 -- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
@@ -76,14 +78,14 @@ ORDER BY FirstName;
 ## <a name="c-escaping-the-underscore-character"></a>C: escape di il carattere di sottolineatura   
 Nell'esempio seguente restituisce i nomi dei ruoli predefiniti del database come `db_owner` e `db_ddladmin`, ma restituisce inoltre il `dbo` utente. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
 Il carattere di sottolineatura nella terza posizione di carattere verrà considerata come un carattere jolly e non Filtra per solo le entità inizia con le lettere `db_`. Caratteri di escape per il carattere di sottolineatura racchiudere tra parentesi quadre `[_]`. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   
@@ -100,8 +102,8 @@ db_securityadmin
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Ad esempio &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [% (Carattere jolly alla corrispondenza)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91; &#93; (Carattere jolly alla corrispondenza)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93; Mancata corrispondenza dei caratteri (jolly)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     

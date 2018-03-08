@@ -3,12 +3,12 @@ title: ALTER libreria esterna (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,16 +18,16 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 8365e364c9769af139be2b8dd4e7f5943afc58ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>LIBRERIA esterna ALTER (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Modifica il contenuto di una libreria pacchetto esterno esistente.
 
@@ -94,7 +94,7 @@ Per il linguaggio R, è necessario preparare i pacchetti sotto forma di file di 
 
 Il `ALTER EXTERNAL LIBRARY` istruzione consente di caricare solo i bit di libreria per il database. La libreria modificata non è installata effettivamente fino a quando un utente esegue uno script esterno in un secondo momento, eseguendo [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 Richiede il `ALTER ANY EXTERNAL LIBRARY` autorizzazione. Gli utenti che ha creato una libreria esterna, è possibile modificare tale libreria esterna.
 

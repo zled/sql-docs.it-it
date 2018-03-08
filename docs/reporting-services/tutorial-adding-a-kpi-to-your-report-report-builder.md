@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e3e6194d510371b5a7aed8cad4f2efe5d188687
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c0e21bcd1d4695aaf7a55891c7b6d3c9231cdd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report)
 In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] viene aggiunto un indicatore KPI a un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
@@ -238,7 +238,7 @@ Un misuratore raffigura un singolo valore di un set di dati. In questa esercitaz
   
 10. Nella finestra di dialogo **Proprietà indicatore di misura lineare** > scheda **Opzioni dell'indicatore di misura** > **Tipo di indicatore di misura** assicurarsi che l'opzione**Barre** sia selezionata. 
  
-11. Scegliere **OK**.  
+11. Fare clic su **OK**.  
   
 12. Fare clic con il pulsante destro del mouse sulla scala nel misuratore e selezionare **Proprietà scala**.  
   
@@ -249,7 +249,7 @@ Un misuratore raffigura un singolo valore di un set di dati. In questa esercitaz
 
 14. Nella scheda **Etichette** selezionare **Nascondi etichette scala**.
 
-15. Scegliere **OK**.
+15. Fare clic su **OK**.
   
 14. Trascinare il misuratore all'interno della tabella, nella seconda cella vuota della colonna Linear KPI, nella riga che visualizza le vendite del subtotale per il campo `Subcategory` , accanto al campo in cui è stata aggiunta la formula per il colore dello sfondo.  
   
@@ -291,7 +291,7 @@ Gli indicatori sono piccoli e semplici misuratori che consentono di visualizzare
   
     In questo report, è possibile anche modificare l'ambito di un indicatore posizionato nella cella del subtotale della sottocategoria per eseguire la sincronizzazione nel campo SalesDate.  
   
-11. Scegliere **OK**.
+11. Fare clic su **OK**.
 
 11. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
 
@@ -304,7 +304,7 @@ Il testo può essere ulteriormente migliorato applicando stili di carattere, dim
   
 ### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
-1.  Nell'area di progettazione selezionare **Fare clic per aggiungere il titolo**.  
+1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
 2.  Digitare **Product Sales KPIs**e fare clic all'esterno della casella di testo.  
   
@@ -344,7 +344,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
   
 2.  Fare clic su **Salva**.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Questo passaggio conclude l'esercitazione relativa all'aggiunta di un indicatore KPI al report. Per altre informazioni, vedere:
 *  [Misuratori](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicatori](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

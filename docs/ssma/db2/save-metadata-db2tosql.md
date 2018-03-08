@@ -1,7 +1,7 @@
 ---
 title: Salvare i metadati (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 704487a260c0652293d84bb6393c8cf04a720043
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 51b6e2d6e74233ce04934fbd80c410482e4bd89f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-metadata-db2tosql"></a>Salvare i metadati (DB2ToSQL)
 Il **salvare metadati** la finestra di dialogo viene richiesto di caricare i metadati al progetto SSMA prima del salvataggio. Questo consente di avere un file di progetto completo che è possibile utilizzare non in linea e inviare ad altri utenti, come il personale di supporto tecnico.  
@@ -46,7 +46,7 @@ Seleziona database tutti elencati.
 **Clear**  
 Cancella la casella di controllo per tutti i database con metadati mancanti. È possibile deselezionare la casella di controllo se i metadati sono stato caricato.  
   
-**Salva**  
+**Salvare**  
 Salva il progetto, il caricamento dei metadati per i database selezionati con metadati mancanti.  
   
 **Annulla**  

@@ -15,13 +15,13 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be67496825da165dca22ed5074e0e1ee67a32a56
-ms.sourcegitcommit: d8d602898e80797e330aab54e53ee7dde8282e21
+ms.openlocfilehash: 67aaeb56b3d3230e650dc24d16221e2af6872344
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-distributed-availability-group"></a>Configurare un gruppo di disponibilità distribuito  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Per creare un gruppo di disponibilità distribuito, è necessario creare un grup
 
 Per una panoramica tecnica dei gruppi di disponibilità distribuiti, vedere [Gruppi di disponibilità distribuiti](distributed-availability-groups.md).   
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Impostare i listener di endpoint in ascolto per tutti gli indirizzi IP
 
@@ -220,7 +220,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];
 In questo momento è supportato solo il failover manuale. L'istruzione Transact-SQL seguente effettua il failover del gruppo di disponibilità distribuito denominato `distributedag`:  
 
 
-1. Impostare la modalità di disponibilità sul commit sincrono per il gruppo di disponibilità secondaria. 
+1. Impostare la modalità di disponibilità sul commit sincrono per entrambi i gruppi di disponibilità. 
     
       ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
@@ -229,7 +229,7 @@ In questo momento è supportato solo il failover manuale. L'istruzione Transact-
       'ag1' WITH 
          ( 
           LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = MANUAL, 
           SEEDING_MODE = MANUAL 
           ), 

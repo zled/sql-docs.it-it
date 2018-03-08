@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7ea94113-c0f1-4cca-9228-f1a034fba5db
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f4c67d1f5b8aea2537b04ebed1608834b13d8f61
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f2e412047e4d859de637da933d2335232961ee13
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotsystemserviceinstance-cmdlet"></a>Cmdlet New-PowerPivotSystemServiceInstance
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Aggiunge una nuova istanza della [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servizio di sistema a un server applicazioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Aggiunge una nuova istanza del servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a un server applicazioni.  
 
 >[!NOTE] 
 >In questo articolo può contenere esempi e informazioni non aggiornate. Usare il cmdlet Get-Help per la versione più recente.
@@ -53,7 +54,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |Accettare input da pipeline?|true|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-systemserviceinstancename-string"></a>-SystemServiceInstanceName \<stringa >  
+### <a name="-systemserviceinstancename-string"></a>-SystemServiceInstanceName \<string>  
  Specifica un nome che identifica l'oggetto.  
   
 |||  

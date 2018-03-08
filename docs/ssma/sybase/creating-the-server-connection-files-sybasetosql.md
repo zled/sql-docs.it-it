@@ -3,7 +3,7 @@ title: Creazione dei file di connessione del Server (SybaseToSQL) | Documenti Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 773246d89414c123514b24bd2edc66b267ce6a45
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 85c98038c589d57daeea1ba8c715d00b089b8f77
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Creazione dei file di connessione del Server (SybaseToSQL)
 Nella sezione del file di script server o in un file di connessione server separato, è possibile specificare le informazioni sul server. Il parametro della riga di comando per il file di connessione del server è, `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione del server sia file di script, è considerata la definizione del server nel file di script.  

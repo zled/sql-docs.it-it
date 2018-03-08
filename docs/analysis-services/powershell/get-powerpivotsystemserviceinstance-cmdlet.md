@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 56027a8e-1949-4349-b616-68c8b1d2963c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e52176bc32adbaee46a22d3c4df6a331cf7c39b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5043f2f3966182853decdde119a6914f59e1c12d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="get-powerpivotsystemserviceinstance-cmdlet"></a>Cmdlet Get-PowerPivotSystemServiceInstance
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Restituisce uno o più istanze di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servizio di sistema in esecuzione nei server applicazioni nella farm.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Restituisce una o più istanze di Servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in esecuzione nei server applicazioni nella farm.  
 
 >[!NOTE] 
 >In questo articolo può contenere esempi e informazioni non aggiornate. Usare il cmdlet Get-Help per la versione più recente.
@@ -42,7 +43,7 @@ Get-PowerPivotSystemServiceInstance [-Identity <PowerPivotMidTierServiceInstance
   
 ## <a name="parameters"></a>Parametri  
   
-### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>-Identity \<PowerPivotMidTierServiceInstancePipeBind >  
+### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>-Identity \<PowerPivotMidTierServiceInstancePipeBind>  
  Specifica l'istanza del servizio da ottenere. Il valore deve essere un GUID valido che identifica in modo univoco l'oggetto nella farm.  
   
 |||  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - CLSID
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4f221f043fd976e5c0f6679e6f1dda29f5c199e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f20bf4aee0befa6fb3439da84eef1a04e8ac04a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-source-objects-ole-db"></a>Oggetti origine dati (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,15 +86,15 @@ else
   
 -   [Proprietà dell'origine dati &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
--   [Proprietà delle informazioni sulle origini dati](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md)  
+-   [Proprietà delle informazioni di origine dati](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md)  
   
--   [Proprietà di inizializzazione e di autorizzazione](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)  
+-   [Proprietà di inizializzazione e autorizzazione](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)  
   
 -   [Sessioni](../../relational-databases/native-client-ole-db-data-source-objects/sessions.md)  
   
 -   [Proprietà della sessione - Provider OLE DB di SQL Server Native Client](../../relational-databases/native-client-ole-db-data-source-objects/session-properties-sql-server-native-client-ole-db-provider.md)  
   
--   [Oggetti di origine dati persistenti](../../relational-databases/native-client-ole-db-data-source-objects/persisted-data-source-objects.md)  
+-   [Oggetti origine dati persistenti](../../relational-databases/native-client-ole-db-data-source-objects/persisted-data-source-objects.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

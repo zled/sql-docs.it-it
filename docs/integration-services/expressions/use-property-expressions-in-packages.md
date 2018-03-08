@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,18 +22,18 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 87cdbcf3158e3bbcc76233ff48f0ec90d5372c64
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df3d79297b56c02f4aff107349cb8dce5c75d4da
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="use-property-expressions-in-packages"></a>Utilizzo delle espressioni di proprietà nei pacchetti
+# <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
   Un'espressione di proprietà è un'espressione assegnata a una proprietà per consentire l'aggiornamento dinamico della proprietà in fase di esecuzione. Un'espressione di proprietà, ad esempio, consente di aggiornare la riga A utilizzata dall'attività Invia messaggi inserendo un indirizzo di posta elettronica archiviato in una variabile.  
   
  È possibile aggiungere un'espressione a pacchetti, attività, cicli Foreach, cicli For, sequenze, enumeratori Foreach, gestori eventi, gestioni connessioni a livello di pacchetto o progetto oppure provider di log. Qualsiasi proprietà di questi oggetti che sia di lettura/scrittura può implementare un'espressione di proprietà. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta l'utilizzo delle espressioni di proprietà in alcune proprietà personalizzate di componenti del flusso di dati. Le variabili e i vincoli di precedenza non supportano le espressioni di proprietà, ma includono speciali proprietà in cui è possibile utilizzare espressioni.  
@@ -175,7 +176,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Espressione e Highlighter di configurazione (Progetto CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   Articolo tecnico [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761)(Esempi di espressioni SSIS) nel sito Web social.technet.microsoft.com  
+-   Articolo tecnico relativo agli [esempi di espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  

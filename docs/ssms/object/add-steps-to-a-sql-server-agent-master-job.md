@@ -8,23 +8,25 @@ ms.service:
 ms.component: ssms-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43fb99a30889f928cbbd8a3232a21df902994ae8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f5f2ba7e28ec6e6ce1900078fd3d070f63ffa365
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questo argomento descrive come aggiungere passaggi a un processo master di SQL Server Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In questo argomento verrà descritto come aggiungere passaggi a un processo master di SQL Server Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
   
 **Contenuto dell'argomento**  
   
@@ -62,7 +64,7 @@ Un processo master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 
   
 4.  Fare clic con il pulsante destro del mouse sul processo a cui si intende aggiungere passaggi e scegliere **Proprietà**.  
   
-5.  In **Seleziona una pagina** nella finestra di dialogo **Proprietà processo –***nome_processo* selezionare **Passaggi**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [Proprietà processo - nuovo processo &#40;pagina passaggi&#41;](../../ssms/agent/job-properties-new-job-steps-page.md).  
+5.  Nella finestra di dialogo **Proprietà processo –***nome_processo* selezionare **Passaggi** in **Seleziona una pagina**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [Proprietà processo - nuovo processo &#40;pagina passaggi&#41;](../../ssms/agent/job-properties-new-job-steps-page.md).  
   
 6.  Al termine, fare clic su **OK**.  
   

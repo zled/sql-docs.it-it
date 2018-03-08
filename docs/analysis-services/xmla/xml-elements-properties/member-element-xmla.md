@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Member Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54ea0bd96716ae6c11fa1195c9845b721fc76ef6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 82690ec66dfcb96787ea592a8d32c3826ee8776f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="member-element-xmla"></a>Elemento Member (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Rappresenta un singolo membro in un elemento padre [membri](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) o [tupla](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) elemento.  
@@ -68,10 +66,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>Attributi  
   
-|Attribute|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |Gerarchia|Richiesto **stringa** attributo (padre **tupla** solo elementi). Il nome della gerarchia a cui il membro rappresentato dal **membro** elemento appartiene.|  
   

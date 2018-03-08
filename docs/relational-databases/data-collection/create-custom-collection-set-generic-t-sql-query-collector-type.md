@@ -8,26 +8,28 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - T-SQL Query collector type
 - collection sets [SQL Server], creating custom
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef0146839adf62839b6f319df6407a4afad8e1f8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c72ceb6d3bb9220c9f4f5ce8ad8c25624f037cbd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Creare un set di raccolta personalizzato che usa il tipo agente di raccolta Query T-SQL generico
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile creare un set di raccolta personalizzato con elementi della raccolta che usano il tipo di agente di raccolta Query T-SQL generico tramite le stored procedure fornite con l'agente di raccolta dati. Il completamento di questa attività comporta l'utilizzo dell'Editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per eseguire le procedure descritte di seguito:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+È possibile creare un set di raccolta personalizzato con elementi della raccolta che utilizzano il tipo di agente di raccolta Query T-SQL generico tramite le stored procedure fornite con l'agente di raccolta dati. Il completamento di questa attività comporta l'utilizzo dell'Editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per eseguire le procedure descritte di seguito:  
   
 -   Configurazione delle pianificazioni di caricamento.  
   

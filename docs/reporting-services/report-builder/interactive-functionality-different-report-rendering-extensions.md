@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a3a1e2dc58250da1a2d0d8e0a3a1e78374ba2cc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4b6eb94e8511be6d1e2f5ccf2cc12eea7ced9198
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Funzionalità interattiva per estensioni diverse per il rendering di report
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce funzionalità per l'interazione con un report impaginato in fase di esecuzione. Solo alcuni formati di rendering dei report supportano l'intera gamma di caratteristiche interattive. Usare la tabella seguente per comprendere la modalità di utilizzo delle diverse caratteristiche interattive in formati specifici.  

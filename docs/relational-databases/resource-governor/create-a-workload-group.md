@@ -16,15 +16,15 @@ helpviewer_keywords:
 - workload groups [SQL Server], create
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7974e3a9bb83302791b9e98e0fcd39a1a52a5a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91b5af4b33e069b60f3a4b542ac9734c278e1e62
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-workload-group"></a>Creare un gruppo di carico di lavoro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   
--   **Per creare un gruppo di carico di lavoro usando:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **Per creare un gruppo di carico di lavoro utilizzando:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
  Per la creazione dell'indice è possibile utilizzare un'area di lavoro per la memoria maggiore rispetto a quanto inizialmente garantito per le prestazioni. Questa speciale gestione è supportata da Resource Governor, tuttavia, la concessione iniziale ed eventuali concessioni di memoria aggiuntiva sono limitate dalle impostazioni di gruppo del carico di lavoro e dal pool di risorse.  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="Permissions"></a> Permissions  
  Per creare un gruppo di carico di lavoro è necessaria l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="CreRPProp"></a> Creare un gruppo di carico di lavoro utilizzando SQL Server Management Studio  

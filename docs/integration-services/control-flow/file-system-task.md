@@ -8,24 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.filesystemtask.f1
 - sql13.dts.designer.filesystemtask.general.f1
-helpviewer_keywords: File System task [Integration Services]
+helpviewer_keywords:
+- File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a72870b1591218161de2253c65bdb6f290941481
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 176f39cf7a5df57fad08a464212815f41affb1a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="file-system-task"></a>Attività File system
   L'attività File system consente di eseguire operazioni su file e directory nel file system. Tramite l'attività File system un pacchetto può ad esempio creare, spostare o eliminare file e directory. È inoltre possibile utilizzare l'attività File system per impostare attributi su file e directory, ad esempio per impostare file come nascosti o in sola lettura.  
@@ -80,7 +82,7 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un'attività che consente di eseguire il download e il caricamento di file di dati, nonché di gestire directory sui server. Per altre informazioni, vedere [Attività FTP](../../integration-services/control-flow/ftp-task.md).  
   
 ## <a name="file-system-task-editor-general-page"></a>Editor attività File system (pagina Generale)
@@ -100,7 +102,7 @@ ms.lasthandoff: 11/20/2017
  **IsDestinationPathVariable**  
  Consente di specificare se il percorso di destinazione è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**True**|Il percorso di destinazione è archiviato in una variabile. Se si seleziona questo valore, viene visualizzata l'opzione dinamica **DestinationVariable**.|  
 |**False**|Il percorso di destinazione è specificato in una gestione connessione file. Se si seleziona questo valore, viene visualizzata l'opzione dinamica **DestinationConnection**.|  
@@ -114,13 +116,13 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
   
- **Description**  
+ **Descrizione**  
  Consente di digitare una descrizione dell'attività File system.  
   
  **Operazione**  
  Consente di selezionare l'operazione di file system da eseguire. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Copia directory**|Consente di copiare una directory. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e la destinazione.|  
 |**Copia file**|Consente di copiare un file. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e la destinazione.|  
@@ -136,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **IsSourcePathVariable**  
  Consente di specificare se il percorso di destinazione è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Valore||  
+|valore||  
 |-----------|-|  
 |**True**|Il percorso di destinazione è archiviato in una variabile. Se si seleziona questo valore, viene visualizzata l'opzione dinamica **SourceVariable**.|  
 |**False**|Il percorso di destinazione è specificato in una gestione connessione file. Se si seleziona questo valore, viene visualizzata l'opzione dinamica **DestinationVariable**.|  

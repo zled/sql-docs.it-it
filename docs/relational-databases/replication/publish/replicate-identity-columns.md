@@ -20,15 +20,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3c4e1d9a170eecea88a5e929bcc21f84f2074714
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c69e39305a23fafee8c264db3fdb315b6595d01
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replicate-identity-columns"></a>Replica di colonne Identity
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si assegna la proprietà IDENTITY a una colonna, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]genera automaticamente numeri sequenziali per le nuove righe inserite nella tabella contenente la colonna Identity. Per altre informazioni, vedere [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Dato che è possibile includere le colonne Identity come parte della chiave primaria, è importante evitare di inserire valori duplicati nelle colonne Identity. Per utilizzare colonne Identity in una topologia di replica con aggiornamenti in più di un nodo, è necessario che ogni nodo presente nella topologia di replica utilizzi un intervallo di valori Identity diverso, in modo da non generare duplicati.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Manuale. Questa opzione viene utilizzata per la replica snapshot e transazionale con aggiornamenti nel Sottoscrittore, per la replica transazionale peer-to-peer oppure se l'applicazione richiede il controllo degli intervalli di valori Identity a livello di programmazione. Se si sceglie la gestione manuale, è necessario verificare che gli intervalli vengano assegnati al server di pubblicazione e a tutti i Sottoscrittori e che vengano assegnati nuovi intervalli se quelli iniziali sono già in uso. Nella replica l'opzione NOT FOR REPLICATION viene impostata nella colonna Identity del Sottoscrittore.  
   
--   Nessuno Questa opzione è consigliata solo per la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è disponibile solo dall'interfaccia delle stored procedure delle pubblicazioni transazionali.  
+-   nessuna. Questa opzione è consigliata solo per la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è disponibile solo dall'interfaccia delle stored procedure delle pubblicazioni transazionali.  
   
  Per specificare un'opzione di gestione degli intervalli di valori Identity, vedere [Gestire le colonne Identity](../../../relational-databases/replication/publish/manage-identity-columns.md).  
   

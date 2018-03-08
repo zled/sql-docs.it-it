@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.configuredistributionwizard.enablepublishers.f1
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c277d809dc9ce385326520872cb5ccc10f98eef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 402b389dbe45e7206f84ef97758987e7b0ae0a72
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publishers"></a>Server di pubblicazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile concedere ad altri server di pubblicazione l'autorizzazione per l'uso del server di distribuzione. Tenere presente che, se si abilita un server di pubblicazione per l'utilizzo di questo server come server di distribuzione remoto, il server non diventerà un server di pubblicazione. È infatti necessario connettersi al server di pubblicazione, configurarlo per la pubblicazione e selezionare questo server come server di distribuzione. Utilizzando la Creazione guidata nuova pubblicazione è possibile configurare il server di pubblicazione e selezionare un server di distribuzione.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
  Se il server desiderato non è incluso nell'elenco, fare clic su **Aggiungi** per aggiungere un server di pubblicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Oracle all'elenco dei server di pubblicazione disponibili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare la distribuzione](../../relational-databases/replication/configure-distribution.md)   
+ [Configura distribuzione](../../relational-databases/replication/configure-distribution.md)   
  [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Creare una pubblicazione](../../relational-databases/replication/publish/create-a-publication.md)  

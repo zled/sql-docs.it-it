@@ -8,28 +8,28 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3204dee0af5235847920c41d9738a1c2ecdcfb9c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c0fef50d7a63d51955dcc523e07957c237d530ff
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="relationship-representation-tabular"></a>Rappresentazione di una relazione (tabulare)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Una relazione è una connessione tra due tabelle di dati. e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Una relazione è una connessione tra due tabelle di dati e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle.  
   
- Vedere [rappresentazione della relazione (tabulare)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) per una spiegazione dettagliata su come creare e modificare la rappresentazione della relazione.  
+ Per una spiegazione dettagliata su come creare e modificare la rappresentazione della relazione, vedere [Relationship Representation (Tabular)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) .  
   
 ## <a name="relationship-representation"></a>Rappresentazione di una relazione  
  Nei modelli tabulari, più relazioni possono essere definite tra due tabelle. Quando vengono definite più relazioni tra due tabelle, solo una di queste può essere definita come relazione predefinita per il modello e viene denominata come relazione attiva. Tutte le altre relazioni vengono denominate come inattive.  

@@ -1,5 +1,5 @@
 ---
-title: log_shipping_monitor_error_detail (Transact-SQL) | Documenti Microsoft
+title: log_shipping_monitor_error_detail (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_error_detail_TSQL
 - log_shipping_monitor_error_detail
-dev_langs: TSQL
-helpviewer_keywords: log_shipping_monitor_error_detail system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- log_shipping_monitor_error_detail system table
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7a2797659e6f20192a87662700632c399f72763
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c3f30aafc0d201903fab4a5d42e55c38669b70c2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="logshippingmonitorerrordetail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**sequence_number**|**int**|Numero incrementale che indica l'ordine corretto delle informazioni relative agli errori che interessano più record.|  
 |**log_time**|**datetime**|Data e ora di creazione del record.|  
 |**log_time_utc**|**datetime**|Data e ora UTC (Coordinated Universal Time o ora di Greenwich) di creazione del record.|  
-|**Messaggio**|**nvarchar**|Testo del messaggio.|  
+|**message**|**nvarchar**|Testo del messaggio.|  
 |**origine**|**nvarchar**|Origine del messaggio di errore o dell'evento.|  
 |**help_url**|**nvarchar**|URL, se disponibile, in cui sono disponibili informazioni aggiuntive sull'errore.|  
   
@@ -56,12 +59,12 @@ ms.lasthandoff: 11/17/2017
  Per identificare una sessione di agente, utilizzare colonne **agent_id**, **agent_type**, e **session_id**. Ordinamento **log_time** per visualizzare gli errori nell'ordine in cui sono stati registrati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [log_shipping_monitor_history_detail &#40; Transact-SQL &#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
- [sp_cleanup_log_shipping_history &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_delete_log_shipping_primary_database &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
- [sp_delete_log_shipping_secondary_database &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [Tabelle di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Informazioni sul Log Shipping &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [log_shipping_monitor_history_detail &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
+ [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
+ [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
+ [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

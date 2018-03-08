@@ -1,5 +1,5 @@
 ---
-title: IHsyscolumns (Transact-SQL) | Documenti Microsoft
+title: IHsyscolumns (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - IHsyscolumns
 - IHsyscolumns_TSQL
-dev_langs: TSQL
-helpviewer_keywords: IHsyscolumns view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IHsyscolumns view
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 347a3b691f2933cc4e3fbedcb3ddb59171da0108
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 416b4256f162ee76c10f56aa06a3f952b77e872b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,34 +42,34 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome della colonna o del parametro della procedura.|  
 |**id**|**int**|ID di oggetto della tabella a cui appartiene la colonna o ID della stored procedure a cui è associato il parametro.|  
-|**tipoX**|**tinyint**|Il tipo di archiviazione fisica da [systypes &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**xtype**|**tinyint**|Il tipo di archiviazione fisica da [systypes &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|ID del tipo di dati esteso definito dall'utente.|  
 |**lunghezza**|**bigint**|La lunghezza massima di archiviazione fisica da [systypes &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**XScale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**int**|ID di colonna o di parametro.|  
-|**Sfalsamento x**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**xoffset**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**riservato**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**reserved**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|ID del valore predefinito della colonna.|  
-|**dominio**|**int**|ID della regola o vincolo CHECK per la colonna.|  
-|**numero**|**int**|Numero di sottoprocedura quando la procedura è raggruppata (**0** per voci non di procedura).|  
+|**domain**|**int**|ID della regola o vincolo CHECK per la colonna.|  
+|**number**|**int**|Numero di sottoprocedura quando la procedura è raggruppata (**0** per voci non di procedura).|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|Offset nella riga in cui appare la colonna.|  
 |**collationid**|**int**|ID delle regole di confronto della colonna. NULL per colonne non di tipo carattere.|  
 |**lingua**|**int**|Identificatore di lingua per la colonna.|  
 |**status**|**int**|Mappa di bit utilizzata per descrivere una proprietà della colonna o del parametro:<br /><br /> **0x08** = colonna ammette valori null.<br /><br /> **0x10** = ANSI padding era attivata quando **varchar** o **varbinary** sono state aggiunte colonne. Gli spazi vuoti finali vengono mantenuti per **varchar** e gli zeri finali vengono mantenuti per **varbinary** colonne.<br /><br /> **0x40** = è un parametro OUTPUT.<br /><br /> **0x80** = colonna è una colonna identity.|  
-|**tipo**|**int**|Il tipo di archiviazione fisica da [systypes &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**type**|**int**|Il tipo di archiviazione fisica da [systypes &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**usertype**|**tinyint**|L'ID del tipo di dati definito dall'utente da [systypes &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Prec**|**int**|Livello di precisione della colonna|  
+|**prec**|**int**|Livello di precisione della colonna|  
 |**scala**|**int**|Scala della colonna.|  
-|**calcolato**|**int**|Flag che indica se si tratta di una colonna calcolata:<br /><br /> **0** = non calcolata.<br /><br /> **1** = calcolata.|  
-|**isoutparam**|**int**|Indica se il parametro della procedura è un parametro di output:<br /><br /> **1** = true.<br /><br /> **0** = false.|  
-|**IsNullable**|**int**|Indica se la colonna ammette valori Null:<br /><br /> **1** = true.<br /><br /> **0** = false.|  
+|**iscomputed**|**int**|Flag che indica se si tratta di una colonna calcolata:<br /><br /> **0** = non calcolata.<br /><br /> **1** = calcolata.|  
+|**isoutparam**|**int**|Indica se il parametro della procedura è un parametro di output:<br /><br /> **1** = true.<br /><br /> **0** = False.|  
+|**IsNullable**|**int**|Indica se la colonna ammette valori Null:<br /><br /> **1** = true.<br /><br /> **0** = False.|  
 |**regole di confronto**|**int**|Nome delle regole di confronto della colonna. NULL per colonne non di tipo carattere.|  
 |**tdscollation**|**int**|Nome delle regole di confronto della colonna quando restituite in un flusso di dati tabulare (TDS, Tabular Data Stream).|  
   

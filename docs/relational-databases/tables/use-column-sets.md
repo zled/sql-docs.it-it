@@ -16,15 +16,15 @@ helpviewer_keywords:
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0871c2e084749a9ceb79192e55e3a99cb24eb351
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fece12352dc2691fdab3906a00f8cb64151590b2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-column-sets"></a>Utilizzare set di colonne
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -133,7 +133,7 @@ GO
   
  ** Non applicabile = Non viene restituito alcun valore per questi attributi durante un'operazione di selezione sul set di colonne. Quando per questo attributo viene specificato un valore dal chiamante nella rappresentazione XML fornita per un set di colonne in un'operazione di inserimento o di aggiornamento, viene generato un errore.  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
  Il funzionamento del modello di sicurezza per un set di colonne è analogo a quello del modello di sicurezza che esiste tra una tabella e le relative colonne. I set di colonne possono essere visualizzati come una tabella di dimensioni ridotte e un'operazione di selezione è analoga a un'operazione SELECT * eseguita su tale tabella. La relazione tra il set di colonne e le colonne di tipo sparse, tuttavia, rappresenta un raggruppamento anziché rappresentare esclusivamente un contenitore. Il modello controlla la sicurezza sulla colonna del set di colonne e applica le operazioni DENY sulle colonne di tipo sparse sottostanti. Di seguito sono riportate le caratteristiche aggiuntive del modello di sicurezza.  
   
 -   È possibile concedere e revocare le autorizzazioni di sicurezza alla colonna del set di colonne, analogamente a qualsiasi altra colonna della tabella.  

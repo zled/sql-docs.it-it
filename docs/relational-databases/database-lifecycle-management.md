@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,19 +33,20 @@ helpviewer_keywords:
 - Database migration
 - Database connectivity
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a13f1130c7bd9deb72c07af66860c20c140eba7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 34f02c8fb4e7971da3ea246880ef3c84ce0294cf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-lifecycle-management"></a>Gestione del ciclo di vita del database
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] DLM (Database Lifecycle Management, gestione del ciclo di vita del database) è un approccio basato su criteri per la gestione dei database e delle risorse dei dati. DLM non è un prodotto, bensì un approccio completo per la gestione dello schema, dei dati e dei metadati del database per un'applicazione di database. L'approccio attento e dinamico a DLM consente a un'organizzazione di gestire le risorse dei dati in base ai livelli appropriati di prestazioni, protezione, disponibilità e costi.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+DLM (Database lifecycle management, gestione del ciclo di vita del database) è un approccio basato su criteri per la gestione dei database e delle risorse dei dati. DLM non è un prodotto, bensì un approccio completo per la gestione dello schema, dei dati e dei metadati del database per un'applicazione di database. L'approccio attento e dinamico a DLM consente a un'organizzazione di gestire le risorse dei dati in base ai livelli appropriati di prestazioni, protezione, disponibilità e costi.  
   
  In DLM si inizia con la presentazione del progetto e delle relative finalità, si continua con lo sviluppo, la verifica, la compilazione, la distribuzione, la gestione, il monitoraggio del database e le attività di backup e si termina con l'archivio dei dati. In questo argomento viene fornita una panoramica delle fasi di DLM che iniziano con lo sviluppo del database e continuano con le azioni di compilazione, distribuzione e monitoraggio (figura 1). Sono inoltre incluse le attività di gestione e le operazioni di portabilità dei dati quali l'importazione/esportazione, il backup, la migrazione e la sincronizzazione.  
   

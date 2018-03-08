@@ -8,7 +8,7 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - sample applications [WMI]
 - managed code [WMI]
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c46aa82d1498ff52116280e92ffd7a3ad31b9be6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3050570e26c562851e0a7b193307771f05ac4a97
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Esempio: Utilizzo del provider di eventi WMI con .NET Framework
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]L'esempio seguente viene creata un'applicazione in c# che utilizza il Provider di eventi WMI per restituire dati degli eventi per tutti gli eventi di language (DDL) che si verificano in un'istanza di installazione predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Nell'esempio seguente viene creata un'applicazione in C# che utilizza il provider di eventi WMI per restituire dati degli eventi per tutti gli eventi DDL che si verificano in un'istanza dell'installazione predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
  Per compilare l'esempio, utilizzare il file di comando seguente:  

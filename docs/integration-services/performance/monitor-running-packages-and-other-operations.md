@@ -8,23 +8,24 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a23adf907e01dd8c95c5c44a5a57db0aeb807625
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2254c139d1e93755cd9b3c503ad0bc42f08cb4e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Esecuzione di pacchetti e altre operazioni di monitoraggio
   È possibile monitorare esecuzioni di pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , convalide di progetto e altre operazioni di usando uno o più strumenti tra quelli indicati di seguito. Alcuni strumenti, tra cui le scelte dei dati, sono disponibili solo per i progetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
   
 |Sezione|Description|  
 |-------------|-----------------|  
-|Filtro|Mostra il filtro corrente applicato al report, ad esempio l'intervallo Ora inizio.|  
+|Filtra|Mostra il filtro corrente applicato al report, ad esempio l'intervallo Ora inizio.|  
 |Informazioni sulle esecuzioni|Indica l'ora di inizio, l'ora di fine e la durata di ogni esecuzione del pacchetto. È possibile visualizzare un elenco di valori dei parametri utilizzati con l'esecuzione di un pacchetto, ad esempio i valori passati a un pacchetto figlio utilizzando l'attività Esegui pacchetto. Per visualizzare l'elenco dei parametri, fare clic su Panoramica.|  
   
  Per altre informazioni sull'utilizzo dell'attività Esegui pacchetto per rendere disponibili valori a un pacchetto figlio, vedere [Attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task.md).  

@@ -8,32 +8,35 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Crawl Started event class
+helpviewer_keywords:
+- Crawl Started event class
 ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 552cb6f1fad9fc69923756fa048de88ea08c1063
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e5e520cb36f063cdef5fbb5aeb365bc5562c6c0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="ftcrawl-started-event-class"></a>Classe di evento FT:Crawl Started
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe di evento **FT:Crawl Started** indica l'avvio di una ricerca per indicizzazione (popolamento) full-text. Utilizzare questa classe di evento per verificare che una richiesta di ricerca per indicizzazione venga effettivamente accolta dalle attività di lavoro.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La classe di evento **FT:Crawl Started** indica l'avvio di una ricerca per indicizzazione (popolamento) full-text. Utilizzare questa classe di evento per verificare che una richiesta di ricerca per indicizzazione venga effettivamente accolta dalle attività di lavoro.  
   
 ## <a name="ft-crawl-started-event-class-data-columns"></a>Colonne di dati della classe di evento FT:Crawl Started  
   
-|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID del database in cui è stata avviata la ricerca per indicizzazione full-text. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
-|**EventClass**|**int**|Tipo di evento = 155.|27|No|  
-|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|**EventClass**|**int**|Tipo di evento = 155.|27|no|  
+|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
 |**ObjectID**|**int**|ID dell'oggetto assegnato dal sistema. La ricerca per indicizzazione full-text è stata avviata sull'indice full-text in questo oggetto.|22|Sì|  
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna vengono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Sì|  

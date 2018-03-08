@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +20,20 @@ helpviewer_keywords:
 - data sources [Analysis Services]
 - storage [Analysis Services], data sources
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8c8da4c13bdddd0994ec67548ce2666d7b06fea8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 99bdc630a51bd2bb4f9cbfeb7860d2dffb9392a0
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Origini dati nei modelli multidimensionali
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Tutti i dati importati o caricati in un modello multidimensionale provengono da un'origine dati esterna. In genere i dati di origine provengono da un data warehouse progettato per la creazione di report, ma potrebbero provenire da qualsiasi database relazionale a cui è stato effettuato l'accesso in modo diretto o indiretto tramite un intermediario, ad esempio un pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Tutti i dati importati o caricati in un modello multidimensionale provengono da un'origine dati esterna. In genere i dati di origine provengono da un data warehouse progettato per la creazione di report, ma potrebbero provenire da qualsiasi database relazionale a cui è stato effettuato l'accesso in modo diretto o indiretto tramite un intermediario, ad esempio un pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Un oggetto **origine dati** in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di specificare una connessione diretta a un'origine dati esterna. Oltre alla posizione fisica, un oggetto origine dati consente di specificare la stringa di connessione, il provider di dati, le credenziali e altre proprietà utilizzate per controllare il comportamento di connessione.  
   
@@ -64,15 +62,15 @@ ms.lasthandoff: 12/08/2017
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Origini dati supportate &#40;SSAS - multidimensionale&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)|Vengono descritti i tipi di origini dati che possono essere utilizzati in un modello multidimensionale.|  
-|[Creare un'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|Viene illustrato come aggiungere un oggetto origine dati a un modello multidimensionale.|  
-|[Eliminare un'origine dati in Esplora soluzioni &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Utilizzare questa procedura per eliminare un oggetto origine dati da un modello multidimensionale.|  
-|[Impostare le proprietà dell'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|Viene descritta ogni proprietà e fornite informazioni su come impostarle.|  
-|[Impostare opzioni di rappresentazione &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|Viene descritto come configurare le opzioni nella finestra di dialogo Impostazioni di rappresentazione.|  
+|[Creare un'origine dati & #40; SSAS multidimensionale & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|Viene illustrato come aggiungere un oggetto origine dati a un modello multidimensionale.|  
+|[Eliminare un'origine dati in Esplora soluzioni & #40; SSAS multidimensionale & #41;](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Utilizzare questa procedura per eliminare un oggetto origine dati da un modello multidimensionale.|  
+|[Impostare proprietà origine dati & #40; SSAS multidimensionale & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|Viene descritta ogni proprietà e fornite informazioni su come impostarle.|  
+|[Impostare le opzioni di rappresentazione & #40; SSAS - multidimensionale & #41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|Viene descritto come configurare le opzioni nella finestra di dialogo Impostazioni di rappresentazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti di database &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Architettura logica &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Origini dati e associazioni &#40; SSAS multidimensionale &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
+ [Gli oggetti di database & #40; Analysis Services - dati multidimensionali & #41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Architettura logica & #40; Analysis Services - dati multidimensionali & #41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Origini dati e associazioni & #40; SSAS multidimensionale & #41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   

@@ -8,31 +8,31 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - schema rowsets [Analysis Services], OLE DB for OLAP
 - OLE DB for OLAP schema rowsets
 - schema rowsets [OLE DB for OLAP]
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ef17308efb95b03a96a37089d3870e97d1bd7dad
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 75bdb07bd24f44fd42cf257a1e365c101329060f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>Set di righe dello schema OLE DB per OLAP
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML per il provider Analysis (XMLA) supporta seguente OLE DB per OLAP i rowset dello schema.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Il provider di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) supporta i set di righe dello schema OLE DB per OLAP seguenti.  
   
 > [!NOTE]  
 >  Per verificare se un provider dell'origine dati supporta un set di righe, utilizzare il **DISCOVER_ENUMERATIONS** set di righe con la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 |Set di righe dello schema<sup>1</sup>|Description|  
 |-------------------------------|-----------------|  
 |[Set di righe DISCOVER_INSTANCES](../../../analysis-services/schema-rowsets/ole-db-olap/discover-instances-rowset.md)|Descrive le istanze nel server.|  
-|[Set di righe DISCOVER_KEYWORDS &#40; OLE DB per OLAP &#41;](../../../analysis-services/schema-rowsets/ole-db-olap/discover-keywords-rowset-ole-db-for-olap.md)|Enumera un elenco di parole riservate dal provider.|  
+|[Set di righe DISCOVER_KEYWORDS & #40; OLE DB per OLAP & #41;](../../../analysis-services/schema-rowsets/ole-db-olap/discover-keywords-rowset-ole-db-for-olap.md)|Enumera un elenco di parole riservate dal provider.|  
 |[Set di righe MDSCHEMA_ACTIONS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)|Descrive le azioni che possono essere disponibili per l'applicazione client.|  
 |[Set di righe MDSCHEMA_CUBES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-cubes-rowset.md)|Descrive la struttura dei cubi all'interno di un database.|  
 |[Set di righe MDSCHEMA_DIMENSIONS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset.md)|Descrive le dimensioni condivise e private all'interno di un database.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |[Set di righe MDSCHEMA_MEASUREGROUP_DIMENSIONS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)|Enumera le dimensioni dei gruppi di misure.|  
 |[Set di righe MDSCHEMA_MEASUREGROUPS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset.md)|Descrive i gruppi di misure all'interno di un database.|  
 |[Set di righe MDSCHEMA_MEASURES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measures-rowset.md)|Descrive ogni misura di un cubo.|  
-|[Set di righe MDSCHEMA_MEMBERS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|Descrive i membri all'interno di un database.|  
+|[Set di righe mdschema_members](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|Descrive i membri all'interno di un database.|  
 |[Set di righe MDSCHEMA_PROPERTIES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Descrive le proprietà dei membri all'interno di un database.|  
 |[Set di righe MDSCHEMA_SETS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Descrive i set attualmente definiti in un database, inclusi i set con ambito sessione.|  
   
@@ -64,6 +64,6 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)   
- [Set di righe dello schema di Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Set di righe dello Schema di Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

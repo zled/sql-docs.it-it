@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, multirow
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b20cb4324e252d3de3c15ceb67e5f6ac7b1dd4e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 39adf5f718f4f4e0789e8e10bf6aa5e007fe6f0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Creazione di trigger DML per gestire più righe di dati
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Quando si scrive il codice di un trigger DML, è importante considerare che l'istruzione che attiva il trigger può essere singola e interessare più righe di dati, anziché una sola riga. Questo funzionamento è comune per i trigger UPDATE e DELETE perché queste istruzioni in genere interessano più righe, mentre è meno comune per i trigger INSERT perché l'istruzione INSERT di base aggiunge soltanto una riga singola. Dato però che un trigger INSERT può essere attivato da un'istruzione INSERT INTO (*table_name*) SELECT, l'inserimento di molte righe può causare la chiamata a un unico trigger.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Quando si scrive il codice di un trigger DML, è importante considerare che l'istruzione che attiva il trigger può essere singola e interessare più righe di dati, anziché una sola riga. Questo funzionamento è comune per i trigger UPDATE e DELETE perché queste istruzioni in genere interessano più righe, mentre è meno comune per i trigger INSERT perché l'istruzione INSERT di base aggiunge soltanto una riga singola. Dato però che un trigger INSERT può essere attivato da un'istruzione INSERT INTO (*table_name*) SELECT, l'inserimento di molte righe può causare la chiamata a un unico trigger.  
   
  Queste considerazioni sono di particolare importanza quando la funzione di un trigger DML consiste nel ricalcolare automaticamente i valori di riepilogo di una tabella e archiviare i risultati in un'altra tabella per i conteggi.  
   

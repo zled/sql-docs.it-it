@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 521848a7d7948e2b1d4cd09277811447a754e0d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c9d5e892b42aa8570ceb9fde71e0ed13d351dc53
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Data e ora miglioramenti (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  Per ulteriori informazioni sui tipi di dati data e ora, vedere [datetime &#40; Transact-SQL &#41; ](../../t-sql/data-types/datetime-transact-sql.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Supporto dei tipi di dati per i miglioramenti relativi a data e ora OLE DB](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
  Fornisce informazioni su OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) che supportano i tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati data e ora.  
   

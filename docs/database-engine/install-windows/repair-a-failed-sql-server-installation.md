@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 14843789252f1e18a728edd13327f28428c7061c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 51c0f4d73f3032497b8a428b4093c16754499b79
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>Ripristinare un'installazione non riuscita di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'operazione di ripristino può essere usata negli scenari seguenti:  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+L'operazione di ripristino può essere utilizzata negli scenari seguenti:  
   
 - Ripristino di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] danneggiata dopo averla installata. 
   

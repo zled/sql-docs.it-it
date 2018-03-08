@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28da6b7f73721a99937dcfca82264463367830c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bf442aad4542358644835a64111ca63ed59b51a6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   L'utilità rs.exe elabora lo script fornito in un file di input. Utilizzare questa utilità per automatizzare le attività di amministrazione e distribuzione dei server di report.  
@@ -121,7 +119,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
   
  Per ulteriori esempi, vedere [Eseguire un file script di Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile definire script per impostare le proprietà di sistema, pubblicare report e così via. Gli script creati possono includere qualsiasi metodo dell'API di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  Lo script deve essere scritto in codice [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e archiviato in un file di testo Unicode o UTF-8 con estensione di file rss. Non è possibile eseguire il debug degli script con l'utilità **rs** . Per eseguire il debug di uno script, eseguire il codice in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  

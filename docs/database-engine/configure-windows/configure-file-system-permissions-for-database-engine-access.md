@@ -17,15 +17,15 @@ helpviewer_keywords:
 - permissions [SQL Server], file system
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c3c16fe40753700a0f8e6d89c403b7a96324d366
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4f656b30d3ef8eca1f9af1c80d9659630d45f908
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurare le autorizzazioni del file system per l'accesso al motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustrato come concedere al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l'accesso al file system nel percorso in cui sono archiviati i file di database. Il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve disporre dell'autorizzazione del file system di Windows per accedere alla cartella file in cui sono archiviati i file di database. L'autorizzazione per il percorso predefinito viene configurata durante l'installazione. Se si posizionano i file di database in un percorso diverso, potrebbe essere necessario seguire questi passaggi per concedere al [!INCLUDE[ssDE](../../includes/ssde-md.md)] l'autorizzazione di controllo completo per il percorso in questione.  

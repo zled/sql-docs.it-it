@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC CHECKALLOC
 - DBCC_CHECKALLOC_TSQL
 - CHECKALLOC
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DBCC CHECKALLOC statement
 - checking database space allocation
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09d190a3a27344d60fe3861b87443165f39ac352
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 69a22a7e7b3859ba2232fe7c60f5b0b885af8b17
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ Controlla la consistenza delle strutture di allocazione dello spazio su disco pe
   
 ## <a name="syntax"></a>Sintassi  
   
-```sql
+```
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -107,7 +109,7 @@ DBCC CHECKALLOC controlla l'allocazione di tutte le pagine nel database, indipen
 Se NO_INFOMSGS viene omesso, DBCC CHECKALLOC raccoglie informazioni relative all'utilizzo dello spazio per tutti gli oggetti del database. Queste informazioni viene stampate insieme a eventuali errori rilevati.
   
 > [!NOTE]  
->La funzionalità di DBCC CHECKALLOC è inclusa [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) e [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Non è pertanto necessario eseguire DBCC CHECKALLOC separatamente rispetto a queste istruzioni.   I dati di FILESTREAM non vengono controllati da DBCC CHECKALLOC. Tramite FILESTREAM vengono archiviati oggetti binari di grandi dimensioni (BLOB) nel file system.  
+> La funzionalità di DBCC CHECKALLOC è inclusa [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) e [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Non è pertanto necessario eseguire DBCC CHECKALLOC separatamente rispetto a queste istruzioni.   I dati di FILESTREAM non vengono controllati da DBCC CHECKALLOC. Tramite FILESTREAM vengono archiviati oggetti binari di grandi dimensioni (BLOB) nel file system.  
   
 ## <a name="internal-database-snapshot"></a>Snapshot di database interno  
 DBCC CHECKALLOC utilizza uno snapshot interno del database per indicare la consistenza transazionale necessaria per l'esecuzione di questi controlli. Se non è possibile creare uno snapshot o si specifica TABLOCK, DBCC CHECKALLOC tenta di acquisire un blocco esclusivo (X) sul database per ottenere la consistenza necessaria.
@@ -160,7 +162,7 @@ DBCC CHECKALLOC fornisce inoltre per ogni indice e partizione di ogni file un ri
   
 DBCC CHECKALLOC restituisce il set di risultati seguente (i valori possono variare), tranne quando viene specificata la parola chiave ESTIMATEONLY o NO_INFOMSGS.
   
-```sql
+```
 DBCC results for 'master'.  
 ***************************************************************  
 Table sysobjects                Object ID 1.  
@@ -222,7 +224,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 Quando si specifica ESTIMATEONLY, viene restituito il set di risultati seguente.
   
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)   
 -------------------------------------------------   
 34  
@@ -232,7 +234,7 @@ Estimated TEMPDB space needed for CHECKALLOC (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza del ruolo predefinito del server sysadmin o db_owner del database.
   
 ## <a name="examples"></a>Esempi  

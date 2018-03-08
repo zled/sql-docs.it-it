@@ -6,7 +6,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
 applies_to:
@@ -16,18 +16,19 @@ dev_langs:
 - Python
 - R
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: b8c384e5d8e13ed0961ad82f95af17c0352389be
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 2d15f47fd148cb7b1f0edf399e94502c3570eabd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>Esercitazioni per servizi SQL Server Machine Learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo fornisce un elenco completo delle applicazioni di esempio che utilizzano le funzionalità di machine learning in SQL Server 2016 o SQL Server 2017, esercitazioni e demo. Per iniziare da qui illustrato come eseguire R o Python da T-SQL, utilizzare i contesti di calcolo remoti e locali e ottimizzare il codice R e Python per un ambiente di produzione di SQL.
 

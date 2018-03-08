@@ -8,10 +8,12 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.configureerroroutput.f1
+f1_keywords:
+- sql13.dts.designer.configureerroroutput.f1
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d71c06122f09a20e384fc491f2568136e8f29ce8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 016befa8b9085029b5fdfe332fce0afa063b40bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="error-handling-in-data"></a>Gestione degli errori nei dati
   Quando tramite un componente flusso di dati viene applicata una trasformazione ai dati delle colonne, vengono estratti dati dalle origini o vengono caricati dati nelle destinazioni, possono verificarsi errori. Gli errori sono spesso dovuti alla presenza di valori non previsti. Una conversione di dati può ad esempio avere esito negativo perché una colonna contiene una stringa anziché un numero, un inserimento in una colonna di database può avere esito negativo perché i dati rappresentano una data mentre la colonna ha un tipo di dati numeric oppure la valutazione di un'espressione può avere esito negativo perché il valore di una colonna è zero e dà luogo a un'operazione matematica non valida.  
@@ -80,7 +82,7 @@ Usare la finestra di dialogo **Configura output errori** per configurare le opzi
   
  **Argomenti correlati:** [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  
   
- **Description**  
+ **Descrizione**  
  Consente di visualizzare la descrizione dell'operazione.  
   
  **Imposta questo valore nelle celle selezionate**  

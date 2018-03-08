@@ -1,7 +1,7 @@
 ---
 title: Mapping tra i database MySQL e gli schemi di SQL Server (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77a150ac9568f614869b3e6f168c96eb47d2e764
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4dd351ebbb052515d953f02ae74282dd1e1d62f1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mapping tra i database MySQL e gli schemi di SQL Server (MySQLToSQL)
 Per impostazione predefinita, SSMA per MySQL esegue la migrazione di tutti gli oggetti in uno schema di MySQL per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o denominato per lo schema di database di SQL Azure. Tuttavia, è possibile personalizzare il mapping tra gli schemi di MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database di SQL Azure.  
@@ -75,7 +75,7 @@ Se si personalizza il mapping tra schemi di MySQL e uno schema di SQL Server, è
   
 1.  Nella scheda mapping dello schema, selezionare una riga e fare clic su **Ripristina predefiniti** per ripristinare il database predefinito e lo schema.  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Next Steps  
 Se si desidera analizzare la conversione di oggetti di MySQL in oggetti di SQL Server o SQL Azure, è possibile [creare un report di conversione](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) in caso contrario, è possibile [convertire le definizioni degli oggetti di database MySQL](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7) negli schemi di SQL Server o SQL Azure  
   
 ## <a name="see-also"></a>Vedere anche  

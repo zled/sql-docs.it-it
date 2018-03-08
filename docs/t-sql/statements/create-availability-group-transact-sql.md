@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,23 +19,24 @@ f1_keywords:
 - CREATE AVAILABILITY GROUP
 - CREATE AVAILABILITY
 - AVAILABILITY_GROUP_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - CREATE AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: "196"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35ccffcfbdce2c10b20c8459e59a1c2d41962088
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e0a4792974ec9aa78678aec74dc390e992471e64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +120,7 @@ CREATE AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *nome_gruppo*  
+ *group_name*  
  Specifica il nome del nuovo gruppo di disponibilità. *nome_gruppo* deve essere un valore valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [identificatore](../../relational-databases/databases/database-identifiers.md), e deve essere univoco in tutti i gruppi di disponibilità nel cluster WSFC. La lunghezza massima consentita per il nome del gruppo di disponibilità è 128 caratteri.  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {PRIMARIO | SECONDARY_ONLY | SECONDARIO | NONE}  
@@ -231,12 +233,12 @@ CREATE AVAILABILITY GROUP group_name
   
  Per informazioni sui prerequisiti per i nodi WSFC e le istanze del server, vedere [prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **='**TCP**://***indirizzo-sistema***:***porta***'**  
+ ENDPOINT_URL **='**TCP**://***system-address***:***port***'**  
  Specifica il percorso URL per il [endpoint del mirroring del database](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita la replica di disponibilità che si sta definendo nella clausola REPLICA ON corrente.  
   
- La clausola ENDPOINT_URL è obbligatoria. Per altre informazioni, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
+ La clausola ENDPOINT_URL è obbligatoria. Per altre informazioni, vedere [Specificare l'URL dell'Endpoint quando si aggiunge o modifica una Replica di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'**TCP**://***indirizzo-sistema***:***porta***'**  
+ **'**TCP**://***system-address***:***port***'**  
  Specifica un URL per definire un URL di endpoint o un URL di routing di sola lettura. I parametri URL sono i seguenti:  
   
  *system-address*  
@@ -263,7 +265,7 @@ CREATE AVAILABILITY GROUP group_name
 
    Per ulteriori informazioni, vedere [replica solo configurazione](../../linux/sql-server-linux-availability-group-ha.md).
   
- La clausola AVAILABILITY_MODE è obbligatoria. Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ La clausola AVAILABILITY_MODE è obbligatoria. Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  FAILOVER_MODE  **=**  {AUTOMATICO | MANUALE}  
  Specifica la modalità di failover della replica di disponibilità che si sta definendo.  
@@ -317,7 +319,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Sono consentite tutte le connessioni ai database nella replica secondaria per l'accesso in sola lettura.  
   
- Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='**TCP**://***indirizzo-sistema***:***porta***'**  
  Specifica l'URL da usare per il routing delle richieste di connessione con finalità di lettura a questa replica di disponibilità. Si tratta dell'URL sul quale è in ascolto il motore di database di SQL Server. In genere, l'istanza predefinita del motore di database di SQL Server è in ascolto sulla porta TCP 1433.  
@@ -360,7 +362,7 @@ CREATE AVAILABILITY GROUP group_name
  Nessuno  
  Specifica che quando questa replica di disponibilità è la replica primaria, il routing di sola lettura non è supportato. Questo è il comportamento predefinito.  
   
- SESSION_TIMEOUT  **=**  *integer*  
+ SESSION_TIMEOUT **=** *integer*  
  Specifica il periodo di timeout della sessione in secondi. Se non si specifica questa opzione, il periodo di timeout predefinito è di 10 secondi. Il valore minimo è 5 secondi.  
   
 > [!IMPORTANT]  
@@ -380,7 +382,7 @@ CREATE AVAILABILITY GROUP group_name
   
  La clausola LISTENER è obbligatoria.  
   
- **'**TCP**://***indirizzo-sistema***:***porta***'**  
+ **'**TCP**://***system-address***:***port***'**  
  Specifica un URL per il listener associato al gruppo di disponibilità. I parametri URL sono i seguenti:  
   
  *system-address*  
@@ -449,7 +451,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- CON IP **(** { **('***four_part_ipv4_address***','***four_part_ipv4_mask* **')** | **('***ipv6_address***')** } [ **,** ...  *n*  ] **)** [ **,** Porta  **=**  *listener_port* ]  
+ CON IP **(** { **('***four_part_ipv4_address***','***four_part_ipv4_mask***')** | **('***ipv6_address***')** } [ **,** ...  *n*  ] **)** [ **,** Porta **= * * * listener_port* ]  
  Specifica che, anziché usare DHCP, il listener del gruppo di disponibilità utilizzerà uno o più indirizzi IP statici. Per creare un gruppo di disponibilità tra più subnet, viene richiesto un indirizzo IP statico nella configurazione del listener per ogni subnet. Per una determinata subnet, l'indirizzo IP statico può essere un indirizzo IPv4 o IPv6. Contattare l'amministratore di rete per ottenere un indirizzo IP statico per ogni subnet che ospita una replica per il nuovo gruppo di disponibilità.  
   
  Esempio:  
@@ -470,14 +472,14 @@ CREATE AVAILABILITY GROUP group_name
   
  È supportato il numero di porta predefinito, 1433. Tuttavia, per motivi di sicurezza, è consigliabile usare un numero di porta diverso.  
   
- Ad esempio: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
+ Esempio: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
 ## <a name="prerequisites-and-restrictions"></a>Prerequisiti e restrizioni  
  Per informazioni sui prerequisiti per la creazione di un gruppo di disponibilità, vedere [prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
  Per informazioni sulle restrizioni sulle istruzioni AVAILABILITY GROUP Transact-SQL, vedere [Cenni preliminari su istruzioni Transact-SQL per gruppi di disponibilità AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.  
@@ -497,7 +499,7 @@ CREATE AVAILABILITY GROUP group_name
   
 |Opzione della replica|Impostazione su `COMPUTER01`|Impostazione su `COMPUTER02`|Impostazione su `COMPUTER03`|Description|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
-|ENDPOINT_URL|TCP: / /*COMPUTER01:5022*|TCP: / /*COMPUTER02:5022*|TCP: / /*COMPUTER03:5022*|In questo esempio i sistemi si trovano nello stesso dominio, pertanto per gli URL dell'endpoint può essere usato il nome del sistema come relativo indirizzo.|  
+|ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|In questo esempio i sistemi si trovano nello stesso dominio, pertanto per gli URL dell'endpoint può essere usato il nome del sistema come relativo indirizzo.|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|In due repliche viene usata la modalità con commit sincrono. In caso di sincronizzazione, supportano il failover senza perdita di dati. Nella terza replica viene usata la modalità di disponibilità con commit asincrono.|  
 |FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|Le repliche con commit sincrono supportano il failover automatico e il failover manuale pianificato. La replica in cui viene usata la modalità di disponibilità con commit sincrono supporta solo il failover manuale forzato.|  
 |BACKUP_PRIORITY|30|30|90|Alla replica con commit asincrono viene assegnata una priorità più alta, pari a 90, rispetto alle repliche con commit sincrono. I backup tendono a verificarsi nell'istanza del server che ospita la replica con commit asincrono.|  
@@ -564,21 +566,21 @@ GO
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
+-   [Creare un gruppo di disponibilità &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
   
--   [Usare la Creazione guidata gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Utilizzare la creazione guidata gruppo di disponibilità &#40; SQL Server Management Studio &#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [Usare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Usare la Creazione guidata gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Utilizzare la creazione guidata gruppo di disponibilità &#40; SQL Server Management Studio &#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [DROP AVAILABILITY GROUP &#40; Transact-SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Risolvere i problemi sempre sulla configurazione di gruppi di disponibilità &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Listener del gruppo di disponibilità, connettività Client e Failover dell'applicazione &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
 

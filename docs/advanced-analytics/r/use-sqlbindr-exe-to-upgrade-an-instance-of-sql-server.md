@@ -7,23 +7,25 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016 CTP3)
+applies_to:
+- SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e83922e15c8bea5f26dcc5c1992acc0529daf18c
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>L'aggiornamento dei componenti di machine learning in un'istanza di SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo viene illustrato il processo di _associazione_, che è possibile utilizzare per eseguire l'aggiornamento di machine learning componenti utilizzati in SQL Server. Il processo di associazione blocca il server in una frequenza di aggiornamento in base alle versioni di Machine Learning Server, anziché utilizzare SQL Server versione e aggiornare la pianificazione.
 
@@ -38,7 +40,7 @@ Se in qualsiasi momento si desidera interrompere l'aggiornamento in base alla pi
 
 Il processo di aggiornamento di machine learning componenti è detto **associazione**, perché il modello di supporto per i componenti di SQL Server machine learning usare i nuovi criteri di ciclo di vita del Software più recenti viene modificato. 
 
-In generale, il passaggio al modello di licenze nuovo assicura che il data Scientist può utilizzare sempre la versione più recente di R o Python. Per ulteriori informazioni sulle condizioni dei criteri del ciclo di vita moderna, vedere [sequenza temporale del supporto per Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
+In generale, il passaggio al nuovo modello di manutenzione garantisce che il data Scientist può utilizzare sempre la versione più recente di R o Python. Per ulteriori informazioni sulle condizioni dei criteri del ciclo di vita moderna, vedere [sequenza temporale del supporto per Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
 
 > [!NOTE]
 > L'aggiornamento non modifica il modello di supporto per il database di SQL Server e non modifica la versione di SQL Server.
@@ -189,7 +191,7 @@ Se si ritiene di cartelle con un nome simile al seguente, è possibile rimuoverl
 
 ### <a name="parameters"></a>Parametri
 
-|nome|Description|
+|Nome|Description|
 |------|------|
 |*list*| Visualizza un elenco di tutti gli ID delle istanze di database SQL nel computer corrente|
 |*bind*| Aggiorna l'istanza di database SQL specificata alla versione più recente di R Server e assicura che all'istanza vengano applicati automaticamente gli aggiornamenti successivi di R Server|

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -58,13 +56,13 @@ ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b3a2027302934ab4fb9dd1ea68cf70e014ee4de8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d38b2ce46120e435ac1b94623587816ff20307d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Formattazione di un grafico (Generatore report e SSRS)
   Dopo aver definito i dati per il grafico e una volta ottenuta la visualizzazione desiderata, è possibile aggiungere una formattazione per migliorare l'aspetto complessivo ed evidenziare i principali punti dati. Le opzioni di formattazione più comuni possono essere modificate dalla finestra di dialogo Proprietà accessibile facendo clic con il pulsante destro del mouse su un elemento del grafico per visualizzare il relativo menu di scelta rapida. A ogni elemento del grafico è associata una finestra di dialogo specifica. Per altre informazioni sugli elementi dei grafici, vedere [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
  Viene descritto come definire i colori tramite una tavolozza, come definire una tavolozza dei colori personalizzata e come definire i colori in base a un'espressione.  
   

@@ -3,7 +3,7 @@ title: Correlare una traccia con i dati di Log delle prestazioni di Windows | Do
 ms.custom: 
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - SQL Server Profiler, correlating trace with log data
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef4781a05da3e06bc1d098dacce544dd599d647b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9fc0474e0f3c823b2ca3fa16979e16ff5123f321
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>Correlare una traccia con i dati di Log delle prestazioni Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è possibile aprire un log delle prestazioni di Microsoft Windows, scegliere i contatori da correlare con una traccia e visualizzare i contatori delle prestazioni selezionati insieme alla traccia nel [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] interfaccia utente grafica. Quando si seleziona un evento nella finestra della traccia, una barra rossa verticale nel riquadro della finestra dei dati di Monitoraggio di sistema di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] indica i dati del log delle prestazioni correlati all'evento di traccia selezionato.  
   
- Per correlare una traccia con i contatori delle prestazioni, aprire un file di traccia o una tabella contenente le colonne di dati **StartTime** e **EndTime** data columns, e then click **Importa dati prestazioni** dal menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu. È quindi possibile aprire un log delle prestazioni e selezionare gli oggetti e i contatori di Monitoraggio di sistema da correlare alla traccia.  
+ Per correlare una traccia con i contatori delle prestazioni, aprire un file di traccia o una tabella contenente le colonne di dati **StartTime** e **EndTime** data columns, e then click **Importa dati prestazioni** dal menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **di** . È quindi possibile aprire un log delle prestazioni e selezionare gli oggetti e i contatori di Monitoraggio di sistema da correlare alla traccia.  
   
 ### <a name="to-correlate-a-trace-with-performance-log-data"></a>Per correlare una traccia ai dati dei registri di prestazioni  
   

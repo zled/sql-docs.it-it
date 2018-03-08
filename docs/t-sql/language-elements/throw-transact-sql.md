@@ -1,5 +1,5 @@
 ---
-title: THROW (Transact-SQL) | Documenti Microsoft
+title: THROW (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - THROW_TSQL
 - THROW
-dev_langs: TSQL
-helpviewer_keywords: THROW statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- THROW statement
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2f4589c45311ad9c1479f97ceb82b38f3e13393e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 04e09db13babdf05ba4cfa2f213f6d6e0d58c1a5
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,20 +49,20 @@ THROW [ { error_number | @local_variable },
   
 ## <a name="arguments"></a>Argomenti  
  *error_number*  
- Costante o variabile che rappresenta l'eccezione. *error_number* è **int** e deve essere maggiore o uguale a 50000 e minore o uguale a 2147483647.  
+ Costante o variabile che rappresenta l'eccezione. *error_number* è di tipo **int** e deve essere maggiore o uguale a 50000 e minore o uguale a 2147483647.  
   
- *Messaggio*  
- Stringa o variabile in cui viene descritta l'eccezione. *messaggio* è **nvarchar (2048)**.  
+ *message*  
+ Stringa o variabile in cui viene descritta l'eccezione. *message* è di tipo **nvarchar(2048)**.  
   
- *stato*  
- Costante o variabile compresa tra 0 e 255 tramite cui viene indicato lo stato da associare al messaggio. *stato* è **tinyint**.  
+ *state*  
+ Costante o variabile compresa tra 0 e 255 tramite cui viene indicato lo stato da associare al messaggio. *state* è di tipo **tinyint**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'istruzione che precede l'istruzione THROW deve essere seguita dal carattere di terminazione punto e virgola (;).  
   
- Se un costrutto TRY...CATCH non è disponibile, la sessione viene terminata. Vengono impostate la procedura e numero di riga in cui viene generata l'eccezione. La gravità viene impostata su 16.  
+ Se non è disponibile un costrutto TRY...CATCH, il batch di istruzioni viene terminato. Vengono impostate la procedura e numero di riga in cui viene generata l'eccezione. La gravità viene impostata su 16.  
   
- Se l'istruzione THROW viene specificata senza parametri, è necessario che venga visualizzata in un blocco CATCH. In questo modo verrà generata l'eccezione rilevata. In caso si verifichi un errore qualsiasi in un'istruzione THROW, il batch di istruzioni verrà terminato.  
+ Se l'istruzione THROW viene specificata senza parametri, è necessario che venga visualizzata in un blocco CATCH. In questo modo verrà generata l'eccezione rilevata. Tutti gli errori che si verificano in un'istruzione THROW causano la terminazione del batch di istruzioni.  
   
  % è un carattere riservato nel testo del messaggio di un'istruzione THROW e deve essere preceduto da un carattere di escape. Raddoppiare il carattere % per restituire % come parte del testo del messaggio, ad esempio "L'aumento ha superato il 15% del valore originale".  
   
@@ -68,16 +71,16 @@ THROW [ { error_number | @local_variable },
   
 |istruzione RAISERROR|Istruzione THROW|  
 |-------------------------|---------------------|  
-|Se un *msg_id* viene passato a RAISERROR, l'ID deve essere definito in sys. Messages.|Il *error_number* parametro non deve essere definito in sys. Messages.|  
-|Il *argomento msg_str* parametro può contenere **printf** gli stili di formattazione.|Il *messaggio* non accetta un parametro **printf** lo stile di formattazione.|  
-|Il *gravità* parametro specifica la gravità dell'eccezione.|Non esiste alcun *gravità* parametro. La gravità dell'eccezione viene sempre impostata su 16.|  
+|Se *msg_id* viene passato a RAISERROR, l'ID deve essere definito in sys.messages.|Il parametro *error_number* non deve essere definito in sys.messages.|  
+|Il parametro *msg_str* può contenere stili di formattazione **printf**.|Il parametro *message* non accetta stili di formattazione **printf**.|  
+|Il parametro *severity* specifica la gravità dell'eccezione.|Non esiste un parametro *severity*. La gravità dell'eccezione viene sempre impostata su 16.|  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-throw-to-raise-an-exception"></a>A. Utilizzo di THROW per generare un'eccezione  
  Nell'esempio seguente viene illustrato come utilizzare l'istruzione `THROW` per generare un'eccezione.  
   
-```tsql  
+```sql  
 THROW 51000, 'The record does not exist.', 1;  
 ```  
   
@@ -92,7 +95,7 @@ THROW 51000, 'The record does not exist.', 1;
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>B. Utilizzo di THROW per generare nuovamente un'eccezione  
  Nell'esempio seguente viene illustrato come utilizzare l'istruzione `THROW` per generare nuovamente l'ultima eccezione generata.  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 CREATE TABLE dbo.TestRethrow  
@@ -121,9 +124,9 @@ END CATCH;
  ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>C. Utilizzo di FORMATMESSAGE con THROW  
- Nell'esempio seguente viene illustrato come utilizzare la funzione `FORMATMESSAGE` con `THROW` per generare un messaggio di errore personalizzato. Nell'esempio viene prima creato un messaggio di errore definito dall'utente tramite `sp_addmessage`. Poiché l'istruzione THROW non consente parametri di sostituzione nel *messaggio* parametro in modo avviene con RAISERROR, la funzione FORMATMESSAGE viene utilizzata per passare i tre valori dei parametri previsti dal messaggio di errore 60000.  
+ Nell'esempio seguente viene illustrato come utilizzare la funzione `FORMATMESSAGE` con `THROW` per generare un messaggio di errore personalizzato. Nell'esempio viene prima creato un messaggio di errore definito dall'utente tramite `sp_addmessage`. Poiché l'istruzione THROW non consente parametri di sostituzione nel parametro *message* come invece avviene con RAISERROR, la funzione FORMATMESSAGE viene utilizzata per passare i tre valori dei parametri previsti nel messaggio di errore 60000.  
   
-```tsql  
+```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
 ,@severity = 16  
@@ -145,20 +148,20 @@ THROW 60000, @msg, 1;
  ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
- [Gravità degli errori di motore di database](../../relational-databases/errors-events/database-engine-error-severities.md)   
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
+ [Gravità degli errori del motore di database](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
- [GOTO &#40; Transact-SQL &#41;](../../t-sql/language-elements/goto-transact-sql.md)   
- [BEGIN... FINE &#40; Transact-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [XACT_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md)   
- [SET XACT_ABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
+ [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
+ [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
 

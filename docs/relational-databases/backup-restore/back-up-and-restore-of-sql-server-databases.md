@@ -25,15 +25,15 @@ helpviewer_keywords:
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 caps.latest.revision: "91"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2fe7ef3aca47080afb896ddb7e89470fda06e9e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 959fea6c816396c70883a47c1d9f00cbd11be9dc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Backup e ripristino di database SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ Dispositivo di**backup**
  ##  <a name="backup-and-restore-strategies"></a>Strategie di backup e ripristino  
  Il backup e il ripristino dei dati devono essere personalizzati per uno specifico ambiente e devono funzionare con le risorse disponibili. Per un utilizzo affidabile delle funzionalità di backup e ripristino è pertanto necessaria un'apposita strategia. Una strategia ben progettata a tale scopo ottimizza la disponibilità dei dati e ne riduce al minimo la perdita, rispettando al contempo le esigenze aziendali specifiche.  
   
-#### <a name="important"></a>Importante 
+#### <a name="important"></a>Importante! 
 **Archiviare il database e i backup su dispositivi separati. In caso contrario, se nel dispositivo contenente il database si verifica un errore, i backup non saranno disponibili. L'archiviazione dei dati e dei backup su dispositivi separati migliora inoltre le prestazioni di I/O sia per la scrittura dei backup che per l'uso in produzione del database.**  
   
  Tale strategia prevede una parte relativa al backup e una parte relativa al ripristino. La parte della strategia relativa al backup definisce il tipo e la frequenza delle operazioni di backup, il tipo e la velocità dell'hardware necessario, le modalità di esecuzione di test dei backup, nonché i percorsi e le modalità di archiviazione dei relativi supporti, incluse le considerazioni relative alla sicurezza. La parte della strategia relativa al ripristino definisce il responsabile dell'esecuzione delle operazioni di ripristino e la modalità di esecuzione di tali operazioni in modo da realizzare gli obiettivi relativi alla disponibilità del database e ridurre al minimo il rischio di perdita dei dati. È consigliabile documentare le procedure di backup e ripristino e mantenerne una copia nella documentazione relativa alle procedure operative aziendali.  
@@ -190,7 +190,7 @@ Dispositivo di**backup**
  ### <a name="using-ssms"></a>Utilizzo di SSMS   
 -   [Creare un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
--   [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
 -   [Backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
   
@@ -213,7 +213,7 @@ Dispositivo di**backup**
   
 -   [Ripristinare un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
--   [Ripristinare file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
+-   [Ripristino di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
 ### <a name="using-t-sql"></a>Uso di T-SQL
 -   [Ripristinare un backup del database nel modello di recupero con registrazione minima &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
@@ -235,7 +235,7 @@ Dispositivo di**backup**
 -   [Ripristinare un database di SQL Server fino a un punto specifico &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
  ### <a name="using-t-sql"></a>Uso di T-SQL 
--   [Ripristinare un database di SQL Server fino a un punto specifico &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
  
 -   [Riavviare un'operazione di ripristino interrotta &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   

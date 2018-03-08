@@ -1,29 +1,29 @@
 ---
 title: Installazione di ricerca Full-Text SQL Server in Linux | Documenti Microsoft
-description: In questo argomento viene descritto come installare ricerca Full-Text di SQL Server in Linux.
+description: In questo articolo viene descritto come installare ricerca Full-Text di SQL Server in Linux.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 68704db01975a26b028d2ebc5b7f0d166793d6bc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 1ffb4caadffb8f292f6bd8e495a457fe86e9d641
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installazione di ricerca Full-Text SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Installare i seguenti passaggi [ricerca Full-Text di SQL Server](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-server-fts**) in Linux. Ricerca full-Text consente di eseguire query full-text su dati di tipo carattere nelle tabelle di SQL Server. Per i problemi noti per questa versione, vedere il [note sulla versione](sql-server-linux-release-notes.md).
 
@@ -51,7 +51,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Se occorre un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi utilizzare gli stessi passaggi di installazione offline descritti nell'argomento [installazione di SQL Server](sql-server-linux-setup.md#offline).
+Se occorre un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi utilizzare gli stessi passaggi di installazione offline descritti nell'articolo [installazione di SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="ubuntu">Installare in Ubuntu</a>
 
@@ -69,7 +69,7 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Se occorre un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi utilizzare gli stessi passaggi di installazione offline descritti nell'argomento [installazione di SQL Server](sql-server-linux-setup.md#offline).
+Se occorre un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi utilizzare gli stessi passaggi di installazione offline descritti nell'articolo [installazione di SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="SLES">Installare in SLES</a>
 
@@ -86,13 +86,13 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Se occorre un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi utilizzare gli stessi passaggi di installazione offline descritti nell'argomento [installazione di SQL Server](sql-server-linux-setup.md#offline).
+Se occorre un'installazione offline, individuare il download del pacchetto nella ricerca Full-text di [note sulla versione](sql-server-linux-release-notes.md). Quindi utilizzare gli stessi passaggi di installazione offline descritti nell'articolo [installazione di SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="supported-languages"></a>Lingue supportate
 
 Ricerca full-Text utilizza [word breaker](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) che determinano come identificare singole parole basate sul linguaggio. È possibile ottenere un elenco di word breaker registrati eseguendo una query di **Sys. fulltext_languages** vista del catalogo. Con SQL Server 2017 vengono installati i Word breaker per le lingue seguenti:
 
-| Linguaggio | ID di lingua |
+| Lingua | ID di lingua |
 |---|---|
 | Lingua neutra | 0 |
 | Arabo | 1025 |
@@ -102,7 +102,7 @@ Ricerca full-Text utilizza [word breaker](../relational-databases/search/configu
 | Inglese (Regno Unito) | 2057 |
 | Bulgaro | 1026 |
 | Catalano | 1027 |
-| Cinese (Hong Kong - R.A.S., Repubblica popolare cinese) | 3076 |
+| Cinese (RAS di Hong Kong, Repubblica popolare cinese) | 3076 |
 | Cinese (Macao - R.A.S.) | 5124 |
 | Cinese (Singapore) | 4100 |
 | Croato | 1050 |
@@ -148,116 +148,116 @@ Ricerca full-Text utilizza [word breaker](../relational-databases/search/configu
 | Urdu | 1056 |
 | Vietnamita | 1066 |
 
-## <a id="filters"></a>Filtri
+## <a id="filters"></a> Filtri
 
 Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in questo caso, un filtro installato è necessario elaborare il file. Per ulteriori informazioni sui filtri, vedere [configurare e gestire i filtri per la ricerca](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
 È possibile visualizzare un elenco di filtri installati chiamando **sp_help_fulltext_system_components 'filter'**. Per SQL Server 2017, vengono installati i seguenti filtri:
 
-| Nome componente | ID classe | Versione |
+| Nome componente | ID classe | Version |
 |---|---|---|
-|con estensione | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ANS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|ASC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione ascx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|ASM | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|ASP | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|con estensione aspx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|ASX | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|BAS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|file con estensione bat | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|bcp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|c | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.asc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.ascx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.asm | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.asp | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.aspx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.asx | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.bas | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.bat | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.bcp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.c | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.cc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |CLS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|cmd | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|. cpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|cs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.CSA | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|CSS | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|CSV | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|cxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.DBS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.cmd | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.cpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.cs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.csa | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.css | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.csv | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.cxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.dbs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |. def | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|dic | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|DOS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. DSP | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|dsw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.dic | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.dos | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.dsp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.dsw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |ext | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.FAQ | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.faq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.fky | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. h | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.HHC | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.h | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.hhc | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.hpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|HTA | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.hta | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.htm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|HTML | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|htt | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.html | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.htt | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |htw | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|HTX | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.htx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.hxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.i | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ibq | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|ICS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.ics | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |IDL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|IDQ | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.idq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |Inc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |INF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|INI | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.ini | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.inl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|INX | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|JAV | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|Java | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. js | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.inx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.jav | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.java | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.js | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.kci | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.lgn | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|log | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|lst | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. m3u | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|MAK | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.MK | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.log | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.lst | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.m3u | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.mak | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.mk | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |Con estensione odc | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.odh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|ODL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. pkgdef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.odl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.pkgdef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.pkgundef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |PL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.PRC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|RC | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|RC2 | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|RCT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.rc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.rc2 | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.rct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |con estensione reg | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|RGS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. RTF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|rul | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. s | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|SCC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|shtm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|sHTML | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|snippet | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.rgs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.rtf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.rul | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.s | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.scc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.shtm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.shtml | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.snippet | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.SOL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.sor | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|SRF | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|STM | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|TAB | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.srf | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.stm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.tab | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |TDL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione tlh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione tli | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|TRG | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. txt | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|UDF | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.UDT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.tlh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.tli | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.trg | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.txt | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.udf | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.udt | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |URL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|usr | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|file con estensione vbs | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.usr | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vbs | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.viw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|vsct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|con estensione vsixlangpack | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|vsixmanifest | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|e vspscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vsct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vsixlangpack | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vsixmanifest | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vspscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.vsscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |vssscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|wri | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.wri | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.wtx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 

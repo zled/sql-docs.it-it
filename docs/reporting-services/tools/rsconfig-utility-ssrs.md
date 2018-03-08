@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d47221585f9bf08f4493043224390ff2d82bb30e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1aaac66ec2c47b50801696217c8a53f7add9ef2e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsconfig-utility-ssrs"></a>utilità rsconfig (SSRS)
   L'utilità **rsconfig** consente di crittografare e archiviare i valori relativi alle connessioni e agli account nel file RSReportServer.config. I valori crittografati includono le informazioni sulla connessione al database del server di report e i valori relativi agli account utilizzati per l'elaborazione automatica dei report.  
@@ -55,34 +53,34 @@ rsconfig {-?}
   
 |Nome|Facoltativo/obbligatorio|Definizione|  
 |----------|------------------------|----------------|  
-|**-?**|Facoltativa.|Visualizza la sintassi degli argomenti di Rsconfig.exe.|  
+|**-?**|Facoltativo.|Visualizza la sintassi degli argomenti di Rsconfig.exe.|  
 |**-c**|Obbligatorio se non si specifica l'argomento **-e** .|Specifica la stringa di connessione, le credenziali e i valori relativi all'origine dei dati utilizzati per connettere un server di report al database corrispondente.<br /><br /> Questo argomento non accetta un valore. È tuttavia necessario specificare ulteriori argomenti per definire tutti i valori di connessione richiesti.<br /><br /> Gli argomenti che è possibile specificare con **- c** includono **-m**, **-s**, **-i**,**-d**,**-a**,**-u**,**-p**e**-t**.|  
 |**-e**|Obbligatorio se non si specifica l'argomento **-c** .|Specifica un account di esecuzione automatica dei report.<br /><br /> Questo argomento non accetta un valore. Per specificare i valori crittografati nel file di configurazione, tuttavia, è necessario includere ulteriori argomenti nella riga di comando.<br /><br /> Con **-e** è possibile specificare gli argomenti **-u** e **-p**. È anche possibile specificare **-t**.|  
 |**-m**  *nomecomputer*|Obbligatorio se si sta configurando un'istanza remota del server di report.|Specifica il nome del computer che ospita il server di report. Se questo argomento viene omesso, l'impostazione predefinita è **localhost**.|  
 |**-s**  *nomeserver*|Obbligatorio.|Specifica l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database del server di report.|  
-|**-i**  *nomeistanza*|Obbligatorio in caso di utilizzo di istanze denominate.|Se per ospitare il database del server di report è stata usata un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , questo valore specifica l'istanza denominata.|  
+|**-i**  *nomeistanza*|Obbligatorio in caso di utilizzo di istanze denominate.|Se è stata usata un'istanza denominata di Reporting Services, questo valore specifica il nome dell'istanza di Reporting Services.|  
 |**-d**  *nomedatabase*|Obbligatorio.|Specifica il nome del database del server di report.|  
 |**-a**  *metododiautenticazione*|Obbligatorio.|Specifica il metodo di autenticazione utilizzato dal server di report per la connessione al relativo database. I valori validi sono **Windows** o **SQL** . Questo argomento non supporta la distinzione tra maiuscole e minuscole.<br /><br /> **Windows** specifica che il server di report usa l'autenticazione di Windows.<br /><br /> **SQL** specifica che il server di report usa l'autenticazione di SQL Server.|  
 |**-u** *[dominio\\]nomeutente*|Obbligatorio con **-e** , facoltativo con **-c**.|Consente di specificare un account utente per la connessione al database del server di report o per l'account automatico.<br /><br /> Per **rsconfig -e**, questo argomento è obbligatorio. Deve essere un account utente di dominio.<br /><br /> Per **rsconfig -c** e **-a SQL**, questo argomento deve specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Per **rsconfig -c** e **-a Windows**, questo argomento può specificare un utente di dominio, un account predefinito o le credenziali dell'account del servizio. Se si specifica un account di dominio, specificare *dominio* e *nome utente* nel formato *dominio\nomeutente*. Se si utilizza un account predefinito, questo argomento è facoltativo. Se si desidera utilizzare le credenziali dell'account di servizio, omettere questo argomento.|  
 |**-p**  *password*|Obbligatorio se si specifica **-u** .|Specifica la password da usare con l'argomento *nomeutente* . Se per l'account non è necessaria una password, è possibile non specificare alcun valore per questo argomento. Per gli account di dominio questo valore supporta la distinzione tra maiuscole e minuscole.|  
-|**-t**|Facoltativa.|Crea l'output dei messaggi di errore nel log di traccia. Questo argomento non accetta un valore. Per altre informazioni, vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
+|**-t**|Facoltativo.|Crea l'output dei messaggi di errore nel log di traccia. Questo argomento non accetta un valore. Per altre informazioni, vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario essere un amministratore locale nel computer che ospita il server di report che si sta configurando.  
   
 ## <a name="file-location"></a>Percorso del file  
  L'utilità rsconfig si trova in **\Programmi\Microsoft SQL Server\110\Tools\Binn**. È possibile eseguire l'utilità da qualsiasi cartella del file system.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Rsconfig.exe consente di:  
   
 -   Modificare le informazioni di connessione utilizzate da un server di report per connettersi al relativo database.  
   
 -   Configurare un account speciale che il server di report utilizza per accedere a un server di database remoto quando non sono disponibili altre credenziali.  
   
- È possibile eseguire l'utilità**rsconfig** in un'istanza locale o remota di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Non è possibile usare l'utilità **rsconfig** per decrittografare e visualizzare i valori già impostati.  
+È possibile eseguire l'utilità **rsconfig** su un'istanza locale o remota di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Non è possibile usare l'utilità **rsconfig** per decrittografare e visualizzare i valori già impostati.  
   
- Prima di eseguire questa utilità, nel computer in fase di configurazione deve essere installato Windows Management Instrumentation (WMI).  
+Prima di eseguire questa utilità, nel computer in fase di configurazione deve essere installato Windows Management Instrumentation (WMI).  
   
 ## <a name="examples"></a>Esempi  
  Gli esempi seguenti illustrano alcuni modi per usare **rsconfig**.  

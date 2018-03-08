@@ -8,7 +8,8 @@ ms.service:
 ms.component: sequence-numbers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - sequence numbers [SQL Server]
 - sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2d9ff3876144ce984c29e804016ec9a69bbd38b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4369c402254e0b0de8082c1670171b834585b2d5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sequence-numbers"></a>Numeri di sequenza
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base alla specifica con la quale è stata creata la sequenza. La sequenza di valori numerici viene generata in ordine crescente o decrescente a un intervallo definito e può essere ripetuta (ciclicamente) in base alle esigenze. Le sequenze, a differenza delle colonne di identità, non sono associate a tabelle. In un'applicazione viene fatto riferimento a un oggetto sequenza per recuperare il relativo valore successivo. La relazione tra sequenze e tabelle è controllata dall'applicazione. È possibile che nelle applicazioni utente si faccia riferimento a un oggetto sequenza e vengano coordinate le chiavi dei valori di più righe e tabelle.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base alla specifica con la quale è stata creata la sequenza. La sequenza di valori numerici viene generata in ordine crescente o decrescente a un intervallo definito e può essere ripetuta (ciclicamente) in base alle esigenze. Le sequenze, a differenza delle colonne di identità, non sono associate a tabelle. In un'applicazione viene fatto riferimento a un oggetto sequenza per recuperare il relativo valore successivo. La relazione tra sequenze e tabelle è controllata dall'applicazione. È possibile che nelle applicazioni utente si faccia riferimento a un oggetto sequenza e vengano coordinate le chiavi dei valori di più righe e tabelle.  
   
  Una sequenza viene creata indipendentemente delle tabelle usando l'istruzione **CREATE SEQUENCE** . Le opzioni consentono di controllare i valori di incremento, massimo e minimo, il punto iniziale, la funzionalità di riavvio automatico e la memorizzazione nella cache per migliorare le prestazioni. Per informazioni sulle opzioni, vedere [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  
   
@@ -393,7 +395,7 @@ GO
   
 ```  
   
- Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che utilizzano `SELECT *` riceveranno la nuova colonna come ultima colonna anziché come prima. Se ciò non è accettabile, sarà necessario creare una tabella completamente nuova, spostare i dati in tale tabella, quindi ricreare le autorizzazioni nella nuova tabella.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] le istruzioni che usano `SELECT *` riceveranno la nuova colonna come ultima colonna anziché come prima. Se ciò non è accettabile, sarà necessario creare una tabella completamente nuova, spostare i dati in tale tabella, quindi ricreare le autorizzazioni nella nuova tabella.  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +20,20 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, databases [Analysis Services]
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c3e78f2941cd7729576647eb96bf21c717664fcf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 854371e81b8adf0ecf32c2685e64f5d136d00987
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Database modelli multidimensionali (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database è una raccolta di origini dati, viste origine dati, cubi, dimensioni e ruoli. Facoltativamente, in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] possono essere incluse strutture per data mining e assembly personalizzati che consentono di aggiungere funzioni definite dall'utente al database.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è una raccolta di origini dati, viste origine dati, cubi, dimensioni e ruoli. Facoltativamente, in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] possono essere incluse strutture per data mining e assembly personalizzati che consentono di aggiungere funzioni definite dall'utente al database.  
   
  I cubi sono gli oggetti query fondamentali in Analysis Services. Quando si esegue una connessione a un database di Analysis Services tramite un'applicazione client, si esegue in pratica la connessione a un cubo all'interno di tale database. È possibile che in un database siano contenuti più cubi se si riutilizzano dimensioni, assembly, ruoli o strutture di data mining in più contesti.  
   
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
  [Backup e ripristino di database di Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
- [Documentazione e script per un database di Analysis Services](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
+ [Documentazione e Script per un Database di Analysis Services](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
   
  [Modificare o eliminare un database di Analysis Services](../../analysis-services/multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   
@@ -64,9 +62,9 @@ ms.lasthandoff: 12/08/2017
   
  [Impostare le proprietà dei database multidimensionali &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md)  
   
- [Sincronizzare database di Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
+ [Sincronizzare i database di Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Passare a un database di Analysis Services tra le modalità ReadOnly e ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connettersi in modalità online a un database di Analysis Services](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)   

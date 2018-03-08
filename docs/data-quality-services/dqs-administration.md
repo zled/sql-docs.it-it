@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d4b4f34938bd72e325394d12bdf0c955d480c14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7c9c8c5a3098e03da579f2bd043ec9675a8c1adb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dqs-administration"></a>amministrazione dqs
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente di amministrare e gestire varie attività DQS eseguite sul [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], configurare proprietà a livello di server correlate alle attività DQS, configurare le impostazioni del servizio dati di riferimento e le impostazioni di log DQS. Queste attività vengono eseguite tramite la funzionalità **Amministrazione** del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. In base all'accesso di sicurezza (ruolo) di cui si dispone in DQS, l'accesso a determinate funzioni in quest'area può essere concesso o negato.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
  Per altre informazioni, vedere [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md).  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

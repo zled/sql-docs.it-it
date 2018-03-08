@@ -1,5 +1,5 @@
 ---
-title: La funzione CONTAINSTABLE (Transact-SQL) | Documenti Microsoft
+title: CONTAINSTABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2015
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTAINSTABLE
 - CONTAINSTABLE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - precise or fuzzy (less precise) matches [full-text search]
 - fuzzy (less precise) word or phrase search [full-text search]
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be9da8f4e10f299844f5ea6895f189c5c4fe4c3c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a9f4ab666351984b62e47d664d17d9e2769337cd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -134,7 +136,7 @@ CONTAINSTABLE
  LINGUA *language_term*  
  È la lingua il cui risorse verranno utilizzate per la suddivisione delle parole, lo stemming e thesaurus e parole non significative (o [parola non significativa](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) rimozione come parte della query. Questo parametro è facoltativo e può essere specificato come valore stringa, intero o esadecimale corrispondente all'identificatore delle impostazioni locali (LCID) di una lingua. Se *language_term* è specificato, la lingua rappresentata verrà applicata a tutti gli elementi della condizione di ricerca. Se non si specifica alcun valore, verrà utilizzata la lingua full-text della colonna.  
   
- Se documenti di lingue diverse vengono archiviati insieme come oggetti BLOB in una singola colonna, l'identificatore delle impostazioni locali (LCID) di un documento specifico determina la lingua da utilizzare per indicizzarne il contenuto. Quando una query su una colonna di questo tipo, specifica *LANGUAGE**language_term* può aumentare la probabilità di ottenere una corrispondenza.  
+ Se documenti di lingue diverse vengono archiviati insieme come oggetti BLOB in una singola colonna, l'identificatore delle impostazioni locali (LCID) di un documento specifico determina la lingua da utilizzare per indicizzarne il contenuto. Quando una query su una colonna di questo tipo, specifica *LANGUAGE * * language_term* può aumentare la probabilità di ottenere una corrispondenza.  
   
  Quando specificato come stringa, *language_term* corrisponde al **alias** valore colonna il [Sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) vista di compatibilità.  La stringa deve essere racchiuso tra virgolette singole, come '*language_term*'. Quando specificato come un numero intero, *language_term* è l'identificatore LCID effettivo che identifica la lingua. Quando specificato come valore esadecimale, *language_term* è 0x seguito dal valore esadecimale del LCID. Il valore esadecimale non deve superare le otto cifre, inclusi gli zeri iniziali.  
   
@@ -168,7 +170,7 @@ FROM table AS FT_TBL INNER JOIN
   
 -   Nell'elenco di selezione per visualizzare il valore di pertinenza assegnato a ogni riga.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione sono disponibili solo per gli utenti che dispongono dei privilegi appropriati per l'istruzione SELECT nella tabella o nelle colonne della tabella a cui viene fatto riferimento.  
   
 ## <a name="examples"></a>Esempi  

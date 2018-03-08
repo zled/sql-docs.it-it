@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fee0eefa43553f1e942abc2c7797d2dd487891d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 902c3fc7afb5ede1af0d49ef4429f8177b2101ad
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_special_columns [ @table_name = ] 'table_name'
  Versione ODBC utilizzata. *ODBCVer* è **int (**4**)**, con un valore predefinito è 2. che indica ODBC versione 2.0. Per ulteriori informazioni sulla differenza tra la versione 2.0 e ODBC versione 3.0, vedere la specifica ODBC SQLSpecialColumns per ODBC versione 3.0.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Nessuno  
+ None  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -91,13 +91,13 @@ sp_special_columns [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>Osservazioni  
  sp_datatype_columns corrisponde a SQLSpecialColumns in ODBC. I risultati restituiti vengono ordinati in base a SCOPE.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sulla colonna che identifica in modo univoco le righe nella tabella `HumanResources.Department`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_special_columns @table_name = 'Department'   

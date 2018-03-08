@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,21 +21,22 @@ helpviewer_keywords:
 - constant elements [SQLXML]
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74ad7c64c64ee406955c15784c25e0172f4cea5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a4557495db906f4f13a5b5346c11047166002df
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Creazione di elementi costanti tramite sql:is-constant (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Per specificare un elemento costante, vale a dire un elemento nello schema XSD che non è mappato ad alcuna tabella di database o di una colonna, è possibile utilizzare il **sql: costante è** annotazione. Questa annotazione accetta un valore booleano (0=false, 1=true). I valori possibili sono 0, 1, true e false. Il **sql: costante è** annotazione può essere specificata in un elemento che non dispone di attributi. Se viene specificata in un elemento con valore true (o 1), l'elemento non viene mappato al database ma viene comunque visualizzato nel documento XML.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Per specificare un elemento costante, vale a dire un elemento nello schema XSD che non esegue il mapping ad alcuna tabella di database o una colonna, è possibile utilizzare il **sql:costante-è** annotazione. Questa annotazione accetta un valore booleano (0=false, 1=true). I valori possibili sono 0, 1, true e false. Il **sql:costante-è** annotazione può essere specificata su un elemento che non dispone di attributi. Se viene specificata in un elemento con valore true (o 1), l'elemento non viene mappato al database ma viene comunque visualizzato nel documento XML.  
   
- Il **sql: costante è** annotazione può essere utilizzata per:  
+ Il **sql:costante-è** annotazione può essere utilizzata per:  
   
 -   Aggiunta di un elemento di livello principale al documento XML. XML richiede un singolo elemento di livello principale (elemento radice) per il documento.  
   

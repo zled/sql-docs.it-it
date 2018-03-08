@@ -18,15 +18,15 @@ helpviewer_keywords:
 - constraints [SQL Server], check
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b07d0651a5f0223e66783c906e5e2ddcf827377f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 432f3190da0556a78f5f434b73b603375e4b037f
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="disable-check-constraints-for-replication"></a>Disabilitare un vincolo CHECK per la replica
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Scegliere **Chiudi**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>Per disabilitare un vincolo CHECK per la replica  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene creata una tabella con una colonna IDENTITY e un vincolo CHECK sulla tabella. Nell'esempio il vincolo viene quindi eliminato e ricreato specificando la clausola NOT FOR REPLICATION.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene creata una tabella con una colonna IDENTITY e un vincolo CHECK sulla tabella. Nell'esempio il vincolo viene quindi eliminato e ricreato specificando la clausola NOT FOR REPLICATION.  
   
     ```  
     USE AdventureWorks2012;  

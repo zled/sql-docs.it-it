@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,19 +23,20 @@ helpviewer_keywords:
 - restoring databases [Analysis Services]
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f750fc5c1c991b8cf4392d427855f583c478c028
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e ripristino di database di Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include backup e ripristino in modo che è possibile ripristinare un database e i relativi oggetti da un determinato punto nel tempo. Tale funzionalità rappresenta anche una tecnica valida per l'esecuzione della migrazione dei database a server aggiornati, per lo spostamento di database tra server o per la distribuzione di un database in un server di produzione. Per il recupero dei dati, se non è già disponibile un piano di backup per i dati importanti, è consigliabile progettarlo e implementarlo appena possibile.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è disponibile una funzionalità di backup e ripristino per poter eseguire il recupero temporizzato di un database e dei relativi oggetti. Tale funzionalità rappresenta anche una tecnica valida per l'esecuzione della migrazione dei database a server aggiornati, per lo spostamento di database tra server o per la distribuzione di un database in un server di produzione. Per il recupero dei dati, se non è già disponibile un piano di backup per i dati importanti, è consigliabile progettarlo e implementarlo appena possibile.  
   
  I comandi di backup e ripristino vengono eseguiti su un database di Analysis Services distribuito. Per progetti e soluzioni disponibili in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è necessario utilizzare il controllo del codice sorgente per assicurarsi di poter recuperare versioni specifiche dei file di origine e quindi creare un piano di recupero dati per il repository del sistema di controllo del codice sorgente che si utilizza.  
   
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/08/2017
  Gli amministratori possono eseguire il backup di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un singolo file di backup (con estensione abf) di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , indipendentemente dalle dimensioni del database. Per istruzioni dettagliate, vedere [come eseguire il backup di un database di Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) e [Automatizzare il backup di un database di Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html).  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilizzato per il caricamento e l'esecuzione di query [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelli di dati in un ambiente SharePoint, carica i relativi modelli dai database del contenuto SharePoint. Questi database di contenuto sono relazionali e vengono eseguiti nel motore di database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Di conseguenza, non è prevista alcuna strategia di backup e ripristino di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per i modelli di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se è stato predisposto un piano di ripristino di emergenza per il contenuto di SharePoint, tale piano include i modelli di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] archiviati nei database di contenuto.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], usato per il caricamento e l'esecuzione di query sui modelli di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un ambiente SharePoint, carica i relativi modelli dai database del contenuto di SharePoint. Questi database di contenuto sono relazionali e vengono eseguiti nel motore di database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Di conseguenza, non è prevista alcuna strategia di backup e ripristino di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per i modelli di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se è stato predisposto un piano di ripristino di emergenza per il contenuto di SharePoint, tale piano include i modelli di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] archiviati nei database di contenuto.  
   
  **Partizioni remote**  
   
@@ -125,7 +123,7 @@ ms.lasthandoff: 12/08/2017
 -   È possibile scegliere di utilizzare il comando di ripristino per modificare la cartella di ripristino per ogni partizione da ripristinare. È possibile ripristinare le partizioni locali in qualsiasi percorso di cartella locale dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui si intende ripristinare il database. È possibile ripristinare le partizioni remote in qualsiasi cartella di qualsiasi server diverso dal server locale. Non è possibile trasformare le partizioni remote in partizioni locali.  
   
     > [!IMPORTANT]  
-    >  Per ogni file di backup, l'utente che esegue il comando di ripristino deve disporre delle autorizzazioni per leggere dal percorso di backup specificato per ogni file. Per ripristinare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non installato nel server, l'utente deve inoltre essere un membro del ruolo del server per l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specifica. Per sovrascrivere un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , l'utente deve avere uno dei ruoli seguenti: deve essere un membro del ruolo del server per l'istanza [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o un membro di un ruolo del database con autorizzazioni Controllo completo (amministratore) sul database da ripristinare.  
+    >  Per ogni file di backup, l'utente che esegue il comando di ripristino deve disporre delle autorizzazioni per leggere dal percorso di backup specificato per ogni file. Per ripristinare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non installato nel server, l'utente deve inoltre essere un membro del ruolo del server per l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specifica. Per sovrascrivere un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , l'utente deve avere uno dei ruoli seguenti: deve essere un membro del ruolo del server per l'istanza [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o un membro di un ruolo del database con autorizzazioni Controllo completo (amministratore) per il database da ripristinare.  
   
     > [!NOTE]  
     >  Dopo avere ripristinato un database esistente, l'utente che ha effettuato l'operazione potrebbe perdere l'accesso al database ripristinato. Può verificarsi questa perdita di accesso se, al momento dell’esecuzione del backup, l'utente non era un membro del ruolo del server o non era un membro del ruolo del database con autorizzazioni Controllo completo (amministratore).  

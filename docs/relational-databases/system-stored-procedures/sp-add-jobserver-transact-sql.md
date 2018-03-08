@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobserver (Transact-SQL) | Documenti Microsoft
+title: sp_add_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobserver
 - sp_add_jobserver_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_jobserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_jobserver
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 218df38c0ba4bb1583560f483e488c8898925496
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6b132644593bd62cc9830ffd61490253e1a89ae2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_id =** ] *job_id*  
+ [ **@job_id =** ] *job_id*  
  Numero di identificazione del processo. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  Nome del processo. *job_name* è **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@server_name =** ] **'***server***'**  
+ [ **@server_name =** ] **'***server***'**  
  Nome del server a cui indirizzare il processo. *server* è **nvarchar (30)**, con valore predefinito è N' (Local) '. *server*può essere **(LOCAL)** per un server locale o il nome di un server di destinazione esistente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -67,7 +70,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -114,8 +117,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_apply_job_to_targets &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

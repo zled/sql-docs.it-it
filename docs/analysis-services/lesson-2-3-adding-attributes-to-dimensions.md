@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4a04d6929acc77aeaf3190e65dacf933995189ee
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d48a36254eb24dd59a9f915d6129b090ae2e7ebc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lezione 2-3-aggiunta di attributi alle dimensioni
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dopo avere definito le dimensioni, è possibile popolare con attributi che rappresentano ogni elemento di dati nella dimensione. Gli attributi si basano in genere sui campi di una vista origine dati. Quando si aggiungono gli attributi a una dimensione, è possibile includere campi di qualsiasi tabella nella vista origine dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Dopo avere definito le dimensioni, è possibile popolarle con gli attributi che rappresentano ogni elemento dati nella dimensione. Gli attributi si basano in genere sui campi di una vista origine dati. Quando si aggiungono gli attributi a una dimensione, è possibile includere campi di qualsiasi tabella nella vista origine dati.  
   
 In questa attività verrà utilizzato Progettazione dimensioni per aggiungere attributi alle dimensioni Customer e Product. La dimensione Customer includerà gli attributi basati sui campi delle tabelle Customer e Geography.  
   
@@ -130,10 +133,10 @@ In questa attività verrà utilizzato Progettazione dimensioni per aggiungere at
 5.  Scegliere **Salva tutti**dal menu File.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Esame delle proprietà del cubo e delle dimensioni](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+[Esame delle proprietà di dimensione e del cubo](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Riferimento alle proprietà degli attributi delle dimensioni](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+[Dimension Attribute Properties Reference](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
   

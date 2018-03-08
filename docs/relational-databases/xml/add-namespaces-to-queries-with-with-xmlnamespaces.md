@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - xml data type [SQL Server], WITH XMLNAMESPACES clause
 - WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6730eac672d4803c3f50a200e83acb214b2986da
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 432e833f5cd9341a083973f8060ddbd477d386c6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] La clausola [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) offre il supporto dell'URI dello spazio dei nomi nel modo seguente:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  La clausola[WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) offre il supporto dell'URI dello spazio dei nomi nel modo seguente:  
   
 -   Rende disponibile il mapping tra il prefisso dello spazio dei nomi e l'URI durante le query di [costruzione di codice XML tramite la clausola FOR XML](../../relational-databases/xml/for-xml-sql-server.md) .  
   
@@ -224,7 +226,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- Nella query precedente, entrambi i metodi **query()** e **exist()** dichiarano lo stesso spazio dei nomi nel rispettivo prologo. Esempio:  
+ Nella query precedente, entrambi i metodi **query()** e **exist()** dichiarano lo stesso spazio dei nomi nel rispettivo prologo. Ad esempio  
   
 ```  
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

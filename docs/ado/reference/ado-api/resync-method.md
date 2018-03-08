@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,18 +18,19 @@ f1_keywords:
 - Fields::Resync
 - Recordset20::Resync
 - Fields::raw_Resync
-helpviewer_keywords: Resync method [ADO]
+helpviewer_keywords:
+- Resync method [ADO]
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 101e2695a47b2c255aac94aedb6b613c1fca15c6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 68c8642b778f6fe73f30096101308328b7b46ebc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="resync-method"></a>Risincronizzazione (metodo)
 Aggiorna i dati nell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto dal database sottostante.  
@@ -42,10 +44,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Parametri  
  *AffectRecords*  
- Facoltativo. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che determina il numero di record di **Resync** saranno influenzati dal metodo. Il valore predefinito è **adAffectAll**. Questo valore non è disponibile con il **Resync** metodo il **campi** raccolta di un **Record** oggetto.  
+ Facoltativa. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che determina il numero di record di **Resync** saranno influenzati dal metodo. Il valore predefinito è **adAffectAll**. Questo valore non è disponibile con il **Resync** metodo il **campi** raccolta di un **Record** oggetto.  
   
  *ResyncValues*  
- Facoltativo. Oggetto [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) valore che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
+ Facoltativa. Oggetto [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) valore che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
   
 ## <a name="remarks"></a>Osservazioni  
   

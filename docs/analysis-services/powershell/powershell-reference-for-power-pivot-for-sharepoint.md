@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c01735a8-f919-48ad-8d74-35d75a18f821
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dcfee1ec7fa7ad9933ec81fc6d0a1c8f5187e99a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ae14a52c81407cf4b161d1347d7a769aad168eca
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>Informazioni di riferimento su PowerShell per Power Pivot per SharePoint
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questa sezione elenca i cmdlet di PowerShell utilizzati per configurare o amministrare un [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installazione. Per altre informazioni sull'abilitazione dei cmdlet e la visualizzazione della Guida integrata, vedere [Configurazione di Power Pivot con Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In questa sezione vengono elencati i cmdlet di PowerShell utilizzati per configurare o amministrare un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Per altre informazioni sull'abilitazione dei cmdlet e la visualizzazione della Guida integrata, vedere [Configurazione di Power Pivot con Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
 
 >[!NOTE] 
 >In questo articolo può contenere esempi e informazioni non aggiornate. Usare il cmdlet Get-Help per la versione più recente.

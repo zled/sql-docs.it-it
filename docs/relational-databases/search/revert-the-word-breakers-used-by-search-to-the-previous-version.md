@@ -8,25 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 932ac3a8337af5871910c9aabd7a906508b1455d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3ad97ccd909c55268cf2be050d913fdc931433a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Ripristinare i word breaker utilizzati dalla ricerca alla versione precedente
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installa e abilita una versione dei word breaker e degli stemmer per tutte le lingue supportate dalla ricerca full-text, a eccezione del coreano. In questo argomento viene descritto come passare da questa versione dei componenti alla versione precedente o come tornare alla nuova versione dalla versione precedente.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene installata e abilitata una versione dei word breaker e degli stemmer per tutte le lingue supportate dalla ricerca full-text, a eccezione del coreano. In questo articolo viene descritto come passare da questa versione dei componenti alla versione precedente o come tornare alla nuova versione dalla versione precedente.  
   
- In questo argomento non vengono prese in considerazione le lingue seguenti:  
+ In questo articolo non vengono prese in considerazione le lingue seguenti:  
   
 -   **Inglese**. Per ripristinare i componenti per la lingua inglese, vedere [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  Per informazioni generali su word breaker e stemmer, vedere [Configurazione e gestione di word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
 ##  <a name="overview"></a> Panoramica del ripristino di word breaker e stemmer  
- Le istruzioni relative al ripristino di word breaker e stemmer variano a seconda della lingua. Nella tabella seguente vengono riepilogati i 3 set di azioni che potrebbe essere necessario eseguire per ripristinare la versione precedente dei componenti.  
+ Le istruzioni relative al ripristino di word breaker e stemmer variano a seconda della lingua. Nella tabella seguente vengono riepilogati i tre set di azioni che potrebbe essere necessario eseguire per ripristinare la versione precedente dei componenti.  
   
 |File corrente|File precedente|Numero di lingue interessate|Azione per i file|Azione per le voci del Registro di sistema|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 >  Se si sostituisce la versione corrente del file NaturalLanguage6.dll con una versione diversa, viene modificato il comportamento di tutte le lingue che utilizzano questo file.  
   
- I file descritti in questo argomento sono file DLL installati nella cartella `MSSQL\Binn` per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il percorso completo è in genere il seguente:  
+ I file descritti in questo articolo sono file DLL installati nella cartella `MSSQL\Binn` per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il percorso completo è in genere il seguente:  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
@@ -218,8 +220,8 @@ ms.lasthandoff: 11/17/2017
 |---------------|------------------|-------------|  
 |CLSID precedente|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Nome file precedente|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID corrente|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Nessuno|  
-|Nome file corrente|MSWB7.dll|Nessuno|  
+|CLSID corrente|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
+|Nome file corrente|MSWB7.dll|None|  
   
  **Tedesco (deu), LCID 1031**  
   
@@ -228,7 +230,7 @@ ms.lasthandoff: 11/17/2017
 |CLSID precedente|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Nome file precedente|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID corrente|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Nome file corrente|MSWB7.dll|MSWB7.dll|  
+|Nome file corrente|MsWb7.dll|MSWB7.dll|  
   
  **Giapponese (jpn), LCID 1041**  
   
@@ -236,8 +238,8 @@ ms.lasthandoff: 11/17/2017
 |---------------|------------------|-------------|  
 |CLSID precedente|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Nome file precedente|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID corrente|04096682-6ece-4e9e-90c1-52d81f0422ed|Nessuno|  
-|Nome file corrente|MsWb70011.dll|Nessuno|  
+|CLSID corrente|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
+|Nome file corrente|MsWb70011.dll|None|  
   
  **Olandese (nld), LCID 1043**  
   
@@ -246,7 +248,7 @@ ms.lasthandoff: 11/17/2017
 |CLSID precedente|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Nome file precedente|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID corrente|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Nome file corrente|MSWB7.dll|MSWB7.dll|  
+|Nome file corrente|MsWb7.dll|MSWB7.dll|  
   
  **Russo (rus), LCID 1049**  
   
@@ -255,7 +257,7 @@ ms.lasthandoff: 11/17/2017
 |CLSID precedente|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Nome file precedente|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID corrente|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Nome file corrente|MSWB7.dll|MSWB7.dll|  
+|Nome file corrente|MsWb7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> Lingue per le quali né il nome file precedente del word breaker né quello corrente è NaturalLanguage6.dll  
  Per le lingue elencate nella tabella seguente, i nomi file dei word breaker e degli stemmer precedenti sono diversi da quelli delle nuove versioni. Né il nome file precedente né quello corrente è NaturalLanguage6.dll. Non è necessario sostituire alcun file perché durante l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vengono copiate entrambe le versioni precedente e corrente dei componenti nella cartella Binn. È tuttavia necessario modificare un set di voci del Registro di sistema per specificare la versione precedente o corrente dei componenti.  
@@ -352,8 +354,8 @@ ms.lasthandoff: 11/17/2017
 |---------------|------------------|-------------|  
 |CLSID precedente|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Nome file precedente|Thawbrkr.dll|Thawbrkr.dll|  
-|CLSID corrente|F70C0935-6E9F-4ef1-9F06-7876536DB900|Nessuno|  
-|Nome file corrente|MsWb7001e.dll|Nessuno|  
+|CLSID corrente|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
+|Nome file corrente|MsWb7001e.dll|None|  
   
  **Cinese tradizionale (zh-hk), LCID 3076**  
   

@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: HierarchyID
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9c72f77d11dbc52f29d503b03624e2d3503cc616
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2650a8b35801747ae9a3b84fb048bcbeab724121
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lezione 2: Creazione e gestione di dati in una tabella gerarchica
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Nella Lezione 1 è stata modificata una tabella esistente per usare il tipo di dati **hierarchyid** ed è stata popolata la colonna **hierarchyid** con la rappresentazione dei dati esistenti. In questa lezione, verrà generata una nuova tabella e verranno inseriti i dati utilizzando i metodi gerarchici. Pertanto, verrà eseguita una query e verranno modificati i dati utilizzando i metodi gerarchici.  

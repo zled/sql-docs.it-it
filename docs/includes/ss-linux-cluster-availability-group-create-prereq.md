@@ -138,15 +138,15 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Creare endpoint di mirroring del database in tutte le repliche
 
-Endpoint del mirroring del database utilizzano il protocollo TCP (Transmission Control) per inviare e ricevere messaggi tra istanze del server che fanno parte di sessioni di mirroring del database o ospitano repliche di disponibilità. L'endpoint del mirroring del database è in attesa su un numero di porta TCP univoco. Il listener TCP richiede un indirizzo IP del listener. L'indirizzo IP del listener deve essere un indirizzo IPv4. È inoltre possibile utilizzare `0.0.0.0`. 
+Endpoint del mirroring del database utilizzano il protocollo TCP (Transmission Control) per inviare e ricevere messaggi tra istanze del server che fanno parte di sessioni di mirroring del database o ospitano repliche di disponibilità. L'endpoint del mirroring del database è in attesa su un numero di porta TCP univoco. 
 
-Lo script di Transact-SQL seguente crea un endpoint di ascolto denominato `Hadr_endpoint` per il gruppo di disponibilità. Avvia l'endpoint e fornisce l'autorizzazione di connessione all'utente che è stato creato. Prima di eseguire lo script, sostituire i valori compresi tra `**< ... >**`.
+Lo script di Transact-SQL seguente crea un endpoint di ascolto denominato `Hadr_endpoint` per il gruppo di disponibilità. Avvia l'endpoint e fornisce l'autorizzazione di connessione all'utente che è stato creato. Prima di eseguire lo script, sostituire i valori compresi tra `**< ... >**`. Facoltativamente è possibile includere un indirizzo IP `LISTENER_IP = (0.0.0.0)`. L'indirizzo IP del listener deve essere un indirizzo IPv4. È inoltre possibile utilizzare `0.0.0.0`. 
 
 Aggiornare lo script Transact-SQL seguente per l'ambiente in tutte le istanze di SQL Server: 
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = ALL,
         AUTHENTICATION = CERTIFICATE dbm_certificate,
@@ -161,7 +161,7 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = WITNESS,
         AUTHENTICATION = CERTIFICATE dbm_certificate,

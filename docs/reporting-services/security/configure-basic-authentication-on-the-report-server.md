@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: "28"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 2972097a7cc52ee5c73ec05d684de19b56cd1fd6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 722fd9bb97ee8fc3dc5ec618467b9ce028a0bf8c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configure-basic-authentication-on-the-report-server"></a>Configurare l'autenticazione di base nel server di report
+# <a name="configure-basic-authentication-on-the-report-server"></a>configurazione dell'autenticazione di base nel server di report
   Per impostazione predefinita, tramite Reporting Services vengono accettate richieste che consentono di specificare l'autenticazione con negoziazione e NTLM. Se la distribuzione include applicazioni client o browser che utilizzano l'autenticazione di base, è necessario aggiungere questo tipo di autenticazione all'elenco di tipi supportati. Inoltre, se si desidera utilizzare Generatore report, è necessario abilitare l'accesso anonimo ai relativi file.  
   
  Per configurare l'autenticazione di base nel server di report, modificare gli elementi e i valori XML nel file RSReportServer.config. È possibile copiare e incollare gli esempi disponibili in questo argomento per sostituire i valori predefiniti.  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4fd85a37ae3cb0f88a875c11642c9076852fffd9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc8d7563067160dd011835cf201ff6e5eec8ec83
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="security-report-builder"></a>Sicurezza (Generatore report)
   Generatore report è un'applicazione client di creazione di report progettata per utilizzare un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Il server di report può essere configurato per lavorare in modalità nativa come server autonomo o in modalità integrata SharePoint per supportare i report in un sito di SharePoint.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - events [SQL Server], Showplan XML
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c54c389d97e750b42d782314f01ec2cb5bedd352
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6a3f8e743eabbd8e084aeb28e26ccaa548adb1ba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Salvare gli eventi Showplan XML Statistics Profile in file distinti (SQL Server Profiler)
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Questo argomento descrive la procedura da seguire per salvare gli eventi [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Showplan XML Statistics Profile **acquisiti in tracce in file con estensione SQLPlan distinti tramite** . È possibile aprire i file di eventi **Showplan XML Statistics Profile** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per visualizzare graficamente il piano di esecuzione di ogni evento.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
          Se lo si desidera, selezionare le caselle di controllo **Consenti rollover dei file** e **Dati di traccia elaborati dal server** . 
   
-    -   Per acquisire la traccia in una tabella di database selezionare la casella di controllo **Salva nella tabella**.  
+    -   Per acquisire la traccia in una tabella di database, selezionare la casella di controllo **Salva nella tabella**.  
   
          Facoltativamente selezionare **Numero massimo di righe** e specificare un valore.  
   
@@ -70,6 +70,6 @@ ms.lasthandoff: 11/17/2017
 11. Per visualizzare il file di eventi **Showplan XML Statistics Profile** in SQL Server Management Studio, scegliere **Apri** dal menu **File** e quindi fare clic su **File**. Andare alla directory in cui è stato salvato il file o i file di eventi **Showplan XML Statistics Profile** per selezionare il file desiderato e quindi aprirlo. I file di eventi**Showplan XML Statistics Profile** sono contraddistinti dall'estensione SQLPlan.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analizzare query con risultati SHOWPLAN in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
+ [Analizzare query con risultati Showplan in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

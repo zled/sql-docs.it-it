@@ -18,16 +18,16 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: aliceku
-ms.openlocfilehash: 0acfd9faa668d1e86cb82496bdd97dc6a0ec2bc8
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 186db9581a3404fe04e4a748d6df06c5899bf810
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell: abilitare Transparent Data Encryption usando la propria chiave di Azure Key Vault
+# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell: abilitare Transparent Data Encryption usando la propria chiave di Azure Key Vault (anteprima)
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Questa guida alle procedure spiega come usare una chiave di Azure Key Vault per Transparent Data Encryption (TDE) in un database o data warehouse SQL. Per altre informazioni su TDE con supporto BYOK (Bring Your Own Key), consultare l'articolo relativo all'[uso di TDE con supporto BYOK per Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
+Questa guida alle procedure spiega come usare una chiave di Azure Key Vault per Transparent Data Encryption (TDE) (in anteprima) in un database o data warehouse SQL. Per altre informazioni su TDE con supporto BYOK (Bring Your Own Key, in anteprima), vedere l'articolo relativo all'[uso di TDE con supporto BYOK per Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
 
 ## <a name="prerequisites"></a>Prerequisites
 

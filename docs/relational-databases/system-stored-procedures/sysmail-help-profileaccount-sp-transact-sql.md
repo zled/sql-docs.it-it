@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_profileaccount_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_help_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
 - sysmail_help_profileaccount_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30af309db029d4d969fe39eb87e15503b590dfae
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dfe0115ca0e641ca0b6397cd624d093f7d94acff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +50,16 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  ID del profilo che si desidera visualizzare nell'elenco. *profile_id* è **int**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* deve essere specificato.  
   
- [  **@profile_name**  =] **'***profile_name***'**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  Nome del profilo che si desidera visualizzare nell'elenco. *profile_name* è **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* deve essere specificato.  
   
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  ID dell'account che si desidera visualizzare nell'elenco. *account_id* è **int**, con un valore predefinito è NULL. Quando *account_id* e *account_name* sono entrambe NULL, vengono elencati tutti gli account nel profilo.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  Nome dell'account che si desidera visualizzare nell'elenco. *account_name* è **sysname**, con un valore predefinito è NULL. Quando *account_id* e *account_name* sono entrambe NULL, vengono elencati tutti gli account nel profilo.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -79,7 +82,7 @@ sysmail_help_profileaccount_sp
   
  La stored procedure **sysmail_help_profileaccount_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  

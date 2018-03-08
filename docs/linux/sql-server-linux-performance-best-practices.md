@@ -1,28 +1,30 @@
 ---
 title: Procedure consigliate per SQL Server in Linux | Documenti Microsoft
-description: Questo argomento fornisce linee guida e procedure consigliate per l'esecuzione di SQL Server 2017 in Linux.
+description: Questo articolo contiene linee guida e procedure consigliate per l'esecuzione di SQL Server 2017 in Linux.
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Procedure consigliate e linee guida di configurazione per SQL Server 2017 su Linux
 
-In questo argomento fornisce le procedure consigliate e indicazioni per ottimizzare le prestazioni per applicazioni di database che si connettono a SQL Server in Linux. Questi suggerimenti sono specifici per l'esecuzione nella piattaforma Linux. Tutti i consigli per SQL Server normali, ad esempio la progettazione degli indici, vengono mantenuti.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Questo articolo fornisce le procedure consigliate e indicazioni per ottimizzare le prestazioni per applicazioni di database che si connettono a SQL Server in Linux. Questi suggerimenti sono specifici per l'esecuzione nella piattaforma Linux. Tutti i consigli per SQL Server normali, ad esempio la progettazione degli indici, vengono mantenuti.
 
 Le linee guida seguenti sono inclusi suggerimenti per la configurazione di SQL Server e il sistema operativo Linux.
 
@@ -34,7 +36,7 @@ Le linee guida seguenti sono inclusi suggerimenti per la configurazione di SQL S
 
 - **Utilizzare l'AFFINITÀ di processo per nodo e/o CPU**
 
-   È consigliabile utilizzare `ALTER SERVER CONFIGURATION` impostare `PROCESS AFFINITY` per tutti i **NUMANODEs** e/o CPU in uso per SQL Server (che è in genere per tutti i nodi e CPU) in un sistema operativo Linux. Affinità processori consente di mantenere il comportamento di Linux e la pianificazione di SQL efficiente. Utilizzo di **NUMANODE** opzione è il metodo più semplice. Si noti che è necessario utilizzare **AFFINITÀ di processo** anche se si dispone di un singolo nodo NUMA nel computer in uso.  Vedere il [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) documentazione per maggiori dettagli su come impostare **AFFINITÀ di processo**.
+   È consigliabile utilizzare `ALTER SERVER CONFIGURATION` impostare `PROCESS AFFINITY` per tutti i **NUMANODEs** e/o CPU in uso per SQL Server (che è in genere per tutti i nodi e CPU) in un sistema operativo Linux. Affinità processori consente di mantenere il comportamento di Linux e la pianificazione di SQL efficiente. Utilizzo di **NUMANODE** opzione è il metodo più semplice. Si noti che è necessario utilizzare **AFFINITÀ di processo** anche se si dispone di un singolo nodo NUMA nel computer in uso.  Vedere il [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) documentazione per ulteriori informazioni su come impostare **AFFINITÀ di processo**.
 
 - **Configurare più file di dati di tempdb**
 
@@ -76,7 +78,7 @@ Nella tabella seguente vengono forniti consigli per le impostazioni del disco:
 | Impostazione | Valore | Ulteriori informazioni |
 |---|---|---|
 | Read-ahead disco | 4096 | Vedere il **blockdev** comando |
-| impostazioni sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>VM.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>VM.swappiness=10 | Vedere il **sysctl** comando |
+| impostazioni sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Vedere il **sysctl** comando |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Kernel impostazione automatica numa bilanciamento del carico per i sistemi a più nodi NUMA
 
@@ -102,7 +104,7 @@ Utilizzare il **noatime** attributo con il file system che viene utilizzato per 
 
 La maggior parte delle installazioni di Linux devono disporre questa opzione per impostazione predefinita. È consigliabile per un'esperienza più coerenza delle prestazioni mantenere abilitata questa opzione di configurazione.
 
-### <a name="swapfile"></a>file di scambio
+### <a name="swapfile"></a>swapfile
 
 Assicurarsi di disporre di un file di scambio configurato correttamente per evitare eventuali problemi di memoria insufficiente. Consultare la documentazione di Linux per informazioni su come creare e impostare correttamente le dimensioni di un file di scambio.
 

@@ -1,33 +1,31 @@
 ---
-title: Le colonne (SSAS tabulare) calcolate | Documenti Microsoft
+title: Le colonne calcolate | Documenti Microsoft
 ms.custom: 
 ms.date: 10/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fcd2e415214ca310f2f53a71f04e58306bec4a63
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f749ff3dc18d381985a38ebf0f2867aa073d2fef
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="calculated-columns"></a>Colonne calcolate
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Le colonne calcolate, nei modelli tabulari, consentono di aggiungere nuovi dati al modello. Invece di incollare o importare i valori nella colonna, viene creata una formula DAX che consente di definire i valori a livello di riga della colonna. La colonna calcolata può quindi essere utilizzata in un report, in una tabella pivot o in un grafico pivot come qualsiasi altra colonna.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Le colonne calcolate, nei modelli tabulari, consentono di aggiungere nuovi dati al modello. Invece di incollare o importare i valori nella colonna, viene creata una formula DAX che consente di definire i valori a livello di riga della colonna. La colonna calcolata può quindi essere utilizzata in un report, in una tabella pivot o in un grafico pivot come qualsiasi altra colonna.  
  
   
   

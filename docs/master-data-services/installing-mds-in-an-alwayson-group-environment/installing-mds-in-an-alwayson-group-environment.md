@@ -8,20 +8,21 @@ ms.service:
 ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
 caps.latest.revision: 
-author: smartysanthosh
-ms.author: nagavo
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2caabcb53e4386927b4103764c8abce34ccdefcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8cd77bb7366fb1bb09d8f119a1b740bd8456344
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Disponibilità elevata e ripristino di emergenza per Master Data Services
 
@@ -96,7 +97,7 @@ Come illustrato nella figura 1 nella sezione precedente, la soluzione descritta 
 
 WSFC è una funzionalità che migliora la disponibilità elevata di applicazioni e servizi. È costituita da un gruppo di istanze di Windows Server indipendenti che eseguono il servizio cluster di failover Microsoft. Le istanze di Windows Server, o nodi come vengono talvolta chiamate, sono connesse in modo che possano comunicare tra loro rendendo possibile il rilevamento degli errori. WSFC offre la funzionalità di rilevamento degli errori e il failover. Se un nodo o un servizio del cluster hanno esito negativo, viene rilevato l'errore e un altro nodo inizia automaticamente o manualmente ad offrire i servizi ospitati sul nodo in errore. Di conseguenza, le interruzioni per gli utenti sono minime e la disponibilità del servizio è migliorata.  
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>Prerequisites
 
 Il sistema operativo Windows Server deve essere installato in tutte le istanze e tutti gli aggiornamenti devono essere corretti.
 
@@ -215,7 +216,7 @@ I gruppi di disponibilità migliorano la disponibilità elevata a livello di dat
 Le istanze del cluster di failover AlwaysOn migliorano la disponibilità elevata a livello di istanza. Il servizio SQL Server e i servizi correlati vengono registrati come risorse in WSFC. La soluzione delle istanze del cluster di failover richiede l'archiviazione simmetrica su disco condiviso, ad esempio condivisioni di file SAN o SMB, che devono essere disponibili a tutti i nodi nel cluster WFC.
 
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>Prerequisites
 
 -   Installare SQL Server in tutti i nodi. Per altre informazioni, vedere [Installare SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server).
 
@@ -319,9 +320,9 @@ Il gruppo di disponibilità può essere creato solo sui database esistenti. Pert
 
 8.  Nella pagina **Specifica repliche** fare clic sulla scheda **Listener** ed eseguire le operazioni seguenti. Vedere Figura 18.
 
-    a.  Fare clic su **Crea un listener del gruppo di disponibilità** per configurare un listener del gruppo di disponibilità per la connessione al database MDS.
+    A.  Fare clic su **Crea un listener del gruppo di disponibilità** per configurare un listener del gruppo di disponibilità per la connessione al database MDS.
 
-    b.  Immettere un **Nome DNS del listener**, ad esempio MDSSQLServer.
+    B.  Immettere un **Nome DNS del listener**, ad esempio MDSSQLServer.
 
     c.  Immettere la porta SQL predefinita, 1433, nella casella di testo **Porta**.
 

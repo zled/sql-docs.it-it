@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: "71"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aa80d1e050c08e66b1576835045f4faf2ef497a5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: fab639dbd4bccffd5e4739d80a7e6830835c790c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Ripristino di un database in una nuova posizione (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come ripristinare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un nuovo percorso e facoltativamente rinominare il database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando SQL Server Management Studio (SSMS) o [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile spostare un database in un nuovo percorso di directory o crearne una copia nella stessa istanza server o in una diversa.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Questo argomento illustra come ripristinare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un nuovo percorso e facoltativamente rinominare il database, in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando SQL Server Management Studio (SSMS) o [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile spostare un database in un nuovo percorso di directory o crearne una copia nella stessa istanza server o in una diversa.  
     
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -144,7 +146,7 @@ ms.lasthandoff: 01/02/2018
      *backup_device* [ **,**...*n* ]  
      Specifica un elenco di dispositivi di backup, da 1 a 64, delimitati da virgole da cui deve essere ripristinato il backup del database. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente, se già definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:  
   
-     { DISK | TAPE } **=***physical_backup_device_name*  
+     { DISK | TAPE } **=***nome_dispositivo_backup_fisico*  
   
      Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -160,7 +162,7 @@ ms.lasthandoff: 01/02/2018
   
      Per altre informazioni, vedere "Specifica di un set di backup" in [Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-     MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
+     MOVE **'***nome_file_logico_in_backup***'** TO **'***nome_file_sistema_operativo***'** [ **,**...*n* ]  
      Specifica che il file di dati o di log specificato da *logical_file_name_in_backup* deve essere ripristinato nel percorso specificato da *operating_system_file_name*. Specificare un'istruzione MOVE per ogni file logico che si desidera ripristinare dal set di backup in un nuovo percorso.  
   
     |Opzione|Description|  

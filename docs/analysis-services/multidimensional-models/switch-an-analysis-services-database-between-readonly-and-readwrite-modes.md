@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e38e3ac4af9df6a512ee26809dedf1d4fc21d839
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c53754f5ba059cfd790a015b7a1c77bd4de81b73
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gli amministratori di database possono modificare la modalità di lettura/scrittura di un database tabulare o multidimensionale come parte del più ampio respiro che distribuisce un carico di lavoro di query tra più server di query di sola lettura.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gli amministratori del database possono cambiare la modalità di lettura/scrittura di un database tabulare o multidimensionale nell'ambito di un'operazione di più ampio respiro per la distribuzione di un carico di lavoro di query tra più server usati solo per le query.  
   
  In un database è possibile passare da una modalità all'altra in vari modi. In questo documento vengono illustrati gli scenari comuni seguenti:  
   
@@ -147,6 +145,6 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
  [Elemento Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [Elemento Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [Elemento ReadWriteMode](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
- [Elemento DbStorageLocation](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Dbstoragelocation-elemento](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
   
   

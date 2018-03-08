@@ -8,26 +8,27 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - transformations [Integration Services], synchronous and asynchronous
 - asynchronous transformations [Integration Services]
 - data flow components [Integration Services], synchronous and asynchronous
 - synchronous transformations [Integration Services]
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 33e3c5b8a8c10a6b4f94d8ae67e68debbd3c8e98
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a0750b3e39c487c171c6b915a7da93a9fb1e6c2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Informazioni sulle trasformazioni sincrone e asincrone
   La differenza tra una trasformazione sincrona e una asincrona in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] può essere definita più facilmente iniziando con una descrizione della trasformazione sincrona. Se la trasformazione sincrona non soddisfa le esigenze specifiche, è possibile che la progettazione richieda una trasformazione asincrona.  

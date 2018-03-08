@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_queue_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_help_queue_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
 - sysmail_help_queue_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_queue_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 233187d223f7d22c5a950fcb2d29063f37be7c7d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5e83aba8601f4329a496229eca329035a95b283c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +58,14 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar(6)**|Tipo di coda. I valori possibili sono **posta** e **stato**.|  
 |**lunghezza**|**int**|Numero di elementi di posta nella coda specificata.|  
-|**stato**|**nvarchar (64)**|Stato del server di monitoraggio. I valori possibili sono **inattivo** (coda è inattiva), **NOTIFIED** (coda ha ricevuto una notifica di), e **RECEIVES_OCCURRING** (coda riceve).|  
+|**state**|**nvarchar(64)**|Stato del server di monitoraggio. I valori possibili sono **inattivo** (coda è inattiva), **NOTIFIED** (coda ha ricevuto una notifica di), e **RECEIVES_OCCURRING** (coda riceve).|  
 |**last_empty_rowset_time**|**DATA/ORA**|Data e ora dell'ultimo svuotamento della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
 |**last_activated_time**|**DATA/ORA**|Data e ora dell'ultima attivazione della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Quando la risoluzione dei problemi di posta elettronica Database, utilizzare **sysmail_help_queue_sp** per visualizzare il numero di elementi presenti nella coda, lo stato della coda e l'ultima attivazione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, solo i membri del **sysadmin** ruolo predefinito del server può accedere a questa procedura.  
   
 ## <a name="examples"></a>Esempi  

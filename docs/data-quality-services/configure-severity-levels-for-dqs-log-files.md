@@ -20,15 +20,15 @@ helpviewer_keywords:
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 91d34b96c3e498351e409c04852ffbd7fa71d0c3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 967e548b420d056526135da89519da75dd8ab6a6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurare livelli di gravità per i file di log DQS
   In questo argomento viene descritto come configurare i livelli di gravità per le varie attività e i vari moduli di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) tramite il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. I livelli di gravità definiscono l'intensità degli eventi che si verificano in DQS. Gli eventi DQS dispongono dei livelli di gravità seguenti, in ordine di gravità decrescente:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per configurare le impostazioni di gravità del log, è necessario disporre del ruolo dqs_administrator per il database DQS_MAIN.  
   
 ##  <a name="ConfigureActivity"></a> Configurare i livelli di gravità a livello di attività  

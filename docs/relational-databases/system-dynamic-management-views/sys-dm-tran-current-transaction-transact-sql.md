@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_current_transaction (Transact-SQL) | Documenti Microsoft
+title: sys.dm_tran_current_transaction (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_current_transaction_TSQL
 - dm_tran_current_transaction_TSQL
 - dm_tran_current_transaction
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_current_transaction dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_current_transaction dynamic management view
 ms.assetid: 75d5697d-b390-4963-99b8-fa0b4244a40c
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55c0179a2c589a8dad2d178693593a943adba445
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 37deeb2752cc1e96c5c3ddc0719d2f71dce2283a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtrancurrenttransaction-transact-sql"></a>sys.dm_tran_current_transaction (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,9 +58,9 @@ sys.dm_tran_current_transaction
 |**first_snapshot_sequence_num**|**bigint**|Numero di sequenza più basso delle transazioni attive nel momento in cui è stato eseguito uno snapshot. Al momento dell'esecuzione, una transazione snapshot esegue uno snapshot di tutte le transazioni attive in quel momento. Per le transazioni non snapshot, il valore di questa colonna è 0.|  
 |**last_transaction_sequence_num**|**bigint**|Numero di sequenza globale. Questo valore rappresenta l'ultimo numero di sequenza della transazione generato dal sistema.|  
 |**first_useful_sequence_num**|**bigint**|Numero di sequenza globale. Questo valore rappresenta il numero di sequenza della transazione meno recente con versioni di riga che devono essere mantenute nell'archivio delle versioni. Le versioni di riga create da transazioni precedenti possono essere rimosse.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessaria l'autorizzazione VIEW SERVER STATE nel server.  
   
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Premium richiede l'autorizzazione VIEW DATABASE STATE nel database. In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Standard e Basic richiede il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] account amministratore.  

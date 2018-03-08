@@ -8,24 +8,26 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apilocation: sqluserinstance.dll
+apilocation:
+- sqluserinstance.dll
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b349093cc92fdfced91476f69bf98b60384e783
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 09b0bc0bb6e65799db8d0767d24a14a59304248d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Informazioni sulla versione e intestazione del database locale di SQL Server Express
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Nessun file di intestazione separato per l'istanza di SQL Server Express LocalDB API. le firme della funzione LocalDB e codici di errore sono definiti nel file di intestazione di SQL Server Native Client (SQLNCLI. h). Per utilizzare l'API dell'istanza del database locale, è necessario includere il file di intestazione sqlncli.h nel progetto.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Non esiste alcun file di intestazione separato per l'API dell'istanza del database locale di SQL Server Express. Le firme e i codici di errore della funzione del database locale sono definiti nel file di intestazione (sqlncli.h) di SQL Server Native Client. Per utilizzare l'API dell'istanza del database locale, è necessario includere il file di intestazione sqlncli.h nel progetto.  
   
 ## <a name="localdb-versioning"></a>Controllo delle versioni del database locale  
  Per l'installazione del database locale viene utilizzato un solo set di file binari per la versione di SQL Server principale. Queste versioni del database locale sono gestite e installate con patch in modo indipendente. Pertanto, l'utente deve specificare quale versione di base (ovvero, versione di SQL Server principale) del database locale utilizzerà. La versione specificata nel formato della versione standard definito da .NET Framework **Version** classe:  

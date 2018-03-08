@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fb717a151e6917d49e164cfeba9b3df3507d46e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a2378a7e84b62102666985f3166bd9c8586837e3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamic-sql"></a>SQL dinamica
 Sebbene SQL statico funziona bene in molte situazioni, è disponibile una classe di applicazioni in cui l'accesso ai dati non è possibile determinare in anticipo. Si supponga, ad esempio, che consente di immettere una query, il foglio di calcolo inviato per il sistema DBMS per recuperare dati da un foglio di calcolo. Il contenuto di questa query ovviamente non può essere noto al programmatore di quando viene scritto il foglio di calcolo.  

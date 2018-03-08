@@ -55,4 +55,8 @@
 ## [Eliminare una guida di piano](delete-a-plan-guide.md)  
 ## [Abilitare o disabilitare una guida di piano](enable-or-disable-a-plan-guide.md)  
 
-#[Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)](../performance-monitor/monitor-resource-usage-system-monitor.md) 
+# [Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)](../performance-monitor/monitor-resource-usage-system-monitor.md)    
+
+# [Join](joins.md)   
+
+# [Sottoquery](subqueries.md)    

@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 06427f8e-89bb-4710-a0c1-dc5e42b7e95e
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8bc82f2140f3103c4a9ded02e12f8b499d8f52be
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ad434202093984f6064fe4bf80ba79e1b57c3cf8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lock-events-category"></a>Categoria di eventi relativa ai blocchi
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria di eventi agli eventi di blocco include le classi di eventi descritte nella tabella seguente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Nella categoria di eventi relativa agli eventi di blocco sono incluse le classi di eventi descritte nella tabella seguente.  
   
 |Event Class|ID evento|Description|  
 |-----------------|--------------|-----------------|  

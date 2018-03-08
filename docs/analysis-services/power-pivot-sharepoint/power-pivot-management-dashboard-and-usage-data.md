@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0d275e7cbe68ddd7dca965d50d05d1777711b48e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 17b70799d09fd1f9a62100c85fde71046250d12e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Dati di utilizzo e dashboard di gestione PowerPivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Dashboard di gestione è una raccolta di report predefiniti e web part in Amministrazione centrale SharePoint che consentono di amministrare un Server SQL [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] per la distribuzione di SharePoint. Nel dashboard di gestione sono disponibili informazioni relative all'integrità del server, all'attività della cartella di lavoro e all'aggiornamento dati. I dati utilizzati nel dashboard provengono dalla raccolta dati di utilizzo di SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] è una raccolta di report e Web part predefiniti in Amministrazione centrale SharePoint che consente di amministrare una distribuzione di [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] per SharePoint di SQL Server. Nel dashboard di gestione sono disponibili informazioni relative all'integrità del server, all'attività della cartella di lavoro e all'aggiornamento dati. I dati utilizzati nel dashboard provengono dalla raccolta dati di utilizzo di SharePoint.  
   
   
 ##  <a name="prereq"></a> Prerequisiti  

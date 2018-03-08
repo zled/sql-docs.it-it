@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_statistics_xml (Transact-SQL) | Documenti Microsoft
+title: sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,20 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_statistics_xml_TSQL
 - dm_exec_query_statistics_xml_TSQL
 - dm_exec_query_statistics_xml
-helpviewer_keywords: sys.dm_exec_query_statistics_xml management view
+helpviewer_keywords:
+- sys.dm_exec_query_statistics_xml management view
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 051b93348547603d2e68a007ede531bfa73a6d58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c2e4547a6c0d79f56fa0f732236e16dbde409a45
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecquerystatisticsxml-transact-sql"></a>Sys.dm_exec_query_statistics_xml (Transact-SQL)
+# <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Restituisce il piano di esecuzione per le richieste in elaborazione di query. Utilizzare questa DMV per recuperare showplan XML con le statistiche temporanee. 
@@ -80,7 +82,7 @@ Questa funzione di sistema funziona in entrambi **standard** e **lightweight** i
 > [!IMPORTANT]
 > TPC-c come test di carico di lavoro, consentendo l'infrastruttura di analisi statistiche lightweight aggiunge un overhead di 1,5 o 2 percento. Al contrario, l'infrastruttura di analisi statistiche standard è possibile aggiungere fino al 90% di overhead per lo stesso scenario di carico di lavoro.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW SERVER STATE` per il server.  
 
 ## <a name="examples"></a>Esempi  
@@ -88,14 +90,14 @@ Questa funzione di sistema funziona in entrambi **standard** e **lightweight** i
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Esaminando le statistiche piano e l'esecuzione di query in tempo reale per un batch in esecuzione  
  Le seguenti query di esempio **Sys.dm exec_requests** per trovare la query specifica e copiare il relativo `session_id` dall'output.  
   
-```t-sql  
+```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
  Per ottenere le statistiche di piano e l'esecuzione di query in tempo reale, utilizzare copiato `session_id` con funzione di sistema **sys.dm_exec_query_statistics_xml**.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
@@ -103,7 +105,7 @@ GO
 
  O la combinazione per tutte le richieste in esecuzione.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_requests
 CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  
