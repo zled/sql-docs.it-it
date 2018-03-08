@@ -1,7 +1,7 @@
 ---
 title: Scaricare SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: 
-ms.date: 02/15/2018
+ms.date: 02/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc8fe6a41661acd176c43cdf1de2a857846a7b83
-ms.sourcegitcommit: 03021482208259e6c67599b47df23fbbe8f3a393
+ms.openlocfilehash: de6d0b4d679dab1f008ef53afef4a173311ea20e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -91,9 +91,9 @@ La versione 17.5 include:
 
 Individuazione dati e classificazione :
 
-- È stata aggiunta una nuova funzionalità Individuazione dati e classificazione SQL per l'individuazione, la classificazione, l'assegnazione di etichette e la creazione di report per i dati sensibili presenti nei database. 
+- È stata aggiunta una nuova funzionalità SQL di individuazione e classificazione dei dati per l'individuazione, la classificazione, l'assegnazione di etichette e la creazione di report per i dati sensibili presenti nei database. 
 - L'individuazione automatica e la classificazione dei dati più sensibili, come ad esempio i dati aziendali, finanziari, medici, personali e così via, possono avere un ruolo fondamentale nella protezione delle informazioni dell'organizzazione.
-- Altre informazioni sono disponibili in [Individuazione e classificazione di dati SQL](../relational-databases/security/sql-data-discovery-and-classification.md).
+- Altre informazioni sono disponibili in [Individuazione dati e classificazione SQL](../relational-databases/security/sql-data-discovery-and-classification.md).
 
 Editor query:
 
@@ -106,14 +106,12 @@ Showplan:
 
 
 
-
-
 ## <a name="supported-sql-offerings"></a>Offerte di SQL supportate
 
 * Questa versione di SSMS funziona con tutte le [versioni supportate da SQL Server 2008 a SQL Server 2017](https://support.microsoft.com/lifecycle?C2=1044) e offre il massimo livello di supporto per l'uso con le funzionalità cloud più recenti nel database SQL di Azure e in Azure SQL Data Warehouse.
-* Non è presente alcun blocco esplicito per SQL Server 2000 o SQL Server 2005, ma alcune funzionalità potrebbero non funzionare correttamente.
+* Usare SSMS 17.x per la connessione a [SQL Server in Linux](../linux/sql-server-linux-overview.md).
 * È supportata anche l'installazione side-by-side di SSMS 17.x con SSMS 16.x o SQL Server 2014 SSMS e versioni precedenti.
-* SQL Server Integration Services (SSIS) - SQL Server Management Studio versione 17.x non supporta la connessione al servizio legacy SQL Server Integration Services. Per connettersi a una versione precedente di Integration Services, usare la versione di SQL Server Management Studio allineata alla versione di SQL Server. Ad esempio, usare SQL Server Management Studio 16.x per connettersi al servizio SQL Server 2016 Integration Services. SQL Server Management Studio 17.x e SQL Server Management Studio 16.x possono essere installati side-by-side nello stesso computer. A partire dalla versione di SQL Server 2012, è consigliabile usare il database Catalogo SSIS, SSISDB, per memorizzare, gestire, eseguire e monitorare i pacchetti Integration Services.
+* SQL Server Integration Services (SSIS) - SQL Server Management Studio versione 17.x non supporta la connessione al servizio legacy SQL Server Integration Services. Per connettersi a una versione precedente di Integration Services, usare la versione di SQL Server Management Studio allineata alla versione di SQL Server. Ad esempio, usare SQL Server Management Studio 16.x per connettersi al servizio SQL Server 2016 Integration Services. SQL Server Management Studio 17.x e SQL Server Management Studio 16.x possono essere installati side-by-side nello stesso computer. A partire dalla versione di SQL Server 2012, è consigliabile usare il database Catalogo SSIS, SSISDB, per memorizzare, gestire, eseguire e monitorare i pacchetti Integration Services. Per informazioni dettagliate, vedere [Catalogo SSIS](../integration-services/catalog/ssis-catalog.md).
 
 ## <a name="supported-operating-systems"></a>Sistemi operativi supportati
   

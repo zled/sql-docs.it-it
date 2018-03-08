@@ -1,5 +1,5 @@
 ---
-title: SUSER_ID (Transact-SQL) | Documenti Microsoft
+title: SUSER_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   Restituisce il numero di identificazione dell'account di accesso dell'utente.  
   
 > [!NOTE]  
->  A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], SUSER_ID restituisce il valore elencato come **principal_id** nel **Sys. server_principals** vista del catalogo.  
+>  A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], SUSER_ID restituisce il valore elencato come **principal_id** nella vista del catalogo **sys.server_principals**.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,16 +54,16 @@ SUSER_ID ( [ 'login' ] )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **'** *accesso* **'**  
- Nome dell'account di accesso dell'utente. *account di accesso* è **nchar**. Se *accesso* è specificato come **char**, *accesso* viene implicitamente convertito in **nchar**. *account di accesso* può essere qualsiasi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o utente di Windows o un gruppo che dispone dell'autorizzazione per connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *accesso* viene omesso, viene restituito il numero di identificazione per l'utente corrente. Se nel parametro è inclusa la parola NULL, verrà restituito NULL.  
+ **'** *login* **'**  
+ Nome dell'account di accesso dell'utente. *login* è di tipo **nchar**. Se *login* viene specificato come **char**, *login* viene convertito in modo implicito in **nchar**. *login* può essere qualsiasi account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure qualsiasi utente o gruppo di Windows autorizzato a connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *login* viene omesso, viene restituito il numero di identificazione dell'account di accesso dell'utente corrente. Se nel parametro è inclusa la parola NULL, verrà restituito NULL.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
- SUSER_ID restituisce un numero di identificazione solo per gli account di accesso che sono stati resi disponibili in modo esplicito all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo ID viene utilizzato all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per rilevare l'appartenenza e le autorizzazioni. Questo ID non è l'equivalente del SID dell'account di accesso restituito da SUSER_SID. Se *accesso* è un account di accesso di SQL Server, il SID esegue il mapping a un GUID. Se *accesso* è un account di accesso di Windows o un gruppo di Windows, il SID esegue il mapping a un ID di sicurezza di Windows.  
+## <a name="remarks"></a>Remarks  
+ SUSER_ID restituisce un numero di identificazione solo per gli account di accesso che sono stati resi disponibili in modo esplicito all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo ID viene utilizzato all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per rilevare l'appartenenza e le autorizzazioni. Questo ID non è l'equivalente del SID dell'account di accesso restituito da SUSER_SID. Se *login* è un account di accesso di SQL Server, il SID esegue il mapping a un GUID. Se *login* è un account di accesso di Windows o un gruppo di Windows, il SID esegue il mapping a un ID di sicurezza di Windows.  
   
- La funzione SUSER_SID restituisce un valore SUID solo per un account di accesso che ha una voce nel **syslogins** tabella di sistema.  
+ SUSER_SID restituisce un valore SUID solo per gli account di accesso a cui corrisponde una voce nella tabella di sistema **syslogins**.  
   
  È possibile utilizzare le funzioni di sistema nell'elenco di selezione, nella clausola WHERE e in qualsiasi posizione in cui è consentita un'espressione. Le funzioni di sistema devono essere sempre seguite dalle parentesi, anche se non si specifica alcun parametro.  
   
@@ -76,7 +76,7 @@ SELECT SUSER_ID('sa');
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [SUSER_SID &#40; Transact-SQL &#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
- [Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
+ [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

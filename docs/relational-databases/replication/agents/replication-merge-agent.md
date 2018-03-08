@@ -24,13 +24,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d28310275dd8df9e8e0ee205322291098ea4a626
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-merge-agent"></a>Agente merge repliche
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'agente di merge della replica è un'utilità eseguibile che applica lo snapshot iniziale contenuto nelle tabelle di database ai Sottoscrittori. Consente inoltre di unire le modifiche ai dati incrementali apportate nel server di pubblicazione dopo la creazione dello snapshot iniziale e di riconciliare i conflitti in base alle regole configurate oppure utilizzando un sistema di risoluzione personalizzato.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Agente merge repliche è un eseguibile dell'utilità che consente di applicare lo snapshot iniziale incluso nelle tabelle di database ai Sottoscrittori. Consente inoltre di unire le modifiche ai dati incrementali apportate nel server di pubblicazione dopo la creazione dello snapshot iniziale e di riconciliare i conflitti in base alle regole configurate oppure utilizzando un sistema di risoluzione personalizzato.  
   
 > [!NOTE]  
 >  I parametri possono essere specificati in qualsiasi ordine. Quando i parametri facoltativi non vengono specificati, vengono usati i valori delle impostazioni predefinite del Registro di sistema nel computer locale.  
@@ -182,7 +183,7 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Per limitare il caricamento, utilizzare in alternativa **@subscriber_upload_options** di **sp_addmergearticle** .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Per limitare il caricamento, usare in alternativa **@subscriber_upload_options** di **sp_addmergearticle**.  
   
  Specifica il tipo di scambio di dati durante la sincronizzazione. I possibili valori sono i seguenti:  
   

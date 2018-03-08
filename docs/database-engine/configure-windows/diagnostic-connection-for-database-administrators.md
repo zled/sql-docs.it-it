@@ -29,13 +29,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7b2ada96d38f3653433aca10f15bfb0e87f165ed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connessione di diagnostica per gli amministratori di database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una speciale connessione di diagnostica a cui possono ricorrere gli amministratori quando non è possibile usare connessioni standard al server. Questa connessione di diagnostica consente a un amministratore di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire query di diagnostica e risolvere problemi anche quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non risponde alle richieste di connessione standard.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una speciale connessione di diagnostica a cui possono ricorrere gli amministratori quando non è possibile usare connessioni standard al server. Questa connessione di diagnostica consente a un amministratore di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire query di diagnostica e risolvere problemi anche quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non risponde alle richieste di connessione standard.  
   
  Questa connessione amministrativa dedicata (DAC, Dedicated Administrator Connection) supporta la crittografia e altre caratteristiche di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La connessione DAC consente solo il cambiamento del contesto utente in un altro utente con privilegi amministrativi.  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/18/2018
   
 -   Comandi DBCC di base quali [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md), [DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md), [DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) e [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). Non eseguire comandi che usano una grande quantità di risorse, ad esempio [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) o [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] comando KILL*\<spid>*. In base allo stato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il comando KILL potrebbe non avere sempre esito positivo. In questo caso, l'unica possibilità potrebbe consistere nel riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di seguito vengono riportate alcune linee guida generali:  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] Comando KILL*\<spid>*. In base allo stato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il comando KILL potrebbe non avere sempre esito positivo. In questo caso, l'unica possibilità potrebbe consistere nel riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di seguito vengono riportate alcune linee guida generali:  
   
     -   Verificare che lo SPID sia stato effettivamente terminato eseguendo la query `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`. Se non viene restituita alcuna riga, la sessione è stata terminata.  
   
