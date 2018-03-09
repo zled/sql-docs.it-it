@@ -1,6 +1,6 @@
 ---
 title: Documentazione di SQL Server | Microsoft Docs
-ms.date: 10/30/2017
+ms.date: 02/28/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -27,11 +27,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5e6b2ffe7735bf8c7cb2fe7e9f76b7d4b675ceef
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 84c0a18929883f0a58e75ed5ce20900d0bdf09e7
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="sql-server-documentation"></a>Documentazione di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,21 @@ SQL Server è una parte essenziale della piattaforma dati di Microsoft. SQL Serv
 |[Novità di SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Note sulla versione di SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
 |[Novità di SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Note sulla versione di SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 |[Novità di SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
-   
+
+
 **Prova SQL Server 2016;**
+> [![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Scaricare SQL Server](http://go.microsoft.com/fwlink/?LinkID=829477)
+>
+> [![Download da Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Scaricare SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+>
+> [![Download da Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+>
+> [![Creare una macchina virtuale](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Ottenere una macchina virtuale con SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+
+## <a name="sql-server-technologies"></a>Tecnologie di SQL Server
+
 
 |||
-|-|-|
-|[![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Scaricare SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477) | [![Download da Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [Scaricare SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) |
-|[![Creare una macchina virtuale](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Ottenere una macchina virtuale con SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) | [![Download da Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Scaricare SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) |
-| [![Download da Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | |
-
-    
-## <a name="sql-server-technologies"></a>Tecnologie di SQL Server    
-    
-|||    
 |-|-|    
 |![Motore di database SQL](../sql-server/media/sql-database-engine.png "Motore di database SQL")|**[Motore di database](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> Il motore di database è il servizio di base per l'archiviazione, l'elaborazione e la protezione dei dati e assicura un accesso controllato e una rapida elaborazione delle transazioni per soddisfare i requisiti delle applicazioni a più alto utilizzo di dati all'interno dell'organizzazione. Il motore di database offre inoltre un supporto completo per garantire alti livelli di disponibilità.|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è una piattaforma per la compilazione di soluzioni di integrazione dei dati ad alte prestazioni, con pacchetti che consentono l'elaborazione ETL per il data warehousing.|    
@@ -74,13 +76,13 @@ SQL Server è una parte essenziale della piattaforma dati di Microsoft. SQL Serv
 ## <a name="earlier-sql-server-versions"></a>Versioni precedenti di SQL Server
 - [SQL Server Update Center (Centro aggiornamenti di SQL Server): collegamenti e informazioni per tutte le versioni supportate](https://msdn.microsoft.com/library/ff803383.aspx)
 - [Documentazione di SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [Documentazione di SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
-- [Documentazione di SQL Server 2008 R2](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
-- [Documentazione di SQL Server 2008](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
-- [Documentazione archiviata di SQL Server 2005](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
+- [Documentazione di SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)
+- [Documentazione di SQL Server 2008 R2](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)
+- [Documentazione di SQL Server 2008](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx)
+- [Documentazione archiviata di SQL Server 2005](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
 
 ## <a name="samples"></a>Esempi  
-- [Database di esempio Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
+- [Database di esempio Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)
 - [Database di esempio AdventureWorks e script per SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=49502) 
 - [Esempi di SQL Server in GitHub](https://github.com/Microsoft/sql-server-samples) 
    
