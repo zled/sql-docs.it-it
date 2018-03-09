@@ -1,7 +1,7 @@
 ---
 title: Eseguire Python con T-SQL | Documenti Microsoft
 ms.custom: 
-ms.date: 09/19/2017
+ms.date: 02/28/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -11,185 +11,385 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: tutorial
 applies_to:
-- SQL Server 2016
+- SQL Server 2017
 dev_langs:
 - Python
 caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: ea8010bb51e02e9676653bb0dc2f12cbfe02761a
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 5c6145d3af6918a5f3daa954aae5522ffffebb89
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="run-python-using-t-sql"></a>Eseguire Python con T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questo esempio viene illustrato come eseguire un semplice script Python in SQL Server, tramite la stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
+In questa esercitazione viene illustrato come eseguire codice Python in SQL Server 2017. Viene illustrato il processo di spostamento dei dati tra SQL Server e Python e viene spiegato come eseguire il wrapping di codice Python corretto in una stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per compilare, eseguire il training e utilizzare modelli di machine learning in SQL Server.
 
-## <a name="step-1-create-the-test-data-table"></a>Passaggio 1. Creare la tabella di dati di test
+## <a name="prerequisites"></a>Prerequisiti
 
-In primo luogo, si creeranno alcuni dati aggiuntivi, da utilizzare durante il mapping di nomi dei giorni della settimana per i dati di origine. Eseguire l'istruzione T-SQL seguente per creare la tabella.
+Per completare questa esercitazione, è necessario installare SQL Server 2017 e abilitare i servizi di Machine Learning nell'istanza, come descritto in [questo articolo](../python/setup-python-machine-learning-services.md). 
 
-```SQL
-CREATE TABLE PythonTest (
-    [DayOfWeek] varchar(10) NOT NULL,
-    [Amount] float NOT NULL
-    )
-GO
+È inoltre necessario installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). In alternativa, è possibile utilizzare un altro database Gestione strumento o di query, a condizione che può connettersi a un server e database ed eseguire una query T-SQL o stored procedure.
 
-INSERT INTO PythonTest VALUES
-('Sunday', 10.0),
-('Monday', 11.1),
-('Tuesday', 12.2),
-('Wednesday', 13.3),
-('Thursday', 14.4),
-('Friday', 15.5),
-('Saturday', 16.6),
-('Friday', 17.7),
-('Monday', 18.8),
-('Sunday', 19.9)
-GO
-```
+Dopo aver completato l'installazione, tornare a questa esercitazione, per informazioni su come eseguire il codice Python nel contesto di una stored procedure. 
 
-## <a name="step-2-run-the-hello-world-script"></a>Passaggio 2. Eseguire lo script "Hello World"
+## <a name="overview"></a>Panoramica
 
-Il codice seguente viene caricato il file eseguibile di Python, passa i dati di input e per ogni riga di dati di input, aggiorna il nome del giorno nella tabella con un numero che rappresenta l'indice del giorno della settimana.
+In questa esercitazione include quattro lezioni:
 
-Prendere nota del parametro  *@RowsPerRead* . Questo parametro specifica il numero di righe che vengono passati al runtime di Python da SQL Server.
++ Le nozioni di base di spostamento dei dati tra SQL Server e Python: ulteriori requisiti di base, strutture di dati, input e output.
++ Provare a utilizzare le stored procedure per eseguire semplici operazioni di Python, ad esempio il caricamento dei dati di esempio.
++ Utilizzare le stored procedure per creare un modello di apprendimento Python e generare punteggi dal modello.
++ Una lezione facoltativa per gli utenti che intendono eseguire Python da un client remoto, l'utilizzo di SQL Server come il _contesto di calcolo_. Include il codice per la creazione di un modello. Tuttavia, richiede che sono già una certa familiarità con gli ambienti Python e gli strumenti Python.
 
-La libreria di analisi dati di Python, noto come **pandas**, è necessario per passare dati a SQL Server ed è incluso per impostazione predefinita con servizi di Machine Learning.
+In questo caso, vengono forniti esempi di Python aggiuntivi specifici di SQL Server 2017: [esercitazioni di SQL Server Python](../tutorials/sql-server-python-tutorials.md)
 
-```sql
-DECLARE @ParamINT INT = 1234567
-DECLARE @ParamCharN VARCHAR(6) = 'INPUT '
+## <a name="verify-that-python-is-enabled-and-the-launchpad-is-running"></a>Verificare che Python è abilitato e la finestra di avvio è in esecuzione
 
-print '------------------------------------------------------------------------'
-print 'Output parameters (before):'
-print FORMATMESSAGE('ParamINT=%d', @ParamINT)
-print FORMATMESSAGE('ParamCharN=%s', @ParamCharN)
+1. In Management Studio, eseguire questa istruzione per assicurarsi che il servizio è stato abilitato.
 
-print 'Dataset (before):'
-SELECT * FROM PythonTest
+    ```sql
+    sp_configure 'external scripts enabled'
+    ```
 
-print '------------------------------------------------------------------------'
-print 'Dataset (after):'
-DECLARE @RowsPerRead INT = 5
+    Se **run_value** è 1, la funzione di machine learning è installato e pronto all'uso.
 
-execute sp_execute_external_script 
-@language = N'Python',
-@script = N'
-import sys
-import os
-print("*******************************")
-print(sys.version)
-print("Hello World")
-print(os.getcwd())
-print("*******************************")
-if ParamINT == 1234567:
-       ParamINT = 1
-else:
-       ParamINT += 1
+    Una causa comune di errori è che la finestra di avvio, che gestisce la comunicazione tra SQL Server e Python, è stato arrestato. È possibile visualizzare lo stato della finestra di avvio con Windows **servizi** pannello oppure aprendo Gestione configurazione SQL Server. Se il servizio è arrestato, riavviarlo.
 
-ParamCharN="OUTPUT"
-OutputDataSet = InputDataSet
+2. Successivamente, verificare che il runtime di Python utilizzo e la comunicazione con SQL Server. A tale scopo, aprire una nuova **Query** finestra in SQL Server Management Studio e connettersi all'istanza in cui è stato installato Python.
 
-global daysMap
+    ```sql
+    EXEC sp_execute_external_script @language = N'Python', 
+    @script = N'print(3+4)'
+    ```
 
-daysMap = {
-       "Monday" : 1,
-       "Tuesday" : 2,
-       "Wednesday" : 3,
-       "Thursday" : 4,
-       "Friday" : 5,
-       "Saturday" : 6,
-       "Sunday" : 7
-       }
+    Se tutto funziona correttamente, si verrà visualizzato un messaggio di risultato simile a questo
 
-OutputDataSet["DayOfWeek"] = pandas.Series([daysMap[i] for i in OutputDataSet["DayOfWeek"]], index = OutputDataSet.index, dtype = "int32")
-', 
-@input_data_1 = N'SELECT * FROM PythonTest', 
-@params = N'@r_rowsPerRead INT, @ParamINT INT OUTPUT, @ParamCharN CHAR(6) OUTPUT',
-@r_rowsPerRead = @RowsPerRead,
-@paramINT = @ParamINT OUTPUT,
-@paramCharN = @ParamCharN OUTPUT
-with result sets (("DayOfWeek" int null, "Amount" float null))
+    ```text
+    STDOUT message(s) from external script: 
+    7
+    ```
 
-print 'Output parameters (after):'
-print FORMATMESSAGE('ParamINT=%d', @ParamINT)
-print FORMATMESSAGE('ParamCharN=%s', @ParamCharN)
-GO
-```
+3. Se si verificano errori, sono disponibili un'ampia gamma di operazioni da eseguire per verificare che il server e Python possa comunicare. 
 
-> [!TIP]
-> I parametri per questa stored procedure sono descritti in dettaglio in questa Guida rapida: [codice R tramite T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md).
+    È necessario aggiungere il gruppo di utenti Windows `SQLRUserGroup` come account di accesso nell'istanza, per garantire che Launchpad consente la comunicazione tra SQL Server e Python. (Viene utilizzato il gruppo stesso per entrambi R ed esecuzione di codice Python). Per ulteriori informazioni, vedere [autenticazione implicita abilitato](../r/add-sqlrusergroup-to-database.md).
+    
+    Inoltre, si potrebbe essere necessario abilitare i protocolli di rete che sono stati disabilitati o aprire il firewall in modo che SQL Server può comunicare con client esterni. Per ulteriori informazioni, vedere [risoluzione dei problemi di installazione](../common-issues-external-script-execution.md).
 
-## <a name="step-3-view-the-results"></a>Passaggio 3. Visualizzare i risultati
+## <a name="basic-python-interaction"></a>Interazione di base Python
 
-La stored procedure Ottiene i dati originali, si applica lo script Python e quindi restituisce i dati modificati nel **risultati** riquadro di Management Studio o un altro strumento di query SQL.
+Esistono due modi per eseguire il codice Python in SQL Server:
 
++ Aggiungere uno script Python come un argomento della stored procedure di sistema, **sp_execute_external_script**
++ Da un client remoto di Python, connettersi a SQL Server ed eseguire codice utilizzando SQL Server come contesto di calcolo. Questa operazione richiede [revoscalepy](../python/what-is-revoscalepy.md).
 
-|DayOfWeek (prima)| Amount|DayOfWeek (dopo) |
-|-----|-----|-----|
-|Domenica|10|7|
-|Lunedì|11.1|1|
-|Martedì|12.2|2|
-|Mercoledì|13.3|3|
-|Giovedì|14.4|4|
-|Venerdì|15.5|5|
-|Sabato|16.6|6|
-|Venerdì|17.7|5|
-|Lunedì|18.8|1|
-|Domenica|19.9|7|
+L'obiettivo principale di questa esercitazione è per garantire che è possibile utilizzare Python in una stored procedure.
 
-I messaggi di stato o gli errori restituiti nella console di Python vengono restituiti come messaggi di **Query** finestra. Di seguito è riportato un estratto dell'output che potrebbe essere visualizzato:
+1. Esecuzione di codice semplice per vedere come i dati vengono passati avanti e indietro tra SQL Server e Python.
 
-*Risultati di esempio*
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    print(c, d)
+    '
+    ```
 
-```
-Output parameters (before):
-ParamINT=1234567
-ParamCharN=INPUT 
-Dataset (before):
+2. Presupponendo che si dispone di tutto è configurato correttamente e Python e SQL Server sono in comunicazione, viene calcolato il risultato corretto, la versione di Python e `print` funzione restituisce il risultato per il **messaggi** windows.
 
-(10 rows affected)
+    **Risultati**
 
-Dataset (after):
-STDOUT message(s) from external script: 
-C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy
+    ```text
+    STDOUT message(s) from external script: 
+    0.5 2
+    ```
+    
+    Durante il recupero **stdout** messaggi è utile quando il test del codice, molto spesso è necessario restituire i risultati in formato tabulare, in modo che sia possibile utilizzarlo in un'applicazione o scriverlo in una tabella. 
 
-3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
-Hello World
-C:\PROGRA~1\MICROS~2\MSSQL1~1.MSS\MSSQL\EXTENS~1\MSSQLSERVER01\7A70B3FB-FBA2-4C52-96D6-8634DB843229
+Per il momento, tenere presente queste regole:
 
-3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
-Hello World
-C:\PROGRA~1\MICROS~2\MSSQL1~1.MSS\MSSQL\EXTENS~1\MSSQLSERVER01\7A70B3FB-FBA2-4C52-96D6-8634DB843229
++ Tutti gli elementi all'interno di `@script` l'argomento deve essere valido codice Python. 
++ Il codice deve seguire tutte le regole Pythonic relativi rientri, i nomi delle variabili e così via. Quando si verifica un errore, controllare le maiuscole e minuscole spazi vuoti.
++ Se si utilizza le eventuali librerie che non vengono caricate per impostazione predefinita, è necessario utilizzare un'istruzione di importazione all'inizio dello script per caricarli. 
++ Se la libreria non è già installata, arrestare e installare il pacchetto di Python all'esterno di SQL Server, come descritto qui: [installare i nuovi pacchetti Python in SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
-(10 rows affected)
-Output parameters (after):
-ParamINT=2
-ParamCharN=OUTPUT
-```
+## <a name="inputs-and-outputs"></a>Input e output
 
-+ Il **messaggio** output include la directory di lavoro utilizzata per l'esecuzione di script. In questo esempio, MSSQLSERVER01 fa riferimento all'account di lavoro allocati da SQL Server per gestire il processo. 
+Per impostazione predefinita, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) accetta un singolo input set di dati, in genere è fornire sotto forma di una query SQL valida. Altri tipi di input possono essere passati come variabili SQL: ad esempio, è possibile passare un modello con training come una variabile, utilizzando una funzione di serializzazione, ad esempio [pickle](https://docs.python.org/3.0/library/pickle.html) o [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) per scrivere il modello un formato binario.
 
-    Il GUID è il nome di una cartella temporanea viene creata durante l'esecuzione di script per archiviare gli elementi di dati e script. Le cartelle temporanee sono protetti da SQL Server e pulite per l'oggetto processo di Windows dopo il completamento dello script è terminata.
+La stored procedure restituisce un singolo Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) frame di dati come output. È tuttavia può restituire valori scalari e i modelli come variabili. È possibile ad esempio, un modello con training come valore binario di output e di passare a un'istruzione T-SQL INSERT, per scrivere tale modello in una tabella. È anche possibile generare grafici (in formato binario) o valori scalari (valori singoli, ad esempio la data e l'ora, il tempo trascorso per il training del modello e così via).
 
-+ La sezione che contiene il messaggio "Hello World" visualizzato due volte. Ciò accade perché il valore di  *@RowsPerRead*  è stato impostato su 5 e sono presenti 10 righe nella tabella; pertanto, in cui sono necessarie due chiamate di Python per elaborare tutte le righe nella tabella.
+Per Ora esaminiamo solo l'impostazione predefinita le variabili di input e outpue, `InputDataSet` e `OutputDataSet`. 
 
-    Le esecuzioni di produzione, è consigliabile sperimentare valori diversi per determinare il numero massimo di righe che devono essere passati in ogni batch. Il numero ottimale di righe è dipendente dai dati e è influenzato dal entrambi il numero di colonne nel set di dati e il tipo di dati che si siano passando.
+1. Eseguire il codice seguente per eseguire alcuni calcoli matematici e restituire i risultati.
 
-## <a name="resources"></a>Risorse
+        ```sql
+        execute sp_execute_external_script 
+        @language = N'Python', 
+        @script = N'
+        a = 1
+        b = 2
+        c = a/b
+        print(c)
+        OutputDataSet = c
+        '
+        WITH RESULT SETS ((ResultValue float))
+        ```
 
-Vedere questi ulteriori esempi di Python e le esercitazioni per suggerimenti avanzati e demo end-to-end.
+2. È necessario ottenere un errore, perché il codice Python genera un valore scalare, non un frame di dati.
 
-+ [Utilizzare revoscalepy Python per creare un modello](use-python-revoscalepy-to-create-model.md)
-+ [Nel Database di Python per gli sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md)
-+ [Compilare un modello predittivo con Python e SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
+        **Results**
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+        ```text
+        line 43, in transform
+            raise TypeError('OutputDataSet should be of type pandas.DataFrame')
+        ```
 
-Se non è possibile trovare la stored procedure, `sp_execute_external_script`, significa che probabile che non è stata completata la configurazione di istanza per supportare l'esecuzione dello script esterno. Dopo l'installazione di SQL Server 2017 e selezionando Python come di machine learning language, è necessario abilitare anche in modo esplicito la funzionalità mediante `sp_configure`e quindi riavviare l'istanza. Per informazioni dettagliate, vedere [programma di installazione di Machine Learning Services con Python](../python/setup-python-machine-learning-services.md).
+3. Ora vedere cosa succede quando si passa un set di dati tabulare Python, utilizzando la variabile di input predefinito `InputDataSet`. 
+
+    ```sql
+    EXECUTE sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    OutputDataSet = InputDataSet
+    ',
+    @input_data_1 = N'SELECT 1 as Col1'
+    ```
+
+    La stored procedure restituisce un data.frame automaticamente, senza che sia necessario eseguire alcuna operazione aggiuntiva nel codice Python.
+
+    **Risultati**
+
+    | Nessun nome di colonna|
+    |------|
+    | 1|
+
+    Per impostazione predefinita, il singolo tabulare input set di dati con il nome `InputDataSet`. Tuttavia, è possibile modificare tale nome aggiungendo una riga simile alla seguente: `@input_data_1_name = N'myResultName'`.
+
+    Nomi di colonna usati da Python mai vengono mantenuti nell'output. Anche se la query di input specificato il nome della colonna `Col1`, tale nome non viene restituito, né sarebbe le intestazioni di colonna utilizzate da script Python. Per specificare un tipo di dati e nome di colonna quando viene nuovamente i dati di SQL Server, utilizzare l'istruzione T-SQL `WITH RESULT SETS` clausola.
+
+4. In questo esempio fornisce nuovi nomi per le variabili di input e outpue.
+
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    MyOutput = MyInput
+    ',
+    @input_data_1_name = N'MyInput',
+    @input_data_1 = N'SELECT 1 as Col1',
+    @output_data_1_name = N'MyOutput'
+    WITH RESULT SETS ((ResultValue int))
+    ```
+
+    La clausola SET di risultati con definisce lo schema per l'output, poiché i nomi delle colonne di Python non vengono mai restituiti con la data.frame.
+
+    **Risultati**
+
+    | ResultValue|
+    |------|
+    | 1|
+
+5. Ora esaminiamo un tipico errore Python. Modificare la riga dell'esempio precedente da `@input_data_1_name = N'MyInput'` a `@input_data_1_name = N'myinput'`.
+
+    Errori di Python vengono passati all'utente come messaggi, per il servizio satellite utilizzato da SQL Server. I messaggi possono richiedere tempi lunghi e può includere errori di SQL Server o finestra di avvio a errori di Python, pertanto è necessario paziente informazioni dettagliate che attraverso il testo. Il messaggio chiave è in questa riga:
+
+    ```text
+    MyOutput = MyInput
+    NameError: name 'MyInput' is not defined
+    ```
+
+    Tenere presente che Python, ad esempio R, sia tra maiuscole e minuscole. Pertanto, quando si otterrà qualsiasi tipo di errore, assicurarsi di controllare i nomi delle variabili e cercare i problemi con spaziatura, rientri e tipi di dati.
+
+## <a name="python-data-structures"></a>Strutture di dati di Python
+
+SQL Server si basa su Python **pandas** pacchetto, è molto utile per l'utilizzo di dati tabulari. Tuttavia, abbiamo già visto che non è possibile passare un valore scalare da Python a SQL Server e si aspettano che "funzioni". In questa sezione verrà esaminato alcune definizioni di tipo di dati di base, preparazione per altri problemi che è possibile eseguire in quando si passano dati tabulari tra Python e SQL Server.
+
++ Un frame di dati è una tabella con _più_ colonne.
++ Una singola colonna di un frame di dati, è un oggetto elenco chiamato una serie.
++ Un singolo valore è una cella di un frame di dati e deve essere chiamato in base all'indice.
+
+In che modo si espone il singolo risultato di un calcolo come frame di dati, se un data.frame richiede una struttura tabulare? Una risposta è per rappresentare il valore scalare singolo come una serie, che viene facilmente convertita in un frame di dati. 
+
+1. In questo esempio esegue alcune semplici operazioni matematiche e converte un valore scalare in una serie. Una serie richiede un indice, che è possibile assegnare manualmente, come illustrato di seguito, o a livello di codice.
+
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    print(c)
+    s = pandas.Series(c, index =["simple math example 1"])
+    print(s)
+    '
+    ```
+
+2. Poiché la serie non è stata convertita in un data.frame, vengono restituiti i valori nella finestra di messaggi, ma è possibile vedere che i risultati sono in formato tabulare più.
+
+    **Risultati**
+
+    ```text
+    STDOUT message(s) from external script: 
+    0.5
+    simple math example 1    0.5
+    dtype: float64
+    ```
+
+3. Per aumentare la lunghezza della serie, è possibile aggiungere nuovi valori, utilizzando una matrice. 
+
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    s = pandas.Series([c,d])
+    print(s)
+    '
+    ```
+
+    Se non si specifica un indice, viene generato un indice che dispone di valori a partire da 0 e terminando con la lunghezza della matrice.
+
+    **Risultati**
+
+    ```text
+    STDOUT message(s) from external script: 
+    0    0.5
+    1    2.0
+    dtype: float64
+    ```
+
+4. Se si aumenta il numero di **indice** valori, ma non aggiungere nuovi **dati** valori, i valori dei dati vengono ripetuti per riempire la serie.
+
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
+    print(s)
+    '
+    ```
+
+    **Risultati**
+
+    ```text
+    STDOUT message(s) from external script: 
+    0.5
+    simple math example 1    0.5
+    simple math example 2    0.5
+    dtype: float64
+    ```
+
+### <a name="convert-series-to-data-frame"></a>Convertire una serie di frame di dati
+
+Con convertire i risultati di matematica scalare in una struttura tabulare, è comunque necessario convertirli in un formato che può gestire SQL Server. 
+
+1. Per convertire una serie in un data.frame, chiamare il pandas [DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) metodo.
+
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    import pandas as pd
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    s = pandas.Series([c,d])
+    print(s)
+    df = pd.DataFrame(s)
+    OutputDataSet = df
+    '
+    WITH RESULT SETS (( ResultValue float ))
+    ```
+
+2. Si noti che i valori di indice non sono output, anche se si utilizza l'indice per ottenere i valori specifici dal data.frame.
+
+    **Risultati**
+
+    |ResultValue|
+    |------|
+    |0,5|
+    |2|
+
+### <a name="output-values-into-dataframe-using-an-index"></a>Valori di output in data.frame tramite un indice
+
+Di seguito viene illustrato il funzionamento di conversione in un data.frame con due serie che contiene i risultati di operazioni matematiche semplici. Il primo ha un indice dei valori sequenziali generati da Python. La seconda Usa un indice arbitrario di valori stringa.
+
+1. In questo esempio Ottiene un valore di serie che utilizza un indice intero.
+
+    ```sql
+    EXECUTE sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    import pandas as pd
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    s = pandas.Series([c,d])
+    print(s)
+    df = pd.DataFrame(s, index=[1])
+    OutputDataSet = df
+    '
+    WITH RESULT SETS (( ResultValue float ))
+    ```
+
+    Tenere presente che l'indice generato automaticamente inizia in corrispondenza di 0. Provare a utilizzare un timeout del valore di indice di intervallo e verificare il risultato.
+
+2. Ora consente di ottenere un valore singolo da altri frame di dati che dispone di un indice stringa. 
+
+    ```sql
+    EXECUTE sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    import pandas as pd
+    a = 1
+    b = 2
+    c = a/b
+    s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
+    print(s)
+    df = pd.DataFrame(s, index=["simple math example 1"])
+    OutputDataSet = df
+    '
+    WITH RESULT SETS (( ResultValue float ))
+    ```
+
+    **Risultati**
+
+    |ResultValue|
+    |------|
+    |0,5|
+
+    Se si tenta di utilizzare un indice numerico per ottenere un valore di questa serie, viene visualizzato un errore.
+
+Questo esercizio è stato progettato per dare un'idea di come usare diverse strutture di dati di Python e assicurarsi di ottenere il risultato corretto come frame di dati. Potrebbe aver concluso che l'output un singolo valore come un frame di dati è più complicata rispetto al relativo valore. Fortunatamente, è possibile passare facilmente tutti i tipi di valori da e verso la stored procedure come variabili. Che è trattata nella lezione successiva.
+
+## <a name="tips"></a>Suggerimenti
+
++ Tra i linguaggi di programmazione Python è uno dei più flessibile per quanto riguarda le virgolette singole e virgolette doppie. si tratta piuttosto intercambiabili. 
+
+    Tuttavia, T-SQL vengono utilizzate le virgolette per solo alcuni aspetti e `@script` argomento vengono utilizzate le virgolette per racchiudere il codice Python come stringa Unicode. Di conseguenza, potrebbe essere necessario esaminare il codice Python e modificare alcune virgolette le virgolette doppie.
+
++ Impossibile trovare la stored procedure, `sp_execute_external_script`? Significa che probabile che non è stata completata la configurazione di istanza per supportare l'esecuzione dello script esterno. Dopo l'installazione di SQL Server 2017 e selezionando Python come di machine learning language, è necessario abilitare anche in modo esplicito la funzionalità mediante `sp_configure`e quindi riavviare l'istanza. 
+
+    Per informazioni dettagliate, vedere [programma di installazione di Machine Learning Services con Python](../python/setup-python-machine-learning-services.md).
+
+## <a name="next-steps"></a>Passaggi successivi
+
+[Eseguire il wrapping di codice Python in una stored procedure SQL](wrap-python-in-tsql-stored-procedure.md)

@@ -1,7 +1,7 @@
 ---
 title: Installazione dei componenti di machine learning senza accesso a internet | Documenti Microsoft
 ms.custom: 
-ms.date: 01/08/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 1c4a63077cf9801a6c83502f2fdea6f88c063227
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d7d218dcb5efeddf248230abff85b46da23d389a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Installazione dei componenti di machine learning senza accesso a internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,16 +47,18 @@ In genere, il programma di installazione dei componenti di computer utilizzati i
 
 ### <a name="step-1-obtain-additional-installers"></a>Passaggio 1. Ottenere i programmi di installazione aggiuntivi
 
+In generale, i programmi di installazione separati vengono forniti per open source e componenti proprietari. L'installazione guidata di SQL Server assicura che vengono installate nell'ordine corretto. Alcune versioni, tuttavia, potrebbero aggiornare un solo set di componenti. Vedere il [tabella dei programmi di installazione](#bkmk_2017Installers) per ogni versione per informazioni dettagliate.
+
 **Per R**
 
-Il linguaggio R è supportato in SQL Server 2016 e SQL Server 2017. Due diversi programmi di installazione sono necessari, per open source e componenti proprietari. L'installazione guidata di SQL Server assicura che vengono installate nell'ordine corretto.
+Il linguaggio R è supportato in SQL Server 2016 e versioni successive. 
 
 + Programmi di installazione con **SRO** nel nome di fornire i componenti di origine aperti.
 + Programmi di installazione con **SRS** nel nome contengono i componenti forniti da Microsoft, inclusi quelli per l'integrazione di database.
 
 **Per Python**
 
-Il linguaggio Python è supportato solo in SQL Server 2017. Nuovamente, esistono due programmi di installazione separati che è necessario scaricare.
+Il linguaggio Python richiede SQL Server 2017 o versione successiva. 
 
 + Programmi di installazione con **Simulato** nel nome sono per aprire Python di Microsoft e fornire i componenti di origine aperti.
 + Programmi di installazione con **SPS** nel nome sono per Python di Microsoft Server e include i componenti forniti da Microsoft, inclusi quelli per l'integrazione di database.
@@ -79,19 +81,18 @@ Per una descrizione dettagliata del processo di installazione offline per R Serv
 3. Verrà visualizzata una finestra di dialogo in cui è richiesto il **percorso di installazione** dei pacchetti necessari.
 4. Fare clic su **Sfoglia** per individuare la cartella che contiene i file di programma di installazione copiato in precedenza.
 5. Se vengono trovati i file corretti, fare clic su **Avanti** per indicare che i componenti sono disponibili.
-10. Completare l'Installazione guidata di SQL Server.
-11. Eseguire i passaggi di post-installazione necessari per assicurarsi che il servizio è abilitato.
+6. Completare l'Installazione guidata di SQL Server.
+7. Eseguire i passaggi di post-installazione necessari per assicurarsi che il servizio è abilitato.
 
 ## <a name="installerlocs"></a>Posizione in cui scaricare i componenti di machine learning
 
-> [!NOTE]
-> Assicurarsi di ottenere i file che corrisponde alla versione di SQL Server si sta installando.
-> 
-> Viene fornito supporto per Python a partire da SQL Server 2017 CTP 2.0. Le versioni precedenti, tra cui SQL Server 2016 non supportano Python.
+Assicurarsi di ottenere i file che corrisponde alla versione di SQL Server si sta installando.
 
 + [Per ottenere i componenti di R per SQL Server 2016](#bkmk_2016Installers)
 
 + [Per ottenere i componenti di R o Python per SQL Server 2017](#bkmk_2017Installers)
+
+Viene fornito supporto per Python a partire da SQL Server 2017 CTP 2.0. Le versioni precedenti, tra cui SQL Server 2016 non supportano Python.
 
 ### <a name="bkmk_2017Installers"></a>Download di SQL Server 2017
 
@@ -141,6 +142,11 @@ Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?
 Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 Aprire Microsoft Python     |Nessuna modifica. Utilizzare precedente|
 Microsoft Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
+**SQL Server 2017 CU4** |
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
+Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
+Aprire Microsoft Python     |Nessuna modifica. Utilizzare precedente|
+Microsoft Python Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
 
 ### <a name="bkmk_2016Installers"></a>Download di SQL Server 2016
 
@@ -235,7 +241,7 @@ L'installazione integrata si riferisce alla possibilità di applicare una patch 
 
 + Se il server non ha accesso a Internet, è necessario scaricare il programma di installazione di SQL Server e quindi scaricare le versioni dei programmi di installazione dei componenti R corrispondenti **prima** di iniziare il processo di aggiornamento.  I componenti di R non sono inclusi per impostazione predefinita con SQL Server.
 
-+ Se si è *aggiunta* questi componenti di un *esistente* installazione, utilizzare la versione aggiornata del programma di installazione di SQL Server e il corrispondente aggiornato versione dei componenti aggiuntivi. Quando si specifica che deve essere installato sia la funzionalità di R, il programma di installazione cerca la versione corrispondente dei programmi di installazione per il machine learning componenti.
++ Se si aggiunge questi componenti a un'installazione esistente, utilizzare la versione aggiornata del programma di installazione di SQL Server e la versione aggiornata corrispondente dei componenti aggiuntivi. Quando si specifica che deve essere installato sia la funzionalità di R, il programma di installazione cerca la versione corrispondente dei programmi di installazione per il machine learning componenti.
 
 ## <a name="command-line-arguments-for-specifying-component-locations"></a>Argomenti della riga di comando per specificare i percorsi dei componenti
 
@@ -243,27 +249,26 @@ Quando si esegue un'installazione offline dalla riga di comando, è necessario f
 
 **Percorso dei programmi di installazione**
 
-- `/UPDATESOURCE`Per specificare il percorso del file locale contenente il programma di installazione di aggiornamento di SQL Server
-- `/MRCACHEDIRECTORY`Per specificare la cartella contenente i file CAB del componente R
-- `/MPYCACHEDIRECTORY`Per specificare la cartella contenente i file CAB del componente Python
+- `/UPDATESOURCE` Per specificare il percorso del file locale contenente il programma di installazione di aggiornamento di SQL Server
+- `/MRCACHEDIRECTORY` Per specificare la cartella contenente i file CAB del componente R
+- `/MPYCACHEDIRECTORY` Per specificare la cartella contenente i file CAB del componente Python
 
 **Componenti di R in SQL Server 2016**
 
-- `/ADVANCEDANALYTICS`Per ottenere supporto del motore di script esterni
-- `/IACCEPTROPENLICENSETERMS="True"`per accettare R separate contratto di licenza
+- `/ADVANCEDANALYTICS` Per ottenere supporto del motore di script esterni
+- `/IACCEPTROPENLICENSETERMS="True"` per accettare R separate contratto di licenza
 
 **Componenti di R in SQL Server 2017**
 
-- `/ADVANCEDANALYTICS`Per ottenere supporto del motore di script esterni
-- `/SQL_INST_MR`usare il linguaggio R
-- `/IACCEPTROPENLICENSETERMS="True"`per accettare R separate contratto di licenza
+- `/ADVANCEDANALYTICS` Per ottenere supporto del motore di script esterni
+- `/SQL_INST_MR` usare il linguaggio R
+- `/IACCEPTROPENLICENSETERMS="True"` per accettare R separate contratto di licenza
 
 **Componenti di Python 2017 di SQL Server**
 
-- `/ADVANCEDANALYTICS`Per ottenere supporto del motore di script esterni
-- `/SQL_INST_MPY`Per utilizzare Python
-- `/IACCEPTPYTHONLICENSETERMS="True"`per accettare la versione di Python separate contratto di licenza
-
+- `/ADVANCEDANALYTICS` Per ottenere supporto del motore di script esterni
+- `/SQL_INST_MPY` Per utilizzare Python
+- `/IACCEPTPYTHONLICENSETERMS="True"` per accettare la versione di Python separate contratto di licenza
 
 > [!NOTE]
 > È possibile modificare l'account del servizio per la finestra di avvio utilizzando i parametri di installazione di SQL Server. È consigliabile installare utilizzando gli account di servizio predefiniti e quindi modificare l'account del servizio utilizzando Gestione configurazione SQL Server. Al termine dell'operazione, assicurarsi di riavviare il servizio Launchpad.

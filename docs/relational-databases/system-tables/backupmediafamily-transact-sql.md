@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b2435ce3fe98104aaf3bbb857e89779adb221e4
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ac82ec09c8051fae6614f19aad5ad2fb518bf710
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,8 @@ ms.lasthandoff: 02/03/2018
 |**media_family_id**|**uniqueidentifier**|Numero di identificazione univoco del gruppo di supporti. Può essere NULL.|  
 |**media_count**|**int**|Numero di supporti nel gruppo. Può essere NULL.|  
 |**logical_device_name**|**nvarchar(128)**|Nome di questo dispositivo di backup in **sys.backup_devices.name**. Se si tratta di un dispositivo di backup temporaneo (anziché un dispositivo di backup permanente presente in **backup_devices**), il valore di **logical_device_name** è NULL.|  
-|**physical_device_name**|**nvarchar(260)**|Nome fisico del dispositivo di backup. Può essere NULL.|  
-|**device_type**|**tinyint**|Tipo di dispositivo di backup:<br /><br /> 2 = Disco<br /><br /> 5 = Nastro<br /><br /> 7 = Dispositivo virtuale<br /><br /> 105 = Dispositivo di backup permanente<br /><br /> Può essere NULL.<br /><br /> Tutti i nomi dei dispositivi permanenti e i numeri di dispositivo sono reperibile **backup_devices**.|  
+|**physical_device_name**|**nvarchar(260)**|Nome fisico del dispositivo di backup. Può essere NULL. Questo campo è condivisa tra il processo di backup e ripristino. Può contenere il percorso di destinazione di backup originale o il percorso di origine originale del ripristino. A seconda se il backup o ripristino si è verificato prima in un server per un database. Si noti che consecutivi ripristini dal file di backup stesso non aggiornerà il percorso indipendentemente dalla posizione in fase di ripristino. Per questo motivo, **physical_device_name** campo non può essere utilizzato per visualizzare il percorso di ripristino utilizzato.|  
+|**device_type**|**tinyint**|Tipo di dispositivo di backup:<br /><br /> 2 = Disco<br /><br /> 5 = Nastro<br /><br /> 7 = Dispositivo virtuale<br /><br /> 9 = archiviazione di azure<br /><br /> 105 = Dispositivo di backup permanente<br /><br /> Può essere NULL.<br /><br /> Tutti i nomi dei dispositivi permanenti e i numeri di dispositivo sono reperibile **backup_devices**.|  
 |**physical_block_size**|**int**|Dimensioni fisiche del blocco utilizzate per la scrittura del gruppo di supporti. Può essere NULL.|  
 |**mirror**|**tinyint**|Numero di mirroring (0-3).|  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/03/2018
  Per ridurre il numero di righe in questa tabella e in altre tabelle di cronologia e di backup, eseguire il [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Backup e ripristino tabelle &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Backup e ripristino di tabelle &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   

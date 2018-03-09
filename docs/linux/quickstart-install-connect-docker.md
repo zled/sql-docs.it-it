@@ -4,7 +4,7 @@ description: "Questa guida introduttiva illustra come usare Docker per eseguire 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 971f6ed4b728f4be127bf9a23e8a7499ec308d90
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 8c3f8bc09ef8c3b6838912027024a3feb97cea5d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Guida introduttiva: Eseguire l'immagine di SQL Server 2017 contenitore con Docker
 
@@ -52,6 +52,8 @@ Questa immagine è costituita da SQL Server in esecuzione su Linux basato su Ubu
    ```
 
    Il comando riportato sopra esegue il pull dell'immagine del contenitore di SQL Server 2017 più recente. Se si vuole eseguire il pull di un'immagine specifica, aggiungere un segno di due punti e il nome del tag (ad esempio `microsoft/mssql-server-linux:2017-GA`). Per vedere tutte le immagini disponibili, vedere la [pagina mssql-server-linux dell'hub Docker](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+   
+   Per i comandi bash in questo articolo, `sudo` viene utilizzato. In, MacOS `sudo` potrebbe non essere necessaria. In Linux, se non si desidera utilizzare `sudo` per l'esecuzione di Docker, è possibile configurare un **docker** gruppo e aggiungere utenti a tale gruppo. Per ulteriori informazioni, vedere [passaggi di post-installazione per Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
 1. Per eseguire l'immagine del contenitore con Docker, è possibile usare il comando seguente da una shell Bash (Linux/macOS) o da un prompt dei comandi PowerShell con privilegi elevati.
 
