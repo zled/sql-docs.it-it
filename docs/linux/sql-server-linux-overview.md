@@ -1,4 +1,4 @@
----
+﻿---
 title: Panoramica di SQL Server in Linux | Documenti Microsoft
 description: "Questo articolo descrive le modalità di esecuzione in Linux e fornisce informazioni su come per altre informazioni in SQL Server."
 author: rothja
@@ -25,7 +25,6 @@ ms.lasthandoff: 02/24/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server 2017 viene ora eseguito in Linux. È lo stesso motore di database di SQL Server, molte funzionalità e i servizi indipendentemente dal sistema operativo simili.
 
 ## <a name="install"></a>Install
 
