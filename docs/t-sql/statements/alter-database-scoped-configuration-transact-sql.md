@@ -83,9 +83,9 @@ Specifica le impostazioni per i database secondari (tutti i database secondari d
 MAXDOP  **=**  {\<valore > | PRIMARY}  
 **\<valore >**  
   
-Specifica il valore predefinito per l'impostazione MAXDOP utilizzato per le istruzioni. 0 è il valore predefinito e indica che verrà utilizzata la configurazione del server. Esegue l'override di MAXDOP a livello di database (a meno che non sia 0) di **massimo grado di parallelismo** impostato a livello di server con sp_configure (o tramite interfaccia grafica). Lo hint per la query può eseguire comunque l'override di MAXDOP impostato a livello di database. Per ottimizzare una query specifica è necessario infatti modificare tale opzione. Tutte queste impostazioni di MAXDOP sono limitate a quanto impostato per il gruppo di carico di lavoro.   
+Specifica il valore predefinito per l'impostazione MAXDOP utilizzato per le istruzioni. 0 è il valore predefinito e indica che verrà utilizzata la configurazione del server. MAXDOP a livello di database esegue l'override (a meno che non sia 0) di **massimo grado di parallelismo** impostato a livello di server con sp_configure. L'hint per la query può eseguire comunque l'override di MAXDOP impostato a livello di database. Per ottimizzare una query specifica è necessario infatti modificare tale o   
 
-Grazie al **massimo grado di parallelismo** è possibile limitare il numero di processori da utilizzare nell'esecuzione di piani paralleli. SQL Server considera piani di esecuzione parallela per query, operazioni DDL su indice, inserimento parallelo, alter column online, raccolta di statistiche in parallelo e popolamento dei cursori statici e basati su keyset.
+Grazie al massimo grado di parallelismo è possibile limitare il numero di processori da utilizzare nell'esecuzione di piani paralleli. SQL Server considera piani di esecuzione parallela per query, operazioni DDL su indice, inserimento parallelo, alter column online, raccolta di statistiche in parallelo e popolamento dei cursori statici e basati su keyset.
  
 Per impostare questa opzione a livello di istanza, vedere [il max degree of parallelism opzione di configurazione Server Configurare](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). 
 
@@ -94,40 +94,40 @@ Per impostare questa opzione a livello di istanza, vedere [il max degree of para
   
 PRIMARY  
   
-Può essere impostato solo per i database secondari, mentre il database è sul primario (AlwaysOn Availability Groups), e indica che la configurazione sarà quella impostata per il database primario. Se la configurazione per il primario cambia, il valore nei database secondari verrà modificato di conseguenza senza la necessità di impostarli in modo esplicito. **PRIMARY** è l'impostazione predefinita per i database secondari.  
+Può essere impostato solo per i database secondari, mentre il database è sul primario, e indica che la configurazione sarà quella impostata per il database primario. Se la configurazione per il primario cambia, il valore nei database secondari verrà modificato di conseguenza senza la necessità di impostarli in modo esplicito. **PRIMARY** è l'impostazione predefinita per i database secondari.  
   
 LEGACY_CARDINALITY_ESTIMATION  **=**  {ON | **OFF** | PRIMARY}  
 
-Consente di impostare il modello di stima della cardinalità di query optimizer a SQL Server 2012 e versione precedente, indipendentemente dal livello di compatibilità del database. Il valore predefinito è **OFF** che imposta il modello di stima della cardinalità in base al livello di compatibilità del database. Impostare a **ON** equivale abilitare il [flag di traccia 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+Consente di impostare il modello di stima della cardinalità di query optimizer su SQL Server 2012 e versione precedente, indipendentemente dal livello di compatibilità del database. Il valore predefinito è **OFF**, che imposta il modello di stima della cardinalità in base al livello di compatibilità del database. Impostare su **ON** equivale ad abilitare il [flag di traccia 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
 > [!TIP] 
-> A livello di query, aggiungere lo [hint](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, aggiungere lo [hint](../../t-sql/queries/hints-transact-sql-query.md) **HINT USE** anziché utilizzare il flag di traccia. 
+> A livello di query, aggiungere l'[hint per la query](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, aggiungere l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) **HINT USE** anziché utilizzare il flag di traccia. 
   
 PRIMARY  
   
-Questo valore è valido solo per i database secondari, mentre il database è sul primario (AlwaysOn Availability Groups), e specifica che l'impostazione del modello di stima di cardinalità per il query optimizer in tutti i database secondari sarà quello impostato per il database primario. Se la configurazione sul primario cambia, è possibile che il valore nei database secondari verrà modificato di conseguenza. **PRIMARY** è l'impostazione predefinita per i database secondari.
+Questo valore è valido solo per i database secondari, mentre il database è sul primario, e specifica che l'impostazione del modello di stima di cardinalità per il query optimizer in tutti i database secondari sarà quello impostato per il database primario. Se la configurazione del modello di stima di cardinalità per il query optimizer sul primario cambia, il valore nei database secondari verrà modificato di conseguenza. **PRIMARY** è l'impostazione predefinita per i database secondari.
   
 PARAMETER_SNIFFING  **=**  { **ON** | OFF | PRIMARIO}  
 
-Abilita o disabilita [lo sniffing dei parametri](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). Il valore predefinito è **ON**. Equivale al [flag di traccia 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+Abilita o disabilita [lo sniffing dei parametri](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). Il valore predefinito è ON. Equivale a [Flag di traccia 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
 > [!TIP] 
-> A livello di query, vedere lo [hint](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, usare lo [hint](../../t-sql/queries/hints-transact-sql-query.md) **HINT USE**. 
+> A livello di query, vedere l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, usare l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) **HINT USE**. 
   
 PRIMARY  
   
-Questo valore è valido solo per i database secondari, mentre il database è sul primario (AlwaysOn Availability Groups), e specifica che il valore per questa impostazione su tutti i database secondari sarà il valore impostato per il database primario. Se la configurazione del primario per l'utilizzo dello [sniffing dei parametri](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) cambia, il valore nel database secondario verrà modificato di conseguenza senza la necessità di impostarlo in modo esplicito. Questo è l'impostazione predefinita per i database secondari.  
+Questo valore è valido solo per i database secondari, mentre il database è sul primario, e specifica che il valore per questa impostazione su tutti i database secondari sarà il valore impostato per il database primario. Se la configurazione del primario per l'utilizzo dello [sniffing dei parametri](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) cambia, il valore nel database secondario verrà modificato di conseguenza senza la necessità di impostarlo in modo esplicito. Questo è l'impostazione predefinita per i database secondari.
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | PRIMARIO}  
 
-Abilita o disabilita gli hotfix di ottimizzazione di query indipendentemente dal livello di compatibilità del database. Il valore predefinito è **OFF**, che disabilita gli hotfix di ottimizzazione che sono stati rilasciati dopo che è stato introdotto il massimo livello di compatibilità disponibile per una versione specifica di query (post-RTM). L'impostazione di **ON** equivale ad abilitare  il [flag di traccia 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+Abilita o disabilita gli hotfix di ottimizzazione di query indipendentemente dal livello di compatibilità del database. Il valore predefinito è **OFF**, che disabilita gli hotfix di ottimizzazione che sono stati rilasciati dopo che è stato introdotto il massimo livello di compatibilità disponibile per una versione specifica di query (post-RTM). L'impostazione su **ON** equivale ad abilitare il [flag di traccia 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
 > [!TIP] 
-> A livello di query, aggiungere lo [hint](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, aggiungere lo [hint](../../t-sql/queries/hints-transact-sql-query.md) **HINT USE** anziché utilizzare il flag di traccia.  
+> A livello di query, aggiungere l'[hint per la query](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, aggiungere l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) **HINT USE** anziché utilizzare il flag di traccia.  
   
 PRIMARY  
   
-Questo valore è valido solo per i database secondari, mentre il database è sul primario (AlwaysOn Availability Groups), e specifica che il valore per questa impostazione su tutti i database secondari sarà il valore impostato per il database primario. Se la configurazione sul primario cambia, il valore nel database secondario verrà modificato di conseguenza senza la necessità di impostare i database secondari valore in modo esplicito. Questo è l'impostazione predefinita per i database secondari.  
+Questo valore è valido solo per i database secondari, mentre il database è sul primario, e specifica che il valore per questa impostazione su tutti i database secondari sarà il valore impostato per il database primario. Se la configurazione sul primario cambia, il valore nel database secondario verrà modificata di conseguenza senza la necessità di impostare i database secondari valore in modo esplicito. Questa è l'impostazione predefinita per i database secondari.
   
 CLEAR PROCEDURE_CACHE  
 
@@ -137,10 +137,10 @@ IDENTITY_CACHE  **=**  { **ON** | OFF}
 
 **Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
-Abilita o disabilita la cache delle identità a livello di database. Il valore predefinito è **ON**. La memorizzazione nella cache di identità viene utilizzato per migliorare le prestazioni di inserimento in tabelle con colonne identity. Per evitare interruzioni nei valori di una colonna identity nei casi in cui il server viene riavviato in modo imprevisto o viene eseguito il failover a un server secondario, disabilitare l'opzione IDENTITY_CACHE. Questa opzione è simile al [flag di traccia 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), ad eccezione del fatto che può essere impostata a livello di database, anziché solo a livello di server.   
+Abilita o disabilita la cache delle identità a livello di database. Il valore predefinito è **ON**. La memorizzazione nella cache di identità viene utilizzata per migliorare le prestazioni di inserimento in tabelle con colonne identity. Per evitare interruzioni nei valori di una colonna identity nei casi in cui il server viene riavviato in modo imprevisto o viene eseguito il failover a un server secondario, disabilitare l'opzione IDENTITY_CACHE. Questa opzione è simile al [flag di traccia 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), ad eccezione del fatto che può essere impostata a livello di database, anziché solo a livello di server.   
 
 > [!NOTE] 
-> Questa opzione può essere impostata solo per il database primario (AlwaysOn Availability Groups). Per ulteriori informazioni, vedere [colonne identity](create-table-transact-sql-identity-property.md).  
+> Questa opzione può essere impostata solo per il database primario. Per ulteriori informazioni, vedere [colonne identity](create-table-transact-sql-identity-property.md).   
 
 ##  <a name="Permissions"></a> Autorizzazioni  
  Richiede ALTER ANY DATABASE SCOPE CONFIGURATION. Questa autorizzazione può essere concessa da un utente con autorizzazione CONTROL per un database.  
@@ -159,11 +159,11 @@ Abilita o disabilita la cache delle identità a livello di database. Il valore p
   
  Le impostazioni granulari possono eseguire l'override delle globali e il resource governor può limitare tutte le altre impostazioni MAXDOP. La logica per l'impostazione di MAXDOP è la seguente:  
   
--   Lo hint per la query esegue l'override sia di quanto impostato con sp_configure sia l'opzione a livello di database. Se il gruppo di risorse MAXDOP è impostato per il gruppo di carico:  
+-   L'hint per la query esegue l'override sia di quanto impostato con sp_configure sia con l'opzione a livello di database. Se il gruppo di risorse MAXDOP è impostato per il gruppo di carico: 
   
-    -   Se lo hint per la query è impostata a 0, si ha l'override dell'impostazione nel resource governor.  
+    - Se l'hint per la query è impostato su 0, si ha l'override dell'impostazione nel resource governor.  
   
-    -   Se lo hint per la query non è a 0, il valore è limitata dall'impostazione nel resource governor.  
+    - Se l'hint per la query non è 0, il valore è limitato dall'impostazione nel resource governor.  
   
 -   Il setting a livello di database (se diverso da 0) sostituisce l'impostazione di sp_configure, a meno che non vi sia un hint per la query e che sia limitata dall'impostazione nel resource governor.  
   
@@ -171,11 +171,11 @@ Abilita o disabilita la cache delle identità a livello di database. Il valore p
   
 **QUERY_OPTIMIZER_HOTFIXES**  
   
- Quando viene utilizzato lo hint QUERYTRACEON per abilitare l'utilità di ottimizzazione query legacy o hotfix di query optimizer, viene applicata una condizione OPPURE tra lo hint di query e la configurazione a livello di database, vale a dire che se uno è abilitato, l'opzione verrà applicata.  
+ Quando viene utilizzato l'hint QUERYTRACEON per abilitare l'utilità di ottimizzazione query legacy o hotfix di query optimizer, viene applicata una condizione OPPURE tra lo hint di query e la configurazione a livello di database, vale a dire che se uno è abilitato, l'opzione verrà applicata.	 
   
 **GeoDR**  
   
- I database secondari, ad esempio i gruppi di disponibilità AlwaysOn e la replica geografica, utilizzano il valore secondario controllando lo stato del database. Anche se non avviene una ricompilazione durante il failover e tecnicamente il nuovo database primario avrà query che utilizzano le impostazioni del secondario, l'idea è che l'impostazione tra server primario e secondario varieranno solo quando il carico di lavoro cambia. Pertanto, le query memorizzate nella cache utilizzeranno le impostazioni ottimali, mentre le nuove query selezioneranno le nuove impostazioni che sono appropriate per loro.  
+  I database secondari leggibili, ad esempio i gruppi di disponibilità AlwaysOn e la replica geografica, utilizzano il valore secondario controllando lo stato del database. Anche se non avviene una ricompilazione durante il failover e tecnicamente il nuovo database primario avrà query che utilizzano le impostazioni del secondario, l'idea è che l'impostazione tra server primario e secondario varieranno solo quando il carico di lavoro cambia. Pertanto, le query memorizzate nella cache utilizzeranno le impostazioni ottimali, mentre le nuove query selezioneranno le nuove impostazioni che sono appropriate per loro.  
   
 **DacFx**  
   
