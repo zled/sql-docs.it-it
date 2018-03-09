@@ -2,7 +2,7 @@
 title: 'Guida introduttiva: Connettersi ed eseguire query di SQL Server tramite Studio operazioni SQL (anteprima) | Documenti Microsoft'
 description: Questa Guida introduttiva viene illustrato come utilizzare Studio operazioni SQL (anteprima) per connettersi a SQL Server ed eseguire una query
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,16 +14,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7588368dcd64316551a9eaa72aeb8ce1d2ea67a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guida introduttiva: Connettersi ed eseguire query tramite SQL Server[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guida introduttiva: Connettersi ed eseguire query tramite SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Questa Guida introduttiva viene illustrato come utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a SQL Server e quindi utilizzare istruzioni Transact-SQL (T-SQL) per creare il *TutorialDB* utilizzato [!INCLUDE[name-sos](../includes/name-sos-short.md)] esercitazioni.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questa Guida rapida, è necessario [!INCLUDE[name-sos](../includes/name-sos-short.md)]e l'accesso a SQL Server.
 
@@ -92,7 +92,10 @@ L'editor di query è ancora connesso al *master* database, ma si desidera creare
 
 
 
-1. Nella finestra query, incollare il frammento di codice seguente:
+1. Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **eseguire**:
+
+   > [!NOTE]
+   > Questa opzione per aggiungere o sovrascrivere la query precedente nell'editor. Si noti che facendo clic su **eseguire** esegue solo la query selezionata. Se non è selezionato, fare clic su **eseguire** esegue tutte le query nell'editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,7 +118,8 @@ Dopo il completamento della query, il nuovo **clienti** tabella viene visualizza
 
 ## <a name="insert-rows"></a>Inserimento di righe
 
-1. Nella finestra query, incollare il frammento di codice seguente:
+- Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **eseguire**:
+
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -128,18 +132,17 @@ Dopo il completamento della query, il nuovo **clienti** tabella viene visualizza
    GO
    ```
 
-1. Per eseguire la query, fare clic su **eseguire**.
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>Visualizzare i dati restituiti da una query
-1. Nella finestra query, incollare il frammento di codice seguente:
+1. Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **eseguire**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. Per eseguire la query, fare clic su **eseguire**.
+1. Vengono visualizzati i risultati della query:
 
    ![Selezionare risultati](media/quickstart-sql-server/select-results.png)
 

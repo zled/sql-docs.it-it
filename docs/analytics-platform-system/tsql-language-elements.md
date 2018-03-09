@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 32643cbe6ab7019cbac912eb26fe3e78423bdeb9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="language-elements"></a>Elementi del linguaggio
 Elementi del linguaggio Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitici SQL Server Parallel Data Warehouse (PDW).
@@ -33,12 +33,12 @@ Elementi del linguaggio Transact-SQL (T-SQL) per analitiche piattaforma di strum
 * [convenzioni della sintassi](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [regole di denominazione di oggetti](../relational-databases/databases/database-identifiers.md)
 * [parole chiave riservate](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [regole di confronto](https://msdn.microsoft.com/library/ff848763.aspx)
-* [commenti](../t-sql/language-elements/comment-transact-sql.md)
-* [costanti](../t-sql/data-types/constants-transact-sql.md)
-* [tipi di dati](../t-sql/data-types/data-types-transact-sql.md)
+* [Regole di confronto](https://msdn.microsoft.com/library/ff848763.aspx)
+* [Commenti](../t-sql/language-elements/comment-transact-sql.md)
+* [constants](../t-sql/data-types/constants-transact-sql.md)
+* [Tipi di dati](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [espressioni](../t-sql/language-elements/expressions-transact-sql.md)
+* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Soluzione alternativa di proprietà di identità](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -61,7 +61,7 @@ Elementi del linguaggio Transact-SQL (T-SQL) per analitiche piattaforma di strum
 * [- (negativo)](../t-sql/language-elements/unary-operators-negative.md)
 * [- (sottrazione)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (moltiplicazione)](../t-sql/language-elements/multiply-transact-sql.md)
-* [/ (Divisione)](../t-sql/language-elements/divide-transact-sql.md)
+* [/ (Divide)](../t-sql/language-elements/divide-transact-sql.md)
 * [Modulo](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>Carattere jolly
@@ -76,10 +76,10 @@ Elementi del linguaggio Transact-SQL (T-SQL) per analitiche piattaforma di strum
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
 * [IN](../t-sql/language-elements/in-transact-sql.md)
-* [È [NON](../t-sql/queries/is-null-transact-sql.md)
+* [NON È](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [O](../t-sql/language-elements/or-transact-sql.md)
+* [OPPURE](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Operatori bit per bit
 * [& (AND bit per bit)](../t-sql/language-elements/bitwise-and-transact-sql.md)
@@ -235,7 +235,7 @@ Elementi del linguaggio Transact-SQL (T-SQL) per analitiche piattaforma di strum
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>Transazioni
-* [transazioni](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Sessioni di diagnostica
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)
@@ -283,7 +283,7 @@ Elementi del linguaggio Transact-SQL (T-SQL) per analitiche piattaforma di strum
 * [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
 * [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
 * [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
-* [SET XACT_ABORT IMPOSTATA SU](../t-sql/statements/set-xact-abort-transact-sql.md)
+* [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per ulteriori informazioni, vedere [istruzioni T-SQL](tsql-statements.md) e [viste di sistema di T-SQL](tsql-system-views.md).

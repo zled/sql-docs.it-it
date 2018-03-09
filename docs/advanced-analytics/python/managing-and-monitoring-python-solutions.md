@@ -1,7 +1,7 @@
 ---
-title: Monitoring| Microsoft Docs
+title: Monitoraggio Python in SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 04/18/2017
+ms.date: 03/06/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -14,21 +14,18 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3abd3145f4de3d1e5d0fee4ff2adbc7d965d4d3b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 034d58a26ef111a89bc88aace8d49c89f1664278
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="monitoring"></a>Monitoraggio
+# <a name="monitoring-python-in-sql-server"></a>Monitoraggio Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-> [!NOTE]
-> Supporto Python è una nuova funzionalità di SQL Server 2017 ed è in versione provvisoria.
+Supporto per Python è una nuova funzionalità di SQL Server, disponibile a partire da SQL Server 2017.
 
-Supporto per Python è una nuova funzionalità di SQL Server, disponibile in SQL Server 2017 CTP 2.0.
-
-Tuttavia, il framework generale per la protezione dati e l'esecuzione dello script esterno è la stessa di R. È possibile monitorare qualsiasi script esterni, inclusi uno che esegue Python, usando lo stesso framework forniti per l'esecuzione di script R in SQL Server 2016. Per ulteriori informazioni, vedere [Monitoring R Solutions](../r/managing-and-monitoring-r-solutions.md).
+Il framework generale per la protezione dati e l'esecuzione dello script esterno è la stessa di R. È possibile monitorare qualsiasi script esterni, inclusi uno che esegue Python, usando lo stesso framework forniti per l'esecuzione di script R in SQL Server 2016. Per ulteriori informazioni, vedere [Monitoring R Solutions](../r/managing-and-monitoring-r-solutions.md).
 
 Vedere i seguenti argomenti correlati per ulteriori informazioni:
 

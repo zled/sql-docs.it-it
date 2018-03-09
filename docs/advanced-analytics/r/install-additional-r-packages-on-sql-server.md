@@ -1,6 +1,6 @@
 ---
 title: Installare pacchetti R aggiuntivi su SQL Server | Documenti Microsoft
-ms.date: 02/20/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a328b07027f61f50df7e3ca2b6ac12b92508688b
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: acb1727c85cae1d8176703c93cc77c971980d394
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Installare pacchetti R aggiuntivi su SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ Sono disponibili più metodi per l'installazione di nuovi pacchetti di R, a seco
 
     Usare i comandi di R convenzionali per installare i pacchetti da Internet. Questo è il metodo più semplice, ma richiede accesso amministrativo.
 
-    **Si applica a:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)].     Occorre inoltre per le istanze di [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] in Gestione dei pacchetti tramite DDL non è stata attivata.
+    **Si applica a:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]. Occorre inoltre per le istanze di [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] in Gestione dei pacchetti tramite DDL non è stata attivata.
 
 + [Installare i nuovi pacchetti di R in un server con **non** l'accesso a internet](#bkmk_offlineInstall)
 
@@ -40,9 +40,9 @@ Sono disponibili più metodi per l'installazione di nuovi pacchetti di R, a seco
 
 + [Installare i pacchetti utilizzando l'istruzione CREATE libreria esterna](#bkmk_createlibrary) 
 
-    L'istruzione CREATE libreria esterna viene fornita in SQL Server 2017, affinché sia possibile che un amministratore di database creare una libreria di pacchetto senza eseguire direttamente il codice R o Python. Tuttavia, questo metodo è necessario preparare in anticipo tutti i pacchetti richiesti.  
+    Il [creare libreria esterna](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) informativa è disponibile in SQL Server 2017, affinché sia possibile creare una libreria di pacchetto senza esecuzione di R o Python code direttamente. Tuttavia, questo metodo richiede preparare in anticipo tutti i pacchetti richiesti e richiede le autorizzazioni di database aggiuntive.
 
-    **Si applica a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; restrizioni  
+    **Si applica a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; restrizioni
 
 ## <a name="bkmk_rInstall"></a> Installare i nuovi pacchetti R tramite Internet
 
@@ -131,7 +131,7 @@ Questa procedura si presuppone che sia stato preparato tutti i pacchetti necessa
 
 ## <a name="bkmk_createlibrary"></a> Utilizzare un'istruzione DDL per installare un pacchetto 
 
-In SQL Server 2017, è possibile utilizzare il [creare libreria esterna](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) istruzione per aggiungere un pacchetto o un set di pacchetti a un'istanza o un database specifico. L'istruzione DDL e i ruoli di database di supporto sono progettati per semplificare l'installazione e la gestione dei pacchetti da un BA senza dover ricorrere a strumenti di R o Python.
+In SQL Server 2017, è possibile utilizzare il [creare libreria esterna](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) istruzione per aggiungere un pacchetto o un set di pacchetti a un'istanza o un database specifico. L'istruzione DDL e i ruoli di database di supporto sono progettati per semplificare l'installazione e la gestione dei pacchetti da un proprietario del database senza dover ricorrere a strumenti di R o Python.
 
 Questo processo richiede alcune attività di preparazione, rispetto all'installazione dei pacchetti utilizzando metodi R o Python convenzionali.
 
@@ -140,6 +140,8 @@ Questo processo richiede alcune attività di preparazione, rispetto all'installa
     Se non si dispone dell'accesso al file system nel server, è inoltre possibile passare un pacchetto completo come una variabile, utilizzando un formato binario. Per ulteriori informazioni, vedere [creare libreria esterna](../../t-sql/statements/create-external-library-transact-sql.md).
 
 + L'istruzione ha esito negativo se i pacchetti richiesti non sono disponibili. È necessario analizzare le dipendenze del pacchetto che si desidera installare e assicurarsi che i pacchetti vengono caricati per il server e il database. Si consiglia di utilizzare **miniCRAN** o **igraph** per l'analisi delle dipendenze di pacchetti.
+
++ È necessario disporre delle autorizzazioni necessarie nel database. Per informazioni dettagliate, vedere [creare libreria esterna](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
 ### <a name="prepare-the-packages-in-archive-format"></a>Preparare i pacchetti in formato di archiviazione
 
