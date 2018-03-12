@@ -29,10 +29,10 @@ ms.author: jroth
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ce69679a348fdb29b334f45fa5e3a61f8dd14e2f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,15 +59,15 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |traceId|**int**|ID della traccia.|  
-|proprietà|**int**|Proprietà della traccia:<br /><br /> 1= Opzioni della traccia. Per ulteriori informazioni, vedere @options in [sp_trace_create &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = Nome del file<br /><br /> 3 = Dimensioni massime<br /><br /> 4 = Ora di arresto<br /><br /> 5 = Stato corrente della traccia. 0 = arrestato. 1 = in esecuzione.|  
+|proprietà|**int**|Proprietà della traccia:<br /><br /> 1= Opzioni della traccia. Per ulteriori informazioni, vedere @options in [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = Nome del file<br /><br /> 3 = Dimensioni massime<br /><br /> 4 = Ora di arresto<br /><br /> 5 = Stato corrente della traccia. 0 = arrestato. 1 = in esecuzione.|  
 |Valore|**sql_variant**|Informazioni sulla proprietà della traccia specificata.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Se viene passato l'ID di una traccia specifica, fn_trace_getinfo restituisce le informazioni su tale traccia. Se viene passato un ID non valido, questa funzione restituisce un set di righe vuoto.  
   
- fn_trace_getinfo aggiunge un'estensione trc al nome di qualsiasi file di traccia incluso nel relativo set di risultati. Per informazioni sulla definizione di una traccia, vedere [sp_trace_create &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Per informazioni analoghe sui filtri di traccia, vedere [Sys. fn_trace_getfilterinfo &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  
+ fn_trace_getinfo aggiunge un'estensione trc al nome di qualsiasi file di traccia incluso nel relativo set di risultati. Per informazioni sulla definizione di una traccia, vedere [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Per informazioni analoghe sui filtri di traccia, vedere [Sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  
   
- Per un esempio completo dell'utilizzo di traccia di stored procedure, vedere [creare una traccia &#40; Transact-SQL &#41; ](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
+ Per un esempio completo dell'utilizzo di traccia di stored procedure, vedere [creare una traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER TRACE nel server.  
