@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
 ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="upgrade-integration-services"></a>Aggiornare Integration Services
   Se nel computer è installato [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] o una versione successiva, è possibile eseguire l'aggiornamento a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  

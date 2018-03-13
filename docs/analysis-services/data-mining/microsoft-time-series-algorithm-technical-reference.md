@@ -35,14 +35,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Time Series
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series sono inclusi due algoritmi distinti per l'analisi delle serie temporali:  
+  Nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series sono inclusi due algoritmi distinti per l'analisi delle serie temporali:  
   
 -   L'algoritmo ARTXP, introdotto in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], è ottimizzato per stimare il successivo valore probabile in una serie.  
   
@@ -53,7 +53,7 @@ Nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series s
  In questo argomento sono incluse informazioni aggiuntive sulla modalità di implementazione di ciascun algoritmo e su come personalizzare un algoritmo impostando parametri per ottimizzare i risultati di analisi e stima.  
   
 ## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Implementazione dell'algoritmo Microsoft Time Series  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research ha sviluppato l'algoritmo ARTXP originale, usato in SQL Server 2005, basandone l'implementazione sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. Pertanto, l'algoritmo ARTXP può essere descritto come modello di albero autoregressivo per la rappresentazione di una serie temporale periodica. Questo algoritmo consente di correlare un numero variabile di elementi precedenti a ciascun elemento corrente stimato. Il nome ARTXP (Autoregressive Tree with Cross Prediction, albero autoregressivo a stima incrociata) deriva dal fatto che il metodo dell'albero autoregressivo (un algoritmo ART) viene applicato a più stati precedenti non noti. Per una descrizione dettagliata dell'algoritmo ARTXP, vedere l'articolo relativo ai [modelli di albero autoregressivi per l'analisi delle serie temporali](http://go.microsoft.com/fwlink/?LinkId=45966).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]Research ha sviluppato l'algoritmo ARTXP originale che è stato utilizzato in SQL Server 2005, basandone l'implementazione sul [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Decision Trees. Pertanto, l'algoritmo ARTXP può essere descritto come modello di albero autoregressivo per la rappresentazione di una serie temporale periodica. Questo algoritmo consente di correlare un numero variabile di elementi precedenti a ciascun elemento corrente stimato. Il nome ARTXP (Autoregressive Tree with Cross Prediction, albero autoregressivo a stima incrociata) deriva dal fatto che il metodo dell'albero autoregressivo (un algoritmo ART) viene applicato a più stati precedenti non noti. Per una descrizione dettagliata dell'algoritmo ARTXP, vedere l'articolo relativo ai [modelli di albero autoregressivi per l'analisi delle serie temporali](http://go.microsoft.com/fwlink/?LinkId=45966).  
   
  L'algoritmo ARIMA è stato aggiunto all'algoritmo Microsoft Time Series in SQL Server 2008 per migliorare l'accuratezza della stima a lungo termine. Si tratta di un'implementazione del processo di calcolo delle medie mobili integrate autoregressive descritto da Box e Jenkins. La metodologia ARIMA consente di determinare le dipendenze in osservazioni effettuate in sequenza nel tempo e può incorporare nel modello shock casuali. Il metodo ARIMA supporta inoltre la stagionalità moltiplicativa. Per ulteriori informazioni sull'algoritmo ARIMA, si consiglia la lettura degli studi originari di Box e Jenkins. Le informazioni fornite in questa sezione sono orientate esclusivamente a una descrizione dell'implementazione della metodologia ARIMA nell'algoritmo Microsoft Time Series.  
   
