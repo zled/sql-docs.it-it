@@ -25,14 +25,14 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Per i campi dati di tipo carattere è facoltativamente possibile contrassegnare la fine di ogni campo di un file di dati con un *carattere di terminazione del campo* a e la fine di ogni riga con un *carattere di terminazione della riga*. I caratteri di terminazione costituiscono un mezzo per indicare ai programmi che leggono il file di dati dove termina un campo o una riga e dove inizia un altro campo o un'altra riga.  
+  Per i campi dati di tipo carattere è facoltativamente possibile contrassegnare la fine di ogni campo di un file di dati con un *carattere di terminazione del campo* a e la fine di ogni riga con un *carattere di terminazione della riga*. I caratteri di terminazione costituiscono un mezzo per indicare ai programmi che leggono il file di dati dove termina un campo o una riga e dove inizia un altro campo o un'altra riga.  
   
 > [!IMPORTANT]  
 >  Per il formato nativo o nativo Unicode, utilizzare i prefissi di lunghezza anziché i caratteri di terminazione del campo. Possono verificarsi conflitti tra i dati in formato nativo e i caratteri di terminazione, perché un file di dati in formato nativo viene archiviato nel formato di dati binario interno di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -90,7 +90,7 @@ Per i campi dati di tipo carattere è facoltativamente possibile contrassegnare 
         >  Dopo l'impostazione interattiva di tutti i campi in un comando **bcp**, viene richiesto di salvare le risposte relative a ogni campo in un file di formato non XML. Per altre informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Linee guida per l'utilizzo dei caratteri di terminazione  
- In alcuni casi, un carattere di terminazione può essere utile per un campo dati **char** o **nchar** . Ad esempio  
+ In alcuni casi, un carattere di terminazione può essere utile per un campo dati **char** o **nchar** . Esempio:  
   
 -   Per una colonna di dati che contiene un valore null in un file di dati da importare in un programma che non riconosce le informazioni sulla lunghezza del prefisso.  
   
@@ -105,7 +105,7 @@ Per i campi dati di tipo carattere è facoltativamente possibile contrassegnare 
   
  Per il comando **bcp** sono disponibili le opzioni seguenti.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**-c**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
 |**-t** `,`|Specifica la virgola (,) come carattere di terminazione del campo.|  
@@ -174,7 +174,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Utilizzo dell'istruzione BULK INSERT per l'impostazione interattiva dei caratteri di terminazione  
  Nell'esempio seguente viene eseguita l'importazione bulk del file di dati `Department-c-t.txt` utilizzando un'istruzione `BULK INSERT` con i qualificatori illustrati nella tabella seguente:  
   
-|Opzione|attribute|  
+|Opzione|Attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='**char**'**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
 |FIELDTERMINATOR **='**`,`**'**|Specifica la virgola (`,`) come carattere di terminazione del campo.|  
