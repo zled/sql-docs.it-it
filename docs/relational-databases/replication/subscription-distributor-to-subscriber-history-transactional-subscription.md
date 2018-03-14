@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.monitor.subscription.disttosub.f1
+f1_keywords:
+- sql13.rep.monitor.subscription.disttosub.f1
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
-caps.latest.revision: "20"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e975b4d43532fe7f9aa8219570c9e8869dab4805
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 32e87fb72178cb89638718478d09aeb5cd0449cf
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Sottoscrizione, Cronologia server di distribuzione - Sottoscrittore (Sottoscrizione transazionale)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La scheda **Cronologia server di distribuzione - Sottoscrittore** mostra informazioni dettagliate sull'agente di distribuzione, tra cui lo stato, la cronologia, i messaggi informativi ed eventuali messaggi di errore.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Nella scheda **Cronologia server di distribuzione - Sottoscrittore** vengono visualizzate informazioni dettagliate sull'agente di distribuzione, quali lo stato, la cronologia, i messaggi informativi ed eventuali messaggi di errore.  
   
 ## <a name="options"></a>Opzioni  
  Scegliere le sessioni dell'agente di distribuzione da visualizzare dal menu **Visualizza** e quindi selezionare una sessione specifica nella griglia con etichetta **Sessioni dell'agente di distribuzione**. Nella griglia con etichetta **Azioni nella sessione selezionata**verranno visualizzate informazioni dettagliate sulla sessione selezionata. Se la sessione selezionata è terminata con un errore, verrà inoltre visualizzata l'area di testo con etichetta **Messaggio o dettagli errore della sessione selezionata** .  

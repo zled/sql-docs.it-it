@@ -19,18 +19,19 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5690ea80bfe12a6995e80987e11bdaa59a30d150
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ec6dfe48d0d12626ff908efd24b810c276249f7c
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Strategie di backup e ripristino della replica di tipo merge
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per la replica di tipo merge, eseguire periodicamente il backup dei database seguenti:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Per la replica di tipo merge, eseguire periodicamente il backup dei database seguenti:  
   
 -   Database di pubblicazione nel server di pubblicazione.  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/18/2018
   
  Per reinizializzare una sottoscrizione, vedere [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
- Per creare e applicare uno snapshot, vedere [Create e Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) e [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Per creare e applicare uno snapshot, vedere [Creazione e applicazione dello snapshot iniziale](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) e [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Backup e ripristino del database di distribuzione  
  Con la replica di tipo merge, è necessario eseguire backup periodici del database di distribuzione, che può essere ripristinato senza particolari attenzioni a condizione che il backup utilizzato non sia precedente al periodo di memorizzazione più breve di tutte le pubblicazioni in cui viene utilizzato il server di distribuzione. Se, ad esempio, vi sono tre pubblicazioni il cui periodo di memorizzazione è pari a 10, 20 e 30 giorni rispettivamente, la copia di backup utilizzata per il ripristino del database non deve avere più di 10 giorni. Il database di distribuzione svolge un ruolo limitato nella replica di tipo merge: non viene utilizzato per archiviare dati utilizzati nel rilevamento delle modifiche e non consente l'archiviazione temporanea delle modifiche della replica di tipo merge per il successivo inoltro ai database di sottoscrizione, come invece avviene nella replica transazionale.  

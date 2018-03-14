@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - parameterized filters [SQL Server replication], validating partition information
 - validating partition information
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
-caps.latest.revision: "36"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc42df9e9610c6deda9d2301b1a54d1a40d49888
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7b706c81300c12f78cf1adc2290960f2920c1324
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Convalida delle informazioni sulle partizioni per un Sottoscrittore di tipo merge
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si definisce un filtro di riga con parametri per una pubblicazione di tipo merge, si usa una funzione che fa riferimento a informazioni sul Sottoscrittore, ad esempio il nome di accesso del Sottoscrittore. Per impostazione predefinita, le informazioni sul Sottoscrittore vengono convalidate dalla replica in base a tale funzione prima di ogni sincronizzazione e ogni volta che uno snapshot viene applicato al Sottoscrittore. Il processo di convalida garantisce il partizionamento corretto dei dati per ogni Sottoscrittore. Il comportamento di convalida è controllato dalla proprietà di pubblicazione **validate_subscriber_info**, che può essere modificata mediante [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) oppure nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione**. Per ulteriori informazioni sulla modifica delle proprietà di pubblicazione, vedere [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Quando si definisce un filtro di riga con parametri per una pubblicazione di tipo merge, si utilizza una funzione che fa riferimento a informazioni sul Sottoscrittore, ad esempio il nome di accesso del Sottoscrittore. Per impostazione predefinita, le informazioni sul Sottoscrittore vengono convalidate dalla replica in base a tale funzione prima di ogni sincronizzazione e ogni volta che uno snapshot viene applicato al Sottoscrittore. Il processo di convalida garantisce il partizionamento corretto dei dati per ogni Sottoscrittore. Il comportamento di convalida è controllato dalla proprietà di pubblicazione **validate_subscriber_info**, che può essere modificata mediante [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) oppure nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione**. Per ulteriori informazioni sulla modifica delle proprietà di pubblicazione, vedere [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ## <a name="how-partition-validation-works"></a>Funzionamento della convalida delle partizioni  
  Quando una pubblicazione viene filtrata, ad esempio mediante la funzione **SUSER_SNAME()**, l'agente di merge applica lo snapshot iniziale a ogni Sottoscrittore in base ai dati validi per l'espressione **SUSER_SNAME()** .  

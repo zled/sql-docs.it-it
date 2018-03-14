@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
-caps.latest.revision: "33"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1312413f12476c9be36ed3595fed82a75fd375fb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c3d5dc46d5c364a9e5c128ce101499330d29efbe
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>Conflitti nella replica di tipo merge avanzata - Scegliere un sistema di risoluzione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si sceglie un sistema di risoluzione, considerare l'importanza della risoluzione dei conflitti nell'applicazione e se è possibile usare il sistema di risoluzione dei conflitti predefinito basato sulle priorità oppure se è necessario usare un sistema di risoluzione dell'articolo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Quando si sceglie un sistema di risoluzione, considerare l'importanza della risoluzione dei conflitti nell'applicazione e se è possibile utilizzare il sistema di risoluzione dei conflitti predefinito basato sulle priorità oppure se è necessario utilizzare un sistema di risoluzione dell'articolo.  
   
  Se i dati sono suddivisi in partizioni che non vengono modificate da più utenti e la topologia di replica è relativamente semplice, ovvero costituita da un server di pubblicazione e pochi Sottoscrittori, i conflitti dovrebbero essere pochi o inesistenti. In questi ambienti non è in genere necessario implementare una strategia di risoluzione dei conflitti complessa. È consigliabile adottare una strategia basata sulle impostazioni predefinite per la risoluzione dei conflitti e che preveda l'utilizzo di sottoscrizioni client e di criteri di priorità della prima modifica. Se la topologia è più complessa, ad esempio se prevede l'utilizzo di Sottoscrittori di ripubblicazione, potrebbero risultare più appropriate le sottoscrizioni server con priorità specifiche.  
   
