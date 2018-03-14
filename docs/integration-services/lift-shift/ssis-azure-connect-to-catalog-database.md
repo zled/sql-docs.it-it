@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98aed78b69a108ae5b0c8f914540b385403a60f9
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 218890a01c98c51c570255dce0ad2c34bc5c26db
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Connettersi al database del catalogo SSISDB in Azure
 
@@ -55,14 +55,20 @@ Prima di iniziare, verificare di avere la versione 17.2 o successiva di SQL Serv
    | **Account di accesso** | Account amministratore del server | Si tratta dell'account specificato al momento della creazione del server. |
    | **Password** | Password per l'account amministratore del server | Si tratta della password specificata al momento della creazione del server. |
 
+    ![Connettersi al server con SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
+
 3. **Connettersi al database SSISDB**. Selezionare **Opzioni** per espandere la finestra di dialogo **Connetti al server**. Nella finestra di dialogo **Connetti al server** espansa selezionare la scheda **Proprietà connessione**. Nel campo **Connetti al database** selezionare o immettere `SSISDB`.
 
     > [!IMPORTANT]
     > Se non si seleziona `SSISDB` durante la connessione, può non essere possibile visualizzare il catalogo SSIS in Esplora oggetti.
 
+    ![Selezionare il database SSISDB per la connessione](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-2.png)
+
 4. Selezionare **Connetti**.
 
 5. In Esplora oggetti espandere **Cataloghi di Integration Services** e quindi espandere **SSISDB** per visualizzare gli oggetti nel database del catalogo SSIS.
+
+    ![Trovare il database SSISDB in Esplora oggetti in SQL Server Management Studio](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-3.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
 - Distribuire un pacchetto. Per altre informazioni, vedere [Distribuire un progetto SSIS con SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).

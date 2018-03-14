@@ -8,10 +8,12 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - scripts [SQL Server replication], upgrading
 - upgrading SQL Server, replicated databases
@@ -20,19 +22,20 @@ helpviewer_keywords:
 - replication [SQL Server], upgrading
 - upgrading replicated databases
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
-caps.latest.revision: "41"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09f8ed7bf8cbd407a8bd9dc706d5e9aadf34ce65
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e8ca0ed7d95f89e56db0c5818d8cfc52523a58ab
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Aggiornamento di script di replica (programmazione Transact-SQL della replica)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile usare file script [!INCLUDE[tsql](../../../includes/tsql-md.md)] per configurare a livello di programmazione una topologia di replica. Per altre informazioni, vedere [Concetti di base relativi alle stored procedure del sistema di replica](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  È possibile utilizzare i file script[!INCLUDE[tsql](../../../includes/tsql-md.md)] per configurare a livello di programmazione una topologia di replica. Per altre informazioni, vedere [Concetti di base relativi alle stored procedure del sistema di replica](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md).  
   
 > [!IMPORTANT]  
 >  Sebbene non sia necessario aggiornare gli script eseguiti da membri del ruolo **sysadmin** , si consiglia di modificare gli script esistenti come descritto in questo argomento. Specificare un account con autorizzazioni minime per ogni agente di replica, come descritto nella sezione relativa alle autorizzazioni necessarie per gli agenti dell'argomento [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  

@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newpubwizard.addeditjoin.f1
+f1_keywords:
+- sql13.rep.newpubwizard.addeditjoin.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
-caps.latest.revision: "25"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9aece9102787b048d9a46f32a17013ae057a9da
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a81220fb68686b2f1834d3d2804aad30f08a2fe1
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="add-or-edit-join"></a>Aggiungi join o Modifica join
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le finestre di dialogo **Aggiungi join** e **Modifica join** consentono di aggiungere e modificare filtri di join per le pubblicazioni di tipo merge.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Le finestre di dialogo **Aggiungi join** e **Modifica join** consentono di aggiungere e modificare filtri join per le pubblicazioni di tipo merge.  
   
 > [!NOTE]  
 >  Per modificare un filtro in una pubblicazione esistente, è necessario un nuovo snapshot per la pubblicazione. Se la pubblicazione dispone di sottoscrizioni, queste ultime devono essere reinizializzate. Per altre informazioni sulle modifiche delle proprietà, vedere [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

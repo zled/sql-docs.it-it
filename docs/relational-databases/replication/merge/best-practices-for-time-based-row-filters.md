@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: best practices
+helpviewer_keywords:
+- best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: "15"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ecfd4a72f00c5b8199f7db64ec0c9175c2487e7e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8717ade947739a3cd6796a7f4268e2c8328db024
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Procedure consigliate per i filtri di riga basati sul tempo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gli utenti delle applicazioni hanno spesso la necessità di recuperare da diverse tabelle determinati subset di dati basati sul tempo. Un venditore potrebbe ad esempio richiedere i dati relativi agli ordini dell'ultima settimana, così come un responsabile della pianificazione di eventi potrebbe aver bisogno di recuperare i dati relativi agli eventi della settimana in arrivo. Per soddisfare queste richieste, le applicazioni utilizzano, in numerosi casi, query contenenti la funzione **GETDATE()** . Si consideri l'istruzione di filtro di riga seguente:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Gli utenti delle applicazioni hanno spesso la necessità di recuperare da diverse tabelle determinati subset di dati basati sul tempo. Un venditore potrebbe ad esempio richiedere i dati relativi agli ordini dell'ultima settimana, così come un responsabile della pianificazione di eventi potrebbe aver bisogno di recuperare i dati relativi agli eventi della settimana in arrivo. Per soddisfare queste richieste, le applicazioni utilizzano, in numerosi casi, query contenenti la funzione **GETDATE()** . Si consideri l'istruzione di filtro di riga seguente:  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  

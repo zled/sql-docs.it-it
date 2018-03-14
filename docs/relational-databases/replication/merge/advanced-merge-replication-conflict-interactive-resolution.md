@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
-caps.latest.revision: "34"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0acc68329b1b9b07633c24db2521f5cf3502b38f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 218ece244355e445aff15e7b05bc710db0efeb1d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>Conflitti nella replica di tipo merge avanzata - Risoluzione interattiva
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replica di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre un sistema di risoluzione interattivo che consente di risolvere i conflitti in modo manuale durante la sincronizzazione su richiesta in Gestione sincronizzazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Attivato in fase di esecuzione, il sistema di risoluzione interattivo è un'interfaccia grafica che visualizza i dati relativi a ogni riga in conflitto e offre opzioni per la visualizzazione e la modifica dei dati in conflitto, nonché per la risoluzione distinta dei singoli conflitti.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La replica di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre un sistema di risoluzione interattivo che consente di risolvere i conflitti in modo manuale durante la sincronizzazione su richiesta in Gestione sincronizzazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Attivato in fase di esecuzione, il sistema di risoluzione interattivo è un'interfaccia grafica che visualizza i dati relativi a ogni riga in conflitto e offre opzioni per la visualizzazione e la modifica dei dati in conflitto, nonché per la risoluzione distinta dei singoli conflitti.  
   
  Il sistema di risoluzione interattivo presenta alcune analogie con il Visualizzatore conflitti. Nel Visualizzatore conflitti vengono tuttavia visualizzati i risultati dei conflitti già risolti dopo la sincronizzazione di tipo merge, mentre il sistema di risoluzione interattivo visualizza ogni conflitto prima della risoluzione e consente di determinarne l'esito durante la sincronizzazione di tipo merge. È necessario che sia disponibile un utente per il monitoraggio del sistema di risoluzione interattivo in caso di conflitto.  
   

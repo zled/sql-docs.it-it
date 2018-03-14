@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: snapshots [SQL Server replication], security
+helpviewer_keywords:
+- snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
-caps.latest.revision: "46"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4816ea4f6e42fdcabb4fbbbdd8a58650a14b1448
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6a811827ab0be4c5a61c5e3b65361e8a82421f38
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="secure-the-snapshot-folder"></a>Sicurezza della cartella snapshot
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La cartella snapshot è una directory in cui vengono archiviati i file di snapshot. È consigliabile dedicare questa directory esclusivamente all'archiviazione degli snapshot. Concedere all'agente snapshot l'autorizzazione di scrittura per la cartella e verificare che l'autorizzazione di lettura sia concessa solo all'account di Windows utilizzato dall'agente di merge o dall'agente di distribuzione per accedere alla cartella. L'account di Windows associato all'agente deve essere un account di dominio per poter accedere a una cartella snapshot posizionata in un computer remoto.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La cartella snapshot è una directory in cui vengono archiviati i file di snapshot. È consigliabile dedicare questa directory esclusivamente all'archiviazione degli snapshot. Concedere all'agente snapshot l'autorizzazione di scrittura per la cartella e verificare che l'autorizzazione di lettura sia concessa solo all'account di Windows utilizzato dall'agente di merge o dall'agente di distribuzione per accedere alla cartella. L'account di Windows associato all'agente deve essere un account di dominio per poter accedere a una cartella snapshot posizionata in un computer remoto.  
   
 > [!NOTE]  
 >  Controllo account utente consente agli amministratori di gestire i propri diritti utente elevati (detti anche *privilegi*). Quando l'esecuzione avviene in sistemi operativi con Controllo account utente abilitato, gli amministratori non utilizzano i propri diritti amministrativi, ma eseguono la maggior parte delle azioni come utenti standard (non amministrativi), assumendo temporaneamente i diritti di amministratore solo se necessario. Controllo account utente può impedire l'accesso amministrativo alla condivisione snapshot. Le autorizzazioni per la condivisione snapshot devono pertanto essere concesse in modo esplicito agli account di Windows utilizzati dall'agente snapshot, dall'agente di distribuzione e dall'agente di merge. È necessario eseguire questa operazione anche se gli account di Windows sono membri del gruppo Administrators.  

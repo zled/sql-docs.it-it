@@ -8,29 +8,32 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.availabilitygroup.manualfailover.f1
+f1_keywords:
+- sql13.swb.availabilitygroup.manualfailover.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4df88a913bd97cfdc632fe8e1fb365c5d8e81c2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f1523eff2118c8a451b13167510e204d039f84fa
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Eseguire un failover manuale pianificato di un gruppo di disponibilità (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questo argomento viene illustrato come eseguire un failover manuale senza perdite di dati (*failover manuale pianificato*) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Un failover manuale pianificato, ad esempio un failover del gruppo di disponibilità AlwaysOn, comporta il passaggio della replica primaria precedente al ruolo secondario. Il failover attualmente comporta il passaggio della replica primaria precedente al ruolo secondario.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Questo argomento descrive come eseguire un failover manuale senza perdite di dati (*failover manuale pianificato*) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Un failover manuale pianificato, ad esempio un failover del gruppo di disponibilità AlwaysOn, comporta il passaggio della replica primaria precedente al ruolo secondario. Il failover attualmente comporta il passaggio della replica primaria precedente al ruolo secondario.  
   
-Un failover manuale pianificato è supportato solo quando la replica principale e la replica secondaria di destinazione sono in esecuzione in modalità commit sincrono e sono attualmente sincronizzate. Un failover manuale pianificato mantiene tutti i dati presenti nel database secondario che appartengono al gruppo di disponibilità sulla replica secondaria di destinazione. Dopo che la replica primaria precedente è passata al ruolo secondario, i relativi database diventano database secondari. Iniziano quindi a eseguire la sincronizzazione con i nuovi database primari. Dopo la transizione di tutti i database allo stato SYNCHRONIZED, la nuova replica secondaria diventa idonea a fungere da destinazione di un futuro failover manuale pianificato.  
+Un failover manuale pianificato è supportato solo quando la replica principale e la replica secondaria di destinazione sono in esecuzione in modalità commit sincrono e sono attualmente sincronizzate. Un failover manuale pianificato mantiene tutti i dati presenti nei database secondari associati al gruppo di disponibilità nella replica secondaria di destinazione. Dopo che la replica primaria precedente è passata al ruolo secondario, i relativi database diventano database secondari. Iniziano quindi a eseguire la sincronizzazione con i nuovi database primari. Dopo la transizione di tutti i database allo stato SYNCHRONIZED, la nuova replica secondaria diventa idonea a fungere da destinazione di un futuro failover manuale pianificato.  
   
 > [!NOTE]  
 >  Se la replica primaria e le repliche secondarie sono configurate per la modalità di failover automatico, dopo la sincronizzazione, la replica secondaria può anche fungere da destinazione per un failover automatico. Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  

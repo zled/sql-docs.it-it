@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Web synchronization, security architecture
+helpviewer_keywords:
+- Web synchronization, security architecture
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
-caps.latest.revision: "31"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94de766b7e039aa2b66d900202fff0d458b0f358
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5e5ebab7b8b31ecfeefb0b520fd2b82c1819b80f
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architettura di sicurezza per la sincronizzazione tramite il Web
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente un controllo accurato della configurazione della sicurezza per la sincronizzazione Web. In questo articolo viene riportato un elenco completo dei componenti che possono essere inclusi in una configurazione di sincronizzazione tramite il Web e vengono fornite informazioni sulle connessioni tra i componenti. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente un controllo accurato della configurazione della sicurezza per la sincronizzazione Web. In questo articolo viene riportato un elenco completo dei componenti che possono essere inclusi in una configurazione di sincronizzazione tramite il Web e vengono fornite informazioni sulle connessioni tra i componenti. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  Nella figura seguente sono illustrate tutte le possibili connessioni, anche se è possibile che alcune di esse non siano necessarie in determinate topologie. Una connessione a un server FTP, ad esempio, è necessaria solo se lo snapshot viene recapitato tramite FTP.  
   

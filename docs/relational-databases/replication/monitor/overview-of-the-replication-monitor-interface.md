@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
-caps.latest.revision: "41"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dedf784414d1eda02bd650bd46051950f22629ad
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f5e9b520191020639ce044d195e5c7b892e75181
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Panoramica dell'interfaccia di Monitoraggio replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Monitoraggio replica per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre una visualizzazione incentrata sul server di pubblicazione o sul server di distribuzione di tutte le attività di replica suddivise in due riquadri. Se si aggiunge un server di pubblicazione nel riquadro sinistro di Monitoraggio replica, verranno visualizzate nel riquadro sinistro informazioni sul server di pubblicazione, sulle relative pubblicazioni, sulle sottoscrizioni a tali pubblicazioni e sui diversi agenti di replica. Oltre a visualizzare informazioni per la topologia di replica, Monitoraggio replica consente di eseguire numerose attività, quali l'avvio e l'arresto degli agenti e la convalida dei dati.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Monitoraggio replica per[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre una visualizzazione incentrata sul server di pubblicazione o sul server di distribuzione di tutte le attività di replica suddivise in due riquadri. Se si aggiunge un server di pubblicazione nel riquadro sinistro di Monitoraggio replica, verranno visualizzate nel riquadro sinistro informazioni sul server di pubblicazione, sulle relative pubblicazioni, sulle sottoscrizioni a tali pubblicazioni e sui diversi agenti di replica. Oltre a visualizzare informazioni per la topologia di replica, Monitoraggio replica consente di eseguire numerose attività, quali l'avvio e l'arresto degli agenti e la convalida dei dati.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>Visualizzazione di informazioni per l'intera topologia  
  Nel riquadro sinistro di Monitoraggio replica vengono visualizzati  

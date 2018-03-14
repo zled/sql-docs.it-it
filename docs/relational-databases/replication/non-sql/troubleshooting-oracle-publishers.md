@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
-caps.latest.revision: "62"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 115bdbf97a35d4035c00a8e547a2c38125ce6970
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 44c98b6b2a184c3e438a2e993adcc26a871069f3
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Risoluzione dei problemi dei server di pubblicazione Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento elenca alcuni problemi che possono verificarsi durante la configurazione e l'uso di un server di pubblicazione Oracle.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questo argomento vengono elencati alcuni problemi che possono verificarsi durante la configurazione e l'uso di un server di pubblicazione Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Viene generato un errore relativo al software di rete e client Oracle  
  L'account con cui viene eseguito [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel server di distribuzione deve disporre di autorizzazioni di lettura ed esecuzione per la directory e tutte le sottodirectory in cui è installato il software di rete client Oracle. Se tali autorizzazioni non vengono concesse o i componenti client Oracle non sono installati correttamente, verrà visualizzato il messaggio di errore seguente:  

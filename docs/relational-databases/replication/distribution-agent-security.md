@@ -18,18 +18,19 @@ helpviewer_keywords:
 - Distribution Agent Security dialog box
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55a2550c50737ac6d1d4f405c9e9417861f2ef49
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 04006ef28f3c67d0ecd03488273342625d12c216
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="distribution-agent-security"></a>Sicurezza agente di distribuzione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La finestra di dialogo **Sicurezza agente di distribuzione** consente di specificare l'account di Windows usato per l'esecuzione dell'agente di distribuzione. L'agente di distribuzione viene eseguito nel server di distribuzione per le sottoscrizioni push e nel Sottoscrittore per le sottoscrizioni pull. L'account di Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] è detto anche *account di processo*, poiché si tratta dell'account con cui viene eseguito il processo dell'agente. Le opzioni aggiuntive disponibili in questa finestra di dialogo dipendono dalla modalità con cui si accede a tale finestra di dialogo:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La finestra di dialogo **Sicurezza agente di distribuzione** consente di specificare l'account di Windows utilizzato per l'esecuzione dell'agente di distribuzione. L'agente di distribuzione viene eseguito nel server di distribuzione per le sottoscrizioni push e nel Sottoscrittore per le sottoscrizioni pull. L'account di Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] è detto anche *account di processo*, poiché si tratta dell'account con cui viene eseguito il processo dell'agente. Le opzioni aggiuntive disponibili in questa finestra di dialogo dipendono dalla modalità con cui si accede a tale finestra di dialogo:  
   
 -   Se si accede alla finestra di dialogo dalla Creazione guidata nuova sottoscrizione, è possibile specificare il contesto in cui l'agente di distribuzione stabilisce le connessioni al Sottoscrittore (per le sottoscrizioni push) o al server di distribuzione (per le sottoscrizioni pull). La connessione può essere stabilita tramite la rappresentazione dell'account di Windows o nel contesto di un account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificato dall'utente.  
   

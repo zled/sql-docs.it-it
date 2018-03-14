@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 7b17cdd39e1eb155581d070ef659d6c34c044b4d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Distribuire, eseguire e monitorare un pacchetto SSIS in Azure
 Questa esercitazione illustra come distribuire un progetto di SQL Server Integration Services per il database del catalogo SSISDB nel database SQL di Azure, eseguire un pacchetto nel runtime di integrazione SSIS di Azure e monitorare il pacchetto in esecuzione.
@@ -29,9 +29,16 @@ Prima di iniziare, verificare di avere la versione 17.2 o successiva di SQL Serv
 
 Verificare inoltre se il database SSISDB è configurato e se è stato eseguito il provisioning del runtime di integrazione SSIS di Azure. Per informazioni su come eseguire il provisioning di SSIS in Azure, vedere [Distribuire pacchetti SQL Server Integration Services in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
+> [!NOTE]
+> La distribuzione in Azure supporta solo il modello di distribuzione del progetto.
+
 ## <a name="connect-to-the-ssisdb-database"></a>Connettersi al database SSISDB
 
-Usare SQL Server Management Studio per connettersi al catalogo SSIS nel server di database SQL di Azure. Per altre informazioni, vedere [Connettersi al database del catalogo SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
+Usare SQL Server Management Studio per connettersi al catalogo SSIS nel server di database SQL di Azure. Per altre informazioni e screenshot, vedere [Connettersi al database del catalogo SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
+
+Ecco i due aspetti più importanti da ricordare. Questi passaggi sono descritti nella procedura seguente.
+-   Immettere il nome completo del server di database SQL di Azure nel formato **mysqldbserver.database.windows.net**.
+-   Selezionare `SSISDB` come database per la connessione.
 
 > [!IMPORTANT]
 > Un server di database SQL di Azure è in ascolto sulla porta 1433. Se si tenta di connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
@@ -56,12 +63,18 @@ Usare SQL Server Management Studio per connettersi al catalogo SSIS nel server d
 
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>Distribuire un progetto con la procedura guidata
 
+Per altre informazioni sulla distribuzione di pacchetti e sulla distribuzione guidata, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](../packages/deploy-integration-services-ssis-projects-and-packages.md) e [Distribuzione guidata Integration Services](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+
 ### <a name="start-the-integration-services-deployment-wizard"></a>Avviare la Distribuzione guidata Integration Services
 1. In Esplora oggetti di SQL Server Management Studio, con il nodo **Cataloghi di Integration Services** e il nodo **SSISDB** espansi, espandere una cartella di progetto.
 
 2.  Selezionare il nodo **Progetti**.
 
 3.  Fare clic sul nodo **Progetti** e selezionare **Distribuzione progetto**. Si apre la Distribuzione guidata Integration Services. È possibile distribuire un progetto da un database del catalogo SSIS o dal file system.
+
+    ![Distribuire un progetto da SQL Server Management Studio](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project1.png)
+
+    ![Verrà visualizzata la finestra di dialogo della distribuzione guidata SSIS](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project2.png)
 
 ### <a name="deploy-a-project-with-the-deployment-wizard"></a>Distribuire un progetto con la procedura guidata
 1. Nella pagina **Introduzione** della distribuzione guidata leggere l'introduzione. Selezionare **Avanti** per aprire la pagina **Seleziona origine**.

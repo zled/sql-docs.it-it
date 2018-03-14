@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6ed067a54cc867ed091dd27f5a4af91954045f1
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Supportare più destinazioni in componenti personalizzati
  È ora possibile usare Progettazione SSIS in SQL Server Data Tools (SSDT) per creare, gestire ed eseguire pacchetti destinati a SQL Server 2016, SQL Server 2014 o SQL Server 2012. Per ottenere SSDT per Visual Studio 2015, vedere [Scaricare la versione più recente di SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
@@ -104,7 +104,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **Messaggio di errore** Impossibile eseguire il cast dell'oggetto COM di tipo 'System.__ComObject' al tipo di interfaccia 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100'. Questa operazione non è riuscita perché la chiamata QueryInterface sul componente COM per l'interfaccia con IID '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}' non è riuscita a causa dell'errore seguente: interfaccia non supportata (eccezione da HRESULT: 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
 
-**Soluzione.** Se l'estensione personalizzata fa riferimento all'assembly di interoperabilità di SSIS, ad esempio Microsoft.SqlServer.DTSPipelineWrap o Microsoft.SqlServer.DTSRuntimeWrap, impostare il valore della proprietà **Incorpora tipi di interoperabilità** su **False ".
+**Soluzione.** Se l'estensione personalizzata fa riferimento ad assembly di interoperabilità di SSIS, ad esempio Microsoft.SqlServer.DTSPipelineWrap o Microsoft.SqlServer.DTSRuntimeWrap, impostare il valore della proprietà **Incorpora tipi di interoperabilità** su **False**.
 
 ![Incorpora tipi di interoperabilità](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 
