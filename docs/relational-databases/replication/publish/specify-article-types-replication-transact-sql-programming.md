@@ -8,29 +8,32 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
 - articles [SQL Server replication], transactional replication options
 - articles [SQL Server replication], merge replication options
 - stored procedures [SQL Server replication], publishing
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
-caps.latest.revision: "26"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fbfcc58464f73d16af3b50b93e3c9c5776d371b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fbc14b8551a9d3da0d52e0e4731f2831585c19ea
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Impostazione dei tipi di articolo (programmazione Transact-SQL della replica)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] I tipi di articolo predefiniti per la replica sono gli articoli di tabella, ma è possibile pubblicare altri oggetti di database come articoli, tra cui viste, stored procedure, funzioni definite dall'utente ed esecuzione di stored procedure. È possibile utilizzare le stored procedure di replica per specificare a livello di programmazione un tipo di articolo mentre viene definito. Le stored procedure utilizzate dipendono dal tipo di replica e dal tipo di articolo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  I tipi di articolo predefiniti per la replica sono gli articoli di tabella, ma è possibile pubblicare altri oggetti di database come articoli, tra cui viste, stored procedure, funzioni definite dall'utente ed esecuzione di stored procedure. È possibile utilizzare le stored procedure di replica per specificare a livello di programmazione un tipo di articolo mentre viene definito. Le stored procedure utilizzate dipendono dal tipo di replica e dal tipo di articolo.  
   
 > [!NOTE]  
 >  La designazione di solo schema durante la definizione di articoli di tabelle, viste e stored procedure indica che verrà replicata solo la definizione dell'oggetto.  

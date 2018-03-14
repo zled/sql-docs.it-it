@@ -19,19 +19,19 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bf4fda73309e49d009d156fa8c18063e495bac92
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 24bcd2fda50c637ac4769b46e93f3d02a8352dc7
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-log-reader-agent"></a>Agente lettura log repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Agente lettura log repliche è un eseguibile che consente di monitorare il log delle transazioni di tutti i database configurati per la replica transazionale e di copiare le transazioni contrassegnate per la replica dal log delle transazioni al database di distribuzione.  
+  Agente lettura log repliche è un eseguibile che consente di monitorare il log delle transazioni di tutti i database configurati per la replica transazionale e di copiare le transazioni contrassegnate per la replica dal log delle transazioni al database di distribuzione.  
   
 > [!NOTE]  
 >  I parametri possono essere specificati in qualsiasi ordine. Quando i parametri facoltativi non vengono specificati, vengono utilizzati i valori predefiniti basati sul profilo agente predefinito.  

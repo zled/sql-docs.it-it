@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
-caps.latest.revision: "18"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec8c660444c11a95896c2d3e0cfd47a7d8bc8514
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1df7460cea4142e8f64f956a8b8dde852c47a165
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Peer-to-peer - Rilevamento dei conflitti nella replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replica transazionale peer-to-peer consente di inserire, aggiornare o eliminare dati in qualsiasi nodo di una topologia e di propagare le modifiche agli altri nodi. Poiché è possibile modificare i dati in qualsiasi nodo, si potrebbe verificare un conflitto tra le modifiche apportate ai dati in nodi diversi. Se una riga viene modificata in più nodi, può causare un conflitto o persino la perdita di un aggiornamento quando viene propagata in altri nodi.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La replica transazionale peer-to-peer consente di inserire, aggiornare o eliminare dati in qualsiasi nodo di una topologia e di propagare le modifiche agli altri nodi. Poiché è possibile modificare i dati in qualsiasi nodo, si potrebbe verificare un conflitto tra le modifiche apportate ai dati in nodi diversi. Se una riga viene modificata in più nodi, può causare un conflitto o persino la perdita di un aggiornamento quando viene propagata in altri nodi.  
   
  Con la replica peer-to-peer in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e versioni successive, viene introdotta l'opzione che consente di abilitare il rilevamento dei conflitti in una topologia peer-to-peer. Questa opzione consente di evitare problemi causati da conflitti non rilevati, tra cui il comportamento incoerente dell'applicazione e la perdita di aggiornamenti. Se questa opzione è abilitata, per impostazione predefinita una modifica in conflitto viene considerata come un errore critico che impedisce il corretto funzionamento dell'agente di distribuzione. In caso di conflitto, la topologia rimane in uno stato incoerente finché il conflitto non viene risolto e i dati non vengono resi coerenti nell'intera topologia.  
   

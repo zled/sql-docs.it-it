@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - replication [SQL Server], initializing
 - initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
-caps.latest.revision: "37"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0c8e0d600647d81dde027bb053cfeabb83518ae7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 51a6df19c29bdc1956bf942d67a84e26cb229f3a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inizializzazione di una sottoscrizione transazionale senza uno snapshot
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Per impostazione predefinita, una sottoscrizione di una pubblicazione transazionale viene inizializzata con uno snapshot generato dall'agente di snapshot e applicato dall'agente di distribuzione. In alcuni scenari, ad esempio quelli che comportano l'utilizzo di set di dati iniziali di grandi dimensioni, è preferibile inizializzare una sottoscrizione utilizzando un altro metodo. Altri metodi di inizializzazione di un Sottoscrittore includono:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Per impostazione predefinita, una sottoscrizione di una pubblicazione transazionale viene inizializzata con uno snapshot generato dall'agente snapshot e applicato dall'agente di distribuzione. In alcuni scenari, ad esempio quelli che comportano l'utilizzo di set di dati iniziali di grandi dimensioni, è preferibile inizializzare una sottoscrizione utilizzando un altro metodo. Altri metodi di inizializzazione di un Sottoscrittore includono:  
   
 -   Specifica di un backup. Ripristinare il backup sul Sottoscrittore in modo che l'agente di distribuzione possa quindi copiare le procedure di sistema e i metadati di replica richiesti. L'inizializzazione con un backup rappresenta la procedura più rapida per il recapito dei dati al Sottoscrittore ed è conveniente in quanto è possibile utilizzare qualsiasi backup recente purché sia stato eseguito in seguito all'abilitazione della pubblicazione per l'inizializzazione con un backup.  
   
