@@ -1,7 +1,7 @@
 ---
 title: Sequenza di comandi (TMSL) | Documenti Microsoft
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 03/12/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,39 +12,40 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 898d6ec2-9b40-441b-be2b-5728d1d2882e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d628482a5d7c2efb9c7611af1d024ad6b644512a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d1c5a1108ca775694122b6e9c5518913b47d85aa
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sequence-command-tmsl"></a>Comando Sequence (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Utilizzare il **sequenza** comando per eseguire un set di operazioni consecutivo in modalità batch in un'istanza di Analysis Services.  L'intero comando e tutti i relativi componenti deve essere completata in ordine per la transazione abbia esito positivo.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Utilizzare il **sequenza** comando per eseguire un set di operazioni consecutivo in modalità batch in un'istanza di Analysis Services.  L'intero comando e tutti i relativi componenti deve essere completata in ordine per la transazione abbia esito positivo.  
   
  È possibile eseguire i comandi seguenti in sequenza, ad eccezione di **aggiornamento** comando che viene eseguito in parallelo di elaborare più oggetti contemporaneamente.  
   
--   [Creazione di comandi &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)  
+-   [Creare un comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)  
   
--   [Comando CreateOrReplace &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)  
+-   [Comando CreateOrReplace &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)  
   
--   [ALTER comando &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)  
+-   [Comando ALTER &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)  
   
--   [Eliminare comandi &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)  
+-   [Comando Delete &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)  
   
--   [Aggiornare comando &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)  
+-   [Comando Refresh &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)  
   
--   [Comando di backup &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/backup-command-tmsl.md)  
+-   [Comando di backup &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/backup-command-tmsl.md)  
   
--   [Ripristinare comandi &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/restore-command-tmsl.md)  
+-   [Il comando RESTORE &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/restore-command-tmsl.md)  
   
--   [Collegare comando &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/attach-command-tmsl.md)  
+-   [Attach-comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/attach-command-tmsl.md)  
   
--   [Scollegare comandi &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/detach-command-tmsl.md)  
+-   [Detach-comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/detach-command-tmsl.md)  
   
 ## <a name="request"></a>Richiesta  
  **maxParallelism** è una proprietà facoltativa che determina se **aggiornamento** operazioni eseguono in sequenza o in parallelo.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Il valore integer assegnato a **maxParallelism** determina il numero massimo di thread utilizzati durante l'elaborazione. I valori validi sono qualsiasi numero intero positivo. Impostazione del valore su 1 è uguale a non parallela (utilizza un thread).  
   
- Solo **aggiornamento** viene eseguito in parallelo. Se si modifica **maxParallelism** per utilizzare un numero fisso di thread, assicurarsi di esaminare le proprietà nella [aggiornare comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md) a comprendere l'impatto potenziale. È possibile impostare le proprietà in modo che minano parallelismo anche quando sono state apportate disponibili più thread. La sequenza di tipi di aggiornamento seguente genererà il grado di parallelismo migliore:  
+ Solo **aggiornamento** viene eseguito in parallelo. Se si modifica **maxParallelism** per utilizzare un numero fisso di thread, assicurarsi di esaminare le proprietà nella [comando Refresh &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md) a comprendere l'impatto potenziale. È possibile impostare le proprietà in modo che minano parallelismo anche quando sono state apportate disponibili più thread. La sequenza di tipi di aggiornamento seguente genererà il grado di parallelismo migliore:  
   
 -   Specificare innanzitutto l'aggiornamento per tutti gli oggetti utilizzando ClearValues  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 01/08/2018
         {   
           "refresh": {   
             "type": "calculate",   
-            "object": {   
+            "objects": {   
              "database": "salesdatabase"   
             }   
           }   
@@ -103,7 +104,7 @@ ms.lasthandoff: 01/08/2018
  Quando il comando ha esito positivo, restituisce un risultato vuoto. In caso contrario, viene restituita un'eccezione di XMLA.  
   
 ## <a name="usage-endpoints"></a>Utilizzo (endpoint)  
- Questo elemento di comando viene utilizzato in un'istruzione del [metodo Execute &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chiamata su un endpoint XMLA, esposto nei modi seguenti:  
+ Questo elemento di comando viene utilizzato in un'istruzione del [metodo Execute &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chiamata su un endpoint XMLA, esposto nei modi seguenti:  
   
 -   Come una finestra XMLA in SQL Server Management Studio (SSMS)  
   
@@ -113,7 +114,7 @@ ms.lasthandoff: 01/08/2018
   
  Non è possibile generare uno script già pronto per questo comando da SSMS. In alternativa, è possibile iniziare con un esempio o scriverne uno proprio.  
   
- Il [ \[SSAS-MS-T\]: SQL Server Analysis Services tabulare (protocollo tecnici di SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento include una sezione 3.1.5.2.2 che descrive la struttura di oggetti e i comandi di metadati tabulari JSON . Attualmente, tale documento vengono illustrati i comandi e le funzionalità non ancora implementata nello script TMSL. Vedere l'argomento ([tabulare Model Scripting Language &#40; TMSL &#41; Fare riferimento a](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) per chiarimenti sui quali è supportata.  
+ Il [ \[SSAS-MS-T\]: SQL Server Analysis Services tabulare (protocollo tecnici di SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento include una sezione 3.1.5.2.2 che descrive la struttura di oggetti e i comandi di metadati tabulari JSON . Attualmente, tale documento vengono illustrati i comandi e le funzionalità non ancora implementata nello script TMSL. Vedere l'argomento ([linguaggio di Scripting del modello tabulare &#40;TMSL&#41; riferimento](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) per chiarimenti sui quali è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Riferimento al linguaggio di scripting per modelli tabulari &#40;TMSL&#41;)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

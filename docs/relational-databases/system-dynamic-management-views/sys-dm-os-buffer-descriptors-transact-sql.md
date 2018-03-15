@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e35b3cd5c0b10bce5ed66f8c68babcebc96ae95
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1c03bbdbe271500ecf417fe3b5c125304001a05e
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/03/2018
  Quando una pagina di dati viene letta dal disco, viene copiata nel pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e memorizzata nella cache per il riutilizzo. Ogni pagina di dati memorizzata nella cache è associata a un descrittore di buffer. I descrittori di buffer identificano in modo univoco ogni pagina di dati attualmente memorizzata nella cache in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors restituisce le pagine memorizzate nella cache per tutti i database utente e di sistema. incluse le pagine associate al database Resource.  
   
 > **Nota:** da chiamare [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_os_buffer_descriptors**.  
-  
+
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID del database associato alla pagina nel pool di buffer. Ammette i valori Null.|  
@@ -120,7 +120,7 @@ ORDER BY cached_pages_count DESC;
 ## <a name="see-also"></a>Vedere anche  
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
- [Relative al sistema operativo SQL Server viste a gestione dinamica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [Viste a gestione dinamica relative al sistema di operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Database Resource](../../relational-databases/databases/resource-database.md)   
  [Sys.dm_os_buffer_pool_extension_configuration &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
