@@ -34,16 +34,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41e53169a20ff3082afc0e4b8f10ab76e79ca87d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f0aeedb143b94958e949466ea84def760614478c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una descrizione della gerarchia delle autorizzazioni predefinite del server. `sys.fn_builtin_permissions`può essere chiamato solo su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], e restituisce tutte le autorizzazioni, indipendentemente dal fatto sono supportati sulla piattaforma corrente. La maggior parte delle autorizzazioni si applica a tutte le piattaforme, mentre alcune non si applicano a tutte le piattaforme. Ad esempio non è possibile concedere autorizzazioni a livello di server SQL Database. Per informazioni su quali piattaforme supportano ogni autorizzazione, vedere [autorizzazioni &#40; motore di Database &#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Restituisce una descrizione della gerarchia delle autorizzazioni predefinite del server. `sys.fn_builtin_permissions` può essere chiamato solo su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], e restituisce tutte le autorizzazioni, indipendentemente dal fatto sono supportati sulla piattaforma corrente. La maggior parte delle autorizzazioni si applica a tutte le piattaforme, mentre alcune non si applicano a tutte le piattaforme. Ad esempio non è possibile concedere autorizzazioni a livello di server SQL Database. Per informazioni su quali piattaforme supportano ogni autorizzazione, vedere [autorizzazioni &#40;motore di Database&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -340,7 +340,7 @@ La figura seguente illustra le autorizzazioni e le relative relazioni. Alcune de
 ![Autorizzazioni del motore di database](../../relational-databases/security/media/database-engine-permissions.PNG) 
 
 >[!NOTE]
-> Come parte di questo argomento il poster è molto piccolo e non può essere consultato. Scaricare il poster relativo alle autorizzazioni del motore di database da [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+> Come parte di questo argomento il poster è molto piccolo e non può essere consultato. Scaricare il Poster di autorizzazioni del motore di Database da [ https://aka.ms/sql-permissions-poster ](https://aka.ms/sql-permissions-poster).  
    
   
 ## <a name="permissions"></a>Autorizzazioni  
