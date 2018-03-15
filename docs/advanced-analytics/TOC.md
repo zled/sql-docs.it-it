@@ -1,13 +1,8 @@
-# [Introduzione](getting-started-with-machine-learning-services.md)
-
 # Panoramica
-## [Che cos'è Microsoft Machine Learning Services](r/r-services.md)
-## [Novità nell'apprendimento automatico](what-s-new-in-sql-server-machine-learning-services.md)
-## [Articoli nuovi e aggiornati](new-updated-advanced-analytics.md)
-## [Architettura e panoramica](architecture-overview-machine-learning.md)
-## [Differenze nelle funzionalità di apprendimento automatico tra le edizioni di SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
-
-## [Uso di R nel Database SQL di Azure](r/using-r-in-azure-sql-database.md)
+## [Che cos'è SQL Machine Learning Services](what-is-sql-server-machine-learning.md)
+## [Nuove funzionalità](what-s-new-in-sql-server-machine-learning-services.md)
+## [Panoramica dell'architettura](architecture-overview-machine-learning.md)
+## [Funzionalità in base all'edizione](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # [Machine Learning Services - R](r/sql-server-r-services.md)
 
@@ -97,8 +92,6 @@
 #### [Training e salvataggio di un modello](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Rendere operativo il modello](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python: Distribuire e utilizzare i modelli con un server autonomo](../advanced-analytics/python/publish-consume-python-code.md)
-
 # [Machine Learning Server (Standalone)](r/r-server-standalone.md)
 ## [Introduzione](r/getting-started-with-microsoft-r-server-standalone.md)
 ## [Configurare Machine Learning Server (Standalone)](r/create-a-standalone-r-server.md)
@@ -142,7 +135,7 @@
 ### [Usare dati dai cubi OLAP in R](r/using-data-from-olap-cubes-in-r.md)
 ### [Creare una stored procedure con sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-## restazioni
+## Prestazioni
 
 ### [Ottimizzazione delle prestazioni per R - Panoramica](r/sql-server-r-services-performance-tuning.md)
 ### [Ottimizzazione delle prestazioni per R - Configurazione di SQL Server](r/sql-server-configuration-r-services.md)
@@ -175,6 +168,8 @@
 
 ## [Problemi noti](known-issues-for-sql-server-machine-learning-services.md)
 ## [Note sulla versione](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [Articoli nuovi e aggiornati](new-updated-advanced-analytics.md)
+## [Uso di R nel Database SQL di Azure](r/using-r-in-azure-sql-database.md)
 
 ## [Suggerimenti per l'installazione e la risoluzione dei problemi](machine-learning-troubleshooting-faq.md)
 ### [Raccolta dati per la risoluzione dei problemi](data-collection-ml-troubleshooting-process.md)
